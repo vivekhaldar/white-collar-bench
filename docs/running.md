@@ -29,12 +29,13 @@ Worlds (`worlds/`) and the contract (`contract/`) come with the source checkout.
 ## 2. Find and build worlds
 
 ```bash
-wcb world list                   # every world under worlds/, with days and checkpoints
+wcb world list                   # every world under worlds/, with days, checkpoints and gold status
 wcb world build pilot            # derive manifests, gold state, oracle stores and questions
+wcb world build --all --if-stale # build every world whose gold is missing or out of date
 wcb world questions pilot        # the questions, with unanswerable ones marked (dev worlds only)
 ```
 
-A world must be **built** before it can be run: the runner needs `inbox/<date>/manifest.json`, `gold/oracle-store/<date>/` and `gold/questions/<checkpoint>.json`. If something is missing, `wcb run` stops before any session starts and tells you which command to run.
+A world must be **built** before it can be run: the runner needs `inbox/<date>/manifest.json`, `gold/oracle-store/<date>/` and `gold/questions/<checkpoint>.json`. Built gold is not committed to the repository, so after cloning or pulling, `wcb run` builds each world whose gold is missing or stale before any session starts (a few seconds per world). It knows a world is stale from `gold/BUILD.json`, which records the gold version and a digest of the world's sources ([worlds](worlds.md#what-wcb-world-build-writes)). Pass `--no-build` to skip this; then a world with missing files stops the run, with the command that fixes it.
 
 Worlds are named by their path under `worlds/` (`pilot`, `dev/w01`) or given as a directory path.
 
@@ -151,6 +152,7 @@ wcb run --adapter adapters/my-agent.yaml --split dev --repeats 3 --out runs/my-a
 | `--workspace-root DIR` | Where temporary workspaces are created (default: the system temp directory). |
 | `--resume` | Continue an interrupted run (see §6). |
 | `--skip-ingest` | Run only oracle query sessions (see §7). |
+| `--build` / `--no-build` | Build worlds whose gold is missing or stale before running (default on; see §2). |
 | `--meter` | Route each session's model calls through a local metering proxy, so token counts are measured rather than self-reported (see §7a). `--meter-bind` and `--meter-host` set where it listens and how sessions reach it. |
 
 An episode runs like this:
@@ -299,7 +301,8 @@ Replace `WCB_AGENT_IMAGE` and `WCB_AGENT_CMD` with your own image and entry comm
 
 | Symptom | Fix |
 |---|---|
-| `world ... is not built; missing: ...` | Run `wcb world build <world>`. |
+| `world ... is not built; missing: ...` | Run `wcb world build <world>`, or drop `--no-build`. |
+| `world ... failed to build` | The world's sources have errors; run `wcb world check <world>`. For a world you edited, see [worlds](worlds.md). |
 | `output directory ... is not empty` | Pass `--resume` to continue that run, or choose a new `--out`. |
 | `status: error`, `command ... not found` in `stderr.log` | The command is not on the session's `PATH`, which is your `PATH` with the `wcb` interpreter's directory first. Use an absolute path or `{adapter_dir}/script`, or set `PATH` in `env`. |
 | `python` not found (null baseline) | Run `wcb` from a virtual environment, or change the command to `python3`. |

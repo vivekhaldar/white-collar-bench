@@ -23,7 +23,7 @@ Worlds live in `worlds/<split>/<world-id>/` (`pilot`, `dev`, `test`). A small co
 |---|---|
 | `wcb world list` | Lists the worlds under `worlds/` with their episode days and checkpoints. |
 | `wcb world check <world>` | Runs the consistency checks below. Exit code 1 if there are errors. `--json` prints issues as JSON. |
-| `wcb world build <world>` | Checks the world, then regenerates manifests and `gold/`. Writes nothing if the check finds errors. |
+| `wcb world build <world>...` | Checks each world, then regenerates manifests and `gold/`. Writes nothing for a world whose check finds errors. `--all` builds every world under `worlds/`; `--if-stale` skips worlds whose gold is current. |
 | `wcb world stats <world>` | Prints calibration statistics as JSON (the same content as `gold/calibration.json`). |
 | `wcb world questions <world> [--checkpoint cp1]` | Prints the built questions, flagging unanswerable ones. |
 
@@ -40,6 +40,9 @@ The build is deterministic: rebuilding an unchanged world rewrites identical byt
 | `gold/oracle-store/<date>/` | A correct Track A store for `seed.end` and every episode day (see below). The `seed.end` store is the seed store that Track A episodes start from. |
 | `gold/questions/<cp>.json` | Questions with gold answers per checkpoint ([formats §3.2](formats.md#32-goldquestionscpjson-hidden)). |
 | `gold/calibration.json` | Calibration statistics (see below). |
+| `gold/BUILD.json` | Written last, only if the build succeeded: `gold_version` and `sources_sha256`, a digest of `world.yaml`, `world.jsonl`, `questions.yaml` and every inbox file except the manifests. |
+
+Built gold is not committed for worlds under `worlds/` (it is several megabytes per world and fully derived). `wcb run` rebuilds a world when `gold/BUILD.json` is missing, its digest no longer matches the sources, or its `gold_version` differs from `GOLD_VERSION` in [`wcb/world/build.py`](../wcb/world/build.py). Bump `GOLD_VERSION` in any change that alters built gold, and rebuild the committed test fixture with `wcb world build tests/fixtures/mini-world`; a test fails until you do.
 
 Gold state applies only **knowable** events: those revealed by an artifact delivered on or before the date ([formats §1.3](formats.md#13-knowability)). Gold is what an ideal ingestor could know, not the full hidden truth.
 
@@ -83,7 +86,7 @@ Attributes whose key starts with `_` are never rendered. A fact that is never re
    - every string in `secrets` occurs literally in the file.
 5. **Leave some things unobservable on purpose**, such as a budget no input mentions, and ask about them: the gold answer is to abstain.
 6. **Write `questions.yaml`** using the templates in [formats §3.1](formats.md#31-questionsyaml-spec-hidden).
-7. **Run `wcb world check`, fix every error, then `wcb world build`.** Read the oracle store for the last day: it is the clearest picture of what an agent should end up with. Commit the authored files and the derived ones together.
+7. **Run `wcb world check`, fix every error, then `wcb world build`.** Read the oracle store for the last day: it is the clearest picture of what an agent should end up with. Commit the authored files and the inbox manifests; `gold/` is ignored by git.
 
 ## Check reference
 

@@ -14,7 +14,7 @@ uv venv && uv pip install -e '.[dev]'        # or: python -m venv .venv && .venv
 source .venv/bin/activate
 
 wcb world list                               # available worlds
-wcb run --adapter adapters/examples/null.yaml --world pilot --out runs/null
+wcb run --adapter adapters/examples/null.yaml --world pilot --out runs/null   # builds the world's gold first
 wcb score runs/null                          # writes runs/null/scores/report.md
 ```
 
@@ -76,11 +76,11 @@ Inputs are hard in the ways real work is hard:
 
 | World | Description |
 |---|---|
-| `pilot` | Hand-authored. One week at the Office of Digital Strategy of a fictional public university system: 8 projects, about 40 people, about 120 artifacts and 3 checkpoints. |
-| `dev/*` | Generated worlds with public gold, for development. See [generator](docs/generator.md). |
+| `pilot` | Hand-authored. One week at the Office of Digital Strategy of a fictional public university system: 8 projects, about 40 people, 127 artifacts and 3 checkpoints. |
+| `dev/*` | Five generated worlds with public gold, for development: city government, health network and university settings, one or two weeks, standard and small sizes. See [generator](docs/generator.md). |
 | `test/*` | Held-out worlds, used for leaderboard runs only. |
 
-Gold (`worlds/*/gold/`) is public for `pilot` and `dev` so you can debug. Never let your agent read it: the runner creates workspaces outside the repository, and [`docker.yaml`](adapters/examples/docker.yaml) runs each session in a container that sees only its workspace, as leaderboard runs do.
+Gold (`worlds/*/gold/`) is public for `pilot` and `dev` so you can debug. It is derived from each world's sources and not committed: `wcb run` builds it when it is missing or stale, and `wcb world build --all` builds every world (a few seconds each). Never let your agent read it: the runner creates workspaces outside the repository, and [`docker.yaml`](adapters/examples/docker.yaml) runs each session in a container that sees only its workspace, as leaderboard runs do.
 
 ## Commands
 
@@ -139,7 +139,7 @@ tests/          unit and end-to-end tests (pytest)
 ```bash
 pytest                 # unit and end-to-end tests
 ruff check .
-wcb world build worlds/pilot && git diff --stat worlds/pilot/gold   # builds are deterministic
+wcb world build --all  # gold is deterministic; bump GOLD_VERSION (wcb/world/build.py) when it changes
 ```
 
 Contributions must keep all content synthetic; see [AGENTS.md](AGENTS.md).

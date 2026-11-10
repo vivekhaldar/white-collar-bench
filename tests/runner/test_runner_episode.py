@@ -42,6 +42,14 @@ def run_world(tmp_path: Path, fake_world: Path):
     return go
 
 
+@pytest.fixture
+def mini_world_copy(tmp_path: Path, mini_world_dir: Path) -> Path:
+    """A copy of the built mini world, which (unlike the fake world) can be rebuilt."""
+    import shutil
+
+    return Path(shutil.copytree(mini_world_dir, tmp_path / "worlds" / "mini-world"))
+
+
 def r1(tmp_path: Path) -> Path:
     return tmp_path / "run" / "fake" / "r1"
 
@@ -67,7 +75,8 @@ def test_track_a_full_run(
     assert meta["adapter"]["name"] == "fake-agent" and meta["adapter"]["model"] == "test/fake-model"
     assert meta["adapter"]["version"] == "1.0.0" and len(meta["adapter"]["sha256"]) == 64
     assert meta["adapter"]["path"] == str(adapter.resolve())
-    assert meta["worlds"] == [{"id": "fake", "path": str(fake_world.resolve()), "repeats": 1}]
+    assert meta["worlds"] == [{"id": "fake", "path": str(fake_world.resolve()), "repeats": 1,
+                               "gold": read_json(fake_world / "gold" / "BUILD.json")}]
     assert meta["started_at"] and meta["finished_at"] and meta["command_line"]
     assert meta["wcb_version"]
 
@@ -441,9 +450,26 @@ def test_unbuilt_world_is_rejected_with_a_fix(tmp_path, fake_world, make_adapter
 
     shutil.rmtree(fake_world / "gold")
     with pytest.raises(FileNotFoundError, match="wcb world build") as e:
-        run_world(make_adapter())
+        run_world(make_adapter(), build=False)
     assert "gold/oracle-store/2027-01-05/" in str(e.value)
     assert not (tmp_path / "run").exists()
+
+
+def test_unbuildable_world_fails_before_any_session(tmp_path, fake_world, make_adapter, run_world):
+    import shutil
+
+    shutil.rmtree(fake_world / "gold")  # and the fake world has no world.jsonl to build from
+    with pytest.raises(ValueError, match="failed to build"):
+        run_world(make_adapter())
+    assert not (tmp_path / "run").exists()
+
+
+def test_stale_world_is_rebuilt_before_running(tmp_path, make_adapter, run_world, mini_world_copy):
+    from wcb.world.build import gold_status
+
+    (mini_world_copy / "gold" / "BUILD.json").unlink()
+    assert run_world(make_adapter(), world=mini_world_copy, max_days=1) == 0
+    assert gold_status(mini_world_copy) is None
 
 
 def test_missing_manifest_is_rejected(tmp_path, fake_world, make_adapter, run_world):

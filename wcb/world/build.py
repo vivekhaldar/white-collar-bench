@@ -13,7 +13,10 @@ by hand (docs/formats.md §1). The build:
    `gold/oracle-store/<date>/`, then checks it for planted secrets and, when the contract
    validator is available, validates it;
 5. builds the gold questions per checkpoint into `gold/questions/<cp>.json` (§3.2);
-6. writes `gold/calibration.json` (the same content as `wcb world stats`).
+6. writes `gold/calibration.json` (the same content as `wcb world stats`);
+7. if nothing failed, writes `gold/BUILD.json`, which records `GOLD_VERSION` and a digest of
+   the world's sources. `gold_status` compares it with the current world, and `ensure_built`
+   (used by `wcb run`) rebuilds a world whose gold is missing or stale.
 
 Output is deterministic: rebuilding an unchanged world rewrites identical bytes, so a
 rebuild shows no diff. Stale derived files (dates or checkpoints that no longer exist) are
@@ -22,18 +25,26 @@ removed.
 
 from __future__ import annotations
 
+import hashlib
 import shutil
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
 from wcb.store.oracle import render_oracle_store
-from wcb.util.io import write_json
+from wcb.util.io import read_json, write_json
 from wcb.util.issues import Issue, error, warning
 from wcb.world.check import check_world
 from wcb.world.model import World
 from wcb.world.state import state_at
 from wcb.world.stats import compute_stats, read_question_docs
+
+#: Version of what `wcb world build` writes. Bump it in any change to wcb that alters built gold
+#: (states, oracle stores, question gold), and rebuild tests/fixtures/mini-world. Worlds whose
+#: `gold/BUILD.json` records another version are rebuilt by `wcb run`.
+GOLD_VERSION = 1
+BUILD_STAMP = "BUILD.json"
+_SOURCE_FILES = ("world.yaml", "world.jsonl", "questions.yaml")
 
 
 @dataclass
@@ -68,6 +79,7 @@ def build_world(world_dir: Path) -> BuildResult:
     issues = check_world(world_dir)
     if _errors(issues):
         return BuildResult(False, issues, [])
+    (world_dir / "gold" / BUILD_STAMP).unlink(missing_ok=True)  # until this build succeeds
     world = World.load(world_dir)
     written: list[str] = []
     written += write_manifests(world)
@@ -81,7 +93,63 @@ def build_world(world_dir: Path) -> BuildResult:
     stats = compute_stats(world, final, read_question_docs(world.dir))
     write_json(world.dir / "gold" / "calibration.json", stats)
     written.append("gold/calibration.json")
-    return BuildResult(not _errors(issues), issues, written)
+    ok = not _errors(issues)
+    if ok:
+        write_json(world.dir / "gold" / BUILD_STAMP, build_stamp(world.dir))
+        written.append(f"gold/{BUILD_STAMP}")
+    return BuildResult(ok, issues, written)
+
+
+# ---------------------------------------------------------------- freshness
+def sources_digest(world_dir: Path) -> str:
+    """SHA-256 over the world's authored files: world.yaml, world.jsonl, questions.yaml and
+    every inbox file except the derived manifests."""
+    world_dir = Path(world_dir)
+    files = [world_dir / n for n in _SOURCE_FILES]
+    inbox = world_dir / "inbox"
+    if inbox.is_dir():
+        files += sorted(p for p in inbox.rglob("*") if p.is_file() and p.name != "manifest.json")
+    h = hashlib.sha256()
+    for p in files:
+        if p.is_file():
+            h.update(p.relative_to(world_dir).as_posix().encode() + b"\0")
+            h.update(hashlib.sha256(p.read_bytes()).digest())
+    return h.hexdigest()
+
+
+def build_stamp(world_dir: Path) -> dict[str, Any]:
+    """The content of `gold/BUILD.json` for the world as it is now."""
+    return {"gold_version": GOLD_VERSION, "sources_sha256": sources_digest(world_dir)}
+
+
+def gold_status(world_dir: Path) -> str | None:
+    """None if the world's gold is built and current; otherwise a short reason it is not."""
+    stamp = Path(world_dir) / "gold" / BUILD_STAMP
+    if not stamp.is_file():
+        return "gold not built"
+    try:
+        data = read_json(stamp)
+    except ValueError:
+        return f"unreadable gold/{BUILD_STAMP}"
+    if data.get("gold_version") != GOLD_VERSION:
+        return f"gold built by gold version {data.get('gold_version')}, this wcb uses {GOLD_VERSION}"
+    if data.get("sources_sha256") != sources_digest(world_dir):
+        return "world sources changed since the last build"
+    return None
+
+
+def ensure_built(world_dir: Path, echo=None) -> BuildResult | None:
+    """Build the world if its gold is missing or stale. Returns the build result, or None if the
+    gold was already current. Raises ValueError, with the build's issues, if the build fails."""
+    why = gold_status(world_dir)
+    if why is None:
+        return None
+    if echo is not None:
+        echo(f"building {world_dir} ({why})")
+    res = build_world(world_dir)
+    if not res.ok:
+        raise ValueError(f"world {world_dir} failed to build:\n{res.format()}")
+    return res
 
 
 # ---------------------------------------------------------------- steps

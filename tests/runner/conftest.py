@@ -26,6 +26,8 @@ from pathlib import Path
 import pytest
 import yaml
 
+from wcb.world.build import BUILD_STAMP, build_stamp
+
 SEED_DATES = ["2027-01-04", "2027-01-05"]
 DAYS = ["2027-01-06", "2027-01-07"]
 SEED_END = SEED_DATES[-1]
@@ -193,6 +195,8 @@ def build_world(d: Path, checkpoints: list[dict] | None = None) -> Path:
         f = d / "gold" / "questions" / f"{cp['id']}.json"
         f.parent.mkdir(parents=True, exist_ok=True)
         f.write_text(json.dumps(questions))
+    # Mark the hand-made gold as current so `wcb run` does not try to rebuild it.
+    (d / "gold" / BUILD_STAMP).write_text(json.dumps(build_stamp(d)))
     return d
 
 

@@ -91,3 +91,53 @@ def test_build_without_question_module_warns(world_copy):
     else:
         assert (world_copy / "gold/questions/cp1.json").is_file()
         assert (world_copy / "gold/questions/cp2.json").is_file()
+
+
+# ---------------------------------------------------------------- freshness stamp
+def test_build_writes_a_stamp_and_reports_staleness(world_copy):
+    from wcb.world.build import BUILD_STAMP, GOLD_VERSION, ensure_built, gold_status
+
+    stamp = world_copy / "gold" / BUILD_STAMP
+    stamp.unlink(missing_ok=True)
+    assert gold_status(world_copy) == "gold not built"
+    assert build_world(world_copy).ok
+    assert read_json(stamp)["gold_version"] == GOLD_VERSION
+    assert gold_status(world_copy) is None
+    assert ensure_built(world_copy) is None  # current: nothing to do
+
+    artifact = next(p for p in (world_copy / "inbox").rglob("*.md"))
+    artifact.write_text(artifact.read_text() + "\nEdited.\n")
+    assert gold_status(world_copy) == "world sources changed since the last build"
+    (world_copy / "inbox" / artifact.parent.name / "manifest.json").write_text("{}")
+    assert gold_status(world_copy) == "world sources changed since the last build"  # manifests ignored
+
+    seen = []
+    res = ensure_built(world_copy, echo=seen.append)
+    assert res is not None and res.ok and gold_status(world_copy) is None
+    assert seen and "sources changed" in seen[0]
+
+    data = read_json(stamp)
+    data["gold_version"] = GOLD_VERSION - 1
+    stamp.write_text(json.dumps(data))
+    assert "gold version" in gold_status(world_copy)
+
+
+def test_ensure_built_raises_when_the_build_fails(world_copy):
+    import pytest
+
+    from wcb.world.build import ensure_built, gold_status
+
+    assert build_world(world_copy).ok
+    (world_copy / "world.jsonl").write_text('{"id": "e-bad", "t": "not a time"}\n')
+    assert gold_status(world_copy) == "world sources changed since the last build"
+    with pytest.raises(ValueError, match="failed to build"):
+        ensure_built(world_copy)
+    assert gold_status(world_copy) is not None  # still stale, so the next run tries again
+
+
+def test_committed_fixture_gold_is_current():
+    """tests/fixtures/mini-world is committed with its gold; rebuild it when this fails."""
+    from wcb.paths import repo_root
+    from wcb.world.build import gold_status
+
+    assert gold_status(repo_root() / "tests" / "fixtures" / "mini-world") is None

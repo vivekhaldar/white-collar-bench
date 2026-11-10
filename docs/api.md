@@ -29,7 +29,7 @@ print(report.summary_text())
 print(report.data["headline"]["wcb"], report.data["headline"]["sis"])
 ```
 
-`RunConfig` also takes `max_days`, `workspace_root`, `resume` and `skip_ingest`, with the same meanings as the [command-line options](running.md). `score_run(run_dir, judge="llm", judge_model="anthropic:<model>")` uses the LLM judge ([judges](judge.md)). `report.data` is exactly `report.json`; its fields are described in [scoring](scoring.md).
+`RunConfig` also takes `max_days`, `workspace_root`, `resume`, `skip_ingest`, `meter` and `build`, with the same meanings as the [command-line options](running.md). `score_run(run_dir, judge="llm", judge_model="anthropic:<model>")` uses the LLM judge ([judges](judge.md)). `report.data` is exactly `report.json`; its fields are described in [scoring](scoring.md).
 
 | Function | Purpose |
 |---|---|
@@ -79,6 +79,7 @@ for cid, loop in st["loops"].items():
 | `state_at(world, date)` | Gold state at the end of `date`: `entities`, `loops`, `decisions`, `events`, `unknowable`, `delivered` and `secrets` ([formats](formats.md) §3). |
 | `wcb.world.check.check_world(dir)` | Consistency checks; returns issues. |
 | `wcb.world.build.build_world(dir)` | Check, then write manifests and `gold/`. Returns `BuildResult` with `ok`, `issues` and `written`. |
+| `wcb.world.build.gold_status(dir)`, `ensure_built(dir, echo=None)` | `None` if the world's gold is current, else the reason; build only if needed (raises `ValueError` if the build fails). `run` calls `ensure_built` unless `RunConfig(build=False)`. |
 | `wcb.world.stats.world_stats(dir)` | Calibration statistics as a dict. |
 | `wcb.world.generate.generate_world(*, seed, weeks=1, out_dir, world_id=None, size="standard", llm=False, llm_model=None, build=True)` | Generate a world ([generator](generator.md)). Raises `GenerationError` if the result fails its checks. |
 | `wcb.store.oracle.render_oracle_store(world, state, out_dir)` | Write the oracle store for a state. |

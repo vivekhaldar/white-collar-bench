@@ -36,7 +36,7 @@ wcb run --adapter adapters/examples/custom-script.yaml --world pilot --out runs/
 wcb score runs/simple-claude
 ```
 
-Add `--max-days 1` for a quick check that sessions start and finish. A world must be built first (`wcb world build pilot`); see [running](running.md#2-find-and-build-worlds).
+Add `--max-days 1` for a quick check that sessions start and finish. `wcb run` builds the world's gold first if needed; see [running](running.md#2-find-and-build-worlds).
 
 ## 2. Adapter file reference
 

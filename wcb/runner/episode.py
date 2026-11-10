@@ -63,6 +63,7 @@ from wcb.runner.workspace import (
 )
 from wcb.util.dates import DATE_RE
 from wcb.util.io import read_json, write_json
+from wcb.world.build import BUILD_STAMP, ensure_built
 from wcb.world.model import World
 
 KILL_GRACE_S = 10.0
@@ -93,6 +94,7 @@ class RunConfig:
     meter: bool = False  # route model calls through the metering proxy (wcb/meter.py)
     meter_bind: str = "127.0.0.1"  # address the proxy listens on
     meter_host: str | None = None  # address sessions use to reach it (default: meter_bind)
+    build: bool = True  # build worlds whose gold is missing or stale (wcb world build)
 
 
 # ====================================================================== entry point
@@ -110,6 +112,8 @@ def run(cfg: RunConfig) -> int:
     adapter = load_adapter(Path(cfg.adapter))
     plans = _plan_worlds(cfg)
     for plan in plans:
+        if cfg.build:
+            ensure_built(plan.dir, echo=lambda m: _log(f"wcb run: {m}"))
         _check_built(plan, cfg.track, agent=not cfg.skip_ingest, oracle=oracle)
     out = Path(cfg.out).expanduser().resolve()
     ws_root = _check_workspace_root(cfg.workspace_root, out, plans)
@@ -356,7 +360,10 @@ def _start_run_json(
     out: Path, cfg: RunConfig, adapter: Adapter, plans: list[_WorldPlan], oracle: bool
 ) -> dict[str, Any]:
     run_file = out / "run.json"
-    worlds = [{"id": p.id, "path": str(p.dir), "repeats": cfg.repeats} for p in plans]
+    worlds = [
+        {"id": p.id, "path": str(p.dir), "repeats": cfg.repeats, "gold": _gold_stamp(p.dir)}
+        for p in plans
+    ]
     if cfg.resume and run_file.is_file():
         old = read_json(run_file)
         if old.get("track") != cfg.track:
@@ -415,6 +422,12 @@ def _start_run_json(
     out.mkdir(parents=True, exist_ok=True)
     write_json(run_file, meta)
     return meta
+
+
+def _gold_stamp(world_dir: Path) -> dict[str, Any] | None:
+    """The world's gold/BUILD.json, so run.json records which gold the run was made against."""
+    stamp = world_dir / "gold" / BUILD_STAMP
+    return read_json(stamp) if stamp.is_file() else None
 
 
 # ====================================================================== episodes

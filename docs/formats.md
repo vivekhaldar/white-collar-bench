@@ -34,6 +34,7 @@ worlds/<split>/<world-id>/
     oracle-store/<date>/  a correct Track A store for each date
     questions/<cp>.json   questions with gold answers per checkpoint
     calibration.json      summary statistics of the world
+    BUILD.json            gold version and source digest of the last successful build
 ```
 
 The world is built from `world.yaml`, `world.jsonl`, `questions.yaml` and the artifact files. Everything under `gold/` and every `manifest.json` is derived by `wcb world build` and must not be edited by hand.
@@ -381,7 +382,7 @@ env_passthrough: [MY_PROVIDER_API_KEY]
 
 ```text
 runs/<name>/
-  run.json                       adapter, track, worlds, repeats, versions, timestamps
+  run.json                       adapter, track, worlds (with each world's gold/BUILD.json), repeats, versions, timestamps
   <world-id>/r<k>/
     workspace/                   final store
     snapshots/<date>/            store after each ingestion day (excluding .git, inbox/, .wcb/)

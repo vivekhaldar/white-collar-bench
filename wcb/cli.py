@@ -47,12 +47,27 @@ def cmd_world_check(a) -> int:
 
 
 def cmd_world_build(a) -> int:
-    from wcb.paths import resolve_world
-    from wcb.world.build import build_world
+    from wcb.paths import resolve_world, worlds_dir
+    from wcb.world.build import build_world, gold_status
 
-    res = build_world(resolve_world(a.world))
-    print(res.format())
-    return 0 if res.ok else 1
+    if a.all:
+        dirs = [p.parent for p in sorted(worlds_dir().glob("**/world.yaml"))]
+    elif a.world:
+        dirs = [resolve_world(w) for w in a.world]
+    else:
+        print("wcb world build: name one or more worlds, or pass --all", file=sys.stderr)
+        return 2
+    status = 0
+    for d in dirs:
+        if a.if_stale and gold_status(d) is None:
+            print(f"{d}: gold is current")
+            continue
+        res = build_world(d)
+        if len(dirs) > 1:
+            print(f"== {d}")
+        print(res.format())
+        status = status or (0 if res.ok else 1)
+    return status
 
 
 def cmd_world_stats(a) -> int:
@@ -67,6 +82,7 @@ def cmd_world_stats(a) -> int:
 def cmd_world_list(a) -> int:
     from wcb.paths import worlds_dir
     from wcb.util.io import read_yaml
+    from wcb.world.build import gold_status
 
     root = worlds_dir()
     for p in sorted(root.glob("**/world.yaml")):
@@ -74,7 +90,8 @@ def cmd_world_list(a) -> int:
         rel = p.parent.relative_to(root)
         cps = len(meta.get("checkpoints", []))
         days = len(meta.get("episode", {}).get("days", []))
-        print(f"{str(rel):24} {days} days, {cps} checkpoints  {meta.get('title', '')}")
+        gold = "gold current" if gold_status(p.parent) is None else "gold not built or stale"
+        print(f"{str(rel):24} {days} days, {cps} checkpoints, {gold:23}  {meta.get('title', '')}")
     return 0
 
 
@@ -125,6 +142,7 @@ def cmd_run(a) -> int:
         meter=a.meter,
         meter_bind=a.meter_bind,
         meter_host=a.meter_host,
+        build=a.build,
     )
     return run(cfg)
 
@@ -229,7 +247,10 @@ def build_parser() -> argparse.ArgumentParser:
     wc.add_argument("--json", action="store_true")
     wc.set_defaults(fn=cmd_world_check)
     wb = w.add_parser("build", help="derive manifests, gold state, oracle stores and questions")
-    wb.add_argument("world")
+    wb.add_argument("world", nargs="*", help="world paths or names under worlds/")
+    wb.add_argument("--all", action="store_true", help="build every world under worlds/")
+    wb.add_argument("--if-stale", action="store_true",
+                    help="skip worlds whose gold is already current (gold/BUILD.json)")
     wb.set_defaults(fn=cmd_world_build)
     wst = w.add_parser("stats", help="calibration statistics")
     wst.add_argument("world")
@@ -270,6 +291,8 @@ def build_parser() -> argparse.ArgumentParser:
                    help="route sessions' model calls through a metering proxy (docs/running.md)")
     r.add_argument("--meter-bind", default="127.0.0.1", help="address the metering proxy listens on")
     r.add_argument("--meter-host", help="address sessions use to reach the proxy (default: --meter-bind)")
+    r.add_argument("--build", action=argparse.BooleanOptionalAction, default=True,
+                   help="build worlds whose gold is missing or stale first (default: on)")
     r.set_defaults(fn=cmd_run)
 
     dr = sub.add_parser("doctor", help="smoke-test an adapter on the mini world and explain failures")
