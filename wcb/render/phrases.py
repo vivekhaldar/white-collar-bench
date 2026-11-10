@@ -158,7 +158,7 @@ def lowercase_keep(text: str, keep: list[str]) -> str:
     """Lowercase `text` except for the literal strings in `keep` (secrets, links, codes)."""
     if not keep:
         return text.lower()
-    pattern = "|".join(re.escape(k) for k in sorted(set(keep), key=len, reverse=True) if k)
+    pattern = "|".join(re.escape(k) for k in sorted(set(keep), key=lambda s: (-len(s), s)) if k)
     if not pattern:
         return text.lower()
     out, pos = [], 0
@@ -258,7 +258,7 @@ _PAST_EXTRA = {"take": "took", "make": "made", "lead": "led", "give": "gave", "f
 
 
 def names_in(ctx: RenderContext, text: str) -> list[str]:
-    return [f for f in sorted(ctx.first_names, key=len, reverse=True) if re.search(rf"\b{re.escape(f)}\b", text)]
+    return [f for f in sorted(ctx.first_names, key=lambda s: (-len(s), s)) if re.search(rf"\b{re.escape(f)}\b", text)]
 
 
 def resolve_first(ctx: RenderContext, first: str, roles: list[str | None]) -> str | None:

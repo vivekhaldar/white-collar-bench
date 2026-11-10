@@ -231,7 +231,8 @@ def render(ctx: RenderContext, comm: Communication, aid: str) -> Rendered:
     # ---------------------------------------------------------------- names: mangling and drift
     keywords_by_act = {a.event: list(ctx.events[a.event].get("keywords") or []) for a in comm.acts}
     mangled: dict[str, str] = {}
-    firsts = sorted({ctx.first(p) for p in ctx.people if ctx.person(p).get("last")}, key=len, reverse=True)
+    firsts = sorted({ctx.first(p) for p in ctx.people if ctx.person(p).get("last")},
+                    key=lambda s: (-len(s), s))  # ties by name: set order varies by process
     for seg in segments:
         for i, (sp, text, act) in enumerate(seg):
             if rng.random() > 0.35:

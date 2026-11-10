@@ -91,7 +91,7 @@ def cmd_world_list(a) -> int:
         cps = len(meta.get("checkpoints", []))
         days = len(meta.get("episode", {}).get("days", []))
         gold = "gold current" if gold_status(p.parent) is None else "gold not built or stale"
-        print(f"{str(rel):24} {days} days, {cps} checkpoints, {gold:23}  {meta.get('title', '')}")
+        print(f"{str(rel):20} {days:>2} days, {cps:>2} checkpoints, {gold:23}  {meta.get('title', '')}")
     return 0
 
 

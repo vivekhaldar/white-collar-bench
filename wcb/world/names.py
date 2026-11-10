@@ -130,10 +130,10 @@ Rudo Kagiso Lerato Thabo Mpho Layla Omar Karim Rania Tariq Nadia Hassan Faris Sa
 Rami Ziad Leila Amira Bilal Hiba Khalil Nour Imran Arash Parisa Darius Shirin Kian Roya Emre Elif
 Deniz Burak Selin Cem Aylin Aarav Ananya Rohan Vikram Meera Kavya Nikhil Divya Ishaan Lakshmi Rahul
 Sneha Tanvi Venkatesh Deepa Harish Ayesha Sanjay Pooja Kiran Gaurav Nandini Rekha Suresh Tahmina
-Rafiq Mei Wei Jun Xiaoling Hao Yan Jia Haruto Yuki Sakura Kenji Aiko Takeshi Naoko Minji
-Jisoo Dong-hyun Eun-ji Hyejin Ji-ho Tuan Minh Quang Thao Bao Anh Maricel Joselito Dalisay Bayani
-Ligaya Siti Putri Agus Dewi Wayan Ratna Somchai Kanya Alejandro Valentina Mateo Camila Santiago
-Isabela Daniela Diego Paula Andres Mariana Rodrigo Catalina Emilio Renata Thiago Leticia Guadalupe
+Rafiq Mei Wei Jun Xiaoling Hao Yan Jia Haruto Yuki Sakura Kenji Aiko Takeshi Naoko Minji Jisoo
+Dong-hyun Eun-ji Hyejin Ji-ho Tuan Minh Quang Thao Bao Anh Maricel Joselito Dalisay Bayani Ligaya
+Siti Putri Agus Dewi Wayan Ratna Somchai Kanya Alejandro Valentina Mateo Camila Santiago Isabela
+Daniela Diego Paula Andres Mariana Rodrigo Catalina Emilio Renata Thiago Leticia Guadalupe
 Esperanza Rafael Ignacio Soledad Fernanda Tomas Luz Marcelo Joana Caio Bruna Vitoria Anouk Bram
 Femke Joris Lotte Sander Ingeborg Henrik Astrid Sigrid Lars Freja Mikkel Elin Johan Aino Eero Tuuli
 Pekka Liisa Katarzyna Tomasz Magdalena Pawel Zuzana Ondrej Milena Bogdan Ileana Andrei Sorina
@@ -158,30 +158,29 @@ Moyo Banda Phiri Tembo Mutasa Chikwanha Nkosi Molefe Khoury Saleh Farah Mansour 
 Rahimi Sabbagh Tahan El-Amin Bishara Haidari Jaber Kassem Malouf Najjar Rashed Shami Toubia Yassin
 Ahmadi Karimi Moradi Tehrani Rostami Jafari Sadeghi Yilmaz Demir Aydin Kaya Sahin Ozturk Arslan
 Korkmaz Erdem Kocak Raghavan Menon Pillai Krishnan Subramanian Chatterjee Banerjee Mukherjee
-Sengupta Mehta Kulkarni Deshpande Gupta Agarwal Malhotra Bhatt Chaudhry Siddiqui Hossain
-Karunaratne Perera Wickramasinghe Thapa Gurung Shrestha Rao Reddy Naidu Venkataraman Bose Nakamura
-Takahashi Watanabe Yamamoto Fujita Ishikawa Matsuda Hayashi Morimoto Tanaka Okada Choi Jeong Yoon
-Kang Baek Hwang Zhang Liu Chen Zhou Xu Guo Luo Feng Deng Pham Vu Dang Ngo Duong Santos Bautista
-Villanueva Mendoza Pangilinan Salazar Wijaya Santoso Hidayat Kusuma Siregar Suwannarat Chaiyaporn
-Rattanakorn Herrera Vargas Navarro Ortega Fuentes Cabrera Paredes Zamora Arroyo Bustamante Cardenas
-Figueroa Ibarra Jimenez Lozano Maldonado Montoya Quintero Rosales Sandoval Trujillo Valdez
-Villalobos Carvalho Oliveira Ribeiro Almeida Barbosa Cardoso Costa Duarte Monteiro Pereira Rocha
-Teixeira Moreira Azevedo Brandao Medeiros Jansen Bakker Visser Smit Meijer Mulder Hendriks
-Bergstrom Nyberg Holm Sandberg Eriksen Dahl Lund Haugen Virtanen Korhonen Makinen Laine Nieminen
-Kowalski Nowak Wisniewska Zielinski Lewandowska Dvorak Novotny Horvath Kovacs Nagy Popescu Ionescu
-Dumitru Petrov Ivanova Sokolov Volkov Kuznetsova Bondarenko Kovalenko Jovanovic Petrovic Nikolic
-Horvat Babic Schreiber Hoffmann Krause Neumann Becker Brandt Vogel Hartmann Zimmermann Lehmann
-Rossi Bianchi Ricci Romano Colombo Greco Gallo Conti Esposito Moretti Lombardi Mancini Dubois
-Lefebvre Moreau Laurent Girard Bonnet Mercier Fontaine Chevalier Garnier Faure Gauthier Byrne Doyle
-Kavanagh Gallagher Quinlan MacLeod Fraser Munro Sinclair Galbraith Lloyd Pritchard Rees Vaughan
-Penhallow Papadopoulos Georgiou Nikolaidis Konstantinou Alexiou Whitfield Ashworth Pembroke
-Calloway Thornbury Merriweather Langley Hargrove Carmichael Dunmore Everett Fenwick Gilchrist
-Kingsley Lockhart Northcott Prescott Sherwood Tolliver Underhill Yardley Ashby Bramwell Cartwright
-Dempsey Ellery Forsythe Jessup Kimball Lowell Mayfield Overton Pickering Quimby Rutledge Stanhope
-Upton Winslow Abernathy Blackwood Darrow Fifita Taufa Kealoha Kahananui Parata Tapsell Horomona
-Kalua Ben-David Mizrahi Shapiro Katz Friedman Levy Peretz Golan Adler Petrosyan Hakobyan Sargsyan
-Grigoryan Beridze Kapanadze Abenova Nurlanov Batbold Sato Kowalczyk Andersen Lindgren Halvorsen
-Okeke Achterhof Vandermeer Oyelami Delacroix Marchand
+Sengupta Mehta Kulkarni Deshpande Agarwal Malhotra Bhatt Chaudhry Siddiqui Hossain Karunaratne
+Perera Wickramasinghe Thapa Gurung Shrestha Naidu Venkataraman Bose Nakamura Takahashi Watanabe
+Yamamoto Fujita Ishikawa Matsuda Hayashi Morimoto Tanaka Okada Choi Jeong Yoon Kang Baek Hwang Liu
+Chen Zhou Xu Guo Luo Feng Deng Pham Vu Dang Ngo Duong Santos Bautista Villanueva Mendoza Pangilinan
+Salazar Wijaya Santoso Hidayat Kusuma Siregar Suwannarat Chaiyaporn Rattanakorn Herrera Vargas
+Navarro Ortega Fuentes Cabrera Paredes Zamora Arroyo Bustamante Cardenas Figueroa Ibarra Jimenez
+Lozano Maldonado Montoya Quintero Rosales Sandoval Trujillo Valdez Villalobos Carvalho Oliveira
+Ribeiro Almeida Barbosa Cardoso Costa Duarte Monteiro Pereira Rocha Teixeira Moreira Azevedo
+Brandao Medeiros Jansen Bakker Visser Smit Meijer Mulder Hendriks Bergstrom Nyberg Holm Sandberg
+Eriksen Dahl Lund Haugen Virtanen Korhonen Makinen Laine Nieminen Kowalski Nowak Wisniewska
+Zielinski Lewandowska Dvorak Novotny Horvath Kovacs Nagy Popescu Ionescu Dumitru Petrov Ivanova
+Sokolov Volkov Kuznetsova Bondarenko Kovalenko Jovanovic Petrovic Nikolic Horvat Babic Schreiber
+Hoffmann Krause Neumann Becker Brandt Vogel Hartmann Zimmermann Lehmann Rossi Bianchi Ricci Romano
+Colombo Greco Gallo Conti Esposito Moretti Lombardi Mancini Dubois Lefebvre Moreau Laurent Girard
+Bonnet Mercier Fontaine Chevalier Garnier Faure Gauthier Byrne Doyle Kavanagh Gallagher Quinlan
+MacLeod Fraser Munro Sinclair Galbraith Pritchard Rees Vaughan Penhallow Papadopoulos Georgiou
+Nikolaidis Konstantinou Alexiou Whitfield Ashworth Pembroke Calloway Thornbury Merriweather Langley
+Hargrove Carmichael Dunmore Everett Fenwick Gilchrist Kingsley Lockhart Northcott Prescott Sherwood
+Tolliver Underhill Yardley Ashby Bramwell Cartwright Dempsey Ellery Forsythe Jessup Kimball Lowell
+Mayfield Overton Pickering Quimby Rutledge Stanhope Upton Winslow Abernathy Blackwood Darrow Fifita
+Taufa Kealoha Kahananui Parata Tapsell Horomona Kalua Ben-David Mizrahi Shapiro Katz Friedman
+Peretz Golan Adler Petrosyan Hakobyan Sargsyan Grigoryan Beridze Kapanadze Abenova Nurlanov Batbold
+Sato Kowalczyk Andersen Lindgren Halvorsen Okeke Achterhof Vandermeer Oyelami Delacroix Marchand
 """
 
 FIRST_NAMES: list[str] = _clean(_FIRST_RAW.split())

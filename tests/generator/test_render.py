@@ -147,12 +147,14 @@ def test_transcript_texture(rendered):
 
 
 def test_recaps_and_notes(rendered):
-    out, *_ = rendered
+    out, _plan, sim, _emits, _ctx = rendered
     mns = [p.read_text() for p in sorted(out.glob("inbox/*/mn-*.md"))]
     assert any("## Action items" in t and "may contain errors" in t for t in mns)
     nts = [p.read_text() for p in sorted(out.glob("inbox/*/nt-*.md"))]
     assert any(t.startswith("# Portfolio map") for t in nts)
-    assert any(t.startswith("Voice memo") for t in nts)
+    # Voice memos are drawn at random (tests/generator/test_generate.py checks that they occur).
+    if any(c.kind == "voice_memo" for c in sim.comms):
+        assert any(t.startswith("Voice memo") for t in nts)
 
 
 def test_noise_is_marked_and_varied(rendered):

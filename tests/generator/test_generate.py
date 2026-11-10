@@ -72,6 +72,30 @@ def test_generation_is_byte_deterministic(generated, seed, size):
     assert not diff, diff[:10]
 
 
+def test_generation_does_not_depend_on_hash_randomization(tmp_path):
+    """Same seed under different PYTHONHASHSEED values (set iteration order) gives the same bytes.
+
+    Seed 4 at two weeks once rendered a transcript differently from run to run, because names
+    of equal length were ordered by set iteration.
+    """
+    import os
+    import subprocess
+    import sys
+
+    outs = []
+    for hs in ("1", "2", "3"):
+        out = tmp_path / f"h{hs}"
+        code = ("from pathlib import Path; from wcb.world.generate import generate_world; "
+                f"generate_world(seed=4, weeks=2, out_dir=Path({str(out)!r}), build=False)")
+        env = {**os.environ, "PYTHONHASHSEED": hs}
+        subprocess.run([sys.executable, "-c", code], check=True, env=env)
+        outs.append(_files(out))
+    for other in outs[1:]:
+        assert sorted(other) == sorted(outs[0])
+        diff = [k for k in outs[0] if outs[0][k] != other[k]]
+        assert not diff, diff[:10]
+
+
 def test_different_seeds_differ(generated):
     a, _ = generated[(0, "standard")]
     b, _ = generated[(1, "standard")]
@@ -199,6 +223,12 @@ def test_calendar_methods_across_worlds(generated):
         for p in world_dir.glob("inbox/*/*.ics"):
             methods.add(next(ln for ln in p.read_text().splitlines() if ln.startswith("METHOD:"))[7:])
     assert methods == {"REQUEST", "CANCEL", "REPLY"}
+
+
+def test_voice_memos_occur_across_worlds(generated):
+    memos = [p for world_dir, _ in generated.values() for p in world_dir.glob("inbox/*/nt-*.md")
+             if p.read_text().startswith("Voice memo")]
+    assert memos
 
 
 @pytest.mark.parametrize("seed,size", WORLDS)

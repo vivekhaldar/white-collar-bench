@@ -200,7 +200,7 @@ def _wrap(par: str, keep: list[str] | None = None) -> str:
     if "\n" in par:
         return "\n".join(_wrap(ln, keep) if ln else ln for ln in par.split("\n"))
     glue = "\u00a0"
-    for k in sorted({k for k in keep or [] if " " in k}, key=len, reverse=True):
+    for k in sorted({k for k in keep or [] if " " in k}, key=lambda s: (-len(s), s)):
         par = re.sub(re.escape(k), lambda m: m.group(0).replace(" ", glue), par, flags=re.I)
     out = "\n".join(textwrap.wrap(par, width=76, break_long_words=False, break_on_hyphens=False)) or par
     return out.replace(glue, " ")
