@@ -39,8 +39,8 @@
   checkpoint: cp1
   template: owed_to_me
   params:
-    person: p-carys-laurent
-    name_form: the platform engineer
+    person: p-friederike-agyeman
+    name_form: Rike
   challenges:
   - alias
 - id: q-006
@@ -251,6 +251,7 @@
   - duplicate_signal
   - endorsement
   - new_entity
+  - restructuring
   - supersession
   - worker_directive
 - id: q-032
@@ -281,6 +282,8 @@
     name_form: Losa
   challenges:
   - alias
+  - new_entity
+  - restructuring
 - id: q-035
   checkpoint: cp3
   template: owed_to_me
@@ -300,7 +303,9 @@
   template: project_loops
   params:
     project: pr-dorcliff-transcript-intake-discovery
-  challenges: []
+  challenges:
+  - new_entity
+  - restructuring
 - id: q-038
   checkpoint: cp3
   template: person_brief

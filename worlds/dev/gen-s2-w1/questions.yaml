@@ -85,9 +85,9 @@
   checkpoint: cp1
   template: person_brief
   params:
-    person: p-kayode-whitfield
+    person: p-imani-quaye
   challenges:
-  - new_entity
+  - name_collision
 - id: q-012
   checkpoint: cp1
   template: decision_date
@@ -205,11 +205,10 @@
   checkpoint: cp2
   template: person_brief
   params:
-    person: p-rudo-thornbury
-    name_form: Rudo
+    person: p-penelope-fuentes
+    name_form: Penelope
   challenges:
   - alias
-  - endorsement
 - id: q-026
   checkpoint: cp2
   template: event_date
@@ -256,6 +255,8 @@
   - duplicate_signal
   - endorsement
   - implied_commitment
+  - new_entity
+  - restructuring
   - worker_directive
 - id: q-032
   checkpoint: cp3

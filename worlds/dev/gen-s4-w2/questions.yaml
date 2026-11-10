@@ -257,6 +257,7 @@
   - endorsement
   - implied_commitment
   - new_entity
+  - restructuring
   - supersession
   - worker_directive
 - id: q-032
@@ -288,10 +289,11 @@
   checkpoint: cp3
   template: owed_to_me
   params:
-    person: p-celine-novotny
-    name_form: Celine
+    person: p-margaux-kang
+    name_form: Margaux
   challenges:
   - alias
+  - duplicate_signal
 - id: q-036
   checkpoint: cp3
   template: project_attr
@@ -382,6 +384,7 @@
   - endorsement
   - implied_commitment
   - new_entity
+  - restructuring
   - scattered_evidence
   - supersession
   - worker_directive
@@ -523,6 +526,7 @@
   - endorsement
   - implied_commitment
   - new_entity
+  - restructuring
   - supersession
   - unobservable
   - worker_directive
@@ -572,6 +576,7 @@
   - alias
   - correction
   - new_entity
+  - restructuring
 - id: q-067
   checkpoint: cp5
   template: person_brief
@@ -654,6 +659,7 @@
   - endorsement
   - implied_commitment
   - new_entity
+  - restructuring
   - supersession
   - unobservable
   - worker_directive
@@ -707,6 +713,8 @@
   - duplicate_signal
   - name_collision
   - new_entity
+  - restructuring
+  - worker_directive
 - id: q-082
   checkpoint: cp6
   template: decision_date

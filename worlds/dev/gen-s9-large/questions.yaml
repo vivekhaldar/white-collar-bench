@@ -69,7 +69,7 @@
   checkpoint: cp1
   template: person_attr
   params:
-    person: p-michaela-dang
+    person: p-mikayla-babic
     attribute: org
   challenges: []
 - id: q-010
@@ -152,6 +152,7 @@
   - duplicate_signal
   - endorsement
   - new_entity
+  - restructuring
   - unobservable
 - id: q-020
   checkpoint: cp2
@@ -186,6 +187,8 @@
   - batch_catchup
   - duplicate_signal
   - name_collision
+  - new_entity
+  - restructuring
 - id: q-023
   checkpoint: cp2
   template: owed_to_me
@@ -301,6 +304,7 @@
   - duplicate_signal
   - endorsement
   - new_entity
+  - restructuring
   - unobservable
 - id: q-038
   checkpoint: cp3

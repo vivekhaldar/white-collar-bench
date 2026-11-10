@@ -137,6 +137,8 @@
   - duplicate_signal
   - endorsement
   - implied_commitment
+  - new_entity
+  - restructuring
   - unobservable
   - worker_directive
 - id: q-017
@@ -250,6 +252,8 @@
     project: pr-morcliff-tooling-wear-discovery
   challenges:
   - endorsement
+  - new_entity
+  - restructuring
   - worker_directive
 - id: q-030
   checkpoint: cp2
@@ -270,6 +274,8 @@
   - duplicate_signal
   - endorsement
   - implied_commitment
+  - new_entity
+  - restructuring
   - unobservable
   - worker_directive
 - id: q-032
@@ -329,7 +335,7 @@
   checkpoint: cp3
   template: person_brief
   params:
-    person: p-kiran-merriweather
+    person: p-kian-ishikawa
   challenges: []
 - id: q-039
   checkpoint: cp3
@@ -396,6 +402,8 @@
   - duplicate_signal
   - endorsement
   - implied_commitment
+  - new_entity
+  - restructuring
   - scattered_evidence
   - unobservable
   - worker_directive
@@ -536,6 +544,8 @@
   - duplicate_signal
   - endorsement
   - implied_commitment
+  - new_entity
+  - restructuring
   - supersession
   - unobservable
   - worker_directive
@@ -627,10 +637,11 @@
   checkpoint: cp5
   template: person_brief
   params:
-    person: p-kian-ishikawa
-    name_form: Kian
+    person: p-jonathan-gurung
+    name_form: Jonathan
   challenges:
   - alias
+  - unobservable
 - id: q-074
   checkpoint: cp5
   template: event_date
@@ -658,6 +669,8 @@
   - duplicate_signal
   - endorsement
   - implied_commitment
+  - new_entity
+  - restructuring
   - supersession
   - unobservable
   - worker_directive
@@ -787,6 +800,7 @@
   - endorsement
   - implied_commitment
   - new_entity
+  - restructuring
   - scattered_evidence
   - supersession
   - unobservable
@@ -866,7 +880,7 @@
   checkpoint: cp7
   template: person_brief
   params:
-    person: p-kamau-greco
+    person: p-kiran-merriweather
   challenges: []
 - id: q-101
   checkpoint: cp7
@@ -919,6 +933,7 @@
   - endorsement
   - implied_commitment
   - new_entity
+  - restructuring
   - supersession
   - unobservable
   - worker_directive
@@ -995,10 +1010,9 @@
   checkpoint: cp8
   template: person_brief
   params:
-    person: p-hamish-okada
+    person: p-kamau-greco
   challenges:
-  - new_entity
-  - restructuring
+  - batch_catchup
 - id: q-116
   checkpoint: cp8
   template: decision_date
@@ -1047,6 +1061,7 @@
   - endorsement
   - implied_commitment
   - new_entity
+  - restructuring
   - supersession
   - unobservable
   - worker_directive
@@ -1181,6 +1196,7 @@
   - endorsement
   - implied_commitment
   - new_entity
+  - restructuring
   - scattered_evidence
   - supersession
   - unobservable
@@ -1225,7 +1241,9 @@
   template: owed_to_me
   params:
     person: p-kian-ishikawa
-  challenges: []
+  challenges:
+  - restructuring
+  - worker_directive
 - id: q-141
   checkpoint: cp10
   template: loop_due
@@ -1279,11 +1297,12 @@
   checkpoint: cp10
   template: person_brief
   params:
-    person: p-ilse-langley
-    name_form: Ilse
+    person: p-hamish-okada
+    name_form: the VP
   challenges:
   - alias
   - new_entity
+  - restructuring
 - id: q-148
   checkpoint: cp10
   template: event_date
@@ -1318,6 +1337,7 @@
   - endorsement
   - implied_commitment
   - new_entity
+  - restructuring
   - supersession
   - unobservable
   - worker_directive
@@ -1454,6 +1474,7 @@
   - endorsement
   - implied_commitment
   - new_entity
+  - restructuring
   - supersession
   - unobservable
   - worker_directive

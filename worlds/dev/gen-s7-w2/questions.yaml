@@ -134,6 +134,8 @@
   - duplicate_signal
   - endorsement
   - implied_commitment
+  - new_entity
+  - restructuring
 - id: q-017
   checkpoint: cp2
   template: project_status
@@ -166,6 +168,8 @@
   - endorsement
   - implied_commitment
   - name_collision
+  - new_entity
+  - restructuring
 - id: q-020
   checkpoint: cp2
   template: owed_to_me
@@ -263,6 +267,8 @@
   - duplicate_signal
   - endorsement
   - implied_commitment
+  - new_entity
+  - restructuring
   - scattered_evidence
   - supersession
   - worker_directive
@@ -390,6 +396,8 @@
   - duplicate_signal
   - endorsement
   - implied_commitment
+  - new_entity
+  - restructuring
   - scattered_evidence
   - supersession
   - unobservable
@@ -511,6 +519,8 @@
   - duplicate_signal
   - endorsement
   - implied_commitment
+  - new_entity
+  - restructuring
   - scattered_evidence
   - supersession
   - unobservable
@@ -557,7 +567,9 @@
   template: project_loops
   params:
     project: pr-elmwick-waitlist-management-discovery
-  challenges: []
+  challenges:
+  - new_entity
+  - restructuring
 - id: q-067
   checkpoint: cp5
   template: person_brief

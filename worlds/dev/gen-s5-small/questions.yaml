@@ -101,6 +101,8 @@
   - correction
   - duplicate_signal
   - implied_commitment
+  - new_entity
+  - restructuring
   - supersession
   - unobservable
 - id: q-013
@@ -131,7 +133,9 @@
   template: i_owe
   params:
     person: p-isla-faure
-  challenges: []
+  challenges:
+  - new_entity
+  - restructuring
 - id: q-016
   checkpoint: cp2
   template: owed_to_me
