@@ -13,3 +13,5 @@ All benchmark content is synthetic. See [AGENTS.md](AGENTS.md).
 
 - [Motivation and related work](docs/motivation.md)
 - [Benchmark design](docs/design.md)
+- [Construction plan](docs/plan.md)
+- [Scoring and run protocol](docs/scoring.md)
