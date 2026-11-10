@@ -1,0 +1,13 @@
+# Deterministic, LLM-free reference reader (see wcb/baselines/store_reader.py).
+# Ingestion does nothing; queries are answered by reading the contract store directly.
+# Intended for oracle-only runs, as a pipeline sanity check:
+#   wcb run --adapter adapters/examples/store-reader.yaml --world pilot --skip-ingest --out runs/store-reader
+name: store-reader
+version: 0.1.0
+model: none
+ingest:
+  cmd: ["python", "-m", "wcb.baselines.null"]
+  timeout_s: 60
+query:
+  cmd: ["python", "-m", "wcb.baselines.store_reader"]
+  timeout_s: 120
