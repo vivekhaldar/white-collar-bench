@@ -551,6 +551,7 @@ TECH_TERMS = _words(
     cpu ram ssd hdd os vm vms saas paas iaas b2b b2c dtc readme changelog license makefile
     dockerfile gitignore localhost repo repos monorepo frontmatter wikilink wikilinks backlink
     backlinks kanban scrum sprint epic story
+    openid idp idps authenticator gpus wcag vpat stem x-request-id request-id mfa totp
 
     vcalendar vevent vtimezone valarm vtodo vjournal vfreebusy dtstart dtend dtstamp prodid uid
     rrule exdate rdate tzid tzname tzoffsetfrom tzoffsetto partstat cutype mailto attendee
