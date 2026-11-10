@@ -155,6 +155,30 @@ def cmd_bundle(a) -> int:
     return 0
 
 
+def cmd_meter_serve(a) -> int:
+    import time
+
+    from wcb.meter import MeterProxy
+
+    with MeterProxy(Path(a.log), host=a.host, port=a.port) as p:
+        print(f"wcb meter: listening on http://{p.host}:{p.port}, logging to {a.log}", flush=True)
+        for prov, url in sorted(p.upstreams.items()):
+            print(f"  {prov:9} -> {url}    base URL for tag T: {p.base_url('T', prov)}", flush=True)
+        try:
+            while True:
+                time.sleep(3600)
+        except KeyboardInterrupt:
+            pass
+    return 0
+
+
+def cmd_meter_summary(a) -> int:
+    from wcb.meter import summarize
+
+    print(json.dumps(summarize(Path(a.log), a.tag), indent=2))
+    return 0
+
+
 # ---------------------------------------------------------------- privacy
 def cmd_privacy_scan(a) -> int:
     from wcb.privacy.scan import scan
@@ -261,6 +285,19 @@ def build_parser() -> argparse.ArgumentParser:
     b.add_argument("--logs", action="store_true", help="include session logs and agent transcripts")
     b.add_argument("--snapshots", action="store_true", help="include the daily store snapshots")
     b.set_defaults(fn=cmd_bundle)
+
+    me = sub.add_parser("meter", help="model-call metering proxy").add_subparsers(
+        dest="what", required=True
+    )
+    ms = me.add_parser("serve", help="run the proxy in the foreground")
+    ms.add_argument("--log", required=True, help="JSONL file to append call records to")
+    ms.add_argument("--host", default="127.0.0.1")
+    ms.add_argument("--port", type=int, default=8787)
+    ms.set_defaults(fn=cmd_meter_serve)
+    mu = me.add_parser("summary", help="token totals from a meter log")
+    mu.add_argument("log")
+    mu.add_argument("--tag", help="only calls with this tag (a session name)")
+    mu.set_defaults(fn=cmd_meter_summary)
 
     pv = sub.add_parser("privacy", help="privacy tools").add_subparsers(dest="what", required=True)
     ps = pv.add_parser("scan", help="check benchmark content for terms from a private repository")
