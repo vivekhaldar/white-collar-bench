@@ -176,6 +176,81 @@ def cmd_bundle(a) -> int:
     return 0
 
 
+def cmd_judge_sample(a) -> int:
+    from collections import Counter
+
+    from wcb.grade.agreement import collect_decisions, sample_decisions, write_sample
+
+    pool = collect_decisions([Path(d) for d in a.run_dir])
+    sample = sample_decisions(pool, a.n, a.seed)
+    out = Path(a.out)
+    if out.exists() and not a.force:
+        print(f"{out} exists; pass --force to overwrite it (labels in it would be lost)",
+              file=sys.stderr)
+        return 1
+    write_sample(out, sample)
+    by = Counter((r["kind"], str(r["labels"]["heuristic"])) for r in sample)
+    print(f"{len(pool)} distinct decisions in {len(a.run_dir)} run(s); sampled {len(sample)}:")
+    for (kind, verdict), n in sorted(by.items()):
+        print(f"  {kind:10} heuristic={verdict:13} {n}")
+    print(f"wrote {out}; next: wcb judge label {out} --labeller <your name>")
+    return 0
+
+
+def cmd_judge_label(a) -> int:
+    from wcb.grade.agreement import parse_human_label, prompt_for, read_sample, write_sample
+
+    path = Path(a.sample)
+    records = read_sample(path)
+    todo = [r for r in records if r["labels"].get(a.labeller) is None]
+    print(f"{len(todo)} of {len(records)} decisions left for {a.labeller}. Other labels are "
+          "hidden. Answers are saved as you go; q quits.")
+    asks = {"same_item": "Same item? [y]es / [n]o / [s]kip / [q]uit: ",
+            "rubric": "[c]overed / [m]issing / contradicte[x] / [s]kip / [q]uit: "}
+    for k, r in enumerate(todo, 1):
+        print(f"\n----- {k}/{len(todo)}  {r['kind']}  {r['id']}\n{prompt_for(r)}\n")
+        while True:
+            try:
+                text = input(asks[r["kind"]])
+            except EOFError:
+                return 0
+            if text.strip().lower() in ("q", "quit"):
+                return 0
+            if text.strip().lower() in ("s", "skip"):
+                break
+            verdict = parse_human_label(r["kind"], text)
+            if verdict is not None:
+                r["labels"][a.labeller] = verdict
+                write_sample(path, records)
+                break
+    print("all labelled; next: wcb judge agreement " + str(path))
+    return 0
+
+
+def cmd_judge_run(a) -> int:
+    from wcb.grade.agreement import label_with_judge, read_sample, write_sample
+    from wcb.grade.judge import make_judge
+
+    path = Path(a.sample)
+    records = read_sample(path)
+    judge = make_judge(a.judge, a.judge_model,
+                       cache_path=path.with_suffix(".judge-cache.jsonl") if a.judge == "llm" else None)
+    name = a.name or judge.name
+    done = label_with_judge(records, judge, name,
+                            progress=lambda k, n: print(f"\r{k}/{n}", end="", file=sys.stderr))
+    write_sample(path, records)
+    print(f"\nlabelled {done} decision(s) as {name!r} in {path}")
+    return 0
+
+
+def cmd_judge_agreement(a) -> int:
+    from wcb.grade.agreement import agreement, format_agreement, read_sample
+
+    rows = agreement(read_sample(Path(a.sample)))
+    print(json.dumps(rows, indent=2) if a.json else format_agreement(rows, a.target))
+    return 0
+
+
 def cmd_meter_serve(a) -> int:
     import time
 
@@ -315,6 +390,32 @@ def build_parser() -> argparse.ArgumentParser:
     b.add_argument("--logs", action="store_true", help="include session logs and agent transcripts")
     b.add_argument("--snapshots", action="store_true", help="include the daily store snapshots")
     b.set_defaults(fn=cmd_bundle)
+
+    jd = sub.add_parser("judge", help="judge agreement: sample decisions, label, compare").add_subparsers(
+        dest="what", required=True
+    )
+    js = jd.add_parser("sample", help="sample judge decisions from scored runs into a JSONL file")
+    js.add_argument("run_dir", nargs="+")
+    js.add_argument("--n", type=int, default=100, help="decisions to sample (default 100)")
+    js.add_argument("--seed", type=int, default=0)
+    js.add_argument("--out", required=True, help="sample file to write (.jsonl)")
+    js.add_argument("--force", action="store_true", help="overwrite an existing sample file")
+    js.set_defaults(fn=cmd_judge_sample)
+    jl = jd.add_parser("label", help="label a sample by hand, blind to other labels")
+    jl.add_argument("sample")
+    jl.add_argument("--labeller", required=True, help="your name, as recorded with each label")
+    jl.set_defaults(fn=cmd_judge_label)
+    jr = jd.add_parser("run", help="label a sample with a judge (e.g. the LLM judge)")
+    jr.add_argument("sample")
+    jr.add_argument("--judge", choices=["heuristic", "llm"], default="llm")
+    jr.add_argument("--judge-model", help="LLM spec (see docs/judge.md)")
+    jr.add_argument("--name", help="labeller name (default: the judge's name)")
+    jr.set_defaults(fn=cmd_judge_run)
+    ja = jd.add_parser("agreement", help="Cohen's kappa between every pair of labellers")
+    ja.add_argument("sample")
+    ja.add_argument("--json", action="store_true")
+    ja.add_argument("--target", type=float, default=0.8, help="kappa to flag pairs below")
+    ja.set_defaults(fn=cmd_judge_agreement)
 
     me = sub.add_parser("meter", help="model-call metering proxy").add_subparsers(
         dest="what", required=True

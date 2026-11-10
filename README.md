@@ -88,6 +88,7 @@ Gold (`worlds/*/gold/`) is public for `pilot` and `dev` so you can debug. It is 
 |---|---|
 | `wcb run --adapter A --world W --out DIR` | Run an agent over worlds (`--split dev`, `--track B`, `--repeats N`, `--resume`, `--skip-ingest` for oracle-only runs) |
 | `wcb doctor --adapter A [--track B]` | Smoke-test an adapter on the mini world; checklist with hints |
+| `wcb judge sample\|label\|run\|agreement` | Sample judge decisions from scored runs, label them by hand or with a judge, and report Cohen's κ ([judges](docs/judge.md#measuring-judge-agreement)) |
 | `wcb score DIR [--judge llm --judge-model M]` | Grade a run and write `report.json` and `report.md` |
 | `wcb validate store DIR` | Check a store against the Track A contract |
 | `wcb validate answers FILE --questions Q` | Check an answers file |

@@ -37,6 +37,7 @@ print(report.data["headline"]["wcb"], report.data["headline"]["sis"])
 | `wcb.runner.adapter.load_adapter(path)` | Parse and validate an adapter file; raises `AdapterError` with a message saying what to fix |
 | `wcb.bundle.bundle_run(run_dir, out, *, logs=False, snapshots=False)` | Write a `.tar.gz` of a scored run; returns the manifest |
 | `wcb.grade.answers.score_answers(gold_doc, answers, judge, ctx)` | Score one answers dict against one gold questions file (example in [judges](judge.md)) |
+| `wcb.grade.agreement.collect_decisions(run_dirs)`, `sample_decisions(decisions, n, seed)`, `label_with_judge(records, judge, name)`, `agreement(records)`, `cohen_kappa(a, b)` | Judge-agreement study: the functions behind `wcb judge` ([judges](judge.md#measuring-judge-agreement)) |
 
 ## Stores
 

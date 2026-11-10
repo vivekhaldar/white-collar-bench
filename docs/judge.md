@@ -201,3 +201,21 @@ scores = score_answers(read_json(".../gold/questions/cp2.json"), read_json("answ
 ```
 
 Each `QuestionScore` carries `base` (before citations), `citation` and `score`, plus `details`: matches with per-attribute credit, rubric verdicts, invalid citations and validation problems.
+
+## Measuring judge agreement
+
+Before a judge is pinned for a release, its decisions are checked against people (plan milestone M4: Cohen's κ of at least 0.8 on `same_item` and `rubric` decisions). `wcb judge` does the bookkeeping; the code is [`wcb/grade/agreement.py`](../wcb/grade/agreement.py).
+
+```bash
+wcb judge sample runs/agent-a runs/agent-b --n 120 --out judge-sample.jsonl   # draw decisions
+wcb judge label judge-sample.jsonl --labeller alex                             # label by hand
+wcb judge run judge-sample.jsonl --judge-model anthropic:claude-opus-5-5       # label with the LLM judge
+wcb judge agreement judge-sample.jsonl                                         # kappa for every pair
+```
+
+1. **Sample.** `wcb judge sample` re-grades scored runs with a recording heuristic judge and collects every distinct decision it was asked to make, with the heuristic's verdict. It then draws a sample split evenly between `same_item` and `rubric`, and within each kind between the heuristic's verdicts, so rare outcomes such as `contradicted` are represented. Use runs from several real agents: decisions from oracle-only runs are easier than typical ones.
+2. **Label by hand.** `wcb judge label` shows each decision as exactly the prompt the LLM judge sees and asks for `y`/`n` (same item) or `c`/`m`/`x` (covered, missing, contradicted). Other labels are never shown. Each answer is saved as it is given, so a session can stop and resume. Two people should label the same sample independently, so that human–human agreement gives the ceiling.
+3. **Label with judges.** `wcb judge run` adds a judge's verdicts under its name (`llm:<spec>` by default). LLM decisions are cached next to the sample.
+4. **Compare.** `wcb judge agreement` prints, for each decision kind and each pair of labellers, the number of shared items, raw agreement, Cohen's κ and the confusion counts, and flags pairs below `--target` (0.8). `--json` gives the same rows as JSON.
+
+The sample file is JSONL, one decision per line: `id` (a hash of the prompt), `kind`, `inputs` (the judge's arguments) and `labels` (labeller name to verdict). Keep it with the release notes: the pinned judge, its κ against each person, and the human–human κ are reported together.
