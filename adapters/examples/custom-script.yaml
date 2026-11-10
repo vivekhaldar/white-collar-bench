@@ -1,0 +1,25 @@
+# Your own agent as a script next to this file. Copy custom_agent_template.py and this file,
+# rename both, and fill in the marked places in the script.
+#
+#   wcb run --adapter adapters/examples/custom-script.yaml --world pilot --out runs/custom
+#
+# As shipped, the template is a working (but trivial) agent: it logs every input in the daily
+# log during ingestion and abstains on every question. It scores like the null baseline.
+#
+# The script reads the session from environment variables (WCB_PHASE, WCB_DATE, WCB_TRACK,
+# WCB_WORKSPACE, WCB_PROMPT_FILE, WCB_SESSION_DIR); the runner runs it with the workspace as its
+# working directory. {adapter_dir} is the directory holding this file, so the script can live
+# next to it. "python" is the interpreter that runs wcb (the runner puts it first on PATH).
+name: my-custom-agent
+version: 0.1.0
+model: none                      # the provider/model your script calls, e.g. vendor/model-name
+description: Template for a custom agent script
+cmd: ["python", "{adapter_dir}/custom_agent_template.py"]
+ingest:
+  timeout_s: 1800
+query:
+  timeout_s: 900
+env:
+  MY_AGENT_MODE: benchmark       # literal variables for your script
+env_passthrough:
+  - MY_PROVIDER_API_KEY          # secrets copied from your environment

@@ -1,0 +1,62 @@
+# Claude Code (Anthropic's CLI coding agent) as a white-collar-bench agent.
+#
+#   export ANTHROPIC_API_KEY=...                 # required: --bare reads only this key
+#   export ANTHROPIC_MODEL=<model-id>            # optional: otherwise Claude Code's default model
+#   wcb run --adapter adapters/examples/claude-code.yaml --world pilot --out runs/claude-code
+#
+# How it works:
+# - `claude --print` runs one non-interactive session in the workspace (the session's working
+#   directory) with the fixed benchmark prompt as its only instruction.
+# - `--dangerously-skip-permissions` lets it read and write files and run commands without asking:
+#   stdin is empty, so a permission prompt would hang until the timeout. Claude Code's tools are
+#   NOT confined to the workspace. For verified or shared-machine runs, run the whole session in a
+#   container that mounts only {workspace} (and {session_dir}), with network access limited to
+#   the model API. See docs/adapters.md, "Isolation".
+# - `--bare` skips CLAUDE.md discovery, auto-memory, hooks and plugins, so nothing from your own
+#   setup or from earlier sessions leaks in (fresh process, no memory outside the workspace).
+#   It authenticates only with ANTHROPIC_API_KEY. To use a Claude subscription login instead,
+#   remove `--bare`, pass CLAUDE_CODE_OAUTH_TOKEN (from `claude setup-token`) and run in a
+#   container with an empty HOME so no personal CLAUDE.md or memory is loaded.
+# - `--no-session-persistence` keeps no conversation history on disk between sessions.
+# - The model: set ANTHROPIC_MODEL, or add "--model", "<model-id>" to cmd. Update `model:` below
+#   to match; it is what the report shows.
+# - `wcb.agents.wrap` passes Claude Code's stream-json output through to stdout.log and writes
+#   .wcb/usage.json (tokens, cost, tool calls) from its final `result` event.
+#
+# Flags checked against `claude --help` for Claude Code 2.1.
+name: claude-code
+version: "2.1"                        # the Claude Code version you ran (`claude --version`)
+model: anthropic/claude-code-default  # replace with anthropic/<model-id> you ran
+description: Claude Code in --print mode with the fixed benchmark prompt
+cmd:
+  - python
+  - -m
+  - wcb.agents.wrap
+  - --format
+  - claude
+  - --
+  - claude
+  - --print
+  - "{prompt_text}"
+  - --bare
+  - --dangerously-skip-permissions
+  - --no-session-persistence
+  - --output-format
+  - stream-json
+  - --verbose
+  - --append-system-prompt
+  - >-
+    You are running unattended in a benchmark session: nobody will answer questions or approve
+    actions. Work only with files inside the current working directory, and stop when the task
+    is done.
+ingest:
+  timeout_s: 1800
+query:
+  timeout_s: 900
+env:
+  CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: "1"   # no telemetry, update checks or error reports
+  DISABLE_AUTOUPDATER: "1"
+env_passthrough:
+  - ANTHROPIC_API_KEY
+  - ANTHROPIC_MODEL
+  - ANTHROPIC_BASE_URL
