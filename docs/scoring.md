@@ -9,8 +9,9 @@ A competitor supplies an **adapter**: a small config that tells the runner how t
 ### 1. Install and fetch worlds
 
 ```bash
-pip install white-collar-bench
-wcb fetch dev            # public dev worlds with gold
+git clone <this repository> && cd white-collar-bench
+uv venv && uv pip install -e .     # or: pip install -e .
+wcb world list                     # the pilot and dev worlds ship in worlds/, with gold
 ```
 
 ### 2. Write an adapter
@@ -82,7 +83,21 @@ Rules:
 
 > Today is {date}. Answer every question in `.wcb/questions.json` using the store. Write `.wcb/answers.json` following `.wcb/answer-schema.json`. Cite sources. Abstain when the store does not support an answer. Do not modify the store.
 
-In Track B, `CONTRACT.md` is replaced by a one-paragraph goal statement.
+In Track B, `CONTRACT.md` is replaced by a one-paragraph goal statement, `GOALS.md` (from [`contract/GOALS-TRACK-B.md`](../contract/GOALS-TRACK-B.md)), and the prompts refer to "your files" instead of "the store":
+
+**Track B seed ingestion** (one session before the first episode day, with every seed date's inputs at once):
+
+> Today is {date}. Your inputs so far, up to and including today, are in {inbox_dirs}, one directory per date (each has a `manifest.json`). Incorporate them into your files following `GOALS.md`. Inputs will not be available after this session.
+
+**Track B ingestion:**
+
+> Today is {date}. New inputs are in `inbox/{date}/` (see `manifest.json`). Incorporate them into your files following `GOALS.md`. Inputs will not be available after this session.
+
+**Track B query:**
+
+> Today is {date}. Answer every question in `.wcb/questions.json` using your files. Write `.wcb/answers.json` following `.wcb/answer-schema.json`. Cite sources. Abstain when your files do not support an answer. Do not modify your files.
+
+The texts live in [`wcb/runner/prompts.py`](../wcb/runner/prompts.py).
 
 ## Answer format
 
@@ -149,7 +164,7 @@ List and change items are matched to gold in two steps:
 1. **Candidates:** gold items sharing a cited artifact or the same counterparty.
 2. **Confirmation:** a pinned judge model answers one narrow yes/no question per candidate pair: "Do these describe the same commitment?"
 
-The final one-to-one assignment maximizes confirmed matches. Judge prompts, model, version and temperature (0) are fixed per release. Each decision is the majority of 3 samples.
+The final one-to-one assignment maximizes confirmed matches. Judge prompts, model, version and temperature are fixed per release: temperature 0 for a single sample, and 1.0 when voting over 3 samples. The default `wcb score` judge is the deterministic heuristic judge; `--judge llm` selects a pinned model. See [judges](judge.md) for prompts, thresholds and model pinning.
 
 ### Aggregation
 

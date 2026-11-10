@@ -283,6 +283,8 @@ Agent-visible. Generated from `artifact.emit` events.
 | `event_date` | temporal | `event` | text required | Date of the event |
 | `focus_tomorrow` | priority | (none) | What should I focus on tomorrow? | Worker-owned active accepted loops that are overdue or due by the next business day |
 
+The full rules for each template are in [questions](questions.md). Optional spec keys: `text` (overrides the template text), `name_form` (the surface form used for the entity in the text), `challenges`, and `extra_rubric` (status and brief only).
+
 *Active* means status `open`, `waiting` or `blocked`. Any question becomes **unanswerable** (`answerable: false`, gold: abstain) when its target value is not knowable at the checkpoint, for example a `project_attr` on a `budget` that is never revealed.
 
 ### 3.2 `gold/questions/<cp>.json` (hidden)
@@ -306,7 +308,7 @@ Agent-visible. Generated from `artifact.emit` events.
 | status, brief | `{"rubric": [...], "facts": {...}}` (§3.3) |
 | change | `{"items": [{"event", "summary", "date", "type", "keywords", "support"}]}` |
 | temporal | `{"date": "YYYY-MM-DD", "event": "e-..."}` |
-| priority | `{"must_include": [list items], "worker_active": [list items], "distractors": [list items], "k": 10}`. `must_include`: worker-owned active accepted loops due by the next business day. `worker_active`: all worker-owned active accepted loops. `distractors`: knowable loops that are closed or owed by someone else. |
+| priority | `{"must_include": [list items], "worker_active": [list items], "distractors": [list items], "k": 10}`. `must_include`: worker-owned active accepted loops due by the next business day. `worker_active`: all worker-owned active accepted loops. `distractors`: knowable loops that are closed or owed by someone else. `tomorrow`: the next business day. |
 | any unanswerable | `{}` with `answerable: false` |
 
 `support` lists the artifact IDs that carry the evidence for the gold answer. Citations are checked against it.
@@ -322,6 +324,7 @@ Status and brief questions carry a checklist. Each item has:
  "support": ["em-0040"]}
 ```
 
+- `aspect`: what the item checks, for example `status`, `target_date`, `loop` or `shared_project`.
 - `weight`: 2 for critical items, 1 otherwise.
 - `keywords`: groups of alternatives. The heuristic judge marks the item *covered* when every group has at least one match in the answer.
 - `stale`: groups describing a superseded value. The heuristic judge marks the item *contradicted* when every stale group matches and the item is not covered.
@@ -370,9 +373,9 @@ env_passthrough: [MY_PROVIDER_API_KEY]
 ```
 
 - `cmd` is a list (run directly) or a string (run with `/bin/sh -c`). A phase's `cmd` overrides the top-level one.
-- Placeholders: `{workspace}`, `{prompt}` (prompt file path), `{prompt_text}`, `{date}`, `{phase}` (`ingest` or `query`), `{track}` (`A` or `B`), `{session_dir}`, `{adapter_dir}` (directory holding the adapter file).
-- Environment: the runner passes `PATH`, `HOME`, `USER`, `LANG`, `LC_ALL`, `TERM`, `TMPDIR`, `SHELL`, the variables listed in `env_passthrough`, `env`, and `WCB_DATE`, `WCB_PHASE`, `WCB_TRACK`, `WCB_WORKSPACE`, `WCB_PROMPT_FILE`, `WCB_SESSION_DIR`.
-- Usage reporting: the agent may write `.wcb/usage.json` (`{"input_tokens", "output_tokens", "cost_usd", "tool_calls", "model"}`) in the workspace. The runner collects and removes it.
+- Placeholders: `{workspace}`, `{prompt}` (prompt file path), `{prompt_text}`, `{date}`, `{phase}` (`ingest` or `query`), `{track}` (`A` or `B`), `{session_dir}`, `{adapter_dir}` (directory holding the adapter file). In a string `cmd`, substituted values are shell-quoted with `shlex.quote`.
+- Environment: the runner passes `PATH`, `HOME`, `USER`, `LANG`, `LC_ALL`, `TERM`, `TMPDIR`, `SHELL`, the variables listed in `env_passthrough`, `env`, and `WCB_DATE`, `WCB_PHASE`, `WCB_TRACK`, `WCB_WORKSPACE`, `WCB_PROMPT_FILE`, `WCB_SESSION_DIR`. The directory of the Python interpreter running `wcb` is put first on `PATH`, so `python` in an adapter command resolves to the interpreter that has `wcb` installed.
+- Usage reporting: the agent may write `.wcb/usage.json` (`{"input_tokens", "output_tokens", "cost_usd", "tool_calls", "model"}`) in the workspace. The runner collects and removes it. Extra fields, such as `cache_read_input_tokens`, `turns` or `provider`, are kept as they are. `input_tokens` includes cached input tokens.
 
 ## 6. Run directory
 
@@ -390,4 +393,23 @@ runs/<name>/
   scores/report.json, scores/report.md   written by `wcb score`
 ```
 
-`session.json`: `{"phase", "date", "checkpoint", "store", "cmd", "exit_code", "timed_out", "wall_s", "started_at", "usage"}`.
+Also:
+
+- `<world-id>/r<k>/state.json`: the runner's resume state, including the temporary workspace path.
+- `snapshots/<seed_end>/`: the initial store. In Track A this is the seed oracle store; in Track B it holds only `GOALS.md` until the seed session completes.
+- `sessions/seed.ingest/`: the Track B seed session, which ingests all seed inputs at once.
+- `answers/<cp>.raw.json`: the agent's file as written, kept when it is not valid JSON or fails the schema.
+
+`session.json` holds:
+
+| Field | Meaning |
+|---|---|
+| `phase`, `date`, `checkpoint`, `store` | Which session this was; `store` is `agent` or `oracle` |
+| `cmd`, `exit_code`, `timed_out`, `wall_s`, `started_at`, `finished_at` | How the command ran |
+| `status` | `ok`, `failed`, `timeout` or `error` |
+| `usage` | The agent's `.wcb/usage.json`, if written |
+| `timeout_s`, `world`, `repeat`, `track`, `notes` | Context |
+| `seed_dates` | Seed sessions only |
+| `answers: {status, answered, questions}` | Query sessions only |
+
+Oracle-store query sessions run after the episode's ingestion sessions finish, so oracle-derived answers never sit in the run directory while the agent is still ingesting.
