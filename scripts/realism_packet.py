@@ -83,7 +83,7 @@ def main() -> int:
         for art in w.artifacts.values():
             if not getattr(art, "noise", False):
                 by_channel.setdefault(art.channel, []).append(art)
-        for channel, arts in sorted(by_channel.items()):
+        for _channel, arts in sorted(by_channel.items()):
             arts = sorted(arts, key=lambda x: x.id)
             for art in rng.sample(arts, min(a.per_channel, len(arts))):
                 picks.append((w, art))
