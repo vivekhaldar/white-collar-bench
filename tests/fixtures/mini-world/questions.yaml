@@ -1,0 +1,13 @@
+- {id: q-001, checkpoint: cp1, template: i_owe, params: {person: p-cora-velez}}
+- {id: q-002, checkpoint: cp1, template: owed_to_me, params: {person: p-cora-velez}, challenges: [transfer]}
+- {id: q-003, checkpoint: cp1, template: project_attr, params: {project: pr-quillon, attribute: target_date}, challenges: [supersession]}
+- {id: q-004, checkpoint: cp1, template: project_attr, params: {project: pr-quillon, attribute: budget}, text: "What is the budget for Quillon?", challenges: [unobservable]}
+- {id: q-005, checkpoint: cp1, template: i_owe, params: {person: p-sam-patel}, text: "What do I owe Samir?", challenges: [alias, endorsement]}
+- {id: q-006, checkpoint: cp2, template: project_status, params: {project: pr-quillon}}
+- {id: q-007, checkpoint: cp2, template: person_brief, params: {person: p-ben-okoro}}
+- {id: q-008, checkpoint: cp2, template: project_changes, params: {project: pr-quillon, since: 2027-01-08}}
+- {id: q-009, checkpoint: cp2, template: decision_date, params: {decision: d-002}}
+- {id: q-010, checkpoint: cp2, template: focus_tomorrow, params: {}}
+- {id: q-011, checkpoint: cp2, template: owed_to_me, params: {person: p-ben-okoro}, challenges: [weak_evidence, acceptance_vs_occurrence]}
+- {id: q-012, checkpoint: cp2, template: loop_owner, params: {commitment: c-004}, challenges: [transfer]}
+- {id: q-013, checkpoint: cp2, template: person_attr, params: {person: p-sam-reyes, attribute: role}, challenges: [name_collision]}

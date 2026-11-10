@@ -1,0 +1,16 @@
+id: mini
+title: "Mini fixture world: two episode days at a freight company (tests only)"
+version: 1
+split: fixture
+worker: p-ada-quist
+timezone: "-08:00"
+seed:
+  start: 2027-01-04
+  end: 2027-01-08
+episode:
+  days: [2027-01-11, 2027-01-12]
+checkpoints:
+  - {id: cp1, date: 2027-01-11, label: end of Monday}
+  - {id: cp2, date: 2027-01-12, label: end of Tuesday}
+generator:
+  kind: hand-authored
