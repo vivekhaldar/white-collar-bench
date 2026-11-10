@@ -153,8 +153,9 @@ class HeuristicJudge:
     shared (`common`). The prediction is its `text` and `counterparty`; other fields are never
     read. `same_item` matches when any of these holds:
 
-    1. *keyword route*: some distinctive gold keyword phrase (not only month or weekday names)
-       occurs in the prediction (whole words, case- and accent-insensitive), at least
+    1. *keyword route*: some informative gold keyword phrase (not only month or weekday names,
+       and not only names that appear capitalized in the description, such as a project code
+       name or a person; `informative_keyword`) occurs in the prediction (whole words, case- and accent-insensitive), at least
        `KEYWORD_CONTAINMENT` (30%) of the gold description's tokens occur in the prediction,
        the shared tokens other than the description's first word (usually the verb: Send,
        Review) number at least `KEYWORD_MIN_SHARED` (2, or all of them when there are fewer)
@@ -163,7 +164,9 @@ class HeuristicJudge:
        counterparty name), so an item that strings several commitments together matches none;
     2. *overlap route*: the token Jaccard similarity between the prediction's `text` (or its
        full text, whichever is higher) and the gold description is at least `JACCARD_MATCH`
-       (0.5);
+       (0.5), and the shared tokens include one that is neither a name (`name_tokens` of
+       either side) nor the description's first word, so sharing a long project name is not
+       enough;
     3. *terse route*: every token of the prediction's `text` occurs in the gold description,
        except capitalized words after the first (names, which may be aliases the judge cannot
        resolve), and at least `TERSE_MIN_SHARED` (3) tokens are shared.
@@ -235,7 +238,7 @@ def heuristic_same_item(pred: dict, gold: dict) -> bool:
     if (
         g
         and p_full
-        and any(distinctive_keyword(k) and contains_phrase(full, k) for k in keywords)
+        and any(informative_keyword(k, desc) and contains_phrase(full, k) for k in keywords)
         and len(common(g, p_full)) / len(g) >= KEYWORD_CONTAINMENT
         and len(common(p_full, gold_vocabulary(gold))) / len(p_full) >= KEYWORD_PRECISION
     ):
@@ -243,12 +246,26 @@ def heuristic_same_item(pred: dict, gold: dict) -> bool:
         shared = common(rest, p_full)
         if len(shared) >= min(KEYWORD_MIN_SHARED, len(rest)) and shared - name_tokens(desc):
             return True
+    # Overlap: enough shared tokens, and among them something besides names and the verb
+    # ("Heathridge Course Assistant Discovery is now done" vs "... moved to readout" share
+    # only the project's name).
+    plain = g - name_tokens(desc) - name_tokens(full) - match_tokens(" ".join(_WORD.findall(normalize(desc))[:1]))
     for p in (p_core, p_full):
-        if g | p and len(common(g, p)) / len(g | p) >= JACCARD_MATCH:
+        if g | p and len(common(g, p)) / len(g | p) >= JACCARD_MATCH and common(plain, p):
             return True
     core = pred_text(pred, full=False)
     rest = p_core - g - name_tokens(core)
     return not rest and len(common(g, p_core)) >= TERSE_MIN_SHARED
+
+
+def informative_keyword(keyword: str, desc: str) -> bool:
+    """A keyword that is evidence of a specific item: not only month or weekday names, and not
+    only names from the description (a project code name or a person, which many items share:
+    "Marten" in "I promised Jalen the Marten retention schedule")."""
+    if not distinctive_keyword(keyword):
+        return False
+    words = {t for t in match_tokens(keyword) if t not in CALENDAR_WORDS}
+    return bool(words - name_tokens(desc))
 
 
 def distinctive_keyword(keyword: str) -> bool:
