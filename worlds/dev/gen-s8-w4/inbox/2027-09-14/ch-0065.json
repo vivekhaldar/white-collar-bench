@@ -1,0 +1,40 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#ai-use-core",
+ "kind": "channel",
+ "participants": [
+  "Adwoa Kocak",
+  "Amira Baek",
+  "Kian Ishikawa",
+  "Zawadi Quintero",
+  "Wei Suwannarat"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-14T08:07:00-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "For info, Ottavio needs the AI-use glossary by 16 September."
+  },
+  {
+   "ts": "2027-09-14T08:08:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-09-14T08:11:16-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-14T08:15:22-06:00",
+   "user": "Wei Suwannarat",
+   "handle": "@wei",
+   "text": "+1",
+   "thread_of": 0
+  }
+ ]
+}

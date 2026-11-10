@@ -1,0 +1,159 @@
+{
+  "date": "2027-07-06",
+  "artifacts": [
+    {
+      "id": "em-0087",
+      "channel": "email",
+      "received_at": "2027-07-06T07:42:00-08:00",
+      "path": "em-0087.eml",
+      "title": "Re: Garnet privacy impact assessment"
+    },
+    {
+      "id": "ch-0067",
+      "channel": "chat",
+      "received_at": "2027-07-06T09:10:00-08:00",
+      "path": "ch-0067.json",
+      "title": "#garnet-core"
+    },
+    {
+      "id": "mt-0011",
+      "channel": "transcript",
+      "received_at": "2027-07-06T09:30:00-08:00",
+      "path": "mt-0011.vtt",
+      "title": "Corrie sync (transcript)"
+    },
+    {
+      "id": "mn-0014",
+      "channel": "meeting_notes",
+      "received_at": "2027-07-06T09:55:00-08:00",
+      "path": "mn-0014.md",
+      "title": "Recap: Garnet standup"
+    },
+    {
+      "id": "ch-0068",
+      "channel": "chat",
+      "received_at": "2027-07-06T11:12:00-08:00",
+      "path": "ch-0068.json",
+      "title": "DM: Bolat Oyelami / Hiba Jimenez"
+    },
+    {
+      "id": "ch-0069",
+      "channel": "chat",
+      "received_at": "2027-07-06T11:44:00-08:00",
+      "path": "ch-0069.json",
+      "title": "#garnet-core"
+    },
+    {
+      "id": "em-0088",
+      "channel": "email",
+      "received_at": "2027-07-06T12:49:00-08:00",
+      "path": "em-0088.eml",
+      "title": "Re: Garnet: numbers"
+    },
+    {
+      "id": "em-0089",
+      "channel": "email",
+      "received_at": "2027-07-06T13:20:00-08:00",
+      "path": "em-0089.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0090",
+      "channel": "email",
+      "received_at": "2027-07-06T13:28:00-08:00",
+      "path": "em-0090.eml",
+      "title": "[INC-73804] Ticket updated"
+    },
+    {
+      "id": "ch-0070",
+      "channel": "chat",
+      "received_at": "2027-07-06T14:45:00-08:00",
+      "path": "ch-0070.json",
+      "title": "DM: Hiba Jimenez / Andrei Laurent"
+    },
+    {
+      "id": "mn-0015",
+      "channel": "meeting_notes",
+      "received_at": "2027-07-06T15:30:00-08:00",
+      "path": "mn-0015.md",
+      "title": "Recap: Assessment design workshop run-through"
+    },
+    {
+      "id": "em-0091",
+      "channel": "email",
+      "received_at": "2027-07-06T15:46:00-08:00",
+      "path": "em-0091.eml",
+      "title": "Re: Garnet lessons-learned note"
+    },
+    {
+      "id": "mn-0016",
+      "channel": "meeting_notes",
+      "received_at": "2027-07-06T16:00:00-08:00",
+      "path": "mn-0016.md",
+      "title": "Notes: Assessment design workshop / Siskin sync"
+    },
+    {
+      "id": "ch-0071",
+      "channel": "chat",
+      "received_at": "2027-07-06T17:44:00-08:00",
+      "path": "ch-0071.json",
+      "title": "DM: Bolat Oyelami / Hiba Jimenez"
+    },
+    {
+      "id": "em-0092",
+      "channel": "email",
+      "received_at": "2027-07-06T17:49:00-08:00",
+      "path": "em-0092.eml",
+      "title": "Admissions triage selection stale cache"
+    },
+    {
+      "id": "em-0093",
+      "channel": "email",
+      "received_at": "2027-07-06T18:06:00-08:00",
+      "path": "em-0093.eml",
+      "title": "The Quad Ledger: issue 27"
+    },
+    {
+      "id": "em-0094",
+      "channel": "email",
+      "received_at": "2027-07-06T18:24:00-08:00",
+      "path": "em-0094.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0072",
+      "channel": "chat",
+      "received_at": "2027-07-06T19:02:00-08:00",
+      "path": "ch-0072.json",
+      "title": "DM: Hiba Jimenez / Zawadi Grigoryan"
+    },
+    {
+      "id": "nt-0008",
+      "channel": "note",
+      "received_at": "2027-07-06T20:07:00-08:00",
+      "path": "nt-0008.md",
+      "title": "Tue voice memo"
+    },
+    {
+      "id": "ch-0073",
+      "channel": "chat",
+      "received_at": "2027-07-06T20:45:00-08:00",
+      "path": "ch-0073.json",
+      "title": "DM: Hiba Jimenez / Bolat Oyelami"
+    },
+    {
+      "id": "ch-0074",
+      "channel": "chat",
+      "received_at": "2027-07-06T20:57:00-08:00",
+      "path": "ch-0074.json",
+      "title": "DM: Desmond Visser / Hiba Jimenez"
+    },
+    {
+      "id": "em-0095",
+      "channel": "email",
+      "received_at": "2027-07-06T21:46:00-08:00",
+      "path": "em-0095.eml",
+      "title": "Draft: Assessment design workshop action log"
+    }
+  ]
+}

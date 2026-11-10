@@ -1,0 +1,168 @@
+{
+  "date": "2027-09-09",
+  "artifacts": [
+    {
+      "id": "ch-0089",
+      "channel": "chat",
+      "received_at": "2027-09-09T07:38:00-08:00",
+      "path": "ch-0089.json",
+      "title": "#fjord-core (catch-up)"
+    },
+    {
+      "id": "mt-0013",
+      "channel": "transcript",
+      "received_at": "2027-09-09T07:39:00-08:00",
+      "path": "mt-0013.vtt",
+      "title": "Cairn sync (transcript)"
+    },
+    {
+      "id": "em-0119",
+      "channel": "email",
+      "received_at": "2027-09-09T07:40:00-08:00",
+      "path": "em-0119.eml",
+      "title": "While you were out: room booking selection"
+    },
+    {
+      "id": "ch-0090",
+      "channel": "chat",
+      "received_at": "2027-09-09T07:41:00-08:00",
+      "path": "ch-0090.json",
+      "title": "DM: Darius Bramwell / Ottavio Moreira"
+    },
+    {
+      "id": "ca-0010",
+      "channel": "calendar",
+      "received_at": "2027-09-09T08:08:00-08:00",
+      "path": "ca-0010.ics",
+      "title": "Cancelled: Fjord standup"
+    },
+    {
+      "id": "ch-0091",
+      "channel": "chat",
+      "received_at": "2027-09-09T09:54:00-08:00",
+      "path": "ch-0091.json",
+      "title": "#fjord-core"
+    },
+    {
+      "id": "em-0120",
+      "channel": "email",
+      "received_at": "2027-09-09T10:00:00-08:00",
+      "path": "em-0120.eml",
+      "title": "Re: Fjord help-desk script"
+    },
+    {
+      "id": "ch-0092",
+      "channel": "chat",
+      "received_at": "2027-09-09T10:35:00-08:00",
+      "path": "ch-0092.json",
+      "title": "#fjord-core"
+    },
+    {
+      "id": "em-0121",
+      "channel": "email",
+      "received_at": "2027-09-09T10:37:00-08:00",
+      "path": "em-0121.eml",
+      "title": "Synthetic student data set for Fjord"
+    },
+    {
+      "id": "ch-0093",
+      "channel": "chat",
+      "received_at": "2027-09-09T11:04:00-08:00",
+      "path": "ch-0093.json",
+      "title": "#cairn-core"
+    },
+    {
+      "id": "ch-0094",
+      "channel": "chat",
+      "received_at": "2027-09-09T11:32:00-08:00",
+      "path": "ch-0094.json",
+      "title": "#room-booking-selection-core"
+    },
+    {
+      "id": "ch-0095",
+      "channel": "chat",
+      "received_at": "2027-09-09T12:24:00-08:00",
+      "path": "ch-0095.json",
+      "title": "#cairn-core"
+    },
+    {
+      "id": "dc-0003",
+      "channel": "document",
+      "received_at": "2027-09-09T13:36:00-08:00",
+      "path": "dc-0003.xlsx",
+      "title": "Cairn requirements matrix v3",
+      "parent": "em-0122"
+    },
+    {
+      "id": "em-0122",
+      "channel": "email",
+      "received_at": "2027-09-09T13:36:00-08:00",
+      "path": "em-0122.eml",
+      "title": "Re: Cairn requirements matrix"
+    },
+    {
+      "id": "mt-0014",
+      "channel": "transcript",
+      "received_at": "2027-09-09T14:00:00-08:00",
+      "path": "mt-0014.vtt",
+      "title": "Cross-campus AI forum (transcript)"
+    },
+    {
+      "id": "ch-0096",
+      "channel": "chat",
+      "received_at": "2027-09-09T14:56:00-08:00",
+      "path": "ch-0096.json",
+      "title": "#early-alert-advisory-core"
+    },
+    {
+      "id": "em-0123",
+      "channel": "email",
+      "received_at": "2027-09-09T14:58:00-08:00",
+      "path": "em-0123.eml",
+      "title": "Re: Two customer references from Ithic again"
+    },
+    {
+      "id": "em-0124",
+      "channel": "email",
+      "received_at": "2027-09-09T15:49:00-08:00",
+      "path": "em-0124.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "dc-0004",
+      "channel": "document",
+      "received_at": "2027-09-09T16:00:00-08:00",
+      "path": "dc-0004.xlsx",
+      "title": "Room booking selection evaluation rubric v3",
+      "parent": "em-0125"
+    },
+    {
+      "id": "em-0125",
+      "channel": "email",
+      "received_at": "2027-09-09T16:00:00-08:00",
+      "path": "em-0125.eml",
+      "title": "Room booking selection evaluation rubric"
+    },
+    {
+      "id": "em-0126",
+      "channel": "email",
+      "received_at": "2027-09-09T17:16:00-08:00",
+      "path": "em-0126.eml",
+      "title": "Re: Fjord security review package"
+    },
+    {
+      "id": "ch-0097",
+      "channel": "chat",
+      "received_at": "2027-09-09T18:35:00-08:00",
+      "path": "ch-0097.json",
+      "title": "DM: Ottavio Moreira / Nomvula Ndlovu"
+    },
+    {
+      "id": "nt-0009",
+      "channel": "note",
+      "received_at": "2027-09-09T19:08:00-08:00",
+      "path": "nt-0009.md",
+      "title": "Thu notes"
+    }
+  ]
+}

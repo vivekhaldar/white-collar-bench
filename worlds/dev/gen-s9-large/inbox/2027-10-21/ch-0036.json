@@ -1,0 +1,35 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-anh-aroha",
+ "kind": "dm",
+ "participants": [
+  "Anh",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-21T17:26:00-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "Just to recap, on Tuesday you raised whether I could send you the informatics nurse specialist timeline. Not agreed yet."
+  },
+  {
+   "ts": "2027-10-21T17:26:53-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-10-21T17:30:22-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-10-21T17:34:13-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

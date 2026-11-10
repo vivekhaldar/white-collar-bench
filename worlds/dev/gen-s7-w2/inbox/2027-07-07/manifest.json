@@ -1,0 +1,159 @@
+{
+  "date": "2027-07-07",
+  "artifacts": [
+    {
+      "id": "em-0096",
+      "channel": "email",
+      "received_at": "2027-07-07T07:01:00-08:00",
+      "path": "em-0096.eml",
+      "title": "Re: Admissions triage selection stale cache"
+    },
+    {
+      "id": "ch-0075",
+      "channel": "chat",
+      "received_at": "2027-07-07T07:38:00-08:00",
+      "path": "ch-0075.json",
+      "title": "#garnet-core (catch-up)"
+    },
+    {
+      "id": "mt-0012",
+      "channel": "transcript",
+      "received_at": "2027-07-07T07:39:00-08:00",
+      "path": "mt-0012.vtt",
+      "title": "Siskin sync (transcript)"
+    },
+    {
+      "id": "em-0097",
+      "channel": "email",
+      "received_at": "2027-07-07T07:40:00-08:00",
+      "path": "em-0097.eml",
+      "title": "While you were out: Corrie"
+    },
+    {
+      "id": "ch-0076",
+      "channel": "chat",
+      "received_at": "2027-07-07T09:31:00-08:00",
+      "path": "ch-0076.json",
+      "title": "#siskin-operating-model-core"
+    },
+    {
+      "id": "ch-0077",
+      "channel": "chat",
+      "received_at": "2027-07-07T09:54:00-08:00",
+      "path": "ch-0077.json",
+      "title": "#siskin-core"
+    },
+    {
+      "id": "mt-0013",
+      "channel": "transcript",
+      "received_at": "2027-07-07T09:55:00-08:00",
+      "path": "mt-0013.vtt",
+      "title": "Garnet standup (transcript)"
+    },
+    {
+      "id": "em-0098",
+      "channel": "email",
+      "received_at": "2027-07-07T10:15:00-08:00",
+      "path": "em-0098.eml",
+      "title": "Garnet test plan"
+    },
+    {
+      "id": "em-0099",
+      "channel": "email",
+      "received_at": "2027-07-07T10:50:00-08:00",
+      "path": "em-0099.eml",
+      "title": "Introduction: Garnet"
+    },
+    {
+      "id": "em-0100",
+      "channel": "email",
+      "received_at": "2027-07-07T10:53:00-08:00",
+      "path": "em-0100.eml",
+      "title": "Re: Garnet requirements matrix"
+    },
+    {
+      "id": "em-0101",
+      "channel": "email",
+      "received_at": "2027-07-07T12:28:00-08:00",
+      "path": "em-0101.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0102",
+      "channel": "email",
+      "received_at": "2027-07-07T12:32:00-08:00",
+      "path": "em-0102.eml",
+      "title": "[REQ-28377] Request resolved"
+    },
+    {
+      "id": "ch-0078",
+      "channel": "chat",
+      "received_at": "2027-07-07T13:04:00-08:00",
+      "path": "ch-0078.json",
+      "title": "DM: Hiba Jimenez / Zawadi Grigoryan"
+    },
+    {
+      "id": "em-0103",
+      "channel": "email",
+      "received_at": "2027-07-07T14:49:00-08:00",
+      "path": "em-0103.eml",
+      "title": "Re: Assessment design workshop action log"
+    },
+    {
+      "id": "em-0104",
+      "channel": "email",
+      "received_at": "2027-07-07T14:54:00-08:00",
+      "path": "em-0104.eml",
+      "title": "Re: Garnet cutover plan"
+    },
+    {
+      "id": "ch-0079",
+      "channel": "chat",
+      "received_at": "2027-07-07T14:58:00-08:00",
+      "path": "ch-0079.json",
+      "title": "DM: Anastasia Mizrahi / Hiba Jimenez"
+    },
+    {
+      "id": "em-0105",
+      "channel": "email",
+      "received_at": "2027-07-07T14:58:00-08:00",
+      "path": "em-0105.eml",
+      "title": "[REQ-28975] Request resolved"
+    },
+    {
+      "id": "ch-0080",
+      "channel": "chat",
+      "received_at": "2027-07-07T15:38:00-08:00",
+      "path": "ch-0080.json",
+      "title": "DM: Hiba Jimenez / Dong-hyun Colombo"
+    },
+    {
+      "id": "ch-0081",
+      "channel": "chat",
+      "received_at": "2027-07-07T16:38:00-08:00",
+      "path": "ch-0081.json",
+      "title": "DM: Desmond Visser / Hiba Jimenez"
+    },
+    {
+      "id": "ch-0082",
+      "channel": "chat",
+      "received_at": "2027-07-07T17:37:00-08:00",
+      "path": "ch-0082.json",
+      "title": "#garnet-core"
+    },
+    {
+      "id": "ch-0083",
+      "channel": "chat",
+      "received_at": "2027-07-07T18:29:00-08:00",
+      "path": "ch-0083.json",
+      "title": "#siskin-core"
+    },
+    {
+      "id": "ch-0084",
+      "channel": "chat",
+      "received_at": "2027-07-07T18:38:00-08:00",
+      "path": "ch-0084.json",
+      "title": "DM: Hiba Jimenez / Bolat Oyelami"
+    }
+  ]
+}

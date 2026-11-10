@@ -1,0 +1,31 @@
+{
+ "workspace": "birchmere",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Nurlan Jansen",
+  "Deniz Feng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-15T13:13:47-05:00",
+   "user": "Nurlan Jansen",
+   "handle": "@nurlan",
+   "text": "the elevator on the east side is out again",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@deniz"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-15T13:20:09-05:00",
+   "user": "Deniz Feng",
+   "handle": "@deniz",
+   "text": "stairs it is"
+  }
+ ]
+}

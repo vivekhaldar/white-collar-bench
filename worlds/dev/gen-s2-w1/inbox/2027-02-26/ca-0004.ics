@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Vercliff//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:b82411559629fc68@vercliff.example
+DTSTAMP:20270226T170500Z
+DTSTART:20270302T160000Z
+DTEND:20270302T170000Z
+SUMMARY:Mistral scoping call
+ORGANIZER;CN=Yael Ellery:mailto:yael.ellery@nordale.vercliff.example
+ATTENDEE;CN=Naoko Sandoval;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:naoko.sandoval@nordale.vercliff.example
+ATTENDEE;CN=Bilal Kahananui;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bilal.kahananui@vercliff.example
+ATTENDEE;CN=Cassandra Yilmaz;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:cassandra.yilmaz@vercliff.example
+ATTENDEE;CN=Dina Ricci;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.ricci@vercliff.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.vercliff.example/j/6644127204?pwd=754kYZdZ\nPasscode: 837710
+LOCATION:https://meet.vercliff.example/j/6644127204?pwd=754kYZdZ
+END:VEVENT
+END:VCALENDAR

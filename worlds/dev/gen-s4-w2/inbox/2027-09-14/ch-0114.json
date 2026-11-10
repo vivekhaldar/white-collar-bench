@@ -1,0 +1,35 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-ottavio-theresa",
+ "kind": "dm",
+ "participants": [
+  "Ottavio Moreira",
+  "Theresa Petrov"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-14T12:10:00-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "Could you set up room booking selection staging access for me?"
+  },
+  {
+   "ts": "2027-09-14T12:10:55-08:00",
+   "user": "Theresa Petrov",
+   "handle": "@theresa",
+   "text": "yep, on it"
+  },
+  {
+   "ts": "2027-09-14T12:15:37-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-09-14T12:17:30-08:00",
+   "user": "Theresa Petrov",
+   "handle": "@theresa",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

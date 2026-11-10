@@ -1,0 +1,17 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-anahit-hiba",
+ "kind": "dm",
+ "participants": [
+  "Anahit Fifita",
+  "Hiba Deng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-31T17:38:00-05:00",
+   "user": "Anahit Fifita",
+   "handle": "@anahit",
+   "text": "I need to reopen the Wagtail go-live checklist: it was sent to the wrong group!"
+  }
+ ]
+}

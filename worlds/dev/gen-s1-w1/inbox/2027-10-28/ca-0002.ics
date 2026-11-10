@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Holcrest//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:cd1afb8759674e35@holcrest.example
+DTSTAMP:20271028T193800Z
+DTSTART:20271029T200000Z
+DTEND:20271029T203000Z
+SUMMARY:Marten security review
+ORGANIZER;CN=Petra Korkmaz:mailto:petra.korkmaz@birchcrest.holcrest.example
+ATTENDEE;CN=Jalen Sandberg;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:jalen.sandberg@holcrest.example
+ATTENDEE;CN=Camila Abernathy;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:camila.abernathy@holcrest.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.holcrest.example/j/3056531783?pwd=e29fLyTt\nPasscode: 916433
+LOCATION:https://meet.holcrest.example/j/3056531783?pwd=e29fLyTt
+END:VEVENT
+END:VCALENDAR

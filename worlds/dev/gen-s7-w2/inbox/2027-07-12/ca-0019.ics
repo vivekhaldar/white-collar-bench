@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Corrstead//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:259e115db1cdc3eb@corrstead.example
+DTSTAMP:20270712T212100Z
+DTSTART:20270714T220000Z
+DTEND:20270714T223000Z
+SUMMARY:Walkthrough: Garnet stakeholder map
+ORGANIZER;CN=Hiba Jimenez:mailto:hiba.jimenez@corrstead.example
+ATTENDEE;CN=Ewan Laine;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ewan.laine@crandale.corrstead.example
+SEQUENCE:0
+DESCRIPTION:Placeholder\, agenda to follow.\nJoin video meeting: https://meet.corrstead.example/j/6726159288?pwd=jfZVGEtq\nPasscode: 925223
+LOCATION:https://meet.corrstead.example/j/6726159288?pwd=jfZVGEtq
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,47 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-nomvula",
+ "kind": "dm",
+ "participants": [
+  "Nomvula Jansen",
+  "Dina Ricci"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-03T15:52:51-07:00",
+   "user": "Nomvula Jansen",
+   "handle": "@nomvula",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-03-03T15:54:20-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "sure, what's up?"
+  },
+  {
+   "ts": "2027-03-03T15:56:00-07:00",
+   "user": "Nomvula Jansen",
+   "handle": "@nomvula",
+   "text": "I can share the AI in public service workshop feedback form with you."
+  },
+  {
+   "ts": "2027-03-03T15:56:11-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "great, thank you"
+  },
+  {
+   "ts": "2027-03-03T15:58:03-07:00",
+   "user": "Nomvula Jansen",
+   "handle": "@nomvula",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-03-03T15:59:40-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "remote, but online all day"
+  }
+ ]
+}

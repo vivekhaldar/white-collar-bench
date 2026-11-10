@@ -1,0 +1,43 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-cassandra-dina",
+ "kind": "dm",
+ "participants": [
+  "Cassandra Yilmaz",
+  "Dina Ricci"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-23T16:32:43-07:00",
+   "user": "Cassandra Yilmaz",
+   "handle": "@cassandra",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-02-23T16:33:36-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-02-23T16:34:00-07:00",
+   "user": "Cassandra Yilmaz",
+   "handle": "@cassandra",
+   "text": "Just to recap, yesterday I said I'd publish the Fennel tenant onboarding guide.",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@dina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-23T16:34:17-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "great, thank you"
+  }
+ ]
+}

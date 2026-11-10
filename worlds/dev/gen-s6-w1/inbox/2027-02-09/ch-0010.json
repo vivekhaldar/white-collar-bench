@@ -1,0 +1,41 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-tariq",
+ "kind": "dm",
+ "participants": [
+  "Tariq Okeke",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-09T13:25:17-08:00",
+   "user": "Tariq Okeke",
+   "handle": "@tariq",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-02-09T13:26:00-08:00",
+   "user": "Tariq Okeke",
+   "handle": "@tariq",
+   "text": "Can you circulate the course assistant selection scorecard? :)"
+  },
+  {
+   "ts": "2027-02-09T13:27:17-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "sure, can do"
+  },
+  {
+   "ts": "2027-02-09T13:28:04-08:00",
+   "user": "Tariq Okeke",
+   "handle": "@tariq",
+   "text": "are you in the office tomorrow? :)"
+  },
+  {
+   "ts": "2027-02-09T13:29:23-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "remote, but online all day"
+  }
+ ]
+}

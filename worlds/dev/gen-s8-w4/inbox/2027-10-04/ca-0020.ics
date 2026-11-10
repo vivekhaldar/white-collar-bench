@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iselmoor//Calendar//EN
+METHOD:CANCEL
+BEGIN:VEVENT
+UID:dd3c45d6a8d29255@iselmoor.example
+DTSTAMP:20271004T135300Z
+DTSTART:20271004T153000Z
+DTEND:20271004T155500Z
+SUMMARY:Cancelled: Fulmar standup
+ORGANIZER;CN=Ottavio Bakker:mailto:ottavio.bakker@ivycrest.iselmoor.example
+ATTENDEE;CN=Amira Baek;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:amira.baek@iselmoor.example
+ATTENDEE;CN=Adwoa Kocak;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:adwoa.kocak@iselmoor.example
+ATTENDEE;CN=Giorgi Wisniewska;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:giorgi.wisniewska@ivycrest.iselmoor.example
+ATTENDEE;CN=Oksana Hoffmann;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:oksana.hoffmann@iselmoor.example
+ATTENDEE;CN=Marcelo Meijer;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:marcelo.meijer@iselmoor.example
+ATTENDEE;CN=Batbayar Galbraith;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:batbayar.galbraith@iselmoor.example
+ATTENDEE;CN=Thibault Kowalski;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:thibault.kowalski@iselmoor.example
+RECURRENCE-ID:20271004T153000Z
+SEQUENCE:1
+STATUS:CANCELLED
+DESCRIPTION:Not needed this time\, covered in the leads call.
+END:VEVENT
+END:VCALENDAR

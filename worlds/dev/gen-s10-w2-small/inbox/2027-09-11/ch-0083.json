@@ -1,0 +1,25 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-gaurav",
+ "kind": "dm",
+ "participants": [
+  "Gaurav Laine",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-11T13:24:00+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "Akosua is expecting you to review their Nettle dependency list.",
+   "edited": true,
+   "original": "Akosua is expecting you to review tehir Nettle dependency list."
+  },
+  {
+   "ts": "2027-09-11T13:25:06+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "can I come back to you on this?"
+  }
+ ]
+}

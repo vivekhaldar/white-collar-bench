@@ -1,0 +1,35 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-desmond-hiba",
+ "kind": "dm",
+ "participants": [
+  "Dez",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-09T13:16:00-08:00",
+   "user": "Dez",
+   "handle": "@desmond",
+   "text": "Just fixed the admissions triage selection stale cache! :)"
+  },
+  {
+   "ts": "2027-07-09T13:17:02-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "great, thanks"
+  },
+  {
+   "ts": "2027-07-09T13:18:24-08:00",
+   "user": "Dez",
+   "handle": "@desmond",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-07-09T13:18:48-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "later!"
+  }
+ ]
+}

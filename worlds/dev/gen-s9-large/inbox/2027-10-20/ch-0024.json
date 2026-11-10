@@ -1,0 +1,41 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-aylin",
+ "kind": "dm",
+ "participants": [
+  "Aylin Bianchi",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-20T08:09:25-05:00",
+   "user": "Aylin Bianchi",
+   "handle": "@aylin",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-10-20T08:10:00-05:00",
+   "user": "Aylin Bianchi",
+   "handle": "@aylin",
+   "text": "We're now in panel on Informatics Nurse Specialist Hire!"
+  },
+  {
+   "ts": "2027-10-20T08:10:34-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-10-20T08:12:38-05:00",
+   "user": "Aylin Bianchi",
+   "handle": "@aylin",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-10-20T08:15:47-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "yep, all good"
+  }
+ ]
+}

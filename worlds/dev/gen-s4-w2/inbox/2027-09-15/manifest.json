@@ -1,0 +1,131 @@
+{
+  "date": "2027-09-15",
+  "artifacts": [
+    {
+      "id": "em-0167",
+      "channel": "email",
+      "received_at": "2027-09-15T08:15:00-08:00",
+      "path": "em-0167.eml",
+      "title": "Fjord accessibility review after Esperanza's comments"
+    },
+    {
+      "id": "ch-0120",
+      "channel": "chat",
+      "received_at": "2027-09-15T09:07:00-08:00",
+      "path": "ch-0120.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "em-0168",
+      "channel": "email",
+      "received_at": "2027-09-15T09:50:00-08:00",
+      "path": "em-0168.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0121",
+      "channel": "chat",
+      "received_at": "2027-09-15T10:21:00-08:00",
+      "path": "ch-0121.json",
+      "title": "DM: Ottavio Moreira / Nomvula Ndlovu"
+    },
+    {
+      "id": "em-0169",
+      "channel": "email",
+      "received_at": "2027-09-15T11:39:00-08:00",
+      "path": "em-0169.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "em-0170",
+      "channel": "email",
+      "received_at": "2027-09-15T11:42:00-08:00",
+      "path": "em-0170.eml",
+      "title": "[INC-51907] Ticket updated"
+    },
+    {
+      "id": "em-0171",
+      "channel": "email",
+      "received_at": "2027-09-15T11:46:00-08:00",
+      "path": "em-0171.eml",
+      "title": "Notes from the financial aid chat session"
+    },
+    {
+      "id": "mn-0015",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-15T12:00:00-08:00",
+      "path": "mn-0015.md",
+      "title": "Recap: Cairn / Fjord sync"
+    },
+    {
+      "id": "em-0172",
+      "channel": "email",
+      "received_at": "2027-09-15T12:13:00-08:00",
+      "path": "em-0172.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "mt-0015",
+      "channel": "transcript",
+      "received_at": "2027-09-15T14:35:00-08:00",
+      "path": "mt-0015.vtt",
+      "title": "Cairn platform sync (transcript)"
+    },
+    {
+      "id": "mn-0016",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-15T15:45:00-08:00",
+      "path": "mn-0016.md",
+      "title": "Notes: Fjord review"
+    },
+    {
+      "id": "ch-0122",
+      "channel": "chat",
+      "received_at": "2027-09-15T15:59:00-08:00",
+      "path": "ch-0122.json",
+      "title": "DM: Ottavio Moreira / Nomvula Ndlovu"
+    },
+    {
+      "id": "ch-0123",
+      "channel": "chat",
+      "received_at": "2027-09-15T16:00:00-08:00",
+      "path": "ch-0123.json",
+      "title": "DM: Meera Bondarenko / Ottavio Moreira"
+    },
+    {
+      "id": "em-0173",
+      "channel": "email",
+      "received_at": "2027-09-15T16:18:00-08:00",
+      "path": "em-0173.eml",
+      "title": "[REQ-33899] Request resolved"
+    },
+    {
+      "id": "em-0174",
+      "channel": "email",
+      "received_at": "2027-09-15T16:34:00-08:00",
+      "path": "em-0174.eml",
+      "title": "[INC-61096] Ticket updated"
+    },
+    {
+      "id": "ch-0124",
+      "channel": "chat",
+      "received_at": "2027-09-15T17:52:00-08:00",
+      "path": "ch-0124.json",
+      "title": "DM: Ottavio Moreira / Henrik Santoso"
+    },
+    {
+      "id": "em-0175",
+      "channel": "email",
+      "received_at": "2027-09-15T18:05:00-08:00",
+      "path": "em-0175.eml",
+      "title": "Fjord dependency list"
+    },
+    {
+      "id": "em-0176",
+      "channel": "email",
+      "received_at": "2027-09-15T18:25:00-08:00",
+      "path": "em-0176.eml",
+      "title": "Fjord LMS integration notes"
+    }
+  ]
+}

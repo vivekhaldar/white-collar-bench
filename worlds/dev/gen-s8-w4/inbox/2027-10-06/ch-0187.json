@@ -1,0 +1,49 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#wagtail-core",
+ "kind": "channel",
+ "participants": [
+  "Adwoa",
+  "Amira Baek",
+  "Oksana Hoffmann",
+  "Ottavio Bakker",
+  "Giorgi Wisniewska",
+  "Batbayar Galbraith",
+  "Marcelo Meijer"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-06T07:38:00-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "@giorgi just sent you the Wagtail accessibility review."
+  },
+  {
+   "ts": "2027-10-06T07:38:43-06:00",
+   "user": "Giorgi Wisniewska",
+   "handle": "@giorgi",
+   "text": "great, thanks"
+  },
+  {
+   "ts": "2027-10-06T07:39:45-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-10-06T07:45:04-06:00",
+   "user": "Marcelo Meijer",
+   "handle": "@marcelo",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-10-06T07:49:52-06:00",
+   "user": "Giorgi Wisniewska",
+   "handle": "@giorgi",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

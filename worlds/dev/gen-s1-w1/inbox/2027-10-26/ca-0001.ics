@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Holcrest//Calendar//EN
+METHOD:CANCEL
+BEGIN:VEVENT
+UID:5c46d0b0f827ac14@holcrest.example
+DTSTAMP:20271026T151100Z
+DTSTART:20271026T163000Z
+DTEND:20271026T165500Z
+SUMMARY:Cancelled: Marten standup
+ORGANIZER;CN=Petra Korkmaz:mailto:petra.korkmaz@birchcrest.holcrest.example
+ATTENDEE;CN=Camila Abernathy;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:camila.abernathy@holcrest.example
+ATTENDEE;CN=Jalen Sandberg;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:jalen.sandberg@holcrest.example
+ATTENDEE;CN=Sipho Sengupta;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:sipho.sengupta@birchcrest.holcrest.example
+ATTENDEE;CN=Dina Taufa;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.taufa@birchcrest.holcrest.example
+ATTENDEE;CN=Yasmin Mokoena;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:yasmin.mokoena@holcrest.example
+ATTENDEE;CN=Nadia Jovanovic;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:nadia.jovanovic@holcrest.example
+ATTENDEE;CN=Thandiwe Garnier;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:thandiwe.garnier@holcrest.example
+RECURRENCE-ID:20271026T163000Z
+SEQUENCE:1
+STATUS:CANCELLED
+DESCRIPTION:Cancelling this one\, nothing to discuss this week.
+END:VEVENT
+END:VCALENDAR

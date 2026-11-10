@@ -1,0 +1,770 @@
+- id: q-001
+  checkpoint: cp1
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - scattered_evidence
+- id: q-002
+  checkpoint: cp1
+  template: project_status
+  params:
+    project: pr-garnet
+    name_form: the Crandale pilot
+  challenges:
+  - alias
+  - duplicate_signal
+  - implied_commitment
+  - supersession
+- id: q-003
+  checkpoint: cp1
+  template: project_changes
+  params:
+    project: pr-corrie
+    since: '2027-07-03'
+    name_form: Project Corrie
+  challenges:
+  - alias
+- id: q-004
+  checkpoint: cp1
+  template: i_owe
+  params:
+    person: p-desmond-visser
+    name_form: Dez
+  challenges:
+  - alias
+  - duplicate_signal
+  - endorsement
+- id: q-005
+  checkpoint: cp1
+  template: owed_to_me
+  params:
+    person: p-rania-dlamini
+    name_form: Rania
+  challenges:
+  - alias
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - worker_directive
+- id: q-006
+  checkpoint: cp1
+  template: loop_owner
+  params:
+    commitment: c-026
+  challenges:
+  - transfer
+- id: q-007
+  checkpoint: cp1
+  template: loop_due
+  params:
+    commitment: c-052
+  challenges:
+  - scattered_evidence
+- id: q-008
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-garnet
+    attribute: target_date
+  challenges:
+  - supersession
+- id: q-009
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-bolat-oyelami
+    attribute: role
+  challenges:
+  - name_collision
+- id: q-010
+  checkpoint: cp1
+  template: project_loops
+  params:
+    project: pr-corrie
+  challenges: []
+- id: q-011
+  checkpoint: cp1
+  template: person_brief
+  params:
+    person: p-bolat-oyelami
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+  - name_collision
+- id: q-012
+  checkpoint: cp1
+  template: decision_date
+  params:
+    decision: d-001
+  challenges: []
+- id: q-013
+  checkpoint: cp1
+  template: event_date
+  params:
+    event: e-0109
+  text: When was "Draft the Garnet load test plan" completed?
+  challenges: []
+- id: q-014
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-garnet
+    attribute: budget
+  text: What is the budget for Garnet?
+  challenges:
+  - unobservable
+- id: q-015
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-ewan-laine
+    attribute: office
+    name_form: the Crandale lead
+  challenges:
+  - alias
+  - unobservable
+- id: q-016
+  checkpoint: cp2
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - restructuring
+- id: q-017
+  checkpoint: cp2
+  template: project_status
+  params:
+    project: pr-garnet
+    name_form: Project Garnet
+  challenges:
+  - alias
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - supersession
+  - version_mismatch
+- id: q-018
+  checkpoint: cp2
+  template: project_changes
+  params:
+    project: pr-elmwick-waitlist-management-discovery
+    since: '2027-07-06'
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-019
+  checkpoint: cp2
+  template: i_owe
+  params:
+    person: p-bolat-oyelami
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - name_collision
+  - new_entity
+  - restructuring
+- id: q-020
+  checkpoint: cp2
+  template: owed_to_me
+  params:
+    person: p-mere-hidayat
+  challenges: []
+- id: q-021
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-elmwick-alumni-outreach-discovery
+    attribute: blocker
+  challenges: []
+- id: q-022
+  checkpoint: cp2
+  template: person_attr
+  params:
+    person: p-dong-hyun-colombo
+    attribute: org
+    name_form: Dong-hyun
+  challenges:
+  - alias
+  - new_entity
+- id: q-023
+  checkpoint: cp2
+  template: project_loops
+  params:
+    project: pr-elmwick-alumni-outreach-discovery
+    name_form: the alumni outreach work
+  challenges:
+  - alias
+- id: q-024
+  checkpoint: cp2
+  template: person_brief
+  params:
+    person: p-rania-dlamini
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - worker_directive
+- id: q-025
+  checkpoint: cp2
+  template: event_date
+  params:
+    event: e-0200
+  text: When was "Share the Garnet requirements matrix with Hiba" handed over to Bolat Oyelami?
+  challenges:
+  - transfer
+- id: q-026
+  checkpoint: cp2
+  template: loop_owner
+  params:
+    commitment: c-059
+  challenges:
+  - transfer
+- id: q-027
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-assessment-design-workshop
+    attribute: phase
+  challenges: []
+- id: q-028
+  checkpoint: cp2
+  template: project_loops
+  params:
+    project: pr-siskin-operating-model-review
+    name_form: the operating model review
+  challenges:
+  - alias
+  - endorsement
+- id: q-029
+  checkpoint: cp2
+  template: person_brief
+  params:
+    person: p-desmond-visser
+  challenges:
+  - batch_catchup
+  - correction
+  - duplicate_signal
+  - endorsement
+- id: q-030
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-iselbury-thesis-formatting-idea
+    attribute: budget
+  challenges:
+  - unobservable
+- id: q-031
+  checkpoint: cp3
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - restructuring
+  - scattered_evidence
+  - supersession
+  - worker_directive
+- id: q-032
+  checkpoint: cp3
+  template: project_status
+  params:
+    project: pr-garnet
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - supersession
+- id: q-033
+  checkpoint: cp3
+  template: project_changes
+  params:
+    project: pr-elmwick-alumni-outreach-discovery
+    since: '2027-07-08'
+  challenges:
+  - silent_closure
+- id: q-034
+  checkpoint: cp3
+  template: i_owe
+  params:
+    person: p-andrei-laurent
+  challenges: []
+- id: q-035
+  checkpoint: cp3
+  template: owed_to_me
+  params:
+    person: p-andrei-laurent
+  challenges:
+  - reversal
+- id: q-036
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-syllabus-review-learning-series
+    attribute: sponsor
+  challenges: []
+- id: q-037
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-siskin
+    name_form: the platform
+  challenges:
+  - alias
+  - batch_catchup
+  - duplicate_signal
+  - endorsement
+- id: q-038
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-zawadi-grigoryan
+  challenges:
+  - name_collision
+- id: q-039
+  checkpoint: cp3
+  template: event_date
+  params:
+    event: e-0183
+  text: When was "Assemble the Garnet security review package" completed?
+  challenges: []
+- id: q-040
+  checkpoint: cp3
+  template: loop_due
+  params:
+    commitment: c-055
+  challenges:
+  - endorsement
+  - supersession
+  - worker_directive
+- id: q-041
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-syllabus-review-learning-series
+    attribute: owner
+    name_form: the learning series
+  challenges:
+  - alias
+- id: q-042
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-assessment-design-workshop
+  challenges:
+  - endorsement
+  - implied_commitment
+  - scattered_evidence
+  - supersession
+  - worker_directive
+- id: q-043
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-andrei-laurent
+  challenges:
+  - reversal
+- id: q-044
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-admissions-triage-tool-selection
+    attribute: budget_ceiling
+  text: What is the budget ceiling for Admissions Triage Tool Selection?
+  challenges:
+  - unobservable
+- id: q-045
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-elmwick-alumni-outreach-discovery
+    attribute: budget
+  challenges:
+  - unobservable
+- id: q-046
+  checkpoint: cp4
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - restructuring
+  - scattered_evidence
+  - supersession
+  - unobservable
+  - worker_directive
+- id: q-047
+  checkpoint: cp4
+  template: project_status
+  params:
+    project: pr-garnet
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - supersession
+- id: q-048
+  checkpoint: cp4
+  template: project_changes
+  params:
+    project: pr-garnet
+    since: '2027-07-10'
+    name_form: Project Garnet
+  challenges:
+  - alias
+  - duplicate_signal
+  - implied_commitment
+- id: q-049
+  checkpoint: cp4
+  template: i_owe
+  params:
+    person: p-rahul-sargsyan
+  challenges:
+  - unobservable
+- id: q-050
+  checkpoint: cp4
+  template: owed_to_me
+  params:
+    person: p-desmond-visser
+  challenges:
+  - batch_catchup
+- id: q-051
+  checkpoint: cp4
+  template: project_loops
+  params:
+    project: pr-admissions-triage-tool-selection
+  challenges:
+  - scattered_evidence
+  - unobservable
+- id: q-052
+  checkpoint: cp4
+  template: person_brief
+  params:
+    person: p-emre-khumalo
+  challenges: []
+- id: q-053
+  checkpoint: cp4
+  template: event_date
+  params:
+    event: e-0209
+  text: When was "Send Bolat the Siskin faculty survey" completed?
+  challenges:
+  - duplicate_signal
+- id: q-054
+  checkpoint: cp4
+  template: loop_due
+  params:
+    commitment: c-089
+  challenges:
+  - scattered_evidence
+- id: q-055
+  checkpoint: cp4
+  template: project_attr
+  params:
+    project: pr-corrie
+    attribute: sponsor
+  challenges: []
+- id: q-056
+  checkpoint: cp4
+  template: person_brief
+  params:
+    person: p-madeline-chikwanha
+  challenges: []
+- id: q-057
+  checkpoint: cp4
+  template: event_date
+  params:
+    event: e-0132
+  text: When was "Return the Merol security questionnaire again" completed?
+  challenges:
+  - duplicate_signal
+- id: q-058
+  checkpoint: cp4
+  template: project_attr
+  params:
+    project: pr-elmwick-alumni-outreach-discovery
+    attribute: sponsor
+  challenges: []
+- id: q-059
+  checkpoint: cp4
+  template: person_brief
+  params:
+    person: p-rahul-sargsyan
+  challenges:
+  - unobservable
+- id: q-060
+  checkpoint: cp4
+  template: project_attr
+  params:
+    project: pr-siskin
+    attribute: budget
+    name_form: Siskin platform
+  challenges:
+  - alias
+  - unobservable
+- id: q-061
+  checkpoint: cp5
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - restructuring
+  - scattered_evidence
+  - supersession
+  - unobservable
+  - worker_directive
+- id: q-062
+  checkpoint: cp5
+  template: project_status
+  params:
+    project: pr-garnet
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - supersession
+- id: q-063
+  checkpoint: cp5
+  template: project_changes
+  params:
+    project: pr-admissions-triage-tool-selection
+    since: '2027-07-13'
+    name_form: the Torane/Merol evaluation
+  challenges:
+  - alias
+  - duplicate_signal
+  - scattered_evidence
+- id: q-064
+  checkpoint: cp5
+  template: i_owe
+  params:
+    person: p-anastasia-mizrahi
+  challenges: []
+- id: q-065
+  checkpoint: cp5
+  template: owed_to_me
+  params:
+    person: p-bolat-oyelami
+  challenges:
+  - duplicate_signal
+  - name_collision
+  - supersession
+  - transfer
+- id: q-066
+  checkpoint: cp5
+  template: project_loops
+  params:
+    project: pr-elmwick-waitlist-management-discovery
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-067
+  checkpoint: cp5
+  template: person_brief
+  params:
+    person: p-anastasia-mizrahi
+  challenges: []
+- id: q-068
+  checkpoint: cp5
+  template: event_date
+  params:
+    event: e-0248
+  text: When was "Share the assessment design workshop session outline with Hiba" completed?
+  challenges: []
+- id: q-069
+  checkpoint: cp5
+  template: loop_owner
+  params:
+    commitment: c-087
+  challenges:
+  - transfer
+- id: q-070
+  checkpoint: cp5
+  template: project_attr
+  params:
+    project: pr-syllabus-review-learning-series
+    attribute: phase
+  challenges:
+  - duplicate_signal
+- id: q-071
+  checkpoint: cp5
+  template: person_attr
+  params:
+    person: p-abigail-kuznetsova
+    attribute: role
+    name_form: Abigail
+  challenges:
+  - alias
+  - new_entity
+- id: q-072
+  checkpoint: cp5
+  template: project_loops
+  params:
+    project: pr-holmarsh-partnership
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - worker_directive
+- id: q-073
+  checkpoint: cp5
+  template: person_brief
+  params:
+    person: p-mere-hidayat
+    name_form: Mere
+  challenges:
+  - alias
+  - new_entity
+  - restructuring
+- id: q-074
+  checkpoint: cp5
+  template: person_attr
+  params:
+    person: p-madeline-chikwanha
+    attribute: office
+  challenges:
+  - unobservable
+- id: q-075
+  checkpoint: cp5
+  template: project_attr
+  params:
+    project: pr-syllabus-review-learning-series
+    attribute: budget
+    name_form: the learning series
+  challenges:
+  - alias
+  - unobservable
+- id: q-076
+  checkpoint: cp6
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - scattered_evidence
+  - supersession
+  - unobservable
+  - worker_directive
+- id: q-077
+  checkpoint: cp6
+  template: project_status
+  params:
+    project: pr-garnet
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - silent_closure
+  - supersession
+- id: q-078
+  checkpoint: cp6
+  template: project_changes
+  params:
+    project: pr-assessment-design-workshop
+    since: '2027-07-15'
+    name_form: the workshop
+  challenges:
+  - alias
+- id: q-079
+  checkpoint: cp6
+  template: i_owe
+  params:
+    person: p-madeline-chikwanha
+  challenges: []
+- id: q-080
+  checkpoint: cp6
+  template: owed_to_me
+  params:
+    person: p-catalina-achterhof
+  challenges: []
+- id: q-081
+  checkpoint: cp6
+  template: person_brief
+  params:
+    person: p-ewan-laine
+  challenges:
+  - endorsement
+- id: q-082
+  checkpoint: cp6
+  template: decision_date
+  params:
+    decision: d-003
+  challenges: []
+- id: q-083
+  checkpoint: cp6
+  template: event_date
+  params:
+    event: e-0206
+  text: When was "Generate a synthetic student data set for Garnet" completed?
+  challenges: []
+- id: q-084
+  checkpoint: cp6
+  template: loop_due
+  params:
+    commitment: c-092
+  challenges:
+  - endorsement
+  - worker_directive
+- id: q-085
+  checkpoint: cp6
+  template: project_attr
+  params:
+    project: pr-iselbury-thesis-formatting-idea
+    attribute: sponsor
+  challenges: []
+- id: q-086
+  checkpoint: cp6
+  template: person_brief
+  params:
+    person: p-bolat-farah
+  challenges:
+  - name_collision
+- id: q-087
+  checkpoint: cp6
+  template: event_date
+  params:
+    event: e-0223
+  text: When was "Send Hiba the Garnet data dictionary" completed?
+  challenges:
+  - duplicate_signal
+  - version_mismatch
+- id: q-088
+  checkpoint: cp6
+  template: project_attr
+  params:
+    project: pr-garnet
+    attribute: blocker
+  challenges:
+  - implied_commitment
+- id: q-089
+  checkpoint: cp6
+  template: person_brief
+  params:
+    person: p-deborah-nurlanov
+    name_form: Deborah
+  challenges:
+  - alias
+  - new_entity
+  - restructuring
+- id: q-090
+  checkpoint: cp6
+  template: person_attr
+  params:
+    person: p-catalina-achterhof
+    attribute: phone
+  challenges:
+  - unobservable

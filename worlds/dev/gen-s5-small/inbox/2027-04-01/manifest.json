@@ -1,0 +1,161 @@
+{
+  "date": "2027-04-01",
+  "artifacts": [
+    {
+      "id": "ch-0063",
+      "channel": "chat",
+      "received_at": "2027-04-01T07:38:00-05:00",
+      "path": "ch-0063.json",
+      "title": "#wagtail-core (catch-up)"
+    },
+    {
+      "id": "mt-0015",
+      "channel": "transcript",
+      "received_at": "2027-04-01T07:39:00-05:00",
+      "path": "mt-0015.vtt",
+      "title": "Okapi sync (transcript)"
+    },
+    {
+      "id": "dc-0002",
+      "channel": "document",
+      "received_at": "2027-04-01T07:40:00-05:00",
+      "path": "dc-0002.pdf",
+      "title": "Clinical documentation discovery findings summary v3",
+      "parent": "em-0072"
+    },
+    {
+      "id": "em-0072",
+      "channel": "email",
+      "received_at": "2027-04-01T07:40:00-05:00",
+      "path": "em-0072.eml",
+      "title": "While you were out: clinical documentation discovery"
+    },
+    {
+      "id": "em-0073",
+      "channel": "email",
+      "received_at": "2027-04-01T07:57:00-05:00",
+      "path": "em-0073.eml",
+      "title": "Re: Nurse scheduling selection scorecard"
+    },
+    {
+      "id": "ch-0064",
+      "channel": "chat",
+      "received_at": "2027-04-01T08:00:00-05:00",
+      "path": "ch-0064.json",
+      "title": "DM: Hiba Deng / Anahit Fifita"
+    },
+    {
+      "id": "mt-0016",
+      "channel": "transcript",
+      "received_at": "2027-04-01T08:30:00-05:00",
+      "path": "mt-0016.vtt",
+      "title": "Lunch and learn (transcript)"
+    },
+    {
+      "id": "em-0074",
+      "channel": "email",
+      "received_at": "2027-04-01T08:50:00-05:00",
+      "path": "em-0074.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "mt-0017",
+      "channel": "transcript",
+      "received_at": "2027-04-01T09:55:00-05:00",
+      "path": "mt-0017.vtt",
+      "title": "Wagtail standup (transcript)"
+    },
+    {
+      "id": "ca-0007",
+      "channel": "calendar",
+      "received_at": "2027-04-01T11:13:00-05:00",
+      "path": "ca-0007.ics",
+      "title": "Invite: Nurse scheduling selection review"
+    },
+    {
+      "id": "em-0075",
+      "channel": "email",
+      "received_at": "2027-04-01T12:21:00-05:00",
+      "path": "em-0075.eml",
+      "title": "Grion sandbox credentials"
+    },
+    {
+      "id": "ch-0065",
+      "channel": "chat",
+      "received_at": "2027-04-01T13:35:00-05:00",
+      "path": "ch-0065.json",
+      "title": "DM: Anahit Fifita / Hiba Deng"
+    },
+    {
+      "id": "em-0076",
+      "channel": "email",
+      "received_at": "2027-04-01T15:03:00-05:00",
+      "path": "em-0076.eml",
+      "title": "Re: Okapi SSO broker for Falbury"
+    },
+    {
+      "id": "em-0077",
+      "channel": "email",
+      "received_at": "2027-04-01T15:50:00-05:00",
+      "path": "em-0077.eml",
+      "title": "Re: Splitting out referral backlog discovery"
+    },
+    {
+      "id": "mt-0018",
+      "channel": "transcript",
+      "received_at": "2027-04-01T16:00:00-05:00",
+      "path": "mt-0018.vtt",
+      "title": "Catch-up: Hiba / Rudo (transcript)"
+    },
+    {
+      "id": "ch-0066",
+      "channel": "chat",
+      "received_at": "2027-04-01T17:04:00-05:00",
+      "path": "ch-0066.json",
+      "title": "DM: Burak Petrovic / Hiba Deng"
+    },
+    {
+      "id": "dc-0003",
+      "channel": "document",
+      "received_at": "2027-04-01T17:35:00-05:00",
+      "path": "dc-0003.docx",
+      "title": "Nurse scheduling selection pricing comparison v3",
+      "parent": "em-0078"
+    },
+    {
+      "id": "em-0078",
+      "channel": "email",
+      "received_at": "2027-04-01T17:35:00-05:00",
+      "path": "em-0078.eml",
+      "title": "Nurse scheduling selection pricing comparison"
+    },
+    {
+      "id": "ch-0067",
+      "channel": "chat",
+      "received_at": "2027-04-01T17:41:00-05:00",
+      "path": "ch-0067.json",
+      "title": "DM: Burak Jaber / Hiba Deng"
+    },
+    {
+      "id": "ch-0068",
+      "channel": "chat",
+      "received_at": "2027-04-01T18:02:00-05:00",
+      "path": "ch-0068.json",
+      "title": "DM: Anahit Fifita / Hiba Deng"
+    },
+    {
+      "id": "ch-0069",
+      "channel": "chat",
+      "received_at": "2027-04-01T18:08:00-05:00",
+      "path": "ch-0069.json",
+      "title": "DM: Elena Chaudhry / Hiba Deng"
+    },
+    {
+      "id": "em-0079",
+      "channel": "email",
+      "received_at": "2027-04-01T18:15:00-05:00",
+      "path": "em-0079.eml",
+      "title": "Wagtail RACI chart"
+    }
+  ]
+}

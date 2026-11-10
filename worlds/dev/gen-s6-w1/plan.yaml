@@ -1,0 +1,2140 @@
+plan_version: 1
+world_id: gen-s6-w1
+generator:
+  kind: wcb-gen
+  version: 1
+  seed: 6
+  size: standard
+  weeks: 1
+setting:
+  key: university
+  label: public university system
+  timezone: -08:00
+  vocab:
+    sites: courses
+    site: course
+    users: faculty
+    end_users: students
+    council: Council of Provosts
+    data: student data
+    agreement: data-sharing agreement
+    platform: shared AI platform
+    unit_word: campus
+  nouns:
+  - risk register
+  - rollout checklist
+  - test plan
+  - decision memo
+  - status slide
+  - comms plan
+  - training outline
+  - budget justification
+  - vendor comparison
+  - architecture diagram
+  - integration spec
+  - access request
+  - pilot charter
+  - evaluation rubric
+  - data dictionary
+  - stakeholder map
+  - dependency list
+  - requirements matrix
+  - lessons-learned note
+  - timeline
+  - RACI chart
+  - cutover plan
+  - acceptance criteria
+  - metrics definition
+  - service blueprint
+  - support model
+  - retention schedule
+  - change request
+  - accessibility review
+  - help-desk script
+  - course roster export
+  - LMS integration notes
+  - accessibility audit
+  - faculty survey
+  umbrella: o-lanhurst-university-system
+  central: o-office-of-academic-technology
+  video_domain: meet.lanhurst.example
+  chat_workspace: lanhurst
+  volume:
+  - 15
+  - 20
+  loops_per_day: 5.8
+calendar:
+  start: '2027-02-22'
+  seed:
+    start: '2027-02-08'
+    end: '2027-02-19'
+    days:
+    - '2027-02-08'
+    - '2027-02-09'
+    - '2027-02-10'
+    - '2027-02-11'
+    - '2027-02-12'
+    - '2027-02-15'
+    - '2027-02-16'
+    - '2027-02-17'
+    - '2027-02-18'
+    - '2027-02-19'
+  episode:
+    days:
+    - '2027-02-22'
+    - '2027-02-23'
+    - '2027-02-24'
+    - '2027-02-25'
+    - '2027-02-26'
+    - '2027-02-27'
+    weeks:
+    - - '2027-02-22'
+      - '2027-02-23'
+      - '2027-02-24'
+      - '2027-02-25'
+      - '2027-02-26'
+      - '2027-02-27'
+  checkpoints:
+  - id: cp1
+    date: '2027-02-23'
+    label: end of Tuesday
+  - id: cp2
+    date: '2027-02-25'
+    label: end of Thursday
+  - id: cp3
+    date: '2027-02-27'
+    label: end of week
+worker: p-despina-pereira
+orgs:
+- id: o-lanhurst-university-system
+  name: Lanhurst University System
+  short: Lanhurst
+  kind: internal
+  role: umbrella
+  domain: lanhurst.example
+  slug: lanhurst
+  surface_forms:
+  - Lanhurst
+  - LUS
+  - lanhurst.example
+  receptiveness: null
+- id: o-office-of-academic-technology
+  name: Office of Academic Technology
+  short: OAT
+  kind: internal
+  role: central
+  domain: lanhurst.example
+  slug: oat
+  surface_forms:
+  - OAT
+  - central
+  - the OAT team
+  - lanhurst.example
+  receptiveness: null
+- id: o-dorcliff-state-college
+  name: Dorcliff State College
+  short: Dorcliff
+  kind: internal
+  role: unit
+  domain: dorcliff.lanhurst.example
+  slug: dorcliff
+  surface_forms:
+  - Dorcliff
+  - DSC
+  - dorcliff.lanhurst.example
+  receptiveness: high
+- id: o-university-of-corrgate
+  name: University of Corrgate
+  short: Corrgate
+  kind: internal
+  role: unit
+  domain: corrgate.lanhurst.example
+  slug: corrgate
+  surface_forms:
+  - Corrgate
+  - UC
+  - corrgate.lanhurst.example
+  receptiveness: medium
+- id: o-calderhaven-university
+  name: Calderhaven University
+  short: Calderhaven
+  kind: internal
+  role: unit
+  domain: calderhaven.lanhurst.example
+  slug: calderhaven
+  surface_forms:
+  - Calderhaven
+  - CU
+  - calderhaven.lanhurst.example
+  receptiveness: low
+- id: o-norstead-state-college
+  name: Norstead State College
+  short: Norstead
+  kind: internal
+  role: unit
+  domain: norstead.lanhurst.example
+  slug: norstead
+  surface_forms:
+  - Norstead
+  - NSC
+  - norstead.lanhurst.example
+  receptiveness: low
+- id: o-zenia-labs
+  name: Zenia Labs
+  short: Zenia
+  kind: vendor
+  role: vendor
+  domain: zenia.example
+  slug: zenia
+  surface_forms:
+  - Zenia
+  - zenia.example
+  receptiveness: null
+- id: o-linel-learning
+  name: Linel Learning
+  short: Linel
+  kind: vendor
+  role: vendor
+  domain: linel.example
+  slug: linel
+  surface_forms:
+  - Linel
+  - linel.example
+  receptiveness: null
+- id: o-glencombe-center-for-digital-pedagogy
+  name: Glencombe Center for Digital Pedagogy
+  short: Glencombe
+  kind: partner
+  role: partner
+  domain: glencombe-research.example
+  slug: glencombe
+  surface_forms:
+  - Glencombe
+  - GCDP
+  - glencombe-research.example
+  receptiveness: null
+- id: o-verholm-center-for-digital-pedagogy
+  name: Verholm Center for Digital Pedagogy
+  short: Verholm
+  kind: partner
+  role: partner
+  domain: verholm-research.example
+  slug: verholm
+  surface_forms:
+  - Verholm
+  - VCDP
+  - verholm-research.example
+  receptiveness: null
+people:
+- id: p-despina-pereira
+  name: Despina Pereira
+  first: Despina
+  last: Pereira
+  nickname: null
+  org: o-office-of-academic-technology
+  role: Lead Solutions Architect, Teaching Technology
+  role_phrase: null
+  email: despina.pereira@lanhurst.example
+  handle: '@despina'
+  relationship: null
+  group: central
+  tier: core
+  weight: 0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Despina
+  - D. Pereira
+  - despina.pereira@lanhurst.example
+  - '@despina'
+- id: p-aiko-venkataraman
+  name: Aiko Venkataraman
+  first: Aiko
+  last: Venkataraman
+  nickname: null
+  org: o-office-of-academic-technology
+  role: Associate Provost for Academic Technology
+  role_phrase: the associate provost
+  email: aiko.venkataraman@lanhurst.example
+  handle: '@aiko'
+  relationship: manager
+  group: central
+  tier: core
+  weight: 2.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Aiko
+  - A. Venkataraman
+  - aiko.venkataraman@lanhurst.example
+  - '@aiko'
+  - the associate provost
+- id: p-andres-erdem
+  name: Andres Erdem
+  first: Andres
+  last: Erdem
+  nickname: null
+  org: o-office-of-academic-technology
+  role: Head of Learning Services
+  role_phrase: our learning services head
+  email: andres.erdem@lanhurst.example
+  handle: '@andres'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 7.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - Andres
+  - A. Erdem
+  - andres.erdem@lanhurst.example
+  - '@andres'
+  - our learning services head
+- id: p-liisa-babic
+  name: Liisa Babic
+  first: Liisa
+  last: Babic
+  nickname: null
+  org: o-office-of-academic-technology
+  role: Lead, Cloud Platforms
+  role_phrase: the platform lead
+  email: liisa.babic@lanhurst.example
+  handle: '@liisa'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 3.2
+  appears: null
+  voice: formal
+  surface_forms:
+  - Liisa
+  - L. Babic
+  - liisa.babic@lanhurst.example
+  - '@liisa'
+  - the platform lead
+- id: p-carys-laurent
+  name: Carys Laurent
+  first: Carys
+  last: Laurent
+  nickname: null
+  org: o-office-of-academic-technology
+  role: Platform Engineer
+  role_phrase: the platform engineer
+  email: carys.laurent@lanhurst.example
+  handle: '@carys'
+  relationship: stakeholder
+  group: central
+  tier: core
+  weight: 1.2
+  appears: null
+  voice: formal
+  surface_forms:
+  - Carys
+  - C. Laurent
+  - carys.laurent@lanhurst.example
+  - '@carys'
+  - the platform engineer
+- id: p-tomas-deng
+  name: Tomas Deng
+  first: Tomas
+  last: Deng
+  nickname: null
+  org: o-office-of-academic-technology
+  role: Information Security Manager
+  role_phrase: the security manager
+  email: tomas.deng@lanhurst.example
+  handle: '@tomas'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 2.9
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Tomas
+  - T. Deng
+  - tomas.deng@lanhurst.example
+  - '@tomas'
+  - the security manager
+- id: p-lindiwe-baek
+  name: Lindiwe Baek
+  first: Lindiwe
+  last: Baek
+  nickname: null
+  org: o-office-of-academic-technology
+  role: Product Owner, Student Systems
+  role_phrase: the product owner
+  email: lindiwe.baek@lanhurst.example
+  handle: '@lindiwe'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 1.2
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Lindiwe
+  - L. Baek
+  - lindiwe.baek@lanhurst.example
+  - '@lindiwe'
+  - the product owner
+- id: p-oluwaseun-demir
+  name: Oluwaseun Demir
+  first: Oluwaseun
+  last: Demir
+  nickname: Seun
+  org: o-office-of-academic-technology
+  role: Executive Assistant to the Associate Provost
+  role_phrase: the provost's EA
+  email: oluwaseun.demir@lanhurst.example
+  handle: '@oluwaseun'
+  relationship: assistant
+  group: central
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Oluwaseun
+  - Seun
+  - O. Demir
+  - oluwaseun.demir@lanhurst.example
+  - '@oluwaseun'
+  - the provost's EA
+- id: p-carly-petrosyan
+  name: Carly Petrosyan
+  first: Carly
+  last: Petrosyan
+  nickname: null
+  org: o-office-of-academic-technology
+  role: Senior Data Analyst
+  role_phrase: our data analyst
+  email: carly.petrosyan@lanhurst.example
+  handle: '@carly'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - Carly
+  - C. Petrosyan
+  - carly.petrosyan@lanhurst.example
+  - '@carly'
+  - our data analyst
+- id: p-oat-shared-inbox
+  name: OAT Shared Inbox
+  first: OAT Team
+  last: Mailbox
+  nickname: null
+  org: o-office-of-academic-technology
+  role: Shared team mailbox
+  role_phrase: the OAT inbox
+  email: oat-team@lanhurst.example
+  handle: '@oat-team'
+  relationship: other
+  group: mailbox
+  tier: core
+  weight: 0.3
+  appears: null
+  voice: formal
+  surface_forms:
+  - OAT Team
+  - the OAT inbox
+  - oat-team@lanhurst.example
+- id: p-wei-rossi
+  name: Wei Rossi
+  first: Wei
+  last: Rossi
+  nickname: null
+  org: o-lanhurst-university-system
+  role: Procurement Officer, System Procurement
+  role_phrase: the procurement officer
+  email: wei.rossi@lanhurst.example
+  handle: '@wei'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Wei
+  - W. Rossi
+  - wei.rossi@lanhurst.example
+  - '@wei'
+  - the procurement officer
+- id: p-johan-ellery
+  name: Johan Ellery
+  first: Johan
+  last: Ellery
+  nickname: null
+  org: o-lanhurst-university-system
+  role: Associate Counsel, System Legal
+  role_phrase: system counsel
+  email: johan.ellery@lanhurst.example
+  handle: '@johan'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Johan
+  - J. Ellery
+  - johan.ellery@lanhurst.example
+  - '@johan'
+  - system counsel
+- id: p-segun-gilchrist
+  name: Segun Gilchrist
+  first: Segun
+  last: Gilchrist
+  nickname: null
+  org: o-lanhurst-university-system
+  role: Director, System Budget Office
+  role_phrase: the budget director
+  email: segun.gilchrist@lanhurst.example
+  handle: '@segun'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: terse
+  surface_forms:
+  - Segun
+  - S. Gilchrist
+  - segun.gilchrist@lanhurst.example
+  - '@segun'
+  - the budget director
+- id: p-emre-sato
+  name: Emre Sato
+  first: Emre
+  last: Sato
+  nickname: null
+  org: o-lanhurst-university-system
+  role: Talent Partner, System HR
+  role_phrase: our talent partner
+  email: emre.sato@lanhurst.example
+  handle: '@emre'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: terse
+  surface_forms:
+  - Emre
+  - E. Sato
+  - emre.sato@lanhurst.example
+  - '@emre'
+  - our talent partner
+- id: p-magdalena-pham
+  name: Magdalena Pham
+  first: Magdalena
+  last: Pham
+  nickname: Magda
+  org: o-lanhurst-university-system
+  role: Chief Privacy Officer
+  role_phrase: the privacy officer
+  email: magdalena.pham@lanhurst.example
+  handle: '@magdalena'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Magdalena
+  - Magda
+  - M. Pham
+  - magdalena.pham@lanhurst.example
+  - '@magdalena'
+  - the privacy officer
+- id: p-jurgen-dvorak
+  name: Jurgen Dvorak
+  first: Jurgen
+  last: Dvorak
+  nickname: null
+  org: o-dorcliff-state-college
+  role: Chief Information Officer
+  role_phrase: Dorcliff's CIO
+  email: jurgen.dvorak@dorcliff.lanhurst.example
+  handle: '@jurgen'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Jurgen
+  - J. Dvorak
+  - jurgen.dvorak@dorcliff.lanhurst.example
+  - '@jurgen'
+  - Dorcliff's CIO
+- id: p-losa-moretti
+  name: Losa Moretti
+  first: Losa
+  last: Moretti
+  nickname: null
+  org: o-dorcliff-state-college
+  role: Director, Teaching & Learning Technology
+  role_phrase: the Dorcliff lead
+  email: losa.moretti@dorcliff.lanhurst.example
+  handle: '@losa'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 2.4
+  appears: null
+  voice: terse
+  surface_forms:
+  - Losa
+  - L. Moretti
+  - losa.moretti@dorcliff.lanhurst.example
+  - '@losa'
+  - the Dorcliff lead
+- id: p-nathaniel-cartwright
+  name: Nathaniel Cartwright
+  first: Nathaniel
+  last: Cartwright
+  nickname: null
+  org: o-dorcliff-state-college
+  role: Site Reliability Engineer
+  role_phrase: null
+  email: nathaniel.cartwright@dorcliff.lanhurst.example
+  handle: '@nathaniel'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Nathaniel
+  - N. Cartwright
+  - nathaniel.cartwright@dorcliff.lanhurst.example
+  - '@nathaniel'
+- id: p-karim-navarro
+  name: Karim Navarro
+  first: Karim
+  last: Navarro
+  nickname: null
+  org: o-dorcliff-state-college
+  role: Instructional Designer
+  role_phrase: null
+  email: karim.navarro@dorcliff.lanhurst.example
+  handle: '@karim'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Karim
+  - K. Navarro
+  - karim.navarro@dorcliff.lanhurst.example
+  - '@karim'
+- id: p-rekha-nnaji
+  name: Rekha Nnaji
+  first: Rekha
+  last: Nnaji
+  nickname: null
+  org: o-university-of-corrgate
+  role: Chief Information Officer
+  role_phrase: Corrgate's CIO
+  email: rekha.nnaji@corrgate.lanhurst.example
+  handle: '@rekha'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Rekha
+  - R. Nnaji
+  - rekha.nnaji@corrgate.lanhurst.example
+  - '@rekha'
+  - Corrgate's CIO
+- id: p-tariq-okeke
+  name: Tariq Okeke
+  first: Tariq
+  last: Okeke
+  nickname: null
+  org: o-university-of-corrgate
+  role: Director of Institutional Research
+  role_phrase: the Corrgate lead
+  email: tariq.okeke@corrgate.lanhurst.example
+  handle: '@tariq'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Tariq
+  - T. Okeke
+  - tariq.okeke@corrgate.lanhurst.example
+  - '@tariq'
+  - the Corrgate lead
+- id: p-karli-banda
+  name: Karli Banda
+  first: Karli
+  last: Banda
+  nickname: null
+  org: o-university-of-corrgate
+  role: Instructional Designer
+  role_phrase: null
+  email: karli.banda@corrgate.lanhurst.example
+  handle: '@karli'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Karli
+  - K. Banda
+  - karli.banda@corrgate.lanhurst.example
+  - '@karli'
+- id: p-katerina-teixeira
+  name: Katerina Teixeira
+  first: Katerina
+  last: Teixeira
+  nickname: Katia
+  org: o-calderhaven-university
+  role: Chief Information Officer
+  role_phrase: Calderhaven's CIO
+  email: katerina.teixeira@calderhaven.lanhurst.example
+  handle: '@katerina'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: terse
+  surface_forms:
+  - Katerina
+  - Katia
+  - K. Teixeira
+  - katerina.teixeira@calderhaven.lanhurst.example
+  - '@katerina'
+  - Calderhaven's CIO
+- id: p-haruto-vaughan
+  name: Haruto Vaughan
+  first: Haruto
+  last: Vaughan
+  nickname: null
+  org: o-calderhaven-university
+  role: Dean of Libraries
+  role_phrase: the Calderhaven lead
+  email: haruto.vaughan@calderhaven.lanhurst.example
+  handle: '@haruto'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: formal
+  surface_forms:
+  - Haruto
+  - H. Vaughan
+  - haruto.vaughan@calderhaven.lanhurst.example
+  - '@haruto'
+  - the Calderhaven lead
+- id: p-nikos-mercier
+  name: Nikos Mercier
+  first: Nikos
+  last: Mercier
+  nickname: null
+  org: o-calderhaven-university
+  role: Service Desk Lead
+  role_phrase: null
+  email: nikos.mercier@calderhaven.lanhurst.example
+  handle: '@nikos'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Nikos
+  - N. Mercier
+  - nikos.mercier@calderhaven.lanhurst.example
+  - '@nikos'
+- id: p-friederike-agyeman
+  name: Friederike Agyeman
+  first: Friederike
+  last: Agyeman
+  nickname: Rike
+  org: o-calderhaven-university
+  role: Software Engineer
+  role_phrase: null
+  email: friederike.agyeman@calderhaven.lanhurst.example
+  handle: '@friederike'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Friederike
+  - Rike
+  - F. Agyeman
+  - friederike.agyeman@calderhaven.lanhurst.example
+  - '@friederike'
+- id: p-sakura-kealoha
+  name: Sakura Kealoha
+  first: Sakura
+  last: Kealoha
+  nickname: null
+  org: o-norstead-state-college
+  role: Chief Information Officer
+  role_phrase: Norstead's CIO
+  email: sakura.kealoha@norstead.lanhurst.example
+  handle: '@sakura'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: terse
+  surface_forms:
+  - Sakura
+  - S. Kealoha
+  - sakura.kealoha@norstead.lanhurst.example
+  - '@sakura'
+  - Norstead's CIO
+- id: p-leila-dang
+  name: Leila Dang
+  first: Leila
+  last: Dang
+  nickname: null
+  org: o-norstead-state-college
+  role: Registrar
+  role_phrase: the Norstead lead
+  email: leila.dang@norstead.lanhurst.example
+  handle: '@leila'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: formal
+  surface_forms:
+  - Leila
+  - L. Dang
+  - leila.dang@norstead.lanhurst.example
+  - '@leila'
+  - the Norstead lead
+- id: p-elena-fujita
+  name: Elena Fujita
+  first: Elena
+  last: Fujita
+  nickname: null
+  org: o-norstead-state-college
+  role: Enterprise Architect
+  role_phrase: null
+  email: elena.fujita@norstead.lanhurst.example
+  handle: '@elena'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Elena
+  - E. Fujita
+  - elena.fujita@norstead.lanhurst.example
+  - '@elena'
+- id: p-milena-mayfield
+  name: Milena Mayfield
+  first: Milena
+  last: Mayfield
+  nickname: null
+  org: o-norstead-state-college
+  role: Instructional Designer
+  role_phrase: null
+  email: milena.mayfield@norstead.lanhurst.example
+  handle: '@milena'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Milena
+  - M. Mayfield
+  - milena.mayfield@norstead.lanhurst.example
+  - '@milena'
+- id: p-andres-garnier
+  name: Andres Garnier
+  first: Andres
+  last: Garnier
+  nickname: null
+  org: o-zenia-labs
+  role: Account Executive
+  role_phrase: null
+  email: andres.garnier@zenia.example
+  handle: '@andresg'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: terse
+  surface_forms:
+  - Andres
+  - A. Garnier
+  - andres.garnier@zenia.example
+  - '@andresg'
+- id: p-rosalind-neumann
+  name: Rosalind Neumann
+  first: Rosalind
+  last: Neumann
+  nickname: null
+  org: o-zenia-labs
+  role: Solutions Engineer
+  role_phrase: null
+  email: rosalind.neumann@zenia.example
+  handle: '@rosalind'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Rosalind
+  - R. Neumann
+  - rosalind.neumann@zenia.example
+  - '@rosalind'
+- id: p-sipho-costa
+  name: Sipho Costa
+  first: Sipho
+  last: Costa
+  nickname: null
+  org: o-linel-learning
+  role: Account Executive
+  role_phrase: null
+  email: sipho.costa@linel.example
+  handle: '@sipho'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: formal
+  surface_forms:
+  - Sipho
+  - S. Costa
+  - sipho.costa@linel.example
+  - '@sipho'
+- id: p-tariq-galbraith
+  name: Tariq Galbraith
+  first: Tariq
+  last: Galbraith
+  nickname: null
+  org: o-linel-learning
+  role: Solutions Engineer
+  role_phrase: null
+  email: tariq.galbraith@linel.example
+  handle: '@tariqg'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Tariq
+  - T. Galbraith
+  - tariq.galbraith@linel.example
+  - '@tariqg'
+- id: p-jalen-chatterjee
+  name: Jalen Chatterjee
+  first: Jalen
+  last: Chatterjee
+  nickname: null
+  org: o-glencombe-center-for-digital-pedagogy
+  role: Senior Research Scientist
+  role_phrase: null
+  email: jalen.chatterjee@glencombe-research.example
+  handle: '@jalen'
+  relationship: partner
+  group: partner
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Jalen
+  - J. Chatterjee
+  - jalen.chatterjee@glencombe-research.example
+  - '@jalen'
+- id: p-jonathan-sinclair
+  name: Jonathan Sinclair
+  first: Jonathan
+  last: Sinclair
+  nickname: null
+  org: o-verholm-center-for-digital-pedagogy
+  role: Senior Research Scientist
+  role_phrase: null
+  email: jonathan.sinclair@verholm-research.example
+  handle: '@jonathan'
+  relationship: partner
+  group: partner
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: terse
+  surface_forms:
+  - Jonathan
+  - J. Sinclair
+  - jonathan.sinclair@verholm-research.example
+  - '@jonathan'
+- id: p-kalani-toubia
+  name: Kalani Toubia
+  first: Kalani
+  last: Toubia
+  nickname: null
+  org: null
+  role: Candidate
+  role_phrase: null
+  email: kalani.toubia@post.example
+  handle: '@kalani'
+  relationship: candidate
+  group: candidate
+  tier: core
+  weight: 0.6
+  appears: null
+  voice: terse
+  surface_forms:
+  - Kalani
+  - K. Toubia
+  - kalani.toubia@post.example
+  - '@kalani'
+- id: p-ebun-petrovic
+  name: Ebun Petrovic
+  first: Ebun
+  last: Petrovic
+  nickname: null
+  org: o-dorcliff-state-college
+  role: Privacy Officer
+  role_phrase: the new privacy officer
+  email: ebun.petrovic@dorcliff.lanhurst.example
+  handle: '@ebun'
+  relationship: stakeholder
+  group: newcomer
+  tier: core
+  weight: 1.4
+  appears: '2027-02-24'
+  voice: chatty
+  surface_forms:
+  - Ebun
+  - E. Petrovic
+  - ebun.petrovic@dorcliff.lanhurst.example
+  - '@ebun'
+  - the new privacy officer
+- id: p-mpho-figueroa
+  name: Mpho Figueroa
+  first: Mpho
+  last: Figueroa
+  nickname: null
+  org: null
+  role: Editor, Campus Systems Weekly
+  role_phrase: null
+  email: mpho.figueroa@newsletters.example
+  handle: '@mpho'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - mpho.figueroa@newsletters.example
+  minor_kind: newsletter
+- id: p-lanhurst-it-service-desk
+  name: Lanhurst IT Service Desk
+  first: Lanhurst IT Service Desk
+  last: ''
+  nickname: null
+  org: null
+  role: Lanhurst IT Service Desk
+  role_phrase: null
+  email: servicedesk-noreply@lanhurst.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - servicedesk-noreply@lanhurst.example
+  minor_kind: service_desk
+- id: p-platform-status-page
+  name: Platform Status Page
+  first: Platform Status Page
+  last: ''
+  nickname: null
+  org: null
+  role: Platform Status Page
+  role_phrase: null
+  email: status-noreply@lanhurst.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - status-noreply@lanhurst.example
+  minor_kind: status
+- id: p-lanhurst-internal-communications
+  name: Lanhurst Internal Communications
+  first: Lanhurst Internal Communications
+  last: ''
+  nickname: null
+  org: null
+  role: Lanhurst Internal Communications
+  role_phrase: null
+  email: news@lanhurst.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - news@lanhurst.example
+  minor_kind: comms
+- id: p-ileana-abernathy
+  name: Ileana Abernathy
+  first: Ileana
+  last: Abernathy
+  nickname: null
+  org: null
+  role: Events Coordinator
+  role_phrase: null
+  email: ileana.abernathy@lanhurst.example
+  handle: '@ileana'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - ileana.abernathy@lanhurst.example
+  minor_kind: events
+- id: p-efua-dubois
+  name: Efua Dubois
+  first: Efua
+  last: Dubois
+  nickname: null
+  org: null
+  role: Conference Organizer
+  role_phrase: null
+  email: efua.dubois@conference.example
+  handle: '@efua'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - efua.dubois@conference.example
+  minor_kind: conference
+- id: p-benefits-enrollment-notices
+  name: Benefits Enrollment Notices
+  first: Benefits Enrollment Notices
+  last: ''
+  nickname: null
+  org: null
+  role: Benefits Enrollment Notices
+  role_phrase: null
+  email: benefits-noreply@lanhurst.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - benefits-noreply@lanhurst.example
+  minor_kind: benefits
+projects:
+- id: pr-axolotl
+  name: Axolotl
+  short: Axolotl
+  kw: axolotl
+  code: Axolotl
+  surface_forms:
+  - Project Axolotl
+  - the lab safety training pilot
+  - the Dorcliff pilot
+  - AXOP
+  archetype: flagship_pilot
+  size: flagship
+  topic: lab safety training
+  topic_a: an AI lab safety tutor
+  pivot: waitlist management
+  role: ''
+  unit: o-dorcliff-state-college
+  vendors:
+  - o-zenia-labs
+  - o-linel-learning
+  partner: o-glencombe-center-for-digital-pedagogy
+  owner: p-losa-moretti
+  sponsor: p-jurgen-dvorak
+  members:
+  - p-despina-pereira
+  - p-losa-moretti
+  - p-andres-erdem
+  - p-nathaniel-cartwright
+  - p-karim-navarro
+  - p-liisa-babic
+  - p-tomas-deng
+  - p-carys-laurent
+  - p-lindiwe-baek
+  - p-jurgen-dvorak
+  orgs:
+  - o-dorcliff-state-college
+  status: active
+  phase: scoping
+  target_date: '2027-03-30'
+  n: 5
+  cast:
+    owner: p-losa-moretti
+    sponsor: p-jurgen-dvorak
+    lead: p-losa-moretti
+    unit:
+    - p-nathaniel-cartwright
+    - p-karim-navarro
+    - p-losa-moretti
+    ae:
+    - p-andres-garnier
+    - p-sipho-costa
+    se:
+    - p-rosalind-neumann
+    - p-tariq-galbraith
+    eng: p-liisa-babic
+    sec: p-tomas-deng
+    privacy: p-magdalena-pham
+    legal: p-johan-ellery
+    proc: p-wei-rossi
+    fin: p-segun-gilchrist
+    hr: p-emre-sato
+    ea: p-oluwaseun-demir
+    collab: p-andres-erdem
+    partner: p-jalen-chatterjee
+    cand: p-kalani-toubia
+  weight: 36.09
+  start: '2027-02-08'
+- id: pr-fennel
+  name: Fennel
+  short: Fennel
+  kw: fennel
+  code: Fennel
+  surface_forms:
+  - the platform
+  - the common platform
+  - Fennel platform
+  - the shared AI platform
+  archetype: platform_hub
+  size: hub
+  topic: shared platform
+  topic_a: ''
+  pivot: waitlist management
+  role: ''
+  unit: o-dorcliff-state-college
+  vendors:
+  - o-linel-learning
+  - o-zenia-labs
+  partner: o-glencombe-center-for-digital-pedagogy
+  owner: p-liisa-babic
+  sponsor: p-aiko-venkataraman
+  members:
+  - p-despina-pereira
+  - p-liisa-babic
+  - p-andres-erdem
+  - p-losa-moretti
+  - p-nathaniel-cartwright
+  - p-karim-navarro
+  - p-carys-laurent
+  orgs: []
+  status: active
+  phase: onboarding tenants
+  target_date: null
+  n: 2
+  cast:
+    owner: p-liisa-babic
+    sponsor: p-aiko-venkataraman
+    lead: p-losa-moretti
+    unit:
+    - p-nathaniel-cartwright
+    - p-karim-navarro
+    - p-losa-moretti
+    ae:
+    - p-sipho-costa
+    - p-andres-garnier
+    se:
+    - p-tariq-galbraith
+    - p-rosalind-neumann
+    eng: p-carys-laurent
+    sec: p-tomas-deng
+    privacy: p-magdalena-pham
+    legal: p-johan-ellery
+    proc: p-wei-rossi
+    fin: p-segun-gilchrist
+    hr: p-emre-sato
+    ea: p-oluwaseun-demir
+    collab: p-andres-erdem
+    partner: p-jalen-chatterjee
+    cand: p-kalani-toubia
+  weight: 11.75
+  start: '2027-02-08'
+- id: pr-course-assistant-tool-selection
+  name: Course Assistant Tool Selection
+  short: course assistant selection
+  kw: course assistant selection
+  code: null
+  surface_forms:
+  - the course assistant bake-off
+  - the Linel/Zenia evaluation
+  - CATS selection
+  archetype: vendor_pair_evaluation
+  size: mid
+  topic: course assistant
+  topic_a: an AI course assistant
+  pivot: transcript intake
+  role: ''
+  unit: o-university-of-corrgate
+  vendors:
+  - o-linel-learning
+  - o-zenia-labs
+  partner: o-glencombe-center-for-digital-pedagogy
+  owner: p-tariq-okeke
+  sponsor: p-aiko-venkataraman
+  members:
+  - p-despina-pereira
+  - p-tariq-okeke
+  - p-andres-erdem
+  - p-karli-banda
+  - p-sipho-costa
+  - p-wei-rossi
+  orgs:
+  - o-university-of-corrgate
+  - o-linel-learning
+  - o-zenia-labs
+  status: active
+  phase: demos
+  target_date: '2027-03-16'
+  n: 2
+  cast:
+    owner: p-tariq-okeke
+    sponsor: p-aiko-venkataraman
+    lead: p-tariq-okeke
+    unit:
+    - p-karli-banda
+    - p-tariq-okeke
+    ae:
+    - p-sipho-costa
+    - p-andres-garnier
+    se:
+    - p-tariq-galbraith
+    - p-rosalind-neumann
+    eng: p-liisa-babic
+    sec: p-tomas-deng
+    privacy: p-magdalena-pham
+    legal: p-johan-ellery
+    proc: p-wei-rossi
+    fin: p-segun-gilchrist
+    hr: p-emre-sato
+    ea: p-oluwaseun-demir
+    collab: p-andres-erdem
+    partner: p-jalen-chatterjee
+    cand: p-kalani-toubia
+  weight: 7.09
+  start: '2027-02-08'
+- id: pr-dorcliff-captioning-discovery
+  name: Dorcliff Captioning Discovery
+  short: captioning discovery
+  kw: captioning discovery
+  code: null
+  surface_forms:
+  - the Dorcliff discovery
+  - the captioning work
+  - DCD discovery
+  archetype: pivoting_discovery
+  size: mid
+  topic: captioning
+  topic_a: an AI captioning service
+  pivot: transcript intake
+  role: ''
+  unit: o-dorcliff-state-college
+  vendors:
+  - o-linel-learning
+  - o-zenia-labs
+  partner: o-glencombe-center-for-digital-pedagogy
+  owner: p-losa-moretti
+  sponsor: p-aiko-venkataraman
+  members:
+  - p-despina-pereira
+  - p-losa-moretti
+  - p-andres-erdem
+  - p-nathaniel-cartwright
+  - p-karim-navarro
+  orgs:
+  - o-dorcliff-state-college
+  status: active
+  phase: site visit
+  target_date: '2027-03-09'
+  n: 2
+  cast:
+    owner: p-losa-moretti
+    sponsor: p-aiko-venkataraman
+    lead: p-losa-moretti
+    unit:
+    - p-nathaniel-cartwright
+    - p-karim-navarro
+    - p-losa-moretti
+    ae:
+    - p-sipho-costa
+    - p-andres-garnier
+    se:
+    - p-tariq-galbraith
+    - p-rosalind-neumann
+    eng: p-liisa-babic
+    sec: p-tomas-deng
+    privacy: p-magdalena-pham
+    legal: p-johan-ellery
+    proc: p-wei-rossi
+    fin: p-segun-gilchrist
+    hr: p-emre-sato
+    ea: p-oluwaseun-demir
+    collab: p-andres-erdem
+    partner: p-jalen-chatterjee
+    cand: p-kalani-toubia
+  weight: 6.88
+  start: '2027-02-08'
+- id: pr-linel-enterprise-agreement
+  name: Linel Enterprise Agreement
+  short: Linel enterprise agreement
+  kw: linel enterprise
+  code: null
+  surface_forms:
+  - the Linel deal
+  - the Linel renewal
+  archetype: supplier_negotiation
+  size: mid
+  topic: licensing
+  topic_a: ''
+  pivot: transcript intake
+  role: ''
+  unit: o-dorcliff-state-college
+  vendors:
+  - o-linel-learning
+  - o-zenia-labs
+  partner: o-glencombe-center-for-digital-pedagogy
+  owner: p-wei-rossi
+  sponsor: p-aiko-venkataraman
+  members:
+  - p-despina-pereira
+  - p-wei-rossi
+  - p-andres-erdem
+  - p-losa-moretti
+  - p-nathaniel-cartwright
+  - p-karim-navarro
+  orgs:
+  - o-dorcliff-state-college
+  - o-linel-learning
+  - o-zenia-labs
+  status: active
+  phase: negotiation
+  target_date: '2027-03-10'
+  n: 2
+  cast:
+    owner: p-wei-rossi
+    sponsor: p-aiko-venkataraman
+    lead: p-losa-moretti
+    unit:
+    - p-nathaniel-cartwright
+    - p-karim-navarro
+    - p-losa-moretti
+    ae:
+    - p-sipho-costa
+    - p-andres-garnier
+    se:
+    - p-tariq-galbraith
+    - p-rosalind-neumann
+    eng: p-liisa-babic
+    sec: p-tomas-deng
+    privacy: p-magdalena-pham
+    legal: p-johan-ellery
+    proc: p-wei-rossi
+    fin: p-segun-gilchrist
+    hr: p-emre-sato
+    ea: p-oluwaseun-demir
+    collab: p-andres-erdem
+    partner: p-jalen-chatterjee
+    cand: p-kalani-toubia
+  weight: 5.47
+  start: '2027-02-08'
+- id: pr-lanhurst-responsible-ai-use-framework
+  name: Lanhurst Responsible AI Use Framework
+  short: AI-use
+  kw: ai-use
+  code: null
+  surface_forms:
+  - the AI framework
+  - the framework
+  - the responsible-use framework
+  archetype: strategic_framework
+  size: mid
+  topic: responsible AI use
+  topic_a: ''
+  pivot: waitlist management
+  role: ''
+  unit: o-university-of-corrgate
+  vendors:
+  - o-linel-learning
+  - o-zenia-labs
+  partner: o-glencombe-center-for-digital-pedagogy
+  owner: p-despina-pereira
+  sponsor: p-aiko-venkataraman
+  members:
+  - p-despina-pereira
+  - p-despina-pereira
+  - p-andres-erdem
+  - p-tariq-okeke
+  - p-karli-banda
+  orgs: []
+  status: active
+  phase: drafting
+  target_date: '2027-03-22'
+  n: 2
+  cast:
+    owner: p-despina-pereira
+    sponsor: p-aiko-venkataraman
+    lead: p-tariq-okeke
+    unit:
+    - p-karli-banda
+    - p-tariq-okeke
+    ae:
+    - p-sipho-costa
+    - p-andres-garnier
+    se:
+    - p-tariq-galbraith
+    - p-rosalind-neumann
+    eng: p-liisa-babic
+    sec: p-tomas-deng
+    privacy: p-magdalena-pham
+    legal: p-johan-ellery
+    proc: p-wei-rossi
+    fin: p-segun-gilchrist
+    hr: p-emre-sato
+    ea: p-oluwaseun-demir
+    collab: p-andres-erdem
+    partner: p-jalen-chatterjee
+    cand: p-kalani-toubia
+  weight: 5.63
+  start: '2027-02-08'
+- id: pr-glencombe-partnership
+  name: Glencombe Partnership
+  short: Glencombe partnership
+  kw: glencombe partnership
+  code: null
+  surface_forms:
+  - the Glencombe relationship
+  - Glencombe
+  archetype: relationship_thread
+  size: small
+  topic: partnership
+  topic_a: ''
+  pivot: prerequisite mapping
+  role: ''
+  unit: o-dorcliff-state-college
+  vendors:
+  - o-linel-learning
+  - o-zenia-labs
+  partner: o-glencombe-center-for-digital-pedagogy
+  owner: p-despina-pereira
+  sponsor: p-aiko-venkataraman
+  members:
+  - p-despina-pereira
+  - p-despina-pereira
+  - p-andres-erdem
+  - p-losa-moretti
+  orgs:
+  - o-dorcliff-state-college
+  - o-glencombe-center-for-digital-pedagogy
+  status: active
+  phase: ongoing
+  target_date: null
+  n: 2
+  cast:
+    owner: p-despina-pereira
+    sponsor: p-aiko-venkataraman
+    lead: p-losa-moretti
+    unit:
+    - p-nathaniel-cartwright
+    - p-karim-navarro
+    - p-losa-moretti
+    ae:
+    - p-sipho-costa
+    - p-andres-garnier
+    se:
+    - p-tariq-galbraith
+    - p-rosalind-neumann
+    eng: p-liisa-babic
+    sec: p-tomas-deng
+    privacy: p-magdalena-pham
+    legal: p-johan-ellery
+    proc: p-wei-rossi
+    fin: p-segun-gilchrist
+    hr: p-emre-sato
+    ea: p-oluwaseun-demir
+    collab: p-andres-erdem
+    partner: p-jalen-chatterjee
+    cand: p-kalani-toubia
+  weight: 2.38
+  start: '2027-02-08'
+- id: pr-thesis-formatting-input-round
+  name: Thesis Formatting Input Round
+  short: thesis formatting input round
+  kw: thesis formatting input round
+  code: null
+  surface_forms:
+  - the thesis formatting input
+  - the thesis formatting round
+  archetype: delegated_asks
+  size: small
+  topic: thesis formatting
+  topic_a: an AI thesis formatting checker
+  pivot: lab equipment booking
+  role: ''
+  unit: o-norstead-state-college
+  vendors:
+  - o-zenia-labs
+  - o-linel-learning
+  partner: o-glencombe-center-for-digital-pedagogy
+  owner: p-despina-pereira
+  sponsor: p-aiko-venkataraman
+  members:
+  - p-despina-pereira
+  - p-despina-pereira
+  - p-andres-erdem
+  - p-leila-dang
+  orgs:
+  - o-norstead-state-college
+  status: active
+  phase: asking
+  target_date: null
+  n: 2
+  cast:
+    owner: p-despina-pereira
+    sponsor: p-aiko-venkataraman
+    lead: p-leila-dang
+    unit:
+    - p-elena-fujita
+    - p-milena-mayfield
+    - p-leila-dang
+    ae:
+    - p-andres-garnier
+    - p-sipho-costa
+    se:
+    - p-rosalind-neumann
+    - p-tariq-galbraith
+    eng: p-liisa-babic
+    sec: p-tomas-deng
+    privacy: p-magdalena-pham
+    legal: p-johan-ellery
+    proc: p-wei-rossi
+    fin: p-segun-gilchrist
+    hr: p-emre-sato
+    ea: p-oluwaseun-demir
+    collab: p-andres-erdem
+    partner: p-jalen-chatterjee
+    cand: p-kalani-toubia
+  weight: 2.56
+  start: '2027-02-08'
+- id: pr-fennel-operating-model-review
+  name: Fennel Operating Model Review
+  short: Fennel operating model
+  kw: operating model
+  code: null
+  surface_forms:
+  - the operating model review
+  - the ops model draft
+  - the Fennel operating model
+  archetype: peer_review
+  size: small
+  topic: platform
+  topic_a: ''
+  pivot: lab equipment booking
+  role: ''
+  unit: o-dorcliff-state-college
+  vendors:
+  - o-linel-learning
+  - o-zenia-labs
+  partner: o-glencombe-center-for-digital-pedagogy
+  owner: p-liisa-babic
+  sponsor: p-aiko-venkataraman
+  members:
+  - p-despina-pereira
+  - p-liisa-babic
+  - p-andres-erdem
+  - p-losa-moretti
+  orgs:
+  - o-dorcliff-state-college
+  status: active
+  phase: review requested
+  target_date: null
+  n: 2
+  cast:
+    owner: p-liisa-babic
+    sponsor: p-aiko-venkataraman
+    lead: p-losa-moretti
+    unit:
+    - p-nathaniel-cartwright
+    - p-karim-navarro
+    - p-losa-moretti
+    ae:
+    - p-sipho-costa
+    - p-andres-garnier
+    se:
+    - p-tariq-galbraith
+    - p-rosalind-neumann
+    eng: p-liisa-babic
+    sec: p-tomas-deng
+    privacy: p-magdalena-pham
+    legal: p-johan-ellery
+    proc: p-wei-rossi
+    fin: p-segun-gilchrist
+    hr: p-emre-sato
+    ea: p-oluwaseun-demir
+    collab: p-andres-erdem
+    partner: p-jalen-chatterjee
+    cand: p-kalani-toubia
+  weight: 2.72
+  start: '2027-02-08'
+- id: pr-norstead-admissions-triage-idea
+  name: Norstead Admissions Triage Idea
+  short: admissions triage
+  kw: admissions triage
+  code: null
+  surface_forms:
+  - Leila's admissions triage idea
+  - the admissions triage placeholder
+  archetype: placeholder
+  size: placeholder
+  topic: admissions triage
+  topic_a: an AI admissions document triage tool
+  pivot: lab equipment booking
+  role: ''
+  unit: o-norstead-state-college
+  vendors:
+  - o-zenia-labs
+  - o-linel-learning
+  partner: o-glencombe-center-for-digital-pedagogy
+  owner: p-leila-dang
+  sponsor: p-aiko-venkataraman
+  members:
+  - p-despina-pereira
+  - p-leila-dang
+  - p-andres-erdem
+  orgs:
+  - o-norstead-state-college
+  status: active
+  phase: placeholder
+  target_date: null
+  n: 2
+  cast:
+    owner: p-leila-dang
+    sponsor: p-aiko-venkataraman
+    lead: p-leila-dang
+    unit:
+    - p-elena-fujita
+    - p-milena-mayfield
+    - p-leila-dang
+    ae:
+    - p-andres-garnier
+    - p-sipho-costa
+    se:
+    - p-rosalind-neumann
+    - p-tariq-galbraith
+    eng: p-liisa-babic
+    sec: p-tomas-deng
+    privacy: p-magdalena-pham
+    legal: p-johan-ellery
+    proc: p-wei-rossi
+    fin: p-segun-gilchrist
+    hr: p-emre-sato
+    ea: p-oluwaseun-demir
+    collab: p-andres-erdem
+    partner: p-jalen-chatterjee
+    cand: p-kalani-toubia
+  weight: 0.14
+  start: '2027-02-08'
+- id: pr-linel-alumni-outreach-diligence
+  name: Linel Alumni Outreach Diligence
+  short: Linel diligence
+  kw: linel diligence
+  code: null
+  surface_forms:
+  - the Linel deep dive
+  - the alumni outreach diligence
+  archetype: stalled_discovery
+  size: dormant
+  topic: alumni outreach
+  topic_a: an AI alumni outreach assistant
+  pivot: prerequisite mapping
+  role: ''
+  unit: o-norstead-state-college
+  vendors:
+  - o-linel-learning
+  - o-zenia-labs
+  partner: o-glencombe-center-for-digital-pedagogy
+  owner: p-despina-pereira
+  sponsor: p-aiko-venkataraman
+  members:
+  - p-despina-pereira
+  - p-despina-pereira
+  - p-andres-erdem
+  orgs:
+  - o-norstead-state-college
+  - o-linel-learning
+  - o-zenia-labs
+  status: dormant
+  phase: stalled
+  target_date: null
+  n: 2
+  cast:
+    owner: p-despina-pereira
+    sponsor: p-aiko-venkataraman
+    lead: p-leila-dang
+    unit:
+    - p-elena-fujita
+    - p-milena-mayfield
+    - p-leila-dang
+    ae:
+    - p-sipho-costa
+    - p-andres-garnier
+    se:
+    - p-tariq-galbraith
+    - p-rosalind-neumann
+    eng: p-liisa-babic
+    sec: p-tomas-deng
+    privacy: p-magdalena-pham
+    legal: p-johan-ellery
+    proc: p-wei-rossi
+    fin: p-segun-gilchrist
+    hr: p-emre-sato
+    ea: p-oluwaseun-demir
+    collab: p-andres-erdem
+    partner: p-jalen-chatterjee
+    cand: p-kalani-toubia
+  weight: 0.56
+  start: '2027-02-08'
+- id: pr-room-booking-learning-series
+  name: Room Booking Learning Series
+  short: room booking series
+  kw: room booking series
+  code: null
+  surface_forms:
+  - the learning series
+  - the room booking talks
+  archetype: education_programme
+  size: dormant
+  topic: room booking
+  topic_a: an AI room booking assistant
+  pivot: transcript intake
+  role: ''
+  unit: o-calderhaven-university
+  vendors:
+  - o-zenia-labs
+  - o-linel-learning
+  partner: o-glencombe-center-for-digital-pedagogy
+  owner: p-andres-erdem
+  sponsor: p-aiko-venkataraman
+  members:
+  - p-despina-pereira
+  - p-andres-erdem
+  - p-haruto-vaughan
+  orgs:
+  - o-calderhaven-university
+  - o-glencombe-center-for-digital-pedagogy
+  status: active
+  phase: dormant
+  target_date: null
+  n: 2
+  cast:
+    owner: p-andres-erdem
+    sponsor: p-aiko-venkataraman
+    lead: p-haruto-vaughan
+    unit:
+    - p-nikos-mercier
+    - p-friederike-agyeman
+    - p-haruto-vaughan
+    ae:
+    - p-andres-garnier
+    - p-sipho-costa
+    se:
+    - p-rosalind-neumann
+    - p-tariq-galbraith
+    eng: p-liisa-babic
+    sec: p-tomas-deng
+    privacy: p-magdalena-pham
+    legal: p-johan-ellery
+    proc: p-wei-rossi
+    fin: p-segun-gilchrist
+    hr: p-emre-sato
+    ea: p-oluwaseun-demir
+    collab: p-andres-erdem
+    partner: p-jalen-chatterjee
+    cand: p-kalani-toubia
+  weight: 0.68
+  start: '2027-02-08'
+collisions:
+  first_names:
+  - - p-andres-erdem
+    - p-andres-garnier
+  - - p-tariq-okeke
+    - p-tariq-galbraith
+  homophones:
+  - p-carly-petrosyan
+  - p-karli-banda
+cadences:
+- key: standup
+  title: Axolotl standup
+  kind: meeting
+  project: pr-axolotl
+  weekdays:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  every: 1
+  time: 09:30
+  minutes: 25
+  organizer: p-losa-moretti
+  attendees:
+  - p-despina-pereira
+  - p-losa-moretti
+  - p-andres-erdem
+  - p-nathaniel-cartwright
+  - p-karim-navarro
+  - p-liisa-babic
+  - p-tomas-deng
+  - p-carys-laurent
+- key: leads
+  title: OAT leads call
+  kind: meeting
+  project: null
+  weekdays:
+  - 0
+  every: 1
+  time: '11:00'
+  minutes: 45
+  organizer: p-aiko-venkataraman
+  attendees:
+  - p-despina-pereira
+  - p-andres-erdem
+  - p-liisa-babic
+  - p-tomas-deng
+  - p-lindiwe-baek
+  - p-aiko-venkataraman
+- key: hub_sync
+  title: Fennel platform sync
+  kind: meeting
+  project: pr-fennel
+  weekdays:
+  - 2
+  every: 1
+  time: '14:00'
+  minutes: 30
+  organizer: p-liisa-babic
+  attendees:
+  - p-despina-pereira
+  - p-liisa-babic
+  - p-andres-erdem
+  - p-losa-moretti
+  - p-nathaniel-cartwright
+  - p-karim-navarro
+- key: one_on_one
+  title: 1:1 Despina / Andres
+  kind: meeting
+  project: null
+  weekdays:
+  - 1
+  every: 2
+  time: '15:00'
+  minutes: 30
+  organizer: p-andres-erdem
+  attendees:
+  - p-despina-pereira
+  - p-andres-erdem
+- key: forum
+  title: Cross-campus AI forum
+  kind: meeting
+  project: null
+  weekdays:
+  - 3
+  every: 2
+  time: '13:00'
+  minutes: 60
+  organizer: p-andres-erdem
+  attendees:
+  - p-despina-pereira
+  - p-andres-erdem
+  - p-losa-moretti
+  - p-tariq-okeke
+  - p-haruto-vaughan
+  - p-leila-dang
+- key: weekly_update
+  title: Weekly update
+  kind: obligation
+  project: null
+  weekdays:
+  - 0
+  - 4
+  every: 1
+  organizer: p-oat-shared-inbox
+  attendees:
+  - p-despina-pereira
+  - p-aiko-venkataraman
+challenges:
+- week: 1
+  tag: worker_directive
+  day: '2027-02-22'
+  project: pr-lanhurst-responsible-ai-use-framework
+- week: 1
+  tag: noise
+  day: '2027-02-22'
+- week: 1
+  tag: implied_commitment
+  day: '2027-02-22'
+  project: pr-axolotl
+- week: 1
+  tag: duplicate_signal
+  day: '2027-02-23'
+  project: pr-dorcliff-captioning-discovery
+- week: 1
+  tag: privacy
+  day: '2027-02-24'
+- week: 1
+  tag: alias
+  day: '2027-02-23'
+- week: 1
+  tag: name_collision
+  day: '2027-02-24'
+- week: 1
+  tag: new_entity
+  day: '2027-02-24'
+  person: p-ebun-petrovic
+  project: pr-axolotl
+- week: 1
+  tag: supersession
+  day: '2027-02-23'
+  project: pr-axolotl
+- week: 1
+  tag: unobservable
+  day: '2027-02-24'
+  project: pr-course-assistant-tool-selection
+  attribute: budget
+- week: 1
+  tag: draft_vs_sent
+  day: '2027-02-23'
+  setup: '2027-02-22'
+- week: 1
+  tag: batch_catchup
+  day: '2027-02-24'
+- week: 1
+  tag: transfer
+  day: '2027-02-24'
+- week: 1
+  tag: correction
+  day: '2027-02-25'
+  setup: '2027-02-23'
+- week: 1
+  tag: weak_evidence
+  day: '2027-02-25'
+  setup: '2027-02-22'
+- week: 1
+  tag: acceptance_vs_occurrence
+  day: '2027-02-25'
+- week: 1
+  tag: restructuring
+  day: '2027-02-26'
+  mode: split
+  project: pr-dorcliff-captioning-discovery
+- week: 1
+  tag: version_mismatch
+  day: '2027-02-25'
+  setup: '2027-02-22'
+- week: 1
+  tag: silent_closure
+  day: '2027-02-25'
+  setup: '2027-02-23'
+- week: 1
+  tag: reversal
+  day: '2027-02-26'
+  setup: '2027-02-18'
+  project: pr-axolotl
+- week: 1
+  tag: endorsement
+  day: '2027-02-26'
+  setup: '2027-02-22'
+- week: 1
+  tag: scattered_evidence
+  day: '2027-02-25'
+  setup: '2027-02-22'
+  steps:
+  - '2027-02-23'
+  - '2027-02-24'
+  - '2027-02-25'
+audit:
+  unrevealed:
+    e-0011: never appears
+    e-0019: never appears
+    e-0022: never appears
+    e-0024: never appears
+    e-0025: never appears
+    e-0030: never appears
+    e-0035: never appears
+    e-0037: never appears
+    e-0039: never appears
+    e-0044: never appears
+    e-0045: never appears
+    e-0046: never appears
+    e-0047: never appears
+    e-0162: unreported closure
+    e-0212: unobservable
+    e-0242: 'weak evidence: the walkthrough left no trace'
+  instruction_injection: em-0087
+  attachments:
+  - dc-0001
+  - dc-0002
+  - dc-0003
+  - dc-0004

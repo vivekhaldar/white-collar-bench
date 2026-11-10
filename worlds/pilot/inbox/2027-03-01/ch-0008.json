@@ -1,0 +1,17 @@
+{
+  "workspace": "tarrow",
+  "channel": "dm-ramona-mara",
+  "kind": "dm",
+  "participants": ["Ramona Szabo", "Mara Ilves"],
+  "messages": [
+    {"ts": "2027-03-01T08:48:10-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "morning!! did you get snowed in over the weekend?? my street was a skating rink ❄️"},
+    {"ts": "2027-03-01T08:49:31-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "nope, just cold"},
+    {"ts": "2027-03-01T08:52:05-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "quick one: need deck v2 by 5am tomorrow 😇"},
+    {"ts": "2027-03-01T08:53:12-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "kidding!! realistically wednesday noon? need it before I print handouts"},
+    {"ts": "2027-03-01T08:55:02-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "wed noon works", "reactions": [{"emoji": "white_check_mark", "users": ["@ramona"]}]},
+    {"ts": "2027-03-01T08:56:20-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "also three lines on Tinderbox for the program dashboard by EOD? 🙏"},
+    {"ts": "2027-03-01T08:57:04-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "yep"},
+    {"ts": "2027-03-01T17:30:41-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "dashboard lines: hosting = kettleyard shared tenant; ARB wants spec v2; real data still paused.", "reactions": [{"emoji": "tada", "users": ["@ramona"]}]},
+    {"ts": "2027-03-01T17:35:00-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "perfect ty"}
+  ]
+}

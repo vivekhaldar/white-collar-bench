@@ -1,0 +1,52 @@
+{
+ "workspace": "birchmere",
+ "channel": "#okapi-core",
+ "kind": "channel",
+ "participants": [
+  "Alasdair Kaya",
+  "Katarzyna Dang",
+  "Bisi Chatterjee",
+  "Eleni Fontaine",
+  "Dina Laurent",
+  "Penny",
+  "Nurlan Jansen",
+  "Giorgi Villanueva",
+  "Tori",
+  "Phoebe Pickering"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-23T14:00:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "@phoebe i sent you the okapi privacy review form"
+  },
+  {
+   "ts": "2027-09-23T14:00:38-05:00",
+   "user": "Giorgi Villanueva",
+   "handle": "@giorgi",
+   "text": "ok :)"
+  },
+  {
+   "ts": "2027-09-23T14:05:31-05:00",
+   "user": "Dina Laurent",
+   "handle": "@dina",
+   "text": "following :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-23T14:07:12-05:00",
+   "user": "Eleni Fontaine",
+   "handle": "@eleni",
+   "text": "following :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-23T14:10:30-05:00",
+   "user": "Nurlan Jansen",
+   "handle": "@nurlan",
+   "text": "+1",
+   "thread_of": 0
+  }
+ ]
+}

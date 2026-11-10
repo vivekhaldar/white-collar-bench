@@ -1,0 +1,29 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#wagtail-core",
+ "kind": "channel",
+ "participants": [
+  "Marcelo Meijer",
+  "Amira Baek",
+  "Oksana Hoffmann",
+  "Adwoa",
+  "Ottavio Bakker",
+  "Giorgi Wisniewska",
+  "Batbayar Galbraith"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T15:03:00-06:00",
+   "user": "Marcelo Meijer",
+   "handle": "@marcelo",
+   "text": "From the sync earlier, Amira will review Batbayar's Wagtail cutover plan."
+  },
+  {
+   "ts": "2027-09-07T15:04:15-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "ok :)",
+   "thread_of": 0
+  }
+ ]
+}

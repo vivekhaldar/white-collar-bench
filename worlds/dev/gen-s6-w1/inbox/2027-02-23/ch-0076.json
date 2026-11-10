@@ -1,0 +1,17 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-karim",
+ "kind": "dm",
+ "participants": [
+  "Karim Navarro",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-23T17:55:00-08:00",
+   "user": "Karim Navarro",
+   "handle": "@karim",
+   "text": "Would you be able to send me the Axolotl rollout checklist?"
+  }
+ ]
+}

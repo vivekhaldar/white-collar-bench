@@ -1,0 +1,32 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Kiran Hayashi",
+  "Chiamaka Rashed",
+  "Kenji Faure"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-21T15:01:34-05:00",
+   "user": "Kiran Hayashi",
+   "handle": "@kiran",
+   "text": "does anyone have a spare laptop charger (usb-c)? :)"
+  },
+  {
+   "ts": "2027-10-21T15:08:05-05:00",
+   "user": "Chiamaka Rashed",
+   "handle": "@chiamaka",
+   "text": "I have one, desk by the window",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-10-21T15:12:44-05:00",
+   "user": "Kenji Faure",
+   "handle": "@kenji",
+   "text": "check the supply cupboard",
+   "thread_of": 0
+  }
+ ]
+}

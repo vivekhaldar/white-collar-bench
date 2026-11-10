@@ -1,0 +1,43 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-keisha",
+ "kind": "dm",
+ "participants": [
+  "Keisha Hargrove",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-28T14:54:00-05:00",
+   "user": "Keisha Hargrove",
+   "handle": "@keisha",
+   "text": "Would you be able to review my Cirrus comms plan?",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@aroha"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-28T14:54:42-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "let me check and get back to you"
+  },
+  {
+   "ts": "2027-10-28T14:57:10-05:00",
+   "user": "Keisha Hargrove",
+   "handle": "@keisha",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-10-28T14:58:05-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "later!"
+  }
+ ]
+}

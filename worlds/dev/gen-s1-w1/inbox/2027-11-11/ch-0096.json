@@ -1,0 +1,23 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-jalen",
+ "kind": "dm",
+ "participants": [
+  "Jalen",
+  "Camila Abernathy"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-11T10:06:43-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-11-11T10:10:00-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "i'll rotate the obsidian vault secrets"
+  }
+ ]
+}

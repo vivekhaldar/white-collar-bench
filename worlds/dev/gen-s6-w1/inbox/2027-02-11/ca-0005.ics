@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lanhurst//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:50b3911892e842d2@lanhurst.example
+DTSTAMP:20270211T155200Z
+DTSTART:20270216T170000Z
+DTEND:20270216T174500Z
+SUMMARY:Thesis formatting input round working session
+ORGANIZER;CN=Leila Dang:mailto:leila.dang@norstead.lanhurst.example
+ATTENDEE;CN=Despina Pereira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:despina.pereira@lanhurst.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.lanhurst.example/j/9675811272?pwd=jGkRFKXT\nPasscode: 915532
+LOCATION:https://meet.lanhurst.example/j/9675811272?pwd=jGkRFKXT
+END:VEVENT
+END:VCALENDAR

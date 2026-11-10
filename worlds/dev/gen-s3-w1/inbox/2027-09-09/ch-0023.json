@@ -1,0 +1,32 @@
+{
+ "workspace": "birchmere",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Nurlan Jansen",
+  "Bisi Chatterjee"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-09T09:03:55-05:00",
+   "user": "Nurlan Jansen",
+   "handle": "@nurlan",
+   "text": "lost a blue umbrella, might be in the big meeting room",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@bisi"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-09T09:06:54-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "will keep an eye out",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-nadia-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Nadia Vogel",
+  "Ottavio Moreira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-14T08:27:00-08:00",
+   "user": "Nadia Vogel",
+   "handle": "@nadia",
+   "text": "The course assistant discovery stakeholder map is back on, sorry for the delay!"
+  },
+  {
+   "ts": "2027-09-14T08:27:27-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-09-14T08:30:49-08:00",
+   "user": "Nadia Vogel",
+   "handle": "@nadia",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-09-14T08:32:27-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

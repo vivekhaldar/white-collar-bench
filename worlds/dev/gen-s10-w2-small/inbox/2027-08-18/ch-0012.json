@@ -1,0 +1,38 @@
+{
+ "workspace": "reddale",
+ "channel": "#nettle-core",
+ "kind": "channel",
+ "participants": [
+  "Bisi Volkov",
+  "Aoife Everett",
+  "Gaurav Laine",
+  "Akosua",
+  "Douglas Grigoryan",
+  "Sigrid Asante",
+  "Sipho Papadopoulos",
+  "Adaeze Morimoto",
+  "Bruna Thapa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-18T13:24:07+01:00",
+   "user": "Bisi Volkov",
+   "handle": "@bisi",
+   "text": "@aoife recap from Monday: I asked you to turn around the Nettle API contract v2; nothing agreed yet."
+  },
+  {
+   "ts": "2027-08-18T13:25:03+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "maybe, need to see how the week goes",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-08-18T13:35:03+01:00",
+   "user": "Sigrid Asante",
+   "handle": "@sigrid",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

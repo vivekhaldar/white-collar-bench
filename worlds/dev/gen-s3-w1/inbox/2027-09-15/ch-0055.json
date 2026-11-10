@@ -1,0 +1,41 @@
+{
+ "workspace": "birchmere",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Nurlan Jansen",
+  "Adebayo Kalua",
+  "Deniz Feng",
+  "Penelope Romano"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-15T14:55:54-05:00",
+   "user": "Nurlan Jansen",
+   "handle": "@nurlan",
+   "text": "who left a lunchbox in the fridge since last week?",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@adebayo",
+      "@deniz"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-15T14:59:39-05:00",
+   "user": "Adebayo Kalua",
+   "handle": "@adebayo",
+   "text": "not me!",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-15T15:03:00-05:00",
+   "user": "Deniz Feng",
+   "handle": "@deniz",
+   "text": "it's been there a while"
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-hiba-zawadi",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Zawadi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-06T13:41:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "I'll hand Corrie over to Iselbury."
+  },
+  {
+   "ts": "2027-07-06T13:41:42-08:00",
+   "user": "Zawadi",
+   "handle": "@zawadi",
+   "text": "great, thank you"
+  },
+  {
+   "ts": "2027-07-06T18:22:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "okay, hand corrie over to iselbury is done now"
+  },
+  {
+   "ts": "2027-07-06T18:22:57-08:00",
+   "user": "Zawadi",
+   "handle": "@zawadi",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-07-06T18:26:33-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-07-06T18:29:43-08:00",
+   "user": "Zawadi",
+   "handle": "@zawadi",
+   "text": "no worries"
+  }
+ ]
+}

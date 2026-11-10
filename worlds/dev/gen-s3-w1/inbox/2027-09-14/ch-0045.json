@@ -1,0 +1,48 @@
+{
+ "workspace": "birchmere",
+ "channel": "#bed-management-discovery-core",
+ "kind": "channel",
+ "participants": [
+  "Vitoria Oduro",
+  "Alasdair Kaya",
+  "Guadalupe Moreau",
+  "Bisi",
+  "Oluwaseun Hakobyan"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-14T12:05:00-05:00",
+   "user": "Vitoria Oduro",
+   "handle": "@vitoria",
+   "text": "@alasdair got what i needed, the bed management discovery change request is moving again"
+  },
+  {
+   "ts": "2027-09-14T12:05:36-05:00",
+   "user": "Guadalupe Moreau",
+   "handle": "@guadalupe",
+   "text": "got it",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-14T12:09:53-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-14T12:13:05-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-14T12:22:47-05:00",
+   "user": "Guadalupe Moreau",
+   "handle": "@guadalupe",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

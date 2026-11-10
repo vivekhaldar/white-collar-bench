@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lanhurst//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:1b8ac761ebeee192@lanhurst.example
+DTSTAMP:20270208T195300Z
+DTSTART:20270210T000000Z
+DTEND:20270210T010000Z
+SUMMARY:Dorcliff site visit
+ORGANIZER;CN=Losa Moretti:mailto:losa.moretti@dorcliff.lanhurst.example
+ATTENDEE;CN=Andres Erdem;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:andres.erdem@lanhurst.example
+ATTENDEE;CN=Despina Pereira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:despina.pereira@lanhurst.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.lanhurst.example/j/4678663320?pwd=MJsgFLDh\nPasscode: 583494
+LOCATION:https://meet.lanhurst.example/j/4678663320?pwd=MJsgFLDh
+END:VEVENT
+END:VCALENDAR

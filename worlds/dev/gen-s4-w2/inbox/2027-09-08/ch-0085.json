@@ -1,0 +1,47 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-magdalena-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Ottavio Moreira",
+  "Magda"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T16:47:17-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-09-08T16:48:14-08:00",
+   "user": "Magda",
+   "handle": "@magdalena",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-09-08T16:49:09-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "Done, I sent you the course assistant discovery process map."
+  },
+  {
+   "ts": "2027-09-08T16:50:27-08:00",
+   "user": "Magda",
+   "handle": "@magdalena",
+   "text": "got it, thanks"
+  },
+  {
+   "ts": "2027-09-08T16:54:27-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-09-08T16:56:59-08:00",
+   "user": "Magda",
+   "handle": "@magdalena",
+   "text": "yep, all good"
+  }
+ ]
+}

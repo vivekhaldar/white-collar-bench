@@ -1,0 +1,153 @@
+{
+  "date": "2027-09-23",
+  "artifacts": [
+    {
+      "id": "ch-0104",
+      "channel": "chat",
+      "received_at": "2027-09-23T07:38:00-05:00",
+      "path": "ch-0104.json",
+      "title": "#okapi-core (catch-up)"
+    },
+    {
+      "id": "mt-0016",
+      "channel": "transcript",
+      "received_at": "2027-09-23T07:39:00-05:00",
+      "path": "mt-0016.vtt",
+      "title": "Sirocco sync (transcript)"
+    },
+    {
+      "id": "em-0102",
+      "channel": "email",
+      "received_at": "2027-09-23T07:40:00-05:00",
+      "path": "em-0102.eml",
+      "title": "Re: While you were out: funding model"
+    },
+    {
+      "id": "ch-0105",
+      "channel": "chat",
+      "received_at": "2027-09-23T07:41:00-05:00",
+      "path": "ch-0105.json",
+      "title": "DM: Katarzyna Dang / Alasdair Kaya"
+    },
+    {
+      "id": "ca-0010",
+      "channel": "calendar",
+      "received_at": "2027-09-23T08:30:00-05:00",
+      "path": "ca-0010.ics",
+      "title": "Accepted: Sirocco follow-up"
+    },
+    {
+      "id": "ch-0106",
+      "channel": "chat",
+      "received_at": "2027-09-23T08:38:00-05:00",
+      "path": "ch-0106.json",
+      "title": "DM: Kwame Brandt / Alasdair Kaya"
+    },
+    {
+      "id": "em-0103",
+      "channel": "email",
+      "received_at": "2027-09-23T08:58:00-05:00",
+      "path": "em-0103.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ca-0011",
+      "channel": "calendar",
+      "received_at": "2027-09-23T09:43:00-05:00",
+      "path": "ca-0011.ics",
+      "title": "Invite: Okapi review"
+    },
+    {
+      "id": "dc-0006",
+      "channel": "document",
+      "received_at": "2027-09-23T12:47:00-05:00",
+      "path": "dc-0006.xlsx",
+      "title": "Referral triage discovery observation notes v2",
+      "parent": "em-0104"
+    },
+    {
+      "id": "em-0104",
+      "channel": "email",
+      "received_at": "2027-09-23T12:47:00-05:00",
+      "path": "em-0104.eml",
+      "title": "Referral triage discovery observation notes"
+    },
+    {
+      "id": "ch-0107",
+      "channel": "chat",
+      "received_at": "2027-09-23T13:57:00-05:00",
+      "path": "ch-0107.json",
+      "title": "DM: Alasdair Kaya / Katarzyna Dang"
+    },
+    {
+      "id": "mn-0010",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-23T14:00:00-05:00",
+      "path": "mn-0010.md",
+      "title": "Recap: Office hours with Bisi"
+    },
+    {
+      "id": "mt-0017",
+      "channel": "transcript",
+      "received_at": "2027-09-23T14:05:00-05:00",
+      "path": "mt-0017.vtt",
+      "title": "Cross-hospital AI forum (transcript)"
+    },
+    {
+      "id": "em-0105",
+      "channel": "email",
+      "received_at": "2027-09-23T14:10:00-05:00",
+      "path": "em-0105.eml",
+      "title": "Rosix sandbox credentials"
+    },
+    {
+      "id": "ch-0108",
+      "channel": "chat",
+      "received_at": "2027-09-23T14:23:00-05:00",
+      "path": "ch-0108.json",
+      "title": "#okapi-core"
+    },
+    {
+      "id": "em-0106",
+      "channel": "email",
+      "received_at": "2027-09-23T14:48:00-05:00",
+      "path": "em-0106.eml",
+      "title": "Re: Intake Forms Tool Selection: moving to procurement"
+    },
+    {
+      "id": "em-0107",
+      "channel": "email",
+      "received_at": "2027-09-23T15:53:00-05:00",
+      "path": "em-0107.eml",
+      "title": "Okapi evaluation rubric"
+    },
+    {
+      "id": "ch-0109",
+      "channel": "chat",
+      "received_at": "2027-09-23T17:00:00-05:00",
+      "path": "ch-0109.json",
+      "title": "#referral-triage-discovery-core"
+    },
+    {
+      "id": "ch-0110",
+      "channel": "chat",
+      "received_at": "2027-09-23T17:49:00-05:00",
+      "path": "ch-0110.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "em-0108",
+      "channel": "email",
+      "received_at": "2027-09-23T17:52:00-05:00",
+      "path": "em-0108.eml",
+      "title": "Lanmoor Bed Management Discovery: numbers"
+    },
+    {
+      "id": "ch-0111",
+      "channel": "chat",
+      "received_at": "2027-09-23T18:21:00-05:00",
+      "path": "ch-0111.json",
+      "title": "#sirocco-core"
+    }
+  ]
+}

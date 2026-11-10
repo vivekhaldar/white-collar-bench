@@ -1,0 +1,17 @@
+# Null baseline adapter: does nothing during ingestion and abstains on every question.
+# It sets the score floor and is the smallest working adapter. Try it with:
+#
+#   wcb run --adapter adapters/examples/null.yaml --world pilot --out runs/null
+#
+# "python" resolves to the interpreter that runs wcb: the runner puts that interpreter's
+# directory first on PATH in every session (see docs/running.md).
+# "-I" keeps the workspace (the session's working directory, which the agent controls) off
+# sys.path, so a json.py or wcb/ the agent leaves in the store cannot replace a real module.
+name: null-baseline
+version: 0.1.0
+model: none
+cmd: ["python", "-I", "-m", "wcb.baselines.null"]
+ingest:
+  timeout_s: 60
+query:
+  timeout_s: 60

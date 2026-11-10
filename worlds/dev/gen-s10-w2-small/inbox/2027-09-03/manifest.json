@@ -1,0 +1,89 @@
+{
+  "date": "2027-09-03",
+  "artifacts": [
+    {
+      "id": "em-0076",
+      "channel": "email",
+      "received_at": "2027-09-03T09:09:00+01:00",
+      "path": "em-0076.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "em-0077",
+      "channel": "email",
+      "received_at": "2027-09-03T09:28:00+01:00",
+      "path": "em-0077.eml",
+      "title": "Re: Nettle status slide"
+    },
+    {
+      "id": "ch-0056",
+      "channel": "chat",
+      "received_at": "2027-09-03T09:39:00+01:00",
+      "path": "ch-0056.json",
+      "title": "DM: Gaurav Laine / Aoife Everett"
+    },
+    {
+      "id": "nt-0009",
+      "channel": "note",
+      "received_at": "2027-09-03T09:55:00+01:00",
+      "path": "nt-0009.md",
+      "title": "Voice debrief: Nettle standup"
+    },
+    {
+      "id": "ch-0057",
+      "channel": "chat",
+      "received_at": "2027-09-03T10:49:00+01:00",
+      "path": "ch-0057.json",
+      "title": "#nettle-core"
+    },
+    {
+      "id": "ch-0058",
+      "channel": "chat",
+      "received_at": "2027-09-03T12:40:00+01:00",
+      "path": "ch-0058.json",
+      "title": "#pantry-inventory-discovery-core"
+    },
+    {
+      "id": "ch-0059",
+      "channel": "chat",
+      "received_at": "2027-09-03T15:26:00+01:00",
+      "path": "ch-0059.json",
+      "title": "#nettle-core"
+    },
+    {
+      "id": "em-0078",
+      "channel": "email",
+      "received_at": "2027-09-03T15:42:00+01:00",
+      "path": "em-0078.eml",
+      "title": "Status note: w/e 3 September"
+    },
+    {
+      "id": "ch-0060",
+      "channel": "chat",
+      "received_at": "2027-09-03T15:52:00+01:00",
+      "path": "ch-0060.json",
+      "title": "DM: Sipho Papadopoulos / Aoife Everett"
+    },
+    {
+      "id": "nt-0010",
+      "channel": "note",
+      "received_at": "2027-09-03T16:05:00+01:00",
+      "path": "nt-0010.md",
+      "title": "Fri notes"
+    },
+    {
+      "id": "mn-0022",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-03T16:15:00+01:00",
+      "path": "mn-0022.md",
+      "title": "Notes: Team planning"
+    },
+    {
+      "id": "em-0079",
+      "channel": "email",
+      "received_at": "2027-09-03T21:40:00+01:00",
+      "path": "em-0079.eml",
+      "title": "Draft: Nettle member survey"
+    }
+  ]
+}

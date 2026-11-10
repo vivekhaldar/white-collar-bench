@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lanhurst//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:43b99360c46d875f@lanhurst.example
+DTSTAMP:20270211T225400Z
+DTSTART:20270215T183000Z
+DTEND:20270215T190000Z
+SUMMARY:Fennel platform sync
+ORGANIZER;CN=Liisa Babic:mailto:liisa.babic@lanhurst.example
+ATTENDEE;CN=Nathaniel Cartwright;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:nathaniel.cartwright@dorcliff.lanhurst.example
+ATTENDEE;CN=Andres Erdem;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:andres.erdem@lanhurst.example
+ATTENDEE;CN=Carys Laurent;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:carys.laurent@lanhurst.example
+ATTENDEE;CN=Despina Pereira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:despina.pereira@lanhurst.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.lanhurst.example/j/9643325479?pwd=5JxFJJ53\nPasscode: 111473
+LOCATION:https://meet.lanhurst.example/j/9643325479?pwd=5JxFJJ53
+END:VEVENT
+END:VCALENDAR

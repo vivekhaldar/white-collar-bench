@@ -1,0 +1,37 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-batbayar",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Batbayar Galbraith"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-20T07:03:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "I updated the Fulmar change request after your comments.",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@batbayar"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-20T07:06:17-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "are you in the office tomorrow? :)"
+  },
+  {
+   "ts": "2027-09-20T07:08:25-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "remote, but online all day"
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "workspace": "iselvale",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Aylin Kocak",
+  "Friederike Bhatt"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-24T08:40:06-05:00",
+   "user": "Aylin Kocak",
+   "handle": "@aylin",
+   "text": "is it just me or is it freezing on 3 today?",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@friederike"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-24T08:43:17-05:00",
+   "user": "Friederike Bhatt",
+   "handle": "@friederike",
+   "text": "not just you",
+   "thread_of": 0
+  }
+ ]
+}

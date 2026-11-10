@@ -1,0 +1,138 @@
+{
+  "date": "2027-03-04",
+  "artifacts": [
+    {
+      "id": "em-0060",
+      "channel": "email",
+      "received_at": "2027-03-04T07:50:00-07:00",
+      "path": "em-0060.eml",
+      "title": "Re: Marmara security questionnaire"
+    },
+    {
+      "id": "em-0061",
+      "channel": "email",
+      "received_at": "2027-03-04T08:08:00-07:00",
+      "path": "em-0061.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0059",
+      "channel": "chat",
+      "received_at": "2027-03-04T09:56:00-07:00",
+      "path": "ch-0059.json",
+      "title": "DM: Meera Chebet / Dina Ricci"
+    },
+    {
+      "id": "em-0062",
+      "channel": "email",
+      "received_at": "2027-03-04T10:56:00-07:00",
+      "path": "em-0062.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0060",
+      "channel": "chat",
+      "received_at": "2027-03-04T12:49:00-07:00",
+      "path": "ch-0060.json",
+      "title": "DM: Imani Navarro / Dina Ricci"
+    },
+    {
+      "id": "mt-0013",
+      "channel": "transcript",
+      "received_at": "2027-03-04T13:15:00-07:00",
+      "path": "mt-0013.vtt",
+      "title": "Catch-up: Dina / Imani (transcript)"
+    },
+    {
+      "id": "ch-0061",
+      "channel": "chat",
+      "received_at": "2027-03-04T13:35:00-07:00",
+      "path": "ch-0061.json",
+      "title": "DM: Dina Ricci / Imani Navarro"
+    },
+    {
+      "id": "em-0063",
+      "channel": "email",
+      "received_at": "2027-03-04T14:07:00-07:00",
+      "path": "em-0063.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0064",
+      "channel": "email",
+      "received_at": "2027-03-04T14:08:00-07:00",
+      "path": "em-0064.eml",
+      "title": "[INC-81255] Ticket updated"
+    },
+    {
+      "id": "ch-0062",
+      "channel": "chat",
+      "received_at": "2027-03-04T15:03:00-07:00",
+      "path": "ch-0062.json",
+      "title": "#mistral-core"
+    },
+    {
+      "id": "ch-0063",
+      "channel": "chat",
+      "received_at": "2027-03-04T15:03:00-07:00",
+      "path": "ch-0063.json",
+      "title": "DM: Tendai Santos / Dina Ricci"
+    },
+    {
+      "id": "ch-0064",
+      "channel": "chat",
+      "received_at": "2027-03-04T15:26:00-07:00",
+      "path": "ch-0064.json",
+      "title": "DM: Kayode Whitfield / Dina Ricci"
+    },
+    {
+      "id": "ch-0065",
+      "channel": "chat",
+      "received_at": "2027-03-04T15:45:00-07:00",
+      "path": "ch-0065.json",
+      "title": "#general"
+    },
+    {
+      "id": "mt-0014",
+      "channel": "transcript",
+      "received_at": "2027-03-04T16:30:00-07:00",
+      "path": "mt-0014.vtt",
+      "title": "Office hours with Cassandra (transcript)"
+    },
+    {
+      "id": "em-0065",
+      "channel": "email",
+      "received_at": "2027-03-04T17:02:00-07:00",
+      "path": "em-0065.eml",
+      "title": "Fwd: A Talton catch-up"
+    },
+    {
+      "id": "nt-0006",
+      "channel": "note",
+      "received_at": "2027-03-04T18:02:00-07:00",
+      "path": "nt-0006.md",
+      "title": "Thu notes"
+    },
+    {
+      "id": "ch-0066",
+      "channel": "chat",
+      "received_at": "2027-03-04T18:15:00-07:00",
+      "path": "ch-0066.json",
+      "title": "DM: Imani Navarro / Dina Ricci"
+    },
+    {
+      "id": "em-0066",
+      "channel": "email",
+      "received_at": "2027-03-04T18:28:00-07:00",
+      "path": "em-0066.eml",
+      "title": "Re: Mistral support model"
+    },
+    {
+      "id": "em-0067",
+      "channel": "email",
+      "received_at": "2027-03-04T18:33:00-07:00",
+      "path": "em-0067.eml",
+      "title": "[Scheduled] Network maintenance window"
+    }
+  ]
+}

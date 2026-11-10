@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iselvale//Calendar//EN
+METHOD:REPLY
+BEGIN:VEVENT
+UID:75ef256fd0570dfe@iselvale.example
+DTSTAMP:20270402T132100Z
+DTSTART:20270402T210000Z
+DTEND:20270402T213000Z
+SUMMARY:Accepted: Clinical documentation discovery follow-up
+ORGANIZER;CN=Anahit Fifita:mailto:anahit.fifita@iselvale.example
+ATTENDEE;CN=Hiba Deng;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED:mailto:hiba.deng@iselvale.example
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR

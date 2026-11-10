@@ -1,0 +1,14 @@
+{
+  "workspace": "tarrow",
+  "channel": "#tinderbox-core",
+  "kind": "channel",
+  "participants": ["Yusra Haddad", "Joaquín Sepúlveda", "Dmitri Halloran", "Mara Ilves"],
+  "messages": [
+    {"ts": "2027-02-15T10:51:07-08:00", "user": "Yusra Haddad", "handle": "@yusra", "text": "Welcome to #tinderbox-core. Adding two Kestrow folks: @jsep is Joaquín Sepúlveda, our Enterprise Architect (he chairs ARB). @dima is Dmitri Halloran, Software Engineer on my team, building the LMS side. @mara is Mara Ilves from ODS, architecture lead for the pilot."},
+    {"ts": "2027-02-15T10:52:30-08:00", "user": "Joaquín Sepúlveda", "handle": "@jsep", "text": "Hi all. Jack is fine."},
+    {"ts": "2027-02-15T10:58:44-08:00", "user": "Yusra Haddad", "handle": "@yusra", "text": "@mara can you send the architecture one-pager before Thursday's ARB prep?"},
+    {"ts": "2027-02-15T11:01:12-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "yep", "reactions": [{"emoji": "+1", "users": ["@yusra"]}]},
+    {"ts": "2027-02-15T11:02:05-08:00", "user": "Joaquín Sepúlveda", "handle": "@jsep", "text": "ARB will want hosting options + data flows on it"},
+    {"ts": "2027-02-15T11:03:49-08:00", "user": "Dmitri Halloran", "handle": "@dima", "text": "and the LMS interface pls, so i know what i'm building"}
+  ]
+}

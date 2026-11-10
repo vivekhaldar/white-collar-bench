@@ -1,0 +1,33 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-hiba-mere",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Mere Hidayat"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-16T20:50:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "i reviewed your alumni outreach discovery findings summary earlier today",
+   "edited": true,
+   "original": "i reviewed your alumni outreach discovery findings summary eariler today",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@mere"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-16T20:50:14-08:00",
+   "user": "Mere Hidayat",
+   "handle": "@mere",
+   "text": "got it, thanks"
+  }
+ ]
+}

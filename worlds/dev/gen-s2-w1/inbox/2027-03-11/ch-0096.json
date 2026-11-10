@@ -1,0 +1,37 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-freja",
+ "kind": "dm",
+ "participants": [
+  "Dina Ricci",
+  "Freja Mutasa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-11T18:17:23-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-03-11T18:17:43-07:00",
+   "user": "Freja Mutasa",
+   "handle": "@freja",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-03-11T18:18:28-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "done, i sent you the funding model decision memo",
+   "edited": true,
+   "original": "done, i sent you the fundnig model decision memo"
+  },
+  {
+   "ts": "2027-03-11T18:19:06-07:00",
+   "user": "Freja Mutasa",
+   "handle": "@freja",
+   "text": "perfect :)"
+  }
+ ]
+}

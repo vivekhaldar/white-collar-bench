@@ -1,0 +1,59 @@
+{
+ "workspace": "vercliff",
+ "channel": "#fennel-core",
+ "kind": "channel",
+ "participants": [
+  "Dina Ricci",
+  "Cassandra Yilmaz",
+  "Imani Navarro",
+  "Yael Ellery",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
+  "Thibault Sahin"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-23T13:57:00-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "@cassandra i can review the Fennel model allow-list.",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@imani",
+      "@yael",
+      "@cassandra"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-23T13:57:57-07:00",
+   "user": "Imani Navarro",
+   "handle": "@imani",
+   "text": "noted"
+  },
+  {
+   "ts": "2027-02-23T13:58:33-07:00",
+   "user": "Naoko Sandoval",
+   "handle": "@naoko",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-23T13:59:35-07:00",
+   "user": "Imani Navarro",
+   "handle": "@imani",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-23T14:01:53-07:00",
+   "user": "Rudo Thornbury",
+   "handle": "@rudo",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

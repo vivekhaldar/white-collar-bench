@@ -1,0 +1,35 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-petra",
+ "kind": "dm",
+ "participants": [
+  "Petra Korkmaz",
+  "Camila Abernathy"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-03T15:48:00-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "Can you update the Marten one-page summary after my comments?"
+  },
+  {
+   "ts": "2027-11-03T15:49:22-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "sure, can do"
+  },
+  {
+   "ts": "2027-11-03T15:53:03-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-11-03T15:55:20-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

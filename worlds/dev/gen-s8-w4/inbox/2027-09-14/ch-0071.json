@@ -1,0 +1,41 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-hamish",
+ "kind": "dm",
+ "participants": [
+  "Hamish Okada",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-14T14:17:00-06:00",
+   "user": "Hamish Okada",
+   "handle": "@hamish",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-14T14:17:18-06:00",
+   "user": "Hamish Okada",
+   "handle": "@hamish",
+   "text": "As agreed on Friday, we'll limit the Fulmar pilot to four lines! :)"
+  },
+  {
+   "ts": "2027-09-14T14:18:48-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "ok, works for me"
+  },
+  {
+   "ts": "2027-09-14T14:20:52-06:00",
+   "user": "Hamish Okada",
+   "handle": "@hamish",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-09-14T14:23:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "yep, all good"
+  }
+ ]
+}

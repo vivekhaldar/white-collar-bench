@@ -1,0 +1,52 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#cairn-core",
+ "kind": "channel",
+ "participants": [
+  "Meera Bondarenko",
+  "Ottavio Moreira",
+  "Theresa Petrov",
+  "Darius Bramwell",
+  "Ratna Nikolic",
+  "Bruna Vaughan",
+  "Nomvula Ndlovu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-09T12:01:00-08:00",
+   "user": "Meera Bondarenko",
+   "handle": "@meera",
+   "text": "@ottavio could you update the Cairn evaluation rubric after my comments by 10 September?",
+   "edited": true,
+   "original": "@ottavio could you update the Cairn evaluation rubric after my comments by 12 September?"
+  },
+  {
+   "ts": "2027-09-09T12:01:12-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "noted",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T12:03:10-08:00",
+   "user": "Ratna Nikolic",
+   "handle": "@ratna",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T12:12:51-08:00",
+   "user": "Theresa Petrov",
+   "handle": "@theresa",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T12:15:13-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

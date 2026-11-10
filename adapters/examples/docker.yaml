@@ -1,0 +1,39 @@
+# Run every session of any agent in a fresh container that can see ONLY the workspace.
+# This is how verified (leaderboard) runs isolate agents from gold and from each other.
+#
+#   export WCB_AGENT_IMAGE=my-agent:1.2          # your image
+#   export WCB_AGENT_CMD="my-agent --run"        # command inside the image (reads WCB_* env)
+#   export ANTHROPIC_API_KEY=...                 # whatever your agent needs (see env_passthrough)
+#   wcb run --adapter adapters/examples/docker.yaml --world pilot --out runs/my-agent-docker
+#
+# Inside the container:
+#   /workspace        the store (read-write; in query sessions only .wcb/ is writable)
+#   /wcb/prompt.md    the session prompt (read-only)
+#   WCB_DATE, WCB_PHASE, WCB_TRACK, WCB_WORKSPACE=/workspace, WCB_PROMPT_FILE=/wcb/prompt.md
+# The container runs as your host user so files it writes stay owned by you, and has no other
+# host mounts. Network access is the Docker default; restrict it with --network if your agent
+# only needs a model endpoint reachable through a proxy.
+# docker/Dockerfile.simple builds an image containing the wcb simple harness for a quick try.
+name: docker-wrapped-agent
+version: 0.1.0
+model: set-in-WCB_AGENT_IMAGE
+cmd: >-
+  docker run --rm --init
+  --user "$(id -u):$(id -g)"
+  -v {workspace}:/workspace -w /workspace
+  -v {prompt}:/wcb/prompt.md:ro
+  -e WCB_DATE={date} -e WCB_PHASE={phase} -e WCB_TRACK={track}
+  -e WCB_WORKSPACE=/workspace -e WCB_PROMPT_FILE=/wcb/prompt.md
+  -e ANTHROPIC_API_KEY -e ANTHROPIC_BASE_URL -e OPENAI_API_KEY -e OPENAI_BASE_URL
+  "$WCB_AGENT_IMAGE" sh -c "$WCB_AGENT_CMD"
+ingest:
+  timeout_s: 1800
+query:
+  timeout_s: 900
+env_passthrough:
+  - WCB_AGENT_IMAGE
+  - WCB_AGENT_CMD
+  - ANTHROPIC_API_KEY
+  - ANTHROPIC_BASE_URL
+  - OPENAI_API_KEY
+  - OPENAI_BASE_URL

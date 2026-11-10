@@ -1,0 +1,37 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-hiba-rania",
+ "kind": "dm",
+ "participants": [
+  "Rania Dlamini",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-02T07:26:07-08:00",
+   "user": "Rania Dlamini",
+   "handle": "@rania",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-07-02T07:27:28-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-07-02T07:32:30-08:00",
+   "user": "Rania Dlamini",
+   "handle": "@rania",
+   "text": "recap from wednesday: you asked me to send you the holmarsh working paper; nothing agreed yet",
+   "edited": true,
+   "original": "recap from wednesday: you asked me to send you the holmarsh working paper; nothnig agreed yet"
+  },
+  {
+   "ts": "2027-07-02T07:33:50-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "perfect, thanks"
+  }
+ ]
+}

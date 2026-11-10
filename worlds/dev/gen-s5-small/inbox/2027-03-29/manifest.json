@@ -1,0 +1,117 @@
+{
+  "date": "2027-03-29",
+  "artifacts": [
+    {
+      "id": "em-0060",
+      "channel": "email",
+      "received_at": "2027-03-29T07:05:00-05:00",
+      "path": "em-0060.eml",
+      "title": "Reminder: Friday status note due Friday 2 April"
+    },
+    {
+      "id": "nt-0004",
+      "channel": "note",
+      "received_at": "2027-03-29T07:23:00-05:00",
+      "path": "nt-0004.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "em-0061",
+      "channel": "email",
+      "received_at": "2027-03-29T08:29:00-05:00",
+      "path": "em-0061.eml",
+      "title": "Re: Wagtail risk register"
+    },
+    {
+      "id": "ch-0044",
+      "channel": "chat",
+      "received_at": "2027-03-29T08:36:00-05:00",
+      "path": "ch-0044.json",
+      "title": "#okapi-core"
+    },
+    {
+      "id": "em-0062",
+      "channel": "email",
+      "received_at": "2027-03-29T09:01:00-05:00",
+      "path": "em-0062.eml",
+      "title": "Anahit's Wagtail order set review"
+    },
+    {
+      "id": "ch-0045",
+      "channel": "chat",
+      "received_at": "2027-03-29T10:33:00-05:00",
+      "path": "ch-0045.json",
+      "title": "DM: Anahit Fifita / Hiba Deng"
+    },
+    {
+      "id": "ch-0046",
+      "channel": "chat",
+      "received_at": "2027-03-29T11:41:00-05:00",
+      "path": "ch-0046.json",
+      "title": "DM: Hiba Deng / Marcelo Brandao"
+    },
+    {
+      "id": "mt-0013",
+      "channel": "transcript",
+      "received_at": "2027-03-29T11:45:00-05:00",
+      "path": "mt-0013.vtt",
+      "title": "CDS leads call (transcript)"
+    },
+    {
+      "id": "em-0063",
+      "channel": "email",
+      "received_at": "2027-03-29T13:38:00-05:00",
+      "path": "em-0063.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0064",
+      "channel": "email",
+      "received_at": "2027-03-29T14:50:00-05:00",
+      "path": "em-0064.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "nt-0005",
+      "channel": "note",
+      "received_at": "2027-03-29T16:30:00-05:00",
+      "path": "nt-0005.md",
+      "title": "Voice debrief: Team retro"
+    },
+    {
+      "id": "ch-0047",
+      "channel": "chat",
+      "received_at": "2027-03-29T16:37:00-05:00",
+      "path": "ch-0047.json",
+      "title": "DM: Hiba Deng / Isla Faure"
+    },
+    {
+      "id": "em-0065",
+      "channel": "email",
+      "received_at": "2027-03-29T17:04:00-05:00",
+      "path": "em-0065.eml",
+      "title": "Re: Clinical documentation discovery stakeholder map"
+    },
+    {
+      "id": "ca-0005",
+      "channel": "calendar",
+      "received_at": "2027-03-29T17:05:00-05:00",
+      "path": "ca-0005.ics",
+      "title": "Invite: Walkthrough: Wagtail risk register"
+    },
+    {
+      "id": "ch-0048",
+      "channel": "chat",
+      "received_at": "2027-03-29T17:56:00-05:00",
+      "path": "ch-0048.json",
+      "title": "#clinical-documentation-core"
+    },
+    {
+      "id": "nt-0006",
+      "channel": "note",
+      "received_at": "2027-03-29T20:17:00-05:00",
+      "path": "nt-0006.md",
+      "title": "Mon notes"
+    }
+  ]
+}

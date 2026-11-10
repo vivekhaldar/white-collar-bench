@@ -1,0 +1,32 @@
+{
+ "workspace": "holcrest",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Aarav Zamora",
+  "Kirsten Ellery",
+  "Yiannis Bustamante"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-04T16:24:33-07:00",
+   "user": "Aarav Zamora",
+   "handle": "@aarav",
+   "text": "there's leftover cake in the kitchen on 4"
+  },
+  {
+   "ts": "2027-11-04T16:26:32-07:00",
+   "user": "Kirsten Ellery",
+   "handle": "@kirsten",
+   "text": "on my way",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-04T16:27:32-07:00",
+   "user": "Yiannis Bustamante",
+   "handle": "@yiannis",
+   "text": "what kind?",
+   "thread_of": 0
+  }
+ ]
+}

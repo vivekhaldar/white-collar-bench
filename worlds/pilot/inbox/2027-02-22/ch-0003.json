@@ -1,0 +1,12 @@
+{"workspace": "tarrow", "channel": "#tinderbox-core", "kind": "channel",
+ "participants": ["Teodor Lisowski", "Dmitri Halloran", "Mara Ilves", "Joaquín Sepúlveda"],
+ "messages": [
+  {"ts": "2027-02-22T15:58:40-08:00", "user": "Teodor Lisowski", "handle": "@teo", "text": "tinderbox is registered as an SSO app in the IdP. client id tinderbox-kes (secret in vault). closing KSD-20788", "reactions": [{"emoji": "white_check_mark", "users": ["@mara", "@dima"]}]},
+  {"ts": "2027-02-22T16:00:12-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "ty teo"},
+  {"ts": "2027-02-22T16:07:55-08:00", "user": "Dmitri Halloran", "handle": "@dima", "text": "got spec v1. read it twice, mostly makes sense. i can have the LMS context API up against it by Mar 5"},
+  {"ts": "2027-02-22T16:08:21-08:00", "user": "Dmitri Halloran", "handle": "@dima", "text": "assuming the contract doesn't move. famous last words"},
+  {"ts": "2027-02-22T16:08:49-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "great"},
+  {"ts": "2027-02-22T16:09:30-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "@jsep can you price option 1 (dedicated kestrow deploy) so we can compare against the shared tenant?"},
+  {"ts": "2027-02-22T16:10:58-08:00", "user": "Joaquín Sepúlveda", "handle": "@jsep", "text": "will do. I'll use the ARB costing template so the two are comparable.", "thread_of": 5},
+  {"ts": "2027-02-22T16:11:40-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "perfect", "thread_of": 5}
+ ]}

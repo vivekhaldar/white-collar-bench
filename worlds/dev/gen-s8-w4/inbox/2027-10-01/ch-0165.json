@@ -1,0 +1,37 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-batbayar",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Batbayar Galbraith"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-01T13:39:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "Great if you can send me the monthly Wagtail cost report.",
+   "edited": true,
+   "original": "Great if you can send me the monthly Wagatil cost report."
+  },
+  {
+   "ts": "2027-10-01T13:39:12-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "will do :)"
+  },
+  {
+   "ts": "2027-10-01T13:43:12-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-10-01T13:46:30-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "busy, but fine. you? :)"
+  }
+ ]
+}

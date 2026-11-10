@@ -1,0 +1,43 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-jalen",
+ "kind": "dm",
+ "participants": [
+  "Camila Abernathy",
+  "Jalen Sandberg"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-10T17:21:29-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-11-10T17:39:00-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "let's make it official: you'll share the marten lessons-learned note with me",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@jalen"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-10T17:39:33-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "Done, I sent you the Marten public notice draft."
+  },
+  {
+   "ts": "2027-11-10T17:40:32-07:00",
+   "user": "Jalen Sandberg",
+   "handle": "@jalen",
+   "text": "thank you!"
+  }
+ ]
+}

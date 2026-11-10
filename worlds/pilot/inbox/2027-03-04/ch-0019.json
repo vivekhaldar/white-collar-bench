@@ -1,0 +1,19 @@
+{
+  "workspace": "tarrow",
+  "channel": "dm-ramona-mara",
+  "kind": "dm",
+  "participants": ["Mara Ilves", "Ramona Szabo"],
+  "messages": [
+    {"ts": "2027-03-04T08:25:03-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "back. thanks for covering yesterday 🙏 speaker list for name badges + deck v3 attached (new room on the title slide, Connie's reworded panel question)", "files": [{"name": "Workshop speakers - name badges.docx", "type": "docx"}, {"name": "Teaching with AI - deck v3.pdf", "type": "pdf"}]},
+    {"ts": "2027-03-04T08:28:17-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "np! glad I could cover the Tinderbox standup - standup notes are in the folder 📝"},
+    {"ts": "2027-03-04T08:30:40-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "oh - correction on catering: I said \"confirmed\" yesterday but the catering order actually went in Monday the 1st, so we've been fine all week 😅"},
+    {"ts": "2027-03-04T08:33:09-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "quick one: can you do a two-minute Tinderbox update at the opening? right after the welcome, before Ines"},
+    {"ts": "2027-03-04T08:33:51-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "sure"},
+    {"ts": "2027-03-04T08:34:26-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "🎉 also how was the offsite food??"},
+    {"ts": "2027-03-04T08:34:58-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "beige"},
+    {"ts": "2027-03-04T08:35:20-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "😂 classic", "thread_of": 6},
+    {"ts": "2027-03-04T08:36:12-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "also - did the tinderbox + kettleyard risks make the program risk register? add the gateway outage pls"},
+    {"ts": "2027-03-04T08:40:02-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "oops not yet 🙈 will do it today - tinderbox, kettleyard + the outage"},
+    {"ts": "2027-03-04T08:52:30-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "ok running to Pellery to check the room 🏃‍♀️"}
+  ]
+}

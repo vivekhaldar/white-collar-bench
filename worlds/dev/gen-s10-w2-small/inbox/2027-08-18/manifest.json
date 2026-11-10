@@ -1,0 +1,89 @@
+{
+  "date": "2027-08-18",
+  "artifacts": [
+    {
+      "id": "em-0011",
+      "channel": "email",
+      "received_at": "2027-08-18T07:40:00+01:00",
+      "path": "em-0011.eml",
+      "title": "Community Digital Notes: issue 33"
+    },
+    {
+      "id": "ch-0009",
+      "channel": "chat",
+      "received_at": "2027-08-18T08:17:00+01:00",
+      "path": "ch-0009.json",
+      "title": "#nettle-core"
+    },
+    {
+      "id": "em-0012",
+      "channel": "email",
+      "received_at": "2027-08-18T08:28:00+01:00",
+      "path": "em-0012.eml",
+      "title": "Re: FYI: Pipit model allow-list"
+    },
+    {
+      "id": "em-0013",
+      "channel": "email",
+      "received_at": "2027-08-18T09:25:00+01:00",
+      "path": "em-0013.eml",
+      "title": "FYI: Friday status note for w/e 20 August"
+    },
+    {
+      "id": "em-0014",
+      "channel": "email",
+      "received_at": "2027-08-18T09:53:00+01:00",
+      "path": "em-0014.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "mt-0002",
+      "channel": "transcript",
+      "received_at": "2027-08-18T10:00:00+01:00",
+      "path": "mt-0002.vtt",
+      "title": "Nettle standup (transcript)"
+    },
+    {
+      "id": "ch-0010",
+      "channel": "chat",
+      "received_at": "2027-08-18T11:23:00+01:00",
+      "path": "ch-0010.json",
+      "title": "#nettle-core"
+    },
+    {
+      "id": "ch-0011",
+      "channel": "chat",
+      "received_at": "2027-08-18T11:45:00+01:00",
+      "path": "ch-0011.json",
+      "title": "DM: Sipho Papadopoulos / Aoife Everett"
+    },
+    {
+      "id": "em-0015",
+      "channel": "email",
+      "received_at": "2027-08-18T11:55:00+01:00",
+      "path": "em-0015.eml",
+      "title": "Re: Synthetic client data set for Nettle"
+    },
+    {
+      "id": "ch-0012",
+      "channel": "chat",
+      "received_at": "2027-08-18T14:12:00+01:00",
+      "path": "ch-0012.json",
+      "title": "#nettle-core"
+    },
+    {
+      "id": "em-0016",
+      "channel": "email",
+      "received_at": "2027-08-18T14:42:00+01:00",
+      "path": "em-0016.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0013",
+      "channel": "chat",
+      "received_at": "2027-08-18T18:58:00+01:00",
+      "path": "ch-0013.json",
+      "title": "#pantry-inventory-discovery-core"
+    }
+  ]
+}

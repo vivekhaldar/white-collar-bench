@@ -1,0 +1,131 @@
+{
+  "date": "2027-02-11",
+  "artifacts": [
+    {
+      "id": "em-0019",
+      "channel": "email",
+      "received_at": "2027-02-11T06:38:00-08:00",
+      "path": "em-0019.eml",
+      "title": "[INC-65011] Ticket updated"
+    },
+    {
+      "id": "em-0020",
+      "channel": "email",
+      "received_at": "2027-02-11T07:24:00-08:00",
+      "path": "em-0020.eml",
+      "title": "Re: List of pilot courses for Axolotl"
+    },
+    {
+      "id": "ca-0005",
+      "channel": "calendar",
+      "received_at": "2027-02-11T07:52:00-08:00",
+      "path": "ca-0005.ics",
+      "title": "Invite: Thesis formatting input round working session"
+    },
+    {
+      "id": "ch-0021",
+      "channel": "chat",
+      "received_at": "2027-02-11T09:20:00-08:00",
+      "path": "ch-0021.json",
+      "title": "DM: Aiko Venkataraman / Despina Pereira"
+    },
+    {
+      "id": "mn-0005",
+      "channel": "meeting_notes",
+      "received_at": "2027-02-11T09:55:00-08:00",
+      "path": "mn-0005.md",
+      "title": "Recap: Axolotl standup"
+    },
+    {
+      "id": "em-0021",
+      "channel": "email",
+      "received_at": "2027-02-11T10:27:00-08:00",
+      "path": "em-0021.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "em-0022",
+      "channel": "email",
+      "received_at": "2027-02-11T10:47:00-08:00",
+      "path": "em-0022.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0023",
+      "channel": "email",
+      "received_at": "2027-02-11T11:43:00-08:00",
+      "path": "em-0023.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "nt-0003",
+      "channel": "note",
+      "received_at": "2027-02-11T13:39:00-08:00",
+      "path": "nt-0003.md",
+      "title": "Thu notes"
+    },
+    {
+      "id": "ch-0022",
+      "channel": "chat",
+      "received_at": "2027-02-11T13:56:00-08:00",
+      "path": "ch-0022.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0023",
+      "channel": "chat",
+      "received_at": "2027-02-11T14:27:00-08:00",
+      "path": "ch-0023.json",
+      "title": "#random"
+    },
+    {
+      "id": "ca-0006",
+      "channel": "calendar",
+      "received_at": "2027-02-11T14:54:00-08:00",
+      "path": "ca-0006.ics",
+      "title": "Invite: Fennel platform sync"
+    },
+    {
+      "id": "mn-0006",
+      "channel": "meeting_notes",
+      "received_at": "2027-02-11T15:30:00-08:00",
+      "path": "mn-0006.md",
+      "title": "Notes: AI-use sync"
+    },
+    {
+      "id": "em-0024",
+      "channel": "email",
+      "received_at": "2027-02-11T16:07:00-08:00",
+      "path": "em-0024.eml",
+      "title": "Fwd: Notes from the research computing session"
+    },
+    {
+      "id": "ch-0024",
+      "channel": "chat",
+      "received_at": "2027-02-11T17:16:00-08:00",
+      "path": "ch-0024.json",
+      "title": "DM: Carys Laurent / Despina Pereira"
+    },
+    {
+      "id": "ch-0025",
+      "channel": "chat",
+      "received_at": "2027-02-11T17:23:00-08:00",
+      "path": "ch-0025.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0026",
+      "channel": "chat",
+      "received_at": "2027-02-11T18:33:00-08:00",
+      "path": "ch-0026.json",
+      "title": "#axolotl-core"
+    },
+    {
+      "id": "ch-0027",
+      "channel": "chat",
+      "received_at": "2027-02-11T21:41:00-08:00",
+      "path": "ch-0027.json",
+      "title": "DM: Despina Pereira / Liisa Babic"
+    }
+  ]
+}

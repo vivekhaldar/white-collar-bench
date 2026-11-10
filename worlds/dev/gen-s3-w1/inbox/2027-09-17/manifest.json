@@ -1,0 +1,131 @@
+{
+  "date": "2027-09-17",
+  "artifacts": [
+    {
+      "id": "em-0058",
+      "channel": "email",
+      "received_at": "2027-09-17T07:09:00-05:00",
+      "path": "em-0058.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0059",
+      "channel": "email",
+      "received_at": "2027-09-17T08:15:00-05:00",
+      "path": "em-0059.eml",
+      "title": "[REQ-23908] Request resolved"
+    },
+    {
+      "id": "em-0060",
+      "channel": "email",
+      "received_at": "2027-09-17T08:26:00-05:00",
+      "path": "em-0060.eml",
+      "title": "FYI: Bisi's after-hours support question on intake forms selection"
+    },
+    {
+      "id": "ch-0074",
+      "channel": "chat",
+      "received_at": "2027-09-17T08:49:00-05:00",
+      "path": "ch-0074.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0061",
+      "channel": "email",
+      "received_at": "2027-09-17T09:37:00-05:00",
+      "path": "em-0061.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0075",
+      "channel": "chat",
+      "received_at": "2027-09-17T10:05:00-05:00",
+      "path": "ch-0075.json",
+      "title": "DM: Alasdair Kaya / Katarzyna Dang"
+    },
+    {
+      "id": "em-0062",
+      "channel": "email",
+      "received_at": "2027-09-17T10:09:00-05:00",
+      "path": "em-0062.eml",
+      "title": "Re: Sirocco vendor comparison"
+    },
+    {
+      "id": "ch-0076",
+      "channel": "chat",
+      "received_at": "2027-09-17T10:34:00-05:00",
+      "path": "ch-0076.json",
+      "title": "DM: Alasdair Kaya / Guadalupe Moreau"
+    },
+    {
+      "id": "ch-0077",
+      "channel": "chat",
+      "received_at": "2027-09-17T11:11:00-05:00",
+      "path": "ch-0077.json",
+      "title": "DM: Penelope Romano / Alasdair Kaya"
+    },
+    {
+      "id": "mn-0007",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-17T11:30:00-05:00",
+      "path": "mn-0007.md",
+      "title": "Recap: Okapi / Sirocco sync"
+    },
+    {
+      "id": "em-0063",
+      "channel": "email",
+      "received_at": "2027-09-17T11:51:00-05:00",
+      "path": "em-0063.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0078",
+      "channel": "chat",
+      "received_at": "2027-09-17T15:17:00-05:00",
+      "path": "ch-0078.json",
+      "title": "DM: Penelope Romano / Alasdair Kaya"
+    },
+    {
+      "id": "em-0064",
+      "channel": "email",
+      "received_at": "2027-09-17T16:09:00-05:00",
+      "path": "em-0064.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0065",
+      "channel": "email",
+      "received_at": "2027-09-17T16:44:00-05:00",
+      "path": "em-0065.eml",
+      "title": "Re: FYI: Okapi"
+    },
+    {
+      "id": "ch-0079",
+      "channel": "chat",
+      "received_at": "2027-09-17T17:16:00-05:00",
+      "path": "ch-0079.json",
+      "title": "DM: Alasdair Kaya / Bisi Chatterjee"
+    },
+    {
+      "id": "em-0066",
+      "channel": "email",
+      "received_at": "2027-09-17T17:19:00-05:00",
+      "path": "em-0066.eml",
+      "title": "Status note: w/e 17 September"
+    },
+    {
+      "id": "ch-0080",
+      "channel": "chat",
+      "received_at": "2027-09-17T17:22:00-05:00",
+      "path": "ch-0080.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "em-0067",
+      "channel": "email",
+      "received_at": "2027-09-17T17:29:00-05:00",
+      "path": "em-0067.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    }
+  ]
+}

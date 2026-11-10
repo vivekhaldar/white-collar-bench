@@ -1,0 +1,125 @@
+{
+  "date": "2027-03-05",
+  "artifacts": [
+    {
+      "id": "em-0068",
+      "channel": "email",
+      "received_at": "2027-03-05T08:46:00-07:00",
+      "path": "em-0068.eml",
+      "title": "Re: Mistral decision memo"
+    },
+    {
+      "id": "mt-0015",
+      "channel": "transcript",
+      "received_at": "2027-03-05T10:00:00-07:00",
+      "path": "mt-0015.vtt",
+      "title": "Mistral standup (transcript)"
+    },
+    {
+      "id": "ch-0067",
+      "channel": "chat",
+      "received_at": "2027-03-05T12:12:00-07:00",
+      "path": "ch-0067.json",
+      "title": "#fennel-core"
+    },
+    {
+      "id": "ch-0068",
+      "channel": "chat",
+      "received_at": "2027-03-05T12:24:00-07:00",
+      "path": "ch-0068.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0069",
+      "channel": "email",
+      "received_at": "2027-03-05T12:58:00-07:00",
+      "path": "em-0069.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0070",
+      "channel": "email",
+      "received_at": "2027-03-05T13:55:00-07:00",
+      "path": "em-0070.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0071",
+      "channel": "email",
+      "received_at": "2027-03-05T14:05:00-07:00",
+      "path": "em-0071.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0072",
+      "channel": "email",
+      "received_at": "2027-03-05T15:06:00-07:00",
+      "path": "em-0072.eml",
+      "title": "[INC-41863] Ticket updated"
+    },
+    {
+      "id": "em-0073",
+      "channel": "email",
+      "received_at": "2027-03-05T15:18:00-07:00",
+      "path": "em-0073.eml",
+      "title": "[INC-46374] Ticket updated"
+    },
+    {
+      "id": "ch-0069",
+      "channel": "chat",
+      "received_at": "2027-03-05T15:57:00-07:00",
+      "path": "ch-0069.json",
+      "title": "#general"
+    },
+    {
+      "id": "dc-0003",
+      "channel": "document",
+      "received_at": "2027-03-05T16:21:00-07:00",
+      "path": "dc-0003.pdf",
+      "title": "Mistral solution brief v2",
+      "parent": "em-0074"
+    },
+    {
+      "id": "em-0074",
+      "channel": "email",
+      "received_at": "2027-03-05T16:21:00-07:00",
+      "path": "em-0074.eml",
+      "title": "Status note: w/e 5 March"
+    },
+    {
+      "id": "mt-0016",
+      "channel": "transcript",
+      "received_at": "2027-03-05T16:30:00-07:00",
+      "path": "mt-0016.vtt",
+      "title": "Lunch and learn (transcript)"
+    },
+    {
+      "id": "em-0075",
+      "channel": "email",
+      "received_at": "2027-03-05T16:33:00-07:00",
+      "path": "em-0075.eml",
+      "title": "[INC-86714] Ticket updated"
+    },
+    {
+      "id": "em-0076",
+      "channel": "email",
+      "received_at": "2027-03-05T17:43:00-07:00",
+      "path": "em-0076.eml",
+      "title": "Mistral architecture diagram"
+    },
+    {
+      "id": "ch-0070",
+      "channel": "chat",
+      "received_at": "2027-03-05T18:04:00-07:00",
+      "path": "ch-0070.json",
+      "title": "#mistral-core"
+    },
+    {
+      "id": "nt-0007",
+      "channel": "note",
+      "received_at": "2027-03-05T18:29:00-07:00",
+      "path": "nt-0007.md",
+      "title": "Fri notes"
+    }
+  ]
+}

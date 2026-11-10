@@ -1,0 +1,49 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-imani",
+ "kind": "dm",
+ "participants": [
+  "Imani",
+  "Dina Ricci"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-04T17:57:03-07:00",
+   "user": "Imani",
+   "handle": "@imani",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-03-04T17:57:23-07:00",
+   "user": "Imani",
+   "handle": "@imani",
+   "text": "recap from yesterday: nomvula offered to share the ai in public service workshop feedback form with you",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@dina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-04T17:57:55-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "great, thank you"
+  },
+  {
+   "ts": "2027-03-04T18:00:52-07:00",
+   "user": "Imani",
+   "handle": "@imani",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-03-04T18:02:55-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "yep, all good"
+  }
+ ]
+}

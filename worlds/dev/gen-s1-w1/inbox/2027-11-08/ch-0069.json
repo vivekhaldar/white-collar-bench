@@ -1,0 +1,41 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-petra",
+ "kind": "dm",
+ "participants": [
+  "Camila Abernathy",
+  "Petra Korkmaz"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-08T15:17:45-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-11-08T15:22:00-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "I can send you the Marten test plan."
+  },
+  {
+   "ts": "2027-11-08T15:22:09-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-11-08T15:27:05-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-11-08T15:28:06-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-bisi",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Bisi Chatterjee"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-22T15:53:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "i sent you the okapi action log"
+  },
+  {
+   "ts": "2027-09-22T15:54:16-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "great, thanks"
+  },
+  {
+   "ts": "2027-09-22T15:57:54-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-09-22T15:59:14-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "no worries"
+  }
+ ]
+}

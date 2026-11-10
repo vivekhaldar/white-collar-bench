@@ -1,0 +1,39 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#axolotl-core",
+ "kind": "channel",
+ "participants": [
+  "Liisa Babic",
+  "Despina Pereira",
+  "Losa Moretti",
+  "Andres Erdem",
+  "Nathaniel Cartwright",
+  "Karim Navarro",
+  "Tomas Deng",
+  "Carys Laurent",
+  "Lindiwe Baek",
+  "Jurgen Dvorak"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-19T07:57:34-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "For the record, Despina sent Andres Erdem the Axolotl comms plan on Monday.",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@despina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-19T07:58:18-08:00",
+   "user": "Andres Erdem",
+   "handle": "@andres",
+   "text": "thanks!"
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "workspace": "iselvale",
+ "channel": "#wagtail-core",
+ "kind": "channel",
+ "participants": [
+  "Isla Faure",
+  "Hiba Deng",
+  "Anahit Fifita",
+  "Rudo Ekwueme",
+  "Lakshmi Figueroa",
+  "Rike",
+  "Jisoo Nowak",
+  "Maricel Fuentes",
+  "Rodrigo Okada"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-22T18:27:00-05:00",
+   "user": "Isla Faure",
+   "handle": "@isla",
+   "text": "Rudo would like Hiba to review Rudo's Wagtail bed census extract by Thu 25 Mar, not agreed yet! :)",
+   "edited": true,
+   "original": "Rudo would like Hiba to review Rudo's Wagtail bed census extract by Sat 27 Mar, not agreed yet! :)"
+  },
+  {
+   "ts": "2027-03-22T18:28:02-05:00",
+   "user": "Rudo Ekwueme",
+   "handle": "@rudo",
+   "text": "that'd be great",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-22T18:34:20-05:00",
+   "user": "Anahit Fifita",
+   "handle": "@anahit",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

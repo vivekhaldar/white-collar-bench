@@ -1,0 +1,23 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-hiba-rudo",
+ "kind": "dm",
+ "participants": [
+  "Rudo Ekwueme",
+  "Hiba Deng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-25T18:17:15-05:00",
+   "user": "Rudo Ekwueme",
+   "handle": "@rudo",
+   "text": "for the record, i sent you the wagtail metrics definition on monday"
+  },
+  {
+   "ts": "2027-03-25T18:17:23-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "thank you!"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-petra",
+ "kind": "dm",
+ "participants": [
+  "Petra Korkmaz",
+  "Camila Abernathy"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-09T08:08:00-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "The Marten target date is moving to Friday 31 December (was 22 December)."
+  },
+  {
+   "ts": "2027-11-09T08:08:27-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "ok"
+  }
+ ]
+}

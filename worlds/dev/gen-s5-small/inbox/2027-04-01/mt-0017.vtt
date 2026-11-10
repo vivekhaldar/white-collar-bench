@@ -1,0 +1,119 @@
+WEBVTT
+
+NOTE
+Meeting: Wagtail standup
+Date: Thursday 1 April 2027, 9:30am to 9:55am
+Attendees: Isla Faure (Falbury Community Clinics), Hiba Deng, Anahit Fifita, Rudo Ekwueme (Falbury Community Clinics), Lakshmi Figueroa, Friederike Bhatt, Jisoo Nowak, Maricel Fuentes
+Transcript generated automatically. Speaker names and spellings may be inaccurate.
+
+1
+00:00:03.014 --> 00:00:05.706
+<v Maricel Fuentes>Let's give people a minute to join.
+
+2
+00:00:06.730 --> 00:00:07.730
+<v Hiba Deng>Sure.
+
+3
+00:04:02.958 --> 00:04:06.420
+<v Isla Faure>Let's get going, we've got a lot to cover.
+
+4
+00:04:07.082 --> 00:04:09.005
+<v Isla Faure>Main thing today is Wagtail.
+
+5
+00:08:32.983 --> 00:08:36.445
+<v Hiba Deng>Done, I sent Giorgy the Wagtail privacy review form.
+
+6
+00:08:36.870 --> 00:08:37.870
+<v Rudo Ekwueme>Got it.
+
+7
+00:08:38.473 --> 00:08:41.165
+<v Rudo Ekwueme>I'd rather we didn't escalate this yet.
+
+8
+00:08:42.123 --> 00:08:43.123
+<v Jisoo Nowak>Okay, yeah.
+
+9
+00:08:43.829 --> 00:08:44.829
+<v Friederike Bhatt>Makes sense.
+
+10
+00:10:13.129 --> 00:10:15.822
+<v Isla Faure>We're now in pilot live on Wagtail.
+
+11
+00:10:17.147 --> 00:10:18.147
+<v Maricel Fuentes>Right.
+
+12
+00:10:18.946 --> 00:10:22.023
+<v Hiba Deng>Sorry, you cut out for a second there.
+
+13
+00:10:23.025 --> 00:10:26.102
+<v Isla Faure>I'm back. Nothing new, just what I said.
+
+14
+00:10:26.935 --> 00:10:30.396
+<v Lakshmi Figueroa>The feedback from the last session was pretty mixed.
+
+15
+00:10:31.267 --> 00:10:32.267
+<v Jisoo Nowak>Okay.
+
+16
+00:10:33.223 --> 00:10:34.223
+<v Maricel Fuentes>Fair.
+
+17
+00:10:34.444 --> 00:10:35.444
+<v Hiba Deng>Uh-huh.
+
+18
+00:10:36.144 --> 00:10:39.221
+<v Isla Faure>We said the same thing a month ago.
+
+19
+00:10:39.551 --> 00:10:40.551
+<v Hiba Deng>Mm-hmm.
+
+20
+00:10:40.912 --> 00:10:41.912
+<v Lakshmi Figueroa>Right, right.
+
+21
+00:14:34.224 --> 00:14:38.070
+<v Isla Faure>Nurse Scheduling Tool Selection has moved to the scoring phase.
+
+22
+00:14:38.836 --> 00:14:39.836
+<v Hiba Deng>Mm.
+
+23
+00:14:40.116 --> 00:14:42.808
+<v Rudo Ekwueme>The documentation is still a bit thin.
+
+24
+00:14:43.659 --> 00:14:47.120
+<v Anahit Fifita>I'm not sure everyone's read the latest version yet.
+
+25
+00:14:48.204 --> 00:14:49.204
+<v Hiba Deng>I see.
+
+26
+00:14:50.258 --> 00:14:51.258
+<v Anahit Fifita>Yeah.
+
+27
+00:20:00.738 --> 00:20:02.277
+<v Isla Faure>Great, let's wrap there.
+
+28
+00:20:02.502 --> 00:20:03.502
+<v Maricel Fuentes>Thanks, bye.

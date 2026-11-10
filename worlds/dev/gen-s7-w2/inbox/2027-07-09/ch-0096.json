@@ -1,0 +1,41 @@
+{
+ "workspace": "corrstead",
+ "channel": "#garnet-core",
+ "kind": "channel",
+ "participants": [
+  "Bolat Oyelami",
+  "Hiba Jimenez",
+  "Ewan Laine",
+  "Madeline Chikwanha",
+  "Desmond Visser",
+  "Andrei Laurent",
+  "Emre Khumalo",
+  "Adaeze Fifita",
+  "Eun-ji Valdez",
+  "Dong-hyun Colombo"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-09T13:50:00-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "@hiba i sent you the Garnet evaluation rubric earlier today!",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@madeline",
+      "@ewan"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-09T13:50:50-08:00",
+   "user": "Eun-ji Valdez",
+   "handle": "@eunji",
+   "text": "thanks for the heads up",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Ewan Naidu",
+  "Tariq Ivanova",
+  "Theresa Petrov"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-02T13:40:59-08:00",
+   "user": "Ewan Naidu",
+   "handle": "@ewan",
+   "text": "lost a blue umbrella, might be in the big meeting room",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@tariq",
+      "@theresa"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-02T13:45:23-08:00",
+   "user": "Tariq Ivanova",
+   "handle": "@tariq",
+   "text": "will keep an eye out"
+  },
+  {
+   "ts": "2027-09-02T13:49:44-08:00",
+   "user": "Theresa Petrov",
+   "handle": "@theresa",
+   "text": "there's one at reception",
+   "thread_of": 0
+  }
+ ]
+}

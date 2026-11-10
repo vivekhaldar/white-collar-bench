@@ -1,0 +1,47 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Adwoa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-05T15:30:27-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-10-05T15:31:52-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-10-05T15:36:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "just checking in on the fulmar retention schedule v2, i'm waiting on this from you"
+  },
+  {
+   "ts": "2027-10-05T15:36:28-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "noted"
+  },
+  {
+   "ts": "2027-10-05T15:39:30-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-10-05T15:41:23-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "anytime"
+  }
+ ]
+}

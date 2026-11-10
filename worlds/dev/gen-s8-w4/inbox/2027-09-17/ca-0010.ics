@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iselmoor//Calendar//EN
+METHOD:REPLY
+BEGIN:VEVENT
+UID:02f3fb2e99dcdcac@iselmoor.example
+DTSTAMP:20270917T151500Z
+DTSTART:20270920T220000Z
+DTEND:20270920T223000Z
+SUMMARY:Accepted: AI-use follow-up
+ORGANIZER;CN=Wei Suwannarat:mailto:wei.suwannarat@sandfield.iselmoor.example
+ATTENDEE;CN=Amira Baek;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED:mailto:amira.baek@iselmoor.example
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR

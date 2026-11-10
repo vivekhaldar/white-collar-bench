@@ -1,0 +1,47 @@
+{
+ "workspace": "holcrest",
+ "channel": "#parking-analytics-core",
+ "kind": "channel",
+ "participants": [
+  "Petra Korkmaz",
+  "Camila Abernathy",
+  "Jalen",
+  "Sipho Sengupta",
+  "Dina Taufa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-08T15:17:00-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "Parking Analytics Tool Selection is moving into questionnaires."
+  },
+  {
+   "ts": "2027-11-08T15:17:47-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "noted"
+  },
+  {
+   "ts": "2027-11-08T15:19:12-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-08T15:25:06-07:00",
+   "user": "Dina Taufa",
+   "handle": "@dina",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-08T15:30:21-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "+1",
+   "thread_of": 0
+  }
+ ]
+}

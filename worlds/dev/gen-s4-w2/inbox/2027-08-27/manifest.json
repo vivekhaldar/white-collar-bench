@@ -1,0 +1,117 @@
+{
+  "date": "2027-08-27",
+  "artifacts": [
+    {
+      "id": "em-0034",
+      "channel": "email",
+      "received_at": "2027-08-27T07:36:00-08:00",
+      "path": "em-0034.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0026",
+      "channel": "chat",
+      "received_at": "2027-08-27T09:09:00-08:00",
+      "path": "ch-0026.json",
+      "title": "#random"
+    },
+    {
+      "id": "mt-0006",
+      "channel": "transcript",
+      "received_at": "2027-08-27T10:00:00-08:00",
+      "path": "mt-0006.vtt",
+      "title": "Fjord standup (transcript)"
+    },
+    {
+      "id": "em-0035",
+      "channel": "email",
+      "received_at": "2027-08-27T10:18:00-08:00",
+      "path": "em-0035.eml",
+      "title": "Re: Meera's syllabus review discovery opportunity list"
+    },
+    {
+      "id": "em-0036",
+      "channel": "email",
+      "received_at": "2027-08-27T11:48:00-08:00",
+      "path": "em-0036.eml",
+      "title": "FYI: Notes from the financial aid chat session"
+    },
+    {
+      "id": "em-0037",
+      "channel": "email",
+      "received_at": "2027-08-27T12:54:00-08:00",
+      "path": "em-0037.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0038",
+      "channel": "email",
+      "received_at": "2027-08-27T14:17:00-08:00",
+      "path": "em-0038.eml",
+      "title": "[INC-45571] Ticket updated"
+    },
+    {
+      "id": "ch-0027",
+      "channel": "chat",
+      "received_at": "2027-08-27T15:22:00-08:00",
+      "path": "ch-0027.json",
+      "title": "#random"
+    },
+    {
+      "id": "mt-0007",
+      "channel": "transcript",
+      "received_at": "2027-08-27T15:30:00-08:00",
+      "path": "mt-0007.vtt",
+      "title": "Cairn platform sync (transcript)"
+    },
+    {
+      "id": "em-0039",
+      "channel": "email",
+      "received_at": "2027-08-27T15:59:00-08:00",
+      "path": "em-0039.eml",
+      "title": "Status note: w/e 27 August"
+    },
+    {
+      "id": "ch-0028",
+      "channel": "chat",
+      "received_at": "2027-08-27T16:04:00-08:00",
+      "path": "ch-0028.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0029",
+      "channel": "chat",
+      "received_at": "2027-08-27T16:16:00-08:00",
+      "path": "ch-0029.json",
+      "title": "DM: Bruna Vaughan / Ottavio Moreira"
+    },
+    {
+      "id": "mn-0003",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-27T17:00:00-08:00",
+      "path": "mn-0003.md",
+      "title": "Notes: Fjord scoping call"
+    },
+    {
+      "id": "ch-0030",
+      "channel": "chat",
+      "received_at": "2027-08-27T17:02:00-08:00",
+      "path": "ch-0030.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0040",
+      "channel": "email",
+      "received_at": "2027-08-27T17:28:00-08:00",
+      "path": "em-0040.eml",
+      "title": "FYI: Fjord pilot charter"
+    },
+    {
+      "id": "ch-0031",
+      "channel": "chat",
+      "received_at": "2027-08-27T18:00:00-08:00",
+      "path": "ch-0031.json",
+      "title": "DM: Tariq Ivanova / Ottavio Moreira"
+    }
+  ]
+}

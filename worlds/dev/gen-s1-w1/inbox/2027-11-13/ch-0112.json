@@ -1,0 +1,24 @@
+{
+ "workspace": "holcrest",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Joselito Moradi",
+  "Jalen Sandberg"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-13T15:49:53-07:00",
+   "user": "Joselito Moradi",
+   "handle": "@joselito",
+   "text": "who left a lunchbox in the fridge since last week?"
+  },
+  {
+   "ts": "2027-11-13T15:56:11-07:00",
+   "user": "Jalen Sandberg",
+   "handle": "@jalen",
+   "text": "not me!",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-guadalupe",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Guadalupe Moreau"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-16T15:08:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "just scoped a two-week sprint on outpatient no-shows"
+  },
+  {
+   "ts": "2027-09-16T15:08:49-05:00",
+   "user": "Guadalupe Moreau",
+   "handle": "@guadalupe",
+   "text": "got it, thanks"
+  }
+ ]
+}

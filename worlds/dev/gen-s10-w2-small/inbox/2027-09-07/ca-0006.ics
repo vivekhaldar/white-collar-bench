@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Reddale//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:bee891959dd45bf2@reddale.example
+DTSTAMP:20270907T135600Z
+DTSTART:20270908T140000Z
+DTEND:20270908T144500Z
+SUMMARY:Nettle review
+ORGANIZER;CN=Gaurav Laine:mailto:gaurav.laine@ormton.reddale.example
+ATTENDEE;CN=Aoife Everett;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:aoife.everett@reddale.example
+ATTENDEE;CN=Akosua Bergstrom;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:akosua.bergstrom@reddale.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.reddale.example/j/5719146365?pwd=rdMM7HUy\nPasscode: 024733
+LOCATION:https://meet.reddale.example/j/5719146365?pwd=rdMM7HUy
+END:VEVENT
+END:VCALENDAR

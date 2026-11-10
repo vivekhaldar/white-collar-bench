@@ -1,0 +1,35 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-yasmin",
+ "kind": "dm",
+ "participants": [
+  "Yasmin Mokoena",
+  "Camila Abernathy"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-28T16:47:03-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-10-28T16:47:40-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-10-28T16:51:00-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "Received the Obsidian model allow-list, thank you!"
+  },
+  {
+   "ts": "2027-10-28T16:52:14-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "noted"
+  }
+ ]
+}

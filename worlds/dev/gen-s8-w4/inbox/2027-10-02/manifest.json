@@ -1,0 +1,47 @@
+{
+  "date": "2027-10-02",
+  "artifacts": [
+    {
+      "id": "em-0207",
+      "channel": "email",
+      "received_at": "2027-10-02T08:56:00-06:00",
+      "path": "em-0207.eml",
+      "title": "[INC-80555] Ticket updated"
+    },
+    {
+      "id": "em-0208",
+      "channel": "email",
+      "received_at": "2027-10-02T09:18:00-06:00",
+      "path": "em-0208.eml",
+      "title": "[INC-79247] Ticket updated"
+    },
+    {
+      "id": "em-0209",
+      "channel": "email",
+      "received_at": "2027-10-02T12:28:00-06:00",
+      "path": "em-0209.eml",
+      "title": "[INC-62321] Ticket updated"
+    },
+    {
+      "id": "ch-0168",
+      "channel": "chat",
+      "received_at": "2027-10-02T14:46:00-06:00",
+      "path": "ch-0168.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0169",
+      "channel": "chat",
+      "received_at": "2027-10-02T16:48:00-06:00",
+      "path": "ch-0169.json",
+      "title": "DM: Amira Baek / Yasmin Guo"
+    },
+    {
+      "id": "ch-0170",
+      "channel": "chat",
+      "received_at": "2027-10-02T17:16:00-06:00",
+      "path": "ch-0170.json",
+      "title": "DM: Yasmin Guo / Amira Baek"
+    }
+  ]
+}

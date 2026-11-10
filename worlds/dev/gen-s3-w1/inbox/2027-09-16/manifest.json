@@ -1,0 +1,131 @@
+{
+  "date": "2027-09-16",
+  "artifacts": [
+    {
+      "id": "em-0054",
+      "channel": "email",
+      "received_at": "2027-09-16T06:41:00-05:00",
+      "path": "em-0054.eml",
+      "title": "[REQ-16032] Request resolved"
+    },
+    {
+      "id": "ca-0008",
+      "channel": "calendar",
+      "received_at": "2027-09-16T07:41:00-05:00",
+      "path": "ca-0008.ics",
+      "title": "Cancelled: Okapi standup"
+    },
+    {
+      "id": "em-0055",
+      "channel": "email",
+      "received_at": "2027-09-16T09:24:00-05:00",
+      "path": "em-0055.eml",
+      "title": "Re: Sirocco Funding Model: moving to review"
+    },
+    {
+      "id": "em-0056",
+      "channel": "email",
+      "received_at": "2027-09-16T09:35:00-05:00",
+      "path": "em-0056.eml",
+      "title": "Call for proposals closes Thursday 30 September"
+    },
+    {
+      "id": "ch-0061",
+      "channel": "chat",
+      "received_at": "2027-09-16T09:44:00-05:00",
+      "path": "ch-0061.json",
+      "title": "DM: Alasdair Kaya / Deniz Feng"
+    },
+    {
+      "id": "ch-0062",
+      "channel": "chat",
+      "received_at": "2027-09-16T10:11:00-05:00",
+      "path": "ch-0062.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0063",
+      "channel": "chat",
+      "received_at": "2027-09-16T10:51:00-05:00",
+      "path": "ch-0063.json",
+      "title": "DM: Katarzyna Dang / Alasdair Kaya"
+    },
+    {
+      "id": "em-0057",
+      "channel": "email",
+      "received_at": "2027-09-16T11:12:00-05:00",
+      "path": "em-0057.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0064",
+      "channel": "chat",
+      "received_at": "2027-09-16T12:10:00-05:00",
+      "path": "ch-0064.json",
+      "title": "#rosix-enterprise-agreement-core"
+    },
+    {
+      "id": "ch-0065",
+      "channel": "chat",
+      "received_at": "2027-09-16T12:20:00-05:00",
+      "path": "ch-0065.json",
+      "title": "#bed-management-discovery-core"
+    },
+    {
+      "id": "ch-0066",
+      "channel": "chat",
+      "received_at": "2027-09-16T12:21:00-05:00",
+      "path": "ch-0066.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0067",
+      "channel": "chat",
+      "received_at": "2027-09-16T14:29:00-05:00",
+      "path": "ch-0067.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0068",
+      "channel": "chat",
+      "received_at": "2027-09-16T15:26:00-05:00",
+      "path": "ch-0068.json",
+      "title": "DM: Alasdair Kaya / Guadalupe Moreau"
+    },
+    {
+      "id": "ch-0069",
+      "channel": "chat",
+      "received_at": "2027-09-16T17:22:00-05:00",
+      "path": "ch-0069.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0070",
+      "channel": "chat",
+      "received_at": "2027-09-16T17:58:00-05:00",
+      "path": "ch-0070.json",
+      "title": "DM: Somchai Thapa / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0071",
+      "channel": "chat",
+      "received_at": "2027-09-16T18:03:00-05:00",
+      "path": "ch-0071.json",
+      "title": "DM: Penelope Romano / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0072",
+      "channel": "chat",
+      "received_at": "2027-09-16T18:43:00-05:00",
+      "path": "ch-0072.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0073",
+      "channel": "chat",
+      "received_at": "2027-09-16T18:54:00-05:00",
+      "path": "ch-0073.json",
+      "title": "#funding-model-core"
+    }
+  ]
+}

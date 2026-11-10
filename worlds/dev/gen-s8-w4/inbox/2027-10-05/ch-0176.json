@@ -1,0 +1,23 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Adwoa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-05T08:46:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "Done, I looked into the Fulmar duplicate notifications."
+  },
+  {
+   "ts": "2027-10-05T08:47:12-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "got it, thanks"
+  }
+ ]
+}

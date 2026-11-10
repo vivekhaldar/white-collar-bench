@@ -1,0 +1,25 @@
+From: Tane Haugen <tane.haugen@morcliff.iselmoor.example>
+To: Amira Baek <amira.baek@iselmoor.example>
+Date: Thu, 16 Sep 2027 15:18:00 -0600
+Subject: Splitting out tooling wear discovery
+Message-ID: <em-0099.8@morcliff.iselmoor.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Good afternoon Amira,
+
+I wanted to share a short update.
+
+We're splitting Morcliff Tooling Wear Discovery out of Morcliff Safety
+Reporting Discovery as its own project, so it can move at its own pace.
+Adwoa's safety reporting discovery stakeholder map and the tooling wear
+wait-time export move over with it.
+
+Best regards,
+Tane
+
+--
+Tane Haugen
+Quality Engineering Lead
+Morcliff Plant

@@ -1,0 +1,140 @@
+{
+  "date": "2027-11-05",
+  "artifacts": [
+    {
+      "id": "em-0078",
+      "channel": "email",
+      "received_at": "2027-11-05T07:29:00-07:00",
+      "path": "em-0078.eml",
+      "title": "[INC-57739] Ticket updated"
+    },
+    {
+      "id": "em-0079",
+      "channel": "email",
+      "received_at": "2027-11-05T09:37:00-07:00",
+      "path": "em-0079.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "mt-0008",
+      "channel": "transcript",
+      "received_at": "2027-11-05T09:55:00-07:00",
+      "path": "mt-0008.vtt",
+      "title": "Marten standup (transcript)"
+    },
+    {
+      "id": "ch-0058",
+      "channel": "chat",
+      "received_at": "2027-11-05T09:59:00-07:00",
+      "path": "ch-0058.json",
+      "title": "DM: Jalen Sandberg / Camila Abernathy"
+    },
+    {
+      "id": "mn-0008",
+      "channel": "meeting_notes",
+      "received_at": "2027-11-05T10:00:00-07:00",
+      "path": "mn-0008.md",
+      "title": "Recap: Lunch and learn"
+    },
+    {
+      "id": "mt-0009",
+      "channel": "transcript",
+      "received_at": "2027-11-05T10:00:00-07:00",
+      "path": "mt-0009.vtt",
+      "title": "Lunch and learn (transcript)"
+    },
+    {
+      "id": "ch-0059",
+      "channel": "chat",
+      "received_at": "2027-11-05T11:34:00-07:00",
+      "path": "ch-0059.json",
+      "title": "DM: Camila Abernathy / Petra Korkmaz"
+    },
+    {
+      "id": "em-0080",
+      "channel": "email",
+      "received_at": "2027-11-05T12:36:00-07:00",
+      "path": "em-0080.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0060",
+      "channel": "chat",
+      "received_at": "2027-11-05T14:06:00-07:00",
+      "path": "ch-0060.json",
+      "title": "DM: Jalen Sandberg / Camila Abernathy"
+    },
+    {
+      "id": "em-0081",
+      "channel": "email",
+      "received_at": "2027-11-05T15:09:00-07:00",
+      "path": "em-0081.eml",
+      "title": "Benefits screening discovery process map"
+    },
+    {
+      "id": "ch-0061",
+      "channel": "chat",
+      "received_at": "2027-11-05T16:27:00-07:00",
+      "path": "ch-0061.json",
+      "title": "DM: Petra Korkmaz / Camila Abernathy"
+    },
+    {
+      "id": "em-0082",
+      "channel": "email",
+      "received_at": "2027-11-05T16:39:00-07:00",
+      "path": "em-0082.eml",
+      "title": "Status note: w/e 5 November"
+    },
+    {
+      "id": "ch-0062",
+      "channel": "chat",
+      "received_at": "2027-11-05T17:05:00-07:00",
+      "path": "ch-0062.json",
+      "title": "DM: Fernanda Olawale / Camila Abernathy"
+    },
+    {
+      "id": "ch-0063",
+      "channel": "chat",
+      "received_at": "2027-11-05T17:40:00-07:00",
+      "path": "ch-0063.json",
+      "title": "#tarn-core"
+    },
+    {
+      "id": "ch-0064",
+      "channel": "chat",
+      "received_at": "2027-11-05T17:47:00-07:00",
+      "path": "ch-0064.json",
+      "title": "DM: Jalen Sandberg / Camila Abernathy"
+    },
+    {
+      "id": "dc-0002",
+      "channel": "document",
+      "received_at": "2027-11-05T18:18:00-07:00",
+      "path": "dc-0002.xlsx",
+      "title": "Marten vendor comparison after Yasmin's comments v1",
+      "parent": "em-0083"
+    },
+    {
+      "id": "em-0083",
+      "channel": "email",
+      "received_at": "2027-11-05T18:18:00-07:00",
+      "path": "em-0083.eml",
+      "title": "Re: Marten vendor comparison after Yasmin's comments"
+    },
+    {
+      "id": "dc-0003",
+      "channel": "document",
+      "received_at": "2027-11-05T18:25:00-07:00",
+      "path": "dc-0003.docx",
+      "title": "Tarn usability findings (draft)",
+      "parent": "em-0084"
+    },
+    {
+      "id": "em-0084",
+      "channel": "email",
+      "received_at": "2027-11-05T18:25:00-07:00",
+      "path": "em-0084.eml",
+      "title": "Re: Tarn usability findings"
+    }
+  ]
+}

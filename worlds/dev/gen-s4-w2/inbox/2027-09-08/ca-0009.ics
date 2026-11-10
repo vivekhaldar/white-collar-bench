@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Drayhurst//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:9ed3627a363d45f0@drayhurst.example
+DTSTAMP:20270908T180100Z
+DTSTART:20270909T230000Z
+DTEND:20270909T234500Z
+SUMMARY:Cairn review
+ORGANIZER;CN=Theresa Petrov:mailto:theresa.petrov@drayhurst.example
+ATTENDEE;CN=Ottavio Moreira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ottavio.moreira@drayhurst.example
+ATTENDEE;CN=Meera Bondarenko;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:meera.bondarenko@drayhurst.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.drayhurst.example/j/1485667739?pwd=VhmWTYSu\nPasscode: 199976
+LOCATION:https://meet.drayhurst.example/j/1485667739?pwd=VhmWTYSu
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,12 @@
+{
+  "workspace": "tarrow",
+  "channel": "dm-marisol-mara",
+  "kind": "dm",
+  "participants": ["Marisol Etxeberria", "Mara Ilves"],
+  "messages": [
+    {"ts": "2027-03-04T16:21:09-08:00", "user": "Marisol Etxeberria", "handle": "@marisol", "text": "Mats accepted the offer 🎉 start date Monday 29 March - he'll be our incoming staff ML engineer. kicking off onboarding paperwork"},
+    {"ts": "2027-03-04T16:21:47-08:00", "user": "Marisol Etxeberria", "handle": "@marisol", "text": "(called him at 10 to extend the offer, he came back to me just now with a very polite yes)"},
+    {"ts": "2027-03-04T16:23:30-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "just out of the workshop. excellent. tell Sade?"},
+    {"ts": "2027-03-04T16:23:58-08:00", "user": "Marisol Etxeberria", "handle": "@marisol", "text": "already did", "reactions": [{"emoji": "+1", "users": ["@mara"]}]}
+  ]
+}

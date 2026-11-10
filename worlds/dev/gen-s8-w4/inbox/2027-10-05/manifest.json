@@ -1,0 +1,166 @@
+{
+  "date": "2027-10-05",
+  "artifacts": [
+    {
+      "id": "em-0220",
+      "channel": "email",
+      "received_at": "2027-10-05T06:39:00-06:00",
+      "path": "em-0220.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "em-0221",
+      "channel": "email",
+      "received_at": "2027-10-05T08:46:00-06:00",
+      "path": "em-0221.eml",
+      "title": "Introduction: safety reporting discovery"
+    },
+    {
+      "id": "ch-0176",
+      "channel": "chat",
+      "received_at": "2027-10-05T09:17:00-06:00",
+      "path": "ch-0176.json",
+      "title": "DM: Amira Baek / Adwoa Kocak"
+    },
+    {
+      "id": "em-0222",
+      "channel": "email",
+      "received_at": "2027-10-05T09:43:00-06:00",
+      "path": "em-0222.eml",
+      "title": "Industrial Data Digest: issue 40"
+    },
+    {
+      "id": "mt-0035",
+      "channel": "transcript",
+      "received_at": "2027-10-05T09:55:00-06:00",
+      "path": "mt-0035.vtt",
+      "title": "Fulmar standup (transcript)"
+    },
+    {
+      "id": "ch-0177",
+      "channel": "chat",
+      "received_at": "2027-10-05T12:47:00-06:00",
+      "path": "ch-0177.json",
+      "title": "DM: Ottavio Bakker / Amira Baek"
+    },
+    {
+      "id": "ch-0178",
+      "channel": "chat",
+      "received_at": "2027-10-05T13:29:00-06:00",
+      "path": "ch-0178.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    },
+    {
+      "id": "ch-0179",
+      "channel": "chat",
+      "received_at": "2027-10-05T13:39:00-06:00",
+      "path": "ch-0179.json",
+      "title": "DM: Batbayar Galbraith / Amira Baek"
+    },
+    {
+      "id": "em-0223",
+      "channel": "email",
+      "received_at": "2027-10-05T14:14:00-06:00",
+      "path": "em-0223.eml",
+      "title": "[REQ-12335] Request resolved"
+    },
+    {
+      "id": "em-0224",
+      "channel": "email",
+      "received_at": "2027-10-05T15:04:00-06:00",
+      "path": "em-0224.eml",
+      "title": "Iselmoor Responsible AI Use Framework: numbers"
+    },
+    {
+      "id": "em-0225",
+      "channel": "email",
+      "received_at": "2027-10-05T15:40:00-06:00",
+      "path": "em-0225.eml",
+      "title": "Fulmar budget justification v2"
+    },
+    {
+      "id": "em-0226",
+      "channel": "email",
+      "received_at": "2027-10-05T15:41:00-06:00",
+      "path": "em-0226.eml",
+      "title": "Re: Morcliff Tooling Wear Discovery: moving to analysis"
+    },
+    {
+      "id": "em-0227",
+      "channel": "email",
+      "received_at": "2027-10-05T15:42:00-06:00",
+      "path": "em-0227.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "ch-0180",
+      "channel": "chat",
+      "received_at": "2027-10-05T15:59:00-06:00",
+      "path": "ch-0180.json",
+      "title": "DM: Amira Baek / Adwoa Kocak"
+    },
+    {
+      "id": "em-0228",
+      "channel": "email",
+      "received_at": "2027-10-05T16:04:00-06:00",
+      "path": "em-0228.eml",
+      "title": "Re: Giorgi's work instructions selection evaluation rubric"
+    },
+    {
+      "id": "em-0229",
+      "channel": "email",
+      "received_at": "2027-10-05T16:42:00-06:00",
+      "path": "em-0229.eml",
+      "title": "[REQ-12436] Request resolved"
+    },
+    {
+      "id": "nt-0022",
+      "channel": "note",
+      "received_at": "2027-10-05T16:49:00-06:00",
+      "path": "nt-0022.md",
+      "title": "Tue voice memo"
+    },
+    {
+      "id": "em-0230",
+      "channel": "email",
+      "received_at": "2027-10-05T17:03:00-06:00",
+      "path": "em-0230.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0181",
+      "channel": "chat",
+      "received_at": "2027-10-05T17:52:00-06:00",
+      "path": "ch-0181.json",
+      "title": "DM: Amira Baek / Darnell Malouf"
+    },
+    {
+      "id": "ch-0182",
+      "channel": "chat",
+      "received_at": "2027-10-05T17:56:00-06:00",
+      "path": "ch-0182.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "ch-0183",
+      "channel": "chat",
+      "received_at": "2027-10-05T17:56:00-06:00",
+      "path": "ch-0183.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "ch-0184",
+      "channel": "chat",
+      "received_at": "2027-10-05T18:38:00-06:00",
+      "path": "ch-0184.json",
+      "title": "DM: Amira Baek / Adwoa Kocak"
+    },
+    {
+      "id": "em-0231",
+      "channel": "email",
+      "received_at": "2027-10-05T22:24:00-06:00",
+      "path": "em-0231.eml",
+      "title": "Draft: Wagtail decision memo"
+    }
+  ]
+}

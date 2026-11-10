@@ -1,0 +1,42 @@
+{
+ "workspace": "iselvale",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Kwame Zamora",
+  "Jisoo Nowak",
+  "Anahit Fifita",
+  "Aylin Kocak"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-24T10:39:51-05:00",
+   "user": "Kwame Zamora",
+   "handle": "@kwame",
+   "text": "any lunch recommendations near the office?",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@jisoo",
+      "@anahit"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-24T10:42:53-05:00",
+   "user": "Jisoo Nowak",
+   "handle": "@jisoo",
+   "text": "the noodle place on the corner",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-24T10:47:27-05:00",
+   "user": "Anahit Fifita",
+   "handle": "@anahit",
+   "text": "the salad bar is decent :)",
+   "thread_of": 0
+  }
+ ]
+}

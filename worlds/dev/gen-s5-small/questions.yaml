@@ -1,0 +1,291 @@
+- id: q-001
+  checkpoint: cp1
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - implied_commitment
+  - scattered_evidence
+- id: q-002
+  checkpoint: cp1
+  template: project_status
+  params:
+    project: pr-wagtail
+    name_form: the Falbury pilot
+  challenges:
+  - alias
+  - implied_commitment
+  - scattered_evidence
+- id: q-003
+  checkpoint: cp1
+  template: project_changes
+  params:
+    project: pr-wagtail
+    since: '2027-03-27'
+    name_form: Project Wagtail
+  challenges:
+  - alias
+  - endorsement
+  - implied_commitment
+  - scattered_evidence
+- id: q-004
+  checkpoint: cp1
+  template: i_owe
+  params:
+    person: p-anahit-fifita
+    name_form: our programs director
+  challenges:
+  - alias
+  - implied_commitment
+  - name_collision
+- id: q-005
+  checkpoint: cp1
+  template: owed_to_me
+  params:
+    person: p-anahit-fifita
+    name_form: our programs director
+  challenges:
+  - alias
+  - duplicate_signal
+  - implied_commitment
+  - name_collision
+  - scattered_evidence
+- id: q-006
+  checkpoint: cp1
+  template: loop_owner
+  params:
+    commitment: c-047
+  challenges: []
+- id: q-007
+  checkpoint: cp1
+  template: loop_due
+  params:
+    commitment: c-046
+  challenges:
+  - scattered_evidence
+- id: q-008
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-wagtail
+    attribute: blocker
+  challenges: []
+- id: q-009
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-rodrigo-okada
+    attribute: relationship
+  challenges: []
+- id: q-010
+  checkpoint: cp1
+  template: project_loops
+  params:
+    project: pr-falbury-clinical-documentation-discovery
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+- id: q-011
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-garfield-supply-par-levels-idea
+    attribute: budget
+  challenges:
+  - unobservable
+- id: q-012
+  checkpoint: cp2
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - correction
+  - duplicate_signal
+  - implied_commitment
+  - new_entity
+  - restructuring
+  - supersession
+  - unobservable
+- id: q-013
+  checkpoint: cp2
+  template: project_status
+  params:
+    project: pr-wagtail
+  challenges:
+  - correction
+  - duplicate_signal
+  - implied_commitment
+  - supersession
+  - unobservable
+- id: q-014
+  checkpoint: cp2
+  template: project_changes
+  params:
+    project: pr-falbury-clinical-documentation-discovery
+    since: '2027-03-30'
+    name_form: the clinical documentation work
+  challenges:
+  - alias
+  - batch_catchup
+  - new_entity
+  - restructuring
+- id: q-015
+  checkpoint: cp2
+  template: i_owe
+  params:
+    person: p-isla-faure
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-016
+  checkpoint: cp2
+  template: owed_to_me
+  params:
+    person: p-lakshmi-figueroa
+  challenges:
+  - transfer
+- id: q-017
+  checkpoint: cp2
+  template: loop_due
+  params:
+    commitment: c-053
+  challenges:
+  - correction
+  - supersession
+- id: q-018
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-falbury-clinical-documentation-discovery
+    attribute: phase
+  challenges: []
+- id: q-019
+  checkpoint: cp2
+  template: person_attr
+  params:
+    person: p-giorgi-choi
+    attribute: relationship
+    name_form: Giorgi
+  challenges:
+  - alias
+  - new_entity
+- id: q-020
+  checkpoint: cp2
+  template: project_loops
+  params:
+    project: pr-wagtail
+  challenges:
+  - correction
+  - duplicate_signal
+  - implied_commitment
+  - supersession
+  - unobservable
+- id: q-021
+  checkpoint: cp2
+  template: person_brief
+  params:
+    person: p-rudo-ekwueme
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-022
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-wagtail
+    attribute: budget
+  text: What is the budget for Wagtail?
+  challenges:
+  - unobservable
+- id: q-023
+  checkpoint: cp3
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - correction
+  - duplicate_signal
+  - implied_commitment
+  - supersession
+  - unobservable
+- id: q-024
+  checkpoint: cp3
+  template: project_status
+  params:
+    project: pr-wagtail
+    name_form: the prior authorization pilot
+  challenges:
+  - alias
+  - correction
+  - duplicate_signal
+  - implied_commitment
+  - supersession
+  - unobservable
+- id: q-025
+  checkpoint: cp3
+  template: project_changes
+  params:
+    project: pr-falbury-referral-backlog-discovery
+    since: '2027-04-01'
+  challenges: []
+- id: q-026
+  checkpoint: cp3
+  template: i_owe
+  params:
+    person: p-rudo-ekwueme
+    name_form: Rudo
+  challenges:
+  - alias
+- id: q-027
+  checkpoint: cp3
+  template: owed_to_me
+  params:
+    person: p-burak-petrovic
+  challenges:
+  - name_collision
+- id: q-028
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-nurse-scheduling-tool-selection
+    attribute: target_date
+    name_form: NSTS selection
+  challenges:
+  - alias
+- id: q-029
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-nurse-scheduling-tool-selection
+    name_form: the nurse scheduling bake-off
+  challenges:
+  - alias
+- id: q-030
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-friederike-bhatt
+  challenges:
+  - correction
+  - duplicate_signal
+  - supersession
+- id: q-031
+  checkpoint: cp3
+  template: decision_date
+  params:
+    decision: d-001
+  challenges: []
+- id: q-032
+  checkpoint: cp3
+  template: event_date
+  params:
+    event: e-0090
+  text: When was "Send Hiba the Wagtail metrics definition" completed?
+  challenges:
+  - duplicate_signal
+- id: q-033
+  checkpoint: cp3
+  template: person_attr
+  params:
+    person: p-sneha-arslan
+    attribute: phone
+  challenges:
+  - unobservable

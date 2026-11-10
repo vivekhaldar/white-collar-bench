@@ -1,0 +1,42 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Andres Erdem",
+  "Aiko Venkataraman",
+  "Segun Gilchrist",
+  "Carys Laurent"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-27T16:31:37-08:00",
+   "user": "Andres Erdem",
+   "handle": "@andres",
+   "text": "who left a lunchbox in the fridge since last week?",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@aiko",
+      "@segun"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-27T16:32:23-08:00",
+   "user": "Aiko Venkataraman",
+   "handle": "@aiko",
+   "text": "not me!",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-27T16:34:52-08:00",
+   "user": "Segun Gilchrist",
+   "handle": "@segun",
+   "text": "it's been there a while",
+   "thread_of": 0
+  }
+ ]
+}

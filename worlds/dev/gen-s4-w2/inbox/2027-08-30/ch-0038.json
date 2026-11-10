@@ -1,0 +1,41 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-meerak-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Ottavio Moreira",
+  "Meera"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-30T15:58:47-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-08-30T16:00:00-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "Would you be able to collect two customer references from Ithic?"
+  },
+  {
+   "ts": "2027-08-30T16:00:20-08:00",
+   "user": "Meera",
+   "handle": "@meerak",
+   "text": "yep, on it"
+  },
+  {
+   "ts": "2027-08-30T16:03:14-08:00",
+   "user": "Meera",
+   "handle": "@meerak",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-08-30T16:05:19-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "yep, all good"
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-burakp-hiba",
+ "kind": "dm",
+ "participants": [
+  "Burak",
+  "Hiba Deng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-04-01T16:47:00-05:00",
+   "user": "Burak",
+   "handle": "@burakp",
+   "text": "leave it with me, i'll send you the notes from the referral triage session"
+  },
+  {
+   "ts": "2027-04-01T16:48:09-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "appreciate it"
+  },
+  {
+   "ts": "2027-04-01T16:49:39-05:00",
+   "user": "Burak",
+   "handle": "@burakp",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-04-01T16:53:32-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "anytime"
+  }
+ ]
+}

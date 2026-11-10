@@ -1,0 +1,41 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-jalen",
+ "kind": "dm",
+ "participants": [
+  "Jalen",
+  "Camila Abernathy"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-29T17:29:16-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-10-29T17:34:00-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "ifeoma is expecting you to update the benefits screening discovery pain-point list after their comments"
+  },
+  {
+   "ts": "2027-10-29T17:34:42-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "no problem"
+  },
+  {
+   "ts": "2027-10-29T17:38:07-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-10-29T17:41:32-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "only the first half"
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-yasmin",
+ "kind": "dm",
+ "participants": [
+  "Camila Abernathy",
+  "Yasmin Mokoena"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-29T18:11:00-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "before i can finish the marten vendor comparison after your comments i need your input, over to you for now"
+  },
+  {
+   "ts": "2027-10-29T18:12:19-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-10-29T18:14:32-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-10-29T18:17:43-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "no worries"
+  }
+ ]
+}

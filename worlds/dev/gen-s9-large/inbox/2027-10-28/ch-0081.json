@@ -1,0 +1,29 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-anh-aroha",
+ "kind": "dm",
+ "participants": [
+  "Aroha Mendoza",
+  "Anh Villanueva"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-28T16:23:00-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "leave it with me, i'll review your radiology follow-up discovery process map"
+  },
+  {
+   "ts": "2027-10-28T16:24:18-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-10-28T16:26:01-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "only the first half"
+  }
+ ]
+}

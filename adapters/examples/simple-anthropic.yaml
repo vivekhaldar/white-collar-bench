@@ -1,0 +1,42 @@
+# A raw Anthropic model behind white-collar-bench's simple tool loop (wcb.agents.simple).
+#
+#   export ANTHROPIC_API_KEY=...
+#   wcb run --adapter adapters/examples/simple-anthropic.yaml --world pilot --out runs/simple-claude
+#
+# The harness gives the model a short generic system prompt, the session prompt and nine file
+# tools confined to the workspace (list_files, read_file, read_document, write_file, edit_file,
+# delete_file, move_file, search, finish). It writes .wcb/usage.json and a transcript to
+# {session_dir}/simple-transcript.jsonl. See docs/adapters.md, "The simple harness".
+#
+# MODEL: replace <model-id> below with an Anthropic model ID, e.g. one listed by
+#   curl -s https://api.anthropic.com/v1/models -H "x-api-key: $ANTHROPIC_API_KEY" -H "anthropic-version: 2023-06-01"
+# and keep `model:` in sync (it is what the report shows).
+#
+# Optional flags: --max-turns N (80), --max-tokens N (8000), --context-budget TOKENS (100000),
+# --temperature T, --price-input / --price-output USD per million tokens (fills cost_usd),
+# --system-prompt-file F (your own generic system prompt; no world knowledge).
+# ANTHROPIC_BASE_URL points the harness at a proxy or gateway that speaks the Messages API.
+name: simple-anthropic
+version: 0.1.0
+model: anthropic/<model-id>
+description: Raw Anthropic model in the wcb.agents.simple tool loop
+cmd:
+  - python
+  - -I
+  - -m
+  - wcb.agents.simple
+  - --provider
+  - anthropic
+  - --model
+  - <model-id>
+  - --max-turns
+  - "80"
+  - --max-tokens
+  - "8000"
+ingest:
+  timeout_s: 1800
+query:
+  timeout_s: 900
+env_passthrough:
+  - ANTHROPIC_API_KEY
+  - ANTHROPIC_BASE_URL

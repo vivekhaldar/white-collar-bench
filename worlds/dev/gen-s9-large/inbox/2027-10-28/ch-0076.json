@@ -1,0 +1,37 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#ai-use-core",
+ "kind": "channel",
+ "participants": [
+  "Anh Villanueva",
+  "Aroha Mendoza",
+  "Keisha Hargrove",
+  "Babajide Hendriks",
+  "Stanley Valdez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-28T07:32:00-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "Heads up: Aroha will rewrite the AI-use guiding principles!",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@aroha",
+      "@keisha",
+      "@babajide"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-28T07:32:26-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "sure, can do",
+   "thread_of": 0
+  }
+ ]
+}

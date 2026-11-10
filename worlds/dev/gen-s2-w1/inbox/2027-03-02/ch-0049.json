@@ -1,0 +1,35 @@
+{
+ "workspace": "vercliff",
+ "channel": "#fennel-core",
+ "kind": "channel",
+ "participants": [
+  "Imani",
+  "Dina Ricci",
+  "Cassandra Yilmaz",
+  "Yael Ellery",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
+  "Thibault Sahin"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-02T11:22:00-07:00",
+   "user": "Imani",
+   "handle": "@imani",
+   "text": "@dina will share the fennel data dictionary with you"
+  },
+  {
+   "ts": "2027-03-02T11:22:40-07:00",
+   "user": "Yael Ellery",
+   "handle": "@yael",
+   "text": "noted"
+  },
+  {
+   "ts": "2027-03-02T11:29:47-07:00",
+   "user": "Yael Ellery",
+   "handle": "@yael",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

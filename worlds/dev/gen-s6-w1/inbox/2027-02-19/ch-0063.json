@@ -1,0 +1,30 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Wei Rossi",
+  "Liisa Babic",
+  "Aiko Venkataraman"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-19T12:14:28-08:00",
+   "user": "Wei Rossi",
+   "handle": "@wei",
+   "text": "is the wifi on the second floor down for anyone else?"
+  },
+  {
+   "ts": "2027-02-19T12:17:59-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "yep, same here"
+  },
+  {
+   "ts": "2027-02-19T12:21:26-08:00",
+   "user": "Aiko Venkataraman",
+   "handle": "@aiko",
+   "text": "works for me"
+  }
+ ]
+}

@@ -1,0 +1,160 @@
+{
+  "date": "2027-03-11",
+  "artifacts": [
+    {
+      "id": "em-0110",
+      "channel": "email",
+      "received_at": "2027-03-11T07:35:00-07:00",
+      "path": "em-0110.eml",
+      "title": "Mistral budget justification"
+    },
+    {
+      "id": "ch-0091",
+      "channel": "chat",
+      "received_at": "2027-03-11T07:38:00-07:00",
+      "path": "ch-0091.json",
+      "title": "#mistral-core (catch-up)"
+    },
+    {
+      "id": "mt-0021",
+      "channel": "transcript",
+      "received_at": "2027-03-11T07:39:00-07:00",
+      "path": "mt-0021.vtt",
+      "title": "Fennel sync (transcript)"
+    },
+    {
+      "id": "em-0111",
+      "channel": "email",
+      "received_at": "2027-03-11T07:40:00-07:00",
+      "path": "em-0111.eml",
+      "title": "While you were out: funding model"
+    },
+    {
+      "id": "em-0112",
+      "channel": "email",
+      "received_at": "2027-03-11T08:07:00-07:00",
+      "path": "em-0112.eml",
+      "title": "Re: Mistral privacy review form"
+    },
+    {
+      "id": "em-0113",
+      "channel": "email",
+      "received_at": "2027-03-11T08:57:00-07:00",
+      "path": "em-0113.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "ca-0010",
+      "channel": "calendar",
+      "received_at": "2027-03-11T08:58:00-07:00",
+      "path": "ca-0010.ics",
+      "title": "Accepted: Mistral follow-up"
+    },
+    {
+      "id": "em-0114",
+      "channel": "email",
+      "received_at": "2027-03-11T09:02:00-07:00",
+      "path": "em-0114.eml",
+      "title": "Re: Funding model pricing options table"
+    },
+    {
+      "id": "ch-0092",
+      "channel": "chat",
+      "received_at": "2027-03-11T09:19:00-07:00",
+      "path": "ch-0092.json",
+      "title": "DM: Dina Ricci / Bilal Kahananui"
+    },
+    {
+      "id": "em-0115",
+      "channel": "email",
+      "received_at": "2027-03-11T09:46:00-07:00",
+      "path": "em-0115.eml",
+      "title": "Re: Cassandra's Mistral timeline"
+    },
+    {
+      "id": "ch-0093",
+      "channel": "chat",
+      "received_at": "2027-03-11T12:07:00-07:00",
+      "path": "ch-0093.json",
+      "title": "DM: Yael Ellery / Dina Ricci"
+    },
+    {
+      "id": "em-0116",
+      "channel": "email",
+      "received_at": "2027-03-11T12:33:00-07:00",
+      "path": "em-0116.eml",
+      "title": "Mistral retention schedule"
+    },
+    {
+      "id": "em-0117",
+      "channel": "email",
+      "received_at": "2027-03-11T13:44:00-07:00",
+      "path": "em-0117.eml",
+      "title": "Re: Fennel action log"
+    },
+    {
+      "id": "ch-0094",
+      "channel": "chat",
+      "received_at": "2027-03-11T13:48:00-07:00",
+      "path": "ch-0094.json",
+      "title": "#funding-model-core"
+    },
+    {
+      "id": "em-0118",
+      "channel": "email",
+      "received_at": "2027-03-11T13:52:00-07:00",
+      "path": "em-0118.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "dc-0006",
+      "channel": "document",
+      "received_at": "2027-03-11T16:31:00-07:00",
+      "path": "dc-0006.xlsx",
+      "title": "Funding model status slide v2",
+      "parent": "em-0119"
+    },
+    {
+      "id": "em-0119",
+      "channel": "email",
+      "received_at": "2027-03-11T16:31:00-07:00",
+      "path": "em-0119.eml",
+      "title": "Funding model status slide"
+    },
+    {
+      "id": "nt-0011",
+      "channel": "note",
+      "received_at": "2027-03-11T16:52:00-07:00",
+      "path": "nt-0011.md",
+      "title": "Thu notes"
+    },
+    {
+      "id": "em-0120",
+      "channel": "email",
+      "received_at": "2027-03-11T17:10:00-07:00",
+      "path": "em-0120.eml",
+      "title": "Fennel tenant onboarding guide"
+    },
+    {
+      "id": "em-0121",
+      "channel": "email",
+      "received_at": "2027-03-11T18:00:00-07:00",
+      "path": "em-0121.eml",
+      "title": "Fennel Funding Model: numbers"
+    },
+    {
+      "id": "ch-0095",
+      "channel": "chat",
+      "received_at": "2027-03-11T18:18:00-07:00",
+      "path": "ch-0095.json",
+      "title": "#mistral-core"
+    },
+    {
+      "id": "ch-0096",
+      "channel": "chat",
+      "received_at": "2027-03-11T18:40:00-07:00",
+      "path": "ch-0096.json",
+      "title": "DM: Dina Ricci / Freja Mutasa"
+    }
+  ]
+}

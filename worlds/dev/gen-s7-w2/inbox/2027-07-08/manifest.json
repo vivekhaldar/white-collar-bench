@@ -1,0 +1,125 @@
+{
+  "date": "2027-07-08",
+  "artifacts": [
+    {
+      "id": "ch-0085",
+      "channel": "chat",
+      "received_at": "2027-07-08T08:31:00-08:00",
+      "path": "ch-0085.json",
+      "title": "#siskin-core"
+    },
+    {
+      "id": "em-0106",
+      "channel": "email",
+      "received_at": "2027-07-08T08:37:00-08:00",
+      "path": "em-0106.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0086",
+      "channel": "chat",
+      "received_at": "2027-07-08T08:49:00-08:00",
+      "path": "ch-0086.json",
+      "title": "#garnet-core"
+    },
+    {
+      "id": "ch-0087",
+      "channel": "chat",
+      "received_at": "2027-07-08T09:49:00-08:00",
+      "path": "ch-0087.json",
+      "title": "DM: Bolat Oyelami / Hiba Jimenez"
+    },
+    {
+      "id": "mt-0014",
+      "channel": "transcript",
+      "received_at": "2027-07-08T09:55:00-08:00",
+      "path": "mt-0014.vtt",
+      "title": "Garnet standup (transcript)"
+    },
+    {
+      "id": "em-0107",
+      "channel": "email",
+      "received_at": "2027-07-08T11:55:00-08:00",
+      "path": "em-0107.eml",
+      "title": "FYI: Garnet acceptance criteria"
+    },
+    {
+      "id": "ch-0088",
+      "channel": "chat",
+      "received_at": "2027-07-08T12:02:00-08:00",
+      "path": "ch-0088.json",
+      "title": "DM: Bolat Farah / Hiba Jimenez"
+    },
+    {
+      "id": "em-0108",
+      "channel": "email",
+      "received_at": "2027-07-08T13:17:00-08:00",
+      "path": "em-0108.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "mt-0015",
+      "channel": "transcript",
+      "received_at": "2027-07-08T14:00:00-08:00",
+      "path": "mt-0015.vtt",
+      "title": "Cross-campus AI forum (transcript)"
+    },
+    {
+      "id": "em-0109",
+      "channel": "email",
+      "received_at": "2027-07-08T15:16:00-08:00",
+      "path": "em-0109.eml",
+      "title": "Re: Splitting out waitlist management discovery"
+    },
+    {
+      "id": "dc-0002",
+      "channel": "document",
+      "received_at": "2027-07-08T15:24:00-08:00",
+      "path": "dc-0002.docx",
+      "title": "Garnet data dictionary v2",
+      "parent": "em-0110"
+    },
+    {
+      "id": "em-0110",
+      "channel": "email",
+      "received_at": "2027-07-08T15:24:00-08:00",
+      "path": "em-0110.eml",
+      "title": "Garnet data dictionary"
+    },
+    {
+      "id": "ch-0089",
+      "channel": "chat",
+      "received_at": "2027-07-08T15:46:00-08:00",
+      "path": "ch-0089.json",
+      "title": "DM: Ewan Laine / Hiba Jimenez"
+    },
+    {
+      "id": "ch-0090",
+      "channel": "chat",
+      "received_at": "2027-07-08T16:04:00-08:00",
+      "path": "ch-0090.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "em-0111",
+      "channel": "email",
+      "received_at": "2027-07-08T16:45:00-08:00",
+      "path": "em-0111.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "em-0112",
+      "channel": "email",
+      "received_at": "2027-07-08T17:30:00-08:00",
+      "path": "em-0112.eml",
+      "title": "Re: Siskin one-page summary"
+    },
+    {
+      "id": "em-0113",
+      "channel": "email",
+      "received_at": "2027-07-08T18:25:00-08:00",
+      "path": "em-0113.eml",
+      "title": "Speaker spotlight"
+    }
+  ]
+}

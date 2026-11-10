@@ -1,0 +1,28 @@
+# Raw-retrieval baseline (docs/plan.md §7): no curation at ingest time, search at query time.
+#
+#   export ANTHROPIC_API_KEY=...
+#   wcb run --adapter adapters/examples/raw-retrieval.yaml --world pilot --out runs/raw-retrieval
+#
+# Ingestion runs wcb.baselines.archive: every input is copied into sources/<date>/ (secrets
+# redacted) and listed in the daily log, but no person, project or loop record is created or
+# updated. Queries run the simple harness, which answers by searching and reading the archive
+# and the (frozen) seed store. Comparing this baseline with a curating agent on the same model
+# shows what curation adds; its store-integrity score shows what is lost without it.
+#
+# MODEL: replace <model-id> below with an Anthropic model ID and keep `model:` in sync.
+# To use an OpenAI-compatible endpoint instead, change --provider to openai and pass
+# OPENAI_API_KEY / OPENAI_BASE_URL (see simple-openai.yaml).
+name: raw-retrieval
+version: 0.1.0
+model: anthropic/<model-id>
+description: Archive-only ingestion plus LLM search at query time
+ingest:
+  cmd: ["python", "-I", "-m", "wcb.baselines.archive"]
+  timeout_s: 300
+query:
+  cmd: ["python", "-I", "-m", "wcb.agents.simple", "--provider", "anthropic", "--model", "<model-id>",
+        "--max-turns", "80", "--max-tokens", "8000"]
+  timeout_s: 900
+env_passthrough:
+  - ANTHROPIC_API_KEY
+  - ANTHROPIC_BASE_URL

@@ -1,0 +1,23 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-kwame",
+ "kind": "dm",
+ "participants": [
+  "Kwame Brandt",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-23T08:03:00-05:00",
+   "user": "Kwame Brandt",
+   "handle": "@kwame",
+   "text": "Leave it with me, I'll review the Kasis data processing agreement."
+  },
+  {
+   "ts": "2027-09-23T08:03:35-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "perfect, thanks"
+  }
+ ]
+}

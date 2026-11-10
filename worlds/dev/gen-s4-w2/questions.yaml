@@ -1,0 +1,788 @@
+- id: q-001
+  checkpoint: cp1
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+  - new_entity
+  - scattered_evidence
+- id: q-002
+  checkpoint: cp1
+  template: project_status
+  params:
+    project: pr-fjord
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - scattered_evidence
+  - supersession
+- id: q-003
+  checkpoint: cp1
+  template: project_changes
+  params:
+    project: pr-fjord
+    since: '2027-09-04'
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - scattered_evidence
+  - supersession
+- id: q-004
+  checkpoint: cp1
+  template: i_owe
+  params:
+    person: p-tariq-ivanova
+    name_form: Tariq
+  challenges:
+  - alias
+- id: q-005
+  checkpoint: cp1
+  template: owed_to_me
+  params:
+    person: p-meera-kariuki
+  challenges:
+  - name_collision
+- id: q-006
+  checkpoint: cp1
+  template: loop_owner
+  params:
+    commitment: c-039
+  challenges:
+  - duplicate_signal
+- id: q-007
+  checkpoint: cp1
+  template: loop_due
+  params:
+    commitment: c-059
+  challenges:
+  - scattered_evidence
+- id: q-008
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-fjord
+    attribute: phase
+  challenges: []
+- id: q-009
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-meera-bondarenko
+    attribute: relationship
+  challenges:
+  - name_collision
+- id: q-010
+  checkpoint: cp1
+  template: project_loops
+  params:
+    project: pr-cairn
+    name_form: Cairn platform
+  challenges:
+  - alias
+- id: q-011
+  checkpoint: cp1
+  template: person_brief
+  params:
+    person: p-ratna-nikolic
+  challenges:
+  - duplicate_signal
+- id: q-012
+  checkpoint: cp1
+  template: decision_date
+  params:
+    decision: d-002
+  challenges:
+  - worker_directive
+- id: q-013
+  checkpoint: cp1
+  template: event_date
+  params:
+    event: e-0169
+  text: When was "Send Meera the Fjord faculty survey" completed?
+  challenges:
+  - endorsement
+  - implied_commitment
+  - supersession
+- id: q-014
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-margaux-kang
+    attribute: office
+  challenges:
+  - unobservable
+- id: q-015
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-open-courseware-peer-network
+    attribute: budget
+  challenges:
+  - unobservable
+- id: q-016
+  checkpoint: cp2
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+  - new_entity
+- id: q-017
+  checkpoint: cp2
+  template: project_status
+  params:
+    project: pr-fjord
+    name_form: the alumni outreach pilot
+  challenges:
+  - alias
+  - duplicate_signal
+  - new_entity
+  - supersession
+- id: q-018
+  checkpoint: cp2
+  template: project_changes
+  params:
+    project: pr-heathridge-course-assistant-discovery
+    since: '2027-09-07'
+  challenges:
+  - implied_commitment
+  - transfer
+  - unobservable
+- id: q-019
+  checkpoint: cp2
+  template: i_owe
+  params:
+    person: p-meera-bondarenko
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+  - name_collision
+  - new_entity
+- id: q-020
+  checkpoint: cp2
+  template: owed_to_me
+  params:
+    person: p-theresa-petrov
+    name_form: Resi
+  challenges:
+  - alias
+- id: q-021
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-holfield-syllabus-review-discovery
+    attribute: owner
+  challenges: []
+- id: q-022
+  checkpoint: cp2
+  template: person_attr
+  params:
+    person: p-nomvula-ndlovu
+    attribute: role
+  challenges: []
+- id: q-023
+  checkpoint: cp2
+  template: project_loops
+  params:
+    project: pr-holfield-syllabus-review-discovery
+    name_form: the syllabus review work
+  challenges:
+  - alias
+  - new_entity
+- id: q-024
+  checkpoint: cp2
+  template: person_brief
+  params:
+    person: p-bruna-vaughan
+  challenges:
+  - correction
+- id: q-025
+  checkpoint: cp2
+  template: decision_date
+  params:
+    decision: d-001
+  challenges: []
+- id: q-026
+  checkpoint: cp2
+  template: event_date
+  params:
+    event: e-0070
+  text: When was "Send Ottavio the notes from the thesis formatting session" completed?
+  challenges: []
+- id: q-027
+  checkpoint: cp2
+  template: loop_owner
+  params:
+    commitment: c-051
+  challenges:
+  - transfer
+- id: q-028
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-ithic-course-scheduling-diligence
+    attribute: owner
+  challenges: []
+- id: q-029
+  checkpoint: cp2
+  template: person_attr
+  params:
+    person: p-celine-novotny
+    attribute: org
+    name_form: Celine
+  challenges:
+  - alias
+  - new_entity
+- id: q-030
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-heathridge-course-assistant-discovery
+    attribute: budget
+  text: What is the budget for Heathridge Course Assistant Discovery?
+  challenges:
+  - unobservable
+- id: q-031
+  checkpoint: cp3
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - restructuring
+  - supersession
+  - worker_directive
+- id: q-032
+  checkpoint: cp3
+  template: project_status
+  params:
+    project: pr-fjord
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - supersession
+  - worker_directive
+- id: q-033
+  checkpoint: cp3
+  template: project_changes
+  params:
+    project: pr-cairn
+    since: '2027-09-09'
+  challenges: []
+- id: q-034
+  checkpoint: cp3
+  template: i_owe
+  params:
+    person: p-theresa-petrov
+  challenges: []
+- id: q-035
+  checkpoint: cp3
+  template: owed_to_me
+  params:
+    person: p-margaux-kang
+    name_form: Margaux
+  challenges:
+  - alias
+  - duplicate_signal
+- id: q-036
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-early-alert-advisory
+    attribute: sponsor
+  challenges: []
+- id: q-037
+  checkpoint: cp3
+  template: person_attr
+  params:
+    person: p-ratna-nikolic
+    attribute: org
+  challenges: []
+- id: q-038
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-room-booking-tool-selection
+    name_form: RBTS selection
+  challenges:
+  - alias
+  - batch_catchup
+- id: q-039
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-celine-novotny
+    name_form: Celine
+  challenges:
+  - alias
+  - new_entity
+- id: q-040
+  checkpoint: cp3
+  template: event_date
+  params:
+    event: e-0236
+  text: When was "Set up syllabus review discovery sandbox access for Ottavio" completed?
+  challenges:
+  - silent_closure
+- id: q-041
+  checkpoint: cp3
+  template: loop_due
+  params:
+    commitment: c-064
+  challenges:
+  - endorsement
+  - worker_directive
+- id: q-042
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-open-courseware-peer-network
+    attribute: owner
+  challenges:
+  - new_entity
+- id: q-043
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-heathridge-course-assistant-discovery
+  challenges:
+  - transfer
+- id: q-044
+  checkpoint: cp3
+  template: event_date
+  params:
+    event: e-0200
+  text: When was "Walk Meera through the course assistant discovery process map" completed?
+  challenges:
+  - unobservable
+  - weak_evidence
+- id: q-045
+  checkpoint: cp3
+  template: person_attr
+  params:
+    person: p-meera-kariuki
+    attribute: office
+  challenges:
+  - name_collision
+  - unobservable
+- id: q-046
+  checkpoint: cp4
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - restructuring
+  - scattered_evidence
+  - supersession
+  - worker_directive
+- id: q-047
+  checkpoint: cp4
+  template: project_status
+  params:
+    project: pr-fjord
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - scattered_evidence
+  - supersession
+  - worker_directive
+- id: q-048
+  checkpoint: cp4
+  template: project_changes
+  params:
+    project: pr-holfield-syllabus-review-discovery
+    since: '2027-09-11'
+  challenges: []
+- id: q-049
+  checkpoint: cp4
+  template: i_owe
+  params:
+    person: p-darius-bramwell
+    name_form: Darius
+  challenges:
+  - alias
+  - duplicate_signal
+- id: q-050
+  checkpoint: cp4
+  template: owed_to_me
+  params:
+    person: p-bruna-vaughan
+  challenges: []
+- id: q-051
+  checkpoint: cp4
+  template: person_attr
+  params:
+    person: p-henrik-santoso
+    attribute: org
+    name_form: Henrik
+  challenges:
+  - alias
+  - new_entity
+- id: q-052
+  checkpoint: cp4
+  template: person_brief
+  params:
+    person: p-nadia-vogel
+  challenges:
+  - transfer
+- id: q-053
+  checkpoint: cp4
+  template: event_date
+  params:
+    event: e-0095
+  text: When was "Send Tariq the Friday status note for w/e 27 August" completed?
+  challenges:
+  - duplicate_signal
+- id: q-054
+  checkpoint: cp4
+  template: loop_due
+  params:
+    commitment: c-094
+  challenges:
+  - scattered_evidence
+- id: q-055
+  checkpoint: cp4
+  template: project_attr
+  params:
+    project: pr-fjord
+    attribute: sponsor
+    name_form: Project Fjord
+  challenges:
+  - alias
+- id: q-056
+  checkpoint: cp4
+  template: person_brief
+  params:
+    person: p-meera-bondarenko
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - name_collision
+  - new_entity
+  - restructuring
+  - supersession
+  - worker_directive
+- id: q-057
+  checkpoint: cp4
+  template: event_date
+  params:
+    event: e-0171
+  text: When did the target date for Fjord move to 15 November?
+  challenges:
+  - endorsement
+  - implied_commitment
+  - supersession
+- id: q-058
+  checkpoint: cp4
+  template: project_attr
+  params:
+    project: pr-fjord
+    attribute: blocker
+  challenges:
+  - duplicate_signal
+- id: q-059
+  checkpoint: cp4
+  template: person_brief
+  params:
+    person: p-darius-bramwell
+    name_form: the Holfield lead
+  challenges:
+  - alias
+  - duplicate_signal
+  - new_entity
+  - restructuring
+  - scattered_evidence
+- id: q-060
+  checkpoint: cp4
+  template: project_attr
+  params:
+    project: pr-cairn
+    attribute: budget_ceiling
+  text: What is the budget ceiling for Cairn?
+  challenges:
+  - unobservable
+- id: q-061
+  checkpoint: cp5
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - restructuring
+  - supersession
+  - unobservable
+  - worker_directive
+- id: q-062
+  checkpoint: cp5
+  template: project_status
+  params:
+    project: pr-fjord
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - supersession
+  - transfer
+  - version_mismatch
+  - worker_directive
+- id: q-063
+  checkpoint: cp5
+  template: project_changes
+  params:
+    project: pr-room-booking-tool-selection
+    since: '2027-09-14'
+  challenges:
+  - batch_catchup
+  - silent_closure
+- id: q-064
+  checkpoint: cp5
+  template: i_owe
+  params:
+    person: p-nomvula-ndlovu
+  challenges:
+  - new_entity
+- id: q-065
+  checkpoint: cp5
+  template: owed_to_me
+  params:
+    person: p-darius-bramwell
+  challenges: []
+- id: q-066
+  checkpoint: cp5
+  template: project_loops
+  params:
+    project: pr-holfield-waitlist-management-discovery
+    name_form: the waitlist management discovery
+  challenges:
+  - alias
+  - correction
+  - new_entity
+  - restructuring
+- id: q-067
+  checkpoint: cp5
+  template: person_brief
+  params:
+    person: p-theresa-petrov
+  challenges:
+  - correction
+- id: q-068
+  checkpoint: cp5
+  template: event_date
+  params:
+    event: e-0286
+  text: When did the target date for Fjord move to 10 December?
+  challenges:
+  - supersession
+  - transfer
+- id: q-069
+  checkpoint: cp5
+  template: loop_owner
+  params:
+    commitment: c-088
+  challenges:
+  - supersession
+  - transfer
+- id: q-070
+  checkpoint: cp5
+  template: project_attr
+  params:
+    project: pr-open-courseware-peer-network
+    attribute: sponsor
+  challenges:
+  - new_entity
+- id: q-071
+  checkpoint: cp5
+  template: person_brief
+  params:
+    person: p-nomvula-ndlovu
+  challenges:
+  - new_entity
+  - transfer
+- id: q-072
+  checkpoint: cp5
+  template: event_date
+  params:
+    event: e-0188
+  text: When was "Review Esperanza's Fjord evaluation rubric" completed?
+  challenges: []
+- id: q-073
+  checkpoint: cp5
+  template: loop_owner
+  params:
+    commitment: c-037
+  challenges:
+  - transfer
+- id: q-074
+  checkpoint: cp5
+  template: project_attr
+  params:
+    project: pr-early-alert-advisory
+    attribute: budget
+  challenges:
+  - unobservable
+- id: q-075
+  checkpoint: cp5
+  template: person_attr
+  params:
+    person: p-ratna-nikolic
+    attribute: office
+    name_form: Ratna
+  challenges:
+  - alias
+  - unobservable
+- id: q-076
+  checkpoint: cp6
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - restructuring
+  - supersession
+  - unobservable
+  - worker_directive
+- id: q-077
+  checkpoint: cp6
+  template: project_status
+  params:
+    project: pr-fjord
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - supersession
+  - transfer
+  - worker_directive
+- id: q-078
+  checkpoint: cp6
+  template: project_changes
+  params:
+    project: pr-heathridge-lab-safety-training-idea
+    since: '2027-09-16'
+  challenges:
+  - restructuring
+  - worker_directive
+- id: q-079
+  checkpoint: cp6
+  template: i_owe
+  params:
+    person: p-celine-novotny
+    name_form: Celine
+  challenges:
+  - alias
+  - endorsement
+  - new_entity
+  - worker_directive
+- id: q-080
+  checkpoint: cp6
+  template: owed_to_me
+  params:
+    person: p-nadia-vogel
+  challenges:
+  - batch_catchup
+  - transfer
+- id: q-081
+  checkpoint: cp6
+  template: person_brief
+  params:
+    person: p-roya-chatterjee
+  challenges:
+  - duplicate_signal
+  - name_collision
+  - new_entity
+  - restructuring
+  - worker_directive
+- id: q-082
+  checkpoint: cp6
+  template: decision_date
+  params:
+    decision: d-004
+  challenges: []
+- id: q-083
+  checkpoint: cp6
+  template: event_date
+  params:
+    event: e-0220
+  text: When was "Send Meera the Fjord RACI chart" completed?
+  challenges: []
+- id: q-084
+  checkpoint: cp6
+  template: loop_due
+  params:
+    commitment: c-096
+  challenges:
+  - endorsement
+  - worker_directive
+- id: q-085
+  checkpoint: cp6
+  template: project_attr
+  params:
+    project: pr-fjord
+    attribute: target_date
+    name_form: the Holfield pilot
+  challenges:
+  - alias
+  - supersession
+  - transfer
+- id: q-086
+  checkpoint: cp6
+  template: person_brief
+  params:
+    person: p-margaux-kang
+  challenges:
+  - duplicate_signal
+- id: q-087
+  checkpoint: cp6
+  template: event_date
+  params:
+    event: e-0164
+  text: When was "Write the Fjord support playbook" completed?
+  challenges:
+  - duplicate_signal
+- id: q-088
+  checkpoint: cp6
+  template: project_attr
+  params:
+    project: pr-open-courseware-workshop
+    attribute: phase
+    name_form: the workshop
+  challenges:
+  - alias
+  - new_entity
+- id: q-089
+  checkpoint: cp6
+  template: person_brief
+  params:
+    person: p-esperanza-venkataraman
+  challenges: []
+- id: q-090
+  checkpoint: cp6
+  template: project_attr
+  params:
+    project: pr-cairn
+    attribute: budget
+  challenges:
+  - unobservable

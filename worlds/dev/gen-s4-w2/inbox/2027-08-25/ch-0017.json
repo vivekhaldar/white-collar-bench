@@ -1,0 +1,38 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Bruna Vaughan",
+  "Theresa Petrov",
+  "Esperanza Venkataraman",
+  "Nomvula Ndlovu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-25T13:34:54-08:00",
+   "user": "Bruna Vaughan",
+   "handle": "@bruna",
+   "text": "is the wifi on the second floor down for anyone else?"
+  },
+  {
+   "ts": "2027-08-25T13:37:46-08:00",
+   "user": "Theresa Petrov",
+   "handle": "@theresa",
+   "text": "yep, same here"
+  },
+  {
+   "ts": "2027-08-25T13:43:09-08:00",
+   "user": "Esperanza Venkataraman",
+   "handle": "@esperanza",
+   "text": "works for me"
+  },
+  {
+   "ts": "2027-08-25T13:46:47-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "it's been flaky all morning",
+   "thread_of": 0
+  }
+ ]
+}

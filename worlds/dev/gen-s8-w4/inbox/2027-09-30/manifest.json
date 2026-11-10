@@ -1,0 +1,195 @@
+{
+  "date": "2027-09-30",
+  "artifacts": [
+    {
+      "id": "ch-0151",
+      "channel": "chat",
+      "received_at": "2027-09-30T07:38:00-06:00",
+      "path": "ch-0151.json",
+      "title": "#fulmar-core (catch-up)"
+    },
+    {
+      "id": "mt-0032",
+      "channel": "transcript",
+      "received_at": "2027-09-30T07:39:00-06:00",
+      "path": "mt-0032.vtt",
+      "title": "Wagtail sync (transcript)"
+    },
+    {
+      "id": "em-0182",
+      "channel": "email",
+      "received_at": "2027-09-30T07:40:00-06:00",
+      "path": "em-0182.eml",
+      "title": "While you were out: AI-use"
+    },
+    {
+      "id": "ch-0152",
+      "channel": "chat",
+      "received_at": "2027-09-30T07:41:00-06:00",
+      "path": "ch-0152.json",
+      "title": "DM: Ottavio Bakker / Amira Baek"
+    },
+    {
+      "id": "ch-0153",
+      "channel": "chat",
+      "received_at": "2027-09-30T09:05:00-06:00",
+      "path": "ch-0153.json",
+      "title": "DM: Rodrigo Oduro / Amira Baek"
+    },
+    {
+      "id": "ca-0019",
+      "channel": "calendar",
+      "received_at": "2027-09-30T09:25:00-06:00",
+      "path": "ca-0019.ics",
+      "title": "Accepted: Safety reporting discovery follow-up"
+    },
+    {
+      "id": "em-0183",
+      "channel": "email",
+      "received_at": "2027-09-30T09:26:00-06:00",
+      "path": "em-0183.eml",
+      "title": "Re: Oksana's Fulmar dependency list v2"
+    },
+    {
+      "id": "ch-0154",
+      "channel": "chat",
+      "received_at": "2027-09-30T10:07:00-06:00",
+      "path": "ch-0154.json",
+      "title": "DM: Amira Baek / Marcelo Meijer"
+    },
+    {
+      "id": "em-0184",
+      "channel": "email",
+      "received_at": "2027-09-30T11:02:00-06:00",
+      "path": "em-0184.eml",
+      "title": "Re: Oksana's Fulmar dependency list v2"
+    },
+    {
+      "id": "em-0185",
+      "channel": "email",
+      "received_at": "2027-09-30T11:39:00-06:00",
+      "path": "em-0185.eml",
+      "title": "AI-use principles draft v2"
+    },
+    {
+      "id": "em-0186",
+      "channel": "email",
+      "received_at": "2027-09-30T11:43:00-06:00",
+      "path": "em-0186.eml",
+      "title": "Fwd: Fulmar comms plan v2"
+    },
+    {
+      "id": "em-0187",
+      "channel": "email",
+      "received_at": "2027-09-30T12:37:00-06:00",
+      "path": "em-0187.eml",
+      "title": "Re: AI-use status slide v2 after Zawadi's comments"
+    },
+    {
+      "id": "em-0188",
+      "channel": "email",
+      "received_at": "2027-09-30T13:02:00-06:00",
+      "path": "em-0188.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0155",
+      "channel": "chat",
+      "received_at": "2027-09-30T14:03:00-06:00",
+      "path": "ch-0155.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "em-0189",
+      "channel": "email",
+      "received_at": "2027-09-30T14:28:00-06:00",
+      "path": "em-0189.eml",
+      "title": "Operator AI Basics Workshop: moving to closed"
+    },
+    {
+      "id": "ch-0156",
+      "channel": "chat",
+      "received_at": "2027-09-30T14:29:00-06:00",
+      "path": "ch-0156.json",
+      "title": "#ai-use-core"
+    },
+    {
+      "id": "ch-0157",
+      "channel": "chat",
+      "received_at": "2027-09-30T14:38:00-06:00",
+      "path": "ch-0157.json",
+      "title": "DM: Tane Haugen / Amira Baek"
+    },
+    {
+      "id": "ch-0158",
+      "channel": "chat",
+      "received_at": "2027-09-30T14:58:00-06:00",
+      "path": "ch-0158.json",
+      "title": "DM: Kamau Greco / Amira Baek"
+    },
+    {
+      "id": "mt-0033",
+      "channel": "transcript",
+      "received_at": "2027-09-30T16:00:00-06:00",
+      "path": "mt-0033.vtt",
+      "title": "Morcliff relationship check-in (transcript)"
+    },
+    {
+      "id": "em-0190",
+      "channel": "email",
+      "received_at": "2027-09-30T16:36:00-06:00",
+      "path": "em-0190.eml",
+      "title": "Operator AI Basics Workshop: numbers"
+    },
+    {
+      "id": "em-0191",
+      "channel": "email",
+      "received_at": "2027-09-30T16:52:00-06:00",
+      "path": "em-0191.eml",
+      "title": "Re: Fulmar requirements matrix v2"
+    },
+    {
+      "id": "ch-0159",
+      "channel": "chat",
+      "received_at": "2027-09-30T17:17:00-06:00",
+      "path": "ch-0159.json",
+      "title": "DM: Amira Baek / Wei Suwannarat"
+    },
+    {
+      "id": "em-0192",
+      "channel": "email",
+      "received_at": "2027-09-30T17:36:00-06:00",
+      "path": "em-0192.eml",
+      "title": "Re: Fulmar service blueprint"
+    },
+    {
+      "id": "ch-0160",
+      "channel": "chat",
+      "received_at": "2027-09-30T18:00:00-06:00",
+      "path": "ch-0160.json",
+      "title": "DM: Batbayar Galbraith / Amira Baek"
+    },
+    {
+      "id": "ch-0161",
+      "channel": "chat",
+      "received_at": "2027-09-30T18:17:00-06:00",
+      "path": "ch-0161.json",
+      "title": "#ai-use-core"
+    },
+    {
+      "id": "dc-0010",
+      "channel": "document",
+      "received_at": "2027-09-30T18:18:00-06:00",
+      "path": "dc-0010.xlsx",
+      "title": "Wagtail rollout checklist v2",
+      "parent": "em-0193"
+    },
+    {
+      "id": "em-0193",
+      "channel": "email",
+      "received_at": "2027-09-30T18:18:00-06:00",
+      "path": "em-0193.eml",
+      "title": "Wagtail rollout checklist"
+    }
+  ]
+}

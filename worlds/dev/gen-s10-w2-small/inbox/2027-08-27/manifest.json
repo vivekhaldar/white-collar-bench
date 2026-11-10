@@ -1,0 +1,96 @@
+{
+  "date": "2027-08-27",
+  "artifacts": [
+    {
+      "id": "em-0048",
+      "channel": "email",
+      "received_at": "2027-08-27T07:59:00+01:00",
+      "path": "em-0048.eml",
+      "title": "Re: Sigrid's Nettle integration spec"
+    },
+    {
+      "id": "em-0049",
+      "channel": "email",
+      "received_at": "2027-08-27T08:49:00+01:00",
+      "path": "em-0049.eml",
+      "title": "[INC-71705] Ticket updated"
+    },
+    {
+      "id": "mn-0013",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-27T10:00:00+01:00",
+      "path": "mn-0013.md",
+      "title": "Notes: Nettle standup"
+    },
+    {
+      "id": "ch-0031",
+      "channel": "chat",
+      "received_at": "2027-08-27T12:06:00+01:00",
+      "path": "ch-0031.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0032",
+      "channel": "chat",
+      "received_at": "2027-08-27T13:34:00+01:00",
+      "path": "ch-0032.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0033",
+      "channel": "chat",
+      "received_at": "2027-08-27T13:58:00+01:00",
+      "path": "ch-0033.json",
+      "title": "DM: Bisi Volkov / Aoife Everett"
+    },
+    {
+      "id": "mn-0014",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-27T16:00:00+01:00",
+      "path": "mn-0014.md",
+      "title": "Recap: Pantry inventory discovery / Nettle sync"
+    },
+    {
+      "id": "ch-0034",
+      "channel": "chat",
+      "received_at": "2027-08-27T16:03:00+01:00",
+      "path": "ch-0034.json",
+      "title": "#pantry-inventory-discovery-core"
+    },
+    {
+      "id": "em-0050",
+      "channel": "email",
+      "received_at": "2027-08-27T16:03:00+01:00",
+      "path": "em-0050.eml",
+      "title": "[INC-85264] Ticket updated"
+    },
+    {
+      "id": "em-0051",
+      "channel": "email",
+      "received_at": "2027-08-27T16:32:00+01:00",
+      "path": "em-0051.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0052",
+      "channel": "email",
+      "received_at": "2027-08-27T17:08:00+01:00",
+      "path": "em-0052.eml",
+      "title": "Status note: w/e 27 August"
+    },
+    {
+      "id": "em-0053",
+      "channel": "email",
+      "received_at": "2027-08-27T17:08:00+01:00",
+      "path": "em-0053.eml",
+      "title": "Re: Pantry inventory discovery stakeholder map"
+    },
+    {
+      "id": "nt-0005",
+      "channel": "note",
+      "received_at": "2027-08-27T19:54:00+01:00",
+      "path": "nt-0005.md",
+      "title": "Fri notes"
+    }
+  ]
+}

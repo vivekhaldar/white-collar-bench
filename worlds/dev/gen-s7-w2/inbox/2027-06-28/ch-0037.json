@@ -1,0 +1,35 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolat-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Bolat"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-28T11:44:55-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-06-28T11:45:29-08:00",
+   "user": "Bolat",
+   "handle": "@bolat",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-06-28T11:47:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "will confirm the garnet support model with you"
+  },
+  {
+   "ts": "2027-06-28T11:48:20-08:00",
+   "user": "Bolat",
+   "handle": "@bolat",
+   "text": "thanks!"
+  }
+ ]
+}

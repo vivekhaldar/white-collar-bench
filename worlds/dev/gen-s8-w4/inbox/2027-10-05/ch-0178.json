@@ -1,0 +1,25 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Adwoa",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-05T12:44:00-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "For info, Wei needs the Fulmar sensor tag list v2 by Thursday 7 October.",
+   "edited": true,
+   "original": "For info, Wei neesd the Fulmar sensor tag list v2 by Thursday 7 October."
+  },
+  {
+   "ts": "2027-10-05T12:45:29-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "thanks for the heads up"
+  }
+ ]
+}

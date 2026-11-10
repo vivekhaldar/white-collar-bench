@@ -1,0 +1,37 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-karim",
+ "kind": "dm",
+ "participants": [
+  "Despina Pereira",
+  "Karim Navarro"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-25T08:49:00-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "i sent you the captioning discovery test plan",
+   "edited": true,
+   "original": "i sent you the captioning dicsovery test plan"
+  },
+  {
+   "ts": "2027-02-25T08:49:14-08:00",
+   "user": "Karim Navarro",
+   "handle": "@karim",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-02-25T08:52:13-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-02-25T08:54:02-08:00",
+   "user": "Karim Navarro",
+   "handle": "@karim",
+   "text": "only the first half"
+  }
+ ]
+}

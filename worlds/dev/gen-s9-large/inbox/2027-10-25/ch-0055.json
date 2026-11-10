@@ -1,0 +1,37 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-malia",
+ "kind": "dm",
+ "participants": [
+  "Malia Guo",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-25T17:28:30-05:00",
+   "user": "Malia Guo",
+   "handle": "@malia",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-10-25T17:28:57-05:00",
+   "user": "Malia Guo",
+   "handle": "@malia",
+   "text": "recap from thursday: i offered to rebase the funding model usage forecast",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@aroha"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-25T17:29:44-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "appreciate it"
+  }
+ ]
+}

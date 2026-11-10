@@ -1,0 +1,31 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Putri Ashby",
+  "Kiran Hayashi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-27T17:17:26-05:00",
+   "user": "Putri Ashby",
+   "handle": "@putri",
+   "text": "does anyone have a spare laptop charger (usb-c)?",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@kiran"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-27T17:19:22-05:00",
+   "user": "Kiran Hayashi",
+   "handle": "@kiran",
+   "text": "I have one, desk by the window"
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-daniela",
+ "kind": "dm",
+ "participants": [
+  "Daniela Ochieng",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-20T17:07:00-05:00",
+   "user": "Daniela Ochieng",
+   "handle": "@daniela",
+   "text": "heads up: chiamaka will check references for bram"
+  },
+  {
+   "ts": "2027-10-20T17:07:13-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-10-20T17:11:00-05:00",
+   "user": "Daniela Ochieng",
+   "handle": "@daniela",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-10-20T17:14:40-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "only the first half"
+  }
+ ]
+}

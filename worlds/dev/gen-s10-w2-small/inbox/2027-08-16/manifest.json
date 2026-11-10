@@ -1,0 +1,89 @@
+{
+  "date": "2027-08-16",
+  "artifacts": [
+    {
+      "id": "em-0001",
+      "channel": "email",
+      "received_at": "2027-08-16T06:58:00+01:00",
+      "path": "em-0001.eml",
+      "title": "Reminder: Friday status note due Friday 20 August"
+    },
+    {
+      "id": "nt-0001",
+      "channel": "note",
+      "received_at": "2027-08-16T08:05:00+01:00",
+      "path": "nt-0001.md",
+      "title": "Portfolio map"
+    },
+    {
+      "id": "ch-0001",
+      "channel": "chat",
+      "received_at": "2027-08-16T08:34:00+01:00",
+      "path": "ch-0001.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "em-0002",
+      "channel": "email",
+      "received_at": "2027-08-16T08:35:00+01:00",
+      "path": "em-0002.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "ch-0002",
+      "channel": "chat",
+      "received_at": "2027-08-16T08:40:00+01:00",
+      "path": "ch-0002.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0003",
+      "channel": "chat",
+      "received_at": "2027-08-16T09:11:00+01:00",
+      "path": "ch-0003.json",
+      "title": "#random"
+    },
+    {
+      "id": "mn-0001",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-16T09:55:00+01:00",
+      "path": "mn-0001.md",
+      "title": "Recap: Nettle standup"
+    },
+    {
+      "id": "ch-0004",
+      "channel": "chat",
+      "received_at": "2027-08-16T11:43:00+01:00",
+      "path": "ch-0004.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0003",
+      "channel": "email",
+      "received_at": "2027-08-16T11:45:00+01:00",
+      "path": "em-0003.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "em-0004",
+      "channel": "email",
+      "received_at": "2027-08-16T12:53:00+01:00",
+      "path": "em-0004.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0005",
+      "channel": "email",
+      "received_at": "2027-08-16T15:56:00+01:00",
+      "path": "em-0005.eml",
+      "title": "All-staff: building access changes"
+    },
+    {
+      "id": "ch-0005",
+      "channel": "chat",
+      "received_at": "2027-08-16T16:53:00+01:00",
+      "path": "ch-0005.json",
+      "title": "#general"
+    }
+  ]
+}

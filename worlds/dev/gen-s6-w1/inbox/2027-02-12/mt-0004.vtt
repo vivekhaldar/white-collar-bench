@@ -1,0 +1,71 @@
+WEBVTT
+
+NOTE
+Meeting: Catch-up: Despina / Carys
+Date: Friday 12 February 2027, 8am to 8:45am
+Attendees: Carys Laurent, Despina Pereira
+Transcript generated automatically. Speaker names and spellings may be inaccurate.
+
+1
+00:00:04.625 --> 00:00:06.548
+<v Carys Laurent>Can everyone hear me okay?
+
+2
+00:00:07.726 --> 00:00:08.880
+<v Despina Pereira>Yep, you're fine.
+
+3
+00:21:24.939 --> 00:21:26.477
+<v Carys Laurent>Okay, let's get started.
+
+4
+00:30:39.839 --> 00:30:42.916
+<v Carys Laurent>I configured the Fennel SSO broker for Dorcliff.
+
+5
+00:30:44.121 --> 00:30:45.121
+<v Despina Pereira>Yeah.
+
+6
+00:30:45.817 --> 00:30:46.817
+<v Carys Laurent>Okay.
+
+7
+00:30:48.206 --> 00:30:49.206
+<v Despina Pereira>Fair.
+
+8
+00:30:50.210 --> 00:30:54.440
+<v Despina Pereira>Is that the same as what we talked about last time?
+
+9
+00:30:55.398 --> 00:30:57.321
+<v Carys Laurent>Roughly, with a few tweaks.
+
+10
+00:30:57.840 --> 00:30:58.840
+<v Despina Pereira>Makes sense.
+
+11
+00:30:59.778 --> 00:31:02.855
+<v Despina Pereira>Last time this took longer than we thought.
+
+12
+00:31:03.676 --> 00:31:04.676
+<v Carys Laurent>Yeah, true.
+
+13
+00:31:05.175 --> 00:31:07.868
+<v Despina Pereira>The documentation is still a bit thin.
+
+14
+00:31:08.686 --> 00:31:09.686
+<v Carys Laurent>Mm-hmm.
+
+15
+00:33:04.315 --> 00:33:05.854
+<v Carys Laurent>Cool, let's wrap there.
+
+16
+00:33:06.948 --> 00:33:07.948
+<v Despina Pereira>Thanks!

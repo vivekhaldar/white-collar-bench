@@ -1,0 +1,22 @@
+From: Dina Ricci <dina.ricci@vercliff.example>
+To: Thibault Sahin <thibault.sahin@vercliff.example>
+Date: Tue, 09 Mar 2027 07:12:00 -0700
+Subject: Re: Gateway rate limits for Fennel tenants
+Message-ID: <em-0092.2@vercliff.example>
+In-Reply-To: <em-0092-prev.2@vercliff.example>
+References: <em-0092-prev.2@vercliff.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Any news on the gateway rate limits for Fennel tenants? I'm blocked until it
+lands.
+
+Dina
+
+On Fri, 05 Mar 2027 14:24:00 -0700, Thibault Sahin wrote:
+> Dina -
+>
+> Did this ever get sorted on Fennel?
+>
+> Thibault

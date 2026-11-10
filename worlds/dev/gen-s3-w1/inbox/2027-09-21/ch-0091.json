@@ -1,0 +1,44 @@
+{
+ "workspace": "birchmere",
+ "channel": "#okapi-core",
+ "kind": "channel",
+ "participants": [
+  "Kasia",
+  "Alasdair Kaya",
+  "Bisi Chatterjee",
+  "Eleni Fontaine",
+  "Dina Laurent",
+  "Penelope Romano",
+  "Nurlan Jansen",
+  "Giorgi Villanueva",
+  "Victoria Hoffmann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-21T13:18:00-05:00",
+   "user": "Kasia",
+   "handle": "@katarzyna",
+   "text": "heads up, okapi now targets 1 november (was 18 october)"
+  },
+  {
+   "ts": "2027-09-21T13:19:15-05:00",
+   "user": "Victoria Hoffmann",
+   "handle": "@victoria",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-09-21T13:27:10-05:00",
+   "user": "Penelope Romano",
+   "handle": "@penelope",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-21T13:28:11-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Tavo",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-04T14:46:00-06:00",
+   "user": "Tavo",
+   "handle": "@ottavio",
+   "text": "Heads up: Shirin will send you the Fulmar rollout checklist v2!"
+  },
+  {
+   "ts": "2027-10-04T14:48:01-06:00",
+   "user": "Tavo",
+   "handle": "@ottavio",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-10-04T14:48:30-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "anytime"
+  }
+ ]
+}

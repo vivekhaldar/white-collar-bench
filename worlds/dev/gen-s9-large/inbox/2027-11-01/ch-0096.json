@@ -1,0 +1,63 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#cirrus-core",
+ "kind": "channel",
+ "participants": [
+  "Aroha Mendoza",
+  "Keisha Hargrove",
+  "Anh Villanueva",
+  "Babajide Hendriks",
+  "Stanley Valdez",
+  "Adebayo Kahananui",
+  "Mathieu Wijaya",
+  "Andres Yamamoto",
+  "Kiran Hayashi",
+  "Marguerite Teixeira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-01T14:38:00-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "@mathieu on it, I'll walk you through the Cirrus budget justification.",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@keisha",
+      "@anh",
+      "@babajide"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-01T14:38:45-05:00",
+   "user": "Kiran Hayashi",
+   "handle": "@kiran",
+   "text": "noted",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-01T14:41:38-05:00",
+   "user": "Marguerite Teixeira",
+   "handle": "@marguerite",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-01T14:48:43-05:00",
+   "user": "Adebayo Kahananui",
+   "handle": "@adebayo",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-01T14:49:50-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  }
+ ]
+}

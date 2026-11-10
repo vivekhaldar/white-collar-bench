@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Birchmere//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:9b8cdcf379a2629e@birchmere.example
+DTSTAMP:20270923T144300Z
+DTSTART:20270924T200000Z
+DTEND:20270924T204500Z
+SUMMARY:Okapi review
+ORGANIZER;CN=Katarzyna Dang:mailto:katarzyna.dang@ketford.birchmere.example
+ATTENDEE;CN=Alasdair Kaya;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:alasdair.kaya@birchmere.example
+ATTENDEE;CN=Bisi Chatterjee;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bisi.chatterjee@birchmere.example
+SEQUENCE:0
+DESCRIPTION:Placeholder\, agenda to follow.\nJoin video meeting: https://meet.birchmere.example/j/3544358004?pwd=jSN7c9Tf\nPasscode: 121145
+LOCATION:https://meet.birchmere.example/j/3544358004?pwd=jSN7c9Tf
+END:VEVENT
+END:VCALENDAR

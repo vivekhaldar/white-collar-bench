@@ -1,0 +1,32 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Tariq Ivanova",
+  "Theresa Petrov",
+  "Bruna Vaughan",
+  "Meera Bondarenko"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-26T14:54:39-08:00",
+   "user": "Tariq Ivanova",
+   "handle": "@tariq",
+   "text": "lost a blue umbrella, might be in the big meeting room"
+  },
+  {
+   "ts": "2027-08-26T14:55:10-08:00",
+   "user": "Theresa Petrov",
+   "handle": "@theresa",
+   "text": "will keep an eye out"
+  },
+  {
+   "ts": "2027-08-26T14:59:32-08:00",
+   "user": "Bruna Vaughan",
+   "handle": "@bruna",
+   "text": "there's one at reception",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-hamish",
+ "kind": "dm",
+ "participants": [
+  "Hamish Okada",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-08T10:50:15-06:00",
+   "user": "Hamish Okada",
+   "handle": "@hamish",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-10-08T10:51:18-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-10-08T10:51:39-06:00",
+   "user": "Hamish Okada",
+   "handle": "@hamish",
+   "text": "Change of plan: we're no longer going to limit the safety reporting discovery rollout to two lines. I want a wider trial! :)"
+  },
+  {
+   "ts": "2027-10-08T10:51:45-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "sounds good"
+  },
+  {
+   "ts": "2027-10-08T10:52:22-06:00",
+   "user": "Hamish Okada",
+   "handle": "@hamish",
+   "text": "Let's widen the safety reporting discovery rollout to three lines! :)"
+  },
+  {
+   "ts": "2027-10-08T10:53:50-06:00",
+   "user": "Hamish Okada",
+   "handle": "@hamish",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-10-08T10:57:15-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "only the first half"
+  }
+ ]
+}

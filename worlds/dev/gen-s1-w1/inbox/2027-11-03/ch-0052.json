@@ -1,0 +1,40 @@
+{
+ "workspace": "holcrest",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Kirsten Ellery",
+  "Aarav Zamora",
+  "Joselito Moradi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-03T15:26:43-07:00",
+   "user": "Kirsten Ellery",
+   "handle": "@kirsten",
+   "text": "who left a lunchbox in the fridge since last week?",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@aarav",
+      "@joselito"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-03T15:31:12-07:00",
+   "user": "Aarav Zamora",
+   "handle": "@aarav",
+   "text": "not me!",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-03T15:33:38-07:00",
+   "user": "Joselito Moradi",
+   "handle": "@joselito",
+   "text": "it's been there a while"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-andres-despina",
+ "kind": "dm",
+ "participants": [
+  "Andres",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-25T09:58:00-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "Correction to what I said earlier: the captioning discovery stale cache isn't done after all. The change was rolled back, so it's open again."
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+  "date": "2027-02-25",
+  "artifacts": [
+    {
+      "id": "em-0013",
+      "channel": "email",
+      "received_at": "2027-02-25T10:02:00-08:00",
+      "path": "em-0013.eml",
+      "title": "Re: Tinderbox - pausing real student data"
+    },
+    {
+      "id": "dc-0005",
+      "channel": "document",
+      "received_at": "2027-02-25T15:45:00-08:00",
+      "path": "dc-0005.pdf",
+      "title": "Teaching with AI - deck v1",
+      "parent": "em-0014"
+    },
+    {
+      "id": "em-0014",
+      "channel": "email",
+      "received_at": "2027-02-25T15:45:00-08:00",
+      "path": "em-0014.eml",
+      "title": "Workshop deck v1"
+    },
+    {
+      "id": "ch-0005",
+      "channel": "chat",
+      "received_at": "2027-02-25T16:44:00-08:00",
+      "path": "ch-0005.json",
+      "title": "DM Bettina / Mara: support handoff"
+    },
+    {
+      "id": "em-0015",
+      "channel": "email",
+      "received_at": "2027-02-25T17:10:00-08:00",
+      "path": "em-0015.eml",
+      "title": "Scrivelo DPA review + Saltmarren DSA"
+    }
+  ]
+}

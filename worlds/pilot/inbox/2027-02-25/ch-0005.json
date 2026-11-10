@@ -1,0 +1,14 @@
+{
+  "workspace": "tarrow",
+  "channel": "dm-bettina-mara",
+  "kind": "dm",
+  "participants": ["Bettina Oduya", "Mara Ilves"],
+  "messages": [
+    {"ts": "2027-02-25T16:37:48-08:00", "user": "Bettina Oduya", "handle": "@bettina", "text": "hey - putting my product principal hat on for a sec, re writing tool: who owns tier-2 support once the vendor's implementation team hands off? i don't want ODS holding it by default"},
+    {"ts": "2027-02-25T16:38:55-08:00", "user": "Bettina Oduya", "handle": "@bettina", "text": "because that's how it always goes. vendor runs a lovely onboarding, leaves, and in october a saltmarren instructor can't get feedback on 40 essays the night before grades are due. who picks up the phone at 2am? right now the answer is \"whoever is listed last in the contract\", which is us"},
+    {"ts": "2027-02-25T16:40:14-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "good q - i'll put it in the requirements. named tier-2 owner after the handoff, not assumed"},
+    {"ts": "2027-02-25T16:40:39-08:00", "user": "Bettina Oduya", "handle": "@bettina", "text": "🙏 thank you", "reactions": [{"emoji": "+1", "users": ["@mara"]}]},
+    {"ts": "2027-02-25T16:43:22-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "also any ETA on the kettleyard service catalog entry?"},
+    {"ts": "2027-02-25T16:44:05-08:00", "user": "Bettina Oduya", "handle": "@bettina", "text": "next week-ish 🙃"}
+  ]
+}

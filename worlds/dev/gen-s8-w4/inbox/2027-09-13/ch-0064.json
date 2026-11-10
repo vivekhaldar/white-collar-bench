@@ -1,0 +1,51 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#operator-ai-basics-core",
+ "kind": "channel",
+ "participants": [
+  "Amira Baek",
+  "Adwoa",
+  "Kian Ishikawa",
+  "Zawadi Quintero",
+  "Wei Suwannarat"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-13T16:35:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "@adwoa leave it with me, I'll walk you through the operator AI basics workshop room plan.",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@adwoa",
+      "@zawadi",
+      "@kian"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-13T16:36:03-06:00",
+   "user": "Wei Suwannarat",
+   "handle": "@wei",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-13T16:36:35-06:00",
+   "user": "Zawadi Quintero",
+   "handle": "@zawadi",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-13T16:44:05-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

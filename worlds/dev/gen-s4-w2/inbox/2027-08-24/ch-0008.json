@@ -1,0 +1,31 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Theresa Petrov",
+  "Nomvula Ndlovu",
+  "Tariq Ivanova",
+  "Bruna Vaughan"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-24T10:32:49-08:00",
+   "user": "Theresa Petrov",
+   "handle": "@theresa",
+   "text": "lost a blue umbrella, might be in the big meeting room"
+  },
+  {
+   "ts": "2027-08-24T10:37:52-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "will keep an eye out"
+  },
+  {
+   "ts": "2027-08-24T10:40:06-08:00",
+   "user": "Tariq Ivanova",
+   "handle": "@tariq",
+   "text": "there's one at reception"
+  }
+ ]
+}

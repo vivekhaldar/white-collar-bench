@@ -1,0 +1,41 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-penelope",
+ "kind": "dm",
+ "participants": [
+  "Penelope Romano",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-17T10:09:14-05:00",
+   "user": "Penelope Romano",
+   "handle": "@penelope",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-09-17T10:09:43-05:00",
+   "user": "Penelope Romano",
+   "handle": "@penelope",
+   "text": "Bisi Chatterjee asked if you could confirm the Sirocco vendor comparison with them."
+  },
+  {
+   "ts": "2027-09-17T10:10:14-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "sure, can do"
+  },
+  {
+   "ts": "2027-09-17T10:13:43-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-09-17T10:15:47-05:00",
+   "user": "Penelope Romano",
+   "handle": "@penelope",
+   "text": "anytime"
+  }
+ ]
+}

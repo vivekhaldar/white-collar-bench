@@ -1,0 +1,35 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-yasmin",
+ "kind": "dm",
+ "participants": [
+  "Yasmin Mokoena",
+  "Camila Abernathy"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-09T17:42:00-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "Done, I fixed the plain language workshop slow page loads."
+  },
+  {
+   "ts": "2027-11-09T17:42:52-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "great, thanks"
+  },
+  {
+   "ts": "2027-11-09T17:46:19-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-11-09T17:47:56-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "later!"
+  }
+ ]
+}

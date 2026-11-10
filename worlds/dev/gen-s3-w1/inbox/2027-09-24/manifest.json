@@ -1,0 +1,131 @@
+{
+  "date": "2027-09-24",
+  "artifacts": [
+    {
+      "id": "em-0109",
+      "channel": "email",
+      "received_at": "2027-09-24T06:36:00-05:00",
+      "path": "em-0109.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "ch-0112",
+      "channel": "chat",
+      "received_at": "2027-09-24T08:28:00-05:00",
+      "path": "ch-0112.json",
+      "title": "#referral-triage-discovery-core"
+    },
+    {
+      "id": "mt-0018",
+      "channel": "transcript",
+      "received_at": "2027-09-24T08:30:00-05:00",
+      "path": "mt-0018.vtt",
+      "title": "Team planning (transcript)"
+    },
+    {
+      "id": "ch-0113",
+      "channel": "chat",
+      "received_at": "2027-09-24T09:11:00-05:00",
+      "path": "ch-0113.json",
+      "title": "DM: Alasdair Kaya / Victoria Hoffmann"
+    },
+    {
+      "id": "ch-0114",
+      "channel": "chat",
+      "received_at": "2027-09-24T09:20:00-05:00",
+      "path": "ch-0114.json",
+      "title": "DM: Alasdair Kaya / Eleni Fontaine"
+    },
+    {
+      "id": "mt-0019",
+      "channel": "transcript",
+      "received_at": "2027-09-24T09:55:00-05:00",
+      "path": "mt-0019.vtt",
+      "title": "Okapi standup (transcript)"
+    },
+    {
+      "id": "ch-0115",
+      "channel": "chat",
+      "received_at": "2027-09-24T10:27:00-05:00",
+      "path": "ch-0115.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0116",
+      "channel": "chat",
+      "received_at": "2027-09-24T12:59:00-05:00",
+      "path": "ch-0116.json",
+      "title": "DM: Alasdair Kaya / Somchai Thapa"
+    },
+    {
+      "id": "em-0110",
+      "channel": "email",
+      "received_at": "2027-09-24T13:39:00-05:00",
+      "path": "em-0110.eml",
+      "title": "Re: Sirocco cutover plan"
+    },
+    {
+      "id": "ch-0117",
+      "channel": "chat",
+      "received_at": "2027-09-24T14:55:00-05:00",
+      "path": "ch-0117.json",
+      "title": "DM: Alasdair Kaya / Catrin Kiprono"
+    },
+    {
+      "id": "em-0111",
+      "channel": "email",
+      "received_at": "2027-09-24T15:04:00-05:00",
+      "path": "em-0111.eml",
+      "title": "[INC-55431] Ticket updated"
+    },
+    {
+      "id": "mn-0011",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-24T15:45:00-05:00",
+      "path": "mn-0011.md",
+      "title": "Recap: Okapi review"
+    },
+    {
+      "id": "em-0112",
+      "channel": "email",
+      "received_at": "2027-09-24T15:49:00-05:00",
+      "path": "em-0112.eml",
+      "title": "Re: Splitting out outpatient no-shows discovery"
+    },
+    {
+      "id": "em-0113",
+      "channel": "email",
+      "received_at": "2027-09-24T16:34:00-05:00",
+      "path": "em-0113.eml",
+      "title": "Status note: w/e 24 September"
+    },
+    {
+      "id": "em-0114",
+      "channel": "email",
+      "received_at": "2027-09-24T17:44:00-05:00",
+      "path": "em-0114.eml",
+      "title": "[INC-85698] Ticket updated"
+    },
+    {
+      "id": "nt-0008",
+      "channel": "note",
+      "received_at": "2027-09-24T18:43:00-05:00",
+      "path": "nt-0008.md",
+      "title": "Fri notes"
+    },
+    {
+      "id": "em-0115",
+      "channel": "email",
+      "received_at": "2027-09-24T20:26:00-05:00",
+      "path": "em-0115.eml",
+      "title": "Re: Bisi's Sirocco bed census extract"
+    },
+    {
+      "id": "nt-0009",
+      "channel": "note",
+      "received_at": "2027-09-24T21:05:00-05:00",
+      "path": "nt-0009.md",
+      "title": "Fri notes"
+    }
+  ]
+}

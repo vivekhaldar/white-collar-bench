@@ -1,0 +1,37 @@
+{
+ "workspace": "birchmere",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Deniz Feng",
+  "Bisi Chatterjee",
+  "Giorgi Villanueva",
+  "Tunde Andersen"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-13T13:41:31-05:00",
+   "user": "Deniz Feng",
+   "handle": "@deniz",
+   "text": "is the wifi on the second floor down for anyone else? :)"
+  },
+  {
+   "ts": "2027-09-13T13:43:16-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "yep, same here"
+  },
+  {
+   "ts": "2027-09-13T13:46:21-05:00",
+   "user": "Giorgi Villanueva",
+   "handle": "@giorgi",
+   "text": "works for me :)"
+  },
+  {
+   "ts": "2027-09-13T13:52:07-05:00",
+   "user": "Tunde Andersen",
+   "handle": "@tunde",
+   "text": "it's been flaky all morning"
+  }
+ ]
+}

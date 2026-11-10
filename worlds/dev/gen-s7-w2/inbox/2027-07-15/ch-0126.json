@@ -1,0 +1,55 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-emre-hiba",
+ "kind": "dm",
+ "participants": [
+  "Emre Khumalo",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-15T11:28:53-08:00",
+   "user": "Emre Khumalo",
+   "handle": "@emre",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-07-15T11:29:56-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-07-15T11:32:00-08:00",
+   "user": "Emre Khumalo",
+   "handle": "@emre",
+   "text": "I'll share the Garnet LMS integration notes with you.",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-15T11:32:18-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-07-15T11:33:27-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-07-15T11:33:55-08:00",
+   "user": "Emre Khumalo",
+   "handle": "@emre",
+   "text": "only the first half"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Vercliff//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:d6d3939fc5b07b62@vercliff.example
+DTSTAMP:20270302T152600Z
+DTSTART:20270305T200000Z
+DTEND:20270305T203000Z
+SUMMARY:Working session: Funding model funding options memo
+ORGANIZER;CN=Kayode Whitfield:mailto:kayode.whitfield@vercliff.example
+ATTENDEE;CN=Dina Ricci;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.ricci@vercliff.example
+SEQUENCE:0
+DESCRIPTION:Agenda: Send Kayode the funding model funding options memo.\nJoin video meeting: https://meet.vercliff.example/j/6525559895?pwd=sfmGvcAt\nPasscode: 864971
+LOCATION:https://meet.vercliff.example/j/6525559895?pwd=sfmGvcAt
+END:VEVENT
+END:VCALENDAR

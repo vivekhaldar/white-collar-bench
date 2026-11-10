@@ -1,0 +1,35 @@
+{
+ "workspace": "corrstead",
+ "channel": "#siskin-core",
+ "kind": "channel",
+ "participants": [
+  "Hiba Jimenez",
+  "Dez",
+  "Bolat Oyelami",
+  "Ewan Laine",
+  "Maddie",
+  "Emre Khumalo",
+  "Andrei Laurent"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-07T18:02:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "@andrei done, I sent you the Siskin one-page summary."
+  },
+  {
+   "ts": "2027-07-07T18:03:15-08:00",
+   "user": "Dez",
+   "handle": "@desmond",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-07-07T18:11:33-08:00",
+   "user": "Maddie",
+   "handle": "@madeline",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

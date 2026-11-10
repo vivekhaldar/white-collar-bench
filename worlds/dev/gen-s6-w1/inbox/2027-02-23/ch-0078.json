@@ -1,0 +1,36 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#fennel-core",
+ "kind": "channel",
+ "participants": [
+  "Andres",
+  "Despina Pereira",
+  "Liisa Babic",
+  "Losa Moretti",
+  "Nathaniel Cartwright",
+  "Karim Navarro",
+  "Carys Laurent"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-23T17:52:00-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "@despina can you send me the Fennel rollout checklist by Wednesday?"
+  },
+  {
+   "ts": "2027-02-23T17:57:58-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-23T18:04:14-08:00",
+   "user": "Nathaniel Cartwright",
+   "handle": "@nathaniel",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

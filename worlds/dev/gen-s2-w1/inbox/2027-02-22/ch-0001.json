@@ -1,0 +1,43 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-nomvula",
+ "kind": "dm",
+ "participants": [
+  "Nomvula Jansen",
+  "Dina Ricci"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-22T08:11:00-07:00",
+   "user": "Nomvula Jansen",
+   "handle": "@nomvula",
+   "text": "can you send me the pothole reporting selection requirements list?",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@dina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-22T08:11:41-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "on it"
+  },
+  {
+   "ts": "2027-02-22T08:13:54-07:00",
+   "user": "Nomvula Jansen",
+   "handle": "@nomvula",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-02-22T08:16:49-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "anytime"
+  }
+ ]
+}

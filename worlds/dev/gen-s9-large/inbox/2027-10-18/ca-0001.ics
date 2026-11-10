@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Kirkmarsh//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:8546ec00104ac408@kirkmarsh.example
+DTSTAMP:20271018T144700Z
+DTSTART:20271020T213000Z
+DTEND:20271020T221500Z
+SUMMARY:Catch-up: Aroha / Winifred
+ORGANIZER;CN=Winifred Tanaka:mailto:winifred.tanaka@clelera.example
+ATTENDEE;CN=Aroha Mendoza;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:aroha.mendoza@kirkmarsh.example
+SEQUENCE:0
+DESCRIPTION:Quick sync\, 30 minutes.\nJoin video meeting: https://meet.kirkmarsh.example/j/1597346344?pwd=42dxkkbh\nPasscode: 350928
+LOCATION:https://meet.kirkmarsh.example/j/1597346344?pwd=42dxkkbh
+END:VEVENT
+END:VCALENDAR

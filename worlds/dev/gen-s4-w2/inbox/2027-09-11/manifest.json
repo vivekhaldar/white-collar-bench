@@ -1,0 +1,47 @@
+{
+  "date": "2027-09-11",
+  "artifacts": [
+    {
+      "id": "em-0138",
+      "channel": "email",
+      "received_at": "2027-09-11T08:37:00-08:00",
+      "path": "em-0138.eml",
+      "title": "[INC-55970] Ticket updated"
+    },
+    {
+      "id": "em-0139",
+      "channel": "email",
+      "received_at": "2027-09-11T09:31:00-08:00",
+      "path": "em-0139.eml",
+      "title": "[REQ-36568] Request resolved"
+    },
+    {
+      "id": "ch-0103",
+      "channel": "chat",
+      "received_at": "2027-09-11T10:04:00-08:00",
+      "path": "ch-0103.json",
+      "title": "#fjord-core"
+    },
+    {
+      "id": "em-0140",
+      "channel": "email",
+      "received_at": "2027-09-11T11:38:00-08:00",
+      "path": "em-0140.eml",
+      "title": "[INC-47831] Ticket updated"
+    },
+    {
+      "id": "ch-0104",
+      "channel": "chat",
+      "received_at": "2027-09-11T16:01:00-08:00",
+      "path": "ch-0104.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0105",
+      "channel": "chat",
+      "received_at": "2027-09-11T17:32:00-08:00",
+      "path": "ch-0105.json",
+      "title": "#general"
+    }
+  ]
+}

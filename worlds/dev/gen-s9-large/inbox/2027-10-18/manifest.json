@@ -1,0 +1,166 @@
+{
+  "date": "2027-10-18",
+  "artifacts": [
+    {
+      "id": "em-0001",
+      "channel": "email",
+      "received_at": "2027-10-18T07:02:00-05:00",
+      "path": "em-0001.eml",
+      "title": "Reminder: Friday status note due Friday 22 October"
+    },
+    {
+      "id": "nt-0001",
+      "channel": "note",
+      "received_at": "2027-10-18T08:05:00-05:00",
+      "path": "nt-0001.md",
+      "title": "Portfolio map"
+    },
+    {
+      "id": "em-0002",
+      "channel": "email",
+      "received_at": "2027-10-18T08:29:00-05:00",
+      "path": "em-0002.eml",
+      "title": "Re: Reading list on discharge summary"
+    },
+    {
+      "id": "ch-0001",
+      "channel": "chat",
+      "received_at": "2027-10-18T09:11:00-05:00",
+      "path": "ch-0001.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0002",
+      "channel": "chat",
+      "received_at": "2027-10-18T09:18:00-05:00",
+      "path": "ch-0002.json",
+      "title": "#random"
+    },
+    {
+      "id": "ca-0001",
+      "channel": "calendar",
+      "received_at": "2027-10-18T09:47:00-05:00",
+      "path": "ca-0001.ics",
+      "title": "Invite: Catch-up: Aroha / Winifred"
+    },
+    {
+      "id": "ch-0003",
+      "channel": "chat",
+      "received_at": "2027-10-18T09:53:00-05:00",
+      "path": "ch-0003.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0004",
+      "channel": "chat",
+      "received_at": "2027-10-18T10:49:00-05:00",
+      "path": "ch-0004.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "em-0003",
+      "channel": "email",
+      "received_at": "2027-10-18T11:22:00-05:00",
+      "path": "em-0003.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "mn-0001",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-18T11:50:00-05:00",
+      "path": "mn-0001.md",
+      "title": "Recap: NDO leads call"
+    },
+    {
+      "id": "em-0004",
+      "channel": "email",
+      "received_at": "2027-10-18T11:53:00-05:00",
+      "path": "em-0004.eml",
+      "title": "Wellness credit deadline"
+    },
+    {
+      "id": "em-0005",
+      "channel": "email",
+      "received_at": "2027-10-18T13:42:00-05:00",
+      "path": "em-0005.eml",
+      "title": "All-staff: building access changes"
+    },
+    {
+      "id": "ch-0005",
+      "channel": "chat",
+      "received_at": "2027-10-18T14:19:00-05:00",
+      "path": "ch-0005.json",
+      "title": "DM: Anh Villanueva / Aroha Mendoza"
+    },
+    {
+      "id": "ch-0006",
+      "channel": "chat",
+      "received_at": "2027-10-18T14:20:00-05:00",
+      "path": "ch-0006.json",
+      "title": "DM: Aylin Bianchi / Aroha Mendoza"
+    },
+    {
+      "id": "ch-0007",
+      "channel": "chat",
+      "received_at": "2027-10-18T14:31:00-05:00",
+      "path": "ch-0007.json",
+      "title": "DM: Anh Villanueva / Aroha Mendoza"
+    },
+    {
+      "id": "em-0006",
+      "channel": "email",
+      "received_at": "2027-10-18T15:41:00-05:00",
+      "path": "em-0006.eml",
+      "title": "Your benefits statement is ready"
+    },
+    {
+      "id": "ch-0008",
+      "channel": "chat",
+      "received_at": "2027-10-18T16:16:00-05:00",
+      "path": "ch-0008.json",
+      "title": "DM: Aroha Mendoza / Anh Villanueva"
+    },
+    {
+      "id": "ch-0009",
+      "channel": "chat",
+      "received_at": "2027-10-18T16:20:00-05:00",
+      "path": "ch-0009.json",
+      "title": "DM: Keisha Hargrove / Aroha Mendoza"
+    },
+    {
+      "id": "ch-0010",
+      "channel": "chat",
+      "received_at": "2027-10-18T16:37:00-05:00",
+      "path": "ch-0010.json",
+      "title": "DM: Winifred Tanaka / Aroha Mendoza"
+    },
+    {
+      "id": "ch-0011",
+      "channel": "chat",
+      "received_at": "2027-10-18T16:56:00-05:00",
+      "path": "ch-0011.json",
+      "title": "#kittiwake-core"
+    },
+    {
+      "id": "ch-0012",
+      "channel": "chat",
+      "received_at": "2027-10-18T17:26:00-05:00",
+      "path": "ch-0012.json",
+      "title": "DM: Aroha Mendoza / Stanley Valdez"
+    },
+    {
+      "id": "ch-0013",
+      "channel": "chat",
+      "received_at": "2027-10-18T17:37:00-05:00",
+      "path": "ch-0013.json",
+      "title": "#clelera-enterprise-core"
+    },
+    {
+      "id": "ch-0014",
+      "channel": "chat",
+      "received_at": "2027-10-18T18:54:00-05:00",
+      "path": "ch-0014.json",
+      "title": "DM: Winifred Tanaka / Aroha Mendoza"
+    }
+  ]
+}

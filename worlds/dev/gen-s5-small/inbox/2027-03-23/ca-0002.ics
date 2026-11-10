@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iselvale//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:23822d2469b672c3@iselvale.example
+DTSTAMP:20270323T175800Z
+DTSTART:20270324T153000Z
+DTEND:20270324T163000Z
+SUMMARY:Wagtail security review
+ORGANIZER;CN=Isla Faure:mailto:isla.faure@falbury.iselvale.example
+ATTENDEE;CN=Anahit Fifita;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:anahit.fifita@iselvale.example
+ATTENDEE;CN=Lakshmi Figueroa;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:lakshmi.figueroa@iselvale.example
+ATTENDEE;CN=Hiba Deng;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.deng@iselvale.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.iselvale.example/j/5132555054?pwd=bSUdUntT\nPasscode: 012416
+LOCATION:https://meet.iselvale.example/j/5132555054?pwd=bSUdUntT
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,32 @@
+{
+ "workspace": "birchmere",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Penelope Romano",
+  "Dina Laurent",
+  "Giorgi Villanueva",
+  "Deniz Feng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T16:34:10-05:00",
+   "user": "Penelope Romano",
+   "handle": "@penelope",
+   "text": "the elevator on the east side is out again"
+  },
+  {
+   "ts": "2027-09-08T16:39:23-05:00",
+   "user": "Dina Laurent",
+   "handle": "@dina",
+   "text": "stairs it is :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-08T16:41:04-05:00",
+   "user": "Giorgi Villanueva",
+   "handle": "@giorgi",
+   "text": "classic"
+  }
+ ]
+}

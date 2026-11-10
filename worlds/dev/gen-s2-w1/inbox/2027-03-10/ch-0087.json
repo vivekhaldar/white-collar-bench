@@ -1,0 +1,31 @@
+{
+ "workspace": "vercliff",
+ "channel": "#mistral-core",
+ "kind": "channel",
+ "participants": [
+  "Dina Ricci",
+  "Yael Ellery",
+  "Imani",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
+  "Cassandra Yilmaz",
+  "Bilal Kahananui",
+  "Thibault Sahin",
+  "Mei Obi",
+  "Xiaoling Taufa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-10T08:54:00-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "@rudo let's make it official: you'll share the mistral accessibility review with me"
+  },
+  {
+   "ts": "2027-03-10T08:54:23-07:00",
+   "user": "Thibault Sahin",
+   "handle": "@thibault",
+   "text": "thanks for the heads up"
+  }
+ ]
+}

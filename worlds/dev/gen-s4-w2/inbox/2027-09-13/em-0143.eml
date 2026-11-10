@@ -1,0 +1,15 @@
+From: Platform Status Page <status-noreply@drayhurst.example>
+To: Ottavio Moreira <ottavio.moreira@drayhurst.example>
+Date: Mon, 13 Sep 2027 09:13:00 -0800
+Subject: [Investigating] Intermittent sign-in delays
+Message-ID: <em-0143.4@drayhurst.example>
+Auto-Submitted: auto-generated
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+We are investigating reports of degraded performance. Updates will follow every 30 minutes until resolved.
+
+Affected: file storage, single sign-on, video meetings (partial)
+
+You are receiving this because you subscribed to platform status updates.

@@ -1,0 +1,53 @@
+{
+ "workspace": "iselvale",
+ "channel": "#wagtail-core",
+ "kind": "channel",
+ "participants": [
+  "Isla Faure",
+  "Hiba Deng",
+  "Anahit Fifita",
+  "Rudo Ekwueme",
+  "Lakshmi Figueroa",
+  "Friederike Bhatt",
+  "Jisoo Nowak",
+  "Maricel Fuentes",
+  "Rodrigo Okada"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-22T11:16:00-05:00",
+   "user": "Isla Faure",
+   "handle": "@isla",
+   "text": "Heads up: Rudo will send Hiba the Wagtail metrics definition!",
+   "edited": true,
+   "original": "Heads up: Rudo will send Hiba the Wagtail mertics definition!"
+  },
+  {
+   "ts": "2027-03-22T11:17:08-05:00",
+   "user": "Rodrigo Okada",
+   "handle": "@rodrigo",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-03-22T11:21:56-05:00",
+   "user": "Anahit Fifita",
+   "handle": "@anahit",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-22T11:30:16-05:00",
+   "user": "Rodrigo Okada",
+   "handle": "@rodrigo",
+   "text": "+1",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-22T11:35:00-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

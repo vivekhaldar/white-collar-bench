@@ -1,0 +1,89 @@
+{
+  "date": "2027-03-30",
+  "artifacts": [
+    {
+      "id": "em-0066",
+      "channel": "email",
+      "received_at": "2027-03-30T07:37:00-05:00",
+      "path": "em-0066.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "ca-0006",
+      "channel": "calendar",
+      "received_at": "2027-03-30T08:02:00-05:00",
+      "path": "ca-0006.ics",
+      "title": "Cancelled: Wagtail standup"
+    },
+    {
+      "id": "ch-0049",
+      "channel": "chat",
+      "received_at": "2027-03-30T10:14:00-05:00",
+      "path": "ch-0049.json",
+      "title": "#wagtail-core"
+    },
+    {
+      "id": "ch-0050",
+      "channel": "chat",
+      "received_at": "2027-03-30T10:40:00-05:00",
+      "path": "ch-0050.json",
+      "title": "DM: Hiba Deng / Lakshmi Figueroa"
+    },
+    {
+      "id": "ch-0051",
+      "channel": "chat",
+      "received_at": "2027-03-30T11:59:00-05:00",
+      "path": "ch-0051.json",
+      "title": "DM: Friederike Bhatt / Hiba Deng"
+    },
+    {
+      "id": "em-0067",
+      "channel": "email",
+      "received_at": "2027-03-30T13:51:00-05:00",
+      "path": "em-0067.eml",
+      "title": "Re: Clinical documentation discovery stakeholder map"
+    },
+    {
+      "id": "ch-0052",
+      "channel": "chat",
+      "received_at": "2027-03-30T14:45:00-05:00",
+      "path": "ch-0052.json",
+      "title": "#wagtail-core"
+    },
+    {
+      "id": "mt-0014",
+      "channel": "transcript",
+      "received_at": "2027-03-30T15:30:00-05:00",
+      "path": "mt-0014.vtt",
+      "title": "1:1 Hiba / Anahit (transcript)"
+    },
+    {
+      "id": "ch-0053",
+      "channel": "chat",
+      "received_at": "2027-03-30T15:58:00-05:00",
+      "path": "ch-0053.json",
+      "title": "DM: Hiba Deng / Anahit Fifita"
+    },
+    {
+      "id": "ch-0054",
+      "channel": "chat",
+      "received_at": "2027-03-30T18:06:00-05:00",
+      "path": "ch-0054.json",
+      "title": "#wagtail-core"
+    },
+    {
+      "id": "ch-0055",
+      "channel": "chat",
+      "received_at": "2027-03-30T18:20:00-05:00",
+      "path": "ch-0055.json",
+      "title": "DM: Rudo Ekwueme / Hiba Deng"
+    },
+    {
+      "id": "ch-0056",
+      "channel": "chat",
+      "received_at": "2027-03-30T18:25:00-05:00",
+      "path": "ch-0056.json",
+      "title": "#okapi-core"
+    }
+  ]
+}

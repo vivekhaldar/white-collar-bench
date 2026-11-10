@@ -1,0 +1,16 @@
+{
+  "workspace": "tarrow",
+  "channel": "#kettleyard",
+  "kind": "channel",
+  "participants": ["Bartosz Zielke", "Ilya Marchetti", "Mara Ilves"],
+  "messages": [
+    {"ts": "2027-03-01T10:02:44-08:00", "user": "kyd-ci", "handle": "@kyd-ci", "text": "deps: bumped kyd-proto 3.8.1 -> 3.9.0 in kyd-admin-ui (PR #388, auto-merged). CI green on main."},
+    {"ts": "2027-03-01T11:14:09-08:00", "user": "Ilya Marchetti", "handle": "@ilya", "text": "who broke the staging dashboard? every panel on kyd-staging says \"no data\". asking for a friend (the friend is me)"},
+    {"ts": "2027-03-01T11:19:37-08:00", "user": "Bart Z.", "handle": "@bart", "text": "me 🙃 renamed the metrics datasource, didnt realise the panels were pinned to the old name. reverting", "thread_of": 1},
+    {"ts": "2027-03-01T11:26:02-08:00", "user": "Bart Z.", "handle": "@bart", "text": "all good now", "thread_of": 1, "reactions": [{"emoji": "pray", "users": ["@ilya"]}]},
+    {"ts": "2027-03-01T15:24:18-08:00", "user": "Bart Z.", "handle": "@bart", "text": "status for @mara on the provision ask: tinderbox tenant ~80%, blocked on the IdP signing cert from teo"},
+    {"ts": "2027-03-01T15:25:03-08:00", "user": "Bart Z.", "handle": "@bart", "text": "namespace + quota + gateway route are done, its just the sso broker side. cant finish it without the kestrow IdP signing cert. should be quick once it lands", "thread_of": 4},
+    {"ts": "2027-03-01T15:27:40-08:00", "user": "Ilya Marchetti", "handle": "@ilya", "text": "@bart can you chase teo directly", "thread_of": 4},
+    {"ts": "2027-03-01T15:31:52-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "teo's on it per standup", "thread_of": 4, "reactions": [{"emoji": "+1", "users": ["@bart", "@ilya"]}]}
+  ]
+}

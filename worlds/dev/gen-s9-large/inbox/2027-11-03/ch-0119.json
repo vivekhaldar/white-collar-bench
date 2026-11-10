@@ -1,0 +1,47 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-mathieu",
+ "kind": "dm",
+ "participants": [
+  "Mathieu Wijaya",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-03T15:51:12-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-11-03T15:52:21-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-11-03T15:55:00-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "let's route all kittiwake tenants through one model gateway"
+  },
+  {
+   "ts": "2027-11-03T15:56:29-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "makes sense"
+  },
+  {
+   "ts": "2027-11-03T15:58:58-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-11-03T15:59:37-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

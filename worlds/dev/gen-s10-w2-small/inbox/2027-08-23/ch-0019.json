@@ -1,0 +1,29 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-akosua-aoife",
+ "kind": "dm",
+ "participants": [
+  "Akosua",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-23T14:23:14+01:00",
+   "user": "Akosua",
+   "handle": "@akosua",
+   "text": "Recap from 16 August: Nare agreed to send you the referral matching problem statement!"
+  },
+  {
+   "ts": "2027-08-23T14:27:26+01:00",
+   "user": "Akosua",
+   "handle": "@akosua",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-08-23T14:30:17+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "no worries"
+  }
+ ]
+}

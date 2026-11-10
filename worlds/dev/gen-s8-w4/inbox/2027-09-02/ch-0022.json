@@ -1,0 +1,41 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Adwoa",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-02T09:35:02-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-02T09:36:00-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "Could you update the Fulmar lessons-learned note after my comments?"
+  },
+  {
+   "ts": "2027-09-02T09:37:03-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "will do"
+  },
+  {
+   "ts": "2027-09-02T09:38:08-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-09-02T09:39:06-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "anytime"
+  }
+ ]
+}

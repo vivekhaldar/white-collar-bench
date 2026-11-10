@@ -1,0 +1,82 @@
+{
+  "date": "2027-08-23",
+  "artifacts": [
+    {
+      "id": "em-0030",
+      "channel": "email",
+      "received_at": "2027-08-23T06:56:00+01:00",
+      "path": "em-0030.eml",
+      "title": "Reminder: Friday status note due Friday 27 August"
+    },
+    {
+      "id": "em-0031",
+      "channel": "email",
+      "received_at": "2027-08-23T09:02:00+01:00",
+      "path": "em-0031.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "mt-0005",
+      "channel": "transcript",
+      "received_at": "2027-08-23T10:00:00+01:00",
+      "path": "mt-0005.vtt",
+      "title": "Nettle standup (transcript)"
+    },
+    {
+      "id": "em-0032",
+      "channel": "email",
+      "received_at": "2027-08-23T10:02:00+01:00",
+      "path": "em-0032.eml",
+      "title": "Re: Pantry inventory baseline data from Holworth"
+    },
+    {
+      "id": "mn-0006",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-23T11:45:00+01:00",
+      "path": "mn-0006.md",
+      "title": "Recap: FDO leads call"
+    },
+    {
+      "id": "em-0033",
+      "channel": "email",
+      "received_at": "2027-08-23T12:20:00+01:00",
+      "path": "em-0033.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0019",
+      "channel": "chat",
+      "received_at": "2027-08-23T15:04:00+01:00",
+      "path": "ch-0019.json",
+      "title": "DM: Akosua Bergstrom / Aoife Everett"
+    },
+    {
+      "id": "ch-0020",
+      "channel": "chat",
+      "received_at": "2027-08-23T15:52:00+01:00",
+      "path": "ch-0020.json",
+      "title": "#nettle-core"
+    },
+    {
+      "id": "mn-0007",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-23T16:00:00+01:00",
+      "path": "mn-0007.md",
+      "title": "Notes: Holworth site visit"
+    },
+    {
+      "id": "mn-0008",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-23T16:45:00+01:00",
+      "path": "mn-0008.md",
+      "title": "Notes: Catch-up: Aoife / Gaurav"
+    },
+    {
+      "id": "ch-0021",
+      "channel": "chat",
+      "received_at": "2027-08-23T17:34:00+01:00",
+      "path": "ch-0021.json",
+      "title": "DM: Sigrid Asante / Aoife Everett"
+    }
+  ]
+}

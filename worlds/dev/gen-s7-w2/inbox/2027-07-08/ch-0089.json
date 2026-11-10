@@ -1,0 +1,49 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-ewan-hiba",
+ "kind": "dm",
+ "participants": [
+  "Ewan Laine",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-08T15:15:27-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-07-08T15:16:07-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "we're pushing garnet to 12 august, from 3 august",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-08T15:16:56-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-07-08T15:19:18-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-07-08T15:21:17-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "yep, all good"
+  }
+ ]
+}

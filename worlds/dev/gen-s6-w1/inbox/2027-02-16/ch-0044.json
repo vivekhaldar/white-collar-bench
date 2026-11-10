@@ -1,0 +1,48 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#axolotl-core",
+ "kind": "channel",
+ "participants": [
+  "Liisa Babic",
+  "Despina Pereira",
+  "Losa Moretti",
+  "Andres Erdem",
+  "Nathaniel Cartwright",
+  "Karim Navarro",
+  "Tomas Deng",
+  "Carys Laurent",
+  "Lindiwe Baek",
+  "Jurgen Dvorak"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-16T15:31:00-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "@despina the Axolotl tenant on Fennel is back on, sorry for the delay.",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@andres",
+      "@despina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-16T15:32:21-08:00",
+   "user": "Losa Moretti",
+   "handle": "@losa",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-16T15:40:51-08:00",
+   "user": "Tomas Deng",
+   "handle": "@tomas",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  }
+ ]
+}

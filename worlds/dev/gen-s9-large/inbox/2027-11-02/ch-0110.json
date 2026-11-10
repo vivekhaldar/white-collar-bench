@@ -1,0 +1,35 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-mathieu",
+ "kind": "dm",
+ "participants": [
+  "Mathieu Wijaya",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-02T19:27:00-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "i fixed the cirrus timeout errors earlier today"
+  },
+  {
+   "ts": "2027-11-02T19:28:01-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-11-02T19:30:42-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-11-02T19:31:18-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "no worries"
+  }
+ ]
+}

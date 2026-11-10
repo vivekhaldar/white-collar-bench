@@ -1,0 +1,47 @@
+{
+  "date": "2027-07-03",
+  "artifacts": [
+    {
+      "id": "ch-0064",
+      "channel": "chat",
+      "received_at": "2027-07-03T08:38:00-08:00",
+      "path": "ch-0064.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "em-0069",
+      "channel": "email",
+      "received_at": "2027-07-03T09:20:00-08:00",
+      "path": "em-0069.eml",
+      "title": "[INC-59201] Ticket updated"
+    },
+    {
+      "id": "em-0070",
+      "channel": "email",
+      "received_at": "2027-07-03T10:24:00-08:00",
+      "path": "em-0070.eml",
+      "title": "[INC-61020] Ticket updated"
+    },
+    {
+      "id": "em-0071",
+      "channel": "email",
+      "received_at": "2027-07-03T11:32:00-08:00",
+      "path": "em-0071.eml",
+      "title": "[INC-50314] Ticket updated"
+    },
+    {
+      "id": "em-0072",
+      "channel": "email",
+      "received_at": "2027-07-03T12:09:00-08:00",
+      "path": "em-0072.eml",
+      "title": "[REQ-22377] Request resolved"
+    },
+    {
+      "id": "em-0073",
+      "channel": "email",
+      "received_at": "2027-07-03T12:44:00-08:00",
+      "path": "em-0073.eml",
+      "title": "[REQ-31029] Request resolved"
+    }
+  ]
+}

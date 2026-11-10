@@ -1,0 +1,156 @@
+{
+  "date": "2027-03-04",
+  "artifacts": [
+    {
+      "id": "ch-0017",
+      "channel": "chat",
+      "received_at": "2027-03-04T07:41:00-08:00",
+      "path": "ch-0017.json",
+      "title": "#kettleyard-incident (Wed 3 Mar)"
+    },
+    {
+      "id": "mn-0009",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-04T07:41:00-08:00",
+      "path": "mn-0009.md",
+      "title": "Huddlescribe recap: Kettleyard incident standup (Wed 13:00)"
+    },
+    {
+      "id": "dc-0009",
+      "channel": "document",
+      "received_at": "2027-03-04T07:42:00-08:00",
+      "path": "dc-0009.pdf",
+      "title": "Kettleyard Reference Architecture v4",
+      "parent": "em-0036"
+    },
+    {
+      "id": "em-0036",
+      "channel": "email",
+      "received_at": "2027-03-04T07:42:00-08:00",
+      "path": "em-0036.eml",
+      "title": "Kettleyard reference architecture v4 (addresses your comments)"
+    },
+    {
+      "id": "ch-0018",
+      "channel": "chat",
+      "received_at": "2027-03-04T07:43:00-08:00",
+      "path": "ch-0018.json",
+      "title": "DM Marisol / Mara: references, offer approved"
+    },
+    {
+      "id": "ca-0007",
+      "channel": "calendar",
+      "received_at": "2027-03-04T07:50:00-08:00",
+      "path": "ca-0007.ics",
+      "title": "Declined: Scrivelo - next steps (Fri 5 Mar 11:00)"
+    },
+    {
+      "id": "ch-0019",
+      "channel": "chat",
+      "received_at": "2027-03-04T08:52:00-08:00",
+      "path": "ch-0019.json",
+      "title": "DM Ramona / Mara: back from offsite"
+    },
+    {
+      "id": "dc-0010",
+      "channel": "document",
+      "received_at": "2027-03-04T08:52:00-08:00",
+      "path": "dc-0010.pdf",
+      "title": "Teaching with AI - deck v3",
+      "parent": "ch-0019"
+    },
+    {
+      "id": "ch-0020",
+      "channel": "chat",
+      "received_at": "2027-03-04T09:58:00-08:00",
+      "path": "ch-0020.json",
+      "title": "DM Emeka / Mara: guide, TA login, rubric"
+    },
+    {
+      "id": "mt-0009",
+      "channel": "transcript",
+      "received_at": "2027-03-04T10:35:00-08:00",
+      "path": "mt-0009.vtt",
+      "title": "Kettleyard incident standup (Thu)"
+    },
+    {
+      "id": "mn-0010",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-04T11:35:00-08:00",
+      "path": "mn-0010.md",
+      "title": "Huddlescribe recap: Delphine / Mara check-in"
+    },
+    {
+      "id": "em-0037",
+      "channel": "email",
+      "received_at": "2027-03-04T11:58:00-08:00",
+      "path": "em-0037.eml",
+      "title": "Following up from our call: weights, DSA, advising"
+    },
+    {
+      "id": "dc-0011",
+      "channel": "document",
+      "received_at": "2027-03-04T12:20:00-08:00",
+      "path": "dc-0011.xlsx",
+      "title": "WFT vendor scorecard v2",
+      "parent": "em-0038"
+    },
+    {
+      "id": "em-0038",
+      "channel": "email",
+      "received_at": "2027-03-04T12:20:00-08:00",
+      "path": "em-0038.eml",
+      "title": "Vendor scorecard: summary"
+    },
+    {
+      "id": "ch-0021",
+      "channel": "chat",
+      "received_at": "2027-03-04T12:50:00-08:00",
+      "path": "ch-0021.json",
+      "title": "#tinderbox-core: SSO works, spec v2, security package"
+    },
+    {
+      "id": "dc-0012",
+      "channel": "document",
+      "received_at": "2027-03-04T12:50:00-08:00",
+      "path": "dc-0012.md",
+      "title": "Tinderbox LMS interface spec v2",
+      "parent": "ch-0021"
+    },
+    {
+      "id": "ca-0008",
+      "channel": "calendar",
+      "received_at": "2027-03-04T15:18:00-08:00",
+      "path": "ca-0008.ics",
+      "title": "Invite: Tinderbox: operating model & ownership"
+    },
+    {
+      "id": "ch-0022",
+      "channel": "chat",
+      "received_at": "2027-03-04T16:24:00-08:00",
+      "path": "ch-0022.json",
+      "title": "DM Marisol / Mara: Mateus accepted"
+    },
+    {
+      "id": "ca-0009",
+      "channel": "calendar",
+      "received_at": "2027-03-04T16:55:00-08:00",
+      "path": "ca-0009.ics",
+      "title": "Invite: Library research assistant - evaluation partnership?"
+    },
+    {
+      "id": "ch-0023",
+      "channel": "chat",
+      "received_at": "2027-03-04T17:24:00-08:00",
+      "path": "ch-0023.json",
+      "title": "#kettleyard: prod fix deployed"
+    },
+    {
+      "id": "mn-0011",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-04T21:30:00-08:00",
+      "path": "mn-0011.md",
+      "title": "Debrief: Teaching with AI workshop"
+    }
+  ]
+}

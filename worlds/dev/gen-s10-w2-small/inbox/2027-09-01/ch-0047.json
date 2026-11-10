@@ -1,0 +1,29 @@
+{
+ "workspace": "reddale",
+ "channel": "#translation-help-selection-core",
+ "kind": "channel",
+ "participants": [
+  "Aoife Everett",
+  "Akosua Bergstrom",
+  "Amani",
+  "Catrin Dang",
+  "Akosua"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-01T11:11:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "@akosua i can confirm the translation help selection pricing comparison with you",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@akosua",
+      "@catrin"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolat-hiba",
+ "kind": "dm",
+ "participants": [
+  "Bolat Oyelami",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-15T08:14:00-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "Heads up: Deborah will send Mere the alumni outreach discovery course roster export! :)"
+  },
+  {
+   "ts": "2027-07-15T08:18:27-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-07-15T08:19:38-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "anytime"
+  }
+ ]
+}

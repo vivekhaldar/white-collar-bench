@@ -1,0 +1,31 @@
+{
+ "workspace": "iselvale",
+ "channel": "#wagtail-core",
+ "kind": "channel",
+ "participants": [
+  "Lakshmi Figueroa",
+  "Hiba Deng",
+  "Isla Faure",
+  "Anahit",
+  "Rudo Ekwueme",
+  "Friederike Bhatt",
+  "Jisoo Nowak",
+  "Maricel Fuentes",
+  "Rodrigo Okada"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-18T07:47:00-05:00",
+   "user": "Lakshmi Figueroa",
+   "handle": "@lakshmi",
+   "text": "@hiba i can generate a synthetic patient data set for wagtail"
+  },
+  {
+   "ts": "2027-03-18T07:47:41-05:00",
+   "user": "Rudo Ekwueme",
+   "handle": "@rudo",
+   "text": "ok",
+   "thread_of": 0
+  }
+ ]
+}

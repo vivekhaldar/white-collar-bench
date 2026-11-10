@@ -1,0 +1,58 @@
+From: Hana Kobayashi-Reyes <hana.kobayashireyes@kestrow.tarrow.example>
+To: Mara Ilves <mara.ilves@tarrow.example>, Yusra Haddad <yusra.haddad@kestrow.tarrow.example>
+Date: Tue, 02 Mar 2027 08:05:00 -0800
+Subject: Introduction: Tinderbox privacy review (PIA)
+Message-ID: <em-0027@kestrow.tarrow.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Dear Ms. Ilves, dear Yusra,
+
+Please allow me to introduce myself. My name is Hana Kobayashi-Reyes, and
+I joined Kestrow as Privacy Officer last week. Among the files I have
+inherited is the review of the Tinderbox course assistant pilot, and Yusra
+has kindly told me that you are the architect for it, Ms. Ilves. I am
+writing to both of you so that the campus lead has the same information.
+
+Some context on our process, since it may be new to the system office.
+Any new service at Kestrow that processes personal information about
+students or staff goes through the campus privacy impact assessment (PIA)
+before that processing begins. The PIA is a structured questionnaire
+covering what data is collected, the purpose and legal basis, where the
+data is stored and for how long, who can access it, which third parties
+or shared services receive it, and how individuals are informed. My
+office reviews the completed questionnaire, may come back with questions
+or conditions, and records the outcome in the campus register. It is
+separate from, and in addition to, the security review led by the system
+office.
+
+1. PIA questionnaire. I would be grateful if you could complete the
+   attached PIA questionnaire for Tinderbox by Friday 12 March. As the
+   architect you are best placed to answer most of it; where a question
+   concerns campus practice (for example, the notice given to students in
+   the pilot courses), please mark it and I will follow up with Yusra.
+
+2. PIA walkthrough. Could you also set up a 30-minute
+   data-flow walkthrough with me before you fill it in? Think of it as
+   a PIA walkthrough: you would show me how data moves between the learning
+   management system, the course assistant and the shared platform it is
+   hosted on, and I can tell you early which parts of the questionnaire
+   will need the most detail. Any time that suits you over the coming
+   days is fine; my calendar is still fairly open.
+
+For the avoidance of doubt: under campus policy, real student data cannot
+be processed in Tinderbox until both the PIA and the security review are
+complete. I understand from Yusra that the pilot is currently running on
+dummy data, which is entirely consistent with that.
+
+I look forward to working with you both, and I apologise for arriving in
+the middle of things.
+
+With kind regards,
+
+Hana Kobayashi-Reyes
+Privacy Officer
+Office of Privacy and Records
+Tarrow University Kestrow
+hana.kobayashireyes@kestrow.tarrow.example

@@ -1,0 +1,82 @@
+{
+  "date": "2027-08-17",
+  "artifacts": [
+    {
+      "id": "em-0006",
+      "channel": "email",
+      "received_at": "2027-08-17T07:58:00+01:00",
+      "path": "em-0006.eml",
+      "title": "Fwd: Noris deep-dive materials"
+    },
+    {
+      "id": "em-0007",
+      "channel": "email",
+      "received_at": "2027-08-17T08:27:00+01:00",
+      "path": "em-0007.eml",
+      "title": "Re: Nettle data-flow diagram"
+    },
+    {
+      "id": "mn-0002",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-17T10:00:00+01:00",
+      "path": "mn-0002.md",
+      "title": "Recap: Nettle standup"
+    },
+    {
+      "id": "em-0008",
+      "channel": "email",
+      "received_at": "2027-08-17T10:19:00+01:00",
+      "path": "em-0008.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0006",
+      "channel": "chat",
+      "received_at": "2027-08-17T10:56:00+01:00",
+      "path": "ch-0006.json",
+      "title": "#pantry-inventory-discovery-core"
+    },
+    {
+      "id": "nt-0002",
+      "channel": "note",
+      "received_at": "2027-08-17T12:47:00+01:00",
+      "path": "nt-0002.md",
+      "title": "Tue voice memo"
+    },
+    {
+      "id": "ch-0007",
+      "channel": "chat",
+      "received_at": "2027-08-17T13:10:00+01:00",
+      "path": "ch-0007.json",
+      "title": "#random"
+    },
+    {
+      "id": "mt-0001",
+      "channel": "transcript",
+      "received_at": "2027-08-17T15:30:00+01:00",
+      "path": "mt-0001.vtt",
+      "title": "1:1 Aoife / Akosua (transcript)"
+    },
+    {
+      "id": "em-0009",
+      "channel": "email",
+      "received_at": "2027-08-17T15:42:00+01:00",
+      "path": "em-0009.eml",
+      "title": "[REQ-18044] Request resolved"
+    },
+    {
+      "id": "em-0010",
+      "channel": "email",
+      "received_at": "2027-08-17T15:59:00+01:00",
+      "path": "em-0010.eml",
+      "title": "FYI: Nettle API contract v2"
+    },
+    {
+      "id": "ch-0008",
+      "channel": "chat",
+      "received_at": "2027-08-17T18:02:00+01:00",
+      "path": "ch-0008.json",
+      "title": "DM: Akosua Bergstrom / Aoife Everett"
+    }
+  ]
+}

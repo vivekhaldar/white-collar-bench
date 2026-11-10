@@ -1,0 +1,20 @@
+From: Mara Ilves <mara.ilves@tarrow.example>
+To: Folasade Renwick <folasade.renwick@tarrow.example>
+Date: Fri, 19 Feb 2027 16:40:00 -0800
+Subject: Weekly update: w/e 19 Feb
+Message-ID: <em-0008@tarrow.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Sade,
+
+First weekly update, three bullets and one risk:
+
+- Tinderbox: scoped with Yusra to 3 courses (CHEM 110, HIST 214, BIOL 205). Go-live still 22 Mar.
+- Writing tool bake-off: vendor security & accessibility questionnaire (VSQ) out to Scrivelo and Penmarq; responses pending.
+- Chargeback: FTE inputs in from Percy (v1, Orrin Valley provisional); modeling has started.
+
+Risk: the Tinderbox tenant on Kettleyard depends on Kestrow's IdP signing cert (SSO). Until it arrives the tenant can't be finished, and the go-live date carries that dependency.
+
+— Mara

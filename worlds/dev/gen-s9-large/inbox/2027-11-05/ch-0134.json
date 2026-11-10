@@ -1,0 +1,67 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-anh-aroha",
+ "kind": "dm",
+ "participants": [
+  "Anh",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-05T17:26:07-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-11-05T17:26:38-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-11-05T17:28:00-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "I sent you the Okapi roadmap slide!",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@aroha"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-05T17:28:58-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-11-05T17:29:14-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "That's AI Safety Rounds Workshop done! :)"
+  },
+  {
+   "ts": "2027-11-05T17:29:54-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-11-05T17:30:08-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "We're spinning up AI safety rounds Peer Network as a follow-on to AI Safety Rounds Workshop. Keeping the relationship with Vashmere warm: introductions, catch-ups and favours. Ongoing! :)"
+  },
+  {
+   "ts": "2027-11-05T17:31:38-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "good to know"
+  }
+ ]
+}

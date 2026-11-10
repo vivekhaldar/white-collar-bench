@@ -1,0 +1,28 @@
+{
+ "workspace": "iselvale",
+ "channel": "#okapi-core",
+ "kind": "channel",
+ "participants": [
+  "Lakshmi Figueroa",
+  "Hiba Deng",
+  "Anahit",
+  "Isla Faure",
+  "Rudo Ekwueme",
+  "Jisoo Nowak",
+  "Friederike Bhatt"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-30T17:52:00-05:00",
+   "user": "Lakshmi Figueroa",
+   "handle": "@lakshmi",
+   "text": "@hiba got what i needed, the okapi capacity plan is moving again"
+  },
+  {
+   "ts": "2027-03-30T17:52:49-05:00",
+   "user": "Rudo Ekwueme",
+   "handle": "@rudo",
+   "text": "good to know"
+  }
+ ]
+}

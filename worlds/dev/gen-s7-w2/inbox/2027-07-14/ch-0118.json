@@ -1,0 +1,43 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolatf-hiba",
+ "kind": "dm",
+ "participants": [
+  "Bolat",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-14T12:45:00-08:00",
+   "user": "Bolat",
+   "handle": "@bolatf",
+   "text": "I can send you the notes from the lab safety training session.",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-14T12:46:13-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-07-14T12:47:45-08:00",
+   "user": "Bolat",
+   "handle": "@bolatf",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-07-14T12:50:12-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "remote, but online all day"
+  }
+ ]
+}

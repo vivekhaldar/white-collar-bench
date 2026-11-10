@@ -1,0 +1,31 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Andres Yamamoto",
+  "Amira Andersen"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-29T13:34:51-05:00",
+   "user": "Andres Yamamoto",
+   "handle": "@andres",
+   "text": "lost a blue umbrella, might be in the big meeting room",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@amira"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-29T13:39:05-05:00",
+   "user": "Amira Andersen",
+   "handle": "@amira",
+   "text": "will keep an eye out"
+  }
+ ]
+}

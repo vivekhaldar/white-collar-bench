@@ -1,0 +1,35 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-yasmin",
+ "kind": "dm",
+ "participants": [
+  "Camila Abernathy",
+  "Yasmin Mokoena"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-03T13:54:00-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "I reviewed your Obsidian stakeholder map."
+  },
+  {
+   "ts": "2027-11-03T13:55:22-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "thank you!"
+  },
+  {
+   "ts": "2027-11-03T13:56:42-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-11-03T13:58:21-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "no worries"
+  }
+ ]
+}

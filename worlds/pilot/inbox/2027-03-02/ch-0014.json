@@ -1,0 +1,10 @@
+{
+  "workspace": "tarrow",
+  "channel": "dm-mara-sade",
+  "kind": "dm",
+  "participants": ["Mara Ilves", "Folasade Renwick"],
+  "messages": [
+    {"ts": "2027-03-02T15:26:14-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "chargeback options paper for the 4pm attached (council of campus CIOs prep) - A flat per-campus fee, B consumption-based, C hybrid. on the rebased FTEs (v2). I recommend C.", "files": [{"name": "Kettleyard cost-sharing options v1.docx", "type": "docx"}]},
+    {"ts": "2027-03-02T15:31:20-08:00", "user": "Folasade Renwick", "handle": "@sade", "text": "Got it. Three bullets and one risk when you present, please."}
+  ]
+}

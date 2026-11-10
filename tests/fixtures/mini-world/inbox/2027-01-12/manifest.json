@@ -1,0 +1,26 @@
+{
+  "date": "2027-01-12",
+  "artifacts": [
+    {
+      "id": "mn-0001",
+      "channel": "meeting_notes",
+      "received_at": "2027-01-12T11:00:00-08:00",
+      "path": "mn-0001.md",
+      "title": "Quillon steering notes"
+    },
+    {
+      "id": "em-0005",
+      "channel": "email",
+      "received_at": "2027-01-12T15:10:00-08:00",
+      "path": "em-0005.eml",
+      "title": "Completed security questionnaire"
+    },
+    {
+      "id": "ca-0002",
+      "channel": "calendar",
+      "received_at": "2027-01-12T15:30:00-08:00",
+      "path": "ca-0002.ics",
+      "title": "Accepted: Reconciliation review"
+    }
+  ]
+}

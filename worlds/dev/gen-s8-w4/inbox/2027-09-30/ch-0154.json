@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-marcelo",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Marcelo Meijer"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-30T09:25:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "i sent you the wagtail comms plan"
+  },
+  {
+   "ts": "2027-09-30T09:25:18-06:00",
+   "user": "Marcelo Meijer",
+   "handle": "@marcelo",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-09-30T09:30:09-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-09-30T09:34:01-06:00",
+   "user": "Marcelo Meijer",
+   "handle": "@marcelo",
+   "text": "no worries"
+  }
+ ]
+}

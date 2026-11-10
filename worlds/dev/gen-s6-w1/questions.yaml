@@ -1,0 +1,379 @@
+- id: q-001
+  checkpoint: cp1
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - scattered_evidence
+  - supersession
+- id: q-002
+  checkpoint: cp1
+  template: project_status
+  params:
+    project: pr-axolotl
+  challenges:
+  - duplicate_signal
+  - scattered_evidence
+  - supersession
+- id: q-003
+  checkpoint: cp1
+  template: project_changes
+  params:
+    project: pr-axolotl
+    since: '2027-02-19'
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+  - scattered_evidence
+  - supersession
+- id: q-004
+  checkpoint: cp1
+  template: i_owe
+  params:
+    person: p-andres-erdem
+  challenges:
+  - duplicate_signal
+  - name_collision
+  - supersession
+- id: q-005
+  checkpoint: cp1
+  template: owed_to_me
+  params:
+    person: p-friederike-agyeman
+    name_form: Rike
+  challenges:
+  - alias
+- id: q-006
+  checkpoint: cp1
+  template: loop_owner
+  params:
+    commitment: c-012
+  challenges:
+  - transfer
+- id: q-007
+  checkpoint: cp1
+  template: loop_due
+  params:
+    commitment: c-059
+  challenges:
+  - scattered_evidence
+- id: q-008
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-course-assistant-tool-selection
+    attribute: owner
+  challenges: []
+- id: q-009
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-sipho-costa
+    attribute: org
+  challenges: []
+- id: q-010
+  checkpoint: cp1
+  template: project_loops
+  params:
+    project: pr-dorcliff-captioning-discovery
+    name_form: DCD discovery
+  challenges:
+  - alias
+  - duplicate_signal
+  - supersession
+- id: q-011
+  checkpoint: cp1
+  template: person_brief
+  params:
+    person: p-losa-moretti
+  challenges:
+  - duplicate_signal
+  - supersession
+- id: q-012
+  checkpoint: cp1
+  template: decision_date
+  params:
+    decision: d-001
+  challenges: []
+- id: q-013
+  checkpoint: cp1
+  template: event_date
+  params:
+    event: e-0156
+  text: When was "Confirm the Axolotl lessons-learned note with Andres" completed?
+  challenges:
+  - duplicate_signal
+- id: q-014
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-course-assistant-tool-selection
+    attribute: budget
+  text: What is the budget for Course Assistant Tool Selection?
+  challenges:
+  - unobservable
+- id: q-015
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-room-booking-learning-series
+    attribute: budget
+  challenges:
+  - unobservable
+- id: q-016
+  checkpoint: cp2
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - new_entity
+  - supersession
+- id: q-017
+  checkpoint: cp2
+  template: project_status
+  params:
+    project: pr-axolotl
+    name_form: Project Axolotl
+  challenges:
+  - alias
+  - duplicate_signal
+  - new_entity
+  - supersession
+- id: q-018
+  checkpoint: cp2
+  template: project_changes
+  params:
+    project: pr-course-assistant-tool-selection
+    since: '2027-02-23'
+  challenges:
+  - batch_catchup
+  - unobservable
+- id: q-019
+  checkpoint: cp2
+  template: i_owe
+  params:
+    person: p-tomas-deng
+  challenges:
+  - duplicate_signal
+- id: q-020
+  checkpoint: cp2
+  template: owed_to_me
+  params:
+    person: p-liisa-babic
+    name_form: Liisa
+  challenges:
+  - alias
+  - batch_catchup
+  - correction
+  - duplicate_signal
+- id: q-021
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-fennel
+    attribute: owner
+    name_form: the common platform
+  challenges:
+  - alias
+- id: q-022
+  checkpoint: cp2
+  template: person_attr
+  params:
+    person: p-ebun-petrovic
+    attribute: role
+  challenges:
+  - new_entity
+- id: q-023
+  checkpoint: cp2
+  template: project_loops
+  params:
+    project: pr-course-assistant-tool-selection
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+- id: q-024
+  checkpoint: cp2
+  template: person_brief
+  params:
+    person: p-tomas-deng
+  challenges:
+  - duplicate_signal
+- id: q-025
+  checkpoint: cp2
+  template: decision_date
+  params:
+    decision: d-002
+  challenges:
+  - worker_directive
+- id: q-026
+  checkpoint: cp2
+  template: event_date
+  params:
+    event: e-0103
+  text: When was "Send Despina the list of pilot courses for Axolotl" handed over to Jurgen Dvorak?
+  challenges:
+  - transfer
+- id: q-027
+  checkpoint: cp2
+  template: loop_owner
+  params:
+    commitment: c-024
+  challenges:
+  - transfer
+- id: q-028
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-linel-enterprise-agreement
+    attribute: target_date
+  challenges: []
+- id: q-029
+  checkpoint: cp2
+  template: project_loops
+  params:
+    project: pr-fennel-operating-model-review
+  challenges: []
+- id: q-030
+  checkpoint: cp2
+  template: person_attr
+  params:
+    person: p-leila-dang
+    attribute: phone
+  challenges:
+  - unobservable
+- id: q-031
+  checkpoint: cp3
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - endorsement
+  - new_entity
+  - restructuring
+  - supersession
+  - worker_directive
+- id: q-032
+  checkpoint: cp3
+  template: project_status
+  params:
+    project: pr-axolotl
+    name_form: Project Axolotl
+  challenges:
+  - alias
+  - duplicate_signal
+  - new_entity
+  - supersession
+- id: q-033
+  checkpoint: cp3
+  template: project_changes
+  params:
+    project: pr-dorcliff-transcript-intake-discovery
+    since: '2027-02-25'
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-034
+  checkpoint: cp3
+  template: i_owe
+  params:
+    person: p-losa-moretti
+    name_form: Losa
+  challenges:
+  - alias
+  - new_entity
+  - restructuring
+- id: q-035
+  checkpoint: cp3
+  template: owed_to_me
+  params:
+    person: p-losa-moretti
+  challenges:
+  - batch_catchup
+- id: q-036
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-glencombe-partnership
+    attribute: owner
+  challenges: []
+- id: q-037
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-dorcliff-transcript-intake-discovery
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-038
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-andres-erdem
+    name_form: our learning services head
+  challenges:
+  - alias
+  - duplicate_signal
+  - endorsement
+  - name_collision
+  - new_entity
+  - restructuring
+  - worker_directive
+- id: q-039
+  checkpoint: cp3
+  template: event_date
+  params:
+    event: e-0256
+  text: When was "Send Aiko the Friday status note for w/e 26 February" completed?
+  challenges:
+  - duplicate_signal
+- id: q-040
+  checkpoint: cp3
+  template: loop_due
+  params:
+    commitment: c-062
+  challenges:
+  - endorsement
+  - worker_directive
+- id: q-041
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-thesis-formatting-input-round
+    attribute: owner
+    name_form: the thesis formatting input
+  challenges:
+  - alias
+- id: q-042
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-fennel
+  challenges:
+  - batch_catchup
+  - endorsement
+  - worker_directive
+- id: q-043
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-leila-dang
+  challenges: []
+- id: q-044
+  checkpoint: cp3
+  template: event_date
+  params:
+    event: e-0242
+  text: When was "Walk Liisa through the Axolotl decision memo" completed?
+  challenges:
+  - unobservable
+  - weak_evidence
+- id: q-045
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-glencombe-partnership
+    attribute: budget
+  challenges:
+  - unobservable

@@ -1,0 +1,125 @@
+{
+  "date": "2027-09-03",
+  "artifacts": [
+    {
+      "id": "em-0077",
+      "channel": "email",
+      "received_at": "2027-09-03T07:19:00-08:00",
+      "path": "em-0077.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0064",
+      "channel": "chat",
+      "received_at": "2027-09-03T09:08:00-08:00",
+      "path": "ch-0064.json",
+      "title": "DM: Ottavio Moreira / Bruna Vaughan"
+    },
+    {
+      "id": "em-0078",
+      "channel": "email",
+      "received_at": "2027-09-03T09:32:00-08:00",
+      "path": "em-0078.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0079",
+      "channel": "email",
+      "received_at": "2027-09-03T09:42:00-08:00",
+      "path": "em-0079.eml",
+      "title": "[REQ-33379] Request resolved"
+    },
+    {
+      "id": "em-0080",
+      "channel": "email",
+      "received_at": "2027-09-03T09:47:00-08:00",
+      "path": "em-0080.eml",
+      "title": "[REQ-20128] Request resolved"
+    },
+    {
+      "id": "mn-0009",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-03T09:55:00-08:00",
+      "path": "mn-0009.md",
+      "title": "Notes: Fjord standup"
+    },
+    {
+      "id": "ch-0065",
+      "channel": "chat",
+      "received_at": "2027-09-03T10:26:00-08:00",
+      "path": "ch-0065.json",
+      "title": "#course-assistant-discovery-core"
+    },
+    {
+      "id": "em-0081",
+      "channel": "email",
+      "received_at": "2027-09-03T11:26:00-08:00",
+      "path": "em-0081.eml",
+      "title": "Fjord update"
+    },
+    {
+      "id": "em-0082",
+      "channel": "email",
+      "received_at": "2027-09-03T11:47:00-08:00",
+      "path": "em-0082.eml",
+      "title": "[INC-47134] Ticket updated"
+    },
+    {
+      "id": "em-0083",
+      "channel": "email",
+      "received_at": "2027-09-03T13:00:00-08:00",
+      "path": "em-0083.eml",
+      "title": "Room Booking Tool Selection: moving to procurement"
+    },
+    {
+      "id": "em-0084",
+      "channel": "email",
+      "received_at": "2027-09-03T14:48:00-08:00",
+      "path": "em-0084.eml",
+      "title": "Course assistant discovery pain-point list"
+    },
+    {
+      "id": "em-0085",
+      "channel": "email",
+      "received_at": "2027-09-03T15:00:00-08:00",
+      "path": "em-0085.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "dc-0002",
+      "channel": "document",
+      "received_at": "2027-09-03T15:55:00-08:00",
+      "path": "dc-0002.pdf",
+      "title": "Course assistant discovery comms plan after Meera's comments v3",
+      "parent": "em-0086"
+    },
+    {
+      "id": "em-0086",
+      "channel": "email",
+      "received_at": "2027-09-03T15:55:00-08:00",
+      "path": "em-0086.eml",
+      "title": "Status note: w/e 3 September"
+    },
+    {
+      "id": "em-0087",
+      "channel": "email",
+      "received_at": "2027-09-03T16:07:00-08:00",
+      "path": "em-0087.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0088",
+      "channel": "email",
+      "received_at": "2027-09-03T17:36:00-08:00",
+      "path": "em-0088.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0066",
+      "channel": "chat",
+      "received_at": "2027-09-03T18:22:00-08:00",
+      "path": "ch-0066.json",
+      "title": "#course-assistant-discovery-core"
+    }
+  ]
+}

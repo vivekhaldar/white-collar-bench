@@ -1,0 +1,23 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-bilal-dina",
+ "kind": "dm",
+ "participants": [
+  "Dina Ricci",
+  "Bilal Kahananui"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-25T15:21:00-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "I joined your panel on benefits screening earlier today."
+  },
+  {
+   "ts": "2027-02-25T15:21:17-07:00",
+   "user": "Bilal Kahananui",
+   "handle": "@bilal",
+   "text": "thanks!"
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "workspace": "reddale",
+ "channel": "#translation-help-selection-core",
+ "kind": "channel",
+ "participants": [
+  "Akosua Carmichael",
+  "Aoife Everett",
+  "Akosua",
+  "Amani",
+  "Catrin Dang"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-02T09:07:00+01:00",
+   "user": "Akosua Carmichael",
+   "handle": "@akosuac",
+   "text": "@aoife done, I sent the Noris accessibility conformance report again."
+  },
+  {
+   "ts": "2027-09-02T09:07:19+01:00",
+   "user": "Akosua",
+   "handle": "@akosua",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-09-02T09:08:19+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-02T09:16:34+01:00",
+   "user": "Akosua",
+   "handle": "@akosua",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-02T09:25:48+01:00",
+   "user": "Catrin Dang",
+   "handle": "@catrin",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

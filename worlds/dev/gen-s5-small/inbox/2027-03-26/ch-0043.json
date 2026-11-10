@@ -1,0 +1,29 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-friederike-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Deng",
+  "Rike"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-26T17:44:12-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-03-26T17:44:34-05:00",
+   "user": "Rike",
+   "handle": "@friederike",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-03-26T17:44:55-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "I confirmed the Wagtail decision memo with you."
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-imani",
+ "kind": "dm",
+ "participants": [
+  "Dina Ricci",
+  "Imani Navarro"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-12T09:28:00-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "before i can finish introduce you to tendai for the permit intake work i need your input, over to you for now"
+  },
+  {
+   "ts": "2027-03-12T09:28:33-07:00",
+   "user": "Imani Navarro",
+   "handle": "@imani",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-03-12T09:33:18-07:00",
+   "user": "Imani Navarro",
+   "handle": "@imani",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-03-12T09:35:03-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "no worries"
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "workspace": "birchmere",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Giorgi Villanueva",
+  "Bisi Chatterjee"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-10T16:45:07-05:00",
+   "user": "Giorgi Villanueva",
+   "handle": "@giorgi",
+   "text": "is the wifi on the second floor down for anyone else?",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@bisi"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-10T16:48:58-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "yep, same here",
+   "thread_of": 0
+  }
+ ]
+}

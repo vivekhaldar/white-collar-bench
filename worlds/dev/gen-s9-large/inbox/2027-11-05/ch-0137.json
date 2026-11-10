@@ -1,0 +1,33 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#okapi-core",
+ "kind": "channel",
+ "participants": [
+  "Aroha Mendoza",
+  "Anh Villanueva",
+  "Achieng Colombo",
+  "Michaela Dang",
+  "Aino Menon"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-05T19:53:00-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "@michaela done, I demoed the Okapi prototype to you."
+  },
+  {
+   "ts": "2027-11-05T19:53:51-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "good to know :)"
+  },
+  {
+   "ts": "2027-11-05T19:55:00-05:00",
+   "user": "Michaela Dang",
+   "handle": "@michaela",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

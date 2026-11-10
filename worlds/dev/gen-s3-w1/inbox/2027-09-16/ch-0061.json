@@ -1,0 +1,23 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-deniz",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Deniz Feng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-16T09:24:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "No need for rebase the funding model usage forecast any more, duplicate of another ask."
+  },
+  {
+   "ts": "2027-09-16T09:25:02-05:00",
+   "user": "Deniz Feng",
+   "handle": "@deniz",
+   "text": "noted"
+  }
+ ]
+}

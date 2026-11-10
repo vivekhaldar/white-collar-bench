@@ -1,0 +1,47 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#cirrus-core",
+ "kind": "channel",
+ "participants": [
+  "Mathieu Wijaya",
+  "Aroha Mendoza",
+  "Keisha Hargrove",
+  "Anh Villanueva",
+  "Jide",
+  "Stanley Valdez",
+  "Adebayo Kahananui",
+  "Andres Yamamoto",
+  "Kiran Hayashi",
+  "Marguerite Teixeira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-05T09:12:00-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "done, i fixed the cirrus timeout errors",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@keisha"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-05T09:19:08-05:00",
+   "user": "Andres Yamamoto",
+   "handle": "@andres",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-05T09:25:20-05:00",
+   "user": "Marguerite Teixeira",
+   "handle": "@marguerite",
+   "text": "thanks for flagging :)",
+   "thread_of": 0
+  }
+ ]
+}

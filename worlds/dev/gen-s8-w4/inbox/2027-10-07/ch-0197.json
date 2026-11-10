@@ -1,0 +1,47 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-zawadi",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Zawadi Quintero"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-07T15:37:46-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-10-07T15:38:19-06:00",
+   "user": "Zawadi Quintero",
+   "handle": "@zawadi",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-10-07T15:40:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "now that i have the ai-use sandbox access sorted, i can start the dry run"
+  },
+  {
+   "ts": "2027-10-07T15:41:03-06:00",
+   "user": "Zawadi Quintero",
+   "handle": "@zawadi",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-10-07T15:45:46-06:00",
+   "user": "Zawadi Quintero",
+   "handle": "@zawadi",
+   "text": "thanks again for earlier :)"
+  },
+  {
+   "ts": "2027-10-07T15:46:53-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "anytime"
+  }
+ ]
+}

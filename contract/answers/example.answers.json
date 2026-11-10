@@ -1,0 +1,53 @@
+{
+  "q-001": {
+    "type": "point",
+    "abstain": false,
+    "value": "Imogen Tran",
+    "cites": [
+      "em-0012",
+      "projects/harbor-migration"
+    ]
+  },
+  "q-002": {
+    "type": "list",
+    "abstain": false,
+    "items": [
+      {
+        "text": "Send the revised capacity model",
+        "counterparty": "Imogen Tran",
+        "direction": "i_owe",
+        "status": "open",
+        "due": "2027-03-04",
+        "cites": [
+          "mt-0031",
+          "loops/send-revised-capacity-model"
+        ]
+      }
+    ]
+  },
+  "q-003": {
+    "type": "status",
+    "abstain": false,
+    "summary": "Paused pending the security review; target moved to 2027-03-19.",
+    "claims": [
+      {
+        "text": "Target moved to 2027-03-19",
+        "cites": [
+          "em-0040"
+        ]
+      }
+    ]
+  },
+  "q-004": {
+    "type": "temporal",
+    "abstain": false,
+    "date": "2027-02-24",
+    "cites": [
+      "nt-0007"
+    ]
+  },
+  "q-005": {
+    "type": "point",
+    "abstain": true
+  }
+}

@@ -1,0 +1,47 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-burak-hiba",
+ "kind": "dm",
+ "participants": [
+  "Burak",
+  "Hiba Deng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-04-01T17:07:08-05:00",
+   "user": "Burak",
+   "handle": "@burak",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-04-01T17:07:48-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-04-01T17:09:00-05:00",
+   "user": "Burak",
+   "handle": "@burak",
+   "text": "i'll send you the notes from the portal message routing session by tue 13 apr"
+  },
+  {
+   "ts": "2027-04-01T17:09:23-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "perfect, thanks"
+  },
+  {
+   "ts": "2027-04-01T17:09:58-05:00",
+   "user": "Burak",
+   "handle": "@burak",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-04-01T17:11:29-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "no worries"
+  }
+ ]
+}

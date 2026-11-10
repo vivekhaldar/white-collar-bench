@@ -1,0 +1,34 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#clelera-enterprise-core",
+ "kind": "channel",
+ "participants": [
+  "Anh",
+  "Aroha Mendoza",
+  "Kenji Faure",
+  "Ronit Kusuma",
+  "Isabela Mensah",
+  "Mpho Sengupta"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-01T12:53:00-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "@aroha would you be able to send me the Clelera enterprise agreement negotiation brief?"
+  },
+  {
+   "ts": "2027-11-01T12:54:07-05:00",
+   "user": "Kenji Faure",
+   "handle": "@kenji",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-11-01T12:55:53-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

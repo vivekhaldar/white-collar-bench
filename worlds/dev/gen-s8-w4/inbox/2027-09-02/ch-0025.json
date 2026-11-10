@@ -1,0 +1,41 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Batbayar Galbraith",
+  "Thibault Kowalski",
+  "Oksana Hoffmann",
+  "Baraka Chevalier"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-02T13:24:30-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "the elevator on the east side is out again :)",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@thibault",
+      "@oksana"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-02T13:31:07-06:00",
+   "user": "Thibault Kowalski",
+   "handle": "@thibault",
+   "text": "stairs it is",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-02T13:36:15-06:00",
+   "user": "Oksana Hoffmann",
+   "handle": "@oksana",
+   "text": "classic"
+  }
+ ]
+}

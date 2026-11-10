@@ -1,0 +1,39 @@
+{
+ "workspace": "reddale",
+ "channel": "#nettle-core",
+ "kind": "channel",
+ "participants": [
+  "Aoife Everett",
+  "Gaurav Laine",
+  "Akosua Bergstrom",
+  "Douglas Grigoryan",
+  "Bisi Volkov",
+  "Sigrid Asante",
+  "Sipho Papadopoulos",
+  "Adaeze Morimoto",
+  "Bruna Thapa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-31T12:21:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "@bisi can you set up Nettle test tenant login for me?",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@akosua",
+      "@douglas"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-08-31T12:21:33+01:00",
+   "user": "Bisi Volkov",
+   "handle": "@bisi",
+   "text": "sure, can do :)"
+  }
+ ]
+}

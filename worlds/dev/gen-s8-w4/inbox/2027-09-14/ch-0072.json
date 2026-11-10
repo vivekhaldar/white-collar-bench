@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-segun",
+ "kind": "dm",
+ "participants": [
+  "Segun Okeke",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-14T10:59:00-06:00",
+   "user": "Segun Okeke",
+   "handle": "@segun",
+   "text": "Could you send me the work instructions selection lessons-learned note?"
+  },
+  {
+   "ts": "2027-09-14T11:00:06-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "no problem"
+  },
+  {
+   "ts": "2027-09-14T11:04:58-06:00",
+   "user": "Segun Okeke",
+   "handle": "@segun",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-09-14T11:06:36-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+  "date": "2027-10-30",
+  "artifacts": [
+    {
+      "id": "em-0035",
+      "channel": "email",
+      "received_at": "2027-10-30T08:31:00-07:00",
+      "path": "em-0035.eml",
+      "title": "[INC-54011] Ticket updated"
+    },
+    {
+      "id": "em-0036",
+      "channel": "email",
+      "received_at": "2027-10-30T09:57:00-07:00",
+      "path": "em-0036.eml",
+      "title": "[REQ-28004] Request resolved"
+    },
+    {
+      "id": "em-0037",
+      "channel": "email",
+      "received_at": "2027-10-30T11:57:00-07:00",
+      "path": "em-0037.eml",
+      "title": "[INC-72008] Ticket updated"
+    },
+    {
+      "id": "ch-0034",
+      "channel": "chat",
+      "received_at": "2027-10-30T16:02:00-07:00",
+      "path": "ch-0034.json",
+      "title": "DM: Yasmin Mokoena / Camila Abernathy"
+    },
+    {
+      "id": "nt-0004",
+      "channel": "note",
+      "received_at": "2027-10-30T20:11:00-07:00",
+      "path": "nt-0004.md",
+      "title": "Sat voice memo"
+    }
+  ]
+}

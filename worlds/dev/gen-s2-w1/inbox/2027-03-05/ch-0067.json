@@ -1,0 +1,45 @@
+{
+ "workspace": "vercliff",
+ "channel": "#fennel-core",
+ "kind": "channel",
+ "participants": [
+  "Yael Ellery",
+  "Dina Ricci",
+  "Cassandra Yilmaz",
+  "Imani",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
+  "Thibault Sahin"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-05T11:53:00-07:00",
+   "user": "Yael Ellery",
+   "handle": "@yael",
+   "text": "@dina i can share the Fennel evaluation rubric with you.",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@cassandra",
+      "@imani",
+      "@dina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-05T11:54:28-07:00",
+   "user": "Naoko Sandoval",
+   "handle": "@naoko",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-03-05T11:59:09-07:00",
+   "user": "Naoko Sandoval",
+   "handle": "@naoko",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

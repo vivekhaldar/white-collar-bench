@@ -1,0 +1,124 @@
+{
+  "date": "2027-03-10",
+  "artifacts": [
+    {
+      "id": "em-0101",
+      "channel": "email",
+      "received_at": "2027-03-10T07:46:00-07:00",
+      "path": "em-0101.eml",
+      "title": "Re: Gateway rate limits for Fennel tenants"
+    },
+    {
+      "id": "em-0102",
+      "channel": "email",
+      "received_at": "2027-03-10T08:45:00-07:00",
+      "path": "em-0102.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0103",
+      "channel": "email",
+      "received_at": "2027-03-10T09:08:00-07:00",
+      "path": "em-0103.eml",
+      "title": "[REQ-37896] Request resolved"
+    },
+    {
+      "id": "em-0104",
+      "channel": "email",
+      "received_at": "2027-03-10T09:09:00-07:00",
+      "path": "em-0104.eml",
+      "title": "Introduction: Mistral"
+    },
+    {
+      "id": "ch-0086",
+      "channel": "chat",
+      "received_at": "2027-03-10T09:15:00-07:00",
+      "path": "ch-0086.json",
+      "title": "#mistral-core"
+    },
+    {
+      "id": "ch-0087",
+      "channel": "chat",
+      "received_at": "2027-03-10T09:18:00-07:00",
+      "path": "ch-0087.json",
+      "title": "#mistral-core"
+    },
+    {
+      "id": "em-0105",
+      "channel": "email",
+      "received_at": "2027-03-10T09:55:00-07:00",
+      "path": "em-0105.eml",
+      "title": "Imani's pothole reporting selection decision memo"
+    },
+    {
+      "id": "mt-0020",
+      "channel": "transcript",
+      "received_at": "2027-03-10T10:00:00-07:00",
+      "path": "mt-0020.vtt",
+      "title": "Mistral standup (transcript)"
+    },
+    {
+      "id": "ch-0088",
+      "channel": "chat",
+      "received_at": "2027-03-10T10:16:00-07:00",
+      "path": "ch-0088.json",
+      "title": "DM: Yael Ellery / Dina Ricci"
+    },
+    {
+      "id": "em-0106",
+      "channel": "email",
+      "received_at": "2027-03-10T12:39:00-07:00",
+      "path": "em-0106.eml",
+      "title": "[REQ-27381] Request resolved"
+    },
+    {
+      "id": "em-0107",
+      "channel": "email",
+      "received_at": "2027-03-10T13:48:00-07:00",
+      "path": "em-0107.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0089",
+      "channel": "chat",
+      "received_at": "2027-03-10T13:49:00-07:00",
+      "path": "ch-0089.json",
+      "title": "DM: Dina Ricci / Bilal Kahananui"
+    },
+    {
+      "id": "mn-0006",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-10T14:30:00-07:00",
+      "path": "mn-0006.md",
+      "title": "Recap: Fennel platform sync"
+    },
+    {
+      "id": "em-0108",
+      "channel": "email",
+      "received_at": "2027-03-10T14:44:00-07:00",
+      "path": "em-0108.eml",
+      "title": "Re: FYI: Fennel timeout errors"
+    },
+    {
+      "id": "mn-0007",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-10T15:00:00-07:00",
+      "path": "mn-0007.md",
+      "title": "Recap: Records requests discovery / Mistral sync"
+    },
+    {
+      "id": "em-0109",
+      "channel": "email",
+      "received_at": "2027-03-10T15:57:00-07:00",
+      "path": "em-0109.eml",
+      "title": "Re: Mistral: new target date"
+    },
+    {
+      "id": "ch-0090",
+      "channel": "chat",
+      "received_at": "2027-03-10T16:55:00-07:00",
+      "path": "ch-0090.json",
+      "title": "DM: Imani Navarro / Dina Ricci"
+    }
+  ]
+}

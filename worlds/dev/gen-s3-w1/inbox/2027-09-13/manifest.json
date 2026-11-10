@@ -1,0 +1,139 @@
+{
+  "date": "2027-09-13",
+  "artifacts": [
+    {
+      "id": "em-0033",
+      "channel": "email",
+      "received_at": "2027-09-13T06:58:00-05:00",
+      "path": "em-0033.eml",
+      "title": "Reminder: Friday status note due Friday 17 September"
+    },
+    {
+      "id": "ch-0036",
+      "channel": "chat",
+      "received_at": "2027-09-13T09:37:00-05:00",
+      "path": "ch-0036.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0037",
+      "channel": "chat",
+      "received_at": "2027-09-13T11:08:00-05:00",
+      "path": "ch-0037.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0034",
+      "channel": "email",
+      "received_at": "2027-09-13T11:45:00-05:00",
+      "path": "em-0034.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "em-0035",
+      "channel": "email",
+      "received_at": "2027-09-13T12:38:00-05:00",
+      "path": "em-0035.eml",
+      "title": "[INC-80503] Ticket updated"
+    },
+    {
+      "id": "em-0036",
+      "channel": "email",
+      "received_at": "2027-09-13T13:27:00-05:00",
+      "path": "em-0036.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "mt-0011",
+      "channel": "transcript",
+      "received_at": "2027-09-13T13:30:00-05:00",
+      "path": "mt-0011.vtt",
+      "title": "Sirocco platform sync (transcript)"
+    },
+    {
+      "id": "em-0037",
+      "channel": "email",
+      "received_at": "2027-09-13T13:49:00-05:00",
+      "path": "em-0037.eml",
+      "title": "Re: Dina's Okapi risk register"
+    },
+    {
+      "id": "ch-0038",
+      "channel": "chat",
+      "received_at": "2027-09-13T13:58:00-05:00",
+      "path": "ch-0038.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0039",
+      "channel": "chat",
+      "received_at": "2027-09-13T14:03:00-05:00",
+      "path": "ch-0039.json",
+      "title": "#funding-model-core"
+    },
+    {
+      "id": "em-0038",
+      "channel": "email",
+      "received_at": "2027-09-13T14:03:00-05:00",
+      "path": "em-0038.eml",
+      "title": "Re: Okapi order set review"
+    },
+    {
+      "id": "ch-0040",
+      "channel": "chat",
+      "received_at": "2027-09-13T14:54:00-05:00",
+      "path": "ch-0040.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0039",
+      "channel": "email",
+      "received_at": "2027-09-13T16:03:00-05:00",
+      "path": "em-0039.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "mt-0012",
+      "channel": "transcript",
+      "received_at": "2027-09-13T16:30:00-05:00",
+      "path": "mt-0012.vtt",
+      "title": "Okapi scoping call (transcript)"
+    },
+    {
+      "id": "nt-0004",
+      "channel": "note",
+      "received_at": "2027-09-13T16:41:00-05:00",
+      "path": "nt-0004.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "ch-0041",
+      "channel": "chat",
+      "received_at": "2027-09-13T17:26:00-05:00",
+      "path": "ch-0041.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "dc-0003",
+      "channel": "document",
+      "received_at": "2027-09-13T17:41:00-05:00",
+      "path": "dc-0003.xlsx",
+      "title": "Intake forms selection scorecard v3",
+      "parent": "em-0040"
+    },
+    {
+      "id": "em-0040",
+      "channel": "email",
+      "received_at": "2027-09-13T17:41:00-05:00",
+      "path": "em-0040.eml",
+      "title": "Intake forms selection scorecard"
+    },
+    {
+      "id": "em-0041",
+      "channel": "email",
+      "received_at": "2027-09-13T17:59:00-05:00",
+      "path": "em-0041.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Chiamaka Rashed",
+  "Andres Yamamoto",
+  "Putri Ashby",
+  "Mathieu Wijaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-25T12:38:54-05:00",
+   "user": "Chiamaka Rashed",
+   "handle": "@chiamaka",
+   "text": "anyone up for coffee at 3?",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@andres",
+      "@putri"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-25T12:44:53-05:00",
+   "user": "Andres Yamamoto",
+   "handle": "@andres",
+   "text": "me!"
+  },
+  {
+   "ts": "2027-10-25T12:50:33-05:00",
+   "user": "Putri Ashby",
+   "handle": "@putri",
+   "text": "can't today, back to back"
+  },
+  {
+   "ts": "2027-10-25T12:52:43-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "yes please"
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-darnell",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Darnell Malouf"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-23T11:34:18-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "morning!"
+  },
+  {
+   "ts": "2027-09-23T11:35:09-06:00",
+   "user": "Darnell Malouf",
+   "handle": "@darnell",
+   "text": "sure, what's up?"
+  },
+  {
+   "ts": "2027-09-23T11:35:22-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "Done, I sent you the reading list on scrap analysis.",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@darnell"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-23T11:36:46-06:00",
+   "user": "Darnell Malouf",
+   "handle": "@darnell",
+   "text": "great, thanks"
+  }
+ ]
+}

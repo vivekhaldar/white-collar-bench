@@ -1,0 +1,35 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jaber",
+  "Dina Ricci"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-02T07:01:22-07:00",
+   "user": "Hiba Jaber",
+   "handle": "@hiba",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-03-02T07:02:18-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-03-02T07:03:00-07:00",
+   "user": "Hiba Jaber",
+   "handle": "@hiba",
+   "text": "Blocker on Ivyworth Records Requests Discovery: unsigned data-sharing agreement with Ivyworth."
+  },
+  {
+   "ts": "2027-03-02T07:03:19-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "thanks for the heads up"
+  }
+ ]
+}

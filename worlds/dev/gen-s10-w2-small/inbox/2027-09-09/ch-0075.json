@@ -1,0 +1,67 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-gaurav",
+ "kind": "dm",
+ "participants": [
+  "Gaurav Laine",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T15:15:45+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-09-08T15:17:31+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "catching people up since a few of us are out today"
+  },
+  {
+   "ts": "2027-09-08T15:17:42+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "from the sync earlier, akosua will share the nettle pilot charter with you"
+  },
+  {
+   "ts": "2027-09-08T15:18:55+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "great, thank you"
+  },
+  {
+   "ts": "2027-09-08T15:19:50+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "looks like you confirmed the nettle data dictionary with akosua",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@aoife"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-08T15:20:38+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-09-08T15:24:50+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-09-08T15:27:03+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "anytime"
+  }
+ ]
+}

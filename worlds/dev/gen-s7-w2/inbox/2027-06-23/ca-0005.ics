@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Corrstead//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:c0ad351491c6c15c@corrstead.example
+DTSTAMP:20270623T214000Z
+DTSTART:20270624T180000Z
+DTEND:20270624T183000Z
+SUMMARY:Updated: Elmwick site visit
+ORGANIZER;CN=Mere Hidayat:mailto:mere.hidayat@elmwick.corrstead.example
+ATTENDEE;CN=Bolat Oyelami;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bolat.oyelami@corrstead.example
+ATTENDEE;CN=Hiba Jimenez;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.jimenez@corrstead.example
+SEQUENCE:1
+DESCRIPTION:Moved to accommodate a conflict.\nJoin video meeting: https://meet.corrstead.example/j/2891838786?pwd=5fYc7Paj\nPasscode: 705715
+LOCATION:https://meet.corrstead.example/j/2891838786?pwd=5fYc7Paj
+END:VEVENT
+END:VCALENDAR

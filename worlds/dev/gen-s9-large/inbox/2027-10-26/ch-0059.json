@@ -1,0 +1,23 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-ronit",
+ "kind": "dm",
+ "participants": [
+  "Ronit Kusuma",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-26T11:42:00-05:00",
+   "user": "Ronit Kusuma",
+   "handle": "@ronit",
+   "text": "Douglas Cardenas (Account Executive at Fenory) will send you the Fenory volume tiers, as discussed."
+  },
+  {
+   "ts": "2027-10-26T11:43:12-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "great, thank you"
+  }
+ ]
+}

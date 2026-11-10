@@ -1,0 +1,23 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-meera-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Ottavio Moreira",
+  "Meera Bondarenko"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-16T12:31:00-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "I'm in now (the room booking selection staging access), starting on the testing this afternoon."
+  },
+  {
+   "ts": "2027-09-16T12:32:17-08:00",
+   "user": "Meera Bondarenko",
+   "handle": "@meera",
+   "text": "got it"
+  }
+ ]
+}

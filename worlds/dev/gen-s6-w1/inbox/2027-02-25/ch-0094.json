@@ -1,0 +1,43 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-losa",
+ "kind": "dm",
+ "participants": [
+  "Despina Pereira",
+  "Losa Moretti"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-25T14:32:00-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "done, i sent you the axolotl support model",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@losa"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-25T14:32:28-08:00",
+   "user": "Losa Moretti",
+   "handle": "@losa",
+   "text": "thank you!"
+  },
+  {
+   "ts": "2027-02-25T14:34:42-08:00",
+   "user": "Losa Moretti",
+   "handle": "@losa",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-02-25T14:38:36-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

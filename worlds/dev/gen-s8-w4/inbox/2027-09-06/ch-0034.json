@@ -1,0 +1,43 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-oksana",
+ "kind": "dm",
+ "participants": [
+  "Oksana Hoffmann",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-06T15:16:00-06:00",
+   "user": "Oksana Hoffmann",
+   "handle": "@oksana",
+   "text": "Wagtail is moving into hardening. :)",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@amira"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-06T15:16:48-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-09-06T15:18:25-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-09-06T15:20:48-06:00",
+   "user": "Oksana Hoffmann",
+   "handle": "@oksana",
+   "text": "remote, but online all day :)"
+  }
+ ]
+}

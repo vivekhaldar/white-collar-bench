@@ -1,0 +1,41 @@
+{
+ "workspace": "corrstead",
+ "channel": "#garnet-core",
+ "kind": "channel",
+ "participants": [
+  "Hiba Jimenez",
+  "Ewan Laine",
+  "Bolat",
+  "Maddie",
+  "Desmond Visser",
+  "Andrei Laurent",
+  "Emre Khumalo",
+  "Adaeze Fifita",
+  "Eun-ji Valdez",
+  "Dong-hyun Colombo"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-13T14:02:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "@bolat just looked into the Garnet login loop.",
+   "edited": true,
+   "original": "@bolat just looked into the Ganret login loop."
+  },
+  {
+   "ts": "2027-07-13T14:03:16-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "got it",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-07-13T14:09:08-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  }
+ ]
+}

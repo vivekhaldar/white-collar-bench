@@ -1,0 +1,35 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-ewan-hiba",
+ "kind": "dm",
+ "participants": [
+  "Ewan Laine",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-13T14:27:50-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-07-13T14:29:24-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "catching people up since a few of us are out today"
+  },
+  {
+   "ts": "2027-07-13T14:30:00-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "bolat asked if you could send them the garnet one-page summary"
+  },
+  {
+   "ts": "2027-07-13T14:30:20-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "on it"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolat-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Bolat Oyelami"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-07T18:19:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "I sent you the Siskin faculty survey."
+  },
+  {
+   "ts": "2027-07-07T18:20:23-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "got it, thanks"
+  }
+ ]
+}

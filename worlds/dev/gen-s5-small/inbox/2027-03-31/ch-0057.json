@@ -1,0 +1,23 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-hiba-lakshmi",
+ "kind": "dm",
+ "participants": [
+  "Hiba Deng",
+  "Lakshmi Figueroa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-31T07:59:00-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "Got the Okapi operating model draft v3, building on it this week."
+  },
+  {
+   "ts": "2027-03-31T07:59:42-05:00",
+   "user": "Lakshmi Figueroa",
+   "handle": "@lakshmi",
+   "text": "got it"
+  }
+ ]
+}

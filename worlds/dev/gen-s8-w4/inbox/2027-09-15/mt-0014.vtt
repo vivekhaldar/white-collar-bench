@@ -1,0 +1,79 @@
+WEBVTT
+
+NOTE
+Meeting: Wagtail platform sync
+Date: Wednesday 15 September 2027, 2pm to 2:30pm
+Attendees: Oksana Hoffmann, Amira Baek, Adwoa Kocak, Ottavio Bakker (Ivycrest Distribution Center), Giorgi Wisniewska (Ivycrest Distribution Center), Batbayar Galbraith
+Transcript generated automatically. Speaker names and spellings may be inaccurate.
+
+1
+00:00:01.715 --> 00:00:04.407
+<v Amira Baek>Let's give people a minute to join.
+
+2
+00:00:04.816 --> 00:00:05.816
+<v Giorgi Wisniewska>Sure.
+
+3
+00:06:30.435 --> 00:06:33.896
+<v Oksana Hoffmann>Let's get going, we've got a lot to cover.
+
+4
+00:06:34.215 --> 00:06:36.138
+<v Oksana Hoffmann>Main thing today is Wagtail.
+
+5
+00:12:42.041 --> 00:12:47.425
+<v Oksana Hoffmann>Just to recap, yesterday Batbayar said they'd set up Wagtail staging access for Amira.
+
+6
+00:12:48.086 --> 00:12:49.086
+<v Giorgi Wisniewska>Mm.
+
+7
+00:12:49.605 --> 00:12:50.605
+<v Adwoa Kocak>Got it.
+
+8
+00:12:51.019 --> 00:12:53.712
+<v Oksana Hoffmann>I'm a bit worried we're overcommitting again.
+
+9
+00:12:54.095 --> 00:12:55.095
+<v Adwoa Kocak>Right, right.
+
+10
+00:12:55.561 --> 00:12:56.561
+<v Amira Baek>Okay, yeah.
+
+11
+00:12:57.641 --> 00:12:58.641
+<v Adwoa Kocak>Mm-hmm.
+
+12
+00:18:38.002 --> 00:18:39.925
+<v Oksana Hoffmann>Quick round, anything to flag?
+
+13
+00:18:40.559 --> 00:18:42.867
+<v Batbayar Galbraith>Just heads-down on the usual stuff.
+
+14
+00:18:43.101 --> 00:18:44.101
+<v Oksana Hoffmann>Right.
+
+15
+00:18:44.662 --> 00:18:46.585
+<v Giorgi Wisniewska>Nothing from me this week.
+
+16
+00:18:46.969 --> 00:18:47.969
+<v Batbayar Galbraith>Okay.
+
+17
+00:22:52.081 --> 00:22:53.620
+<v Oksana Hoffmann>Great, let's wrap there.
+
+18
+00:22:54.060 --> 00:22:55.060
+<v Giorgi Wisniewska>Thanks!

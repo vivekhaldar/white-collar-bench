@@ -1,0 +1,35 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolat-hiba",
+ "kind": "dm",
+ "participants": [
+  "Bolat",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-25T17:50:32-08:00",
+   "user": "Bolat",
+   "handle": "@bolat",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-06-25T17:51:25-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-06-25T17:52:17-08:00",
+   "user": "Bolat",
+   "handle": "@bolat",
+   "text": "Just to recap, on Monday I raised whether you could set up a coffee with me about alumni outreach. Not agreed yet!"
+  },
+  {
+   "ts": "2027-06-25T17:52:27-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "let me check and get back to you"
+  }
+ ]
+}

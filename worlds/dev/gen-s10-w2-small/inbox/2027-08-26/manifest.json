@@ -1,0 +1,75 @@
+{
+  "date": "2027-08-26",
+  "artifacts": [
+    {
+      "id": "em-0044",
+      "channel": "email",
+      "received_at": "2027-08-26T09:53:00+01:00",
+      "path": "em-0044.eml",
+      "title": "Fwd: Introduce Tahmina to Akosua for the Morgate working group"
+    },
+    {
+      "id": "ch-0027",
+      "channel": "chat",
+      "received_at": "2027-08-26T11:57:00+01:00",
+      "path": "ch-0027.json",
+      "title": "#nettle-core"
+    },
+    {
+      "id": "mn-0012",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-26T13:30:00+01:00",
+      "path": "mn-0012.md",
+      "title": "Recap: Catch-up: Aoife / Akosua"
+    },
+    {
+      "id": "ch-0028",
+      "channel": "chat",
+      "received_at": "2027-08-26T14:03:00+01:00",
+      "path": "ch-0028.json",
+      "title": "#nettle-core"
+    },
+    {
+      "id": "em-0045",
+      "channel": "email",
+      "received_at": "2027-08-26T14:16:00+01:00",
+      "path": "em-0045.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "ch-0029",
+      "channel": "chat",
+      "received_at": "2027-08-26T14:50:00+01:00",
+      "path": "ch-0029.json",
+      "title": "DM: Aoife Everett / Bisi Volkov"
+    },
+    {
+      "id": "em-0046",
+      "channel": "email",
+      "received_at": "2027-08-26T15:13:00+01:00",
+      "path": "em-0046.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0047",
+      "channel": "email",
+      "received_at": "2027-08-26T15:28:00+01:00",
+      "path": "em-0047.eml",
+      "title": "Re: To Akosua for the Morgate working group"
+    },
+    {
+      "id": "ch-0030",
+      "channel": "chat",
+      "received_at": "2027-08-26T15:36:00+01:00",
+      "path": "ch-0030.json",
+      "title": "#pipit-core"
+    },
+    {
+      "id": "mt-0009",
+      "channel": "transcript",
+      "received_at": "2027-08-26T16:30:00+01:00",
+      "path": "mt-0009.vtt",
+      "title": "Catch-up: Aoife / Lilit (transcript)"
+    }
+  ]
+}

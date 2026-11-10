@@ -1,0 +1,31 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Mikayla Babic",
+  "Mathieu Wijaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-25T09:25:29-05:00",
+   "user": "Mikayla Babic",
+   "handle": "@mikayla",
+   "text": "is it just me or is it freezing on 3 today?",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@mathieu"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-25T09:31:59-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "not just you"
+  }
+ ]
+}

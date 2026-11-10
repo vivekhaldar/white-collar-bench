@@ -1,0 +1,47 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#fulmar-core",
+ "kind": "channel",
+ "participants": [
+  "Ottavio Bakker",
+  "Amira Baek",
+  "Adwoa",
+  "Giorgi Wisniewska",
+  "Oksana Hoffmann",
+  "Marcelo Meijer",
+  "Batbayar Galbraith",
+  "Thibault Kowalski",
+  "Kamau Greco"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-01T10:47:00-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "@amira i drafted the Fulmar load test plan earlier today! :)",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@amira",
+      "@adwoa"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-01T10:54:21-06:00",
+   "user": "Giorgi Wisniewska",
+   "handle": "@giorgi",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-01T11:00:34-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

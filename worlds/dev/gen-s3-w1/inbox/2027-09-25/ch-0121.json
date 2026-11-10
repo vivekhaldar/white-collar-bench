@@ -1,0 +1,23 @@
+{
+ "workspace": "birchmere",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Eun-ji Chen",
+  "Kwame Brandt"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-25T16:07:23-05:00",
+   "user": "Eun-ji Chen",
+   "handle": "@eunji",
+   "text": "is the wifi on the second floor down for anyone else?"
+  },
+  {
+   "ts": "2027-09-25T16:12:09-05:00",
+   "user": "Kwame Brandt",
+   "handle": "@kwame",
+   "text": "yep, same here"
+  }
+ ]
+}

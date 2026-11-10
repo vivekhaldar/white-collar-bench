@@ -1,0 +1,45 @@
+From: Kian Ishikawa <kian.ishikawa@sandfield.iselmoor.example>
+To: Amira Baek <amira.baek@iselmoor.example>
+Date: Fri, 01 Oct 2027 12:22:00 -0600
+Subject: Re: Splitting out AI-use support model workstream
+Message-ID: <em-0198.8@sandfield.iselmoor.example>
+In-Reply-To: <em-0198-prev.8@iselmoor.example>
+References: <em-0198-prev.8@iselmoor.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Amira -
+
+We're splitting AI-use Support Model Workstream out of Iselmoor Responsible
+AI Use Framework as its own project, so it can move at its own pace. The
+AI-use dependency list moves over with it.
+
+-
+Kian
+
+On Thu, 30 Sep 2027 13:54:00 -0600, Amira Baek wrote:
+> Kian -
+>
+> Following up on the below.
+>
+> Amira
+>
+> On Wed, 29 Sep 2027 08:05:00 -0600, Kian Ishikawa wrote:
+>> Hi Amira,
+>>
+>> Thanks, saw this.
+>>
+>> Kian
+>>
+>> On Tue, 28 Sep 2027 12:07:00 -0600, Amira Baek wrote:
+>>> Hi Kian,
+>>>
+>>> Sorry, I lost track of this thread. Where are we on Iselmoor Responsible AI Use Framework?
+>>>
+>>> Amira
+>>>
+>>> On Mon, 27 Sep 2027 17:06:00 -0600, Kian Ishikawa wrote:
+>>>> Got it, thanks.
+>>>>
+>>>> Kian

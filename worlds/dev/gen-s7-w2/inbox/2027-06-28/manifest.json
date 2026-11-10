@@ -1,0 +1,117 @@
+{
+  "date": "2027-06-28",
+  "artifacts": [
+    {
+      "id": "em-0033",
+      "channel": "email",
+      "received_at": "2027-06-28T06:57:00-08:00",
+      "path": "em-0033.eml",
+      "title": "Reminder: Friday status note due Friday 2 July"
+    },
+    {
+      "id": "em-0034",
+      "channel": "email",
+      "received_at": "2027-06-28T07:14:00-08:00",
+      "path": "em-0034.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0035",
+      "channel": "email",
+      "received_at": "2027-06-28T07:27:00-08:00",
+      "path": "em-0035.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "ca-0011",
+      "channel": "calendar",
+      "received_at": "2027-06-28T08:06:00-08:00",
+      "path": "ca-0011.ics",
+      "title": "Cancelled: Garnet standup"
+    },
+    {
+      "id": "ch-0036",
+      "channel": "chat",
+      "received_at": "2027-06-28T09:22:00-08:00",
+      "path": "ch-0036.json",
+      "title": "DM: Madeline Chikwanha / Hiba Jimenez"
+    },
+    {
+      "id": "em-0036",
+      "channel": "email",
+      "received_at": "2027-06-28T09:57:00-08:00",
+      "path": "em-0036.eml",
+      "title": "Re: FYI: Garnet solution brief"
+    },
+    {
+      "id": "em-0037",
+      "channel": "email",
+      "received_at": "2027-06-28T10:18:00-08:00",
+      "path": "em-0037.eml",
+      "title": "Merol security questionnaire"
+    },
+    {
+      "id": "em-0038",
+      "channel": "email",
+      "received_at": "2027-06-28T10:51:00-08:00",
+      "path": "em-0038.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "mn-0006",
+      "channel": "meeting_notes",
+      "received_at": "2027-06-28T11:30:00-08:00",
+      "path": "mn-0006.md",
+      "title": "Recap: Catch-up: Hiba / Catalina"
+    },
+    {
+      "id": "mt-0006",
+      "channel": "transcript",
+      "received_at": "2027-06-28T11:30:00-08:00",
+      "path": "mt-0006.vtt",
+      "title": "Catch-up: Hiba / Catalina (transcript)"
+    },
+    {
+      "id": "ch-0037",
+      "channel": "chat",
+      "received_at": "2027-06-28T12:09:00-08:00",
+      "path": "ch-0037.json",
+      "title": "DM: Hiba Jimenez / Bolat Oyelami"
+    },
+    {
+      "id": "ch-0038",
+      "channel": "chat",
+      "received_at": "2027-06-28T14:33:00-08:00",
+      "path": "ch-0038.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "mt-0007",
+      "channel": "transcript",
+      "received_at": "2027-06-28T15:30:00-08:00",
+      "path": "mt-0007.vtt",
+      "title": "Garnet build sync (transcript)"
+    },
+    {
+      "id": "mn-0007",
+      "channel": "meeting_notes",
+      "received_at": "2027-06-28T15:45:00-08:00",
+      "path": "mn-0007.md",
+      "title": "Recap: Assessment design workshop run-through"
+    },
+    {
+      "id": "mt-0008",
+      "channel": "transcript",
+      "received_at": "2027-06-28T15:45:00-08:00",
+      "path": "mt-0008.vtt",
+      "title": "Holmarsh partnership / Siskin sync (transcript)"
+    },
+    {
+      "id": "ca-0012",
+      "channel": "calendar",
+      "received_at": "2027-06-28T17:46:00-08:00",
+      "path": "ca-0012.ics",
+      "title": "Invite: Corrie sync"
+    }
+  ]
+}

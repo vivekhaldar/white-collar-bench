@@ -1,0 +1,35 @@
+id: gen-s1-w1
+title: 'Generated world: Office of Civic Technology, City of Holcrest (city government digital service)'
+version: 1
+split: dev
+worker: p-camila-abernathy
+timezone: -07:00
+seed:
+  start: '2027-10-25'
+  end: '2027-11-06'
+episode:
+  days:
+  - '2027-11-08'
+  - '2027-11-09'
+  - '2027-11-10'
+  - '2027-11-11'
+  - '2027-11-12'
+  - '2027-11-13'
+checkpoints:
+- id: cp1
+  date: '2027-11-09'
+  label: end of Tuesday
+- id: cp2
+  date: '2027-11-11'
+  label: end of Thursday
+- id: cp3
+  date: '2027-11-13'
+  label: end of week
+generator:
+  kind: wcb-gen
+  version: 1
+  seed: 1
+  weeks: 1
+  size: standard
+  setting: city
+  llm: false

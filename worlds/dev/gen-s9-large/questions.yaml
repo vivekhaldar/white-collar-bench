@@ -1,0 +1,455 @@
+- id: q-001
+  checkpoint: cp1
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - scattered_evidence
+  - unobservable
+- id: q-002
+  checkpoint: cp1
+  template: project_status
+  params:
+    project: pr-cirrus
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - supersession
+- id: q-003
+  checkpoint: cp1
+  template: project_changes
+  params:
+    project: pr-bed-management-tool-selection
+    since: '2027-10-29'
+    name_form: the Kasane/Clelera evaluation
+  challenges:
+  - alias
+  - scattered_evidence
+- id: q-004
+  checkpoint: cp1
+  template: i_owe
+  params:
+    person: p-winifred-tanaka
+  challenges: []
+- id: q-005
+  checkpoint: cp1
+  template: owed_to_me
+  params:
+    person: p-adebayo-kahananui
+    name_form: Adebayo
+  challenges:
+  - alias
+  - duplicate_signal
+  - transfer
+- id: q-006
+  checkpoint: cp1
+  template: loop_owner
+  params:
+    commitment: c-028
+  challenges:
+  - transfer
+- id: q-007
+  checkpoint: cp1
+  template: loop_due
+  params:
+    commitment: c-072
+  challenges:
+  - scattered_evidence
+- id: q-008
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-okapi
+    attribute: target_date
+  challenges: []
+- id: q-009
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-mikayla-babic
+    attribute: org
+  challenges: []
+- id: q-010
+  checkpoint: cp1
+  template: project_loops
+  params:
+    project: pr-frostmere-radiology-follow-up-discovery
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+- id: q-011
+  checkpoint: cp1
+  template: person_brief
+  params:
+    person: p-winifred-tanaka
+  challenges:
+  - duplicate_signal
+  - endorsement
+- id: q-012
+  checkpoint: cp1
+  template: decision_date
+  params:
+    decision: d-002
+  challenges:
+  - worker_directive
+- id: q-013
+  checkpoint: cp1
+  template: event_date
+  params:
+    event: e-0135
+  text: When was "Send Daniela the informatics nurse specialist candidate pack" completed?
+  challenges:
+  - duplicate_signal
+- id: q-014
+  checkpoint: cp1
+  template: loop_owner
+  params:
+    commitment: c-031
+  challenges:
+  - transfer
+- id: q-015
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-cirrus
+    attribute: blocker
+  challenges: []
+- id: q-016
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-mathieu-wijaya
+    attribute: relationship
+  challenges: []
+- id: q-017
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-kittiwake-funding-model
+    attribute: budget
+  text: What is the budget for Kittiwake Funding Model?
+  challenges:
+  - unobservable
+- id: q-018
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-frostmere-radiology-follow-up-discovery
+    attribute: budget
+    name_form: the radiology follow-up work
+  challenges:
+  - alias
+  - unobservable
+- id: q-019
+  checkpoint: cp2
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - endorsement
+  - new_entity
+  - restructuring
+  - unobservable
+- id: q-020
+  checkpoint: cp2
+  template: project_status
+  params:
+    project: pr-cirrus
+  challenges:
+  - batch_catchup
+  - endorsement
+  - new_entity
+  - supersession
+- id: q-021
+  checkpoint: cp2
+  template: project_changes
+  params:
+    project: pr-cirrus
+    since: '2027-11-02'
+    name_form: the Redridge pilot
+  challenges:
+  - alias
+  - batch_catchup
+  - correction
+  - duplicate_signal
+  - new_entity
+  - version_mismatch
+- id: q-022
+  checkpoint: cp2
+  template: i_owe
+  params:
+    person: p-anh-villanueva
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - name_collision
+  - new_entity
+  - restructuring
+- id: q-023
+  checkpoint: cp2
+  template: owed_to_me
+  params:
+    person: p-achieng-colombo
+  challenges:
+  - duplicate_signal
+  - name_collision
+- id: q-024
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-frostmere-clinical-documentation-idea
+    attribute: phase
+  challenges: []
+- id: q-025
+  checkpoint: cp2
+  template: person_attr
+  params:
+    person: p-cassandra-pham
+    attribute: role
+    name_form: Cass
+  challenges:
+  - alias
+  - new_entity
+- id: q-026
+  checkpoint: cp2
+  template: project_loops
+  params:
+    project: pr-bed-management-tool-selection
+  challenges: []
+- id: q-027
+  checkpoint: cp2
+  template: person_brief
+  params:
+    person: p-michaela-dang
+  challenges: []
+- id: q-028
+  checkpoint: cp2
+  template: decision_date
+  params:
+    decision: d-003
+  challenges: []
+- id: q-029
+  checkpoint: cp2
+  template: event_date
+  params:
+    event: e-0185
+  text: When was "Update the radiology follow-up discovery opportunity list after Anh's comments" completed?
+  challenges:
+  - endorsement
+- id: q-030
+  checkpoint: cp2
+  template: loop_owner
+  params:
+    commitment: c-057
+  challenges:
+  - transfer
+- id: q-031
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-nurse-scheduling-learning-series
+    attribute: phase
+  challenges:
+  - implied_commitment
+- id: q-032
+  checkpoint: cp2
+  template: project_loops
+  params:
+    project: pr-redridge-referral-triage-discovery
+    name_form: the referral triage work
+  challenges:
+  - alias
+  - duplicate_signal
+- id: q-033
+  checkpoint: cp2
+  template: person_brief
+  params:
+    person: p-stanley-valdez
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-034
+  checkpoint: cp2
+  template: decision_date
+  params:
+    decision: d-001
+  challenges: []
+- id: q-035
+  checkpoint: cp2
+  template: event_date
+  params:
+    event: e-0284
+  text: When was "Draft the Cirrus load test plan" completed?
+  challenges:
+  - unobservable
+  - weak_evidence
+- id: q-036
+  checkpoint: cp2
+  template: person_attr
+  params:
+    person: p-stanley-valdez
+    attribute: phone
+  challenges:
+  - unobservable
+- id: q-037
+  checkpoint: cp3
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - endorsement
+  - new_entity
+  - restructuring
+  - unobservable
+- id: q-038
+  checkpoint: cp3
+  template: project_status
+  params:
+    project: pr-cirrus
+    name_form: Project Cirrus
+  challenges:
+  - alias
+  - batch_catchup
+  - endorsement
+  - new_entity
+  - supersession
+- id: q-039
+  checkpoint: cp3
+  template: project_changes
+  params:
+    project: pr-okapi
+    since: '2027-11-04'
+  challenges:
+  - endorsement
+  - new_entity
+  - worker_directive
+- id: q-040
+  checkpoint: cp3
+  template: i_owe
+  params:
+    person: p-malia-guo
+  challenges:
+  - unobservable
+- id: q-041
+  checkpoint: cp3
+  template: owed_to_me
+  params:
+    person: p-mathieu-wijaya
+    name_form: Mathieu
+  challenges:
+  - alias
+  - endorsement
+- id: q-042
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-redridge-medication-reconciliation-discovery
+    attribute: phase
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-043
+  checkpoint: cp3
+  template: person_attr
+  params:
+    person: p-anh-villanueva
+    attribute: role
+  challenges:
+  - name_collision
+- id: q-044
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-okapi
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - transfer
+- id: q-045
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-eleni-rattanakorn
+    name_form: Eleni
+  challenges:
+  - alias
+- id: q-046
+  checkpoint: cp3
+  template: event_date
+  params:
+    event: e-0211
+  text: When was "Send Putri the Friday status note for w/e 29 October" completed?
+  challenges:
+  - duplicate_signal
+- id: q-047
+  checkpoint: cp3
+  template: loop_due
+  params:
+    commitment: c-079
+  challenges:
+  - endorsement
+  - worker_directive
+- id: q-048
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-bed-management-tool-selection
+    attribute: owner
+  challenges: []
+- id: q-049
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-informatics-nurse-specialist-hire
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - endorsement
+- id: q-050
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-achieng-colombo
+  challenges:
+  - duplicate_signal
+  - name_collision
+- id: q-051
+  checkpoint: cp3
+  template: event_date
+  params:
+    event: e-0197
+  text: When was "Send Aroha the notes from the interpreter booking session" completed?
+  challenges:
+  - duplicate_signal
+- id: q-052
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-redridge-referral-triage-discovery
+    attribute: phase
+    name_form: RRTD discovery
+  challenges:
+  - alias
+- id: q-053
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-kittiwake-funding-model
+  challenges:
+  - duplicate_signal
+  - unobservable
+- id: q-054
+  checkpoint: cp3
+  template: person_attr
+  params:
+    person: p-kiran-hayashi
+    attribute: phone
+    name_form: Kiran
+  challenges:
+  - alias
+  - unobservable

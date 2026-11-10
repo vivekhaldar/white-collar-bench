@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Adwoa",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-17T09:49:32-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "Recap from Wednesday: you sent Ottavio the AI-use glossary."
+  },
+  {
+   "ts": "2027-09-17T09:50:59-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-09-17T09:55:41-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-09-17T09:56:10-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

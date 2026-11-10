@@ -1,0 +1,29 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-elena-hiba",
+ "kind": "dm",
+ "participants": [
+  "Elena Chaudhry",
+  "Hiba Deng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-04-01T17:41:00-05:00",
+   "user": "Elena Chaudhry",
+   "handle": "@elena",
+   "text": "could you join my panel on intake forms?"
+  },
+  {
+   "ts": "2027-04-01T17:41:50-05:00",
+   "user": "Elena Chaudhry",
+   "handle": "@elena",
+   "text": "(this involves vervale institute for health services research.)"
+  },
+  {
+   "ts": "2027-04-01T17:42:13-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "ok"
+  }
+ ]
+}

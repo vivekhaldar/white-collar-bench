@@ -1,0 +1,41 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-aiko-despina",
+ "kind": "dm",
+ "participants": [
+  "Aiko Venkataraman",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-08T06:51:59-08:00",
+   "user": "Aiko Venkataraman",
+   "handle": "@aiko",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-02-08T06:55:00-08:00",
+   "user": "Aiko Venkataraman",
+   "handle": "@aiko",
+   "text": "Could you send me the Friday status note for w/e 12 February by Friday?"
+  },
+  {
+   "ts": "2027-02-08T06:55:11-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "on it"
+  },
+  {
+   "ts": "2027-02-08T06:58:06-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-02-08T07:01:44-08:00",
+   "user": "Aiko Venkataraman",
+   "handle": "@aiko",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

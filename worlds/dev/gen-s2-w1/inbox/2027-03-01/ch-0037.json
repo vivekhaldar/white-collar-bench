@@ -1,0 +1,32 @@
+{
+ "workspace": "vercliff",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Bogdan Quinlan",
+  "Thibault Sahin",
+  "Imani Navarro",
+  "Mei Obi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-01T12:34:02-07:00",
+   "user": "Bogdan Quinlan",
+   "handle": "@bogdan",
+   "text": "is it just me or is it freezing on 3 today?"
+  },
+  {
+   "ts": "2027-03-01T12:37:17-07:00",
+   "user": "Thibault Sahin",
+   "handle": "@thibault",
+   "text": "not just you :)"
+  },
+  {
+   "ts": "2027-03-01T12:41:56-07:00",
+   "user": "Imani Navarro",
+   "handle": "@imani",
+   "text": "bring a jumper",
+   "thread_of": 0
+  }
+ ]
+}

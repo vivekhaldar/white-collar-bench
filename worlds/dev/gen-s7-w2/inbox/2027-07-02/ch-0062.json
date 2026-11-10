@@ -1,0 +1,47 @@
+{
+ "workspace": "corrstead",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Emre Khumalo",
+  "Rodrigo Gurung",
+  "Bolat Oyelami",
+  "Andrei Laurent"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-02T11:18:02-08:00",
+   "user": "Emre Khumalo",
+   "handle": "@emre",
+   "text": "there's leftover cake in the kitchen on 4",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@rodrigo",
+      "@bolat"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-02T11:20:30-08:00",
+   "user": "Rodrigo Gurung",
+   "handle": "@rodrigo",
+   "text": "on my way"
+  },
+  {
+   "ts": "2027-07-02T11:26:07-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "what kind?",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-07-02T11:27:26-08:00",
+   "user": "Andrei Laurent",
+   "handle": "@andrei",
+   "text": "the lemon one is gone already"
+  }
+ ]
+}

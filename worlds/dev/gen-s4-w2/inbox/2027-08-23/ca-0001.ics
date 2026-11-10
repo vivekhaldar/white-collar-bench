@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Drayhurst//Calendar//EN
+METHOD:CANCEL
+BEGIN:VEVENT
+UID:784d83b7ffa76e25@drayhurst.example
+DTSTAMP:20270823T161300Z
+DTSTART:20270823T173000Z
+DTEND:20270823T175500Z
+SUMMARY:Cancelled: Fjord standup
+ORGANIZER;CN=Darius Bramwell:mailto:darius.bramwell@holfield.drayhurst.example
+ATTENDEE;CN=Ottavio Moreira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ottavio.moreira@drayhurst.example
+ATTENDEE;CN=Meera Bondarenko;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:meera.bondarenko@drayhurst.example
+ATTENDEE;CN=Ratna Nikolic;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ratna.nikolic@holfield.drayhurst.example
+ATTENDEE;CN=Theresa Petrov;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:theresa.petrov@drayhurst.example
+ATTENDEE;CN=Nomvula Ndlovu;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:nomvula.ndlovu@drayhurst.example
+ATTENDEE;CN=Bruna Vaughan;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bruna.vaughan@drayhurst.example
+ATTENDEE;CN=Esperanza Venkataraman;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:esperanza.venkataraman@drayhurst.example
+RECURRENCE-ID:20270823T173000Z
+SEQUENCE:1
+STATUS:CANCELLED
+DESCRIPTION:Not needed this time\, covered in the leads call.
+END:VEVENT
+END:VCALENDAR

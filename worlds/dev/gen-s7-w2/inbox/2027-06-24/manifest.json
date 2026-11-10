@@ -1,0 +1,124 @@
+{
+  "date": "2027-06-24",
+  "artifacts": [
+    {
+      "id": "ca-0006",
+      "channel": "calendar",
+      "received_at": "2027-06-24T08:15:00-08:00",
+      "path": "ca-0006.ics",
+      "title": "Cancelled: Garnet standup"
+    },
+    {
+      "id": "mn-0005",
+      "channel": "meeting_notes",
+      "received_at": "2027-06-24T09:00:00-08:00",
+      "path": "mn-0005.md",
+      "title": "Notes: Catch-up: Hiba / Desmond"
+    },
+    {
+      "id": "ch-0020",
+      "channel": "chat",
+      "received_at": "2027-06-24T10:33:00-08:00",
+      "path": "ch-0020.json",
+      "title": "DM: Bolat Oyelami / Hiba Jimenez"
+    },
+    {
+      "id": "em-0022",
+      "channel": "email",
+      "received_at": "2027-06-24T11:37:00-08:00",
+      "path": "em-0022.eml",
+      "title": "[INC-40555] Ticket updated"
+    },
+    {
+      "id": "ch-0021",
+      "channel": "chat",
+      "received_at": "2027-06-24T11:44:00-08:00",
+      "path": "ch-0021.json",
+      "title": "DM: Andrei Laurent / Hiba Jimenez"
+    },
+    {
+      "id": "ch-0022",
+      "channel": "chat",
+      "received_at": "2027-06-24T11:58:00-08:00",
+      "path": "ch-0022.json",
+      "title": "DM: Emre Khumalo / Hiba Jimenez"
+    },
+    {
+      "id": "ca-0007",
+      "channel": "calendar",
+      "received_at": "2027-06-24T12:26:00-08:00",
+      "path": "ca-0007.ics",
+      "title": "Invite: Assessment design workshop run-through"
+    },
+    {
+      "id": "ch-0023",
+      "channel": "chat",
+      "received_at": "2027-06-24T12:44:00-08:00",
+      "path": "ch-0023.json",
+      "title": "DM: Bolat Oyelami / Hiba Jimenez"
+    },
+    {
+      "id": "em-0023",
+      "channel": "email",
+      "received_at": "2027-06-24T13:53:00-08:00",
+      "path": "em-0023.eml",
+      "title": "All-staff: building access changes"
+    },
+    {
+      "id": "mt-0003",
+      "channel": "transcript",
+      "received_at": "2027-06-24T14:00:00-08:00",
+      "path": "mt-0003.vtt",
+      "title": "Cross-campus AI forum (transcript)"
+    },
+    {
+      "id": "ch-0024",
+      "channel": "chat",
+      "received_at": "2027-06-24T14:42:00-08:00",
+      "path": "ch-0024.json",
+      "title": "DM: Rania Dlamini / Hiba Jimenez"
+    },
+    {
+      "id": "ch-0025",
+      "channel": "chat",
+      "received_at": "2027-06-24T15:16:00-08:00",
+      "path": "ch-0025.json",
+      "title": "#alumni-outreach-discovery-core"
+    },
+    {
+      "id": "ch-0026",
+      "channel": "chat",
+      "received_at": "2027-06-24T16:15:00-08:00",
+      "path": "ch-0026.json",
+      "title": "DM: Hiba Jimenez / Bolat Oyelami"
+    },
+    {
+      "id": "ch-0027",
+      "channel": "chat",
+      "received_at": "2027-06-24T16:51:00-08:00",
+      "path": "ch-0027.json",
+      "title": "DM: Hiba Jimenez / Desmond Visser"
+    },
+    {
+      "id": "ca-0008",
+      "channel": "calendar",
+      "received_at": "2027-06-24T17:08:00-08:00",
+      "path": "ca-0008.ics",
+      "title": "Updated: Catch-up: Hiba / Catalina"
+    },
+    {
+      "id": "ch-0028",
+      "channel": "chat",
+      "received_at": "2027-06-24T18:14:00-08:00",
+      "path": "ch-0028.json",
+      "title": "DM: Hiba Jimenez / Madeline Chikwanha"
+    },
+    {
+      "id": "em-0024",
+      "channel": "email",
+      "received_at": "2027-06-24T18:32:00-08:00",
+      "path": "em-0024.eml",
+      "title": "[REQ-24644] Request resolved"
+    }
+  ]
+}

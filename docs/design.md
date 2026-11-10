@@ -9,7 +9,7 @@ white-collar-bench evaluates an agent that maintains a knowledge worker's **stor
 Two task types:
 
 1. **Ingestion:** incorporate new inputs (email, chat, meeting transcripts, documents, the worker's own notes) into the store.
-2. **State-of-the-world queries:** answer questions such as "What is the status of Project Thistledown?", "What do I owe Dana?" or "What does Dana owe me?"
+2. **State-of-the-world queries:** answer questions such as "What is the status of Project Thistledown?", "What do I owe Marisol?" or "What does Marisol owe me?"
 
 Later answers depend on earlier ingestion, so errors compound as they would in real use.
 
@@ -74,7 +74,7 @@ Each episode deliberately includes:
 |---|---|
 | Supersession | A launch date set on Monday moves on Wednesday. |
 | Reversal | A decision is made and later undone. |
-| Aliases | "Dana", "M. Teague", "mteague@…", "the new PM" are one person. |
+| Aliases | "Marisol", "M. Teague", "mteague@…", "the new PM" are one person. |
 | Name collisions | Two different people named Sam. |
 | New entities | A new collaborator or project appears without introduction. |
 | Duplicate signals | The same ask arrives by email and in a meeting. |
@@ -90,9 +90,9 @@ Each episode deliberately includes:
 | Type | Example | Expected answer |
 |---|---|---|
 | Point fact | Who owns the vendor contract on Thistledown? | Entity |
-| List | What do I owe Dana? What does Dana owe me? | Set of loops |
+| List | What do I owe Marisol? What does Marisol owe me? | Set of loops |
 | Status | What is the status of Thistledown? | Structured summary |
-| Relationship brief | What am I working on with Dana? | Projects and loops |
+| Relationship brief | What am I working on with Marisol? | Projects and loops |
 | Change | What changed on Thistledown since Monday? | Set of changes |
 | Temporal | When did we decide to drop the beta? | Date or event |
 | Prioritization | What should I focus on tomorrow? | Ranked loops |

@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+/dist/
+/build/
+*.egg-info/
+/runs/
+/tmp/
+.wcb-cache/
+/worlds/test/
+
+# Built gold and oracle stores are derived from each world's sources by `wcb world build`
+# (deterministic), so they are not committed. Test fixtures keep theirs.
+/worlds/*/gold/
+/worlds/*/*/gold/

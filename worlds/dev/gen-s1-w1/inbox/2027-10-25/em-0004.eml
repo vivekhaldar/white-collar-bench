@@ -1,0 +1,15 @@
+From: Platform Status Page <status-noreply@holcrest.example>
+To: Camila Abernathy <camila.abernathy@holcrest.example>
+Date: Mon, 25 Oct 2027 15:00:00 -0700
+Subject: [Investigating] Intermittent sign-in delays
+Message-ID: <em-0004.1@holcrest.example>
+Auto-Submitted: auto-generated
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+We are investigating reports of degraded performance. Updates will follow every 30 minutes until resolved.
+
+Affected: file storage, single sign-on, video meetings (partial)
+
+You are receiving this because you subscribed to platform status updates.

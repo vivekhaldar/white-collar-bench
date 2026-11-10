@@ -1,0 +1,43 @@
+{
+ "workspace": "iselvale",
+ "channel": "#okapi-core",
+ "kind": "channel",
+ "participants": [
+  "Hiba Deng",
+  "Lakshmi Figueroa",
+  "Anahit",
+  "Isla Faure",
+  "Rudo Ekwueme",
+  "Jisoo Nowak",
+  "Friederike Bhatt"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-24T17:40:00-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "@friederike i reviewed your Okapi order set review."
+  },
+  {
+   "ts": "2027-03-24T17:41:27-05:00",
+   "user": "Lakshmi Figueroa",
+   "handle": "@lakshmi",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-24T17:42:04-05:00",
+   "user": "Jisoo Nowak",
+   "handle": "@jisoo",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-24T17:50:19-05:00",
+   "user": "Anahit",
+   "handle": "@anahit",
+   "text": "+1",
+   "thread_of": 0
+  }
+ ]
+}

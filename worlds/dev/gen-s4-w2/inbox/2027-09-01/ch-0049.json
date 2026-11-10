@@ -1,0 +1,52 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#fjord-core",
+ "kind": "channel",
+ "participants": [
+  "Ottavio Moreira",
+  "Darius Bramwell",
+  "Meera",
+  "Ratna Nikolic",
+  "Resi",
+  "Nomvula Ndlovu",
+  "Bruna Vaughan",
+  "Espe",
+  "Yaroslav Moyo"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-01T09:54:00-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "@darius before I can finish the Fjord solution brief I need your input, over to you for now.",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@darius"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-01T09:54:49-08:00",
+   "user": "Bruna Vaughan",
+   "handle": "@bruna",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-09-01T09:59:55-08:00",
+   "user": "Yaroslav Moyo",
+   "handle": "@yaroslav",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-01T10:09:40-08:00",
+   "user": "Resi",
+   "handle": "@theresa",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,389 @@
+WEBVTT
+
+NOTE
+Tinderbox standup - Mon 1 Mar 2027
+Date: Mon 1 Mar 2027, 09:15 (-08:00), meet.tarrow.example
+Attendees (auto-generated): Yusra Haddad, Joaquín Sepúlveda, Dmitri Halloran, Saanvi Raghunathan, Teodor Lisowski, Mara Ilves, KES-HUDDLE-2B
+Transcript generated automatically. Speaker names from meeting display names; may contain errors.
+
+00:00:03.179 --> 00:00:09.373
+<v Yusra Haddad>Morning. Give people a sec, a couple of folks are still joining.
+
+00:00:10.178 --> 00:00:11.199
+<v Dmitri Halloran>Morning
+
+00:00:12.234 --> 00:00:13.076
+<v Teodor Lisowski>Morning.
+
+00:00:14.444 --> 00:00:21.965
+<v Yusra Haddad>Did everyone find somewhere to park? The north garage is closed all week.
+
+00:00:23.323 --> 00:00:25.122
+<v Saanvi Raghunathan>Closed for what?
+
+00:00:25.913 --> 00:00:35.227
+<v Yusra Haddad>Structural inspection. There was an email Friday afternoon, which nobody read. Everyone's on the stadium lot and the shuttle.
+
+00:00:36.573 --> 00:00:48.589
+<v Dmitri Halloran>The shuttle was standing room only. I stood next to a guy eating an entire breakfast burrito at eight a.m. It was a lot
+
+00:00:49.230 --> 00:00:52.878
+<v Mara Ilves>I'm remote this morning, so, no comment.
+
+00:00:54.122 --> 00:01:00.955
+<v Yusra Haddad>Lucky you. Dima, what's happening in your video, why are you so tall?
+
+00:01:02.155 --> 00:01:12.954
+<v Dmitri Halloran>New standing desk. It goes up and down. I have been going up and down all morning. It's a whole personality now
+
+00:01:14.314 --> 00:01:20.797
+<v Saanvi Raghunathan>That's week one. By week three it's a very expensive sitting desk.
+
+00:01:21.909 --> 00:01:23.691
+<v Dmitri Halloran>Rude. Probably accurate
+
+00:01:25.042 --> 00:01:31.753
+<v Yusra Haddad>(laughs) Okay. Let's go. Quick round, same order as always. Teo, you're first.
+
+00:01:33.572 --> 00:01:45.740
+<v Teodor Lisowski>Morning. So, KSD-20931 is still waiting on the IdP vendor patch for group claims. I chased them on Friday. No date from them yet.
+
+00:01:46.946 --> 00:01:54.472
+<v Yusra Haddad>Remind me where that leaves us. The app is registered, people can sign in...
+
+00:01:55.834 --> 00:02:12.899
+<v Teodor Lisowski>Sign-in works. The group claims aren't released to the Tinderbox app, so it can't tell a student from an instructor, or which section anyone's in. Until the patch lands it's basically everyone or no one.
+
+00:02:14.233 --> 00:02:18.833
+<v Mara Ilves>And there's no config workaround on the IdP side?
+
+00:02:19.159 --> 00:02:32.634
+<v Teodor Lisowski>Not a supported one. I could hand-map one test group, but not real sections. I'd rather wait for the vendor than build something we have to unpick.
+
+00:02:33.282 --> 00:02:35.478
+<v Mara Ilves>Okay. Makes sense.
+
+00:02:35.959 --> 00:02:40.019
+<v Yusra Haddad>Mm-hm. Okay, still waiting on the vendor. Saanvi.
+
+00:02:40.816 --> 00:02:58.220
+<v Saanvi Raghunathan>Load test plan is done, it's in the shared folder. 500 concurrent sessions, ramping over ten minutes, then a twenty-minute hold. Mix of short questions and the long context pulls, because those are the expensive ones.
+
+00:02:59.531 --> 00:03:00.408
+<v Yusra Haddad>Mm-hm.
+
+00:03:00.825 --> 00:03:18.437
+<v Saanvi Raghunathan>But the load test waits on the tenant. There's nothing to point it at yet. As soon as there's an endpoint I can schedule it, I need maybe a day's notice to get the generators up.
+
+00:03:19.514 --> 00:03:24.955
+<v Yusra Haddad>And the tenant is with... Mara, that's on the Kettleyard side?
+
+00:03:26.309 --> 00:03:37.537
+<v Mara Ilves>Kettleyard side, yes. Bartosz on Ilya's team is still provisioning it. Last I heard they were waiting on the Kestrow IdP signing cert.
+
+00:03:38.462 --> 00:03:43.473
+<v Teodor Lisowski>Yeah, Bartosz and I have been going back and forth on that.
+
+00:03:44.081 --> 00:03:47.063
+<v Mara Ilves>Okay. So it's moving.
+
+00:03:47.704 --> 00:03:52.346
+<v Saanvi Raghunathan>Okay. So, waiting on the tenant. That's me.
+
+00:03:53.282 --> 00:04:04.535
+<v Yusra Haddad>Thanks. Dima, you're next, but actually, hold on. Jack has the ARB outcome and it affects you, so let's do Jack first. Jack?
+
+00:04:05.902 --> 00:04:10.517
+<v Joaquín Sepúlveda>Yes, one second, I'm just finding the minutes.
+
+00:04:17.080 --> 00:04:25.165
+<v Joaquín Sepúlveda>Sorry. My laptop has decided now is the time for an update. Give me two minutes.
+
+00:04:25.583 --> 00:04:35.631
+<v Yusra Haddad>Classic. Okay, Dima, go ahead with the rest of yours while we wait, and we'll come back to the spec.
+
+00:04:36.172 --> 00:04:50.601
+<v Dmitri Halloran>Sure. Dummy data generator's done. Three fake courses, four hundred fake students. I named them after elements so nobody mistakes them for real people. There is a Professor Molybdenum.
+
+00:04:51.767 --> 00:04:52.651
+<v Mara Ilves>(laughs)
+
+00:04:53.634 --> 00:04:58.304
+<v Yusra Haddad>Please do not demo Professor Molybdenum to faculty.
+
+00:04:59.647 --> 00:05:00.996
+<v Dmitri Halloran>No promises
+
+00:05:01.905 --> 00:05:09.188
+<v Saanvi Raghunathan>Is the fake data realistic enough for load? Message lengths, that kind of thing?
+
+00:05:10.397 --> 00:05:17.547
+<v Dmitri Halloran>Message lengths yes. Content is nonsense. It's fine for load, not for anything else.
+
+00:05:18.023 --> 00:05:20.354
+<v Saanvi Raghunathan>That's all I need.
+
+00:05:21.003 --> 00:05:32.882
+<v Dmitri Halloran>Also the LMS test instance is crawling again. Took me twenty minutes to reset one course shell on Friday. Not a blocker, just pain
+
+00:05:33.322 --> 00:05:37.447
+<v Yusra Haddad>Did you raise it with the LMS team?
+
+00:05:38.014 --> 00:05:44.892
+<v Dmitri Halloran>Ticket's in. They said known issue. Which is my favourite kind of issue
+
+00:05:45.907 --> 00:05:53.855
+<v Mara Ilves>Sorry, you cut out for a second there, Dima. The LMS test instance is slow?
+
+00:05:54.892 --> 00:05:58.537
+<v Dmitri Halloran>Slow. Yes. That's the whole update
+
+00:05:59.724 --> 00:06:01.393
+<v Mara Ilves>Okay, got it.
+
+00:06:02.149 --> 00:06:05.702
+<v KES-HUDDLE-2B>Hello? Sorry. Is this the Tinderbox standup?
+
+00:06:07.002 --> 00:06:14.253
+<v Yusra Haddad>It is. Who's on the huddle room device? It just shows up as KES-HUDDLE-2B.
+
+00:06:15.403 --> 00:06:25.961
+<v KES-HUDDLE-2B>Oh, sorry, it's Greta. Service desk. The room was double-booked, I had to wait for the other lot to clear out.
+
+00:06:26.636 --> 00:06:33.305
+<v Yusra Haddad>No problem. Greta, give us the runbook update quickly while Jack's laptop finishes.
+
+00:06:34.133 --> 00:06:47.636
+<v KES-HUDDLE-2B>Sure. The tier-1 runbook is in progress. I've got sign-in problems and the 'assistant gave me a wrong answer' section drafted. Escalation section is still a placeholder.
+
+00:06:48.806 --> 00:06:56.872
+<v Yusra Haddad>Okay. Runbook in progress. Where does it live, so I can link it from the card?
+
+00:06:58.208 --> 00:07:07.255
+<v KES-HUDDLE-2B>Service desk wiki, under Pilots. It's a draft page, so only our team can see it for now.
+
+00:07:08.010 --> 00:07:11.427
+<v Yusra Haddad>That's fine for now. Thanks, Greta.
+
+00:07:12.314 --> 00:07:17.944
+<v KES-HUDDLE-2B>I'll go on mute, this room echoes like a cathedral.
+
+00:07:18.914 --> 00:07:22.720
+<v Yusra Haddad>(laughs) Thank you. Jack, are you back?
+
+00:07:27.060 --> 00:07:38.088
+<v Joaquín Sepúlveda>I'm back. Okay. So, ARB came back on the interface spec - they won't approve v1, they want an event-based context API.
+
+00:07:38.710 --> 00:07:40.503
+<v Yusra Haddad>Meaning what, concretely?
+
+00:07:41.307 --> 00:07:58.126
+<v Joaquín Sepúlveda>Meaning they don't want Tinderbox polling the LMS on a timer for roster and content changes. They want the LMS to publish events. Enrollment changed, content published, section created. And Tinderbox subscribes to those.
+
+00:07:58.804 --> 00:07:59.770
+<v Mara Ilves>Mm-hm.
+
+00:08:00.463 --> 00:08:25.499
+<v Joaquín Sepúlveda>The board's view is that polling every course every few minutes is load on the LMS that nobody has budgeted for, and it doesn't fit the integration standard they adopted last year. I did argue polling was fine for a three-course pilot. They said pilots become production. Which, fair.
+
+00:08:26.024 --> 00:08:31.593
+<v Mara Ilves>Did they say which mechanism? LMS webhooks, or the integration bus?
+
+00:08:32.241 --> 00:08:44.422
+<v Joaquín Sepúlveda>The bus. The standard says the integration bus, webhooks only as a fallback where a system can't publish to the bus. The LMS can.
+
+00:08:44.870 --> 00:08:49.114
+<v Mara Ilves>Okay. That's actually easier for replay than webhooks.
+
+00:08:50.467 --> 00:08:54.504
+<v Joaquín Sepúlveda>That was more or less their argument, yes.
+
+00:08:55.079 --> 00:08:57.680
+<v Dmitri Halloran>So the fifth is dead.
+
+00:08:58.275 --> 00:09:01.496
+<v Joaquín Sepúlveda>The date isn't something the board...
+
+00:09:00.296 --> 00:09:04.431
+<v Dmitri Halloran>Third time the contract's changed. Third time.
+
+00:09:03.831 --> 00:09:09.310
+<v Joaquín Sepúlveda>...is not my call, Dmitri. I'm reporting what the board said.
+
+00:09:10.137 --> 00:09:19.576
+<v Dmitri Halloran>I know. I know it's not you. I had the polling endpoints half built against v1, that's all.
+
+00:09:20.443 --> 00:09:30.025
+<v Yusra Haddad>Okay. Let's not litigate it here. Jack, what do we need to get it back in front of them?
+
+00:09:30.505 --> 00:09:47.037
+<v Joaquín Sepúlveda>A v2 of the spec that describes the event-based contract. Event types, payloads, how Tinderbox acknowledges an event, what happens on replay or if it misses one. Then it goes back to ARB.
+
+00:09:47.544 --> 00:09:50.460
+<v Mara Ilves>I'll turn a v2 around.
+
+00:09:51.008 --> 00:09:55.031
+<v Yusra Haddad>So spec v2, event-based. That's you, Mara.
+
+00:09:55.955 --> 00:10:05.335
+<v Mara Ilves>Yes. I'll keep the field list from v1 wherever it still applies, so Dima isn't starting from zero.
+
+00:10:06.646 --> 00:10:15.157
+<v Dmitri Halloran>Appreciate it. Genuinely. The bus has a test environment at least. It's flaky but it exists
+
+00:10:15.476 --> 00:10:19.945
+<v Dmitri Halloran>Can I stop on the polling stuff then
+
+00:10:20.985 --> 00:10:23.351
+<v Mara Ilves>Yes, park the polling.
+
+00:10:24.315 --> 00:10:27.749
+<v Dmitri Halloran>Cool. Great. Love that for me.
+
+00:10:28.171 --> 00:10:37.996
+<v Joaquín Sepúlveda>To be clear, the board isn't against the pilot. They just want the contract right before anyone builds on it.
+
+00:10:39.068 --> 00:10:45.798
+<v Yusra Haddad>Understood. Hosting, while we're on architecture. Mara, you said option 2 this morning?
+
+00:10:46.966 --> 00:10:54.326
+<v Mara Ilves>Yes, shared tenant. Tinderbox goes on the shared Kettleyard tenant, not a dedicated Kestrow deployment.
+
+00:10:54.984 --> 00:10:56.350
+<v Joaquín Sepúlveda>Okay. Noted.
+
+00:10:57.313 --> 00:11:03.628
+<v Mara Ilves>It's cheaper, and it's one less thing for anyone here to run.
+
+00:11:04.648 --> 00:11:12.117
+<v Yusra Haddad>Good. One less open question. Give me a second, I'm moving cards on the board.
+
+00:11:30.773 --> 00:11:42.033
+<v Speaker 4>So for the load test the target is the shared tenant, not a Kestrow cluster. Good, that's what the plan already assumes.
+
+00:11:43.224 --> 00:11:44.551
+<v Yusra Haddad>Yep.
+
+00:11:45.460 --> 00:11:52.913
+<v Speaker 4>Then I just need the tenant endpoint and a test key when it exists.
+
+00:11:53.230 --> 00:11:58.605
+<v Mara Ilves>Mm-hm. Tenant details usually get posted in the Kettleyard channel.
+
+00:12:00.004 --> 00:12:02.448
+<v Speaker 4>Okay, I'm in there.
+
+00:12:02.805 --> 00:12:08.924
+<v Yusra Haddad>Okay. Anything else on the build before we get to security?
+
+00:12:11.416 --> 00:12:13.253
+<v Yusra Haddad>No? Okay.
+
+00:12:15.741 --> 00:12:24.810
+<v Yusra Haddad>Okay. Security. Real student data is still paused until Hugo's review. Who's doing the security package for Hugo?
+
+00:12:25.790 --> 00:12:35.660
+<v Mara Ilves>I'll pull it together, probably this week. The security review package. Architecture, data flows, the Kettleyard controls, the dummy-data setup.
+
+00:12:36.360 --> 00:12:42.383
+<v Yusra Haddad>Okay. Because as long as that's open we're in dummy-data mode.
+
+00:12:43.247 --> 00:12:44.449
+<v Mara Ilves>Understood.
+
+00:12:44.862 --> 00:12:54.234
+<v Dmitri Halloran>Does the security package cover the context API? Because the context API is, as we've established, about to change
+
+00:12:55.034 --> 00:13:05.801
+<v Mara Ilves>It describes what data crosses the boundary and who can see it. Not the endpoint shapes. So v2 doesn't invalidate it.
+
+00:13:06.435 --> 00:13:08.261
+<v Dmitri Halloran>Okay, good
+
+00:13:09.531 --> 00:13:17.421
+<v Yusra Haddad>Does it need anything from Kestrow? Data classification for the course materials, that sort of thing?
+
+00:13:18.807 --> 00:13:28.124
+<v Mara Ilves>It'll reference Kestrow's classification for course content. It's published, so I don't need anything new from anyone yet.
+
+00:13:29.382 --> 00:13:30.281
+<v Yusra Haddad>Okay.
+
+00:13:31.535 --> 00:13:37.111
+<v Speaker 4>Does the security package need the load test results in it?
+
+00:13:37.718 --> 00:13:43.136
+<v Mara Ilves>No, it doesn't depend on them. It's design and controls.
+
+00:13:44.025 --> 00:13:45.288
+<v Speaker 4>Okay, good.
+
+00:13:46.137 --> 00:13:51.089
+<v Yusra Haddad>And Hugo will be Hugo about it. Per policy.
+
+00:13:51.613 --> 00:13:55.786
+<v Mara Ilves>He will. That's fine, that's his job.
+
+00:13:56.154 --> 00:14:05.665
+<v Teodor Lisowski>If it helps, the IdP config for the app is all in the ticket already. For the identity section.
+
+00:14:06.863 --> 00:14:10.959
+<v Mara Ilves>Good, I'll pull it from there. Thanks, Teo.
+
+00:14:12.074 --> 00:14:13.307
+<v Yusra Haddad>Mm-hm.
+
+00:14:14.195 --> 00:14:22.296
+<v Yusra Haddad>Okay. While I'm here, for the 29th. Mara, what actually has to be true for go-live?
+
+00:14:22.659 --> 00:14:41.082
+<v Mara Ilves>Hugo clears the review so we can move off dummy data. The claims patch, so the app knows who's in which section. A context API against v2. And the tenant, but that's the least risky of the four.
+
+00:14:41.569 --> 00:14:46.570
+<v Yusra Haddad>So three of the four aren't in this room.
+
+00:14:47.861 --> 00:14:55.254
+<v Dmitri Halloran>One of them is very much in this room. It's me. I'm the room
+
+00:14:55.886 --> 00:14:57.074
+<v Yusra Haddad>(laughs) Fair.
+
+00:14:57.576 --> 00:15:06.437
+<v Joaquín Sepúlveda>And ARB will want to see v2 before anyone builds on it. Just so that's on the list.
+
+00:15:07.459 --> 00:15:11.654
+<v Yusra Haddad>Noted. Give me a minute, I'm typing.
+
+00:15:32.372 --> 00:15:52.544
+<v Yusra Haddad>Okay. Let me read back the blockers so I can update the board. Blockers as of today: real student data paused pending the security review. ARB rejected spec v1. And SSO group claims not released, that's KSD-20931. Am I missing anything?
+
+00:15:53.398 --> 00:15:59.750
+<v Mara Ilves>That's it. The tenant's in progress, but that's not a blocker yet.
+
+00:16:00.310 --> 00:16:05.895
+<v Yusra Haddad>Okay. And go-live stays the 29th of March on the board.
+
+00:16:06.530 --> 00:16:07.840
+<v Dmitri Halloran>For now
+
+00:16:08.802 --> 00:16:12.209
+<v Yusra Haddad>For now, Dima, yes, thank you.
+
+00:16:13.830 --> 00:16:18.421
+<v KES-HUDDLE-2B>Sorry, one thing from the service desk, on the...
+
+00:16:19.365 --> 00:16:26.735
+<v Yusra Haddad>Greta, sorry, I have to drop - let's take the rest offline. Message me?
+
+00:16:27.521 --> 00:16:28.736
+<v KES-HUDDLE-2B>Okay. Sure.
+
+00:16:29.996 --> 00:16:31.586
+<v Yusra Haddad>Thanks everyone.
+
+00:16:32.054 --> 00:16:33.354
+<v Mara Ilves>Thanks. Bye.
+
+00:16:34.552 --> 00:16:35.642
+<v Dmitri Halloran>Bye
+

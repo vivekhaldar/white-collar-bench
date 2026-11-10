@@ -1,0 +1,104 @@
+{
+  "date": "2027-09-10",
+  "artifacts": [
+    {
+      "id": "em-0105",
+      "channel": "email",
+      "received_at": "2027-09-10T06:55:00+01:00",
+      "path": "em-0105.eml",
+      "title": "[INC-71862] Ticket updated"
+    },
+    {
+      "id": "em-0106",
+      "channel": "email",
+      "received_at": "2027-09-10T08:15:00+01:00",
+      "path": "em-0106.eml",
+      "title": "[INC-60853] Ticket updated"
+    },
+    {
+      "id": "em-0107",
+      "channel": "email",
+      "received_at": "2027-09-10T09:42:00+01:00",
+      "path": "em-0107.eml",
+      "title": "[INC-68222] Ticket updated"
+    },
+    {
+      "id": "mn-0027",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-10T09:55:00+01:00",
+      "path": "mn-0027.md",
+      "title": "Recap: Nettle standup"
+    },
+    {
+      "id": "em-0108",
+      "channel": "email",
+      "received_at": "2027-09-10T10:50:00+01:00",
+      "path": "em-0108.eml",
+      "title": "Holworth Pantry Inventory Discovery update"
+    },
+    {
+      "id": "ch-0078",
+      "channel": "chat",
+      "received_at": "2027-09-10T11:06:00+01:00",
+      "path": "ch-0078.json",
+      "title": "DM: Lilit Yilmaz / Aoife Everett"
+    },
+    {
+      "id": "ch-0079",
+      "channel": "chat",
+      "received_at": "2027-09-10T15:16:00+01:00",
+      "path": "ch-0079.json",
+      "title": "#random"
+    },
+    {
+      "id": "ca-0008",
+      "channel": "calendar",
+      "received_at": "2027-09-10T17:18:00+01:00",
+      "path": "ca-0008.ics",
+      "title": "Invite: Morgate partnership sync"
+    },
+    {
+      "id": "em-0109",
+      "channel": "email",
+      "received_at": "2027-09-10T17:21:00+01:00",
+      "path": "em-0109.eml",
+      "title": "[INC-87114] Ticket updated"
+    },
+    {
+      "id": "dc-0005",
+      "channel": "document",
+      "received_at": "2027-09-10T17:26:00+01:00",
+      "path": "dc-0005.xlsx",
+      "title": "Translation help selection risk register (final)",
+      "parent": "em-0110"
+    },
+    {
+      "id": "em-0110",
+      "channel": "email",
+      "received_at": "2027-09-10T17:26:00+01:00",
+      "path": "em-0110.eml",
+      "title": "Status note: w/e 10 September"
+    },
+    {
+      "id": "nt-0013",
+      "channel": "note",
+      "received_at": "2027-09-10T17:26:00+01:00",
+      "path": "nt-0013.md",
+      "title": "Fri notes"
+    },
+    {
+      "id": "ch-0080",
+      "channel": "chat",
+      "received_at": "2027-09-10T17:33:00+01:00",
+      "path": "ch-0080.json",
+      "title": "#nettle-core"
+    },
+    {
+      "id": "ch-0081",
+      "channel": "chat",
+      "received_at": "2027-09-10T18:17:00+01:00",
+      "path": "ch-0081.json",
+      "title": "DM: Amani Katz / Aoife Everett"
+    }
+  ]
+}

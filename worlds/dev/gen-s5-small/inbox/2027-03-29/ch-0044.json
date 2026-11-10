@@ -1,0 +1,29 @@
+{
+ "workspace": "iselvale",
+ "channel": "#okapi-core",
+ "kind": "channel",
+ "participants": [
+  "Lakshmi Figueroa",
+  "Hiba Deng",
+  "Anahit Fifita",
+  "Isla Faure",
+  "Rudo Ekwueme",
+  "Jisoo Nowak",
+  "Friederike Bhatt"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-29T08:03:00-05:00",
+   "user": "Lakshmi Figueroa",
+   "handle": "@lakshmi",
+   "text": "done, i drafted the okapi on-call rota"
+  },
+  {
+   "ts": "2027-03-29T08:03:14-05:00",
+   "user": "Friederike Bhatt",
+   "handle": "@friederike",
+   "text": "got it",
+   "thread_of": 0
+  }
+ ]
+}

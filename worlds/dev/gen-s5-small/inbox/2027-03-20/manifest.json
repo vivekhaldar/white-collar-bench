@@ -1,0 +1,40 @@
+{
+  "date": "2027-03-20",
+  "artifacts": [
+    {
+      "id": "em-0023",
+      "channel": "email",
+      "received_at": "2027-03-20T09:04:00-05:00",
+      "path": "em-0023.eml",
+      "title": "[REQ-20265] Request resolved"
+    },
+    {
+      "id": "em-0024",
+      "channel": "email",
+      "received_at": "2027-03-20T09:04:00-05:00",
+      "path": "em-0024.eml",
+      "title": "[INC-78684] Ticket updated"
+    },
+    {
+      "id": "em-0025",
+      "channel": "email",
+      "received_at": "2027-03-20T09:50:00-05:00",
+      "path": "em-0025.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "ch-0017",
+      "channel": "chat",
+      "received_at": "2027-03-20T12:08:00-05:00",
+      "path": "ch-0017.json",
+      "title": "DM: Anahit Fifita / Hiba Deng"
+    },
+    {
+      "id": "ch-0018",
+      "channel": "chat",
+      "received_at": "2027-03-20T12:19:00-05:00",
+      "path": "ch-0018.json",
+      "title": "DM: Anahit Fifita / Hiba Deng"
+    }
+  ]
+}

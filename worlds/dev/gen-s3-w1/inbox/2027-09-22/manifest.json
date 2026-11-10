@@ -1,0 +1,146 @@
+{
+  "date": "2027-09-22",
+  "artifacts": [
+    {
+      "id": "em-0090",
+      "channel": "email",
+      "received_at": "2027-09-22T08:02:00-05:00",
+      "path": "em-0090.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0097",
+      "channel": "chat",
+      "received_at": "2027-09-22T08:30:00-05:00",
+      "path": "ch-0097.json",
+      "title": "DM: Alasdair Kaya / Katarzyna Dang"
+    },
+    {
+      "id": "em-0091",
+      "channel": "email",
+      "received_at": "2027-09-22T09:25:00-05:00",
+      "path": "em-0091.eml",
+      "title": "Call for proposals closes Thursday 30 September"
+    },
+    {
+      "id": "em-0092",
+      "channel": "email",
+      "received_at": "2027-09-22T10:09:00-05:00",
+      "path": "em-0092.eml",
+      "title": "Introduction: Okapi"
+    },
+    {
+      "id": "ch-0098",
+      "channel": "chat",
+      "received_at": "2027-09-22T12:23:00-05:00",
+      "path": "ch-0098.json",
+      "title": "DM: Alasdair Kaya / Eleni Fontaine"
+    },
+    {
+      "id": "ch-0099",
+      "channel": "chat",
+      "received_at": "2027-09-22T12:53:00-05:00",
+      "path": "ch-0099.json",
+      "title": "#funding-model-core"
+    },
+    {
+      "id": "em-0093",
+      "channel": "email",
+      "received_at": "2027-09-22T13:02:00-05:00",
+      "path": "em-0093.eml",
+      "title": "[INC-46213] Ticket updated"
+    },
+    {
+      "id": "em-0094",
+      "channel": "email",
+      "received_at": "2027-09-22T13:09:00-05:00",
+      "path": "em-0094.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "ch-0100",
+      "channel": "chat",
+      "received_at": "2027-09-22T13:34:00-05:00",
+      "path": "ch-0100.json",
+      "title": "#okapi-core"
+    },
+    {
+      "id": "em-0095",
+      "channel": "email",
+      "received_at": "2027-09-22T14:25:00-05:00",
+      "path": "em-0095.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0096",
+      "channel": "email",
+      "received_at": "2027-09-22T15:15:00-05:00",
+      "path": "em-0096.eml",
+      "title": "Re: Counter-proposal to Rosix"
+    },
+    {
+      "id": "dc-0005",
+      "channel": "document",
+      "received_at": "2027-09-22T15:19:00-05:00",
+      "path": "dc-0005.docx",
+      "title": "Referral triage discovery site visit agenda v2",
+      "parent": "em-0097"
+    },
+    {
+      "id": "em-0097",
+      "channel": "email",
+      "received_at": "2027-09-22T15:19:00-05:00",
+      "path": "em-0097.eml",
+      "title": "Referral triage discovery site visit agenda"
+    },
+    {
+      "id": "ch-0101",
+      "channel": "chat",
+      "received_at": "2027-09-22T15:31:00-05:00",
+      "path": "ch-0101.json",
+      "title": "DM: Somchai Korkmaz / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0102",
+      "channel": "chat",
+      "received_at": "2027-09-22T16:27:00-05:00",
+      "path": "ch-0102.json",
+      "title": "DM: Alasdair Kaya / Bisi Chatterjee"
+    },
+    {
+      "id": "em-0098",
+      "channel": "email",
+      "received_at": "2027-09-22T16:46:00-05:00",
+      "path": "em-0098.eml",
+      "title": "Re: Bisi's funding model budget justification"
+    },
+    {
+      "id": "em-0099",
+      "channel": "email",
+      "received_at": "2027-09-22T17:06:00-05:00",
+      "path": "em-0099.eml",
+      "title": "Re: Bed management baseline data from Lanmoor"
+    },
+    {
+      "id": "em-0100",
+      "channel": "email",
+      "received_at": "2027-09-22T17:18:00-05:00",
+      "path": "em-0100.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0103",
+      "channel": "chat",
+      "received_at": "2027-09-22T17:39:00-05:00",
+      "path": "ch-0103.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "em-0101",
+      "channel": "email",
+      "received_at": "2027-09-22T18:11:00-05:00",
+      "path": "em-0101.eml",
+      "title": "Re: Funding model timeline"
+    }
+  ]
+}

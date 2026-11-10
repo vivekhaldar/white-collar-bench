@@ -1,0 +1,40 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#fulmar-core",
+ "kind": "channel",
+ "participants": [
+  "Marcelo Meijer",
+  "Amira Baek",
+  "Ottavio Bakker",
+  "Adwoa Kocak",
+  "Giorgi Wisniewska",
+  "Oksana Hoffmann",
+  "Batbayar Galbraith",
+  "Thibault Kowalski",
+  "Kamau Greco"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T07:30:00-06:00",
+   "user": "Marcelo Meijer",
+   "handle": "@marcelo",
+   "text": "Amira will send Adwoa Kocak the Fulmar action log, as discussed.",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@adwoa",
+      "@amira"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-08T07:31:19-06:00",
+   "user": "Kamau Greco",
+   "handle": "@kamau",
+   "text": "ok",
+   "thread_of": 0
+  }
+ ]
+}

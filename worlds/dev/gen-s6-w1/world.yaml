@@ -1,0 +1,36 @@
+id: gen-s6-w1
+title: 'Generated world: Office of Academic Technology, Lanhurst University System (public university
+  system)'
+version: 1
+split: dev
+worker: p-despina-pereira
+timezone: -08:00
+seed:
+  start: '2027-02-08'
+  end: '2027-02-19'
+episode:
+  days:
+  - '2027-02-22'
+  - '2027-02-23'
+  - '2027-02-24'
+  - '2027-02-25'
+  - '2027-02-26'
+  - '2027-02-27'
+checkpoints:
+- id: cp1
+  date: '2027-02-23'
+  label: end of Tuesday
+- id: cp2
+  date: '2027-02-25'
+  label: end of Thursday
+- id: cp3
+  date: '2027-02-27'
+  label: end of week
+generator:
+  kind: wcb-gen
+  version: 1
+  seed: 6
+  weeks: 1
+  size: standard
+  setting: university
+  llm: false

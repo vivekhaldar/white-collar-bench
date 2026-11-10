@@ -1,0 +1,32 @@
+{
+ "workspace": "corrstead",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Bolat Oyelami",
+  "Rodrigo Gurung",
+  "Andrei Laurent",
+  "Anastasia Mizrahi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-09T10:28:41-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "good morning all"
+  },
+  {
+   "ts": "2027-07-09T10:33:21-08:00",
+   "user": "Rodrigo Gurung",
+   "handle": "@rodrigo",
+   "text": "morning!"
+  },
+  {
+   "ts": "2027-07-09T10:39:13-08:00",
+   "user": "Andrei Laurent",
+   "handle": "@andrei",
+   "text": "morning",
+   "thread_of": 0
+  }
+ ]
+}

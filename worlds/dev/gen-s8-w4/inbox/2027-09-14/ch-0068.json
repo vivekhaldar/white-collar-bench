@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#wagtail-core",
+ "kind": "channel",
+ "participants": [
+  "Amira Baek",
+  "Oksana Hoffmann",
+  "Adwoa Kocak",
+  "Ottavio Bakker",
+  "Giorgi Wisniewska",
+  "Batbayar Galbraith",
+  "Marcelo Meijer"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-14T12:30:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "@batbayar when you get a chance, could you set up wagtail staging access for me?"
+  },
+  {
+   "ts": "2027-09-14T12:31:27-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-09-14T12:36:15-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "following :)",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Thibault Kowalski",
+  "Adwoa Kocak",
+  "Hamish Okada",
+  "Goran Liu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T17:04:39-06:00",
+   "user": "Thibault Kowalski",
+   "handle": "@thibault",
+   "text": "is the wifi on the second floor down for anyone else?"
+  },
+  {
+   "ts": "2027-09-08T17:10:07-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "yep, same here"
+  },
+  {
+   "ts": "2027-09-08T17:13:55-06:00",
+   "user": "Hamish Okada",
+   "handle": "@hamish",
+   "text": "works for me"
+  },
+  {
+   "ts": "2027-09-08T17:19:52-06:00",
+   "user": "Goran Liu",
+   "handle": "@goran",
+   "text": "it's been flaky all morning"
+  }
+ ]
+}

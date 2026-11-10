@@ -1,0 +1,104 @@
+{
+  "date": "2027-08-31",
+  "artifacts": [
+    {
+      "id": "mn-0016",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-31T10:00:00+01:00",
+      "path": "mn-0016.md",
+      "title": "Recap: Nettle standup"
+    },
+    {
+      "id": "ch-0037",
+      "channel": "chat",
+      "received_at": "2027-08-31T10:02:00+01:00",
+      "path": "ch-0037.json",
+      "title": "DM: Bisi Volkov / Aoife Everett"
+    },
+    {
+      "id": "ch-0038",
+      "channel": "chat",
+      "received_at": "2027-08-31T11:00:00+01:00",
+      "path": "ch-0038.json",
+      "title": "DM: Aoife Everett / Tahmina Ozturk"
+    },
+    {
+      "id": "ch-0039",
+      "channel": "chat",
+      "received_at": "2027-08-31T12:42:00+01:00",
+      "path": "ch-0039.json",
+      "title": "#nettle-core"
+    },
+    {
+      "id": "em-0061",
+      "channel": "email",
+      "received_at": "2027-08-31T14:06:00+01:00",
+      "path": "em-0061.eml",
+      "title": "[INC-62696] Ticket updated"
+    },
+    {
+      "id": "ch-0040",
+      "channel": "chat",
+      "received_at": "2027-08-31T14:07:00+01:00",
+      "path": "ch-0040.json",
+      "title": "DM: Sipho Papadopoulos / Aoife Everett"
+    },
+    {
+      "id": "dc-0002",
+      "channel": "document",
+      "received_at": "2027-08-31T15:22:00+01:00",
+      "path": "dc-0002.docx",
+      "title": "Pipit on-call rota v3",
+      "parent": "em-0062"
+    },
+    {
+      "id": "em-0062",
+      "channel": "email",
+      "received_at": "2027-08-31T15:22:00+01:00",
+      "path": "em-0062.eml",
+      "title": "Re: Pipit on-call rota"
+    },
+    {
+      "id": "mn-0017",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-31T15:30:00+01:00",
+      "path": "mn-0017.md",
+      "title": "Recap: 1:1 Aoife / Akosua"
+    },
+    {
+      "id": "ch-0041",
+      "channel": "chat",
+      "received_at": "2027-08-31T16:29:00+01:00",
+      "path": "ch-0041.json",
+      "title": "DM: Amani Xu / Aoife Everett"
+    },
+    {
+      "id": "ch-0042",
+      "channel": "chat",
+      "received_at": "2027-08-31T17:01:00+01:00",
+      "path": "ch-0042.json",
+      "title": "DM: Sipho Papadopoulos / Aoife Everett"
+    },
+    {
+      "id": "ch-0043",
+      "channel": "chat",
+      "received_at": "2027-08-31T17:26:00+01:00",
+      "path": "ch-0043.json",
+      "title": "#nettle-core"
+    },
+    {
+      "id": "ch-0044",
+      "channel": "chat",
+      "received_at": "2027-08-31T17:42:00+01:00",
+      "path": "ch-0044.json",
+      "title": "DM: Amani Katz / Aoife Everett"
+    },
+    {
+      "id": "em-0063",
+      "channel": "email",
+      "received_at": "2027-08-31T18:25:00+01:00",
+      "path": "em-0063.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    }
+  ]
+}

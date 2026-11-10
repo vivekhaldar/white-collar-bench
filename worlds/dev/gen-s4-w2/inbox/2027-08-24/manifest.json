@@ -1,0 +1,138 @@
+{
+  "date": "2027-08-24",
+  "artifacts": [
+    {
+      "id": "ch-0004",
+      "channel": "chat",
+      "received_at": "2027-08-24T08:24:00-08:00",
+      "path": "ch-0004.json",
+      "title": "DM: Meera Bondarenko / Ottavio Moreira"
+    },
+    {
+      "id": "em-0013",
+      "channel": "email",
+      "received_at": "2027-08-24T09:24:00-08:00",
+      "path": "em-0013.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "mt-0003",
+      "channel": "transcript",
+      "received_at": "2027-08-24T10:00:00-08:00",
+      "path": "mt-0003.vtt",
+      "title": "Fjord standup (transcript)"
+    },
+    {
+      "id": "ca-0002",
+      "channel": "calendar",
+      "received_at": "2027-08-24T10:01:00-08:00",
+      "path": "ca-0002.ics",
+      "title": "Invite: Open courseware workshop run-through"
+    },
+    {
+      "id": "ch-0005",
+      "channel": "chat",
+      "received_at": "2027-08-24T10:08:00-08:00",
+      "path": "ch-0005.json",
+      "title": "DM: Theresa Petrov / Ottavio Moreira"
+    },
+    {
+      "id": "em-0014",
+      "channel": "email",
+      "received_at": "2027-08-24T10:09:00-08:00",
+      "path": "em-0014.eml",
+      "title": "Re: Darius's syllabus review discovery interview guide"
+    },
+    {
+      "id": "ch-0006",
+      "channel": "chat",
+      "received_at": "2027-08-24T10:26:00-08:00",
+      "path": "ch-0006.json",
+      "title": "DM: Darius Bramwell / Ottavio Moreira"
+    },
+    {
+      "id": "ch-0007",
+      "channel": "chat",
+      "received_at": "2027-08-24T10:46:00-08:00",
+      "path": "ch-0007.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0008",
+      "channel": "chat",
+      "received_at": "2027-08-24T11:08:00-08:00",
+      "path": "ch-0008.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0009",
+      "channel": "chat",
+      "received_at": "2027-08-24T11:09:00-08:00",
+      "path": "ch-0009.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0010",
+      "channel": "chat",
+      "received_at": "2027-08-24T11:13:00-08:00",
+      "path": "ch-0010.json",
+      "title": "DM: Theresa Petrov / Ottavio Moreira"
+    },
+    {
+      "id": "em-0015",
+      "channel": "email",
+      "received_at": "2027-08-24T11:53:00-08:00",
+      "path": "em-0015.eml",
+      "title": "Re: List of pilot courses for Fjord"
+    },
+    {
+      "id": "em-0016",
+      "channel": "email",
+      "received_at": "2027-08-24T12:05:00-08:00",
+      "path": "em-0016.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "ch-0011",
+      "channel": "chat",
+      "received_at": "2027-08-24T14:40:00-08:00",
+      "path": "ch-0011.json",
+      "title": "DM: Margaux Kang / Ottavio Moreira"
+    },
+    {
+      "id": "ch-0012",
+      "channel": "chat",
+      "received_at": "2027-08-24T15:29:00-08:00",
+      "path": "ch-0012.json",
+      "title": "DM: Margaux Kang / Ottavio Moreira"
+    },
+    {
+      "id": "ch-0013",
+      "channel": "chat",
+      "received_at": "2027-08-24T15:33:00-08:00",
+      "path": "ch-0013.json",
+      "title": "DM: Ottavio Moreira / Tegan Ogunleye"
+    },
+    {
+      "id": "em-0017",
+      "channel": "email",
+      "received_at": "2027-08-24T15:33:00-08:00",
+      "path": "em-0017.eml",
+      "title": "The Quad Ledger: issue 34"
+    },
+    {
+      "id": "ch-0014",
+      "channel": "chat",
+      "received_at": "2027-08-24T15:57:00-08:00",
+      "path": "ch-0014.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "em-0018",
+      "channel": "email",
+      "received_at": "2027-08-24T17:38:00-08:00",
+      "path": "em-0018.eml",
+      "title": "Event space survey"
+    }
+  ]
+}

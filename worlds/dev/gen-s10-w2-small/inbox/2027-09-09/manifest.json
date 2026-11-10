@@ -1,0 +1,118 @@
+{
+  "date": "2027-09-09",
+  "artifacts": [
+    {
+      "id": "ch-0074",
+      "channel": "chat",
+      "received_at": "2027-09-09T07:38:00+01:00",
+      "path": "ch-0074.json",
+      "title": "#nettle-core (catch-up)"
+    },
+    {
+      "id": "mt-0017",
+      "channel": "transcript",
+      "received_at": "2027-09-09T07:39:00+01:00",
+      "path": "mt-0017.vtt",
+      "title": "Pipit sync (transcript)"
+    },
+    {
+      "id": "em-0099",
+      "channel": "email",
+      "received_at": "2027-09-09T07:40:00+01:00",
+      "path": "em-0099.eml",
+      "title": "While you were out: pantry inventory discovery"
+    },
+    {
+      "id": "ch-0075",
+      "channel": "chat",
+      "received_at": "2027-09-09T07:41:00+01:00",
+      "path": "ch-0075.json",
+      "title": "DM: Gaurav Laine / Aoife Everett"
+    },
+    {
+      "id": "ch-0076",
+      "channel": "chat",
+      "received_at": "2027-09-09T07:43:00+01:00",
+      "path": "ch-0076.json",
+      "title": "#nettle-core"
+    },
+    {
+      "id": "mn-0026",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-09T09:55:00+01:00",
+      "path": "mn-0026.md",
+      "title": "Notes: Nettle standup"
+    },
+    {
+      "id": "ca-0007",
+      "channel": "calendar",
+      "received_at": "2027-09-09T10:25:00+01:00",
+      "path": "ca-0007.ics",
+      "title": "Accepted: Nettle follow-up"
+    },
+    {
+      "id": "mt-0018",
+      "channel": "transcript",
+      "received_at": "2027-09-09T11:00:00+01:00",
+      "path": "mt-0018.vtt",
+      "title": "Nettle readiness review (transcript)"
+    },
+    {
+      "id": "em-0100",
+      "channel": "email",
+      "received_at": "2027-09-09T11:15:00+01:00",
+      "path": "em-0100.eml",
+      "title": "Re: Translation help selection risk register"
+    },
+    {
+      "id": "em-0101",
+      "channel": "email",
+      "received_at": "2027-09-09T12:15:00+01:00",
+      "path": "em-0101.eml",
+      "title": "Noris deep-dive materials"
+    },
+    {
+      "id": "nt-0012",
+      "channel": "note",
+      "received_at": "2027-09-09T12:30:00+01:00",
+      "path": "nt-0012.md",
+      "title": "Voice debrief: Nettle / pantry inventory discovery sync"
+    },
+    {
+      "id": "em-0102",
+      "channel": "email",
+      "received_at": "2027-09-09T16:00:00+01:00",
+      "path": "em-0102.eml",
+      "title": "Re: Holworth Pantry Inventory Discovery: numbers"
+    },
+    {
+      "id": "em-0103",
+      "channel": "email",
+      "received_at": "2027-09-09T16:17:00+01:00",
+      "path": "em-0103.eml",
+      "title": "Community Digital Notes: issue 36"
+    },
+    {
+      "id": "dc-0004",
+      "channel": "document",
+      "received_at": "2027-09-09T16:49:00+01:00",
+      "path": "dc-0004.xlsx",
+      "title": "Nettle lessons-learned note v2",
+      "parent": "em-0104"
+    },
+    {
+      "id": "em-0104",
+      "channel": "email",
+      "received_at": "2027-09-09T16:49:00+01:00",
+      "path": "em-0104.eml",
+      "title": "Nettle lessons-learned note"
+    },
+    {
+      "id": "ch-0077",
+      "channel": "chat",
+      "received_at": "2027-09-09T18:36:00+01:00",
+      "path": "ch-0077.json",
+      "title": "DM: Akosua Bergstrom / Aoife Everett"
+    }
+  ]
+}

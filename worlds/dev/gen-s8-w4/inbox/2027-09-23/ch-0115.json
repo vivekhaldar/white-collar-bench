@@ -1,0 +1,38 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#predictive-maintenance-core",
+ "kind": "channel",
+ "participants": [
+  "Rodrigo",
+  "Amira Baek",
+  "Adwoa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-23T11:20:00-06:00",
+   "user": "Rodrigo",
+   "handle": "@rodrigo",
+   "text": "@amira leave it with me, i'll send you falhaven's input on predictive maintenance again"
+  },
+  {
+   "ts": "2027-09-23T11:20:34-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "noted"
+  },
+  {
+   "ts": "2027-09-23T11:29:46-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "+1",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-23T11:32:39-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

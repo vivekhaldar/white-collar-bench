@@ -1,0 +1,132 @@
+{
+  "date": "2027-09-10",
+  "artifacts": [
+    {
+      "id": "em-0027",
+      "channel": "email",
+      "received_at": "2027-09-10T06:31:00-05:00",
+      "path": "em-0027.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0028",
+      "channel": "email",
+      "received_at": "2027-09-10T08:09:00-05:00",
+      "path": "em-0028.eml",
+      "title": "Re: Okapi tenant on Sirocco"
+    },
+    {
+      "id": "ch-0030",
+      "channel": "chat",
+      "received_at": "2027-09-10T08:55:00-05:00",
+      "path": "ch-0030.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "mn-0003",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-10T09:55:00-05:00",
+      "path": "mn-0003.md",
+      "title": "Recap: Okapi standup"
+    },
+    {
+      "id": "em-0029",
+      "channel": "email",
+      "received_at": "2027-09-10T11:38:00-05:00",
+      "path": "em-0029.eml",
+      "title": "[REQ-33920] Request resolved"
+    },
+    {
+      "id": "ch-0031",
+      "channel": "chat",
+      "received_at": "2027-09-10T12:48:00-05:00",
+      "path": "ch-0031.json",
+      "title": "DM: Alasdair Kaya / Dina Laurent"
+    },
+    {
+      "id": "ch-0032",
+      "channel": "chat",
+      "received_at": "2027-09-10T13:22:00-05:00",
+      "path": "ch-0032.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "mt-0009",
+      "channel": "transcript",
+      "received_at": "2027-09-10T14:00:00-05:00",
+      "path": "mt-0009.vtt",
+      "title": "Catch-up: Alasdair / Somchai (transcript)"
+    },
+    {
+      "id": "em-0030",
+      "channel": "email",
+      "received_at": "2027-09-10T14:47:00-05:00",
+      "path": "em-0030.eml",
+      "title": "Bed management baseline data from Lanmoor"
+    },
+    {
+      "id": "mt-0010",
+      "channel": "transcript",
+      "received_at": "2027-09-10T15:00:00-05:00",
+      "path": "mt-0010.vtt",
+      "title": "Okapi / Sirocco sync (transcript)"
+    },
+    {
+      "id": "ch-0033",
+      "channel": "chat",
+      "received_at": "2027-09-10T16:06:00-05:00",
+      "path": "ch-0033.json",
+      "title": "#general"
+    },
+    {
+      "id": "dc-0002",
+      "channel": "document",
+      "received_at": "2027-09-10T16:53:00-05:00",
+      "path": "dc-0002.pdf",
+      "title": "Okapi solution brief v3",
+      "parent": "em-0031"
+    },
+    {
+      "id": "em-0031",
+      "channel": "email",
+      "received_at": "2027-09-10T16:53:00-05:00",
+      "path": "em-0031.eml",
+      "title": "Status note: w/e 10 September"
+    },
+    {
+      "id": "ch-0034",
+      "channel": "chat",
+      "received_at": "2027-09-10T17:11:00-05:00",
+      "path": "ch-0034.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0035",
+      "channel": "chat",
+      "received_at": "2027-09-10T17:42:00-05:00",
+      "path": "ch-0035.json",
+      "title": "DM: Eun-ji Chen / Alasdair Kaya"
+    },
+    {
+      "id": "ca-0005",
+      "channel": "calendar",
+      "received_at": "2027-09-10T18:09:00-05:00",
+      "path": "ca-0005.ics",
+      "title": "Updated: Okapi scoping call"
+    },
+    {
+      "id": "ca-0006",
+      "channel": "calendar",
+      "received_at": "2027-09-10T18:30:00-05:00",
+      "path": "ca-0006.ics",
+      "title": "Invite: Sirocco platform sync"
+    },
+    {
+      "id": "em-0032",
+      "channel": "email",
+      "received_at": "2027-09-10T18:48:00-05:00",
+      "path": "em-0032.eml",
+      "title": "Event space survey"
+    }
+  ]
+}

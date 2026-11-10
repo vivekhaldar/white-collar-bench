@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Birchmere//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:e40d3a4d3007df5c@birchmere.example
+DTSTAMP:20270907T192500Z
+DTSTART:20270908T153000Z
+DTEND:20270908T163000Z
+SUMMARY:Funding model options review
+ORGANIZER;CN=Bisi Chatterjee:mailto:bisi.chatterjee@birchmere.example
+ATTENDEE;CN=Alasdair Kaya;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:alasdair.kaya@birchmere.example
+ATTENDEE;CN=Somchai Thapa;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:somchai.thapa@emberbury.birchmere.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.birchmere.example/j/8465322398?pwd=JUmEu3wn\nPasscode: 862513
+LOCATION:https://meet.birchmere.example/j/8465322398?pwd=JUmEu3wn
+END:VEVENT
+END:VCALENDAR

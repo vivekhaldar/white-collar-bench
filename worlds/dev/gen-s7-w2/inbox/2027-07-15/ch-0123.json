@@ -1,0 +1,43 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-andrei-hiba",
+ "kind": "dm",
+ "participants": [
+  "Andrei Laurent",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-15T07:50:00-08:00",
+   "user": "Andrei Laurent",
+   "handle": "@andrei",
+   "text": "Correction to what I said earlier: the Siskin duplicate notifications isn't done after all. The change was rolled back, so it's open again.",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-15T07:50:33-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-07-15T07:54:17-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-07-15T07:55:58-08:00",
+   "user": "Andrei Laurent",
+   "handle": "@andrei",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

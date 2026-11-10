@@ -1,0 +1,131 @@
+{
+  "date": "2027-02-23",
+  "artifacts": [
+    {
+      "id": "em-0090",
+      "channel": "email",
+      "received_at": "2027-02-23T08:35:00-08:00",
+      "path": "em-0090.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0091",
+      "channel": "email",
+      "received_at": "2027-02-23T08:41:00-08:00",
+      "path": "em-0091.eml",
+      "title": "Fennel: moving to hardening"
+    },
+    {
+      "id": "em-0092",
+      "channel": "email",
+      "received_at": "2027-02-23T09:03:00-08:00",
+      "path": "em-0092.eml",
+      "title": "Re: Captioning discovery test plan"
+    },
+    {
+      "id": "em-0093",
+      "channel": "email",
+      "received_at": "2027-02-23T09:37:00-08:00",
+      "path": "em-0093.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "ch-0071",
+      "channel": "chat",
+      "received_at": "2027-02-23T09:42:00-08:00",
+      "path": "ch-0071.json",
+      "title": "#axolotl-core"
+    },
+    {
+      "id": "mn-0012",
+      "channel": "meeting_notes",
+      "received_at": "2027-02-23T10:00:00-08:00",
+      "path": "mn-0012.md",
+      "title": "Recap: Axolotl standup"
+    },
+    {
+      "id": "ch-0072",
+      "channel": "chat",
+      "received_at": "2027-02-23T10:37:00-08:00",
+      "path": "ch-0072.json",
+      "title": "DM: Despina Pereira / Tomas Deng"
+    },
+    {
+      "id": "ch-0073",
+      "channel": "chat",
+      "received_at": "2027-02-23T13:51:00-08:00",
+      "path": "ch-0073.json",
+      "title": "DM: Liisa Babic / Despina Pereira"
+    },
+    {
+      "id": "em-0094",
+      "channel": "email",
+      "received_at": "2027-02-23T14:00:00-08:00",
+      "path": "em-0094.eml",
+      "title": "Re: Captioning discovery dashboard access"
+    },
+    {
+      "id": "em-0095",
+      "channel": "email",
+      "received_at": "2027-02-23T14:31:00-08:00",
+      "path": "em-0095.eml",
+      "title": "Axolotl slow page loads"
+    },
+    {
+      "id": "ch-0074",
+      "channel": "chat",
+      "received_at": "2027-02-23T14:37:00-08:00",
+      "path": "ch-0074.json",
+      "title": "DM: Oluwaseun Demir / Despina Pereira"
+    },
+    {
+      "id": "mt-0011",
+      "channel": "transcript",
+      "received_at": "2027-02-23T15:30:00-08:00",
+      "path": "mt-0011.vtt",
+      "title": "1:1 Despina / Andres (transcript)"
+    },
+    {
+      "id": "ch-0075",
+      "channel": "chat",
+      "received_at": "2027-02-23T18:08:00-08:00",
+      "path": "ch-0075.json",
+      "title": "#course-assistant-selection-core"
+    },
+    {
+      "id": "ch-0076",
+      "channel": "chat",
+      "received_at": "2027-02-23T18:11:00-08:00",
+      "path": "ch-0076.json",
+      "title": "DM: Karim Navarro / Despina Pereira"
+    },
+    {
+      "id": "ch-0077",
+      "channel": "chat",
+      "received_at": "2027-02-23T18:13:00-08:00",
+      "path": "ch-0077.json",
+      "title": "DM: Liisa Babic / Despina Pereira"
+    },
+    {
+      "id": "ch-0078",
+      "channel": "chat",
+      "received_at": "2027-02-23T18:20:00-08:00",
+      "path": "ch-0078.json",
+      "title": "#fennel-core"
+    },
+    {
+      "id": "em-0096",
+      "channel": "email",
+      "received_at": "2027-02-23T18:48:00-08:00",
+      "path": "em-0096.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0097",
+      "channel": "email",
+      "received_at": "2027-02-23T21:42:00-08:00",
+      "path": "em-0097.eml",
+      "title": "Draft: Fennel access request"
+    }
+  ]
+}

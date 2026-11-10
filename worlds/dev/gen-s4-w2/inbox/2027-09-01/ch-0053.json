@@ -1,0 +1,31 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Meera Bondarenko",
+  "Tariq Ivanova",
+  "Teagan Alexiou"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-01T17:12:09-08:00",
+   "user": "Meera Bondarenko",
+   "handle": "@meera",
+   "text": "does anyone have a spare laptop charger (usb-c)?"
+  },
+  {
+   "ts": "2027-09-01T17:14:29-08:00",
+   "user": "Tariq Ivanova",
+   "handle": "@tariq",
+   "text": "i have one, desk by the window",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-01T17:20:45-08:00",
+   "user": "Teagan Alexiou",
+   "handle": "@teagan",
+   "text": "check the supply cupboard"
+  }
+ ]
+}

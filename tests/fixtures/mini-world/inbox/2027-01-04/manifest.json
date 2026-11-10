@@ -1,0 +1,19 @@
+{
+  "date": "2027-01-04",
+  "artifacts": [
+    {
+      "id": "nt-0001",
+      "channel": "note",
+      "received_at": "2027-01-04T08:30:00-08:00",
+      "path": "nt-0001.md",
+      "title": "Quillon kickoff notes"
+    },
+    {
+      "id": "em-0001",
+      "channel": "email",
+      "received_at": "2027-01-04T09:10:00-08:00",
+      "path": "em-0001.eml",
+      "title": "Tessellate security questionnaire"
+    }
+  ]
+}

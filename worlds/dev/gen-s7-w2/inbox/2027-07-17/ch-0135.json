@@ -1,0 +1,35 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-hiba-mere",
+ "kind": "dm",
+ "participants": [
+  "Mere Hidayat",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-17T12:25:00-08:00",
+   "user": "Mere Hidayat",
+   "handle": "@mere",
+   "text": "bolat asked if you could send them the alumni outreach discovery observation notes"
+  },
+  {
+   "ts": "2027-07-17T12:26:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "yep, on it"
+  },
+  {
+   "ts": "2027-07-17T12:30:55-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-07-17T12:34:12-08:00",
+   "user": "Mere Hidayat",
+   "handle": "@mere",
+   "text": "later!"
+  }
+ ]
+}

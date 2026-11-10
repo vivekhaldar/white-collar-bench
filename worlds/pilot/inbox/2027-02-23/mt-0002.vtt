@@ -1,0 +1,451 @@
+WEBVTT
+
+NOTE
+Scrivelo demo - 23 Feb 2027
+Date: Tue 23 Feb 2027, 11:00-11:50 (-08:00), meet.tarrow.example
+Attendees: Gregor Lindahl, Hannah Feld, Mara Ilves, Delphine Arceneaux, Lionel Mbatha
+Transcript generated automatically. Speaker names from meeting display names.
+
+00:00:03.120 --> 00:00:06.480
+<v Gregor Lindahl>Hi, good morning! Can everyone hear me okay?
+
+00:00:06.900 --> 00:00:08.050
+<v Mara Ilves>Yep, loud and clear.
+
+00:00:08.400 --> 00:00:15.700
+<v Delphine Arceneaux>Morning. Sorry, I'm one minute late in my head, I came straight from a transcript appeal. It's been that kind of Tuesday.
+
+00:00:16.020 --> 00:00:21.340
+<v Gregor Lindahl>Ha, no, you're right on time. We're just waiting on, um, I think one more from Saltmarren?
+
+00:00:21.800 --> 00:00:25.150
+<v Delphine Arceneaux>Lionel. He said he'd join, he's probably fighting the VPN.
+
+00:00:38.600 --> 00:00:41.900
+<v Lionel Mbatha>I'm here. The VPN won, but I'm here.
+
+00:00:42.300 --> 00:00:43.400
+<v Gregor Lindahl>Excellent.
+
+00:00:43.900 --> 00:01:05.200
+<v Gregor Lindahl>Okay, so, thank you all for making time. I know registrar season never really ends. I'm Gregor Lindahl, I'm the account executive at Scrivelo Learning for the Tarrow system, so I'm your person for anything commercial. Most people call me Grig. And with me is Hannah, who is the one who actually knows how it works.
+
+00:01:05.600 --> 00:01:16.900
+<v Hannah Feld>Hi everyone, Hannah Feld, I'm a solutions engineer at Scrivelo. I do the demos and then I do the integrations, so if I promise you something today I'm also the one who has to build it. Which keeps me honest.
+
+00:01:17.300 --> 00:01:18.200
+<v Mara Ilves>(laughs) Good.
+
+00:01:18.700 --> 00:01:22.300
+<v Gregor Lindahl>Could we do a quick round on your side, just so Hannah knows who's who?
+
+00:01:22.800 --> 00:01:34.600
+<v Mara Ilves>Sure. Mara Ilves, Office of Digital Strategy at the system office. I'm running the evaluation for Saltmarren. Delphine is our sponsor.
+
+00:01:35.000 --> 00:01:46.300
+<v Delphine Arceneaux>Delphine Arceneaux, interim registrar at Saltmarren. The writing feedback piece came out of conversations with our English faculty and the writing center. I mostly want to know if it helps students before the essay is due, not after.
+
+00:01:46.900 --> 00:02:02.400
+<v Lionel Mbatha>Lionel Mbatha, Director of IT at Saltmarren. For the record, I'm here because whatever gets picked, my team ends up supporting it and plugging it into the LMS. So I'll be asking the boring questions. Delphine's asked me to sit in on the Penmarq session as well.
+
+00:02:02.800 --> 00:02:06.100
+<v Gregor Lindahl>Boring questions are our favorite questions. Truly.
+
+00:02:06.500 --> 00:02:08.000
+<v Lionel Mbatha>We'll see.
+
+00:02:08.600 --> 00:02:25.900
+<v Gregor Lindahl>So, agenda. Hannah's going to do about twenty minutes of the product, we'll leave plenty of room for questions, and then I'll take five minutes at the end on next steps and what a rollout at Saltmarren could look like. Sound okay?
+
+00:02:26.200 --> 00:02:27.000
+<v Delphine Arceneaux>Perfect.
+
+00:02:27.400 --> 00:02:29.300
+<v Hannah Feld>Great. Let me share my screen.
+
+00:02:35.100 --> 00:02:37.600
+<v Hannah Feld>Can you see a, uh, blue dashboard?
+
+00:02:37.900 --> 00:02:38.700
+<v Mara Ilves>Yes.
+
+00:02:39.100 --> 00:03:04.800
+<v Hannah Feld>Okay. So this is the instructor view. What I've set up for today is a mock ENGL 101 section, first-year composition, with a real-ish assignment: an argumentative essay, 1,200 to 1,500 words, with a five-criterion rubric. Thesis, use of evidence, organization, style, and mechanics. I lifted the rubric from a public composition program and anonymized it.
+
+00:03:05.300 --> 00:03:21.900
+<v Hannah Feld>The core idea of Scrivelo is that the feedback is aligned to the instructor's rubric. It doesn't invent its own idea of a good essay. The instructor uploads or builds the rubric here, and every comment the student gets is tagged to a criterion.
+
+00:03:22.300 --> 00:03:25.000
+<v Delphine Arceneaux>Mm-hm. And it doesn't give a grade?
+
+00:03:25.400 --> 00:03:42.100
+<v Hannah Feld>No grade, by default. There is a setting for a provisional band, but almost nobody turns it on for first-year writing, because faculty don't want students optimizing for a number on a draft. It's feedback, not grading.
+
+00:03:42.500 --> 00:03:44.300
+<v Delphine Arceneaux>Good. Our faculty would revolt.
+
+00:03:44.800 --> 00:03:47.200
+<v Hannah Feld>(laughs) Yeah, we hear that a lot.
+
+00:03:47.700 --> 00:04:10.600
+<v Hannah Feld>So let me switch to the student side. Here's a sample draft. Student pastes it in, or it comes in from the LMS assignment, I'll get to that. They click "get feedback," and, takes a few seconds, there we go. Each comment is anchored to a passage. This one's on the thesis: "Your claim is clear but it's a statement of fact, not an arguable position." Tagged to criterion one.
+
+00:04:11.000 --> 00:04:14.100
+<v Mara Ilves>Is that one comment per criterion, or as many as it finds?
+
+00:04:14.500 --> 00:04:30.300
+<v Hannah Feld>Capped. Instructors set a cap, default is three per criterion, because the research, and our own data, says students ignore feedback after about ten comments. So we'd rather give them the three that matter.
+
+00:04:30.700 --> 00:04:31.500
+<v Mara Ilves>Okay.
+
+00:04:32.000 --> 00:04:50.200
+<v Hannah Feld>And here's the part faculty like. The instructor can see every comment the tool gave, in this review queue, and they can hide or edit comments before release if they want a human-in-the-loop mode. Or they can let it release straight to students. Most of our composition customers start with review-first and loosen it after a few weeks.
+
+00:04:50.700 --> 00:04:55.900
+<v Delphine Arceneaux>How many of the instructors actually look at the queue, though? Honestly.
+
+00:04:56.300 --> 00:05:10.400
+<v Hannah Feld>Honestly, in week one, all of them. By week six, maybe a third. Which is fine, as long as the default was set deliberately. We show the instructor a little summary each week of what went out.
+
+00:05:10.800 --> 00:05:11.600
+<v Delphine Arceneaux>Mm.
+
+00:05:12.100 --> 00:05:31.700
+<v Hannah Feld>Okay, revision history. The student revises, resubmits, and gets a comparison: which comments they addressed, which they didn't. This is the bit students actually use. You can see here, draft two fixed the thesis, still hasn't dealt with the counterargument.
+
+00:05:32.100 --> 00:05:35.900
+<v Mara Ilves>How does it decide a comment was "addressed"? Is that the model's judgment?
+
+00:05:36.300 --> 00:05:51.800
+<v Hannah Feld>It's the model's judgment, yes, with a confidence threshold. If it's not sure, it says "possibly addressed" and doesn't tick it off. We were burned early on by being too generous there.
+
+00:05:52.200 --> 00:05:52.900
+<v Mara Ilves>Okay.
+
+00:05:53.400 --> 00:06:12.000
+<v Hannah Feld>And then on the instructor side again, a section view. Where the class is collectively struggling. In this mock section it's evidence: about sixty percent of drafts got an evidence comment. So the instructor might do a mini-lesson on integrating quotes.
+
+00:06:12.500 --> 00:06:16.300
+<v Delphine Arceneaux>That's the bit the writing center would love. If it's real.
+
+00:06:16.700 --> 00:06:19.100
+<v Hannah Feld>It's real, it's live in the product today.
+
+00:06:19.500 --> 00:06:23.900
+<v Gregor Lindahl>And that section view is one of the things our references always bring up, actually.
+
+00:07:02.300 --> 00:07:18.900
+<v Hannah Feld>Let me show you rubric setup quickly, because that's where instructors spend their first twenty minutes. You can import a rubric from the LMS, or paste one, or start from one of our templates. Then for each criterion you can add "look-fors," which are basically hints to the model.
+
+00:07:19.300 --> 00:07:21.900
+<v Mara Ilves>Are the look-fors visible to students?
+
+00:07:22.300 --> 00:07:26.800
+<v Hannah Feld>No, instructor-only. Students just see the criterion name.
+
+00:08:40.100 --> 00:08:44.600
+<v Delphine Arceneaux>Can I ask about scale, before we go further? Because this is lovely for one section.
+
+00:08:45.000 --> 00:08:45.800
+<v Hannah Feld>Please.
+
+00:08:46.200 --> 00:09:04.700
+<v Delphine Arceneaux>Our ENGL 101 and 102 sections are most of first-year writing at Saltmarren. That's a lot of students, and they all hit the same week around midterms. What happens when, I don't know, a few thousand essays come in on the same Sunday night?
+
+00:09:05.100 --> 00:09:22.600
+<v Hannah Feld>So, volume we're comfortable with. Our largest composition customer runs about forty thousand submissions in their peak week. Feedback latency goes from about eight seconds to maybe twenty at the very peak. We queue it, and the student sees a "your feedback is on the way" message.
+
+00:09:23.000 --> 00:09:24.200
+<v Delphine Arceneaux>Twenty seconds is fine.
+
+00:09:24.600 --> 00:09:27.900
+<v Lionel Mbatha>Where does it queue? On your side or on ours?
+
+00:09:28.300 --> 00:09:31.700
+<v Hannah Feld>Ours. Nothing runs on campus infrastructure.
+
+00:09:32.100 --> 00:09:33.000
+<v Lionel Mbatha>Okay.
+
+00:09:33.500 --> 00:09:43.200
+<v Gregor Lindahl>And just so you know, Delphine, the way we price, volume of essays doesn't change the price. It's per enrolled student in the licensed courses, so a busy midterm doesn't cost you more.
+
+00:09:43.600 --> 00:09:46.100
+<v Delphine Arceneaux>Okay. That's helpful to know.
+
+00:11:15.800 --> 00:11:35.200
+<v Hannah Feld>So that's the core loop. A couple more things, then I'll stop and take questions. Accessibility: the student view is keyboard-navigable, works with screen readers, comments are announced in reading order. And language support for multilingual writers, which I know matters for transfer students.
+
+00:11:35.600 --> 00:11:41.900
+<v Delphine Arceneaux>It does. A lot of our transfer students are, um, coming in with writing from other systems.
+
+00:11:42.300 --> 00:11:59.100
+<v Hannah Feld>Right. So the feedback can be explained in the student's preferred language while the comment stays anchored to the English text. Instructors can switch that off per course.
+
+00:11:59.600 --> 00:12:03.400
+<v Mara Ilves>Okay. I have a list of questions, but Lionel, you go first.
+
+00:12:03.900 --> 00:12:05.200
+<v Lionel Mbatha>Thank you. So, LMS integration.
+
+00:12:05.600 --> 00:12:30.900
+<v Lionel Mbatha>We're not going to have students pasting essays into a separate website. If this happens, it happens inside the LMS assignment. So: is it LTI 1.3, does it do deep linking, does it write anything back to the gradebook, and what does it need from our side, roster sync, a service account, what.
+
+00:12:31.300 --> 00:12:57.200
+<v Hannah Feld>Yep. LTI 1.3 with deep linking, so an instructor adds Scrivelo as an assignment tool in the LMS. Roster comes over through the LTI launch and names and roles service, so no separate roster sync. Gradebook write-back is off by default, and since we don't grade, the only thing it can write back is a completion flag, if you want it. On your side, a tool registration and, um, a couple of scopes.
+
+00:12:57.600 --> 00:13:01.400
+<v Lionel Mbatha>And submissions? Do you pull the file from the LMS or does the student upload twice?
+
+00:13:01.800 --> 00:13:11.200
+<v Hannah Feld>We pull it from the LMS submission via the API, so the student submits once. We have a REST API for that piece, separate from LTI.
+
+00:13:11.600 --> 00:13:14.100
+<v Lionel Mbatha>Okay. And data residency.
+
+00:13:14.500 --> 00:13:29.300
+<v Hannah Feld>All processing and storage is in a US-West region. Essays retained for the term plus ninety days by default, configurable down to thirty. Sub-processors are listed in the questionnaire.
+
+00:13:29.700 --> 00:13:37.200
+<v Gregor Lindahl>Which, by the way, our security team is just wrapping up, the questionnaire Mara sent. It's nearly done.
+
+00:13:37.600 --> 00:13:38.600
+<v Mara Ilves>Thanks.
+
+00:13:39.000 --> 00:13:55.500
+<v Lionel Mbatha>Okay. I'll be honest, since we're all here. I'm not sold that we need to buy this. The system's putting real money into Kettleyard. A rubric-aligned feedback loop on top of a hosted model is, I'd say, not nothing, but it's not magic either. We could build—
+
+00:13:55.400 --> 00:13:57.100
+<v Gregor Lindahl>Totally fair, and—
+
+00:13:57.200 --> 00:14:06.800
+<v Lionel Mbatha>Let me finish. We could build something on Kettleyard ourselves and own it. That's my bias, and I'd rather say it out loud than sit on it.
+
+00:14:07.200 --> 00:14:25.900
+<v Gregor Lindahl>No, I appreciate that, Lionel, genuinely. What I'd say is that the model is maybe ten percent of it. The rubric alignment, the revision tracking, the faculty review queue, the accessibility work, that's six years of product. But I hear you.
+
+00:14:26.300 --> 00:14:28.400
+<v Lionel Mbatha>Noted.
+
+00:14:28.900 --> 00:14:35.200
+<v Mara Ilves>That's a fair thing to put on the table. Let's keep going for now.
+
+00:14:35.600 --> 00:14:36.400
+<v Lionel Mbatha>Sure.
+
+00:15:02.000 --> 00:15:06.400
+<v Mara Ilves>Hannah, on the model side. What models, and who hosts them?
+
+00:15:06.800 --> 00:15:22.900
+<v Hannah Feld>We use a mix of hosted foundation models through our own gateway, plus a smaller fine-tuned model for the criterion tagging, which we host ourselves. All US-West. The exact providers are in the sub-processor list.
+
+00:15:23.300 --> 00:15:28.400
+<v Mara Ilves>And if a provider changes, do we get notified or does it just happen?
+
+00:15:28.800 --> 00:15:35.900
+<v Hannah Feld>Thirty days' notice for any new sub-processor. That's in the standard DPA.
+
+00:15:36.300 --> 00:15:37.100
+<v Mara Ilves>Okay.
+
+00:15:37.600 --> 00:15:45.300
+<v Mara Ilves>And what does the instructor see when the model is wrong? Like, confidently wrong about a quote.
+
+00:15:45.700 --> 00:16:04.800
+<v Hannah Feld>So students can flag any comment as "doesn't apply" or "wrong," and those come to the instructor queue and to us, anonymized. We review flagged comments weekly. Let me show you one, actually, I have a flagged one in the mock section.
+
+00:16:05.200 --> 00:16:06.300
+<v Mara Ilves>Please.
+
+00:17:48.100 --> 00:17:52.900
+<v Hannah Feld>...so that's the flag loop. Questions on that before I move to admin?
+
+00:17:53.300 --> 00:17:55.800
+<v Delphine Arceneaux>No, that's clear. Thank you.
+
+00:19:30.400 --> 00:19:47.100
+<v Hannah Feld>Admin console, briefly. This is what Lionel's team would see. Courses with Scrivelo enabled, usage by course, flag rates, and the integration health page. If the LMS API starts failing, it shows up here and we get paged too.
+
+00:19:47.500 --> 00:19:49.900
+<v Lionel Mbatha>Who's "we"? Your support, or you?
+
+00:19:50.300 --> 00:19:59.800
+<v Hannah Feld>Our support team, 24/7 for integration outages. Me, if it's something weird.
+
+00:20:00.200 --> 00:20:01.100
+<v Lionel Mbatha>Okay.
+
+00:21:12.500 --> 00:21:15.900
+<v Delphine Arceneaux>Sorry, one sec, I'm getting messages from my office. Keep going.
+
+00:21:16.300 --> 00:21:17.400
+<v Hannah Feld>No worries.
+
+00:23:40.700 --> 00:23:58.300
+<v Hannah Feld>And the last thing I'll show is the student-facing explanation page, which tells students what the tool does and does not do. It's editable by the institution. I think that's an underrated piece. Okay, I'll stop sharing.
+
+00:23:58.700 --> 00:24:00.900
+<v Gregor Lindahl>Thank you, Hannah. Questions?
+
+00:24:01.400 --> 00:24:12.800
+<v Delphine Arceneaux>I'll just say, that was clearer than I expected. The section view and the revision comparison are the two things I'd want our faculty to see.
+
+00:24:13.200 --> 00:24:14.500
+<v Gregor Lindahl>Love to hear it.
+
+00:24:15.000 --> 00:24:22.100
+<v Mara Ilves>I have a few more but they're mostly for the paperwork. Lionel?
+
+00:24:22.500 --> 00:24:27.200
+<v Lionel Mbatha>Mine are about the API. I'll come back to them.
+
+00:26:50.100 --> 00:27:05.600
+<v Mara Ilves>On rollout. Realistically, if Saltmarren chose you, how long from contract to a first section using it?
+
+00:27:06.000 --> 00:27:21.800
+<v Hannah Feld>Technically, two to three weeks for the LTI registration and testing. Practically, it's faculty readiness. We'd want an instructor workshop before any students touch it.
+
+00:27:22.200 --> 00:27:23.300
+<v Mara Ilves>Okay. That matches what we'd expect.
+
+00:29:10.400 --> 00:29:26.200
+<v Gregor Lindahl>So, let me do next steps, because I know you're all busy. First thing you'll want for the comparison is numbers. I'll get you pricing for Saltmarren, built on per-student licensing for the courses you'd actually turn it on in.
+
+00:29:26.600 --> 00:29:29.300
+<v Delphine Arceneaux>Yes, please. The ENGL 101 and 102 sections, at minimum.
+
+00:29:29.700 --> 00:29:33.900
+<v Gregor Lindahl>Perfect, I'll scope the Scrivelo pricing to that and show the system-wide tier alongside.
+
+00:29:34.300 --> 00:29:35.100
+<v Mara Ilves>Thanks.
+
+00:31:02.800 --> 00:31:08.600
+<v Lionel Mbatha>[inaudible] ...through the, the, if the token expires mid-[inaudible]
+
+00:31:09.000 --> 00:31:11.200
+<v Mara Ilves>Lionel, you cut out. Say again?
+
+00:31:16.900 --> 00:31:19.400
+<v Lionel Mbatha>Sorry. VPN again. Can you hear me now?
+
+00:31:19.800 --> 00:31:20.600
+<v Gregor Lindahl>Yes, we've got you.
+
+00:31:21.000 --> 00:31:33.900
+<v Lionel Mbatha>I was asking what happens if the LMS token expires mid-session. Does the student lose their draft? It's a detail, it can wait.
+
+00:31:34.300 --> 00:31:43.700
+<v Hannah Feld>Short answer, no, drafts autosave every thirty seconds on our side. The longer answer is a token-refresh thing, and it's a good question.
+
+00:34:20.100 --> 00:34:31.900
+<v Delphine Arceneaux>Can I come back to accessibility? Our disability services office will ask before anything goes near a student. What do you have in writing?
+
+00:34:32.300 --> 00:34:46.800
+<v Gregor Lindahl>Absolutely. We have a full accessibility conformance report, the ACR, against WCAG 2.1 AA, done by a third party. I'll send you our accessibility conformance report. Our compliance team owns the document, so it'll come from them.
+
+00:34:47.200 --> 00:34:49.900
+<v Delphine Arceneaux>Thank you. That's a hard requirement for us.
+
+00:34:50.300 --> 00:34:51.400
+<v Mara Ilves>For us too.
+
+00:36:05.500 --> 00:36:12.700
+<v Mara Ilves>A small one: is the student explanation page part of what the ACR covers, or just the main feedback view?
+
+00:36:13.100 --> 00:36:18.900
+<v Hannah Feld>Whole student-facing surface. Instructor console too, I believe. The report will say.
+
+00:38:44.200 --> 00:38:59.600
+<v Lionel Mbatha>Back to the API, then. I'd want to see the actual documentation, not a brochure. Endpoints, auth, what you pull from the LMS, what you store, rate limits, error handling.
+
+00:38:59.900 --> 00:39:00.900
+<v Gregor Lindahl>Sure, so—
+
+00:39:00.800 --> 00:39:12.400
+<v Hannah Feld>Yeah, I can do better than describe it. I'll send our LMS integration API documentation, the real reference docs, the same ones our integration partners build against.
+
+00:39:12.800 --> 00:39:14.100
+<v Lionel Mbatha>That would be helpful.
+
+00:39:14.500 --> 00:39:21.600
+<v Hannah Feld>It covers the LTI setup and the REST side, and there's a section on token refresh, which answers your earlier one.
+
+00:39:22.000 --> 00:39:23.000
+<v Lionel Mbatha>Good.
+
+00:41:30.300 --> 00:41:41.700
+<v Mara Ilves>Grig, one more for the paperwork. Have you got other campuses like Saltmarren using this? Not the flagship research universities. Regional, lots of transfer students.
+
+00:41:42.100 --> 00:41:58.400
+<v Gregor Lindahl>Yes, absolutely. I'll send you two customer references from comparable campuses, mid-size, public, heavy on first-year composition. People who will actually pick up the phone and be honest with you.
+
+00:41:58.800 --> 00:42:01.300
+<v Delphine Arceneaux>Honest would be refreshing.
+
+00:42:01.700 --> 00:42:03.900
+<v Gregor Lindahl>(laughs) I'll pick the cranky ones.
+
+00:42:04.300 --> 00:42:05.200
+<v Mara Ilves>Please do.
+
+00:44:02.600 --> 00:44:20.300
+<v Gregor Lindahl>And then the thing we find really works is to get it in front of real students early. Mara, if you could nominate two sections for a trial, even just in the second half of the term, we'd set it up at no cost and Hannah would do the faculty onboarding herself.
+
+00:44:20.700 --> 00:44:27.800
+<v Mara Ilves>Let's see after the shortlist. We haven't seen the other vendor yet, and I don't want to run a trial with one of you and not the other.
+
+00:44:28.200 --> 00:44:34.300
+<v Gregor Lindahl>Totally understand. Should I pencil in, like, a placeholder, just so we hold Hannah's time?
+
+00:44:34.700 --> 00:44:38.900
+<v Mara Ilves>No, don't pencil anything yet.
+
+00:44:39.300 --> 00:44:40.400
+<v Gregor Lindahl>Fair enough. Fair enough.
+
+00:44:40.800 --> 00:44:45.700
+<v Delphine Arceneaux>And honestly our faculty are buried until after midterms anyway.
+
+00:44:46.100 --> 00:44:47.200
+<v Gregor Lindahl>Understood.
+
+00:47:12.400 --> 00:47:30.800
+<v Lionel Mbatha>Mara, from my side. Whoever we pick has to work inside our LMS the way we've got it set up, and there are a few things we've locked down that vendors always assume we haven't. I'll send you our LMS integration constraints, so you can hold both vendors to the same list.
+
+00:47:31.200 --> 00:47:34.700
+<v Mara Ilves>That'd be great, thank you.
+
+00:47:35.100 --> 00:47:38.300
+<v Hannah Feld>And we'd love to see those too, if you're able to share them.
+
+00:47:38.700 --> 00:47:41.900
+<v Lionel Mbatha>Mara will decide what goes to vendors.
+
+00:47:42.300 --> 00:47:43.100
+<v Hannah Feld>Of course.
+
+00:48:20.500 --> 00:48:39.600
+<v Gregor Lindahl>Okay, so just to recap from our side. I owe you pricing for Saltmarren, the ACR from our compliance team, and two customer references. Hannah owes you the API documentation. And we'll hold off on the trial until you've done your shortlist.
+
+00:48:40.000 --> 00:48:41.300
+<v Mara Ilves>That's right. Thanks, both.
+
+00:48:41.700 --> 00:48:47.900
+<v Delphine Arceneaux>Thank you, this was really useful. I have to jump, I've got students lined up outside my door.
+
+00:48:48.300 --> 00:48:50.600
+<v Gregor Lindahl>Of course, thank you Delphine!
+
+00:48:51.000 --> 00:48:53.200
+<v Lionel Mbatha>Thanks. I'm dropping too.
+
+00:48:53.600 --> 00:49:01.100
+<v Gregor Lindahl>Thanks Lionel. Mara, my calendar link's in my signature if anything comes up. Have a great rest of your Tuesday.
+
+00:49:01.500 --> 00:49:02.600
+<v Mara Ilves>You too. Bye.
+
+00:49:03.000 --> 00:49:04.100
+<v Hannah Feld>Bye everyone!

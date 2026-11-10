@@ -1,0 +1,138 @@
+{
+  "date": "2027-08-31",
+  "artifacts": [
+    {
+      "id": "em-0009",
+      "channel": "email",
+      "received_at": "2027-08-31T08:22:00-06:00",
+      "path": "em-0009.eml",
+      "title": "All-staff: building access changes"
+    },
+    {
+      "id": "em-0010",
+      "channel": "email",
+      "received_at": "2027-08-31T09:07:00-06:00",
+      "path": "em-0010.eml",
+      "title": "AI-use risk taxonomy"
+    },
+    {
+      "id": "ch-0008",
+      "channel": "chat",
+      "received_at": "2027-08-31T09:31:00-06:00",
+      "path": "ch-0008.json",
+      "title": "DM: Hamish Okada / Amira Baek"
+    },
+    {
+      "id": "mn-0001",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-31T10:00:00-06:00",
+      "path": "mn-0001.md",
+      "title": "Recap: Fulmar standup"
+    },
+    {
+      "id": "ch-0009",
+      "channel": "chat",
+      "received_at": "2027-08-31T10:35:00-06:00",
+      "path": "ch-0009.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0010",
+      "channel": "chat",
+      "received_at": "2027-08-31T10:59:00-06:00",
+      "path": "ch-0010.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "em-0011",
+      "channel": "email",
+      "received_at": "2027-08-31T11:28:00-06:00",
+      "path": "em-0011.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "ch-0011",
+      "channel": "chat",
+      "received_at": "2027-08-31T13:25:00-06:00",
+      "path": "ch-0011.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    },
+    {
+      "id": "em-0012",
+      "channel": "email",
+      "received_at": "2027-08-31T13:59:00-06:00",
+      "path": "em-0012.eml",
+      "title": "Parking lot resurfacing"
+    },
+    {
+      "id": "ch-0012",
+      "channel": "chat",
+      "received_at": "2027-08-31T14:15:00-06:00",
+      "path": "ch-0012.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    },
+    {
+      "id": "ch-0013",
+      "channel": "chat",
+      "received_at": "2027-08-31T14:35:00-06:00",
+      "path": "ch-0013.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "ch-0014",
+      "channel": "chat",
+      "received_at": "2027-08-31T14:39:00-06:00",
+      "path": "ch-0014.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0015",
+      "channel": "chat",
+      "received_at": "2027-08-31T14:59:00-06:00",
+      "path": "ch-0015.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0013",
+      "channel": "email",
+      "received_at": "2027-08-31T15:49:00-06:00",
+      "path": "em-0013.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "em-0014",
+      "channel": "email",
+      "received_at": "2027-08-31T16:30:00-06:00",
+      "path": "em-0014.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "em-0015",
+      "channel": "email",
+      "received_at": "2027-08-31T17:31:00-06:00",
+      "path": "em-0015.eml",
+      "title": "Re: Fulmar load test plan"
+    },
+    {
+      "id": "nt-0003",
+      "channel": "note",
+      "received_at": "2027-08-31T17:34:00-06:00",
+      "path": "nt-0003.md",
+      "title": "Tue notes"
+    },
+    {
+      "id": "em-0016",
+      "channel": "email",
+      "received_at": "2027-08-31T18:30:00-06:00",
+      "path": "em-0016.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "ch-0016",
+      "channel": "chat",
+      "received_at": "2027-08-31T18:52:00-06:00",
+      "path": "ch-0016.json",
+      "title": "#fulmar-core"
+    }
+  ]
+}

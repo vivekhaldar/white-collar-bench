@@ -1,0 +1,35 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-eleni",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Eleni Fontaine"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T08:32:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "any news on the current referral triage process map? i'm blocked until it lands"
+  },
+  {
+   "ts": "2027-09-08T08:33:27-05:00",
+   "user": "Eleni Fontaine",
+   "handle": "@eleni",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-09-08T08:38:07-05:00",
+   "user": "Eleni Fontaine",
+   "handle": "@eleni",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-09-08T08:39:12-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "yep, all good"
+  }
+ ]
+}

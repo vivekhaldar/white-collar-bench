@@ -1,0 +1,43 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Adwoa",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-10T13:05:37-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "Just to recap, on 30 August you said you'd turn around the Fulmar API contract v2.",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@amira"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-10T13:06:54-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "on it"
+  },
+  {
+   "ts": "2027-09-10T13:10:05-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-09-10T13:12:32-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "yep, all good"
+  }
+ ]
+}

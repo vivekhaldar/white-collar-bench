@@ -1,0 +1,31 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Andres Erdem",
+  "Lindiwe Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-11T13:39:07-08:00",
+   "user": "Andres Erdem",
+   "handle": "@andres",
+   "text": "anyone up for coffee at 3?",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@lindiwe"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-11T13:42:42-08:00",
+   "user": "Lindiwe Baek",
+   "handle": "@lindiwe",
+   "text": "me!"
+  }
+ ]
+}

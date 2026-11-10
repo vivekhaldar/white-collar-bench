@@ -1,0 +1,34 @@
+{
+ "workspace": "vercliff",
+ "channel": "#mistral-core",
+ "kind": "channel",
+ "participants": [
+  "Dina Ricci",
+  "Yael Ellery",
+  "Imani Navarro",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
+  "Cassandra Yilmaz",
+  "Bilal Kahananui",
+  "Thibault Sahin",
+  "Mei Obi",
+  "Xiaoling Taufa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-09T09:15:00-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "@imani i sent you the Mistral architecture diagram.",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@rudo",
+      "@imani"
+     ]
+    }
+   ]
+  }
+ ]
+}

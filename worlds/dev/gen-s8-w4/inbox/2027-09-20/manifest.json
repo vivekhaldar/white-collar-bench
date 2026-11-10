@@ -1,0 +1,174 @@
+{
+  "date": "2027-09-20",
+  "artifacts": [
+    {
+      "id": "em-0116",
+      "channel": "email",
+      "received_at": "2027-09-20T07:05:00-06:00",
+      "path": "em-0116.eml",
+      "title": "Reminder: Friday status note due Friday 24 September"
+    },
+    {
+      "id": "ch-0092",
+      "channel": "chat",
+      "received_at": "2027-09-20T07:46:00-06:00",
+      "path": "ch-0092.json",
+      "title": "DM: Amira Baek / Batbayar Galbraith"
+    },
+    {
+      "id": "nt-0009",
+      "channel": "note",
+      "received_at": "2027-09-20T08:17:00-06:00",
+      "path": "nt-0009.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "mt-0020",
+      "channel": "transcript",
+      "received_at": "2027-09-20T09:55:00-06:00",
+      "path": "mt-0020.vtt",
+      "title": "Fulmar standup (transcript)"
+    },
+    {
+      "id": "em-0117",
+      "channel": "email",
+      "received_at": "2027-09-20T09:59:00-06:00",
+      "path": "em-0117.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "em-0118",
+      "channel": "email",
+      "received_at": "2027-09-20T10:54:00-06:00",
+      "path": "em-0118.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "ch-0093",
+      "channel": "chat",
+      "received_at": "2027-09-20T11:21:00-06:00",
+      "path": "ch-0093.json",
+      "title": "DM: Amira Baek / Ottavio Bakker"
+    },
+    {
+      "id": "em-0119",
+      "channel": "email",
+      "received_at": "2027-09-20T11:41:00-06:00",
+      "path": "em-0119.eml",
+      "title": "Re: Fulmar budget justification"
+    },
+    {
+      "id": "nt-0010",
+      "channel": "note",
+      "received_at": "2027-09-20T11:50:00-06:00",
+      "path": "nt-0010.md",
+      "title": "Voice debrief: MDO leads call"
+    },
+    {
+      "id": "ca-0012",
+      "channel": "calendar",
+      "received_at": "2027-09-20T13:18:00-06:00",
+      "path": "ca-0012.ics",
+      "title": "Invite: Walkthrough: Fulmar budget justification"
+    },
+    {
+      "id": "em-0120",
+      "channel": "email",
+      "received_at": "2027-09-20T13:28:00-06:00",
+      "path": "em-0120.eml",
+      "title": "Re: Adwoa's Fulmar cutover plan"
+    },
+    {
+      "id": "ch-0094",
+      "channel": "chat",
+      "received_at": "2027-09-20T13:34:00-06:00",
+      "path": "ch-0094.json",
+      "title": "DM: Amira Baek / Kamau Greco"
+    },
+    {
+      "id": "em-0121",
+      "channel": "email",
+      "received_at": "2027-09-20T14:14:00-06:00",
+      "path": "em-0121.eml",
+      "title": "Fwd: Safety reporting baseline analysis"
+    },
+    {
+      "id": "em-0122",
+      "channel": "email",
+      "received_at": "2027-09-20T16:29:00-06:00",
+      "path": "em-0122.eml",
+      "title": "Re: Operator AI basics workshop registration list"
+    },
+    {
+      "id": "ch-0095",
+      "channel": "chat",
+      "received_at": "2027-09-20T16:46:00-06:00",
+      "path": "ch-0095.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "ch-0096",
+      "channel": "chat",
+      "received_at": "2027-09-20T17:19:00-06:00",
+      "path": "ch-0096.json",
+      "title": "DM: Batbayar Galbraith / Amira Baek"
+    },
+    {
+      "id": "em-0123",
+      "channel": "email",
+      "received_at": "2027-09-20T17:27:00-06:00",
+      "path": "em-0123.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "ch-0097",
+      "channel": "chat",
+      "received_at": "2027-09-20T17:28:00-06:00",
+      "path": "ch-0097.json",
+      "title": "DM: Amira Baek / Adwoa Kocak"
+    },
+    {
+      "id": "dc-0008",
+      "channel": "document",
+      "received_at": "2027-09-20T17:45:00-06:00",
+      "path": "dc-0008.xlsx",
+      "title": "Operator AI basics workshop registration list v2",
+      "parent": "em-0124"
+    },
+    {
+      "id": "em-0124",
+      "channel": "email",
+      "received_at": "2027-09-20T17:45:00-06:00",
+      "path": "em-0124.eml",
+      "title": "Re: Operator AI basics workshop registration list"
+    },
+    {
+      "id": "ch-0098",
+      "channel": "chat",
+      "received_at": "2027-09-20T18:10:00-06:00",
+      "path": "ch-0098.json",
+      "title": "DM: Amira Baek / Shirin Oyelami"
+    },
+    {
+      "id": "ch-0099",
+      "channel": "chat",
+      "received_at": "2027-09-20T18:16:00-06:00",
+      "path": "ch-0099.json",
+      "title": "DM: Zawadi Quintero / Amira Baek"
+    },
+    {
+      "id": "ch-0100",
+      "channel": "chat",
+      "received_at": "2027-09-20T18:17:00-06:00",
+      "path": "ch-0100.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "em-0125",
+      "channel": "email",
+      "received_at": "2027-09-20T18:30:00-06:00",
+      "path": "em-0125.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    }
+  ]
+}

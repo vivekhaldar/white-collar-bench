@@ -1,0 +1,103 @@
+{
+  "date": "2027-03-23",
+  "artifacts": [
+    {
+      "id": "ch-0026",
+      "channel": "chat",
+      "received_at": "2027-03-23T08:26:00-05:00",
+      "path": "ch-0026.json",
+      "title": "DM: Lindiwe Ribeiro / Hiba Deng"
+    },
+    {
+      "id": "mn-0004",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-23T09:00:00-05:00",
+      "path": "mn-0004.md",
+      "title": "Recap: Catch-up: Hiba / Isla"
+    },
+    {
+      "id": "mn-0005",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-23T10:00:00-05:00",
+      "path": "mn-0005.md",
+      "title": "Recap: Wagtail standup"
+    },
+    {
+      "id": "em-0033",
+      "channel": "email",
+      "received_at": "2027-03-23T12:40:00-05:00",
+      "path": "em-0033.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ca-0002",
+      "channel": "calendar",
+      "received_at": "2027-03-23T12:58:00-05:00",
+      "path": "ca-0002.ics",
+      "title": "Invite: Wagtail security review"
+    },
+    {
+      "id": "em-0034",
+      "channel": "email",
+      "received_at": "2027-03-23T13:48:00-05:00",
+      "path": "em-0034.eml",
+      "title": "[REQ-28898] Request resolved"
+    },
+    {
+      "id": "mn-0006",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-23T14:45:00-05:00",
+      "path": "mn-0006.md",
+      "title": "Recap: Okapi / Wagtail sync"
+    },
+    {
+      "id": "em-0035",
+      "channel": "email",
+      "received_at": "2027-03-23T14:48:00-05:00",
+      "path": "em-0035.eml",
+      "title": "Fwd: Grion security questionnaire"
+    },
+    {
+      "id": "mn-0007",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-23T15:30:00-05:00",
+      "path": "mn-0007.md",
+      "title": "Recap: Clinical documentation discovery check-in"
+    },
+    {
+      "id": "em-0036",
+      "channel": "email",
+      "received_at": "2027-03-23T15:53:00-05:00",
+      "path": "em-0036.eml",
+      "title": "Coffee with Jisoo about prior authorization"
+    },
+    {
+      "id": "nt-0003",
+      "channel": "note",
+      "received_at": "2027-03-23T16:12:00-05:00",
+      "path": "nt-0003.md",
+      "title": "Tue notes"
+    },
+    {
+      "id": "em-0037",
+      "channel": "email",
+      "received_at": "2027-03-23T17:26:00-05:00",
+      "path": "em-0037.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0027",
+      "channel": "chat",
+      "received_at": "2027-03-23T17:45:00-05:00",
+      "path": "ch-0027.json",
+      "title": "DM: Hiba Deng / Jisoo Nowak"
+    },
+    {
+      "id": "em-0038",
+      "channel": "email",
+      "received_at": "2027-03-23T17:58:00-05:00",
+      "path": "em-0038.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    }
+  ]
+}

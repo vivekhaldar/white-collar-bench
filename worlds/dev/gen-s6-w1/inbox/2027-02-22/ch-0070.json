@@ -1,0 +1,23 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-tariq",
+ "kind": "dm",
+ "participants": [
+  "Tariq Okeke",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-22T17:38:00-08:00",
+   "user": "Tariq Okeke",
+   "handle": "@tariq",
+   "text": "Course Assistant Tool Selection has moved to the procurement phase! :)"
+  },
+  {
+   "ts": "2027-02-22T17:38:27-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "noted"
+  }
+ ]
+}

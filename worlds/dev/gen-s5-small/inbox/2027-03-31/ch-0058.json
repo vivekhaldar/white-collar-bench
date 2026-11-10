@@ -1,0 +1,30 @@
+{
+ "workspace": "iselvale",
+ "channel": "#wagtail-core",
+ "kind": "channel",
+ "participants": [
+  "Rike",
+  "Hiba Deng",
+  "Isla Faure",
+  "Anahit Fifita",
+  "Rudo Ekwueme",
+  "Lakshmi Figueroa",
+  "Jisoo Nowak",
+  "Maricel Fuentes",
+  "Rodrigo Okada"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-31T11:07:00-05:00",
+   "user": "Rike",
+   "handle": "@friederike",
+   "text": "@hiba on it, i'll share the wagtail architecture diagram with you"
+  },
+  {
+   "ts": "2027-03-31T11:07:57-05:00",
+   "user": "Rodrigo Okada",
+   "handle": "@rodrigo",
+   "text": "noted"
+  }
+ ]
+}

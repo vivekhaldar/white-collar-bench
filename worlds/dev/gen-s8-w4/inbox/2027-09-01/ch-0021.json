@@ -1,0 +1,17 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Adwoa Kocak",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-01T18:23:00-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "Operator AI Basics Workshop is moving into logistics."
+  }
+ ]
+}

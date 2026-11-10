@@ -1,0 +1,43 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-tahmina",
+ "kind": "dm",
+ "participants": [
+  "Aoife Everett",
+  "Tahmina Ozturk"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-31T10:24:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "pulled the morgate working paper into the deck, thanks tahmina",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@tahmina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-08-31T10:24:14+01:00",
+   "user": "Tahmina Ozturk",
+   "handle": "@tahmina",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-08-31T10:28:54+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-08-31T10:29:26+01:00",
+   "user": "Tahmina Ozturk",
+   "handle": "@tahmina",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

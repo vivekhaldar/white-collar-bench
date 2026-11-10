@@ -1,0 +1,41 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-meera-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Ottavio Moreira",
+  "Meera Bondarenko"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-10T12:58:36-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-09-10T12:59:11-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "now that i have the syllabus review discovery sandbox access sorted, i can start the dry run"
+  },
+  {
+   "ts": "2027-09-10T13:00:17-08:00",
+   "user": "Meera Bondarenko",
+   "handle": "@meera",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-09-10T13:00:54-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-09-10T13:01:16-08:00",
+   "user": "Meera Bondarenko",
+   "handle": "@meera",
+   "text": "later!"
+  }
+ ]
+}

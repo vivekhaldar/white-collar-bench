@@ -1,0 +1,44 @@
+# A raw model behind white-collar-bench's simple tool loop, over the OpenAI Chat Completions API.
+# Works with OpenAI and any OpenAI-compatible server.
+#
+#   export OPENAI_API_KEY=...
+#   wcb run --adapter adapters/examples/simple-openai.yaml --world pilot --out runs/simple-openai
+#
+# MODEL: replace <model-id> below (twice: `model:` and `--model`).
+#
+# Other endpoints (set OPENAI_BASE_URL; see docs/adapters.md for details):
+#
+#   OpenRouter  export OPENAI_BASE_URL=https://openrouter.ai/api/v1
+#               export OPENAI_API_KEY=$OPENROUTER_API_KEY     (model IDs look like vendor/model)
+#   vLLM        vllm serve <hf-model> --enable-auto-tool-choice --tool-call-parser <parser>
+#               export OPENAI_BASE_URL=http://localhost:8000/v1   (no key needed)
+#   Ollama      ollama pull <model>; raise its context window (e.g. OLLAMA_CONTEXT_LENGTH=32768)
+#               export OPENAI_BASE_URL=http://localhost:11434/v1  (no key needed)
+#
+# For a smaller context window, lower --context-budget to about 70% of it (in tokens) and
+# --max-tool-output accordingly. Reasoning models count thinking against --max-tokens: raise it.
+# --api-key-env NAME reads the key from another variable (add NAME to env_passthrough).
+name: simple-openai
+version: 0.1.0
+model: openai/<model-id>
+description: Raw model (OpenAI-compatible API) in the wcb.agents.simple tool loop
+cmd:
+  - python
+  - -I
+  - -m
+  - wcb.agents.simple
+  - --provider
+  - openai
+  - --model
+  - <model-id>
+  - --max-turns
+  - "80"
+  - --max-tokens
+  - "16000"
+ingest:
+  timeout_s: 1800
+query:
+  timeout_s: 900
+env_passthrough:
+  - OPENAI_API_KEY
+  - OPENAI_BASE_URL

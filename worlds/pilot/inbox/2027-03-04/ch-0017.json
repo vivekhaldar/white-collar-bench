@@ -1,0 +1,30 @@
+{
+  "workspace": "tarrow",
+  "channel": "#kettleyard-incident",
+  "kind": "channel",
+  "participants": ["Bartosz Zielke", "Ilya Marchetti", "Bettina Oduya", "Ramona Szabo", "Saanvi Raghunathan", "Folasade Renwick"],
+  "messages": [
+    {"ts": "2027-03-03T09:52:14-08:00", "user": "Bartosz Zielke", "handle": "@bart", "text": "declaring incident, gateway 502s. started ~09:50, all tenants incl tinderbox-kes-01. bridge: https://meet.tarrow.example/j/7713094466 passcode 330912"},
+    {"ts": "2027-03-03T09:53:40-08:00", "user": "Bartosz Zielke", "handle": "@bart", "text": "upstreams look healthy from the gateway side, 502s are coming from us not the providers. digging", "thread_of": 0},
+    {"ts": "2027-03-03T10:05:11-08:00", "user": "Ilya Marchetti", "handle": "@ilya", "text": "bart you're IC. I'll take the upstream/provider side so you don't have to"},
+    {"ts": "2027-03-03T10:05:39-08:00", "user": "Bartosz Zielke", "handle": "@bart", "text": "ack, IC", "thread_of": 2},
+    {"ts": "2027-03-03T10:14:26-08:00", "user": "Saanvi Raghunathan", "handle": "@saanvi", "text": "fyi from kestrow: aborted the tinderbox load test at 140/500 concurrent when the 502s hit us. error rate 0.2% -> 61% in under a minute. not rerunning until you're green"},
+    {"ts": "2027-03-03T10:23:08-08:00", "user": "Bartosz Zielke", "handle": "@bart", "text": "all 3 replicas up, health checks green, but the provider pool is pinned at 64/64 active on every replica and not draining. smells like the connection pool"},
+    {"ts": "2027-03-03T10:24:51-08:00", "user": "Ilya Marchetti", "handle": "@ilya", "text": "streaming timeouts not handing connections back? that's the shape of it", "thread_of": 5},
+    {"ts": "2027-03-03T10:47:33-08:00", "user": "Bartosz Zielke", "handle": "@bart", "text": "working on a pool fix: release conns on stream timeout + cap idle. will test on staging first"},
+    {"ts": "2027-03-03T11:20:05-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "@bart pls ping Mara + me when the connection-pool fix is in prod - tinderbox's load test needs it. Mara's at the offsite all day so I'm covering for her 🙏"},
+    {"ts": "2027-03-03T11:21:47-08:00", "user": "Bartosz Zielke", "handle": "@bart", "text": "will do 👍", "thread_of": 8},
+    {"ts": "2027-03-03T12:10:19-08:00", "user": "Bettina Oduya", "handle": "@bettina", "text": "campus IT comms sent - Kestrow, Saltmarren, Orrin Valley and Brackwater service desks all have the status page link and the 'expect failed requests, no action needed' line. If anyone gets a call from a campus desk, point them at the status page, not this channel."},
+    {"ts": "2027-03-03T12:30:44-08:00", "user": "Bartosz Zielke", "handle": "@bart", "text": "root cause looks like connection-pool exhaustion. conns that hit the 60s streaming timeout never go back to the pool, so it fills up and every new request gets a 502. started when the morning traffic ramped"},
+    {"ts": "2027-03-03T12:32:02-08:00", "user": "Ilya Marchetti", "handle": "@ilya", "text": "incident standup 13:00 on the same bridge. short one"},
+    {"ts": "2027-03-03T13:23:15-08:00", "user": "Ilya Marchetti", "handle": "@ilya", "text": "standup summary: bart stays IC. went back and forth on rolling back to the v2 per-tenant pools - bart thinks the pool fix is closer. bettina owns campus comms. next update 15:00"},
+    {"ts": "2027-03-03T15:02:37-08:00", "user": "Bartosz Zielke", "handle": "@bart", "text": "15:00 update: pool fix looks good on staging, pool drains properly after timeouts. rolling it out"},
+    {"ts": "2027-03-03T15:09:58-08:00", "user": "Bettina Oduya", "handle": "@bettina", "text": "status page moved to Identified with the connection-pool wording. Two campus desks have asked when; I've said \"this afternoon, watch the status page\" and nothing more specific.", "thread_of": 14},
+    {"ts": "2027-03-03T16:40:12-08:00", "user": "Bartosz Zielke", "handle": "@bart", "text": "fix deployed, gateway healthy 🎉 502s back to baseline, pool draining normally", "reactions": [{"emoji": "tada", "users": ["@ramona", "@bettina"]}, {"emoji": "pray", "users": ["@saanvi"]}]},
+    {"ts": "2027-03-03T16:43:30-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "amazing, thank you!! 🎉", "thread_of": 16},
+    {"ts": "2027-03-03T16:58:05-08:00", "user": "Bettina Oduya", "handle": "@bettina", "text": "status page set to Monitoring. I'll leave it there overnight rather than Resolved.", "thread_of": 16},
+    {"ts": "2027-03-03T17:34:21-08:00", "user": "Folasade Renwick", "handle": "@sade", "text": "@ilya I want a written postmortem on the gateway outage by next Wednesday. Root cause, timeline, what changes. @mara I want Tinderbox's impact in it.", "reactions": [{"emoji": "+1", "users": ["@ilya", "@bart"]}]},
+    {"ts": "2027-03-03T17:36:48-08:00", "user": "Ilya Marchetti", "handle": "@ilya", "text": "understood", "thread_of": 19},
+    {"ts": "2027-03-03T18:40:03-08:00", "user": "Saanvi Raghunathan", "handle": "@saanvi", "text": "will retry load test tomorrow"}
+  ]
+}

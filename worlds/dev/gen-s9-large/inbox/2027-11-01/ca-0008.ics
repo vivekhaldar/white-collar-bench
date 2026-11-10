@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Kirkmarsh//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:dd2878962a0d65cf@kirkmarsh.example
+DTSTAMP:20271101T204600Z
+DTSTART:20271103T190000Z
+DTEND:20271103T193000Z
+SUMMARY:Walkthrough: Cirrus budget justification
+ORGANIZER;CN=Aroha Mendoza:mailto:aroha.mendoza@kirkmarsh.example
+ATTENDEE;CN=Mathieu Wijaya;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:mathieu.wijaya@kirkmarsh.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.kirkmarsh.example/j/3794609227?pwd=xPMqvthT\nPasscode: 676905
+LOCATION:https://meet.kirkmarsh.example/j/3794609227?pwd=xPMqvthT
+END:VEVENT
+END:VCALENDAR

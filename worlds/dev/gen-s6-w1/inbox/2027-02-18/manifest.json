@@ -1,0 +1,146 @@
+{
+  "date": "2027-02-18",
+  "artifacts": [
+    {
+      "id": "em-0064",
+      "channel": "email",
+      "received_at": "2027-02-18T08:08:00-08:00",
+      "path": "em-0064.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "ch-0051",
+      "channel": "chat",
+      "received_at": "2027-02-18T08:33:00-08:00",
+      "path": "ch-0051.json",
+      "title": "DM: Andres Erdem / Despina Pereira"
+    },
+    {
+      "id": "em-0065",
+      "channel": "email",
+      "received_at": "2027-02-18T09:44:00-08:00",
+      "path": "em-0065.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "mn-0009",
+      "channel": "meeting_notes",
+      "received_at": "2027-02-18T11:00:00-08:00",
+      "path": "mn-0009.md",
+      "title": "Recap: Course assistant selection / Axolotl sync"
+    },
+    {
+      "id": "ch-0052",
+      "channel": "chat",
+      "received_at": "2027-02-18T11:20:00-08:00",
+      "path": "ch-0052.json",
+      "title": "#fennel-core"
+    },
+    {
+      "id": "ch-0053",
+      "channel": "chat",
+      "received_at": "2027-02-18T11:20:00-08:00",
+      "path": "ch-0053.json",
+      "title": "DM: Andres Erdem / Despina Pereira"
+    },
+    {
+      "id": "em-0066",
+      "channel": "email",
+      "received_at": "2027-02-18T11:51:00-08:00",
+      "path": "em-0066.eml",
+      "title": "FYI: Fennel timeline after Nathaniel's comments"
+    },
+    {
+      "id": "ch-0054",
+      "channel": "chat",
+      "received_at": "2027-02-18T12:07:00-08:00",
+      "path": "ch-0054.json",
+      "title": "#axolotl-core"
+    },
+    {
+      "id": "em-0067",
+      "channel": "email",
+      "received_at": "2027-02-18T13:11:00-08:00",
+      "path": "em-0067.eml",
+      "title": "FYI: Axolotl lessons-learned note"
+    },
+    {
+      "id": "ch-0055",
+      "channel": "chat",
+      "received_at": "2027-02-18T13:35:00-08:00",
+      "path": "ch-0055.json",
+      "title": "DM: Despina Pereira / Andres Erdem"
+    },
+    {
+      "id": "em-0068",
+      "channel": "email",
+      "received_at": "2027-02-18T13:54:00-08:00",
+      "path": "em-0068.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "dc-0001",
+      "channel": "document",
+      "received_at": "2027-02-18T14:11:00-08:00",
+      "path": "dc-0001.xlsx",
+      "title": "Reading list on research computing (final)",
+      "parent": "em-0069"
+    },
+    {
+      "id": "em-0069",
+      "channel": "email",
+      "received_at": "2027-02-18T14:11:00-08:00",
+      "path": "em-0069.eml",
+      "title": "Reading list on research computing"
+    },
+    {
+      "id": "ch-0056",
+      "channel": "chat",
+      "received_at": "2027-02-18T14:47:00-08:00",
+      "path": "ch-0056.json",
+      "title": "DM: Tariq Okeke / Despina Pereira"
+    },
+    {
+      "id": "em-0070",
+      "channel": "email",
+      "received_at": "2027-02-18T14:51:00-08:00",
+      "path": "em-0070.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0071",
+      "channel": "email",
+      "received_at": "2027-02-18T15:25:00-08:00",
+      "path": "em-0071.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0072",
+      "channel": "email",
+      "received_at": "2027-02-18T15:55:00-08:00",
+      "path": "em-0072.eml",
+      "title": "Fwd: Norstead's input on thesis formatting again"
+    },
+    {
+      "id": "ch-0057",
+      "channel": "chat",
+      "received_at": "2027-02-18T16:24:00-08:00",
+      "path": "ch-0057.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0058",
+      "channel": "chat",
+      "received_at": "2027-02-18T17:16:00-08:00",
+      "path": "ch-0058.json",
+      "title": "#fennel-core"
+    },
+    {
+      "id": "ch-0059",
+      "channel": "chat",
+      "received_at": "2027-02-18T18:25:00-08:00",
+      "path": "ch-0059.json",
+      "title": "#ai-use-core"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "date": "2027-08-31",
+  "artifacts": [
+    {
+      "id": "ch-0040",
+      "channel": "chat",
+      "received_at": "2027-08-31T08:42:00-08:00",
+      "path": "ch-0040.json",
+      "title": "DM: Meera Bondarenko / Ottavio Moreira"
+    },
+    {
+      "id": "ch-0041",
+      "channel": "chat",
+      "received_at": "2027-08-31T08:53:00-08:00",
+      "path": "ch-0041.json",
+      "title": "DM: Ottavio Moreira / Esperanza Venkataraman"
+    },
+    {
+      "id": "ch-0042",
+      "channel": "chat",
+      "received_at": "2027-08-31T08:56:00-08:00",
+      "path": "ch-0042.json",
+      "title": "DM: Meera Bondarenko / Ottavio Moreira"
+    },
+    {
+      "id": "ch-0043",
+      "channel": "chat",
+      "received_at": "2027-08-31T08:58:00-08:00",
+      "path": "ch-0043.json",
+      "title": "DM: Nomvula Ndlovu / Ottavio Moreira"
+    },
+    {
+      "id": "ca-0005",
+      "channel": "calendar",
+      "received_at": "2027-08-31T09:58:00-08:00",
+      "path": "ca-0005.ics",
+      "title": "Invite: Cairn platform sync"
+    },
+    {
+      "id": "em-0057",
+      "channel": "email",
+      "received_at": "2027-08-31T10:14:00-08:00",
+      "path": "em-0057.eml",
+      "title": "Re: Two customer references from Ithic"
+    },
+    {
+      "id": "ca-0006",
+      "channel": "calendar",
+      "received_at": "2027-08-31T12:03:00-08:00",
+      "path": "ca-0006.ics",
+      "title": "Invite: Cairn platform sync"
+    },
+    {
+      "id": "ch-0044",
+      "channel": "chat",
+      "received_at": "2027-08-31T12:59:00-08:00",
+      "path": "ch-0044.json",
+      "title": "DM: Ottavio Moreira / Ewan Naidu"
+    },
+    {
+      "id": "ca-0007",
+      "channel": "calendar",
+      "received_at": "2027-08-31T13:33:00-08:00",
+      "path": "ca-0007.ics",
+      "title": "Invite: Fjord scoping call"
+    },
+    {
+      "id": "ch-0045",
+      "channel": "chat",
+      "received_at": "2027-08-31T13:36:00-08:00",
+      "path": "ch-0045.json",
+      "title": "DM: Margaux Kang / Ottavio Moreira"
+    },
+    {
+      "id": "ch-0046",
+      "channel": "chat",
+      "received_at": "2027-08-31T13:50:00-08:00",
+      "path": "ch-0046.json",
+      "title": "#fjord-core"
+    },
+    {
+      "id": "em-0058",
+      "channel": "email",
+      "received_at": "2027-08-31T15:06:00-08:00",
+      "path": "em-0058.eml",
+      "title": "[REQ-19229] Request resolved"
+    },
+    {
+      "id": "ch-0047",
+      "channel": "chat",
+      "received_at": "2027-08-31T16:21:00-08:00",
+      "path": "ch-0047.json",
+      "title": "DM: Ottavio Moreira / Darius Bramwell"
+    },
+    {
+      "id": "nt-0004",
+      "channel": "note",
+      "received_at": "2027-08-31T16:31:00-08:00",
+      "path": "nt-0004.md",
+      "title": "Tue voice memo"
+    },
+    {
+      "id": "em-0059",
+      "channel": "email",
+      "received_at": "2027-08-31T18:18:00-08:00",
+      "path": "em-0059.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "em-0060",
+      "channel": "email",
+      "received_at": "2027-08-31T18:51:00-08:00",
+      "path": "em-0060.eml",
+      "title": "Catering menu for next month"
+    }
+  ]
+}

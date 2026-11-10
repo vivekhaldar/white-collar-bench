@@ -1,0 +1,17 @@
+{
+  "workspace": "tarrow",
+  "channel": "#tinderbox-core",
+  "kind": "channel",
+  "participants": ["Teodor Lisowski", "Saanvi Raghunathan", "Margarethe Voss", "Yusra Haddad", "Mara Ilves"],
+  "messages": [
+    {"ts": "2027-02-26T09:12:31-08:00", "user": "Yusra Haddad", "handle": "@yusra", "text": "Adding a few people so the whole Tinderbox team is in one channel. @saanvi is Saanvi Raghunathan, Kestrow SRE, she owns the load test. @greta is Margarethe (Greta) Voss, our Service Desk Lead. Also added @hpark (Hyun-woo) since the security review runs through him now."},
+    {"ts": "2027-02-26T09:20:04-08:00", "user": "Teodor Lisowski", "handle": "@teo", "text": "bad news: group claims aren't being released to tinderbox. IdP needs a vendor patch. ticket KSD-20931"},
+    {"ts": "2027-02-26T09:20:47-08:00", "user": "Teodor Lisowski", "handle": "@teo", "text": "app registration is fine, it's the claim release. waiting on the IdP vendor. i'll fix the group-claim release on our side as soon as the patch lands", "thread_of": 1},
+    {"ts": "2027-02-26T09:22:10-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "ok. no group claims = no role mapping = no instructor vs student. so tinderbox is now blocked on SSO group claims too, on top of the real-data pause", "thread_of": 1},
+    {"ts": "2027-02-26T09:22:36-08:00", "user": "Teodor Lisowski", "handle": "@teo", "text": "yep. will update the ticket when i hear from them", "thread_of": 1},
+    {"ts": "2027-02-26T09:24:03-08:00", "user": "Saanvi Raghunathan", "handle": "@saanvi", "text": "load test plan is done - 500 concurrent sessions, p95 < 2s target. ramp 0 to 500 over 10 min, hold 20. i'll run it once the tenant exists"},
+    {"ts": "2027-02-26T09:24:51-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "great, thanks saanvi", "reactions": [{"emoji": "+1", "users": ["@saanvi"]}]},
+    {"ts": "2027-02-26T09:28:12-08:00", "user": "Margarethe Voss", "handle": "@greta", "text": "hi all - working on the tier-1 runbook for tinderbox. will post the draft here when there's something to look at"},
+    {"ts": "2027-02-26T09:29:40-08:00", "user": "Yusra Haddad", "handle": "@yusra", "text": "thanks all", "reactions": [{"emoji": "pray", "users": ["@greta", "@saanvi"]}]}
+  ]
+}

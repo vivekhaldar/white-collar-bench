@@ -1,0 +1,35 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-tariq",
+ "kind": "dm",
+ "participants": [
+  "Tariq Okeke",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-15T11:09:00-08:00",
+   "user": "Tariq Okeke",
+   "handle": "@tariq",
+   "text": "Lanhurst Responsible AI Use Framework is moving into consultation."
+  },
+  {
+   "ts": "2027-02-15T11:09:52-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-02-15T11:13:51-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-02-15T11:16:33-08:00",
+   "user": "Tariq Okeke",
+   "handle": "@tariq",
+   "text": "later!"
+  }
+ ]
+}

@@ -1,0 +1,377 @@
+- id: q-001
+  checkpoint: cp1
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+  - scattered_evidence
+- id: q-002
+  checkpoint: cp1
+  template: project_status
+  params:
+    project: pr-okapi
+    name_form: the Ketford pilot
+  challenges:
+  - alias
+  - duplicate_signal
+  - scattered_evidence
+  - supersession
+- id: q-003
+  checkpoint: cp1
+  template: project_changes
+  params:
+    project: pr-okapi
+    since: '2027-09-17'
+  challenges:
+  - implied_commitment
+  - scattered_evidence
+  - supersession
+- id: q-004
+  checkpoint: cp1
+  template: i_owe
+  params:
+    person: p-eleni-fontaine
+    name_form: Eleni
+  challenges:
+  - alias
+- id: q-005
+  checkpoint: cp1
+  template: owed_to_me
+  params:
+    person: p-nurlan-jansen
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+  - transfer
+- id: q-006
+  checkpoint: cp1
+  template: loop_owner
+  params:
+    commitment: c-021
+  challenges:
+  - transfer
+- id: q-007
+  checkpoint: cp1
+  template: loop_due
+  params:
+    commitment: c-058
+  challenges:
+  - scattered_evidence
+- id: q-008
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-sirocco-operating-model-review
+    attribute: sponsor
+  challenges: []
+- id: q-009
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-eleni-fontaine
+    attribute: relationship
+    name_form: Lena
+  challenges:
+  - alias
+- id: q-010
+  checkpoint: cp1
+  template: project_loops
+  params:
+    project: pr-rosix-enterprise-agreement
+  challenges:
+  - duplicate_signal
+- id: q-011
+  checkpoint: cp1
+  template: person_brief
+  params:
+    person: p-dina-laurent
+  challenges:
+  - endorsement
+  - implied_commitment
+  - worker_directive
+- id: q-012
+  checkpoint: cp1
+  template: decision_date
+  params:
+    decision: d-002
+  challenges:
+  - duplicate_signal
+- id: q-013
+  checkpoint: cp1
+  template: event_date
+  params:
+    event: e-0166
+  text: When was "Send Tunde the Friday status note for w/e 17 September" completed?
+  challenges:
+  - duplicate_signal
+- id: q-014
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-lanmoor-bed-management-discovery
+    attribute: budget
+  text: What is the budget for Lanmoor Bed Management Discovery?
+  challenges:
+  - unobservable
+- id: q-015
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-penelope-romano
+    attribute: phone
+    name_form: Penny
+  challenges:
+  - alias
+  - unobservable
+- id: q-016
+  checkpoint: cp2
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+  - unobservable
+- id: q-017
+  checkpoint: cp2
+  template: project_status
+  params:
+    project: pr-okapi
+  challenges:
+  - correction
+  - duplicate_signal
+  - implied_commitment
+  - supersession
+  - transfer
+- id: q-018
+  checkpoint: cp2
+  template: project_changes
+  params:
+    project: pr-lanmoor-bed-management-discovery
+    since: '2027-09-21'
+    name_form: the Lanmoor discovery
+  challenges:
+  - alias
+  - transfer
+  - unobservable
+- id: q-019
+  checkpoint: cp2
+  template: i_owe
+  params:
+    person: p-tunde-andersen
+  challenges: []
+- id: q-020
+  checkpoint: cp2
+  template: owed_to_me
+  params:
+    person: p-katarzyna-dang
+  challenges: []
+- id: q-021
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-dalett-interpreter-booking-diligence
+    attribute: owner
+    name_form: the Dalett deep dive
+  challenges:
+  - alias
+- id: q-022
+  checkpoint: cp2
+  template: person_attr
+  params:
+    person: p-phoebe-pickering
+    attribute: org
+  challenges:
+  - new_entity
+- id: q-023
+  checkpoint: cp2
+  template: project_loops
+  params:
+    project: pr-okapi
+    name_form: OKAP
+  challenges:
+  - alias
+  - correction
+  - duplicate_signal
+  - implied_commitment
+  - transfer
+- id: q-024
+  checkpoint: cp2
+  template: person_brief
+  params:
+    person: p-nurlan-jansen
+    name_form: Nurlan
+  challenges:
+  - alias
+  - duplicate_signal
+  - implied_commitment
+  - transfer
+- id: q-025
+  checkpoint: cp2
+  template: decision_date
+  params:
+    decision: d-001
+  challenges: []
+- id: q-026
+  checkpoint: cp2
+  template: event_date
+  params:
+    event: e-0207
+  text: When was "Send Bisi the Okapi order set review" completed?
+  challenges:
+  - batch_catchup
+- id: q-027
+  checkpoint: cp2
+  template: loop_owner
+  params:
+    commitment: c-027
+  challenges:
+  - transfer
+- id: q-028
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-intake-forms-tool-selection
+    attribute: target_date
+    name_form: the Kasis/Rosix evaluation
+  challenges:
+  - alias
+- id: q-029
+  checkpoint: cp2
+  template: project_loops
+  params:
+    project: pr-lanmoor-bed-management-discovery
+  challenges:
+  - transfer
+  - unobservable
+- id: q-030
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-ketford-referral-triage-discovery
+    attribute: budget
+  challenges:
+  - unobservable
+- id: q-031
+  checkpoint: cp3
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - implied_commitment
+  - reversal
+  - unobservable
+- id: q-032
+  checkpoint: cp3
+  template: project_status
+  params:
+    project: pr-okapi
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+  - reversal
+  - supersession
+- id: q-033
+  checkpoint: cp3
+  template: project_changes
+  params:
+    project: pr-ketford-referral-triage-discovery
+    since: '2027-09-23'
+    name_form: the Ketford discovery
+  challenges:
+  - alias
+- id: q-034
+  checkpoint: cp3
+  template: i_owe
+  params:
+    person: p-bisi-chatterjee
+  challenges:
+  - duplicate_signal
+  - name_collision
+- id: q-035
+  checkpoint: cp3
+  template: owed_to_me
+  params:
+    person: p-somchai-korkmaz
+  challenges:
+  - name_collision
+- id: q-036
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-sirocco-funding-model
+    attribute: target_date
+  challenges: []
+- id: q-037
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-sirocco
+    name_form: the common platform
+  challenges:
+  - alias
+  - batch_catchup
+  - duplicate_signal
+  - implied_commitment
+- id: q-038
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-guadalupe-moreau
+  challenges:
+  - duplicate_signal
+  - new_entity
+  - restructuring
+- id: q-039
+  checkpoint: cp3
+  template: event_date
+  params:
+    event: e-0186
+  text: When was "Run a sensitivity analysis on the funding model" completed?
+  challenges:
+  - duplicate_signal
+- id: q-040
+  checkpoint: cp3
+  template: loop_due
+  params:
+    commitment: c-055
+  challenges:
+  - endorsement
+  - worker_directive
+- id: q-041
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-sirocco-funding-model
+    attribute: sponsor
+  challenges: []
+- id: q-042
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-ketford-referral-triage-discovery
+  challenges: []
+- id: q-043
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-kwame-brandt
+  challenges: []
+- id: q-044
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-lanmoor-bed-management-discovery
+    attribute: budget
+  challenges:
+  - unobservable
+- id: q-045
+  checkpoint: cp3
+  template: person_attr
+  params:
+    person: p-bisi-chatterjee
+    attribute: office
+  challenges:
+  - name_collision
+  - unobservable

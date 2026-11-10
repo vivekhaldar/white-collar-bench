@@ -1,0 +1,35 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-anh-aroha",
+ "kind": "dm",
+ "participants": [
+  "Anh",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-29T08:07:00-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "Margaux would like Mpho to send Margaux the Clelera enterprise agreement pricing comparison, not agreed yet!"
+  },
+  {
+   "ts": "2027-10-29T08:07:46-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-10-29T08:12:31-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-10-29T08:16:14-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

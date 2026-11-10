@@ -1,0 +1,23 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolat-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Bolat"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-15T17:39:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "I sent you the Corrie backlog snapshot."
+  },
+  {
+   "ts": "2027-07-15T17:40:25-08:00",
+   "user": "Bolat",
+   "handle": "@bolat",
+   "text": "thanks!"
+  }
+ ]
+}

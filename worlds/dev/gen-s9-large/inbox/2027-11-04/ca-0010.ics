@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Kirkmarsh//Calendar//EN
+METHOD:REPLY
+BEGIN:VEVENT
+UID:032129b7993bd9bb@kirkmarsh.example
+DTSTAMP:20271104T153900Z
+DTSTART:20271105T210000Z
+DTEND:20271105T213000Z
+SUMMARY:Accepted: Kittiwake follow-up
+ORGANIZER;CN=Mathieu Wijaya:mailto:mathieu.wijaya@kirkmarsh.example
+ATTENDEE;CN=Aroha Mendoza;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED:mailto:aroha.mendoza@kirkmarsh.example
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR

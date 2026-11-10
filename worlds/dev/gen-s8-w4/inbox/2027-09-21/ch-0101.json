@@ -1,0 +1,43 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Adwoa Kocak"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-21T11:02:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "done, i sent you the operator ai basics workshop attendee list",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@adwoa"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-21T11:03:02-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-09-21T11:06:17-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-09-21T11:06:55-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

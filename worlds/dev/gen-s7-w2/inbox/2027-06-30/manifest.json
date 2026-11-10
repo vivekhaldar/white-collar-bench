@@ -1,0 +1,145 @@
+{
+  "date": "2027-06-30",
+  "artifacts": [
+    {
+      "id": "ca-0013",
+      "channel": "calendar",
+      "received_at": "2027-06-30T08:21:00-08:00",
+      "path": "ca-0013.ics",
+      "title": "Cancelled: Corrie sync"
+    },
+    {
+      "id": "ch-0044",
+      "channel": "chat",
+      "received_at": "2027-06-30T08:29:00-08:00",
+      "path": "ch-0044.json",
+      "title": "DM: Madeline Chikwanha / Hiba Jimenez"
+    },
+    {
+      "id": "em-0047",
+      "channel": "email",
+      "received_at": "2027-06-30T09:28:00-08:00",
+      "path": "em-0047.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "mn-0009",
+      "channel": "meeting_notes",
+      "received_at": "2027-06-30T09:30:00-08:00",
+      "path": "mn-0009.md",
+      "title": "Notes: Assessment design workshop run-through"
+    },
+    {
+      "id": "em-0048",
+      "channel": "email",
+      "received_at": "2027-06-30T09:44:00-08:00",
+      "path": "em-0048.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "mn-0010",
+      "channel": "meeting_notes",
+      "received_at": "2027-06-30T10:00:00-08:00",
+      "path": "mn-0010.md",
+      "title": "Notes: Garnet standup"
+    },
+    {
+      "id": "ch-0045",
+      "channel": "chat",
+      "received_at": "2027-06-30T12:29:00-08:00",
+      "path": "ch-0045.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0046",
+      "channel": "chat",
+      "received_at": "2027-06-30T12:49:00-08:00",
+      "path": "ch-0046.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0047",
+      "channel": "chat",
+      "received_at": "2027-06-30T13:03:00-08:00",
+      "path": "ch-0047.json",
+      "title": "DM: Andrei Laurent / Hiba Jimenez"
+    },
+    {
+      "id": "ch-0048",
+      "channel": "chat",
+      "received_at": "2027-06-30T13:48:00-08:00",
+      "path": "ch-0048.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "mt-0010",
+      "channel": "transcript",
+      "received_at": "2027-06-30T14:30:00-08:00",
+      "path": "mt-0010.vtt",
+      "title": "Siskin platform sync (transcript)"
+    },
+    {
+      "id": "em-0049",
+      "channel": "email",
+      "received_at": "2027-06-30T15:01:00-08:00",
+      "path": "em-0049.eml",
+      "title": "Re: Garnet rollout checklist"
+    },
+    {
+      "id": "em-0050",
+      "channel": "email",
+      "received_at": "2027-06-30T15:04:00-08:00",
+      "path": "em-0050.eml",
+      "title": "The Quad Ledger: issue 26"
+    },
+    {
+      "id": "ch-0049",
+      "channel": "chat",
+      "received_at": "2027-06-30T15:10:00-08:00",
+      "path": "ch-0049.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "em-0051",
+      "channel": "email",
+      "received_at": "2027-06-30T16:18:00-08:00",
+      "path": "em-0051.eml",
+      "title": "[REQ-21294] Request resolved"
+    },
+    {
+      "id": "em-0052",
+      "channel": "email",
+      "received_at": "2027-06-30T16:27:00-08:00",
+      "path": "em-0052.eml",
+      "title": "Event space survey"
+    },
+    {
+      "id": "em-0053",
+      "channel": "email",
+      "received_at": "2027-06-30T16:29:00-08:00",
+      "path": "em-0053.eml",
+      "title": "Re: FYI: Alumni outreach discovery stakeholder map after Bolat's comments"
+    },
+    {
+      "id": "ch-0050",
+      "channel": "chat",
+      "received_at": "2027-06-30T16:39:00-08:00",
+      "path": "ch-0050.json",
+      "title": "DM: Bolat Oyelami / Hiba Jimenez"
+    },
+    {
+      "id": "em-0054",
+      "channel": "email",
+      "received_at": "2027-06-30T17:29:00-08:00",
+      "path": "em-0054.eml",
+      "title": "Catering menu for next month"
+    },
+    {
+      "id": "nt-0005",
+      "channel": "note",
+      "received_at": "2027-06-30T20:46:00-08:00",
+      "path": "nt-0005.md",
+      "title": "Wed notes"
+    }
+  ]
+}

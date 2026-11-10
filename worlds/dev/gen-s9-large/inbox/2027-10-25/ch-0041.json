@@ -1,0 +1,45 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#cirrus-core",
+ "kind": "channel",
+ "participants": [
+  "Adebayo Kahananui",
+  "Aroha Mendoza",
+  "Keisha Hargrove",
+  "Anh",
+  "Babajide Hendriks",
+  "Stanley Valdez",
+  "Mathieu Wijaya",
+  "Andres Yamamoto",
+  "Kiran Hayashi",
+  "Margo"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-25T07:39:48-05:00",
+   "user": "Adebayo Kahananui",
+   "handle": "@adebayo",
+   "text": "Recap from Thursday: Stanley offered to draft the Cirrus load test plan."
+  },
+  {
+   "ts": "2027-10-25T07:40:10-05:00",
+   "user": "Stanley Valdez",
+   "handle": "@stanley",
+   "text": "on it"
+  },
+  {
+   "ts": "2027-10-25T07:40:48-05:00",
+   "user": "Andres Yamamoto",
+   "handle": "@andres",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-10-25T07:46:54-05:00",
+   "user": "Babajide Hendriks",
+   "handle": "@babajide",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

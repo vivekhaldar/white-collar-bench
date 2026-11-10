@@ -1,0 +1,49 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-anh-aroha",
+ "kind": "dm",
+ "participants": [
+  "Anh",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-27T09:33:39-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-10-27T09:34:00-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "When you get a chance, could you update the radiology follow-up discovery opportunity list after my comments? :)",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@aroha"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-27T09:34:18-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "will do"
+  },
+  {
+   "ts": "2027-10-27T09:35:37-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-10-27T09:39:04-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "only the first half :)"
+  }
+ ]
+}

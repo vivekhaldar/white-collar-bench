@@ -1,0 +1,33 @@
+{
+ "workspace": "birchmere",
+ "channel": "#intake-forms-selection-core",
+ "kind": "channel",
+ "participants": [
+  "Bisi Chatterjee",
+  "Alasdair Kaya",
+  "Somchai Thapa",
+  "Catrin Kiprono",
+  "Sneha Thornbury"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-21T15:51:00-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "From the sync earlier, the Emberbury lead will send Alasdair the intake forms selection demo script."
+  },
+  {
+   "ts": "2027-09-21T15:51:52-05:00",
+   "user": "Catrin Kiprono",
+   "handle": "@catrin",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-09-21T15:54:11-05:00",
+   "user": "Somchai Thapa",
+   "handle": "@somchai",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

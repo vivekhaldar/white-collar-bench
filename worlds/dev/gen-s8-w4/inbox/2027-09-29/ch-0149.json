@@ -1,0 +1,43 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-thibault",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Thibault Kowalski"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-29T16:04:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "i sent you the ai-use principles draft v2",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@thibault"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-29T16:04:24-06:00",
+   "user": "Thibault Kowalski",
+   "handle": "@thibault",
+   "text": "got it, thanks"
+  },
+  {
+   "ts": "2027-09-29T16:06:51-06:00",
+   "user": "Thibault Kowalski",
+   "handle": "@thibault",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-09-29T16:10:03-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "no worries"
+  }
+ ]
+}

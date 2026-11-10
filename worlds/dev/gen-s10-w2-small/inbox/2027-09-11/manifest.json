@@ -1,0 +1,54 @@
+{
+  "date": "2027-09-11",
+  "artifacts": [
+    {
+      "id": "em-0111",
+      "channel": "email",
+      "received_at": "2027-09-11T09:24:00+01:00",
+      "path": "em-0111.eml",
+      "title": "[INC-45232] Ticket updated"
+    },
+    {
+      "id": "ch-0082",
+      "channel": "chat",
+      "received_at": "2027-09-11T09:57:00+01:00",
+      "path": "ch-0082.json",
+      "title": "DM: Sigrid Asante / Aoife Everett"
+    },
+    {
+      "id": "em-0112",
+      "channel": "email",
+      "received_at": "2027-09-11T10:31:00+01:00",
+      "path": "em-0112.eml",
+      "title": "[INC-60357] Ticket updated"
+    },
+    {
+      "id": "em-0113",
+      "channel": "email",
+      "received_at": "2027-09-11T10:56:00+01:00",
+      "path": "em-0113.eml",
+      "title": "[REQ-36713] Request resolved"
+    },
+    {
+      "id": "ch-0083",
+      "channel": "chat",
+      "received_at": "2027-09-11T13:51:00+01:00",
+      "path": "ch-0083.json",
+      "title": "DM: Gaurav Laine / Aoife Everett"
+    },
+    {
+      "id": "nt-0014",
+      "channel": "note",
+      "received_at": "2027-09-11T16:17:00+01:00",
+      "path": "nt-0014.md",
+      "title": "Sat voice memo"
+    },
+    {
+      "id": "em-0114",
+      "channel": "email",
+      "received_at": "2027-09-11T17:29:00+01:00",
+      "path": "em-0114.eml",
+      "title": "Re: Sipho's Pipit board paper"
+    }
+  ]
+}

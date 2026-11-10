@@ -1,0 +1,39 @@
+{
+ "workspace": "corrstead",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Desmond Visser",
+  "Anastasia Mizrahi",
+  "Adaeze Fifita"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-26T08:05:19-08:00",
+   "user": "Desmond Visser",
+   "handle": "@desmond",
+   "text": "lost a blue umbrella, might be in the big meeting room",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@anastasia",
+      "@adaeze"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-06-26T08:10:11-08:00",
+   "user": "Anastasia Mizrahi",
+   "handle": "@anastasia",
+   "text": "will keep an eye out"
+  },
+  {
+   "ts": "2027-06-26T08:16:32-08:00",
+   "user": "Adaeze Fifita",
+   "handle": "@adaeze",
+   "text": "there's one at reception"
+  }
+ ]
+}

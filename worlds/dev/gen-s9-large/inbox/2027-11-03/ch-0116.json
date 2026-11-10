@@ -1,0 +1,43 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-achieng-aroha",
+ "kind": "dm",
+ "participants": [
+  "Achieng",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-03T12:23:00-05:00",
+   "user": "Achieng",
+   "handle": "@achieng",
+   "text": "leave it with me, i'll share the funding model budget justification with you",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@aroha"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-03T12:23:14-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-11-03T12:23:47-05:00",
+   "user": "Achieng",
+   "handle": "@achieng",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-11-03T12:26:00-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "anytime"
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+  "date": "2027-10-26",
+  "artifacts": [
+    {
+      "id": "ca-0001",
+      "channel": "calendar",
+      "received_at": "2027-10-26T08:11:00-07:00",
+      "path": "ca-0001.ics",
+      "title": "Cancelled: Marten standup"
+    },
+    {
+      "id": "ch-0010",
+      "channel": "chat",
+      "received_at": "2027-10-26T08:15:00-07:00",
+      "path": "ch-0010.json",
+      "title": "DM: Camila Abernathy / Nadia Jovanovic"
+    },
+    {
+      "id": "em-0010",
+      "channel": "email",
+      "received_at": "2027-10-26T08:28:00-07:00",
+      "path": "em-0010.eml",
+      "title": "Re: Final name for Tarn"
+    },
+    {
+      "id": "ch-0011",
+      "channel": "chat",
+      "received_at": "2027-10-26T08:31:00-07:00",
+      "path": "ch-0011.json",
+      "title": "#benefits-screening-core"
+    },
+    {
+      "id": "ch-0012",
+      "channel": "chat",
+      "received_at": "2027-10-26T08:46:00-07:00",
+      "path": "ch-0012.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0011",
+      "channel": "email",
+      "received_at": "2027-10-26T09:11:00-07:00",
+      "path": "em-0011.eml",
+      "title": "Re: Ulworth Benefits Screening Discovery update"
+    },
+    {
+      "id": "mn-0001",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-26T09:30:00-07:00",
+      "path": "mn-0001.md",
+      "title": "Recap: Obsidian / notice translation discovery sync"
+    },
+    {
+      "id": "em-0012",
+      "channel": "email",
+      "received_at": "2027-10-26T11:18:00-07:00",
+      "path": "em-0012.eml",
+      "title": "Wellbeing week activities"
+    },
+    {
+      "id": "em-0013",
+      "channel": "email",
+      "received_at": "2027-10-26T11:56:00-07:00",
+      "path": "em-0013.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "ch-0013",
+      "channel": "chat",
+      "received_at": "2027-10-26T12:47:00-07:00",
+      "path": "ch-0013.json",
+      "title": "DM: Jalen Sandberg / Camila Abernathy"
+    },
+    {
+      "id": "ch-0014",
+      "channel": "chat",
+      "received_at": "2027-10-26T12:59:00-07:00",
+      "path": "ch-0014.json",
+      "title": "#obsidian-core"
+    },
+    {
+      "id": "ch-0015",
+      "channel": "chat",
+      "received_at": "2027-10-26T13:11:00-07:00",
+      "path": "ch-0015.json",
+      "title": "DM: Camila Abernathy / Jalen Sandberg"
+    },
+    {
+      "id": "ch-0016",
+      "channel": "chat",
+      "received_at": "2027-10-26T13:55:00-07:00",
+      "path": "ch-0016.json",
+      "title": "DM: Camila Abernathy / Fernanda Olawale"
+    },
+    {
+      "id": "ch-0017",
+      "channel": "chat",
+      "received_at": "2027-10-26T14:06:00-07:00",
+      "path": "ch-0017.json",
+      "title": "DM: Camila Abernathy / Jalen Sandberg"
+    },
+    {
+      "id": "mn-0002",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-26T15:30:00-07:00",
+      "path": "mn-0002.md",
+      "title": "Notes: 1:1 Camila / Jalen"
+    },
+    {
+      "id": "mt-0001",
+      "channel": "transcript",
+      "received_at": "2027-10-26T16:00:00-07:00",
+      "path": "mt-0001.vtt",
+      "title": "Obsidian / Marten sync (transcript)"
+    },
+    {
+      "id": "em-0014",
+      "channel": "email",
+      "received_at": "2027-10-26T17:06:00-07:00",
+      "path": "em-0014.eml",
+      "title": "[Scheduled] Network maintenance window"
+    }
+  ]
+}

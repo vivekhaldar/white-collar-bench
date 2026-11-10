@@ -1,0 +1,47 @@
+{
+ "workspace": "corrstead",
+ "channel": "#assessment-design-workshop-core",
+ "kind": "channel",
+ "participants": [
+  "Hiba Jimenez",
+  "Bolat Oyelami",
+  "Tane Wisniewska",
+  "Funmilayo Ogunleye"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-12T12:09:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "@bolat you mentioned you'd share the assessment design workshop session outline with me, that works for me"
+  },
+  {
+   "ts": "2027-07-12T12:09:39-08:00",
+   "user": "Tane Wisniewska",
+   "handle": "@tane",
+   "text": "got it",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-07-12T12:10:43-08:00",
+   "user": "Funmilayo Ogunleye",
+   "handle": "@funmilayo",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-07-12T12:18:58-08:00",
+   "user": "Tane Wisniewska",
+   "handle": "@tane",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-07-12T12:22:01-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

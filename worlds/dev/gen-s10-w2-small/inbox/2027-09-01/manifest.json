@@ -1,0 +1,110 @@
+{
+  "date": "2027-09-01",
+  "artifacts": [
+    {
+      "id": "ch-0045",
+      "channel": "chat",
+      "received_at": "2027-09-01T07:38:00+01:00",
+      "path": "ch-0045.json",
+      "title": "#nettle-core (catch-up)"
+    },
+    {
+      "id": "mt-0012",
+      "channel": "transcript",
+      "received_at": "2027-09-01T07:39:00+01:00",
+      "path": "mt-0012.vtt",
+      "title": "Pipit sync (transcript)"
+    },
+    {
+      "id": "em-0064",
+      "channel": "email",
+      "received_at": "2027-09-01T07:40:00+01:00",
+      "path": "em-0064.eml",
+      "title": "While you were out: pantry inventory discovery"
+    },
+    {
+      "id": "ca-0003",
+      "channel": "calendar",
+      "received_at": "2027-09-01T09:32:00+01:00",
+      "path": "ca-0003.ics",
+      "title": "Invite: Pipit review"
+    },
+    {
+      "id": "em-0065",
+      "channel": "email",
+      "received_at": "2027-09-01T09:49:00+01:00",
+      "path": "em-0065.eml",
+      "title": "Re: Nettle privacy impact assessment"
+    },
+    {
+      "id": "mn-0018",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-01T09:55:00+01:00",
+      "path": "mn-0018.md",
+      "title": "Recap: Nettle standup"
+    },
+    {
+      "id": "em-0066",
+      "channel": "email",
+      "received_at": "2027-09-01T10:01:00+01:00",
+      "path": "em-0066.eml",
+      "title": "Introduction: Nettle"
+    },
+    {
+      "id": "ch-0046",
+      "channel": "chat",
+      "received_at": "2027-09-01T11:06:00+01:00",
+      "path": "ch-0046.json",
+      "title": "DM: Aoife Everett / Bisi Volkov"
+    },
+    {
+      "id": "ch-0047",
+      "channel": "chat",
+      "received_at": "2027-09-01T11:30:00+01:00",
+      "path": "ch-0047.json",
+      "title": "#translation-help-selection-core"
+    },
+    {
+      "id": "em-0067",
+      "channel": "email",
+      "received_at": "2027-09-01T11:36:00+01:00",
+      "path": "em-0067.eml",
+      "title": "[REQ-27915] Request resolved"
+    },
+    {
+      "id": "ch-0048",
+      "channel": "chat",
+      "received_at": "2027-09-01T11:42:00+01:00",
+      "path": "ch-0048.json",
+      "title": "#nettle-core"
+    },
+    {
+      "id": "ch-0049",
+      "channel": "chat",
+      "received_at": "2027-09-01T12:27:00+01:00",
+      "path": "ch-0049.json",
+      "title": "DM: Amani Katz / Aoife Everett"
+    },
+    {
+      "id": "em-0068",
+      "channel": "email",
+      "received_at": "2027-09-01T12:40:00+01:00",
+      "path": "em-0068.eml",
+      "title": "Ithtec sandbox credentials"
+    },
+    {
+      "id": "mn-0019",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-01T14:30:00+01:00",
+      "path": "mn-0019.md",
+      "title": "Notes: Pipit platform sync"
+    },
+    {
+      "id": "ch-0050",
+      "channel": "chat",
+      "received_at": "2027-09-01T17:56:00+01:00",
+      "path": "ch-0050.json",
+      "title": "DM: Gaurav Laine / Aoife Everett"
+    }
+  ]
+}

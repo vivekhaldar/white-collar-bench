@@ -1,0 +1,26 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#course-assistant-discovery-core",
+ "kind": "channel",
+ "participants": [
+  "Ottavio Moreira",
+  "Roya Chatterjee",
+  "Meera Bondarenko",
+  "Tegan Ogunleye",
+  "Nadia Vogel"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-03T09:56:00-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "@tegan could you send me the course assistant discovery stakeholder map?"
+  },
+  {
+   "ts": "2027-09-03T09:56:33-08:00",
+   "user": "Roya Chatterjee",
+   "handle": "@roya",
+   "text": "good to know"
+  }
+ ]
+}

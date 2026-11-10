@@ -1,0 +1,43 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-akosua-aoife",
+ "kind": "dm",
+ "participants": [
+  "Aoife Everett",
+  "Akosua Bergstrom"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-24T08:45:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "I'm going to park the pantry inventory discovery observation notes (superseded by a decision).",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@akosua"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-08-24T08:46:17+01:00",
+   "user": "Akosua Bergstrom",
+   "handle": "@akosua",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-08-24T08:48:19+01:00",
+   "user": "Akosua Bergstrom",
+   "handle": "@akosua",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-08-24T08:50:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "no worries"
+  }
+ ]
+}

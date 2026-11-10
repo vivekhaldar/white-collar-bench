@@ -1,0 +1,49 @@
+{
+ "workspace": "birchmere",
+ "channel": "#funding-model-core",
+ "kind": "channel",
+ "participants": [
+  "Somchai",
+  "Alasdair Kaya",
+  "Bisi Chatterjee",
+  "Catrin Kiprono",
+  "Deniz Feng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-22T12:30:00-05:00",
+   "user": "Somchai",
+   "handle": "@somchai",
+   "text": "@alasdair will send you the funding model timeline.",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@catrin"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-22T12:30:16-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "noted",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-22T12:36:03-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-22T12:38:34-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "+1",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+  "date": "2027-07-10",
+  "artifacts": [
+    {
+      "id": "em-0120",
+      "channel": "email",
+      "received_at": "2027-07-10T08:12:00-08:00",
+      "path": "em-0120.eml",
+      "title": "[INC-77166] Ticket updated"
+    },
+    {
+      "id": "em-0121",
+      "channel": "email",
+      "received_at": "2027-07-10T11:26:00-08:00",
+      "path": "em-0121.eml",
+      "title": "[REQ-35526] Request resolved"
+    },
+    {
+      "id": "em-0122",
+      "channel": "email",
+      "received_at": "2027-07-10T12:47:00-08:00",
+      "path": "em-0122.eml",
+      "title": "[INC-43390] Ticket updated"
+    },
+    {
+      "id": "em-0123",
+      "channel": "email",
+      "received_at": "2027-07-10T13:08:00-08:00",
+      "path": "em-0123.eml",
+      "title": "Garnet training outline"
+    },
+    {
+      "id": "nt-0010",
+      "channel": "note",
+      "received_at": "2027-07-10T17:24:00-08:00",
+      "path": "nt-0010.md",
+      "title": "Sat voice memo"
+    },
+    {
+      "id": "ch-0099",
+      "channel": "chat",
+      "received_at": "2027-07-10T18:05:00-08:00",
+      "path": "ch-0099.json",
+      "title": "DM: Ewan Laine / Hiba Jimenez"
+    }
+  ]
+}

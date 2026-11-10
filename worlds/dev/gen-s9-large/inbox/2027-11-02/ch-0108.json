@@ -1,0 +1,37 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-anh-aroha",
+ "kind": "dm",
+ "participants": [
+  "Anh",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-02T14:55:46-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-11-02T14:56:53-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-11-02T14:58:00-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "Can you send me the bed management selection decision memo by 3 November?",
+   "edited": true,
+   "original": "Can you send me the bed management selection decision memo by 5 November?"
+  },
+  {
+   "ts": "2027-11-02T14:58:16-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "on it"
+  }
+ ]
+}

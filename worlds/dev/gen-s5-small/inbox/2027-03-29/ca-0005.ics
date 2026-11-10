@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iselvale//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:1189873c2dd660a2@iselvale.example
+DTSTAMP:20270329T220500Z
+DTSTART:20270401T190000Z
+DTEND:20270401T193000Z
+SUMMARY:Walkthrough: Wagtail risk register
+ORGANIZER;CN=Hiba Deng:mailto:hiba.deng@iselvale.example
+ATTENDEE;CN=Anahit Fifita;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:anahit.fifita@iselvale.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.iselvale.example/j/6021793334?pwd=sNwhkWka\nPasscode: 029951
+LOCATION:https://meet.iselvale.example/j/6021793334?pwd=sNwhkWka
+END:VEVENT
+END:VCALENDAR

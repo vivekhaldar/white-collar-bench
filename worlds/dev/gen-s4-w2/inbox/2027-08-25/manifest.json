@@ -1,0 +1,131 @@
+{
+  "date": "2027-08-25",
+  "artifacts": [
+    {
+      "id": "em-0019",
+      "channel": "email",
+      "received_at": "2027-08-25T08:42:00-08:00",
+      "path": "em-0019.eml",
+      "title": "[INC-49450] Ticket updated"
+    },
+    {
+      "id": "mt-0004",
+      "channel": "transcript",
+      "received_at": "2027-08-25T09:55:00-08:00",
+      "path": "mt-0004.vtt",
+      "title": "Fjord standup (transcript)"
+    },
+    {
+      "id": "em-0020",
+      "channel": "email",
+      "received_at": "2027-08-25T10:01:00-08:00",
+      "path": "em-0020.eml",
+      "title": "Re: FYI: Course assistant discovery comms plan after Meera's comments"
+    },
+    {
+      "id": "ch-0015",
+      "channel": "chat",
+      "received_at": "2027-08-25T11:02:00-08:00",
+      "path": "ch-0015.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0016",
+      "channel": "chat",
+      "received_at": "2027-08-25T12:27:00-08:00",
+      "path": "ch-0016.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "em-0021",
+      "channel": "email",
+      "received_at": "2027-08-25T12:51:00-08:00",
+      "path": "em-0021.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "ch-0017",
+      "channel": "chat",
+      "received_at": "2027-08-25T14:16:00-08:00",
+      "path": "ch-0017.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "mt-0005",
+      "channel": "transcript",
+      "received_at": "2027-08-25T14:30:00-08:00",
+      "path": "mt-0005.vtt",
+      "title": "Cairn platform sync (transcript)"
+    },
+    {
+      "id": "ch-0018",
+      "channel": "chat",
+      "received_at": "2027-08-25T15:01:00-08:00",
+      "path": "ch-0018.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0022",
+      "channel": "email",
+      "received_at": "2027-08-25T15:31:00-08:00",
+      "path": "em-0022.eml",
+      "title": "All-staff: building access changes"
+    },
+    {
+      "id": "em-0023",
+      "channel": "email",
+      "received_at": "2027-08-25T15:35:00-08:00",
+      "path": "em-0023.eml",
+      "title": "Parking lot resurfacing"
+    },
+    {
+      "id": "ca-0003",
+      "channel": "calendar",
+      "received_at": "2027-08-25T16:25:00-08:00",
+      "path": "ca-0003.ics",
+      "title": "Invite: Fjord scoping call"
+    },
+    {
+      "id": "ch-0019",
+      "channel": "chat",
+      "received_at": "2027-08-25T16:35:00-08:00",
+      "path": "ch-0019.json",
+      "title": "#lab-safety-training-core"
+    },
+    {
+      "id": "em-0024",
+      "channel": "email",
+      "received_at": "2027-08-25T16:35:00-08:00",
+      "path": "em-0024.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "em-0025",
+      "channel": "email",
+      "received_at": "2027-08-25T17:17:00-08:00",
+      "path": "em-0025.eml",
+      "title": "[REQ-37214] Request resolved"
+    },
+    {
+      "id": "em-0026",
+      "channel": "email",
+      "received_at": "2027-08-25T17:39:00-08:00",
+      "path": "em-0026.eml",
+      "title": "Wellbeing week activities"
+    },
+    {
+      "id": "em-0027",
+      "channel": "email",
+      "received_at": "2027-08-25T18:13:00-08:00",
+      "path": "em-0027.eml",
+      "title": "Coffee with Nadia about admissions triage"
+    },
+    {
+      "id": "nt-0002",
+      "channel": "note",
+      "received_at": "2027-08-25T20:21:00-08:00",
+      "path": "nt-0002.md",
+      "title": "Wed notes"
+    }
+  ]
+}

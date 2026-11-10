@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Adwoa Kocak"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-20T17:05:40-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-20T17:06:53-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-09-20T17:07:45-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "just updated the fulmar dependency list after your comments"
+  },
+  {
+   "ts": "2027-09-20T17:08:54-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "great, thanks"
+  }
+ ]
+}

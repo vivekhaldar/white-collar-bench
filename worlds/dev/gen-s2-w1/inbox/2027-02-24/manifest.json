@@ -1,0 +1,103 @@
+{
+  "date": "2027-02-24",
+  "artifacts": [
+    {
+      "id": "em-0017",
+      "channel": "email",
+      "received_at": "2027-02-24T07:41:00-07:00",
+      "path": "em-0017.eml",
+      "title": "Fwd: Parking analytics problem statement"
+    },
+    {
+      "id": "mt-0002",
+      "channel": "transcript",
+      "received_at": "2027-02-24T08:45:00-07:00",
+      "path": "mt-0002.vtt",
+      "title": "Office hours with Bogdan (transcript)"
+    },
+    {
+      "id": "em-0018",
+      "channel": "email",
+      "received_at": "2027-02-24T09:57:00-07:00",
+      "path": "em-0018.eml",
+      "title": "Event space survey"
+    },
+    {
+      "id": "mt-0003",
+      "channel": "transcript",
+      "received_at": "2027-02-24T10:00:00-07:00",
+      "path": "mt-0003.vtt",
+      "title": "Mistral standup (transcript)"
+    },
+    {
+      "id": "em-0019",
+      "channel": "email",
+      "received_at": "2027-02-24T11:05:00-07:00",
+      "path": "em-0019.eml",
+      "title": "Wellbeing week activities"
+    },
+    {
+      "id": "em-0020",
+      "channel": "email",
+      "received_at": "2027-02-24T11:26:00-07:00",
+      "path": "em-0020.eml",
+      "title": "Re: Fennel SSO broker for Nordale"
+    },
+    {
+      "id": "ch-0019",
+      "channel": "chat",
+      "received_at": "2027-02-24T11:27:00-07:00",
+      "path": "ch-0019.json",
+      "title": "DM: Imani Navarro / Dina Ricci"
+    },
+    {
+      "id": "em-0021",
+      "channel": "email",
+      "received_at": "2027-02-24T11:51:00-07:00",
+      "path": "em-0021.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "em-0022",
+      "channel": "email",
+      "received_at": "2027-02-24T12:51:00-07:00",
+      "path": "em-0022.eml",
+      "title": "[INC-73767] Ticket updated"
+    },
+    {
+      "id": "nt-0003",
+      "channel": "note",
+      "received_at": "2027-02-24T14:35:00-07:00",
+      "path": "nt-0003.md",
+      "title": "Voice debrief: Fennel platform sync"
+    },
+    {
+      "id": "em-0023",
+      "channel": "email",
+      "received_at": "2027-02-24T16:32:00-07:00",
+      "path": "em-0023.eml",
+      "title": "Re: Mistral tenant on Fennel"
+    },
+    {
+      "id": "ch-0020",
+      "channel": "chat",
+      "received_at": "2027-02-24T16:41:00-07:00",
+      "path": "ch-0020.json",
+      "title": "#fennel-core"
+    },
+    {
+      "id": "ch-0021",
+      "channel": "chat",
+      "received_at": "2027-02-24T18:14:00-07:00",
+      "path": "ch-0021.json",
+      "title": "DM: Dina Ricci / Yael Ellery"
+    },
+    {
+      "id": "ch-0022",
+      "channel": "chat",
+      "received_at": "2027-02-24T19:02:00-07:00",
+      "path": "ch-0022.json",
+      "title": "DM: Imani Navarro / Dina Ricci"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-yael",
+ "kind": "dm",
+ "participants": [
+  "Yael Ellery",
+  "Dina Ricci"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-03T11:12:00-07:00",
+   "user": "Yael Ellery",
+   "handle": "@yael",
+   "text": "Got what I needed, the Mistral rollout checklist is moving again."
+  },
+  {
+   "ts": "2027-03-03T11:12:14-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-03-03T11:14:06-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-03-03T11:15:05-07:00",
+   "user": "Yael Ellery",
+   "handle": "@yael",
+   "text": "no worries"
+  }
+ ]
+}

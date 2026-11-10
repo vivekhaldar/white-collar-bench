@@ -1,0 +1,35 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-nurlan",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Nurlan Jansen"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-20T10:45:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "just checking in on the sirocco sso broker for ketford, i'm waiting on this from you"
+  },
+  {
+   "ts": "2027-09-20T10:45:46-05:00",
+   "user": "Nurlan Jansen",
+   "handle": "@nurlan",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-09-20T10:46:37-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-09-20T10:46:57-05:00",
+   "user": "Nurlan Jansen",
+   "handle": "@nurlan",
+   "text": "later!"
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-keisha",
+ "kind": "dm",
+ "participants": [
+  "Aroha Mendoza",
+  "Keisha Hargrove"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-03T08:58:00-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "I sent you the reading list on discharge summary.",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@keisha"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-03T09:01:06-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-11-03T09:01:38-05:00",
+   "user": "Keisha Hargrove",
+   "handle": "@keisha",
+   "text": "only the first half"
+  }
+ ]
+}

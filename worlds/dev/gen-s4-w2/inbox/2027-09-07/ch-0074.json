@@ -1,0 +1,35 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-meerak-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Meera",
+  "Ottavio Moreira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T11:48:00-08:00",
+   "user": "Meera",
+   "handle": "@meerak",
+   "text": "i can send you the notes from the alumni outreach session again"
+  },
+  {
+   "ts": "2027-09-07T11:49:01-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "great, thank you"
+  },
+  {
+   "ts": "2027-09-07T11:50:28-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-09-07T11:53:16-08:00",
+   "user": "Meera",
+   "handle": "@meerak",
+   "text": "no worries"
+  }
+ ]
+}

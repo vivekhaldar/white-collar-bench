@@ -1,0 +1,132 @@
+{
+  "date": "2027-11-02",
+  "artifacts": [
+    {
+      "id": "em-0055",
+      "channel": "email",
+      "received_at": "2027-11-02T08:31:00-07:00",
+      "path": "em-0055.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "ca-0004",
+      "channel": "calendar",
+      "received_at": "2027-11-02T08:44:00-07:00",
+      "path": "ca-0004.ics",
+      "title": "Cancelled: Marten standup"
+    },
+    {
+      "id": "em-0056",
+      "channel": "email",
+      "received_at": "2027-11-02T10:17:00-07:00",
+      "path": "em-0056.eml",
+      "title": "Notice translation discovery findings summary"
+    },
+    {
+      "id": "em-0057",
+      "channel": "email",
+      "received_at": "2027-11-02T11:10:00-07:00",
+      "path": "em-0057.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "dc-0001",
+      "channel": "document",
+      "received_at": "2027-11-02T11:13:00-07:00",
+      "path": "dc-0001.xlsx",
+      "title": "Parking analytics selection requirements list (final)",
+      "parent": "em-0058"
+    },
+    {
+      "id": "em-0058",
+      "channel": "email",
+      "received_at": "2027-11-02T11:13:00-07:00",
+      "path": "em-0058.eml",
+      "title": "Re: Parking analytics selection requirements list"
+    },
+    {
+      "id": "em-0059",
+      "channel": "email",
+      "received_at": "2027-11-02T12:07:00-07:00",
+      "path": "em-0059.eml",
+      "title": "Re: Plain language workshop run sheet"
+    },
+    {
+      "id": "em-0060",
+      "channel": "email",
+      "received_at": "2027-11-02T13:22:00-07:00",
+      "path": "em-0060.eml",
+      "title": "Civic Tech Bulletin: issue 44"
+    },
+    {
+      "id": "ch-0039",
+      "channel": "chat",
+      "received_at": "2027-11-02T14:41:00-07:00",
+      "path": "ch-0039.json",
+      "title": "#marten-core"
+    },
+    {
+      "id": "ch-0040",
+      "channel": "chat",
+      "received_at": "2027-11-02T15:06:00-07:00",
+      "path": "ch-0040.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0061",
+      "channel": "email",
+      "received_at": "2027-11-02T15:26:00-07:00",
+      "path": "em-0061.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0041",
+      "channel": "chat",
+      "received_at": "2027-11-02T16:51:00-07:00",
+      "path": "ch-0041.json",
+      "title": "DM: Thandiwe Garnier / Camila Abernathy"
+    },
+    {
+      "id": "ch-0042",
+      "channel": "chat",
+      "received_at": "2027-11-02T17:00:00-07:00",
+      "path": "ch-0042.json",
+      "title": "#obsidian-core"
+    },
+    {
+      "id": "ch-0043",
+      "channel": "chat",
+      "received_at": "2027-11-02T17:14:00-07:00",
+      "path": "ch-0043.json",
+      "title": "DM: Camila Abernathy / Petra Korkmaz"
+    },
+    {
+      "id": "nt-0005",
+      "channel": "note",
+      "received_at": "2027-11-02T17:21:00-07:00",
+      "path": "nt-0005.md",
+      "title": "Tue notes"
+    },
+    {
+      "id": "em-0062",
+      "channel": "email",
+      "received_at": "2027-11-02T18:07:00-07:00",
+      "path": "em-0062.eml",
+      "title": "FYI: Obsidian tenant onboarding guide"
+    },
+    {
+      "id": "em-0063",
+      "channel": "email",
+      "received_at": "2027-11-02T18:16:00-07:00",
+      "path": "em-0063.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0064",
+      "channel": "email",
+      "received_at": "2027-11-02T18:22:00-07:00",
+      "path": "em-0064.eml",
+      "title": "Room booking confirmation"
+    }
+  ]
+}

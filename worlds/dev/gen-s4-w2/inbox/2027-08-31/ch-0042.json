@@ -1,0 +1,23 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-meera-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Meera",
+  "Ottavio Moreira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-31T08:10:14-08:00",
+   "user": "Meera",
+   "handle": "@meera",
+   "text": "Recap from 23 August: you updated the course assistant discovery comms plan after my comments."
+  },
+  {
+   "ts": "2027-08-31T08:10:37-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "thanks for the heads up"
+  }
+ ]
+}

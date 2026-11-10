@@ -1,0 +1,35 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-liisa",
+ "kind": "dm",
+ "participants": [
+  "Liisa Babic",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-22T09:17:00-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "Done, I shared the Axolotl architecture diagram with you."
+  },
+  {
+   "ts": "2027-02-22T09:17:26-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-02-22T09:20:29-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-02-22T09:22:15-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "remote, but online all day"
+  }
+ ]
+}

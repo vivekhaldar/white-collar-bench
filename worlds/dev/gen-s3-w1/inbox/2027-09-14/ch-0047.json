@@ -1,0 +1,37 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-somchai",
+ "kind": "dm",
+ "participants": [
+  "Somchai",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-14T14:37:00-05:00",
+   "user": "Somchai",
+   "handle": "@somchai",
+   "text": "Bisi Chatterjee is expecting you to send them the Sirocco operating model review comments.",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@alasdair"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-14T14:37:45-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-09-14T14:41:00-05:00",
+   "user": "Somchai",
+   "handle": "@somchai",
+   "text": "remote, but online all day"
+  }
+ ]
+}

@@ -1,0 +1,131 @@
+{
+  "date": "2027-09-13",
+  "artifacts": [
+    {
+      "id": "em-0075",
+      "channel": "email",
+      "received_at": "2027-09-13T06:59:00-06:00",
+      "path": "em-0075.eml",
+      "title": "Reminder: Friday status note due Friday 17 September"
+    },
+    {
+      "id": "ca-0007",
+      "channel": "calendar",
+      "received_at": "2027-09-13T07:39:00-06:00",
+      "path": "ca-0007.ics",
+      "title": "Invite: Rosia intro call"
+    },
+    {
+      "id": "nt-0005",
+      "channel": "note",
+      "received_at": "2027-09-13T07:47:00-06:00",
+      "path": "nt-0005.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "em-0076",
+      "channel": "email",
+      "received_at": "2027-09-13T09:45:00-06:00",
+      "path": "em-0076.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "mn-0015",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-13T09:55:00-06:00",
+      "path": "mn-0015.md",
+      "title": "Recap: Fulmar standup"
+    },
+    {
+      "id": "mt-0010",
+      "channel": "transcript",
+      "received_at": "2027-09-13T09:55:00-06:00",
+      "path": "mt-0010.vtt",
+      "title": "Fulmar standup (transcript)"
+    },
+    {
+      "id": "mt-0011",
+      "channel": "transcript",
+      "received_at": "2027-09-13T10:45:00-06:00",
+      "path": "mt-0011.vtt",
+      "title": "Fulmar / work instructions selection sync (transcript)"
+    },
+    {
+      "id": "ch-0062",
+      "channel": "chat",
+      "received_at": "2027-09-13T11:29:00-06:00",
+      "path": "ch-0062.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    },
+    {
+      "id": "em-0077",
+      "channel": "email",
+      "received_at": "2027-09-13T11:30:00-06:00",
+      "path": "em-0077.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "mt-0012",
+      "channel": "transcript",
+      "received_at": "2027-09-13T11:45:00-06:00",
+      "path": "mt-0012.vtt",
+      "title": "MDO leads call (transcript)"
+    },
+    {
+      "id": "em-0078",
+      "channel": "email",
+      "received_at": "2027-09-13T12:21:00-06:00",
+      "path": "em-0078.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0063",
+      "channel": "chat",
+      "received_at": "2027-09-13T13:43:00-06:00",
+      "path": "ch-0063.json",
+      "title": "DM: Amira Baek / Adwoa Kocak"
+    },
+    {
+      "id": "em-0079",
+      "channel": "email",
+      "received_at": "2027-09-13T13:45:00-06:00",
+      "path": "em-0079.eml",
+      "title": "Re: Fulmar access request"
+    },
+    {
+      "id": "ca-0008",
+      "channel": "calendar",
+      "received_at": "2027-09-13T14:05:00-06:00",
+      "path": "ca-0008.ics",
+      "title": "Invite: Wagtail review"
+    },
+    {
+      "id": "em-0080",
+      "channel": "email",
+      "received_at": "2027-09-13T14:58:00-06:00",
+      "path": "em-0080.eml",
+      "title": "Galix sandbox credentials"
+    },
+    {
+      "id": "ch-0064",
+      "channel": "chat",
+      "received_at": "2027-09-13T17:02:00-06:00",
+      "path": "ch-0064.json",
+      "title": "#operator-ai-basics-core"
+    },
+    {
+      "id": "em-0081",
+      "channel": "email",
+      "received_at": "2027-09-13T17:16:00-06:00",
+      "path": "em-0081.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "ca-0009",
+      "channel": "calendar",
+      "received_at": "2027-09-13T18:06:00-06:00",
+      "path": "ca-0009.ics",
+      "title": "Invite: Walkthrough: Operator AI basics workshop room plan"
+    }
+  ]
+}

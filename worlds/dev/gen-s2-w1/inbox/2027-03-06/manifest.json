@@ -1,0 +1,47 @@
+{
+  "date": "2027-03-06",
+  "artifacts": [
+    {
+      "id": "em-0077",
+      "channel": "email",
+      "received_at": "2027-03-06T07:47:00-07:00",
+      "path": "em-0077.eml",
+      "title": "Cassandra's Fennel accessibility review"
+    },
+    {
+      "id": "em-0078",
+      "channel": "email",
+      "received_at": "2027-03-06T08:11:00-07:00",
+      "path": "em-0078.eml",
+      "title": "[INC-55685] Ticket updated"
+    },
+    {
+      "id": "em-0079",
+      "channel": "email",
+      "received_at": "2027-03-06T09:19:00-07:00",
+      "path": "em-0079.eml",
+      "title": "Call for proposals closes Saturday 20 March"
+    },
+    {
+      "id": "ch-0071",
+      "channel": "chat",
+      "received_at": "2027-03-06T14:58:00-07:00",
+      "path": "ch-0071.json",
+      "title": "DM: Imani Navarro / Dina Ricci"
+    },
+    {
+      "id": "ch-0072",
+      "channel": "chat",
+      "received_at": "2027-03-06T15:24:00-07:00",
+      "path": "ch-0072.json",
+      "title": "#ai-in-public-service-core"
+    },
+    {
+      "id": "em-0080",
+      "channel": "email",
+      "received_at": "2027-03-06T18:19:00-07:00",
+      "path": "em-0080.eml",
+      "title": "Records requests discovery interview guide"
+    }
+  ]
+}

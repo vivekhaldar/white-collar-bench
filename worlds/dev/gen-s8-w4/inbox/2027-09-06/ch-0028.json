@@ -1,0 +1,29 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-tane",
+ "kind": "dm",
+ "participants": [
+  "Tane Haugen",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-06T10:21:04-06:00",
+   "user": "Tane Haugen",
+   "handle": "@tane",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-06T10:24:00-06:00",
+   "user": "Tane Haugen",
+   "handle": "@tane",
+   "text": "Morcliff Safety Reporting Discovery is moving into site visit."
+  },
+  {
+   "ts": "2027-09-06T10:24:44-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "good to know"
+  }
+ ]
+}

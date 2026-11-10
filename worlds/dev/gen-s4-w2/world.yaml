@@ -1,0 +1,51 @@
+id: gen-s4-w2
+title: 'Generated world: Systemwide Learning Innovation Office, Drayhurst University System (public university
+  system)'
+version: 1
+split: dev
+worker: p-ottavio-moreira
+timezone: -08:00
+seed:
+  start: '2027-08-23'
+  end: '2027-09-04'
+episode:
+  days:
+  - '2027-09-06'
+  - '2027-09-07'
+  - '2027-09-08'
+  - '2027-09-09'
+  - '2027-09-10'
+  - '2027-09-11'
+  - '2027-09-13'
+  - '2027-09-14'
+  - '2027-09-15'
+  - '2027-09-16'
+  - '2027-09-17'
+  - '2027-09-18'
+checkpoints:
+- id: cp1
+  date: '2027-09-07'
+  label: end of Tuesday (week 1)
+- id: cp2
+  date: '2027-09-09'
+  label: end of Thursday (week 1)
+- id: cp3
+  date: '2027-09-11'
+  label: end of week (week 1)
+- id: cp4
+  date: '2027-09-14'
+  label: end of Tuesday (week 2)
+- id: cp5
+  date: '2027-09-16'
+  label: end of Thursday (week 2)
+- id: cp6
+  date: '2027-09-18'
+  label: end of week (week 2)
+generator:
+  kind: wcb-gen
+  version: 1
+  seed: 4
+  weeks: 2
+  size: standard
+  setting: university
+  llm: false

@@ -1,0 +1,49 @@
+{
+ "workspace": "iselvale",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Maricel Fuentes",
+  "Friederike Bhatt",
+  "Aylin Kocak",
+  "Anahit Fifita"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-16T14:27:43-05:00",
+   "user": "Maricel Fuentes",
+   "handle": "@maricel",
+   "text": "is the wifi on the second floor down for anyone else?",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@friederike",
+      "@aylin"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-16T14:31:16-05:00",
+   "user": "Friederike Bhatt",
+   "handle": "@friederike",
+   "text": "yep, same here",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-16T14:36:40-05:00",
+   "user": "Aylin Kocak",
+   "handle": "@aylin",
+   "text": "works for me",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-16T14:37:44-05:00",
+   "user": "Anahit Fifita",
+   "handle": "@anahit",
+   "text": "it's been flaky all morning",
+   "thread_of": 0
+  }
+ ]
+}

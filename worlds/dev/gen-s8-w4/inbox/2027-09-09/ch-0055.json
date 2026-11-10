@@ -1,0 +1,39 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Adwoa Kocak",
+  "Batbayar Galbraith",
+  "Oksana Hoffmann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-09T14:03:43-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "is it just me or is it freezing on 3 today?",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@batbayar",
+      "@oksana"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-09T14:08:00-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "not just you"
+  },
+  {
+   "ts": "2027-09-09T14:10:48-06:00",
+   "user": "Oksana Hoffmann",
+   "handle": "@oksana",
+   "text": "bring a jumper"
+  }
+ ]
+}

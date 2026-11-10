@@ -1,0 +1,39 @@
+{
+ "workspace": "reddale",
+ "channel": "#nettle-core",
+ "kind": "channel",
+ "participants": [
+  "Doug",
+  "Aoife Everett",
+  "Gaurav Laine",
+  "Akosua Bergstrom",
+  "Bisi Volkov",
+  "Sigrid Asante",
+  "Sipho Papadopoulos",
+  "Adaeze Morimoto",
+  "Bruna Thapa",
+  "Marko Chaiyaporn"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-03T14:44:00+01:00",
+   "user": "Doug",
+   "handle": "@douglas",
+   "text": "@aoife when you get a chance, could you revise the Nettle evaluation plan?"
+  },
+  {
+   "ts": "2027-09-03T14:45:50+01:00",
+   "user": "Bisi Volkov",
+   "handle": "@bisi",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-03T14:53:39+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

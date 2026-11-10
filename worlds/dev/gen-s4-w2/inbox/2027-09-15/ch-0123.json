@@ -1,0 +1,29 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-meera-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Meera",
+  "Ottavio Moreira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-15T15:38:00-08:00",
+   "user": "Meera",
+   "handle": "@meera",
+   "text": "Sorry, I was wrong before: the waitlist management discovery missing roster sync didn't hold and has been rolled back. It's back on the list."
+  },
+  {
+   "ts": "2027-09-15T15:38:30-08:00",
+   "user": "Meera",
+   "handle": "@meera",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-09-15T15:40:17-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "later!"
+  }
+ ]
+}

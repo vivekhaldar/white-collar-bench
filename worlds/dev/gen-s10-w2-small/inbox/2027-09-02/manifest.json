@@ -1,0 +1,125 @@
+{
+  "date": "2027-09-02",
+  "artifacts": [
+    {
+      "id": "em-0069",
+      "channel": "email",
+      "received_at": "2027-09-02T07:26:00+01:00",
+      "path": "em-0069.eml",
+      "title": "Community Digital Notes: issue 35"
+    },
+    {
+      "id": "em-0070",
+      "channel": "email",
+      "received_at": "2027-09-02T07:46:00+01:00",
+      "path": "em-0070.eml",
+      "title": "Noris accessibility conformance report"
+    },
+    {
+      "id": "ca-0004",
+      "channel": "calendar",
+      "received_at": "2027-09-02T08:59:00+01:00",
+      "path": "ca-0004.ics",
+      "title": "Accepted: Pipit follow-up"
+    },
+    {
+      "id": "em-0071",
+      "channel": "email",
+      "received_at": "2027-09-02T09:03:00+01:00",
+      "path": "em-0071.eml",
+      "title": "Nettle evaluation rubric"
+    },
+    {
+      "id": "em-0072",
+      "channel": "email",
+      "received_at": "2027-09-02T09:15:00+01:00",
+      "path": "em-0072.eml",
+      "title": "Nettle dependency list"
+    },
+    {
+      "id": "ch-0051",
+      "channel": "chat",
+      "received_at": "2027-09-02T09:28:00+01:00",
+      "path": "ch-0051.json",
+      "title": "#translation-help-selection-core"
+    },
+    {
+      "id": "nt-0008",
+      "channel": "note",
+      "received_at": "2027-09-02T09:55:00+01:00",
+      "path": "nt-0008.md",
+      "title": "Voice debrief: Nettle standup"
+    },
+    {
+      "id": "ch-0052",
+      "channel": "chat",
+      "received_at": "2027-09-02T10:30:00+01:00",
+      "path": "ch-0052.json",
+      "title": "DM: Aoife Everett / Amani Xu"
+    },
+    {
+      "id": "em-0073",
+      "channel": "email",
+      "received_at": "2027-09-02T11:29:00+01:00",
+      "path": "em-0073.eml",
+      "title": "Re: Splitting out duplicate client records discovery"
+    },
+    {
+      "id": "ch-0053",
+      "channel": "chat",
+      "received_at": "2027-09-02T11:45:00+01:00",
+      "path": "ch-0053.json",
+      "title": "DM: Douglas Grigoryan / Aoife Everett"
+    },
+    {
+      "id": "ch-0054",
+      "channel": "chat",
+      "received_at": "2027-09-02T12:12:00+01:00",
+      "path": "ch-0054.json",
+      "title": "DM: Tuuli Ibekwe / Aoife Everett"
+    },
+    {
+      "id": "mn-0020",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-02T14:30:00+01:00",
+      "path": "mn-0020.md",
+      "title": "Notes: Pipit hardening review"
+    },
+    {
+      "id": "dc-0003",
+      "channel": "document",
+      "received_at": "2027-09-02T15:41:00+01:00",
+      "path": "dc-0003.xlsx",
+      "title": "Nettle member survey v3",
+      "parent": "em-0074"
+    },
+    {
+      "id": "em-0074",
+      "channel": "email",
+      "received_at": "2027-09-02T15:41:00+01:00",
+      "path": "em-0074.eml",
+      "title": "Nettle member survey"
+    },
+    {
+      "id": "mn-0021",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-02T15:45:00+01:00",
+      "path": "mn-0021.md",
+      "title": "Recap: Pipit review"
+    },
+    {
+      "id": "ch-0055",
+      "channel": "chat",
+      "received_at": "2027-09-02T16:57:00+01:00",
+      "path": "ch-0055.json",
+      "title": "DM: Aoife Everett / Akosua Bergstrom"
+    },
+    {
+      "id": "em-0075",
+      "channel": "email",
+      "received_at": "2027-09-02T17:02:00+01:00",
+      "path": "em-0075.eml",
+      "title": "Re: Nettle: numbers"
+    }
+  ]
+}

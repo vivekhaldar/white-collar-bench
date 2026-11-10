@@ -1,0 +1,26 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#captioning-discovery-core",
+ "kind": "channel",
+ "participants": [
+  "Despina Pereira",
+  "Losa Moretti",
+  "Andres",
+  "Nathaniel Cartwright",
+  "Karim Navarro"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-25T18:21:00-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "I'm in now (the captioning discovery dashboard access), starting on the testing this afternoon."
+  },
+  {
+   "ts": "2027-02-25T18:22:02-08:00",
+   "user": "Losa Moretti",
+   "handle": "@losa",
+   "text": "noted"
+  }
+ ]
+}

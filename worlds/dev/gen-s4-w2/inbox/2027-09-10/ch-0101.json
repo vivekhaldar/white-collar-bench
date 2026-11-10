@@ -1,0 +1,35 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-meera-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Meera Bondarenko",
+  "Ottavio Moreira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-10T15:04:00-08:00",
+   "user": "Meera Bondarenko",
+   "handle": "@meera",
+   "text": "Looks like Bruna fixed the Cairn broken deep links."
+  },
+  {
+   "ts": "2027-09-10T15:04:22-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "got it, thanks"
+  },
+  {
+   "ts": "2027-09-10T15:08:54-08:00",
+   "user": "Meera Bondarenko",
+   "handle": "@meera",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-09-10T15:11:11-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "yep, all good"
+  }
+ ]
+}

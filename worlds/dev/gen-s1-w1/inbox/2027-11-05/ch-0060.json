@@ -1,0 +1,43 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-jalen",
+ "kind": "dm",
+ "participants": [
+  "Jalen",
+  "Camila Abernathy"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-05T13:22:09-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "recap from monday: nadia offered to share the marten rollout checklist with you",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@camila"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-05T13:23:24-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "appreciate it"
+  },
+  {
+   "ts": "2027-11-05T13:26:03-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-11-05T13:27:49-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "later!"
+  }
+ ]
+}

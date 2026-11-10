@@ -1,0 +1,35 @@
+id: gen-s3-w1
+title: 'Generated world: Clinical Digital Services, Birchmere Health Partners (regional health network)'
+version: 1
+split: dev
+worker: p-alasdair-kaya
+timezone: -05:00
+seed:
+  start: '2027-09-06'
+  end: '2027-09-17'
+episode:
+  days:
+  - '2027-09-20'
+  - '2027-09-21'
+  - '2027-09-22'
+  - '2027-09-23'
+  - '2027-09-24'
+  - '2027-09-25'
+checkpoints:
+- id: cp1
+  date: '2027-09-21'
+  label: end of Tuesday
+- id: cp2
+  date: '2027-09-23'
+  label: end of Thursday
+- id: cp3
+  date: '2027-09-25'
+  label: end of week
+generator:
+  kind: wcb-gen
+  version: 1
+  seed: 3
+  weeks: 1
+  size: standard
+  setting: health
+  llm: false

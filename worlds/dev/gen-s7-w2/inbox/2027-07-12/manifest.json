@@ -1,0 +1,153 @@
+{
+  "date": "2027-07-12",
+  "artifacts": [
+    {
+      "id": "em-0124",
+      "channel": "email",
+      "received_at": "2027-07-12T06:56:00-08:00",
+      "path": "em-0124.eml",
+      "title": "Reminder: Friday status note due Friday 16 July"
+    },
+    {
+      "id": "nt-0011",
+      "channel": "note",
+      "received_at": "2027-07-12T08:08:00-08:00",
+      "path": "nt-0011.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "em-0125",
+      "channel": "email",
+      "received_at": "2027-07-12T08:12:00-08:00",
+      "path": "em-0125.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "em-0126",
+      "channel": "email",
+      "received_at": "2027-07-12T09:04:00-08:00",
+      "path": "em-0126.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "em-0127",
+      "channel": "email",
+      "received_at": "2027-07-12T09:31:00-08:00",
+      "path": "em-0127.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "ch-0100",
+      "channel": "chat",
+      "received_at": "2027-07-12T09:45:00-08:00",
+      "path": "ch-0100.json",
+      "title": "DM: Tane Wisniewska / Hiba Jimenez"
+    },
+    {
+      "id": "ch-0101",
+      "channel": "chat",
+      "received_at": "2027-07-12T10:45:00-08:00",
+      "path": "ch-0101.json",
+      "title": "DM: Hiba Jimenez / Ewan Laine"
+    },
+    {
+      "id": "em-0128",
+      "channel": "email",
+      "received_at": "2027-07-12T10:55:00-08:00",
+      "path": "em-0128.eml",
+      "title": "Re: Garnet action log"
+    },
+    {
+      "id": "mn-0018",
+      "channel": "meeting_notes",
+      "received_at": "2027-07-12T11:45:00-08:00",
+      "path": "mn-0018.md",
+      "title": "Recap: SLIO leads call"
+    },
+    {
+      "id": "mt-0016",
+      "channel": "transcript",
+      "received_at": "2027-07-12T11:45:00-08:00",
+      "path": "mt-0016.vtt",
+      "title": "SLIO leads call (transcript)"
+    },
+    {
+      "id": "ca-0018",
+      "channel": "calendar",
+      "received_at": "2027-07-12T12:34:00-08:00",
+      "path": "ca-0018.ics",
+      "title": "Invite: Working session: Garnet lessons-learned note"
+    },
+    {
+      "id": "ch-0102",
+      "channel": "chat",
+      "received_at": "2027-07-12T12:37:00-08:00",
+      "path": "ch-0102.json",
+      "title": "#assessment-design-workshop-core"
+    },
+    {
+      "id": "ch-0103",
+      "channel": "chat",
+      "received_at": "2027-07-12T13:19:00-08:00",
+      "path": "ch-0103.json",
+      "title": "#garnet-core"
+    },
+    {
+      "id": "ca-0019",
+      "channel": "calendar",
+      "received_at": "2027-07-12T13:21:00-08:00",
+      "path": "ca-0019.ics",
+      "title": "Invite: Walkthrough: Garnet stakeholder map"
+    },
+    {
+      "id": "mt-0017",
+      "channel": "transcript",
+      "received_at": "2027-07-12T13:30:00-08:00",
+      "path": "mt-0017.vtt",
+      "title": "Siskin / Garnet sync (transcript)"
+    },
+    {
+      "id": "em-0129",
+      "channel": "email",
+      "received_at": "2027-07-12T13:39:00-08:00",
+      "path": "em-0129.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "nt-0012",
+      "channel": "note",
+      "received_at": "2027-07-12T13:56:00-08:00",
+      "path": "nt-0012.md",
+      "title": "Mon voice memo"
+    },
+    {
+      "id": "em-0130",
+      "channel": "email",
+      "received_at": "2027-07-12T14:56:00-08:00",
+      "path": "em-0130.eml",
+      "title": "Re: Garnet API credentials"
+    },
+    {
+      "id": "dc-0004",
+      "channel": "document",
+      "received_at": "2027-07-12T15:49:00-08:00",
+      "path": "dc-0004.docx",
+      "title": "Assessment design workshop session outline v2",
+      "parent": "em-0131"
+    },
+    {
+      "id": "em-0131",
+      "channel": "email",
+      "received_at": "2027-07-12T15:49:00-08:00",
+      "path": "em-0131.eml",
+      "title": "Re: Assessment design workshop session outline"
+    },
+    {
+      "id": "mt-0018",
+      "channel": "transcript",
+      "received_at": "2027-07-12T16:15:00-08:00",
+      "path": "mt-0018.vtt",
+      "title": "Lunch and learn (transcript)"
+    }
+  ]
+}

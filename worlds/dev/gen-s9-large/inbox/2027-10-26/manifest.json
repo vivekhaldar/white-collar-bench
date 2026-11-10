@@ -1,0 +1,183 @@
+{
+  "date": "2027-10-26",
+  "artifacts": [
+    {
+      "id": "em-0057",
+      "channel": "email",
+      "received_at": "2027-10-26T09:08:00-05:00",
+      "path": "em-0057.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0058",
+      "channel": "email",
+      "received_at": "2027-10-26T09:17:00-05:00",
+      "path": "em-0058.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "mn-0010",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-26T09:30:00-05:00",
+      "path": "mn-0010.md",
+      "title": "Recap: Lunch and learn"
+    },
+    {
+      "id": "ch-0057",
+      "channel": "chat",
+      "received_at": "2027-10-26T09:45:00-05:00",
+      "path": "ch-0057.json",
+      "title": "#cirrus-core"
+    },
+    {
+      "id": "em-0059",
+      "channel": "email",
+      "received_at": "2027-10-26T11:28:00-05:00",
+      "path": "em-0059.eml",
+      "title": "[INC-54584] Ticket updated"
+    },
+    {
+      "id": "em-0060",
+      "channel": "email",
+      "received_at": "2027-10-26T11:48:00-05:00",
+      "path": "em-0060.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "ch-0058",
+      "channel": "chat",
+      "received_at": "2027-10-26T11:50:00-05:00",
+      "path": "ch-0058.json",
+      "title": "DM: Andres Yamamoto / Aroha Mendoza"
+    },
+    {
+      "id": "ch-0059",
+      "channel": "chat",
+      "received_at": "2027-10-26T12:07:00-05:00",
+      "path": "ch-0059.json",
+      "title": "DM: Ronit Kusuma / Aroha Mendoza"
+    },
+    {
+      "id": "em-0061",
+      "channel": "email",
+      "received_at": "2027-10-26T13:19:00-05:00",
+      "path": "em-0061.eml",
+      "title": "Re: Synthetic patient data set for Cirrus"
+    },
+    {
+      "id": "em-0062",
+      "channel": "email",
+      "received_at": "2027-10-26T14:14:00-05:00",
+      "path": "em-0062.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "dc-0002",
+      "channel": "document",
+      "received_at": "2027-10-26T14:21:00-05:00",
+      "path": "dc-0002.pdf",
+      "title": "Clelera enterprise agreement action log v2",
+      "parent": "em-0063"
+    },
+    {
+      "id": "em-0063",
+      "channel": "email",
+      "received_at": "2027-10-26T14:21:00-05:00",
+      "path": "em-0063.eml",
+      "title": "Re: Clelera enterprise agreement action log"
+    },
+    {
+      "id": "em-0064",
+      "channel": "email",
+      "received_at": "2027-10-26T14:54:00-05:00",
+      "path": "em-0064.eml",
+      "title": "[REQ-30523] Request resolved"
+    },
+    {
+      "id": "dc-0003",
+      "channel": "document",
+      "received_at": "2027-10-26T15:06:00-05:00",
+      "path": "dc-0003.docx",
+      "title": "Cirrus security review package v3",
+      "parent": "em-0065"
+    },
+    {
+      "id": "em-0065",
+      "channel": "email",
+      "received_at": "2027-10-26T15:06:00-05:00",
+      "path": "em-0065.eml",
+      "title": "Re: Cirrus security review package"
+    },
+    {
+      "id": "em-0066",
+      "channel": "email",
+      "received_at": "2027-10-26T15:29:00-05:00",
+      "path": "em-0066.eml",
+      "title": "Health Systems Dispatch: issue 43"
+    },
+    {
+      "id": "em-0067",
+      "channel": "email",
+      "received_at": "2027-10-26T15:59:00-05:00",
+      "path": "em-0067.eml",
+      "title": "Cirrus pilot to four wards"
+    },
+    {
+      "id": "dc-0004",
+      "channel": "document",
+      "received_at": "2027-10-26T16:04:00-05:00",
+      "path": "dc-0004.xlsx",
+      "title": "AI safety rounds workshop attendee list v2",
+      "parent": "em-0068"
+    },
+    {
+      "id": "em-0068",
+      "channel": "email",
+      "received_at": "2027-10-26T16:04:00-05:00",
+      "path": "em-0068.eml",
+      "title": "AI safety rounds workshop attendee list"
+    },
+    {
+      "id": "em-0069",
+      "channel": "email",
+      "received_at": "2027-10-26T16:31:00-05:00",
+      "path": "em-0069.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "em-0070",
+      "channel": "email",
+      "received_at": "2027-10-26T16:59:00-05:00",
+      "path": "em-0070.eml",
+      "title": "Fwd: Introduce Lilit to Isabela for the Vashmere working group"
+    },
+    {
+      "id": "em-0071",
+      "channel": "email",
+      "received_at": "2027-10-26T17:09:00-05:00",
+      "path": "em-0071.eml",
+      "title": "Fwd: Redridge data-use agreement"
+    },
+    {
+      "id": "em-0072",
+      "channel": "email",
+      "received_at": "2027-10-26T17:23:00-05:00",
+      "path": "em-0072.eml",
+      "title": "Fwd: Frostmere data-use agreement"
+    },
+    {
+      "id": "em-0073",
+      "channel": "email",
+      "received_at": "2027-10-26T18:26:00-05:00",
+      "path": "em-0073.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "ch-0060",
+      "channel": "chat",
+      "received_at": "2027-10-26T18:27:00-05:00",
+      "path": "ch-0060.json",
+      "title": "DM: Aroha Mendoza / Lilit Wekesa"
+    }
+  ]
+}

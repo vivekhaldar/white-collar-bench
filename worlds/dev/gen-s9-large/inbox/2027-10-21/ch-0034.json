@@ -1,0 +1,32 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#informatics-nurse-core",
+ "kind": "channel",
+ "participants": [
+  "Chiamaka Rashed",
+  "Aroha Mendoza",
+  "Mathieu Wijaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-21T16:21:35-05:00",
+   "user": "Chiamaka Rashed",
+   "handle": "@chiamaka",
+   "text": "@aroha just to recap, yesterday I said I'd check references for Bram."
+  },
+  {
+   "ts": "2027-10-21T16:21:52-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "got it",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-10-21T16:30:53-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

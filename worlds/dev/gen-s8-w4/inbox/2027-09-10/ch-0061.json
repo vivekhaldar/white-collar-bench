@@ -1,0 +1,32 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Thibault Kowalski",
+  "Adwoa Kocak",
+  "Marcelo Meijer",
+  "Goran Liu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-10T13:39:06-06:00",
+   "user": "Thibault Kowalski",
+   "handle": "@thibault",
+   "text": "the elevator on the east side is out again"
+  },
+  {
+   "ts": "2027-09-10T13:40:50-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "stairs it is",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-10T13:44:23-06:00",
+   "user": "Marcelo Meijer",
+   "handle": "@marcelo",
+   "text": "classic"
+  }
+ ]
+}

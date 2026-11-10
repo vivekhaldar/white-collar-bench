@@ -1,0 +1,146 @@
+{
+  "date": "2027-09-06",
+  "artifacts": [
+    {
+      "id": "em-0044",
+      "channel": "email",
+      "received_at": "2027-09-06T06:56:00-06:00",
+      "path": "em-0044.eml",
+      "title": "Reminder: Friday status note due Friday 10 September"
+    },
+    {
+      "id": "em-0045",
+      "channel": "email",
+      "received_at": "2027-09-06T08:06:00-06:00",
+      "path": "em-0045.eml",
+      "title": "Adwoa's Fulmar requirements matrix"
+    },
+    {
+      "id": "mn-0005",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-06T09:55:00-06:00",
+      "path": "mn-0005.md",
+      "title": "Recap: Fulmar standup"
+    },
+    {
+      "id": "em-0046",
+      "channel": "email",
+      "received_at": "2027-09-06T10:10:00-06:00",
+      "path": "em-0046.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "ch-0027",
+      "channel": "chat",
+      "received_at": "2027-09-06T10:37:00-06:00",
+      "path": "ch-0027.json",
+      "title": "DM: Marcelo Meijer / Amira Baek"
+    },
+    {
+      "id": "ch-0028",
+      "channel": "chat",
+      "received_at": "2027-09-06T10:50:00-06:00",
+      "path": "ch-0028.json",
+      "title": "DM: Tane Haugen / Amira Baek"
+    },
+    {
+      "id": "dc-0003",
+      "channel": "document",
+      "received_at": "2027-09-06T10:55:00-06:00",
+      "path": "dc-0003.pdf",
+      "title": "Fulmar status slide v2",
+      "parent": "em-0047"
+    },
+    {
+      "id": "em-0047",
+      "channel": "email",
+      "received_at": "2027-09-06T10:55:00-06:00",
+      "path": "em-0047.eml",
+      "title": "Fulmar status slide"
+    },
+    {
+      "id": "em-0048",
+      "channel": "email",
+      "received_at": "2027-09-06T11:21:00-06:00",
+      "path": "em-0048.eml",
+      "title": "Event space survey"
+    },
+    {
+      "id": "mn-0006",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-06T11:30:00-06:00",
+      "path": "mn-0006.md",
+      "title": "Recap: Fulmar security review"
+    },
+    {
+      "id": "mn-0007",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-06T11:45:00-06:00",
+      "path": "mn-0007.md",
+      "title": "Notes: MDO leads call"
+    },
+    {
+      "id": "ch-0029",
+      "channel": "chat",
+      "received_at": "2027-09-06T11:50:00-06:00",
+      "path": "ch-0029.json",
+      "title": "DM: Kian Ishikawa / Amira Baek"
+    },
+    {
+      "id": "ch-0030",
+      "channel": "chat",
+      "received_at": "2027-09-06T12:00:00-06:00",
+      "path": "ch-0030.json",
+      "title": "DM: Amira Baek / Kian Ishikawa"
+    },
+    {
+      "id": "mn-0008",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-06T12:00:00-06:00",
+      "path": "mn-0008.md",
+      "title": "Notes: Rosia intro call"
+    },
+    {
+      "id": "ch-0031",
+      "channel": "chat",
+      "received_at": "2027-09-06T12:13:00-06:00",
+      "path": "ch-0031.json",
+      "title": "#work-instructions-core"
+    },
+    {
+      "id": "ch-0032",
+      "channel": "chat",
+      "received_at": "2027-09-06T12:40:00-06:00",
+      "path": "ch-0032.json",
+      "title": "DM: Zawadi Quintero / Amira Baek"
+    },
+    {
+      "id": "ch-0033",
+      "channel": "chat",
+      "received_at": "2027-09-06T13:26:00-06:00",
+      "path": "ch-0033.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "ch-0034",
+      "channel": "chat",
+      "received_at": "2027-09-06T16:00:00-06:00",
+      "path": "ch-0034.json",
+      "title": "DM: Oksana Hoffmann / Amira Baek"
+    },
+    {
+      "id": "mt-0005",
+      "channel": "transcript",
+      "received_at": "2027-09-06T16:30:00-06:00",
+      "path": "mt-0005.vtt",
+      "title": "Fulmar security review (transcript)"
+    },
+    {
+      "id": "em-0049",
+      "channel": "email",
+      "received_at": "2027-09-06T18:24:00-06:00",
+      "path": "em-0049.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    }
+  ]
+}

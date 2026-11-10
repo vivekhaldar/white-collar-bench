@@ -1,0 +1,32 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Andres Erdem",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-08T15:43:29-08:00",
+   "user": "Andres Erdem",
+   "handle": "@andres",
+   "text": "lost a blue umbrella, might be in the big meeting room",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@despina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-08T15:47:46-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "will keep an eye out",
+   "thread_of": 0
+  }
+ ]
+}

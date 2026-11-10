@@ -1,0 +1,31 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Esperanza Venkataraman",
+  "Theresa Petrov",
+  "Nomvula Ndlovu",
+  "Bruna Vaughan"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-26T16:53:33-08:00",
+   "user": "Esperanza Venkataraman",
+   "handle": "@esperanza",
+   "text": "the elevator on the east side is out again"
+  },
+  {
+   "ts": "2027-08-26T17:00:07-08:00",
+   "user": "Theresa Petrov",
+   "handle": "@theresa",
+   "text": "stairs it is"
+  },
+  {
+   "ts": "2027-08-26T17:01:49-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "classic"
+  }
+ ]
+}

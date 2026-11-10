@@ -1,0 +1,38 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Bruna Vaughan",
+  "Meera Bondarenko",
+  "Theresa Petrov",
+  "Nomvula Ndlovu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-26T09:28:32-08:00",
+   "user": "Bruna Vaughan",
+   "handle": "@bruna",
+   "text": "anyone up for coffee at 3?"
+  },
+  {
+   "ts": "2027-08-26T09:31:45-08:00",
+   "user": "Meera Bondarenko",
+   "handle": "@meera",
+   "text": "me!"
+  },
+  {
+   "ts": "2027-08-26T09:36:11-08:00",
+   "user": "Theresa Petrov",
+   "handle": "@theresa",
+   "text": "can't today, back to back"
+  },
+  {
+   "ts": "2027-08-26T09:37:44-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "yes please",
+   "thread_of": 0
+  }
+ ]
+}

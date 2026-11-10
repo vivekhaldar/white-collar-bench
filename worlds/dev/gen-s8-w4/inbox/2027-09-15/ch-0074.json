@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-segun",
+ "kind": "dm",
+ "participants": [
+  "Segun Okeke",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-15T07:19:00-06:00",
+   "user": "Segun Okeke",
+   "handle": "@segun",
+   "text": "i sent the rosia accessibility conformance report"
+  },
+  {
+   "ts": "2027-09-15T07:20:17-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "got it, thanks"
+  },
+  {
+   "ts": "2027-09-15T07:24:39-06:00",
+   "user": "Segun Okeke",
+   "handle": "@segun",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-09-15T07:26:31-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

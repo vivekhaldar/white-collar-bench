@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Adwoa",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-29T12:19:49-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-29T12:21:00-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "Will share the Fulmar requirements matrix v2 with you."
+  },
+  {
+   "ts": "2027-09-29T12:24:26-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-09-29T12:27:49-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "remote, but online all day"
+  }
+ ]
+}

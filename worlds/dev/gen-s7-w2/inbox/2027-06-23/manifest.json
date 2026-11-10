@@ -1,0 +1,138 @@
+{
+  "date": "2027-06-23",
+  "artifacts": [
+    {
+      "id": "em-0014",
+      "channel": "email",
+      "received_at": "2027-06-23T08:16:00-08:00",
+      "path": "em-0014.eml",
+      "title": "Wellbeing week activities"
+    },
+    {
+      "id": "em-0015",
+      "channel": "email",
+      "received_at": "2027-06-23T09:55:00-08:00",
+      "path": "em-0015.eml",
+      "title": "Fwd: Corrie usability findings"
+    },
+    {
+      "id": "nt-0002",
+      "channel": "note",
+      "received_at": "2027-06-23T09:55:00-08:00",
+      "path": "nt-0002.md",
+      "title": "Voice debrief: Garnet standup"
+    },
+    {
+      "id": "nt-0003",
+      "channel": "note",
+      "received_at": "2027-06-23T09:58:00-08:00",
+      "path": "nt-0003.md",
+      "title": "Wed notes"
+    },
+    {
+      "id": "mt-0001",
+      "channel": "transcript",
+      "received_at": "2027-06-23T10:30:00-08:00",
+      "path": "mt-0001.vtt",
+      "title": "Garnet scoping call (transcript)"
+    },
+    {
+      "id": "mn-0003",
+      "channel": "meeting_notes",
+      "received_at": "2027-06-23T11:30:00-08:00",
+      "path": "mn-0003.md",
+      "title": "Recap: Catch-up: Hiba / Catalina"
+    },
+    {
+      "id": "mt-0002",
+      "channel": "transcript",
+      "received_at": "2027-06-23T11:30:00-08:00",
+      "path": "mt-0002.vtt",
+      "title": "Catch-up: Hiba / Catalina (transcript)"
+    },
+    {
+      "id": "em-0016",
+      "channel": "email",
+      "received_at": "2027-06-23T11:38:00-08:00",
+      "path": "em-0016.eml",
+      "title": "Fwd: Garnet solution brief"
+    },
+    {
+      "id": "em-0017",
+      "channel": "email",
+      "received_at": "2027-06-23T11:47:00-08:00",
+      "path": "em-0017.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0017",
+      "channel": "chat",
+      "received_at": "2027-06-23T11:53:00-08:00",
+      "path": "ch-0017.json",
+      "title": "DM: Andrei Laurent / Hiba Jimenez"
+    },
+    {
+      "id": "em-0018",
+      "channel": "email",
+      "received_at": "2027-06-23T12:54:00-08:00",
+      "path": "em-0018.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "ca-0004",
+      "channel": "calendar",
+      "received_at": "2027-06-23T12:59:00-08:00",
+      "path": "ca-0004.ics",
+      "title": "Invite: Catch-up: Hiba / Catalina"
+    },
+    {
+      "id": "em-0019",
+      "channel": "email",
+      "received_at": "2027-06-23T13:17:00-08:00",
+      "path": "em-0019.eml",
+      "title": "Garnet API contract v2"
+    },
+    {
+      "id": "ca-0005",
+      "channel": "calendar",
+      "received_at": "2027-06-23T13:40:00-08:00",
+      "path": "ca-0005.ics",
+      "title": "Updated: Elmwick site visit"
+    },
+    {
+      "id": "ch-0018",
+      "channel": "chat",
+      "received_at": "2027-06-23T14:31:00-08:00",
+      "path": "ch-0018.json",
+      "title": "DM: Hiba Jimenez / Desmond Visser"
+    },
+    {
+      "id": "em-0020",
+      "channel": "email",
+      "received_at": "2027-06-23T14:33:00-08:00",
+      "path": "em-0020.eml",
+      "title": "Fwd: Introduce Rania to Bolat for the Holmarsh working group"
+    },
+    {
+      "id": "mn-0004",
+      "channel": "meeting_notes",
+      "received_at": "2027-06-23T14:35:00-08:00",
+      "path": "mn-0004.md",
+      "title": "Recap: Siskin platform sync"
+    },
+    {
+      "id": "ch-0019",
+      "channel": "chat",
+      "received_at": "2027-06-23T15:47:00-08:00",
+      "path": "ch-0019.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0021",
+      "channel": "email",
+      "received_at": "2027-06-23T18:29:00-08:00",
+      "path": "em-0021.eml",
+      "title": "[INC-66093] Ticket updated"
+    }
+  ]
+}

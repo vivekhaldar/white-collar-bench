@@ -1,0 +1,10 @@
+{
+  "workspace": "tarrow",
+  "channel": "dm-mara-lucia",
+  "kind": "dm",
+  "participants": ["Mara Ilves", "Lucía Ferreyra"],
+  "messages": [
+    {"ts": "2027-03-02T08:31:22-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "can you find 45 min w/ sade + bart ngata re tinderbox ownership? this wk or next"},
+    {"ts": "2027-03-02T08:33:00-08:00", "user": "Lucía Ferreyra", "handle": "@lucia", "text": "Sade's at the leadership offsite tomorrow too - I'll look at Thu/Fri. Invite to follow!", "reactions": [{"emoji": "pray", "users": ["@mara"]}]}
+  ]
+}

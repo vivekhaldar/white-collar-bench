@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tarrow University System//Calendar 2027//EN
+METHOD:CANCEL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:e7b3f215-sade-mara-1on1@tarrow.example
+RECURRENCE-ID:20270304T150000
+DTSTAMP:20270302T000500Z
+SEQUENCE:2
+STATUS:CANCELLED
+SUMMARY:Canceled: Sade / Mara 1:1
+DTSTART:20270304T150000
+DTEND:20270304T153000
+LOCATION:VC office (4th floor) / video
+ORGANIZER;CN=Lucía Ferreyra:mailto:lucia.ferreyra@tarrow.example
+ATTENDEE;CN=Folasade Renwick;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:folasade.renwick@tarrow.example
+ATTENDEE;CN=Mara Ilves;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:mara.ilves@tarrow.example
+DESCRIPTION:Sade is in Board of Regents prep Thursday afternoon - I'll find a slot next week. - Lulu
+END:VEVENT
+END:VCALENDAR

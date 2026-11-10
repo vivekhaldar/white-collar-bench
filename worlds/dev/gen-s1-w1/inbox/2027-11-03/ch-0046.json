@@ -1,0 +1,31 @@
+{
+ "workspace": "holcrest",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Jalen Sandberg",
+  "Joselito Moradi",
+  "Nadia Jovanovic"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-03T10:03:30-07:00",
+   "user": "Jalen Sandberg",
+   "handle": "@jalen",
+   "text": "does anyone have a spare laptop charger (usb-c)?"
+  },
+  {
+   "ts": "2027-11-03T10:08:08-07:00",
+   "user": "Joselito Moradi",
+   "handle": "@joselito",
+   "text": "i have one, desk by the window"
+  },
+  {
+   "ts": "2027-11-03T10:10:15-07:00",
+   "user": "Nadia Jovanovic",
+   "handle": "@nadia",
+   "text": "check the supply cupboard",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "workspace": "iselvale",
+ "channel": "#okapi-core",
+ "kind": "channel",
+ "participants": [
+  "Jisoo Nowak",
+  "Hiba Deng",
+  "Lakshmi Figueroa",
+  "Anahit Fifita",
+  "Isla Faure",
+  "Rudo Ekwueme",
+  "Friederike Bhatt"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-22T13:57:00-05:00",
+   "user": "Jisoo Nowak",
+   "handle": "@jisoo",
+   "text": "@friederike i rotated the Okapi vault secrets earlier today."
+  },
+  {
+   "ts": "2027-03-22T13:57:06-05:00",
+   "user": "Lakshmi Figueroa",
+   "handle": "@lakshmi",
+   "text": "noted"
+  },
+  {
+   "ts": "2027-03-22T14:03:52-05:00",
+   "user": "Anahit Fifita",
+   "handle": "@anahit",
+   "text": "following :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-22T14:08:50-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,103 @@
+{
+  "date": "2027-07-01",
+  "artifacts": [
+    {
+      "id": "em-0055",
+      "channel": "email",
+      "received_at": "2027-07-01T06:31:00-08:00",
+      "path": "em-0055.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0051",
+      "channel": "chat",
+      "received_at": "2027-07-01T08:20:00-08:00",
+      "path": "ch-0051.json",
+      "title": "#siskin-core"
+    },
+    {
+      "id": "em-0056",
+      "channel": "email",
+      "received_at": "2027-07-01T09:12:00-08:00",
+      "path": "em-0056.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0052",
+      "channel": "chat",
+      "received_at": "2027-07-01T09:26:00-08:00",
+      "path": "ch-0052.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "em-0057",
+      "channel": "email",
+      "received_at": "2027-07-01T09:40:00-08:00",
+      "path": "em-0057.eml",
+      "title": "[INC-56825] Ticket updated"
+    },
+    {
+      "id": "em-0058",
+      "channel": "email",
+      "received_at": "2027-07-01T10:10:00-08:00",
+      "path": "em-0058.eml",
+      "title": "Elmwick Alumni Outreach Discovery update"
+    },
+    {
+      "id": "ch-0053",
+      "channel": "chat",
+      "received_at": "2027-07-01T11:03:00-08:00",
+      "path": "ch-0053.json",
+      "title": "DM: Andrei Laurent / Hiba Jimenez"
+    },
+    {
+      "id": "ch-0054",
+      "channel": "chat",
+      "received_at": "2027-07-01T11:30:00-08:00",
+      "path": "ch-0054.json",
+      "title": "DM: Mere Hidayat / Hiba Jimenez"
+    },
+    {
+      "id": "em-0059",
+      "channel": "email",
+      "received_at": "2027-07-01T11:50:00-08:00",
+      "path": "em-0059.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0055",
+      "channel": "chat",
+      "received_at": "2027-07-01T12:27:00-08:00",
+      "path": "ch-0055.json",
+      "title": "#alumni-outreach-discovery-core"
+    },
+    {
+      "id": "ch-0056",
+      "channel": "chat",
+      "received_at": "2027-07-01T13:44:00-08:00",
+      "path": "ch-0056.json",
+      "title": "DM: Hiba Jimenez / Ewan Laine"
+    },
+    {
+      "id": "ch-0057",
+      "channel": "chat",
+      "received_at": "2027-07-01T14:25:00-08:00",
+      "path": "ch-0057.json",
+      "title": "#siskin-core"
+    },
+    {
+      "id": "ch-0058",
+      "channel": "chat",
+      "received_at": "2027-07-01T15:11:00-08:00",
+      "path": "ch-0058.json",
+      "title": "DM: Adaeze Fifita / Hiba Jimenez"
+    },
+    {
+      "id": "em-0060",
+      "channel": "email",
+      "received_at": "2027-07-01T17:12:00-08:00",
+      "path": "em-0060.eml",
+      "title": "Re: Garnet integration endpoint"
+    }
+  ]
+}

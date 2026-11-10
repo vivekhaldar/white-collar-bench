@@ -1,0 +1,23 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-losa",
+ "kind": "dm",
+ "participants": [
+  "Losa Moretti",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-17T10:51:00-08:00",
+   "user": "Losa Moretti",
+   "handle": "@losa",
+   "text": "Picking the Axolotl change request back up now."
+  },
+  {
+   "ts": "2027-02-17T10:52:18-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "good to know"
+  }
+ ]
+}

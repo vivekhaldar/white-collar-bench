@@ -1,0 +1,45 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-eleni",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Eleni Fontaine"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-22T11:55:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "Done, I sent you the referral triage discovery interview guide.",
+   "edited": true,
+   "original": "Done, I sent you the referral triage dicsovery interview guide.",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@eleni"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-22T11:56:25-05:00",
+   "user": "Eleni Fontaine",
+   "handle": "@eleni",
+   "text": "great, thanks :)"
+  },
+  {
+   "ts": "2027-09-22T11:57:07-05:00",
+   "user": "Eleni Fontaine",
+   "handle": "@eleni",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-09-22T12:00:56-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

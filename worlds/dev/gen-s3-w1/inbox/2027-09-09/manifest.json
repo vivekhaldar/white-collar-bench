@@ -1,0 +1,138 @@
+{
+  "date": "2027-09-09",
+  "artifacts": [
+    {
+      "id": "em-0019",
+      "channel": "email",
+      "received_at": "2027-09-09T06:31:00-05:00",
+      "path": "em-0019.eml",
+      "title": "[REQ-37688] Request resolved"
+    },
+    {
+      "id": "em-0020",
+      "channel": "email",
+      "received_at": "2027-09-09T06:46:00-05:00",
+      "path": "em-0020.eml",
+      "title": "Wellness credit deadline"
+    },
+    {
+      "id": "ch-0022",
+      "channel": "chat",
+      "received_at": "2027-09-09T07:46:00-05:00",
+      "path": "ch-0022.json",
+      "title": "DM: Bisi Njoroge / Alasdair Kaya"
+    },
+    {
+      "id": "em-0021",
+      "channel": "email",
+      "received_at": "2027-09-09T08:09:00-05:00",
+      "path": "em-0021.eml",
+      "title": "Re: Reference note for Dina's prior authorization fellowship application"
+    },
+    {
+      "id": "em-0022",
+      "channel": "email",
+      "received_at": "2027-09-09T08:37:00-05:00",
+      "path": "em-0022.eml",
+      "title": "Parking lot resurfacing"
+    },
+    {
+      "id": "em-0023",
+      "channel": "email",
+      "received_at": "2027-09-09T09:31:00-05:00",
+      "path": "em-0023.eml",
+      "title": "FYI: Current referral triage process map"
+    },
+    {
+      "id": "ch-0023",
+      "channel": "chat",
+      "received_at": "2027-09-09T09:43:00-05:00",
+      "path": "ch-0023.json",
+      "title": "#random"
+    },
+    {
+      "id": "mt-0008",
+      "channel": "transcript",
+      "received_at": "2027-09-09T09:55:00-05:00",
+      "path": "mt-0008.vtt",
+      "title": "Okapi standup (transcript)"
+    },
+    {
+      "id": "ch-0024",
+      "channel": "chat",
+      "received_at": "2027-09-09T10:06:00-05:00",
+      "path": "ch-0024.json",
+      "title": "DM: Lindiwe Ahmadi / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0025",
+      "channel": "chat",
+      "received_at": "2027-09-09T10:58:00-05:00",
+      "path": "ch-0025.json",
+      "title": "DM: Eleni Fontaine / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0026",
+      "channel": "chat",
+      "received_at": "2027-09-09T12:47:00-05:00",
+      "path": "ch-0026.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "em-0024",
+      "channel": "email",
+      "received_at": "2027-09-09T14:00:00-05:00",
+      "path": "em-0024.eml",
+      "title": "Your benefits statement is ready"
+    },
+    {
+      "id": "ch-0027",
+      "channel": "chat",
+      "received_at": "2027-09-09T14:44:00-05:00",
+      "path": "ch-0027.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0028",
+      "channel": "chat",
+      "received_at": "2027-09-09T14:50:00-05:00",
+      "path": "ch-0028.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0025",
+      "channel": "email",
+      "received_at": "2027-09-09T14:55:00-05:00",
+      "path": "em-0025.eml",
+      "title": "[REQ-24349] Request resolved"
+    },
+    {
+      "id": "em-0026",
+      "channel": "email",
+      "received_at": "2027-09-09T15:20:00-05:00",
+      "path": "em-0026.eml",
+      "title": "All-staff: building access changes"
+    },
+    {
+      "id": "ch-0029",
+      "channel": "chat",
+      "received_at": "2027-09-09T15:37:00-05:00",
+      "path": "ch-0029.json",
+      "title": "#random"
+    },
+    {
+      "id": "ca-0004",
+      "channel": "calendar",
+      "received_at": "2027-09-09T16:04:00-05:00",
+      "path": "ca-0004.ics",
+      "title": "Invite: Catch-up: Alasdair / Somchai"
+    },
+    {
+      "id": "nt-0003",
+      "channel": "note",
+      "received_at": "2027-09-09T16:10:00-05:00",
+      "path": "nt-0003.md",
+      "title": "Thu notes"
+    }
+  ]
+}

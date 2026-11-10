@@ -1,0 +1,33 @@
+{
+  "date": "2027-04-03",
+  "artifacts": [
+    {
+      "id": "em-0086",
+      "channel": "email",
+      "received_at": "2027-04-03T09:48:00-05:00",
+      "path": "em-0086.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0087",
+      "channel": "email",
+      "received_at": "2027-04-03T10:57:00-05:00",
+      "path": "em-0087.eml",
+      "title": "[REQ-38790] Request resolved"
+    },
+    {
+      "id": "em-0088",
+      "channel": "email",
+      "received_at": "2027-04-03T11:42:00-05:00",
+      "path": "em-0088.eml",
+      "title": "[REQ-21083] Request resolved"
+    },
+    {
+      "id": "em-0089",
+      "channel": "email",
+      "received_at": "2027-04-03T12:12:00-05:00",
+      "path": "em-0089.eml",
+      "title": "[REQ-10035] Request resolved"
+    }
+  ]
+}

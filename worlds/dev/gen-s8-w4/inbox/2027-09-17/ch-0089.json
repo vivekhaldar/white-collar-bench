@@ -1,0 +1,42 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Oksana Hoffmann",
+  "Ifeoma Tapsell",
+  "Hamish Okada",
+  "Jonathan Gurung"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-17T12:41:06-06:00",
+   "user": "Oksana Hoffmann",
+   "handle": "@oksana",
+   "text": "does anyone have a spare laptop charger (usb-c)?",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@ifeoma",
+      "@hamish"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-17T12:42:33-06:00",
+   "user": "Ifeoma Tapsell",
+   "handle": "@ifeoma",
+   "text": "I have one, desk by the window",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-17T12:44:42-06:00",
+   "user": "Hamish Okada",
+   "handle": "@hamish",
+   "text": "check the supply cupboard :)",
+   "thread_of": 0
+  }
+ ]
+}

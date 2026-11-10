@@ -1,0 +1,25 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-sipho",
+ "kind": "dm",
+ "participants": [
+  "Sipho Papadopoulos",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-31T16:40:00+01:00",
+   "user": "Sipho Papadopoulos",
+   "handle": "@sipho",
+   "text": "Just fixed the Pipit stale cache! :)",
+   "edited": true,
+   "original": "Just fixed the Pipit stael cache! :)"
+  },
+  {
+   "ts": "2027-08-31T16:40:52+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "thank you!"
+  }
+ ]
+}

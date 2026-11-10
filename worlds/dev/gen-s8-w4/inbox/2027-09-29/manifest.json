@@ -1,0 +1,124 @@
+{
+  "date": "2027-09-29",
+  "artifacts": [
+    {
+      "id": "em-0176",
+      "channel": "email",
+      "received_at": "2027-09-29T07:46:00-06:00",
+      "path": "em-0176.eml",
+      "title": "Industrial Data Digest: issue 39"
+    },
+    {
+      "id": "em-0177",
+      "channel": "email",
+      "received_at": "2027-09-29T08:36:00-06:00",
+      "path": "em-0177.eml",
+      "title": "Re: Fulmar stakeholder map v2"
+    },
+    {
+      "id": "ca-0018",
+      "channel": "calendar",
+      "received_at": "2027-09-29T09:20:00-06:00",
+      "path": "ca-0018.ics",
+      "title": "Cancelled: Fulmar standup"
+    },
+    {
+      "id": "em-0178",
+      "channel": "email",
+      "received_at": "2027-09-29T09:26:00-06:00",
+      "path": "em-0178.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0179",
+      "channel": "email",
+      "received_at": "2027-09-29T10:55:00-06:00",
+      "path": "em-0179.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0145",
+      "channel": "chat",
+      "received_at": "2027-09-29T11:47:00-06:00",
+      "path": "ch-0145.json",
+      "title": "DM: Tane Haugen / Amira Baek"
+    },
+    {
+      "id": "mt-0030",
+      "channel": "transcript",
+      "received_at": "2027-09-29T12:30:00-06:00",
+      "path": "mt-0030.vtt",
+      "title": "Ivycrest relationship check-in (transcript)"
+    },
+    {
+      "id": "ch-0146",
+      "channel": "chat",
+      "received_at": "2027-09-29T12:52:00-06:00",
+      "path": "ch-0146.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    },
+    {
+      "id": "ch-0147",
+      "channel": "chat",
+      "received_at": "2027-09-29T13:17:00-06:00",
+      "path": "ch-0147.json",
+      "title": "DM: Giorgi Wisniewska / Amira Baek"
+    },
+    {
+      "id": "mt-0031",
+      "channel": "transcript",
+      "received_at": "2027-09-29T14:30:00-06:00",
+      "path": "mt-0031.vtt",
+      "title": "Wagtail platform sync (transcript)"
+    },
+    {
+      "id": "ch-0148",
+      "channel": "chat",
+      "received_at": "2027-09-29T16:10:00-06:00",
+      "path": "ch-0148.json",
+      "title": "DM: Giorgi Wisniewska / Amira Baek"
+    },
+    {
+      "id": "ch-0149",
+      "channel": "chat",
+      "received_at": "2027-09-29T16:32:00-06:00",
+      "path": "ch-0149.json",
+      "title": "DM: Amira Baek / Thibault Kowalski"
+    },
+    {
+      "id": "nt-0019",
+      "channel": "note",
+      "received_at": "2027-09-29T16:41:00-06:00",
+      "path": "nt-0019.md",
+      "title": "Wed notes"
+    },
+    {
+      "id": "em-0180",
+      "channel": "email",
+      "received_at": "2027-09-29T17:21:00-06:00",
+      "path": "em-0180.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "mn-0023",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-29T17:30:00-06:00",
+      "path": "mn-0023.md",
+      "title": "Recap: Catch-up: Amira / Zawadi"
+    },
+    {
+      "id": "ch-0150",
+      "channel": "chat",
+      "received_at": "2027-09-29T18:28:00-06:00",
+      "path": "ch-0150.json",
+      "title": "DM: Adwoa Chukwu / Amira Baek"
+    },
+    {
+      "id": "em-0181",
+      "channel": "email",
+      "received_at": "2027-09-29T18:28:00-06:00",
+      "path": "em-0181.eml",
+      "title": "Falhaven's input on predictive maintenance again"
+    }
+  ]
+}

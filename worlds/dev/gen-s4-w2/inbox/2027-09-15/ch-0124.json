@@ -1,0 +1,23 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-henrik-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Ottavio Moreira",
+  "Henrik Santoso"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-15T17:19:45-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-09-15T17:20:29-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "Just sent you the room booking selection renewal questionnaire."
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+From: Kestrow Service Desk <noreply-servicedesk@kestrow.tarrow.example>
+To: Mara Ilves <mara.ilves@tarrow.example>
+Date: Mon, 01 Mar 2027 16:48:00 -0800
+Subject: [KSD-20931] Tinderbox SSO group claims: status changed to Pending Vendor
+Message-ID: <em-0023@kestrow.tarrow.example>
+Auto-Submitted: auto-generated
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+This is an automated ticketing notification from the Kestrow Service Desk.
+Please do not reply to this email; replies to this address are not monitored.
+
+The status of a ticket you are watching has changed.
+
+  Ticket:        KSD-20931
+  Summary:       Tinderbox SSO - group claims not released
+  Category:      Identity & Access > SSO / Federation
+  Priority:      P3 - Normal
+  Assignee:      T. Lisowski (Identity & Access)
+  Watchers:      M. Ilves
+  Opened:        26 Feb 2027 09:14
+
+  Status:        In Progress  ->  Pending Vendor
+
+  Last update:   01 Mar 2027 16:47 by T. Lisowski
+                 "Awaiting IdP vendor patch"
+
+About this status: "Pending Vendor" means the ticket is waiting on a
+third-party supplier. Response-time targets are paused while a ticket is in
+this status and resume automatically when it returns to In Progress.
+
+View the full ticket history:
+https://kestrow.tarrow.example/servicedesk/KSD-20931
+
+--
+Kestrow Service Desk | Tarrow University Kestrow
+You are receiving this message because you are listed as a watcher on
+KSD-20931. To change your notification preferences, sign in to the Service
+Desk portal and select Profile > Notifications.

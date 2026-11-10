@@ -1,0 +1,23 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-cassandra-dina",
+ "kind": "dm",
+ "participants": [
+  "Cassandra Yilmaz",
+  "Dina Ricci"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-01T15:01:22-07:00",
+   "user": "Cassandra Yilmaz",
+   "handle": "@cassandra",
+   "text": "Recap from Thursday: you confirmed the Mistral risk register with Imani Navarro."
+  },
+  {
+   "ts": "2027-03-01T15:01:51-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "noted"
+  }
+ ]
+}

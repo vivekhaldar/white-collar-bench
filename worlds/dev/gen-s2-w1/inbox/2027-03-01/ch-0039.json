@@ -1,0 +1,31 @@
+{
+ "workspace": "vercliff",
+ "channel": "#mistral-core",
+ "kind": "channel",
+ "participants": [
+  "Dina Ricci",
+  "Yael Ellery",
+  "Imani Navarro",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
+  "Cassandra Yilmaz",
+  "Bilal Kahananui",
+  "Thibault Sahin",
+  "Mei Obi",
+  "Xiaoling Taufa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-01T13:43:00-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "@cassandra leave it with me, i'll send you the mistral dependency list"
+  },
+  {
+   "ts": "2027-03-01T13:43:32-07:00",
+   "user": "Cassandra Yilmaz",
+   "handle": "@cassandra",
+   "text": "perfect, thanks"
+  }
+ ]
+}

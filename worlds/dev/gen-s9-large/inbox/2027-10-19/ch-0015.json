@@ -1,0 +1,47 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-winifred",
+ "kind": "dm",
+ "participants": [
+  "Aroha Mendoza",
+  "Winifred Tanaka"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-19T08:12:50-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-10-19T08:13:27-05:00",
+   "user": "Winifred Tanaka",
+   "handle": "@winifred",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-10-19T08:14:22-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "Let's make it official: you'll send me the Clelera volume tiers."
+  },
+  {
+   "ts": "2027-10-19T08:15:01-05:00",
+   "user": "Winifred Tanaka",
+   "handle": "@winifred",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-10-19T08:19:34-05:00",
+   "user": "Winifred Tanaka",
+   "handle": "@winifred",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-10-19T08:19:56-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "only the first half"
+  }
+ ]
+}

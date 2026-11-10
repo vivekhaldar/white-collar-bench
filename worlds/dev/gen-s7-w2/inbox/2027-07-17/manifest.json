@@ -1,0 +1,47 @@
+{
+  "date": "2027-07-17",
+  "artifacts": [
+    {
+      "id": "em-0166",
+      "channel": "email",
+      "received_at": "2027-07-17T08:31:00-08:00",
+      "path": "em-0166.eml",
+      "title": "[INC-59106] Ticket updated"
+    },
+    {
+      "id": "em-0167",
+      "channel": "email",
+      "received_at": "2027-07-17T08:49:00-08:00",
+      "path": "em-0167.eml",
+      "title": "[REQ-29965] Request resolved"
+    },
+    {
+      "id": "ch-0134",
+      "channel": "chat",
+      "received_at": "2027-07-17T11:04:00-08:00",
+      "path": "ch-0134.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0168",
+      "channel": "email",
+      "received_at": "2027-07-17T11:27:00-08:00",
+      "path": "em-0168.eml",
+      "title": "[INC-74436] Ticket updated"
+    },
+    {
+      "id": "em-0169",
+      "channel": "email",
+      "received_at": "2027-07-17T12:06:00-08:00",
+      "path": "em-0169.eml",
+      "title": "Programme now live"
+    },
+    {
+      "id": "ch-0135",
+      "channel": "chat",
+      "received_at": "2027-07-17T13:09:00-08:00",
+      "path": "ch-0135.json",
+      "title": "DM: Mere Hidayat / Hiba Jimenez"
+    }
+  ]
+}

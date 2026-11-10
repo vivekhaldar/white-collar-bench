@@ -1,0 +1,19 @@
+{
+ "workspace": "reddale",
+ "channel": "#pantry-inventory-discovery-core",
+ "kind": "channel",
+ "participants": [
+  "Aoife Everett",
+  "Amani Xu",
+  "Akosua Bergstrom",
+  "Catrin Dang"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-19T12:29:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "@akosua i reviewed your pantry inventory discovery findings summary earlier today"
+  }
+ ]
+}

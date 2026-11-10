@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Drayhurst//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:69fe1039199abe6f@drayhurst.example
+DTSTAMP:20270827T011100Z
+DTSTART:20270827T223000Z
+DTEND:20270827T233000Z
+SUMMARY:Cairn platform sync
+ORGANIZER;CN=Theresa Petrov:mailto:theresa.petrov@drayhurst.example
+ATTENDEE;CN=Nomvula Ndlovu;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:nomvula.ndlovu@drayhurst.example
+ATTENDEE;CN=Ottavio Moreira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ottavio.moreira@drayhurst.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.drayhurst.example/j/4212340537?pwd=56N9t9Ly\nPasscode: 401531
+LOCATION:https://meet.drayhurst.example/j/4212340537?pwd=56N9t9Ly
+END:VEVENT
+END:VCALENDAR

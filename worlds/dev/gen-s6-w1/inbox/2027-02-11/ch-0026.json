@@ -1,0 +1,62 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#axolotl-core",
+ "kind": "channel",
+ "participants": [
+  "Despina Pereira",
+  "Losa Moretti",
+  "Andres",
+  "Nathaniel Cartwright",
+  "Karim Navarro",
+  "Liisa Babic",
+  "Tomas Deng",
+  "Carys Laurent",
+  "Lindiwe Baek",
+  "Jurgen Dvorak"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-11T18:02:00-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "@liisa andres and I will send you the Axolotl acceptance criteria.",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@losa",
+      "@nathaniel"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-11T18:02:35-08:00",
+   "user": "Tomas Deng",
+   "handle": "@tomas",
+   "text": "thanks for the heads up",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-11T18:05:38-08:00",
+   "user": "Karim Navarro",
+   "handle": "@karim",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-11T18:15:29-08:00",
+   "user": "Lindiwe Baek",
+   "handle": "@lindiwe",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-11T18:18:06-08:00",
+   "user": "Losa Moretti",
+   "handle": "@losa",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

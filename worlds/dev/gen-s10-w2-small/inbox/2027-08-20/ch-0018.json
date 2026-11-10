@@ -1,0 +1,55 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-sigrid",
+ "kind": "dm",
+ "participants": [
+  "Sigrid Asante",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-20T14:14:52+01:00",
+   "user": "Sigrid Asante",
+   "handle": "@sigrid",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-08-20T14:16:12+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-08-20T14:17:05+01:00",
+   "user": "Sigrid Asante",
+   "handle": "@sigrid",
+   "text": "Recap from Wednesday: you offered to assemble the Nettle security review package.",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@aoife"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-08-20T14:18:25+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "no problem"
+  },
+  {
+   "ts": "2027-08-20T14:23:20+01:00",
+   "user": "Sigrid Asante",
+   "handle": "@sigrid",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-08-20T14:25:15+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "later!"
+  }
+ ]
+}

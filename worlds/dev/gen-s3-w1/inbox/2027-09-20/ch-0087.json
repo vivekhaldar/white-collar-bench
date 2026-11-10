@@ -1,0 +1,29 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-penelope",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Penny"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-20T18:23:41-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-20T18:25:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "will walk you through the okapi downtime procedure"
+  },
+  {
+   "ts": "2027-09-20T18:25:53-05:00",
+   "user": "Penny",
+   "handle": "@penelope",
+   "text": "perfect, thanks"
+  }
+ ]
+}

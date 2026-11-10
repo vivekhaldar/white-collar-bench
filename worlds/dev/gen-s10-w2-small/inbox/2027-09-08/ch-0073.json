@@ -1,0 +1,41 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-chiamaka",
+ "kind": "dm",
+ "participants": [
+  "Amaka",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T18:03:38+01:00",
+   "user": "Amaka",
+   "handle": "@chiamaka",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-09-08T18:07:00+01:00",
+   "user": "Amaka",
+   "handle": "@chiamaka",
+   "text": "Will send you the notes from the referral matching session."
+  },
+  {
+   "ts": "2027-09-08T18:08:12+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "great, thank you"
+  },
+  {
+   "ts": "2027-09-08T18:11:02+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-09-08T18:14:21+01:00",
+   "user": "Amaka",
+   "handle": "@chiamaka",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-bisi",
+ "kind": "dm",
+ "participants": [
+  "Bisi",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T08:33:36-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-09-08T08:34:25-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "sure, what's up?"
+  },
+  {
+   "ts": "2027-09-08T08:34:56-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "Just to recap, yesterday Lena said they'd send you the current referral triage process map! :)"
+  },
+  {
+   "ts": "2027-09-08T08:36:03-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "appreciate it"
+  },
+  {
+   "ts": "2027-09-08T08:39:32-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-09-08T08:41:41-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

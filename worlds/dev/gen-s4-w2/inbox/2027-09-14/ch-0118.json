@@ -1,0 +1,43 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-ottavio-theresa",
+ "kind": "dm",
+ "participants": [
+  "Resi",
+  "Ottavio Moreira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-14T14:34:00-08:00",
+   "user": "Resi",
+   "handle": "@theresa",
+   "text": "Can you send me the Fjord accessibility review?",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@ottavio"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-14T14:34:14-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "on it"
+  },
+  {
+   "ts": "2027-09-14T14:37:29-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-09-14T14:38:04-08:00",
+   "user": "Resi",
+   "handle": "@theresa",
+   "text": "no worries"
+  }
+ ]
+}

@@ -1,0 +1,145 @@
+{
+  "date": "2027-09-14",
+  "artifacts": [
+    {
+      "id": "ca-0007",
+      "channel": "calendar",
+      "received_at": "2027-09-14T07:21:00-05:00",
+      "path": "ca-0007.ics",
+      "title": "Invite: Notes from the intake forms session"
+    },
+    {
+      "id": "em-0042",
+      "channel": "email",
+      "received_at": "2027-09-14T07:44:00-05:00",
+      "path": "em-0042.eml",
+      "title": "[REQ-32211] Request resolved"
+    },
+    {
+      "id": "em-0043",
+      "channel": "email",
+      "received_at": "2027-09-14T08:24:00-05:00",
+      "path": "em-0043.eml",
+      "title": "The Ward Round Digest: issue 37"
+    },
+    {
+      "id": "ch-0042",
+      "channel": "chat",
+      "received_at": "2027-09-14T09:23:00-05:00",
+      "path": "ch-0042.json",
+      "title": "DM: Eleni Fontaine / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0043",
+      "channel": "chat",
+      "received_at": "2027-09-14T09:27:00-05:00",
+      "path": "ch-0043.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "mn-0004",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-14T10:00:00-05:00",
+      "path": "mn-0004.md",
+      "title": "Recap: Ketford relationship check-in"
+    },
+    {
+      "id": "ch-0044",
+      "channel": "chat",
+      "received_at": "2027-09-14T10:46:00-05:00",
+      "path": "ch-0044.json",
+      "title": "DM: Sneha Thornbury / Alasdair Kaya"
+    },
+    {
+      "id": "em-0044",
+      "channel": "email",
+      "received_at": "2027-09-14T12:10:00-05:00",
+      "path": "em-0044.eml",
+      "title": "Fwd: Two customer references from Rosix again"
+    },
+    {
+      "id": "ch-0045",
+      "channel": "chat",
+      "received_at": "2027-09-14T12:40:00-05:00",
+      "path": "ch-0045.json",
+      "title": "#bed-management-discovery-core"
+    },
+    {
+      "id": "em-0045",
+      "channel": "email",
+      "received_at": "2027-09-14T13:41:00-05:00",
+      "path": "em-0045.eml",
+      "title": "Re: Two customer references from Rosix again"
+    },
+    {
+      "id": "ch-0046",
+      "channel": "chat",
+      "received_at": "2027-09-14T13:58:00-05:00",
+      "path": "ch-0046.json",
+      "title": "DM: Guadalupe Moreau / Alasdair Kaya"
+    },
+    {
+      "id": "em-0046",
+      "channel": "email",
+      "received_at": "2027-09-14T15:10:00-05:00",
+      "path": "em-0046.eml",
+      "title": "Re: Sirocco Operating Model Review: moving to revision"
+    },
+    {
+      "id": "ch-0047",
+      "channel": "chat",
+      "received_at": "2027-09-14T15:14:00-05:00",
+      "path": "ch-0047.json",
+      "title": "DM: Somchai Thapa / Alasdair Kaya"
+    },
+    {
+      "id": "em-0047",
+      "channel": "email",
+      "received_at": "2027-09-14T15:40:00-05:00",
+      "path": "em-0047.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "em-0048",
+      "channel": "email",
+      "received_at": "2027-09-14T17:02:00-05:00",
+      "path": "em-0048.eml",
+      "title": "Catering menu for next month"
+    },
+    {
+      "id": "ch-0048",
+      "channel": "chat",
+      "received_at": "2027-09-14T18:02:00-05:00",
+      "path": "ch-0048.json",
+      "title": "#sirocco-core"
+    },
+    {
+      "id": "em-0049",
+      "channel": "email",
+      "received_at": "2027-09-14T18:02:00-05:00",
+      "path": "em-0049.eml",
+      "title": "[REQ-12807] Request resolved"
+    },
+    {
+      "id": "ch-0049",
+      "channel": "chat",
+      "received_at": "2027-09-14T18:35:00-05:00",
+      "path": "ch-0049.json",
+      "title": "DM: Adebayo Kalua / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0050",
+      "channel": "chat",
+      "received_at": "2027-09-14T18:39:00-05:00",
+      "path": "ch-0050.json",
+      "title": "DM: Adebayo Kalua / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0051",
+      "channel": "chat",
+      "received_at": "2027-09-14T18:49:00-05:00",
+      "path": "ch-0051.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    }
+  ]
+}

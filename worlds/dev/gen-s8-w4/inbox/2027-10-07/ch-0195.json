@@ -1,0 +1,49 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Adwoa Kocak"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-07T11:48:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "i reviewed your safety reporting discovery stakeholder map"
+  },
+  {
+   "ts": "2027-10-07T11:48:32-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-10-07T11:48:52-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "Done, I sent you the reading list on shift handover.",
+   "edited": true,
+   "original": "Done, I sent you the readign list on shift handover."
+  },
+  {
+   "ts": "2027-10-07T11:49:51-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "great, thanks"
+  },
+  {
+   "ts": "2027-10-07T11:51:48-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-10-07T11:53:39-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "remote, but online all day"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lanhurst//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:d26df7dc8866a819@lanhurst.example
+DTSTAMP:20270216T195600Z
+DTSTART:20270217T213000Z
+DTEND:20270217T220000Z
+SUMMARY:Working session: Axolotl change request
+ORGANIZER;CN=Losa Moretti:mailto:losa.moretti@dorcliff.lanhurst.example
+ATTENDEE;CN=Despina Pereira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:despina.pereira@lanhurst.example
+SEQUENCE:0
+DESCRIPTION:Agenda: Send Despina the Axolotl change request.\nJoin video meeting: https://meet.lanhurst.example/j/7526189531?pwd=5x9HpG6k\nPasscode: 286968
+LOCATION:https://meet.lanhurst.example/j/7526189531?pwd=5x9HpG6k
+END:VEVENT
+END:VCALENDAR

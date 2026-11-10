@@ -1,0 +1,40 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#fulmar-core",
+ "kind": "channel",
+ "participants": [
+  "Yasmin Guo",
+  "Amira Baek",
+  "Ottavio Bakker",
+  "Adwoa Kocak",
+  "Giorgi Wisniewska",
+  "Oksana Hoffmann",
+  "Marcelo Meijer",
+  "Batbayar Galbraith",
+  "Thibault Kowalski",
+  "Kamau Greco",
+  "Shirin Oyelami"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-30T13:25:00-06:00",
+   "user": "Yasmin Guo",
+   "handle": "@yasmin",
+   "text": "Sorry, I was wrong before: the Fulmar timeout errors didn't hold and has been rolled back. It's back on the list."
+  },
+  {
+   "ts": "2027-09-30T13:26:26-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "noted",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-30T13:29:25-06:00",
+   "user": "Marcelo Meijer",
+   "handle": "@marcelo",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

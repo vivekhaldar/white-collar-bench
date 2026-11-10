@@ -1,0 +1,145 @@
+{
+  "date": "2027-02-08",
+  "artifacts": [
+    {
+      "id": "em-0001",
+      "channel": "email",
+      "received_at": "2027-02-08T06:31:00-08:00",
+      "path": "em-0001.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "em-0002",
+      "channel": "email",
+      "received_at": "2027-02-08T06:55:00-08:00",
+      "path": "em-0002.eml",
+      "title": "Reminder: Friday status note due Friday 12 February"
+    },
+    {
+      "id": "nt-0001",
+      "channel": "note",
+      "received_at": "2027-02-08T08:05:00-08:00",
+      "path": "nt-0001.md",
+      "title": "Portfolio map"
+    },
+    {
+      "id": "ch-0001",
+      "channel": "chat",
+      "received_at": "2027-02-08T08:48:00-08:00",
+      "path": "ch-0001.json",
+      "title": "#axolotl-core"
+    },
+    {
+      "id": "em-0003",
+      "channel": "email",
+      "received_at": "2027-02-08T09:19:00-08:00",
+      "path": "em-0003.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0004",
+      "channel": "email",
+      "received_at": "2027-02-08T10:38:00-08:00",
+      "path": "em-0004.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ca-0001",
+      "channel": "calendar",
+      "received_at": "2027-02-08T11:53:00-08:00",
+      "path": "ca-0001.ics",
+      "title": "Invite: Dorcliff site visit"
+    },
+    {
+      "id": "em-0005",
+      "channel": "email",
+      "received_at": "2027-02-08T12:11:00-08:00",
+      "path": "em-0005.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "ch-0002",
+      "channel": "chat",
+      "received_at": "2027-02-08T12:25:00-08:00",
+      "path": "ch-0002.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0003",
+      "channel": "chat",
+      "received_at": "2027-02-08T13:11:00-08:00",
+      "path": "ch-0003.json",
+      "title": "DM: Aiko Venkataraman / Despina Pereira"
+    },
+    {
+      "id": "em-0006",
+      "channel": "email",
+      "received_at": "2027-02-08T13:54:00-08:00",
+      "path": "em-0006.eml",
+      "title": "Re: Course Assistant Tool Selection: moving to scoring"
+    },
+    {
+      "id": "ch-0004",
+      "channel": "chat",
+      "received_at": "2027-02-08T13:55:00-08:00",
+      "path": "ch-0004.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ca-0002",
+      "channel": "calendar",
+      "received_at": "2027-02-08T15:11:00-08:00",
+      "path": "ca-0002.ics",
+      "title": "Invite: AI-use sync"
+    },
+    {
+      "id": "ch-0005",
+      "channel": "chat",
+      "received_at": "2027-02-08T15:36:00-08:00",
+      "path": "ch-0005.json",
+      "title": "DM: Andres Erdem / Despina Pereira"
+    },
+    {
+      "id": "ch-0006",
+      "channel": "chat",
+      "received_at": "2027-02-08T16:11:00-08:00",
+      "path": "ch-0006.json",
+      "title": "DM: Sipho Costa / Despina Pereira"
+    },
+    {
+      "id": "ch-0007",
+      "channel": "chat",
+      "received_at": "2027-02-08T16:31:00-08:00",
+      "path": "ch-0007.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0008",
+      "channel": "chat",
+      "received_at": "2027-02-08T16:56:00-08:00",
+      "path": "ch-0008.json",
+      "title": "#linel-enterprise-agreement-core"
+    },
+    {
+      "id": "em-0007",
+      "channel": "email",
+      "received_at": "2027-02-08T17:10:00-08:00",
+      "path": "em-0007.eml",
+      "title": "[REQ-23405] Request resolved"
+    },
+    {
+      "id": "em-0008",
+      "channel": "email",
+      "received_at": "2027-02-08T18:39:00-08:00",
+      "path": "em-0008.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "nt-0002",
+      "channel": "note",
+      "received_at": "2027-02-08T18:56:00-08:00",
+      "path": "nt-0002.md",
+      "title": "Mon notes"
+    }
+  ]
+}

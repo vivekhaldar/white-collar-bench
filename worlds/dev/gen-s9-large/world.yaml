@@ -1,0 +1,35 @@
+id: gen-s9-large
+title: 'Generated world: Network Digital Office, Kirkmarsh Health Partners (regional health network)'
+version: 1
+split: dev
+worker: p-aroha-mendoza
+timezone: -05:00
+seed:
+  start: '2027-10-18'
+  end: '2027-10-29'
+episode:
+  days:
+  - '2027-11-01'
+  - '2027-11-02'
+  - '2027-11-03'
+  - '2027-11-04'
+  - '2027-11-05'
+  - '2027-11-06'
+checkpoints:
+- id: cp1
+  date: '2027-11-02'
+  label: end of Tuesday
+- id: cp2
+  date: '2027-11-04'
+  label: end of Thursday
+- id: cp3
+  date: '2027-11-06'
+  label: end of week
+generator:
+  kind: wcb-gen
+  version: 1
+  seed: 9
+  weeks: 1
+  size: large
+  setting: health
+  llm: false

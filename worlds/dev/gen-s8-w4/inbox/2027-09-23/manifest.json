@@ -1,0 +1,174 @@
+{
+  "date": "2027-09-23",
+  "artifacts": [
+    {
+      "id": "ch-0111",
+      "channel": "chat",
+      "received_at": "2027-09-23T07:38:00-06:00",
+      "path": "ch-0111.json",
+      "title": "#fulmar-core (catch-up)"
+    },
+    {
+      "id": "mt-0022",
+      "channel": "transcript",
+      "received_at": "2027-09-23T07:39:00-06:00",
+      "path": "mt-0022.vtt",
+      "title": "Wagtail sync (transcript)"
+    },
+    {
+      "id": "em-0145",
+      "channel": "email",
+      "received_at": "2027-09-23T07:40:00-06:00",
+      "path": "em-0145.eml",
+      "title": "While you were out: AI-use"
+    },
+    {
+      "id": "ch-0112",
+      "channel": "chat",
+      "received_at": "2027-09-23T09:52:00-06:00",
+      "path": "ch-0112.json",
+      "title": "DM: Amira Baek / Adwoa Kocak"
+    },
+    {
+      "id": "mt-0023",
+      "channel": "transcript",
+      "received_at": "2027-09-23T09:55:00-06:00",
+      "path": "mt-0023.vtt",
+      "title": "Fulmar standup (transcript)"
+    },
+    {
+      "id": "ch-0113",
+      "channel": "chat",
+      "received_at": "2027-09-23T11:20:00-06:00",
+      "path": "ch-0113.json",
+      "title": "DM: Tane Haugen / Amira Baek"
+    },
+    {
+      "id": "dc-0009",
+      "channel": "document",
+      "received_at": "2027-09-23T11:50:00-06:00",
+      "path": "dc-0009.docx",
+      "title": "Safety reporting discovery findings summary v4",
+      "parent": "em-0146"
+    },
+    {
+      "id": "em-0146",
+      "channel": "email",
+      "received_at": "2027-09-23T11:50:00-06:00",
+      "path": "em-0146.eml",
+      "title": "Safety reporting discovery findings summary"
+    },
+    {
+      "id": "ch-0114",
+      "channel": "chat",
+      "received_at": "2027-09-23T11:52:00-06:00",
+      "path": "ch-0114.json",
+      "title": "DM: Amira Baek / Darnell Malouf"
+    },
+    {
+      "id": "ch-0115",
+      "channel": "chat",
+      "received_at": "2027-09-23T11:55:00-06:00",
+      "path": "ch-0115.json",
+      "title": "#predictive-maintenance-core"
+    },
+    {
+      "id": "em-0147",
+      "channel": "email",
+      "received_at": "2027-09-23T13:17:00-06:00",
+      "path": "em-0147.eml",
+      "title": "Re: Adwoa's AI-use risk register"
+    },
+    {
+      "id": "mt-0024",
+      "channel": "transcript",
+      "received_at": "2027-09-23T14:00:00-06:00",
+      "path": "mt-0024.vtt",
+      "title": "Rosia intro call (transcript)"
+    },
+    {
+      "id": "ch-0116",
+      "channel": "chat",
+      "received_at": "2027-09-23T14:17:00-06:00",
+      "path": "ch-0116.json",
+      "title": "DM: Amira Baek / Ottavio Bakker"
+    },
+    {
+      "id": "em-0148",
+      "channel": "email",
+      "received_at": "2027-09-23T15:09:00-06:00",
+      "path": "em-0148.eml",
+      "title": "Fulmar support model"
+    },
+    {
+      "id": "mt-0025",
+      "channel": "transcript",
+      "received_at": "2027-09-23T15:45:00-06:00",
+      "path": "mt-0025.vtt",
+      "title": "Fulmar review (transcript)"
+    },
+    {
+      "id": "ch-0117",
+      "channel": "chat",
+      "received_at": "2027-09-23T16:46:00-06:00",
+      "path": "ch-0117.json",
+      "title": "DM: Rodrigo Gallo / Amira Baek"
+    },
+    {
+      "id": "em-0149",
+      "channel": "email",
+      "received_at": "2027-09-23T17:31:00-06:00",
+      "path": "em-0149.eml",
+      "title": "Re: Work instructions selection dependency list"
+    },
+    {
+      "id": "em-0150",
+      "channel": "email",
+      "received_at": "2027-09-23T17:33:00-06:00",
+      "path": "em-0150.eml",
+      "title": "Re: To Adwoa for the Wilhaven working group"
+    },
+    {
+      "id": "ch-0118",
+      "channel": "chat",
+      "received_at": "2027-09-23T17:48:00-06:00",
+      "path": "ch-0118.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "ch-0119",
+      "channel": "chat",
+      "received_at": "2027-09-23T17:48:00-06:00",
+      "path": "ch-0119.json",
+      "title": "DM: Oksana Hoffmann / Amira Baek"
+    },
+    {
+      "id": "ch-0120",
+      "channel": "chat",
+      "received_at": "2027-09-23T18:06:00-06:00",
+      "path": "ch-0120.json",
+      "title": "#work-instructions-core"
+    },
+    {
+      "id": "ch-0121",
+      "channel": "chat",
+      "received_at": "2027-09-23T18:16:00-06:00",
+      "path": "ch-0121.json",
+      "title": "#work-instructions-core"
+    },
+    {
+      "id": "em-0151",
+      "channel": "email",
+      "received_at": "2027-09-23T18:20:00-06:00",
+      "path": "em-0151.eml",
+      "title": "[REQ-21933] Request resolved"
+    },
+    {
+      "id": "ch-0122",
+      "channel": "chat",
+      "received_at": "2027-09-23T19:08:00-06:00",
+      "path": "ch-0122.json",
+      "title": "DM: Amira Baek / Adwoa Kocak"
+    }
+  ]
+}

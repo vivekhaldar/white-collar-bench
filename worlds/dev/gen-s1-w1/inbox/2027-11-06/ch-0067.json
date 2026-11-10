@@ -1,0 +1,35 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-joselito",
+ "kind": "dm",
+ "participants": [
+  "Lito",
+  "Camila Abernathy"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-06T16:44:00-07:00",
+   "user": "Lito",
+   "handle": "@joselito",
+   "text": "jalen could probably share the marten lessons-learned note with you, not agreed though"
+  },
+  {
+   "ts": "2027-11-06T16:44:09-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-11-06T16:45:07-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-11-06T16:47:26-07:00",
+   "user": "Lito",
+   "handle": "@joselito",
+   "text": "no worries"
+  }
+ ]
+}

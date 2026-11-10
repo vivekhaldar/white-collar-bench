@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tarrow University System//Calendar 2027//EN
+METHOD:REQUEST
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:e5f2a18c-tinderbox-operating-model-ownership@tarrow.example
+DTSTAMP:20270304T231800Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Tinderbox: operating model & ownership
+DTSTART:20270305T103000
+DTEND:20270305T111500
+LOCATION:VC conference room\, System Office / video
+ORGANIZER;CN=Lucía Ferreyra:mailto:lucia.ferreyra@tarrow.example
+ATTENDEE;CN=Folasade Renwick;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:folasade.renwick@tarrow.example
+ATTENDEE;CN=Bartholomew Ngata;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:bart.ngata@kestrow.tarrow.example
+ATTENDEE;CN=Mara Ilves;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:mara.ilves@tarrow.example
+ATTENDEE;CN=Yusra Haddad;ROLE=OPT-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:yusra.haddad@kestrow.tarrow.example
+ATTENDEE;CN=Ramona Szabo;ROLE=OPT-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:ramona.szabo@tarrow.example
+DESCRIPTION:Sade / Bart Ngata / Mara - Tinderbox ownership and operating model after go-live. Yusra and Ramona optional. Bart's office confirmed Dr. Ngata will join by video from Kestrow. Join: https://meet.tarrow.example/j/8150463327?pwd=Lt4nW9
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT10M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

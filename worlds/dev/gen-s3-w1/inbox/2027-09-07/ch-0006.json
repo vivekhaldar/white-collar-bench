@@ -1,0 +1,37 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-eunji",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Eun-ji Chen"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T08:24:37-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-07T08:25:00-05:00",
+   "user": "Eun-ji Chen",
+   "handle": "@eunji",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-09-07T08:26:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "i can draft our counter-proposal to rosix",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@eunji"
+     ]
+    }
+   ]
+  }
+ ]
+}

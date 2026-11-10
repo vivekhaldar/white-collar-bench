@@ -1,0 +1,31 @@
+{
+ "workspace": "vercliff",
+ "channel": "#fennel-core",
+ "kind": "channel",
+ "participants": [
+  "Rudo Thornbury",
+  "Dina Ricci",
+  "Cassandra Yilmaz",
+  "Imani Navarro",
+  "Yael Ellery",
+  "Naoko Sandoval",
+  "Thibault Sahin"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-25T09:32:00-07:00",
+   "user": "Rudo Thornbury",
+   "handle": "@rudo",
+   "text": "For info, the Fennel tenant onboarding guide has moved from the platform lead to Imani Navarro.",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@imani",
+      "@cassandra"
+     ]
+    }
+   ]
+  }
+ ]
+}

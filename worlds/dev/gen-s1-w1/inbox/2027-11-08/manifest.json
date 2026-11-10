@@ -1,0 +1,138 @@
+{
+  "date": "2027-11-08",
+  "artifacts": [
+    {
+      "id": "em-0089",
+      "channel": "email",
+      "received_at": "2027-11-08T06:50:00-07:00",
+      "path": "em-0089.eml",
+      "title": "Reminder: Friday status note due Friday 12 November"
+    },
+    {
+      "id": "nt-0007",
+      "channel": "note",
+      "received_at": "2027-11-08T07:41:00-07:00",
+      "path": "nt-0007.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "mn-0009",
+      "channel": "meeting_notes",
+      "received_at": "2027-11-08T09:55:00-07:00",
+      "path": "mn-0009.md",
+      "title": "Recap: Marten standup"
+    },
+    {
+      "id": "ch-0068",
+      "channel": "chat",
+      "received_at": "2027-11-08T11:32:00-07:00",
+      "path": "ch-0068.json",
+      "title": "#obsidian-core"
+    },
+    {
+      "id": "mt-0010",
+      "channel": "transcript",
+      "received_at": "2027-11-08T11:45:00-07:00",
+      "path": "mt-0010.vtt",
+      "title": "OCT leads call (transcript)"
+    },
+    {
+      "id": "mt-0011",
+      "channel": "transcript",
+      "received_at": "2027-11-08T12:30:00-07:00",
+      "path": "mt-0011.vtt",
+      "title": "Quarterly priorities (transcript)"
+    },
+    {
+      "id": "em-0090",
+      "channel": "email",
+      "received_at": "2027-11-08T12:40:00-07:00",
+      "path": "em-0090.eml",
+      "title": "Re: Marten update"
+    },
+    {
+      "id": "em-0091",
+      "channel": "email",
+      "received_at": "2027-11-08T12:42:00-07:00",
+      "path": "em-0091.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "ca-0006",
+      "channel": "calendar",
+      "received_at": "2027-11-08T14:52:00-07:00",
+      "path": "ca-0006.ics",
+      "title": "Invite: Obsidian review"
+    },
+    {
+      "id": "em-0092",
+      "channel": "email",
+      "received_at": "2027-11-08T15:45:00-07:00",
+      "path": "em-0092.eml",
+      "title": "Re: Benefits screening discovery change request"
+    },
+    {
+      "id": "ch-0069",
+      "channel": "chat",
+      "received_at": "2027-11-08T15:49:00-07:00",
+      "path": "ch-0069.json",
+      "title": "DM: Camila Abernathy / Petra Korkmaz"
+    },
+    {
+      "id": "em-0093",
+      "channel": "email",
+      "received_at": "2027-11-08T15:56:00-07:00",
+      "path": "em-0093.eml",
+      "title": "Zeneth sandbox credentials"
+    },
+    {
+      "id": "ch-0070",
+      "channel": "chat",
+      "received_at": "2027-11-08T15:57:00-07:00",
+      "path": "ch-0070.json",
+      "title": "#parking-analytics-core"
+    },
+    {
+      "id": "nt-0008",
+      "channel": "note",
+      "received_at": "2027-11-08T16:08:00-07:00",
+      "path": "nt-0008.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "ca-0007",
+      "channel": "calendar",
+      "received_at": "2027-11-08T16:29:00-07:00",
+      "path": "ca-0007.ics",
+      "title": "Invite: Walkthrough: Plain language workshop speaker brief"
+    },
+    {
+      "id": "em-0094",
+      "channel": "email",
+      "received_at": "2027-11-08T16:51:00-07:00",
+      "path": "em-0094.eml",
+      "title": "Re: Ulworth Benefits Screening Discovery: moving to analysis"
+    },
+    {
+      "id": "ch-0071",
+      "channel": "chat",
+      "received_at": "2027-11-08T17:54:00-07:00",
+      "path": "ch-0071.json",
+      "title": "DM: Camila Abernathy / Jalen Sandberg"
+    },
+    {
+      "id": "em-0095",
+      "channel": "email",
+      "received_at": "2027-11-08T18:43:00-07:00",
+      "path": "em-0095.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "ch-0072",
+      "channel": "chat",
+      "received_at": "2027-11-08T19:00:00-07:00",
+      "path": "ch-0072.json",
+      "title": "#benefits-screening-core"
+    }
+  ]
+}

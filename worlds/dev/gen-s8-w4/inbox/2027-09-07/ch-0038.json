@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-ignacio",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Ignacio Choi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T12:59:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "Leave it with me, I'll join your panel on visual inspection."
+  },
+  {
+   "ts": "2027-09-07T13:00:07-06:00",
+   "user": "Ignacio Choi",
+   "handle": "@ignacio",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-09-07T13:03:15-06:00",
+   "user": "Ignacio Choi",
+   "handle": "@ignacio",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-09-07T13:05:54-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

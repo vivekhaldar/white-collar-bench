@@ -1,0 +1,131 @@
+{
+  "date": "2027-03-03",
+  "artifacts": [
+    {
+      "id": "ch-0051",
+      "channel": "chat",
+      "received_at": "2027-03-03T07:40:00-07:00",
+      "path": "ch-0051.json",
+      "title": "DM: Dina Ricci / Xiaoling Taufa"
+    },
+    {
+      "id": "em-0054",
+      "channel": "email",
+      "received_at": "2027-03-03T09:23:00-07:00",
+      "path": "em-0054.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "mt-0009",
+      "channel": "transcript",
+      "received_at": "2027-03-03T09:55:00-07:00",
+      "path": "mt-0009.vtt",
+      "title": "Mistral standup (transcript)"
+    },
+    {
+      "id": "mt-0010",
+      "channel": "transcript",
+      "received_at": "2027-03-03T10:00:00-07:00",
+      "path": "mt-0010.vtt",
+      "title": "Catch-up: Dina / Siti (transcript)"
+    },
+    {
+      "id": "ch-0052",
+      "channel": "chat",
+      "received_at": "2027-03-03T11:30:00-07:00",
+      "path": "ch-0052.json",
+      "title": "DM: Yael Ellery / Dina Ricci"
+    },
+    {
+      "id": "em-0055",
+      "channel": "email",
+      "received_at": "2027-03-03T11:30:00-07:00",
+      "path": "em-0055.eml",
+      "title": "Mistral requirements matrix"
+    },
+    {
+      "id": "em-0056",
+      "channel": "email",
+      "received_at": "2027-03-03T11:37:00-07:00",
+      "path": "em-0056.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0053",
+      "channel": "chat",
+      "received_at": "2027-03-03T12:17:00-07:00",
+      "path": "ch-0053.json",
+      "title": "DM: Kayode Whitfield / Dina Ricci"
+    },
+    {
+      "id": "ch-0054",
+      "channel": "chat",
+      "received_at": "2027-03-03T12:54:00-07:00",
+      "path": "ch-0054.json",
+      "title": "#random"
+    },
+    {
+      "id": "mt-0011",
+      "channel": "transcript",
+      "received_at": "2027-03-03T14:30:00-07:00",
+      "path": "mt-0011.vtt",
+      "title": "Fennel platform sync (transcript)"
+    },
+    {
+      "id": "ch-0055",
+      "channel": "chat",
+      "received_at": "2027-03-03T14:39:00-07:00",
+      "path": "ch-0055.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0057",
+      "channel": "email",
+      "received_at": "2027-03-03T14:49:00-07:00",
+      "path": "em-0057.eml",
+      "title": "Pothole Reporting Tool Selection: moving to questionnaires"
+    },
+    {
+      "id": "mt-0012",
+      "channel": "transcript",
+      "received_at": "2027-03-03T15:30:00-07:00",
+      "path": "mt-0012.vtt",
+      "title": "Funding model options review (transcript)"
+    },
+    {
+      "id": "em-0058",
+      "channel": "email",
+      "received_at": "2027-03-03T15:55:00-07:00",
+      "path": "em-0058.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "ch-0056",
+      "channel": "chat",
+      "received_at": "2027-03-03T16:06:00-07:00",
+      "path": "ch-0056.json",
+      "title": "DM: Dina Ricci / Rudo Thornbury"
+    },
+    {
+      "id": "ch-0057",
+      "channel": "chat",
+      "received_at": "2027-03-03T16:27:00-07:00",
+      "path": "ch-0057.json",
+      "title": "DM: Nomvula Jansen / Dina Ricci"
+    },
+    {
+      "id": "ch-0058",
+      "channel": "chat",
+      "received_at": "2027-03-03T16:55:00-07:00",
+      "path": "ch-0058.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0059",
+      "channel": "email",
+      "received_at": "2027-03-03T18:54:00-07:00",
+      "path": "em-0059.eml",
+      "title": "Room booking confirmation"
+    }
+  ]
+}

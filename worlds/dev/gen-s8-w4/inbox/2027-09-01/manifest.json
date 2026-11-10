@@ -1,0 +1,117 @@
+{
+  "date": "2027-09-01",
+  "artifacts": [
+    {
+      "id": "em-0017",
+      "channel": "email",
+      "received_at": "2027-09-01T07:17:00-06:00",
+      "path": "em-0017.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "mt-0003",
+      "channel": "transcript",
+      "received_at": "2027-09-01T09:55:00-06:00",
+      "path": "mt-0003.vtt",
+      "title": "Fulmar standup (transcript)"
+    },
+    {
+      "id": "em-0018",
+      "channel": "email",
+      "received_at": "2027-09-01T09:58:00-06:00",
+      "path": "em-0018.eml",
+      "title": "Re: AI-use lessons-learned note"
+    },
+    {
+      "id": "ch-0017",
+      "channel": "chat",
+      "received_at": "2027-09-01T11:06:00-06:00",
+      "path": "ch-0017.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "ch-0018",
+      "channel": "chat",
+      "received_at": "2027-09-01T12:25:00-06:00",
+      "path": "ch-0018.json",
+      "title": "DM: Amira Baek / Goran Liu"
+    },
+    {
+      "id": "em-0019",
+      "channel": "email",
+      "received_at": "2027-09-01T13:08:00-06:00",
+      "path": "em-0019.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "em-0020",
+      "channel": "email",
+      "received_at": "2027-09-01T13:42:00-06:00",
+      "path": "em-0020.eml",
+      "title": "Your benefits statement is ready"
+    },
+    {
+      "id": "ch-0019",
+      "channel": "chat",
+      "received_at": "2027-09-01T13:44:00-06:00",
+      "path": "ch-0019.json",
+      "title": "DM: Hamish Okada / Amira Baek"
+    },
+    {
+      "id": "em-0021",
+      "channel": "email",
+      "received_at": "2027-09-01T14:16:00-06:00",
+      "path": "em-0021.eml",
+      "title": "Iselmoor Responsible AI Use Framework: moving to endorsement"
+    },
+    {
+      "id": "mn-0002",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-01T15:30:00-06:00",
+      "path": "mn-0002.md",
+      "title": "Recap: Catch-up: Amira / Vitoria"
+    },
+    {
+      "id": "em-0022",
+      "channel": "email",
+      "received_at": "2027-09-01T16:21:00-06:00",
+      "path": "em-0022.eml",
+      "title": "Industrial Data Digest: issue 35"
+    },
+    {
+      "id": "em-0023",
+      "channel": "email",
+      "received_at": "2027-09-01T16:55:00-06:00",
+      "path": "em-0023.eml",
+      "title": "Re: Wagtail model allow-list"
+    },
+    {
+      "id": "em-0024",
+      "channel": "email",
+      "received_at": "2027-09-01T17:12:00-06:00",
+      "path": "em-0024.eml",
+      "title": "Re: FYI: Fulmar API contract v2"
+    },
+    {
+      "id": "em-0025",
+      "channel": "email",
+      "received_at": "2027-09-01T18:30:00-06:00",
+      "path": "em-0025.eml",
+      "title": "Fwd: AI-use timeline"
+    },
+    {
+      "id": "ch-0020",
+      "channel": "chat",
+      "received_at": "2027-09-01T18:51:00-06:00",
+      "path": "ch-0020.json",
+      "title": "DM: Ottavio Bakker / Amira Baek"
+    },
+    {
+      "id": "ch-0021",
+      "channel": "chat",
+      "received_at": "2027-09-01T18:53:00-06:00",
+      "path": "ch-0021.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    }
+  ]
+}

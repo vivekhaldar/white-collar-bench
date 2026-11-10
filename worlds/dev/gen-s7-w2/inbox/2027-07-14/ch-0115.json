@@ -1,0 +1,43 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-abigail-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Abigail Kuznetsova"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-14T11:34:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "i sent you the assessment design workshop renewal questionnaire",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@abigail"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-14T11:34:14-08:00",
+   "user": "Abigail Kuznetsova",
+   "handle": "@abigail",
+   "text": "great, thanks"
+  },
+  {
+   "ts": "2027-07-14T11:36:30-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-07-14T11:38:50-08:00",
+   "user": "Abigail Kuznetsova",
+   "handle": "@abigail",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

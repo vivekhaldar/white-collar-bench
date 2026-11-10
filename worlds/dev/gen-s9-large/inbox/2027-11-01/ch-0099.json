@@ -1,0 +1,32 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Amira Andersen",
+  "Malia Guo",
+  "Putri Ashby",
+  "Mikayla Babic"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-01T16:55:44-05:00",
+   "user": "Amira Andersen",
+   "handle": "@amira",
+   "text": "the elevator on the east side is out again"
+  },
+  {
+   "ts": "2027-11-01T16:59:54-05:00",
+   "user": "Malia Guo",
+   "handle": "@malia",
+   "text": "stairs it is"
+  },
+  {
+   "ts": "2027-11-01T17:06:19-05:00",
+   "user": "Putri Ashby",
+   "handle": "@putri",
+   "text": "classic",
+   "thread_of": 0
+  }
+ ]
+}

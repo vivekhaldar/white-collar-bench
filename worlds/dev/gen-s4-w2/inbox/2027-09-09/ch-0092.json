@@ -1,0 +1,38 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#fjord-core",
+ "kind": "channel",
+ "participants": [
+  "Meera Bondarenko",
+  "Ottavio Moreira",
+  "Darius Bramwell",
+  "Ratna Nikolic",
+  "Theresa Petrov",
+  "Nomvula Ndlovu",
+  "Bruna Vaughan",
+  "Esperanza Venkataraman",
+  "Yaroslav Moyo",
+  "Celine Novotny"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-09T09:59:00-08:00",
+   "user": "Meera Bondarenko",
+   "handle": "@meera",
+   "text": "Nomvula would like Ottavio to send Nomvula the Fjord data-flow diagram, not agreed yet."
+  },
+  {
+   "ts": "2027-09-09T09:59:30-08:00",
+   "user": "Yaroslav Moyo",
+   "handle": "@yaroslav",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-09-09T10:08:55-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,118 @@
+{
+  "date": "2027-10-08",
+  "artifacts": [
+    {
+      "id": "ch-0204",
+      "channel": "chat",
+      "received_at": "2027-10-08T08:03:00-06:00",
+      "path": "ch-0204.json",
+      "title": "DM: Marcelo Meijer / Ottavio Bakker"
+    },
+    {
+      "id": "ca-0023",
+      "channel": "calendar",
+      "received_at": "2027-10-08T08:56:00-06:00",
+      "path": "ca-0023.ics",
+      "title": "Accepted: Fulmar follow-up"
+    },
+    {
+      "id": "ch-0205",
+      "channel": "chat",
+      "received_at": "2027-10-08T09:49:00-06:00",
+      "path": "ch-0205.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    },
+    {
+      "id": "mn-0027",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-08T09:55:00-06:00",
+      "path": "mn-0027.md",
+      "title": "Recap: Fulmar standup"
+    },
+    {
+      "id": "ch-0206",
+      "channel": "chat",
+      "received_at": "2027-10-08T11:04:00-06:00",
+      "path": "ch-0206.json",
+      "title": "DM: Hamish Okada / Amira Baek"
+    },
+    {
+      "id": "em-0245",
+      "channel": "email",
+      "received_at": "2027-10-08T12:04:00-06:00",
+      "path": "em-0245.eml",
+      "title": "[INC-60673] Ticket updated"
+    },
+    {
+      "id": "dc-0014",
+      "channel": "document",
+      "received_at": "2027-10-08T12:11:00-06:00",
+      "path": "dc-0014.pdf",
+      "title": "Fulmar control plan v2 after Ottavio's comments v1",
+      "parent": "em-0246"
+    },
+    {
+      "id": "em-0246",
+      "channel": "email",
+      "received_at": "2027-10-08T12:11:00-06:00",
+      "path": "em-0246.eml",
+      "title": "Fulmar control plan v2 after Ottavio's comments"
+    },
+    {
+      "id": "ch-0207",
+      "channel": "chat",
+      "received_at": "2027-10-08T13:57:00-06:00",
+      "path": "ch-0207.json",
+      "title": "DM: Batbayar Galbraith / Amira Baek"
+    },
+    {
+      "id": "em-0247",
+      "channel": "email",
+      "received_at": "2027-10-08T14:20:00-06:00",
+      "path": "em-0247.eml",
+      "title": "Re: Adwoa's Fulmar PLC export v2"
+    },
+    {
+      "id": "em-0248",
+      "channel": "email",
+      "received_at": "2027-10-08T15:37:00-06:00",
+      "path": "em-0248.eml",
+      "title": "Status note: w/e 8 October"
+    },
+    {
+      "id": "em-0249",
+      "channel": "email",
+      "received_at": "2027-10-08T15:40:00-06:00",
+      "path": "em-0249.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "mn-0028",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-08T16:30:00-06:00",
+      "path": "mn-0028.md",
+      "title": "Recap: Catch-up: Amira / Marcelo"
+    },
+    {
+      "id": "nt-0024",
+      "channel": "note",
+      "received_at": "2027-10-08T17:22:00-06:00",
+      "path": "nt-0024.md",
+      "title": "Fri notes"
+    },
+    {
+      "id": "ch-0208",
+      "channel": "chat",
+      "received_at": "2027-10-08T17:36:00-06:00",
+      "path": "ch-0208.json",
+      "title": "DM: Amira Baek / Ottavio Bakker"
+    },
+    {
+      "id": "em-0250",
+      "channel": "email",
+      "received_at": "2027-10-08T18:49:00-06:00",
+      "path": "em-0250.eml",
+      "title": "Room booking confirmation"
+    }
+  ]
+}

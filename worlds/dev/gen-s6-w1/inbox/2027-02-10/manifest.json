@@ -1,0 +1,117 @@
+{
+  "date": "2027-02-10",
+  "artifacts": [
+    {
+      "id": "ca-0004",
+      "channel": "calendar",
+      "received_at": "2027-02-10T08:02:00-08:00",
+      "path": "ca-0004.ics",
+      "title": "Invite: Catch-up: Despina / Carys"
+    },
+    {
+      "id": "mn-0003",
+      "channel": "meeting_notes",
+      "received_at": "2027-02-10T10:00:00-08:00",
+      "path": "mn-0003.md",
+      "title": "Recap: Axolotl standup"
+    },
+    {
+      "id": "ch-0015",
+      "channel": "chat",
+      "received_at": "2027-02-10T10:17:00-08:00",
+      "path": "ch-0015.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0014",
+      "channel": "email",
+      "received_at": "2027-02-10T10:47:00-08:00",
+      "path": "em-0014.eml",
+      "title": "FYI: Linel volume tiers"
+    },
+    {
+      "id": "ch-0016",
+      "channel": "chat",
+      "received_at": "2027-02-10T11:17:00-08:00",
+      "path": "ch-0016.json",
+      "title": "#axolotl-core"
+    },
+    {
+      "id": "em-0015",
+      "channel": "email",
+      "received_at": "2027-02-10T11:38:00-08:00",
+      "path": "em-0015.eml",
+      "title": "Fennel operating model draft v3"
+    },
+    {
+      "id": "ch-0017",
+      "channel": "chat",
+      "received_at": "2027-02-10T11:53:00-08:00",
+      "path": "ch-0017.json",
+      "title": "DM: Wei Rossi / Despina Pereira"
+    },
+    {
+      "id": "em-0016",
+      "channel": "email",
+      "received_at": "2027-02-10T12:52:00-08:00",
+      "path": "em-0016.eml",
+      "title": "Wellness credit deadline"
+    },
+    {
+      "id": "ch-0018",
+      "channel": "chat",
+      "received_at": "2027-02-10T13:28:00-08:00",
+      "path": "ch-0018.json",
+      "title": "#axolotl-core"
+    },
+    {
+      "id": "ch-0019",
+      "channel": "chat",
+      "received_at": "2027-02-10T13:52:00-08:00",
+      "path": "ch-0019.json",
+      "title": "#axolotl-core"
+    },
+    {
+      "id": "ch-0020",
+      "channel": "chat",
+      "received_at": "2027-02-10T13:54:00-08:00",
+      "path": "ch-0020.json",
+      "title": "DM: Losa Moretti / Despina Pereira"
+    },
+    {
+      "id": "mt-0002",
+      "channel": "transcript",
+      "received_at": "2027-02-10T14:30:00-08:00",
+      "path": "mt-0002.vtt",
+      "title": "Fennel platform sync (transcript)"
+    },
+    {
+      "id": "em-0017",
+      "channel": "email",
+      "received_at": "2027-02-10T15:42:00-08:00",
+      "path": "em-0017.eml",
+      "title": "[REQ-12568] Request resolved"
+    },
+    {
+      "id": "mn-0004",
+      "channel": "meeting_notes",
+      "received_at": "2027-02-10T16:00:00-08:00",
+      "path": "mn-0004.md",
+      "title": "Recap: Catch-up: Despina / Katerina"
+    },
+    {
+      "id": "mt-0003",
+      "channel": "transcript",
+      "received_at": "2027-02-10T16:00:00-08:00",
+      "path": "mt-0003.vtt",
+      "title": "Catch-up: Despina / Katerina (transcript)"
+    },
+    {
+      "id": "em-0018",
+      "channel": "email",
+      "received_at": "2027-02-10T17:00:00-08:00",
+      "path": "em-0018.eml",
+      "title": "Re: FYI: Axolotl tenant on Fennel"
+    }
+  ]
+}

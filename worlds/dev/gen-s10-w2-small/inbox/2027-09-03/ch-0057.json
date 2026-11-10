@@ -1,0 +1,62 @@
+{
+ "workspace": "reddale",
+ "channel": "#nettle-core",
+ "kind": "channel",
+ "participants": [
+  "Bisi Volkov",
+  "Aoife Everett",
+  "Gaurav Laine",
+  "Akosua",
+  "Douglas Grigoryan",
+  "Sigrid Asante",
+  "Sipho Papadopoulos",
+  "Adaeze Morimoto",
+  "Bruna Thapa",
+  "Marko Chaiyaporn"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-03T10:11:00+01:00",
+   "user": "Bisi Volkov",
+   "handle": "@bisi",
+   "text": "@gaurav done, I sent you the Nettle status slide!",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@aoife",
+      "@gaurav"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-03T10:11:24+01:00",
+   "user": "Sipho Papadopoulos",
+   "handle": "@sipho",
+   "text": "ok",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-03T10:17:54+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-03T10:22:43+01:00",
+   "user": "Akosua",
+   "handle": "@akosua",
+   "text": "thanks for flagging :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-03T10:28:40+01:00",
+   "user": "Bruna Thapa",
+   "handle": "@bruna",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  }
+ ]
+}

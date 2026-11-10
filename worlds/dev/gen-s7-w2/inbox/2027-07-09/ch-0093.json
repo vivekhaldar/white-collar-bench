@@ -1,0 +1,37 @@
+{
+ "workspace": "corrstead",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Adaeze Fifita",
+  "Tyrone Duarte",
+  "Anastasia Mizrahi",
+  "Bolat Oyelami"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-09T11:51:33-08:00",
+   "user": "Adaeze Fifita",
+   "handle": "@adaeze",
+   "text": "anyone up for coffee at 3?"
+  },
+  {
+   "ts": "2027-07-09T11:53:17-08:00",
+   "user": "Tyrone Duarte",
+   "handle": "@tyrone",
+   "text": "me!"
+  },
+  {
+   "ts": "2027-07-09T11:58:15-08:00",
+   "user": "Anastasia Mizrahi",
+   "handle": "@anastasia",
+   "text": "can't today, back to back"
+  },
+  {
+   "ts": "2027-07-09T12:04:21-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "yes please"
+  }
+ ]
+}

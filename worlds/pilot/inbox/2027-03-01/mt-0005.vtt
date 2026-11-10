@@ -1,0 +1,830 @@
+WEBVTT
+
+NOTE
+Penmarq demo - 1 Mar 2027
+Date: Mon 1 Mar 2027, 11:00-11:48 (-08:00), meet.tarrow.example
+Attendees: Juniper Hale, Callum Ferris, Mara Ilves, Delphine Arceneaux, Lionel Mbatha, Corwin Bellamy-Tate
+Transcript generated automatically by Huddlescribe. Speaker names from meeting display names; may contain errors.
+
+00:00:05.399 --> 00:00:10.850
+<v Juniper Hale>Hi everyone! Good morning! Can you all hear me okay?
+
+00:00:11.343 --> 00:00:12.797
+<v Mara Ilves>Yes, morning.
+
+00:00:13.790 --> 00:00:16.661
+<v Delphine Arceneaux>Morning. Hear you fine.
+
+00:00:18.002 --> 00:00:28.807
+<v Juniper Hale>Amazing. Welcome, welcome. So excited to finally show you Pen Mark. I think we're just waiting on one or two more?
+
+00:00:30.043 --> 00:00:36.749
+<v Delphine Arceneaux>Lionel's coming, and Corwin from our writing center should be joining too.
+
+00:00:40.178 --> 00:00:50.532
+<v Corwin Bellamy-Tate>Hello, hello. Corwin here. Sorry, I had the link from the original invite and it took me somewhere else entirely.
+
+00:00:51.125 --> 00:01:01.418
+<v Juniper Hale>Hi Corwin! No worries at all. And I see a notetaker joined, Huddlescribe? Just checking that's one of yours.
+
+00:01:02.289 --> 00:01:05.925
+<v Mara Ilves>That's ours. The transcript stays internal.
+
+00:01:06.440 --> 00:01:10.203
+<v Juniper Hale>No problem at all, totally fine.
+
+00:01:16.846 --> 00:01:23.261
+<v Lionel Mbatha>Lionel Mbatha joining. Sorry. The previous meeting ran over, as they do.
+
+00:01:24.239 --> 00:01:41.638
+<v Juniper Hale>Hi Lionel! No worries at all. Okay, so I think that's everyone. Quick intros on our side and then I'll hand over to Callum, who's the one who actually knows how it works.
+
+00:01:41.967 --> 00:01:52.425
+<v Juniper Hale>I'm Juniper Hale, I'm the account executive at Pen Mark for the Tarrow system. Juni is totally fine. And Callum?
+
+00:01:53.610 --> 00:02:06.473
+<v Callum Ferris>Hi. Callum Ferris, solutions engineer at Pen Mark. I do the demos and the integrations. So if something doesn't work later, it's also me.
+
+00:02:07.493 --> 00:02:08.835
+<v Callum Ferris>[dog barking]
+
+00:02:10.220 --> 00:02:15.437
+<v Callum Ferris>Sorry, that's my dog. Delivery van. Give me one sec.
+
+00:02:20.049 --> 00:02:23.714
+<v Callum Ferris>Okay. Muted her. Or tried to.
+
+00:02:24.179 --> 00:02:33.478
+<v Juniper Hale>(laughs) That's Pixel, she's basically on the team. Could we do a quick round on your side?
+
+00:02:34.411 --> 00:02:45.496
+<v Mara Ilves>Sure. Mara Ilves, Office of Digital Strategy at the system office. I'm running the evaluation for Saltmarren. Delphine is our sponsor.
+
+00:02:46.419 --> 00:03:05.935
+<v Delphine Arceneaux>Delphine Arceneaux, interim registrar at Saltmarren. This all started with our English faculty and the writing center, so I've asked Corwin to sit in from now on. His tutors are the ones who'd live with whatever we pick.
+
+00:03:06.741 --> 00:03:22.671
+<v Corwin Bellamy-Tate>Corwin Bellamy-Tate, I'm director of the Writing Center at Saltmarren. Delphine roped me in, which I'm genuinely glad about, because if any of this lands anywhere, it lands on my tutors.
+
+00:03:23.118 --> 00:03:39.943
+<v Lionel Mbatha>Lionel Mbatha, Director of IT at Saltmarren. For the record, I'm here because whatever gets picked, my team supports it and plugs it into the LMS. So I'll be asking the boring questions.
+
+00:03:41.057 --> 00:03:59.773
+<v Juniper Hale>We love boring questions. Truly. Okay! So, agenda. I'll do a couple of minutes on who we are, Callum does the product, then questions, and we'll save ten minutes at the end for next steps. Sound good?
+
+00:04:00.410 --> 00:04:01.866
+<v Delphine Arceneaux>Sounds good.
+
+00:04:02.465 --> 00:04:27.542
+<v Juniper Hale>Great. So, a tiny bit of history, I promise I'll be quick. Pen Mark started about eight years ago as a peer-review tool, inside a writing program at a community college. The founders were writing instructors, not engineers, which honestly still shows in the product, in a good way.
+
+00:04:28.281 --> 00:04:48.196
+<v Juniper Hale>We added AI feedback about three years ago, very carefully, and only after we'd spent a year asking instructors what they actually wanted from it. The answer was basically: help students before the deadline, and never grade for us.
+
+00:04:49.006 --> 00:05:12.770
+<v Juniper Hale>We're now in a little over two hundred institutions, mostly public, a lot of multi-campus systems like yours. This slide is our timeline, I won't read all of it. That's our first office, above a bakery, which was great for morale and terrible for the keyboards.
+
+00:05:13.450 --> 00:05:14.485
+<v Corwin Bellamy-Tate>(laughs)
+
+00:05:15.715 --> 00:05:22.502
+<v Juniper Hale>This one is our team, Callum's in the back row, the one squinting.
+
+00:05:23.359 --> 00:05:26.208
+<v Callum Ferris>It was very sunny.
+
+00:05:27.067 --> 00:05:57.168
+<v Juniper Hale>This one's the growth slide, which our board loves and I find slightly embarrassing. Twelve campuses in year one, about sixty three years ago, and just over two hundred now. The thing I'm actually proud of is the next bit: we've never lost a campus because of a data issue. We've lost a couple on price, I'll be honest.
+
+00:05:57.888 --> 00:05:59.733
+<v Lionel Mbatha>Appreciate the honesty.
+
+00:06:00.438 --> 00:06:08.845
+<v Juniper Hale>And we went employee-owned last year, so, if I sound invested, it's because I literally am.
+
+00:06:09.620 --> 00:06:23.738
+<v Juniper Hale>And this last one is our principles slide. Instructor in control, feedback not grades, students own their work. Okay! That's enough of me. Callum, take it away.
+
+00:06:25.093 --> 00:06:26.538
+<v Mara Ilves>Thanks, Juni.
+
+00:06:27.133 --> 00:06:33.007
+<v Callum Ferris>Okay, sharing my screen. You should see a course list?
+
+00:06:33.850 --> 00:06:35.117
+<v Delphine Arceneaux>Yes.
+
+00:06:36.062 --> 00:06:56.592
+<v Callum Ferris>So this is the instructor view. I've set up a mock ENGL 101 section, first-year composition. The assignment is a source-based argument, about fifteen hundred words, and the instructor has attached their rubric. Four criteria: claim, evidence, organization, and conventions.
+
+00:06:56.992 --> 00:07:18.729
+<v Callum Ferris>The core of Pen Mark is inline feedback. When a student submits a draft, the feedback comes back anchored to sentences in their essay, the way a tutor would write in the margin. Not a report at the end. I'll show you.
+
+00:07:19.077 --> 00:07:45.816
+<v Callum Ferris>Switching to the student view. Here's a draft. Student clicks 'request feedback'. Takes a few seconds. And there. You can see the highlights in the margin. This one on the second paragraph says: 'This quotation is doing the work your own sentence should do. What is your claim about it?' Tagged to evidence.
+
+00:07:46.496 --> 00:07:47.654
+<v Delphine Arceneaux>Mm-hm.
+
+00:07:48.872 --> 00:07:55.107
+<v Mara Ilves>How many comments does it give per draft? Is there a cap?
+
+00:07:56.042 --> 00:08:11.741
+<v Callum Ferris>Instructor sets it. Default is eight per draft across all criteria, and it prioritizes the criteria the instructor weighted highest. Eight sounds low, but past about eight, students stop reading.
+
+00:08:12.861 --> 00:08:23.282
+<v Corwin Bellamy-Tate>That matches what we see in the center, honestly. Past five or six comments, students just look for the grade.
+
+00:08:23.985 --> 00:08:38.695
+<v Callum Ferris>Right. And there isn't one, by default. No score, no letter. Instructors can turn on a rubric-level indicator, like 'developing' or 'proficient', but it's off out of the box.
+
+00:08:39.425 --> 00:08:46.474
+<v Delphine Arceneaux>Good. Our faculty would object loudly to anything that looks like a grade.
+
+00:08:46.893 --> 00:08:50.193
+<v Callum Ferris>We hear that a lot.
+
+00:08:51.047 --> 00:09:05.255
+<v Corwin Bellamy-Tate>Can I ask what the tutors see? If a student brings a draft to the writing center, can a tutor see the comments the tool already gave?
+
+00:09:06.540 --> 00:09:31.841
+<v Callum Ferris>Yes, if the instructor allows it. There's a 'support staff' role. A tutor with that role can see the draft, the AI comments, and the student's responses to them. They can't edit the AI comments, but they can add their own, and those show up in a different color.
+
+00:09:33.087 --> 00:09:41.323
+<v Corwin Bellamy-Tate>Oh, that's useful. Half our sessions start with 'I don't understand what this comment means.'
+
+00:09:42.255 --> 00:10:03.566
+<v Callum Ferris>And the student can reply to a comment, actually. Like this. 'I don't understand what you mean by claim here.' And it explains, with an example from their own draft. That exchange is visible to the instructor and to the tutor.
+
+00:10:03.927 --> 00:10:07.048
+<v Corwin Bellamy-Tate>Hm. Okay. That's genuinely good.
+
+00:10:07.686 --> 00:10:21.490
+<v Corwin Bellamy-Tate>Does it flag essays it thinks were written by AI? Because my tutors get asked that every week, and I'd rather know before a student does.
+
+00:10:21.831 --> 00:10:33.424
+<v Callum Ferris>No. Deliberately. We're not a detection tool and we don't pretend to be. The feedback treats every draft as the student's draft.
+
+00:10:34.735 --> 00:10:37.114
+<v Corwin Bellamy-Tate>Good. Honestly, good.
+
+00:10:38.074 --> 00:10:46.845
+<v Mara Ilves>What about tone? Can an instructor make the comments gentler for first-years, or more direct for upper-division?
+
+00:10:48.034 --> 00:11:06.282
+<v Callum Ferris>Yes, there's a tone setting per assignment. Three levels. And the instructor can paste in two or three of their own example comments, and it matches their voice. That's probably the setting instructors like most.
+
+00:11:07.042 --> 00:11:08.343
+<v Delphine Arceneaux>Mm-hm.
+
+00:11:09.122 --> 00:11:21.484
+<v Delphine Arceneaux>Can an instructor limit how many times a student asks for feedback? Otherwise some of ours will submit forty times the night before.
+
+00:11:22.043 --> 00:11:41.701
+<v Callum Ferris>Yes. Default is three feedback requests per assignment, and the instructor can close feedback a set number of hours before the deadline. Most composition programs close it twenty-four hours before, so it doesn't turn into a last-minute fixer.
+
+00:11:42.268 --> 00:11:44.907
+<v Delphine Arceneaux>Oh, I like that.
+
+00:11:46.296 --> 00:11:53.629
+<v Mara Ilves>What happens when the model is down? Or slow, in the week everything's due?
+
+00:11:54.388 --> 00:12:19.153
+<v Callum Ferris>The student can still submit. The request queues, the student sees a notice that feedback is delayed, and the instructor dashboard shows it as pending. Nothing is lost. We had one bad evening last spring, finals week, and that's what happened. Feedback came through about two hours late.
+
+00:12:19.853 --> 00:12:22.747
+<v Mara Ilves>Okay. Thanks for saying so.
+
+00:12:24.037 --> 00:12:39.266
+<v Callum Ferris>Okay. Revision. Student revises, resubmits, and gets a side-by-side. Comments they addressed are struck through, comments still open stay highlighted. Instructors tell us this is the feature students actually use.
+
+00:12:39.991 --> 00:12:45.009
+<v Mara Ilves>Who decides whether a comment was addressed? The model?
+
+00:12:45.443 --> 00:12:56.389
+<v Callum Ferris>The model, with a confidence threshold. If it isn't confident, it shows 'possibly addressed' and leaves the highlight. We'd rather under-claim.
+
+00:12:57.289 --> 00:12:58.103
+<v Mara Ilves>Okay.
+
+00:12:58.509 --> 00:13:19.370
+<v Callum Ferris>And then the instructor side. Section overview. Which criteria the class as a whole is struggling with. In this mock section it's evidence, about two thirds of drafts got an evidence comment. So the instructor knows what to teach on Thursday.
+
+00:13:20.177 --> 00:13:25.847
+<v Delphine Arceneaux>That's the bit I'd want our department chairs to see.
+
+00:13:27.093 --> 00:13:34.201
+<v Callum Ferris>There's a department roll-up as well. Anonymized, aggregated by course, not by student.
+
+00:13:34.788 --> 00:13:36.257
+<v Delphine Arceneaux>Mm-hm. Good.
+
+00:13:37.161 --> 00:13:45.932
+<v Delphine Arceneaux>Do you have any evidence it actually helps? Not satisfaction surveys. Revision quality, outcomes, anything like that.
+
+00:13:46.792 --> 00:13:51.601
+<v Juniper Hale>Callum, do you want to show the pre/post slide?
+
+00:13:52.096 --> 00:14:17.682
+<v Callum Ferris>Sure. Give me a sec. So, this is aggregate data across about forty composition programs that opted in. The share of second drafts that substantively revise the thesis, versus first-draft-only submissions. It goes from about a third to a bit over half. It's correlational, I'll say that before you do.
+
+00:14:18.865 --> 00:14:25.260
+<v Delphine Arceneaux>I was about to. But it's more than most vendors show us.
+
+00:14:26.091 --> 00:14:48.063
+<v Callum Ferris>One more thing on the instructor side, the release modes. Auto-release, where students get the feedback immediately, or review-first, where the instructor sees every comment and can hide or edit before release. Most programs start review-first for a few weeks and then switch.
+
+00:14:48.557 --> 00:14:52.404
+<v Corwin Bellamy-Tate>How many actually keep reviewing? Honestly.
+
+00:14:53.382 --> 00:15:05.090
+<v Callum Ferris>Honestly? Week one, all of them. By midterm, maybe a third. Which is fine, as long as the default was chosen on purpose.
+
+00:15:06.319 --> 00:15:23.484
+<v Juniper Hale>One of our campuses, a big system out east, ran review-first all year in their developmental writing courses and auto-release everywhere else. That ended up being the model a lot of people copied.
+
+00:15:23.810 --> 00:15:29.669
+<v Corwin Bellamy-Tate>Can you see which students never open the feedback at all?
+
+00:15:30.399 --> 00:15:43.693
+<v Callum Ferris>Yes, there's an engagement view. Opened, replied to a comment, revised. Per student, visible to the instructor, and to support staff if that's turned on.
+
+00:15:44.496 --> 00:15:51.005
+<v Mara Ilves>Can we export de-identified engagement data? For our own evaluation, not yours.
+
+00:15:51.820 --> 00:15:58.050
+<v Callum Ferris>Yes, admin export, CSV, de-identified by default. You'd choose the fields.
+
+00:15:58.590 --> 00:16:06.753
+<v Callum Ferris>Rubric setup next. It's short, and it's the only screen most instructors ever configure.
+
+00:16:11.052 --> 00:16:33.814
+<v Callum Ferris>So you can import the rubric from the LMS, paste it, or start from a template. And for each criterion you can write guidance for the feedback, things to look for, things to ignore. Like, 'don't comment on citation format in the first draft'.
+
+00:16:34.399 --> 00:16:42.133
+<v Corwin Bellamy-Tate>Can tutors see that guidance? Because that would help us be consistent with the instructor.
+
+00:16:42.488 --> 00:16:45.738
+<v Callum Ferris>Support staff can, students can't.
+
+00:16:46.210 --> 00:16:47.211
+<v Corwin Bellamy-Tate>Okay.
+
+00:16:47.556 --> 00:16:55.303
+<v Mara Ilves>What languages does the feedback support? We have a lot of multilingual writers at Saltmarren.
+
+00:16:55.659 --> 00:17:18.178
+<v Callum Ferris>The feedback is in English, but it's been tuned not to penalize second-language patterns as errors unless the instructor asks for conventions feedback. There's a setting for that, it's under conventions. It's not perfect. I'd rather say that now than have you find out.
+
+00:17:18.706 --> 00:17:21.514
+<v Corwin Bellamy-Tate>I appreciate that, actually.
+
+00:17:22.075 --> 00:17:31.673
+<v Corwin Bellamy-Tate>And can a tutor leave a session note on the draft? Like, 'we worked on the counterargument today'?
+
+00:17:32.274 --> 00:17:44.554
+<v Callum Ferris>Yes. There's a notes panel for support staff. The student sees it, the instructor sees it if the instructor has turned on support-staff visibility.
+
+00:17:45.890 --> 00:17:51.968
+<v Corwin Bellamy-Tate>Okay. That would replace a spreadsheet we're all quite tired of.
+
+00:17:53.042 --> 00:18:05.828
+<v Corwin Bellamy-Tate>Do you train tutors, or only faculty? My tutors are mostly undergraduates. They're good, but they'd need a half hour on what they're looking at.
+
+00:18:06.301 --> 00:18:24.037
+<v Callum Ferris>We have a short support-staff module, about twenty-five minutes, self-paced. And in the first term we usually do one live session for tutors, separate from the faculty ones, because the questions are completely different.
+
+00:18:25.152 --> 00:18:35.384
+<v Corwin Bellamy-Tate>They are. Faculty ask what it does. Tutors ask what to say when a student is upset with it.
+
+00:18:35.792 --> 00:18:39.419
+<v Callum Ferris>Ha. Yes. That's exactly the session.
+
+00:18:40.113 --> 00:18:49.766
+<v Delphine Arceneaux>Do students see clearly that the comments come from AI? I don't want anyone thinking it's their instructor.
+
+00:18:50.197 --> 00:19:05.978
+<v Callum Ferris>Yes. Every AI comment is labelled, with a small icon and the words 'automated feedback'. Instructor and tutor comments are labelled with their names. You can't turn the label off.
+
+00:19:06.962 --> 00:19:08.344
+<v Delphine Arceneaux>Good.
+
+00:19:35.149 --> 00:19:40.363
+<v Lionel Mbatha>Can I move to integration? Since that's my part.
+
+00:19:41.669 --> 00:19:42.690
+<v Callum Ferris>Please.
+
+00:19:43.905 --> 00:19:53.649
+<v Lionel Mbatha>How does it sit in the LMS? LTI 1.3? Or is it a separate site the students log into?
+
+00:19:54.267 --> 00:20:14.493
+<v Callum Ferris>LTI 1.3, deep linking. The instructor adds Pen Mark as an assignment tool inside the LMS course. Students never see a separate login, they launch from the assignment. Roster comes through the LTI launch and the names and roles service.
+
+00:20:15.014 --> 00:20:17.169
+<v Lionel Mbatha>And grade passback?
+
+00:20:17.786 --> 00:20:31.865
+<v Callum Ferris>Supported, but off by default, because there's no grade by default. If an instructor turns on the rubric indicator, it can pass a completion mark. Nothing else.
+
+00:20:33.213 --> 00:20:39.579
+<v Lionel Mbatha>Single sign-on for staff who aren't in a course? Tutors, for example?
+
+00:20:40.611 --> 00:20:46.314
+<v Callum Ferris>SAML for the support-staff role. We'd federate with your campus IdP.
+
+00:20:47.268 --> 00:20:59.969
+<v Lionel Mbatha>For the record, our IdP releases the minimum attributes. Vendors always assume we release more than we do. I'll want that tested, not promised.
+
+00:21:01.088 --> 00:21:07.827
+<v Callum Ferris>That's fair. It's the most common thing that goes wrong in onboarding, honestly.
+
+00:21:08.393 --> 00:21:24.076
+<v Lionel Mbatha>Course copies. Our faculty copy their courses forward every term, and every January something breaks because a tool kept a link to last term's course. What happens with Pen Mark?
+
+00:21:24.999 --> 00:21:48.418
+<v Callum Ferris>On a course copy the assignment link comes across, and the first launch in the new course creates a fresh Pen Mark course. Rubrics and tone settings come with it, student data doesn't. We tested it against the copy behaviour in your LMS version last year.
+
+00:21:49.073 --> 00:21:58.207
+<v Lionel Mbatha>That's the one that bites us every January. I'll believe it when I see it, but okay.
+
+00:21:59.436 --> 00:22:04.650
+<v Lionel Mbatha>Do you need anything from our student information system directly?
+
+00:22:05.125 --> 00:22:14.409
+<v Callum Ferris>No. Everything comes through the LMS launch. We don't integrate with student information systems at all, by design.
+
+00:22:15.010 --> 00:22:17.969
+<v Lionel Mbatha>Good. Keep it that way.
+
+00:22:18.719 --> 00:22:30.338
+<v Corwin Bellamy-Tate>Does a tutor have to be added to every course to see drafts? We see students from about sixty sections a term.
+
+00:22:30.966 --> 00:22:49.316
+<v Callum Ferris>No. An admin can scope a support-staff account across courses, by department or by term. The student still has to choose to share the draft with the writing center, that's a button on their side.
+
+00:22:50.498 --> 00:22:54.765
+<v Corwin Bellamy-Tate>Oh, I like that it's the student's choice.
+
+00:22:56.111 --> 00:23:02.923
+<v Lionel Mbatha>What do you need from my team, concretely, to set it up?
+
+00:23:03.683 --> 00:23:26.204
+<v Callum Ferris>An LTI 1.3 registration in your LMS, which gives us a client ID and a deployment ID. SAML metadata for the support-staff role. And one test course with a couple of test accounts, an instructor and a student. That's it for the first pass.
+
+00:23:26.526 --> 00:23:35.327
+<v Lionel Mbatha>And the sandbox is a separate tenant from production? Not a flag on the same one?
+
+00:23:35.701 --> 00:23:41.547
+<v Callum Ferris>Separate tenant. Separate data. Nothing moves from sandbox to production.
+
+00:23:42.053 --> 00:23:43.516
+<v Lionel Mbatha>Okay. Uptime?
+
+00:23:44.392 --> 00:23:53.265
+<v Juniper Hale>Ninety-nine point nine over the last twelve months, it's all on the public status page history.
+
+00:23:53.882 --> 00:23:59.559
+<v Lionel Mbatha>I'll look at the history. The page, not the number.
+
+00:24:00.127 --> 00:24:01.825
+<v Juniper Hale>(laughs) Fair.
+
+00:24:02.835 --> 00:24:14.235
+<v Mara Ilves>When you change the model underneath, does anyone get told? Feedback that shifts in tone halfway through a term is a problem.
+
+00:24:15.410 --> 00:24:29.812
+<v Callum Ferris>We publish release notes, and model changes go to the sandbox two weeks before production so a campus can look first. We don't swap models mid-term without notice.
+
+00:24:30.761 --> 00:24:32.549
+<v Lionel Mbatha>Without notice. Noted.
+
+00:24:33.056 --> 00:24:42.290
+<v Lionel Mbatha>Audit logs. If an instructor says 'I never released that comment', can we see who did what?
+
+00:24:43.269 --> 00:24:53.649
+<v Callum Ferris>Yes. Admin console, audit log per course. Who changed settings, who released or hid comments, when. Exportable as CSV.
+
+00:24:55.026 --> 00:25:05.850
+<v Lionel Mbatha>Okay. And does it work in the LMS mobile app? Half our students only ever see the LMS on a phone.
+
+00:25:06.671 --> 00:25:22.283
+<v Callum Ferris>It works in the mobile app's embedded browser. Reading feedback is fine on a phone. Writing a fifteen-hundred-word essay on a phone is, uh, between the student and their thumbs.
+
+00:25:22.734 --> 00:25:26.285
+<v Corwin Bellamy-Tate>(laughs) We have seen it done.
+
+00:25:26.667 --> 00:25:43.308
+<v Lionel Mbatha>And who supports it? After your implementation team has moved on to the next customer. When an instructor rings our help desk at eight in the evening because feedback isn't coming back.
+
+00:25:44.609 --> 00:25:58.828
+<v Juniper Hale>So you'd have a named customer success manager, and our support desk is staffed during business hours in all US time zones. And there's a status page.
+
+00:25:59.131 --> 00:26:08.135
+<v Lionel Mbatha>Business hours. Okay. So my help desk takes the call and then waits for your business hours.
+
+00:26:09.498 --> 00:26:15.598
+<v Juniper Hale>For tier-one, yes, that's typically how it works with our campuses.
+
+00:26:16.298 --> 00:26:17.352
+<v Lionel Mbatha>Mm.
+
+00:26:20.093 --> 00:26:34.135
+<v Lionel Mbatha>Honestly we could build this on Kettleyard ourselves. The system already has a shared AI platform. Inline comments on a document against a rubric, that's not exotic.
+
+00:26:34.744 --> 00:26:54.962
+<v Juniper Hale>Totally hear that, and a lot of campuses say that! What we usually find is that the hard part isn't the model, it's the eight years of instructor feedback baked into how the comments are written. But I get it.
+
+00:26:55.997 --> 00:27:00.955
+<v Lionel Mbatha>I'm not saying we will. I'm saying we could.
+
+00:27:02.269 --> 00:27:07.500
+<v Mara Ilves>Noted. Let's keep going, we've got data questions too.
+
+00:27:08.598 --> 00:27:19.950
+<v Callum Ferris>Sure. Sorry, give me a second, I'm closing the admin console so I don't accidentally show you another customer's course list.
+
+00:27:21.011 --> 00:27:22.667
+<v Juniper Hale>Safety first!
+
+00:27:48.349 --> 00:27:50.548
+<v Callum Ferris>Okay. Still there?
+
+00:27:51.545 --> 00:27:53.038
+<v Delphine Arceneaux>Still here.
+
+00:28:02.410 --> 00:28:09.877
+<v Juniper Hale>Sorry, that took longer than it should have. Does anyone need a quick stretch before data? We're right on schedule.
+
+00:28:11.205 --> 00:28:13.660
+<v Lionel Mbatha>I'm fine.
+
+00:28:24.932 --> 00:28:31.318
+<v Delphine Arceneaux>Keep going, I'd rather we finish on time.
+
+00:28:40.071 --> 00:28:46.244
+<v Mara Ilves>So, data. Where are student essays stored, and for how long?
+
+00:28:46.652 --> 00:29:06.242
+<v Callum Ferris>Stored in a US region, encrypted at rest. Retention is a customer setting. Default is the end of the academic term plus ninety days, then the essay text is deleted and we keep only aggregated, de-identified feedback statistics.
+
+00:29:06.784 --> 00:29:09.300
+<v Mara Ilves>And the comments themselves?
+
+00:29:09.602 --> 00:29:15.145
+<v Callum Ferris>Same retention as the essay. They're tied to the draft.
+
+00:29:16.545 --> 00:29:22.187
+<v Mara Ilves>And the model itself. Is that yours, or a provider's?
+
+00:29:22.818 --> 00:29:36.790
+<v Callum Ferris>We use a third-party model provider. They're listed as a subprocessor, and under our agreement with them they don't retain inputs or use them for anything else.
+
+00:29:37.641 --> 00:29:48.860
+<v Delphine Arceneaux>That's your provider, and that's storage. I want to ask about you, and about training, and I want to ask it plainly.
+
+00:29:49.222 --> 00:29:50.623
+<v Juniper Hale>Of course.
+
+00:29:51.693 --> 00:30:01.987
+<v Delphine Arceneaux>Will you commit contractually to no training on student essays? Not a setting, not a policy page. In the contract.
+
+00:30:04.473 --> 00:30:17.183
+<v Juniper Hale>That's a really fair question, and I don't want to answer contract language off the cuff on a call. I'll check with our legal team.
+
+00:30:18.528 --> 00:30:31.918
+<v Mara Ilves>I asked the same thing by email on Friday, for what it's worth. It'd be good to have it in writing, for both of us.
+
+00:30:32.805 --> 00:30:43.481
+<v Juniper Hale>Yes, I have your email, Mara, it's flagged. I'll check with our legal team and come back to you both.
+
+00:30:44.506 --> 00:30:51.803
+<v Delphine Arceneaux>Thank you. For us that's close to a deal-breaker, so I'd rather know early.
+
+00:30:52.702 --> 00:30:54.091
+<v Juniper Hale>Understood. Completely.
+
+00:30:55.089 --> 00:31:06.366
+<v Lionel Mbatha>For the record, I'd want the same answer for the comments, not just the essays. The comments are derived from the essays.
+
+00:31:07.614 --> 00:31:12.466
+<v Juniper Hale>Noted, Lionel. I'll include that in the question.
+
+00:31:13.230 --> 00:31:19.011
+<v Mara Ilves>And if there's an incident, how quickly do you notify us?
+
+00:31:19.585 --> 00:31:30.141
+<v Callum Ferris>Within seventy-two hours of confirming it, that's in the standard terms. Faster in practice, but seventy-two is what's written down.
+
+00:31:31.157 --> 00:31:32.197
+<v Mara Ilves>Okay.
+
+00:31:32.846 --> 00:31:41.634
+<v Delphine Arceneaux>And if a student asks for their work to be deleted? Before the end of term?
+
+00:31:42.542 --> 00:31:53.829
+<v Callum Ferris>An admin can delete per student. It's removed from the live system right away and ages out of backups within thirty days.
+
+00:31:54.952 --> 00:31:59.427
+<v Mara Ilves>Do your support engineers ever see essay text?
+
+00:32:00.608 --> 00:32:12.338
+<v Callum Ferris>Only if the customer grants time-boxed support access on a specific course. It's logged, and it expires on its own. Otherwise no.
+
+00:32:12.968 --> 00:32:16.647
+<v Lionel Mbatha>Logged where we can see it?
+
+00:32:17.013 --> 00:32:21.949
+<v Callum Ferris>In the same audit log I showed you. Yes.
+
+00:32:22.422 --> 00:32:23.638
+<v Lionel Mbatha>Okay.
+
+00:32:24.715 --> 00:32:33.591
+<v Mara Ilves>Can a campus set retention shorter than your default? End of term, say, with no ninety days?
+
+00:32:34.847 --> 00:32:42.924
+<v Callum Ferris>Yes. End of term is the shortest option. Some campuses do that for first-year courses.
+
+00:32:43.510 --> 00:32:44.366
+<v Mara Ilves>Okay.
+
+00:32:45.032 --> 00:32:52.424
+<v Mara Ilves>Is your subprocessor list public? And do you tell customers before it changes?
+
+00:32:53.609 --> 00:33:04.501
+<v Callum Ferris>Public, on the trust page. Thirty days' notice before a new subprocessor goes live, by email to the contract contact.
+
+00:33:05.471 --> 00:33:07.249
+<v Lionel Mbatha>Penetration testing?
+
+00:33:08.157 --> 00:33:18.981
+<v Callum Ferris>Annual, third party. We share the summary letter under NDA, the full report stays with us. That's standard for us.
+
+00:33:19.389 --> 00:33:22.024
+<v Lionel Mbatha>Standard for everyone. Okay.
+
+00:33:22.460 --> 00:33:33.861
+<v Delphine Arceneaux>What do students actually agree to the first time they use it? I'd want to see that text before anything goes live.
+
+00:33:34.396 --> 00:33:54.153
+<v Callum Ferris>A short notice on first launch. What the tool does, that it's automated, who can see the comments, how long it's kept. The campus can edit the text, within limits, so it can match your own policy language.
+
+00:33:55.334 --> 00:33:56.777
+<v Delphine Arceneaux>Okay. Good.
+
+00:33:58.052 --> 00:34:14.250
+<v Juniper Hale>And honestly, these are exactly the questions we get from every system now. A year ago it was all features. Now the data conversation comes first, which we think is right.
+
+00:34:15.027 --> 00:34:21.843
+<v Mara Ilves>Callum, you can stop sharing for this next bit, if you like.
+
+00:34:22.916 --> 00:34:25.225
+<v Callum Ferris>Sure. Stopping share.
+
+00:34:46.077 --> 00:34:51.114
+<v Juniper Hale>Sorry, I'm just pulling up my notes, one sec.
+
+00:35:02.551 --> 00:35:10.904
+<v Corwin Bellamy-Tate>While we wait, the student-reply feature is the bit my tutors would actually use.
+
+00:35:11.737 --> 00:35:13.215
+<v Callum Ferris>Good to hear.
+
+00:35:24.618 --> 00:35:30.072
+<v Juniper Hale>Okay, found them. Sorry, too many tabs.
+
+00:35:40.007 --> 00:35:49.934
+<v Mara Ilves>Juni, pricing. I asked on Friday for three campuses, not just Saltmarren, so we can compare like for like.
+
+00:35:50.442 --> 00:36:06.130
+<v Juniper Hale>Yes! So, three-campus pricing is coming this week. I've got our finance team working on the multi-campus tier, and I want to send you something real rather than a range.
+
+00:36:07.028 --> 00:36:10.356
+<v Mara Ilves>Okay. This week is fine.
+
+00:36:11.237 --> 00:36:25.610
+<v Juniper Hale>The model is per-student, by enrollment in the courses that actually use it, not campus-wide headcount. So you only pay for the sections that turn it on.
+
+00:36:26.699 --> 00:36:30.280
+<v Lionel Mbatha>Per-student per term, or per year?
+
+00:36:31.613 --> 00:36:35.331
+<v Juniper Hale>Per year. It'll be in the sheet.
+
+00:36:36.214 --> 00:36:37.998
+<v Lionel Mbatha>Implementation fees?
+
+00:36:38.587 --> 00:36:47.407
+<v Juniper Hale>Onboarding is included for the first year. Callum, or someone on his team, runs the instructor sessions.
+
+00:36:48.575 --> 00:36:49.789
+<v Lionel Mbatha>Okay.
+
+00:36:50.162 --> 00:36:58.817
+<v Delphine Arceneaux>Timing question. If we chose a tool in April, could it realistically be live for fall?
+
+00:36:59.634 --> 00:37:09.886
+<v Juniper Hale>Oh, easily. Typical implementation is about six weeks, and most of that is waiting on LMS registration and SSO testing.
+
+00:37:10.415 --> 00:37:15.736
+<v Lionel Mbatha>Most of that is waiting on my team, you mean.
+
+00:37:16.161 --> 00:37:20.841
+<v Juniper Hale>I would never say that out loud, Lionel.
+
+00:37:21.849 --> 00:37:24.565
+<v Lionel Mbatha>(laughs) You just did.
+
+00:37:24.881 --> 00:37:28.022
+<v Mara Ilves>Is there a minimum commitment?
+
+00:37:28.974 --> 00:37:40.883
+<v Juniper Hale>There's a minimum annual commitment per campus, it's modest. It'll be in the sheet so you can see it next to everything else.
+
+00:37:42.019 --> 00:37:46.005
+<v Lionel Mbatha>Tutor accounts. Are those charged as users?
+
+00:37:46.919 --> 00:37:53.626
+<v Juniper Hale>No. Support staff aren't charged, only students in courses that use it.
+
+00:37:54.526 --> 00:38:04.019
+<v Corwin Bellamy-Tate>Good, because I don't have a budget line for that. I barely have a budget line for coffee.
+
+00:38:04.406 --> 00:38:10.263
+<v Juniper Hale>(laughs) We hear that from every writing center. Every single one.
+
+00:38:11.343 --> 00:38:18.239
+<v Delphine Arceneaux>Would the sheet show a single pilot year? Before anyone signs anything multi-year?
+
+00:38:19.499 --> 00:38:29.829
+<v Juniper Hale>Yes, there's a pilot-year option, one year, no auto-renewal. I'll make sure it's clearly separated from the multi-year lines.
+
+00:38:30.612 --> 00:38:38.383
+<v Delphine Arceneaux>Thank you. Clement in procurement will ask about auto-renewal before he asks about anything else.
+
+00:38:39.498 --> 00:38:43.516
+<v Juniper Hale>(laughs) Procurement always does. As they should.
+
+00:38:47.736 --> 00:38:52.582
+<v Juniper Hale>Any other questions on the product before next steps?
+
+00:38:53.140 --> 00:39:03.874
+<v Corwin Bellamy-Tate>One small one. Can students turn it off? Some of our writers really don't want a machine anywhere near their draft.
+
+00:39:04.392 --> 00:39:17.651
+<v Callum Ferris>If the instructor makes it optional, yes. A student can submit without requesting feedback. The instructor sees who used it, not what they would have gotten.
+
+00:39:18.441 --> 00:39:20.794
+<v Corwin Bellamy-Tate>Okay. Thank you.
+
+00:39:22.033 --> 00:39:29.717
+<v Mara Ilves>And accessibility in the student view. Screen readers, keyboard navigation of the margin comments?
+
+00:39:31.097 --> 00:39:45.825
+<v Callum Ferris>Comments are reachable by keyboard and announced in reading order. The margin highlights have a list view as well, which is what most screen-reader users end up preferring.
+
+00:39:46.740 --> 00:39:48.631
+<v Mara Ilves>Okay, good.
+
+00:39:50.512 --> 00:40:00.177
+<v Lionel Mbatha>Does the list view work inside the mobile app as well? Same embedded browser?
+
+00:40:00.804 --> 00:40:08.351
+<v Callum Ferris>Same view, yes. It's the same page, it just stacks the comments under the text.
+
+00:40:09.215 --> 00:40:10.476
+<v Lionel Mbatha>Okay.
+
+00:40:21.930 --> 00:40:29.668
+<v Juniper Hale>Great. If that's everything on the product, let me just pull up the next-steps slide.
+
+00:40:50.203 --> 00:40:56.941
+<v Delphine Arceneaux>Can I jump in before next steps? I have a hard stop.
+
+00:40:57.948 --> 00:40:59.632
+<v Juniper Hale>Of course.
+
+00:41:00.774 --> 00:41:17.773
+<v Delphine Arceneaux>Mara, can you get us a scorecard summary this week? Both vendors side by side on the vendor scorecard, so I'm not reading two sets of notes before I talk to my VP.
+
+00:41:18.132 --> 00:41:19.269
+<v Mara Ilves>Yes.
+
+00:41:19.960 --> 00:41:24.989
+<v Delphine Arceneaux>Thank you. That's all I need from today, honestly.
+
+00:41:25.384 --> 00:41:38.565
+<v Juniper Hale>So for next steps on our side, we'd love to get Saltmarren into a sandbox trial. Two weeks, no cost, Callum would set you up.
+
+00:41:39.064 --> 00:41:53.462
+<v Mara Ilves>That's the plan on our side. We'll get a couple of writing-center staff into the sandbox for two weeks, so they can try it on real-looking drafts.
+
+00:41:54.459 --> 00:42:04.315
+<v Corwin Bellamy-Tate>Honestly my tutors are slammed until after midterms. I'm not saying no. I'm just saying, honestly, we're slammed.
+
+00:42:04.740 --> 00:42:05.946
+<v Mara Ilves>Understood.
+
+00:42:07.273 --> 00:42:12.117
+<v Delphine Arceneaux>It doesn't have to be the whole center, Corwin.
+
+00:42:13.136 --> 00:42:15.793
+<v Corwin Bellamy-Tate>Mm. I know.
+
+00:42:16.974 --> 00:42:26.147
+<v Mara Ilves>One question on the sandbox. What's your guidance on real student work in there?
+
+00:42:26.900 --> 00:42:36.009
+<v Callum Ferris>Please don't. The sandbox isn't covered by a data agreement, so sample drafts only.
+
+00:42:36.908 --> 00:42:48.341
+<v Callum Ferris>I'll send sandbox access after the call. It'll have this ENGL 101 course in it so nobody's starting from a blank screen.
+
+00:42:49.057 --> 00:42:57.295
+<v Juniper Hale>Perfect. And the three-campus pricing this week, and I'll come back on the legal question.
+
+00:42:58.042 --> 00:42:59.340
+<v Mara Ilves>Thanks.
+
+00:42:59.679 --> 00:43:09.250
+<v Delphine Arceneaux>Thank you all, really. I have to run, I'm due in a transfer appeal hearing in five minutes.
+
+00:43:09.777 --> 00:43:14.071
+<v Juniper Hale>Of course, thank you so much, Delphine!
+
+00:43:15.261 --> 00:43:18.561
+<v Lionel Mbatha>I'm dropping as well. Thanks.
+
+00:43:19.079 --> 00:43:20.405
+<v Juniper Hale>Thanks Lionel!
+
+00:43:23.111 --> 00:43:33.968
+<v Corwin Bellamy-Tate>Can I ask a couple of practical things about the sandbox, while I have you? Since it'd be my people, if it happens.
+
+00:43:34.938 --> 00:43:36.343
+<v Callum Ferris>Of course.
+
+00:43:37.360 --> 00:43:45.570
+<v Corwin Bellamy-Tate>How many accounts? And do they each need their own login, or do they share one?
+
+00:43:45.965 --> 00:44:05.998
+<v Callum Ferris>Own logins. There's one admin login, and whoever has it can invite the rest from inside. There's no real limit on the sandbox, but more than five or six people and it gets hard to tell who did what.
+
+00:44:06.522 --> 00:44:09.990
+<v Corwin Bellamy-Tate>Two or three, realistically. If I can free anyone up at all.
+
+00:44:11.161 --> 00:44:14.250
+<v Mara Ilves>Two or three is plenty.
+
+00:44:14.858 --> 00:44:28.741
+<v Corwin Bellamy-Tate>And sample drafts, do you provide those, or do we bring our own? We have some anonymized ones from a training workshop last year, with permission.
+
+00:44:29.389 --> 00:44:41.217
+<v Callum Ferris>There are a dozen sample drafts in the demo course already. If you add your own, just make sure they're the anonymized ones.
+
+00:44:41.712 --> 00:44:46.241
+<v Corwin Bellamy-Tate>They are. We scrubbed them for the workshop.
+
+00:44:47.248 --> 00:45:00.336
+<v Juniper Hale>Corwin, honestly, I love that you're asking these. Usually we hear from the writing center six weeks after go-live, and not in a good way.
+
+00:45:01.085 --> 00:45:07.443
+<v Corwin Bellamy-Tate>(laughs) I've been the person sending that email, more than once.
+
+00:45:08.220 --> 00:45:27.209
+<v Juniper Hale>We also run a monthly call for writing center directors, across all our campuses. Very informal, mostly people swapping tutor training materials. Happy to add you to the list whenever, no pressure, totally separate from the evaluation.
+
+00:45:27.602 --> 00:45:31.881
+<v Corwin Bellamy-Tate>Maybe after midterms. Everything is after midterms.
+
+00:45:34.400 --> 00:45:50.943
+<v Juniper Hale>And Mara, I'll leave you in peace, I know it's a busy week. Is anyone doing anything fun for spring break? Or is that a silly question in the middle of term.
+
+00:45:51.357 --> 00:45:53.652
+<v Mara Ilves>Not this year.
+
+00:45:54.807 --> 00:45:58.040
+<v Corwin Bellamy-Tate>Midterms first. Then I sleep.
+
+00:45:58.596 --> 00:46:00.486
+<v Juniper Hale>(laughs) That's fair.
+
+00:46:01.504 --> 00:46:07.089
+<v Juniper Hale>Okay. Mara, Corwin, anything else before we let you go?
+
+00:46:07.805 --> 00:46:16.196
+<v Corwin Bellamy-Tate>Actually, one last thing. The tone examples, can tutors add their own, or only instructors?
+
+00:46:17.264 --> 00:46:25.195
+<v Callum Ferris>Only instructors, per assignment. Tutors can't change what the tool says, only add alongside it.
+
+00:46:26.053 --> 00:46:30.918
+<v Corwin Bellamy-Tate>Okay. That's probably right. Thank you, it was helpful.
+
+00:46:32.295 --> 00:46:35.684
+<v Mara Ilves>Nothing else from me. Thanks, both.
+
+00:46:36.954 --> 00:46:45.457
+<v Juniper Hale>Amazing. Thank you so much, everyone, and Mara, if anything comes up before the pricing, just
+

@@ -1,0 +1,37 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolat-hiba",
+ "kind": "dm",
+ "participants": [
+  "Bolat",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-24T10:16:54-08:00",
+   "user": "Bolat",
+   "handle": "@bolat",
+   "text": "morning!"
+  },
+  {
+   "ts": "2027-06-24T10:18:00-08:00",
+   "user": "Bolat",
+   "handle": "@bolat",
+   "text": "Syllabus Review Learning Series has moved to the scheduling phase!",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-06-24T10:18:11-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "got it"
+  }
+ ]
+}

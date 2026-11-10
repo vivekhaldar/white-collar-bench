@@ -1,0 +1,165 @@
+From: Mara Ilves <mara.ilves@tarrow.example>
+To: Ilya Marchetti <ilya.marchetti@tarrow.example>
+Cc: Bettina Oduya <bettina.oduya@tarrow.example>, Hyun-woo Park <hyunwoo.park@tarrow.example>
+Date: Mon, 01 Mar 2027 10:12:00 -0800
+Subject: Re: Kettleyard reference architecture v3: review please
+Message-ID: <em-0021@tarrow.example>
+In-Reply-To: <em-0011@tarrow.example>
+References: <em-0011@tarrow.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Ilya,
+
+My comments on reference architecture v3 - 11 of them, numbered so
+you can reply per number. Read as tenant #1, per your ask.
+Overall: v3 is a real step up from v2. The gateway-enforced quotas and
+redaction-before-sink changes are both right. Most of what's below is
+about what happens under load or when something goes wrong.
+
+Tenancy and identity
+
+1. (s.1) Quotas are requests/min and tokens/min only. Tinderbox's risk is
+   concurrency, not volume - a class of 200 opening the assistant in the
+   same five minutes before a lab is due. Suggest a per-tenant
+   concurrent-request limit alongside the two rate limits, so a tenant
+   gets a clean 429 for concurrency too.
+
+2. (s.2 / s.6 step 4) Group-to-role mapping assumes the campus IdP is
+   actually releasing the groups as claims. Kestrow currently isn't for
+   Tinderbox (Teo's ticket, still with the IdP vendor). Onboarding step 4
+   should include a check that the claims arrive in a test token, and s.2
+   should say what the broker does when a mapped group is missing -
+   deny, or fall back to a default role? I'd say deny.
+
+Model gateway
+
+3. (s.3) Connection pooling has no back-pressure. When the shared pool is
+   exhausted the gateway returns 502 straight away. That turns "busy" into
+   "broken" from the tenant's point of view, and retries from tenant apps
+   will make it worse. Suggest a short bounded wait queue per pool, then
+   503 with Retry-After rather than 502, and a per-tenant cap on how much
+   unused capacity one tenant can borrow - right now a single noisy
+   tenant can drain the spare connections for everyone.
+
+4. (s.3) Retries: one automatic retry on connection reset is fine, but
+   with 60s streaming timeouts a retried stream can hold two connections
+   for most of a minute. Worth stating a retry budget per tenant, or at
+   least that retries count against the tenant's share.
+
+5. (s.3) Is the 64-connection pool per replica or across the three
+   replicas? It changes the arithmetic a lot, especially during a rolling
+   update when one replica is out. Please state it explicitly and give
+   the effective capacity with 2 of 3 replicas up.
+
+Logging
+
+6. (s.5) Debug body logging for up to 72 hours with Security & Identity
+   approval: for tenants that hold student data I'd want this to be "no,
+   except under break-glass", not a routine 72-hour window. Hyun-woo,
+   your call on the wording - flagging it because Tinderbox will be the
+   first tenant where it matters.
+
+Run-rate
+
+7. (s.7) The run-rate excludes egress. Network egress to the upstream
+   providers (and any cross-region transfer) isn't in the table at all.
+   Small in January with internal tenants only, but it scales with
+   traffic and it's exactly the line finance will ask about first.
+   Please add it, even as an estimate.
+
+8. (s.7) Please label more loudly that January is internal tenants only
+   (kyd-ods-sandbox + kyd-ods-evals). Anyone lifting these numbers into
+   a per-tenant baseline will get a very wrong answer. One sentence under
+   the table would do it.
+
+Operations
+
+9. (s.4) Secrets rotation cadence is unspecified. The vault supports
+   rotation and the 24-hour overlap is good, but nothing says how often
+   tenant API keys are rotated, who triggers it, or what the procedure
+   is when a key is suspected leaked (pasted in a channel, committed to a
+   repo, etc.). Needs a cadence and an incident path.
+
+10. (s.6) Onboarding ends at "tenant goes live". Add a step for who owns
+    tier-2 support for the tenant after go-live and where the service
+    catalog entry lives. Bettina - this is your lens more than mine, and
+    I know it's the "who picks up the phone at 2am" question again.
+
+11. (s.8) Open question 6 (status communication) - I'd close it now:
+    status page as the source of truth, channel for chatter. During an
+    incident tenants shouldn't have to guess. Q3 (data residency) also
+    needs closing before any tenant holds real student data.
+
+Nothing here blocks the Tinderbox tenant going ahead on v3 as written;
+3 and 9 are the two I'd most like to see addressed before there's more
+than one real tenant.
+
+Send me v4 when it's ready - and let's sync with Bettina once you've
+revised. For reference architecture v4, a redline against v3 is fine
+if that's easier than a clean copy.
+
+Thanks,
+
+— Mara
+
+Mara Ilves
+Principal Architect, AI & Data
+Office of Digital Strategy (ODS), Tarrow University System Office
+
+
+On Mon, 22 Feb 2027 at 14:30, Ilya Marchetti <ilya.marchetti@tarrow.example> wrote:
+> Mara,
+>
+> Kettleyard reference architecture v3 attached (PDF, draft for review).
+>
+> Mara, could you get me comments by end of next week? Bettina and Hyun-woo,
+> same ask, lighter touch. Reviewers for v3, as they'll appear on the review
+> record, and the lens I'd like from each:
+>
+>   - Mara Ilves - Principal Architect, AI & Data (Office of Digital Strategy):
+>     the whole thing, but read it as tenant #1 would. Tinderbox is the first real tenant and Bartosz is
+>     provisioning it now, so anything that will bite Kestrow should bite us on
+>     paper first.
+>   - Bettina Oduya - Principal, Product (Office of Digital Strategy):
+>     section 6 (onboarding) and anything a campus would experience as "the
+>     service". Yes, including who picks up the phone at 2am.
+>   - Hyun-woo Park - Principal, Security & Identity (Office of Digital Strategy):
+>     sections 2, 4 and 5 (identity broker, secrets vault, logging/redaction).
+>     Hugo, the group-to-role mapping in s.2 is the part I'm least sure of.
+>
+> You asked for January run-rate - it's in section 7. These are platform
+> metering numbers, not finance actuals; Percy's figures after the January
+> close will replace them. Budget totals are kept out of the document on
+> purpose; that conversation belongs to Percy, not to a PDF.
+>
+> What changed since v2:
+>
+>   1. Tenancy model (s.1): quotas are now enforced at the gateway rather than
+>      advisory. A tenant that exceeds its quota gets 429s, not a polite email.
+>   2. Identity broker (s.2): per-tenant mapping of campus IdP groups to
+>      Kettleyard roles, so a campus can scope access without asking us.
+>   3. Model gateway (s.3): one shared connection pool per upstream provider
+>      with per-tenant shares, replacing the per-tenant pools from v2 (which
+>      were mostly idle and occasionally all busy at once, the worst of both).
+>   4. Secrets vault (s.4): per-tenant paths; API keys are now issued per
+>      tenant, not per application.
+>   5. Logging/redaction (s.5): the redaction filter now runs before the log
+>      sink, not after it. Prompt and response bodies are off by default.
+>   6. Onboarding (s.6): checklist rewritten around Tinderbox as tenant #1.
+>   7. New section 7: January run-rate, by component.
+>   8. Open questions (s.8): trimmed from 14 to 6. The other 8 either got
+>      answered or got demoted to "someone else's problem", which is also an
+>      answer.
+>
+> Comments inline on the PDF or as a numbered list by email are both fine. If
+> you number them I will reply per number, which you know I enjoy.
+>
+> Thanks,
+> Ilya
+>
+> --
+> Ilya Marchetti
+> Principal Architect, Data Platform
+> Office of Digital Strategy | Tarrow University System Office

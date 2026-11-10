@@ -1,0 +1,120 @@
+From: Agnieszka Wolanin <agnieszka.wolanin@tarrow.example>
+To: Mara Ilves <mara.ilves@tarrow.example>
+Cc: Delphine Arceneaux <delphine.arceneaux@saltmarren.tarrow.example>
+Date: Wed, 03 Mar 2027 14:20:00 -0800
+Subject: DSA out for signature; Scrivelo DPA preview
+Message-ID: <em-0034@tarrow.example>
+In-Reply-To: <em-0017@tarrow.example>
+References: <em-0015@tarrow.example> <em-0017@tarrow.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Mara,
+
+An update on both items from last week. I have changed the subject line so
+this is easier to find later.
+
+1. DSA. Saltmarren's counsel came back on the retention clause, and I have
+   finalized the data-sharing agreement. It went to Delphine for Saltmarren
+   signature today. Delphine, you should have it in your inbox from the
+   e-signature service.
+
+   For the avoidance of doubt, nothing changes until the DSA is fully
+   executed: no student records, including the anonymized transcript
+   sample, leave Saltmarren before signature. The DSA is now waiting on
+   Saltmarren's signature, not on my office.
+
+2. Scrivelo DPA, preview of my redlines. I have not finished the mark-up of
+   Scrivelo's data processing agreement, but the three points that matter
+   most are settled on our side, and I would rather you had them now:
+
+   (a) No training of any model on student work. This covers essays,
+       drafts and the feedback generated on them, and it applies to Scrivelo
+       and to its sub-processors.
+   (b) Processing in-region only. Student work is processed and stored in
+       the United States region; no transfer outside it, including for
+       support or troubleshooting.
+   (c) Deletion within 30 days of termination, with written confirmation
+       of deletion on request.
+
+   Full redlines next week, as a marked-up copy of the DPA rather than a
+   summary. The sub-processor and audit clauses will be in that copy.
+
+   Assume the same terms for Penmarq. I have not seen Penmarq's paper, but I
+   would not expect to accept anything weaker from either vendor.
+
+All of the above is subject to the vendors' responses; neither DPA is
+agreed until it is signed.
+
+Regards,
+Aga
+
+Agnieszka Wolanin
+Associate General Counsel
+Office of the General Counsel | Tarrow University System Office
+
+
+On Fri, 26 Feb 2027 at 13:05, Agnieszka Wolanin <agnieszka.wolanin@tarrow.example> wrote:
+> Mara,
+>
+> Thank you. Taking your points in order, with one addition.
+>
+> 1. DSA (Saltmarren baseline data). The data-sharing agreement template is
+>    drafted. I will finalize it once Saltmarren's counsel confirms the
+>    retention clause; I have raised it with them and do not yet have a date.
+>    Until the DSA is signed, no student records leave Saltmarren. That
+>    includes the anonymized sample of transfer transcripts Delphine has
+>    offered to send you for the baseline. Anonymized or not, the
+>    transcript sample is a student record for this purpose, and it stays at
+>    Saltmarren until signature. In practical terms, the baseline part of your
+>    discovery is blocked on the unsigned DSA.
+>
+> 2. DPA (Scrivelo). The data processing agreement is on my list for next
+>    week. I will reply with a marked-up copy rather than a summary.
+>
+> 3. Process map. Delphine forwarded Rufus's process map this morning. For my
+>    purposes the step that matters is step 6, the course-by-course
+>    equivalency lookup: it is the bottleneck he identifies, and it is also the
+>    step where evaluators work directly from student records.
+>
+> On timing: I note the site visit is on 2 March and the readout is targeted
+> for 19 March. Interviews with Saltmarren staff during the site visit do not
+> require the DSA, provided no records are copied or taken off campus. I am not
+> able to commit to a signature date ahead of the readout; that depends on
+> Saltmarren's counsel, and the agreement remains subject to their review.
+>
+> Regards,
+> Agnieszka
+>
+> Agnieszka Wolanin
+> Associate General Counsel
+> Office of the General Counsel | Tarrow University System Office
+>
+>
+> On Thu, 25 Feb 2027 at 17:10, Mara Ilves <mara.ilves@tarrow.example> wrote:
+>> Agnieszka,
+>>
+>> Delphine - copying you so you have a direct line. Agnieszka Wolanin is
+>> Associate General Counsel at the system office and is our counsel on both
+>> items below.
+>>
+>> Two asks:
+>>
+>> 1. Scrivelo DPA. Could you review Scrivelo's data processing agreement
+>>    (attached)? Scrivelo is one of the two vendors on the writing tool
+>>    shortlist. What I care about most is what happens to student essays:
+>>    training, retention, sub-processors.
+>>
+>> 2. Saltmarren DSA. Where are we on the data-sharing agreement (DSA) for
+>>    Saltmarren's baseline data? It gates the transfer evaluation discovery.
+>>    We're on site at Saltmarren on 2 March and the readout is targeted for
+>>    19 March, so the baseline is the long pole.
+>>
+>> Thanks,
+>>
+>> — Mara
+>>
+>> Mara Ilves
+>> Principal Architect, AI & Data
+>> Office of Digital Strategy (ODS), Tarrow University System Office

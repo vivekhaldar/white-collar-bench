@@ -1,0 +1,37 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-hamish",
+ "kind": "dm",
+ "participants": [
+  "Hamish Okada",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-01T13:06:34-06:00",
+   "user": "Hamish Okada",
+   "handle": "@hamish",
+   "text": "Just to recap, on Monday you said you'd send me the Friday status note for w/e 3 September!",
+   "edited": true,
+   "original": "Just to recap, on Monday you said you'd send me the Friday status note for w/e 2 September!"
+  },
+  {
+   "ts": "2027-09-01T13:07:57-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "yep, on it"
+  },
+  {
+   "ts": "2027-09-01T13:11:14-06:00",
+   "user": "Hamish Okada",
+   "handle": "@hamish",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-09-01T13:14:20-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "no worries"
+  }
+ ]
+}

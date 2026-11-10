@@ -1,0 +1,52 @@
+{
+ "workspace": "vercliff",
+ "channel": "#fennel-core",
+ "kind": "channel",
+ "participants": [
+  "Imani",
+  "Dina Ricci",
+  "Cassandra Yilmaz",
+  "Yael Ellery",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
+  "Thibault Sahin"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-23T12:37:00-07:00",
+   "user": "Imani",
+   "handle": "@imani",
+   "text": "The Nordale lead would like Dina to review the Nordale lead's Fennel RACI chart, not agreed yet.",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@cassandra",
+      "@dina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-23T12:37:50-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "can I come back to you on this?",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-23T12:46:50-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-23T12:52:00-07:00",
+   "user": "Thibault Sahin",
+   "handle": "@thibault",
+   "text": "+1",
+   "thread_of": 0
+  }
+ ]
+}

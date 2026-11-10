@@ -1,0 +1,43 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-hiba-lakshmi",
+ "kind": "dm",
+ "participants": [
+  "Hiba Deng",
+  "Lakshmi Figueroa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-30T10:07:00-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "thanks for offering to send me the okapi operating model draft v3, that would be great",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@lakshmi"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-30T10:07:51-05:00",
+   "user": "Lakshmi Figueroa",
+   "handle": "@lakshmi",
+   "text": "no problem"
+  },
+  {
+   "ts": "2027-03-30T10:12:18-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-03-30T10:14:01-05:00",
+   "user": "Lakshmi Figueroa",
+   "handle": "@lakshmi",
+   "text": "yep, all good"
+  }
+ ]
+}

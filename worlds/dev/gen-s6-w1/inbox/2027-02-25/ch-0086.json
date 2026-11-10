@@ -1,0 +1,63 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#axolotl-core",
+ "kind": "channel",
+ "participants": [
+  "Losa Moretti",
+  "Despina Pereira",
+  "Andres Erdem",
+  "Nathaniel Cartwright",
+  "Karim Navarro",
+  "Liisa Babic",
+  "Tomas Deng",
+  "Carys Laurent",
+  "Lindiwe Baek",
+  "Jurgen Dvorak"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-24T10:30:00-08:00",
+   "user": "Losa Moretti",
+   "handle": "@losa",
+   "text": "catching people up since a few of us are out today"
+  },
+  {
+   "ts": "2027-02-24T10:33:00-08:00",
+   "user": "Losa Moretti",
+   "handle": "@losa",
+   "text": "@despina i can set up the axolotl single sign-on role mapping"
+  },
+  {
+   "ts": "2027-02-24T10:33:43-08:00",
+   "user": "Nathaniel Cartwright",
+   "handle": "@nathaniel",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-02-24T10:34:05-08:00",
+   "user": "Losa Moretti",
+   "handle": "@losa",
+   "text": "@despina i drafted the axolotl load test plan earlier today"
+  },
+  {
+   "ts": "2027-02-24T10:35:15-08:00",
+   "user": "Tomas Deng",
+   "handle": "@tomas",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-02-24T10:36:17-08:00",
+   "user": "Karim Navarro",
+   "handle": "@karim",
+   "text": "nice :)",
+   "thread_of": 3
+  },
+  {
+   "ts": "2027-02-24T10:40:15-08:00",
+   "user": "Lindiwe Baek",
+   "handle": "@lindiwe",
+   "text": "nice :)",
+   "thread_of": 3
+  }
+ ]
+}

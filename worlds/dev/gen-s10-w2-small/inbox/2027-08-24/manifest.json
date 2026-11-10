@@ -1,0 +1,75 @@
+{
+  "date": "2027-08-24",
+  "artifacts": [
+    {
+      "id": "ch-0022",
+      "channel": "chat",
+      "received_at": "2027-08-24T07:56:00+01:00",
+      "path": "ch-0022.json",
+      "title": "DM: Catrin Dang / Aoife Everett"
+    },
+    {
+      "id": "ch-0023",
+      "channel": "chat",
+      "received_at": "2027-08-24T09:05:00+01:00",
+      "path": "ch-0023.json",
+      "title": "DM: Aoife Everett / Akosua Bergstrom"
+    },
+    {
+      "id": "em-0034",
+      "channel": "email",
+      "received_at": "2027-08-24T09:31:00+01:00",
+      "path": "em-0034.eml",
+      "title": "Re: Nettle action log"
+    },
+    {
+      "id": "mt-0006",
+      "channel": "transcript",
+      "received_at": "2027-08-24T09:55:00+01:00",
+      "path": "mt-0006.vtt",
+      "title": "Nettle standup (transcript)"
+    },
+    {
+      "id": "mn-0009",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-24T10:30:00+01:00",
+      "path": "mn-0009.md",
+      "title": "Recap: Nettle / Pipit sync"
+    },
+    {
+      "id": "mt-0007",
+      "channel": "transcript",
+      "received_at": "2027-08-24T10:30:00+01:00",
+      "path": "mt-0007.vtt",
+      "title": "Nettle / Pipit sync (transcript)"
+    },
+    {
+      "id": "nt-0004",
+      "channel": "note",
+      "received_at": "2027-08-24T16:53:00+01:00",
+      "path": "nt-0004.md",
+      "title": "Tue notes"
+    },
+    {
+      "id": "em-0035",
+      "channel": "email",
+      "received_at": "2027-08-24T17:11:00+01:00",
+      "path": "em-0035.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0036",
+      "channel": "email",
+      "received_at": "2027-08-24T18:17:00+01:00",
+      "path": "em-0036.eml",
+      "title": "Fwd: Holworth data-sharing agreement"
+    },
+    {
+      "id": "em-0037",
+      "channel": "email",
+      "received_at": "2027-08-24T18:42:00+01:00",
+      "path": "em-0037.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    }
+  ]
+}

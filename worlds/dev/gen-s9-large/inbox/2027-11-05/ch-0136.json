@@ -1,0 +1,41 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-anh-aroha",
+ "kind": "dm",
+ "participants": [
+  "Anh Villanueva",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-05T18:17:20-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-11-05T18:19:00-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "Leave it with me, I'll share the Okapi release notes with you!"
+  },
+  {
+   "ts": "2027-11-05T18:19:06-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "great, thank you"
+  },
+  {
+   "ts": "2027-11-05T18:22:19-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "did the link work for you? :)"
+  },
+  {
+   "ts": "2027-11-05T18:26:12-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "yep, all good"
+  }
+ ]
+}

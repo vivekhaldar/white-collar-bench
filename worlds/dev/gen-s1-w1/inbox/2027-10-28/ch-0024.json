@@ -1,0 +1,35 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-fernanda",
+ "kind": "dm",
+ "participants": [
+  "Fernanda Olawale",
+  "Camila Abernathy"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-28T15:31:00-07:00",
+   "user": "Fernanda Olawale",
+   "handle": "@fernanda",
+   "text": "When you get a chance, could you write the Tarn product brief?"
+  },
+  {
+   "ts": "2027-10-28T15:32:07-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "sure, can do"
+  },
+  {
+   "ts": "2027-10-28T15:34:59-07:00",
+   "user": "Fernanda Olawale",
+   "handle": "@fernanda",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-10-28T15:38:01-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

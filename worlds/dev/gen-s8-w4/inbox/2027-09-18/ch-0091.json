@@ -1,0 +1,55 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-thibault",
+ "kind": "dm",
+ "participants": [
+  "Thibault Kowalski",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-18T11:46:11-06:00",
+   "user": "Thibault Kowalski",
+   "handle": "@thibault",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-09-18T11:46:44-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "sure, what's up?"
+  },
+  {
+   "ts": "2027-09-18T11:47:09-06:00",
+   "user": "Thibault Kowalski",
+   "handle": "@thibault",
+   "text": "Shirin asked if you could send them the Fulmar one-page summary.",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@amira"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-18T11:48:24-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "will do"
+  },
+  {
+   "ts": "2027-09-18T11:53:06-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-09-18T11:54:45-06:00",
+   "user": "Thibault Kowalski",
+   "handle": "@thibault",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

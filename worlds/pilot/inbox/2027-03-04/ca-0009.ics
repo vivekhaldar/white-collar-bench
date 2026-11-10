@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Eskerfield Learning Research Institute//Scheduling//EN
+METHOD:REQUEST
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:ivardakis-20270309-1100-libra@eskerfield.example
+DTSTAMP:20270305T005500Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Library research assistant - evaluation partnership?
+DTSTART:20270309T110000
+DTEND:20270309T114500
+LOCATION:Video (Eskerfield meeting room)
+ORGANIZER;CN=Dr. Ines Vardakis:mailto:ines.vardakis@eskerfield.example
+ATTENDEE;CN=Ines Vardakis;ROLE=CHAIR;PARTSTAT=ACCEPTED:mailto:ines.vardakis@eskerfield.example
+ATTENDEE;CN=Mara Ilves;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:mara.ilves@tarrow.example
+ATTENDEE;CN=Ramona Iturbe;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:ramona.iturbe@brackwater.tarrow.example
+DESCRIPTION:After our chat at the workshop - Eskerfield could evaluate a library research assistant with Brackwater. Ramona\, Mara tells me the two of you first discussed this in December\, so I wanted you in the room from the start. A first conversation: what the assistant would do for students\, what an evaluation would look like\, and whether there is a fit with our spring study calendar. If you have any background notes\, send them over whenever. Join: https://eskerfield.example/meet/ivardakis-0309
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

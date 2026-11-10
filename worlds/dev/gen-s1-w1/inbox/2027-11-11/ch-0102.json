@@ -1,0 +1,49 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-jalen",
+ "kind": "dm",
+ "participants": [
+  "Camila Abernathy",
+  "Jalen"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-11T15:23:09-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-11-11T15:24:00-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "Pulled the Marten training outline into the deck, thanks Jalen.",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@jalen"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-11T15:24:06-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-11-11T15:26:15-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-11-11T15:28:04-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "only the first half"
+  }
+ ]
+}

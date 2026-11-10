@@ -1,0 +1,132 @@
+{
+  "date": "2027-10-07",
+  "artifacts": [
+    {
+      "id": "em-0241",
+      "channel": "email",
+      "received_at": "2027-10-07T07:22:00-06:00",
+      "path": "em-0241.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "ch-0192",
+      "channel": "chat",
+      "received_at": "2027-10-07T10:30:00-06:00",
+      "path": "ch-0192.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "ch-0193",
+      "channel": "chat",
+      "received_at": "2027-10-07T10:40:00-06:00",
+      "path": "ch-0193.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "ch-0194",
+      "channel": "chat",
+      "received_at": "2027-10-07T12:02:00-06:00",
+      "path": "ch-0194.json",
+      "title": "DM: Thibault Kowalski / Amira Baek"
+    },
+    {
+      "id": "ch-0195",
+      "channel": "chat",
+      "received_at": "2027-10-07T12:10:00-06:00",
+      "path": "ch-0195.json",
+      "title": "DM: Amira Baek / Adwoa Kocak"
+    },
+    {
+      "id": "em-0242",
+      "channel": "email",
+      "received_at": "2027-10-07T12:42:00-06:00",
+      "path": "em-0242.eml",
+      "title": "Re: Fulmar sensor tag list v2"
+    },
+    {
+      "id": "dc-0013",
+      "channel": "document",
+      "received_at": "2027-10-07T13:13:00-06:00",
+      "path": "dc-0013.xlsx",
+      "title": "Fulmar rollout checklist v2 v2",
+      "parent": "em-0243"
+    },
+    {
+      "id": "em-0243",
+      "channel": "email",
+      "received_at": "2027-10-07T13:13:00-06:00",
+      "path": "em-0243.eml",
+      "title": "Fulmar rollout checklist v2"
+    },
+    {
+      "id": "ch-0196",
+      "channel": "chat",
+      "received_at": "2027-10-07T14:56:00-06:00",
+      "path": "ch-0196.json",
+      "title": "DM: Adwoa Chukwu / Amira Baek"
+    },
+    {
+      "id": "nt-0023",
+      "channel": "note",
+      "received_at": "2027-10-07T16:05:00-06:00",
+      "path": "nt-0023.md",
+      "title": "Thu notes"
+    },
+    {
+      "id": "ch-0197",
+      "channel": "chat",
+      "received_at": "2027-10-07T16:17:00-06:00",
+      "path": "ch-0197.json",
+      "title": "DM: Amira Baek / Zawadi Quintero"
+    },
+    {
+      "id": "ch-0198",
+      "channel": "chat",
+      "received_at": "2027-10-07T16:42:00-06:00",
+      "path": "ch-0198.json",
+      "title": "DM: Amira Baek / Giorgi Wisniewska"
+    },
+    {
+      "id": "ch-0199",
+      "channel": "chat",
+      "received_at": "2027-10-07T16:56:00-06:00",
+      "path": "ch-0199.json",
+      "title": "#ai-use-core"
+    },
+    {
+      "id": "ch-0200",
+      "channel": "chat",
+      "received_at": "2027-10-07T17:08:00-06:00",
+      "path": "ch-0200.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    },
+    {
+      "id": "em-0244",
+      "channel": "email",
+      "received_at": "2027-10-07T17:11:00-06:00",
+      "path": "em-0244.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0201",
+      "channel": "chat",
+      "received_at": "2027-10-07T17:14:00-06:00",
+      "path": "ch-0201.json",
+      "title": "DM: Amira Baek / Kiran Merriweather"
+    },
+    {
+      "id": "ch-0202",
+      "channel": "chat",
+      "received_at": "2027-10-07T17:21:00-06:00",
+      "path": "ch-0202.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    },
+    {
+      "id": "ch-0203",
+      "channel": "chat",
+      "received_at": "2027-10-07T17:41:00-06:00",
+      "path": "ch-0203.json",
+      "title": "DM: Amira Baek / Kiran Merriweather"
+    }
+  ]
+}

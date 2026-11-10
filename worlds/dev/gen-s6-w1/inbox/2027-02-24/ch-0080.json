@@ -1,0 +1,62 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#axolotl-core",
+ "kind": "channel",
+ "participants": [
+  "Andres",
+  "Despina Pereira",
+  "Losa Moretti",
+  "Nathaniel Cartwright",
+  "Karim Navarro",
+  "Liisa Babic",
+  "Tomas Deng",
+  "Carys Laurent",
+  "Lindiwe Baek",
+  "Jurgen Dvorak"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-24T09:49:00-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "@despina on it, I'll deliver the Axolotl integration endpoint by Fri 5 Mar.",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@losa",
+      "@nathaniel",
+      "@despina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-24T09:50:21-08:00",
+   "user": "Nathaniel Cartwright",
+   "handle": "@nathaniel",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-02-24T09:51:13-08:00",
+   "user": "Karim Navarro",
+   "handle": "@karim",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-24T09:59:54-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-24T10:02:24-08:00",
+   "user": "Lindiwe Baek",
+   "handle": "@lindiwe",
+   "text": "thanks for the update :)",
+   "thread_of": 0
+  }
+ ]
+}

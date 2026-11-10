@@ -1,0 +1,787 @@
+WEBVTT
+
+NOTE
+Tinderbox: operating model & ownership - 5 Mar 2027 10:30
+Date: Fri 5 Mar 2027, 10:30-11:15 (-08:00), meet.tarrow.example
+Attendees (auto-generated): Folasade Renwick, Mara Ilves, Ramona Szabo, Kestrow-CIO-Office, Bart Ngata, Yusra Haddad
+Transcript generated automatically. Speaker names from meeting display names; may contain errors.
+
+00:00:02.408 --> 00:00:06.635
+<v Ramona Szabo>Morning! Mara, I heard your standup got evacuated.
+
+00:00:07.975 --> 00:00:16.867
+<v Mara Ilves>Kestrow's fire drill. Yusra's whole building went out mid-sentence. Greta was halfway through a question about phone numbers.
+
+00:00:18.289 --> 00:00:22.012
+<v Ramona Szabo>Poor Greta. She never gets to finish.
+
+00:00:23.064 --> 00:00:25.649
+<v Folasade Renwick>Is everyone back inside?
+
+00:00:26.231 --> 00:00:31.513
+<v Mara Ilves>As far as I know. Saanvi was worried about her coat.
+
+00:00:33.126 --> 00:00:36.884
+<v Ramona Szabo>(laughs) Priorities. It's cold out there today.
+
+00:00:37.491 --> 00:00:40.810
+<v Folasade Renwick>Are we waiting for Bart's office?
+
+00:00:42.150 --> 00:00:48.882
+<v Ramona Szabo>Lucía said he'd join from Kestrow. His room system sometimes takes a minute.
+
+00:01:08.539 --> 00:01:18.416
+<v Ramona Szabo>Mara, did you see the photos from yesterday? The photographer got one of Connie mid-sentence that's going to haunt her.
+
+00:01:19.424 --> 00:01:21.725
+<v Mara Ilves>Not yet. I'll look.
+
+00:01:23.502 --> 00:01:29.181
+<v Folasade Renwick>I'll give it another minute, and then we start without him.
+
+00:01:43.815 --> 00:01:46.848
+<v Kestrow-CIO-Office>[inaudible] ...hear me? This is Bart.
+
+00:01:48.044 --> 00:01:53.302
+<v Folasade Renwick>Bart, morning. We can hear you, you sound very far away.
+
+00:01:54.188 --> 00:01:59.772
+<v Kestrow-CIO-Office>I'm on the room system in my office. Is that any better?
+
+00:02:00.994 --> 00:02:05.585
+<v Ramona Szabo>A little bit echoey, but we've got you.
+
+00:02:06.579 --> 00:02:14.131
+<v Folasade Renwick>Did you make it back last night? Lucía said your flight was a mess.
+
+00:02:15.997 --> 00:02:39.336
+<v Kestrow-CIO-Office>Eventually. The flight back from the CIO forum sat on the tarmac for two and a half hours. Something about a de-icing truck that had gone to the wrong gate. Then they ran out of the little pretzels. I got home at half past one.
+
+00:02:39.948 --> 00:02:42.433
+<v Ramona Szabo>Oh no. Not the pretzels.
+
+00:02:43.740 --> 00:03:06.390
+<v Kestrow-CIO-Office>And then the fire drill at half past nine. Facilities sends me the drill schedule every January, and every January I don't read it. I was standing in the car park in my shirtsleeves with three hundred people asking me if it was real.
+
+00:03:08.050 --> 00:03:14.053
+<v Folasade Renwick>Well, thank you for making it at all. I appreciate it.
+
+00:03:15.041 --> 00:03:24.549
+<v Kestrow-CIO-Office>Wouldn't miss it. This one matters to us. Let me switch to my laptop, this room mic is terrible. One moment.
+
+00:03:50.649 --> 00:03:51.508
+<v Bart Ngata>Better?
+
+00:03:53.165 --> 00:03:57.874
+<v Ramona Szabo>Much better. You're not in a cathedral anymore.
+
+00:03:58.841 --> 00:04:12.965
+<v Bart Ngata>(laughs) The room was set up for board meetings in the nineties. Nobody's ever been able to explain the acoustics. We had an AV consultant in once. He left looking worried.
+
+00:04:13.599 --> 00:04:29.492
+<v Folasade Renwick>Right. Let's start. We've got forty-five minutes and I want to finish with an answer. Yusra's joining late, she has a clash, so we'll pick her up when she arrives.
+
+00:04:31.083 --> 00:04:47.427
+<v Folasade Renwick>One question today. Who runs Tinderbox after go-live, and on what terms. Mara has been carrying it as owner since February. Bart, I gather you have a view, so let's start with you.
+
+00:04:48.799 --> 00:05:00.465
+<v Bart Ngata>I do. Thank you, Sade. And thank you for making the time, I know it's a heavy week for you with the Council coming.
+
+00:05:01.244 --> 00:05:25.160
+<v Bart Ngata>It's quite simple from where I sit. Tinderbox runs in Kestrow courses, for Kestrow students, taught by Kestrow faculty. When it breaks at eleven at night before a lab is due, the calls come to my service desk. When a faculty member is unhappy, they don't come to your office. They come to mine.
+
+00:05:26.004 --> 00:05:33.298
+<v Bart Ngata>So Kestrow should run this after go-live, and frankly I'd rather we built it ourselves.
+
+00:05:35.512 --> 00:05:38.566
+<v Folasade Renwick>Built it. As in, off Kettleyard.
+
+00:05:39.255 --> 00:06:07.481
+<v Bart Ngata>As in on campus. Our own stack, our own people. We have engineers. Dmitri is already writing half of it. Saanvi runs our load testing. Teo runs our identity. I don't see what we're getting from the System that we couldn't do ourselves, and I can see quite clearly what we're giving up.
+
+00:06:09.255 --> 00:06:29.133
+<v Mara Ilves>Dmitri's writing the context API - the LMS side. That stays on campus whatever we decide. What's on Kettleyard is the model gateway, the tenant, the identity broker. The parts that every campus would otherwise build separately, four times.
+
+00:06:30.162 --> 00:06:51.368
+<v Bart Ngata>And every one of those is a dependency I don't control. I watched Wednesday, Mara. Our load test fell over because the shared gateway fell over. Nobody at Kestrow could do anything about it except wait and refresh the status page.
+
+00:06:52.285 --> 00:07:08.162
+<v Mara Ilves>That's fair. Wednesday was bad. The fix is in prod as of last night - Ilya checked it on all three replicas, not just staging - and he's writing the postmortem for Sade.
+
+00:07:09.167 --> 00:07:25.014
+<v Bart Ngata>I'm not blaming Ilya. Ilya's very good. I'm saying that's the shape of the risk. When it's ours, it's ours to fix, and I can walk down the corridor and stand behind the person fixing it.
+
+00:07:26.000 --> 00:07:30.033
+<v Folasade Renwick>I hear the internal-build preference - not now.
+
+00:07:31.200 --> 00:07:52.773
+<v Folasade Renwick>I want to be clear about what that means, Bart. That's not me saying never. It's me saying we are not restarting the build a month from go-live, on a platform that's already stood up, and that the other three campuses are going to land on.
+
+00:07:54.883 --> 00:08:04.316
+<v Bart Ngata>Understood. For the record, I think it's the wrong call for Kestrow, even if it's the right call for the System.
+
+00:08:05.868 --> 00:08:14.742
+<v Folasade Renwick>For the record, noted. And I'd rather you said it in this room than at the Council.
+
+00:08:16.880 --> 00:08:21.979
+<v Bart Ngata>(laughs) I may say it at the Council as well.
+
+00:08:23.627 --> 00:08:26.009
+<v Folasade Renwick>I'd expect nothing less.
+
+00:08:28.314 --> 00:08:45.797
+<v Mara Ilves>Can I show what an internal build would actually involve? Not to argue it. Just so it's on the table. I've got the diagram from the one-pager, give me a second to share.
+
+00:08:47.924 --> 00:08:49.302
+<v Folasade Renwick>Go ahead.
+
+00:09:00.457 --> 00:09:04.818
+<v Mara Ilves>Can you see a diagram with two colours?
+
+00:09:06.894 --> 00:09:09.326
+<v Ramona Szabo>Yes. Blue and orange.
+
+00:09:10.862 --> 00:09:34.138
+<v Mara Ilves>Okay. Blue is Kestrow, orange is Kettleyard. Everything in blue stays with Kestrow under any option. The LMS, Dmitri's context API, the course content, Greta's service desk, the faculty. Orange is the gateway, the model contract, the Tinderbox tenant, and the identity broker that sits in front of your IdP.
+
+00:09:35.743 --> 00:10:12.870
+<v Mara Ilves>If Kestrow built it on campus, all of the orange becomes blue. You'd need your own gateway, your own contract with a model provider, the identity integration done a second time - and Teo just spent a week getting group claims through the first time. And the security review starts over. Real data is paused pending Hyun-woo's review as it is. A second stack means a second review, from the beginning.
+
+00:10:14.960 --> 00:10:17.111
+<v Bart Ngata>Hugo. Yes. I know.
+
+00:10:18.658 --> 00:10:33.968
+<v Mara Ilves>And everything Saanvi is testing on Tuesday, we'd be testing again on different infrastructure. That's the cost. I'm not saying it's impossible. I'm saying it isn't free, and it isn't fast.
+
+00:10:35.822 --> 00:10:51.419
+<v Bart Ngata>I understand the cost of switching. I'm not asking to switch this week. Nobody on my team wants to rebuild a gateway in March. I'm asking who's in charge.
+
+00:10:52.339 --> 00:10:54.544
+<v Mara Ilves>Okay. I'll stop sharing.
+
+00:10:59.704 --> 00:11:09.833
+<v Ramona Szabo>Can I ask the operational question? Because I think that's actually what Bart's worried about. Who picks up the phone.
+
+00:11:11.562 --> 00:11:14.341
+<v Bart Ngata>That's half of it. Yes.
+
+00:11:16.032 --> 00:11:31.359
+<v Ramona Szabo>Greta's team is writing the tier-1 runbook right now. So the first call already lands at Kestrow, with a Kestrow person, working from a Kestrow script. That part is already local.
+
+00:11:33.064 --> 00:12:02.592
+<v Mara Ilves>And after tier-1 it splits. Anything platform - the gateway, the tenant, sign-in at the platform end - goes to Kettleyard. Anything about the courses themselves stays at Kestrow. That's exactly what Greta was asking about this morning before the alarm went off. Bettina's been asking the same question for weeks: who answers at two in the morning.
+
+00:12:04.743 --> 00:12:21.211
+<v Bart Ngata>And who decides what goes into the courses? Who decides there's a fourth course, or a fifth? Right now I sign off, and then I find out later what it costs and who's supporting it. That's backwards.
+
+00:12:22.288 --> 00:12:25.236
+<v Folasade Renwick>Which is the other half.
+
+00:12:27.266 --> 00:12:42.711
+<v Bart Ngata>It's the other half. Cost. If Kestrow runs it, Kestrow ends up paying for it one way or another, and I'd like to know what that looks like before I agree to anything.
+
+00:12:43.517 --> 00:12:49.059
+<v Folasade Renwick>That's a chargeback conversation, and that one belongs to the Council.
+
+00:12:50.307 --> 00:12:52.538
+<v Bart Ngata>Which is next Friday.
+
+00:12:54.549 --> 00:13:05.605
+<v Folasade Renwick>Which is next Friday, the twelfth. You know where I landed on Tuesday. No Tinderbox anywhere beyond Kestrow until the campuses sign up to chargeback.
+
+00:13:06.168 --> 00:13:13.363
+<v Bart Ngata>I heard. Second-hand, but I heard. And Kestrow? Kestrow already has one. What do we pay?
+
+00:13:14.890 --> 00:13:31.100
+<v Folasade Renwick>Let me come back to that. I want Yusra here for the ownership part, and I want to get the ownership part right first. Money follows ownership, not the other way round.
+
+00:13:31.852 --> 00:13:33.012
+<v Bart Ngata>Fair enough.
+
+00:13:36.945 --> 00:13:58.046
+<v Mara Ilves>Can I put one more thing on the table, while we're waiting for Yusra? Whoever runs it, somebody has to hold the architecture across the hub. The tenant configuration, the gateway contract, the interface spec between the LMS and the assistant.
+
+00:13:59.357 --> 00:14:27.298
+<v Mara Ilves>If nobody holds that, we're back to the v1 versus v2 argument every time something changes, with nobody to settle it. Dmitri has already rewritten his handlers once this month. I'd rather he didn't do it twice. And the next campus that comes onto Kettleyard should be able to pick up the same spec, not a Kestrow fork of it.
+
+00:14:29.528 --> 00:14:43.847
+<v Bart Ngata>That I don't mind being central. The architecture. I don't need to own the architecture. Jack would tell you I shouldn't be allowed near it. It's the service I want local.
+
+00:14:44.675 --> 00:14:48.214
+<v Ramona Szabo>That's... actually a really useful split.
+
+00:14:49.043 --> 00:14:51.853
+<v Folasade Renwick>It is. Say more, Bart.
+
+00:14:53.293 --> 00:15:12.174
+<v Bart Ngata>Look. We built our own LMS integration layer in twenty-nineteen. Nobody at the System thought we should. It's still the most reliable thing we run, because the people who built it sit forty metres from the people who use it.
+
+00:15:14.108 --> 00:15:42.508
+<v Bart Ngata>And I'll be candid about the other side of it. The last time the System ran something for us centrally - the analytics dashboards, before your time, Sade - it was funded for two years and then it wasn't, and we found out when the invoices stopped being paid. My faculty remember that. They ask me about it every time the System offers them something.
+
+00:15:44.314 --> 00:15:50.823
+<v Folasade Renwick>I remember the dashboards. I wasn't here, but I've read the file.
+
+00:15:52.969 --> 00:16:23.837
+<v Bart Ngata>Then you know why I'm cautious. I want Tinderbox to be something Kestrow chose and Kestrow runs. Faculty with a problem walk down the corridor, they don't file a ticket with an office in another city. Emeka would be in my office every day if he could be. Constance would be in my office every day to tell me what's wrong with it.
+
+00:16:25.777 --> 00:16:27.453
+<v Ramona Szabo>(laughs) She would.
+
+00:16:28.328 --> 00:16:36.945
+<v Mara Ilves>She was right yesterday, for what it's worth. On the panel. The evaluation can't run on satisfaction scores.
+
+00:16:38.746 --> 00:16:47.322
+<v Bart Ngata>So I heard. Twice already this morning, and once in the car park during the drill.
+
+00:16:49.584 --> 00:16:53.369
+<v Folasade Renwick>Let's not reopen the evaluation plan today.
+
+00:16:55.508 --> 00:16:56.723
+<v Mara Ilves>Agreed. Sorry.
+
+00:16:58.021 --> 00:17:10.169
+<v Folasade Renwick>Bart, the corridor point. If the service is local, what does local mean to you, concretely? Is it people, is it decisions, is it money?
+
+00:17:10.727 --> 00:17:31.711
+<v Bart Ngata>All three, ideally. Realistically: people and decisions. Someone at Kestrow who can say yes or no to a course. Who owns the relationship with the faculty. Who the service desk escalates to when it isn't a platform problem. And who isn't eight levels removed from the students.
+
+00:17:32.524 --> 00:17:34.014
+<v Folasade Renwick>And money?
+
+00:17:34.789 --> 00:17:43.251
+<v Bart Ngata>Money is where I'd like a straight answer, which I gather I'm not getting until Yusra joins.
+
+00:17:45.000 --> 00:17:49.267
+<v Folasade Renwick>(laughs) You're getting it after Yusra joins. That's different.
+
+00:17:49.925 --> 00:17:56.336
+<v Folasade Renwick>Sorry - one second, that's Lucía. She wouldn't call unless it mattered.
+
+00:18:24.156 --> 00:18:29.594
+<v Folasade Renwick>Sorry. The Chancellor's office moving something on Monday. Where were we.
+
+00:18:31.109 --> 00:18:32.932
+<v Ramona Szabo>People and decisions.
+
+00:18:35.062 --> 00:18:38.110
+<v Folasade Renwick>People and decisions. Thank you.
+
+00:18:39.558 --> 00:18:57.912
+<v Ramona Szabo>Can I check one practical thing while we're waiting? The program dashboard has Tinderbox under Mara at the moment, and the risk register has it under ODS. If this moves, I want to know what to write, not guess.
+
+00:18:59.327 --> 00:19:03.221
+<v Folasade Renwick>You'll know by the end of this meeting.
+
+00:19:04.654 --> 00:19:07.578
+<v Ramona Szabo>Perfect. That's all I need.
+
+00:19:08.967 --> 00:19:17.335
+<v Folasade Renwick>Bart, capacity. If Kestrow ran the service from go-live, who actually does the work? Not in principle. Names.
+
+00:19:18.582 --> 00:19:38.460
+<v Bart Ngata>Yusra's team for the courses and the faculty. Ingrid's already doing the onboarding. Greta's desk for tier-1. Saanvi for reliability on our side. Teo for identity. Dmitri for the integration. That's who's doing it now. Most of them are on Yusra's standup every morning already.
+
+00:19:39.819 --> 00:19:45.813
+<v Mara Ilves>That's true. The standup is basically the Kestrow team plus me.
+
+00:19:47.935 --> 00:20:01.505
+<v Bart Ngata>So what we're actually talking about is whether the person who chairs that standup also gets to make the calls. Today she runs it and someone else decides.
+
+00:20:03.124 --> 00:20:06.398
+<v Folasade Renwick>That's a fair way to put it.
+
+00:20:06.945 --> 00:20:17.803
+<v Bart Ngata>While we wait. Mara, the four courses. Yusra will tell you, I signed off nursing. They've been asking me since January.
+
+00:20:18.883 --> 00:20:29.526
+<v Mara Ilves>I heard at standup. Architecturally it's one more course shell on the same tenant. It doesn't change anything on our side.
+
+00:20:31.344 --> 00:20:55.786
+<v Bart Ngata>Good. That's what I wanted to hear. The nursing faculty have very strong opinions about what students should and shouldn't get help with on care plans, so they'll be useful for your evaluation. They'll also be the first to complain, which is useful in its own way.
+
+00:20:56.645 --> 00:21:08.242
+<v Mara Ilves>They will be. Clinical writing is a different case from the other three. It'll tell us more than a fourth intro course would have.
+
+00:21:09.488 --> 00:21:16.299
+<v Folasade Renwick>Is Yusra close? I don't want to decide this without her in the room.
+
+00:21:17.943 --> 00:21:22.470
+<v Ramona Szabo>She said about ten-fifty. Let me check the chat.
+
+00:21:30.077 --> 00:21:33.871
+<v Ramona Szabo>She's out of her other meeting. Two minutes.
+
+00:21:35.832 --> 00:21:36.632
+<v Folasade Renwick>Good.
+
+00:21:38.801 --> 00:21:51.412
+<v Bart Ngata>Sade, while we have two minutes. The Council. Is this going to be on the agenda, or is it going to come up sideways?
+
+00:21:52.155 --> 00:22:02.109
+<v Folasade Renwick>The Council agenda is chargeback. Tinderbox will come up because it's the only live tenant. It always comes up.
+
+00:22:02.791 --> 00:22:08.875
+<v Bart Ngata>It always comes up. Yes. Niall will ask when Orrin Valley gets one.
+
+00:22:09.602 --> 00:22:15.842
+<v Folasade Renwick>Niall will ask, and he'll get the same answer as everyone else.
+
+00:22:20.713 --> 00:22:28.980
+<v Yusra Haddad>Hi - sorry, sorry. My ten o'clock ran over, and the drill had already pushed everything back.
+
+00:22:29.692 --> 00:22:41.946
+<v Folasade Renwick>Yusra, good timing. We were just getting to the part that needs you. Before we go further, where did this morning's standup land? Short version.
+
+00:22:43.681 --> 00:22:49.450
+<v Yusra Haddad>Short version, because we got cut off by the fire drill.
+
+00:22:50.023 --> 00:22:57.411
+<v Yusra Haddad>NURS 301 is in - Bart signed off - so four courses now, not three.
+
+00:22:58.183 --> 00:23:23.174
+<v Yusra Haddad>With the outage and the spec rewrite, go-live is now the 5th of April. Dmitri needs till the 12th for the context API on the new spec. Saanvi's load test is rebooked for the 9th - Ilya confirmed the quota this morning. SSO works now, Teo closed the ticket.
+
+00:23:25.457 --> 00:23:31.737
+<v Yusra Haddad>And real data is still paused, waiting on Hugo's review of the security package.
+
+00:23:33.953 --> 00:23:35.882
+<v Folasade Renwick>Hugo being Hyun-woo.
+
+00:23:37.228 --> 00:23:39.945
+<v Yusra Haddad>Hyun-woo, yes. Sorry. Campus habit.
+
+00:23:40.471 --> 00:23:45.973
+<v Bart Ngata>Everyone at Kestrow calls him Hugo. I'm not sure he knows.
+
+00:23:47.292 --> 00:23:48.550
+<v Mara Ilves>He knows.
+
+00:23:49.355 --> 00:23:52.847
+<v Folasade Renwick>The 5th of April. That's a week.
+
+00:23:54.796 --> 00:24:06.616
+<v Yusra Haddad>A week. The outage cost us the load test, and the spec rewrite cost Dmitri a week. I'd rather move it once, properly, than twice.
+
+00:24:07.853 --> 00:24:11.481
+<v Folasade Renwick>Fine. I agree. Do the instructors know?
+
+00:24:13.436 --> 00:24:26.400
+<v Yusra Haddad>Ingrid told the four of them this morning, after the drill. Nobody minded. Two of them were relieved, honestly. It lands after the break now.
+
+00:24:28.308 --> 00:24:43.671
+<v Mara Ilves>The context API and the load test both land before the 5th with room to spare. The open question is Hyun-woo's review. He's had the package since yesterday, and he doesn't commit to dates.
+
+00:24:45.762 --> 00:24:53.500
+<v Folasade Renwick>He doesn't. And I won't push him. If it slips, it slips for the right reason.
+
+00:24:54.733 --> 00:24:55.533
+<v Yusra Haddad>Understood.
+
+00:24:56.883 --> 00:25:28.200
+<v Folasade Renwick>Yusra, we've been talking about who runs Tinderbox once it's live. Bart's view is that Kestrow should run it - and that, given the choice, he'd build it on campus, which I've said is not happening now. Mara's view is that whoever runs it, someone has to hold the architecture centrally. Bart's fine with that part. Where are you?
+
+00:25:29.829 --> 00:25:46.372
+<v Yusra Haddad>Honestly? I've been running the standup since February. My team does the onboarding, Greta's team does the service desk, Dmitri's on my team. The only thing I don't run is the decision-making.
+
+00:25:47.484 --> 00:26:07.485
+<v Yusra Haddad>If it were mine, I'd need three things. The runbooks, so I know what my people are doing at two in the morning. A named person at Kettleyard for the platform side. And Mara on the end of the phone for the architecture.
+
+00:26:08.693 --> 00:26:13.831
+<v Bart Ngata>That's what I'm asking for. In fewer words than I used.
+
+00:26:15.707 --> 00:26:16.507
+<v Ramona Szabo>(laughs)
+
+00:26:18.338 --> 00:26:39.537
+<v Yusra Haddad>And I'd want it clear who calls go-live. Right now it's ambiguous. I put the date on the board, but if Hugo came back on the fourth of April and said no, I don't actually know whose call it is to slip.
+
+00:26:40.391 --> 00:26:44.497
+<v Folasade Renwick>That's a good test of the question. Mara?
+
+00:26:46.636 --> 00:27:13.116
+<v Mara Ilves>I think that's right. I've been the owner by default, because I wrote the one-pager and the spec. Day to day, Yusra already runs it. What I shouldn't let go of is the architecture - the tenant, the gateway contract, the spec. Everything else is hers in practice already. The go-live call should be hers too.
+
+00:27:14.645 --> 00:27:21.489
+<v Folasade Renwick>And the platform side. If Yusra owns the service, who's her named person at Kettleyard?
+
+00:27:22.127 --> 00:27:32.774
+<v Mara Ilves>Ilya owns Kettleyard. For anything Tinderbox-specific on the platform, it comes through me first, then Ilya. That's how it works now anyway.
+
+00:27:34.950 --> 00:27:40.410
+<v Bart Ngata>As long as there's a name, and the name answers.
+
+00:27:41.810 --> 00:27:42.953
+<v Mara Ilves>It answers.
+
+00:27:44.214 --> 00:27:56.819
+<v Ramona Szabo>Can I ask the workload question? Yusra, a month from go-live, with a slip, and now possibly the whole thing. Can your team actually carry it?
+
+00:27:57.836 --> 00:28:14.663
+<v Yusra Haddad>It's already carrying it. That's my point. Nothing about the work changes. What changes is that when Dmitri asks me 'is this the final spec', I can say yes or no without checking with three people.
+
+00:28:16.455 --> 00:28:23.546
+<v Bart Ngata>And if it needs more people, that's my problem. Not Sade's, not Mara's. Mine.
+
+00:28:24.126 --> 00:28:31.226
+<v Folasade Renwick>Mara. Risks. If ownership moves today, a month before go-live, what worries you?
+
+00:28:33.350 --> 00:28:51.900
+<v Mara Ilves>Two things. One is the timing - handing over in the middle of a slip, with the load test and the context API both landing next week. That's not ideal, but it's manageable, because the people doing the work don't change.
+
+00:28:54.104 --> 00:29:16.911
+<v Mara Ilves>The other is the boundary. Where a Kestrow decision stops and a platform decision starts. If that line isn't clear, we'll find out where it is in the first incident, at two in the morning, which is the worst time to find out.
+
+00:29:18.275 --> 00:29:20.284
+<v Folasade Renwick>So make it clear.
+
+00:29:22.479 --> 00:29:28.709
+<v Mara Ilves>That's what the runbooks are for. The escalation section is exactly that line.
+
+00:29:30.685 --> 00:29:37.838
+<v Yusra Haddad>Which is what Greta was asking about this morning. Everything comes back to Greta's question.
+
+00:29:39.163 --> 00:29:42.898
+<v Ramona Szabo>(laughs) Greta should be at this meeting.
+
+00:29:43.626 --> 00:29:58.860
+<v Bart Ngata>Jack will want the ARB to see whatever we land on. Not to approve it - it's not an architecture decision - just to see it. He likes his minutes complete.
+
+00:29:59.839 --> 00:30:08.070
+<v Yusra Haddad>He does. He asked for the new go-live date for the minutes this morning, before the alarm.
+
+00:30:09.532 --> 00:30:13.945
+<v Folasade Renwick>Ramona, anything from the programme side before I decide?
+
+00:30:14.881 --> 00:30:30.813
+<v Ramona Szabo>Only that the faculty already think of it as Yusra's. When people email me about Tinderbox, they cc Yusra, not Mara. So whatever you decide, the faculty won't be surprised.
+
+00:30:32.444 --> 00:30:34.208
+<v Folasade Renwick>Good to know.
+
+00:30:39.731 --> 00:30:42.031
+<v Folasade Renwick>Okay. I've heard enough.
+
+00:30:42.881 --> 00:30:52.916
+<v Folasade Renwick>Here's what I'm deciding. Yusra owns Tinderbox from today. Mara stays architect of record and hands over the runbooks.
+
+00:30:55.000 --> 00:31:04.610
+<v Folasade Renwick>Bart, that's Kestrow running it. Through Yusra's team, on Kettleyard. The platform stays central. The service is yours.
+
+00:31:05.881 --> 00:31:11.625
+<v Bart Ngata>I can live with that. It's most of what I asked for.
+
+00:31:12.260 --> 00:31:20.467
+<v Folasade Renwick>It's the part of what you asked for that I can give you this month.
+
+00:31:22.105 --> 00:31:24.431
+<v Yusra Haddad>Okay. I'll take it.
+
+00:31:25.550 --> 00:31:41.297
+<v Mara Ilves>So architect of record means: the tenant, the gateway contract and the interface spec still come through me. Day-to-day decisions on the pilot - courses, onboarding, the standup, the go-live call - are Yusra's.
+
+00:31:42.019 --> 00:31:55.277
+<v Folasade Renwick>That's right. And if the two of you ever disagree on something that touches the platform, it comes to me. Not to the Council, and not to Bart's office.
+
+00:31:56.168 --> 00:31:57.428
+<v Bart Ngata>(laughs) Noted.
+
+00:31:58.595 --> 00:31:59.646
+<v Yusra Haddad>Understood.
+
+00:32:01.138 --> 00:32:07.521
+<v Ramona Szabo>So for the dashboard: owner Yusra, Mara as architect of record. Got it.
+
+00:32:08.686 --> 00:32:19.526
+<v Folasade Renwick>And Hyun-woo's review doesn't move. He reviews the package Mara sent him, whoever owns the pilot. Nobody goes around him.
+
+00:32:20.182 --> 00:32:21.504
+<v Yusra Haddad>Nobody would.
+
+00:32:22.544 --> 00:32:27.666
+<v Bart Ngata>I've had that conversation with Hugo once before. Once was enough.
+
+00:32:29.364 --> 00:32:37.430
+<v Yusra Haddad>And Mara, you're still on the standup invite. I'm not letting you off that easily.
+
+00:32:39.183 --> 00:32:40.426
+<v Mara Ilves>(laughs) Fair.
+
+00:32:42.240 --> 00:32:51.204
+<v Bart Ngata>My deans will be pleased. They've been asking me for a month who they're supposed to complain to.
+
+00:32:52.737 --> 00:32:55.474
+<v Folasade Renwick>Now they know. It's Yusra.
+
+00:32:56.765 --> 00:32:59.298
+<v Yusra Haddad>Thank you, Sade. Very kind.
+
+00:33:00.520 --> 00:33:01.508
+<v Ramona Szabo>(laughs)
+
+00:33:02.663 --> 00:33:18.508
+<v Bart Ngata>I'll say this, Sade, since we're being candid. This is the first time in a while the System has handed Kestrow something instead of the other way round. People will notice that.
+
+00:33:19.713 --> 00:33:36.741
+<v Folasade Renwick>That's deliberate. Kettleyard only works if campuses want to be on it. If every campus feels like a tenant in somebody else's building, they'll build their own. Which is your argument, I know.
+
+00:33:38.215 --> 00:33:45.230
+<v Bart Ngata>It's my argument. I'm glad it's been heard, even if it's been heard and declined.
+
+00:33:47.096 --> 00:33:53.070
+<v Folasade Renwick>Heard, and partly answered. The service is yours. The platform isn't. Not now.
+
+00:33:54.507 --> 00:34:10.319
+<v Mara Ilves>And for what it's worth, the architecture doesn't care who owns the service. The spec, the tenant, the gateway - none of that changes because Yusra's name is on it instead of mine.
+
+00:34:11.996 --> 00:34:14.874
+<v Bart Ngata>Good. Then nothing breaks on Monday.
+
+00:34:16.800 --> 00:34:19.096
+<v Mara Ilves>Nothing breaks on Monday.
+
+00:34:21.216 --> 00:34:44.372
+<v Bart Ngata>Which brings me back to money. If it's ours from today, who pays for the spring term? Because I'll be honest, I don't have a line for it. I didn't budget for a service I didn't own, and I can't find one in March.
+
+00:34:46.217 --> 00:34:50.620
+<v Folasade Renwick>I know. I've been thinking about this since Tuesday.
+
+00:34:52.502 --> 00:34:57.692
+<v Ramona Szabo>Do you want us to drop off for this bit?
+
+00:34:58.805 --> 00:35:02.270
+<v Folasade Renwick>No. Stay. You'll all need to know.
+
+00:35:08.746 --> 00:35:09.679
+<v Folasade Renwick>Okay.
+
+00:35:10.925 --> 00:35:20.196
+<v Folasade Renwick>And Kestrow's spring term won't be charged back - central covers it. We'll centrally fund the spring term at Kestrow.
+
+00:35:22.155 --> 00:35:34.577
+<v Folasade Renwick>Expansion beyond Kestrow is still conditional on chargeback. That doesn't change. Saltmarren, Orrin Valley, Brackwater - if they want a Tinderbox, they sign up to chargeback first.
+
+00:35:36.237 --> 00:35:39.999
+<v Mara Ilves>So that's a partial reversal of Tuesday.
+
+00:35:41.264 --> 00:35:56.361
+<v Folasade Renwick>Partial. I'm taking Kestrow's spring term out of the condition. That's the only thing I'm taking out. Kestrow's pilot was never the point of that rule; the other three campuses were.
+
+00:35:58.647 --> 00:36:02.780
+<v Bart Ngata>Thank you. That helps a great deal. Genuinely.
+
+00:36:04.046 --> 00:36:07.095
+<v Ramona Szabo>And after the spring term?
+
+00:36:08.157 --> 00:36:14.765
+<v Folasade Renwick>After the spring term, Kestrow is a Council question like everything else.
+
+00:36:15.593 --> 00:36:20.126
+<v Bart Ngata>Fine. I'll take spring and argue about autumn.
+
+00:36:22.264 --> 00:36:25.117
+<v Folasade Renwick>(laughs) I'm sure you will.
+
+00:36:26.014 --> 00:36:35.972
+<v Ramona Szabo>Can I check what 'covers it' covers? Is that just the platform share, or the model usage as well?
+
+00:36:36.877 --> 00:36:48.282
+<v Folasade Renwick>All of it, for Kestrow's tenant, for the spring term. I'm not going to split hairs over one term of one pilot.
+
+00:36:50.153 --> 00:36:53.513
+<v Mara Ilves>Percy's going to have a view.
+
+00:36:54.885 --> 00:36:59.901
+<v Folasade Renwick>Percy always has a view. It's still my decision.
+
+00:37:01.021 --> 00:37:07.661
+<v Bart Ngata>Can I say that to my deans? That the spring term is covered?
+
+00:37:08.566 --> 00:37:13.307
+<v Folasade Renwick>You can say it. Out loud. No numbers.
+
+00:37:14.502 --> 00:37:20.523
+<v Bart Ngata>No numbers. Understood. They won't ask for numbers, they'll just be relieved.
+
+00:37:22.805 --> 00:37:27.199
+<v Yusra Haddad>Mara, practically. What am I inheriting? What actually moves?
+
+00:37:28.556 --> 00:37:44.554
+<v Mara Ilves>The tenant runbook, the gateway escalation path, the on-call contacts at Kettleyard, the deployment checklist, and the dummy-data procedure until Hyun-woo clears real data. I'll hand over the operational runbooks to you.
+
+00:37:46.148 --> 00:37:50.978
+<v Yusra Haddad>Good. And Greta's tier-1 runbook slots in under those?
+
+00:37:51.950 --> 00:38:05.014
+<v Mara Ilves>It sits in front of them. Greta's is what the desk does on the first call. Mine is what happens after the desk escalates. They should reference each other.
+
+00:38:07.303 --> 00:38:17.123
+<v Yusra Haddad>And who's on call for the platform side? If it's two in the morning and the gateway's down again.
+
+00:38:19.018 --> 00:38:25.334
+<v Mara Ilves>The gateway on-call is Bartosz on Ilya's team. Bart from platform.
+
+00:38:27.320 --> 00:38:29.693
+<v Bart Ngata>Not me, I hope.
+
+00:38:30.376 --> 00:38:33.599
+<v Mara Ilves>(laughs) Not you. The other Bart.
+
+00:38:35.162 --> 00:38:38.984
+<v Yusra Haddad>Two Barts. Wonderful. I'll put surnames in everything.
+
+00:38:40.242 --> 00:38:46.964
+<v Ramona Szabo>We've been doing that in the dashboard since Monday. It saves a lot of confusion.
+
+00:38:47.841 --> 00:38:51.049
+<v Yusra Haddad>Okay. Let's take the details offline.
+
+00:38:53.047 --> 00:38:54.352
+<v Mara Ilves>Offline, yes.
+
+00:38:55.406 --> 00:38:56.365
+<v Folasade Renwick>Bart?
+
+00:38:58.106 --> 00:39:22.596
+<v Bart Ngata>Then send me the cost model. If Kestrow's going to be in the model after spring, I want to see what the model says about Kestrow before I walk into the Council. I don't want to see my campus's number for the first time on a slide.
+
+00:39:24.837 --> 00:39:39.814
+<v Folasade Renwick>Here's my problem, Bart. I've said that nothing on the chargeback options goes to the campuses in writing before the Council. Not the paper, not the tables, not a summary in an email.
+
+00:39:40.998 --> 00:39:44.447
+<v Bart Ngata>I'm not the campuses. I'm one campus.
+
+00:39:45.779 --> 00:39:49.001
+<v Folasade Renwick>(laughs) You're exactly the campuses.
+
+00:39:49.876 --> 00:39:54.785
+<v Bart Ngata>And I'm the one you just gave a service to.
+
+00:39:58.760 --> 00:40:09.419
+<v Folasade Renwick>Fair. Okay. Ramona, send Bart the Kestrow tab of the chargeback cost model only - that's the one exception to nothing-in-writing.
+
+00:40:11.125 --> 00:40:16.367
+<v Ramona Szabo>I'll send it to you, Bart. Just the Kestrow tab.
+
+00:40:17.467 --> 00:40:25.633
+<v Folasade Renwick>Just the Kestrow tab. Not the other campuses, not the options paper. And Bart, please don't forward it.
+
+00:40:26.731 --> 00:40:29.169
+<v Bart Ngata>Understood. It stays with me.
+
+00:40:29.840 --> 00:40:45.743
+<v Bart Ngata>I want to be able to say to my deans, hand on heart, that I've seen what the model says about us. That's all. I'm not going to wave it around at the Council.
+
+00:40:46.968 --> 00:40:52.676
+<v Folasade Renwick>I believe you. That's why it's one tab and not the paper.
+
+00:40:53.588 --> 00:41:01.449
+<v Ramona Szabo>Bart, I'll send it to you directly, not to your office inbox. Is that alright?
+
+00:41:02.084 --> 00:41:05.048
+<v Bart Ngata>Directly is better. Thank you, Ramona.
+
+00:41:06.716 --> 00:41:17.489
+<v Bart Ngata>Mara, one more. Could you at least cost an internal build? Just so I've got a number to hold up against that tab.
+
+00:41:18.589 --> 00:41:20.714
+<v Mara Ilves>If Sade wants it.
+
+00:41:22.479 --> 00:41:26.411
+<v Folasade Renwick>Not now, Bart. Let's get through go-live first.
+
+00:41:28.010 --> 00:41:30.438
+<v Bart Ngata>Fine. I'll keep asking.
+
+00:41:32.114 --> 00:41:34.519
+<v Folasade Renwick>I know you will.
+
+00:41:36.440 --> 00:41:43.929
+<v Bart Ngata>I've been asking the System for things for eleven years. Persistence is most of the job.
+
+00:41:45.811 --> 00:41:49.266
+<v Folasade Renwick>(laughs) It's most of mine as well.
+
+00:41:50.676 --> 00:42:00.836
+<v Yusra Haddad>For what it's worth, Bart, I'd rather not build a gateway either. I have enough to do in April.
+
+00:42:02.267 --> 00:42:03.701
+<v Bart Ngata>(laughs) Traitor.
+
+00:42:05.903 --> 00:42:06.703
+<v Yusra Haddad>Pragmatist.
+
+00:42:07.646 --> 00:42:24.333
+<v Ramona Szabo>Can I pick up one more thing while we're on money? On Tuesday I said 'we'll loop in the campus CFOs', and then nobody actually owned it. I'll take the campus CFO briefing - verbally.
+
+00:42:26.506 --> 00:42:28.831
+<v Folasade Renwick>Verbally. Before the Council.
+
+00:42:31.088 --> 00:42:37.769
+<v Ramona Szabo>Verbally, before the Council. Phone calls. No slides, nothing in an email.
+
+00:42:39.286 --> 00:42:42.380
+<v Mara Ilves>Thank you. That one was hanging.
+
+00:42:44.667 --> 00:42:49.076
+<v Folasade Renwick>Conversations, Ramona. Not decks. Not 'just a quick summary'.
+
+00:42:51.063 --> 00:42:55.563
+<v Ramona Szabo>Conversations. I promise. The slides stay at home.
+
+00:42:57.100 --> 00:43:03.091
+<v Folasade Renwick>Good. Because when I say 'not in writing', I mean not in writing.
+
+00:43:03.738 --> 00:43:07.666
+<v Ramona Szabo>I know. I was there on Tuesday.
+
+00:43:09.863 --> 00:43:17.927
+<v Mara Ilves>Mona, while you're at it - can you hold Thursday the 11th for Council prep with Sade?
+
+00:43:19.762 --> 00:43:25.508
+<v Ramona Szabo>On it. I'll get a prep slot from Lulu for Thursday.
+
+00:43:26.039 --> 00:43:29.441
+<v Folasade Renwick>Thursday's fine. Morning if you can.
+
+00:43:30.641 --> 00:43:42.969
+<v Folasade Renwick>Good. From here the chargeback model is in Council prep. No new options, no new tabs except Bart's. Mara, the one-pager still comes to me Wednesday.
+
+00:43:43.949 --> 00:43:44.749
+<v Mara Ilves>Wednesday.
+
+00:43:45.326 --> 00:43:48.309
+<v Folasade Renwick>Anything else before we stop? Bart?
+
+00:43:49.894 --> 00:43:54.048
+<v Bart Ngata>No. That's more than I came in with.
+
+00:43:55.793 --> 00:43:56.740
+<v Folasade Renwick>Yusra?
+
+00:43:59.034 --> 00:44:03.089
+<v Yusra Haddad>No. I'm going to go and find Greta.
+
+00:44:04.375 --> 00:44:06.329
+<v Mara Ilves>Nothing from me.
+
+00:44:07.777 --> 00:44:10.726
+<v Ramona Szabo>Nope. I've got my list.
+
+00:44:11.331 --> 00:44:15.035
+<v Folasade Renwick>Thank you, all. Yusra, congratulations, I think.
+
+00:44:16.616 --> 00:44:19.172
+<v Yusra Haddad>(laughs) Thank you. I think.
+
+00:44:19.802 --> 00:44:23.248
+<v Folasade Renwick>Bart, go and get some sleep.
+
+00:44:24.467 --> 00:44:29.624
+<v Bart Ngata>After my two o'clock. Thank you, Sade. Thanks, everyone.
+
+00:44:30.557 --> 00:44:31.896
+<v Ramona Szabo>Bye, all!
+
+00:44:32.525 --> 00:44:33.978
+<v Mara Ilves>Thanks. Bye.

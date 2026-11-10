@@ -1,0 +1,23 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-friederike-hiba",
+ "kind": "dm",
+ "participants": [
+  "Friederike Bhatt",
+  "Hiba Deng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-30T11:43:00-05:00",
+   "user": "Friederike Bhatt",
+   "handle": "@friederike",
+   "text": "i'll send you the okapi test plan, with anahit fifita"
+  },
+  {
+   "ts": "2027-03-30T11:43:30-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "great, thank you"
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+From: Mara Ilves <mara.ilves@tarrow.example>
+To: Lionel Mbatha <lionel.mbatha@saltmarren.tarrow.example>
+Cc: Delphine Arceneaux <delphine.arceneaux@saltmarren.tarrow.example>
+Date: Tue, 02 Mar 2027 14:02:00 -0800
+Subject: Re: Huddlescribe recap: Pen Mark demo
+Message-ID: <em-0029@tarrow.example>
+In-Reply-To: <CAL7mb-0302-1315@saltmarren.tarrow.example>
+References: <CAL7mb-0302-1315@saltmarren.tarrow.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Lionel,
+
+Fair on both counts, and noted on the recap - that action item was the notetaker's invention, not yours.
+
+1. Internal-build column: agreed. I'll add an internal-build (Kettleyard) option column to the vendor scorecard so the build-vs-buy comparison sits on the same criteria as Scrivelo and Penmarq rather than in a separate conversation.
+
+2. Support after the vendor's implementation team leaves: Bettina Oduya in our office asked me the same question last week (who owns tier-2 support once the vendor hands off), so the support model is with Bettina and me already. It will be in the requirements - I'm writing tier-2 support after the handoff in as a named owner, not an assumption, whichever procurement route we end up on. Still waiting on Clement for the route.
+
+Delphine - nothing needed from you, copying so the record is straight.
+
+— Mara
+
+Mara Ilves
+Principal Architect, AI & Data
+Office of Digital Strategy (ODS), Tarrow University System Office
+
+
+On Tue, 2 Mar 2027 at 13:15, Lionel Mbatha <lionel.mbatha@saltmarren.tarrow.example> wrote:
+> Mara,
+>
+> For the record, I did not sign up to draft an internal build estimate -
+> the recap invented that. I said on the call that a similar capability
+> could be built on Kettleyard. That is an observation, not an action item,
+> and my team does not have the hours this term to cost one.
+>
+> What I do want: an internal-build option in the scorecard (a build-vs-buy
+> column), and an answer on who supports this after the vendor's
+> implementation team leaves. "Business hours with a named customer success
+> manager" is not a support model. When it breaks in week 12, it is my
+> service desk that gets the call.
+>
+> Lionel
+>
+> Lionel Mbatha
+> Director of IT
+> Tarrow University Saltmarren
+>
+>
+> On Mon, 1 Mar 2027 at 12:02, Huddlescribe Recaps <recaps@huddlescribe.example> wrote:
+>> ## Action items
+>>
+>> [...]
+>> - [ ] **Lionel Mbatha** to draft an internal build estimate for a Kettleyard-based alternative.
+>> [...]

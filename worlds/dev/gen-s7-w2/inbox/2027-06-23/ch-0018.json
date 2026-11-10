@@ -1,0 +1,43 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-desmond-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Desmond Visser"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-23T14:14:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "Just turned around the Garnet API contract v2.",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@desmond"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-06-23T14:14:46-08:00",
+   "user": "Desmond Visser",
+   "handle": "@desmond",
+   "text": "perfect :)"
+  },
+  {
+   "ts": "2027-06-23T14:17:01-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-06-23T14:18:04-08:00",
+   "user": "Desmond Visser",
+   "handle": "@desmond",
+   "text": "anytime :)"
+  }
+ ]
+}

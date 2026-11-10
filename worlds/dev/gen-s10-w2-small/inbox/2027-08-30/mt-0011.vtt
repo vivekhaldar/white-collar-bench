@@ -1,0 +1,75 @@
+WEBVTT
+
+NOTE
+Meeting: Nettle security review
+Date: Monday 30 August 2027, 1pm to 1:45pm
+Attendees: Gaurav Laine (Ormton Housing Trust), Akosua Bergstrom, Bisi Volkov, Aoife Everett
+Transcript generated automatically. Speaker names and spellings may be inaccurate.
+
+1
+00:00:03.921 --> 00:00:06.613
+<v Akosua Bergstrom>My camera's being weird, bear with me.
+
+2
+00:00:06.943 --> 00:00:09.636
+<v Bisi Volkov>We can hear you, that's what matters.
+
+3
+00:18:35.485 --> 00:18:38.946
+<v Gaurav Laine>Let's get going, we've got a lot to cover.
+
+4
+00:21:23.310 --> 00:21:27.156
+<v Bisi Volkov>Unrelated, but is anyone going to the all-hands on Thursday?
+
+5
+00:21:28.524 --> 00:21:29.524
+<v Gaurav Laine>Mm.
+
+6
+00:37:26.776 --> 00:37:31.007
+<v Aoife Everett>I'll try to send Bisy the Nettle dependency list, no promises.
+
+7
+00:37:31.217 --> 00:37:32.217
+<v Bisi Volkov>Got it.
+
+8
+00:37:32.608 --> 00:37:33.608
+<v Akosua Bergstrom>Okay.
+
+9
+00:37:34.219 --> 00:37:37.295
+<v Akosua Bergstrom>We said the same thing a month ago.
+
+10
+00:37:38.573 --> 00:37:39.573
+<v Gaurav Laine>Yeah, true.
+
+11
+00:37:39.863 --> 00:37:40.863
+<v Bisi Volkov>Mm.
+
+12
+00:37:41.609 --> 00:37:42.609
+<v Gaurav Laine>Uh-huh.
+
+13
+00:37:43.040 --> 00:37:45.733
+<v Aoife Everett>The documentation is still a bit thin.
+
+14
+00:37:46.031 --> 00:37:47.031
+<v Akosua Bergstrom>Right.
+
+15
+00:37:48.112 --> 00:37:49.112
+<v Gaurav Laine>Mm-hmm.
+
+16
+00:39:07.071 --> 00:39:09.763
+<v Gaurav Laine>Okay, I think that's it. Thanks everyone.
+
+17
+00:39:10.472 --> 00:39:11.472
+<v Akosua's iPhone>Thanks, bye.

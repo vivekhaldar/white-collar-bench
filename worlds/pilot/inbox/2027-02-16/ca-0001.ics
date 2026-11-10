@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tarrow University System//Calendar 2027//EN
+METHOD:REQUEST
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:7c1e52d0-saltmarren-site-visit@tarrow.example
+DTSTAMP:20270216T220200Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Saltmarren site visit - transfer evaluation discovery
+DTSTART:20270302T100000
+DTEND:20270302T123000
+LOCATION:Registrar's Office\, Saltmarren Admin Bldg\, 3rd floor
+ORGANIZER;CN=Mara Ilves:mailto:mara.ilves@tarrow.example
+ATTENDEE;CN=Delphine Arceneaux;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:delphine.arceneaux@saltmarren.tarrow.example
+ATTENDEE;CN=Rufus Adekunle;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:rufus.adekunle@saltmarren.tarrow.example
+DESCRIPTION:Site visit for the transfer evaluation discovery. Welcome to the discovery team\, Rufus\, and thanks to Delphine for lending us her transfer credit coordinator.\n\nAgenda: walk the transfer evaluation workflow\; interviews with 2-3 evaluators. Rufus - could you bring a process map of the current workflow?\n\nRemote dial-in for anyone not on site: https://meet.tarrow.example/j/6614402981 Passcode: 882104
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

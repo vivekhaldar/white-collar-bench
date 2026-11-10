@@ -1,0 +1,31 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-mathieu",
+ "kind": "dm",
+ "participants": [
+  "Aroha Mendoza",
+  "Mathieu Wijaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-27T07:16:00-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "I'm going to park your Kittiwake operating model draft v2 (superseded by a decision).",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@mathieu"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-27T07:16:59-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "noted"
+  }
+ ]
+}

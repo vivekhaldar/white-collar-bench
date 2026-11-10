@@ -1,0 +1,51 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-dina",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Dina Laurent"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T20:31:53-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-09-07T20:34:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "just confirmed the okapi pilot charter with you",
+   "edited": true,
+   "original": "just confrimed the okapi pilot charter with you",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@dina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-07T20:35:25-05:00",
+   "user": "Dina Laurent",
+   "handle": "@dina",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-09-07T20:37:15-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-09-07T20:38:31-05:00",
+   "user": "Dina Laurent",
+   "handle": "@dina",
+   "text": "yep, all good"
+  }
+ ]
+}

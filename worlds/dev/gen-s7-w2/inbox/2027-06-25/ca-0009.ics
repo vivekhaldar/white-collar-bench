@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Corrstead//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:d95fcaae15a8c34d@corrstead.example
+DTSTAMP:20270625T195400Z
+DTSTART:20270629T233000Z
+DTEND:20270630T000000Z
+SUMMARY:Catch-up: Hiba / Eun-ji
+ORGANIZER;CN=Eun-ji Valdez:mailto:eunji.valdez@crandale.corrstead.example
+ATTENDEE;CN=Hiba Jimenez;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.jimenez@corrstead.example
+SEQUENCE:0
+DESCRIPTION:Quick sync\, 30 minutes.\nJoin video meeting: https://meet.corrstead.example/j/7538024500?pwd=2yH8GpZY\nPasscode: 010791
+LOCATION:https://meet.corrstead.example/j/7538024500?pwd=2yH8GpZY
+END:VEVENT
+END:VCALENDAR

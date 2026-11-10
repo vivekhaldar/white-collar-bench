@@ -1,0 +1,37 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-losa",
+ "kind": "dm",
+ "participants": [
+  "Losa Moretti",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-17T10:01:00-08:00",
+   "user": "Losa Moretti",
+   "handle": "@losa",
+   "text": "oluwaseun is expecting you to send them the reading list on research computing",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@despina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-17T10:04:28-08:00",
+   "user": "Losa Moretti",
+   "handle": "@losa",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-02-17T10:08:28-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "anytime"
+  }
+ ]
+}

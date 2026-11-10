@@ -1,0 +1,35 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aino-aroha",
+ "kind": "dm",
+ "participants": [
+  "Aino Menon",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-27T09:00:17-05:00",
+   "user": "Aino Menon",
+   "handle": "@aino",
+   "text": "Recap from yesterday: Anh agreed to send you the radiology follow-up discovery pain-point list."
+  },
+  {
+   "ts": "2027-10-27T09:00:42-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "great, thank you"
+  },
+  {
+   "ts": "2027-10-27T09:02:33-05:00",
+   "user": "Aino Menon",
+   "handle": "@aino",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-10-27T09:03:17-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "later!"
+  }
+ ]
+}

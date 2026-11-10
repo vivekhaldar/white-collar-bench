@@ -1,0 +1,51 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-hiba",
+ "kind": "dm",
+ "participants": [
+  "Camila Abernathy",
+  "Hiba Overton"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-12T13:48:49-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-11-12T13:53:00-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "just sent you the reading list on pothole reporting",
+   "edited": true,
+   "original": "just sent you the reading list on potohle reporting",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-12T13:53:45-07:00",
+   "user": "Hiba Overton",
+   "handle": "@hiba",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-11-12T13:56:51-07:00",
+   "user": "Hiba Overton",
+   "handle": "@hiba",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-11-12T13:59:28-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

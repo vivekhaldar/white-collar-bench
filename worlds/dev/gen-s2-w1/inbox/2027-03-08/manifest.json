@@ -1,0 +1,182 @@
+{
+  "date": "2027-03-08",
+  "artifacts": [
+    {
+      "id": "em-0081",
+      "channel": "email",
+      "received_at": "2027-03-08T06:51:00-07:00",
+      "path": "em-0081.eml",
+      "title": "Reminder: Friday status note due Friday 12 March"
+    },
+    {
+      "id": "nt-0008",
+      "channel": "note",
+      "received_at": "2027-03-08T07:53:00-07:00",
+      "path": "nt-0008.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "dc-0004",
+      "channel": "document",
+      "received_at": "2027-03-08T08:42:00-07:00",
+      "path": "dc-0004.docx",
+      "title": "Mistral change request v1",
+      "parent": "em-0082"
+    },
+    {
+      "id": "em-0082",
+      "channel": "email",
+      "received_at": "2027-03-08T08:42:00-07:00",
+      "path": "em-0082.eml",
+      "title": "Re: Mistral change request"
+    },
+    {
+      "id": "ch-0073",
+      "channel": "chat",
+      "received_at": "2027-03-08T09:03:00-07:00",
+      "path": "ch-0073.json",
+      "title": "#mistral-core"
+    },
+    {
+      "id": "em-0083",
+      "channel": "email",
+      "received_at": "2027-03-08T09:40:00-07:00",
+      "path": "em-0083.eml",
+      "title": "Call for proposals closes Saturday 20 March"
+    },
+    {
+      "id": "em-0084",
+      "channel": "email",
+      "received_at": "2027-03-08T09:43:00-07:00",
+      "path": "em-0084.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "em-0085",
+      "channel": "email",
+      "received_at": "2027-03-08T09:45:00-07:00",
+      "path": "em-0085.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "em-0086",
+      "channel": "email",
+      "received_at": "2027-03-08T09:58:00-07:00",
+      "path": "em-0086.eml",
+      "title": "Re: AI in Public Service Workshop: moving to closed"
+    },
+    {
+      "id": "mt-0017",
+      "channel": "transcript",
+      "received_at": "2027-03-08T10:00:00-07:00",
+      "path": "mt-0017.vtt",
+      "title": "Mistral standup (transcript)"
+    },
+    {
+      "id": "em-0087",
+      "channel": "email",
+      "received_at": "2027-03-08T10:39:00-07:00",
+      "path": "em-0087.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "em-0088",
+      "channel": "email",
+      "received_at": "2027-03-08T10:41:00-07:00",
+      "path": "em-0088.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "mn-0003",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-08T11:00:00-07:00",
+      "path": "mn-0003.md",
+      "title": "Recap: Marmara intro call"
+    },
+    {
+      "id": "em-0089",
+      "channel": "email",
+      "received_at": "2027-03-08T11:14:00-07:00",
+      "path": "em-0089.eml",
+      "title": "Ethura sandbox credentials"
+    },
+    {
+      "id": "mt-0018",
+      "channel": "transcript",
+      "received_at": "2027-03-08T11:45:00-07:00",
+      "path": "mt-0018.vtt",
+      "title": "DS leads call (transcript)"
+    },
+    {
+      "id": "dc-0005",
+      "channel": "document",
+      "received_at": "2027-03-08T13:24:00-07:00",
+      "path": "dc-0005.xlsx",
+      "title": "Fennel evaluation rubric v2",
+      "parent": "em-0090"
+    },
+    {
+      "id": "em-0090",
+      "channel": "email",
+      "received_at": "2027-03-08T13:24:00-07:00",
+      "path": "em-0090.eml",
+      "title": "Re: Fennel evaluation rubric"
+    },
+    {
+      "id": "ch-0074",
+      "channel": "chat",
+      "received_at": "2027-03-08T13:25:00-07:00",
+      "path": "ch-0074.json",
+      "title": "DM: Dina Ricci / Yael Ellery"
+    },
+    {
+      "id": "ch-0075",
+      "channel": "chat",
+      "received_at": "2027-03-08T13:32:00-07:00",
+      "path": "ch-0075.json",
+      "title": "DM: Dina Ricci / Imani Navarro"
+    },
+    {
+      "id": "ca-0008",
+      "channel": "calendar",
+      "received_at": "2027-03-08T14:52:00-07:00",
+      "path": "ca-0008.ics",
+      "title": "Invite: Mistral review"
+    },
+    {
+      "id": "em-0091",
+      "channel": "email",
+      "received_at": "2027-03-08T17:11:00-07:00",
+      "path": "em-0091.eml",
+      "title": "Early-bird registration ends Friday"
+    },
+    {
+      "id": "ch-0076",
+      "channel": "chat",
+      "received_at": "2027-03-08T17:29:00-07:00",
+      "path": "ch-0076.json",
+      "title": "DM: Dina Ricci / Penelope Fuentes"
+    },
+    {
+      "id": "ch-0077",
+      "channel": "chat",
+      "received_at": "2027-03-08T18:52:00-07:00",
+      "path": "ch-0077.json",
+      "title": "DM: Naoko Sandoval / Dina Ricci"
+    },
+    {
+      "id": "nt-0009",
+      "channel": "note",
+      "received_at": "2027-03-08T20:16:00-07:00",
+      "path": "nt-0009.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "ca-0009",
+      "channel": "calendar",
+      "received_at": "2027-03-08T20:21:00-07:00",
+      "path": "ca-0009.ics",
+      "title": "Invite: Walkthrough: Mistral equity impact review"
+    }
+  ]
+}

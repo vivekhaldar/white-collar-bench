@@ -1,0 +1,159 @@
+{
+  "date": "2027-11-02",
+  "artifacts": [
+    {
+      "id": "em-0110",
+      "channel": "email",
+      "received_at": "2027-11-02T07:49:00-05:00",
+      "path": "em-0110.eml",
+      "title": "Health Systems Dispatch: issue 44"
+    },
+    {
+      "id": "ch-0100",
+      "channel": "chat",
+      "received_at": "2027-11-02T08:34:00-05:00",
+      "path": "ch-0100.json",
+      "title": "DM: Anh Villanueva / Aroha Mendoza"
+    },
+    {
+      "id": "mn-0012",
+      "channel": "meeting_notes",
+      "received_at": "2027-11-02T10:00:00-05:00",
+      "path": "mn-0012.md",
+      "title": "Recap: Cirrus standup"
+    },
+    {
+      "id": "mt-0012",
+      "channel": "transcript",
+      "received_at": "2027-11-02T10:00:00-05:00",
+      "path": "mt-0012.vtt",
+      "title": "Office hours with Putri (transcript)"
+    },
+    {
+      "id": "ch-0101",
+      "channel": "chat",
+      "received_at": "2027-11-02T10:28:00-05:00",
+      "path": "ch-0101.json",
+      "title": "DM: Aroha Mendoza / Luz Ekwueme"
+    },
+    {
+      "id": "ch-0102",
+      "channel": "chat",
+      "received_at": "2027-11-02T11:33:00-05:00",
+      "path": "ch-0102.json",
+      "title": "#funding-model-core"
+    },
+    {
+      "id": "em-0111",
+      "channel": "email",
+      "received_at": "2027-11-02T11:45:00-05:00",
+      "path": "em-0111.eml",
+      "title": "[INC-78906] Ticket updated"
+    },
+    {
+      "id": "em-0112",
+      "channel": "email",
+      "received_at": "2027-11-02T11:51:00-05:00",
+      "path": "em-0112.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "ch-0103",
+      "channel": "chat",
+      "received_at": "2027-11-02T12:28:00-05:00",
+      "path": "ch-0103.json",
+      "title": "DM: Anh Villanueva / Aroha Mendoza"
+    },
+    {
+      "id": "em-0113",
+      "channel": "email",
+      "received_at": "2027-11-02T12:45:00-05:00",
+      "path": "em-0113.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "em-0114",
+      "channel": "email",
+      "received_at": "2027-11-02T12:48:00-05:00",
+      "path": "em-0114.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "ch-0104",
+      "channel": "chat",
+      "received_at": "2027-11-02T14:24:00-05:00",
+      "path": "ch-0104.json",
+      "title": "#cirrus-core"
+    },
+    {
+      "id": "ch-0105",
+      "channel": "chat",
+      "received_at": "2027-11-02T14:58:00-05:00",
+      "path": "ch-0105.json",
+      "title": "#radiology-follow-up-core"
+    },
+    {
+      "id": "em-0115",
+      "channel": "email",
+      "received_at": "2027-11-02T15:00:00-05:00",
+      "path": "em-0115.eml",
+      "title": "Re: Funding model API credentials"
+    },
+    {
+      "id": "ch-0106",
+      "channel": "chat",
+      "received_at": "2027-11-02T15:11:00-05:00",
+      "path": "ch-0106.json",
+      "title": "DM: Keisha Hargrove / Aroha Mendoza"
+    },
+    {
+      "id": "ch-0107",
+      "channel": "chat",
+      "received_at": "2027-11-02T15:38:00-05:00",
+      "path": "ch-0107.json",
+      "title": "DM: Aroha Mendoza / Anh Villanueva"
+    },
+    {
+      "id": "ch-0108",
+      "channel": "chat",
+      "received_at": "2027-11-02T15:39:00-05:00",
+      "path": "ch-0108.json",
+      "title": "DM: Anh Villanueva / Aroha Mendoza"
+    },
+    {
+      "id": "ch-0109",
+      "channel": "chat",
+      "received_at": "2027-11-02T18:02:00-05:00",
+      "path": "ch-0109.json",
+      "title": "#cirrus-core"
+    },
+    {
+      "id": "em-0116",
+      "channel": "email",
+      "received_at": "2027-11-02T18:02:00-05:00",
+      "path": "em-0116.eml",
+      "title": "Kittiwake Funding Model: numbers"
+    },
+    {
+      "id": "em-0117",
+      "channel": "email",
+      "received_at": "2027-11-02T18:33:00-05:00",
+      "path": "em-0117.eml",
+      "title": "[INC-51787] Ticket updated"
+    },
+    {
+      "id": "ch-0110",
+      "channel": "chat",
+      "received_at": "2027-11-02T20:06:00-05:00",
+      "path": "ch-0110.json",
+      "title": "DM: Mathieu Wijaya / Aroha Mendoza"
+    },
+    {
+      "id": "em-0118",
+      "channel": "email",
+      "received_at": "2027-11-02T22:06:00-05:00",
+      "path": "em-0118.eml",
+      "title": "Draft: Bed management selection pricing comparison"
+    }
+  ]
+}

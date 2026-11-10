@@ -1,0 +1,32 @@
+{
+ "workspace": "iselvale",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Tahmina Rosales",
+  "Friederike Bhatt",
+  "Lindiwe Ribeiro"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-19T10:13:33-05:00",
+   "user": "Tahmina Rosales",
+   "handle": "@tahmina",
+   "text": "does anyone have a spare laptop charger (usb-c)?"
+  },
+  {
+   "ts": "2027-03-19T10:18:25-05:00",
+   "user": "Friederike Bhatt",
+   "handle": "@friederike",
+   "text": "i have one, desk by the window",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-19T10:22:29-05:00",
+   "user": "Lindiwe Ribeiro",
+   "handle": "@lindiwe",
+   "text": "check the supply cupboard",
+   "thread_of": 0
+  }
+ ]
+}

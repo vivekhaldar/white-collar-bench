@@ -1,0 +1,33 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Goran Liu",
+  "Baraka Chevalier",
+  "Marcelo Meijer",
+  "Oksana Hoffmann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-14T08:27:34-06:00",
+   "user": "Goran Liu",
+   "handle": "@goran",
+   "text": "the elevator on the east side is out again"
+  },
+  {
+   "ts": "2027-09-14T08:33:43-06:00",
+   "user": "Baraka Chevalier",
+   "handle": "@baraka",
+   "text": "stairs it is",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-14T08:36:04-06:00",
+   "user": "Marcelo Meijer",
+   "handle": "@marcelo",
+   "text": "classic",
+   "thread_of": 0
+  }
+ ]
+}

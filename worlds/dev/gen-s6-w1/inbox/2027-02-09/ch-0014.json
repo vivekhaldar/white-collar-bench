@@ -1,0 +1,35 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-tariq",
+ "kind": "dm",
+ "participants": [
+  "Tariq",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-09T17:41:00-08:00",
+   "user": "Tariq",
+   "handle": "@tariq",
+   "text": "From the sync earlier, Andres Garnier (Account Executive at Zenia) will collect two customer references from Zenia! :)"
+  },
+  {
+   "ts": "2027-02-09T17:41:05-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "that'd be great"
+  },
+  {
+   "ts": "2027-02-09T17:46:01-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-02-09T17:47:18-08:00",
+   "user": "Tariq",
+   "handle": "@tariq",
+   "text": "yep, all good"
+  }
+ ]
+}

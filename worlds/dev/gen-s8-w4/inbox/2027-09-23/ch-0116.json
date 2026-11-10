@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Tavo"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-23T13:59:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "Now that I have the Wagtail dashboard access sorted, I can start the dry run."
+  },
+  {
+   "ts": "2027-09-23T13:59:42-06:00",
+   "user": "Tavo",
+   "handle": "@ottavio",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-09-23T14:00:59-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-09-23T14:04:52-06:00",
+   "user": "Tavo",
+   "handle": "@ottavio",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "workspace": "holcrest",
+ "channel": "#plain-language-workshop-core",
+ "kind": "channel",
+ "participants": [
+  "Petra Korkmaz",
+  "Camila Abernathy",
+  "Jalen",
+  "Sipho Sengupta",
+  "Dina Taufa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-04T09:35:00-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "@camila can you send me the plain language workshop feedback form?"
+  },
+  {
+   "ts": "2027-11-04T09:35:48-07:00",
+   "user": "Sipho Sengupta",
+   "handle": "@sipho",
+   "text": "ok",
+   "thread_of": 0
+  }
+ ]
+}

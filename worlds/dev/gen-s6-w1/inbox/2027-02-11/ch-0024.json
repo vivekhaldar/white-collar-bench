@@ -1,0 +1,47 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-carys-despina",
+ "kind": "dm",
+ "participants": [
+  "Carys Laurent",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-11T16:50:14-08:00",
+   "user": "Carys Laurent",
+   "handle": "@carys",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-02-11T16:50:39-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "sure, what's up?"
+  },
+  {
+   "ts": "2027-02-11T16:53:00-08:00",
+   "user": "Carys Laurent",
+   "handle": "@carys",
+   "text": "Will configure the Fennel SSO broker for Dorcliff."
+  },
+  {
+   "ts": "2027-02-11T16:53:30-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "great, thank you"
+  },
+  {
+   "ts": "2027-02-11T16:57:44-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-02-11T16:59:43-08:00",
+   "user": "Carys Laurent",
+   "handle": "@carys",
+   "text": "no worries"
+  }
+ ]
+}

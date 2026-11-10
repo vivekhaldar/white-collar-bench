@@ -1,0 +1,23 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-akosua-aoife",
+ "kind": "dm",
+ "participants": [
+  "Akosua",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T11:28:00+01:00",
+   "user": "Akosua",
+   "handle": "@akosua",
+   "text": "Will send you the Pipit action log. :)"
+  },
+  {
+   "ts": "2027-09-07T11:28:13+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "thanks!"
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-yiannis",
+ "kind": "dm",
+ "participants": [
+  "Yanni",
+  "Camila Abernathy"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-10T15:13:05-07:00",
+   "user": "Yanni",
+   "handle": "@yiannis",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-11-10T15:13:28-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "sure, what's up?"
+  },
+  {
+   "ts": "2027-11-10T15:14:18-07:00",
+   "user": "Yanni",
+   "handle": "@yiannis",
+   "text": "Leave it with me, I'll share the data engineer sourcing plan with you."
+  },
+  {
+   "ts": "2027-11-10T15:15:13-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "great, thank you"
+  },
+  {
+   "ts": "2027-11-10T15:18:19-07:00",
+   "user": "Yanni",
+   "handle": "@yiannis",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-11-10T15:20:11-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "later!"
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-hamish",
+ "kind": "dm",
+ "participants": [
+  "Hamish Okada",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-31T08:35:10-06:00",
+   "user": "Hamish Okada",
+   "handle": "@hamish",
+   "text": "Recap from yesterday: you agreed to send me the Friday status note for w/e 3 September!",
+   "edited": true,
+   "original": "Recap from yesterday: you agreed to send me the Friday status note for w/e 4 September!"
+  }
+ ]
+}

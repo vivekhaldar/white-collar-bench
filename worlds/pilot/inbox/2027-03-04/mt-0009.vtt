@@ -1,0 +1,368 @@
+WEBVTT
+
+NOTE
+Kettleyard incident standup (Thu)
+Date: Thu 4 Mar 2027, 10:00 (-08:00), meet.tarrow.example
+Attendees (auto-generated): Ilya Marchetti, Bartosz Zielke, Bettina Oduya, Hyun-woo Park, Saanvi Raghunathan, Mara Ilves, iPhone (3)
+Transcript generated automatically. Speaker names from meeting display names; may contain errors.
+
+00:00:04.173 --> 00:00:14.817
+<v Ilya Marchetti>Can you hear me? There's a little red thing on my mic and I don't know what it means.
+
+00:00:16.565 --> 00:00:18.967
+<v Bartosz Zielke>Yep, hear you fine
+
+00:00:20.863 --> 00:00:31.242
+<v Bettina Oduya>I can hear you. Can you hear me? I'm on the home laptop, it does a thing with the--
+
+00:00:32.985 --> 00:00:34.642
+<v Bettina Oduya>[dog barking]
+
+00:00:37.554 --> 00:00:46.720
+<v Bettina Oduya>Sorry. Sorry. That's Biscuit. The recycling truck is on our street and she takes it personally.
+
+00:00:47.549 --> 00:00:51.443
+<v Saanvi Raghunathan>Hi. I can hear everyone. And Biscuit.
+
+00:00:52.943 --> 00:00:58.666
+<v Bettina Oduya>Hold on, I'm going to shut the door. Two seconds.
+
+00:01:00.466 --> 00:01:06.451
+<v Ilya Marchetti>Take your time. We're waiting on Hyun-woo and Mara anyway.
+
+00:01:22.000 --> 00:01:31.688
+<v Bettina Oduya>Okay, I'm back. Door is shut. She's still muttering but she's on the other side of it.
+
+00:01:34.688 --> 00:01:37.826
+<v Ilya Marchetti>We'll give it another minute.
+
+00:02:28.000 --> 00:02:31.366
+<v Hyun-woo Park>Good morning. Can you hear me?
+
+00:02:33.582 --> 00:02:43.645
+<v Hyun-woo Park>Apologies. I was in the audit console and lost track of time. I will come back to why.
+
+00:03:14.000 --> 00:03:29.856
+<v Mara Ilves>Morning. Hi. Sorry, just got back from the offsite, I'm catching up. I saw the incident channel on the way in. Read it in order, which was a mistake.
+
+00:03:32.124 --> 00:03:36.074
+<v Ilya Marchetti>Morning, Mara. Welcome back to the fire.
+
+00:03:38.394 --> 00:03:46.212
+<v Ilya Marchetti>Bart, can you share the pool dashboard? The gateway one, not the cluster one.
+
+00:03:49.212 --> 00:03:52.694
+<v Bartosz Zielke>One sec. Can everyone see it?
+
+00:04:10.000 --> 00:04:45.273
+<v Ilya Marchetti>Right. Let's start, we've got about half an hour and some of you have a workshop. Incident standup, day two, KYD-INC-0307. So. Where we are. The 502s came back at about eight forty this morning when the traffic ramped. Not as bad as yesterday, but the same shape. Pool fills up, doesn't drain. You can see it there, the yellow line, pinned at the top.
+
+00:04:47.805 --> 00:05:01.606
+<v Saanvi Raghunathan>Yeah, I saw that too. Our synthetic check from Kestrow started failing around eight forty-five, so I've been staring at that line since before nine.
+
+00:05:03.607 --> 00:05:22.260
+<v Ilya Marchetti>So I went and looked at the deploy log before this call. Bart's fix yesterday only went to staging - prod is still on the old pool config. I'm taking the incident from here.
+
+00:05:24.260 --> 00:05:26.369
+<v Bartosz Zielke>Yeah, my bad.
+
+00:05:29.076 --> 00:05:37.963
+<v Ilya Marchetti>What happened, for the timeline? Not a blame thing, I just need it written down correctly.
+
+00:05:39.753 --> 00:06:13.387
+<v Bartosz Zielke>So the pipeline promoted it to staging fine, and prod promotion needs a second approver. It sat in the approval queue. I was watching the staging dashboard when I posted, saw the pool draining and the 502s drop and, yeah. Called it. And the 502s dropped in prod too in the evening, but that was just traffic going away. Not the fix.
+
+00:06:14.563 --> 00:06:23.432
+<v Ilya Marchetti>Which is the worst kind of green. Okay. It goes in the timeline as it is.
+
+00:06:24.597 --> 00:06:30.552
+<v Mara Ilves>So the fix is right, it just isn't in production.
+
+00:06:32.388 --> 00:06:44.770
+<v Ilya Marchetti>The fix looks right on staging. It isn't in production. Those are two different statements and yesterday we treated them as one.
+
+00:06:47.519 --> 00:07:03.227
+<v Ilya Marchetti>So, from now: I'm incident commander, and I own getting the connection-pool fix into prod. Bart, you stay hands on keyboard with me, but I make the calls.
+
+00:07:06.120 --> 00:07:08.390
+<v Bartosz Zielke>Okay. Yep. That's fair
+
+00:07:10.789 --> 00:07:27.925
+<v Ilya Marchetti>And I'll confirm in the channel when it is actually in prod. Not staging. Prod. Mara, that covers what Ramona asked Bart for yesterday on your behalf. It's with me now.
+
+00:07:30.306 --> 00:07:35.324
+<v Mara Ilves>Okay. Thanks. I saw Ramona's ask in the channel.
+
+00:07:38.247 --> 00:07:43.573
+<v Hyun-woo Park>Who is the second approver for the production promotion?
+
+00:07:44.461 --> 00:07:58.913
+<v Ilya Marchetti>Normally me. Yesterday I was on the provider side all afternoon and I didn't see the request. That's also going in the timeline. Under my name.
+
+00:08:01.178 --> 00:08:27.551
+<v Bartosz Zielke>For the prod rollout, it's the same change as staging. Release the connection on stream timeout instead of holding it, and cap idle connections per tenant share so one tenant can't sit on the spare ones. Nothing else in the change, I checked the diff twice this morning
+
+00:08:30.130 --> 00:08:55.160
+<v Ilya Marchetti>One replica at a time. We watch the pool gauge on each one before we move to the next. If the pool drains after timeouts on the first replica, we carry on. If it doesn't, we stop and think, which is a step we skipped yesterday.
+
+00:08:57.251 --> 00:09:07.099
+<v Saanvi Raghunathan>With one replica out you're down to two thirds of the pool, right? Is the 64 per replica?
+
+00:09:09.980 --> 00:09:35.797
+<v Ilya Marchetti>Per replica, yes. Which is now written down in v4, as of last night, after somebody asked me in writing. So two of three during the rollout. This morning's traffic fits in that if the connections actually come back, which is the whole point of the fix.
+
+00:09:37.079 --> 00:09:50.236
+<v Ilya Marchetti>And I'm not calling it fixed until it's been clean for a while in prod. Not ten minutes. Long enough that I believe it.
+
+00:09:52.099 --> 00:10:00.645
+<v Bartosz Zielke>Rollback plan is the current config, which we know is bad, so. Forward only really
+
+00:10:01.796 --> 00:10:13.166
+<v Bettina Oduya>Can we talk about the status page? Because right now it says Monitoring, and campus desks read Monitoring as "fixed".
+
+00:10:14.436 --> 00:10:18.109
+<v Ilya Marchetti>It should go back to Identified.
+
+00:10:19.717 --> 00:10:34.337
+<v Bettina Oduya>Agreed. But the wording. I don't want to write "fix deployed to staging, production rollout pending". Nobody at a campus service desk knows what staging is.
+
+00:10:36.260 --> 00:10:37.649
+<v Ilya Marchetti>It's accurate.
+
+00:10:40.297 --> 00:10:53.294
+<v Bettina Oduya>It's accurate and it's useless. Who picks up the phone when a Saltmarren instructor calls and asks what staging means? It's not you.
+
+00:10:54.796 --> 00:11:08.181
+<v Ilya Marchetti>No, it's you, which is why you get to write it. But I don't want anything that implies it's fixed. Yesterday we said fixed.
+
+00:11:10.919 --> 00:11:23.765
+<v Bettina Oduya>Fine. "We have identified the cause and are rolling out a fix to production. Some requests may still fail until this is complete."
+
+00:11:24.892 --> 00:11:29.290
+<v Ilya Marchetti>"Are preparing to roll out." We aren't rolling yet.
+
+00:11:29.490 --> 00:11:31.606
+<v Bettina Oduya>Oh, come on.
+
+00:11:33.060 --> 00:11:34.195
+<v Ilya Marchetti>Bettina.
+
+00:11:35.707 --> 00:11:40.698
+<v Bettina Oduya>Fine. "Preparing to roll out." And no time estimate.
+
+00:11:42.921 --> 00:11:50.144
+<v Ilya Marchetti>No time estimate. And it doesn't go to Resolved until I say so.
+
+00:11:52.805 --> 00:12:19.103
+<v Bettina Oduya>It won't go to Resolved until you say so. I'll update it after this call. And for what it's worth, the Saltmarren desk called twice yesterday afternoon, and Brackwater once. All three were fine with the status page link. Nobody asked what a connection pool is, thank God.
+
+00:12:21.309 --> 00:12:43.669
+<v Saanvi Raghunathan>From the Kestrow side: I was going to rerun the load test this morning, per my message last night. Glad I didn't. So I'm holding. Not rerunning until prod is actually fixed. I don't want another four minutes of junk results.
+
+00:12:44.753 --> 00:12:46.226
+<v Ilya Marchetti>Understood. Sensible.
+
+00:12:47.492 --> 00:13:16.529
+<v Hyun-woo Park>Separately, if I may. This is why I was late. While I was in the vault audit log this morning, pulling events for the incident timeline, I noticed something unrelated to the gateway. The API key that was pasted in #kettleyard on Tuesday is still active in the audit log. It was never rotated.
+
+00:13:16.629 --> 00:13:24.848
+<v Bartosz Zielke>Oh. No, I said I'd rotate it and then the tenant went live and the--
+
+00:13:26.477 --> 00:13:38.665
+<v Hyun-woo Park>Per policy, a key exposed in a channel is treated as compromised from the moment it is posted. Rotate it now, please.
+
+00:13:41.261 --> 00:13:44.064
+<v Bartosz Zielke>Yep. Doing it now. Sorry.
+
+00:13:45.193 --> 00:13:59.769
+<v Hyun-woo Park>And please revoke the old key. Not just issue a new one. The twenty-four hour overlap in the vault does not apply to a leaked key.
+
+00:14:00.752 --> 00:14:15.029
+<v Hyun-woo Park>I have not seen anything in the log that suggests use beyond Tuesday's smoke test. That is not the same as saying it was not used.
+
+00:14:17.455 --> 00:14:24.480
+<v Mara Ilves>Is the Tinderbox app using that key, or only the smoke test?
+
+00:14:26.261 --> 00:14:39.187
+<v Bartosz Zielke>Only the smoke test. The app gets its own from the vault path, so nothing on the Tinderbox side breaks when I revoke
+
+00:14:41.334 --> 00:14:54.806
+<v Ilya Marchetti>And for v5, Mara, this is your comment nine. Rotation, and what we do with a leaked key. I'll be quoting it back to--
+
+00:14:58.306 --> 00:15:00.162
+<v Mara Ilves>Ilya? You froze.
+
+00:15:02.171 --> 00:15:09.988
+<v Bartosz Zielke>His laptop's been doing that all week, the VPN drops every couple of hours
+
+00:15:13.988 --> 00:15:17.009
+<v Saanvi Raghunathan>Mara, how was the offsite?
+
+00:15:18.782 --> 00:15:28.392
+<v Mara Ilves>Long. Lots of flip charts. I'll tell you about it when there isn't a gateway on fire.
+
+00:16:02.000 --> 00:16:06.973
+<v iPhone (3)>Hello? Sorry. Laptop died. I'm on my phone now.
+
+00:16:09.124 --> 00:16:14.416
+<v Mara Ilves>Ilya, is that you? You're showing as iPhone three.
+
+00:16:16.922 --> 00:16:26.066
+<v iPhone (3)>It's me. I don't know why it's three. I only have one phone. Where were we.
+
+00:16:27.787 --> 00:16:30.976
+<v Bettina Oduya>Hyun-woo's key. Bart's rotating it.
+
+00:16:33.010 --> 00:16:35.827
+<v iPhone (3)>Right. Good. Carry on, Bart.
+
+00:16:38.359 --> 00:17:12.446
+<v iPhone (3)>Okay, timeline. For the postmortem. I want to get the skeleton straight while everyone's here, because by Monday nobody will remember anything. Nine fifty, first 502s. Nine fifty-two, Bart declares. Ten-oh-four, status page. Twelve-thirty, root cause - connection-pool exhaustion, streaming timeouts not handing connections back. Fifteen hundred, fix on staging. Sixteen forty, reported deployed. Which it wasn't. Eight forty today, 502s back.
+
+00:17:14.446 --> 00:17:20.960
+<v Bartosz Zielke>Ten forty-seven I started on the fix, if you want that
+
+00:17:22.407 --> 00:17:38.982
+<v Saanvi Raghunathan>And the exact numbers from the load test abort are in my channel message. We went from 0.2 percent errors to 61 percent in under a minute at 140 concurrent.
+
+00:17:40.864 --> 00:17:44.630
+<v iPhone (3)>Yes. I'll take them from there.
+
+00:17:47.150 --> 00:18:00.700
+<v Hyun-woo Park>For the postmortem, I would like the key exposure to be a separate item, not part of the gateway timeline. They are unrelated causes.
+
+00:18:02.509 --> 00:18:08.930
+<v iPhone (3)>Agreed. Separate section. Different root cause, same week. A good week.
+
+00:18:09.767 --> 00:18:29.472
+<v Bettina Oduya>Can it have a section on what we told the campuses? Because yesterday we told them it was fixed, and today we're telling them it isn't, and someone at a campus is going to ask why.
+
+00:18:31.905 --> 00:18:33.999
+<v iPhone (3)>Communications. Yes. Fine.
+
+00:18:36.753 --> 00:18:51.033
+<v Mara Ilves>And the approval queue thing. If the prod promotion can sit there for hours without anyone noticing, that's a what-changes item, not just a timeline line.
+
+00:18:53.995 --> 00:19:13.123
+<v iPhone (3)>Agreed. It's going under what changes. Along with the back-pressure, which I'm told I deferred to v5, on the day before the gateway fell over from lack of back-pressure. I've made my peace with it.
+
+00:19:14.766 --> 00:19:22.713
+<v Saanvi Raghunathan>Does the per-tenant concurrency limit from your v4 change anything for us? For Tinderbox?
+
+00:19:25.559 --> 00:19:33.868
+<v iPhone (3)>On paper, yes. In the gateway, not yet. v4 is a document, not a deploy.
+
+00:19:36.665 --> 00:19:57.056
+<v iPhone (3)>Format is the usual one. Summary, impact, timeline, root cause, what went well, what didn't, what changes. What went well: Bettina's campus comms, and Saanvi stopping the load test inside a minute. That's the list so far.
+
+00:19:59.821 --> 00:20:08.096
+<v Hyun-woo Park>The vault audit log also worked as intended. That is how the key was found.
+
+00:20:09.404 --> 00:20:21.580
+<v Bettina Oduya>Does the postmortem go to the campuses? Because if it does I want to read the communications section before it goes anywhere.
+
+00:20:23.026 --> 00:20:34.965
+<v iPhone (3)>Who sees it is Sade's call, not mine. I'd assume ODS first and campus IT leads after, if she says so.
+
+00:20:37.046 --> 00:20:48.831
+<v Hyun-woo Park>If it is shared outside ODS, the key exposure section should not go with it. That part stays internal, per policy.
+
+00:20:50.868 --> 00:20:57.108
+<v iPhone (3)>Noted. Internal appendix for the key. Main document for the gateway.
+
+00:20:59.032 --> 00:21:17.149
+<v Bartosz Zielke>For the root cause part, the thing nobody saw coming was the streaming timeout holding the connection for the full sixty seconds. On staging the streams are short so it never shows up
+
+00:21:19.394 --> 00:21:28.069
+<v iPhone (3)>Which is also a what-changes item. Staging traffic that looks nothing like production traffic. Classic.
+
+00:21:29.180 --> 00:21:44.176
+<v iPhone (3)>So the postmortem. Sade wants it by next Wednesday, the tenth. Root cause, timeline, what changes. I'll draft it. Mara, she also wants Tinderbox's impact in it.
+
+00:21:45.676 --> 00:21:56.465
+<v Mara Ilves>Yes, I saw her message. Sade wants Tinderbox's impact in the postmortem - I'll write that section by Monday.
+
+00:21:59.293 --> 00:22:18.456
+<v Mara Ilves>The impact section, I mean. The aborted load test, what it means for the pilot timeline, and that we were in dummy-data mode the whole time, so no real student data went through the gateway.
+
+00:22:21.218 --> 00:22:29.502
+<v iPhone (3)>Monday's good. That gives me two days to make it all sound like a plan.
+
+00:22:31.992 --> 00:22:44.458
+<v Hyun-woo Park>Please be precise about the dummy-data point in that section. "No real student data" is a statement I will be asked about.
+
+00:22:46.224 --> 00:22:52.864
+<v Mara Ilves>Understood. I'll say exactly what was in the tenant and nothing more.
+
+00:22:55.368 --> 00:23:07.094
+<v Bartosz Zielke>FYI pool on replica two is at 64 of 64 again. Replica one 58. It's the 10 o'clock classes logging in
+
+00:23:07.929 --> 00:23:18.662
+<v iPhone (3)>Of course it is. Thank you, Bart. That's the yellow line, everyone, if you're still looking at the share.
+
+00:23:21.423 --> 00:23:26.821
+<v Bettina Oduya>I'm not looking at it. It makes me anxious.
+
+00:23:28.720 --> 00:23:44.816
+<v Mara Ilves>Ilya, one more thing. Can you confirm our tenant quota before Saanvi reruns? I'd rather the load test rerun didn't hit a quota wall and look like another outage.
+
+00:23:47.394 --> 00:23:56.887
+<v Saanvi Raghunathan>Yeah. I need to know what the tenant actually allows before I push it to 500 concurrent.
+
+00:23:57.919 --> 00:23:59.345
+<v iPhone (3)>Will check.
+
+00:24:02.345 --> 00:24:06.678
+<v Hyun-woo Park>Bartosz, are you rotating while we talk?
+
+00:24:09.378 --> 00:24:16.195
+<v Bartosz Zielke>Yeah. Vault UI is slow this morning. Everything is slow this morning
+
+00:25:12.000 --> 00:25:23.254
+<v Bartosz Zielke>Rotated, old one revoked. New key's in the vault path. Not in any channel. Not in any channel ever again
+
+00:25:25.776 --> 00:25:31.764
+<v Hyun-woo Park>Thank you. I can see the revocation in the log.
+
+00:25:32.977 --> 00:25:46.991
+<v iPhone (3)>Thank you, Bart. Okay. I think that's the incident. Next update in the channel when the fix is in prod. Bettina, status page after this.
+
+00:25:48.103 --> 00:26:07.481
+<v Bettina Oduya>Doing it now. Read-back: "Identified. We have identified the cause of elevated 502 errors on the model gateway and are preparing to roll out a fix to production. Some requests may still fail." No time.
+
+00:26:09.080 --> 00:26:11.225
+<v iPhone (3)>Perfect. Ship it.
+
+00:26:13.760 --> 00:26:17.683
+<v Bettina Oduya>Thank you. That only took twenty minutes.
+
+00:26:19.376 --> 00:26:29.696
+<v Mara Ilves>Tina, unrelated, before everyone drops. The service catalog entry for Kettleyard? It was "next week-ish" a week ago.
+
+00:26:31.522 --> 00:26:40.886
+<v Bettina Oduya>Honestly, let's drop it. The catalog template changes with v4 - I'll write it fresh against v5.
+
+00:26:41.834 --> 00:26:47.044
+<v Mara Ilves>Okay. Dropping it then. No point writing it twice.
+
+00:26:48.401 --> 00:26:51.914
+<v iPhone (3)>Speaking of writing. Status page, Bettina.
+
+00:26:54.521 --> 00:26:57.807
+<v Bettina Oduya>I'm literally typing it, Ilya.
+
+00:27:00.691 --> 00:27:06.279
+<v Mara Ilves>I have to run, I've got a call at eleven and then the workshop. Thanks all.
+
+00:27:07.585 --> 00:27:12.366
+<v Saanvi Raghunathan>Same, I've got to get across campus. Bye.
+
+00:27:13.217 --> 00:27:15.054
+<v Hyun-woo Park>Thank you, everyone.
+
+00:27:17.574 --> 00:27:18.439
+<v Bartosz Zielke>Bye
+
+00:27:20.599 --> 00:27:23.037
+<v Bettina Oduya>Bye. Biscuit says bye.
+

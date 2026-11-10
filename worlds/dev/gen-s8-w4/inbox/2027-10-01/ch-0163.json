@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-kamau",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Kamau Greco"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-01T09:02:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "logged in fine, so the fulmar staging access is sorted. starting the walkthrough tomorrow"
+  },
+  {
+   "ts": "2027-10-01T09:02:37-06:00",
+   "user": "Kamau Greco",
+   "handle": "@kamau",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-10-01T09:04:09-06:00",
+   "user": "Kamau Greco",
+   "handle": "@kamau",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-10-01T09:04:57-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "anytime"
+  }
+ ]
+}

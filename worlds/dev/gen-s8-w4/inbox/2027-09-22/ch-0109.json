@@ -1,0 +1,32 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#fulmar-core",
+ "kind": "channel",
+ "participants": [
+  "Amira Baek",
+  "Tavo",
+  "Adwoa",
+  "Giorgi Wisniewska",
+  "Oksana Hoffmann",
+  "Marcelo Meijer",
+  "Batbayar Galbraith",
+  "Thibault Kowalski",
+  "Kamau Greco",
+  "Shirin Oyelami"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-22T10:19:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "@batbayar just sent you the Fulmar support model."
+  },
+  {
+   "ts": "2027-09-22T10:21:40-06:00",
+   "user": "Kamau Greco",
+   "handle": "@kamau",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  }
+ ]
+}

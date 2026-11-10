@@ -1,0 +1,12 @@
+{
+  "date": "2027-01-06",
+  "artifacts": [
+    {
+      "id": "em-0002",
+      "channel": "email",
+      "received_at": "2027-01-06T14:30:00-08:00",
+      "path": "em-0002.eml",
+      "title": "Ingestion design doc"
+    }
+  ]
+}

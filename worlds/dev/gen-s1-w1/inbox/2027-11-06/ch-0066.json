@@ -1,0 +1,40 @@
+{
+ "workspace": "holcrest",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Aarav Zamora",
+  "Kirsten Ellery",
+  "Fernanda Olawale",
+  "Jalen Sandberg"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-06T13:21:59-07:00",
+   "user": "Aarav Zamora",
+   "handle": "@aarav",
+   "text": "who left a lunchbox in the fridge since last week?",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@kirsten",
+      "@fernanda"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-06T13:25:53-07:00",
+   "user": "Kirsten Ellery",
+   "handle": "@kirsten",
+   "text": "not me!"
+  },
+  {
+   "ts": "2027-11-06T13:26:24-07:00",
+   "user": "Fernanda Olawale",
+   "handle": "@fernanda",
+   "text": "it's been there a while"
+  }
+ ]
+}

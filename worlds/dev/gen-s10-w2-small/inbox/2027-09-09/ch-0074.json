@@ -1,0 +1,92 @@
+{
+ "workspace": "reddale",
+ "channel": "#nettle-core",
+ "kind": "channel",
+ "participants": [
+  "Gaurav Laine",
+  "Aoife Everett",
+  "Akosua",
+  "Douglas Grigoryan",
+  "Bisi Volkov",
+  "Sigrid Asante",
+  "Sipho Papadopoulos",
+  "Adaeze Morimoto",
+  "Bruna Thapa",
+  "Marko Chaiyaporn"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T10:01:44+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "catching people up since a few of us are out today"
+  },
+  {
+   "ts": "2027-09-08T10:03:00+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "heads up: aoife will send bao the nettle run-cost estimate"
+  },
+  {
+   "ts": "2027-09-08T10:03:33+01:00",
+   "user": "Bisi Volkov",
+   "handle": "@bisi",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-09-08T10:06:04+01:00",
+   "user": "Sigrid Asante",
+   "handle": "@sigrid",
+   "text": "thanks for flagging",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-09-08T10:13:43+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "nice",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-09-08T10:18:30+01:00",
+   "user": "Bruna Thapa",
+   "handle": "@bruna",
+   "text": "nice",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-09-08T10:19:21+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "looks like aoife updated the nettle budget justification after adaeze's comments"
+  },
+  {
+   "ts": "2027-09-08T10:20:05+01:00",
+   "user": "Adaeze Morimoto",
+   "handle": "@adaeze",
+   "text": "got it, thanks",
+   "thread_of": 6
+  },
+  {
+   "ts": "2027-09-08T10:27:25+01:00",
+   "user": "Marko Chaiyaporn",
+   "handle": "@marko",
+   "text": "nice",
+   "thread_of": 6
+  },
+  {
+   "ts": "2027-09-08T10:37:17+01:00",
+   "user": "Adaeze Morimoto",
+   "handle": "@adaeze",
+   "text": "following",
+   "thread_of": 6
+  },
+  {
+   "ts": "2027-09-08T10:45:52+01:00",
+   "user": "Sipho Papadopoulos",
+   "handle": "@sipho",
+   "text": "good to know :)",
+   "thread_of": 6
+  }
+ ]
+}

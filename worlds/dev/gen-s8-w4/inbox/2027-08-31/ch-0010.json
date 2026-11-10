@@ -1,0 +1,51 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#fulmar-core",
+ "kind": "channel",
+ "participants": [
+  "Amira Baek",
+  "Tavo",
+  "Adwoa",
+  "Giorgi Wisniewska",
+  "Oksana Hoffmann",
+  "Marcelo Meijer",
+  "Batbayar Galbraith",
+  "Thibault Kowalski",
+  "Kamau Greco"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-31T10:39:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "@giorgi thanks for offering to set up the fulmar single sign-on role mapping by friday 10 september, that would be great"
+  },
+  {
+   "ts": "2027-08-31T10:39:55-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "good to know :)"
+  },
+  {
+   "ts": "2027-08-31T10:41:57-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "+1 :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-08-31T10:46:50-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-08-31T10:53:43-06:00",
+   "user": "Tavo",
+   "handle": "@ottavio",
+   "text": "+1",
+   "thread_of": 0
+  }
+ ]
+}

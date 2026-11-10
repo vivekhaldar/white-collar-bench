@@ -1,0 +1,48 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#funding-model-core",
+ "kind": "channel",
+ "participants": [
+  "Achieng Colombo",
+  "Aroha Mendoza",
+  "Anh Villanueva",
+  "Michaela Dang",
+  "Aino Menon"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-02T11:05:18-05:00",
+   "user": "Achieng Colombo",
+   "handle": "@achieng",
+   "text": "recap from friday: aroha reviewed anh villanueva's funding model cost model"
+  },
+  {
+   "ts": "2027-11-02T11:05:32-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "got it, thanks :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-02T11:06:16-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-02T11:12:29-05:00",
+   "user": "Aino Menon",
+   "handle": "@aino",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-02T11:13:43-05:00",
+   "user": "Michaela Dang",
+   "handle": "@michaela",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

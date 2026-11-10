@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Kirkmarsh//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:3aaaf841ee48d626@kirkmarsh.example
+DTSTAMP:20271027T205500Z
+DTSTART:20271029T190000Z
+DTEND:20271029T193000Z
+SUMMARY:AI safety rounds workshop run-through
+ORGANIZER;CN=Anh Villanueva:mailto:anh.villanueva@kirkmarsh.example
+ATTENDEE;CN=Daniela Ochieng;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:daniela.ochieng@elmfield.kirkmarsh.example
+ATTENDEE;CN=Aroha Mendoza;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:aroha.mendoza@kirkmarsh.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.kirkmarsh.example/j/8745426922?pwd=ySbKHcGX\nPasscode: 578565
+LOCATION:https://meet.kirkmarsh.example/j/8745426922?pwd=ySbKHcGX
+END:VEVENT
+END:VCALENDAR

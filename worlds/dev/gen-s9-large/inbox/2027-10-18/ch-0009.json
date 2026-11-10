@@ -1,0 +1,35 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-keisha",
+ "kind": "dm",
+ "participants": [
+  "Keisha Hargrove",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-18T08:29:00-05:00",
+   "user": "Keisha Hargrove",
+   "handle": "@keisha",
+   "text": "Can you send me the reading list on discharge summary?"
+  },
+  {
+   "ts": "2027-10-18T08:29:56-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "no problem"
+  },
+  {
+   "ts": "2027-10-18T08:30:43-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-10-18T08:34:12-05:00",
+   "user": "Keisha Hargrove",
+   "handle": "@keisha",
+   "text": "no worries :)"
+  }
+ ]
+}

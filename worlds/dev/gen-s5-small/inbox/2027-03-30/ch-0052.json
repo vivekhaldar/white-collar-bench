@@ -1,0 +1,47 @@
+{
+ "workspace": "iselvale",
+ "channel": "#wagtail-core",
+ "kind": "channel",
+ "participants": [
+  "Anahit",
+  "Hiba Deng",
+  "Isla Faure",
+  "Rudo Ekwueme",
+  "Lakshmi Figueroa",
+  "Friederike Bhatt",
+  "Jisoo Nowak",
+  "Maricel Fuentes",
+  "Rodrigo Okada"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-30T14:23:00-05:00",
+   "user": "Anahit",
+   "handle": "@anahit",
+   "text": "From the sync earlier, Hiba will draft the nurses FAQ for Wagtail by 6 April! :)",
+   "edited": true,
+   "original": "From the sync earlier, Hiba will draft the nurses FAQ for Wagtail by 5 April! :)"
+  },
+  {
+   "ts": "2027-03-30T14:24:27-05:00",
+   "user": "Isla Faure",
+   "handle": "@isla",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-30T14:34:21-05:00",
+   "user": "Friederike Bhatt",
+   "handle": "@friederike",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-30T14:44:12-05:00",
+   "user": "Jisoo Nowak",
+   "handle": "@jisoo",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

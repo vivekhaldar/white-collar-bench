@@ -1,0 +1,32 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Anh Villanueva",
+  "Kiran Hayashi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-20T15:03:04-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "who left a lunchbox in the fridge since last week? :)",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@kiran"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-20T15:09:15-05:00",
+   "user": "Kiran Hayashi",
+   "handle": "@kiran",
+   "text": "not me!",
+   "thread_of": 0
+  }
+ ]
+}

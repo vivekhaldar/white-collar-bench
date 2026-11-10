@@ -1,0 +1,45 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#fulmar-core",
+ "kind": "channel",
+ "participants": [
+  "Amira Baek",
+  "Tavo",
+  "Adwoa",
+  "Giorgi Wisniewska",
+  "Oksana Hoffmann",
+  "Marcelo Meijer",
+  "Batbayar Galbraith",
+  "Thibault Kowalski",
+  "Kamau Greco",
+  "Shirin Oyelami"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-24T09:50:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "@adwoa just sent you the Fulmar sensor tag list."
+  },
+  {
+   "ts": "2027-09-24T09:51:13-06:00",
+   "user": "Giorgi Wisniewska",
+   "handle": "@giorgi",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-09-24T09:55:42-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-24T10:04:54-06:00",
+   "user": "Thibault Kowalski",
+   "handle": "@thibault",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  }
+ ]
+}

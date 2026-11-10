@@ -1,0 +1,45 @@
+{
+ "workspace": "birchmere",
+ "channel": "#sirocco-core",
+ "kind": "channel",
+ "participants": [
+  "Bisi",
+  "Alasdair Kaya",
+  "Dina Laurent",
+  "Katarzyna Dang",
+  "Eleni Fontaine",
+  "Nurlan Jansen",
+  "Penelope Romano"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-14T17:36:25-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "Just to recap, yesterday Nurlan said they'd configure the Sirocco SSO broker for Ketford!",
+   "edited": true,
+   "original": "Just to recap, yesterday Nurlan said they'd configure the Sirocco SSO brokre for Ketford!"
+  },
+  {
+   "ts": "2027-09-14T17:37:25-05:00",
+   "user": "Penelope Romano",
+   "handle": "@penelope",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-14T17:43:05-05:00",
+   "user": "Eleni Fontaine",
+   "handle": "@eleni",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-14T17:46:04-05:00",
+   "user": "Dina Laurent",
+   "handle": "@dina",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  }
+ ]
+}

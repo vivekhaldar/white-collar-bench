@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Corrstead//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:2fe9ca95c93c942c@corrstead.example
+DTSTAMP:20270621T210300Z
+DTSTART:20270623T180000Z
+DTEND:20270623T183000Z
+SUMMARY:Garnet scoping call
+ORGANIZER;CN=Ewan Laine:mailto:ewan.laine@crandale.corrstead.example
+ATTENDEE;CN=Bolat Oyelami;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bolat.oyelami@corrstead.example
+ATTENDEE;CN=Hiba Jimenez;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.jimenez@corrstead.example
+SEQUENCE:0
+DESCRIPTION:Quick sync\, 30 minutes.\nJoin video meeting: https://meet.corrstead.example/j/8306639215?pwd=kWDVbdew\nPasscode: 451232
+LOCATION:https://meet.corrstead.example/j/8306639215?pwd=kWDVbdew
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,51 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#fulmar-core",
+ "kind": "channel",
+ "participants": [
+  "Adwoa",
+  "Amira Baek",
+  "Ottavio Bakker",
+  "Giorgi Wisniewska",
+  "Oksana Hoffmann",
+  "Marcelo Meijer",
+  "Batbayar Galbraith",
+  "Thibault Kowalski",
+  "Kamau Greco"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-09T09:38:00-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "@amira can you update the Fulmar dependency list after my comments?"
+  },
+  {
+   "ts": "2027-09-09T09:39:01-06:00",
+   "user": "Kamau Greco",
+   "handle": "@kamau",
+   "text": "noted"
+  },
+  {
+   "ts": "2027-09-09T09:48:16-06:00",
+   "user": "Oksana Hoffmann",
+   "handle": "@oksana",
+   "text": "+1",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T09:54:28-06:00",
+   "user": "Marcelo Meijer",
+   "handle": "@marcelo",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T09:59:21-06:00",
+   "user": "Kamau Greco",
+   "handle": "@kamau",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

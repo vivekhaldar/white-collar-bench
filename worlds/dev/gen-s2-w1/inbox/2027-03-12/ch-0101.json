@@ -1,0 +1,35 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-cassandra-dina",
+ "kind": "dm",
+ "participants": [
+  "Dina Ricci",
+  "Cassandra Yilmaz"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-12T13:14:00-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "done, i reviewed your mistral timeline"
+  },
+  {
+   "ts": "2027-03-12T13:15:11-07:00",
+   "user": "Cassandra Yilmaz",
+   "handle": "@cassandra",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-03-12T13:16:16-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-03-12T13:16:43-07:00",
+   "user": "Cassandra Yilmaz",
+   "handle": "@cassandra",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

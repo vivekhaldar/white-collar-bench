@@ -1,0 +1,41 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-yasmin",
+ "kind": "dm",
+ "participants": [
+  "Camila Abernathy",
+  "Yasmin Mokoena"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-09T15:33:11-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-11-09T15:34:11-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "can you set up marten test tenant login for me?"
+  },
+  {
+   "ts": "2027-11-09T15:35:00-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "sure, can do"
+  },
+  {
+   "ts": "2027-11-09T15:37:45-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-11-09T15:39:13-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "later!"
+  }
+ ]
+}

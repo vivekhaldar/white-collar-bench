@@ -1,0 +1,29 @@
+{
+ "workspace": "birchmere",
+ "channel": "#bed-management-discovery-core",
+ "kind": "channel",
+ "participants": [
+  "Bisi Chatterjee",
+  "Alasdair Kaya",
+  "Lupe",
+  "Vitoria Oduro",
+  "Seun"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-16T12:00:00-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "FYI Alasdair will scope a two-week sprint on outpatient no-shows.",
+   "edited": true,
+   "original": "FYI Alsadair will scope a two-week sprint on outpatient no-shows."
+  },
+  {
+   "ts": "2027-09-16T12:00:15-05:00",
+   "user": "Seun",
+   "handle": "@oluwaseun",
+   "text": "got it",
+   "thread_of": 0
+  }
+ ]
+}

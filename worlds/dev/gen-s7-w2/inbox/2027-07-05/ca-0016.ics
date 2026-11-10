@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Corrstead//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:2d94383c01aac77e@corrstead.example
+DTSTAMP:20270705T221800Z
+DTSTART:20270706T230000Z
+DTEND:20270706T234500Z
+SUMMARY:Garnet review
+ORGANIZER;CN=Ewan Laine:mailto:ewan.laine@crandale.corrstead.example
+ATTENDEE;CN=Hiba Jimenez;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.jimenez@corrstead.example
+ATTENDEE;CN=Bolat Oyelami;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bolat.oyelami@corrstead.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.corrstead.example/j/8039414450?pwd=d9fxSPVT\nPasscode: 897481
+LOCATION:https://meet.corrstead.example/j/8039414450?pwd=d9fxSPVT
+END:VEVENT
+END:VCALENDAR

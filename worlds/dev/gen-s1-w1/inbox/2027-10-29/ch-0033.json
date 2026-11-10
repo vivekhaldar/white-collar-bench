@@ -1,0 +1,27 @@
+{
+ "workspace": "holcrest",
+ "channel": "#benefits-screening-core",
+ "kind": "channel",
+ "participants": [
+  "Camila Abernathy",
+  "Jalen",
+  "Andrei Lindgren",
+  "Ifeoma Chevalier",
+  "Corinne Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-29T18:25:00-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "@ifeoma just updated the benefits screening discovery pain-point list after your comments."
+  },
+  {
+   "ts": "2027-10-29T18:31:27-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

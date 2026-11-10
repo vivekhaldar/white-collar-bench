@@ -1,0 +1,42 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Aiko Venkataraman",
+  "Carys Laurent",
+  "Wei Rossi",
+  "Tomas Deng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-19T16:14:43-08:00",
+   "user": "Aiko Venkataraman",
+   "handle": "@aiko",
+   "text": "who left a lunchbox in the fridge since last week?",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@carys",
+      "@wei"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-19T16:19:12-08:00",
+   "user": "Carys Laurent",
+   "handle": "@carys",
+   "text": "not me!",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-19T16:24:35-08:00",
+   "user": "Wei Rossi",
+   "handle": "@wei",
+   "text": "it's been there a while",
+   "thread_of": 0
+  }
+ ]
+}

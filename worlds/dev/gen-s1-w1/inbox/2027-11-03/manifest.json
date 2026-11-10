@@ -1,0 +1,145 @@
+{
+  "date": "2027-11-03",
+  "artifacts": [
+    {
+      "id": "em-0065",
+      "channel": "email",
+      "received_at": "2027-11-03T06:44:00-07:00",
+      "path": "em-0065.eml",
+      "title": "Call for proposals closes Wednesday 17 November"
+    },
+    {
+      "id": "em-0066",
+      "channel": "email",
+      "received_at": "2027-11-03T08:06:00-07:00",
+      "path": "em-0066.eml",
+      "title": "Re: Obsidian tenant onboarding guide"
+    },
+    {
+      "id": "ca-0005",
+      "channel": "calendar",
+      "received_at": "2027-11-03T08:12:00-07:00",
+      "path": "ca-0005.ics",
+      "title": "Invite: Obsidian hardening review"
+    },
+    {
+      "id": "ch-0044",
+      "channel": "chat",
+      "received_at": "2027-11-03T08:43:00-07:00",
+      "path": "ch-0044.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0067",
+      "channel": "email",
+      "received_at": "2027-11-03T08:48:00-07:00",
+      "path": "em-0067.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0068",
+      "channel": "email",
+      "received_at": "2027-11-03T09:54:00-07:00",
+      "path": "em-0068.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0045",
+      "channel": "chat",
+      "received_at": "2027-11-03T09:59:00-07:00",
+      "path": "ch-0045.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0046",
+      "channel": "chat",
+      "received_at": "2027-11-03T10:25:00-07:00",
+      "path": "ch-0046.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0069",
+      "channel": "email",
+      "received_at": "2027-11-03T10:25:00-07:00",
+      "path": "em-0069.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0070",
+      "channel": "email",
+      "received_at": "2027-11-03T11:49:00-07:00",
+      "path": "em-0070.eml",
+      "title": "Re: Offer"
+    },
+    {
+      "id": "ch-0047",
+      "channel": "chat",
+      "received_at": "2027-11-03T11:55:00-07:00",
+      "path": "ch-0047.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0048",
+      "channel": "chat",
+      "received_at": "2027-11-03T14:18:00-07:00",
+      "path": "ch-0048.json",
+      "title": "#nantgate-partnership-core"
+    },
+    {
+      "id": "mt-0004",
+      "channel": "transcript",
+      "received_at": "2027-11-03T14:30:00-07:00",
+      "path": "mt-0004.vtt",
+      "title": "Obsidian platform sync (transcript)"
+    },
+    {
+      "id": "ch-0049",
+      "channel": "chat",
+      "received_at": "2027-11-03T14:36:00-07:00",
+      "path": "ch-0049.json",
+      "title": "DM: Camila Abernathy / Yasmin Mokoena"
+    },
+    {
+      "id": "ch-0050",
+      "channel": "chat",
+      "received_at": "2027-11-03T15:33:00-07:00",
+      "path": "ch-0050.json",
+      "title": "DM: Dalisay Dahl / Camila Abernathy"
+    },
+    {
+      "id": "mt-0005",
+      "channel": "transcript",
+      "received_at": "2027-11-03T16:00:00-07:00",
+      "path": "mt-0005.vtt",
+      "title": "Thorndale relationship check-in (transcript)"
+    },
+    {
+      "id": "em-0071",
+      "channel": "email",
+      "received_at": "2027-11-03T16:05:00-07:00",
+      "path": "em-0071.eml",
+      "title": "FYI: Petra's notice translation discovery interview guide"
+    },
+    {
+      "id": "ch-0051",
+      "channel": "chat",
+      "received_at": "2027-11-03T16:11:00-07:00",
+      "path": "ch-0051.json",
+      "title": "DM: Petra Korkmaz / Camila Abernathy"
+    },
+    {
+      "id": "ch-0052",
+      "channel": "chat",
+      "received_at": "2027-11-03T16:15:00-07:00",
+      "path": "ch-0052.json",
+      "title": "#random"
+    },
+    {
+      "id": "nt-0006",
+      "channel": "note",
+      "received_at": "2027-11-03T17:35:00-07:00",
+      "path": "nt-0006.md",
+      "title": "Wed notes"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "workspace": "tarrow",
+  "channel": "dm-delphine-mara",
+  "kind": "dm",
+  "participants": ["Delphine Arceneaux", "Mara Ilves"],
+  "messages": [
+    {"ts": "2027-03-02T07:44:12-08:00", "user": "Delphine Arceneaux", "handle": "@delphine", "text": "morning! visitor parking is lot C, sign in at the front desk, coffee's on us ☕"},
+    {"ts": "2027-03-02T07:45:00-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "ty, see you at 10"}
+  ]
+}

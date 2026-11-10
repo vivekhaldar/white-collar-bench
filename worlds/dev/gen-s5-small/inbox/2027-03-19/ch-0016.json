@@ -1,0 +1,55 @@
+{
+ "workspace": "iselvale",
+ "channel": "#wagtail-core",
+ "kind": "channel",
+ "participants": [
+  "Maricel Fuentes",
+  "Hiba Deng",
+  "Isla Faure",
+  "Anahit Fifita",
+  "Rudo Ekwueme",
+  "Lakshmi Figueroa",
+  "Friederike Bhatt",
+  "Jisoo Nowak",
+  "Rodrigo Okada"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-19T09:51:00-05:00",
+   "user": "Maricel Fuentes",
+   "handle": "@maricel",
+   "text": "Friederike will send Hiba the Wagtail change request, as discussed! :)",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@hiba",
+      "@isla",
+      "@anahit"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-19T09:51:29-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "great, thank you",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-19T09:55:24-05:00",
+   "user": "Anahit Fifita",
+   "handle": "@anahit",
+   "text": "thanks for flagging :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-19T10:03:08-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

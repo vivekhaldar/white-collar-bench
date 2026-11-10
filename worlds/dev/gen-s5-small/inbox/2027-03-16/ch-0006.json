@@ -1,0 +1,47 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-hiba-isla",
+ "kind": "dm",
+ "participants": [
+  "Isla Faure",
+  "Hiba Deng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-16T12:43:00-05:00",
+   "user": "Isla Faure",
+   "handle": "@isla",
+   "text": "We're now in pivot on Falbury Clinical Documentation Discovery!"
+  },
+  {
+   "ts": "2027-03-16T12:44:09-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-03-16T12:44:33-05:00",
+   "user": "Isla Faure",
+   "handle": "@isla",
+   "text": "Next step on Falbury Clinical Documentation Discovery: decide whether referral backlog becomes its own effort. :)"
+  },
+  {
+   "ts": "2027-03-16T12:45:07-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "noted"
+  },
+  {
+   "ts": "2027-03-16T12:46:57-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-03-16T12:49:48-05:00",
+   "user": "Isla Faure",
+   "handle": "@isla",
+   "text": "yep, all good"
+  }
+ ]
+}

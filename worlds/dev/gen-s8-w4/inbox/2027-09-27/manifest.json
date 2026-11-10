@@ -1,0 +1,138 @@
+{
+  "date": "2027-09-27",
+  "artifacts": [
+    {
+      "id": "em-0159",
+      "channel": "email",
+      "received_at": "2027-09-27T06:57:00-06:00",
+      "path": "em-0159.eml",
+      "title": "Reminder: Friday status note due Friday 1 October"
+    },
+    {
+      "id": "nt-0017",
+      "channel": "note",
+      "received_at": "2027-09-27T07:15:00-06:00",
+      "path": "nt-0017.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "em-0160",
+      "channel": "email",
+      "received_at": "2027-09-27T07:54:00-06:00",
+      "path": "em-0160.eml",
+      "title": "[REQ-32978] Request resolved"
+    },
+    {
+      "id": "em-0161",
+      "channel": "email",
+      "received_at": "2027-09-27T08:07:00-06:00",
+      "path": "em-0161.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "em-0162",
+      "channel": "email",
+      "received_at": "2027-09-27T09:07:00-06:00",
+      "path": "em-0162.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "mt-0026",
+      "channel": "transcript",
+      "received_at": "2027-09-27T10:00:00-06:00",
+      "path": "mt-0026.vtt",
+      "title": "Fulmar standup (transcript)"
+    },
+    {
+      "id": "em-0163",
+      "channel": "email",
+      "received_at": "2027-09-27T10:02:00-06:00",
+      "path": "em-0163.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "ch-0134",
+      "channel": "chat",
+      "received_at": "2027-09-27T10:07:00-06:00",
+      "path": "ch-0134.json",
+      "title": "DM: Amira Baek / Ignacio Choi"
+    },
+    {
+      "id": "em-0164",
+      "channel": "email",
+      "received_at": "2027-09-27T11:15:00-06:00",
+      "path": "em-0164.eml",
+      "title": "[INC-85265] Ticket updated"
+    },
+    {
+      "id": "mt-0027",
+      "channel": "transcript",
+      "received_at": "2027-09-27T11:15:00-06:00",
+      "path": "mt-0027.vtt",
+      "title": "Fulmar working session (transcript)"
+    },
+    {
+      "id": "em-0165",
+      "channel": "email",
+      "received_at": "2027-09-27T12:08:00-06:00",
+      "path": "em-0165.eml",
+      "title": "Re: Ottavio's Fulmar retention schedule"
+    },
+    {
+      "id": "ch-0135",
+      "channel": "chat",
+      "received_at": "2027-09-27T13:33:00-06:00",
+      "path": "ch-0135.json",
+      "title": "#safety-reporting-discovery-core"
+    },
+    {
+      "id": "ca-0016",
+      "channel": "calendar",
+      "received_at": "2027-09-27T13:43:00-06:00",
+      "path": "ca-0016.ics",
+      "title": "Invite: Safety reporting discovery review"
+    },
+    {
+      "id": "em-0166",
+      "channel": "email",
+      "received_at": "2027-09-27T14:42:00-06:00",
+      "path": "em-0166.eml",
+      "title": "Galix sandbox credentials"
+    },
+    {
+      "id": "em-0167",
+      "channel": "email",
+      "received_at": "2027-09-27T16:27:00-06:00",
+      "path": "em-0167.eml",
+      "title": "Work instructions selection evaluation rubric"
+    },
+    {
+      "id": "ch-0136",
+      "channel": "chat",
+      "received_at": "2027-09-27T16:30:00-06:00",
+      "path": "ch-0136.json",
+      "title": "DM: Amira Baek / Giorgi Wisniewska"
+    },
+    {
+      "id": "nt-0018",
+      "channel": "note",
+      "received_at": "2027-09-27T16:44:00-06:00",
+      "path": "nt-0018.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "em-0168",
+      "channel": "email",
+      "received_at": "2027-09-27T17:04:00-06:00",
+      "path": "em-0168.eml",
+      "title": "Re: Oksana's Fulmar pilot charter v2"
+    },
+    {
+      "id": "ca-0017",
+      "channel": "calendar",
+      "received_at": "2027-09-27T17:22:00-06:00",
+      "path": "ca-0017.ics",
+      "title": "Invite: Walkthrough: Safety reporting discovery RACI chart"
+    }
+  ]
+}

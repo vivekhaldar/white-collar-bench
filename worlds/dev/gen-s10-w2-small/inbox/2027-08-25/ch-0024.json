@@ -1,0 +1,45 @@
+{
+ "workspace": "reddale",
+ "channel": "#nettle-core",
+ "kind": "channel",
+ "participants": [
+  "Aoife Everett",
+  "Gaurav Laine",
+  "Akosua",
+  "Douglas Grigoryan",
+  "Bisi Volkov",
+  "Sigrid Asante",
+  "Sipho Papadopoulos",
+  "Adaeze Morimoto",
+  "Bruna Thapa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-25T07:49:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "let's limit the nettle pilot to four branches"
+  },
+  {
+   "ts": "2027-08-25T07:49:46+01:00",
+   "user": "Akosua",
+   "handle": "@akosua",
+   "text": "ok, works for me",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-08-25T07:50:51+01:00",
+   "user": "Adaeze Morimoto",
+   "handle": "@adaeze",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-08-25T07:56:42+01:00",
+   "user": "Akosua",
+   "handle": "@akosua",
+   "text": "following :)",
+   "thread_of": 0
+  }
+ ]
+}

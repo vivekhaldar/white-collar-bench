@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Drayhurst//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:e684e94f4313986d@drayhurst.example
+DTSTAMP:20270824T180100Z
+DTSTART:20270826T180000Z
+DTEND:20270826T184500Z
+SUMMARY:Open courseware workshop run-through
+ORGANIZER;CN=Meera Bondarenko:mailto:meera.bondarenko@drayhurst.example
+ATTENDEE;CN=Nadia Vogel;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:nadia.vogel@heathridge.drayhurst.example
+ATTENDEE;CN=Ottavio Moreira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ottavio.moreira@drayhurst.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.drayhurst.example/j/0028261302?pwd=Zw3vTKwy\nPasscode: 990341
+LOCATION:https://meet.drayhurst.example/j/0028261302?pwd=Zw3vTKwy
+END:VEVENT
+END:VCALENDAR

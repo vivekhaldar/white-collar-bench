@@ -1,0 +1,2342 @@
+plan_version: 1
+world_id: gen-s1-w1
+generator:
+  kind: wcb-gen
+  version: 1
+  seed: 1
+  size: standard
+  weeks: 1
+setting:
+  key: city
+  label: city government digital service
+  timezone: -07:00
+  vocab:
+    sites: service centers
+    site: service center
+    users: caseworkers
+    end_users: residents
+    council: Digital Steering Committee
+    data: resident data
+    agreement: data-sharing agreement
+    platform: shared AI platform
+    unit_word: department
+  nouns:
+  - risk register
+  - rollout checklist
+  - test plan
+  - decision memo
+  - status slide
+  - comms plan
+  - training outline
+  - budget justification
+  - vendor comparison
+  - architecture diagram
+  - integration spec
+  - access request
+  - pilot charter
+  - evaluation rubric
+  - data dictionary
+  - stakeholder map
+  - dependency list
+  - requirements matrix
+  - lessons-learned note
+  - timeline
+  - RACI chart
+  - cutover plan
+  - acceptance criteria
+  - metrics definition
+  - service blueprint
+  - support model
+  - retention schedule
+  - change request
+  - accessibility review
+  - help-desk script
+  - service request extract
+  - council memo
+  - equity impact review
+  - public notice draft
+  umbrella: o-city-of-holcrest
+  central: o-office-of-civic-technology
+  video_domain: meet.holcrest.example
+  chat_workspace: holcrest
+  volume:
+  - 15
+  - 20
+  loops_per_day: 5.8
+calendar:
+  start: '2027-11-08'
+  seed:
+    start: '2027-10-25'
+    end: '2027-11-06'
+    days:
+    - '2027-10-25'
+    - '2027-10-26'
+    - '2027-10-27'
+    - '2027-10-28'
+    - '2027-10-29'
+    - '2027-10-30'
+    - '2027-11-01'
+    - '2027-11-02'
+    - '2027-11-03'
+    - '2027-11-04'
+    - '2027-11-05'
+    - '2027-11-06'
+  episode:
+    days:
+    - '2027-11-08'
+    - '2027-11-09'
+    - '2027-11-10'
+    - '2027-11-11'
+    - '2027-11-12'
+    - '2027-11-13'
+    weeks:
+    - - '2027-11-08'
+      - '2027-11-09'
+      - '2027-11-10'
+      - '2027-11-11'
+      - '2027-11-12'
+      - '2027-11-13'
+  checkpoints:
+  - id: cp1
+    date: '2027-11-09'
+    label: end of Tuesday
+  - id: cp2
+    date: '2027-11-11'
+    label: end of Thursday
+  - id: cp3
+    date: '2027-11-13'
+    label: end of week
+worker: p-camila-abernathy
+orgs:
+- id: o-city-of-holcrest
+  name: City of Holcrest
+  short: Holcrest
+  kind: internal
+  role: umbrella
+  domain: holcrest.example
+  slug: holcrest
+  surface_forms:
+  - Holcrest
+  - CH
+  - holcrest.example
+  receptiveness: null
+- id: o-office-of-civic-technology
+  name: Office of Civic Technology
+  short: OCT
+  kind: internal
+  role: central
+  domain: holcrest.example
+  slug: oct
+  surface_forms:
+  - OCT
+  - central
+  - the OCT team
+  - holcrest.example
+  receptiveness: null
+- id: o-birchcrest-department-of-transportation
+  name: Birchcrest Department of Transportation
+  short: Birchcrest
+  kind: internal
+  role: unit
+  domain: birchcrest.holcrest.example
+  slug: birchcrest
+  surface_forms:
+  - Birchcrest
+  - BDT
+  - birchcrest.holcrest.example
+  receptiveness: high
+- id: o-corrbrook-housing-services
+  name: Corrbrook Housing Services
+  short: Corrbrook
+  kind: internal
+  role: unit
+  domain: corrbrook.holcrest.example
+  slug: corrbrook
+  surface_forms:
+  - Corrbrook
+  - CHS
+  - corrbrook.holcrest.example
+  receptiveness: medium
+- id: o-ulworth-library-services
+  name: Ulworth Library Services
+  short: Ulworth
+  kind: internal
+  role: unit
+  domain: ulworth.holcrest.example
+  slug: ulworth
+  surface_forms:
+  - Ulworth
+  - ULS
+  - ulworth.holcrest.example
+  receptiveness: low
+- id: o-sandstead-permitting-office
+  name: Sandstead Permitting Office
+  short: Sandstead
+  kind: internal
+  role: unit
+  domain: sandstead.holcrest.example
+  slug: sandstead
+  surface_forms:
+  - Sandstead
+  - SPO
+  - sandstead.holcrest.example
+  receptiveness: low
+- id: o-thorndale-public-works
+  name: Thorndale Public Works
+  short: Thorndale
+  kind: internal
+  role: unit
+  domain: thorndale.holcrest.example
+  slug: thorndale
+  surface_forms:
+  - Thorndale
+  - TPW
+  - thorndale.holcrest.example
+  receptiveness: medium
+- id: o-quino-systems
+  name: Quino Systems
+  short: Quino
+  kind: vendor
+  role: vendor
+  domain: quino.example
+  slug: quino
+  surface_forms:
+  - Quino
+  - quino.example
+  receptiveness: null
+- id: o-zeneth-labs
+  name: Zeneth Labs
+  short: Zeneth
+  kind: vendor
+  role: vendor
+  domain: zeneth.example
+  slug: zeneth
+  surface_forms:
+  - Zeneth
+  - zeneth.example
+  receptiveness: null
+- id: o-talis-civic
+  name: Talis Civic
+  short: Talis
+  kind: vendor
+  role: vendor
+  domain: talis.example
+  slug: talis
+  surface_forms:
+  - Talis
+  - talis.example
+  receptiveness: null
+- id: o-nantgate-institute-for-public-service-design
+  name: Nantgate Institute for Public Service Design
+  short: Nantgate
+  kind: partner
+  role: partner
+  domain: nantgate-research.example
+  slug: nantgate
+  surface_forms:
+  - Nantgate
+  - NIPSD
+  - nantgate-research.example
+  receptiveness: null
+- id: o-morshaw-institute-for-public-service-design
+  name: Morshaw Institute for Public Service Design
+  short: Morshaw
+  kind: partner
+  role: partner
+  domain: morshaw-research.example
+  slug: morshaw
+  surface_forms:
+  - Morshaw
+  - MIPSD
+  - morshaw-research.example
+  receptiveness: null
+people:
+- id: p-camila-abernathy
+  name: Camila Abernathy
+  first: Camila
+  last: Abernathy
+  nickname: null
+  org: o-office-of-civic-technology
+  role: Principal Architect, AI Services
+  role_phrase: null
+  email: camila.abernathy@holcrest.example
+  handle: '@camila'
+  relationship: null
+  group: central
+  tier: core
+  weight: 0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Camila
+  - C. Abernathy
+  - camila.abernathy@holcrest.example
+  - '@camila'
+- id: p-fernanda-olawale
+  name: Fernanda Olawale
+  first: Fernanda
+  last: Olawale
+  nickname: null
+  org: o-office-of-civic-technology
+  role: Chief Digital Officer
+  role_phrase: the CDO
+  email: fernanda.olawale@holcrest.example
+  handle: '@fernanda'
+  relationship: manager
+  group: central
+  tier: core
+  weight: 2.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - Fernanda
+  - F. Olawale
+  - fernanda.olawale@holcrest.example
+  - '@fernanda'
+  - the CDO
+- id: p-jalen-sandberg
+  name: Jalen Sandberg
+  first: Jalen
+  last: Sandberg
+  nickname: null
+  org: o-office-of-civic-technology
+  role: Director of Delivery
+  role_phrase: our delivery director
+  email: jalen.sandberg@holcrest.example
+  handle: '@jalen'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 7.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Jalen
+  - J. Sandberg
+  - jalen.sandberg@holcrest.example
+  - '@jalen'
+  - our delivery director
+- id: p-yasmin-mokoena
+  name: Yasmin Mokoena
+  first: Yasmin
+  last: Mokoena
+  nickname: null
+  org: o-office-of-civic-technology
+  role: Principal, Platform Engineering
+  role_phrase: the platform lead
+  email: yasmin.mokoena@holcrest.example
+  handle: '@yasmin'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 3.2
+  appears: null
+  voice: formal
+  surface_forms:
+  - Yasmin
+  - Y. Mokoena
+  - yasmin.mokoena@holcrest.example
+  - '@yasmin'
+  - the platform lead
+- id: p-thandiwe-garnier
+  name: Thandiwe Garnier
+  first: Thandiwe
+  last: Garnier
+  nickname: Thandi
+  org: o-office-of-civic-technology
+  role: Platform Engineer
+  role_phrase: the platform engineer
+  email: thandiwe.garnier@holcrest.example
+  handle: '@thandiwe'
+  relationship: stakeholder
+  group: central
+  tier: core
+  weight: 1.2
+  appears: null
+  voice: terse
+  surface_forms:
+  - Thandiwe
+  - Thandi
+  - T. Garnier
+  - thandiwe.garnier@holcrest.example
+  - '@thandiwe'
+  - the platform engineer
+- id: p-nadia-jovanovic
+  name: Nadia Jovanovic
+  first: Nadia
+  last: Jovanovic
+  nickname: null
+  org: o-office-of-civic-technology
+  role: Chief Information Security Officer
+  role_phrase: the CISO
+  email: nadia.jovanovic@holcrest.example
+  handle: '@nadia'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 2.9
+  appears: null
+  voice: terse
+  surface_forms:
+  - Nadia
+  - N. Jovanovic
+  - nadia.jovanovic@holcrest.example
+  - '@nadia'
+  - the CISO
+- id: p-joselito-moradi
+  name: Joselito Moradi
+  first: Joselito
+  last: Moradi
+  nickname: Lito
+  org: o-office-of-civic-technology
+  role: Product Lead, Resident Services
+  role_phrase: the product lead
+  email: joselito.moradi@holcrest.example
+  handle: '@joselito'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 1.2
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Joselito
+  - Lito
+  - J. Moradi
+  - joselito.moradi@holcrest.example
+  - '@joselito'
+  - the product lead
+- id: p-niamh-obi
+  name: Niamh Obi
+  first: Niamh
+  last: Obi
+  nickname: null
+  org: o-office-of-civic-technology
+  role: Executive Assistant to the CDO
+  role_phrase: the CDO's EA
+  email: niamh.obi@holcrest.example
+  handle: '@niamh'
+  relationship: assistant
+  group: central
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: terse
+  surface_forms:
+  - Niamh
+  - N. Obi
+  - niamh.obi@holcrest.example
+  - '@niamh'
+  - the CDO's EA
+- id: p-kirsten-ellery
+  name: Kirsten Ellery
+  first: Kirsten
+  last: Ellery
+  nickname: null
+  org: o-office-of-civic-technology
+  role: Performance Analyst
+  role_phrase: our performance analyst
+  email: kirsten.ellery@holcrest.example
+  handle: '@kirsten'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - Kirsten
+  - K. Ellery
+  - kirsten.ellery@holcrest.example
+  - '@kirsten'
+  - our performance analyst
+- id: p-oct-shared-inbox
+  name: OCT Shared Inbox
+  first: OCT Team
+  last: Mailbox
+  nickname: null
+  org: o-office-of-civic-technology
+  role: Shared team mailbox
+  role_phrase: the OCT inbox
+  email: oct-team@holcrest.example
+  handle: '@oct-team'
+  relationship: other
+  group: mailbox
+  tier: core
+  weight: 0.3
+  appears: null
+  voice: formal
+  surface_forms:
+  - OCT Team
+  - the OCT inbox
+  - oct-team@holcrest.example
+- id: p-guadalupe-smit
+  name: Guadalupe Smit
+  first: Guadalupe
+  last: Smit
+  nickname: null
+  org: o-city-of-holcrest
+  role: Purchasing Agent
+  role_phrase: the purchasing agent
+  email: guadalupe.smit@holcrest.example
+  handle: '@guadalupe'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Guadalupe
+  - G. Smit
+  - guadalupe.smit@holcrest.example
+  - '@guadalupe'
+  - the purchasing agent
+- id: p-sorina-bonnet
+  name: Sorina Bonnet
+  first: Sorina
+  last: Bonnet
+  nickname: null
+  org: o-city-of-holcrest
+  role: Deputy City Attorney
+  role_phrase: the deputy city attorney
+  email: sorina.bonnet@holcrest.example
+  handle: '@sorina'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Sorina
+  - S. Bonnet
+  - sorina.bonnet@holcrest.example
+  - '@sorina'
+  - the deputy city attorney
+- id: p-venkatesh-yassin
+  name: Venkatesh Yassin
+  first: Venkatesh
+  last: Yassin
+  nickname: Venky
+  org: o-city-of-holcrest
+  role: Budget Director
+  role_phrase: the budget director
+  email: venkatesh.yassin@holcrest.example
+  handle: '@venkatesh'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Venkatesh
+  - Venky
+  - V. Yassin
+  - venkatesh.yassin@holcrest.example
+  - '@venkatesh'
+  - the budget director
+- id: p-yiannis-bustamante
+  name: Yiannis Bustamante
+  first: Yiannis
+  last: Bustamante
+  nickname: Yanni
+  org: o-city-of-holcrest
+  role: Recruitment Partner
+  role_phrase: our recruitment partner
+  email: yiannis.bustamante@holcrest.example
+  handle: '@yiannis'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: terse
+  surface_forms:
+  - Yiannis
+  - Yanni
+  - Y. Bustamante
+  - yiannis.bustamante@holcrest.example
+  - '@yiannis'
+  - our recruitment partner
+- id: p-aarav-zamora
+  name: Aarav Zamora
+  first: Aarav
+  last: Zamora
+  nickname: null
+  org: o-city-of-holcrest
+  role: Privacy Officer
+  role_phrase: the privacy officer
+  email: aarav.zamora@holcrest.example
+  handle: '@aarav'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Aarav
+  - A. Zamora
+  - aarav.zamora@holcrest.example
+  - '@aarav'
+  - the privacy officer
+- id: p-imran-achterhof
+  name: Imran Achterhof
+  first: Imran
+  last: Achterhof
+  nickname: null
+  org: o-birchcrest-department-of-transportation
+  role: Department Director
+  role_phrase: Birchcrest's director
+  email: imran.achterhof@birchcrest.holcrest.example
+  handle: '@imran'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Imran
+  - I. Achterhof
+  - imran.achterhof@birchcrest.holcrest.example
+  - '@imran'
+  - Birchcrest's director
+- id: p-petra-korkmaz
+  name: Petra Korkmaz
+  first: Petra
+  last: Korkmaz
+  nickname: null
+  org: o-birchcrest-department-of-transportation
+  role: Operations Manager
+  role_phrase: the Birchcrest lead
+  email: petra.korkmaz@birchcrest.holcrest.example
+  handle: '@petra'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 2.4
+  appears: null
+  voice: formal
+  surface_forms:
+  - Petra
+  - P. Korkmaz
+  - petra.korkmaz@birchcrest.holcrest.example
+  - '@petra'
+  - the Birchcrest lead
+- id: p-sipho-sengupta
+  name: Sipho Sengupta
+  first: Sipho
+  last: Sengupta
+  nickname: null
+  org: o-birchcrest-department-of-transportation
+  role: Caseworker Supervisor
+  role_phrase: null
+  email: sipho.sengupta@birchcrest.holcrest.example
+  handle: '@sipho'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - Sipho
+  - S. Sengupta
+  - sipho.sengupta@birchcrest.holcrest.example
+  - '@sipho'
+- id: p-dina-taufa
+  name: Dina Taufa
+  first: Dina
+  last: Taufa
+  nickname: null
+  org: o-birchcrest-department-of-transportation
+  role: Systems Administrator
+  role_phrase: null
+  email: dina.taufa@birchcrest.holcrest.example
+  handle: '@dina'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - Dina
+  - D. Taufa
+  - dina.taufa@birchcrest.holcrest.example
+  - '@dina'
+- id: p-bisi-andersen
+  name: Bisi Andersen
+  first: Bisi
+  last: Andersen
+  nickname: null
+  org: o-corrbrook-housing-services
+  role: Department Director
+  role_phrase: Corrbrook's director
+  email: bisi.andersen@corrbrook.holcrest.example
+  handle: '@bisi'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Bisi
+  - B. Andersen
+  - bisi.andersen@corrbrook.holcrest.example
+  - '@bisi'
+  - Corrbrook's director
+- id: p-minji-vu
+  name: Minji Vu
+  first: Minji
+  last: Vu
+  nickname: null
+  org: o-corrbrook-housing-services
+  role: Customer Service Manager
+  role_phrase: the Corrbrook lead
+  email: minji.vu@corrbrook.holcrest.example
+  handle: '@minji'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: formal
+  surface_forms:
+  - Minji
+  - M. Vu
+  - minji.vu@corrbrook.holcrest.example
+  - '@minji'
+  - the Corrbrook lead
+- id: p-kristen-kocak
+  name: Kristen Kocak
+  first: Kristen
+  last: Kocak
+  nickname: null
+  org: o-corrbrook-housing-services
+  role: Caseworker Supervisor
+  role_phrase: null
+  email: kristen.kocak@corrbrook.holcrest.example
+  handle: '@kristen'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Kristen
+  - K. Kocak
+  - kristen.kocak@corrbrook.holcrest.example
+  - '@kristen'
+- id: p-eun-ji-moyo
+  name: Eun-ji Moyo
+  first: Eun-ji
+  last: Moyo
+  nickname: null
+  org: o-corrbrook-housing-services
+  role: Systems Administrator
+  role_phrase: null
+  email: eunji.moyo@corrbrook.holcrest.example
+  handle: '@eunji'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Eun-ji
+  - E. Moyo
+  - eunji.moyo@corrbrook.holcrest.example
+  - '@eunji'
+- id: p-karim-jansen
+  name: Karim Jansen
+  first: Karim
+  last: Jansen
+  nickname: null
+  org: o-ulworth-library-services
+  role: Department Director
+  role_phrase: Ulworth's director
+  email: karim.jansen@ulworth.holcrest.example
+  handle: '@karim'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Karim
+  - K. Jansen
+  - karim.jansen@ulworth.holcrest.example
+  - '@karim'
+  - Ulworth's director
+- id: p-andrei-lindgren
+  name: Andrei Lindgren
+  first: Andrei
+  last: Lindgren
+  nickname: null
+  org: o-ulworth-library-services
+  role: Chief of Staff
+  role_phrase: the Ulworth lead
+  email: andrei.lindgren@ulworth.holcrest.example
+  handle: '@andrei'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: terse
+  surface_forms:
+  - Andrei
+  - A. Lindgren
+  - andrei.lindgren@ulworth.holcrest.example
+  - '@andrei'
+  - the Ulworth lead
+- id: p-ifeoma-chevalier
+  name: Ifeoma Chevalier
+  first: Ifeoma
+  last: Chevalier
+  nickname: null
+  org: o-ulworth-library-services
+  role: GIS Analyst
+  role_phrase: null
+  email: ifeoma.chevalier@ulworth.holcrest.example
+  handle: '@ifeoma'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - Ifeoma
+  - I. Chevalier
+  - ifeoma.chevalier@ulworth.holcrest.example
+  - '@ifeoma'
+- id: p-corinne-kaya
+  name: Corinne Kaya
+  first: Corinne
+  last: Kaya
+  nickname: null
+  org: o-ulworth-library-services
+  role: Systems Administrator
+  role_phrase: null
+  email: corinne.kaya@ulworth.holcrest.example
+  handle: '@corinne'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Corinne
+  - C. Kaya
+  - corinne.kaya@ulworth.holcrest.example
+  - '@corinne'
+- id: p-darnell-neumann
+  name: Darnell Neumann
+  first: Darnell
+  last: Neumann
+  nickname: null
+  org: o-sandstead-permitting-office
+  role: Department Director
+  role_phrase: Sandstead's director
+  email: darnell.neumann@sandstead.holcrest.example
+  handle: '@darnell'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: terse
+  surface_forms:
+  - Darnell
+  - D. Neumann
+  - darnell.neumann@sandstead.holcrest.example
+  - '@darnell'
+  - Sandstead's director
+- id: p-dalisay-dahl
+  name: Dalisay Dahl
+  first: Dalisay
+  last: Dahl
+  nickname: null
+  org: o-sandstead-permitting-office
+  role: Program Manager
+  role_phrase: the Sandstead lead
+  email: dalisay.dahl@sandstead.holcrest.example
+  handle: '@dalisay'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Dalisay
+  - D. Dahl
+  - dalisay.dahl@sandstead.holcrest.example
+  - '@dalisay'
+  - the Sandstead lead
+- id: p-sigrid-bhatt
+  name: Sigrid Bhatt
+  first: Sigrid
+  last: Bhatt
+  nickname: null
+  org: o-sandstead-permitting-office
+  role: Web Coordinator
+  role_phrase: null
+  email: sigrid.bhatt@sandstead.holcrest.example
+  handle: '@sigrid'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Sigrid
+  - S. Bhatt
+  - sigrid.bhatt@sandstead.holcrest.example
+  - '@sigrid'
+- id: p-tomasz-ivanova
+  name: Tomasz Ivanova
+  first: Tomasz
+  last: Ivanova
+  nickname: null
+  org: o-thorndale-public-works
+  role: Department Director
+  role_phrase: Thorndale's director
+  email: tomasz.ivanova@thorndale.holcrest.example
+  handle: '@tomasz'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Tomasz
+  - T. Ivanova
+  - tomasz.ivanova@thorndale.holcrest.example
+  - '@tomasz'
+  - Thorndale's director
+- id: p-rafiq-tetteh
+  name: Rafiq Tetteh
+  first: Rafiq
+  last: Tetteh
+  nickname: null
+  org: o-thorndale-public-works
+  role: Deputy Director
+  role_phrase: the Thorndale lead
+  email: rafiq.tetteh@thorndale.holcrest.example
+  handle: '@rafiq'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Rafiq
+  - R. Tetteh
+  - rafiq.tetteh@thorndale.holcrest.example
+  - '@rafiq'
+  - the Thorndale lead
+- id: p-hiba-overton
+  name: Hiba Overton
+  first: Hiba
+  last: Overton
+  nickname: null
+  org: o-thorndale-public-works
+  role: Web Coordinator
+  role_phrase: null
+  email: hiba.overton@thorndale.holcrest.example
+  handle: '@hiba'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Hiba
+  - H. Overton
+  - hiba.overton@thorndale.holcrest.example
+  - '@hiba'
+- id: p-jalen-venkataraman
+  name: Jalen Venkataraman
+  first: Jalen
+  last: Venkataraman
+  nickname: null
+  org: o-quino-systems
+  role: Account Executive
+  role_phrase: null
+  email: jalen.venkataraman@quino.example
+  handle: '@jalenv'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Jalen
+  - J. Venkataraman
+  - jalen.venkataraman@quino.example
+  - '@jalenv'
+- id: p-mateo-eze
+  name: Mateo Eze
+  first: Mateo
+  last: Eze
+  nickname: null
+  org: o-quino-systems
+  role: Solutions Engineer
+  role_phrase: null
+  email: mateo.eze@quino.example
+  handle: '@mateo'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: terse
+  surface_forms:
+  - Mateo
+  - M. Eze
+  - mateo.eze@quino.example
+  - '@mateo'
+- id: p-caio-mehta
+  name: Caio Mehta
+  first: Caio
+  last: Mehta
+  nickname: null
+  org: o-zeneth-labs
+  role: Account Executive
+  role_phrase: null
+  email: caio.mehta@zeneth.example
+  handle: '@caio'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Caio
+  - C. Mehta
+  - caio.mehta@zeneth.example
+  - '@caio'
+- id: p-minji-chebet
+  name: Minji Chebet
+  first: Minji
+  last: Chebet
+  nickname: null
+  org: o-zeneth-labs
+  role: Solutions Engineer
+  role_phrase: null
+  email: minji.chebet@zeneth.example
+  handle: '@minjic'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Minji
+  - M. Chebet
+  - minji.chebet@zeneth.example
+  - '@minjic'
+- id: p-eleanor-quintero
+  name: Eleanor Quintero
+  first: Eleanor
+  last: Quintero
+  nickname: Nell
+  org: o-talis-civic
+  role: Account Executive
+  role_phrase: null
+  email: eleanor.quintero@talis.example
+  handle: '@eleanor'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Eleanor
+  - Nell
+  - E. Quintero
+  - eleanor.quintero@talis.example
+  - '@eleanor'
+- id: p-andres-ricci
+  name: Andres Ricci
+  first: Andres
+  last: Ricci
+  nickname: null
+  org: o-talis-civic
+  role: Solutions Engineer
+  role_phrase: null
+  email: andres.ricci@talis.example
+  handle: '@andres'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Andres
+  - A. Ricci
+  - andres.ricci@talis.example
+  - '@andres'
+- id: p-katerina-vaughan
+  name: Katerina Vaughan
+  first: Katerina
+  last: Vaughan
+  nickname: Katia
+  org: o-nantgate-institute-for-public-service-design
+  role: Senior Research Scientist
+  role_phrase: null
+  email: katerina.vaughan@nantgate-research.example
+  handle: '@katerina'
+  relationship: partner
+  group: partner
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: terse
+  surface_forms:
+  - Katerina
+  - Katia
+  - K. Vaughan
+  - katerina.vaughan@nantgate-research.example
+  - '@katerina'
+- id: p-lindiwe-rostami
+  name: Lindiwe Rostami
+  first: Lindiwe
+  last: Rostami
+  nickname: null
+  org: o-morshaw-institute-for-public-service-design
+  role: Senior Research Scientist
+  role_phrase: null
+  email: lindiwe.rostami@morshaw-research.example
+  handle: '@lindiwe'
+  relationship: partner
+  group: partner
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Lindiwe
+  - L. Rostami
+  - lindiwe.rostami@morshaw-research.example
+  - '@lindiwe'
+- id: p-carys-petrovic
+  name: Carys Petrovic
+  first: Carys
+  last: Petrovic
+  nickname: null
+  org: null
+  role: Candidate
+  role_phrase: null
+  email: carys.petrovic@post.example
+  handle: '@carys'
+  relationship: candidate
+  group: candidate
+  tier: core
+  weight: 0.6
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Carys
+  - C. Petrovic
+  - carys.petrovic@post.example
+  - '@carys'
+- id: p-omar-lefebvre
+  name: Omar Lefebvre
+  first: Omar
+  last: Lefebvre
+  nickname: null
+  org: o-birchcrest-department-of-transportation
+  role: Privacy Officer
+  role_phrase: the new privacy officer
+  email: omar.lefebvre@birchcrest.holcrest.example
+  handle: '@omar'
+  relationship: stakeholder
+  group: newcomer
+  tier: core
+  weight: 1.4
+  appears: '2027-11-10'
+  voice: lowercase
+  surface_forms:
+  - Omar
+  - O. Lefebvre
+  - omar.lefebvre@birchcrest.holcrest.example
+  - '@omar'
+  - the new privacy officer
+- id: p-bayani-bishara
+  name: Bayani Bishara
+  first: Bayani
+  last: Bishara
+  nickname: null
+  org: null
+  role: Editor, Civic Tech Bulletin
+  role_phrase: null
+  email: bayani.bishara@newsletters.example
+  handle: '@bayani'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - bayani.bishara@newsletters.example
+  minor_kind: newsletter
+- id: p-holcrest-it-service-desk
+  name: Holcrest IT Service Desk
+  first: Holcrest IT Service Desk
+  last: ''
+  nickname: null
+  org: null
+  role: Holcrest IT Service Desk
+  role_phrase: null
+  email: servicedesk-noreply@holcrest.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - servicedesk-noreply@holcrest.example
+  minor_kind: service_desk
+- id: p-platform-status-page
+  name: Platform Status Page
+  first: Platform Status Page
+  last: ''
+  nickname: null
+  org: null
+  role: Platform Status Page
+  role_phrase: null
+  email: status-noreply@holcrest.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - status-noreply@holcrest.example
+  minor_kind: status
+- id: p-holcrest-internal-communications
+  name: Holcrest Internal Communications
+  first: Holcrest Internal Communications
+  last: ''
+  nickname: null
+  org: null
+  role: Holcrest Internal Communications
+  role_phrase: null
+  email: news@holcrest.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - news@holcrest.example
+  minor_kind: comms
+- id: p-freja-afolabi
+  name: Freja Afolabi
+  first: Freja
+  last: Afolabi
+  nickname: null
+  org: null
+  role: Events Coordinator
+  role_phrase: null
+  email: freja.afolabi@holcrest.example
+  handle: '@freja'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - freja.afolabi@holcrest.example
+  minor_kind: events
+- id: p-kayode-kariuki
+  name: Kayode Kariuki
+  first: Kayode
+  last: Kariuki
+  nickname: null
+  org: null
+  role: Conference Organizer
+  role_phrase: null
+  email: kayode.kariuki@conference.example
+  handle: '@kayode'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - kayode.kariuki@conference.example
+  minor_kind: conference
+- id: p-benefits-enrollment-notices
+  name: Benefits Enrollment Notices
+  first: Benefits Enrollment Notices
+  last: ''
+  nickname: null
+  org: null
+  role: Benefits Enrollment Notices
+  role_phrase: null
+  email: benefits-noreply@holcrest.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - benefits-noreply@holcrest.example
+  minor_kind: benefits
+projects:
+- id: pr-marten
+  name: Marten
+  short: Marten
+  kw: marten
+  code: Marten
+  surface_forms:
+  - Project Marten
+  - the library help pilot
+  - the Birchcrest pilot
+  - MARP
+  archetype: flagship_pilot
+  size: flagship
+  topic: library help
+  topic_a: an AI library help assistant
+  pivot: inspection backlog
+  role: ''
+  unit: o-birchcrest-department-of-transportation
+  vendors:
+  - o-quino-systems
+  - o-zeneth-labs
+  partner: o-nantgate-institute-for-public-service-design
+  owner: p-petra-korkmaz
+  sponsor: p-fernanda-olawale
+  members:
+  - p-camila-abernathy
+  - p-petra-korkmaz
+  - p-jalen-sandberg
+  - p-sipho-sengupta
+  - p-dina-taufa
+  - p-yasmin-mokoena
+  - p-nadia-jovanovic
+  - p-thandiwe-garnier
+  - p-joselito-moradi
+  - p-imran-achterhof
+  orgs:
+  - o-birchcrest-department-of-transportation
+  status: active
+  phase: build
+  target_date: '2027-12-15'
+  n: 4
+  cast:
+    owner: p-petra-korkmaz
+    sponsor: p-fernanda-olawale
+    lead: p-petra-korkmaz
+    unit:
+    - p-sipho-sengupta
+    - p-dina-taufa
+    - p-petra-korkmaz
+    ae:
+    - p-jalen-venkataraman
+    - p-caio-mehta
+    se:
+    - p-mateo-eze
+    - p-minji-chebet
+    eng: p-yasmin-mokoena
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
+    fin: p-venkatesh-yassin
+    hr: p-yiannis-bustamante
+    ea: p-niamh-obi
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
+  weight: 24.34
+  start: '2027-10-25'
+- id: pr-obsidian
+  name: Obsidian
+  short: Obsidian
+  kw: obsidian
+  code: Obsidian
+  surface_forms:
+  - the platform
+  - the common platform
+  - Obsidian platform
+  - the shared AI platform
+  archetype: platform_hub
+  size: hub
+  topic: shared platform
+  topic_a: ''
+  pivot: duplicate requests
+  role: ''
+  unit: o-birchcrest-department-of-transportation
+  vendors:
+  - o-quino-systems
+  - o-zeneth-labs
+  partner: o-nantgate-institute-for-public-service-design
+  owner: p-yasmin-mokoena
+  sponsor: p-fernanda-olawale
+  members:
+  - p-camila-abernathy
+  - p-yasmin-mokoena
+  - p-jalen-sandberg
+  - p-petra-korkmaz
+  - p-sipho-sengupta
+  - p-dina-taufa
+  - p-thandiwe-garnier
+  orgs: []
+  status: active
+  phase: onboarding tenants
+  target_date: null
+  n: 2
+  cast:
+    owner: p-yasmin-mokoena
+    sponsor: p-fernanda-olawale
+    lead: p-petra-korkmaz
+    unit:
+    - p-sipho-sengupta
+    - p-dina-taufa
+    - p-petra-korkmaz
+    ae:
+    - p-jalen-venkataraman
+    - p-caio-mehta
+    se:
+    - p-mateo-eze
+    - p-minji-chebet
+    eng: p-thandiwe-garnier
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
+    fin: p-venkatesh-yassin
+    hr: p-yiannis-bustamante
+    ea: p-niamh-obi
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
+  weight: 12.25
+  start: '2027-10-25'
+- id: pr-parking-analytics-tool-selection
+  name: Parking Analytics Tool Selection
+  short: parking analytics selection
+  kw: parking analytics selection
+  code: null
+  surface_forms:
+  - the parking analytics bake-off
+  - the Zeneth/Quino evaluation
+  - PATS selection
+  archetype: vendor_pair_evaluation
+  size: mid
+  topic: parking analytics
+  topic_a: an AI parking analytics dashboard
+  pivot: inspection backlog
+  role: ''
+  unit: o-birchcrest-department-of-transportation
+  vendors:
+  - o-zeneth-labs
+  - o-quino-systems
+  partner: o-nantgate-institute-for-public-service-design
+  owner: p-camila-abernathy
+  sponsor: p-imran-achterhof
+  members:
+  - p-camila-abernathy
+  - p-camila-abernathy
+  - p-jalen-sandberg
+  - p-petra-korkmaz
+  - p-sipho-sengupta
+  - p-dina-taufa
+  orgs:
+  - o-birchcrest-department-of-transportation
+  - o-zeneth-labs
+  - o-quino-systems
+  status: active
+  phase: intake
+  target_date: '2027-11-22'
+  n: 2
+  cast:
+    owner: p-camila-abernathy
+    sponsor: p-imran-achterhof
+    lead: p-petra-korkmaz
+    unit:
+    - p-sipho-sengupta
+    - p-dina-taufa
+    - p-petra-korkmaz
+    ae:
+    - p-caio-mehta
+    - p-jalen-venkataraman
+    se:
+    - p-minji-chebet
+    - p-mateo-eze
+    eng: p-yasmin-mokoena
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
+    fin: p-venkatesh-yassin
+    hr: p-yiannis-bustamante
+    ea: p-niamh-obi
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
+  weight: 6.4
+  start: '2027-10-25'
+- id: pr-ulworth-benefits-screening-discovery
+  name: Ulworth Benefits Screening Discovery
+  short: benefits screening discovery
+  kw: benefits screening discovery
+  code: null
+  surface_forms:
+  - the Ulworth discovery
+  - the benefits screening work
+  - UBSD discovery
+  archetype: pivoting_discovery
+  size: mid
+  topic: benefits screening
+  topic_a: an AI benefits eligibility screener
+  pivot: duplicate requests
+  role: ''
+  unit: o-ulworth-library-services
+  vendors:
+  - o-zeneth-labs
+  - o-talis-civic
+  partner: o-nantgate-institute-for-public-service-design
+  owner: p-camila-abernathy
+  sponsor: p-karim-jansen
+  members:
+  - p-camila-abernathy
+  - p-camila-abernathy
+  - p-jalen-sandberg
+  - p-andrei-lindgren
+  - p-ifeoma-chevalier
+  - p-corinne-kaya
+  orgs:
+  - o-ulworth-library-services
+  status: active
+  phase: planning
+  target_date: '2027-12-10'
+  n: 2
+  cast:
+    owner: p-camila-abernathy
+    sponsor: p-karim-jansen
+    lead: p-andrei-lindgren
+    unit:
+    - p-ifeoma-chevalier
+    - p-corinne-kaya
+    - p-andrei-lindgren
+    ae:
+    - p-caio-mehta
+    - p-eleanor-quintero
+    se:
+    - p-minji-chebet
+    - p-andres-ricci
+    eng: p-yasmin-mokoena
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
+    fin: p-venkatesh-yassin
+    hr: p-yiannis-bustamante
+    ea: p-niamh-obi
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
+  weight: 5.96
+  start: '2027-10-25'
+- id: pr-birchcrest-notice-translation-discovery
+  name: Birchcrest Notice Translation Discovery
+  short: notice translation discovery
+  kw: notice translation discovery
+  code: null
+  surface_forms:
+  - the Birchcrest discovery
+  - the notice translation work
+  - BNTD discovery
+  archetype: unit_discovery
+  size: mid
+  topic: notice translation
+  topic_a: an AI public notice translator
+  pivot: call-center wait times
+  role: ''
+  unit: o-birchcrest-department-of-transportation
+  vendors:
+  - o-zeneth-labs
+  - o-quino-systems
+  partner: o-nantgate-institute-for-public-service-design
+  owner: p-camila-abernathy
+  sponsor: p-fernanda-olawale
+  members:
+  - p-camila-abernathy
+  - p-camila-abernathy
+  - p-jalen-sandberg
+  - p-petra-korkmaz
+  - p-sipho-sengupta
+  - p-dina-taufa
+  orgs:
+  - o-birchcrest-department-of-transportation
+  status: active
+  phase: site visit
+  target_date: '2027-11-22'
+  n: 2
+  cast:
+    owner: p-camila-abernathy
+    sponsor: p-fernanda-olawale
+    lead: p-petra-korkmaz
+    unit:
+    - p-sipho-sengupta
+    - p-dina-taufa
+    - p-petra-korkmaz
+    ae:
+    - p-caio-mehta
+    - p-jalen-venkataraman
+    se:
+    - p-minji-chebet
+    - p-mateo-eze
+    eng: p-yasmin-mokoena
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
+    fin: p-venkatesh-yassin
+    hr: p-yiannis-bustamante
+    ea: p-niamh-obi
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
+  weight: 5.42
+  start: '2027-10-25'
+- id: pr-tarn
+  name: Tarn
+  short: Tarn
+  kw: tarn
+  code: Tarn
+  surface_forms:
+  - Project Tarn
+  - the records requests prototype
+  archetype: internal_incubation
+  size: mid
+  topic: records requests
+  topic_a: an AI records request router
+  pivot: inspection backlog
+  role: ''
+  unit: o-birchcrest-department-of-transportation
+  vendors:
+  - o-zeneth-labs
+  - o-talis-civic
+  partner: o-nantgate-institute-for-public-service-design
+  owner: p-camila-abernathy
+  sponsor: p-fernanda-olawale
+  members:
+  - p-camila-abernathy
+  - p-camila-abernathy
+  - p-jalen-sandberg
+  - p-petra-korkmaz
+  - p-sipho-sengupta
+  - p-dina-taufa
+  orgs:
+  - o-birchcrest-department-of-transportation
+  status: active
+  phase: concept
+  target_date: '2027-12-14'
+  n: 2
+  cast:
+    owner: p-camila-abernathy
+    sponsor: p-fernanda-olawale
+    lead: p-petra-korkmaz
+    unit:
+    - p-sipho-sengupta
+    - p-dina-taufa
+    - p-petra-korkmaz
+    ae:
+    - p-caio-mehta
+    - p-eleanor-quintero
+    se:
+    - p-minji-chebet
+    - p-andres-ricci
+    eng: p-yasmin-mokoena
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
+    fin: p-venkatesh-yassin
+    hr: p-yiannis-bustamante
+    ea: p-niamh-obi
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
+  weight: 6.45
+  start: '2027-10-25'
+- id: pr-plain-language-workshop
+  name: Plain Language Workshop
+  short: plain language workshop
+  kw: plain language workshop
+  code: null
+  surface_forms:
+  - the workshop
+  - the Birchcrest workshop
+  - the plain language session
+  archetype: event_preparation
+  size: mid
+  topic: plain language
+  topic_a: ''
+  pivot: fee waiver delays
+  role: ''
+  unit: o-birchcrest-department-of-transportation
+  vendors:
+  - o-talis-civic
+  - o-zeneth-labs
+  partner: o-nantgate-institute-for-public-service-design
+  owner: p-jalen-sandberg
+  sponsor: p-fernanda-olawale
+  members:
+  - p-camila-abernathy
+  - p-jalen-sandberg
+  - p-petra-korkmaz
+  - p-sipho-sengupta
+  - p-dina-taufa
+  orgs:
+  - o-birchcrest-department-of-transportation
+  status: active
+  phase: planning
+  target_date: '2027-12-08'
+  n: 2
+  cast:
+    owner: p-jalen-sandberg
+    sponsor: p-fernanda-olawale
+    lead: p-petra-korkmaz
+    unit:
+    - p-sipho-sengupta
+    - p-dina-taufa
+    - p-petra-korkmaz
+    ae:
+    - p-eleanor-quintero
+    - p-caio-mehta
+    se:
+    - p-andres-ricci
+    - p-minji-chebet
+    eng: p-yasmin-mokoena
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
+    fin: p-venkatesh-yassin
+    hr: p-yiannis-bustamante
+    ea: p-niamh-obi
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
+  weight: 7.35
+  start: '2027-10-25'
+- id: pr-data-engineer-hire
+  name: Data Engineer Hire
+  short: data engineer
+  kw: data engineer
+  code: null
+  surface_forms:
+  - the data engineer search
+  - REQ-3772
+  - the DE hire
+  archetype: hiring_pipeline
+  size: mid
+  topic: data engineer
+  topic_a: ''
+  pivot: call-center wait times
+  role: data engineer
+  unit: o-sandstead-permitting-office
+  vendors:
+  - o-zeneth-labs
+  - o-talis-civic
+  partner: o-nantgate-institute-for-public-service-design
+  owner: p-camila-abernathy
+  sponsor: p-fernanda-olawale
+  members:
+  - p-camila-abernathy
+  - p-camila-abernathy
+  - p-yiannis-bustamante
+  - p-yasmin-mokoena
+  orgs: []
+  status: active
+  phase: screens
+  target_date: null
+  n: 2
+  cast:
+    owner: p-camila-abernathy
+    sponsor: p-fernanda-olawale
+    lead: p-dalisay-dahl
+    unit:
+    - p-sigrid-bhatt
+    - p-dalisay-dahl
+    ae:
+    - p-caio-mehta
+    - p-eleanor-quintero
+    se:
+    - p-minji-chebet
+    - p-andres-ricci
+    eng: p-yasmin-mokoena
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
+    fin: p-venkatesh-yassin
+    hr: p-yiannis-bustamante
+    ea: p-niamh-obi
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
+  weight: 7.15
+  start: '2027-10-25'
+- id: pr-obsidian-operating-model-review
+  name: Obsidian Operating Model Review
+  short: Obsidian operating model
+  kw: operating model
+  code: null
+  surface_forms:
+  - the operating model review
+  - the ops model draft
+  - the Obsidian operating model
+  archetype: peer_review
+  size: small
+  topic: platform
+  topic_a: ''
+  pivot: duplicate requests
+  role: ''
+  unit: o-ulworth-library-services
+  vendors:
+  - o-zeneth-labs
+  - o-quino-systems
+  partner: o-nantgate-institute-for-public-service-design
+  owner: p-yasmin-mokoena
+  sponsor: p-fernanda-olawale
+  members:
+  - p-camila-abernathy
+  - p-yasmin-mokoena
+  - p-jalen-sandberg
+  - p-andrei-lindgren
+  orgs:
+  - o-ulworth-library-services
+  status: active
+  phase: review requested
+  target_date: null
+  n: 2
+  cast:
+    owner: p-yasmin-mokoena
+    sponsor: p-fernanda-olawale
+    lead: p-andrei-lindgren
+    unit:
+    - p-ifeoma-chevalier
+    - p-corinne-kaya
+    - p-andrei-lindgren
+    ae:
+    - p-caio-mehta
+    - p-jalen-venkataraman
+    se:
+    - p-minji-chebet
+    - p-mateo-eze
+    eng: p-yasmin-mokoena
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
+    fin: p-venkatesh-yassin
+    hr: p-yiannis-bustamante
+    ea: p-niamh-obi
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
+  weight: 2.36
+  start: '2027-10-25'
+- id: pr-service-request-triage-input-round
+  name: Service Request Triage Input Round
+  short: service request triage input round
+  kw: service request triage input round
+  code: null
+  surface_forms:
+  - the service request triage input
+  - the service request triage round
+  archetype: delegated_asks
+  size: small
+  topic: service request triage
+  topic_a: an AI service request triage tool
+  pivot: duplicate requests
+  role: ''
+  unit: o-corrbrook-housing-services
+  vendors:
+  - o-quino-systems
+  - o-zeneth-labs
+  partner: o-nantgate-institute-for-public-service-design
+  owner: p-camila-abernathy
+  sponsor: p-fernanda-olawale
+  members:
+  - p-camila-abernathy
+  - p-camila-abernathy
+  - p-jalen-sandberg
+  - p-minji-vu
+  orgs:
+  - o-corrbrook-housing-services
+  status: active
+  phase: asking
+  target_date: null
+  n: 2
+  cast:
+    owner: p-camila-abernathy
+    sponsor: p-fernanda-olawale
+    lead: p-minji-vu
+    unit:
+    - p-kristen-kocak
+    - p-eun-ji-moyo
+    - p-minji-vu
+    ae:
+    - p-jalen-venkataraman
+    - p-caio-mehta
+    se:
+    - p-mateo-eze
+    - p-minji-chebet
+    eng: p-yasmin-mokoena
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
+    fin: p-venkatesh-yassin
+    hr: p-yiannis-bustamante
+    ea: p-niamh-obi
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
+  weight: 2.15
+  start: '2027-10-25'
+- id: pr-nantgate-partnership
+  name: Nantgate Partnership
+  short: Nantgate partnership
+  kw: nantgate partnership
+  code: null
+  surface_forms:
+  - the Nantgate relationship
+  - Nantgate
+  archetype: relationship_thread
+  size: small
+  topic: partnership
+  topic_a: ''
+  pivot: duplicate requests
+  role: ''
+  unit: o-birchcrest-department-of-transportation
+  vendors:
+  - o-quino-systems
+  - o-zeneth-labs
+  partner: o-nantgate-institute-for-public-service-design
+  owner: p-camila-abernathy
+  sponsor: p-fernanda-olawale
+  members:
+  - p-camila-abernathy
+  - p-camila-abernathy
+  - p-jalen-sandberg
+  - p-petra-korkmaz
+  orgs:
+  - o-birchcrest-department-of-transportation
+  - o-nantgate-institute-for-public-service-design
+  status: active
+  phase: ongoing
+  target_date: null
+  n: 2
+  cast:
+    owner: p-camila-abernathy
+    sponsor: p-fernanda-olawale
+    lead: p-petra-korkmaz
+    unit:
+    - p-sipho-sengupta
+    - p-dina-taufa
+    - p-petra-korkmaz
+    ae:
+    - p-jalen-venkataraman
+    - p-caio-mehta
+    se:
+    - p-mateo-eze
+    - p-minji-chebet
+    eng: p-yasmin-mokoena
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
+    fin: p-venkatesh-yassin
+    hr: p-yiannis-bustamante
+    ea: p-niamh-obi
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
+  weight: 2.13
+  start: '2027-10-25'
+- id: pr-thorndale-meeting-minutes-idea
+  name: Thorndale Meeting Minutes Idea
+  short: meeting minutes
+  kw: meeting minutes
+  code: null
+  surface_forms:
+  - Rafiq's meeting minutes idea
+  - the meeting minutes placeholder
+  archetype: placeholder
+  size: placeholder
+  topic: meeting minutes
+  topic_a: an AI meeting minutes drafter
+  pivot: inspection backlog
+  role: ''
+  unit: o-thorndale-public-works
+  vendors:
+  - o-talis-civic
+  - o-quino-systems
+  partner: o-nantgate-institute-for-public-service-design
+  owner: p-rafiq-tetteh
+  sponsor: p-fernanda-olawale
+  members:
+  - p-camila-abernathy
+  - p-rafiq-tetteh
+  - p-jalen-sandberg
+  orgs:
+  - o-thorndale-public-works
+  status: active
+  phase: placeholder
+  target_date: null
+  n: 2
+  cast:
+    owner: p-rafiq-tetteh
+    sponsor: p-fernanda-olawale
+    lead: p-rafiq-tetteh
+    unit:
+    - p-hiba-overton
+    - p-rafiq-tetteh
+    ae:
+    - p-eleanor-quintero
+    - p-jalen-venkataraman
+    se:
+    - p-andres-ricci
+    - p-mateo-eze
+    eng: p-yasmin-mokoena
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
+    fin: p-venkatesh-yassin
+    hr: p-yiannis-bustamante
+    ea: p-niamh-obi
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
+  weight: 0.18
+  start: '2027-10-25'
+- id: pr-quino-permit-intake-diligence
+  name: Quino Permit Intake Diligence
+  short: Quino diligence
+  kw: quino diligence
+  code: null
+  surface_forms:
+  - the Quino deep dive
+  - the permit intake diligence
+  archetype: stalled_discovery
+  size: dormant
+  topic: permit intake
+  topic_a: an AI permit intake assistant
+  pivot: duplicate requests
+  role: ''
+  unit: o-ulworth-library-services
+  vendors:
+  - o-quino-systems
+  - o-zeneth-labs
+  partner: o-nantgate-institute-for-public-service-design
+  owner: p-camila-abernathy
+  sponsor: p-fernanda-olawale
+  members:
+  - p-camila-abernathy
+  - p-camila-abernathy
+  - p-jalen-sandberg
+  orgs:
+  - o-ulworth-library-services
+  - o-quino-systems
+  - o-zeneth-labs
+  status: dormant
+  phase: stalled
+  target_date: null
+  n: 2
+  cast:
+    owner: p-camila-abernathy
+    sponsor: p-fernanda-olawale
+    lead: p-andrei-lindgren
+    unit:
+    - p-ifeoma-chevalier
+    - p-corinne-kaya
+    - p-andrei-lindgren
+    ae:
+    - p-jalen-venkataraman
+    - p-caio-mehta
+    se:
+    - p-mateo-eze
+    - p-minji-chebet
+    eng: p-yasmin-mokoena
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
+    fin: p-venkatesh-yassin
+    hr: p-yiannis-bustamante
+    ea: p-niamh-obi
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
+  weight: 0.54
+  start: '2027-10-25'
+collisions:
+  first_names:
+  - - p-jalen-sandberg
+    - p-jalen-venkataraman
+  - - p-minji-vu
+    - p-minji-chebet
+  homophones:
+  - p-kirsten-ellery
+  - p-kristen-kocak
+cadences:
+- key: standup
+  title: Marten standup
+  kind: meeting
+  project: pr-marten
+  weekdays:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  every: 1
+  time: 09:30
+  minutes: 25
+  organizer: p-petra-korkmaz
+  attendees:
+  - p-camila-abernathy
+  - p-petra-korkmaz
+  - p-jalen-sandberg
+  - p-sipho-sengupta
+  - p-dina-taufa
+  - p-yasmin-mokoena
+  - p-nadia-jovanovic
+  - p-thandiwe-garnier
+- key: leads
+  title: OCT leads call
+  kind: meeting
+  project: null
+  weekdays:
+  - 0
+  every: 1
+  time: '11:00'
+  minutes: 45
+  organizer: p-fernanda-olawale
+  attendees:
+  - p-camila-abernathy
+  - p-jalen-sandberg
+  - p-yasmin-mokoena
+  - p-nadia-jovanovic
+  - p-joselito-moradi
+  - p-fernanda-olawale
+- key: hub_sync
+  title: Obsidian platform sync
+  kind: meeting
+  project: pr-obsidian
+  weekdays:
+  - 2
+  every: 1
+  time: '14:00'
+  minutes: 30
+  organizer: p-yasmin-mokoena
+  attendees:
+  - p-camila-abernathy
+  - p-yasmin-mokoena
+  - p-jalen-sandberg
+  - p-petra-korkmaz
+  - p-sipho-sengupta
+  - p-dina-taufa
+- key: one_on_one
+  title: 1:1 Camila / Jalen
+  kind: meeting
+  project: null
+  weekdays:
+  - 1
+  every: 2
+  time: '15:00'
+  minutes: 30
+  organizer: p-jalen-sandberg
+  attendees:
+  - p-camila-abernathy
+  - p-jalen-sandberg
+- key: forum
+  title: Cross-department AI forum
+  kind: meeting
+  project: null
+  weekdays:
+  - 3
+  every: 2
+  time: '13:00'
+  minutes: 60
+  organizer: p-jalen-sandberg
+  attendees:
+  - p-camila-abernathy
+  - p-jalen-sandberg
+  - p-petra-korkmaz
+  - p-minji-vu
+  - p-andrei-lindgren
+  - p-dalisay-dahl
+  - p-rafiq-tetteh
+- key: weekly_update
+  title: Weekly update
+  kind: obligation
+  project: null
+  weekdays:
+  - 0
+  - 4
+  every: 1
+  organizer: p-oct-shared-inbox
+  attendees:
+  - p-camila-abernathy
+  - p-fernanda-olawale
+challenges:
+- week: 1
+  tag: worker_directive
+  day: '2027-11-08'
+  project: pr-marten
+- week: 1
+  tag: noise
+  day: '2027-11-08'
+- week: 1
+  tag: implied_commitment
+  day: '2027-11-08'
+  project: pr-marten
+- week: 1
+  tag: duplicate_signal
+  day: '2027-11-08'
+  project: pr-ulworth-benefits-screening-discovery
+- week: 1
+  tag: privacy
+  day: '2027-11-08'
+- week: 1
+  tag: alias
+  day: '2027-11-10'
+- week: 1
+  tag: name_collision
+  day: '2027-11-11'
+- week: 1
+  tag: new_entity
+  day: '2027-11-10'
+  person: p-omar-lefebvre
+  project: pr-marten
+- week: 1
+  tag: supersession
+  day: '2027-11-09'
+  project: pr-marten
+- week: 1
+  tag: unobservable
+  day: '2027-11-09'
+  project: pr-tarn
+  attribute: budget
+- week: 1
+  tag: draft_vs_sent
+  day: '2027-11-09'
+  setup: '2027-11-08'
+- week: 1
+  tag: batch_catchup
+  day: '2027-11-09'
+- week: 1
+  tag: transfer
+  day: '2027-11-11'
+- week: 1
+  tag: correction
+  day: '2027-11-11'
+  setup: '2027-11-09'
+- week: 1
+  tag: weak_evidence
+  day: '2027-11-10'
+  setup: '2027-11-08'
+- week: 1
+  tag: acceptance_vs_occurrence
+  day: '2027-11-11'
+- week: 1
+  tag: restructuring
+  day: '2027-11-12'
+  mode: split
+  project: pr-ulworth-benefits-screening-discovery
+- week: 1
+  tag: version_mismatch
+  day: '2027-11-11'
+  setup: '2027-11-08'
+- week: 1
+  tag: silent_closure
+  day: '2027-11-11'
+  setup: '2027-11-09'
+- week: 1
+  tag: reversal
+  day: '2027-11-11'
+  setup: '2027-11-05'
+  project: pr-marten
+- week: 1
+  tag: endorsement
+  day: '2027-11-12'
+  setup: '2027-11-08'
+- week: 1
+  tag: scattered_evidence
+  day: '2027-11-11'
+  setup: '2027-11-08'
+  steps:
+  - '2027-11-09'
+  - '2027-11-10'
+  - '2027-11-11'
+audit:
+  unrevealed:
+    e-0011: never appears
+    e-0013: never appears
+    e-0024: never appears
+    e-0032: never appears
+    e-0034: never appears
+    e-0035: never appears
+    e-0040: never appears
+    e-0042: never appears
+    e-0043: never appears
+    e-0047: never appears
+    e-0048: never appears
+    e-0050: never appears
+    e-0051: never appears
+    e-0053: never appears
+    e-0054: never appears
+    e-0224: unobservable
+    e-0243: 'weak evidence: the walkthrough left no trace'
+  instruction_injection: em-0095
+  attachments:
+  - dc-0001
+  - dc-0002
+  - dc-0003
+  - dc-0004
+  - dc-0005
+  - dc-0006
+  - dc-0007
+  - dc-0008

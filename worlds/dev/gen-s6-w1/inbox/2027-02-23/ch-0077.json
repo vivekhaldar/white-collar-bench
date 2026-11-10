@@ -1,0 +1,43 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-liisa",
+ "kind": "dm",
+ "participants": [
+  "Liisa Babic",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-23T17:51:39-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-02-23T17:52:02-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-02-23T17:52:15-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "Just fixed the captioning discovery stale cache.",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@despina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-23T17:53:01-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "thank you!"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "workspace": "birchmere",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Tunde Andersen",
+  "Bisi Chatterjee"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-13T14:34:57-05:00",
+   "user": "Tunde Andersen",
+   "handle": "@tunde",
+   "text": "does anyone have a spare laptop charger (usb-c)?",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@bisi"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-13T14:39:11-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "I have one, desk by the window"
+  }
+ ]
+}

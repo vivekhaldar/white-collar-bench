@@ -1,0 +1,31 @@
+{
+ "workspace": "birchmere",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Bisi Chatterjee",
+  "Adebayo Kalua",
+  "Nurlan Jansen"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-17T16:38:36-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "lost a blue umbrella, might be in the big meeting room"
+  },
+  {
+   "ts": "2027-09-17T16:40:00-05:00",
+   "user": "Adebayo Kalua",
+   "handle": "@adebayo",
+   "text": "will keep an eye out",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-17T16:41:10-05:00",
+   "user": "Nurlan Jansen",
+   "handle": "@nurlan",
+   "text": "there's one at reception"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "workspace": "reddale",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Sipho Papadopoulos",
+  "Adaeze Morimoto"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-10T14:49:15+01:00",
+   "user": "Sipho Papadopoulos",
+   "handle": "@sipho",
+   "text": "lost a blue umbrella, might be in the big meeting room",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@adaeze"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-10T14:54:42+01:00",
+   "user": "Adaeze Morimoto",
+   "handle": "@adaeze",
+   "text": "will keep an eye out"
+  }
+ ]
+}

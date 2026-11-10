@@ -1,0 +1,41 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-tariq",
+ "kind": "dm",
+ "participants": [
+  "Tariq",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-26T09:18:38-08:00",
+   "user": "Tariq",
+   "handle": "@tariq",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-02-26T09:22:00-08:00",
+   "user": "Tariq",
+   "handle": "@tariq",
+   "text": "We're now in endorsement on Lanhurst Responsible AI Use Framework! :)"
+  },
+  {
+   "ts": "2027-02-26T09:23:21-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-02-26T09:28:20-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-02-26T09:29:35-08:00",
+   "user": "Tariq",
+   "handle": "@tariq",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

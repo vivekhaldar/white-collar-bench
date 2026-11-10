@@ -1,0 +1,35 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-fernanda",
+ "kind": "dm",
+ "participants": [
+  "Fernanda Olawale",
+  "Camila Abernathy"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-05T16:47:00-07:00",
+   "user": "Fernanda Olawale",
+   "handle": "@fernanda",
+   "text": "When you get a chance, could you write up the Tarn usability findings?"
+  },
+  {
+   "ts": "2027-11-05T16:48:10-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "no problem"
+  },
+  {
+   "ts": "2027-11-05T16:52:38-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-11-05T16:56:13-07:00",
+   "user": "Fernanda Olawale",
+   "handle": "@fernanda",
+   "text": "remote, but online all day"
+  }
+ ]
+}

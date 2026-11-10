@@ -1,0 +1,55 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolat-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Bolat"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-05T08:59:29-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-07-05T09:00:22-08:00",
+   "user": "Bolat",
+   "handle": "@bolat",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-07-05T09:02:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "leave it with me, i'll walk you through the siskin metrics definition",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@bolat"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-05T09:02:30-08:00",
+   "user": "Bolat",
+   "handle": "@bolat",
+   "text": "appreciate it"
+  },
+  {
+   "ts": "2027-07-05T09:05:07-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-07-05T09:07:38-08:00",
+   "user": "Bolat",
+   "handle": "@bolat",
+   "text": "only the first half"
+  }
+ ]
+}

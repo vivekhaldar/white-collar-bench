@@ -1,0 +1,46 @@
+{
+ "workspace": "reddale",
+ "channel": "#pantry-inventory-discovery-core",
+ "kind": "channel",
+ "participants": [
+  "Aoife Everett",
+  "Amani Xu",
+  "Akosua Bergstrom",
+  "Catrin Dang"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-17T10:36:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "@akosua leave it with me, i'll review your pantry inventory discovery findings summary"
+  },
+  {
+   "ts": "2027-08-17T10:36:53+01:00",
+   "user": "Akosua Bergstrom",
+   "handle": "@akosua",
+   "text": "that'd be great"
+  },
+  {
+   "ts": "2027-08-17T10:41:19+01:00",
+   "user": "Akosua Bergstrom",
+   "handle": "@akosua",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-08-17T10:45:02+01:00",
+   "user": "Amani Xu",
+   "handle": "@amani",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-08-17T10:51:03+01:00",
+   "user": "Catrin Dang",
+   "handle": "@catrin",
+   "text": "good to know :)",
+   "thread_of": 0
+  }
+ ]
+}

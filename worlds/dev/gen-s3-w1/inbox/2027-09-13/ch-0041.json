@@ -1,0 +1,75 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-bisi",
+ "kind": "dm",
+ "participants": [
+  "Bisi",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-13T16:25:06-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-13T16:52:00-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "Heads up: Nurlan will configure the Sirocco SSO broker for Ketford. :)",
+   "edited": true,
+   "original": "Heads up: Nurlan will configure the Siorcco SSO broker for Ketford. :)"
+  },
+  {
+   "ts": "2027-09-13T16:52:11-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "that'd be great"
+  },
+  {
+   "ts": "2027-09-13T16:53:05-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "Somchai Thapa asked if you could circulate the intake forms selection scorecard."
+  },
+  {
+   "ts": "2027-09-13T16:54:24-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "on it"
+  },
+  {
+   "ts": "2027-09-13T16:54:59-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "From the sync earlier, Vitoria will share the bed management discovery change request with you.",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@alasdair"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-13T16:55:56-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "perfect, thanks"
+  },
+  {
+   "ts": "2027-09-13T16:57:58-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "sorry, was in back-to-backs :)"
+  },
+  {
+   "ts": "2027-09-13T16:58:57-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "no worries"
+  }
+ ]
+}

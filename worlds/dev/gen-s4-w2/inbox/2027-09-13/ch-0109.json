@@ -1,0 +1,23 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-ottavio-theresa",
+ "kind": "dm",
+ "participants": [
+  "Theresa Petrov",
+  "Ottavio Moreira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-13T15:30:48-08:00",
+   "user": "Theresa Petrov",
+   "handle": "@theresa",
+   "text": "For the record, I set up syllabus review discovery sandbox access for you on Friday."
+  },
+  {
+   "ts": "2027-09-13T15:31:59-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "great, thanks"
+  }
+ ]
+}

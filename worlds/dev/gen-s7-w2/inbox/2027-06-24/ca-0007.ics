@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Corrstead//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:1113358a2a9e248b@corrstead.example
+DTSTAMP:20270624T202600Z
+DTSTART:20270630T170000Z
+DTEND:20270630T173000Z
+SUMMARY:Assessment design workshop run-through
+ORGANIZER;CN=Bolat Oyelami:mailto:bolat.oyelami@corrstead.example
+ATTENDEE;CN=Hiba Jimenez;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.jimenez@corrstead.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.corrstead.example/j/2542224466?pwd=xbk5mCgX\nPasscode: 211481
+LOCATION:https://meet.corrstead.example/j/2542224466?pwd=xbk5mCgX
+END:VEVENT
+END:VCALENDAR

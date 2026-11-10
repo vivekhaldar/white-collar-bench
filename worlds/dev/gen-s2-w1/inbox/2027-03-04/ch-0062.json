@@ -1,0 +1,62 @@
+{
+ "workspace": "vercliff",
+ "channel": "#mistral-core",
+ "kind": "channel",
+ "participants": [
+  "Dina Ricci",
+  "Yael Ellery",
+  "Imani",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
+  "Cassandra Yilmaz",
+  "Bilal Kahananui",
+  "Thibault Sahin",
+  "Mei Obi",
+  "Ling"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-04T14:22:00-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "let's limit the mistral pilot to three service centers",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@yael",
+      "@imani"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-04T14:22:35-07:00",
+   "user": "Cassandra Yilmaz",
+   "handle": "@cassandra",
+   "text": "noted",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-04T14:31:31-07:00",
+   "user": "Mei Obi",
+   "handle": "@mei",
+   "text": "+1 :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-04T14:33:07-07:00",
+   "user": "Rudo Thornbury",
+   "handle": "@rudo",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-04T14:39:49-07:00",
+   "user": "Ling",
+   "handle": "@xiaoling",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

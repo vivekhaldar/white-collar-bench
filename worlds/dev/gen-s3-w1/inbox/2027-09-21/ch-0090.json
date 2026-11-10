@@ -1,0 +1,29 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-friederike",
+ "kind": "dm",
+ "participants": [
+  "Friederike Haidari",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-21T10:46:30-05:00",
+   "user": "Friederike Haidari",
+   "handle": "@friederike",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-09-21T10:46:42-05:00",
+   "user": "Friederike Haidari",
+   "handle": "@friederike",
+   "text": "When you get a chance, could you set up a coffee with me about bed management?"
+  },
+  {
+   "ts": "2027-09-21T10:46:48-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "will do"
+  }
+ ]
+}

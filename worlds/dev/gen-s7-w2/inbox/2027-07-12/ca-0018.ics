@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Corrstead//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:5aa6a094d17081f3@corrstead.example
+DTSTAMP:20270712T203400Z
+DTSTART:20270715T003000Z
+DTEND:20270715T010000Z
+SUMMARY:Working session: Garnet lessons-learned note
+ORGANIZER;CN=Bolat Oyelami:mailto:bolat.oyelami@corrstead.example
+ATTENDEE;CN=Hiba Jimenez;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.jimenez@corrstead.example
+SEQUENCE:0
+DESCRIPTION:Agenda: Send Hiba the Garnet lessons-learned note.\nJoin video meeting: https://meet.corrstead.example/j/0975780422?pwd=5L9DXtpQ\nPasscode: 286967
+LOCATION:https://meet.corrstead.example/j/0975780422?pwd=5L9DXtpQ
+END:VEVENT
+END:VCALENDAR

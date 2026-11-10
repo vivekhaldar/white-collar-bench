@@ -1,0 +1,21 @@
+From: Hiba Deng <hiba.deng@iselvale.example>
+To: Lindiwe Ribeiro <lindiwe.ribeiro@iselvale.example>
+Date: Fri, 19 Mar 2027 16:31:00 -0500
+Subject: Status note: w/e 19 March
+Message-ID: <em-0022.5@iselvale.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Friday status note for w/e 19 March:
+
+- I assembled the Wagtail security review package
+- Rudo sent me the referral backlog wait-time export
+- I turned around the Wagtail API contract v2
+
+Risks: a couple of vendor answers are still outstanding.
+
+Any problems, let me know.
+
+Thanks,
+Hiba

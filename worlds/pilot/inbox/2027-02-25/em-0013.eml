@@ -1,0 +1,60 @@
+From: Yusra Haddad <yusra.haddad@kestrow.tarrow.example>
+To: Hyun-woo Park <hyunwoo.park@tarrow.example>, Mara Ilves <mara.ilves@tarrow.example>
+Cc: Bartholomew Ngata <bart.ngata@kestrow.tarrow.example>
+Date: Thu, 25 Feb 2027 10:02:00 -0800
+Subject: Re: Tinderbox - pausing real student data
+Message-ID: <em-0013@kestrow.tarrow.example>
+In-Reply-To: <tbx-data-pause-20270225-0850@tarrow.example>
+References: <tbx-data-pause-20270225-0850@tarrow.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Understood, Hugo. That realistically moves go-live to 29 March.
+
+So, for everyone on this thread: as of today the course assistant pilot is
+building in dummy-data mode. Synthetic course shells and fake student
+accounts only. No real student data goes into the tenant, the context API or
+any test course until your security review is approved. Anything that needs
+real data is blocked on that review.
+
+What doesn't change: Dmitri keeps building the context API against spec v1
+with the synthetic shells; it's still due 5 March. Tenant and SSO setup carry
+on in parallel. None of that needs real records.
+
+Bart - for awareness. 22 March is the date most people on campus have
+heard, so expect the odd question.
+
+If anyone wants to argue about what counts as "real data", let's take that
+offline.
+
+Yusra
+
+--
+Yusra Haddad
+Director of Teaching & Learning Technology
+Tarrow University Kestrow
+yusra.haddad@kestrow.tarrow.example
+
+
+On Thu, 25 Feb 2027 at 08:50, Hyun-woo Park <hyunwoo.park@tarrow.example> wrote:
+> Yusra, Mara,
+>
+> Per policy, production student data may not be used in non-production
+> environments. Effective today Tinderbox runs in dummy-data mode: real student
+> data is paused for the pilot until the security review is approved.
+>
+> Before I can lift this I will need a security review package: sub-processor
+> list, data flows, retention.
+>
+> I am not in a position to give a date for the review itself. That will
+> depend on the completeness of the package when it arrives.
+>
+> I have copied Dr. Ngata as the Kestrow CIO, since the pilot runs on his
+> campus.
+>
+> Regards,
+>
+> Hyun-woo Park
+> Principal, Security & Identity
+> Office of Digital Strategy | Tarrow University System Office

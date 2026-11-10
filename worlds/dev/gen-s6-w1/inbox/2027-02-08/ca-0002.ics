@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lanhurst//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:1131fe52da4b80b1@lanhurst.example
+DTSTAMP:20270208T231100Z
+DTSTART:20270211T230000Z
+DTEND:20270211T233000Z
+SUMMARY:AI-use sync
+ORGANIZER;CN=Andres Erdem:mailto:andres.erdem@lanhurst.example
+ATTENDEE;CN=Despina Pereira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:despina.pereira@lanhurst.example
+ATTENDEE;CN=Tariq Okeke;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:tariq.okeke@corrgate.lanhurst.example
+SEQUENCE:0
+DESCRIPTION:Quick sync\, 30 minutes.\nJoin video meeting: https://meet.lanhurst.example/j/4924908864?pwd=NCS7hMEb\nPasscode: 328239
+LOCATION:https://meet.lanhurst.example/j/4924908864?pwd=NCS7hMEb
+END:VEVENT
+END:VCALENDAR

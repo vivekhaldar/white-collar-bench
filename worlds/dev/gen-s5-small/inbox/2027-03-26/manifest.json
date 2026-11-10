@@ -1,0 +1,96 @@
+{
+  "date": "2027-03-26",
+  "artifacts": [
+    {
+      "id": "em-0050",
+      "channel": "email",
+      "received_at": "2027-03-26T08:42:00-05:00",
+      "path": "em-0050.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0038",
+      "channel": "chat",
+      "received_at": "2027-03-26T08:59:00-05:00",
+      "path": "ch-0038.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0051",
+      "channel": "email",
+      "received_at": "2027-03-26T09:07:00-05:00",
+      "path": "em-0051.eml",
+      "title": "[REQ-25109] Request resolved"
+    },
+    {
+      "id": "mt-0012",
+      "channel": "transcript",
+      "received_at": "2027-03-26T10:00:00-05:00",
+      "path": "mt-0012.vtt",
+      "title": "Wagtail standup (transcript)"
+    },
+    {
+      "id": "ch-0039",
+      "channel": "chat",
+      "received_at": "2027-03-26T11:50:00-05:00",
+      "path": "ch-0039.json",
+      "title": "DM: Anahit Jeong / Hiba Deng"
+    },
+    {
+      "id": "ch-0040",
+      "channel": "chat",
+      "received_at": "2027-03-26T11:50:00-05:00",
+      "path": "ch-0040.json",
+      "title": "#wagtail-core"
+    },
+    {
+      "id": "ch-0041",
+      "channel": "chat",
+      "received_at": "2027-03-26T12:38:00-05:00",
+      "path": "ch-0041.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "em-0052",
+      "channel": "email",
+      "received_at": "2027-03-26T13:00:00-05:00",
+      "path": "em-0052.eml",
+      "title": "Re: FYI: Wagtail integration spec"
+    },
+    {
+      "id": "ca-0004",
+      "channel": "calendar",
+      "received_at": "2027-03-26T13:08:00-05:00",
+      "path": "ca-0004.ics",
+      "title": "Updated: Okapi hardening review"
+    },
+    {
+      "id": "ch-0042",
+      "channel": "chat",
+      "received_at": "2027-03-26T16:17:00-05:00",
+      "path": "ch-0042.json",
+      "title": "DM: Anahit Fifita / Hiba Deng"
+    },
+    {
+      "id": "em-0053",
+      "channel": "email",
+      "received_at": "2027-03-26T17:14:00-05:00",
+      "path": "em-0053.eml",
+      "title": "Status note: w/e 26 March"
+    },
+    {
+      "id": "em-0054",
+      "channel": "email",
+      "received_at": "2027-03-26T18:02:00-05:00",
+      "path": "em-0054.eml",
+      "title": "Re: Wagtail go-live checklist"
+    },
+    {
+      "id": "ch-0043",
+      "channel": "chat",
+      "received_at": "2027-03-26T18:14:00-05:00",
+      "path": "ch-0043.json",
+      "title": "DM: Hiba Deng / Friederike Bhatt"
+    }
+  ]
+}

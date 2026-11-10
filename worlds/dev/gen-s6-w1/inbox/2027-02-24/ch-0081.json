@@ -1,0 +1,25 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#ai-use-core",
+ "kind": "channel",
+ "participants": [
+  "Despina Pereira",
+  "Andres",
+  "Tariq Okeke",
+  "Karli Banda"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-24T10:33:00-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "@andres i sent you the ai-use consultation plan earlier today"
+  },
+  {
+   "ts": "2027-02-24T10:34:20-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "thank you!"
+  }
+ ]
+}

@@ -1,0 +1,154 @@
+{
+  "date": "2027-10-06",
+  "artifacts": [
+    {
+      "id": "ch-0185",
+      "channel": "chat",
+      "received_at": "2027-10-06T07:35:00-06:00",
+      "path": "ch-0185.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    },
+    {
+      "id": "ch-0186",
+      "channel": "chat",
+      "received_at": "2027-10-06T07:38:00-06:00",
+      "path": "ch-0186.json",
+      "title": "#fulmar-core (catch-up)"
+    },
+    {
+      "id": "mt-0036",
+      "channel": "transcript",
+      "received_at": "2027-10-06T07:39:00-06:00",
+      "path": "mt-0036.vtt",
+      "title": "Wagtail sync (transcript)"
+    },
+    {
+      "id": "dc-0011",
+      "channel": "document",
+      "received_at": "2027-10-06T07:40:00-06:00",
+      "path": "dc-0011.docx",
+      "title": "AI-use principles draft v2 v2",
+      "parent": "em-0232"
+    },
+    {
+      "id": "em-0232",
+      "channel": "email",
+      "received_at": "2027-10-06T07:40:00-06:00",
+      "path": "em-0232.eml",
+      "title": "While you were out: AI-use"
+    },
+    {
+      "id": "ch-0187",
+      "channel": "chat",
+      "received_at": "2027-10-06T08:21:00-06:00",
+      "path": "ch-0187.json",
+      "title": "#wagtail-core"
+    },
+    {
+      "id": "mn-0025",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-06T10:00:00-06:00",
+      "path": "mn-0025.md",
+      "title": "Recap: Fulmar standup"
+    },
+    {
+      "id": "em-0233",
+      "channel": "email",
+      "received_at": "2027-10-06T10:06:00-06:00",
+      "path": "em-0233.eml",
+      "title": "Re: Work instructions selection lessons-learned note"
+    },
+    {
+      "id": "ch-0188",
+      "channel": "chat",
+      "received_at": "2027-10-06T10:16:00-06:00",
+      "path": "ch-0188.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    },
+    {
+      "id": "ch-0189",
+      "channel": "chat",
+      "received_at": "2027-10-06T13:05:00-06:00",
+      "path": "ch-0189.json",
+      "title": "DM: Wei Suwannarat / Amira Baek"
+    },
+    {
+      "id": "mn-0026",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-06T14:35:00-06:00",
+      "path": "mn-0026.md",
+      "title": "Recap: Wagtail platform sync"
+    },
+    {
+      "id": "em-0234",
+      "channel": "email",
+      "received_at": "2027-10-06T14:58:00-06:00",
+      "path": "em-0234.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0235",
+      "channel": "email",
+      "received_at": "2027-10-06T15:20:00-06:00",
+      "path": "em-0235.eml",
+      "title": "Re: Fulmar budget justification v2"
+    },
+    {
+      "id": "em-0236",
+      "channel": "email",
+      "received_at": "2027-10-06T15:24:00-06:00",
+      "path": "em-0236.eml",
+      "title": "Re: Galix deep-dive materials"
+    },
+    {
+      "id": "em-0237",
+      "channel": "email",
+      "received_at": "2027-10-06T15:42:00-06:00",
+      "path": "em-0237.eml",
+      "title": "Yasmin's Fulmar metrics definition v2"
+    },
+    {
+      "id": "ch-0190",
+      "channel": "chat",
+      "received_at": "2027-10-06T17:13:00-06:00",
+      "path": "ch-0190.json",
+      "title": "#ai-use-core"
+    },
+    {
+      "id": "em-0238",
+      "channel": "email",
+      "received_at": "2027-10-06T17:14:00-06:00",
+      "path": "em-0238.eml",
+      "title": "Falhaven's input on predictive maintenance"
+    },
+    {
+      "id": "dc-0012",
+      "channel": "document",
+      "received_at": "2027-10-06T18:20:00-06:00",
+      "path": "dc-0012.xlsx",
+      "title": "Fulmar budget justification v2 (draft)",
+      "parent": "em-0239"
+    },
+    {
+      "id": "em-0239",
+      "channel": "email",
+      "received_at": "2027-10-06T18:20:00-06:00",
+      "path": "em-0239.eml",
+      "title": "Re: Fulmar budget justification v2"
+    },
+    {
+      "id": "em-0240",
+      "channel": "email",
+      "received_at": "2027-10-06T18:41:00-06:00",
+      "path": "em-0240.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "ch-0191",
+      "channel": "chat",
+      "received_at": "2027-10-06T18:50:00-06:00",
+      "path": "ch-0191.json",
+      "title": "DM: Amira Baek / Wei Suwannarat"
+    }
+  ]
+}

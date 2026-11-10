@@ -1,0 +1,235 @@
+WEBVTT
+
+NOTE
+Meeting: Wagtail standup
+Date: Thursday 25 March 2027, 9:35am to 10am
+Attendees: Isla Faure (Falbury Community Clinics), Hiba Deng, Anahit Fifita, Rudo Ekwueme (Falbury Community Clinics), Lakshmi Figueroa, Friederike Bhatt, Jisoo Nowak, Maricel Fuentes
+Transcript generated automatically. Speaker names and spellings may be inaccurate.
+
+1
+00:02:26.400 --> 00:02:28.323
+<v Jisoo Nowak>—sorry, it says recording now.
+
+2
+00:03:23.223 --> 00:03:25.531
+<v Isla Faure>We're now in readiness on Wagtail.
+
+3
+00:03:25.971 --> 00:03:26.971
+<v Hiba Deng>Got it.
+
+4
+00:03:27.984 --> 00:03:28.984
+<v Lakshmi Figueroa>Mm.
+
+5
+00:03:29.898 --> 00:03:31.051
+<v Hiba Deng>Any blockers there?
+
+6
+00:03:31.398 --> 00:03:32.937
+<v Isla Faure>Not right now, no.
+
+7
+00:03:33.864 --> 00:03:34.864
+<v Hiba Deng>Okay, yeah.
+
+8
+00:03:35.522 --> 00:03:36.522
+<v Jisoo Nowak>Yeah.
+
+9
+00:03:37.488 --> 00:03:40.565
+<v Rudo Ekwueme>Finance will have views on this, I expect.
+
+10
+00:03:41.154 --> 00:03:42.154
+<v Anahit Fifita>Makes sense.
+
+11
+00:03:42.541 --> 00:03:43.541
+<v Jisoo Nowak>Right, right.
+
+12
+00:03:44.802 --> 00:03:47.879
+<v Jisoo Nowak>We should keep an eye on scope creep.
+
+13
+00:03:48.531 --> 00:03:49.531
+<v Friederike Bhatt>Yeah, true.
+
+14
+00:03:50.314 --> 00:03:51.314
+<v Anahit Fifita>Okay.
+
+15
+00:04:54.410 --> 00:04:57.871
+<v Jisoo Nowak>Before I forget, the parking permits renew next month.
+
+16
+00:04:59.038 --> 00:05:00.191
+<v Isla Faure>I think so.
+
+17
+00:07:46.362 --> 00:07:50.208
+<v Isla Faure>Next up for Wagtail: run the go-live checklist with Falbury.
+
+18
+00:07:50.986 --> 00:07:51.986
+<v Friederike Bhatt>Fair.
+
+19
+00:07:52.854 --> 00:07:53.854
+<v Hiba Deng>I see.
+
+20
+00:07:54.661 --> 00:07:55.661
+<v Friederike Bhatt>Uh-huh.
+
+21
+00:07:56.377 --> 00:07:59.069
+<v Jisoo Nowak>People seem positive about it so far.
+
+22
+00:07:59.541 --> 00:08:00.541
+<v Maricel Fuentes>Right.
+
+23
+00:08:01.405 --> 00:08:02.405
+<v Isla Faure>Mm, okay.
+
+24
+00:08:02.832 --> 00:08:06.294
+<v Hiba Deng>I'm not sure everyone's read the latest version yet.
+
+25
+00:08:07.302 --> 00:08:08.302
+<v Anahit Fifita>Mm-hmm.
+
+26
+00:08:09.414 --> 00:08:10.414
+<v Friederike Bhatt>Yeah.
+
+27
+00:08:10.615 --> 00:08:11.615
+<v Rudo Ekwueme>Makes sense.
+
+28
+00:10:06.842 --> 00:10:10.304
+<v Lakshmi Figueroa>We're now in revision on Okapi Operating Model Review.
+
+29
+00:10:11.085 --> 00:10:12.085
+<v Hiba Deng>I see.
+
+30
+00:10:13.171 --> 00:10:14.171
+<v Isla Faure>Got it.
+
+31
+00:10:14.552 --> 00:10:15.552
+<v Hiba Deng>Right, right.
+
+32
+00:13:22.011 --> 00:13:23.550
+<v Hiba Deng>Wait, is that the—
+
+33
+00:13:24.054 --> 00:13:25.208
+<v Rudo Ekwueme (Guest)>Sorry, go ahead.
+
+34
+00:13:25.753 --> 00:13:29.214
+<v Hiba Deng>I'll run the Wagtail go-live checklist with Anahit Fifita.
+
+35
+00:13:29.475 --> 00:13:30.475
+<v Jisoo Nowak>Mm, okay.
+
+36
+00:13:31.787 --> 00:13:32.787
+<v Lakshmi Figueroa>Mm-hmm.
+
+37
+00:13:33.040 --> 00:13:36.117
+<v Anahit Fifita>Sorry, you cut out for a second there.
+
+38
+00:13:36.347 --> 00:13:39.423
+<v Hiba Deng>I'm back. Nothing new, just what I said.
+
+39
+00:13:40.100 --> 00:13:43.177
+<v Isla Faure>It's a lot of process for a pilot.
+
+40
+00:13:44.400 --> 00:13:45.400
+<v Rudo Ekwueme (Guest)>Right.
+
+41
+00:14:30.542 --> 00:14:34.004
+<v Hiba Deng>Could you send me the Okapi capacity plan, Lakshmi?
+
+42
+00:14:34.899 --> 00:14:36.053
+<v Lakshmi Figueroa>Yeah, no problem.
+
+43
+00:14:36.625 --> 00:14:37.625
+<v Jisoo Nowak>Yeah, true.
+
+44
+00:14:37.835 --> 00:14:40.143
+<v Maricel Fuentes>Did we hear back on that?
+
+45
+00:14:41.068 --> 00:14:42.606
+<v Lakshmi Figueroa>Not yet, still waiting.
+
+46
+00:14:43.821 --> 00:14:44.821
+<v Maricel Fuentes>Okay.
+
+47
+00:14:45.030 --> 00:14:48.876
+<v Jisoo Nowak>Unfortunately the people who'd use it aren't in this room.
+
+48
+00:14:49.973 --> 00:14:50.973
+<v Friederike Bhatt>Mm.
+
+49
+00:14:51.408 --> 00:14:52.408
+<v Jisoo Nowak>Fair.
+
+50
+00:17:52.552 --> 00:17:54.091
+<v Isla Faure>Anything else from anyone?
+
+51
+00:17:55.368 --> 00:17:57.291
+<v Jisoo Nowak>Nothing from me this week.
+
+52
+00:17:58.137 --> 00:17:59.137
+<v Rudo Ekwueme (Guest)>Okay, yeah.
+
+53
+00:17:59.883 --> 00:18:01.037
+<v Rudo Ekwueme (Guest)>Nothing to flag.
+
+54
+00:18:02.185 --> 00:18:03.339
+<v Anahit Fifita>I'm good, thanks.
+
+55
+00:18:03.611 --> 00:18:04.611
+<v Friederike Bhatt>Uh-huh.
+
+56
+00:20:07.256 --> 00:20:09.949
+<v Isla Faure>Okay, I think that's it. Thanks everyone.
+
+57
+00:20:10.824 --> 00:20:11.824
+<v Jisoo Nowak>Thanks, bye.

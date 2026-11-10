@@ -1,0 +1,35 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-winifred",
+ "kind": "dm",
+ "participants": [
+  "Winifred Tanaka",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-18T17:17:00-05:00",
+   "user": "Winifred Tanaka",
+   "handle": "@winifred",
+   "text": "i could send you the clelera volume tiers if that helps?"
+  },
+  {
+   "ts": "2027-10-18T17:17:59-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "great, thank you"
+  },
+  {
+   "ts": "2027-10-18T17:22:47-05:00",
+   "user": "Winifred Tanaka",
+   "handle": "@winifred",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-10-18T17:24:55-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

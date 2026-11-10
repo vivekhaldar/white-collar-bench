@@ -1,0 +1,38 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Lindiwe Baek",
+  "Andres Erdem",
+  "Tomas Deng",
+  "Carys Laurent"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-09T15:44:41-08:00",
+   "user": "Lindiwe Baek",
+   "handle": "@lindiwe",
+   "text": "there's leftover cake in the kitchen on 4 :)"
+  },
+  {
+   "ts": "2027-02-09T15:48:51-08:00",
+   "user": "Andres Erdem",
+   "handle": "@andres",
+   "text": "on my way"
+  },
+  {
+   "ts": "2027-02-09T15:49:45-08:00",
+   "user": "Tomas Deng",
+   "handle": "@tomas",
+   "text": "what kind?",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-09T15:52:20-08:00",
+   "user": "Carys Laurent",
+   "handle": "@carys",
+   "text": "the lemon one is gone already"
+  }
+ ]
+}

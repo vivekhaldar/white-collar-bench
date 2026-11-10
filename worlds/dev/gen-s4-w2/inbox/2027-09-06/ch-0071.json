@@ -1,0 +1,33 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-darius-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Darius Bramwell",
+  "Ottavio Moreira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-06T16:17:00-08:00",
+   "user": "Darius Bramwell",
+   "handle": "@darius",
+   "text": "Meera is expecting you to look into the Fjord timeout errors!",
+   "edited": true,
+   "original": "Meera is expecting you to look into the Fojrd timeout errors!",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@ottavio"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-06T16:18:14-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "no problem"
+  }
+ ]
+}

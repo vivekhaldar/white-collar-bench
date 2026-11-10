@@ -1,0 +1,7 @@
+# Never ship worlds (gold) or runs into an agent image.
+worlds/
+runs/
+tests/
+.venv/
+.git/
+**/__pycache__/

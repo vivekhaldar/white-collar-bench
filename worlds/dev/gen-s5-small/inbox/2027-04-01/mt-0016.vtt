@@ -1,0 +1,143 @@
+WEBVTT
+
+NOTE
+Meeting: Lunch and learn
+Date: Thursday 1 April 2027, 8am to 8:30am
+Attendees: Lindiwe Ribeiro, Kwame Zamora, Lakshmi Figueroa, Hiba Deng
+Transcript generated automatically. Speaker names and spellings may be inaccurate.
+
+1
+00:00:02.359 --> 00:00:04.282
+<v Lakshmi Figueroa>Can everyone hear me okay?
+
+2
+00:00:04.851 --> 00:00:06.005
+<v Kwame Zamora>Yep, you're fine.
+
+3
+00:03:13.997 --> 00:03:16.304
+<v Lindiwe Ribeiro>Okay, I think we have everyone.
+
+4
+00:06:55.435 --> 00:07:00.050
+<v Lindiwe Ribeiro>For the record, Lakshmi shared the Wagtail requirements matrix with Hiba yesterday.
+
+5
+00:07:00.304 --> 00:07:01.304
+<v Kwame Zamora>Mm-hmm.
+
+6
+00:07:02.406 --> 00:07:03.406
+<v Lindiwe Ribeiro>Uh-huh.
+
+7
+00:07:04.241 --> 00:07:05.241
+<v Hiba Deng>Right.
+
+8
+00:07:05.488 --> 00:07:07.412
+<v Kwame Zamora>Does that work for everyone?
+
+9
+00:07:07.888 --> 00:07:09.042
+<v Lindiwe Ribeiro>Works for me.
+
+10
+00:07:09.608 --> 00:07:10.608
+<v Kwame Zamora>Fair.
+
+11
+00:07:11.533 --> 00:07:14.994
+<v Lakshmi Figueroa>It's mostly waiting on other teams at this point.
+
+12
+00:07:15.584 --> 00:07:16.584
+<v Lindiwe Ribeiro>Mm, okay.
+
+13
+00:07:17.898 --> 00:07:18.898
+<v Kwame Zamora>I see.
+
+14
+00:07:20.259 --> 00:07:21.259
+<v Lindiwe Ribeiro>Okay, yeah.
+
+15
+00:07:22.566 --> 00:07:25.258
+<v Lakshmi Figueroa>People seem positive about it so far.
+
+16
+00:07:25.598 --> 00:07:26.598
+<v Kwame Zamora>Mm.
+
+17
+00:10:30.687 --> 00:10:35.302
+<v Lindiwe Ribeiro>Recap from Tuesday: Hiba offered to look into the Wagtail stale cache.
+
+18
+00:10:35.534 --> 00:10:36.534
+<v Lakshmi Figueroa>Makes sense.
+
+19
+00:10:36.831 --> 00:10:37.831
+<v Hiba Deng>Okay.
+
+20
+00:10:38.946 --> 00:10:39.946
+<v Lindiwe Ribeiro>Yeah, true.
+
+21
+00:10:41.290 --> 00:10:42.444
+<v Hiba Deng>Any blockers there?
+
+22
+00:10:43.165 --> 00:10:44.703
+<v Lindiwe Ribeiro>Not right now, no.
+
+23
+00:10:45.309 --> 00:10:48.771
+<v Lakshmi Figueroa>The feedback from the last session was pretty mixed.
+
+24
+00:10:49.882 --> 00:10:50.882
+<v Lindiwe Ribeiro>Right, right.
+
+25
+00:10:51.097 --> 00:10:52.097
+<v Hiba Deng>Yeah.
+
+26
+00:17:02.315 --> 00:17:03.854
+<v Lindiwe Ribeiro>Anything else from anyone?
+
+27
+00:17:04.520 --> 00:17:05.674
+<v Lakshmi Figueroa>I'm good, thanks.
+
+28
+00:17:05.990 --> 00:17:06.990
+<v Lindiwe Ribeiro>Got it.
+
+29
+00:17:07.637 --> 00:17:09.560
+<v Hiba Deng>All quiet on my end.
+
+30
+00:17:10.722 --> 00:17:11.722
+<v Lakshmi Figueroa>Okay.
+
+31
+00:17:12.040 --> 00:17:14.348
+<v Kwame Zamora>Just heads-down on the usual stuff.
+
+32
+00:17:14.762 --> 00:17:15.762
+<v Lakshmi Figueroa>Got it.
+
+33
+00:23:29.634 --> 00:23:32.326
+<v Lindiwe Ribeiro>Okay, I think that's it. Thanks everyone.
+
+34
+00:23:33.313 --> 00:23:34.313
+<v Kwame Zamora>Cheers.

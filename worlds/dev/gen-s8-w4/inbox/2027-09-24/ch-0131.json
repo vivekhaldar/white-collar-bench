@@ -1,0 +1,47 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-wei",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Wei Suwannarat"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-24T14:44:23-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-09-24T14:45:51-06:00",
+   "user": "Wei Suwannarat",
+   "handle": "@wei",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-24T14:46:27-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "No need for your AI-use status slide any more, overtaken by events."
+  },
+  {
+   "ts": "2027-09-24T14:47:23-06:00",
+   "user": "Wei Suwannarat",
+   "handle": "@wei",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-09-24T14:51:36-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-09-24T14:55:12-06:00",
+   "user": "Wei Suwannarat",
+   "handle": "@wei",
+   "text": "anytime"
+  }
+ ]
+}

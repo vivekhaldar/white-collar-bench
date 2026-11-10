@@ -1,0 +1,47 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-meera-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Ottavio Moreira",
+  "Meera"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T18:09:31-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-09-08T18:10:23-08:00",
+   "user": "Meera",
+   "handle": "@meera",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-09-08T18:13:00-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "Will send you the Fjord RACI chart."
+  },
+  {
+   "ts": "2027-09-08T18:13:13-08:00",
+   "user": "Meera",
+   "handle": "@meera",
+   "text": "that'd be great"
+  },
+  {
+   "ts": "2027-09-08T18:15:52-08:00",
+   "user": "Meera",
+   "handle": "@meera",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-09-08T18:19:19-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "yep, all good"
+  }
+ ]
+}

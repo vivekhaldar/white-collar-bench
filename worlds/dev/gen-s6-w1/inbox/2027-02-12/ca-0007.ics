@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lanhurst//Calendar//EN
+METHOD:CANCEL
+BEGIN:VEVENT
+UID:fdfc28e660d22caa@lanhurst.example
+DTSTAMP:20270212T154900Z
+DTSTART:20270212T173000Z
+DTEND:20270212T175500Z
+SUMMARY:Cancelled: Axolotl standup
+ORGANIZER;CN=Losa Moretti:mailto:losa.moretti@dorcliff.lanhurst.example
+ATTENDEE;CN=Despina Pereira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:despina.pereira@lanhurst.example
+ATTENDEE;CN=Andres Erdem;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:andres.erdem@lanhurst.example
+ATTENDEE;CN=Nathaniel Cartwright;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:nathaniel.cartwright@dorcliff.lanhurst.example
+ATTENDEE;CN=Karim Navarro;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:karim.navarro@dorcliff.lanhurst.example
+ATTENDEE;CN=Liisa Babic;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:liisa.babic@lanhurst.example
+ATTENDEE;CN=Tomas Deng;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:tomas.deng@lanhurst.example
+ATTENDEE;CN=Carys Laurent;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:carys.laurent@lanhurst.example
+RECURRENCE-ID:20270212T173000Z
+SEQUENCE:1
+STATUS:CANCELLED
+DESCRIPTION:Cancelling this one\, nothing to discuss this week.
+END:VEVENT
+END:VCALENDAR

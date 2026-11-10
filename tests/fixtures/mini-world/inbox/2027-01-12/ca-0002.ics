@@ -1,0 +1,10 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+METHOD:REPLY
+BEGIN:VEVENT
+UID:ca-0001@larchmont.example
+SUMMARY:Accepted: Reconciliation review
+DTSTART:20270112T160000
+ATTENDEE;PARTSTAT=ACCEPTED;CN=Ada Quist:mailto:ada.quist@larchmont.example
+END:VEVENT
+END:VCALENDAR

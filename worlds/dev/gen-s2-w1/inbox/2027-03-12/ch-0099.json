@@ -1,0 +1,41 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-venkatesh",
+ "kind": "dm",
+ "participants": [
+  "Dina Ricci",
+  "Venkatesh Pangilinan"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-12T12:45:07-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-03-12T12:46:00-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "i sent you the mistral privacy review form earlier today"
+  },
+  {
+   "ts": "2027-03-12T12:47:19-07:00",
+   "user": "Venkatesh Pangilinan",
+   "handle": "@venkatesh",
+   "text": "got it, thanks"
+  },
+  {
+   "ts": "2027-03-12T12:49:44-07:00",
+   "user": "Venkatesh Pangilinan",
+   "handle": "@venkatesh",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-03-12T12:52:07-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "remote, but online all day"
+  }
+ ]
+}

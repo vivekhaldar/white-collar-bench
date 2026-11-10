@@ -1,0 +1,123 @@
+WEBVTT
+
+NOTE
+Meeting: Wagtail platform sync
+Date: Wednesday 29 September 2027, 2pm to 2:30pm
+Attendees: Oksana Hoffmann, Amira Baek, Adwoa Kocak, Ottavio Bakker (Ivycrest Distribution Center), Giorgi Wisniewska (Ivycrest Distribution Center), Batbayar Galbraith
+Transcript generated automatically. Speaker names and spellings may be inaccurate.
+
+1
+00:00:05.989 --> 00:00:07.913
+<v Batbayar Galbraith>Sorry, I was on mute.
+
+2
+00:00:09.135 --> 00:00:10.135
+<v Amira Baek>No worries.
+
+3
+00:02:58.624 --> 00:03:00.932
+<v Oksana Hoffmann>Okay, I think we have everyone.
+
+4
+00:03:01.563 --> 00:03:03.486
+<v Oksana Hoffmann>Main thing today is Wagtail.
+
+5
+00:08:38.826 --> 00:08:43.441
+<v Oksana Hoffmann>Recap from Monday: Adwoa offered to send Amira the Wagtail rollout checklist.
+
+6
+00:08:44.495 --> 00:08:45.495
+<v Batbayar Galbraith>Okay.
+
+7
+00:08:46.515 --> 00:08:49.977
+<v Ottavio Bakker>My concern is mostly the timeline, to be honest.
+
+8
+00:09:11.388 --> 00:09:15.234
+<v Oksana Hoffmann>Recap: we dropped ignacio's panel on visual inspection on Monday.
+
+9
+00:09:16.019 --> 00:09:17.019
+<v Adwoa K.>Fair.
+
+10
+00:09:17.264 --> 00:09:18.264
+<v Ottavio Bakker>Got it.
+
+11
+00:09:19.121 --> 00:09:21.428
+<v Giorgi Wisniewska>Did we hear back on that?
+
+12
+00:09:22.590 --> 00:09:24.129
+<v Oksana Hoffmann>Not that I've seen.
+
+13
+00:09:24.924 --> 00:09:25.924
+<v Giorgi Wisniewska>Yeah.
+
+14
+00:09:26.812 --> 00:09:27.812
+<v Adwoa K.>Okay, yeah.
+
+15
+00:09:28.151 --> 00:09:30.843
+<v Batbayar Galbraith>I'm a bit worried we're overcommitting again.
+
+16
+00:09:31.643 --> 00:09:32.643
+<v Adwoa K.>Makes sense.
+
+17
+00:09:33.540 --> 00:09:37.002
+<v Batbayar Galbraith>I'm not sure everyone's read the latest version yet.
+
+18
+00:09:37.668 --> 00:09:38.668
+<v Adwoa K.>Mm, okay.
+
+19
+00:11:56.181 --> 00:11:59.642
+<v Ottavio Bakker>Also, cake in the kitchen if anyone wants some.
+
+20
+00:12:00.833 --> 00:12:01.833
+<v Adwoa K.>Ha, yes.
+
+21
+00:18:06.965 --> 00:18:08.119
+<v Oksana Hoffmann>Any other updates?
+
+22
+00:18:09.159 --> 00:18:10.313
+<v Adwoa K.>I'm good, thanks.
+
+23
+00:18:10.902 --> 00:18:11.902
+<v Amira Baek>Right, right.
+
+24
+00:18:13.064 --> 00:18:14.987
+<v Ottavio Bakker>Nothing from me this week.
+
+25
+00:18:15.563 --> 00:18:17.870
+<v Batbayar Galbraith>Just heads-down on the usual stuff.
+
+26
+00:18:19.138 --> 00:18:21.061
+<v Amira Baek>Nothing new from my side.
+
+27
+00:18:21.479 --> 00:18:22.479
+<v Giorgi Wisniewska>Mm.
+
+28
+00:18:35.866 --> 00:18:37.405
+<v Oksana Hoffmann>Great, let's wrap there.
+
+29
+00:18:38.363 --> 00:18:39.363
+<v Adwoa K.>Thanks!

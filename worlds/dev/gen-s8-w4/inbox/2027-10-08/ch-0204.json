@@ -1,0 +1,41 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-marcelo-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Marcelo Meijer",
+  "Ottavio Bakker"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-08T07:21:15-06:00",
+   "user": "Marcelo Meijer",
+   "handle": "@marcelo",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-10-08T07:25:00-06:00",
+   "user": "Marcelo Meijer",
+   "handle": "@marcelo",
+   "text": "I sent you the Fulmar status slide v2."
+  },
+  {
+   "ts": "2027-10-08T07:25:38-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "great, thanks"
+  },
+  {
+   "ts": "2027-10-08T07:27:03-06:00",
+   "user": "Marcelo Meijer",
+   "handle": "@marcelo",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-10-08T07:29:46-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "no worries :)"
+  }
+ ]
+}

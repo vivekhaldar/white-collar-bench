@@ -1,0 +1,33 @@
+{
+ "workspace": "holcrest",
+ "channel": "#benefits-screening-core",
+ "kind": "channel",
+ "participants": [
+  "Jalen",
+  "Camila Abernathy",
+  "Andrei Lindgren",
+  "Ifeoma Chevalier",
+  "Corinne Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-08T15:45:00-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "@camila when you get a chance, could you send me the benefits screening discovery change request?"
+  },
+  {
+   "ts": "2027-11-08T15:45:26-07:00",
+   "user": "Corinne Kaya",
+   "handle": "@corinne",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-11-08T15:54:33-07:00",
+   "user": "Andrei Lindgren",
+   "handle": "@andrei",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

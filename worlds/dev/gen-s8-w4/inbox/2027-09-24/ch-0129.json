@@ -1,0 +1,33 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#production-scheduling-core",
+ "kind": "channel",
+ "participants": [
+  "Adwoa",
+  "Amira Baek",
+  "Ottavio Bakker"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-24T13:32:00-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "Production Scheduling Learning Series is moving into scheduling.",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@amira"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-24T13:33:01-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "noted :)",
+   "thread_of": 0
+  }
+ ]
+}

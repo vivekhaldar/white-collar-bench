@@ -1,0 +1,6 @@
+{"workspace": "larchmont", "channel": "dm-ben-ada", "kind": "dm", "participants": ["Ben Okoro", "Ada Quist"],
+ "messages": [
+  {"ts": "2027-01-05T10:00:12-08:00", "user": "Ben Okoro", "handle": "@ben", "text": "morning! for the ledger cleanup I'm reconciling january GL data before we move to the sandbox. I'll get you the january reconciliation report once it's done"},
+  {"ts": "2027-01-05T10:04:40-08:00", "user": "Ben Okoro", "handle": "@ben", "text": "also could you approve my access request for the GL sandbox? it's in your queue"},
+  {"ts": "2027-01-05T10:05:02-08:00", "user": "Ada Quist", "handle": "@ada", "text": "will do"}
+ ]}

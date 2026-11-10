@@ -1,0 +1,41 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Oluwaseun Demir",
+  "Andres Erdem",
+  "Wei Rossi",
+  "Aiko Venkataraman"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-18T15:39:40-08:00",
+   "user": "Oluwaseun Demir",
+   "handle": "@oluwaseun",
+   "text": "who left a lunchbox in the fridge since last week? :)",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@andres",
+      "@wei"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-18T15:44:06-08:00",
+   "user": "Andres Erdem",
+   "handle": "@andres",
+   "text": "not me!",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-18T15:48:25-08:00",
+   "user": "Wei Rossi",
+   "handle": "@wei",
+   "text": "it's been there a while"
+  }
+ ]
+}

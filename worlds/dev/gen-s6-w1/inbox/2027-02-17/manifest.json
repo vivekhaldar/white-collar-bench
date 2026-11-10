@@ -1,0 +1,145 @@
+{
+  "date": "2027-02-17",
+  "artifacts": [
+    {
+      "id": "em-0051",
+      "channel": "email",
+      "received_at": "2027-02-17T07:40:00-08:00",
+      "path": "em-0051.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0052",
+      "channel": "email",
+      "received_at": "2027-02-17T08:18:00-08:00",
+      "path": "em-0052.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "em-0053",
+      "channel": "email",
+      "received_at": "2027-02-17T08:31:00-08:00",
+      "path": "em-0053.eml",
+      "title": "Fennel operating model review session"
+    },
+    {
+      "id": "em-0054",
+      "channel": "email",
+      "received_at": "2027-02-17T09:10:00-08:00",
+      "path": "em-0054.eml",
+      "title": "Re: Axolotl architecture diagram"
+    },
+    {
+      "id": "mt-0005",
+      "channel": "transcript",
+      "received_at": "2027-02-17T09:55:00-08:00",
+      "path": "mt-0005.vtt",
+      "title": "Axolotl standup (transcript)"
+    },
+    {
+      "id": "em-0055",
+      "channel": "email",
+      "received_at": "2027-02-17T09:58:00-08:00",
+      "path": "em-0055.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "ch-0048",
+      "channel": "chat",
+      "received_at": "2027-02-17T10:42:00-08:00",
+      "path": "ch-0048.json",
+      "title": "DM: Losa Moretti / Despina Pereira"
+    },
+    {
+      "id": "ch-0049",
+      "channel": "chat",
+      "received_at": "2027-02-17T11:13:00-08:00",
+      "path": "ch-0049.json",
+      "title": "DM: Losa Moretti / Despina Pereira"
+    },
+    {
+      "id": "em-0056",
+      "channel": "email",
+      "received_at": "2027-02-17T11:21:00-08:00",
+      "path": "em-0056.eml",
+      "title": "To Oluwaseun for the alumni outreach work"
+    },
+    {
+      "id": "em-0057",
+      "channel": "email",
+      "received_at": "2027-02-17T11:39:00-08:00",
+      "path": "em-0057.eml",
+      "title": "Catering menu for next month"
+    },
+    {
+      "id": "em-0058",
+      "channel": "email",
+      "received_at": "2027-02-17T12:07:00-08:00",
+      "path": "em-0058.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0059",
+      "channel": "email",
+      "received_at": "2027-02-17T13:32:00-08:00",
+      "path": "em-0059.eml",
+      "title": "Re: Fennel operating model comparison table"
+    },
+    {
+      "id": "em-0060",
+      "channel": "email",
+      "received_at": "2027-02-17T13:34:00-08:00",
+      "path": "em-0060.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0061",
+      "channel": "email",
+      "received_at": "2027-02-17T14:03:00-08:00",
+      "path": "em-0061.eml",
+      "title": "Re: Axolotl vendor comparison"
+    },
+    {
+      "id": "em-0062",
+      "channel": "email",
+      "received_at": "2027-02-17T14:14:00-08:00",
+      "path": "em-0062.eml",
+      "title": "Re: FYI: Fennel model allow-list"
+    },
+    {
+      "id": "mn-0008",
+      "channel": "meeting_notes",
+      "received_at": "2027-02-17T14:30:00-08:00",
+      "path": "mn-0008.md",
+      "title": "Recap: Axolotl scoping call"
+    },
+    {
+      "id": "mt-0006",
+      "channel": "transcript",
+      "received_at": "2027-02-17T14:30:00-08:00",
+      "path": "mt-0006.vtt",
+      "title": "Fennel platform sync (transcript)"
+    },
+    {
+      "id": "mt-0007",
+      "channel": "transcript",
+      "received_at": "2027-02-17T14:30:00-08:00",
+      "path": "mt-0007.vtt",
+      "title": "Axolotl scoping call (transcript)"
+    },
+    {
+      "id": "ch-0050",
+      "channel": "chat",
+      "received_at": "2027-02-17T16:46:00-08:00",
+      "path": "ch-0050.json",
+      "title": "DM: Despina Pereira / Milena Mayfield"
+    },
+    {
+      "id": "em-0063",
+      "channel": "email",
+      "received_at": "2027-02-17T16:49:00-08:00",
+      "path": "em-0063.eml",
+      "title": "[INC-44587] Ticket updated"
+    }
+  ]
+}

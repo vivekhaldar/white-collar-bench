@@ -1,0 +1,47 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-hiba-rudo",
+ "kind": "dm",
+ "participants": [
+  "Rudo Ekwueme",
+  "Hiba Deng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-22T11:54:39-05:00",
+   "user": "Rudo Ekwueme",
+   "handle": "@rudo",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-03-22T11:55:25-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-03-22T11:55:46-05:00",
+   "user": "Rudo Ekwueme",
+   "handle": "@rudo",
+   "text": "done, i sent you the wagtail metrics definition"
+  },
+  {
+   "ts": "2027-03-22T11:56:42-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-03-22T12:00:02-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-03-22T12:01:44-05:00",
+   "user": "Rudo Ekwueme",
+   "handle": "@rudo",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

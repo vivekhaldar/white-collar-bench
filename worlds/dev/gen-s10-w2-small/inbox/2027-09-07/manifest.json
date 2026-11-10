@@ -1,0 +1,103 @@
+{
+  "date": "2027-09-07",
+  "artifacts": [
+    {
+      "id": "ch-0063",
+      "channel": "chat",
+      "received_at": "2027-09-07T09:15:00+01:00",
+      "path": "ch-0063.json",
+      "title": "#nettle-core"
+    },
+    {
+      "id": "em-0090",
+      "channel": "email",
+      "received_at": "2027-09-07T09:21:00+01:00",
+      "path": "em-0090.eml",
+      "title": "Introduction: translation help selection"
+    },
+    {
+      "id": "em-0091",
+      "channel": "email",
+      "received_at": "2027-09-07T11:17:00+01:00",
+      "path": "em-0091.eml",
+      "title": "Noris sandbox credentials"
+    },
+    {
+      "id": "ch-0064",
+      "channel": "chat",
+      "received_at": "2027-09-07T11:48:00+01:00",
+      "path": "ch-0064.json",
+      "title": "DM: Akosua Bergstrom / Aoife Everett"
+    },
+    {
+      "id": "ch-0065",
+      "channel": "chat",
+      "received_at": "2027-09-07T14:32:00+01:00",
+      "path": "ch-0065.json",
+      "title": "DM: Amani Xu / Aoife Everett"
+    },
+    {
+      "id": "ca-0006",
+      "channel": "calendar",
+      "received_at": "2027-09-07T14:56:00+01:00",
+      "path": "ca-0006.ics",
+      "title": "Invite: Nettle review"
+    },
+    {
+      "id": "em-0092",
+      "channel": "email",
+      "received_at": "2027-09-07T15:57:00+01:00",
+      "path": "em-0092.eml",
+      "title": "Re: Nettle staging access"
+    },
+    {
+      "id": "em-0093",
+      "channel": "email",
+      "received_at": "2027-09-07T16:29:00+01:00",
+      "path": "em-0093.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "mt-0014",
+      "channel": "transcript",
+      "received_at": "2027-09-07T16:30:00+01:00",
+      "path": "mt-0014.vtt",
+      "title": "Pantry inventory discovery / Pipit sync (transcript)"
+    },
+    {
+      "id": "ch-0066",
+      "channel": "chat",
+      "received_at": "2027-09-07T16:57:00+01:00",
+      "path": "ch-0066.json",
+      "title": "DM: Akosua Bergstrom / Aoife Everett"
+    },
+    {
+      "id": "ch-0067",
+      "channel": "chat",
+      "received_at": "2027-09-07T16:59:00+01:00",
+      "path": "ch-0067.json",
+      "title": "#nettle-core"
+    },
+    {
+      "id": "ch-0068",
+      "channel": "chat",
+      "received_at": "2027-09-07T17:08:00+01:00",
+      "path": "ch-0068.json",
+      "title": "#translation-help-selection-core"
+    },
+    {
+      "id": "em-0094",
+      "channel": "email",
+      "received_at": "2027-09-07T17:46:00+01:00",
+      "path": "em-0094.eml",
+      "title": "Re: Sipho's Pipit board paper"
+    },
+    {
+      "id": "em-0095",
+      "channel": "email",
+      "received_at": "2027-09-07T21:32:00+01:00",
+      "path": "em-0095.eml",
+      "title": "Draft: Nettle rollout checklist"
+    }
+  ]
+}

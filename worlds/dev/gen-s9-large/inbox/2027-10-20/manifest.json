@@ -1,0 +1,138 @@
+{
+  "date": "2027-10-20",
+  "artifacts": [
+    {
+      "id": "em-0018",
+      "channel": "email",
+      "received_at": "2027-10-20T07:43:00-05:00",
+      "path": "em-0018.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "em-0019",
+      "channel": "email",
+      "received_at": "2027-10-20T08:01:00-05:00",
+      "path": "em-0019.eml",
+      "title": "Parking lot resurfacing"
+    },
+    {
+      "id": "ch-0024",
+      "channel": "chat",
+      "received_at": "2027-10-20T08:26:00-05:00",
+      "path": "ch-0024.json",
+      "title": "DM: Aylin Bianchi / Aroha Mendoza"
+    },
+    {
+      "id": "ca-0003",
+      "channel": "calendar",
+      "received_at": "2027-10-20T10:03:00-05:00",
+      "path": "ca-0003.ics",
+      "title": "Invite: Working session: Clelera enterprise agreement status slide with Aroha"
+    },
+    {
+      "id": "ch-0025",
+      "channel": "chat",
+      "received_at": "2027-10-20T10:53:00-05:00",
+      "path": "ch-0025.json",
+      "title": "DM: Mathieu Wijaya / Aroha Mendoza"
+    },
+    {
+      "id": "em-0020",
+      "channel": "email",
+      "received_at": "2027-10-20T11:02:00-05:00",
+      "path": "em-0020.eml",
+      "title": "Re: Cirrus API contract v2"
+    },
+    {
+      "id": "em-0021",
+      "channel": "email",
+      "received_at": "2027-10-20T11:17:00-05:00",
+      "path": "em-0021.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "em-0022",
+      "channel": "email",
+      "received_at": "2027-10-20T11:52:00-05:00",
+      "path": "em-0022.eml",
+      "title": "Call for proposals closes Wednesday 3 November"
+    },
+    {
+      "id": "ch-0026",
+      "channel": "chat",
+      "received_at": "2027-10-20T13:01:00-05:00",
+      "path": "ch-0026.json",
+      "title": "DM: Aroha Mendoza / Winifred Tanaka"
+    },
+    {
+      "id": "em-0023",
+      "channel": "email",
+      "received_at": "2027-10-20T13:43:00-05:00",
+      "path": "em-0023.eml",
+      "title": "Fwd: Informatics nurse specialist candidate pack"
+    },
+    {
+      "id": "mn-0005",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-20T14:30:00-05:00",
+      "path": "mn-0005.md",
+      "title": "Recap: Kittiwake platform sync"
+    },
+    {
+      "id": "ch-0027",
+      "channel": "chat",
+      "received_at": "2027-10-20T15:37:00-05:00",
+      "path": "ch-0027.json",
+      "title": "#general"
+    },
+    {
+      "id": "mn-0006",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-20T15:45:00-05:00",
+      "path": "mn-0006.md",
+      "title": "Recap: Bed management selection / Cirrus sync"
+    },
+    {
+      "id": "em-0024",
+      "channel": "email",
+      "received_at": "2027-10-20T16:55:00-05:00",
+      "path": "em-0024.eml",
+      "title": "Re: FYI: Nurses onboarding sessions for Cirrus"
+    },
+    {
+      "id": "mt-0001",
+      "channel": "transcript",
+      "received_at": "2027-10-20T17:15:00-05:00",
+      "path": "mt-0001.vtt",
+      "title": "Catch-up: Aroha / Winifred (transcript)"
+    },
+    {
+      "id": "ch-0028",
+      "channel": "chat",
+      "received_at": "2027-10-20T17:38:00-05:00",
+      "path": "ch-0028.json",
+      "title": "DM: Daniela Ochieng / Aroha Mendoza"
+    },
+    {
+      "id": "em-0025",
+      "channel": "email",
+      "received_at": "2027-10-20T17:46:00-05:00",
+      "path": "em-0025.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0026",
+      "channel": "email",
+      "received_at": "2027-10-20T17:58:00-05:00",
+      "path": "em-0026.eml",
+      "title": "Product update roundup"
+    },
+    {
+      "id": "ch-0029",
+      "channel": "chat",
+      "received_at": "2027-10-20T18:00:00-05:00",
+      "path": "ch-0029.json",
+      "title": "DM: Anh Villanueva / Aroha Mendoza"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Birchmere//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:214949309e82965a@birchmere.example
+DTSTAMP:20270909T210400Z
+DTSTART:20270910T183000Z
+DTEND:20270910T190000Z
+SUMMARY:Catch-up: Alasdair / Somchai
+ORGANIZER;CN=Somchai Thapa:mailto:somchai.thapa@emberbury.birchmere.example
+ATTENDEE;CN=Alasdair Kaya;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:alasdair.kaya@birchmere.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.birchmere.example/j/4778218420?pwd=t8j2KCqA\nPasscode: 886165
+LOCATION:https://meet.birchmere.example/j/4778218420?pwd=t8j2KCqA
+END:VEVENT
+END:VCALENDAR

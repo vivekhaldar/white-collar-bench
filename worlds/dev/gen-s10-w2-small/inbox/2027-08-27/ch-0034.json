@@ -1,0 +1,36 @@
+{
+ "workspace": "reddale",
+ "channel": "#pantry-inventory-discovery-core",
+ "kind": "channel",
+ "participants": [
+  "Aoife Everett",
+  "Amani",
+  "Akosua",
+  "Catrin Dang"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-27T15:18:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "@akosua leave it with me, i'll send you the pantry inventory discovery stakeholder map",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@akosua",
+      "@catrin",
+      "@amani"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-08-27T15:24:20+01:00",
+   "user": "Akosua",
+   "handle": "@akosua",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

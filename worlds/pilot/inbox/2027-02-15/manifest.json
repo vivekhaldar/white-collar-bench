@@ -1,0 +1,26 @@
+{
+  "date": "2027-02-15",
+  "artifacts": [
+    {
+      "id": "nt-0001",
+      "channel": "note",
+      "received_at": "2027-02-15T08:05:00-08:00",
+      "path": "nt-0001.md",
+      "title": "Portfolio map, spring half"
+    },
+    {
+      "id": "em-0001",
+      "channel": "email",
+      "received_at": "2027-02-15T09:32:00-08:00",
+      "path": "em-0001.eml",
+      "title": "Spring priorities and how I'd like updates"
+    },
+    {
+      "id": "ch-0001",
+      "channel": "chat",
+      "received_at": "2027-02-15T11:04:00-08:00",
+      "path": "ch-0001.json",
+      "title": "#tinderbox-core: one-pager for ARB prep"
+    }
+  ]
+}

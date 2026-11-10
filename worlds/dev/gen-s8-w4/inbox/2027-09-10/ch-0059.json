@@ -1,0 +1,33 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Baraka Chevalier",
+  "Marcelo Meijer",
+  "Hamish Okada",
+  "Oksana Hoffmann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-10T12:12:26-06:00",
+   "user": "Baraka Chevalier",
+   "handle": "@baraka",
+   "text": "is it just me or is it freezing on 3 today?"
+  },
+  {
+   "ts": "2027-09-10T12:18:20-06:00",
+   "user": "Marcelo Meijer",
+   "handle": "@marcelo",
+   "text": "not just you",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-10T12:24:27-06:00",
+   "user": "Hamish Okada",
+   "handle": "@hamish",
+   "text": "bring a jumper",
+   "thread_of": 0
+  }
+ ]
+}

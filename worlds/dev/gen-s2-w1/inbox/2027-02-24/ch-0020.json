@@ -1,0 +1,49 @@
+{
+ "workspace": "vercliff",
+ "channel": "#fennel-core",
+ "kind": "channel",
+ "participants": [
+  "Yael Ellery",
+  "Dina Ricci",
+  "Cassandra Yilmaz",
+  "Imani",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
+  "Thibault Sahin"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-24T15:47:31-07:00",
+   "user": "Yael Ellery",
+   "handle": "@yael",
+   "text": "@dina recap from yesterday: I asked you to review my Fennel RACI chart; nothing agreed yet."
+  },
+  {
+   "ts": "2027-02-24T15:48:37-07:00",
+   "user": "Thibault Sahin",
+   "handle": "@thibault",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-02-24T15:57:46-07:00",
+   "user": "Naoko Sandoval",
+   "handle": "@naoko",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-24T16:03:45-07:00",
+   "user": "Cassandra Yilmaz",
+   "handle": "@cassandra",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-24T16:13:11-07:00",
+   "user": "Thibault Sahin",
+   "handle": "@thibault",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

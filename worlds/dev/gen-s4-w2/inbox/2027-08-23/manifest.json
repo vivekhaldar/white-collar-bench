@@ -1,0 +1,146 @@
+{
+  "date": "2027-08-23",
+  "artifacts": [
+    {
+      "id": "em-0001",
+      "channel": "email",
+      "received_at": "2027-08-23T06:57:00-08:00",
+      "path": "em-0001.eml",
+      "title": "Reminder: Friday status note due Friday 27 August"
+    },
+    {
+      "id": "em-0002",
+      "channel": "email",
+      "received_at": "2027-08-23T07:53:00-08:00",
+      "path": "em-0002.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "nt-0001",
+      "channel": "note",
+      "received_at": "2027-08-23T08:05:00-08:00",
+      "path": "nt-0001.md",
+      "title": "Portfolio map"
+    },
+    {
+      "id": "ca-0001",
+      "channel": "calendar",
+      "received_at": "2027-08-23T08:13:00-08:00",
+      "path": "ca-0001.ics",
+      "title": "Cancelled: Fjord standup"
+    },
+    {
+      "id": "em-0003",
+      "channel": "email",
+      "received_at": "2027-08-23T10:01:00-08:00",
+      "path": "em-0003.eml",
+      "title": "Wellness credit deadline"
+    },
+    {
+      "id": "mt-0001",
+      "channel": "transcript",
+      "received_at": "2027-08-23T11:00:00-08:00",
+      "path": "mt-0001.vtt",
+      "title": "Fjord scoping call (transcript)"
+    },
+    {
+      "id": "em-0004",
+      "channel": "email",
+      "received_at": "2027-08-23T11:38:00-08:00",
+      "path": "em-0004.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "mt-0002",
+      "channel": "transcript",
+      "received_at": "2027-08-23T11:45:00-08:00",
+      "path": "mt-0002.vtt",
+      "title": "SLIO leads call (transcript)"
+    },
+    {
+      "id": "em-0005",
+      "channel": "email",
+      "received_at": "2027-08-23T13:29:00-08:00",
+      "path": "em-0005.eml",
+      "title": "Re: FYI: List of pilot courses for Fjord"
+    },
+    {
+      "id": "em-0006",
+      "channel": "email",
+      "received_at": "2027-08-23T14:47:00-08:00",
+      "path": "em-0006.eml",
+      "title": "Your benefits statement is ready"
+    },
+    {
+      "id": "em-0007",
+      "channel": "email",
+      "received_at": "2027-08-23T15:20:00-08:00",
+      "path": "em-0007.eml",
+      "title": "Re: Course assistant discovery comms plan after Meera's comments"
+    },
+    {
+      "id": "em-0008",
+      "channel": "email",
+      "received_at": "2027-08-23T15:30:00-08:00",
+      "path": "em-0008.eml",
+      "title": "[INC-59334] Ticket updated"
+    },
+    {
+      "id": "dc-0001",
+      "channel": "document",
+      "received_at": "2027-08-23T15:45:00-08:00",
+      "path": "dc-0001.docx",
+      "title": "Course assistant discovery comms plan after Meera's comments v1",
+      "parent": "em-0009"
+    },
+    {
+      "id": "em-0009",
+      "channel": "email",
+      "received_at": "2027-08-23T15:45:00-08:00",
+      "path": "em-0009.eml",
+      "title": "Re: Course assistant discovery comms plan after Meera's comments"
+    },
+    {
+      "id": "em-0010",
+      "channel": "email",
+      "received_at": "2027-08-23T16:12:00-08:00",
+      "path": "em-0010.eml",
+      "title": "Course assistant discovery accessibility review after Meera's comments"
+    },
+    {
+      "id": "ch-0001",
+      "channel": "chat",
+      "received_at": "2027-08-23T16:49:00-08:00",
+      "path": "ch-0001.json",
+      "title": "DM: Ottavio Moreira / Darius Bramwell"
+    },
+    {
+      "id": "em-0011",
+      "channel": "email",
+      "received_at": "2027-08-23T16:56:00-08:00",
+      "path": "em-0011.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0002",
+      "channel": "chat",
+      "received_at": "2027-08-23T17:07:00-08:00",
+      "path": "ch-0002.json",
+      "title": "#course-assistant-discovery-core"
+    },
+    {
+      "id": "ch-0003",
+      "channel": "chat",
+      "received_at": "2027-08-23T17:17:00-08:00",
+      "path": "ch-0003.json",
+      "title": "DM: Nadia Vogel / Ottavio Moreira"
+    },
+    {
+      "id": "em-0012",
+      "channel": "email",
+      "received_at": "2027-08-23T18:22:00-08:00",
+      "path": "em-0012.eml",
+      "title": "Re: Notes from the thesis formatting session"
+    }
+  ]
+}

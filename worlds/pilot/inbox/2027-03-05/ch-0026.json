@@ -1,0 +1,13 @@
+{
+  "workspace": "tarrow",
+  "channel": "dm-marisol-mara",
+  "kind": "dm",
+  "participants": ["Marisol Etxeberria", "Mara Ilves"],
+  "messages": [
+    {"ts": "2027-03-05T17:05:12-08:00", "user": "Marisol Etxeberria", "handle": "@marisol", "text": "hiya - this landed from Mats at 16:22:\n> Hi Marisol, thank you again for yesterday. I've now spoken with my manager, and my current employer needs me through end of April for the notice period - could we push my start date to Monday 10 May? I'm sorry to raise this after accepting. - Mats"},
+    {"ts": "2027-03-05T17:06:03-08:00", "user": "Marisol Etxeberria", "handle": "@marisol", "text": "Problem: REQ-2207 funding requires a start by 30 April. I'm reopening the offer on our side and will find out whether the start date can move past 30 April. Don't celebrate yet 😬"},
+    {"ts": "2027-03-05T17:06:51-08:00", "user": "Marisol Etxeberria", "handle": "@marisol", "text": "so for now he's back to candidate status in TarrowRecruit - he accepted the offer yesterday, but until we land a date the requisition can fund, nothing's settled. the 29 March start is off and there's no start date on file"},
+    {"ts": "2027-03-05T17:07:24-08:00", "user": "Marisol Etxeberria", "handle": "@marisol", "text": "if the funding rule won't bend and he can't come earlier, this one could slip away from us. hoping not!"},
+    {"ts": "2027-03-05T17:08:10-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "ugh. ok, keep me posted"}
+  ]
+}

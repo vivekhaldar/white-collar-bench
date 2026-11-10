@@ -1,0 +1,29 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-kian",
+ "kind": "dm",
+ "participants": [
+  "Kian Ishikawa",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-06T11:22:00-06:00",
+   "user": "Kian Ishikawa",
+   "handle": "@kian",
+   "text": "Could you send me the AI-use consultation plan?"
+  },
+  {
+   "ts": "2027-09-06T11:23:30-06:00",
+   "user": "Kian Ishikawa",
+   "handle": "@kian",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-09-06T11:26:54-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "no worries"
+  }
+ ]
+}

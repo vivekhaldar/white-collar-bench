@@ -1,0 +1,35 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-anahit-hiba",
+ "kind": "dm",
+ "participants": [
+  "Anahit Fifita",
+  "Hiba Deng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-22T07:56:00-05:00",
+   "user": "Anahit Fifita",
+   "handle": "@anahit",
+   "text": "I shared the Wagtail status slide with you!"
+  },
+  {
+   "ts": "2027-03-22T07:56:54-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-03-22T07:58:44-05:00",
+   "user": "Anahit Fifita",
+   "handle": "@anahit",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-03-22T08:00:59-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "only the first half"
+  }
+ ]
+}

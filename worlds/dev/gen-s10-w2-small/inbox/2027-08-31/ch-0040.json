@@ -1,0 +1,47 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-sipho",
+ "kind": "dm",
+ "participants": [
+  "Sipho Papadopoulos",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-31T13:23:30+01:00",
+   "user": "Sipho Papadopoulos",
+   "handle": "@sipho",
+   "text": "hey :)"
+  },
+  {
+   "ts": "2027-08-31T13:24:46+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-08-31T13:27:00+01:00",
+   "user": "Sipho Papadopoulos",
+   "handle": "@sipho",
+   "text": "I'll fix the Pipit stale cache! :)"
+  },
+  {
+   "ts": "2027-08-31T13:27:36+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "great, thank you"
+  },
+  {
+   "ts": "2027-08-31T13:31:12+01:00",
+   "user": "Sipho Papadopoulos",
+   "handle": "@sipho",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-08-31T13:33:40+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "anytime"
+  }
+ ]
+}

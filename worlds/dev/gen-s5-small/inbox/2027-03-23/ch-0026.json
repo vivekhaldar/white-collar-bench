@@ -1,0 +1,47 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-hiba-lindiwe",
+ "kind": "dm",
+ "participants": [
+  "Lindiwe Ribeiro",
+  "Hiba Deng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-23T07:47:09-05:00",
+   "user": "Lindiwe Ribeiro",
+   "handle": "@lindiwe",
+   "text": "morning!"
+  },
+  {
+   "ts": "2027-03-23T07:48:15-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-03-23T07:49:00-05:00",
+   "user": "Lindiwe Ribeiro",
+   "handle": "@lindiwe",
+   "text": "For the record, you sent me the Friday status note for w/e 19 March on Friday!"
+  },
+  {
+   "ts": "2027-03-23T07:50:21-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-03-23T07:52:54-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-03-23T07:56:44-05:00",
+   "user": "Lindiwe Ribeiro",
+   "handle": "@lindiwe",
+   "text": "anytime :)"
+  }
+ ]
+}

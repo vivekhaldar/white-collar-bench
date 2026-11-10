@@ -1,0 +1,37 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-bisin",
+ "kind": "dm",
+ "participants": [
+  "Bisi",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-09T07:10:00-05:00",
+   "user": "Bisi",
+   "handle": "@bisin",
+   "text": "Reopening the two customer references from Rosix: it was sent to the wrong group.",
+   "edited": true,
+   "original": "Reopening the two cutsomer references from Rosix: it was sent to the wrong group."
+  },
+  {
+   "ts": "2027-09-09T07:11:08-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-09-09T07:12:56-05:00",
+   "user": "Bisi",
+   "handle": "@bisin",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-09-09T07:15:25-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "yep, all good"
+  }
+ ]
+}

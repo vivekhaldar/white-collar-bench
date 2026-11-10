@@ -1,0 +1,63 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#axolotl-core",
+ "kind": "channel",
+ "participants": [
+  "Liisa Babic",
+  "Despina Pereira",
+  "Losa Moretti",
+  "Andres",
+  "Nathaniel Cartwright",
+  "Karim Navarro",
+  "Tomas Deng",
+  "Carys Laurent",
+  "Lindiwe Baek",
+  "Jurgen Dvorak"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-15T14:10:00-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "Despina would like Andres to send Despina the Axolotl faculty survey, not agreed yet.",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@despina",
+      "@losa",
+      "@andres"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-15T14:10:36-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "perfect, thanks",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-15T14:20:22-08:00",
+   "user": "Losa Moretti",
+   "handle": "@losa",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-15T14:20:53-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-15T14:28:03-08:00",
+   "user": "Jurgen Dvorak",
+   "handle": "@jurgen",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

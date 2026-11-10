@@ -1,0 +1,75 @@
+{
+  "date": "2027-03-15",
+  "artifacts": [
+    {
+      "id": "em-0001",
+      "channel": "email",
+      "received_at": "2027-03-15T07:03:00-05:00",
+      "path": "em-0001.eml",
+      "title": "Reminder: Friday status note due Friday 19 March"
+    },
+    {
+      "id": "nt-0001",
+      "channel": "note",
+      "received_at": "2027-03-15T08:05:00-05:00",
+      "path": "nt-0001.md",
+      "title": "Portfolio map"
+    },
+    {
+      "id": "em-0002",
+      "channel": "email",
+      "received_at": "2027-03-15T09:53:00-05:00",
+      "path": "em-0002.eml",
+      "title": "Re: Okapi tenant onboarding guide"
+    },
+    {
+      "id": "em-0003",
+      "channel": "email",
+      "received_at": "2027-03-15T10:05:00-05:00",
+      "path": "em-0003.eml",
+      "title": "FYI: Grion deep-dive materials"
+    },
+    {
+      "id": "em-0004",
+      "channel": "email",
+      "received_at": "2027-03-15T11:27:00-05:00",
+      "path": "em-0004.eml",
+      "title": "All-staff: building access changes"
+    },
+    {
+      "id": "em-0005",
+      "channel": "email",
+      "received_at": "2027-03-15T12:31:00-05:00",
+      "path": "em-0005.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "ch-0001",
+      "channel": "chat",
+      "received_at": "2027-03-15T13:46:00-05:00",
+      "path": "ch-0001.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0002",
+      "channel": "chat",
+      "received_at": "2027-03-15T16:52:00-05:00",
+      "path": "ch-0002.json",
+      "title": "#general"
+    },
+    {
+      "id": "mt-0001",
+      "channel": "transcript",
+      "received_at": "2027-03-15T17:00:00-05:00",
+      "path": "mt-0001.vtt",
+      "title": "Catch-up: Hiba / Aylin (transcript)"
+    },
+    {
+      "id": "em-0006",
+      "channel": "email",
+      "received_at": "2027-03-15T18:22:00-05:00",
+      "path": "em-0006.eml",
+      "title": "Wellbeing week activities"
+    }
+  ]
+}

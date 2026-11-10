@@ -1,0 +1,41 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Ottavio Bakker"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-15T16:57:35-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-09-15T17:00:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "i sent you the ai-use glossary"
+  },
+  {
+   "ts": "2027-09-15T17:00:08-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-09-15T17:04:14-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-09-15T17:05:52-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "no worries"
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+  "date": "2027-03-31",
+  "artifacts": [
+    {
+      "id": "ch-0057",
+      "channel": "chat",
+      "received_at": "2027-03-31T08:34:00-05:00",
+      "path": "ch-0057.json",
+      "title": "DM: Hiba Deng / Lakshmi Figueroa"
+    },
+    {
+      "id": "em-0068",
+      "channel": "email",
+      "received_at": "2027-03-31T09:22:00-05:00",
+      "path": "em-0068.eml",
+      "title": "Introduction: Wagtail"
+    },
+    {
+      "id": "em-0069",
+      "channel": "email",
+      "received_at": "2027-03-31T11:36:00-05:00",
+      "path": "em-0069.eml",
+      "title": "[REQ-29495] Request resolved"
+    },
+    {
+      "id": "ch-0058",
+      "channel": "chat",
+      "received_at": "2027-03-31T11:38:00-05:00",
+      "path": "ch-0058.json",
+      "title": "#wagtail-core"
+    },
+    {
+      "id": "ch-0059",
+      "channel": "chat",
+      "received_at": "2027-03-31T11:59:00-05:00",
+      "path": "ch-0059.json",
+      "title": "DM: Hiba Deng / Friederike Bhatt"
+    },
+    {
+      "id": "em-0070",
+      "channel": "email",
+      "received_at": "2027-03-31T13:11:00-05:00",
+      "path": "em-0070.eml",
+      "title": "Re: Wagtail: numbers"
+    },
+    {
+      "id": "mn-0009",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-31T14:30:00-05:00",
+      "path": "mn-0009.md",
+      "title": "Recap: Okapi platform sync"
+    },
+    {
+      "id": "ch-0060",
+      "channel": "chat",
+      "received_at": "2027-03-31T15:37:00-05:00",
+      "path": "ch-0060.json",
+      "title": "DM: Isla Faure / Hiba Deng"
+    },
+    {
+      "id": "em-0071",
+      "channel": "email",
+      "received_at": "2027-03-31T16:49:00-05:00",
+      "path": "em-0071.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "ch-0061",
+      "channel": "chat",
+      "received_at": "2027-03-31T18:12:00-05:00",
+      "path": "ch-0061.json",
+      "title": "DM: Anahit Fifita / Hiba Deng"
+    },
+    {
+      "id": "ch-0062",
+      "channel": "chat",
+      "received_at": "2027-03-31T18:19:00-05:00",
+      "path": "ch-0062.json",
+      "title": "DM: Lakshmi Figueroa / Hiba Deng"
+    }
+  ]
+}

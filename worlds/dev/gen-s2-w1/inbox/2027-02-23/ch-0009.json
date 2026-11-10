@@ -1,0 +1,33 @@
+{
+ "workspace": "vercliff",
+ "channel": "#pothole-reporting-core",
+ "kind": "channel",
+ "participants": [
+  "Nomvula Jansen",
+  "Dina Ricci",
+  "Imani Navarro",
+  "Tendai",
+  "Catrin Kuznetsova"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-23T13:06:49-07:00",
+   "user": "Nomvula Jansen",
+   "handle": "@nomvula",
+   "text": "@dina for the record, you sent me the pothole reporting selection requirements list yesterday"
+  },
+  {
+   "ts": "2027-02-23T13:07:37-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-02-23T13:15:19-07:00",
+   "user": "Tendai",
+   "handle": "@tendai",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

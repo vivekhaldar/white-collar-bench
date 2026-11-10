@@ -1,0 +1,31 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-anh-aroha",
+ "kind": "dm",
+ "participants": [
+  "Anh Villanueva",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-02T07:46:45-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "Recap from Thursday: you agreed to review my radiology follow-up discovery process map!",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@aroha"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-02T07:47:17-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "sure, can do"
+  }
+ ]
+}

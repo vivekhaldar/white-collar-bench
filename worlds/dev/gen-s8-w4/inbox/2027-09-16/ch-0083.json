@@ -1,0 +1,54 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#fulmar-core",
+ "kind": "channel",
+ "participants": [
+  "Oksana Hoffmann",
+  "Amira Baek",
+  "Ottavio Bakker",
+  "Adwoa Kocak",
+  "Giorgi Wisniewska",
+  "Marcelo Meijer",
+  "Batbayar Galbraith",
+  "Thibault Kowalski",
+  "Kamau Greco",
+  "Shirin Oyelami"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-16T08:23:00-06:00",
+   "user": "Oksana Hoffmann",
+   "handle": "@oksana",
+   "text": "@amira done, I shared the Fulmar metrics definition with you!",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@adwoa"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-16T08:27:08-06:00",
+   "user": "Giorgi Wisniewska",
+   "handle": "@giorgi",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-16T08:29:37-06:00",
+   "user": "Thibault Kowalski",
+   "handle": "@thibault",
+   "text": "+1",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-16T08:36:53-06:00",
+   "user": "Shirin Oyelami",
+   "handle": "@shirin",
+   "text": "+1 :)",
+   "thread_of": 0
+  }
+ ]
+}

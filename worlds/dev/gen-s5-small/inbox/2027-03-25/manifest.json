@@ -1,0 +1,96 @@
+{
+  "date": "2027-03-25",
+  "artifacts": [
+    {
+      "id": "em-0043",
+      "channel": "email",
+      "received_at": "2027-03-25T06:44:00-05:00",
+      "path": "em-0043.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "mt-0011",
+      "channel": "transcript",
+      "received_at": "2027-03-25T10:00:00-05:00",
+      "path": "mt-0011.vtt",
+      "title": "Wagtail standup (transcript)"
+    },
+    {
+      "id": "ch-0033",
+      "channel": "chat",
+      "received_at": "2027-03-25T10:38:00-05:00",
+      "path": "ch-0033.json",
+      "title": "DM: Lakshmi Figueroa / Hiba Deng"
+    },
+    {
+      "id": "em-0044",
+      "channel": "email",
+      "received_at": "2027-03-25T12:46:00-05:00",
+      "path": "em-0044.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0045",
+      "channel": "email",
+      "received_at": "2027-03-25T13:10:00-05:00",
+      "path": "em-0045.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0034",
+      "channel": "chat",
+      "received_at": "2027-03-25T13:23:00-05:00",
+      "path": "ch-0034.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0046",
+      "channel": "email",
+      "received_at": "2027-03-25T15:35:00-05:00",
+      "path": "em-0046.eml",
+      "title": "Clinical IT Briefing: issue 12"
+    },
+    {
+      "id": "em-0047",
+      "channel": "email",
+      "received_at": "2027-03-25T15:52:00-05:00",
+      "path": "em-0047.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0035",
+      "channel": "chat",
+      "received_at": "2027-03-25T16:10:00-05:00",
+      "path": "ch-0035.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0048",
+      "channel": "email",
+      "received_at": "2027-03-25T16:20:00-05:00",
+      "path": "em-0048.eml",
+      "title": "Fwd: Marys security questionnaire"
+    },
+    {
+      "id": "ch-0036",
+      "channel": "chat",
+      "received_at": "2027-03-25T17:10:00-05:00",
+      "path": "ch-0036.json",
+      "title": "#wagtail-core"
+    },
+    {
+      "id": "em-0049",
+      "channel": "email",
+      "received_at": "2027-03-25T18:35:00-05:00",
+      "path": "em-0049.eml",
+      "title": "[INC-89499] Ticket updated"
+    },
+    {
+      "id": "ch-0037",
+      "channel": "chat",
+      "received_at": "2027-03-25T19:08:00-05:00",
+      "path": "ch-0037.json",
+      "title": "DM: Rudo Ekwueme / Hiba Deng"
+    }
+  ]
+}

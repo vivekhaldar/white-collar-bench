@@ -1,0 +1,131 @@
+{
+  "date": "2027-09-28",
+  "artifacts": [
+    {
+      "id": "em-0169",
+      "channel": "email",
+      "received_at": "2027-09-28T06:35:00-06:00",
+      "path": "em-0169.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "mn-0022",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-28T09:55:00-06:00",
+      "path": "mn-0022.md",
+      "title": "Recap: Fulmar standup"
+    },
+    {
+      "id": "mt-0028",
+      "channel": "transcript",
+      "received_at": "2027-09-28T09:55:00-06:00",
+      "path": "mt-0028.vtt",
+      "title": "Fulmar standup (transcript)"
+    },
+    {
+      "id": "em-0170",
+      "channel": "email",
+      "received_at": "2027-09-28T10:09:00-06:00",
+      "path": "em-0170.eml",
+      "title": "Introduction: Fulmar"
+    },
+    {
+      "id": "ch-0137",
+      "channel": "chat",
+      "received_at": "2027-09-28T10:35:00-06:00",
+      "path": "ch-0137.json",
+      "title": "DM: Oksana Hoffmann / Amira Baek"
+    },
+    {
+      "id": "ch-0138",
+      "channel": "chat",
+      "received_at": "2027-09-28T12:39:00-06:00",
+      "path": "ch-0138.json",
+      "title": "DM: Nikhil Teixeira / Amira Baek"
+    },
+    {
+      "id": "em-0171",
+      "channel": "email",
+      "received_at": "2027-09-28T13:13:00-06:00",
+      "path": "em-0171.eml",
+      "title": "Re: Safety reporting discovery support model"
+    },
+    {
+      "id": "ch-0139",
+      "channel": "chat",
+      "received_at": "2027-09-28T13:49:00-06:00",
+      "path": "ch-0139.json",
+      "title": "DM: Amira Baek / Oksana Hoffmann"
+    },
+    {
+      "id": "em-0172",
+      "channel": "email",
+      "received_at": "2027-09-28T14:14:00-06:00",
+      "path": "em-0172.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0140",
+      "channel": "chat",
+      "received_at": "2027-09-28T14:22:00-06:00",
+      "path": "ch-0140.json",
+      "title": "DM: Nikhil Teixeira / Amira Baek"
+    },
+    {
+      "id": "ch-0141",
+      "channel": "chat",
+      "received_at": "2027-09-28T14:56:00-06:00",
+      "path": "ch-0141.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "ch-0142",
+      "channel": "chat",
+      "received_at": "2027-09-28T15:12:00-06:00",
+      "path": "ch-0142.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    },
+    {
+      "id": "em-0173",
+      "channel": "email",
+      "received_at": "2027-09-28T15:32:00-06:00",
+      "path": "em-0173.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "ch-0143",
+      "channel": "chat",
+      "received_at": "2027-09-28T15:36:00-06:00",
+      "path": "ch-0143.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "mt-0029",
+      "channel": "transcript",
+      "received_at": "2027-09-28T15:45:00-06:00",
+      "path": "mt-0029.vtt",
+      "title": "Safety reporting discovery review (transcript)"
+    },
+    {
+      "id": "em-0174",
+      "channel": "email",
+      "received_at": "2027-09-28T16:25:00-06:00",
+      "path": "em-0174.eml",
+      "title": "[REQ-15438] Request resolved"
+    },
+    {
+      "id": "ch-0144",
+      "channel": "chat",
+      "received_at": "2027-09-28T18:16:00-06:00",
+      "path": "ch-0144.json",
+      "title": "DM: Oksana Hoffmann / Amira Baek"
+    },
+    {
+      "id": "em-0175",
+      "channel": "email",
+      "received_at": "2027-09-28T22:42:00-06:00",
+      "path": "em-0175.eml",
+      "title": "Draft: Work instructions selection evaluation rubric"
+    }
+  ]
+}

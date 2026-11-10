@@ -1,0 +1,31 @@
+{
+ "workspace": "vercliff",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Bilal Kahananui",
+  "Cassandra Yilmaz",
+  "Bogdan Quinlan"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-03T12:21:07-07:00",
+   "user": "Bilal Kahananui",
+   "handle": "@bilal",
+   "text": "there's leftover cake in the kitchen on 4"
+  },
+  {
+   "ts": "2027-03-03T12:25:46-07:00",
+   "user": "Cassandra Yilmaz",
+   "handle": "@cassandra",
+   "text": "on my way",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-03T12:27:18-07:00",
+   "user": "Bogdan Quinlan",
+   "handle": "@bogdan",
+   "text": "what kind?"
+  }
+ ]
+}

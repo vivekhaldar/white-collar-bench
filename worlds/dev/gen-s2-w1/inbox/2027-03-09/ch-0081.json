@@ -1,0 +1,29 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-imaniq",
+ "kind": "dm",
+ "participants": [
+  "Imani",
+  "Dina Ricci"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-09T13:48:00-07:00",
+   "user": "Imani",
+   "handle": "@imaniq",
+   "text": "On it, I'll send you the notes from the inspection scheduling session!"
+  },
+  {
+   "ts": "2027-03-09T13:49:05-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "that'd be great"
+  },
+  {
+   "ts": "2027-03-09T13:49:32-07:00",
+   "user": "Imani",
+   "handle": "@imaniq",
+   "text": "(This involves Torthen Civic.)"
+  }
+ ]
+}

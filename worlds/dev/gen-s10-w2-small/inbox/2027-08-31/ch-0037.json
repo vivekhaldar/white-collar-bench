@@ -1,0 +1,23 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-bisi",
+ "kind": "dm",
+ "participants": [
+  "Bisi Volkov",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-31T09:43:00+01:00",
+   "user": "Bisi Volkov",
+   "handle": "@bisi",
+   "text": "Can you confirm the Nettle architecture diagram with me by Wednesday?"
+  },
+  {
+   "ts": "2027-08-31T09:43:05+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "yep, on it"
+  }
+ ]
+}

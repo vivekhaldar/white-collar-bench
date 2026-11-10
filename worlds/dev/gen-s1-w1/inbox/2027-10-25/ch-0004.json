@@ -1,0 +1,20 @@
+{
+ "workspace": "holcrest",
+ "channel": "#benefits-screening-core",
+ "kind": "channel",
+ "participants": [
+  "Ifeoma Chevalier",
+  "Camila Abernathy",
+  "Jalen",
+  "Andrei Lindgren",
+  "Corinne Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-25T11:42:00-07:00",
+   "user": "Ifeoma Chevalier",
+   "handle": "@ifeoma",
+   "text": "Camila will send Jalen the benefits screening discovery process map, as discussed."
+  }
+ ]
+}

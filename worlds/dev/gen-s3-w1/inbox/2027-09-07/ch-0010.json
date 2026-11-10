@@ -1,0 +1,35 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-bisi",
+ "kind": "dm",
+ "participants": [
+  "Bisi",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T09:53:00-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "Heads up: Bisi Njoroge will send you the Rosix volume tiers. :)"
+  },
+  {
+   "ts": "2027-09-07T09:53:55-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "that'd be great"
+  },
+  {
+   "ts": "2027-09-07T09:56:02-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-09-07T09:56:31-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

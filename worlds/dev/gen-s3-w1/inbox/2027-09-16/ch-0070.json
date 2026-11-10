@@ -1,0 +1,47 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-somchai",
+ "kind": "dm",
+ "participants": [
+  "Somchai",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-16T17:15:42-05:00",
+   "user": "Somchai",
+   "handle": "@somchai",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-09-16T17:16:21-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "sure, what's up?"
+  },
+  {
+   "ts": "2027-09-16T17:20:00-05:00",
+   "user": "Somchai",
+   "handle": "@somchai",
+   "text": "For info, Bisi will send you the funding model usage forecast."
+  },
+  {
+   "ts": "2027-09-16T17:20:23-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "appreciate it"
+  },
+  {
+   "ts": "2027-09-16T17:21:06-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-09-16T17:24:03-05:00",
+   "user": "Somchai",
+   "handle": "@somchai",
+   "text": "no worries"
+  }
+ ]
+}

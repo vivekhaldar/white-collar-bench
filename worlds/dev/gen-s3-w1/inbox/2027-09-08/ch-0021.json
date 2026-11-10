@@ -1,0 +1,24 @@
+{
+ "workspace": "birchmere",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Nurlan Jansen",
+  "Penelope Romano"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T16:58:02-05:00",
+   "user": "Nurlan Jansen",
+   "handle": "@nurlan",
+   "text": "does anyone have a spare laptop charger (usb-c)?"
+  },
+  {
+   "ts": "2027-09-08T17:02:08-05:00",
+   "user": "Penelope Romano",
+   "handle": "@penelope",
+   "text": "I have one, desk by the window",
+   "thread_of": 0
+  }
+ ]
+}

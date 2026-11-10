@@ -1,0 +1,35 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-anh-aroha",
+ "kind": "dm",
+ "participants": [
+  "Anh Villanueva",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-25T11:50:00-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "Done, I sent you the informatics nurse specialist timeline!"
+  },
+  {
+   "ts": "2027-10-25T11:50:55-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "thank you!"
+  },
+  {
+   "ts": "2027-10-25T11:53:31-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-10-25T11:57:06-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "no worries :)"
+  }
+ ]
+}

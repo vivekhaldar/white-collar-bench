@@ -1,0 +1,43 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-anastasia-hiba",
+ "kind": "dm",
+ "participants": [
+  "Nastya",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-07T14:32:18-08:00",
+   "user": "Nastya",
+   "handle": "@anastasia",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-07-07T14:34:00-08:00",
+   "user": "Nastya",
+   "handle": "@anastasia",
+   "text": "i can send you the notes from the syllabus review session",
+   "edited": true,
+   "original": "i can send you the notes from the syllabus review sessino"
+  },
+  {
+   "ts": "2027-07-07T14:34:17-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "perfect, thanks"
+  },
+  {
+   "ts": "2027-07-07T14:35:06-08:00",
+   "user": "Nastya",
+   "handle": "@anastasia",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-07-07T14:38:53-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "no worries"
+  }
+ ]
+}

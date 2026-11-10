@@ -1,0 +1,19 @@
+{
+  "date": "2027-02-23",
+  "artifacts": [
+    {
+      "id": "mt-0002",
+      "channel": "transcript",
+      "received_at": "2027-02-23T11:55:00-08:00",
+      "path": "mt-0002.vtt",
+      "title": "Scrivelo demo"
+    },
+    {
+      "id": "ch-0004",
+      "channel": "chat",
+      "received_at": "2027-02-23T15:20:00-08:00",
+      "path": "ch-0004.json",
+      "title": "DM Ramona / Mara: room, catering, instructors"
+    }
+  ]
+}

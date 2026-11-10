@@ -1,0 +1,26 @@
+{
+  "date": "2027-02-19",
+  "artifacts": [
+    {
+      "id": "mn-0002",
+      "channel": "meeting_notes",
+      "received_at": "2027-02-19T11:40:00-08:00",
+      "path": "mn-0002.md",
+      "title": "Workshop planning call - notes"
+    },
+    {
+      "id": "em-0007",
+      "channel": "email",
+      "received_at": "2027-02-19T13:15:00-08:00",
+      "path": "em-0007.eml",
+      "title": "Registration open: Teaching with AI workshop, Thu 4 March"
+    },
+    {
+      "id": "em-0008",
+      "channel": "email",
+      "received_at": "2027-02-19T16:40:00-08:00",
+      "path": "em-0008.eml",
+      "title": "Weekly update: w/e 19 Feb"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-keisha",
+ "kind": "dm",
+ "participants": [
+  "Keisha Hargrove",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-02T14:45:00-05:00",
+   "user": "Keisha Hargrove",
+   "handle": "@keisha",
+   "text": "We're pushing Cirrus to Friday 3 December, from 22 November!"
+  },
+  {
+   "ts": "2027-11-02T14:45:46-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-11-02T14:46:42-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-11-02T14:48:11-05:00",
+   "user": "Keisha Hargrove",
+   "handle": "@keisha",
+   "text": "anytime :)"
+  }
+ ]
+}

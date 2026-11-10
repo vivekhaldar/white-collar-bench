@@ -1,0 +1,41 @@
+{
+ "workspace": "birchmere",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Giorgi Villanueva",
+  "Penelope Romano",
+  "Deniz Feng",
+  "Tunde Andersen"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-09T14:24:17-05:00",
+   "user": "Giorgi Villanueva",
+   "handle": "@giorgi",
+   "text": "the elevator on the east side is out again",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@penelope",
+      "@deniz"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-09T14:25:54-05:00",
+   "user": "Penelope Romano",
+   "handle": "@penelope",
+   "text": "stairs it is"
+  },
+  {
+   "ts": "2027-09-09T14:28:19-05:00",
+   "user": "Deniz Feng",
+   "handle": "@deniz",
+   "text": "classic",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "workspace": "holcrest",
+ "channel": "#obsidian-core",
+ "kind": "channel",
+ "participants": [
+  "Yasmin Mokoena",
+  "Camila Abernathy",
+  "Jalen Sandberg",
+  "Petra Korkmaz",
+  "Sipho Sengupta",
+  "Dina Taufa",
+  "Thandiwe Garnier"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-08T11:00:00-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "@camila i published the Obsidian tenant onboarding guide earlier today.",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@jalen"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-08T11:00:32-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "got it, thanks",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-08T11:08:38-07:00",
+   "user": "Dina Taufa",
+   "handle": "@dina",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

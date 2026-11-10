@@ -1,0 +1,25 @@
+From: Mara Ilves <mara.ilves@tarrow.example>
+To: Yusra Haddad <yusra.haddad@kestrow.tarrow.example>
+Cc: Joaquín Sepúlveda <joaquin.sepulveda@kestrow.tarrow.example>, Teodor Lisowski <teodor.lisowski@kestrow.tarrow.example>
+Date: Tue, 16 Feb 2027 17:20:00 -0800
+Subject: Tinderbox architecture one-pager
+Message-ID: <em-0004@tarrow.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Yusra,
+
+One-pager attached for ARB prep. Two hosting options: (1) dedicated Kestrow deployment, (2) Kettleyard shared tenant - I lean 2 but want Jack's view. Data flows and identity are on the page as Jack asked; the LMS interface is at box level only.
+
+Copying Teodor Lisowski, Kestrow's Identity & Access Administrator, for the SSO piece.
+
+Teo - can you register Tinderbox as an SSO application in the Kestrow IdP? Client details in section 4.
+
+— Mara
+
+Mara Ilves
+Principal Architect, AI & Data
+Office of Digital Strategy (ODS), Tarrow University System Office
+
+Attachment: Tinderbox_architecture_one-pager_v1.pdf

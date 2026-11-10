@@ -1,0 +1,49 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-thibault",
+ "kind": "dm",
+ "participants": [
+  "Thibault Sahin",
+  "Dina Ricci"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-09T19:07:42-07:00",
+   "user": "Thibault Sahin",
+   "handle": "@thibault",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-03-09T19:10:00-07:00",
+   "user": "Thibault Sahin",
+   "handle": "@thibault",
+   "text": "I fixed the Fennel timeout errors earlier today!",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@dina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-09T19:10:32-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-03-09T19:11:02-07:00",
+   "user": "Thibault Sahin",
+   "handle": "@thibault",
+   "text": "did the link work for you? :)"
+  },
+  {
+   "ts": "2027-03-09T19:13:59-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "yep, all good"
+  }
+ ]
+}

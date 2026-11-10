@@ -1,0 +1,111 @@
+{
+  "date": "2027-09-02",
+  "artifacts": [
+    {
+      "id": "ca-0003",
+      "channel": "calendar",
+      "received_at": "2027-09-02T07:54:00-06:00",
+      "path": "ca-0003.ics",
+      "title": "Cancelled: Fulmar standup"
+    },
+    {
+      "id": "em-0026",
+      "channel": "email",
+      "received_at": "2027-09-02T08:33:00-06:00",
+      "path": "em-0026.eml",
+      "title": "[REQ-19167] Request resolved"
+    },
+    {
+      "id": "em-0027",
+      "channel": "email",
+      "received_at": "2027-09-02T08:58:00-06:00",
+      "path": "em-0027.eml",
+      "title": "Re: Fulmar data-flow diagram"
+    },
+    {
+      "id": "ch-0022",
+      "channel": "chat",
+      "received_at": "2027-09-02T09:54:00-06:00",
+      "path": "ch-0022.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    },
+    {
+      "id": "em-0028",
+      "channel": "email",
+      "received_at": "2027-09-02T11:11:00-06:00",
+      "path": "em-0028.eml",
+      "title": "Re: Wilhaven working paper"
+    },
+    {
+      "id": "em-0029",
+      "channel": "email",
+      "received_at": "2027-09-02T12:13:00-06:00",
+      "path": "em-0029.eml",
+      "title": "[INC-45928] Ticket updated"
+    },
+    {
+      "id": "ch-0023",
+      "channel": "chat",
+      "received_at": "2027-09-02T12:29:00-06:00",
+      "path": "ch-0023.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "em-0030",
+      "channel": "email",
+      "received_at": "2027-09-02T12:36:00-06:00",
+      "path": "em-0030.eml",
+      "title": "Fwd: Current safety reporting process map"
+    },
+    {
+      "id": "ch-0024",
+      "channel": "chat",
+      "received_at": "2027-09-02T12:51:00-06:00",
+      "path": "ch-0024.json",
+      "title": "DM: Adwoa Chukwu / Amira Baek"
+    },
+    {
+      "id": "mn-0003",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-02T14:00:00-06:00",
+      "path": "mn-0003.md",
+      "title": "Recap: Cross-plant AI forum"
+    },
+    {
+      "id": "em-0031",
+      "channel": "email",
+      "received_at": "2027-09-02T14:11:00-06:00",
+      "path": "em-0031.eml",
+      "title": "[INC-46909] Ticket updated"
+    },
+    {
+      "id": "ch-0025",
+      "channel": "chat",
+      "received_at": "2027-09-02T14:14:00-06:00",
+      "path": "ch-0025.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0032",
+      "channel": "email",
+      "received_at": "2027-09-02T16:46:00-06:00",
+      "path": "em-0032.eml",
+      "title": "Catering menu for next month"
+    },
+    {
+      "id": "dc-0001",
+      "channel": "document",
+      "received_at": "2027-09-02T18:08:00-06:00",
+      "path": "dc-0001.docx",
+      "title": "Fulmar lessons-learned note after Adwoa's comments v2",
+      "parent": "em-0033"
+    },
+    {
+      "id": "em-0033",
+      "channel": "email",
+      "received_at": "2027-09-02T18:08:00-06:00",
+      "path": "em-0033.eml",
+      "title": "Fulmar lessons-learned note after Adwoa's comments"
+    }
+  ]
+}

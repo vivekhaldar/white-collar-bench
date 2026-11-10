@@ -1,0 +1,37 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-giorgi",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Giorgi Wisniewska"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-27T15:58:24-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-09-27T15:58:40-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "Done, I looked into the Fulmar slow page loads.",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@giorgi"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-27T16:00:08-06:00",
+   "user": "Giorgi Wisniewska",
+   "handle": "@giorgi",
+   "text": "thank you!"
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "workspace": "corrstead",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Desmond Visser",
+  "Andrei Laurent",
+  "Adaeze Fifita"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-03T07:55:38-08:00",
+   "user": "Desmond Visser",
+   "handle": "@desmond",
+   "text": "good morning all",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@andrei",
+      "@adaeze"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-03T07:58:54-08:00",
+   "user": "Andrei Laurent",
+   "handle": "@andrei",
+   "text": "morning!"
+  },
+  {
+   "ts": "2027-07-03T08:00:09-08:00",
+   "user": "Adaeze Fifita",
+   "handle": "@adaeze",
+   "text": "morning",
+   "thread_of": 0
+  }
+ ]
+}

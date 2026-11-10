@@ -1,0 +1,64 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1270 >>
+stream
+BT
+/F1 10 Tf
+72 760 Td
+0 -15 Td /F1 11 Tf () Tj
+0 -15 Td /F1 16 Tf (AI-use framework draft v1) Tj
+0 -20 Td /F1 10 Tf (Version: v1 | Project: Network Digital Office | Prepared by: Aroha Mendoza | Date: 22 October) Tj
+0 -14 Td /F1 10 Tf (2027) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (Purpose) Tj
+0 -17 Td /F1 10 Tf (Working document for Network Digital Office.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (Summary) Tj
+0 -17 Td /F1 10 Tf (• Terminology follows the shared glossary.) Tj
+0 -14 Td /F1 10 Tf (• Assumptions are listed in the appendix and should be checked before sign-off.) Tj
+0 -14 Td /F1 10 Tf (• Comments are tracked in the margin; resolved ones have been removed.) Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (Details) Tj
+0 -17 Td /F1 10 Tf (Area | Notes) Tj
+0 -14 Td /F1 10 Tf (Scope | carried over from the earlier draft) Tj
+0 -14 Td /F1 10 Tf (Data | to be confirmed) Tj
+0 -14 Td /F1 10 Tf (Security | agreed at the last review) Tj
+0 -14 Td /F1 10 Tf (Integration | reworded after feedback) Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (Open questions) Tj
+0 -17 Td /F1 10 Tf (• Who maintains this once the project ends?) Tj
+0 -14 Td /F1 10 Tf (• Is the current scope still right?) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Title (AI-use framework draft v1 v1) /Producer (wcb) >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001563 00000 n 
+0000001660 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R /Info 6 0 R >>
+startxref
+1735
+%%EOF

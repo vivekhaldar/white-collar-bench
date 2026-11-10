@@ -1,0 +1,35 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-margaux-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Margaux Kang",
+  "Ottavio Moreira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-24T09:33:50-08:00",
+   "user": "Margaux Kang",
+   "handle": "@margaux",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-08-24T09:34:34-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-08-24T09:38:00-08:00",
+   "user": "Margaux Kang",
+   "handle": "@margaux",
+   "text": "Leave it with me, I'll send you the notes from the financial aid chat session."
+  },
+  {
+   "ts": "2027-08-24T09:38:08-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "perfect, thanks"
+  }
+ ]
+}

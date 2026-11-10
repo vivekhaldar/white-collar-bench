@@ -1,0 +1,181 @@
+{
+  "date": "2027-11-04",
+  "artifacts": [
+    {
+      "id": "em-0127",
+      "channel": "email",
+      "received_at": "2027-11-04T06:42:00-05:00",
+      "path": "em-0127.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0128",
+      "channel": "email",
+      "received_at": "2027-11-04T07:19:00-05:00",
+      "path": "em-0128.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0123",
+      "channel": "chat",
+      "received_at": "2027-11-04T07:31:00-05:00",
+      "path": "ch-0123.json",
+      "title": "#cirrus-core"
+    },
+    {
+      "id": "ch-0124",
+      "channel": "chat",
+      "received_at": "2027-11-04T07:38:00-05:00",
+      "path": "ch-0124.json",
+      "title": "#cirrus-core (catch-up)"
+    },
+    {
+      "id": "mt-0013",
+      "channel": "transcript",
+      "received_at": "2027-11-04T07:39:00-05:00",
+      "path": "mt-0013.vtt",
+      "title": "Kittiwake sync (transcript)"
+    },
+    {
+      "id": "em-0129",
+      "channel": "email",
+      "received_at": "2027-11-04T07:40:00-05:00",
+      "path": "em-0129.eml",
+      "title": "While you were out: informatics nurse specialist"
+    },
+    {
+      "id": "dc-0006",
+      "channel": "document",
+      "received_at": "2027-11-04T07:41:00-05:00",
+      "path": "dc-0006.xlsx",
+      "title": "Cirrus rollout checklist v4",
+      "parent": "em-0130"
+    },
+    {
+      "id": "em-0130",
+      "channel": "email",
+      "received_at": "2027-11-04T07:41:00-05:00",
+      "path": "em-0130.eml",
+      "title": "Cirrus rollout checklist"
+    },
+    {
+      "id": "ch-0125",
+      "channel": "chat",
+      "received_at": "2027-11-04T08:20:00-05:00",
+      "path": "ch-0125.json",
+      "title": "#funding-model-core"
+    },
+    {
+      "id": "mn-0015",
+      "channel": "meeting_notes",
+      "received_at": "2027-11-04T09:55:00-05:00",
+      "path": "mn-0015.md",
+      "title": "Recap: Cirrus standup"
+    },
+    {
+      "id": "ca-0010",
+      "channel": "calendar",
+      "received_at": "2027-11-04T10:39:00-05:00",
+      "path": "ca-0010.ics",
+      "title": "Accepted: Kittiwake follow-up"
+    },
+    {
+      "id": "em-0131",
+      "channel": "email",
+      "received_at": "2027-11-04T10:49:00-05:00",
+      "path": "em-0131.eml",
+      "title": "Re: Cirrus support playbook"
+    },
+    {
+      "id": "ch-0126",
+      "channel": "chat",
+      "received_at": "2027-11-04T11:07:00-05:00",
+      "path": "ch-0126.json",
+      "title": "#cirrus-core"
+    },
+    {
+      "id": "ch-0127",
+      "channel": "chat",
+      "received_at": "2027-11-04T11:18:00-05:00",
+      "path": "ch-0127.json",
+      "title": "DM: Aroha Mendoza / Mathieu Wijaya"
+    },
+    {
+      "id": "em-0132",
+      "channel": "email",
+      "received_at": "2027-11-04T11:33:00-05:00",
+      "path": "em-0132.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0133",
+      "channel": "email",
+      "received_at": "2027-11-04T12:06:00-05:00",
+      "path": "em-0133.eml",
+      "title": "Re: Splitting out medication reconciliation discovery"
+    },
+    {
+      "id": "ch-0128",
+      "channel": "chat",
+      "received_at": "2027-11-04T14:25:00-05:00",
+      "path": "ch-0128.json",
+      "title": "#funding-model-core"
+    },
+    {
+      "id": "ch-0129",
+      "channel": "chat",
+      "received_at": "2027-11-04T14:58:00-05:00",
+      "path": "ch-0129.json",
+      "title": "DM: Aroha Mendoza / Anh Villanueva"
+    },
+    {
+      "id": "em-0134",
+      "channel": "email",
+      "received_at": "2027-11-04T15:27:00-05:00",
+      "path": "em-0134.eml",
+      "title": "Product update roundup"
+    },
+    {
+      "id": "em-0135",
+      "channel": "email",
+      "received_at": "2027-11-04T15:32:00-05:00",
+      "path": "em-0135.eml",
+      "title": "[INC-66429] Ticket updated"
+    },
+    {
+      "id": "em-0136",
+      "channel": "email",
+      "received_at": "2027-11-04T15:34:00-05:00",
+      "path": "em-0136.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0137",
+      "channel": "email",
+      "received_at": "2027-11-04T15:49:00-05:00",
+      "path": "em-0137.eml",
+      "title": "Re: Bed management selection pricing comparison"
+    },
+    {
+      "id": "ch-0130",
+      "channel": "chat",
+      "received_at": "2027-11-04T16:13:00-05:00",
+      "path": "ch-0130.json",
+      "title": "DM: Aroha Mendoza / Putri Ashby"
+    },
+    {
+      "id": "em-0138",
+      "channel": "email",
+      "received_at": "2027-11-04T18:13:00-05:00",
+      "path": "em-0138.eml",
+      "title": "Clelera security questionnaire"
+    },
+    {
+      "id": "em-0139",
+      "channel": "email",
+      "received_at": "2027-11-04T18:13:00-05:00",
+      "path": "em-0139.eml",
+      "title": "Room booking confirmation"
+    }
+  ]
+}

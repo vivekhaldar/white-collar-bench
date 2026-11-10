@@ -1,0 +1,152 @@
+{
+  "date": "2027-10-27",
+  "artifacts": [
+    {
+      "id": "ch-0061",
+      "channel": "chat",
+      "received_at": "2027-10-27T07:40:00-05:00",
+      "path": "ch-0061.json",
+      "title": "#radiology-follow-up-core"
+    },
+    {
+      "id": "ch-0062",
+      "channel": "chat",
+      "received_at": "2027-10-27T07:49:00-05:00",
+      "path": "ch-0062.json",
+      "title": "DM: Aroha Mendoza / Mathieu Wijaya"
+    },
+    {
+      "id": "em-0074",
+      "channel": "email",
+      "received_at": "2027-10-27T07:51:00-05:00",
+      "path": "em-0074.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "ch-0063",
+      "channel": "chat",
+      "received_at": "2027-10-27T09:35:00-05:00",
+      "path": "ch-0063.json",
+      "title": "DM: Aino Menon / Aroha Mendoza"
+    },
+    {
+      "id": "ch-0064",
+      "channel": "chat",
+      "received_at": "2027-10-27T09:51:00-05:00",
+      "path": "ch-0064.json",
+      "title": "#random"
+    },
+    {
+      "id": "mt-0007",
+      "channel": "transcript",
+      "received_at": "2027-10-27T10:00:00-05:00",
+      "path": "mt-0007.vtt",
+      "title": "Cirrus standup (transcript)"
+    },
+    {
+      "id": "ch-0065",
+      "channel": "chat",
+      "received_at": "2027-10-27T10:16:00-05:00",
+      "path": "ch-0065.json",
+      "title": "DM: Anh Villanueva / Aroha Mendoza"
+    },
+    {
+      "id": "em-0075",
+      "channel": "email",
+      "received_at": "2027-10-27T11:40:00-05:00",
+      "path": "em-0075.eml",
+      "title": "Re: FYI: Radiology follow-up discovery pain-point list"
+    },
+    {
+      "id": "ch-0066",
+      "channel": "chat",
+      "received_at": "2027-10-27T12:04:00-05:00",
+      "path": "ch-0066.json",
+      "title": "#okapi-core"
+    },
+    {
+      "id": "ch-0067",
+      "channel": "chat",
+      "received_at": "2027-10-27T12:54:00-05:00",
+      "path": "ch-0067.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0068",
+      "channel": "chat",
+      "received_at": "2027-10-27T13:42:00-05:00",
+      "path": "ch-0068.json",
+      "title": "DM: Lilit Wekesa / Aroha Mendoza"
+    },
+    {
+      "id": "ch-0069",
+      "channel": "chat",
+      "received_at": "2027-10-27T14:09:00-05:00",
+      "path": "ch-0069.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "mt-0008",
+      "channel": "transcript",
+      "received_at": "2027-10-27T14:35:00-05:00",
+      "path": "mt-0008.vtt",
+      "title": "Kittiwake platform sync (transcript)"
+    },
+    {
+      "id": "ch-0070",
+      "channel": "chat",
+      "received_at": "2027-10-27T15:51:00-05:00",
+      "path": "ch-0070.json",
+      "title": "#informatics-nurse-core"
+    },
+    {
+      "id": "ca-0005",
+      "channel": "calendar",
+      "received_at": "2027-10-27T15:55:00-05:00",
+      "path": "ca-0005.ics",
+      "title": "Invite: AI safety rounds workshop run-through"
+    },
+    {
+      "id": "ch-0071",
+      "channel": "chat",
+      "received_at": "2027-10-27T17:05:00-05:00",
+      "path": "ch-0071.json",
+      "title": "DM: Aroha Mendoza / Anh Villanueva"
+    },
+    {
+      "id": "ch-0072",
+      "channel": "chat",
+      "received_at": "2027-10-27T17:33:00-05:00",
+      "path": "ch-0072.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0073",
+      "channel": "chat",
+      "received_at": "2027-10-27T17:56:00-05:00",
+      "path": "ch-0073.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0074",
+      "channel": "chat",
+      "received_at": "2027-10-27T18:09:00-05:00",
+      "path": "ch-0074.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0075",
+      "channel": "chat",
+      "received_at": "2027-10-27T18:15:00-05:00",
+      "path": "ch-0075.json",
+      "title": "DM: Aylin Bianchi / Aroha Mendoza"
+    },
+    {
+      "id": "em-0076",
+      "channel": "email",
+      "received_at": "2027-10-27T18:47:00-05:00",
+      "path": "em-0076.eml",
+      "title": "Room booking confirmation"
+    }
+  ]
+}

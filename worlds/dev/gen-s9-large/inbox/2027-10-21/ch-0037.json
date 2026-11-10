@@ -1,0 +1,35 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-anh-daniela",
+ "kind": "dm",
+ "participants": [
+  "Anh Villanueva",
+  "Daniela Ochieng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-21T17:13:00-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "Done, I sent you the informatics nurse specialist candidate pack!"
+  },
+  {
+   "ts": "2027-10-21T17:13:53-05:00",
+   "user": "Daniela Ochieng",
+   "handle": "@daniela",
+   "text": "thank you!"
+  },
+  {
+   "ts": "2027-10-21T17:15:23-05:00",
+   "user": "Daniela Ochieng",
+   "handle": "@daniela",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-10-21T17:17:05-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "later!"
+  }
+ ]
+}

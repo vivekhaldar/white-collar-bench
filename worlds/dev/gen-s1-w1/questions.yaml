@@ -1,0 +1,388 @@
+- id: q-001
+  checkpoint: cp1
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - scattered_evidence
+  - unobservable
+  - worker_directive
+- id: q-002
+  checkpoint: cp1
+  template: project_status
+  params:
+    project: pr-marten
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+  - supersession
+- id: q-003
+  checkpoint: cp1
+  template: project_changes
+  params:
+    project: pr-marten
+    since: '2027-11-06'
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - scattered_evidence
+  - silent_closure
+  - supersession
+  - worker_directive
+- id: q-004
+  checkpoint: cp1
+  template: i_owe
+  params:
+    person: p-petra-korkmaz
+    name_form: Petra
+  challenges:
+  - alias
+  - duplicate_signal
+- id: q-005
+  checkpoint: cp1
+  template: owed_to_me
+  params:
+    person: p-joselito-moradi
+    name_form: Lito
+  challenges:
+  - alias
+- id: q-006
+  checkpoint: cp1
+  template: loop_owner
+  params:
+    commitment: c-047
+  challenges:
+  - duplicate_signal
+  - endorsement
+- id: q-007
+  checkpoint: cp1
+  template: loop_due
+  params:
+    commitment: c-068
+  challenges:
+  - scattered_evidence
+- id: q-008
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-plain-language-workshop
+    attribute: sponsor
+    name_form: the plain language session
+  challenges:
+  - alias
+- id: q-009
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-jalen-sandberg
+    attribute: role
+  challenges:
+  - name_collision
+- id: q-010
+  checkpoint: cp1
+  template: project_loops
+  params:
+    project: pr-plain-language-workshop
+  challenges: []
+- id: q-011
+  checkpoint: cp1
+  template: person_brief
+  params:
+    person: p-petra-korkmaz
+  challenges:
+  - duplicate_signal
+- id: q-012
+  checkpoint: cp1
+  template: decision_date
+  params:
+    decision: d-003
+  challenges:
+  - worker_directive
+- id: q-013
+  checkpoint: cp1
+  template: event_date
+  params:
+    event: e-0186
+  text: When was "Send Fernanda the Friday status note for w/e 5 November" completed?
+  challenges:
+  - duplicate_signal
+- id: q-014
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-obsidian
+    attribute: budget
+  challenges:
+  - unobservable
+- id: q-015
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-tarn
+    attribute: budget
+  text: What is the budget for Tarn?
+  challenges:
+  - unobservable
+- id: q-016
+  checkpoint: cp2
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - supersession
+  - unobservable
+- id: q-017
+  checkpoint: cp2
+  template: project_status
+  params:
+    project: pr-marten
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+  - new_entity
+  - supersession
+- id: q-018
+  checkpoint: cp2
+  template: project_changes
+  params:
+    project: pr-plain-language-workshop
+    since: '2027-11-09'
+  challenges:
+  - correction
+  - new_entity
+- id: q-019
+  checkpoint: cp2
+  template: i_owe
+  params:
+    person: p-fernanda-olawale
+  challenges:
+  - duplicate_signal
+  - endorsement
+- id: q-020
+  checkpoint: cp2
+  template: owed_to_me
+  params:
+    person: p-petra-korkmaz
+  challenges: []
+- id: q-021
+  checkpoint: cp2
+  template: loop_due
+  params:
+    commitment: c-085
+  challenges:
+  - supersession
+- id: q-022
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-data-engineer-hire
+    attribute: sponsor
+    name_form: the data engineer search
+  challenges:
+  - alias
+- id: q-023
+  checkpoint: cp2
+  template: person_attr
+  params:
+    person: p-omar-lefebvre
+    attribute: org
+  challenges:
+  - new_entity
+- id: q-024
+  checkpoint: cp2
+  template: project_loops
+  params:
+    project: pr-data-engineer-hire
+  challenges:
+  - duplicate_signal
+  - endorsement
+- id: q-025
+  checkpoint: cp2
+  template: person_brief
+  params:
+    person: p-corinne-kaya
+    name_form: Corinne
+  challenges:
+  - alias
+- id: q-026
+  checkpoint: cp2
+  template: decision_date
+  params:
+    decision: d-002
+  challenges: []
+- id: q-027
+  checkpoint: cp2
+  template: event_date
+  params:
+    event: e-0232
+  text: When was "Confirm the Marten RACI chart with Yasmin" completed?
+  challenges:
+  - duplicate_signal
+- id: q-028
+  checkpoint: cp2
+  template: loop_owner
+  params:
+    commitment: c-017
+  challenges:
+  - transfer
+- id: q-029
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-data-engineer-hire
+    attribute: owner
+  challenges: []
+- id: q-030
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-parking-analytics-tool-selection
+    attribute: budget
+  challenges:
+  - unobservable
+- id: q-031
+  checkpoint: cp3
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - restructuring
+  - supersession
+  - unobservable
+- id: q-032
+  checkpoint: cp3
+  template: project_status
+  params:
+    project: pr-marten
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+  - new_entity
+  - supersession
+- id: q-033
+  checkpoint: cp3
+  template: project_changes
+  params:
+    project: pr-ulworth-benefits-screening-discovery
+    since: '2027-11-11'
+    name_form: the Ulworth discovery
+  challenges:
+  - alias
+  - new_entity
+  - restructuring
+- id: q-034
+  checkpoint: cp3
+  template: i_owe
+  params:
+    person: p-jalen-sandberg
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - name_collision
+- id: q-035
+  checkpoint: cp3
+  template: owed_to_me
+  params:
+    person: p-nadia-jovanovic
+  challenges:
+  - transfer
+- id: q-036
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-plain-language-workshop
+    attribute: phase
+    name_form: the plain language session
+  challenges:
+  - alias
+  - new_entity
+- id: q-037
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-obsidian
+  challenges:
+  - batch_catchup
+- id: q-038
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-nadia-jovanovic
+    name_form: Nadia
+  challenges:
+  - alias
+  - implied_commitment
+  - transfer
+- id: q-039
+  checkpoint: cp3
+  template: event_date
+  params:
+    event: e-0268
+  text: When was "Send Camila the Marten training outline" completed?
+  challenges:
+  - silent_closure
+- id: q-040
+  checkpoint: cp3
+  template: loop_due
+  params:
+    commitment: c-069
+  challenges:
+  - endorsement
+  - worker_directive
+- id: q-041
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-marten
+    attribute: target_date
+  challenges:
+  - supersession
+- id: q-042
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-ulworth-benefits-screening-discovery
+    name_form: the Ulworth discovery
+  challenges:
+  - alias
+  - duplicate_signal
+- id: q-043
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-fernanda-olawale
+    name_form: Fernanda
+  challenges:
+  - alias
+  - duplicate_signal
+  - endorsement
+  - new_entity
+- id: q-044
+  checkpoint: cp3
+  template: event_date
+  params:
+    event: e-0243
+  text: When was "Walk Jalen through the plain language workshop speaker brief" completed?
+  challenges:
+  - unobservable
+  - weak_evidence
+- id: q-045
+  checkpoint: cp3
+  template: person_attr
+  params:
+    person: p-jalen-sandberg
+    attribute: office
+  challenges:
+  - name_collision
+  - unobservable

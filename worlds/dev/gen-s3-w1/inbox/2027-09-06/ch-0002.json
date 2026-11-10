@@ -1,0 +1,25 @@
+{
+ "workspace": "birchmere",
+ "channel": "#discharge-summary-core",
+ "kind": "channel",
+ "participants": [
+  "Bisi",
+  "Alasdair Kaya",
+  "Lupe"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-06T07:00:00-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "Heads up: Lupe will send Alasdair the discharge summary problem statement."
+  },
+  {
+   "ts": "2027-09-06T07:00:33-05:00",
+   "user": "Lupe",
+   "handle": "@guadalupe",
+   "text": "on it",
+   "thread_of": 0
+  }
+ ]
+}

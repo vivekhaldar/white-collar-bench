@@ -1,0 +1,29 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-kian",
+ "kind": "dm",
+ "participants": [
+  "Kian Ishikawa",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-25T08:55:00-06:00",
+   "user": "Kian Ishikawa",
+   "handle": "@kian",
+   "text": "Adwoa is expecting you to send them the AI-use stakeholder map."
+  },
+  {
+   "ts": "2027-09-25T08:56:33-06:00",
+   "user": "Kian Ishikawa",
+   "handle": "@kian",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-09-25T08:57:24-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

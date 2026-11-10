@@ -1,0 +1,49 @@
+{
+  "date": "2027-02-22",
+  "artifacts": [
+    {
+      "id": "em-0009",
+      "channel": "email",
+      "received_at": "2027-02-22T06:55:00-08:00",
+      "path": "em-0009.eml",
+      "title": "Reminder: weekly VC updates due Friday 26 Feb"
+    },
+    {
+      "id": "dc-0003",
+      "channel": "document",
+      "received_at": "2027-02-22T10:05:00-08:00",
+      "path": "dc-0003.md",
+      "title": "Tinderbox LMS interface spec v1",
+      "parent": "em-0010"
+    },
+    {
+      "id": "em-0010",
+      "channel": "email",
+      "received_at": "2027-02-22T10:05:00-08:00",
+      "path": "em-0010.eml",
+      "title": "Tinderbox interface spec v1"
+    },
+    {
+      "id": "dc-0004",
+      "channel": "document",
+      "received_at": "2027-02-22T14:30:00-08:00",
+      "path": "dc-0004.pdf",
+      "title": "Kettleyard Reference Architecture v3",
+      "parent": "em-0011"
+    },
+    {
+      "id": "em-0011",
+      "channel": "email",
+      "received_at": "2027-02-22T14:30:00-08:00",
+      "path": "em-0011.eml",
+      "title": "Kettleyard reference architecture v3: review please"
+    },
+    {
+      "id": "ch-0003",
+      "channel": "chat",
+      "received_at": "2027-02-22T16:12:00-08:00",
+      "path": "ch-0003.json",
+      "title": "#tinderbox-core: SSO app, context API date, option 1 pricing"
+    }
+  ]
+}

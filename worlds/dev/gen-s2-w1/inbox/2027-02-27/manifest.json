@@ -1,0 +1,62 @@
+{
+  "date": "2027-02-27",
+  "artifacts": [
+    {
+      "id": "em-0039",
+      "channel": "email",
+      "received_at": "2027-02-27T08:54:00-07:00",
+      "path": "em-0039.eml",
+      "title": "[REQ-33165] Request resolved"
+    },
+    {
+      "id": "em-0040",
+      "channel": "email",
+      "received_at": "2027-02-27T09:45:00-07:00",
+      "path": "em-0040.eml",
+      "title": "Fwd: Mistral test plan"
+    },
+    {
+      "id": "em-0041",
+      "channel": "email",
+      "received_at": "2027-02-27T11:16:00-07:00",
+      "path": "em-0041.eml",
+      "title": "[INC-78801] Ticket updated"
+    },
+    {
+      "id": "em-0042",
+      "channel": "email",
+      "received_at": "2027-02-27T11:48:00-07:00",
+      "path": "em-0042.eml",
+      "title": "[INC-45145] Ticket updated"
+    },
+    {
+      "id": "dc-0002",
+      "channel": "document",
+      "received_at": "2027-02-27T11:50:00-07:00",
+      "path": "dc-0002.md",
+      "title": "Mistral test plan v1",
+      "parent": "em-0043"
+    },
+    {
+      "id": "em-0043",
+      "channel": "email",
+      "received_at": "2027-02-27T11:50:00-07:00",
+      "path": "em-0043.eml",
+      "title": "Re: Mistral test plan"
+    },
+    {
+      "id": "ch-0034",
+      "channel": "chat",
+      "received_at": "2027-02-27T17:39:00-07:00",
+      "path": "ch-0034.json",
+      "title": "DM: Tendai Santos / Dina Ricci"
+    },
+    {
+      "id": "ch-0035",
+      "channel": "chat",
+      "received_at": "2027-02-27T18:20:00-07:00",
+      "path": "ch-0035.json",
+      "title": "DM: Penelope Fuentes / Dina Ricci"
+    }
+  ]
+}

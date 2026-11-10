@@ -1,0 +1,77 @@
+From: Tarrow IT Services <itservices@tarrow.example>
+To: all-staff@tarrow.example
+Date: Tue, 02 Mar 2027 06:30:00 -0800
+Subject: [All Staff] Multi-factor sign-in becomes mandatory on 15 March
+Message-ID: <em-0025@tarrow.example>
+Auto-Submitted: auto-generated
+Precedence: bulk
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+SYSTEM-WIDE IT NOTICE
+Tarrow IT Services | System-wide IT all-staff notices
+Audience: all staff and faculty, System Office and all campuses
+
+Multi-factor sign-in becomes mandatory on Monday 15 March 2027
+
+Dear colleagues,
+
+Starting Monday 15 March 2027, multi-factor authentication (MFA) will be
+required every time you sign in to your Tarrow account from outside the
+campus network, and once every 14 days on campus. This applies to email,
+calendar, chat, the HR and payroll portal, and every application that
+uses the Tarrow single sign-on page.
+
+What you need to do before 15 March
+
+  - Enroll at least one second factor. The Tarrow Authenticator app is
+    recommended; a hardware key or a text message to a mobile phone
+    also works.
+  - Enroll a backup method as well, so a lost or replaced phone does not
+    lock you out.
+  - Check that the mobile number on your account is current.
+  - If you already use MFA for the payroll portal, you are enrolled and
+    need to do nothing further.
+
+Step-by-step enrollment guide (5 minutes):
+https://itservices.tarrow.example/kb/mfa-enrollment
+
+What changes on 15 March
+
+  - Accounts without a registered second factor will be prompted to
+    enroll at next sign-in and cannot continue until they do.
+  - Shared and departmental mailboxes are not affected; individual
+    accounts with delegated access to them are.
+  - Service accounts and room devices are handled separately by your
+    campus IT team. No action is needed from individual staff.
+
+Help
+
+  - Tarrow IT Services Desk: Monday to Friday, 07:00-19:00;
+    Saturday, 09:00-13:00.
+  - Phone: extension 4-HELP (4-4357) from any campus phone.
+  - Drop-in enrollment help: System Office lobby, Tuesdays and
+    Thursdays 12:00-14:00 until 12 March.
+  - Campus service desks can also help with enrollment.
+
+A reminder about phishing
+
+  - Tarrow IT Services will NEVER ask for your password, by email,
+    phone, chat or text.
+  - We will never ask you to approve a sign-in prompt you did not start.
+    If you receive one, deny it and call the IT Services Desk.
+  - Expect a rise in fake "MFA enrollment" emails over the next few
+    weeks. The only genuine enrollment page is the one linked above.
+    When in doubt, type the address yourself rather than clicking.
+
+Thank you for helping keep Tarrow accounts and student data secure.
+
+Tarrow IT Services
+Tarrow University System Office
+itservices@tarrow.example
+
+----------------------------------------------------------------------
+Do not reply to this message. This mailbox is not monitored. For help,
+contact the Tarrow IT Services Desk at extension 4-HELP or through the
+IT Services portal.

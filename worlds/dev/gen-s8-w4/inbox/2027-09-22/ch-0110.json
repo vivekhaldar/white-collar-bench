@@ -1,0 +1,41 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-darnell",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Darnell Malouf"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-22T13:08:58-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-22T13:09:20-06:00",
+   "user": "Darnell Malouf",
+   "handle": "@darnell",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-22T13:12:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "the reading list on scrap analysis is on hold until i hear back from you"
+  },
+  {
+   "ts": "2027-09-22T13:15:34-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-09-22T13:17:22-06:00",
+   "user": "Darnell Malouf",
+   "handle": "@darnell",
+   "text": "remote, but online all day"
+  }
+ ]
+}

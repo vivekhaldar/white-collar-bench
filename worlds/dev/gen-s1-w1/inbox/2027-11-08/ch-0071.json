@@ -1,0 +1,29 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-jalen",
+ "kind": "dm",
+ "participants": [
+  "Camila Abernathy",
+  "Jalen Sandberg"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-08T17:19:00-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-11-08T17:21:00-07:00",
+   "user": "Camila Abernathy",
+   "handle": "@camila",
+   "text": "I'm working from the Marten equity impact review now, it covers what I needed."
+  },
+  {
+   "ts": "2027-11-08T17:21:18-07:00",
+   "user": "Jalen Sandberg",
+   "handle": "@jalen",
+   "text": "got it"
+  }
+ ]
+}

@@ -1,0 +1,145 @@
+{
+  "date": "2027-09-14",
+  "artifacts": [
+    {
+      "id": "ch-0065",
+      "channel": "chat",
+      "received_at": "2027-09-14T08:31:00-06:00",
+      "path": "ch-0065.json",
+      "title": "#ai-use-core"
+    },
+    {
+      "id": "ch-0066",
+      "channel": "chat",
+      "received_at": "2027-09-14T08:42:00-06:00",
+      "path": "ch-0066.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0067",
+      "channel": "chat",
+      "received_at": "2027-09-14T09:54:00-06:00",
+      "path": "ch-0067.json",
+      "title": "DM: Alan Luo / Amira Baek"
+    },
+    {
+      "id": "mt-0013",
+      "channel": "transcript",
+      "received_at": "2027-09-14T10:00:00-06:00",
+      "path": "mt-0013.vtt",
+      "title": "Fulmar standup (transcript)"
+    },
+    {
+      "id": "em-0082",
+      "channel": "email",
+      "received_at": "2027-09-14T10:59:00-06:00",
+      "path": "em-0082.eml",
+      "title": "Re: Work instructions selection lessons-learned note"
+    },
+    {
+      "id": "nt-0006",
+      "channel": "note",
+      "received_at": "2027-09-14T11:34:00-06:00",
+      "path": "nt-0006.md",
+      "title": "Tue notes"
+    },
+    {
+      "id": "em-0083",
+      "channel": "email",
+      "received_at": "2027-09-14T11:52:00-06:00",
+      "path": "em-0083.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0084",
+      "channel": "email",
+      "received_at": "2027-09-14T12:10:00-06:00",
+      "path": "em-0084.eml",
+      "title": "Fulmar: new target date"
+    },
+    {
+      "id": "em-0085",
+      "channel": "email",
+      "received_at": "2027-09-14T12:17:00-06:00",
+      "path": "em-0085.eml",
+      "title": "Fulmar export failures"
+    },
+    {
+      "id": "em-0086",
+      "channel": "email",
+      "received_at": "2027-09-14T12:36:00-06:00",
+      "path": "em-0086.eml",
+      "title": "Fwd: Refreshments for the operator AI basics workshop"
+    },
+    {
+      "id": "ch-0068",
+      "channel": "chat",
+      "received_at": "2027-09-14T13:02:00-06:00",
+      "path": "ch-0068.json",
+      "title": "#wagtail-core"
+    },
+    {
+      "id": "ch-0069",
+      "channel": "chat",
+      "received_at": "2027-09-14T13:45:00-06:00",
+      "path": "ch-0069.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0087",
+      "channel": "email",
+      "received_at": "2027-09-14T14:29:00-06:00",
+      "path": "em-0087.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0070",
+      "channel": "chat",
+      "received_at": "2027-09-14T14:39:00-06:00",
+      "path": "ch-0070.json",
+      "title": "DM: Batbayar Galbraith / Amira Baek"
+    },
+    {
+      "id": "ch-0071",
+      "channel": "chat",
+      "received_at": "2027-09-14T14:53:00-06:00",
+      "path": "ch-0071.json",
+      "title": "DM: Hamish Okada / Amira Baek"
+    },
+    {
+      "id": "mn-0016",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-14T15:35:00-06:00",
+      "path": "mn-0016.md",
+      "title": "Recap: 1:1 Amira / Adwoa"
+    },
+    {
+      "id": "mn-0017",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-14T15:45:00-06:00",
+      "path": "mn-0017.md",
+      "title": "Recap: Wagtail review"
+    },
+    {
+      "id": "ch-0072",
+      "channel": "chat",
+      "received_at": "2027-09-14T16:24:00-06:00",
+      "path": "ch-0072.json",
+      "title": "DM: Segun Okeke / Amira Baek"
+    },
+    {
+      "id": "ch-0073",
+      "channel": "chat",
+      "received_at": "2027-09-14T16:39:00-06:00",
+      "path": "ch-0073.json",
+      "title": "DM: Batbayar Galbraith / Amira Baek"
+    },
+    {
+      "id": "em-0088",
+      "channel": "email",
+      "received_at": "2027-09-14T18:38:00-06:00",
+      "path": "em-0088.eml",
+      "title": "Industrial Data Digest: issue 37"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-michaela",
+ "kind": "dm",
+ "participants": [
+  "Michaela Dang",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-28T12:25:39-05:00",
+   "user": "Michaela Dang",
+   "handle": "@michaela",
+   "text": "Recap from Tuesday: Anh Villanueva agreed to send you the radiology follow-up discovery pain-point list."
+  },
+  {
+   "ts": "2027-10-28T12:25:45-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "that'd be great"
+  }
+ ]
+}

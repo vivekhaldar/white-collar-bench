@@ -1,0 +1,35 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-emre-hiba",
+ "kind": "dm",
+ "participants": [
+  "Emre Khumalo",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-24T11:16:33-08:00",
+   "user": "Emre Khumalo",
+   "handle": "@emre",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-06-24T11:17:47-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-06-24T11:18:35-08:00",
+   "user": "Emre Khumalo",
+   "handle": "@emre",
+   "text": "I'll configure the Siskin SSO broker for Crandale."
+  },
+  {
+   "ts": "2027-06-24T11:19:50-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "perfect, thanks"
+  }
+ ]
+}

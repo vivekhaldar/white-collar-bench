@@ -1,0 +1,55 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-donghyun-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Dong-hyun Colombo"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-07T14:55:44-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-07-07T14:56:11-08:00",
+   "user": "Dong-hyun Colombo",
+   "handle": "@donghyun",
+   "text": "sure, what's up?"
+  },
+  {
+   "ts": "2027-07-07T14:58:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "i sent you the garnet privacy review form",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@donghyun"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-07T14:58:20-08:00",
+   "user": "Dong-hyun Colombo",
+   "handle": "@donghyun",
+   "text": "great, thanks"
+  },
+  {
+   "ts": "2027-07-07T14:59:19-08:00",
+   "user": "Dong-hyun Colombo",
+   "handle": "@donghyun",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-07-07T15:02:16-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "no worries"
+  }
+ ]
+}

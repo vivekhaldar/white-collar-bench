@@ -1,0 +1,47 @@
+{
+  "date": "2027-09-25",
+  "artifacts": [
+    {
+      "id": "em-0116",
+      "channel": "email",
+      "received_at": "2027-09-25T08:30:00-05:00",
+      "path": "em-0116.eml",
+      "title": "[INC-41015] Ticket updated"
+    },
+    {
+      "id": "em-0117",
+      "channel": "email",
+      "received_at": "2027-09-25T08:55:00-05:00",
+      "path": "em-0117.eml",
+      "title": "Programme now live"
+    },
+    {
+      "id": "ch-0118",
+      "channel": "chat",
+      "received_at": "2027-09-25T12:23:00-05:00",
+      "path": "ch-0118.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0119",
+      "channel": "chat",
+      "received_at": "2027-09-25T12:24:00-05:00",
+      "path": "ch-0119.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0120",
+      "channel": "chat",
+      "received_at": "2027-09-25T12:53:00-05:00",
+      "path": "ch-0120.json",
+      "title": "DM: Alasdair Kaya / Katarzyna Dang"
+    },
+    {
+      "id": "ch-0121",
+      "channel": "chat",
+      "received_at": "2027-09-25T16:51:00-05:00",
+      "path": "ch-0121.json",
+      "title": "#random"
+    }
+  ]
+}

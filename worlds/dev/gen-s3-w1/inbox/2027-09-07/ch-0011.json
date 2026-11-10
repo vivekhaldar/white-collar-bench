@@ -1,0 +1,40 @@
+{
+ "workspace": "birchmere",
+ "channel": "#okapi-core",
+ "kind": "channel",
+ "participants": [
+  "Alasdair Kaya",
+  "Katarzyna Dang",
+  "Bisi",
+  "Eleni Fontaine",
+  "Dina Laurent",
+  "Penelope Romano",
+  "Nurlan Jansen",
+  "Giorgi Villanueva",
+  "Victoria Hoffmann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T18:15:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "@dina on it, i'll confirm the okapi pilot charter with you",
+   "edited": true,
+   "original": "@dina on it, i'll confirm the okapi pilot chatrer with you"
+  },
+  {
+   "ts": "2027-09-07T18:24:18-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-07T18:24:59-05:00",
+   "user": "Penelope Romano",
+   "handle": "@penelope",
+   "text": "+1",
+   "thread_of": 0
+  }
+ ]
+}

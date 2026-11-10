@@ -1,0 +1,12 @@
+{
+  "workspace": "tarrow",
+  "channel": "dm-ramona-mara",
+  "kind": "dm",
+  "participants": ["Ramona Szabo", "Mara Ilves"],
+  "messages": [
+    {"ts": "2027-03-03T06:50:12-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "deck v2 attached, ahead of your wednesday noon deadline. panel section tightened, Tinderbox slide says dummy-data mode. I'm dark all day at the offsite.", "files": [{"name": "Teaching with AI - deck v2.pdf", "type": "pdf"}], "reactions": [{"emoji": "tada", "users": ["@ramona"]}]},
+    {"ts": "2027-03-03T17:08:04-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "deck looks great!! ok workshop update: room moved to Pellery 204 (bigger) ✅ catering confirmed ✅ AV sorted ✅ regs at 61! Ines lands tonight ✈️"},
+    {"ts": "2027-03-03T17:10:21-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "quick one: can you send me the final speaker list for name badges?"},
+    {"ts": "2027-03-03T17:12:00-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "and deck v3 with the new room on the title slide + Connie's reworded panel question (she emailed me) before I print? 🙏"}
+  ]
+}

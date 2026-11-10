@@ -1,0 +1,40 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Bruna Vaughan",
+  "Meera Bondarenko",
+  "Nomvula Ndlovu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-24T15:16:24-08:00",
+   "user": "Bruna Vaughan",
+   "handle": "@bruna",
+   "text": "does anyone have a spare laptop charger (usb-c)?",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@meera",
+      "@nomvula"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-08-24T15:17:07-08:00",
+   "user": "Meera Bondarenko",
+   "handle": "@meera",
+   "text": "I have one, desk by the window"
+  },
+  {
+   "ts": "2027-08-24T15:18:40-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "check the supply cupboard",
+   "thread_of": 0
+  }
+ ]
+}

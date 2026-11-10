@@ -1,0 +1,22 @@
+{
+ "workspace": "holcrest",
+ "channel": "#obsidian-core",
+ "kind": "channel",
+ "participants": [
+  "Dina Taufa",
+  "Camila Abernathy",
+  "Yasmin Mokoena",
+  "Jalen",
+  "Petra Korkmaz",
+  "Sipho Sengupta",
+  "Thandiwe Garnier"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-02T16:25:00-07:00",
+   "user": "Dina Taufa",
+   "handle": "@dina",
+   "text": "Camila will review Yasmin's Obsidian stakeholder map, as discussed."
+  }
+ ]
+}

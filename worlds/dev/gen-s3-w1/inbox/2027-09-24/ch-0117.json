@@ -1,0 +1,35 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-catrin",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Catrin Kiprono"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-24T14:27:13-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-24T14:27:33-05:00",
+   "user": "Catrin Kiprono",
+   "handle": "@catrin",
+   "text": "sure, what's up?"
+  },
+  {
+   "ts": "2027-09-24T14:28:09-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "Logged in fine, so the intake forms selection dashboard access is sorted. Starting the walkthrough tomorrow."
+  },
+  {
+   "ts": "2027-09-24T14:29:34-05:00",
+   "user": "Catrin Kiprono",
+   "handle": "@catrin",
+   "text": "got it"
+  }
+ ]
+}

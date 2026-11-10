@@ -1,0 +1,124 @@
+{
+  "date": "2027-09-06",
+  "artifacts": [
+    {
+      "id": "em-0001",
+      "channel": "email",
+      "received_at": "2027-09-06T06:58:00-05:00",
+      "path": "em-0001.eml",
+      "title": "Reminder: Friday status note due Friday 10 September"
+    },
+    {
+      "id": "ch-0001",
+      "channel": "chat",
+      "received_at": "2027-09-06T07:50:00-05:00",
+      "path": "ch-0001.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "nt-0001",
+      "channel": "note",
+      "received_at": "2027-09-06T08:05:00-05:00",
+      "path": "nt-0001.md",
+      "title": "Portfolio map"
+    },
+    {
+      "id": "em-0002",
+      "channel": "email",
+      "received_at": "2027-09-06T08:47:00-05:00",
+      "path": "em-0002.eml",
+      "title": "Re: Funding model assumptions log after Deniz's comments"
+    },
+    {
+      "id": "em-0003",
+      "channel": "email",
+      "received_at": "2027-09-06T09:29:00-05:00",
+      "path": "em-0003.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "mt-0001",
+      "channel": "transcript",
+      "received_at": "2027-09-06T09:45:00-05:00",
+      "path": "mt-0001.vtt",
+      "title": "Ketford relationship check-in (transcript)"
+    },
+    {
+      "id": "ch-0002",
+      "channel": "chat",
+      "received_at": "2027-09-06T09:49:00-05:00",
+      "path": "ch-0002.json",
+      "title": "#discharge-summary-core"
+    },
+    {
+      "id": "mn-0001",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-06T09:55:00-05:00",
+      "path": "mn-0001.md",
+      "title": "Recap: Okapi standup"
+    },
+    {
+      "id": "mt-0002",
+      "channel": "transcript",
+      "received_at": "2027-09-06T09:55:00-05:00",
+      "path": "mt-0002.vtt",
+      "title": "Okapi standup (transcript)"
+    },
+    {
+      "id": "em-0004",
+      "channel": "email",
+      "received_at": "2027-09-06T11:37:00-05:00",
+      "path": "em-0004.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "em-0005",
+      "channel": "email",
+      "received_at": "2027-09-06T12:07:00-05:00",
+      "path": "em-0005.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0006",
+      "channel": "email",
+      "received_at": "2027-09-06T14:11:00-05:00",
+      "path": "em-0006.eml",
+      "title": "Re: Intake Forms Tool Selection: moving to scoring"
+    },
+    {
+      "id": "em-0007",
+      "channel": "email",
+      "received_at": "2027-09-06T16:03:00-05:00",
+      "path": "em-0007.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "ch-0003",
+      "channel": "chat",
+      "received_at": "2027-09-06T16:12:00-05:00",
+      "path": "ch-0003.json",
+      "title": "DM: Oluwaseun Hakobyan / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0004",
+      "channel": "chat",
+      "received_at": "2027-09-06T16:14:00-05:00",
+      "path": "ch-0004.json",
+      "title": "DM: Katarzyna Dang / Alasdair Kaya"
+    },
+    {
+      "id": "mt-0003",
+      "channel": "transcript",
+      "received_at": "2027-09-06T16:30:00-05:00",
+      "path": "mt-0003.vtt",
+      "title": "Team planning (transcript)"
+    },
+    {
+      "id": "ch-0005",
+      "channel": "chat",
+      "received_at": "2027-09-06T17:43:00-05:00",
+      "path": "ch-0005.json",
+      "title": "#bed-management-discovery-core"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "date": "2027-08-28",
+  "artifacts": [
+    {
+      "id": "em-0041",
+      "channel": "email",
+      "received_at": "2027-08-28T09:25:00-08:00",
+      "path": "em-0041.eml",
+      "title": "[REQ-28487] Request resolved"
+    },
+    {
+      "id": "ch-0032",
+      "channel": "chat",
+      "received_at": "2027-08-28T11:17:00-08:00",
+      "path": "ch-0032.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0042",
+      "channel": "email",
+      "received_at": "2027-08-28T11:47:00-08:00",
+      "path": "em-0042.eml",
+      "title": "[INC-43165] Ticket updated"
+    },
+    {
+      "id": "em-0043",
+      "channel": "email",
+      "received_at": "2027-08-28T12:57:00-08:00",
+      "path": "em-0043.eml",
+      "title": "[REQ-28606] Request resolved"
+    },
+    {
+      "id": "ch-0033",
+      "channel": "chat",
+      "received_at": "2027-08-28T16:20:00-08:00",
+      "path": "ch-0033.json",
+      "title": "DM: Meera Bondarenko / Ottavio Moreira"
+    },
+    {
+      "id": "ch-0034",
+      "channel": "chat",
+      "received_at": "2027-08-28T18:17:00-08:00",
+      "path": "ch-0034.json",
+      "title": "DM: Nomvula Ndlovu / Ottavio Moreira"
+    }
+  ]
+}

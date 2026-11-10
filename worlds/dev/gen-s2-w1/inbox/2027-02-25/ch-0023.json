@@ -1,0 +1,37 @@
+{
+ "workspace": "vercliff",
+ "channel": "#fennel-core",
+ "kind": "channel",
+ "participants": [
+  "Dina Ricci",
+  "Cassandra Yilmaz",
+  "Imani Navarro",
+  "Yael Ellery",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
+  "Thibault Sahin"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-25T09:02:00-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "@imani done, i confirmed the fennel test plan with you",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@yael"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-25T09:03:17-07:00",
+   "user": "Cassandra Yilmaz",
+   "handle": "@cassandra",
+   "text": "ok",
+   "thread_of": 0
+  }
+ ]
+}

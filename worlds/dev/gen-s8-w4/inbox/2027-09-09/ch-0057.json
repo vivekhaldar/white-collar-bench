@@ -1,0 +1,55 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Adwoa",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-09T16:08:53-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-09-09T16:09:31-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-09-09T16:10:00-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "From the sync earlier, Tane will send you the tooling wear wait-time export.",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@amira"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-09T16:11:26-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "appreciate it"
+  },
+  {
+   "ts": "2027-09-09T16:15:40-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-09-09T16:17:36-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "only the first half"
+  }
+ ]
+}

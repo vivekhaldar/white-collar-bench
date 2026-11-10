@@ -1,0 +1,42 @@
+{
+ "workspace": "birchmere",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Penelope Romano",
+  "Eun-ji Chen",
+  "Nurlan Jansen",
+  "Dina Laurent"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-10T15:50:23-05:00",
+   "user": "Penelope Romano",
+   "handle": "@penelope",
+   "text": "the elevator on the east side is out again",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@eunji",
+      "@nurlan"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-10T15:51:30-05:00",
+   "user": "Eun-ji Chen",
+   "handle": "@eunji",
+   "text": "stairs it is",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-10T15:56:34-05:00",
+   "user": "Nurlan Jansen",
+   "handle": "@nurlan",
+   "text": "classic",
+   "thread_of": 0
+  }
+ ]
+}

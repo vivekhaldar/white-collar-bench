@@ -1,0 +1,47 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-nomvula",
+ "kind": "dm",
+ "participants": [
+  "Nomvula Jansen",
+  "Dina Ricci"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-23T13:09:40-07:00",
+   "user": "Nomvula Jansen",
+   "handle": "@nomvula",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-02-23T13:10:54-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-02-23T13:11:40-07:00",
+   "user": "Nomvula Jansen",
+   "handle": "@nomvula",
+   "text": "for the record, you sent me the pothole reporting selection requirements list yesterday"
+  },
+  {
+   "ts": "2027-02-23T13:12:39-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-02-23T13:17:21-07:00",
+   "user": "Nomvula Jansen",
+   "handle": "@nomvula",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-02-23T13:20:48-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "only the first half"
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+  "workspace": "tarrow",
+  "channel": "dm-dmitri-mara",
+  "kind": "dm",
+  "participants": ["Dmitri Halloran", "Mara Ilves"],
+  "messages": [
+    {"ts": "2027-03-02T12:44:07-08:00", "user": "Dmitri Halloran", "handle": "@dima", "text": "third rewrite of this contract. if v2 moves again after i start i'm out lol (not lol)"},
+    {"ts": "2027-03-02T12:44:39-08:00", "user": "Dmitri Halloran", "handle": "@dima", "text": "like i have half the poller written against v1 and now it's in the bin"},
+    {"ts": "2027-03-02T12:45:12-08:00", "user": "Dmitri Halloran", "handle": "@dima", "text": "when's spec v2 landing?"},
+    {"ts": "2027-03-02T12:55:02-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "thu. event-based, per jack's ARB notes. won't move after that."},
+    {"ts": "2027-03-02T12:55:41-08:00", "user": "Dmitri Halloran", "handle": "@dima", "text": "this thursday. holding you to it", "reactions": [{"emoji": "+1", "users": ["@mara"]}]}
+  ]
+}

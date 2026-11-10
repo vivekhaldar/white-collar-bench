@@ -1,0 +1,41 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-tane",
+ "kind": "dm",
+ "participants": [
+  "Tane Haugen",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-29T11:03:51-06:00",
+   "user": "Tane Haugen",
+   "handle": "@tane",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-09-29T11:05:00-06:00",
+   "user": "Tane Haugen",
+   "handle": "@tane",
+   "text": "Heads up, Morcliff Safety Reporting Discovery now targets October 26 (was 18 October)."
+  },
+  {
+   "ts": "2027-09-29T11:06:16-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-09-29T11:07:47-06:00",
+   "user": "Tane Haugen",
+   "handle": "@tane",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-09-29T11:09:32-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "only the first half"
+  }
+ ]
+}

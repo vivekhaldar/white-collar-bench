@@ -1,0 +1,35 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-desmond-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Dez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-14T17:41:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "i updated the siskin comms plan after your comments"
+  },
+  {
+   "ts": "2027-07-14T17:41:54-08:00",
+   "user": "Dez",
+   "handle": "@desmond",
+   "text": "got it, thanks"
+  },
+  {
+   "ts": "2027-07-14T17:44:31-08:00",
+   "user": "Dez",
+   "handle": "@desmond",
+   "text": "sorry, was in back-to-backs :)"
+  },
+  {
+   "ts": "2027-07-14T17:46:52-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "no worries"
+  }
+ ]
+}

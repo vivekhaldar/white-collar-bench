@@ -1,0 +1,39 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Marguerite Teixeira",
+  "Putri Ashby",
+  "Malia Guo",
+  "Andres Yamamoto"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-27T12:21:40-05:00",
+   "user": "Marguerite Teixeira",
+   "handle": "@marguerite",
+   "text": "anyone up for coffee at 3? :)"
+  },
+  {
+   "ts": "2027-10-27T12:24:14-05:00",
+   "user": "Putri Ashby",
+   "handle": "@putri",
+   "text": "me!",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-10-27T12:27:34-05:00",
+   "user": "Malia Guo",
+   "handle": "@malia",
+   "text": "can't today, back to back",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-10-27T12:33:16-05:00",
+   "user": "Andres Yamamoto",
+   "handle": "@andres",
+   "text": "yes please"
+  }
+ ]
+}

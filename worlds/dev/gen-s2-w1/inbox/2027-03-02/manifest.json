@@ -1,0 +1,117 @@
+{
+  "date": "2027-03-02",
+  "artifacts": [
+    {
+      "id": "ch-0045",
+      "channel": "chat",
+      "received_at": "2027-03-02T07:29:00-07:00",
+      "path": "ch-0045.json",
+      "title": "DM: Hiba Jaber / Dina Ricci"
+    },
+    {
+      "id": "ca-0007",
+      "channel": "calendar",
+      "received_at": "2027-03-02T08:26:00-07:00",
+      "path": "ca-0007.ics",
+      "title": "Invite: Working session: Funding model funding options memo"
+    },
+    {
+      "id": "nt-0005",
+      "channel": "note",
+      "received_at": "2027-03-02T09:00:00-07:00",
+      "path": "nt-0005.md",
+      "title": "Tue voice memo"
+    },
+    {
+      "id": "ch-0046",
+      "channel": "chat",
+      "received_at": "2027-03-02T09:09:00-07:00",
+      "path": "ch-0046.json",
+      "title": "DM: Dina Ricci / Xiaoling Taufa"
+    },
+    {
+      "id": "ch-0047",
+      "channel": "chat",
+      "received_at": "2027-03-02T09:11:00-07:00",
+      "path": "ch-0047.json",
+      "title": "DM: Dina Ricci / Catrin Kuznetsova"
+    },
+    {
+      "id": "ch-0048",
+      "channel": "chat",
+      "received_at": "2027-03-02T10:05:00-07:00",
+      "path": "ch-0048.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0047",
+      "channel": "email",
+      "received_at": "2027-03-02T10:06:00-07:00",
+      "path": "em-0047.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "ch-0049",
+      "channel": "chat",
+      "received_at": "2027-03-02T11:47:00-07:00",
+      "path": "ch-0049.json",
+      "title": "#fennel-core"
+    },
+    {
+      "id": "em-0048",
+      "channel": "email",
+      "received_at": "2027-03-02T12:36:00-07:00",
+      "path": "em-0048.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0050",
+      "channel": "chat",
+      "received_at": "2027-03-02T15:25:00-07:00",
+      "path": "ch-0050.json",
+      "title": "DM: Yael Ellery / Dina Ricci"
+    },
+    {
+      "id": "em-0049",
+      "channel": "email",
+      "received_at": "2027-03-02T15:36:00-07:00",
+      "path": "em-0049.eml",
+      "title": "Civic Tech Bulletin: issue 9"
+    },
+    {
+      "id": "em-0050",
+      "channel": "email",
+      "received_at": "2027-03-02T16:37:00-07:00",
+      "path": "em-0050.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "mt-0008",
+      "channel": "transcript",
+      "received_at": "2027-03-02T17:00:00-07:00",
+      "path": "mt-0008.vtt",
+      "title": "Mistral scoping call (transcript)"
+    },
+    {
+      "id": "em-0051",
+      "channel": "email",
+      "received_at": "2027-03-02T18:06:00-07:00",
+      "path": "em-0051.eml",
+      "title": "Fwd: Mistral service blueprint"
+    },
+    {
+      "id": "em-0052",
+      "channel": "email",
+      "received_at": "2027-03-02T18:16:00-07:00",
+      "path": "em-0052.eml",
+      "title": "Re: Fennel test plan"
+    },
+    {
+      "id": "em-0053",
+      "channel": "email",
+      "received_at": "2027-03-02T18:51:00-07:00",
+      "path": "em-0053.eml",
+      "title": "[REQ-11828] Request resolved"
+    }
+  ]
+}

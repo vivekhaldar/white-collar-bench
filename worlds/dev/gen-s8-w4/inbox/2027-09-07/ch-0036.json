@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-kiran",
+ "kind": "dm",
+ "participants": [
+  "Kiran Merriweather",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T11:46:00-06:00",
+   "user": "Kiran Merriweather",
+   "handle": "@kiran",
+   "text": "Can you set up a Wilhaven catch-up with me by Fri 17 Sep? :)"
+  },
+  {
+   "ts": "2027-09-07T11:46:50-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "on it"
+  },
+  {
+   "ts": "2027-09-07T11:48:31-06:00",
+   "user": "Kiran Merriweather",
+   "handle": "@kiran",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-09-07T11:51:46-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

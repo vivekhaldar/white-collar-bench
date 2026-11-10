@@ -1,0 +1,41 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-catalina-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Catalina Achterhof"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-22T17:05:15-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-06-22T17:06:12-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "i sent you the reading list on admissions triage earlier today"
+  },
+  {
+   "ts": "2027-06-22T17:07:17-08:00",
+   "user": "Catalina Achterhof",
+   "handle": "@catalina",
+   "text": "got it, thanks"
+  },
+  {
+   "ts": "2027-06-22T17:09:43-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-06-22T17:10:55-08:00",
+   "user": "Catalina Achterhof",
+   "handle": "@catalina",
+   "text": "yep, all good"
+  }
+ ]
+}

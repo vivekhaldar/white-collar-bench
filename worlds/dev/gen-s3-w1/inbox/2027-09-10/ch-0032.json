@@ -1,0 +1,41 @@
+{
+ "workspace": "birchmere",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Penelope Romano",
+  "Eun-ji Chen",
+  "Tunde Andersen",
+  "Bisi Chatterjee"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-10T12:42:46-05:00",
+   "user": "Penelope Romano",
+   "handle": "@penelope",
+   "text": "does anyone have a spare laptop charger (usb-c)?",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@eunji",
+      "@tunde"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-10T12:47:47-05:00",
+   "user": "Eun-ji Chen",
+   "handle": "@eunji",
+   "text": "i have one, desk by the window",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-10T12:51:59-05:00",
+   "user": "Tunde Andersen",
+   "handle": "@tunde",
+   "text": "check the supply cupboard"
+  }
+ ]
+}

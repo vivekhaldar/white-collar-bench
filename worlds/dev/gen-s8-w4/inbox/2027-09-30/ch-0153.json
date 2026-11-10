@@ -1,0 +1,41 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-rodrigo",
+ "kind": "dm",
+ "participants": [
+  "Rodrigo",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-30T08:41:08-06:00",
+   "user": "Rodrigo",
+   "handle": "@rodrigo",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-30T08:41:19-06:00",
+   "user": "Rodrigo",
+   "handle": "@rodrigo",
+   "text": "i sent you falhaven's input on predictive maintenance again earlier today"
+  },
+  {
+   "ts": "2027-09-30T08:41:33-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-09-30T08:42:56-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-09-30T08:44:02-06:00",
+   "user": "Rodrigo",
+   "handle": "@rodrigo",
+   "text": "later!"
+  }
+ ]
+}

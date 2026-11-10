@@ -1,0 +1,139 @@
+{
+  "date": "2027-07-16",
+  "artifacts": [
+    {
+      "id": "em-0157",
+      "channel": "email",
+      "received_at": "2027-07-16T08:16:00-08:00",
+      "path": "em-0157.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0158",
+      "channel": "email",
+      "received_at": "2027-07-16T08:22:00-08:00",
+      "path": "em-0158.eml",
+      "title": "Re: Siskin status slide after Desmond's comments"
+    },
+    {
+      "id": "ca-0022",
+      "channel": "calendar",
+      "received_at": "2027-07-16T09:06:00-08:00",
+      "path": "ca-0022.ics",
+      "title": "Accepted: Admissions triage selection follow-up"
+    },
+    {
+      "id": "ch-0130",
+      "channel": "chat",
+      "received_at": "2027-07-16T12:22:00-08:00",
+      "path": "ch-0130.json",
+      "title": "DM: Hiba Jimenez / Bolat Oyelami"
+    },
+    {
+      "id": "em-0159",
+      "channel": "email",
+      "received_at": "2027-07-16T12:38:00-08:00",
+      "path": "em-0159.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "mn-0021",
+      "channel": "meeting_notes",
+      "received_at": "2027-07-16T13:00:00-08:00",
+      "path": "mn-0021.md",
+      "title": "Notes: Team retro"
+    },
+    {
+      "id": "em-0160",
+      "channel": "email",
+      "received_at": "2027-07-16T13:42:00-08:00",
+      "path": "em-0160.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "ch-0131",
+      "channel": "chat",
+      "received_at": "2027-07-16T14:08:00-08:00",
+      "path": "ch-0131.json",
+      "title": "DM: Anastasia Mizrahi / Hiba Jimenez"
+    },
+    {
+      "id": "mt-0024",
+      "channel": "transcript",
+      "received_at": "2027-07-16T14:15:00-08:00",
+      "path": "mt-0024.vtt",
+      "title": "Admissions triage selection / Siskin sync (transcript)"
+    },
+    {
+      "id": "ch-0132",
+      "channel": "chat",
+      "received_at": "2027-07-16T14:31:00-08:00",
+      "path": "ch-0132.json",
+      "title": "DM: Bolat Oyelami / Hiba Jimenez"
+    },
+    {
+      "id": "em-0161",
+      "channel": "email",
+      "received_at": "2027-07-16T14:49:00-08:00",
+      "path": "em-0161.eml",
+      "title": "Re: Torane security questionnaire"
+    },
+    {
+      "id": "em-0162",
+      "channel": "email",
+      "received_at": "2027-07-16T14:54:00-08:00",
+      "path": "em-0162.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "dc-0006",
+      "channel": "document",
+      "received_at": "2027-07-16T17:10:00-08:00",
+      "path": "dc-0006.docx",
+      "title": "Garnet one-page summary v2",
+      "parent": "em-0163"
+    },
+    {
+      "id": "em-0163",
+      "channel": "email",
+      "received_at": "2027-07-16T17:10:00-08:00",
+      "path": "em-0163.eml",
+      "title": "Status note: w/e 16 July"
+    },
+    {
+      "id": "nt-0014",
+      "channel": "note",
+      "received_at": "2027-07-16T17:53:00-08:00",
+      "path": "nt-0014.md",
+      "title": "Fri notes"
+    },
+    {
+      "id": "nt-0015",
+      "channel": "note",
+      "received_at": "2027-07-16T18:29:00-08:00",
+      "path": "nt-0015.md",
+      "title": "Fri notes"
+    },
+    {
+      "id": "em-0164",
+      "channel": "email",
+      "received_at": "2027-07-16T18:30:00-08:00",
+      "path": "em-0164.eml",
+      "title": "Alumni outreach discovery problem framing note"
+    },
+    {
+      "id": "ch-0133",
+      "channel": "chat",
+      "received_at": "2027-07-16T21:26:00-08:00",
+      "path": "ch-0133.json",
+      "title": "DM: Hiba Jimenez / Mere Hidayat"
+    },
+    {
+      "id": "em-0165",
+      "channel": "email",
+      "received_at": "2027-07-16T21:52:00-08:00",
+      "path": "em-0165.eml",
+      "title": "Draft: Admissions triage selection timeline"
+    }
+  ]
+}

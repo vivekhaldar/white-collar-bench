@@ -1,0 +1,42 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#wagtail-core",
+ "kind": "channel",
+ "participants": [
+  "Amira Baek",
+  "Oksana Hoffmann",
+  "Adwoa Kocak",
+  "Tavo",
+  "Giorgi Wisniewska",
+  "Batbayar Galbraith",
+  "Marcelo Meijer"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-04T08:32:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "@adwoa on it, I'll send you the Wagtail decision memo."
+  },
+  {
+   "ts": "2027-10-04T08:33:03-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "ok :)"
+  },
+  {
+   "ts": "2027-10-04T08:37:37-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-10-04T08:43:47-06:00",
+   "user": "Marcelo Meijer",
+   "handle": "@marcelo",
+   "text": "+1",
+   "thread_of": 0
+  }
+ ]
+}

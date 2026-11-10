@@ -1,0 +1,35 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-lindiwe",
+ "kind": "dm",
+ "participants": [
+  "Lindiwe Baek",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-15T13:56:00-08:00",
+   "user": "Lindiwe Baek",
+   "handle": "@lindiwe",
+   "text": "Karim will send you the Axolotl requirements matrix, as discussed. :)"
+  },
+  {
+   "ts": "2027-02-15T13:56:07-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "perfect, thanks"
+  },
+  {
+   "ts": "2027-02-15T14:00:09-08:00",
+   "user": "Lindiwe Baek",
+   "handle": "@lindiwe",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-02-15T14:01:15-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "later!"
+  }
+ ]
+}

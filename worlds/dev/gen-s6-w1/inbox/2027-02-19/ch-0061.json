@@ -1,0 +1,35 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-andres-despina",
+ "kind": "dm",
+ "participants": [
+  "Andres Erdem",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-19T11:57:00-08:00",
+   "user": "Andres Erdem",
+   "handle": "@andres",
+   "text": "Room Booking Learning Series has moved to the revived phase."
+  },
+  {
+   "ts": "2027-02-19T11:57:26-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "noted"
+  },
+  {
+   "ts": "2027-02-19T11:59:29-08:00",
+   "user": "Andres Erdem",
+   "handle": "@andres",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-02-19T12:02:12-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

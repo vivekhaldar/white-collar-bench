@@ -1,0 +1,47 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-mpho",
+ "kind": "dm",
+ "participants": [
+  "Aroha Mendoza",
+  "Mpho Sengupta"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-19T09:15:18-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-10-19T09:15:53-05:00",
+   "user": "Mpho Sengupta",
+   "handle": "@mpho",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-10-19T09:18:00-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "you mentioned you'd share the clelera enterprise agreement action log with me, that works for me"
+  },
+  {
+   "ts": "2027-10-19T09:19:30-05:00",
+   "user": "Mpho Sengupta",
+   "handle": "@mpho",
+   "text": "no problem"
+  },
+  {
+   "ts": "2027-10-19T09:21:32-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-10-19T09:24:09-05:00",
+   "user": "Mpho Sengupta",
+   "handle": "@mpho",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

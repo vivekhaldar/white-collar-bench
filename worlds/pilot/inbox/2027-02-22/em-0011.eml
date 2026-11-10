@@ -1,0 +1,63 @@
+From: Ilya Marchetti <ilya.marchetti@tarrow.example>
+To: Mara Ilves <mara.ilves@tarrow.example>
+Cc: Bettina Oduya <bettina.oduya@tarrow.example>, Hyun-woo Park <hyunwoo.park@tarrow.example>
+Date: Mon, 22 Feb 2027 14:30:00 -0800
+Subject: Kettleyard reference architecture v3: review please
+Message-ID: <em-0011@tarrow.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Mara,
+
+Kettleyard reference architecture v3 attached (PDF, draft for review).
+
+Mara, could you get me comments by end of next week? Bettina and Hyun-woo,
+same ask, lighter touch. Reviewers for v3, as they'll appear on the review
+record, and the lens I'd like from each:
+
+  - Mara Ilves - Principal Architect, AI & Data (Office of Digital Strategy):
+    the whole thing, but read it as tenant #1 would. Tinderbox is the first real tenant and Bartosz is
+    provisioning it now, so anything that will bite Kestrow should bite us on
+    paper first.
+  - Bettina Oduya - Principal, Product (Office of Digital Strategy):
+    section 6 (onboarding) and anything a campus would experience as "the
+    service". Yes, including who picks up the phone at 2am.
+  - Hyun-woo Park - Principal, Security & Identity (Office of Digital Strategy):
+    sections 2, 4 and 5 (identity broker, secrets vault, logging/redaction).
+    Hugo, the group-to-role mapping in s.2 is the part I'm least sure of.
+
+You asked for January run-rate - it's in section 7. These are platform
+metering numbers, not finance actuals; Percy's figures after the January
+close will replace them. Budget totals are kept out of the document on
+purpose; that conversation belongs to Percy, not to a PDF.
+
+What changed since v2:
+
+  1. Tenancy model (s.1): quotas are now enforced at the gateway rather than
+     advisory. A tenant that exceeds its quota gets 429s, not a polite email.
+  2. Identity broker (s.2): per-tenant mapping of campus IdP groups to
+     Kettleyard roles, so a campus can scope access without asking us.
+  3. Model gateway (s.3): one shared connection pool per upstream provider
+     with per-tenant shares, replacing the per-tenant pools from v2 (which
+     were mostly idle and occasionally all busy at once, the worst of both).
+  4. Secrets vault (s.4): per-tenant paths; API keys are now issued per
+     tenant, not per application.
+  5. Logging/redaction (s.5): the redaction filter now runs before the log
+     sink, not after it. Prompt and response bodies are off by default.
+  6. Onboarding (s.6): checklist rewritten around Tinderbox as tenant #1.
+  7. New section 7: January run-rate, by component.
+  8. Open questions (s.8): trimmed from 14 to 6. The other 8 either got
+     answered or got demoted to "someone else's problem", which is also an
+     answer.
+
+Comments inline on the PDF or as a numbered list by email are both fine. If
+you number them I will reply per number, which you know I enjoy.
+
+Thanks,
+Ilya
+
+--
+Ilya Marchetti
+Principal Architect, Data Platform
+Office of Digital Strategy | Tarrow University System Office

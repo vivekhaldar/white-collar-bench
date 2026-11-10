@@ -1,0 +1,31 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-anahit-hiba",
+ "kind": "dm",
+ "participants": [
+  "Anahit Fifita",
+  "Hiba Deng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-20T11:57:00-05:00",
+   "user": "Anahit Fifita",
+   "handle": "@anahit",
+   "text": "Done, I sent you the Wagtail accessibility review!",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-20T11:57:09-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "thanks!"
+  }
+ ]
+}

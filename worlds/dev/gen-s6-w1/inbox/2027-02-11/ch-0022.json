@@ -1,0 +1,31 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Tomas Deng",
+  "Liisa Babic"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-11T13:17:59-08:00",
+   "user": "Tomas Deng",
+   "handle": "@tomas",
+   "text": "lost a blue umbrella, might be in the big meeting room",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@liisa"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-11T13:22:44-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "will keep an eye out"
+  }
+ ]
+}

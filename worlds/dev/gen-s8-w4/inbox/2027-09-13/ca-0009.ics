@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iselmoor//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:d17a513c15477c97@iselmoor.example
+DTSTAMP:20270914T000600Z
+DTSTART:20270915T200000Z
+DTEND:20270915T203000Z
+SUMMARY:Walkthrough: Operator AI basics workshop room plan
+ORGANIZER;CN=Amira Baek:mailto:amira.baek@iselmoor.example
+ATTENDEE;CN=Adwoa Kocak;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:adwoa.kocak@iselmoor.example
+SEQUENCE:0
+DESCRIPTION:Placeholder\, agenda to follow.\nJoin video meeting: https://meet.iselmoor.example/j/6471847931?pwd=Gg35zBXR\nPasscode: 800556
+LOCATION:https://meet.iselmoor.example/j/6471847931?pwd=Gg35zBXR
+END:VEVENT
+END:VCALENDAR

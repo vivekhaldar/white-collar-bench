@@ -1,0 +1,40 @@
+{
+ "workspace": "holcrest",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Aarav Zamora",
+  "Nadia Jovanovic",
+  "Kirsten Ellery",
+  "Joselito Moradi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-01T13:04:14-07:00",
+   "user": "Aarav Zamora",
+   "handle": "@aarav",
+   "text": "who left a lunchbox in the fridge since last week?",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@nadia",
+      "@kirsten"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-01T13:09:44-07:00",
+   "user": "Nadia Jovanovic",
+   "handle": "@nadia",
+   "text": "not me!"
+  },
+  {
+   "ts": "2027-11-01T13:10:23-07:00",
+   "user": "Kirsten Ellery",
+   "handle": "@kirsten",
+   "text": "it's been there a while"
+  }
+ ]
+}

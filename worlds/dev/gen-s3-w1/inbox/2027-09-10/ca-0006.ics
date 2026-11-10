@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Birchmere//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:1a686c3fab1e1282@birchmere.example
+DTSTAMP:20270910T233000Z
+DTSTART:20270913T180000Z
+DTEND:20270913T183000Z
+SUMMARY:Sirocco platform sync
+ORGANIZER;CN=Dina Laurent:mailto:dina.laurent@birchmere.example
+ATTENDEE;CN=Bisi Chatterjee;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bisi.chatterjee@birchmere.example
+ATTENDEE;CN=Eleni Fontaine;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:eleni.fontaine@ketford.birchmere.example
+ATTENDEE;CN=Alasdair Kaya;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:alasdair.kaya@birchmere.example
+SEQUENCE:0
+DESCRIPTION:Placeholder\, agenda to follow.\nJoin video meeting: https://meet.birchmere.example/j/8868012865?pwd=kPEexYaN\nPasscode: 401715
+LOCATION:https://meet.birchmere.example/j/8868012865?pwd=kPEexYaN
+END:VEVENT
+END:VCALENDAR

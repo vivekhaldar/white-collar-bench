@@ -1,0 +1,41 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Adwoa",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-07T16:46:06-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-10-07T16:47:35-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-10-07T16:48:00-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "I'll share the Wagtail service blueprint with you."
+  },
+  {
+   "ts": "2027-10-07T16:50:41-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-10-07T16:51:33-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "no worries"
+  }
+ ]
+}

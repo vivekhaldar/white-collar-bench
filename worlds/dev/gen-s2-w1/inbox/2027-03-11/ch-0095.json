@@ -1,0 +1,44 @@
+{
+ "workspace": "vercliff",
+ "channel": "#mistral-core",
+ "kind": "channel",
+ "participants": [
+  "Xiaoling Taufa",
+  "Dina Ricci",
+  "Yael Ellery",
+  "Imani",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
+  "Cassandra Yilmaz",
+  "Bilal Kahananui",
+  "Thibault Sahin",
+  "Mei Obi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-11T17:44:00-07:00",
+   "user": "Xiaoling Taufa",
+   "handle": "@xiaoling",
+   "text": "Change of plan: we're no longer going to limit the Mistral pilot to three service centers. Nordale asked for another service center!"
+  },
+  {
+   "ts": "2027-03-11T17:44:47-07:00",
+   "user": "Bilal Kahananui",
+   "handle": "@bilal",
+   "text": "agreed"
+  },
+  {
+   "ts": "2027-03-11T17:45:06-07:00",
+   "user": "Xiaoling Taufa",
+   "handle": "@xiaoling",
+   "text": "Decision: widen the Mistral pilot to four service centers! :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-11T17:46:04-07:00",
+   "user": "Bilal Kahananui",
+   "handle": "@bilal",
+   "text": "makes sense"
+  }
+ ]
+}

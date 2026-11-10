@@ -1,0 +1,35 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-meera-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Meera Bondarenko",
+  "Ottavio Moreira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-17T14:36:00-08:00",
+   "user": "Meera Bondarenko",
+   "handle": "@meera",
+   "text": "Theresa is expecting you to send them the Cairn rollout checklist."
+  },
+  {
+   "ts": "2027-09-17T14:36:17-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "will do"
+  },
+  {
+   "ts": "2027-09-17T14:38:51-08:00",
+   "user": "Meera Bondarenko",
+   "handle": "@meera",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-09-17T14:41:08-08:00",
+   "user": "Ottavio Moreira",
+   "handle": "@ottavio",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

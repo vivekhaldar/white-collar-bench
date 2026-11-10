@@ -1,0 +1,19 @@
+{
+  "workspace": "tarrow",
+  "channel": "#tinderbox-core",
+  "kind": "channel",
+  "participants": ["Saanvi Raghunathan", "Dmitri Halloran", "Ramona Szabo", "Yusra Haddad"],
+  "messages": [
+    {"ts": "2027-03-03T10:12:08-08:00", "user": "Saanvi Raghunathan", "handle": "@saanvi", "text": "gateway throwing 502s - aborting the load test. was at 140 of 500 concurrent, error rate 61% and climbing. not our side, it's the kettleyard gateway"},
+    {"ts": "2027-03-03T10:13:40-08:00", "user": "Saanvi Raghunathan", "handle": "@saanvi", "text": "ramp stopped, test sessions drained. this morning's results are junk, discarding them", "thread_of": 0},
+    {"ts": "2027-03-03T10:15:22-08:00", "user": "Dmitri Halloran", "handle": "@dima", "text": "fyi we're still in dummy-data mode anyway. so the only thing hurting is our pride"},
+    {"ts": "2027-03-03T10:16:05-08:00", "user": "Dmitri Halloran", "handle": "@dima", "text": "current mood", "files": [{"name": "502-this-is-fine.png", "type": "png"}], "reactions": [{"emoji": "joy", "users": ["@saanvi", "@ramona"]}, {"emoji": "fire", "users": ["@saanvi"]}]},
+    {"ts": "2027-03-03T10:20:31-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "hi all! 👋 I'm covering standup for Mara today - she's at the offsite and asked me to cover the Tinderbox standup for her. notes to follow 📝"},
+    {"ts": "2027-03-03T10:21:10-08:00", "user": "Yusra Haddad", "handle": "@yusra", "text": "Thanks Ramona.", "thread_of": 4},
+    {"ts": "2027-03-03T10:27:44-08:00", "user": "Saanvi Raghunathan", "handle": "@saanvi", "text": "unrelated: does anyone have the visitor wifi password for thursday? have a guest coming for the workshop and she doesn't have a kestrow login"},
+    {"ts": "2027-03-03T10:29:02-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "event services usually hands out the guest wifi cards at the door, they did at the last one 😊", "thread_of": 6},
+    {"ts": "2027-03-03T10:40:09-08:00", "user": "Yusra Haddad", "handle": "@yusra", "text": "so load test is off till the gateway's fixed?"},
+    {"ts": "2027-03-03T10:40:27-08:00", "user": "Saanvi Raghunathan", "handle": "@saanvi", "text": "yep. blocked."},
+    {"ts": "2027-03-03T10:41:00-08:00", "user": "Yusra Haddad", "handle": "@yusra", "text": "also no standup tomorrow - workshop day, I'm cancelling thursday's.", "reactions": [{"emoji": "+1", "users": ["@saanvi", "@dima", "@ramona"]}]}
+  ]
+}

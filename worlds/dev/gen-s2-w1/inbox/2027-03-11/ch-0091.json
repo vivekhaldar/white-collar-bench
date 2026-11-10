@@ -1,0 +1,43 @@
+{
+ "workspace": "vercliff",
+ "channel": "#mistral-core",
+ "kind": "channel",
+ "participants": [
+  "Yael Ellery",
+  "Dina Ricci",
+  "Imani",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
+  "Cassandra Yilmaz",
+  "Bilal Kahananui",
+  "Thibault Sahin",
+  "Mei Obi",
+  "Xiaoling Taufa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-10T10:19:33-07:00",
+   "user": "Yael Ellery",
+   "handle": "@yael",
+   "text": "catching people up since a few of us are out today"
+  },
+  {
+   "ts": "2027-03-10T10:21:00-07:00",
+   "user": "Yael Ellery",
+   "handle": "@yael",
+   "text": "Heads up: Dina will review Thibault's Mistral retention schedule."
+  },
+  {
+   "ts": "2027-03-10T10:21:53-07:00",
+   "user": "Yael Ellery",
+   "handle": "@yael",
+   "text": "@thibault thanks for the Mistral decision memo, got it."
+  },
+  {
+   "ts": "2027-03-10T10:22:03-07:00",
+   "user": "Cassandra Yilmaz",
+   "handle": "@cassandra",
+   "text": "got it"
+  }
+ ]
+}

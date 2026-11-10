@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Kirkmarsh//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:1a219342a8e6dcc6@kirkmarsh.example
+DTSTAMP:20271105T152600Z
+DTSTART:20271110T160000Z
+DTEND:20271110T170000Z
+SUMMARY:Working session: Coffee with Dominic about intake forms
+ORGANIZER;CN=Dominic Agarwal:mailto:dominic.agarwal@elmfield.kirkmarsh.example
+ATTENDEE;CN=Aroha Mendoza;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:aroha.mendoza@kirkmarsh.example
+SEQUENCE:0
+DESCRIPTION:Agenda: Set up a coffee with Dominic about intake forms.\nJoin video meeting: https://meet.kirkmarsh.example/j/3918512472?pwd=VmM42Ah5\nPasscode: 341271
+LOCATION:https://meet.kirkmarsh.example/j/3918512472?pwd=VmM42Ah5
+END:VEVENT
+END:VCALENDAR

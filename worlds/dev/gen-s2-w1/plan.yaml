@@ -1,0 +1,2175 @@
+plan_version: 1
+world_id: gen-s2-w1
+generator:
+  kind: wcb-gen
+  version: 1
+  seed: 2
+  size: standard
+  weeks: 1
+setting:
+  key: city
+  label: city government digital service
+  timezone: -07:00
+  vocab:
+    sites: service centers
+    site: service center
+    users: caseworkers
+    end_users: residents
+    council: Digital Steering Committee
+    data: resident data
+    agreement: data-sharing agreement
+    platform: shared AI platform
+    unit_word: department
+  nouns:
+  - risk register
+  - rollout checklist
+  - test plan
+  - decision memo
+  - status slide
+  - comms plan
+  - training outline
+  - budget justification
+  - vendor comparison
+  - architecture diagram
+  - integration spec
+  - access request
+  - pilot charter
+  - evaluation rubric
+  - data dictionary
+  - stakeholder map
+  - dependency list
+  - requirements matrix
+  - lessons-learned note
+  - timeline
+  - RACI chart
+  - cutover plan
+  - acceptance criteria
+  - metrics definition
+  - service blueprint
+  - support model
+  - retention schedule
+  - change request
+  - accessibility review
+  - help-desk script
+  - service request extract
+  - council memo
+  - equity impact review
+  - public notice draft
+  umbrella: o-city-of-vercliff
+  central: o-vercliff-digital-service
+  video_domain: meet.vercliff.example
+  chat_workspace: vercliff
+  volume:
+  - 15
+  - 20
+  loops_per_day: 5.8
+calendar:
+  start: '2027-03-08'
+  seed:
+    start: '2027-02-22'
+    end: '2027-03-06'
+    days:
+    - '2027-02-22'
+    - '2027-02-23'
+    - '2027-02-24'
+    - '2027-02-25'
+    - '2027-02-26'
+    - '2027-02-27'
+    - '2027-03-01'
+    - '2027-03-02'
+    - '2027-03-03'
+    - '2027-03-04'
+    - '2027-03-05'
+    - '2027-03-06'
+  episode:
+    days:
+    - '2027-03-08'
+    - '2027-03-09'
+    - '2027-03-10'
+    - '2027-03-11'
+    - '2027-03-12'
+    weeks:
+    - - '2027-03-08'
+      - '2027-03-09'
+      - '2027-03-10'
+      - '2027-03-11'
+      - '2027-03-12'
+  checkpoints:
+  - id: cp1
+    date: '2027-03-09'
+    label: end of Tuesday
+  - id: cp2
+    date: '2027-03-11'
+    label: end of Thursday
+  - id: cp3
+    date: '2027-03-12'
+    label: end of week
+worker: p-dina-ricci
+orgs:
+- id: o-city-of-vercliff
+  name: City of Vercliff
+  short: Vercliff
+  kind: internal
+  role: umbrella
+  domain: vercliff.example
+  slug: vercliff
+  surface_forms:
+  - Vercliff
+  - CV
+  - vercliff.example
+  receptiveness: null
+- id: o-vercliff-digital-service
+  name: Vercliff Digital Service
+  short: DS
+  kind: internal
+  role: central
+  domain: vercliff.example
+  slug: ds
+  surface_forms:
+  - DS
+  - central
+  - the DS team
+  - vercliff.example
+  receptiveness: null
+- id: o-nordale-department-of-transportation
+  name: Nordale Department of Transportation
+  short: Nordale
+  kind: internal
+  role: unit
+  domain: nordale.vercliff.example
+  slug: nordale
+  surface_forms:
+  - Nordale
+  - NDT
+  - nordale.vercliff.example
+  receptiveness: high
+- id: o-selfell-public-works
+  name: Selfell Public Works
+  short: Selfell
+  kind: internal
+  role: unit
+  domain: selfell.vercliff.example
+  slug: selfell
+  surface_forms:
+  - Selfell
+  - SPW
+  - selfell.vercliff.example
+  receptiveness: medium
+- id: o-ivyworth-housing-services
+  name: Ivyworth Housing Services
+  short: Ivyworth
+  kind: internal
+  role: unit
+  domain: ivyworth.vercliff.example
+  slug: ivyworth
+  surface_forms:
+  - Ivyworth
+  - IHS
+  - ivyworth.vercliff.example
+  receptiveness: low
+- id: o-penport-library-services
+  name: Penport Library Services
+  short: Penport
+  kind: internal
+  role: unit
+  domain: penport.vercliff.example
+  slug: penport
+  surface_forms:
+  - Penport
+  - PLS
+  - penport.vercliff.example
+  receptiveness: low
+- id: o-ormmarsh-parks-and-recreation
+  name: Ormmarsh Parks and Recreation
+  short: Ormmarsh
+  kind: internal
+  role: unit
+  domain: ormmarsh.vercliff.example
+  slug: ormmarsh
+  surface_forms:
+  - Ormmarsh
+  - OPR
+  - ormmarsh.vercliff.example
+  receptiveness: medium
+- id: o-torthen-civic
+  name: Torthen Civic
+  short: Torthen
+  kind: vendor
+  role: vendor
+  domain: torthen.example
+  slug: torthen
+  surface_forms:
+  - Torthen
+  - torthen.example
+  receptiveness: null
+- id: o-marmara-labs
+  name: Marmara Labs
+  short: Marmara
+  kind: vendor
+  role: vendor
+  domain: marmara.example
+  slug: marmara
+  surface_forms:
+  - Marmara
+  - marmara.example
+  receptiveness: null
+- id: o-ethura-systems
+  name: Ethura Systems
+  short: Ethura
+  kind: vendor
+  role: vendor
+  domain: ethura.example
+  slug: ethura
+  surface_forms:
+  - Ethura
+  - ethura.example
+  receptiveness: null
+- id: o-talton-institute-for-public-service-design
+  name: Talton Institute for Public Service Design
+  short: Talton
+  kind: partner
+  role: partner
+  domain: talton-research.example
+  slug: talton
+  surface_forms:
+  - Talton
+  - TIPSD
+  - talton-research.example
+  receptiveness: null
+people:
+- id: p-dina-ricci
+  name: Dina Ricci
+  first: Dina
+  last: Ricci
+  nickname: null
+  org: o-vercliff-digital-service
+  role: Senior Technologist, Civic AI
+  role_phrase: null
+  email: dina.ricci@vercliff.example
+  handle: '@dina'
+  relationship: null
+  group: central
+  tier: core
+  weight: 0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Dina
+  - D. Ricci
+  - dina.ricci@vercliff.example
+  - '@dina'
+- id: p-kayode-whitfield
+  name: Kayode Whitfield
+  first: Kayode
+  last: Whitfield
+  nickname: null
+  org: o-vercliff-digital-service
+  role: Chief Digital Officer
+  role_phrase: the CDO
+  email: kayode.whitfield@vercliff.example
+  handle: '@kayode'
+  relationship: manager
+  group: central
+  tier: core
+  weight: 2.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Kayode
+  - K. Whitfield
+  - kayode.whitfield@vercliff.example
+  - '@kayode'
+  - the CDO
+- id: p-imani-navarro
+  name: Imani Navarro
+  first: Imani
+  last: Navarro
+  nickname: null
+  org: o-vercliff-digital-service
+  role: Director of Delivery
+  role_phrase: our delivery director
+  email: imani.navarro@vercliff.example
+  handle: '@imani'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 7.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Imani
+  - I. Navarro
+  - imani.navarro@vercliff.example
+  - '@imani'
+  - our delivery director
+- id: p-cassandra-yilmaz
+  name: Cassandra Yilmaz
+  first: Cassandra
+  last: Yilmaz
+  nickname: null
+  org: o-vercliff-digital-service
+  role: Principal, Platform Engineering
+  role_phrase: the platform lead
+  email: cassandra.yilmaz@vercliff.example
+  handle: '@cassandra'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 3.2
+  appears: null
+  voice: formal
+  surface_forms:
+  - Cassandra
+  - C. Yilmaz
+  - cassandra.yilmaz@vercliff.example
+  - '@cassandra'
+  - the platform lead
+- id: p-thibault-sahin
+  name: Thibault Sahin
+  first: Thibault
+  last: Sahin
+  nickname: null
+  org: o-vercliff-digital-service
+  role: Platform Engineer
+  role_phrase: the platform engineer
+  email: thibault.sahin@vercliff.example
+  handle: '@thibault'
+  relationship: stakeholder
+  group: central
+  tier: core
+  weight: 1.2
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Thibault
+  - T. Sahin
+  - thibault.sahin@vercliff.example
+  - '@thibault'
+  - the platform engineer
+- id: p-bilal-kahananui
+  name: Bilal Kahananui
+  first: Bilal
+  last: Kahananui
+  nickname: null
+  org: o-vercliff-digital-service
+  role: Chief Information Security Officer
+  role_phrase: the CISO
+  email: bilal.kahananui@vercliff.example
+  handle: '@bilal'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 2.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Bilal
+  - B. Kahananui
+  - bilal.kahananui@vercliff.example
+  - '@bilal'
+  - the CISO
+- id: p-mei-obi
+  name: Mei Obi
+  first: Mei
+  last: Obi
+  nickname: null
+  org: o-vercliff-digital-service
+  role: Product Lead, Resident Services
+  role_phrase: the product lead
+  email: mei.obi@vercliff.example
+  handle: '@mei'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 1.2
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Mei
+  - M. Obi
+  - mei.obi@vercliff.example
+  - '@mei'
+  - the product lead
+- id: p-bogdan-quinlan
+  name: Bogdan Quinlan
+  first: Bogdan
+  last: Quinlan
+  nickname: null
+  org: o-vercliff-digital-service
+  role: Executive Assistant to the CDO
+  role_phrase: the CDO's EA
+  email: bogdan.quinlan@vercliff.example
+  handle: '@bogdan'
+  relationship: assistant
+  group: central
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: formal
+  surface_forms:
+  - Bogdan
+  - B. Quinlan
+  - bogdan.quinlan@vercliff.example
+  - '@bogdan'
+  - the CDO's EA
+- id: p-katrin-nyberg
+  name: Katrin Nyberg
+  first: Katrin
+  last: Nyberg
+  nickname: null
+  org: o-vercliff-digital-service
+  role: Performance Analyst
+  role_phrase: our performance analyst
+  email: katrin.nyberg@vercliff.example
+  handle: '@katrin'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Katrin
+  - K. Nyberg
+  - katrin.nyberg@vercliff.example
+  - '@katrin'
+  - our performance analyst
+- id: p-ds-shared-inbox
+  name: DS Shared Inbox
+  first: DS Team
+  last: Mailbox
+  nickname: null
+  org: o-vercliff-digital-service
+  role: Shared team mailbox
+  role_phrase: the DS inbox
+  email: ds-team@vercliff.example
+  handle: '@ds-team'
+  relationship: other
+  group: mailbox
+  tier: core
+  weight: 0.3
+  appears: null
+  voice: formal
+  surface_forms:
+  - DS Team
+  - the DS inbox
+  - ds-team@vercliff.example
+- id: p-ilse-menon
+  name: Ilse Menon
+  first: Ilse
+  last: Menon
+  nickname: null
+  org: o-city-of-vercliff
+  role: Purchasing Agent
+  role_phrase: the purchasing agent
+  email: ilse.menon@vercliff.example
+  handle: '@ilse'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Ilse
+  - I. Menon
+  - ilse.menon@vercliff.example
+  - '@ilse'
+  - the purchasing agent
+- id: p-magdalena-shapiro
+  name: Magdalena Shapiro
+  first: Magdalena
+  last: Shapiro
+  nickname: Magda
+  org: o-city-of-vercliff
+  role: Deputy City Attorney
+  role_phrase: the deputy city attorney
+  email: magdalena.shapiro@vercliff.example
+  handle: '@magdalena'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Magdalena
+  - Magda
+  - M. Shapiro
+  - magdalena.shapiro@vercliff.example
+  - '@magdalena'
+  - the deputy city attorney
+- id: p-freja-mutasa
+  name: Freja Mutasa
+  first: Freja
+  last: Mutasa
+  nickname: null
+  org: o-city-of-vercliff
+  role: Budget Director
+  role_phrase: the budget director
+  email: freja.mutasa@vercliff.example
+  handle: '@freja'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Freja
+  - F. Mutasa
+  - freja.mutasa@vercliff.example
+  - '@freja'
+  - the budget director
+- id: p-jisoo-sato
+  name: Jisoo Sato
+  first: Jisoo
+  last: Sato
+  nickname: null
+  org: o-city-of-vercliff
+  role: Recruitment Partner
+  role_phrase: our recruitment partner
+  email: jisoo.sato@vercliff.example
+  handle: '@jisoo'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Jisoo
+  - J. Sato
+  - jisoo.sato@vercliff.example
+  - '@jisoo'
+  - our recruitment partner
+- id: p-rahul-duarte
+  name: Rahul Duarte
+  first: Rahul
+  last: Duarte
+  nickname: null
+  org: o-city-of-vercliff
+  role: Privacy Officer
+  role_phrase: the privacy officer
+  email: rahul.duarte@vercliff.example
+  handle: '@rahul'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Rahul
+  - R. Duarte
+  - rahul.duarte@vercliff.example
+  - '@rahul'
+  - the privacy officer
+- id: p-xiaoling-taufa
+  name: Xiaoling Taufa
+  first: Xiaoling
+  last: Taufa
+  nickname: Ling
+  org: o-nordale-department-of-transportation
+  role: Department Director
+  role_phrase: Nordale's director
+  email: xiaoling.taufa@nordale.vercliff.example
+  handle: '@xiaoling'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Xiaoling
+  - Ling
+  - X. Taufa
+  - xiaoling.taufa@nordale.vercliff.example
+  - '@xiaoling'
+  - Nordale's director
+- id: p-yael-ellery
+  name: Yael Ellery
+  first: Yael
+  last: Ellery
+  nickname: null
+  org: o-nordale-department-of-transportation
+  role: Program Manager
+  role_phrase: the Nordale lead
+  email: yael.ellery@nordale.vercliff.example
+  handle: '@yael'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 2.4
+  appears: null
+  voice: formal
+  surface_forms:
+  - Yael
+  - Y. Ellery
+  - yael.ellery@nordale.vercliff.example
+  - '@yael'
+  - the Nordale lead
+- id: p-rudo-thornbury
+  name: Rudo Thornbury
+  first: Rudo
+  last: Thornbury
+  nickname: null
+  org: o-nordale-department-of-transportation
+  role: Records Manager
+  role_phrase: null
+  email: rudo.thornbury@nordale.vercliff.example
+  handle: '@rudo'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - Rudo
+  - R. Thornbury
+  - rudo.thornbury@nordale.vercliff.example
+  - '@rudo'
+- id: p-naoko-sandoval
+  name: Naoko Sandoval
+  first: Naoko
+  last: Sandoval
+  nickname: null
+  org: o-nordale-department-of-transportation
+  role: Web Coordinator
+  role_phrase: null
+  email: naoko.sandoval@nordale.vercliff.example
+  handle: '@naoko'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Naoko
+  - N. Sandoval
+  - naoko.sandoval@nordale.vercliff.example
+  - '@naoko'
+- id: p-alejandro-carmichael
+  name: Alejandro Carmichael
+  first: Alejandro
+  last: Carmichael
+  nickname: null
+  org: o-selfell-public-works
+  role: Department Director
+  role_phrase: Selfell's director
+  email: alejandro.carmichael@selfell.vercliff.example
+  handle: '@alejandro'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: terse
+  surface_forms:
+  - Alejandro
+  - A. Carmichael
+  - alejandro.carmichael@selfell.vercliff.example
+  - '@alejandro'
+  - Selfell's director
+- id: p-tendai-santos
+  name: Tendai Santos
+  first: Tendai
+  last: Santos
+  nickname: null
+  org: o-selfell-public-works
+  role: Customer Service Manager
+  role_phrase: the Selfell lead
+  email: tendai.santos@selfell.vercliff.example
+  handle: '@tendai'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: terse
+  surface_forms:
+  - Tendai
+  - T. Santos
+  - tendai.santos@selfell.vercliff.example
+  - '@tendai'
+  - the Selfell lead
+- id: p-catrin-kuznetsova
+  name: Catrin Kuznetsova
+  first: Catrin
+  last: Kuznetsova
+  nickname: null
+  org: o-selfell-public-works
+  role: Records Manager
+  role_phrase: null
+  email: catrin.kuznetsova@selfell.vercliff.example
+  handle: '@catrin'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Catrin
+  - C. Kuznetsova
+  - catrin.kuznetsova@selfell.vercliff.example
+  - '@catrin'
+- id: p-nomvula-jansen
+  name: Nomvula Jansen
+  first: Nomvula
+  last: Jansen
+  nickname: null
+  org: o-selfell-public-works
+  role: Web Coordinator
+  role_phrase: null
+  email: nomvula.jansen@selfell.vercliff.example
+  handle: '@nomvula'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Nomvula
+  - N. Jansen
+  - nomvula.jansen@selfell.vercliff.example
+  - '@nomvula'
+- id: p-wayan-nakamura
+  name: Wayan Nakamura
+  first: Wayan
+  last: Nakamura
+  nickname: null
+  org: o-ivyworth-housing-services
+  role: Department Director
+  role_phrase: Ivyworth's director
+  email: wayan.nakamura@ivyworth.vercliff.example
+  handle: '@wayan'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: formal
+  surface_forms:
+  - Wayan
+  - W. Nakamura
+  - wayan.nakamura@ivyworth.vercliff.example
+  - '@wayan'
+  - Ivyworth's director
+- id: p-hiba-jaber
+  name: Hiba Jaber
+  first: Hiba
+  last: Jaber
+  nickname: null
+  org: o-ivyworth-housing-services
+  role: Operations Manager
+  role_phrase: the Ivyworth lead
+  email: hiba.jaber@ivyworth.vercliff.example
+  handle: '@hiba'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: formal
+  surface_forms:
+  - Hiba
+  - H. Jaber
+  - hiba.jaber@ivyworth.vercliff.example
+  - '@hiba'
+  - the Ivyworth lead
+- id: p-niamh-kovalenko
+  name: Niamh Kovalenko
+  first: Niamh
+  last: Kovalenko
+  nickname: null
+  org: o-ivyworth-housing-services
+  role: Business Analyst
+  role_phrase: null
+  email: niamh.kovalenko@ivyworth.vercliff.example
+  handle: '@niamh'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Niamh
+  - N. Kovalenko
+  - niamh.kovalenko@ivyworth.vercliff.example
+  - '@niamh'
+- id: p-malcolm-khoury
+  name: Malcolm Khoury
+  first: Malcolm
+  last: Khoury
+  nickname: null
+  org: o-penport-library-services
+  role: Department Director
+  role_phrase: Penport's director
+  email: malcolm.khoury@penport.vercliff.example
+  handle: '@malcolm'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: terse
+  surface_forms:
+  - Malcolm
+  - M. Khoury
+  - malcolm.khoury@penport.vercliff.example
+  - '@malcolm'
+  - Penport's director
+- id: p-kenji-wekesa
+  name: Kenji Wekesa
+  first: Kenji
+  last: Wekesa
+  nickname: null
+  org: o-penport-library-services
+  role: Deputy Director
+  role_phrase: the Penport lead
+  email: kenji.wekesa@penport.vercliff.example
+  handle: '@kenji'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Kenji
+  - K. Wekesa
+  - kenji.wekesa@penport.vercliff.example
+  - '@kenji'
+  - the Penport lead
+- id: p-jelena-darko
+  name: Jelena Darko
+  first: Jelena
+  last: Darko
+  nickname: null
+  org: o-penport-library-services
+  role: Records Manager
+  role_phrase: null
+  email: jelena.darko@penport.vercliff.example
+  handle: '@jelena'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Jelena
+  - J. Darko
+  - jelena.darko@penport.vercliff.example
+  - '@jelena'
+- id: p-mariana-konstantinou
+  name: Mariana Konstantinou
+  first: Mariana
+  last: Konstantinou
+  nickname: null
+  org: o-ormmarsh-parks-and-recreation
+  role: Department Director
+  role_phrase: Ormmarsh's director
+  email: mariana.konstantinou@ormmarsh.vercliff.example
+  handle: '@mariana'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Mariana
+  - M. Konstantinou
+  - mariana.konstantinou@ormmarsh.vercliff.example
+  - '@mariana'
+  - Ormmarsh's director
+- id: p-meera-chebet
+  name: Meera Chebet
+  first: Meera
+  last: Chebet
+  nickname: null
+  org: o-ormmarsh-parks-and-recreation
+  role: Chief of Staff
+  role_phrase: the Ormmarsh lead
+  email: meera.chebet@ormmarsh.vercliff.example
+  handle: '@meera'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Meera
+  - M. Chebet
+  - meera.chebet@ormmarsh.vercliff.example
+  - '@meera'
+  - the Ormmarsh lead
+- id: p-emilio-arslan
+  name: Emilio Arslan
+  first: Emilio
+  last: Arslan
+  nickname: null
+  org: o-ormmarsh-parks-and-recreation
+  role: Web Coordinator
+  role_phrase: null
+  email: emilio.arslan@ormmarsh.vercliff.example
+  handle: '@emilio'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - Emilio
+  - E. Arslan
+  - emilio.arslan@ormmarsh.vercliff.example
+  - '@emilio'
+- id: p-nathaniel-fenwick
+  name: Nathaniel Fenwick
+  first: Nathaniel
+  last: Fenwick
+  nickname: null
+  org: o-ormmarsh-parks-and-recreation
+  role: Systems Administrator
+  role_phrase: null
+  email: nathaniel.fenwick@ormmarsh.vercliff.example
+  handle: '@nathaniel'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Nathaniel
+  - N. Fenwick
+  - nathaniel.fenwick@ormmarsh.vercliff.example
+  - '@nathaniel'
+- id: p-imani-quaye
+  name: Imani Quaye
+  first: Imani
+  last: Quaye
+  nickname: null
+  org: o-torthen-civic
+  role: Account Executive
+  role_phrase: null
+  email: imani.quaye@torthen.example
+  handle: '@imaniq'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Imani
+  - I. Quaye
+  - imani.quaye@torthen.example
+  - '@imaniq'
+- id: p-tahmina-suwannarat
+  name: Tahmina Suwannarat
+  first: Tahmina
+  last: Suwannarat
+  nickname: null
+  org: o-torthen-civic
+  role: Solutions Engineer
+  role_phrase: null
+  email: tahmina.suwannarat@torthen.example
+  handle: '@tahmina'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Tahmina
+  - T. Suwannarat
+  - tahmina.suwannarat@torthen.example
+  - '@tahmina'
+- id: p-siti-montoya
+  name: Siti Montoya
+  first: Siti
+  last: Montoya
+  nickname: null
+  org: o-marmara-labs
+  role: Account Executive
+  role_phrase: null
+  email: siti.montoya@marmara.example
+  handle: '@siti'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: terse
+  surface_forms:
+  - Siti
+  - S. Montoya
+  - siti.montoya@marmara.example
+  - '@siti'
+- id: p-tendai-krishnan
+  name: Tendai Krishnan
+  first: Tendai
+  last: Krishnan
+  nickname: null
+  org: o-marmara-labs
+  role: Solutions Engineer
+  role_phrase: null
+  email: tendai.krishnan@marmara.example
+  handle: '@tendaik'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: terse
+  surface_forms:
+  - Tendai
+  - T. Krishnan
+  - tendai.krishnan@marmara.example
+  - '@tendaik'
+- id: p-anh-novotny
+  name: Anh Novotny
+  first: Anh
+  last: Novotny
+  nickname: null
+  org: o-ethura-systems
+  role: Account Executive
+  role_phrase: null
+  email: anh.novotny@ethura.example
+  handle: '@anh'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Anh
+  - A. Novotny
+  - anh.novotny@ethura.example
+  - '@anh'
+- id: p-esi-petrosyan
+  name: Esi Petrosyan
+  first: Esi
+  last: Petrosyan
+  nickname: null
+  org: o-ethura-systems
+  role: Solutions Engineer
+  role_phrase: null
+  email: esi.petrosyan@ethura.example
+  handle: '@esi'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Esi
+  - E. Petrosyan
+  - esi.petrosyan@ethura.example
+  - '@esi'
+- id: p-penelope-fuentes
+  name: Penelope Fuentes
+  first: Penelope
+  last: Fuentes
+  nickname: null
+  org: o-talton-institute-for-public-service-design
+  role: Senior Research Scientist
+  role_phrase: null
+  email: penelope.fuentes@talton-research.example
+  handle: '@penelope'
+  relationship: partner
+  group: partner
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: terse
+  surface_forms:
+  - Penelope
+  - P. Fuentes
+  - penelope.fuentes@talton-research.example
+  - '@penelope'
+- id: p-lakshmi-matsuda
+  name: Lakshmi Matsuda
+  first: Lakshmi
+  last: Matsuda
+  nickname: null
+  org: null
+  role: Candidate
+  role_phrase: null
+  email: lakshmi.matsuda@post.example
+  handle: '@lakshmi'
+  relationship: candidate
+  group: candidate
+  tier: core
+  weight: 0.6
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Lakshmi
+  - L. Matsuda
+  - lakshmi.matsuda@post.example
+  - '@lakshmi'
+- id: p-venkatesh-pangilinan
+  name: Venkatesh Pangilinan
+  first: Venkatesh
+  last: Pangilinan
+  nickname: Venky
+  org: o-nordale-department-of-transportation
+  role: Privacy Officer
+  role_phrase: the new privacy officer
+  email: venkatesh.pangilinan@nordale.vercliff.example
+  handle: '@venkatesh'
+  relationship: stakeholder
+  group: newcomer
+  tier: core
+  weight: 1.4
+  appears: '2027-03-10'
+  voice: terse
+  surface_forms:
+  - Venkatesh
+  - Venky
+  - V. Pangilinan
+  - venkatesh.pangilinan@nordale.vercliff.example
+  - '@venkatesh'
+  - the new privacy officer
+- id: p-aylin-kocak
+  name: Aylin Kocak
+  first: Aylin
+  last: Kocak
+  nickname: null
+  org: null
+  role: Editor, Civic Tech Bulletin
+  role_phrase: null
+  email: aylin.kocak@newsletters.example
+  handle: '@aylin'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - aylin.kocak@newsletters.example
+  minor_kind: newsletter
+- id: p-vercliff-it-service-desk
+  name: Vercliff IT Service Desk
+  first: Vercliff IT Service Desk
+  last: ''
+  nickname: null
+  org: null
+  role: Vercliff IT Service Desk
+  role_phrase: null
+  email: servicedesk-noreply@vercliff.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - servicedesk-noreply@vercliff.example
+  minor_kind: service_desk
+- id: p-platform-status-page
+  name: Platform Status Page
+  first: Platform Status Page
+  last: ''
+  nickname: null
+  org: null
+  role: Platform Status Page
+  role_phrase: null
+  email: status-noreply@vercliff.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - status-noreply@vercliff.example
+  minor_kind: status
+- id: p-vercliff-internal-communications
+  name: Vercliff Internal Communications
+  first: Vercliff Internal Communications
+  last: ''
+  nickname: null
+  org: null
+  role: Vercliff Internal Communications
+  role_phrase: null
+  email: news@vercliff.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - news@vercliff.example
+  minor_kind: comms
+- id: p-tuan-hendriks
+  name: Tuan Hendriks
+  first: Tuan
+  last: Hendriks
+  nickname: null
+  org: null
+  role: Events Coordinator
+  role_phrase: null
+  email: tuan.hendriks@vercliff.example
+  handle: '@tuan'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - tuan.hendriks@vercliff.example
+  minor_kind: events
+- id: p-yasmin-colombo
+  name: Yasmin Colombo
+  first: Yasmin
+  last: Colombo
+  nickname: null
+  org: null
+  role: Conference Organizer
+  role_phrase: null
+  email: yasmin.colombo@conference.example
+  handle: '@yasmin'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - yasmin.colombo@conference.example
+  minor_kind: conference
+- id: p-benefits-enrollment-notices
+  name: Benefits Enrollment Notices
+  first: Benefits Enrollment Notices
+  last: ''
+  nickname: null
+  org: null
+  role: Benefits Enrollment Notices
+  role_phrase: null
+  email: benefits-noreply@vercliff.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - benefits-noreply@vercliff.example
+  minor_kind: benefits
+projects:
+- id: pr-mistral
+  name: Mistral
+  short: Mistral
+  kw: mistral
+  code: Mistral
+  surface_forms:
+  - Project Mistral
+  - the service request triage pilot
+  - the Nordale pilot
+  - MISP
+  archetype: flagship_pilot
+  size: flagship
+  topic: service request triage
+  topic_a: an AI service request triage tool
+  pivot: inspection backlog
+  role: ''
+  unit: o-nordale-department-of-transportation
+  vendors:
+  - o-marmara-labs
+  - o-torthen-civic
+  partner: o-talton-institute-for-public-service-design
+  owner: p-yael-ellery
+  sponsor: p-xiaoling-taufa
+  members:
+  - p-dina-ricci
+  - p-yael-ellery
+  - p-imani-navarro
+  - p-rudo-thornbury
+  - p-naoko-sandoval
+  - p-cassandra-yilmaz
+  - p-bilal-kahananui
+  - p-thibault-sahin
+  - p-mei-obi
+  - p-xiaoling-taufa
+  orgs:
+  - o-nordale-department-of-transportation
+  status: active
+  phase: scoping
+  target_date: '2027-03-19'
+  n: 3
+  cast:
+    owner: p-yael-ellery
+    sponsor: p-xiaoling-taufa
+    lead: p-yael-ellery
+    unit:
+    - p-rudo-thornbury
+    - p-naoko-sandoval
+    - p-yael-ellery
+    ae:
+    - p-siti-montoya
+    - p-imani-quaye
+    se:
+    - p-tendai-krishnan
+    - p-tahmina-suwannarat
+    eng: p-cassandra-yilmaz
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
+    proc: p-ilse-menon
+    fin: p-freja-mutasa
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
+  weight: 38.05
+  start: '2027-02-22'
+- id: pr-fennel
+  name: Fennel
+  short: Fennel
+  kw: fennel
+  code: Fennel
+  surface_forms:
+  - the platform
+  - the common platform
+  - Fennel platform
+  - the shared AI platform
+  archetype: platform_hub
+  size: hub
+  topic: shared platform
+  topic_a: ''
+  pivot: inspection backlog
+  role: ''
+  unit: o-nordale-department-of-transportation
+  vendors:
+  - o-torthen-civic
+  - o-ethura-systems
+  partner: o-talton-institute-for-public-service-design
+  owner: p-cassandra-yilmaz
+  sponsor: p-kayode-whitfield
+  members:
+  - p-dina-ricci
+  - p-cassandra-yilmaz
+  - p-imani-navarro
+  - p-yael-ellery
+  - p-rudo-thornbury
+  - p-naoko-sandoval
+  - p-thibault-sahin
+  orgs: []
+  status: active
+  phase: onboarding tenants
+  target_date: null
+  n: 2
+  cast:
+    owner: p-cassandra-yilmaz
+    sponsor: p-kayode-whitfield
+    lead: p-yael-ellery
+    unit:
+    - p-rudo-thornbury
+    - p-naoko-sandoval
+    - p-yael-ellery
+    ae:
+    - p-imani-quaye
+    - p-anh-novotny
+    se:
+    - p-tahmina-suwannarat
+    - p-esi-petrosyan
+    eng: p-thibault-sahin
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
+    proc: p-ilse-menon
+    fin: p-freja-mutasa
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
+  weight: 12.76
+  start: '2027-02-22'
+- id: pr-pothole-reporting-tool-selection
+  name: Pothole Reporting Tool Selection
+  short: pothole reporting selection
+  kw: pothole reporting selection
+  code: null
+  surface_forms:
+  - the pothole reporting bake-off
+  - the Marmara/Ethura evaluation
+  - PRTS selection
+  archetype: vendor_pair_evaluation
+  size: mid
+  topic: pothole reporting
+  topic_a: an AI pothole reporting assistant
+  pivot: call-center wait times
+  role: ''
+  unit: o-selfell-public-works
+  vendors:
+  - o-marmara-labs
+  - o-ethura-systems
+  partner: o-talton-institute-for-public-service-design
+  owner: p-dina-ricci
+  sponsor: p-alejandro-carmichael
+  members:
+  - p-dina-ricci
+  - p-dina-ricci
+  - p-imani-navarro
+  - p-tendai-santos
+  - p-catrin-kuznetsova
+  - p-nomvula-jansen
+  orgs:
+  - o-selfell-public-works
+  - o-marmara-labs
+  - o-ethura-systems
+  status: active
+  phase: intake
+  target_date: '2027-04-05'
+  n: 2
+  cast:
+    owner: p-dina-ricci
+    sponsor: p-alejandro-carmichael
+    lead: p-tendai-santos
+    unit:
+    - p-catrin-kuznetsova
+    - p-nomvula-jansen
+    - p-tendai-santos
+    ae:
+    - p-siti-montoya
+    - p-anh-novotny
+    se:
+    - p-tendai-krishnan
+    - p-esi-petrosyan
+    eng: p-cassandra-yilmaz
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
+    proc: p-ilse-menon
+    fin: p-freja-mutasa
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
+  weight: 6.93
+  start: '2027-02-22'
+- id: pr-ivyworth-records-requests-discovery
+  name: Ivyworth Records Requests Discovery
+  short: records requests discovery
+  kw: records requests discovery
+  code: null
+  surface_forms:
+  - the Ivyworth discovery
+  - the records requests work
+  - IRRD discovery
+  archetype: pivoting_discovery
+  size: mid
+  topic: records requests
+  topic_a: an AI records request router
+  pivot: duplicate requests
+  role: ''
+  unit: o-ivyworth-housing-services
+  vendors:
+  - o-ethura-systems
+  - o-marmara-labs
+  partner: o-talton-institute-for-public-service-design
+  owner: p-hiba-jaber
+  sponsor: p-kayode-whitfield
+  members:
+  - p-dina-ricci
+  - p-hiba-jaber
+  - p-imani-navarro
+  - p-niamh-kovalenko
+  orgs:
+  - o-ivyworth-housing-services
+  status: active
+  phase: planning
+  target_date: '2027-04-14'
+  n: 2
+  cast:
+    owner: p-hiba-jaber
+    sponsor: p-kayode-whitfield
+    lead: p-hiba-jaber
+    unit:
+    - p-niamh-kovalenko
+    - p-hiba-jaber
+    ae:
+    - p-anh-novotny
+    - p-siti-montoya
+    se:
+    - p-esi-petrosyan
+    - p-tendai-krishnan
+    eng: p-cassandra-yilmaz
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
+    proc: p-ilse-menon
+    fin: p-freja-mutasa
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
+  weight: 7.06
+  start: '2027-02-22'
+- id: pr-fennel-funding-model
+  name: Fennel Funding Model
+  short: funding model
+  kw: funding model
+  code: null
+  surface_forms:
+  - the recharge model
+  - the funding options
+  - Fennel recharge
+  archetype: economics_model
+  size: mid
+  topic: cost sharing
+  topic_a: ''
+  pivot: inspection backlog
+  role: ''
+  unit: o-nordale-department-of-transportation
+  vendors:
+  - o-marmara-labs
+  - o-ethura-systems
+  partner: o-talton-institute-for-public-service-design
+  owner: p-dina-ricci
+  sponsor: p-kayode-whitfield
+  members:
+  - p-dina-ricci
+  - p-dina-ricci
+  - p-imani-navarro
+  - p-yael-ellery
+  - p-rudo-thornbury
+  - p-naoko-sandoval
+  orgs:
+  - o-nordale-department-of-transportation
+  status: active
+  phase: inputs
+  target_date: '2027-04-12'
+  n: 2
+  cast:
+    owner: p-dina-ricci
+    sponsor: p-kayode-whitfield
+    lead: p-yael-ellery
+    unit:
+    - p-rudo-thornbury
+    - p-naoko-sandoval
+    - p-yael-ellery
+    ae:
+    - p-siti-montoya
+    - p-anh-novotny
+    se:
+    - p-tendai-krishnan
+    - p-esi-petrosyan
+    eng: p-cassandra-yilmaz
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
+    proc: p-ilse-menon
+    fin: p-freja-mutasa
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
+  weight: 7.96
+  start: '2027-02-22'
+- id: pr-ai-in-public-service-workshop
+  name: AI in Public Service Workshop
+  short: AI in public service workshop
+  kw: ai in public service workshop
+  code: null
+  surface_forms:
+  - the workshop
+  - the Selfell workshop
+  - the AI in public service session
+  archetype: event_preparation
+  size: mid
+  topic: AI in public service
+  topic_a: ''
+  pivot: call-center wait times
+  role: ''
+  unit: o-selfell-public-works
+  vendors:
+  - o-marmara-labs
+  - o-ethura-systems
+  partner: o-talton-institute-for-public-service-design
+  owner: p-imani-navarro
+  sponsor: p-kayode-whitfield
+  members:
+  - p-dina-ricci
+  - p-imani-navarro
+  - p-tendai-santos
+  - p-catrin-kuznetsova
+  - p-nomvula-jansen
+  orgs:
+  - o-selfell-public-works
+  status: active
+  phase: logistics
+  target_date: '2027-03-19'
+  n: 2
+  cast:
+    owner: p-imani-navarro
+    sponsor: p-kayode-whitfield
+    lead: p-tendai-santos
+    unit:
+    - p-catrin-kuznetsova
+    - p-nomvula-jansen
+    - p-tendai-santos
+    ae:
+    - p-siti-montoya
+    - p-anh-novotny
+    se:
+    - p-tendai-krishnan
+    - p-esi-petrosyan
+    eng: p-cassandra-yilmaz
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
+    proc: p-ilse-menon
+    fin: p-freja-mutasa
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
+  weight: 7.69
+  start: '2027-02-22'
+- id: pr-inspection-scheduling-advisory
+  name: Inspection Scheduling Advisory
+  short: inspection scheduling advisory
+  kw: inspection scheduling advisory
+  code: null
+  surface_forms:
+  - the inspection scheduling advice
+  - Selfell inspection scheduling advisory
+  archetype: background_advisory
+  size: small
+  topic: inspection scheduling
+  topic_a: an AI inspection scheduler
+  pivot: fee waiver delays
+  role: ''
+  unit: o-selfell-public-works
+  vendors:
+  - o-torthen-civic
+  - o-marmara-labs
+  partner: o-talton-institute-for-public-service-design
+  owner: p-tendai-santos
+  sponsor: p-kayode-whitfield
+  members:
+  - p-dina-ricci
+  - p-tendai-santos
+  - p-imani-navarro
+  - p-catrin-kuznetsova
+  orgs:
+  - o-selfell-public-works
+  status: active
+  phase: advising
+  target_date: null
+  n: 2
+  cast:
+    owner: p-tendai-santos
+    sponsor: p-kayode-whitfield
+    lead: p-tendai-santos
+    unit:
+    - p-catrin-kuznetsova
+    - p-nomvula-jansen
+    - p-tendai-santos
+    ae:
+    - p-imani-quaye
+    - p-siti-montoya
+    se:
+    - p-tahmina-suwannarat
+    - p-tendai-krishnan
+    eng: p-cassandra-yilmaz
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
+    proc: p-ilse-menon
+    fin: p-freja-mutasa
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
+  weight: 2.84
+  start: '2027-02-22'
+- id: pr-talton-partnership
+  name: Talton Partnership
+  short: Talton partnership
+  kw: talton partnership
+  code: null
+  surface_forms:
+  - the Talton relationship
+  - Talton
+  archetype: relationship_thread
+  size: small
+  topic: partnership
+  topic_a: ''
+  pivot: call-center wait times
+  role: ''
+  unit: o-nordale-department-of-transportation
+  vendors:
+  - o-ethura-systems
+  - o-marmara-labs
+  partner: o-talton-institute-for-public-service-design
+  owner: p-dina-ricci
+  sponsor: p-kayode-whitfield
+  members:
+  - p-dina-ricci
+  - p-dina-ricci
+  - p-imani-navarro
+  - p-yael-ellery
+  orgs:
+  - o-nordale-department-of-transportation
+  - o-talton-institute-for-public-service-design
+  status: active
+  phase: ongoing
+  target_date: null
+  n: 2
+  cast:
+    owner: p-dina-ricci
+    sponsor: p-kayode-whitfield
+    lead: p-yael-ellery
+    unit:
+    - p-rudo-thornbury
+    - p-naoko-sandoval
+    - p-yael-ellery
+    ae:
+    - p-anh-novotny
+    - p-siti-montoya
+    se:
+    - p-esi-petrosyan
+    - p-tendai-krishnan
+    eng: p-cassandra-yilmaz
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
+    proc: p-ilse-menon
+    fin: p-freja-mutasa
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
+  weight: 2.67
+  start: '2027-02-22'
+- id: pr-selfell-parking-analytics-idea
+  name: Selfell Parking Analytics Idea
+  short: parking analytics
+  kw: parking analytics
+  code: null
+  surface_forms:
+  - Tendai's parking analytics idea
+  - the parking analytics placeholder
+  archetype: placeholder
+  size: placeholder
+  topic: parking analytics
+  topic_a: an AI parking analytics dashboard
+  pivot: duplicate requests
+  role: ''
+  unit: o-selfell-public-works
+  vendors:
+  - o-torthen-civic
+  - o-ethura-systems
+  partner: o-talton-institute-for-public-service-design
+  owner: p-tendai-santos
+  sponsor: p-kayode-whitfield
+  members:
+  - p-dina-ricci
+  - p-tendai-santos
+  - p-imani-navarro
+  orgs:
+  - o-selfell-public-works
+  status: active
+  phase: placeholder
+  target_date: null
+  n: 2
+  cast:
+    owner: p-tendai-santos
+    sponsor: p-kayode-whitfield
+    lead: p-tendai-santos
+    unit:
+    - p-catrin-kuznetsova
+    - p-nomvula-jansen
+    - p-tendai-santos
+    ae:
+    - p-imani-quaye
+    - p-anh-novotny
+    se:
+    - p-tahmina-suwannarat
+    - p-esi-petrosyan
+    eng: p-cassandra-yilmaz
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
+    proc: p-ilse-menon
+    fin: p-freja-mutasa
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
+  weight: 0.14
+  start: '2027-02-22'
+- id: pr-marmara-code-enforcement-diligence
+  name: Marmara Code Enforcement Diligence
+  short: Marmara diligence
+  kw: marmara diligence
+  code: null
+  surface_forms:
+  - the Marmara deep dive
+  - the code enforcement diligence
+  archetype: stalled_discovery
+  size: dormant
+  topic: code enforcement
+  topic_a: an AI code enforcement triage tool
+  pivot: call-center wait times
+  role: ''
+  unit: o-ormmarsh-parks-and-recreation
+  vendors:
+  - o-marmara-labs
+  - o-ethura-systems
+  partner: o-talton-institute-for-public-service-design
+  owner: p-dina-ricci
+  sponsor: p-kayode-whitfield
+  members:
+  - p-dina-ricci
+  - p-dina-ricci
+  - p-imani-navarro
+  orgs:
+  - o-ormmarsh-parks-and-recreation
+  - o-marmara-labs
+  - o-ethura-systems
+  status: active
+  phase: diligence
+  target_date: null
+  n: 2
+  cast:
+    owner: p-dina-ricci
+    sponsor: p-kayode-whitfield
+    lead: p-meera-chebet
+    unit:
+    - p-emilio-arslan
+    - p-nathaniel-fenwick
+    - p-meera-chebet
+    ae:
+    - p-siti-montoya
+    - p-anh-novotny
+    se:
+    - p-tendai-krishnan
+    - p-esi-petrosyan
+    eng: p-cassandra-yilmaz
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
+    proc: p-ilse-menon
+    fin: p-freja-mutasa
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
+  weight: 0.73
+  start: '2027-02-22'
+- id: pr-library-help-learning-series
+  name: Library Help Learning Series
+  short: library help series
+  kw: library help series
+  code: null
+  surface_forms:
+  - the learning series
+  - the library help talks
+  archetype: education_programme
+  size: dormant
+  topic: library help
+  topic_a: an AI library help assistant
+  pivot: fee waiver delays
+  role: ''
+  unit: o-ormmarsh-parks-and-recreation
+  vendors:
+  - o-torthen-civic
+  - o-marmara-labs
+  partner: o-talton-institute-for-public-service-design
+  owner: p-imani-navarro
+  sponsor: p-kayode-whitfield
+  members:
+  - p-dina-ricci
+  - p-imani-navarro
+  - p-meera-chebet
+  orgs:
+  - o-ormmarsh-parks-and-recreation
+  - o-talton-institute-for-public-service-design
+  status: active
+  phase: dormant
+  target_date: null
+  n: 2
+  cast:
+    owner: p-imani-navarro
+    sponsor: p-kayode-whitfield
+    lead: p-meera-chebet
+    unit:
+    - p-emilio-arslan
+    - p-nathaniel-fenwick
+    - p-meera-chebet
+    ae:
+    - p-imani-quaye
+    - p-siti-montoya
+    se:
+    - p-tahmina-suwannarat
+    - p-tendai-krishnan
+    eng: p-cassandra-yilmaz
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
+    proc: p-ilse-menon
+    fin: p-freja-mutasa
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
+  weight: 0.6
+  start: '2027-02-22'
+collisions:
+  first_names:
+  - - p-imani-navarro
+    - p-imani-quaye
+  - - p-tendai-santos
+    - p-tendai-krishnan
+  homophones:
+  - p-katrin-nyberg
+  - p-catrin-kuznetsova
+cadences:
+- key: standup
+  title: Mistral standup
+  kind: meeting
+  project: pr-mistral
+  weekdays:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  every: 1
+  time: 09:30
+  minutes: 25
+  organizer: p-yael-ellery
+  attendees:
+  - p-dina-ricci
+  - p-yael-ellery
+  - p-imani-navarro
+  - p-rudo-thornbury
+  - p-naoko-sandoval
+  - p-cassandra-yilmaz
+  - p-bilal-kahananui
+  - p-thibault-sahin
+- key: leads
+  title: DS leads call
+  kind: meeting
+  project: null
+  weekdays:
+  - 0
+  every: 1
+  time: '11:00'
+  minutes: 45
+  organizer: p-kayode-whitfield
+  attendees:
+  - p-dina-ricci
+  - p-imani-navarro
+  - p-cassandra-yilmaz
+  - p-bilal-kahananui
+  - p-mei-obi
+  - p-kayode-whitfield
+- key: hub_sync
+  title: Fennel platform sync
+  kind: meeting
+  project: pr-fennel
+  weekdays:
+  - 2
+  every: 1
+  time: '14:00'
+  minutes: 30
+  organizer: p-cassandra-yilmaz
+  attendees:
+  - p-dina-ricci
+  - p-cassandra-yilmaz
+  - p-imani-navarro
+  - p-yael-ellery
+  - p-rudo-thornbury
+  - p-naoko-sandoval
+- key: one_on_one
+  title: 1:1 Dina / Imani
+  kind: meeting
+  project: null
+  weekdays:
+  - 1
+  every: 2
+  time: '15:00'
+  minutes: 30
+  organizer: p-imani-navarro
+  attendees:
+  - p-dina-ricci
+  - p-imani-navarro
+- key: forum
+  title: Cross-department AI forum
+  kind: meeting
+  project: null
+  weekdays:
+  - 3
+  every: 2
+  time: '13:00'
+  minutes: 60
+  organizer: p-imani-navarro
+  attendees:
+  - p-dina-ricci
+  - p-imani-navarro
+  - p-yael-ellery
+  - p-tendai-santos
+  - p-hiba-jaber
+  - p-kenji-wekesa
+  - p-meera-chebet
+- key: weekly_update
+  title: Weekly update
+  kind: obligation
+  project: null
+  weekdays:
+  - 0
+  - 4
+  every: 1
+  organizer: p-ds-shared-inbox
+  attendees:
+  - p-dina-ricci
+  - p-kayode-whitfield
+challenges:
+- week: 1
+  tag: worker_directive
+  day: '2027-03-08'
+  project: pr-ivyworth-records-requests-discovery
+- week: 1
+  tag: noise
+  day: '2027-03-08'
+- week: 1
+  tag: implied_commitment
+  day: '2027-03-08'
+  project: pr-mistral
+- week: 1
+  tag: duplicate_signal
+  day: '2027-03-09'
+  project: pr-ivyworth-records-requests-discovery
+- week: 1
+  tag: privacy
+  day: '2027-03-08'
+- week: 1
+  tag: alias
+  day: '2027-03-09'
+- week: 1
+  tag: name_collision
+  day: '2027-03-09'
+- week: 1
+  tag: new_entity
+  day: '2027-03-10'
+  person: p-venkatesh-pangilinan
+  project: pr-mistral
+- week: 1
+  tag: supersession
+  day: '2027-03-10'
+  project: pr-mistral
+- week: 1
+  tag: unobservable
+  day: '2027-03-11'
+  project: pr-fennel-funding-model
+  attribute: budget
+- week: 1
+  tag: draft_vs_sent
+  day: '2027-03-12'
+  setup: '2027-03-08'
+- week: 1
+  tag: batch_catchup
+  day: '2027-03-10'
+- week: 1
+  tag: transfer
+  day: '2027-03-11'
+- week: 1
+  tag: correction
+  day: '2027-03-11'
+  setup: '2027-03-09'
+- week: 1
+  tag: weak_evidence
+  day: '2027-03-11'
+  setup: '2027-03-08'
+- week: 1
+  tag: acceptance_vs_occurrence
+  day: '2027-03-11'
+- week: 1
+  tag: restructuring
+  day: '2027-03-12'
+  mode: split
+  project: pr-ivyworth-records-requests-discovery
+- week: 1
+  tag: version_mismatch
+  day: '2027-03-11'
+  setup: '2027-03-08'
+- week: 1
+  tag: silent_closure
+  day: '2027-03-11'
+  setup: '2027-03-09'
+- week: 1
+  tag: reversal
+  day: '2027-03-11'
+  setup: '2027-03-04'
+  project: pr-mistral
+- week: 1
+  tag: endorsement
+  day: '2027-03-12'
+  setup: '2027-03-09'
+- week: 1
+  tag: scattered_evidence
+  day: '2027-03-11'
+  setup: '2027-03-08'
+  steps:
+  - '2027-03-09'
+  - '2027-03-10'
+  - '2027-03-11'
+audit:
+  unrevealed:
+    e-0020: never appears
+    e-0022: never appears
+    e-0038: never appears
+    e-0040: never appears
+    e-0041: never appears
+    e-0043: never appears
+    e-0046: never appears
+    e-0048: never appears
+    e-0052: never appears
+    e-0238: unobservable
+    e-0240: 'weak evidence: the walkthrough left no trace'
+  instruction_injection: em-0084
+  attachments:
+  - dc-0001
+  - dc-0002
+  - dc-0003
+  - dc-0004
+  - dc-0005
+  - dc-0006
+  - dc-0007

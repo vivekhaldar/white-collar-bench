@@ -1,0 +1,31 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-andres-aroha",
+ "kind": "dm",
+ "participants": [
+  "Andres Yamamoto",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-26T11:30:00-05:00",
+   "user": "Andres Yamamoto",
+   "handle": "@andres",
+   "text": "Would you be able to assemble the Cirrus security review package?",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@aroha"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-26T11:31:01-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "no problem"
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-bisi",
+ "kind": "dm",
+ "participants": [
+  "Bisi",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-22T15:03:04-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "hello :)"
+  },
+  {
+   "ts": "2027-09-22T15:04:30-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-09-22T15:07:00-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "I'll send you the Okapi RACI chart! :)"
+  },
+  {
+   "ts": "2027-09-22T15:08:14-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-09-22T17:15:00-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "That's the Okapi RACI chart done, by the way. :)"
+  },
+  {
+   "ts": "2027-09-22T17:15:05-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "perfect"
+  }
+ ]
+}

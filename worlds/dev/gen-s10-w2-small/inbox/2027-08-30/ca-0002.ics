@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Reddale//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:59955deedf16c801@reddale.example
+DTSTAMP:20270830T122300Z
+DTSTART:20270902T130000Z
+DTEND:20270902T133000Z
+SUMMARY:Walkthrough: Pipit one-page summary
+ORGANIZER;CN=Aoife Everett:mailto:aoife.everett@reddale.example
+ATTENDEE;CN=Douglas Grigoryan;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:douglas.grigoryan@ormton.reddale.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.reddale.example/j/1669862667?pwd=pTv9Zn33\nPasscode: 192855
+LOCATION:https://meet.reddale.example/j/1669862667?pwd=pTv9Zn33
+END:VEVENT
+END:VCALENDAR

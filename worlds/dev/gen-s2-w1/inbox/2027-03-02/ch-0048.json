@@ -1,0 +1,40 @@
+{
+ "workspace": "vercliff",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Mei Obi",
+  "Bilal Kahananui",
+  "Cassandra Yilmaz"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-02T09:20:50-07:00",
+   "user": "Mei Obi",
+   "handle": "@mei",
+   "text": "the elevator on the east side is out again",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@bilal",
+      "@cassandra"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-02T09:27:12-07:00",
+   "user": "Bilal Kahananui",
+   "handle": "@bilal",
+   "text": "stairs it is"
+  },
+  {
+   "ts": "2027-03-02T09:30:39-07:00",
+   "user": "Cassandra Yilmaz",
+   "handle": "@cassandra",
+   "text": "classic",
+   "thread_of": 0
+  }
+ ]
+}

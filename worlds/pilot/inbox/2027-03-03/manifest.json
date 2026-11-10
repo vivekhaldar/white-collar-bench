@@ -1,0 +1,69 @@
+{
+  "date": "2027-03-03",
+  "artifacts": [
+    {
+      "id": "ca-0006",
+      "channel": "calendar",
+      "received_at": "2027-03-03T08:40:00-08:00",
+      "path": "ca-0006.ics",
+      "title": "Accepted: Tinderbox PIA walkthrough (Fri 5 Mar 13:00)"
+    },
+    {
+      "id": "em-0032",
+      "channel": "email",
+      "received_at": "2027-03-03T09:05:00-08:00",
+      "path": "em-0032.eml",
+      "title": "Handing off: parental leave from Friday"
+    },
+    {
+      "id": "em-0033",
+      "channel": "email",
+      "received_at": "2027-03-03T10:04:00-08:00",
+      "path": "em-0033.eml",
+      "title": "[Investigating] Elevated 502 errors on Kettleyard model gateway"
+    },
+    {
+      "id": "ch-0015",
+      "channel": "chat",
+      "received_at": "2027-03-03T10:41:00-08:00",
+      "path": "ch-0015.json",
+      "title": "#tinderbox-core: gateway 502s, load test aborted"
+    },
+    {
+      "id": "mn-0008",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-03T11:02:00-08:00",
+      "path": "mn-0008.md",
+      "title": "Tinderbox standup: Wed 3 Mar (Ramona covering for Mara)"
+    },
+    {
+      "id": "em-0034",
+      "channel": "email",
+      "received_at": "2027-03-03T14:20:00-08:00",
+      "path": "em-0034.eml",
+      "title": "DSA out for signature; Scrivelo DPA preview"
+    },
+    {
+      "id": "em-0035",
+      "channel": "email",
+      "received_at": "2027-03-03T15:30:00-08:00",
+      "path": "em-0035.eml",
+      "title": "Booking confirmation: Pellery Hall 204, Thu 4 Mar (room change)"
+    },
+    {
+      "id": "ch-0016",
+      "channel": "chat",
+      "received_at": "2027-03-03T17:12:00-08:00",
+      "path": "ch-0016.json",
+      "title": "DM Ramona / Mara: deck v2, workshop logistics"
+    },
+    {
+      "id": "dc-0008",
+      "channel": "document",
+      "received_at": "2027-03-03T17:12:00-08:00",
+      "path": "dc-0008.pdf",
+      "title": "Teaching with AI - deck v2",
+      "parent": "ch-0016"
+    }
+  ]
+}

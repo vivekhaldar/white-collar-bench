@@ -1,0 +1,23 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-katarzyna",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Katarzyna Dang"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-22T08:05:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "i sent you the okapi evaluation rubric"
+  },
+  {
+   "ts": "2027-09-22T08:05:39-05:00",
+   "user": "Katarzyna Dang",
+   "handle": "@katarzyna",
+   "text": "perfect"
+  }
+ ]
+}

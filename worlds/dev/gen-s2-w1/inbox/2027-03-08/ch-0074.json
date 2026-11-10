@@ -1,0 +1,57 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-yael",
+ "kind": "dm",
+ "participants": [
+  "Dina Ricci",
+  "Yael Ellery"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-08T12:57:34-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-03-08T12:58:19-07:00",
+   "user": "Yael Ellery",
+   "handle": "@yael",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-03-08T12:59:00-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "I'm working from the Mistral rollout checklist now, it covers what I needed.",
+   "edited": true,
+   "original": "I'm working from the Mistarl rollout checklist now, it covers what I needed.",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@yael"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-08T12:59:58-07:00",
+   "user": "Yael Ellery",
+   "handle": "@yael",
+   "text": "noted"
+  },
+  {
+   "ts": "2027-03-08T13:02:39-07:00",
+   "user": "Dina Ricci",
+   "handle": "@dina",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-03-08T13:05:14-07:00",
+   "user": "Yael Ellery",
+   "handle": "@yael",
+   "text": "remote, but online all day"
+  }
+ ]
+}

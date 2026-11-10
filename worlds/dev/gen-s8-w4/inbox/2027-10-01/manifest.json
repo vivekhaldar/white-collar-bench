@@ -1,0 +1,145 @@
+{
+  "date": "2027-10-01",
+  "artifacts": [
+    {
+      "id": "em-0194",
+      "channel": "email",
+      "received_at": "2027-10-01T06:38:00-06:00",
+      "path": "em-0194.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0162",
+      "channel": "chat",
+      "received_at": "2027-10-01T08:05:00-06:00",
+      "path": "ch-0162.json",
+      "title": "DM: Yasmin Guo / Amira Baek"
+    },
+    {
+      "id": "ch-0163",
+      "channel": "chat",
+      "received_at": "2027-10-01T09:22:00-06:00",
+      "path": "ch-0163.json",
+      "title": "DM: Amira Baek / Kamau Greco"
+    },
+    {
+      "id": "em-0195",
+      "channel": "email",
+      "received_at": "2027-10-01T09:36:00-06:00",
+      "path": "em-0195.eml",
+      "title": "[INC-44914] Ticket updated"
+    },
+    {
+      "id": "em-0196",
+      "channel": "email",
+      "received_at": "2027-10-01T09:52:00-06:00",
+      "path": "em-0196.eml",
+      "title": "Re: AI-use stakeholder map"
+    },
+    {
+      "id": "ch-0164",
+      "channel": "chat",
+      "received_at": "2027-10-01T11:20:00-06:00",
+      "path": "ch-0164.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "em-0197",
+      "channel": "email",
+      "received_at": "2027-10-01T11:44:00-06:00",
+      "path": "em-0197.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0198",
+      "channel": "email",
+      "received_at": "2027-10-01T12:22:00-06:00",
+      "path": "em-0198.eml",
+      "title": "Re: Splitting out AI-use support model workstream"
+    },
+    {
+      "id": "em-0199",
+      "channel": "email",
+      "received_at": "2027-10-01T12:31:00-06:00",
+      "path": "em-0199.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "ch-0165",
+      "channel": "chat",
+      "received_at": "2027-10-01T14:22:00-06:00",
+      "path": "ch-0165.json",
+      "title": "DM: Amira Baek / Batbayar Galbraith"
+    },
+    {
+      "id": "em-0200",
+      "channel": "email",
+      "received_at": "2027-10-01T14:43:00-06:00",
+      "path": "em-0200.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0201",
+      "channel": "email",
+      "received_at": "2027-10-01T14:59:00-06:00",
+      "path": "em-0201.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "ch-0166",
+      "channel": "chat",
+      "received_at": "2027-10-01T15:34:00-06:00",
+      "path": "ch-0166.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "em-0202",
+      "channel": "email",
+      "received_at": "2027-10-01T16:10:00-06:00",
+      "path": "em-0202.eml",
+      "title": "Status note: w/e 1 October"
+    },
+    {
+      "id": "em-0203",
+      "channel": "email",
+      "received_at": "2027-10-01T16:27:00-06:00",
+      "path": "em-0203.eml",
+      "title": "Predictive Maintenance Input Round: moving to collected"
+    },
+    {
+      "id": "ch-0167",
+      "channel": "chat",
+      "received_at": "2027-10-01T16:29:00-06:00",
+      "path": "ch-0167.json",
+      "title": "#ai-use-core"
+    },
+    {
+      "id": "em-0204",
+      "channel": "email",
+      "received_at": "2027-10-01T17:50:00-06:00",
+      "path": "em-0204.eml",
+      "title": "Re: Fulmar timeout errors"
+    },
+    {
+      "id": "em-0205",
+      "channel": "email",
+      "received_at": "2027-10-01T18:03:00-06:00",
+      "path": "em-0205.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0206",
+      "channel": "email",
+      "received_at": "2027-10-01T18:21:00-06:00",
+      "path": "em-0206.eml",
+      "title": "AI-use risk register v2 after Zawadi's comments"
+    },
+    {
+      "id": "nt-0020",
+      "channel": "note",
+      "received_at": "2027-10-01T18:59:00-06:00",
+      "path": "nt-0020.md",
+      "title": "Fri notes"
+    }
+  ]
+}

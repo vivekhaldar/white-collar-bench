@@ -1,0 +1,41 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Thibault Kowalski",
+  "Adwoa Kocak",
+  "Baraka Chevalier",
+  "Batbayar Galbraith"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T11:36:37-06:00",
+   "user": "Thibault Kowalski",
+   "handle": "@thibault",
+   "text": "any lunch recommendations near the office?",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@adwoa",
+      "@baraka"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-07T11:39:22-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "the noodle place on the corner"
+  },
+  {
+   "ts": "2027-09-07T11:44:47-06:00",
+   "user": "Baraka Chevalier",
+   "handle": "@baraka",
+   "text": "the salad bar is decent",
+   "thread_of": 0
+  }
+ ]
+}

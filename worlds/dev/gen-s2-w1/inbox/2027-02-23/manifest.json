@@ -1,0 +1,145 @@
+{
+  "date": "2027-02-23",
+  "artifacts": [
+    {
+      "id": "em-0013",
+      "channel": "email",
+      "received_at": "2027-02-23T08:14:00-07:00",
+      "path": "em-0013.eml",
+      "title": "[INC-43691] Ticket updated"
+    },
+    {
+      "id": "ca-0002",
+      "channel": "calendar",
+      "received_at": "2027-02-23T08:58:00-07:00",
+      "path": "ca-0002.ics",
+      "title": "Cancelled: Mistral standup"
+    },
+    {
+      "id": "em-0014",
+      "channel": "email",
+      "received_at": "2027-02-23T11:13:00-07:00",
+      "path": "em-0014.eml",
+      "title": "[REQ-15707] Request resolved"
+    },
+    {
+      "id": "ch-0004",
+      "channel": "chat",
+      "received_at": "2027-02-23T11:19:00-07:00",
+      "path": "ch-0004.json",
+      "title": "DM: Siti Montoya / Dina Ricci"
+    },
+    {
+      "id": "ch-0005",
+      "channel": "chat",
+      "received_at": "2027-02-23T11:44:00-07:00",
+      "path": "ch-0005.json",
+      "title": "DM: Dina Ricci / Nathaniel Fenwick"
+    },
+    {
+      "id": "ch-0006",
+      "channel": "chat",
+      "received_at": "2027-02-23T12:11:00-07:00",
+      "path": "ch-0006.json",
+      "title": "DM: Dina Ricci / Nathaniel Fenwick"
+    },
+    {
+      "id": "ch-0007",
+      "channel": "chat",
+      "received_at": "2027-02-23T12:52:00-07:00",
+      "path": "ch-0007.json",
+      "title": "#fennel-core"
+    },
+    {
+      "id": "ch-0008",
+      "channel": "chat",
+      "received_at": "2027-02-23T13:30:00-07:00",
+      "path": "ch-0008.json",
+      "title": "DM: Nomvula Jansen / Dina Ricci"
+    },
+    {
+      "id": "ch-0009",
+      "channel": "chat",
+      "received_at": "2027-02-23T13:43:00-07:00",
+      "path": "ch-0009.json",
+      "title": "#pothole-reporting-core"
+    },
+    {
+      "id": "ch-0010",
+      "channel": "chat",
+      "received_at": "2027-02-23T14:19:00-07:00",
+      "path": "ch-0010.json",
+      "title": "#fennel-core"
+    },
+    {
+      "id": "ch-0011",
+      "channel": "chat",
+      "received_at": "2027-02-23T14:36:00-07:00",
+      "path": "ch-0011.json",
+      "title": "DM: Bilal Kahananui / Dina Ricci"
+    },
+    {
+      "id": "em-0015",
+      "channel": "email",
+      "received_at": "2027-02-23T14:51:00-07:00",
+      "path": "em-0015.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "ch-0012",
+      "channel": "chat",
+      "received_at": "2027-02-23T15:36:00-07:00",
+      "path": "ch-0012.json",
+      "title": "DM: Yael Ellery / Dina Ricci"
+    },
+    {
+      "id": "ch-0013",
+      "channel": "chat",
+      "received_at": "2027-02-23T15:44:00-07:00",
+      "path": "ch-0013.json",
+      "title": "DM: Dina Ricci / Imani Navarro"
+    },
+    {
+      "id": "em-0016",
+      "channel": "email",
+      "received_at": "2027-02-23T15:58:00-07:00",
+      "path": "em-0016.eml",
+      "title": "Re: Fennel SSO broker for Nordale"
+    },
+    {
+      "id": "ch-0014",
+      "channel": "chat",
+      "received_at": "2027-02-23T16:25:00-07:00",
+      "path": "ch-0014.json",
+      "title": "DM: Catrin Kuznetsova / Dina Ricci"
+    },
+    {
+      "id": "ch-0015",
+      "channel": "chat",
+      "received_at": "2027-02-23T17:02:00-07:00",
+      "path": "ch-0015.json",
+      "title": "DM: Cassandra Yilmaz / Dina Ricci"
+    },
+    {
+      "id": "ch-0016",
+      "channel": "chat",
+      "received_at": "2027-02-23T17:14:00-07:00",
+      "path": "ch-0016.json",
+      "title": "DM: Thibault Sahin / Dina Ricci"
+    },
+    {
+      "id": "ch-0017",
+      "channel": "chat",
+      "received_at": "2027-02-23T17:44:00-07:00",
+      "path": "ch-0017.json",
+      "title": "#mistral-core"
+    },
+    {
+      "id": "ch-0018",
+      "channel": "chat",
+      "received_at": "2027-02-23T18:34:00-07:00",
+      "path": "ch-0018.json",
+      "title": "DM: Imani Navarro / Dina Ricci"
+    }
+  ]
+}

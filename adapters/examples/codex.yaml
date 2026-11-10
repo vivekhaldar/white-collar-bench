@@ -1,0 +1,45 @@
+# OpenAI Codex CLI (`codex exec`) as a white-collar-bench agent.
+#
+#   export OPENAI_API_KEY=...         # or CODEX_API_KEY, or a `codex login` in $CODEX_HOME
+#   export CODEX_MODEL=<model-id>     # optional: otherwise Codex's built-in default model
+#   wcb run --adapter adapters/examples/codex.yaml --world pilot --out runs/codex
+#
+# How it works:
+# - `codex exec` runs one non-interactive session. `--cd {workspace}` makes the workspace its
+#   working root; `--sandbox workspace-write` lets its commands write only inside it (in query
+#   sessions the store files are read-only anyway, and only .wcb/ is meant to be written).
+# - `--skip-git-repo-check` is needed because Codex otherwise insists on a trusted git repository.
+# - `--ephemeral` keeps no session files on disk, and `--ignore-user-config` ignores your
+#   ~/.codex/config.toml (MCP servers, profiles, custom instructions), so every session starts
+#   fresh with no memory outside the workspace. Authentication still comes from CODEX_HOME.
+# - `--json` prints events as JSON lines; `wcb.agents.wrap` passes them through to stdout.log and
+#   writes .wcb/usage.json from the `turn.completed` events.
+# - The prompt is passed as the last argument. To read it from stdin instead, replace
+#   {prompt_text} with: - < {prompt}
+# - The model: set CODEX_MODEL (the shell expansion below adds `--model` only when it is set),
+#   and update `model:` below to match.
+# - On Linux the workspace-write sandbox needs Landlock/seccomp. Inside a container that already
+#   isolates the session you can use --dangerously-bypass-approvals-and-sandbox instead.
+#
+# This is a string command, run with /bin/sh -c. Placeholders are shell-quoted by the runner, so
+# do not quote them yourself. ${CODEX_MODEL...} is shell syntax and is left alone by the runner.
+# Flags checked against `codex exec --help` for codex-cli 0.163.
+name: codex
+version: "0.163"                   # the Codex CLI version you ran (`codex --version`)
+model: openai/codex-default        # replace with openai/<model-id> you ran
+description: OpenAI Codex CLI (codex exec) with the fixed benchmark prompt
+cmd: >-
+  python -I -m wcb.agents.wrap --format codex ${CODEX_MODEL:+--model "$CODEX_MODEL"} --
+  codex exec --cd {workspace} --sandbox workspace-write --skip-git-repo-check
+  --ephemeral --ignore-user-config --json --color never
+  ${CODEX_MODEL:+--model "$CODEX_MODEL"}
+  {prompt_text}
+ingest:
+  timeout_s: 1800
+query:
+  timeout_s: 900
+env_passthrough:
+  - OPENAI_API_KEY
+  - CODEX_API_KEY
+  - CODEX_HOME
+  - CODEX_MODEL
