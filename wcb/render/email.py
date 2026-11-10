@@ -71,13 +71,15 @@ COMMS_BODIES = (
 )
 EVENTS_BODIES = (
     "Your booking of Meeting Room {room} on {when} is confirmed. Please cancel at least 24 hours ahead if plans change.",
-    "Next month's catering menu is attached to the events page. Dietary requirements can be added to bookings as usual.",
-    "Please take two minutes to tell us how the event spaces are working for you. The survey closes on Friday.",
+    "Next month's catering menu is posted on the events page. Dietary requirements can be added to bookings as usual.",
+    "Please take two minutes to tell us how the event spaces are working for you. The survey closes on {friday}.",
 )
 CONFERENCE_BODIES = (
-    "The call for proposals for the Regional Digital Services Summit closes in ten days. Talks, panels and workshops are welcome.",
-    "Early-bird registration for the summit ends this Friday. Group discounts are available for teams of four or more.",
+    "The call for proposals for the Regional Digital Services Summit closes on {deadline} ({left}). Talks, panels and "
+    "workshops are welcome.",
+    "Early-bird registration for the summit ends {deadline} ({left}). Group discounts are available for teams of four or more.",
     "This week's speaker spotlight features a session on running pilots that people actually adopt.",
+    "The summit programme is now live: three tracks, forty sessions and a hands-on lab on the second day.",
 )
 BENEFITS_BODIES = (
     "Open enrollment runs until the end of the month. Review your elections in the benefits portal.",
@@ -162,16 +164,23 @@ def _greeting(ctx: RenderContext, comm: Communication, voice: str, rng: random.R
     name = ctx.call_name(to[0], comm)
     if ctx.is_bot(to[0]):
         name = "team"
+    hour = parse_dt(comm.t).hour
+    daypart = "Good morning" if hour < 12 else "Good afternoon" if hour < 18 else "Good evening"
     return rng.choice({
-        "formal": (f"Dear {name},", f"Hello {name},", f"Good morning {name},"),
+        "formal": (f"Dear {name},", f"Hello {name},", f"{daypart} {name},"),
         "terse": (f"{name} -", f"{name},", ""),
         "chatty": (f"Hi {name}!", f"Hey {name},", f"Hi {name},"),
         "lowercase": (f"hi {name.lower()}", f"hey {name.lower()},", ""),
     }[voice])
 
 
-def _signoff(ctx: RenderContext, pid: str, voice: str, rng: random.Random, comm: Communication) -> list[str]:
+def _signoff(ctx: RenderContext, pid: str, voice: str, rng: random.Random, comm: Communication,
+             closer: str = "") -> list[str]:
     so = rng.choice(SIGNOFFS[voice])
+    if so and closer and (any(w in closer.lower() for w in ("thank", "thx", "ty")) and
+                          any(w in so.lower() for w in ("thank", "thx"))
+                          or set(re.findall(r"[a-z]{4,}", closer.lower())) & set(re.findall(r"[a-z]{4,}", so.lower()))):
+        so = ""  # never "Thx." followed by "Thanks," or "Speak soon!" by "Talk soon,"
     p = ctx.person(pid)
     first = ctx.call_name(pid, comm) if p.get("last") else ctx.full(pid)
     if voice == "terse":
@@ -184,10 +193,17 @@ def _signoff(ctx: RenderContext, pid: str, voice: str, rng: random.Random, comm:
     return out + sig
 
 
-def _wrap(par: str) -> str:
-    if par.startswith(("- ", ">", "  ")) or "http" in par:
+def _wrap(par: str, keep: list[str] | None = None) -> str:
+    """Wrap a paragraph at 76 columns without splitting any phrase in `keep` (keywords) across lines."""
+    if par.startswith(("- ", ">", "  ")) or "http" in par or par.startswith("----------"):
         return par
-    return "\n".join(textwrap.wrap(par, width=76, break_long_words=False, break_on_hyphens=False)) or par
+    if "\n" in par:
+        return "\n".join(_wrap(ln, keep) if ln else ln for ln in par.split("\n"))
+    glue = "\u00a0"
+    for k in sorted({k for k in keep or [] if " " in k}, key=len, reverse=True):
+        par = re.sub(re.escape(k), lambda m: m.group(0).replace(" ", glue), par, flags=re.I)
+    out = "\n".join(textwrap.wrap(par, width=76, break_long_words=False, break_on_hyphens=False)) or par
+    return out.replace(glue, " ")
 
 
 def _body(ctx: RenderContext, comm: Communication, rng: random.Random):
@@ -215,7 +231,8 @@ def _body(ctx: RenderContext, comm: Communication, rng: random.Random):
                                      "While you were out, a few things moved:"]))
         forward = _forward(ctx, comm, rng)
         if forward:
-            paras += forward
+            paras += forward[0]
+            subject = "Fwd: " + forward[1]
         else:
             body_sents = [sentence(ln.text) for ln in lines]
             paras += _paragraphs(body_sents, rng)
@@ -225,14 +242,18 @@ def _body(ctx: RenderContext, comm: Communication, rng: random.Random):
             if child.kind == "document" and not comm.extra.get("version_mismatch"):
                 paras.append(rng.choice([f"Attached: {child.subject}.", f"I've attached {child.subject}.",
                                          f"See attached ({child.subject})."]))
-    opener = rng.choice(OPENERS[voice]) if not comm.draft and special is None else ""
+    first_act = ctx.events[comm.acts[0].event] if comm.acts else {}
+    opener = ctx.fresh_choice("open:" + voice, OPENERS[voice], rng) if not comm.draft and special is None else ""
+    if opener and first_act.get("type") == "commitment.create" and comm.sender == first_act.get("creditor") \
+            and opener.lower().startswith(("update", "fyi")):
+        opener = ""  # a request does not open as an update
     text_for_gaps = "\n".join([subject, *paras]) + "\n" + "\n".join(ctx.signature(S)) + "\n" + \
         " ".join(ctx.full(p) for p in [S, *to, *comm.cc])
     gaps = coverage_gaps(ctx, comm, text_for_gaps)
     paras += gap_lines(ctx, gaps, rng, "written")
     if ctx.rewriter is not None and special is None and paras and not comm.noise:
         paras = _polish(ctx, comm, paras, keep)
-    closer = rng.choice(CLOSERS[voice]) if not comm.draft else ""
+    closer = ctx.fresh_choice("close:" + voice, CLOSERS[voice], rng) if not comm.draft else ""
     greeting = _greeting(ctx, comm, voice, rng)
     parts = [greeting] if greeting else []
     if opener:
@@ -240,14 +261,17 @@ def _body(ctx: RenderContext, comm: Communication, rng: random.Random):
     parts += paras
     if closer:
         parts.append(closer)
-    body = "\n\n".join(_wrap(style_written(p, voice, keep)) for p in parts if p)
-    body += "\n\n" + "\n".join(_signoff(ctx, S, voice, rng, comm))
+    kws = [k for a in comm.acts for k in (ctx.events[a.event].get("keywords") or [])]
+    body = "\n\n".join(_wrap(style_written(p, voice, keep), kws) for p in parts if p)
+    body += "\n\n" + "\n".join(_signoff(ctx, S, voice, rng, comm, closer))
     is_re = subject.lower().startswith("re:")
+    if subject.startswith("Fwd: "):
+        reply_to = None
     if reply_to is not None:
         if not is_re:
             subject = "Re: " + subject
         quoted = _quote(reply_to)
-    elif not comm.draft and (is_re or rng.random() < 0.35) and not subject.lower().startswith(("fwd:", "fw:")) \
+    elif not comm.draft and (is_re or rng.random() < 0.6) and not subject.lower().startswith(("fwd:", "fw:")) \
             and to and not ctx.is_bot(to[0]) and to[0] != S and special is None and not comm.extra.get("away"):
         fake = _earlier_note(ctx, comm, to[0], S, rng)
         if fake:
@@ -315,45 +339,121 @@ def _quote(msg: dict) -> list[str]:
     return lines
 
 
+ASKS_EARLIER = (
+    "Any news{about}? No rush, just planning my week.",
+    "Could you send me a quick update{about} when you have a minute?",
+    "{name}, where did we land{about}? Want to make sure I'm not missing anything.",
+    "Just checking this didn't fall through the cracks.",
+    "Following up on the below.",
+    "Is there anything you need from me{about}?",
+    "Gentle nudge on this one.",
+    "Sorry, I lost track of this thread. Where are we{about}?",
+    "Flagging this again in case it got buried.",
+    "Picking this back up{about}. Anything I should know?",
+    "Circling back on this one.",
+    "Did this ever get sorted{about}?",
+)
+ACKS_EARLIER = ("Got it, thanks.", "Thanks for the reminder.", "Noted, thanks.", "Appreciate the patience on this.",
+                "Thanks, saw this.", "Understood.")
+
+
+def _business_before(t: dt.datetime, rng: random.Random) -> dt.datetime:
+    """`t`, or the nearest earlier working-hours moment (8:00-18:30 on a weekday)."""
+    for _ in range(10):
+        minutes = t.hour * 60 + t.minute
+        if t.weekday() < 5 and 8 * 60 <= minutes <= 18 * 60 + 30:
+            return t
+        if t.weekday() < 5 and minutes > 18 * 60 + 30:
+            return t.replace(hour=rng.randint(14, 17), minute=rng.randint(0, 59))
+        t = (t - dt.timedelta(days=1)).replace(hour=rng.randint(10, 17), minute=rng.randint(0, 59))
+    return t
+
+
 def _earlier_note(ctx: RenderContext, comm: Communication, frm: str, to: str, rng: random.Random) -> dict | None:
-    """An earlier, content-free message from the recipient that this email answers."""
-    t = parse_dt(comm.t) - dt.timedelta(minutes=rng.randint(25, 60 * 26))
+    """Earlier, content-free messages that this email answers: the recipient's nudge, sometimes
+    preceded by a short back-and-forth, nested the way mail clients quote them."""
     proj = ctx.pname(comm.project)
     about = f" on {proj}" if proj else ""
-    name = ctx.call_name(to, comm)
-    body = rng.choice([
-        f"Hi {name},\n\nAny news{about}? No rush, just planning my week.\n\nThanks,\n{ctx.first(frm)}",
-        f"Hi {name},\n\nCould you send me a quick update{about} when you have a minute?\n\n{ctx.first(frm)}",
-        f"{name}, where did we land{about}? Want to make sure I'm not missing anything.\n\n{ctx.first(frm)}",
-    ])
-    if ctx.voice(frm) == "lowercase":
-        body = body.lower()
-    return {"date": format_datetime(t), "name": ctx.full(frm), "body": body, "msgid": "", "quoted": []}
+    depth = rng.choice([1, 1, 1, 1, 2, 2, 3, 3, 4, 5])
+    t = _business_before(parse_dt(comm.t) - dt.timedelta(minutes=rng.randint(25, 60 * 26)), rng)
+    times = [t]
+    for _ in range(depth - 1):
+        times.append(_business_before(times[-1] - dt.timedelta(minutes=rng.randint(40, 60 * 30)), rng))
+    times.reverse()  # oldest first
+    msg: dict | None = None
+    asks = list(ASKS_EARLIER)
+    rng.shuffle(asks)
+    for k, when in enumerate(times):
+        # The newest earlier message is the recipient's; going back, the two alternate.
+        author = frm if (depth - 1 - k) % 2 == 0 else to
+        other = to if author == frm else frm
+        greet = rng.choice([f"Hi {ctx.call_name(other, comm)},\n\n", "", f"{ctx.call_name(other, comm)} -\n\n"])
+        if author == frm:
+            text = asks.pop().format(about=about, name=ctx.call_name(other, comm))
+            if text.startswith(ctx.call_name(other, comm)):
+                greet = ""
+        else:
+            text = rng.choice(ACKS_EARLIER)
+        body = f"{greet}{text}\n\n{ctx.first(author)}"
+        if ctx.voice(author) == "lowercase":
+            body = body.lower()
+        quoted = _quote(msg) if msg else []
+        msg = {"date": format_datetime(when), "name": ctx.full(author), "body": body, "msgid": "", "quoted": quoted}
+    return msg
 
 
-def _forward(ctx: RenderContext, comm: Communication, rng: random.Random) -> list[str] | None:
-    """A second-hand loop report as a forwarded message from its debtor to its creditor."""
-    if len(comm.acts) != 1 or rng.random() > 0.5:
+def _forward(ctx: RenderContext, comm: Communication, rng: random.Random) -> tuple[list[str], str] | None:
+    """A second-hand report as a forward: the party's own message, passed on by the sender.
+
+    Returns the paragraphs and the forwarded subject, or None. The forwarded message is from the
+    loop's debtor (or its creditor when the debtor is the worker, or a decision's maker) to the
+    person forwarding it, never to the worker, and is dated when the event happened."""
+    import copy
+
+    from wcb.world.comms import Act
+
+    main = [a for a in comm.acts if ctx.events[a.event]["type"] != "entity.create"]
+    if len(main) != 1 or main[0].how != "second_hand" or rng.random() > 0.8:
         return None
-    a = comm.acts[0]
+    a = main[0]
     e = ctx.events[a.event]
-    if a.how != "second_hand" or e["type"] != "commitment.create":
+    S, W = comm.sender, ctx.worker
+    if e["type"] == "commitment.create":
+        if not ctx.accepted_at(e["commitment"], comm):
+            return None
+        D, Cr = e["debtor"], e["creditor"]
+        author, inner_to = (D, Cr) if D != W else (Cr, S)
+    elif e["type"] == "commitment.resolve" and e.get("status") == "done":
+        lp = ctx.loop_before.get(e["id"]) or {}
+        author, inner_to = lp.get("debtor"), lp.get("creditor")
+        if inner_to == W:
+            return None  # a delivery to the worker is not shown by a message to someone else
+    elif e["type"] == "decision.make":
+        by = [p for p in e.get("by") or [] if p != W]
+        author, inner_to = (by[0] if by else None), S
+    else:
         return None
-    D, Cr = e["debtor"], e["creditor"]
-    if ctx.worker in (D, Cr) or comm.sender in (D, Cr) or not e.get("accepted", True):
+    if inner_to in (W, author, None):
+        inner_to = S
+    if not author or author in (S, W) or inner_to == author:
         return None
-    inner_namer = Namer(ctx, comm, D, [Cr])
-    inner_namer.fresh = set()
-    ph = Phraser(ctx, comm, rng)
-    line = ph.lines(a, inner_namer, "written")
-    t = parse_dt(e["t"])
-    fwd = [rng.choice(["FYI, see below.", "Forwarding for visibility.", "Looping you in on this one."]),
+    inner = copy.copy(comm)
+    inner.id, inner.t, inner.sender, inner.to, inner.cc = comm.id + "-fwd", e["t"], author, [inner_to], []
+    inner.acts = [Act(a.event, "direct")]
+    namer = Namer(ctx, inner, author, [inner_to])
+    namer.fresh = set()
+    lines = Phraser(ctx, inner, rng).lines(inner.acts[0], namer, "written")
+    if not lines:
+        return None
+    topic = _topic(ctx, inner) or "Update"
+    fwd = [rng.choice(["FYI, see below.", "Forwarding for visibility.", "Looping you in on this one.",
+                       "Passing this on, thought you'd want to see it."]),
            "---------- Forwarded message ---------\n"
-           f"From: {ctx.address(D)}\nDate: {format_datetime(t)}\n"
-           f"Subject: {upper_first(subject_with_keywords(ctx, e['what'], e.get('keywords') or []))}\n"
-           f"To: {ctx.address(Cr)}",
-           f"Hi {ctx.first(Cr)},\n\n" + " ".join(sentence(ln.text) for ln in line) + f"\n\n{ctx.first(D)}"]
-    return fwd
+           f"From: {ctx.address(author)}\nDate: {format_datetime(parse_dt(e['t']))}\n"
+           f"Subject: {topic}\nTo: {ctx.address(inner_to)}",
+           f"Hi {ctx.call_name(inner_to, comm)},\n\n" + " ".join(sentence(ln.text) for ln in lines)
+           + f"\n\n{ctx.call_name(author, comm)}"]
+    return fwd, topic
 
 
 def _allusion(ctx: RenderContext, comm: Communication, rng: random.Random) -> str:
@@ -378,7 +478,8 @@ def _special_body(ctx: RenderContext, comm: Communication, namer: Namer, ph: Phr
         label = create["what"].rsplit(" for ", 1)[-1]
         return [f"This is your weekly reminder: the Friday status note for {label} is due to "
                 f"{ctx.full(create['creditor'])} by end of day {day_words(create['due'], 0)}.",
-                "Three bullets on progress and one on risks is plenty. Reply to this message if you need an extension."]
+                "Half a page is enough: what moved, what slipped, and anything you need from leadership. "
+                "Reply to this message if you need an extension."]
     if subj.startswith("Status note:"):
         note_namer = Namer(ctx, comm, ctx.worker, [])
         own = {a.event for a in comm.acts if "status note" in ctx.events[a.event].get("summary", "").lower()}
@@ -436,7 +537,7 @@ def _noise_body(ctx: RenderContext, comm: Communication, rng: random.Random, aid
     if kind == "newsletter":
         items = rng.sample(NEWSLETTER_ITEMS, 3)
         name = p.get("role", "").split(", ", 1)[-1] or "The Newsletter"
-        body = [f"{name}", f"Issue {parse_dt(comm.t).isocalendar()[1]}", "",
+        body = [f"{name}", f"Issue {comm.extra.get('issue') or parse_dt(comm.t).isocalendar()[1]}", "",
                 "In this issue:", ""]
         for h, d in items:
             body += [f"* {h}", f"  {d}", ""]
@@ -465,11 +566,17 @@ def _noise_body(ctx: RenderContext, comm: Communication, rng: random.Random, aid
         body = [_by_subject(subject, COMMS_BODIES, ("building", "wellbeing", "parking"), rng), "",
                 f"{ctx.umbrella['short']} Internal Communications"]
     elif kind == "events":
+        d = parse_dt(comm.t).date()
+        friday = d + dt.timedelta(days=(4 - d.weekday()) % 7 or 7)
         body = [_by_subject(subject, EVENTS_BODIES, ("booking", "catering", "survey"), rng).format(
-                room=rng.choice(["2.14", "3B", "Atrium", "4.02"]), when=when), "",
+                room=rng.choice(["2.14", "3B", "Atrium", "4.02"]), when=when, friday=day_words(friday.isoformat(), 0)), "",
                 f"{ctx.full(comm.sender)}", "Events Coordinator"]
     elif kind == "conference":
-        body = ["Dear colleague,", "", _by_subject(subject, CONFERENCE_BODIES, ("proposals", "early-bird", "spotlight"), rng),
+        deadline = comm.extra.get("deadline") or _later(comm.t, 10)
+        left_days = (dt.date.fromisoformat(deadline) - parse_dt(comm.t).date()).days
+        left = "today" if left_days == 0 else "tomorrow" if left_days == 1 else f"{left_days} days from now"
+        text = _by_subject(subject, CONFERENCE_BODIES, ("proposals", "early-bird", "spotlight", "programme"), rng)
+        body = ["Dear colleague,", "", text.format(deadline=day_words(deadline, 0), left=left),
                 "", "Details and registration: https://conference.example/summit", "", ctx.full(comm.sender),
                 "Conference Organizer", "", "To stop receiving these emails, reply UNSUBSCRIBE."]
     elif kind == "benefits":

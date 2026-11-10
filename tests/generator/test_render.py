@@ -116,7 +116,7 @@ def test_email_texture(rendered):
     assert sum("\n> " in t for t in texts) >= 5  # quoted replies
     assert any("X-Draft: true" in t for t in texts)
     assert any("Unsubscribe" in t or "UNSUBSCRIBE" in t for t in texts)
-    signoffs = ("Kind regards,", "Best regards,", "Cheers,", "Thanks,")
+    signoffs = ("Kind regards,", "Best regards,", "Regards,", "With thanks,", "Cheers,", "Thanks,", "Best,", "Talk soon,")
     assert sum(any(s in t for s in signoffs) for t in texts) >= 10
 
 

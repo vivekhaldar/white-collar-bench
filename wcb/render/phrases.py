@@ -6,7 +6,7 @@ turned into sentences here, in one of four registers:
 - `written`: an email or chat message from its author to its audience ("I'll send you...");
 - `spoken`: meeting dialogue, possibly several speakers ("Can you...?" / "Yep, will do.");
 - `note`: the worker's own terse shorthand ("- me: send Ana the risk register");
-- `recap`: an AI meeting recap in the third person ("Ana Ruiz will send...").
+- `recap`: an AI meeting recap in the third person ("Ana Velloq will send...").
 
 Every sentence that conveys a commitment or decision contains its `what` (with names turned
 into pronouns only where no keyword depends on them), so the keywords that graders match are
@@ -27,8 +27,9 @@ from wcb.world.comms import Act, Communication
 from wcb.world.simulator import PARTICLES, PAST
 
 # ---------------------------------------------------------------- generic banks
-BACKCHANNELS = ("Mm-hmm.", "Yeah.", "Right.", "Okay.", "Sure.", "Got it.", "Yep.", "Uh-huh.", "Mm.",
-                "Makes sense.", "Right, right.", "Okay, yeah.")
+# Acknowledgements that never read as someone accepting an ask ("Sure." would).
+BACKCHANNELS = ("Mm-hmm.", "Yeah.", "Right.", "Okay.", "Got it.", "Uh-huh.", "Mm.", "Makes sense.", "Right, right.",
+                "Okay, yeah.", "Yeah, true.", "Mm, okay.", "I see.", "Fair.")
 SMALL_TALK = (
     ("Can everyone hear me okay?", "Yep, you're fine."),
     ("Sorry, I was on mute.", "No worries."),
@@ -53,18 +54,21 @@ CUT_OFFS = ("So the thing with the—", "I was going to say, if we—", "Can we 
 RESTARTS = ("Sorry, go ahead.", "No, you go.", "Sorry, you first.", "Go on.")
 OPENERS = {
     "formal": ("I hope you are well.", "Thank you for your time earlier.", "Following up on our conversation.",
-               "I wanted to share a short update."),
-    "terse": ("Quick one.", "", "", "Update:"),
-    "chatty": ("Hope your week's going well!", "Hope you had a good weekend!", "Quick update from my side!",
-               "Thanks again for earlier, really helpful."),
-    "lowercase": ("", "quick one", "", "fyi"),
+               "I wanted to share a short update.", "I hope the week is going smoothly.", "Apologies for the slow reply.",
+               "Thank you for your patience on this.", "", ""),
+    "terse": ("Quick one.", "", "", "", "Short note.", "One thing from me.", "Brief one."),
+    "chatty": ("Hope your week's going well!", "Hope you had a good weekend!", "Quick one from my side!",
+               "Thanks again for earlier, really helpful.", "Hope you survived the meeting marathon!",
+               "Sorry this took a while!", ""),
+    "lowercase": ("", "quick one", "", "fyi", "", "short one"),
 }
 CLOSERS = {
     "formal": ("Please let me know if you have any questions.", "Many thanks.", "Thank you in advance.",
-               "I am happy to discuss further."),
-    "terse": ("Thx.", "", "Shout if issues.", ""),
-    "chatty": ("Thanks so much!", "Shout if anything's unclear!", "Speak soon!", "Thanks a million!"),
-    "lowercase": ("thx", "", "lmk", "ty"),
+               "I am happy to discuss further.", "With thanks for your help on this.", "", "I appreciate your time."),
+    "terse": ("Thx.", "", "Shout if issues.", "", "", "Any problems, let me know.", "That's all for now.", "Ping me if unclear."),
+    "chatty": ("Thanks so much!", "Shout if anything's unclear!", "Speak soon!", "Thanks a million!", "Have a good one!",
+               "Let me know what you think!", ""),
+    "lowercase": ("thx", "", "lmk", "ty", "", "cheers"),
 }
 SIGNOFFS = {
     "formal": ("Kind regards,", "Best regards,", "Regards,", "With thanks,"),
@@ -72,20 +76,50 @@ SIGNOFFS = {
     "chatty": ("Cheers,", "Thanks!", "Best,", "Talk soon,"),
     "lowercase": ("", "-", "thanks", ""),
 }
-CHAT_ACKS = ("thanks!", "ty", "perfect, thanks", "great", "ok", "will do", "sounds good", "noted", "on it",
-             "cool", "thank you!", "got it")
+# Chat acknowledgements by what they answer and who answers (docs/generator.md, "Chat").
+CHAT_ACKS = {
+    "asked_yes": ("will do", "on it", "sure, can do", "yep, on it", "no problem"),  # the debtor, agreeing
+    "asked_maybe": ("let me check and get back to you", "maybe, need to see how the week goes", "can I come back to you on this?"),
+    "promised_to": ("thanks!", "perfect, thanks", "great, thank you", "appreciate it", "that'd be great"),  # the creditor
+    "done_for": ("thanks!", "got it, thanks", "perfect", "thank you!", "great, thanks"),
+    "fyi": ("noted", "ok", "good to know", "thanks for the heads up", "got it"),
+    "decision": ("sounds good", "makes sense", "agreed", "ok, works for me", "noted"),
+}
+CHAT_CHIME = ("+1", "thanks for flagging", "following", "good to know", "nice", "thanks for the update")
+CHAT_SMALL = (
+    ("how's your week going?", "busy, but fine. you?"),
+    ("are you in the office tomorrow?", "remote, but online all day"),
+    ("did you catch the all-hands?", "only the first half"),
+    ("thanks again for earlier", "anytime"),
+    ("sorry, was in back-to-backs", "no worries"),
+    ("is the shared drive slow for you too?", "yeah, it's been crawling all morning"),
+    ("ok, talk later", "later!"),
+    ("did the link work for you?", "yep, all good"),
+)
 REACTIONS = ("+1", "eyes", "white_check_mark", "pray", "raised_hands", "tada", "heavy_check_mark", "thumbsup")
+# Social posts: (opener, replies, earliest minute, latest minute, weekdays or None). A post about
+# a time of day goes up before that time; "happy friday" only on Fridays.
 SOCIAL_CHAT = (
-    ("anyone up for coffee at 3?", ("me!", "can't today, back to back", "yes please")),
-    ("there's leftover cake in the kitchen on 4", ("on my way", "what kind?", "the lemon one is gone already")),
-    ("is the wifi on the second floor down for anyone else?", ("yep, same here", "works for me", "it's been flaky all morning")),
-    ("happy friday everyone", ("happy friday!", "made it", "")),
-    ("lost a blue umbrella, might be in the big meeting room", ("will keep an eye out", "", "there's one at reception")),
-    ("who's going to the all-hands later?", ("I'll dial in", "me", "is it in person this time?")),
-    ("reminder that the fire drill is at 11", ("thanks for the heads up", "again?", "")),
-    ("any lunch recommendations near the office?", ("the noodle place on the corner", "the salad bar is decent", "")),
-    ("the elevator on the east side is out again", ("stairs it is", "classic", "")),
-    ("does anyone have a spare laptop charger (usb-c)?", ("I have one, desk by the window", "", "check the supply cupboard")),
+    ("anyone up for coffee at 3?", ("me!", "can't today, back to back", "yes please"), 8 * 60, 14 * 60 + 30, None),
+    ("there's leftover cake in the kitchen on 4", ("on my way", "what kind?", "the lemon one is gone already"),
+     11 * 60, 16 * 60 + 30, None),
+    ("is the wifi on the second floor down for anyone else?", ("yep, same here", "works for me", "it's been flaky all morning"),
+     8 * 60, 17 * 60 + 30, None),
+    ("happy friday everyone", ("happy friday!", "made it", ""), 8 * 60, 12 * 60, (4,)),
+    ("lost a blue umbrella, might be in the big meeting room", ("will keep an eye out", "", "there's one at reception"),
+     8 * 60, 17 * 60 + 30, None),
+    ("who's going to the all-hands later?", ("I'll dial in", "me", "is it in person this time?"), 8 * 60, 11 * 60 + 30,
+     (0, 1, 2, 3)),
+    ("reminder that the fire drill is at 11", ("thanks for the heads up", "again?", ""), 8 * 60, 10 * 60 + 40, (0, 1, 2, 3, 4)),
+    ("any lunch recommendations near the office?", ("the noodle place on the corner", "the salad bar is decent", ""),
+     10 * 60, 12 * 60 + 30, None),
+    ("the elevator on the east side is out again", ("stairs it is", "classic", ""), 8 * 60, 17 * 60 + 30, None),
+    ("does anyone have a spare laptop charger (usb-c)?", ("I have one, desk by the window", "", "check the supply cupboard"),
+     8 * 60, 17 * 60 + 30, None),
+    ("is it just me or is it freezing on 3 today?", ("not just you", "bring a jumper", ""), 8 * 60, 15 * 60, None),
+    ("who left a lunchbox in the fridge since last week?", ("not me!", "", "it's been there a while"), 11 * 60, 17 * 60, None),
+    ("anyone else in today?", ("just me and the cleaners", "here till 1", ""), 8 * 60, 14 * 60, (5,)),
+    ("good morning all", ("morning!", "morning", ""), 7 * 60 + 30, 10 * 60 + 30, None),
 )
 
 
@@ -153,16 +187,27 @@ class Namer:
     third_person: bool = False  # recap register: never "I" or "you"
     fresh: set[str] = field(default_factory=set)
     introduced: set[str] = field(default_factory=set)
+    them: set[str] = field(default_factory=set)  # people referred to as "they" in this sentence
 
     def __post_init__(self) -> None:
         if not self.fresh:
             self.fresh = {e for e in self.ctx.introduces(self.comm) if e.startswith("p-")}
 
-    def view(self, speaker: str | None, audience: list[str] | None = None) -> Namer:
+    def view(self, speaker: str | None, audience: list[str] | None = None, *, them: set[str] | None = None) -> Namer:
         """The same artifact from another speaker's point of view (shares introductions)."""
         n = Namer(self.ctx, self.comm, speaker, list(audience or []), self.third_person, self.fresh,
-                  self.introduced)
+                  self.introduced, set(them or ()))
         return n
+
+    def vocative(self, pid: str) -> str:
+        """How a speaker addresses someone by name ('Ana, could you...'): never a pronoun."""
+        if pid in self.fresh and pid not in self.introduced:
+            self.introduced.add(pid)
+            return self.ctx.full(pid)
+        base = self.ctx.call_name(pid, self.comm)
+        if self.speaker and pid != self.speaker and base == self.ctx.first(self.speaker):
+            return self.ctx.full(pid)
+        return base
 
     def you(self, pid: str | None) -> bool:
         return not self.third_person and len(self.audience) == 1 and pid == self.audience[0]
@@ -174,6 +219,8 @@ class Namer:
             return {"subj": "I", "obj": "me", "poss": "my"}[case]
         if self.you(pid):
             return {"subj": "you", "obj": "you", "poss": "your"}[case]
+        if pid in self.them:
+            return {"subj": "they", "obj": "them", "poss": "their"}[case]
         if pid in self.fresh and pid not in self.introduced:
             self.introduced.add(pid)
             base = self.ctx.full(pid)
@@ -182,11 +229,15 @@ class Namer:
                 org = self.ctx.org_of(pid)
                 if role:
                     at = f" at {org['short']}" if org and org["role"] not in ("central", "umbrella") else ""
-                    base = f"{base} ({lower_first(role) if not role[:1].isupper() or ' ' in role else role}{at})"
+                    base = f"{base} ({role}{at})"
         elif full or self.third_person and pid in self.ctx.collisions:
             base = self.ctx.full(pid)
         else:
             base = self.ctx.form(pid, self.comm)
+            # Never a bare first name that the speaker or the person addressed also answers to.
+            mine = {self.ctx.first(x) for x in (self.speaker, *self.audience) if x and x != pid}
+            if base in mine:
+                base = self.ctx.full(pid)
         return base + "'s" if case == "poss" else base
 
     def subj(self, pid: str | None) -> str:
@@ -265,16 +316,14 @@ def subject_of(ctx: RenderContext | set[str], what: str) -> str:
     i = 1
     if i < len(words) and words[i].lower() in PARTICLES:
         i += 1
-    if i < len(words) and words[i] in first_names:
+    if i < len(words) and (words[i] in first_names or words[i] in ("me", "you", "them")):
         i += 1
     if i < len(words) and words[i].lower() in PARTICLES:
         i += 1
     rest = words[i:]
-    # drop a trailing "with Ana" / "for Ana Ruiz" naming a person
-    for k in range(len(rest) - 1, 0, -1):
-        if rest[k - 1].lower() in ("with", "for", "to") and rest[k] in first_names:
-            rest = rest[: k - 1]
-            break
+    # drop a trailing "with Ana" naming a person (only at the very end of the phrase)
+    if len(rest) >= 2 and rest[-2].lower() in ("with", "for", "to") and rest[-1] in first_names:
+        rest = rest[:-2]
     if not rest:
         return lower_first(what)
     if rest[0].lower() in ("the", "a", "an", "our", "my"):
@@ -289,6 +338,14 @@ def subject_of(ctx: RenderContext | set[str], what: str) -> str:
 def subject_with_keywords(ctx: RenderContext, what: str, keywords: list[str]) -> str:
     s = subject_of(ctx, what)
     return s if has_keywords(s, keywords) else lower_first(what)
+
+
+def subject_for(ctx: RenderContext, namer: Namer, what: str, keywords: list[str], roles: list[str | None]) -> str:
+    """`subject_with_keywords` from a point of view: names left in the phrase become pronouns
+    ('the plan after Ana's comments' said by Ana -> 'the plan after my comments')."""
+    s = subject_with_keywords(ctx, what, keywords)
+    out = vp(ctx, namer, s, keywords, roles)
+    return out if has_keywords(out, keywords) else s
 
 
 def due_words(due: str | None, ref: str, rng: random.Random, *, prefix: str = " by ") -> str:
@@ -397,16 +454,26 @@ class Phraser:
             w = lower_first(e["what"])
             return [Line(sp, self.choose([f"Recap from {when}: we decided to {w}.", f"As agreed {on}, we'll {w}."]))]
         if e["type"] == "commitment.create":
-            D = e["debtor"]
-            roles = [D, e["creditor"], *(e.get("others") or []), ctx.worker]
+            D, Cr = e["debtor"], e["creditor"]
+            roles = [D, Cr, *(e.get("others") or []), ctx.worker]
             X = vp(ctx, v, e["what"], list(e.get("keywords") or []), roles)
             who = v.name(D, "subj")
+            if not ctx.accepted_at(e["commitment"], self.comm):
+                # Never agreed (as far as anything delivered so far shows): say it was only asked.
+                asker = v.name(Cr, "subj")
+                return [Line(sp, self.choose([
+                    f"Recap from {when}: {asker} asked {v.name(D)} to {X}; nothing agreed yet.",
+                    f"Just to recap, {on} {asker} raised whether {who} could {X}. Not agreed yet.",
+                ]))]
+            if e.get("kind") == "task" and D != Cr:
+                return [Line(sp, self.choose([f"Recap from {when}: {who} offered to {X}.",
+                                              f"Just to recap, {on} {who} said {who if who in ('I', 'you') else 'they'}'d {X}."]))]
             return [Line(sp, self.choose([f"Recap from {when}: {who} agreed to {X}.",
                                           f"Just to recap, {on} {who} said {who if who in ('I', 'you') else 'they'}'d {X}."]))]
         lp = self._loop(e["commitment"], e["id"])
         roles = [lp["debtor"], lp["creditor"], *(lp.get("others") or []), ctx.worker]
         if e["status"] == "dropped":
-            subj = subject_with_keywords(ctx, lp["what"], lp.get("keywords") or [])
+            subj = subject_for(ctx, v, lp["what"], lp.get("keywords") or [], roles)
             return [Line(sp, f"Recap: we dropped {subj} {on}.")]
         pv = past_vp(ctx, v, lp["what"], roles)
         return [Line(sp, self.choose([f"For the record, {v.name(lp['debtor'], 'subj')} {pv} {on}.",
@@ -432,7 +499,7 @@ class Phraser:
         roles = [D, Cr, *others, ctx.worker]
         due = due_words(e.get("due"), self.ref, rng)
         how = act.how
-        accepted = e.get("accepted", True)
+        accepted = ctx.accepted_at(e["commitment"], self.comm)
         S = nm.speaker
         if reg == "recap":
             nm3 = nm
@@ -498,8 +565,9 @@ class Phraser:
         # someone else reports it (second-hand, FYI, a relayed ask)
         Dw = nm.will(D)
         if D == ctx.worker and nm.you(D):
-            return [Line(S, self.choose([f"{upper_first(nm.name(Cr, 'subj'))} is expecting you to {X}{due}.",
-                                         f"{upper_first(nm.name(Cr, 'subj'))} asked if you could {X}{due}."]))]
+            Xt = vp(ctx, nm.view(S, nm.audience, them={Cr}), e["what"], kws, roles)
+            return [Line(S, self.choose([f"{upper_first(nm.name(Cr, 'subj'))} is expecting you to {Xt}{due}.",
+                                         f"{upper_first(nm.name(Cr, 'subj'))} asked if you could {Xt}{due}."]))]
         if not accepted:
             if nm.you(Cr):
                 return [Line(S, self.choose([f"{upper_first(nm.name(D, 'subj'))} might {X}{due}, nothing confirmed yet.",
@@ -510,40 +578,46 @@ class Phraser:
                                      f"{upper_first(Dw)} {X}{due}, as discussed."]))]
 
     def _create_dialogue(self, e, act, nm: Namer, D, Cr, others, kws, roles, due) -> list[Line]:
+        """A commitment made in a meeting, as dialogue.
+
+        An ask is put to the debtor by name and answered by the debtor straight away; an offer
+        or promise is made by the debtor. If the debtor is not in the room, an accepted loop is
+        reported ("Ana said she'd...") and an unaccepted one is only floated."""
         ctx, rng = self.ctx, self.rng
         parts = set(self.comm.participants) | {self.comm.sender}
         how = act.how
-        speaker = act.by if act.by in parts else (D if D in parts else (Cr if Cr in parts else self.comm.sender))
-        accepted = e.get("accepted", True)
+        accepted = ctx.accepted_at(e["commitment"], self.comm)
+        present = D in parts
         out: list[Line] = []
-        if how == "implied" and speaker == D:
+        if how == "implied" and present:
             raiser = Cr if Cr in parts and Cr != D else self._someone_else(D)
-            subj = subject_with_keywords(ctx, e["what"], kws)
+            subj = subject_for(ctx, nm.view(raiser), e["what"], kws, roles) if raiser else \
+                subject_with_keywords(ctx, e["what"], kws)
             if raiser:
-                v = nm.view(raiser)
                 out.append(Line(raiser, self.choose([f"We're still seeing problems with {subject_of(ctx, e['what'])}.",
                                                      f"Has anyone looked at {subj}?",
                                                      f"The other thing is {subj}, it's still not right."])))
-            v = nm.view(D)
             out.append(Line(D, self.choose([f"Let me take a look at {subj}.", f"Yeah, leave {subj} with me.",
                                             f"Okay, let me look into {subj}."])))
             return out
-        if speaker == D and Cr in parts and Cr != D and rng.random() < 0.55 and how != "hedged":
+        if present and e.get("kind") == "ask" and Cr in parts and Cr != D and how != "hedged" and rng.random() < 0.8:
             v = nm.view(Cr, [D])
             X = vp(ctx, v, e["what"], kws, roles)
-            out.append(Line(Cr, self.choose([f"{upper_first(v.name(D, 'subj'))}, could you {X}{due}?",
-                                             f"Can you {X}{due}?", f"Would you be able to {X}{due}?"])))
+            voc = v.vocative(D)
+            out.append(Line(Cr, self.choose([f"{voc}, could you {X}{due}?", f"{voc}, can you {X}{due}?",
+                                             f"{voc}, would you be able to {X}{due}?", f"Could you {X}{due}, {voc}?"])))
             v2 = nm.view(D, [Cr])
             if accepted:
                 out.append(Line(D, self.choose(["Yep, will do.", "Sure, I can do that.", "Yeah, no problem.",
                                                 "Okay, I'll get that done.", f"Sure, I'll {vp(ctx, v2, e['what'], kws, roles)}."])))
             else:
                 out.append(Line(D, self.choose(["Let me check what I've got on and come back to you.",
-                                                "Maybe, I need to see how this week goes.", "I'll think about it."])))
+                                                "Maybe, I need to see how this week goes.", "I'll think about it.",
+                                                "Possibly. Can I get back to you on that?"])))
             return out
-        v = nm.view(speaker, [p for p in parts if p not in (speaker,)][:1] if len(parts) == 2 else [])
-        X = vp(ctx, v, e["what"], kws, roles)
-        if speaker == D:
+        if present:
+            v = nm.view(D, [Cr] if Cr in parts and len(parts) == 2 and Cr != D else [])
+            X = vp(ctx, v, e["what"], kws, roles)
             if how == "hedged":
                 txt = self.choose([f"I can probably {X}{due}, maybe next week.", f"I'll try to {X}{due}, no promises.",
                                    f"I could look at it, I mean, {X}{due}, sometime next week?"])
@@ -554,12 +628,23 @@ class Phraser:
             else:
                 txt = self.choose([f"I'll {X}{due}.", f"I can {X}{due}.", f"Okay, I'll {X}{due}.",
                                    f"Yeah, I'll {X}{due}.", f"Let me {X}{due}."])
-        elif speaker == Cr:
-            txt = self.choose([f"Can {v.name(D, 'subj')} {X}{due}?", f"I'd like {v.name(D)} to {X}{due}.",
-                               f"We need {v.name(D)} to {X}{due}."])
+            out.append(Line(D, txt))
+            if Cr in parts and Cr != D and accepted and how != "hedged" and rng.random() < 0.5:
+                out.append(Line(Cr, self.choose(["That'd be great, thanks.", "Perfect, thank you.", "Great, thanks.",
+                                                 "Thanks, that helps."])))
+            return out
+        # The debtor is not in the room.
+        speaker = act.by if act.by in parts else (Cr if Cr in parts else self.comm.sender)
+        v = nm.view(speaker, [])
+        X = vp(ctx, v, e["what"], kws, roles)
+        Dn = upper_first(v.name(D, "subj"))
+        if accepted:
+            txt = self.choose([f"{Dn} said they'd {X}{due}.", f"I spoke to {v.name(D)}, they'll {X}{due}.",
+                               f"{Dn} has agreed to {X}{due}."])
         else:
-            txt = self.choose([f"{upper_first(v.will(D))} {X}{due}, right?", f"And {v.will(D)} {X}{due}.",
-                               f"So {v.name(D, 'subj')} is going to {X}{due}."])
+            txt = self.choose([f"It would help if {v.name(D)} could {X}{due}, but nothing's agreed.",
+                               f"I'd like {v.name(D)} to {X}{due}; I haven't asked yet.",
+                               f"Could {v.name(D, 'subj')} {X}{due}? Worth asking."])
         out.append(Line(speaker, txt))
         return out
 
@@ -573,7 +658,7 @@ class Phraser:
         D, Cr = lp["debtor"], lp["creditor"]
         roles = [D, Cr, *(lp.get("others") or []), ctx.worker]
         kws = list(lp.get("keywords") or [])
-        subj = subject_with_keywords(ctx, lp["what"], kws)
+        subj = subject_for(ctx, nm, lp["what"], kws, roles)
         S = nm.speaker
         if e["status"] == "dropped":
             reason = reason_of(e.get("summary", ""))
@@ -593,12 +678,13 @@ class Phraser:
             n3 = nm
             return [Line(None, f"{n3.name(D, 'subj', full=True)} confirmed {subj} is done.")]
         if act.how == "indirect":
-            return [Line(S, self.choose(indirect_closure(lp["what"], subj, nm.name(D))))]
+            return [Line(S, self.choose(indirect_closure(lp["what"], subj, ctx.call_name(D, self.comm))))]
         speaker = S
         if reg == "spoken":
             parts = set(self.comm.participants) | {self.comm.sender}
             speaker = D if D in parts else (act.by if act.by in parts else self.comm.sender)
             nm = nm.view(speaker, [])
+            subj = subject_for(ctx, nm, lp["what"], kws, roles)
         pv = past_vp(ctx, nm, lp["what"], roles)
         verb = lp["what"].split(" ", 1)[0]
         if self.created_here(e["commitment"]):
@@ -623,13 +709,13 @@ class Phraser:
         D, Cr = lp["debtor"], lp["creditor"]
         roles = [D, Cr, *(lp.get("others") or []), ctx.worker, ch.get("debtor")]
         kws = list(lp.get("keywords") or [])
-        subj = subject_with_keywords(ctx, lp["what"], kws)
         S = nm.speaker
         summ = e.get("summary", "")
         if reg == "spoken":
             parts = set(self.comm.participants) | {self.comm.sender}
             S = act.by if act.by in parts else (D if D in parts else self.comm.sender)
             nm = nm.view(S, [])
+        subj = subject_for(ctx, nm, lp["what"], kws, roles)
         def say(txt: str) -> list[Line]:
             return [Line(None if reg in ("note", "recap") else S, txt)]
 
@@ -703,9 +789,11 @@ class Phraser:
                                         f"Any news on {subj}? I'm blocked until it lands."]))
             if summ.startswith("Correction") or act.how == "correction":
                 if reg in ("note", "recap"):
-                    return say(f"{'- ' if reg == 'note' else ''}correction: {lower_first(summ.split(': ', 1)[-1])}")
-                return say(self.choose([f"Correction to what I said earlier: {lower_first(summ.split(': ', 1)[-1])}.",
-                                        f"Sorry, I was wrong before: {lower_first(summ.split(': ', 1)[-1])}."]))
+                    return say(f"{'- ' if reg == 'note' else ''}correction: {subj} is not done after all, open again")
+                return say(self.choose([f"Correction to what I said earlier: {subj} isn't done after all. "
+                                        f"The change was rolled back, so it's open again.",
+                                        f"Sorry, I was wrong before: {subj} didn't hold and has been rolled back. "
+                                        f"It's back on the list."]))
             if summ.startswith("Reopened"):
                 r = f": {reason}" if reason else ""
                 if reg in ("note", "recap"):
@@ -901,11 +989,11 @@ def first_person(text: str, first: str) -> str:
 def indirect_closure(what: str, subj: str, debtor: str) -> list[str]:
     """Sentences that show a loop is done only through a side effect (silent closure)."""
     verb = what.split(" ", 1)[0].lower()
-    low = what.lower()
-    if any(w in low for w in ("access", "login", "credentials", "tenant", "account")):
+    head = " ".join(subj.lower().split()[-2:])
+    if any(w in head for w in ("access", "login", "credentials", "tenant", "account")):
         return [f"I'm in now ({subj}), starting on the testing this afternoon.",
                 f"Logged in fine, so {subj} is sorted. Starting the walkthrough tomorrow.",
-                f"Now that {subj} works for me, I can start the dry run."]
+                f"Now that I have {subj} sorted, I can start the dry run."]
     if verb in ("book", "schedule", "set", "line", "hold", "register"):
         return [f"Saw the calendar hold for {subj}, thanks {debtor}.",
                 f"Got the invite for {subj}, see you there."]

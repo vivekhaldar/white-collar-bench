@@ -75,6 +75,7 @@ class RenderContext:
         self.loop_create: dict[str, dict] = {}
         self.dec_create: dict[str, dict] = {}
         self.loop_before: dict[str, dict] = {}  # event id -> loop state just before the event
+        self.endorsements: dict[str, list[str]] = {}  # commitment -> update events that accept it
         self.proj_before: dict[str, dict] = {}  # event id -> project attrs just before the event
         self._index_events()
         self.comm_by_id: dict[str, Communication] = {c.id: c for c in sim.comms}
@@ -99,6 +100,17 @@ class RenderContext:
             if c.parent:
                 self.children.setdefault(c.parent, []).append(c)
         self.injection_artifact: str | None = None
+        self.line_use: dict[tuple[str, str], int] = {}  # stock line -> times used so far in this world
+
+    def fresh_choice(self, key: str, options, rng: random.Random) -> str:
+        """A stock phrase from `options`, preferring the ones this world has used least, so that
+        openers, closers and greetings do not repeat the same line dozens of times."""
+        opts = list(options)
+        least = min(self.line_use.get((key, o), 0) for o in opts)
+        pick = rng.choice([o for o in opts if self.line_use.get((key, o), 0) <= least + 1])
+        if pick:
+            self.line_use[(key, pick)] = self.line_use.get((key, pick), 0) + 1
+        return pick
 
     # ------------------------------------------------------------ indexing
     def _index_events(self) -> None:
@@ -141,12 +153,27 @@ class RenderContext:
                 else:
                     for k, v in (e.get("changes") or {}).items():
                         cur[k] = copy.deepcopy(v)
+                    if (e.get("changes") or {}).get("accepted") is True:
+                        self.endorsements.setdefault(e["commitment"], []).append(e["id"])
             elif et == "decision.make":
                 self.dec_create[e["decision"]] = e
             elif et == "project.merge":
                 for p in e.get("projects") or []:
                     if p in projs:
                         projs[p]["status"] = "merged"
+
+    def accepted_at(self, cid: str, comm: Communication) -> bool:
+        """Whether a loop counts as agreed in `comm`: accepted when created, or endorsed by an event
+        that happened by `comm.t` and that an input delivered no later than `comm` reveals."""
+        create = self.loop_create.get(cid)
+        if create is None or create.get("accepted", True):
+            return True
+        for eid in self.endorsements.get(cid, []):
+            fr = self.first_revealer.get(eid)
+            if self.events[eid]["t"] <= comm.t and fr is not None \
+                    and self.comm_by_id[fr].received_at <= comm.received_at:
+                return True
+        return False
 
     # ------------------------------------------------------------ randomness
     def rng(self, *key: Any) -> random.Random:

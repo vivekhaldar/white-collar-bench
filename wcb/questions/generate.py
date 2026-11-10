@@ -388,15 +388,18 @@ class _QGen:
 
     # ------------------------------------------------------------ unanswerable
     def _unanswerable(self, n: int) -> int:
+        """Unanswerable questions about entities the inputs do show: a hidden figure, a closure no
+        input reports, a detail never given. A person no input mentions is only a last resort
+        (the missing name gives it away)."""
         made = 0
-        kinds = ["hidden_fact", "hidden_closure", "unknown_person", "hidden_fact"]
+        kinds = ["hidden_fact", "hidden_closure", "seen_person_detail", "hidden_fact", "any_budget"]
         self.rng.shuffle(kinds)
         for kind in kinds * 2:
             if made >= n:
                 break
             if getattr(self, "_u_" + kind)():
                 made += 1
-        while made < n and self._u_any_budget():
+        while made < n and (self._u_any_budget() or self._u_seen_person_detail() or self._u_unknown_person()):
             made += 1
         return made
 
@@ -427,6 +430,24 @@ class _QGen:
             self.asked[("u_close", e["id"])] += 1
         return ok
 
+    def _u_seen_person_detail(self) -> bool:
+        """A detail about someone the inputs mention that no input ever gives (their direct line,
+        their office), asked about a person the worker deals with."""
+        active = self._accepted_active()
+        people = sorted({x for lp in active.values() for x in (lp["debtor"], lp["creditor"]) if x != self.worker
+                         and x in self.state["entities"] and not self.state["entities"][x]["attrs"].get("_minor")})
+        attr = self.rng.choice(["phone", "office"])
+        cands = [p for p in people if not self.state["entities"][p]["attrs"].get(attr)
+                 and not self.asked[("u_detail", p)]]
+        if not cands:
+            return False
+        p = self.rng.choice(cands)
+        ok = self._add("person_attr", {"person": p, "attribute": attr}, answerable=False, tags={"unobservable"},
+                       entity=p)
+        if ok:
+            self.asked[("u_detail", p)] += 1
+        return ok
+
     def _u_unknown_person(self) -> bool:
         cands = sorted(p for p, ev in self.creates.items() if ev["kind"] == "person" and p not in self.state["entities"]
                        and not self.revealers.get(ev["id"]) and p != self.worker
@@ -441,10 +462,12 @@ class _QGen:
         return ok
 
     def _u_any_budget(self) -> bool:
-        for p in self._projects():
+        projs = self._projects(live=True)
+        self.rng.shuffle(projs)
+        for p in projs:
             if not self.asked[("u_budget", p)] and "budget" not in self.state["entities"][p]["attrs"]:
                 ok = self._add("project_attr", {"project": p, "attribute": "budget"}, answerable=False,
-                               tags={"unobservable"})
+                               tags={"unobservable"}, entity=p)
                 self.asked[("u_budget", p)] += 1
                 if ok:
                     return True

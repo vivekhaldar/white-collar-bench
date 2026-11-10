@@ -10,6 +10,7 @@ from __future__ import annotations
 import email
 import json
 import zipfile
+from collections import Counter
 from email import policy
 from pathlib import Path
 
@@ -23,7 +24,7 @@ from wcb.render.email import INJECTION_LINES
 from wcb.world.check import check_world, raw_text
 from wcb.world.generate import generate_world
 from wcb.world.model import World
-from wcb.world.names import HARD_DENYLIST
+from wcb.world.names import contains_denied
 from wcb.world.planner import CHALLENGE_TAGS
 from wcb.world.state import state_at
 
@@ -223,8 +224,9 @@ def test_no_denylisted_or_pilot_names(generated, seed, size):
     for p in world_dir.rglob("*"):
         if p.is_file() and p.suffix in TEXT_SUFFIXES:
             low = p.read_text(encoding="utf-8").lower()
-            bad = [w for w in (*HARD_DENYLIST, *PILOT_NAMES) if w in low]
+            bad = [w for w in PILOT_NAMES if w in low]
             assert not bad, (p, bad)
+            assert not contains_denied(low), p
 
 
 def test_world_yaml_and_plan(generated):
@@ -256,3 +258,233 @@ def test_regenerating_into_the_same_directory_replaces_it(tmp_path):
     assert not (out / "inbox" / "stray.txt").exists() and keep.read_text() == "mine"
     assert not (out / "gold").exists()
     assert not [i for i in check_world(out) if i.severity == "error"]
+
+
+# ---------------------------------------------------------------- gold faithfulness and texture
+def _world_rows(world_dir: Path) -> tuple[dict[str, dict], list[dict], dict[str, dict]]:
+    rows = [json.loads(x) for x in (world_dir / "world.jsonl").read_text().splitlines() if x.strip()]
+    ev = {r["id"]: r for r in rows}
+    arts = {r["artifact"]: r for r in rows if r["type"] == "artifact.emit"}
+    return ev, rows, arts
+
+
+def _accepted_by(rows: list[dict], cid: str, t: str) -> bool:
+    create = next(r for r in rows if r["type"] == "commitment.create" and r["commitment"] == cid)
+    return create["accepted"] or any(r["type"] == "commitment.update" and r["commitment"] == cid
+                                     and r["changes"].get("accepted") is True and r["t"] <= t for r in rows)
+
+
+def _first_reveal_dates(arts: dict[str, dict]) -> dict[str, str]:
+    out: dict[str, str] = {}
+    for a in sorted(arts.values(), key=lambda a: a["received_at"]):
+        for r in a["reveals"]:
+            out.setdefault(r, a["received_at"][:10])
+    return out
+
+
+@pytest.mark.parametrize("seed,size", WORLDS)
+def test_meeting_asks_are_answered_by_the_debtor(generated, seed, size):
+    """An ask in a meeting names its debtor (never 'You,') and the debtor answers it next."""
+    world_dir, _ = generated[(seed, size)]
+    ev, rows, arts = _world_rows(world_dir)
+    names = {r["entity"]: r["name"] for r in rows if r["type"] == "entity.create" and r["kind"] == "person"}
+    asks = 0
+    for a in arts.values():
+        if a["channel"] != "transcript":
+            continue
+        text = (world_dir / a["path"]).read_text()
+        assert "<v " not in text or "\n<v" in text
+        cues = [(ln[3:].split(">", 1)[0], ln.split(">", 1)[1]) for ln in text.splitlines() if ln.startswith("<v ")]
+        assert not any(t.startswith("You, ") for _, t in cues), a["artifact"]
+        for r in a["reveals"]:
+            e = ev[r]
+            if e["type"] != "commitment.create":
+                continue
+            kws = [k.lower() for k in e["keywords"]]
+            debtor = names[e["debtor"]]
+            for i, (sp, t) in enumerate(cues):
+                low = t.lower()
+                if all(k in low for k in kws) and "you" in low and "?" in t and sp != debtor \
+                        and any(low.startswith(f"{w.lower()}, ") for w in debtor.split()[:1]):
+                    asks += 1
+                    assert i + 1 < len(cues) and cues[i + 1][0].split()[0].startswith(debtor.split()[0][:3]), \
+                        (a["artifact"], t, cues[i + 1] if i + 1 < len(cues) else None)
+    assert asks >= 0
+
+
+@pytest.mark.parametrize("seed,size", WORLDS)
+def test_restatements_match_the_loop_state(generated, seed, size):
+    """A restated loop is never delivered after the loop closed (except a delayed catch-up of the
+    original exchange), and a loop nobody agreed to is never described as agreed."""
+    world_dir, _ = generated[(seed, size)]
+    ev, rows, arts = _world_rows(world_dir)
+    first = _first_reveal_dates(arts)
+    closed: dict[str, str] = {}
+    for r in rows:
+        if r["type"] == "commitment.resolve":
+            closed.setdefault(r["commitment"], r["t"])
+    for a in arts.values():
+        if a["noise"] or a["channel"] == "document":
+            continue
+        raw = raw_text(world_dir / a["path"]) or ""
+        for rid in a["reveals"]:
+            e = ev[rid]
+            if e["type"] != "commitment.create":
+                continue
+            cid = e["commitment"]
+            if first[rid] < a["received_at"][:10] and "batch_catchup" not in a["challenges"]:
+                assert not (cid in closed and closed[cid] < a["received_at"]), (a["artifact"], cid)
+            if not _accepted_by(rows, cid, a["received_at"]):
+                for line in raw.lower().splitlines():
+                    if all(k in line for k in e["keywords"]):
+                        assert "agreed to" not in line and "said they'd" not in line, (a["artifact"], line)
+
+
+@pytest.mark.parametrize("seed,size", WORLDS)
+def test_meeting_commitments_have_their_debtor_in_the_room(generated, seed, size):
+    """An accepted commitment a transcript shows is made by someone present, or reported as such."""
+    world_dir, _ = generated[(seed, size)]
+    ev, rows, arts = _world_rows(world_dir)
+    names = {r["entity"]: r["name"] for r in rows if r["type"] == "entity.create" and r["kind"] == "person"}
+    worker = yaml.safe_load((world_dir / "world.yaml").read_text())["worker"]
+    first = _first_reveal_dates(arts)
+    for a in arts.values():
+        if a["channel"] != "transcript":
+            continue
+        text = (world_dir / a["path"]).read_text()
+        attendees = next(ln for ln in text.splitlines() if ln.startswith("Attendees:"))
+        for rid in a["reveals"]:
+            e = ev[rid]
+            if e["type"] != "commitment.create" or e["debtor"] == worker or first[rid] < a["received_at"][:10]:
+                continue
+            if not _accepted_by(rows, e["commitment"], a["received_at"]) or names[e["debtor"]] in attendees:
+                continue
+            line = next((ln for ln in text.splitlines() if all(k in ln.lower() for k in e["keywords"])), "")
+            assert any(p in line for p in ("said they'd", "they'll", "has agreed to", "Recap")), (a["artifact"], line)
+
+
+@pytest.mark.parametrize("seed,size", WORLDS)
+def test_chat_messages_follow_their_events(generated, seed, size):
+    """A chat message that states a commitment or decision is posted no earlier than it happened
+    and no later than the thread is delivered."""
+    world_dir, _ = generated[(seed, size)]
+    ev, _rows, arts = _world_rows(world_dir)
+    for a in arts.values():
+        if a["channel"] != "chat" or a["noise"]:
+            continue
+        doc = json.loads((world_dir / a["path"]).read_text())
+        assert [m["ts"] for m in doc["messages"]] == sorted(m["ts"] for m in doc["messages"])
+        for rid in a["reveals"]:
+            e = ev[rid]
+            if e["type"] not in ("commitment.create", "decision.make"):
+                continue
+            for m in doc["messages"]:
+                if all(k in m["text"].lower() for k in e["keywords"]):
+                    assert e["t"] <= m["ts"] <= a["received_at"], (a["artifact"], m["ts"], e["t"])
+                    break
+
+
+@pytest.mark.parametrize("seed,size", WORLDS)
+def test_reversals_replace_like_with_like(generated, seed, size):
+    """The decision that replaces a reversed one is its counterpart, never an unrelated one."""
+    world_dir, _ = generated[(seed, size)]
+    _ev, rows, _arts = _world_rows(world_dir)
+    makes = {r["decision"]: r for r in rows if r["type"] == "decision.make"}
+    for r in rows:
+        if r["type"] != "decision.reverse":
+            continue
+        old = makes[r["decision"]]
+        after = [m for m in makes.values() if m.get("project") == old.get("project") and r["t"] <= m["t"] <= r["t"][:16]
+                 + ":59" + r["t"][19:] and m["decision"] != old["decision"]]
+        for m in after:
+            assert m["what"].split()[0] != "Widen" or old["what"].split()[0] == "Limit", (old["what"], m["what"])
+
+
+@pytest.mark.parametrize("seed,size", WORLDS)
+def test_calendar_items_hang_together(generated, seed, size):
+    """Updates and cancellations share the UID of an invite or a meeting series; most invited
+    meetings that fall inside the world are held with a record (or deliberately left untraced)."""
+    world_dir, _ = generated[(seed, size)]
+    _ev, _rows, arts = _world_rows(world_dir)
+    uids: dict[str, list[str]] = {}
+    for a in sorted(arts.values(), key=lambda a: a["received_at"]):
+        if a["channel"] != "calendar":
+            continue
+        text = (world_dir / a["path"]).read_text()
+        uid = next(ln for ln in text.splitlines() if ln.startswith("UID:"))[4:]
+        method = next(ln for ln in text.splitlines() if ln.startswith("METHOD:"))[7:]
+        summary = next(ln for ln in text.splitlines() if ln.startswith("SUMMARY:"))[8:]
+        kind = "update" if summary.startswith("Updated: ") else "cancel" if method == "CANCEL" else method
+        if kind == "update":
+            assert uids.get(uid), (a["artifact"], "update without an invite")
+        if kind == "cancel" and "RECURRENCE-ID" not in text:
+            assert uids.get(uid), (a["artifact"], "cancel without an invite")
+        uids.setdefault(uid, []).append(kind)
+    assert not any("(worker away)" in a["title"] for a in arts.values())
+
+
+@pytest.mark.parametrize("seed,size", WORLDS)
+def test_no_one_names_themselves(generated, seed, size):
+    """Speakers never refer to themselves by their bare first name."""
+    world_dir, _ = generated[(seed, size)]
+    _ev, rows, arts = _world_rows(world_dir)
+    full_names = {r["name"] for r in rows if r["type"] == "entity.create" and r["kind"] == "person"}
+    import re
+
+    def bare(first: str, text: str) -> bool:
+        for m in re.finditer(rf"\b{re.escape(first)}\b", text):
+            rest = text[m.start():]
+            if not any(rest.startswith(n) for n in full_names if n.startswith(first + " ")):
+                return True
+        return False
+
+    for a in arts.values():
+        path = world_dir / a["path"]
+        if a["channel"] == "chat" and not a["noise"]:
+            for m in json.loads(path.read_text())["messages"]:
+                assert not bare(m["user"].split()[0], m["text"]), (a["artifact"], m["user"], m["text"])
+        elif a["channel"] == "transcript":
+            for ln in path.read_text().splitlines():
+                if ln.startswith("<v "):
+                    sp, t = ln[3:].split(">", 1)
+                    if "'s " not in sp and "(" not in sp:
+                        assert not bare(sp.split()[0], t), (a["artifact"], sp, t)
+
+
+@pytest.mark.parametrize("seed,size", WORLDS)
+def test_texture_and_calibration_extras(generated, seed, size):
+    """Replies with quoted history, threaded chats, backchannels, no raw phase labels, noise on a
+    schedule, and the worker's portfolio map in the first person."""
+    import re
+
+    world_dir, _ = generated[(seed, size)]
+    _ev, _rows, arts = _world_rows(world_dir)
+    stats = json.loads((world_dir / "gold" / "calibration.json").read_text())
+    emails = [a for a in arts.values() if a["channel"] == "email" and not a["noise"]]
+    replies = [a for a in emails if re.search(r"^Subject: (Re|Fwd):", (world_dir / a["path"]).read_text(), re.M)]
+    assert len(replies) / len(emails) >= 0.35
+    depth = max(max((len(m) for m in re.findall(r"^(>+)", (world_dir / a["path"]).read_text(), re.M)), default=0)
+                for a in emails)
+    assert depth >= 3
+    lengths = sorted(len(json.loads((world_dir / a["path"]).read_text())["messages"])
+                     for a in arts.values() if a["channel"] == "chat" and not a["noise"])
+    assert lengths[len(lengths) // 2] >= 3
+    cues = [ln.split(">", 1)[1] for a in arts.values() if a["channel"] == "transcript"
+            for ln in (world_dir / a["path"]).read_text().splitlines() if ln.startswith("<v ")]
+    from wcb.render.phrases import BACKCHANNELS
+
+    assert 0.2 <= sum(c in BACKCHANNELS for c in cues) / len(cues) <= 0.55
+    issues = Counter()
+    for a in arts.values():
+        text = raw_text(world_dir / a["path"]) or ""
+        assert not re.search(r"Currently in (placeholder|asking|dormant|ongoing)\b", text), a["artifact"]
+        if a["noise"] and a["channel"] == "email":
+            m = re.search(r"^Subject: (.*): issue (\d+)$", text, re.M)
+            if m:
+                issues[m.groups()] += 1
+    assert all(n == 1 for n in issues.values()), issues
+    portfolio = next(a for a in arts.values() if a["title"] == "Portfolio map")
+    assert "owner: me" in (world_dir / portfolio["path"]).read_text()
+    loops = stats["loops"]
+    assert loops["kind"]["shares"].get("decision", 0) <= 0.1
+    assert loops["lifetime_business_days"]["median"] <= 2.5

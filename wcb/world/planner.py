@@ -118,11 +118,11 @@ SETTINGS: dict[str, Setting] = {
                        "Principal Technologist, Learning Systems"),
         roles={
             "manager": ("Associate Provost for Academic Technology", "the associate provost"),
-            "collab": ("Director of Programs", "our programs director"),
-            "eng": ("Principal, Platform Engineering", "the platform lead"),
+            "collab": ("Head of Learning Services", "our learning services head"),
+            "eng": ("Lead, Cloud Platforms", "the platform lead"),
             "eng2": ("Platform Engineer", "the platform engineer"),
-            "sec": ("Principal, Security & Identity", "the security principal"),
-            "product": ("Principal, Product", "the product principal"),
+            "sec": ("Information Security Manager", "the security manager"),
+            "product": ("Product Owner, Student Systems", "the product owner"),
             "ea": ("Executive Assistant to the Associate Provost", "the provost's EA"),
             "analyst": ("Senior Data Analyst", "our data analyst"),
             "proc": ("Procurement Officer, System Procurement", "the procurement officer"),
@@ -137,13 +137,13 @@ SETTINGS: dict[str, Setting] = {
         unit_staff_titles=("Software Engineer", "Instructional Designer", "Identity & Access Administrator",
                            "Service Desk Lead", "Site Reliability Engineer", "Enterprise Architect"),
         partner_patterns=("{place} Institute for Learning Research", "{place} Center for Digital Pedagogy"),
-        topics=(("course assistant", "an AI course assistant"), ("transfer credit evaluation", "an AI transfer-credit evaluator"),
-                ("advising scheduling", "an AI advising scheduler"), ("library research", "an AI library research assistant"),
+        topics=(("course assistant", "an AI course assistant"), ("lab safety training", "an AI lab safety tutor"),
+                ("room booking", "an AI room booking assistant"), ("thesis formatting", "an AI thesis formatting checker"),
                 ("captioning", "an AI captioning service"), ("admissions triage", "an AI admissions document triage tool"),
                 ("early alert", "an AI early-alert assistant"), ("financial aid chat", "an AI financial aid assistant"),
                 ("course scheduling", "an AI course scheduling optimizer"), ("research computing", "an AI research computing broker"),
-                ("syllabus review", "an AI syllabus review tool"), ("writing feedback", "an AI writing feedback tool")),
-        pivots=("advising wait times", "prerequisite mapping", "transcript intake", "waitlist management"),
+                ("syllabus review", "an AI syllabus review tool"), ("alumni outreach", "an AI alumni outreach assistant")),
+        pivots=("lab equipment booking", "prerequisite mapping", "transcript intake", "waitlist management"),
         hire_roles=("staff data engineer", "ML platform engineer", "accessibility specialist"),
         event_topics=("AI literacy", "assessment design", "open courseware"),
         nouns=COMMON_NOUNS + ("course roster export", "LMS integration notes", "accessibility audit", "faculty survey"),
@@ -360,14 +360,17 @@ def make_plan(
     weeks: int = 1,
     size: str = "standard",
     world_id: str | None = None,
-    start: str = "2027-04-05",
+    start: str | None = None,
     setting: str | None = None,
 ) -> dict:
     """The plan (plan.yaml content) for a world. Deterministic in its arguments.
 
-    `start` must be a Monday: the first episode day. The seed is the two weeks before it.
+    `start` must be a Monday: the first episode day. The seed is the two weeks before it. By
+    default it is drawn from the seed: a Monday between February and November 2027.
     `setting` forces an organization template (default: drawn from the seed).
     """
+    if start is None:
+        start = seed_start_monday(seed)
     if size not in SIZES:
         raise ValueError(f"size must be one of {', '.join(SIZES)}")
     if weeks < 1:
@@ -376,6 +379,12 @@ def make_plan(
         raise ValueError(f"start {start} is not a Monday")
     rng = random.Random(f"wcb-plan:{seed}:{size}:{weeks}")
     return _Planner(rng, seed, weeks, size, world_id or f"gen-s{seed}-w{weeks}", start, setting).build()
+
+
+def seed_start_monday(seed: int) -> str:
+    """The default first episode day for a seed: a Monday in 2027 (1 February to 22 November)."""
+    weeks = random.Random(f"wcb-start:{seed}").randint(0, 42)
+    return add_days("2027-02-01", 7 * weeks)
 
 
 class _Planner:
@@ -450,6 +459,8 @@ class _Planner:
             if self.rng.random() < 0.85:
                 days.append(add_days(monday, 5))
             weeks.append(days)
+        if not seed_sat and all(len(days) == 5 for days in weeks):
+            weeks[-1].append(add_days(weeks[-1][0], 5))  # weekends are quiet, never empty
         checkpoints = []
         for w, days in enumerate(weeks):
             for d, label in ((days[1], "end of Tuesday"), (days[3], "end of Thursday"),
@@ -562,9 +573,9 @@ class _Planner:
         self.role_people["manager"] = self._person(c, r["manager"][0], "manager", "central", phrase=r["manager"][1], weight=2.0)
         self.role_people["collab"] = self._person(c, r["collab"][0], "peer", "central", phrase=r["collab"][1], weight=7.0,
                                                   first=coll_a)
-        self.role_people["eng"] = self._person(c, r["eng"][0], "peer", "central", phrase=r["eng"][1], weight=2.6)
+        self.role_people["eng"] = self._person(c, r["eng"][0], "peer", "central", phrase=r["eng"][1], weight=3.2)
         self.role_people["eng2"] = self._person(c, r["eng2"][0], "stakeholder", "central", phrase=r["eng2"][1], weight=1.2)
-        self.role_people["sec"] = self._person(c, r["sec"][0], "peer", "central", phrase=r["sec"][1], weight=2.4)
+        self.role_people["sec"] = self._person(c, r["sec"][0], "peer", "central", phrase=r["sec"][1], weight=2.9)
         self.role_people["product"] = self._person(c, r["product"][0], "peer", "central", phrase=r["product"][1], weight=1.2)
         self.role_people["ea"] = self._person(c, r["ea"][0], "assistant", "central", phrase=r["ea"][1], weight=0.8)
         if self.size != "small":
@@ -593,9 +604,9 @@ class _Planner:
         staff_titles = list(st.unit_staff_titles)
         homo_b_used = False
         for i, unit in enumerate(self.units):
-            head = self._person(unit, f"{st.unit_head[0]}, {unit['name']}", "executive", "unit",
+            head = self._person(unit, st.unit_head[0], "executive", "unit",
                                 phrase=f"{unit['short']}'s {st.unit_head[1]}", weight=0.7)
-            lead = self._person(unit, f"{lead_titles[i % len(lead_titles)]}, {unit['name']}", "stakeholder", "unit",
+            lead = self._person(unit, lead_titles[i % len(lead_titles)], "stakeholder", "unit",
                                 phrase=f"the {unit['short']} lead", weight=2.4 if i == 0 else 1.3,
                                 first=coll_b if i == 1 else None)
             staff = []
@@ -604,26 +615,26 @@ class _Planner:
                 first = None
                 if not homo_b_used and i >= 1:
                     first, homo_b_used = homo[1], True
-                staff.append(self._person(unit, f"{title}, {unit['name']}", "stakeholder", "unit", weight=1.0, first=first))
+                staff.append(self._person(unit, title, "stakeholder", "unit", weight=1.0, first=first))
             self.unit_people[unit["id"]] = {"head": head, "lead": lead, "staff": staff}
 
         # Vendors: an account executive and a solutions engineer each.
         self.vendor_people: dict[str, dict[str, dict]] = {}
         for k, v in enumerate(self.vendors):
-            ae = self._person(v, f"Account Executive, {v['name']}", "vendor", "vendor", weight=1.1,
+            ae = self._person(v, "Account Executive", "vendor", "vendor", weight=1.1,
                               first=coll_a if k == 0 else None)
-            se = self._person(v, f"Solutions Engineer, {v['name']}", "vendor", "vendor", weight=0.9,
+            se = self._person(v, "Solutions Engineer", "vendor", "vendor", weight=0.9,
                               first=coll_b if k == 1 else None)
             self.vendor_people[v["id"]] = {"ae": ae, "se": se}
         if not homo_b_used:
             v0 = self.vendors[0]
             self.vendor_people[v0["id"]]["csm"] = self._person(
-                v0, f"Customer Success Manager, {v0['name']}", "vendor", "vendor", first=homo[1])
+                v0, "Customer Success Manager", "vendor", "vendor", first=homo[1])
         if "analyst" not in self.role_people:
             self.role_people["analyst"] = self._person(c, r["analyst"][0], "peer", "central", phrase=r["analyst"][1],
                                                        weight=1.0, first=homo[0])
         self.partner_people = [
-            self._person(p, f"Senior Research Scientist, {p['name']}", "partner", "partner", weight=0.8)
+            self._person(p, "Senior Research Scientist", "partner", "partner", weight=0.8)
             for p in self.partners
         ]
         self.candidate = self._person(None, "Candidate", "candidate", "candidate", weight=0.6)
@@ -646,7 +657,7 @@ class _Planner:
         for w in range(self.weeks):
             org_fn, title, rel, phrase = newcomer_roles[w % len(newcomer_roles)]
             org = org_fn()
-            p = self._person(org, f"{title}, {org['name']}" if org["role"] != "central" else title, rel,
+            p = self._person(org, title, rel,
                              "newcomer", phrase=phrase, weight=1.4, appears="TBD")
             self.newcomers.append(p)
         # Minor senders: newsletters and automated notifications.
@@ -741,7 +752,7 @@ class _Planner:
         for p in self.projects:
             p["start"] = seed_start
         # Heavy-tailed weights: flagship ~35% of loops, top two ~50%.
-        base = {"flagship": 34.0, "hub": 14.0, "mid": 7.0, "small": 2.5, "placeholder": 0.15, "dormant": 0.6}
+        base = {"flagship": 31.0, "hub": 12.5, "mid": 7.0, "small": 2.5, "placeholder": 0.15, "dormant": 0.6}
         for p in self.projects:
             p["weight"] = round(base[p["size"]] * rng.uniform(0.75, 1.25), 2)
 
@@ -825,7 +836,7 @@ class _Planner:
             kw = short
             forms = ["the learning series", f"the {topic} talks"]
         elif archetype == "placeholder":
-            name, short, kw = f"{_title(topic)} (placeholder)", topic, topic
+            name, short, kw = f"{unit['short']} {_title(topic)} Idea", topic, topic
             forms = [f"{up['lead']['first']}'s {topic} idea", f"the {topic} placeholder"]
         elif archetype == "stalled_discovery":
             v = vendors[0]

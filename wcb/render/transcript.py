@@ -29,20 +29,49 @@ from wcb.util.dates import parse_dt
 from wcb.world.comms import Communication
 
 WORDS_PER_SECOND = 2.6
-# Discussion that carries no facts: questions, non-committal answers, musings.
-PROBES = ("How's that looking?", "Any blockers there?", "Is that still on track?", "Did we hear back on that?",
-          "Anything else on that one?", "Does that work for everyone?", "Sorry, can you say that again?",
-          "Who else needs to know about this?", "Is that written down anywhere?")
-ANSWERS = ("Mostly on track.", "Not yet, still waiting.", "I think so, yeah.", "Nothing major.",
-           "It's moving, slowly.", "Same as last week, really.", "Honestly, it depends on the other teams.",
-           "I'd have to check, but I think so.", "It's in the shared folder somewhere.")
+# Discussion that carries no facts: a probing question and an answer that fits it, musings
+# (including mild pushback and worry), and a closing round. Nothing here commits anyone to anything.
+PROBE_PAIRS = (
+    ("How's that looking?", ("Mostly on track.", "It's moving, slowly.", "Okay, I think. Ask me again next week.")),
+    ("Any blockers there?", ("Nothing major.", "Honestly, it depends on the other teams.", "Not right now, no.")),
+    ("Is that still realistic?", ("I think so, yeah.", "It's tight, but yes.", "Probably. I'd rather not promise more.")),
+    ("Did we hear back on that?", ("Not yet, still waiting.", "Not that I've seen.")),
+    ("Is that written down anywhere?", ("It's in the shared folder somewhere.", "Not properly, it's mostly in people's heads.")),
+    ("Does that work for everyone?", ("Works for me.", "Fine by me.", "I think so, yeah.")),
+    ("Sorry, you cut out for a second there.", ("Sorry, bad connection. Same as I said before, really.",
+                                                "I'm back. Nothing new, just what I said.")),
+    ("Who else needs to know about this?", ("Probably just the people here for now.", "The unit leads, eventually.")),
+    ("Is that the same as what we talked about last time?", ("More or less, yeah.", "Roughly, with a few tweaks.")),
+    ("Are we sure that's the right order to do things in?", ("Not completely, but it's the best we've got.",
+                                                            "I'd push back a little, but fine.")),
+)
 MUSINGS = ("The main thing is just getting people's time.", "There's a lot of interest, which is good.",
            "The documentation is still a bit thin.", "It's mostly waiting on other teams at this point.",
            "People seem positive about it so far.", "We should keep an eye on scope creep.",
            "The feedback from the last session was pretty mixed.", "Last time this took longer than we thought.",
-           "I'm not sure everyone's read the latest version yet.")
+           "I'm not sure everyone's read the latest version yet.",
+           "My concern is mostly the timeline, to be honest.", "I'm a bit worried we're overcommitting again.",
+           "Unfortunately the people who'd use it aren't in this room.",
+           "I'm not sure I agree, but let's see how it lands.", "Finance will have views on this, I expect.",
+           "We said the same thing a month ago.", "I'd rather we didn't escalate this yet.",
+           "It's a lot of process for a pilot.", "Some of the units are going to see this as us overreaching.")
 ROUNDS = ("Nothing from me this week.", "Nothing new from my side.", "All quiet on my end.",
-          "Just heads-down on the usual stuff.")
+          "Just heads-down on the usual stuff.", "Nothing to flag.", "I'm good, thanks.")
+
+
+class _Bag:
+    """Draws from a phrase bank without replacement until it runs out, then starts over."""
+
+    def __init__(self, items, rng: random.Random):
+        self.items = list(items)
+        self.rng = rng
+        self.left: list = []
+
+    def draw(self):
+        if not self.left:
+            self.left = list(self.items)
+            self.rng.shuffle(self.left)
+        return self.left.pop()
 
 
 def participants(ctx: RenderContext, comm: Communication) -> list[str]:
@@ -113,34 +142,60 @@ def render(ctx: RenderContext, comm: Communication, aid: str) -> Rendered:
     if proj and rng.random() < 0.6:
         segments[-1].append((organizer, rng.choice([f"Main thing today is {proj}.", f"Mostly {proj} updates today.",
                                                     f"Let's start with {proj}."]), None))
-    current: list[tuple[str, str, str | None]] = []
-    last_act = None
+    backs, probes, musings = _Bag(BACKCHANNELS, rng), _Bag(PROBE_PAIRS, rng), _Bag(MUSINGS, rng)
+    multi = len(people) > 1
+
+    def backchannel(after: str, seg: list) -> None:
+        """A few short acknowledgements, each from someone other than the previous speaker."""
+        prev = after
+        for _ in range(rng.choice([1, 1, 2, 2, 3])):
+            who = other_than(prev) if prev != after else other_than(after)
+            seg.append((who, backs.draw(), None))
+            prev = who
+
+    # Group the act lines: everything one act says (an ask and its answer) stays together, and
+    # discussion filler only follows once the act is complete.
+    groups: list[list] = []
     for ln in act_cues:
-        if ln.act != last_act and current:
-            segments.append(current)
-            current = []
-        last_act = ln.act
-        sp = ln.speaker if ln.speaker in people else organizer
-        if rng.random() < 0.1 and len(people) > 1:
-            cutter = other_than(sp)
-            current.append((sp, rng.choice(CUT_OFFS), None))
-            current.append((cutter, rng.choice(RESTARTS), None))
-        current.append((sp, ln.text, ln.act))
-        while rng.random() < 0.45 and len(people) > 1:
-            current.append((other_than(sp), rng.choice(BACKCHANNELS), None))
-        if rng.random() < 0.7 and len(people) > 1:
-            q = other_than(sp)
-            current.append((q, rng.choice(PROBES), None))
-            current.append((sp, rng.choice(ANSWERS), None))
-        for _ in range(rng.choice([0, 1, 1, 2, 3])):
+        if groups and groups[-1][0].act == ln.act:
+            groups[-1].append(ln)
+        else:
+            groups.append([ln])
+    actors: set[str] = set()
+    for grp in groups:
+        seg: list[tuple[str, str, str | None]] = []
+        first_sp = grp[0].speaker if grp[0].speaker in people else organizer
+        if rng.random() < 0.1 and multi:
+            seg.append((first_sp, rng.choice(CUT_OFFS), None))
+            seg.append((other_than(first_sp), rng.choice(RESTARTS), None))
+        for ln in grp:
+            sp = ln.speaker if ln.speaker in people else organizer
+            seg.append((sp, ln.text, ln.act))
+            actors.add(sp)
+        last = seg[-1][0]
+        if multi and rng.random() < 0.9:
+            backchannel(last, seg)
+        if multi and rng.random() < 0.55:
+            q, answers = probes.draw()
+            asker = other_than(last)
+            seg.append((asker, q, None))
+            seg.append((last, rng.choice(answers), None))
+            if rng.random() < 0.5:
+                backchannel(last, seg)
+        for _ in range(rng.choice([0, 1, 1, 2])):
             m = rng.choice(people)
-            current.append((m, rng.choice(MUSINGS), None))
-            if rng.random() < 0.5 and len(people) > 1:
-                current.append((other_than(m), rng.choice(BACKCHANNELS), None))
-    if current:
-        segments.append(current)
-    if len(people) > 2 and rng.random() < 0.6:
-        rounds = [(p, rng.choice(ROUNDS), None) for p in rng.sample(people, min(len(people), rng.randint(2, 4)))]
+            seg.append((m, musings.draw(), None))
+            if multi and rng.random() < 0.9:
+                backchannel(m, seg)
+        segments.append(seg)
+    quiet = [p for p in people if p not in actors and p != organizer]
+    if len(people) > 2 and len(quiet) >= 2 and rng.random() < 0.6:
+        rbag = _Bag(ROUNDS, rng)
+        rounds = []
+        for p in rng.sample(quiet, min(len(quiet), rng.randint(2, 4))):
+            rounds.append((p, rbag.draw(), None))
+            if rng.random() < 0.7:
+                rounds.append((other_than(p), backs.draw(), None))
         rounds.insert(0, (organizer, rng.choice(["Anything else from anyone?", "Quick round, anything to flag?",
                                                  "Any other updates?"]), None))
         segments.append(rounds)
@@ -159,6 +214,14 @@ def render(ctx: RenderContext, comm: Communication, aid: str) -> Rendered:
         sp = rng.choice(people)
         segments.insert(rng.randint(2, len(segments)), [(sp, rng.choice(OFF_TOPIC), None),
                                                        (other_than(sp), rng.choice(["Ha, yes.", "No idea.", "I think so.", "Mm."]), None)])
+    if not act_cues and multi:
+        # A meeting where nothing new came up still has some talk.
+        seg = []
+        for _ in range(rng.randint(2, 4)):
+            m = rng.choice(people)
+            seg.append((m, musings.draw(), None))
+            backchannel(m, seg)
+        segments.insert(min(len(segments), 2), seg)
     closers = (["Okay, I think that's it. Thanks everyone.", "Thanks all, talk soon.", "Great, let's wrap there.",
                 "Okay, thanks, I'll let you all go."] if len(people) > 2 else
                ["Okay, I think that's it. Thanks.", "Great, talk next week.", "Cool, let's wrap there."])

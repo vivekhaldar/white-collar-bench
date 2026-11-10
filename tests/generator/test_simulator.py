@@ -25,7 +25,7 @@ from wcb.world.comms import (
     Communication,
     artifact_prefixes,
 )
-from wcb.world.names import HARD_DENYLIST
+from wcb.world.names import contains_denied
 from wcb.world.planner import CHALLENGE_TAGS, make_plan
 from wcb.world.simulator import simulate
 from wcb.world.state import state_at
@@ -208,8 +208,7 @@ def test_keywords_and_summaries(sim_of):
 def test_no_denylisted_strings(sim_of):
     for key in WORLDS[:3]:
         blob = json.dumps(sim_of(*key).to_dict()).lower()
-        for bad in HARD_DENYLIST:
-            assert bad not in blob, bad
+        assert not contains_denied(blob)
 
 
 # ---------------------------------------------------------------- planted challenges
@@ -379,3 +378,67 @@ def test_saturday_and_seed_days_have_deliveries(sim_of):
         assert d in dates, d
     assert all(parse_date(d).weekday() < 6 for d in dates)
     assert add_days(plan["calendar"]["episode"]["days"][-1], 1) not in dates
+
+
+def test_calibration_shape_extras(calibration):
+    """Decision and suggestion shares, lifetimes, meeting mix and the echo rules (docs/calibration.md)."""
+    loops = [s["loops"] for _, s in calibration]
+    assert 0.01 <= _mean(lp["kind"]["shares"].get("decision", 0) for lp in loops) <= 0.07
+    assert 0.06 <= _mean(lp["suggested_at_create_share"] for lp in loops) <= 0.2
+    assert _mean(lp["lifetime_business_days"]["median"] for lp in loops) <= 2.0
+    assert _mean(lp["lifetime_business_days"]["p90"] for lp in loops) >= 3.5
+    meetings = [c for sim, _ in calibration for c in sim.comms if c.kind == "meeting"]
+    no_project = sum(c.project is None for c in meetings) / len(meetings)
+    two = sum(bool(c.extra.get("also")) for c in meetings) / len(meetings)
+    assert 0.2 <= no_project <= 0.55 and 0.05 <= two <= 0.35, (no_project, two)
+    assert not any("(worker away)" in c.subject for c in meetings)
+
+
+def test_restatements_skip_closed_loops_and_reversed_decisions(calibration):
+    """A communication never restates (on a later day) a loop that has already closed or a
+    decision that has already been reversed, unless it is the delayed delivery of the original."""
+    for sim, _ in calibration:
+        ev = {e["id"]: e for e in sim.events}
+        closed: dict[str, str] = {}
+        reversed_at: dict[str, str] = {}
+        for e in sim.events:
+            if e["type"] == "commitment.resolve":
+                closed.setdefault(e["commitment"], e["t"])
+            elif e["type"] == "commitment.update" and e["changes"].get("status") == "open":
+                closed.pop(e["commitment"], None)
+            elif e["type"] == "decision.reverse":
+                reversed_at[e["decision"]] = e["t"]
+        first: dict[str, str] = {}
+        for c in sorted(sim.comms, key=lambda c: c.received_at):
+            for a in c.acts:
+                first.setdefault(a.event, c.date)
+        for c in sim.comms:
+            if c.date > c.t[:10]:
+                continue  # a batch catch-up delivers the original exchange late
+            for a in c.acts:
+                e = ev[a.event]
+                if first[a.event] >= c.date or e["t"][:10] >= c.t[:10]:
+                    continue
+                if e["type"] == "commitment.create":
+                    assert not (e["commitment"] in closed and closed[e["commitment"]] <= c.t), (c.id, a.event)
+                if e["type"] == "decision.make":
+                    assert not (e["decision"] in reversed_at and reversed_at[e["decision"]] <= c.t), (c.id, a.event)
+
+
+def test_calendar_invites_book_real_meetings(sim_of):
+    """Invites, updates and cancellations refer to one booked meeting (or a meeting series) by UID,
+    and most booked meetings that fall inside the world are held."""
+    sim = sim_of(4, "standard", 2)
+    days = {c.date for c in sim.comms}
+    cal = [c for c in sim.comms if c.kind.startswith("calendar_")]
+    uids = {c.extra["meeting"]["uid"] for c in cal if c.extra.get("meeting", {}).get("uid")}
+    assert len(uids) >= 5
+    held = {(c.subject, c.t[:10]) for c in sim.comms if c.kind == "meeting"}
+    booked = {}
+    for c in sorted(cal, key=lambda c: c.received_at):
+        m = c.extra.get("meeting") or {}
+        if m.get("uid") and not m.get("recurrence_id"):
+            booked[m["uid"]] = (c.kind, m["title"], m["start"][:10])
+    traced = [b for b in booked.values() if b[0] != "calendar_cancel" and b[2] in days
+              and not b[1].startswith(("Walkthrough:", "Working session:")) and not b[1].endswith("follow-up")]
+    assert traced and sum((t, d) in held for _, t, d in traced) / len(traced) >= 0.5

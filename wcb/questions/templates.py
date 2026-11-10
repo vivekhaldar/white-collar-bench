@@ -330,6 +330,8 @@ PERSON_ATTR_TEXT = {
     "org": "Which organization is {X} with?",
     "email": "What is {X}'s email address?",
     "relationship": "What is my working relationship with {X}?",
+    "phone": "What is {X}'s direct phone number?",
+    "office": "Which office or building does {X} work from?",
 }
 
 

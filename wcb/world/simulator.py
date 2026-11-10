@@ -44,15 +44,17 @@ WEEKDAY_LOOPS = (1.3, 1.2, 1.0, 0.9, 0.7, 0.2, 0.0)
 WEEKDAY_VOLUME = (1.1, 1.06, 1.0, 0.96, 0.9, 0.33, 0.0)
 BASIS_MIX = (("reported", 0.52), ("received", 0.21), ("sent", 0.22), ("scheduled", 0.03), ("inferred", 0.02))
 OWNER_MIX = (("worker", 0.44), ("others", 0.47), ("joint", 0.09))
-COVERAGE_MIX = (("transcript", 0.45), ("transcript+recap", 0.10), ("recap", 0.25), ("debrief", 0.15),
-                ("voice_debrief", 0.05))
+COVERAGE_MIX = (("transcript", 0.50), ("transcript+recap", 0.05), ("recap", 0.25), ("debrief", 0.14),
+                ("voice_debrief", 0.06))
 # Bimodal lifetimes: a loop closes fast (0-2 business days), slowly (3-20) or stays live. The
 # worker clears their own items faster than others answer, so waiting loops pile up.
-P_FAST = {"worker": 0.50, "others": 0.29}
-P_MED = {"worker": 0.20, "others": 0.20}
-P_SUGGEST_ASK = 0.65  # an incoming ask that the worker has not agreed to yet
-P_SUGGEST_RECAP = 0.28  # an action an AI recap or meeting proposes
-P_SUGGEST_PROPOSAL = 0.15  # a task proposed for the worker in a meeting, not yet taken on
+P_FAST = {"worker": 0.50, "others": 0.27}
+P_MED = {"worker": 0.22, "others": 0.28}
+P_SUGGEST_ASK = 0.6  # an incoming ask that the worker has not agreed to yet
+P_SUGGEST_RECAP = 0.22  # an action an AI recap or meeting proposes
+P_SUGGEST_PROPOSAL = 0.12  # a task proposed for the worker in a meeting, not yet taken on
+P_UNRECORDED = 0.25  # meetings that happen without a recording, notes or debrief (no artifact at all)
+P_DECISION = 0.035  # chance per weekday (scaled by the weekday's activity) of an archetype decision
 P_UNREPORTED = 0.04  # a closure no communication ever reports
 NUMBER_WORDS = {2: "two", 3: "three", 4: "four", 5: "five", 6: "six"}
 DAY_START, DAY_END, EVENING_END = 7 * 60 + 30, 18 * 60 + 30, 21 * 60 + 30
@@ -80,6 +82,18 @@ DROP_REASONS = ("folded into a broader ask", "superseded by a decision", "no lon
                 "duplicate of another ask", "overtaken by events")
 REOPEN_REASONS = ("the first version missed a section", "the numbers did not reconcile",
                   "the fix did not hold")
+
+
+def reopen_reasons(what: str) -> tuple[str, ...]:
+    """Reasons a closed loop of this kind gets reopened."""
+    verb = what.split(" ", 1)[0].lower()
+    if verb in ("fix", "deploy", "rotate", "configure", "provision", "set") and "up a" not in what:
+        return ("the fix did not hold", "it broke again after the next release")
+    if verb in ("book", "schedule", "line", "hold", "set", "join", "introduce"):
+        return ("the time no longer works for everyone", "it has to be rearranged")
+    if verb in ("review", "comment", "check", "approve", "confirm"):
+        return ("there was a second round of changes", "the version reviewed was out of date")
+    return ("the first version missed a section", "the numbers did not reconcile", "it was sent to the wrong group")
 BLOCK_REASONS = ("waiting on an unsigned agreement", "waiting on access approval", "waiting on a vendor fix")
 
 
@@ -241,6 +255,17 @@ class _Sim:
         self.n_thread = 0
         self.today = self.first_day
         self.recent: list[tuple[str, str]] = []  # (date, event id) of revealed state changes
+        # Meetings booked through calendar invites: held (or not) on their day. A meeting series
+        # or a one-off keeps one UID across its invite, updates and cancellation.
+        self.planned: list[dict] = []
+        self.noise_sent: set[tuple] = set()
+        # Fixed dates that noise mail counts down to (a conference's call for proposals and early bird).
+        ep = self.cal["episode"]["days"]
+        self.noise_dates = {"cfp": add_days(ep[0], self.rng.randint(2, 12)),
+                            "early": add_days(ep[0], 4 + 7 * self.rng.randint(0, max(0, len(ep) // 6 - 1)))}
+        self.cancelled: set[tuple[str, str]] = set()  # (cadence key, date) occurrences cancelled
+        self.n_uid = 0
+        self.checkpoint_days = {c["date"] for c in self.cal["checkpoints"]}
 
     # ============================================================ driver
     def run(self) -> Simulation:
@@ -279,6 +304,8 @@ class _Sim:
             self._phase_moves(day)
             self._facts_and_decisions(day)
         self._new_loops(day)
+        if day in self.checkpoint_days and wd < 5:
+            self._due_tomorrow(day)
         self._seal_day(day)
 
     # ============================================================ basic helpers
@@ -504,13 +531,15 @@ class _Sim:
                 topic=pp.get("topic") or "AI adoption", topic_a=pp.get("topic_a") or "an AI assistant",
                 pivot=pp.get("pivot") or "a new problem", role=pp.get("role") or "specialist",
                 n=NUMBER_WORDS.get(pp.get("n", 3), "three"),
+                n_plus=NUMBER_WORDS.get(pp.get("n", 3) + 1, "more"),
                 owner=self.pns(proj.owner), sponsor=self.pns(proj.sponsor),
                 lead=self.pns(pp["cast"].get("lead")), cand=self.pns(pp["cast"].get("cand")),
             )
         else:
             topic = self.rng.choice([t for t, _ in self._setting_topics()])
             hub = self.plan_projects[self.hub_id]
-            ctx.update(proj=NS(short="", kw="", name=""), topic=topic, n="three", hub=NS(short=hub["short"], kw=hub["kw"]))
+            ctx.update(proj=NS(short="", kw="", name=""), topic=topic, n="three", n_plus="four",
+                       hub=NS(short=hub["short"], kw=hub["kw"]))
         for k, pid in people.items():
             ctx[k] = self.pns(pid)
         return ctx
@@ -534,10 +563,10 @@ class _Sim:
         if proj.status == "done":
             return desc + " Completed."
         if proj.status in ("dormant", "paused"):
-            return desc + f" Currently {proj.status}; no recent activity."
+            return desc + (" Gone quiet; no recent activity." if proj.status == "dormant" else " On hold for now.")
         if proj.status == "cancelled":
             return desc + " Cancelled."
-        parts = ["Ongoing" if proj.phase == "ongoing" else f"Currently in {proj.phase}"]
+        parts = [phase_phrase(proj.phase)]
         if proj.blocker:
             parts.append(f"blocked on {proj.blocker}")
         if proj.target:
@@ -645,6 +674,9 @@ class _Sim:
                  received: str | None = None, extra: dict | None = None, parent: str | None = None) -> Communication:
         self.n_comm += 1
         t = self.ts(day, minute)
+        if received is None and kind in ("chat_dm", "chat_channel"):
+            # A chat thread is exported a little after its first message, once the replies are in.
+            received = self.ts(day, min(int(minute) + self.rng.randint(15, 45), 23 * 60 + 50))
         to = [x for x in (to or []) if x]
         if thread is None:
             if kind == "chat_dm" and sender and to:
@@ -670,7 +702,13 @@ class _Sim:
     def chat_channel_name(self, proj: _Proj | None) -> str:
         if proj is None:
             return "#general"
-        return "#" + (proj.p.get("code") or proj.p["short"]).lower().replace(" ", "-")[:24] + "-core"
+        words = (proj.p.get("code") or proj.p["short"]).lower().replace("/", " ").split()
+        slug = words[0]
+        for w in words[1:]:
+            if len(slug) + 1 + len(w) > 26:
+                break  # cut at a word boundary, never mid-word
+            slug += "-" + w
+        return "#" + slug + "-core"
 
     def message(self, day: str, sender: str, recipient: str, proj: _Proj | None, *, lo: int = DAY_START,
                 prefer: str | None = None, subject: str = "", reuse: float = 0.35, thread: str | None = None,
@@ -686,7 +724,7 @@ class _Sim:
         elif prefer == "chat":
             kind = "chat_dm"
         if kind is None:
-            kind = "chat_dm" if self.rng.random() < 0.64 else "email"
+            kind = "chat_dm" if self.rng.random() < 0.68 else "email"
         if kind == "chat_dm" and proj is not None and self.rng.random() < 0.35 \
                 and sender in proj.members + [self.W] and recipient in proj.members + [self.W]:
             kind = "chat_channel"
@@ -717,7 +755,11 @@ class _Sim:
             return [self.W]
         return [m for m in proj.members if self._ok(m, self.today) or m == self.W][:10]
 
-    def meeting_for(self, day: str, proj: _Proj | None, parties: list[str], lo: int = 0) -> Communication | None:
+    def meeting_for(self, day: str, proj: _Proj | None, parties: list[str], lo: int = 0,
+                    need: list[str] | None = None) -> Communication | None:
+        """A meeting held today, ending after minute `lo`, that can carry an event about `proj`.
+
+        `need` lists people who must be in the room (the debtor of an accepted commitment)."""
         cands = []
         for c in self.day_comms:
             if c.kind != "meeting" or c.extra.get("fixed") or c.date != day:
@@ -725,8 +767,12 @@ class _Sim:
             end = self.minute(c.t)
             if end - 5 < lo:
                 continue
-            if proj is not None and c.project == proj.id:
+            if need and not all(p in c.participants for p in need if p):
+                continue
+            if proj is not None and proj.id in (c.project, c.extra.get("also")):
                 cands.append((0, c))
+            elif c.project is None and all(p in c.participants for p in parties if p) and parties:
+                cands.append((0 if self.rng.random() < 0.5 else 1, c))  # cross-cutting meetings (leads call, 1:1)
             elif proj is None and c.project is None:
                 cands.append((1, c))
             elif all(p in c.participants for p in parties if p):
@@ -783,9 +829,13 @@ class _Sim:
             if lo > DAY_END:
                 return None
             m = self.rand_minute(lo, DAY_END)
-            c = self.new_comm(day, "calendar_invite", m, sender, [recipient], project=proj.id if proj else None,
-                              subject=subject or "Invite")
-            self._join_link(c)
+            title = (subject or "Invite").removeprefix("Invite: ")
+            if not any(w in title.lower() for w in ("session", "demo", "meeting", "call", "workshop", "catch-up")):
+                title = "Working session: " + title
+            pm = self.plan_meeting(day, self.bday(day, self.rng.randint(1, 3)),
+                                   self.rng.choice([9, 10, 11, 13, 14, 15, 16]) * 60 + self.rng.choice([0, 30]),
+                                   self.rng.choice([30, 45, 60]), title, sender, [recipient], proj, trace=False)
+            c = self._invite(day, pm, m)
             return c, c.t
         return self.message(day, sender, recipient, proj, lo=lo, prefer=prefer, subject=subject, thread=thread)
 
@@ -809,25 +859,95 @@ class _Sim:
             proj = self.projs.get(cad["project"]) if cad["project"] else None
             if proj is not None and not proj.active:
                 continue
-            if cad["key"] == "standup" and self.rng.random() < 0.15:
-                continue  # standups get skipped now and then
             hh, mm = (int(x) for x in cad["time"].split(":"))
             organizer = proj.owner if proj is not None and cad["key"] == "standup" else cad["organizer"]
+            if (cad["key"], day) in self.cancelled:
+                continue  # cancelled earlier through the calendar
+            if cad["key"] == "standup" and self.rng.random() < 0.15:
+                # Standups get skipped now and then, sometimes with a same-morning cancellation.
+                if self.rng.random() < 0.5 and self._ok(organizer, day):
+                    self._cancel_occurrence(day, cad, organizer, self.rand_minute(7 * 60 + 40, hh * 60 + mm - 10))
+                continue
+            if self.rng.random() < P_UNRECORDED:
+                continue  # held, but nobody recorded or wrote it up
             self.new_meeting(day, cad["title"], hh * 60 + mm + self.rng.choice([0, 0, 5]), cad["minutes"], organizer,
                              list(cad["attendees"]), proj, recurring=cad["key"])
+        # Meetings booked earlier through an invite (and not cancelled since).
+        held = 0
+        for pm in self.planned:
+            if pm["day"] != day or pm["status"] != "planned":
+                continue
+            pm["status"] = "held"
+            if not pm["trace"] or self.rng.random() < P_UNRECORDED:
+                continue  # held, but unrecorded and unminuted: the invite is all the inputs show
+            proj = self.projs.get(pm["project"] or "")
+            m = self.new_meeting(day, pm["title"], pm["start"], pm["minutes"], pm["organizer"], pm["attendees"],
+                                 proj if proj is not None and proj.active else None)
+            m.extra.update({"uid": pm["uid"], "keep": True})
+            held += 1
         n_adhoc = self.pick([0, 1, 1, 2, 2, 3], None) if wd < 2 else self.pick([0, 1, 1, 2], None)
+        n_adhoc = max(0, n_adhoc - held // 2)
         projs = [p for p in self.live(day) if p.arch.phase(p.phase).activity > 0.2]
         for _ in range(n_adhoc):
+            if self.rng.random() < P_UNRECORDED:
+                continue
+            r = self.rng.random()
+            if r < 0.4:
+                self._adhoc_unattached(day)
+                continue
             proj = self.pick(projs, [p.weight * p.arch.phase(p.phase).activity for p in projs])
             if proj is None:
                 break
-            ph = proj.arch.phase(proj.phase)
-            title = self.fmt(self.rng.choice(ph.meetings), self._ctx(proj)) if ph.meetings else f"{proj.p['short']} check-in"
-            title = title[:1].upper() + title[1:]
-            attendees = [proj.owner] + [self.pick_cp(proj, day) for _ in range(self.rng.randint(1, 4))]
-            attendees = [a for a in dict.fromkeys(attendees) if a]
+            title, attendees, also = self._adhoc_title(day, proj, projs, two=r > 0.65)
             start = self.rng.choice([9, 10, 11, 13, 14, 15, 16]) * 60 + self.rng.choice([0, 0, 30])
-            self.new_meeting(day, title, start, self.rng.choice([30, 30, 45, 60]), attendees[0], attendees, proj)
+            m = self.new_meeting(day, title, start, self.rng.choice([30, 30, 45, 60]), attendees[0], attendees, proj)
+            if also:
+                m.extra["also"] = also
+
+    def _adhoc_title(self, day: str, proj: _Proj, projs: list[_Proj], *, two: bool = False
+                     ) -> tuple[str, list[str], str | None]:
+        """Title, attendees and second project of an ad hoc project meeting."""
+        ph = proj.arch.phase(proj.phase)
+        title = self.fmt(self.rng.choice(ph.meetings), self._ctx(proj)) if ph.meetings else \
+            self.rng.choice([f"{proj.p['short']} check-in", f"{proj.p['short']} working session", f"{proj.p['short']} sync"])
+        attendees = [proj.owner] + [self.pick_cp(proj, day) for _ in range(self.rng.randint(1, 4))]
+        also = None
+        others = [p for p in projs if p.id != proj.id and p.p["size"] in ("flagship", "hub", "mid")]
+        if two and others:
+            # One meeting that spans two projects (a dependency or a shared stakeholder).
+            o = self.pick(others, [p.weight for p in others])
+            also = o.id
+            title = f"{proj.p['short']} / {o.p['short']} sync"
+            attendees += [o.owner, self.pick_cp(o, day)]
+        title = title[:1].upper() + title[1:]
+        attendees = [a for a in dict.fromkeys(attendees) if a]
+        return title, attendees, also
+
+    def _adhoc_unattached(self, day: str) -> Communication | None:
+        """A meeting that belongs to no project: a catch-up, office hours or a team session."""
+        core = [p for p in self.proj_people(None, day) if self.people[p].get("group") in ("central", "unit", "functional",
+                                                                                             "partner")]
+        if not core:
+            return None
+        who = self.pick(core, [self.weight_of(p, None) for p in core])
+        kind = self.rng.random()
+        wf = self.first(self.W)
+        if kind < 0.5:
+            title, attendees, organizer = f"Catch-up: {wf} / {self.first(who)}", [who], who
+        elif kind < 0.75:
+            team = [p for p in core if self.people[p].get("group") == "central"]
+            attendees = list(dict.fromkeys([self.manager, *self.rng.sample(team, min(len(team), 3))]))
+            title = self.rng.choice(["Team retro", "Team planning", "Lunch and learn", "Quarterly priorities"])
+            organizer = attendees[0]
+        else:
+            org = self.orgs.get(self.people[who].get("org") or "")
+            title = f"{org['short']} relationship check-in" if org and org["role"] in ("unit", "partner") else \
+                f"Office hours with {self.first(who)}"
+            attendees, organizer = [who], who
+        start = self.rng.choice([8, 9, 12, 13, 15, 16]) * 60 + self.rng.choice([0, 30])
+        m = self.new_meeting(day, title, start, self.rng.choice([30, 30, 45]), organizer, attendees, None)
+        m.extra["keep"] = self.rng.random() < 0.5
+        return m
 
     # ============================================================ portfolio note and cadences
     def _portfolio_note(self, day: str) -> None:
@@ -881,7 +1001,7 @@ class _Sim:
             week_start = add_days(day, -4)
             recent = [eid for d, eid in self.recent if week_start <= d <= day and self.ev[eid]["t"] <= c.t
                       and self.ev[eid]["type"] in ("fact.set", "decision.make", "commitment.resolve")
-                      and self.ev[eid].get("attribute") != "summary"]
+                      and self.ev[eid].get("attribute") != "summary" and self._echo_ok(eid)]
             for eid in self.rng.sample(recent, min(3, len(recent))):
                 self.reveal(c, eid)
 
@@ -989,9 +1109,10 @@ class _Sim:
                 proj.nouns.add(noun)
         # Status, due date, acceptance and evidence basis.
         if status is None:
-            status = beat.status or ("open" if debtor == self.W else
+            # Waiting is mostly on others; now and then the worker's own item waits on someone's input.
+            status = beat.status or (("waiting" if self.rng.random() < 0.06 else "open") if debtor == self.W else
                                      ("waiting" if creditor == self.W and self.rng.random() < 0.85 else "open"))
-        if due is None and (force_due or (beat.due and self.rng.random() < 0.4) or self.rng.random() < 0.006):
+        if due is None and (force_due or (beat.due and self.rng.random() < 0.22) or self.rng.random() < 0.006):
             lo, hi = beat.due or (2, 8)
             due = self.bday(day, self.rng.randint(lo, hi))
         if basis is None:
@@ -1013,7 +1134,7 @@ class _Sim:
                 accepted = False
         # Where it shows up.
         if comm is None:
-            placed = self._place_create(day, proj, debtor, creditor, basis, beat, what)
+            placed = self._place_create(day, proj, debtor, creditor, basis, beat, what, accepted)
             if placed is None:
                 return None
             comm, t_ev, how2, by2 = placed
@@ -1021,6 +1142,9 @@ class _Sim:
             how = how or how2
             by = by or by2
         t = t or comm.t
+        if comm.kind == "meeting" and accepted and debtor != self.W and debtor not in comm.participants \
+                and len(comm.participants) >= 3:
+            comm.participants.append(debtor)  # whoever takes on an action was in the room
         lp = self._commit(t, what=what, summary=summary, kind=beat.kind, debtor=debtor, creditor=creditor,
                           others=others, project=proj.id if proj else None, status=status, due=due,
                           accepted=accepted, basis=basis, keywords=keywords)
@@ -1034,20 +1158,34 @@ class _Sim:
             self._plan_lifecycle(lp, day)
         return lp
 
+    def noun_pool(self, proj: _Proj | None) -> list[str]:
+        """Artifact nouns that fit a project's archetype (docs/generator.md, "Archetypes")."""
+        if proj is None:
+            return list(A.GENERIC_NOUNS)
+        name = proj.arch.name
+        own = list(A.NOUNS.get(name, ()))
+        if name in A.DOMAIN_NOUN_ARCHETYPES or not own:
+            own += [n for n in self.nouns if n not in own]
+        return own + [n for n in A.GENERIC_NOUNS if n not in own]
+
     def noun(self, proj: _Proj | None) -> str:
         used = proj.nouns if proj else set()
-        opts = [n for n in self.nouns if n not in used]
+        pool = self.noun_pool(proj)
+        opts = [n for n in pool if n not in used]
         if not opts:
-            opts = [f"{n} v2" for n in self.nouns if f"{n} v2" not in used] or [f"{self.rng.choice(self.nouns)} addendum"]
-        return self.rng.choice(opts)
+            opts = [f"{n} v2" for n in pool if f"{n} v2" not in used] or [f"{self.rng.choice(pool)} addendum"]
+        # The archetype's own nouns come first; generic ones only once those are spent.
+        own = [n for n in opts if n in A.NOUNS.get(proj.arch.name if proj else "", ())]
+        return self.rng.choice(own if own and self.rng.random() < 0.8 else opts)
 
     def _place_create(self, day: str, proj: _Proj | None, debtor: str, creditor: str, basis: str, beat: A.Beat,
-                      what: str) -> tuple[Communication, str, str, str | None] | None:
+                      what: str, accepted: bool = True) -> tuple[Communication, str, str, str | None] | None:
         other = creditor if debtor == self.W else debtor if creditor == self.W else creditor
         subject = self.subject_of(what)
         prefer = {"email": "email", "chat": "chat"}.get(beat.channel or "")
         if basis == "reported":
-            m = self.meeting_for(day, proj, [debtor, creditor])
+            # An agreement made in a meeting needs its debtor in the room.
+            m = self.meeting_for(day, proj, [debtor, creditor], need=[debtor] if accepted else None)
             if m is not None:
                 return m, self.in_meeting(m), "direct", debtor
             reporter = self.pick_cp(proj, day, {debtor, creditor}) or self.collab
@@ -1085,7 +1223,7 @@ class _Sim:
         rng = self.rng
         if not lp.accepted:
             r = rng.random()
-            if r < 0.32:
+            if r < 0.2:
                 self._schedule(self.bday(day, rng.randint(1, 4)), 2, "loop", (lp.id, "endorse", {}))
             elif r < 0.42:
                 self._schedule(self.bday(day, rng.randint(1, 5)), 2, "loop", (lp.id, "drop", {}))
@@ -1094,17 +1232,17 @@ class _Sim:
         close_at: int | None = None
         who = "worker" if lp.debtor == self.W else "others"
         if r < P_FAST[who]:
-            close_at = rng.choice([0, 0, 0, 0, 1, 1, 1, 2, 2])
+            close_at = rng.choice([0, 0, 0, 0, 0, 1, 1, 1, 2])
         elif r < P_FAST[who] + P_MED[who]:
-            close_at = int(round(math.exp(rng.uniform(math.log(3), math.log(20)))))
+            close_at = int(round(math.exp(rng.uniform(math.log(4), math.log(25)))))
         if close_at is not None:
-            action = "drop" if rng.random() < (0.05 if close_at <= 2 else 0.16) else "done"
+            action = "drop" if rng.random() < (0.04 if close_at <= 2 else 0.12) else "done"
             self._schedule(self.bday(day, close_at) if close_at else day, 3, "loop", (lp.id, action, {}))
             if action == "done" and rng.random() < 0.02:
                 self._schedule(self.bday(day, close_at + rng.randint(1, 3)), 4, "loop", (lp.id, "reopen", {}))
         horizon = close_at if close_at is not None else 20
         if horizon >= 2:
-            if rng.random() < (0.3 if lp.debtor != self.W else 0.05):
+            if rng.random() < (0.3 if lp.debtor != self.W else 0.10):
                 self._schedule(self.bday(day, rng.randint(1, horizon - 1 if horizon > 1 else 1)), 2, "loop",
                                (lp.id, "toggle", {}))
             if rng.random() < 0.08:
@@ -1112,7 +1250,7 @@ class _Sim:
                                (lp.id, "transfer", {}))
             if lp.due and rng.random() < 0.3:
                 self._schedule(self.bday(day, rng.randint(1, max(1, horizon - 1))), 2, "loop", (lp.id, "due", {}))
-            if rng.random() < 0.012:
+            if rng.random() < 0.06:
                 self._schedule(self.bday(day, rng.randint(1, max(1, horizon - 1))), 2, "loop", (lp.id, "block", {}))
 
     def _transition(self, day: str, cid: str, action: str, extra: dict) -> None:
@@ -1183,7 +1321,7 @@ class _Sim:
             e = self._resolve(lp, t, "done", self.past(lp.what, lp.debtor))
             self.reveal(comm, e["id"], how, by=None if how != "second_hand" else comm.sender)
         elif action == "drop":
-            mode = self.pick(["note", "message", "meeting"], [0.35, 0.4, 0.25])
+            mode = self.pick(["note", "message", "meeting"], [0.22, 0.53, 0.25])
             placed = self._place(day, mode=mode, sender=W, recipient=lp.debtor if lp.debtor != W else lp.creditor,
                                  proj=proj, after=lp.last_t)
             if placed is None or placed[1] <= lp.last_t:
@@ -1192,7 +1330,7 @@ class _Sim:
             e = self._resolve(lp, placed[1], "dropped", f"Dropped: {self.pov(lp.what)} ({reason})")
             self.reveal(placed[0], e["id"])
         elif action == "endorse":
-            placed = self._place(day, mode="note" if rng.random() < 0.6 else "message", sender=W,
+            placed = self._place(day, mode="note" if rng.random() < 0.4 else "message", sender=W,
                                  recipient=lp.creditor if lp.creditor != W else lp.debtor, proj=proj, after=lp.last_t)
             if placed is None or placed[1] <= lp.last_t:
                 return
@@ -1250,14 +1388,14 @@ class _Sim:
             e = self._update(lp, placed[1], {"status": "blocked"},
                              f"{self.subject_of(lp.what)} blocked: {rng.choice(BLOCK_REASONS)}")
             self.reveal(placed[0], e["id"])
-            self._schedule(self.bday(day, rng.randint(2, 6)), 2, "loop", (lp.id, "toggle", {}))
+            self._schedule(self.bday(day, rng.randint(4, 12)), 2, "loop", (lp.id, "toggle", {}))
         elif action == "reopen":
             placed = self._place(day, mode="message", sender=lp.creditor if lp.creditor != W else lp.debtor,
                                  recipient=W, proj=proj, after=lp.last_t, thread=lp.thread, subject=self._re(lp))
             if placed is None or placed[1] <= lp.last_t:
                 return
             e = self._update(lp, placed[1], {"status": "open"},
-                             f"Reopened: {self.pov(lp.what)} ({rng.choice(REOPEN_REASONS)})")
+                             f"Reopened: {self.pov(lp.what)} ({rng.choice(reopen_reasons(lp.what))})")
             self.reveal(placed[0], e["id"])
             self._schedule(self.bday(day, rng.randint(1, 4)), 3, "loop", (lp.id, "done", {}))
 
@@ -1376,7 +1514,7 @@ class _Sim:
             for b in facts:
                 if rng.random() < 0.02 * b.weight * ph.activity * (1.5 if proj.p["size"] == "flagship" else 1):
                     self.fact_beat(day, proj, b)
-        if rng.random() < 0.18 * WEEKDAY_LOOPS[self.weekday(day)]:
+        if rng.random() < P_DECISION * WEEKDAY_LOOPS[self.weekday(day)]:
             projs = [p for p in self.live(day) if p.arch.decisions]
             proj = self.pick(projs, [p.weight for p in projs])
             if proj is not None:
@@ -1426,7 +1564,7 @@ class _Sim:
         ctx = self._ctx(proj)
         what = self.fmt(beat.what, ctx)
         if comm is None:
-            mode = self.pick(["meeting", "note", "message"], [0.5, 0.25, 0.25])
+            mode = self.pick(["meeting", "note", "message"], [0.45, 0.15, 0.4])
             sender = by[0] if by[0] != self.W else self.W
             placed = self._place(day, mode=mode, sender=sender, recipient=self.W if sender != self.W else proj.owner,
                                  proj=proj, subject=self.subject_of(what))
@@ -1439,7 +1577,8 @@ class _Sim:
         e = self._ev("decision.make", t or comm.t, self.fmt(beat.summary, ctx), decision=did, what=what, by=by,
                      project=proj.id, keywords=_clean_keywords([self.fmt(k, ctx).lower() for k in beat.keywords], what))
         self.dec_ev[did] = e["id"]
-        self.dec[did] = {"id": did, "project": proj.id, "what": what, "reversed": False, "t": e["t"]}
+        self.dec[did] = {"id": did, "project": proj.id, "what": what, "reversed": False, "t": e["t"], "beat": beat,
+                         "by": list(by)}
         proj.decisions.append(did)
         self.reveal(comm, e["id"], how)
         return e
@@ -1459,6 +1598,20 @@ class _Sim:
                 continue
             proj = self.pick(projs, weights)
             self.project_loop(day, proj)
+
+    def _due_tomorrow(self, day: str) -> None:
+        """Before a checkpoint, make sure something of the worker's is due by the next business day
+        (a deadline is what "what should I focus on tomorrow?" turns on)."""
+        nxt = self.bday(day, 1)
+        if any(lp.debtor == self.W and lp.due and lp.due <= nxt for lp in self._active_loops()):
+            return
+        projs = [p for p in self.live(day) if p.p["size"] in ("flagship", "hub", "mid")]
+        proj = self.pick(projs, [p.weight for p in projs])
+        if proj is None:
+            return
+        lp = self.project_loop(day, proj, category="worker", lifecycle=False, accepted=True, due=nxt, basis="received")
+        if lp is not None and self.rng.random() < 0.7:
+            self._schedule(nxt, 3, "loop", (lp.id, "done", {}))
 
     def project_loop(self, day: str, proj: _Proj, *, category: str | None = None, **kw: Any) -> _Loop | None:
         cat = category or self.mix(OWNER_MIX)
@@ -1499,6 +1652,10 @@ class _Sim:
         for m in [c for c in self.day_comms if c.kind == "meeting" and not c.acts]:
             if not self._fill_meeting(m, day):
                 self._drop(m)
+        # A message whose event fell through (the transition found nothing to say) is not sent.
+        for c in [c for c in self.day_comms if c.kind in ("email", "chat_dm", "chat_channel", "note", "voice_memo")
+                  and not c.acts and not c.noise and not c.draft and not c.secrets and c.subject != "Portfolio map"]:
+            self._drop(c)
         self._volume(day)
         for c in self.day_comms:
             self._reveal_people(c)
@@ -1514,10 +1671,12 @@ class _Sim:
         if m.extra.get("fixed"):
             return True
         cands = [eid for d, eid in self.recent[-60:]
-                 if d < day and self.ev[eid].get("project") == m.project and self.ev[eid]["t"] <= m.t
-                 and self.ev[eid]["type"] != "fact.set"]
+                 if d < day and (self.ev[eid].get("project") in (m.project, m.extra.get("also")) or m.project is None)
+                 and self.ev[eid]["t"] <= m.t
+                 and self.ev[eid]["type"] != "fact.set" and self._echo_ok(eid)
+                 and (self._parties(self.ev[eid]) & set(m.participants) or self.rng.random() < 0.3)]
         if not cands or self.rng.random() < 0.35:
-            return False
+            return bool(m.extra.get("keep"))
         for eid in self.rng.sample(cands, min(len(cands), self.rng.randint(1, 2))):
             self.reveal(m, eid, "direct")
         return True
@@ -1578,34 +1737,90 @@ class _Sim:
             elif r < 0.62:
                 if not self._fyi(day):
                     self._noise_email(day)
-            elif r < 0.75 and wd < 5:
+            elif r < 0.71 and wd < 5:
                 self._calendar_filler(day)
             else:
                 self._noise_email(day)
 
     # ------------------------------------------------------------ noise and filler
     def _noise_email(self, day: str) -> Communication:
-        sender = self.rng.choice(self.minors)
-        p = self.people[sender]
-        kind = p.get("minor_kind", "newsletter")
+        """A newsletter, notification or announcement. Periodic mail keeps to its schedule (one issue
+        a week), and deadlines count down with the calendar."""
         d = parse_date(day)
-        subjects = {
-            "newsletter": [f"{p['role'].split(', ', 1)[-1]}: issue {d.isocalendar()[1]}", "This week in digital services",
-                           "Five reads for the week"],
-            "service_desk": [f"[INC-{self.rng.randint(40000, 89999)}] Ticket updated", "Scheduled maintenance this weekend",
-                             f"[REQ-{self.rng.randint(10000, 39999)}] Request resolved"],
-            "status": ["[Resolved] Elevated latency on file storage", "[Scheduled] Network maintenance window",
-                       "[Investigating] Intermittent sign-in delays"],
-            "comms": ["All-staff: building access changes", "Wellbeing week activities", "Parking lot resurfacing"],
-            "events": ["Room booking confirmation", "Catering menu for next month", "Event space survey"],
-            "conference": ["Call for proposals closes soon", "Early-bird registration ends Friday", "Speaker spotlight"],
-            "benefits": ["Open enrollment reminder", "Your benefits statement is ready", "Wellness credit deadline"],
-            "marketing": ["Webinar: getting more from your data", "Customer story: faster onboarding", "Product update roundup"],
-        }.get(kind, ["Newsletter"])
-        m = self.rand_minute(6 * 60 + 30, 19 * 60)
-        c = self.new_comm(day, "email", m, sender, [self.W], subject=self.rng.choice(subjects), noise=True,
-                          extra={"noise_kind": kind})
+        week = d.isocalendar()[1]
+        wd = d.weekday()
+        extra: dict[str, Any] = {}
+        subject = None
+        for _ in range(12):
+            sender = self.rng.choice(self.minors)
+            p = self.people[sender]
+            kind = p.get("minor_kind", "newsletter")
+            opts = self._noise_subjects(kind, p, day, extra)
+            opts = [o for o in opts if (kind, o[1]) not in self.noise_sent or o[1] is None]
+            if opts:
+                subject, key = self.rng.choice(opts)
+                if key is not None:
+                    self.noise_sent.add((kind, key))
+                break
+        if subject is None:
+            kind, sender = "service_desk", next((m for m in self.minors if self.people[m].get("minor_kind") == "service_desk"),
+                                                self.minors[0])
+            subject = f"[INC-{self.rng.randint(40000, 89999)}] Ticket updated"
+        m = self.rand_minute(6 * 60 + 30, 19 * 60) if wd < 5 else self.rand_minute(8 * 60, 13 * 60)
+        if kind == "newsletter":
+            extra["issue"] = week
+        c = self.new_comm(day, "email", m, sender, [self.W], subject=subject, noise=True,
+                          extra={"noise_kind": kind, **extra})
         return c
+
+    def _noise_subjects(self, kind: str, p: dict, day: str, extra: dict) -> list[tuple[str, Any]]:
+        """(subject, once-only key) choices for a noise email today; a key is sent at most once."""
+        d = parse_date(day)
+        week, wd = d.isocalendar()[1], d.weekday()
+        conf = self.noise_dates
+        if kind == "newsletter":
+            return [(f"{p['role'].split(', ', 1)[-1]}: issue {week}", ("issue", week))] if wd in (1, 2, 3) else []
+        if kind == "service_desk":
+            out = [(f"[INC-{self.rng.randint(40000, 89999)}] Ticket updated", None),
+                   (f"[REQ-{self.rng.randint(10000, 39999)}] Request resolved", None)]
+            if wd <= 3:
+                out.append(("Scheduled maintenance this weekend", ("maint", week)))
+            return out
+        if kind == "status":
+            return [("[Resolved] Elevated latency on file storage", ("st1", week)),
+                    ("[Scheduled] Network maintenance window", ("st2", week)),
+                    ("[Investigating] Intermittent sign-in delays", ("st3", week))]
+        if kind == "comms":
+            out = [("All-staff: building access changes", ("c1",)), ("Wellbeing week activities", ("c2",)),
+                   ("Parking lot resurfacing", ("c3",))]
+            if wd <= 3:
+                out.append(("Reminder: all-staff meeting Thursday", ("c4", week)))
+            return out if wd < 5 else []
+        if kind == "events":
+            return [("Room booking confirmation", None), ("Catering menu for next month", ("e2",)),
+                    ("Event space survey", ("e3",))] if wd < 5 else []
+        if kind == "conference":
+            out = [("Speaker spotlight", ("spot", week))]
+            cfp, early = conf["cfp"], conf["early"]
+            days_cfp = (parse_date(cfp) - d).days
+            days_early = (parse_date(early) - d).days
+            if 0 < days_cfp <= 14:
+                extra["deadline"] = cfp
+                out.append((f"Call for proposals closes {self.date_words(cfp)}", ("cfp", week)))
+            if 0 <= days_early <= 6 and wd < 5:
+                extra["deadline"] = early
+                out.append(("Early-bird registration ends " + ("today" if days_early == 0 else
+                            parse_date(early).strftime("%A")), ("early", week)))
+            if days_early < 0:
+                out.append(("Programme now live", ("prog",)))
+            return out
+        if kind == "benefits":
+            return [("Open enrollment reminder", ("b1", week)), ("Your benefits statement is ready", ("b2",)),
+                    ("Wellness credit deadline", ("b3",))]
+        if kind == "marketing":
+            return [("Webinar: getting more from your data", ("m1",)), ("Customer story: faster onboarding", ("m2",)),
+                    ("Product update roundup", ("m3", week))]
+        return [("Newsletter", None)]
 
     def _noise_chat(self, day: str) -> Communication:
         # Social chatter comes from colleagues the worker already knows, so noise never introduces anyone.
@@ -1617,36 +1832,137 @@ class _Sim:
         return self.new_comm(day, "chat_channel", m, sender, [], participants=[sender, self.W], subject=channel,
                              noise=True, extra={"noise_kind": "social"})
 
+    def _parties(self, e: dict) -> set[str]:
+        """People an event is about: a loop's debtor, creditor and others, a decision's makers."""
+        out: set[str] = set()
+        cid = e.get("commitment")
+        if cid and cid in self.loops:
+            lp = self.loops[cid]
+            create = self.ev[self.loop_ev[cid]]
+            out |= {create["debtor"], create["creditor"], *create.get("others", []), lp.debtor}
+            out |= {v for k, v in (e.get("changes") or {}).items() if k in ("debtor", "creditor") and v}
+        out |= set(e.get("by") or [])
+        return {p for p in out if p and p != self.W}
+
+    def _echo_ok(self, eid: str) -> bool:
+        """Whether an earlier event can be restated now: not about a loop that has since closed
+        or a decision that has since been reversed."""
+        e = self.ev[eid]
+        cid = e.get("commitment")
+        if cid and e["type"] != "commitment.resolve":
+            lp = self.loops.get(cid)
+            if lp is None or lp.status not in ACTIVE:
+                return False
+        if e["type"] == "decision.make" and self.dec.get(e["decision"], {}).get("reversed"):
+            return False
+        return True
+
     def _fyi(self, day: str) -> bool:
-        cands = [eid for d, eid in self.recent[-80:] if d >= add_days(day, -4) and self.ev[eid]["type"] != "fact.set"]
+        cands = [eid for d, eid in self.recent[-80:] if d >= add_days(day, -4) and self.ev[eid]["type"] != "fact.set"
+                 and self._echo_ok(eid)]
         if not cands:
             return False
         eid = self.rng.choice(cands)
         e = self.ev[eid]
         proj = self.projs.get(e.get("project") or "")
-        sender = self.pick_cp(proj, day) or self.collab
+        # Someone who was party to it passes it on.
+        parties = sorted(p for p in self._parties(e) if self._ok(p, day))
+        if parties and self.rng.random() < 0.65:
+            sender = self.pick(parties)
+        else:
+            # A colleague who was copied passes it on (rendered as a forward when it is an email).
+            sender = self.pick_cp(proj, day, set(parties)) or self.collab
         lo = self.minute(e["t"]) + 5 if e["t"][:10] == day else DAY_START
         r = self.message(day, sender, self.W, proj, lo=lo, reuse=0.0, subject="FYI")
         if r is None:
             return False
         c, _t = r
-        self.reveal(c, eid, "second_hand", by=sender)
+        self.reveal(c, eid, "second_hand" if sender not in self._parties(e) else "direct", by=sender)
         return True
 
-    def _calendar_filler(self, day: str) -> Communication:
-        projs = self.live(day)
-        proj = self.pick(projs, [p.weight for p in projs])
-        org = self.pick_cp(proj, day) or self.collab
-        when = self.bday(day, self.rng.randint(1, 4))
-        title = f"{proj.p['short'][:1].upper() + proj.p['short'][1:]} sync" if proj else "Catch-up"
-        kind = self.pick(["calendar_invite", "calendar_update", "calendar_cancel"], [0.7, 0.2, 0.1])
-        c = self.new_comm(day, kind, self.rand_minute(), org, [self.W], project=proj.id if proj else None,
-                          subject=("Invite: " if kind == "calendar_invite" else "Updated: " if kind == "calendar_update"
-                                   else "Cancelled: ") + title,
-                          extra={"meeting": {"title": title, "start": self.ts(when, 14 * 60), "end": self.ts(when, 14 * 60 + 30)}})
-        if kind != "calendar_cancel":
-            self._join_link(c)
+    def _uid(self, key: str | None = None) -> str:
+        if key is None:
+            self.n_uid += 1
+            key = f"one-off-{self.n_uid}"
+        return f"{self.plan['world_id']}:{key}"
+
+    def plan_meeting(self, day: str, when: str, start: int, minutes: int, title: str, organizer: str,
+                     attendees: list[str], proj: _Proj | None, *, trace: bool = True) -> dict:
+        """Book a meeting for a later day; `_meetings` holds it unless it is cancelled first.
+
+        With `trace=False` the meeting leaves nothing but its calendar items."""
+        pm = {"uid": self._uid(), "title": title, "day": when, "start": start, "minutes": minutes,
+              "organizer": organizer, "attendees": [a for a in dict.fromkeys([organizer, *attendees]) if a],
+              "project": proj.id if proj else None, "seq": 0, "status": "planned", "trace": trace, "booked": day}
+        self.planned.append(pm)
+        return pm
+
+    def _meeting_extra(self, pm: dict, **more: Any) -> dict:
+        return {"meeting": {"title": pm["title"], "start": self.ts(pm["day"], pm["start"]),
+                            "end": self.ts(pm["day"], pm["start"] + pm["minutes"]), "uid": pm["uid"],
+                            "sequence": pm["seq"], "organizer": pm["organizer"], **more}}
+
+    def _invite(self, day: str, pm: dict, minute: int | None = None) -> Communication:
+        to = [a for a in pm["attendees"] if a != pm["organizer"]] or [self.W]
+        c = self.new_comm(day, "calendar_invite", minute if minute is not None else self.rand_minute(), pm["organizer"],
+                          to, project=pm["project"], subject=f"Invite: {pm['title']}", extra=self._meeting_extra(pm))
+        self._join_link(c)
         return c
+
+    def _cancel_occurrence(self, day: str, cad: dict, organizer: str, minute: int) -> Communication:
+        hh, mm = (int(x) for x in cad["time"].split(":"))
+        start = self.ts(day, hh * 60 + mm)
+        self.cancelled.add((cad["key"], day))
+        to = [a for a in cad["attendees"] if a != organizer and (a == self.W or self._ok(a, day))][:8] or [self.W]
+        c = self.new_comm(day, "calendar_cancel", minute, organizer, to,
+                          project=cad["project"] if cad["project"] in self.projs else None,
+                          subject=f"Cancelled: {cad['title']}",
+                          extra={"meeting": {"title": cad["title"], "start": start,
+                                             "end": self.ts(day, hh * 60 + mm + cad["minutes"]),
+                                             "uid": self._uid("series-" + cad["key"]), "recurrence_id": start,
+                                             "sequence": 1, "organizer": organizer}})
+        return c
+
+    def _calendar_filler(self, day: str) -> Communication | None:
+        """An invite for a meeting later this week, or an update or cancellation of one booked earlier."""
+        upcoming = [pm for pm in self.planned if pm["day"] > day and pm["status"] == "planned" and pm["trace"]
+                    and self._ok(pm["organizer"], day) and pm["booked"] < day and pm.get("touched") != day]
+        r = self.rng.random()
+        if upcoming and r < 0.2:
+            pm = self.rng.choice(upcoming)
+            pm["touched"] = day
+            pm["seq"] += 1
+            if self.rng.random() < 0.6:
+                pm["start"] = self.rng.choice([9, 10, 11, 13, 14, 15, 16]) * 60 + self.rng.choice([0, 30])
+            else:
+                pm["day"] = self.bday(pm["day"], 1)
+            to = [a for a in pm["attendees"] if a != pm["organizer"]] or [self.W]
+            c = self.new_comm(day, "calendar_update", self.rand_minute(), pm["organizer"], to, project=pm["project"],
+                              subject=f"Updated: {pm['title']}", extra=self._meeting_extra(pm))
+            self._join_link(c)
+            return c
+        if upcoming and r < 0.3:
+            pm = self.rng.choice(upcoming)
+            pm["touched"] = day
+            pm["seq"] += 1
+            pm["status"] = "cancelled"
+            to = [a for a in pm["attendees"] if a != pm["organizer"]] or [self.W]
+            return self.new_comm(day, "calendar_cancel", self.rand_minute(), pm["organizer"], to, project=pm["project"],
+                                 subject=f"Cancelled: {pm['title']}", extra=self._meeting_extra(pm))
+        projs = self.live(day)
+        proj = self.pick(projs, [p.weight for p in projs]) if self.rng.random() < 0.7 else None
+        when = self.bday(day, self.rng.randint(1, 4))
+        start = self.rng.choice([9, 10, 11, 13, 14, 15, 16]) * 60 + self.rng.choice([0, 0, 30])
+        if proj is not None:
+            title, attendees, _also = self._adhoc_title(day, proj, [])
+            organizer = attendees[0] if attendees[0] != self.W else (self.pick_cp(proj, day) or self.collab)
+        else:
+            who = self.pick_cp(None, day) or self.collab
+            title, attendees, organizer = f"Catch-up: {self.first(self.W)} / {self.first(who)}", [who], who
+        attendees = [a for a in attendees if a == self.W or self._ok(a, day)]
+        pm = self.plan_meeting(day, when, start, self.rng.choice([30, 30, 45, 60]), title, organizer,
+                               [*attendees, self.W], proj)
+        return self._invite(day, pm)
 
     # ============================================================ planted challenges
     def _challenge(self, day: str, ch: dict, stage: str) -> None:
@@ -1676,12 +1992,15 @@ class _Sim:
         proj = self._proj(ch.get("project"))
         c = self.new_comm(day, "note", self.rand_minute(7 * 60 + 15, 8 * 60 + 20), self.W, [], subject="Mon notes")
         c.extra["fixed"] = True
-        k = self.rng.choice("ABC")
+        k, k2 = self.rng.sample("ABC", 2)
         noun = self.noun(proj)
         proj.nouns.add(noun)
         beat = A.D("dir", f"Use approach {k} for the {{proj.short}} {noun}",
                    f"Decided to use approach {k} for the {{proj.short}} {noun}", [f"approach {k.lower()}", noun],
-                   by=("worker",))
+                   by=("worker",),
+                   counter=(f"Use approach {k2} for the {{proj.short}} {noun}",
+                            f"Decided to use approach {k2} for the {{proj.short}} {noun}", [f"approach {k2.lower()}", noun]),
+                   reasons=(f"approach {k} turned out to need data we do not have", f"{{sponsor.first}} preferred approach {k2}"))
         e = self.decide(day, proj, beat, comm=c, t=c.t)
         drop = self._active_loops(lambda lp: lp.project == proj.id and lp.debtor != self.W
                                   and self._known_by(lp, day) and lp.last_t < c.t)
@@ -1738,10 +2057,9 @@ class _Sim:
         org = proj.owner if proj.owner != self.W else self.collab
         when = self.bday(day, 1)
         title = f"{proj.p['short'][:1].upper() + proj.p['short'][1:]} review"
-        c = self.new_comm(day, "calendar_invite", self.rand_minute(9 * 60, 16 * 60), org, [self.W], project=proj.id,
-                          subject=f"Invite: {title}",
-                          extra={"meeting": {"title": title, "start": self.ts(when, 15 * 60), "end": self.ts(when, 15 * 60 + 45)}})
-        self._join_link(c)
+        attendees = [a for a in [org, self.W, *self.proj_people(proj, day)[:2]] if a]
+        pm = self.plan_meeting(day, when, 15 * 60, 45, title, org, attendees, proj)
+        c = self._invite(day, pm, self.rand_minute(9 * 60, 16 * 60))
         c.tag("privacy")
         # A vendor engineer emails a temporary password in plain text.
         vend = [x for x in self.live(day) if x.p.get("vendors") and x.p["cast"].get("se")]
@@ -1917,7 +2235,8 @@ class _Sim:
             if kind == "meeting":
                 attendees = [sender, *self.proj_people(proj, day)[:3]]
                 c = self.new_comm(day, "meeting", m + 30, sender, [], participants=[*dict.fromkeys(attendees)],
-                                  project=proj.id, subject=f"{proj.p['short']} sync (worker away)", received=received,
+                                  project=proj.id, subject=f"{proj.p['short'][:1].upper() + proj.p['short'][1:]} sync",
+                                  received=received,
                                   extra={"coverage": "transcript", "start": self.ts(day, m), "end": self.ts(day, m + 30)})
             elif kind == "chat_channel":
                 c = self.new_comm(day, kind, m, sender, [], participants=self._channel_members(proj), project=proj.id,
@@ -2033,10 +2352,8 @@ class _Sim:
             st["loop"] = lp.id
             meet = ch["day"]
             title = f"Walkthrough: {self.subject_of(lp.what).split(' through the ', 1)[-1]}"
-            c = self.new_comm(day, "calendar_invite", self.rand_minute(self.minute(lp.last_t) + 10, DAY_END), self.W,
-                              [cp], project=proj.id, subject=f"Invite: {title}",
-                              extra={"meeting": {"title": title, "start": self.ts(meet, 14 * 60), "end": self.ts(meet, 14 * 60 + 30)}})
-            self._join_link(c)
+            pm = self.plan_meeting(day, meet, 14 * 60, 30, title, self.W, [cp], proj, trace=False)
+            c = self._invite(day, pm, self.rand_minute(self.minute(lp.last_t) + 10, DAY_END))
             c.tag("weak_evidence", "privacy")
             st["invite"] = c.id
             return
@@ -2052,10 +2369,10 @@ class _Sim:
         org = self.pick_cp(proj, day) or self.collab
         when = self.bday(day, 1) if self.bday(day, 1) <= self.last_day else day
         title = f"{proj.p['short'][:1].upper() + proj.p['short'][1:]} follow-up"
+        pm = self.plan_meeting(day, when, 16 * 60, 30, title, org, [self.W], proj, trace=False)
         c = self.new_comm(day, "calendar_reply", self.rand_minute(8 * 60, 12 * 60), self.W, [org], project=proj.id,
-                          subject=f"Accepted: {title}",
-                          extra={"meeting": {"title": title, "start": self.ts(when, 16 * 60), "end": self.ts(when, 16 * 60 + 30),
-                                             "organizer": org}, "response": "accepted", "fixed": True})
+                          subject=f"Accepted: {title}", extra={**self._meeting_extra(pm), "response": "accepted",
+                                                               "fixed": True})
         c.tag("acceptance_vs_occurrence")
 
     def _ch_restructuring(self, day, ch, stage, st) -> None:
@@ -2114,7 +2431,7 @@ class _Sim:
                   weight=max(3.0, src.weight * 0.3), owner=lead, members=[self.W, lead, *src.members[2:5]])
         pp["members"] = list(dict.fromkeys(pp["members"]))
         t = self.ts(day, self.minute(c.t) - 2)
-        ce = self._project_create(pp, t, summary=f"{name} split out of {src.p['name']}")
+        ce = self._project_create(pp, t, summary=f"New project: {name}, led by {self.first(lead) if lead != self.W else 'me'}")
         movable = self._active_loops(lambda lp: lp.project == src.id and self._known_by(lp, day))
         moves = {lp.id: pid for lp in self.rng.sample(movable, min(len(movable), self.rng.randint(1, 2)))}
         e = self._ev("project.split", c.t, f"{name} split out of {src.p['name']}", project=src.id, into=[pid],
@@ -2132,9 +2449,7 @@ class _Sim:
     def _ch_version_mismatch(self, day, ch, stage, st) -> None:
         if stage == "setup":
             proj = self._proj(None)
-            noun = self.rng.choice(["scorecard", "cost model", "options paper", "evaluation workbook", "rollout plan"])
-            if noun in proj.nouns:
-                noun = noun + " v2"
+            noun = self.noun(proj)
             proj.nouns.add(noun)
             beat = A.L("vm", f"Send {{creditor.first}} the {{proj.short}} {noun}", f"{{debtor.first}} will send the {{proj.short}} {noun}",
                        [noun, "{proj.kw}"], debtor="cp", creditor="worker", kind="task", n=99)
@@ -2198,9 +2513,15 @@ class _Sim:
         proj = self._proj(ch.get("project"))
         if stage == "setup":
             beats = [b for b in proj.arch.decisions if proj.uses[(b.key, "")] < 1]
+            beats = [b for b in beats if b.counter] or beats
             beat = beats[0] if beats else A.D("scope", "Limit the {proj.short} rollout to {n} {v.sites}",
                                               "Decided to limit the {proj.short} rollout to {n} {v.sites}",
-                                              ["{n} {v.sites}", "rollout"])
+                                              ["{n} {v.sites}", "rollout"],
+                                              counter=("Widen the {proj.short} rollout to {n_plus} {v.sites}",
+                                                       "Decided to widen the {proj.short} rollout to {n_plus} {v.sites}",
+                                                       ["{n_plus} {v.sites}", "rollout"]),
+                                              reasons=("{sponsor.first} wants a wider trial",
+                                                       "{unit.short} asked for another {v.site}"))
             e = self.decide(day, proj, beat)
             if e is not None:
                 st["decision"] = e["decision"]
@@ -2208,6 +2529,7 @@ class _Sim:
         did = st.get("decision")
         if did is None:
             cands = [d for d in self.dec.values() if not d["reversed"] and self.known.get(self.dec_ev[d["id"]], "9") < day]
+            cands = [d for d in cands if d.get("beat") is not None and d["beat"].counter] or cands
             if not cands:
                 return
             did = self.rng.choice(cands)["id"]
@@ -2220,22 +2542,29 @@ class _Sim:
             return
         c, t = placed
         ctx = self._ctx(proj)
-        reasons = proj.arch.reversal_reasons or ("{sponsor.first} asked for a different approach",)
+        beat = d.get("beat")
+        # The reason and the replacement follow from the decision being reversed.
+        reasons = (beat.reasons if beat is not None and beat.reasons else
+                   proj.arch.reversal_reasons or ("{sponsor.first} asked for a different approach",))
         reason = self.fmt(self.rng.choice(reasons), ctx)
         e = self._ev("decision.reverse", t, f"Reversed: {self.lower_first(d['what'])} ({reason})", decision=did,
                      reason=reason, project=proj.id)
         d["reversed"] = True
         self.reveal(c, e["id"])
-        n2 = NUMBER_WORDS.get(proj.p.get("n", 3) + 1, "more")
-        what2 = f"Widen the {proj.p['short']} scope to {n2} {self.vocab.sites}"
+        if beat is None or not beat.counter:
+            c.tag("reversal")
+            return
+        cwhat, csummary, ckws = beat.counter
+        what2 = self.fmt(cwhat, ctx)
         self.n_dec += 1
         did2 = f"d-x{self.n_dec:03d}"
         t2 = self.ts(day, self.minute(t) + 1) if self.minute(t) + 1 <= self.minute(c.t) else t
-        e2 = self._ev("decision.make", t2, f"Decided to {self.lower_first(what2)}", decision=did2, what=what2,
-                      by=[sender] if sender else [self.W], project=proj.id,
-                      keywords=_clean_keywords([f"{n2} {self.vocab.sites}", proj.p["kw"]], what2))
+        by2 = [sender] if sender else [self.W]
+        e2 = self._ev("decision.make", t2, self.fmt(csummary, ctx), decision=did2, what=what2, by=by2, project=proj.id,
+                      keywords=_clean_keywords([self.fmt(k, ctx).lower() for k in ckws], what2))
         self.dec_ev[did2] = e2["id"]
-        self.dec[did2] = {"id": did2, "project": proj.id, "what": what2, "reversed": False, "t": t2}
+        self.dec[did2] = {"id": did2, "project": proj.id, "what": what2, "reversed": False, "t": t2, "beat": None,
+                          "by": by2}
         self.reveal(c, e2["id"])
         c.tag("reversal")
 
@@ -2341,6 +2670,8 @@ class _Sim:
                 dmap[e["decision"]] = f"d-{len(dmap) + 1:03d}"
         flags: dict[str, set[str]] = defaultdict(set)
         events: list[dict] = []
+        endorsed = {cmap[e["commitment"]] for e in order
+                    if e["type"] == "commitment.update" and e["changes"].get("accepted") is True}
         prev_due: dict[str, str | None] = {}
         for e in order:
             out = {k: v for k, v in e.items() if not k.startswith("_")}
@@ -2405,8 +2736,8 @@ class _Sim:
                 if e["type"] == "entity.create" and e["kind"] in ("person", "project") and e["t"][:10] > seed_start \
                         and e["t"][:10] >= add_days(c.date, -2):
                     c.tag("new_entity")
-                if e["type"] == "commitment.create" and e.get("accepted") is False:
-                    c.tag("endorsement")
+                if e["type"] == "commitment.create" and e.get("accepted") is False and e["commitment"] in endorsed:
+                    c.tag("endorsement")  # a suggestion that is endorsed later
             if c.kind in ("note", "voice_memo") and c.sender == self.W and any(
                     by_new[a.event]["type"] in ("decision.make", "commitment.resolve", "commitment.update", "project.merge")
                     for a in c.acts):
@@ -2473,6 +2804,35 @@ class _Sim:
             "generator": {"kind": "wcb-gen", "version": g["version"], "seed": g["seed"], "sim_seed": self.seed,
                           "size": g["size"], "weeks": g["weeks"], "setting": plan["setting"]["key"]},
         }
+
+
+PHASE_PHRASES = {
+    "ongoing": "Ongoing", "scoping": "Currently scoping", "build": "Currently in build",
+    "security review": "Currently in security review", "readiness": "Getting ready for go-live",
+    "pilot live": "Live with pilot users", "onboarding tenants": "Onboarding tenants",
+    "hardening": "Hardening the platform", "steady state": "Running in steady state",
+    "intake": "Gathering requirements", "questionnaires": "Waiting on vendor questionnaires",
+    "demos": "Running vendor demos", "scoring": "Scoring the vendors", "procurement": "With procurement",
+    "contracting": "In contracting", "planning": "Planning", "site visit": "Doing site visits",
+    "analysis": "Analysing what we found", "readout": "Preparing the readout", "closed": "Closed",
+    "pivot": "Reframing the problem", "advising": "Advising as needed", "fading": "Winding down",
+    "needs gathering": "Gathering needs", "negotiation": "Negotiating terms", "contract review": "In contract review",
+    "signed": "Signed", "logistics": "Sorting out logistics", "delivery": "Running the sessions",
+    "concept": "At concept stage", "prototype": "Building a prototype", "user testing": "In user testing",
+    "handover": "Being handed over", "inputs": "Collecting inputs", "options": "Drafting options",
+    "review": "Under review", "council": "Going to the council", "drafting": "Drafting",
+    "consultation": "In consultation", "endorsement": "Seeking endorsement", "sourcing": "Sourcing candidates",
+    "screens": "Running phone screens", "panel": "At panel interviews", "offer": "At offer stage",
+    "dormant": "Quiet; no sessions booked", "revived": "Picking up again", "scheduling": "Scheduling sessions",
+    "placeholder": "Waiting on a problem statement", "diligence": "In diligence", "stalled": "Stalled",
+    "investigating": "Under investigation", "postmortem": "In postmortem", "review requested": "Out for review",
+    "revision": "Being revised", "done": "Done", "asking": "Collecting input", "collected": "Input collected",
+}
+
+
+def phase_phrase(phase: str) -> str:
+    """A readable phrase for a project phase ('scoring' -> 'Scoring the vendors')."""
+    return PHASE_PHRASES.get(phase) or f"Currently in {phase}"
 
 
 def _clean_keywords(keywords: list[str], what: str) -> list[str]:

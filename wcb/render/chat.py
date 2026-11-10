@@ -17,6 +17,8 @@ import re
 from wcb.render.context import RenderContext, Rendered, day_words
 from wcb.render.phrases import (
     CHAT_ACKS,
+    CHAT_CHIME,
+    CHAT_SMALL,
     REACTIONS,
     SOCIAL_CHAT,
     Line,
@@ -38,7 +40,8 @@ def render(ctx: RenderContext, comm: Communication) -> list[Rendered]:
     if comm.kind == "chat_dm":
         other = comm.to[0] if comm.to else ctx.worker
         people = [comm.sender, other]
-        channel = "dm-" + "-".join(sorted(_slug(ctx.first(p)) for p in people))
+        # Handles are unique, first names are not (two Jurgens must not share a DM).
+        channel = "dm-" + "-".join(sorted(_slug(ctx.handle(p).lstrip("@")) for p in people))
         kind = "dm"
         title = f"DM: {ctx.full(comm.sender)} / {ctx.full(other)}"
     else:
@@ -132,15 +135,21 @@ def _messages(ctx: RenderContext, comm: Communication, rng: random.Random, peopl
         for ln in act_lines(ctx, comm, ph, nm, "written", acts=[a]):
             lines.append((ln, prefix))
     end = max(parse_dt(comm.received_at), parse_dt(comm.t))
-    times = [parse_dt(ctx.events[ln.act]["t"]) for ln, _ in lines if ln.act]
-    first = min(times) if times else parse_dt(comm.t)
+    anchors = [_anchor(ctx, comm, ln.act, rng) for ln, _ in lines if ln.act]
+    first = min(anchors) if anchors else parse_dt(comm.t)
     start = first - dt.timedelta(seconds=rng.randint(90, 400))
     clock = _Clock(start, end, rng)
     out: list[dict] = []
     voice = ctx.voice(S)
     if rng.random() < 0.45 and dm:
         greet = rng.choice(["morning!", "hey", "hi!", "quick q", "got a sec?", "hello"])
+        if parse_dt(comm.t).hour >= 12 and greet == "morning!":
+            greet = "hey"
         out.append(_msg(ctx, comm, S, clock.at(start), style_chat(greet, voice, keep, rng)))
+        if others and rng.random() < 0.5:
+            out.append(_msg(ctx, comm, others[0], clock.at(gap=(20, 90)),
+                            style_chat(rng.choice(["hey", "hi", "yep, go ahead", "sure, what's up?"]),
+                                       ctx.voice(others[0]), keep, rng)))
     if comm.extra.get("away"):
         out.append(_msg(ctx, comm, S, clock.at(start), style_chat("catching people up since a few of us are out today", voice, keep, rng)))
     gaps = coverage_gaps(ctx, comm, " ".join(ln.text for ln, _ in lines) + " " + " ".join(ctx.full(p) for p in people))
@@ -150,7 +159,6 @@ def _messages(ctx: RenderContext, comm: Communication, rng: random.Random, peopl
     for ln, prefix in lines:
         speaker = ln.speaker if ln.speaker in people else S
         ev = ctx.events.get(ln.act or "")
-        t_ev = parse_dt(ev["t"]) if ev else None
         txt = style_chat(prefix + (lower_first(ln.text) if prefix else ln.text), ctx.voice(speaker), keep, rng)
         extra: dict = {}
         if not dm and parent_idx is not None and rng.random() < 0.35:
@@ -164,19 +172,66 @@ def _messages(ctx: RenderContext, comm: Communication, rng: random.Random, peopl
             if reactors:
                 extra["reactions"] = [{"emoji": rng.choice(REACTIONS),
                                        "users": [ctx.handle(p) for p in rng.sample(reactors, rng.randint(1, len(reactors)))]}]
-        anchor = t_ev - dt.timedelta(seconds=rng.randint(30, 90)) if t_ev is not None else None
+        # A message is never earlier than what it reports; a restatement is posted when the thread is.
+        anchor = _anchor(ctx, comm, ln.act, rng) if ln.act else None
         out.append(_msg(ctx, comm, speaker, clock.at(anchor, gap=(10, 60)), txt, **extra))
+        idx = len(out) - 1
         if parent_idx is None and not dm:
-            parent_idx = len(out) - 1
-        if others and rng.random() < 0.45:
+            parent_idx = idx
+        if others and rng.random() < 0.85:
             replier = rng.choice([p for p in people if p != speaker] or [S])
-            ack = style_chat(rng.choice(CHAT_ACKS), ctx.voice(replier), keep, rng)
-            th = len(out) - 1 if not dm and rng.random() < 0.6 else None
-            out.append(_msg(ctx, comm, replier, clock.at(gap=(5, 25)), ack, thread_of=th))
+            ack = style_chat(rng.choice(_acks(ctx, comm, ev, speaker, replier)), ctx.voice(replier), keep, rng)
+            th = idx if not dm and rng.random() < 0.6 else None
+            out.append(_msg(ctx, comm, replier, clock.at(gap=(5, 90)), ack, thread_of=th))
+        if not dm and len(people) > 2 and rng.random() < 0.65:
+            # Other channel members chime in under the post.
+            for p in rng.sample([x for x in people if x != speaker], min(len(people) - 1, rng.randint(1, 3))):
+                out.append(_msg(ctx, comm, p, clock.at(gap=(30, 600)),
+                                style_chat(rng.choice(CHAT_CHIME), ctx.voice(p), keep, rng), thread_of=idx))
+    if dm and others and rng.random() < 0.6:
+        a, b = rng.choice(CHAT_SMALL)
+        first_sp = rng.choice([S, others[0]])
+        second = others[0] if first_sp == S else S
+        out.append(_msg(ctx, comm, first_sp, clock.at(gap=(30, 300)), style_chat(a, ctx.voice(first_sp), keep, rng)))
+        out.append(_msg(ctx, comm, second, clock.at(gap=(20, 240)), style_chat(b, ctx.voice(second), keep, rng)))
     for sec in comm.secrets:
         if not any(sec in m["text"] for m in out):
             out.append(_msg(ctx, comm, S, clock.at(), f"link for later: {sec}"))
     return out
+
+
+def _anchor(ctx: RenderContext, comm: Communication, eid: str | None, rng: random.Random) -> dt.datetime:
+    """When the message conveying `eid` is posted: at the event, or, for a restatement of an event
+    from an earlier day, shortly before the thread's own time on its own day."""
+    t_ev = parse_dt(ctx.events[eid]["t"]) if eid else parse_dt(comm.t)
+    if eid and ctx.events[eid]["t"][:10] < comm.t[:10]:
+        own = parse_dt(comm.t) - dt.timedelta(seconds=rng.randint(60, 900))
+        day_start = parse_dt(comm.t[:10] + "T07:30:00" + comm.t[19:])
+        return max(own, day_start, t_ev)
+    return t_ev
+
+
+def _acks(ctx: RenderContext, comm: Communication, ev: dict | None, speaker: str, replier: str) -> tuple[str, ...]:
+    """Acknowledgements that fit the message: only a debtor agrees to do something, and only
+    when the loop counts as agreed."""
+    if ev is None:
+        return CHAT_ACKS["fyi"]
+    et = ev["type"]
+    if et == "commitment.create":
+        D, Cr = ev["debtor"], ev["creditor"]
+        if replier == D and speaker != D:
+            return CHAT_ACKS["asked_yes"] if ctx.accepted_at(ev["commitment"], comm) else CHAT_ACKS["asked_maybe"]
+        if replier == Cr:
+            return CHAT_ACKS["promised_to"]
+        return CHAT_ACKS["fyi"]
+    if et == "commitment.resolve":
+        lp = ctx.loop_before.get(ev["id"]) or {}
+        if ev.get("status") == "done" and replier == lp.get("creditor"):
+            return CHAT_ACKS["done_for"]
+        return CHAT_ACKS["fyi"]
+    if et in ("decision.make", "decision.reverse"):
+        return CHAT_ACKS["decision"]
+    return CHAT_ACKS["fyi"]
 
 
 def _edit(ctx: RenderContext, ev: dict | None, text: str, rng: random.Random) -> str | None:
@@ -219,8 +274,11 @@ def _social(ctx: RenderContext, comm: Communication, rng: random.Random) -> tupl
                   if p.startswith("p-") and d < day and p not in (S, ctx.worker)
                   and ctx.person(p).get("group") in ("central", "functional"))
     repliers = rng.sample(pool, min(len(pool), rng.randint(1, 3))) if pool else [ctx.worker]
-    opener, replies = rng.choice(SOCIAL_CHAT)
     start = parse_dt(comm.t) - dt.timedelta(minutes=rng.randint(1, 12))
+    minute, wd = start.hour * 60 + start.minute, start.weekday()
+    fits = [x for x in SOCIAL_CHAT if x[2] <= minute <= x[3] and (x[4] is None or wd in x[4])]
+    fits = fits or [x for x in SOCIAL_CHAT if x[4] is None]
+    opener, replies = rng.choice(fits)[:2]
     clock = _Clock(start, parse_dt(comm.received_at) + dt.timedelta(minutes=30), rng)
     out = [_msg(ctx, comm, S, clock.at(start), style_chat(opener, ctx.voice(S), [], rng))]
     for p, r in zip(repliers, [x for x in replies if x], strict=False):

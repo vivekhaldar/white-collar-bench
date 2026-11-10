@@ -56,8 +56,9 @@ def render(ctx: RenderContext, comm: Communication) -> list[Rendered]:
         attendees = [comm.sender or ctx.worker]
     else:
         attendees = [p for p in dict.fromkeys([*comm.to, *comm.cc]) if p and p != organizer] or [ctx.worker]
-    uid_src = f"{ctx.seed}:{title}:{meeting['start']}:{organizer}"
-    uid = hashlib.sha1(uid_src.encode()).hexdigest()[:16] + "@" + ctx.email(organizer).split("@")[-1]
+    # One UID per meeting (or meeting series): its invite, updates, cancellation and replies share it.
+    uid_src = f"{ctx.seed}:{meeting['uid']}" if meeting.get("uid") else f"{ctx.seed}:{title}:{meeting['start']}:{organizer}"
+    uid = hashlib.sha1(uid_src.encode()).hexdigest()[:16] + "@" + ctx.umbrella["domain"]
     lines = ["BEGIN:VCALENDAR", "VERSION:2.0", f"PRODID:-//{ctx.umbrella['short']}//Calendar//EN",
              f"METHOD:{method}", "BEGIN:VEVENT", f"UID:{uid}", f"DTSTAMP:{_utc(comm.t)}",
              f"DTSTART:{_utc(meeting['start'])}", f"DTEND:{_utc(meeting.get('end') or meeting['start'])}"]
@@ -67,10 +68,15 @@ def render(ctx: RenderContext, comm: Communication) -> list[Rendered]:
     for p in attendees:
         part = "ACCEPTED" if comm.kind == "calendar_reply" else "NEEDS-ACTION"
         lines.append(f"ATTENDEE;CN={_esc(ctx.full(p))};ROLE=REQ-PARTICIPANT;PARTSTAT={part}:mailto:{ctx.email(p)}")
+    if meeting.get("recurrence_id"):
+        lines.append(f"RECURRENCE-ID:{_utc(meeting['recurrence_id'])}")
+    seq = meeting.get("sequence")
     if comm.kind == "calendar_update":
-        lines.append("SEQUENCE:1")
-    if comm.kind == "calendar_cancel":
-        lines += ["SEQUENCE:2", "STATUS:CANCELLED"]
+        lines.append(f"SEQUENCE:{seq if seq else 1}")
+    elif comm.kind == "calendar_cancel":
+        lines += [f"SEQUENCE:{seq if seq else 1}", "STATUS:CANCELLED"]
+    elif seq is not None:
+        lines.append(f"SEQUENCE:{seq}")
     desc: list[str] = []
     if comm.acts:
         namer = Namer(ctx, comm, organizer, attendees[:1] if len(attendees) == 1 else [])
@@ -88,10 +94,11 @@ def render(ctx: RenderContext, comm: Communication) -> list[Rendered]:
     elif comm.kind == "calendar_invite":
         desc.append(rng.choice(["Catch-up.", "Placeholder, agenda to follow.", "Quick sync, 30 minutes.", ""]))
     elif comm.kind == "calendar_update":
-        desc.append(rng.choice(["Moved to accommodate a conflict.", "New time, same agenda.", "Room changed."]))
+        desc.append(rng.choice(["Moved to accommodate a conflict.", "New time, same agenda.",
+                                "Shifted to fit around another meeting."]))
     elif comm.kind == "calendar_cancel":
-        desc.append(rng.choice(["Cancelling this one, nothing to discuss this week.", "Cancelled, will reschedule.",
-                                "Not needed, covered in the leads call."]))
+        desc.append(rng.choice(["Cancelling this one, nothing to discuss this week.", "Cancelling, a few people are out.",
+                                "Not needed this time, covered in the leads call.", "Skipping today, back to normal next time."]))
     link, code = comm.extra.get("join_link"), comm.extra.get("passcode")
     if link:
         desc.append(f"Join video meeting: {link}")

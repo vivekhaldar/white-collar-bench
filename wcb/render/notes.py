@@ -25,9 +25,11 @@ from wcb.render.phrases import (
     gap_lines,
     lower_first,
     lowercase_keep,
+    upper_first,
 )
 from wcb.render.transcript import attendee_list, participants
 from wcb.world.comms import Communication
+from wcb.world.simulator import phase_phrase
 
 
 # ---------------------------------------------------------------- meeting notes
@@ -56,10 +58,12 @@ def _recap(ctx: RenderContext, comm: Communication, aid: str) -> Rendered:
             done = any(ctx.events[b.event]["type"] == "commitment.resolve"
                        and ctx.events[b.event]["commitment"] == e["commitment"] for b in comm.acts)
             box = "[x]" if done else "[ ]"
-            if not e.get("accepted", True):
+            accepted = ctx.accepted_at(e["commitment"], comm)
+            if not accepted:
                 actions.append(f"- {box} (suggested) {who}: {e['what']}{due}")
             else:
                 actions.append(f"- {box} {who}: {e['what']}{due}{' (done during the meeting)' if done else ''}")
+            summary.append("- " + _topic_line(ctx, e, accepted, rng))
             continue
         if e["type"] == "commitment.resolve" and any(
                 ctx.events[b.event]["type"] == "commitment.create"
@@ -69,7 +73,7 @@ def _recap(ctx: RenderContext, comm: Communication, aid: str) -> Rendered:
         for ln in lines:
             if not ln.text:
                 continue
-            (decisions if e["type"] in ("decision.make", "decision.reverse") else summary).append("- " + ln.text)
+            (decisions if e["type"] in ("decision.make", "decision.reverse") else summary).append("- " + upper_first(ln.text))
     shown = list(people)
     wrong = ""
     mangled = ctx.mangled.get(comm.id, {})
@@ -90,11 +94,14 @@ def _recap(ctx: RenderContext, comm: Communication, aid: str) -> Rendered:
             shown.append(rng.choice(extra))
     elif r < 0.6:
         wrong = f"- Next meeting: {rng.choice(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'])} at the usual time."
+    proj = ctx.pname(comm.project)
     if not summary:
-        proj = ctx.pname(comm.project)
         summary.append(rng.choice([f"- Round of updates{' on ' + proj if proj else ''}; see action items.",
-                                   "- The group went through open items.", "- Short status check-in."])
+                                   "- Short status check-in."])
                        if actions or decisions else "- General discussion; no new items.")
+    if proj and rng.random() < 0.6:
+        summary.insert(0, rng.choice([f"- The meeting focused on {proj}.", f"- Mostly {proj} updates.",
+                                      f"- Check-in on {proj}."]))
     date = day_words(comm.t[:10], 0) + " " + comm.t[:4]
     lines = [f"# {title}", "",
              f"{date}, {time_words(comm.extra.get('start') or comm.t)} to {time_words(comm.t)}. Summarized by {tool}.", "",
@@ -111,6 +118,20 @@ def _recap(ctx: RenderContext, comm: Communication, aid: str) -> Rendered:
         text += "\n\n## Context\n\n" + "\n".join(extra_lines)
     text += "\n\n_This summary was generated automatically and may contain errors._\n"
     return Rendered(aid, ".md", f"Recap: {title}", content=text, text=text)
+
+
+def _topic_line(ctx: RenderContext, e: dict, accepted: bool, rng: random.Random) -> str:
+    """A summary bullet for a loop the meeting raised (the action item carries the details)."""
+    from wcb.render.phrases import subject_with_keywords
+
+    subj = subject_with_keywords(ctx, e["what"], list(e.get("keywords") or []))
+    D, Cr = ctx.full(e["debtor"]), ctx.full(e["creditor"])
+    if not accepted:
+        return rng.choice([f"{Cr} raised {subj}; whether {D} picks it up is still open.",
+                           f"Discussed {subj}. No owner agreed yet."])
+    if e.get("kind") == "ask":
+        return rng.choice([f"{Cr} raised {subj}; {D} is picking it up.", f"Discussed {subj}; {D} is picking it up."])
+    return rng.choice([f"{D} offered to handle {subj}.", f"Discussed {subj}; {D} has it."])
 
 
 def _debrief(ctx: RenderContext, comm: Communication, aid: str) -> Rendered:
@@ -151,11 +172,12 @@ def render_note(ctx: RenderContext, comm: Communication, aid: str) -> Rendered:
     else:
         title = comm.subject or "Notes"
     if spoken:
-        fillers = ["um,", "uh,", "so", "and", "also", "", "", "okay so"]
+        fillers = ["um,", "uh,", "so", "and", "also", "", "", "okay so", "then", "oh and"]
         parts = [intro]
-        for ln in lines:
+        for k, ln in enumerate(lines):
             s = ln[2:] if ln.startswith("- ") else ln
-            f = rng.choice(fillers)
+            # The first thought never opens with a connective ("and decided...").
+            f = rng.choice(["", "", "so", "first,", "okay,"] if k == 0 else fillers)
             parts.append((f + " " + lower_first(s) if f else s).rstrip(".") + ".")
         speech = " ".join(p.strip() for p in parts if p.strip())
         speech = lowercase_keep(speech, keep)
@@ -190,11 +212,14 @@ def _portfolio(ctx: RenderContext, comm: Communication, aid: str, rng: random.Ra
         out.append("")
         out.append(str(a.get("summary", "")))
         out.append("")
-        bits = [f"owner: {ctx.full(a.get('owner'))}"]
+        def who(pid: str | None) -> str:
+            return "me" if pid == ctx.worker else ctx.full(pid)
+
+        bits = [f"owner: {who(a.get('owner'))}"]
         if a.get("sponsor"):
-            bits.append(f"sponsor: {ctx.full(a['sponsor'])}")
+            bits.append(f"sponsor: {who(a['sponsor'])}")
         if a.get("phase"):
-            bits.append(f"phase: {a['phase']}")
+            bits.append(f"stage: {phase_phrase(a['phase']).lower()}")
         if a.get("target_date"):
             bits.append(f"target: {day_words(a['target_date'], 3)}")
         out.append("- " + "; ".join(bits))

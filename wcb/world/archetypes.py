@@ -60,6 +60,10 @@ class Beat:
     value: str | None = None  # fact beats: text template, "+lo..hi" for a date slip, "" clears
     by: tuple[str, ...] = ("worker",)  # decision beats
     subject: str = ""  # email subject or meeting title hint
+    # Decision beats: the decision that replaces this one if it is reversed (what, summary,
+    # keywords) and the reasons that fit such a reversal.
+    counter: tuple[str, str, tuple[str, ...]] | None = None
+    reasons: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -107,8 +111,11 @@ def L(key, what, summary, kw, *, debtor="worker", creditor="cp", others=None, ki
                 due, ch, w, n, subject=subject)
 
 
-def D(key, what, summary, kw, *, by=("worker", "sponsor"), w=1.0):
-    return Beat(key, "decision", what, summary, tuple(kw), weight=w, by=tuple(by))
+def D(key, what, summary, kw, *, by=("worker", "sponsor"), w=1.0, counter=None, reasons=()):
+    """A decision beat. `counter` is (what, summary, keywords) of the decision that replaces it
+    when it is reversed; `reasons` are reversal reasons that fit it."""
+    c = (counter[0], counter[1], tuple(counter[2])) if counter else None
+    return Beat(key, "decision", what, summary, tuple(kw), weight=w, by=tuple(by), counter=c, reasons=tuple(reasons))
 
 
 def F(key, attr, value, summary, *, w=1.0):
@@ -147,16 +154,16 @@ GENERIC: tuple[Beat, ...] = (
 
 # Loops that belong to no project: relationships, admin and favours.
 UNATTACHED: tuple[Beat, ...] = (
-    L("u_intro", "Introduce {cp.first} to {other.first}", "I offered to introduce {cp.first} to {other.first}",
-      ["introduce {cp.first}", "{other.first}"], others=None, w=1.0, n=99),
+    L("u_intro", "Introduce {cp.first} to {other.first} for the {topic} work", "I offered to introduce {cp.first} to {other.first}",
+      ["introduce", "{topic} work"], others=None, w=1.0, n=99),
     L("u_coffee", "Set up a coffee with {cp.first} about {topic}", "I said I'd set up a coffee with {cp.first} about {topic}",
       ["coffee", "{topic}"], w=1.0, n=99),
     L("u_reading", "Send {cp.first} the reading list on {topic}", "I promised {cp.first} my reading list on {topic}",
       ["reading list", "{topic}"], w=1.0, n=99),
     L("u_ask_notes", "Send {creditor.first} the notes from the {topic} session", "I asked {debtor.first} for the notes from the {topic} session",
       ["notes from the {topic} session", "{topic}"], debtor="cp", creditor="worker", w=1.0, n=99),
-    L("u_reference", "Write a reference note for {cp.first}", "{cp.first} asked me for a reference note",
-      ["reference note", "{cp.first}"], kind="ask", w=0.5, n=99),
+    L("u_reference", "Write a reference note for {cp.first}'s {topic} fellowship application",
+      "{cp.first} asked me for a reference note", ["reference note", "{topic} fellowship"], kind="ask", w=0.5, n=99),
     L("u_panel", "Join {cp.first}'s panel on {topic}", "{cp.first} asked me to join a panel on {topic}",
       ["panel on {topic}", "{topic}"], kind="ask", w=0.6, n=99),
 )
@@ -234,12 +241,22 @@ FLAGSHIP = Archetype(
     reversal_reasons=("{sponsor.first} wants a wider trial", "{unit.short} asked for another {v.site}", "the security review requires it"),
     decisions=(
         D("d_scope", "Limit the {proj.short} pilot to {n} {v.sites}", "Decided to limit the {proj.short} pilot to {n} {v.sites}",
-          ["{n} {v.sites}", "{proj.kw}"]),
+          ["{n} {v.sites}", "{proj.kw}"],
+          counter=("Widen the {proj.short} pilot to {n_plus} {v.sites}", "Decided to widen the {proj.short} pilot to {n_plus} {v.sites}",
+                   ["{n_plus} {v.sites}", "{proj.kw}"]),
+          reasons=("{sponsor.first} wants a wider trial", "{unit.short} asked for another {v.site}")),
         D("d_host", "Host {proj.short} on the shared {hub.short} tenant", "Decided to host {proj.short} on the shared {hub.short} tenant",
-          ["shared {hub.short} tenant", "{proj.kw}"], by=("worker",)),
+          ["shared {hub.short} tenant", "{proj.kw}"], by=("worker",),
+          counter=("Give {proj.short} a dedicated tenant outside {hub.short}", "Decided to give {proj.short} a dedicated tenant outside {hub.short}",
+                   ["dedicated tenant", "{proj.kw}"]),
+          reasons=("the security review requires a separate tenant", "{unit.short} wants its {v.data} kept apart")),
         D("d_synth", "Use synthetic {v.data} in {proj.short} until the security review closes",
           "Decided to use synthetic {v.data} in {proj.short} until the security review closes",
-          ["synthetic {v.data}", "security review"], by=("sec", "worker")),
+          ["synthetic {v.data}", "security review"], by=("sec", "worker"),
+          counter=("Test {proj.short} with de-identified {v.data} from the next test cycle",
+                   "Decided to test {proj.short} with de-identified {v.data} from the next test cycle",
+                   ["de-identified {v.data}", "{proj.kw}"]),
+          reasons=("synthetic records were not realistic enough to test with", "the security review signed off on de-identified extracts")),
     ),
 )
 
@@ -274,7 +291,10 @@ HUB = Archetype(
     ),
     start=("onboarding tenants",),
     decisions=(D("d_gw", "Route all {proj.short} tenants through one model gateway", "Decided to route all {proj.short} tenants through one model gateway",
-                 ["one model gateway", "{proj.kw}"], by=("owner", "worker")),),
+                 ["one model gateway", "{proj.kw}"], by=("owner", "worker"),
+                 counter=("Let {proj.short} tenants keep their own model gateways", "Decided to let {proj.short} tenants keep their own model gateways",
+                          ["own model gateways", "{proj.kw}"]),
+                 reasons=("one gateway cannot carry every tenant's load yet", "two tenants have contractual reasons to stay separate")),),
 )
 
 VENDOR_PAIR = Archetype(
@@ -328,9 +348,15 @@ VENDOR_PAIR = Archetype(
     reversal_reasons=("{vendor.short} could not meet the data terms", "procurement requires a third bidder"),
     decisions=(
         D("d_short", "Shortlist {vendor.short} and {vendor2.short} for {proj.short}", "Decided to shortlist {vendor.short} and {vendor2.short}",
-          ["shortlist", "{vendor2.short}"], by=("worker", "lead")),
+          ["shortlist", "{vendor2.short}"], by=("worker", "lead"),
+          counter=("Add a third bidder to the {proj.short} shortlist", "Decided to add a third bidder to the {proj.short} shortlist",
+                   ["third bidder", "{proj.kw}"]),
+          reasons=("procurement requires a third bidder", "{vendor.short} could not meet the data terms")),
         D("d_weight", "Weight integration effort at 25% in the {proj.short} scoring", "Decided to weight integration effort at 25% in the {proj.short} scoring",
-          ["integration effort", "25%"], by=("lead", "worker")),
+          ["integration effort", "25%"], by=("lead", "worker"),
+          counter=("Weight integration effort at 15% in the {proj.short} scoring", "Decided to weight integration effort at 15% in the {proj.short} scoring",
+                   ["integration effort", "15%"]),
+          reasons=("{unit.short} thinks integration effort is over-weighted", "the scoring should favour usability")),
     ),
 )
 
@@ -427,7 +453,11 @@ SUPPLIER = Archetype(
     ),
     start=("needs gathering", "negotiation"),
     decisions=(D("d_term", "Sign a three-year {vendor.short} agreement", "Decided to go for a three-year {vendor.short} agreement",
-                 ["three-year", "{vendor.short} agreement"], by=("sponsor", "worker")),),
+                 ["three-year", "{vendor.short} agreement"], by=("sponsor", "worker"),
+                 counter=("Sign a one-year {vendor.short} agreement with a renewal option",
+                          "Decided to go for a one-year {vendor.short} agreement with a renewal option",
+                          ["one-year", "{vendor.short} agreement"]),
+                 reasons=("finance will not commit beyond one year", "{vendor.short} would not cap price rises")),),
 )
 
 EVENT = Archetype(
@@ -492,7 +522,11 @@ INCUBATION = Archetype(
     ),
     start=("concept", "prototype"),
     decisions=(D("d_inhouse", "Build {proj.short} in-house rather than buy", "Decided to build {proj.short} in-house rather than buy",
-                 ["in-house", "{proj.kw}"], by=("sponsor", "worker")),),
+                 ["in-house", "{proj.kw}"], by=("sponsor", "worker"),
+                 counter=("Buy an off-the-shelf tool instead of building {proj.short}",
+                          "Decided to buy an off-the-shelf tool instead of building {proj.short}",
+                          ["off-the-shelf tool", "{proj.kw}"]),
+                 reasons=("{sponsor.first} does not want to staff a build", "the team has no capacity for a build this year")),),
 )
 
 ECONOMICS = Archetype(
@@ -523,7 +557,10 @@ ECONOMICS = Archetype(
     start=("inputs", "options"),
     reversal_reasons=("the {v.council} asked for usage-based pricing", "finance could not find central funds"),
     decisions=(D("d_tier", "Charge {v.unit_word}s a flat platform fee under the {proj.short}", "Decided to charge a flat platform fee under the {proj.short}",
-                 ["flat platform fee", "{proj.kw}"], by=("sponsor",)),),
+                 ["flat platform fee", "{proj.kw}"], by=("sponsor",),
+                 counter=("Charge {v.unit_word}s by usage under the {proj.short}", "Decided to charge by usage under the {proj.short}",
+                          ["by usage", "{proj.kw}"]),
+                 reasons=("the {v.council} asked for usage-based pricing", "small {v.unit_word}s said a flat fee was unfair")),),
 )
 
 FRAMEWORK = Archetype(
@@ -549,7 +586,11 @@ FRAMEWORK = Archetype(
     ),
     start=("drafting", "consultation"),
     decisions=(D("d_tiers", "Adopt a three-tier risk model in the {proj.short} framework", "Decided to adopt a three-tier risk model in the {proj.short} framework",
-                 ["three-tier risk model", "{proj.kw}"], by=("sponsor", "worker")),),
+                 ["three-tier risk model", "{proj.kw}"], by=("sponsor", "worker"),
+                 counter=("Adopt a two-tier risk model in the {proj.short} framework",
+                          "Decided to adopt a two-tier risk model in the {proj.short} framework",
+                          ["two-tier risk model", "{proj.kw}"]),
+                 reasons=("{unit.short} found three tiers too complex to apply", "legal advised a simpler model")),),
 )
 
 HIRING = Archetype(
@@ -575,8 +616,8 @@ HIRING = Archetype(
         P("offer", [
             L("approve", "Approve the offer for {cand.first}", "{debtor.first} will approve the offer for {cand.first}",
               ["offer for {cand.first}", "{cand.first}"], debtor="sponsor", creditor="worker", kind="task"),
-            L("startdate", "Agree a start date with {cand.first}", "I'll agree a start date with {cand.first}",
-              ["start date", "{cand.first}"], creditor="cand", kind="task"),
+            L("startdate", "Agree a start date for the {proj.short} role with {cand.first}", "I'll agree a start date with {cand.first}",
+              ["start date", "{proj.kw}"], creditor="cand", kind="task"),
         ], activity=0.6),
     ),
     start=("sourcing", "screens"),
@@ -670,10 +711,11 @@ RELATIONSHIP = Archetype(
     "relationship_thread", "relationship thread",
     "Keeping the relationship with {partner.short} warm: introductions, catch-ups and favours.",
     phases=(P("ongoing", [
-        L("intro", "Introduce {creditor.first} to {cp.first}", "I offered to introduce {creditor.first} to {cp.first}",
-          ["introduce {creditor.first}", "{cp.first}"], creditor="partner", kind="task", n=2),
-        L("catchup", "Set up a catch-up with {creditor.first}", "I said I'd set up a catch-up with {creditor.first}",
-          ["catch-up", "{creditor.first}"], creditor="partner", kind="task"),
+        L("intro", "Introduce {creditor.first} to {cp.first} for the {partner.short} working group",
+          "I offered to introduce {creditor.first} to {cp.first}",
+          ["introduce", "{partner.short} working group"], creditor="partner", kind="task", n=2),
+        L("catchup", "Set up a {partner.short} catch-up with {creditor.first}", "I said I'd set up a catch-up with {creditor.first}",
+          ["{partner.short} catch-up", "catch-up"], creditor="partner", kind="task"),
         L("paper", "Send {creditor.first} the {partner.short} working paper", "{debtor.first} offered the {partner.short} working paper",
           ["working paper", "{partner.short}"], debtor="partner", creditor="worker", kind="task"),
     ], activity=0.5),),
@@ -716,6 +758,45 @@ DORMANT_ARCHETYPES = ("stalled_discovery", "education_programme")
 
 def get(name: str) -> Archetype:
     return ARCHETYPES[name]
+
+
+# Artifact nouns for `{noun}` slots, per archetype, so that a hiring project asks for an interview
+# scorecard rather than an integration spec. Archetypes missing here (the flagship, the hub, the
+# incident) draw from the setting's nouns; every archetype falls back to `GENERIC_NOUNS`.
+NOUNS: dict[str, tuple[str, ...]] = {
+    "vendor_pair_evaluation": ("evaluation rubric", "vendor comparison", "requirements matrix", "demo script",
+                               "reference-check notes", "pricing comparison", "risk register", "decision memo"),
+    "unit_discovery": ("interview guide", "process map", "stakeholder map", "findings summary", "survey questions",
+                       "pain-point list", "observation notes", "opportunity list"),
+    "pivoting_discovery": ("interview guide", "process map", "stakeholder map", "findings summary",
+                           "problem framing note", "pain-point list", "observation notes", "opportunity list"),
+    "economics_model": ("cost model", "usage forecast", "pricing options table", "assumptions log",
+                        "budget justification", "chargeback scenarios"),
+    "strategic_framework": ("consultation plan", "principles draft", "glossary", "risk taxonomy", "comment log",
+                            "decision memo"),
+    "hiring_pipeline": ("interview scorecard", "interview plan", "role profile", "sourcing plan", "question bank",
+                        "candidate pack"),
+    "event_preparation": ("run sheet", "speaker brief", "registration list", "session outline", "feedback form",
+                          "room plan"),
+    "internal_incubation": ("user journey map", "backlog snapshot", "usability test script", "release notes",
+                            "roadmap slide", "feature list"),
+    "supplier_negotiation": ("seat-count summary", "pricing comparison", "term sheet", "redline summary",
+                             "negotiation brief", "renewal timeline"),
+    "background_advisory": ("guidance comments", "reading list", "options note", "FAQ draft"),
+    "peer_review": ("review comments", "comparison table", "summary of changes"),
+    "relationship_thread": ("meeting notes", "working paper summary", "contact list", "event invitation"),
+    "delegated_asks": ("input template", "response tracker", "summary table", "reminder note"),
+    "education_programme": ("session outline", "attendance list", "feedback form", "speaker brief"),
+    "placeholder": ("problem statement draft", "one-pager"),
+    "stalled_discovery": ("diligence notes", "reference-check notes", "question list"),
+    "operational_incident": ("incident timeline", "runbook update", "status page draft", "root-cause notes"),
+}
+# Nouns that fit any project.
+GENERIC_NOUNS = ("decision memo", "status slide", "timeline", "risk register", "comms plan", "lessons-learned note",
+                 "stakeholder map", "dependency list", "one-page summary", "action log")
+# Archetypes whose `{noun}` also draws on the setting's domain nouns (exports, audits, specs).
+DOMAIN_NOUN_ARCHETYPES = frozenset({"flagship_pilot", "platform_hub", "operational_incident", "unit_discovery",
+                                    "pivoting_discovery"})
 
 
 _SLOT = re.compile(r"\{([a-z_0-9]+)(?:\.([a-z_0-9]+))?\}")
@@ -763,6 +844,13 @@ def _beat_problems(where: str, b: Beat) -> list[str]:
         for role in b.by:
             if role not in ROLES:
                 out.append(f"{where}: unknown role {role!r}")
+        if b.counter is not None:
+            cwhat, csummary, ckws = b.counter
+            if not cwhat or not csummary or len(ckws) < 2:
+                out.append(f"{where}: counter needs what, summary and two keywords")
+            for kw in ckws:
+                if kw.lower().replace("{proj.kw}", "{proj.short}") not in cwhat.lower():
+                    out.append(f"{where}: counter keyword {kw!r} is not in {cwhat!r}")
     if b.type == "fact" and b.attr is None:
         out.append(f"{where}: fact beat needs attr")
     return out

@@ -5,34 +5,39 @@ pools spanning many cultures and paired at random; organizations, products and p
 names are coined from syllable tables and short word lists. Every generated string is checked
 against two denylists:
 
-- ``HARD_DENYLIST``: words that must never appear anywhere in generated content (checked as
-  case-insensitive substrings);
+- a hard denylist of words that must never appear anywhere in generated content (checked as
+  case-insensitive substrings of words; see ``contains_denied``). It is stored as SHA-256
+  digests so that this public file does not spell out terms found by privacy reviews;
 - ``AVOID_TOKENS``: names used by the hand-authored pilot world, the test fixtures and the
   examples in the docs, plus a few famous or real-company names. Generated names may not use
   them as whole tokens, so generated worlds stay distinct from the pilot.
 
-All randomness comes from the ``random.Random`` instance passed in, so the same seed always
-produces the same names.
+The name pools below were pruned with ``wcb privacy scan`` (docs/privacy.md); prune them again
+the same way after adding names. All randomness comes from the ``random.Random`` instance passed
+in, so the same seed always produces the same names.
 """
 
 from __future__ import annotations
 
+import hashlib
 import random
 import re
 import unicodedata
 
 # ---------------------------------------------------------------- denylists
-# Never used anywhere (they collide with a private corpus). Substring match, case-insensitive.
-HARD_DENYLIST: tuple[str, ...] = (
-    "teague",
-    "thistledown",
-    "brenwick",
-    "quillon",
-    "Wexmoor",
-    "selva",
-    "orrisfield",
-    "quorne",
-)
+# SHA-256 hex digests of lowercase ASCII words that are never used anywhere. To add a word w:
+# hashlib.sha256(w.encode()).hexdigest().
+_HARD_DENY_SHA256: frozenset[str] = frozenset({
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+})
+_HARD_DENY_LENGTHS: tuple[int, ...] = (4, 5, 6, 7, 8)
 
 # Whole-token matches, case-insensitive: the pilot cast and orgs, fixture and doc examples,
 # and a handful of real companies, products and famous names that coinage could hit.
@@ -57,8 +62,30 @@ AVOID_TOKENS: frozenset[str] = frozenset(
     optum cigna aetna humana tesla toyota bosch honeywell tableau snowflake databricks palantir
     accenture deloitte infosys wipro cisco vmware zendesk twilio stripe shopify hubspot asana
     notion figma atlassian github gitlab docusign dropbox epic cerner
+    quinix equinix arent saffron heron veritas nutanix calix fenix onix lumen medix salix
     """.split()
 )
+
+
+# Full names that the pools can produce and that belong to well-known people (actors, athletes,
+# writers, politicians, film characters). Checked as whole names, case- and accent-insensitive.
+FAMOUS_FULL_NAMES: frozenset[str] = frozenset(
+    """
+    arjun reddy|kiran desai|sanjay gupta|deepa mehta|paolo rossi|diego costa|divya dutta|raymond chen|kiran rao
+    nandini reddy|venkatesh iyer|harish rao|lakshmi menon|rohan joshi|gaurav gupta|matteo ricci|christopher lloyd
+    malcolm fraser|daniel levy|gideon levy|michael rosen|robert shapiro|astrid lindgren|armen sargsyan
+    tigran petrosyan|cem yilmaz|burak yilmaz|emre aydin|naoko takahashi|zainab balogun|francesca rossi
+    valentina vargas|lorenzo lombardi|caio ribeiro|marcelo rocha|thiago costa|rafael costa|diego rivera
+    paula navarro|daniela romo|wei zhang|jun wang|yan zhang|haruto sato|kenji watanabe|daniel kang|elif sahin
+    michael douglas|robert fraser|douglas fraser|william lloyd|stanley kubrick|leonard cohen|siobhan byrne
+    timothy spall|rebecca hall|elizabeth holmes|jennifer doyle|lars andersen|henrik lund|yuki tanaka
+    """.replace("\n", "|").split("|")
+) - {""}
+
+
+def is_famous(full_name: str) -> bool:
+    """True if a generated full name belongs to a well-known person."""
+    return " ".join(_fold(full_name).split()) in {" ".join(n.split()) for n in FAMOUS_FULL_NAMES}
 
 
 def _fold(s: str) -> str:
@@ -66,11 +93,21 @@ def _fold(s: str) -> str:
     return unicodedata.normalize("NFKD", str(s)).encode("ascii", "ignore").decode("ascii").lower()
 
 
+def contains_denied(text: str) -> bool:
+    """True if any word in `text` contains a hard-denylisted word (case-insensitive)."""
+    for word in set(re.findall(r"[a-z]+", _fold(text))):
+        for n in _HARD_DENY_LENGTHS:
+            for i in range(len(word) - n + 1):
+                if hashlib.sha256(word[i:i + n].encode()).hexdigest() in _HARD_DENY_SHA256:
+                    return True
+    return False
+
+
 def is_denied(text: str) -> bool:
     """True if `text` contains a hard-denylisted word or uses an avoided name as a token."""
-    low = _fold(text)
-    if any(w in low for w in HARD_DENYLIST):
+    if contains_denied(text):
         return True
+    low = _fold(text)
     toks = set(re.findall(r"[a-z]+(?:-[a-z]+)*", low))
     toks |= {p for t in list(toks) for p in t.split("-")}
     return bool(toks & AVOID_TOKENS)
@@ -89,65 +126,62 @@ _FIRST_RAW = """
 Adaeze Chidi Kwame Ama Kofi Yaw Efua Abena Nnamdi Ifeoma Tunde Bisi Segun Funmilayo Uche Chiamaka
 Obinna Adwoa Kojo Esi Akosua Femi Zainab Ngozi Babajide Temitope Oluwaseun Adebayo Ebun Kayode
 Wanjiru Njeri Kamau Otieno Achieng Amani Baraka Zawadi Thandiwe Sipho Lindiwe Themba Nomvula Tendai
-Rudo Kagiso Lerato Thabo Mpho Neo Layla Omar Karim Rania Tariq Nadia Hassan Faris Salma Dina Yasmin
+Rudo Kagiso Lerato Thabo Mpho Layla Omar Karim Rania Tariq Nadia Hassan Faris Salma Dina Yasmin
 Rami Ziad Leila Amira Bilal Hiba Khalil Nour Imran Arash Parisa Darius Shirin Kian Roya Emre Elif
-Deniz Burak Selin Cem Aylin  Aarav Ananya Priya Rohan Vikram Meera Kavya Arjun Nikhil Divya
-Ishaan Lakshmi Rahul Sneha Tanvi Venkatesh Deepa Harish  Ayesha Sanjay Pooja Kiran Anil
-Gaurav Nandini Rekha Suresh Tahmina Rafiq Mei Wei Jun Xiaoling Hao Yan Jia Haruto Yuki Sakura Kenji
-Aiko Takeshi Naoko Minji Seo-yeon Jisoo Dong-hyun Eun-ji Hyejin Ji-ho Tuan  Minh Quang Thao Bao
-Anh Maricel Joselito Dalisay Bayani Ligaya Siti Putri Agus Dewi Wayan Ratna Somchai Kanya Alejandro
-Valentina Mateo Camila Santiago Isabela Gabriel Daniela Diego Paula Andres Mariana Rodrigo Catalina
-Emilio Renata Thiago Leticia Guadalupe Esperanza Rafael Ignacio Soledad Fernanda Tomas Luz Marcelo
-Joana Caio Bruna Vitoria Anouk Bram Femke Joris Lotte Sander Ingeborg Henrik Astrid Sigrid Lars
-Freja Mikkel Elin Johan Aino Eero Tuuli Pekka Liisa Katarzyna Tomasz Magdalena Pawel Zuzana Ondrej
-Milena Bogdan Ileana Andrei Sorina Nikolai Anastasia Svetlana Oksana Taras Yaroslav Dragan Jelena
-Marko Ivana Goran Petra Ilse Jurgen Friederike Matthias Annika Lukas Theresa Francesca Giulia
-Lorenzo Chiara Matteo Alessia Paolo Federica Stefano Elena Aurelie Mathieu Celine Bastien Margaux
-Thibault Solene Yannick Elodie Siobhan Ciaran Aoife Eoin Niamh Declan Saoirse Rhys Bronwen Gethin
-Carys Ewan Morag Fiona Alasdair Hamish Isla Theodora Eleni Yiannis Stavros Katerina Nikos Despina
-Patricia Elizabeth Jennifer Christopher Jonathan Nathaniel Abigail Katherine Rebecca Daniel Michael
-William Robert Alexander Victoria Deborah Douglas Kenneth Russell Raymond Eleanor Frederick 
- Rosalind Tobias Winifred Cassandra Dominic Gwendolyn Jacqueline Leonard Madeline Penelope
-Reginald Stanley Timothy Vanessa Zachary Tyrone Darnell Keisha Shanice Malcolm Andre Imani Jalen
-Aaliyah Desmond Cedric Aroha Tane Mere Wiremu Kalani Leilani Malia Sione Losa Tevita Noa Yael Eitan
-Tamar Avi Shira Ronit Gideon Anahit Armen Nare Tigran Lilit Giorgi  Aigerim Nurlan Bolat
-Batbayar Saraa Phoebe Quentin Marguerite Corinne Ottavio Benedikt Halima Mariam Yusuf Idris 
+Deniz Burak Selin Cem Aylin Aarav Ananya Rohan Vikram Meera Kavya Nikhil Divya Ishaan Lakshmi Rahul
+Sneha Tanvi Venkatesh Deepa Harish Ayesha Sanjay Pooja Kiran Gaurav Nandini Rekha Suresh Tahmina
+Rafiq Mei Wei Jun Xiaoling Hao Yan Jia Haruto Yuki Sakura Kenji Aiko Takeshi Naoko Minji
+Jisoo Dong-hyun Eun-ji Hyejin Ji-ho Tuan Minh Quang Thao Bao Anh Maricel Joselito Dalisay Bayani
+Ligaya Siti Putri Agus Dewi Wayan Ratna Somchai Kanya Alejandro Valentina Mateo Camila Santiago
+Isabela Daniela Diego Paula Andres Mariana Rodrigo Catalina Emilio Renata Thiago Leticia Guadalupe
+Esperanza Rafael Ignacio Soledad Fernanda Tomas Luz Marcelo Joana Caio Bruna Vitoria Anouk Bram
+Femke Joris Lotte Sander Ingeborg Henrik Astrid Sigrid Lars Freja Mikkel Elin Johan Aino Eero Tuuli
+Pekka Liisa Katarzyna Tomasz Magdalena Pawel Zuzana Ondrej Milena Bogdan Ileana Andrei Sorina
+Nikolai Anastasia Svetlana Oksana Taras Yaroslav Dragan Jelena Marko Ivana Goran Petra Ilse Jurgen
+Friederike Matthias Annika Lukas Theresa Francesca Giulia Lorenzo Chiara Matteo Alessia Paolo
+Federica Stefano Elena Aurelie Mathieu Celine Bastien Margaux Thibault Solene Yannick Elodie
+Siobhan Ciaran Aoife Eoin Niamh Declan Saoirse Rhys Bronwen Gethin Carys Ewan Morag Fiona Alasdair
+Hamish Isla Theodora Eleni Yiannis Stavros Katerina Nikos Despina Patricia Elizabeth Jonathan
+Nathaniel Abigail Alexander Victoria Deborah Douglas Kenneth Eleanor Frederick Rosalind Tobias
+Winifred Cassandra Dominic Gwendolyn Leonard Madeline Penelope Reginald Stanley Timothy Vanessa
+Tyrone Darnell Keisha Shanice Malcolm Imani Jalen Aaliyah Desmond Cedric Aroha Tane Mere Wiremu
+Kalani Leilani Malia Sione Losa Tevita Noa Yael Eitan Tamar Avi Shira Ronit Gideon Anahit Armen
+Nare Tigran Lilit Giorgi Aigerim Nurlan Bolat Batbayar Saraa Phoebe Quentin Marguerite Corinne
+Ottavio Benedikt Halima Mariam Yusuf Idris
 """
 
 _SURNAME_RAW = """
-Adeyemi  Mensah Asante Boateng Owusu Nwachukwu Eze Obi Balogun Adewale Danjuma Ogunleye
-Ibekwe Amadi Oduro Agyeman Appiah Quaye Tetteh Darko Ansah Afolabi Olawale Bankole Ekwueme Nnaji
-Chukwu Kariuki Mwangi Njoroge Ochieng Wekesa Mutua Kiprono Chebet Nyambura Dlamini Ndlovu Khumalo
-Mokoena Sithole Moyo Banda Phiri Tembo Mutasa Chikwanha Nkosi Molefe Khoury Saleh Farah Mansour
-Aziz Hamdan Qureshi Rahimi Sabbagh Tahan El-Amin Bishara Haidari Jaber Kassem Malouf Najjar Rashed
-Shami Toubia Yassin Ahmadi Karimi Moradi Tehrani Rostami Jafari Sadeghi Yilmaz Demir Aydin Kaya
-Sahin Ozturk Arslan Korkmaz Erdem Kocak Raghavan Iyer Menon Nair Pillai Krishnan Subramanian
-Chatterjee Banerjee Mukherjee Sengupta Desai Mehta Joshi Kulkarni Deshpande Gupta Agarwal Malhotra
-Bhatt Chaudhry Siddiqui Rahman Hossain Chowdhury Karunaratne Perera Wickramasinghe Thapa Gurung
-Shrestha Rao Reddy Naidu Venkataraman Bose Dutta Nakamura Takahashi Watanabe Yamamoto Fujita
-Ishikawa Matsuda Hayashi Morimoto Tanaka Okada Choi Jeong Seo Yoon Kang Baek Hwang Zhang Liu Chen
-Wang Huang Zhou Xu Guo Luo Tang Feng Deng Nguyen Pham Vu Dang Bui Ngo Duong Santos Bautista
+Adeyemi Mensah Asante Boateng Owusu Nwachukwu Eze Obi Balogun Adewale Danjuma Ogunleye Ibekwe Amadi
+Oduro Agyeman Appiah Quaye Tetteh Darko Ansah Afolabi Olawale Bankole Ekwueme Nnaji Chukwu Kariuki
+Mwangi Njoroge Ochieng Wekesa Mutua Kiprono Chebet Nyambura Dlamini Ndlovu Khumalo Mokoena Sithole
+Moyo Banda Phiri Tembo Mutasa Chikwanha Nkosi Molefe Khoury Saleh Farah Mansour Aziz Hamdan Qureshi
+Rahimi Sabbagh Tahan El-Amin Bishara Haidari Jaber Kassem Malouf Najjar Rashed Shami Toubia Yassin
+Ahmadi Karimi Moradi Tehrani Rostami Jafari Sadeghi Yilmaz Demir Aydin Kaya Sahin Ozturk Arslan
+Korkmaz Erdem Kocak Raghavan Menon Pillai Krishnan Subramanian Chatterjee Banerjee Mukherjee
+Sengupta Mehta Kulkarni Deshpande Gupta Agarwal Malhotra Bhatt Chaudhry Siddiqui Hossain
+Karunaratne Perera Wickramasinghe Thapa Gurung Shrestha Rao Reddy Naidu Venkataraman Bose Nakamura
+Takahashi Watanabe Yamamoto Fujita Ishikawa Matsuda Hayashi Morimoto Tanaka Okada Choi Jeong Yoon
+Kang Baek Hwang Zhang Liu Chen Zhou Xu Guo Luo Feng Deng Pham Vu Dang Ngo Duong Santos Bautista
 Villanueva Mendoza Pangilinan Salazar Wijaya Santoso Hidayat Kusuma Siregar Suwannarat Chaiyaporn
-Rattanakorn Castillo Morales Herrera Vargas Navarro Ortega Delgado Fuentes Cabrera Paredes Zamora
-Arroyo Bustamante Cardenas Figueroa Ibarra Jimenez Lozano Maldonado Montoya Quintero Rosales
-Sandoval Trujillo Valdez Villalobos Carvalho Oliveira Ribeiro Almeida Barbosa Cardoso Costa Duarte
-Monteiro Pereira Rocha Teixeira Moreira Azevedo Brandao Medeiros Jansen Bakker Visser Smit Meijer
-Mulder Hendriks  Bergstrom Nyberg Holm Sandberg Eriksen Dahl Lund Haugen Virtanen Korhonen
-Makinen Laine Nieminen Kowalski Nowak Wisniewska Zielinski Lewandowska Dvorak Novotny Horvath Kovacs
-Nagy Popescu Ionescu Dumitru Petrov Ivanova Sokolov Volkov Kuznetsova Bondarenko Kovalenko
-Jovanovic Petrovic Nikolic Horvat Babic Schreiber Hoffmann Krause Neumann Becker Brandt Vogel
-Hartmann Zimmermann Lehmann Rossi Bianchi Ricci Romano Colombo Greco Gallo Conti Esposito Moretti
-Lombardi Mancini Dubois Lefebvre Moreau Laurent Girard Bonnet Mercier Fontaine Chevalier Garnier
-Faure Lambert Gauthier  Byrne Doyle Kavanagh Gallagher  Quinlan MacLeod Fraser
-Munro Sinclair Galbraith Lloyd Pritchard Rees Vaughan Penhallow Papadopoulos Georgiou Nikolaidis
-Konstantinou Alexiou Whitfield Ashworth  Pembroke Calloway Thornbury Merriweather Langley
-Hargrove Carmichael Dunmore Everett Fenwick Gilchrist Kingsley Lockhart Northcott Prescott
-Sherwood Tolliver Underhill Yardley Ashby Bramwell Cartwright Dempsey Ellery Forsythe Jessup
-Kimball Lowell Mayfield Overton Pickering Quimby Rutledge Stanhope Upton Winslow Abernathy
-Blackwood Darrow Fifita Taufa Kealoha Kahananui Parata Tapsell Horomona Kalua Ben-David Mizrahi
-Shapiro Katz Friedman Levy Peretz Golan Rosen Adler Petrosyan Hakobyan Sargsyan Grigoryan Beridze
-Kapanadze Abenova Nurlanov Batbold  Sato Kowalczyk Andersen Lindgren Halvorsen Okeke
-Achterhof Vandermeer Oyelami Delacroix Marchand
+Rattanakorn Herrera Vargas Navarro Ortega Fuentes Cabrera Paredes Zamora Arroyo Bustamante Cardenas
+Figueroa Ibarra Jimenez Lozano Maldonado Montoya Quintero Rosales Sandoval Trujillo Valdez
+Villalobos Carvalho Oliveira Ribeiro Almeida Barbosa Cardoso Costa Duarte Monteiro Pereira Rocha
+Teixeira Moreira Azevedo Brandao Medeiros Jansen Bakker Visser Smit Meijer Mulder Hendriks
+Bergstrom Nyberg Holm Sandberg Eriksen Dahl Lund Haugen Virtanen Korhonen Makinen Laine Nieminen
+Kowalski Nowak Wisniewska Zielinski Lewandowska Dvorak Novotny Horvath Kovacs Nagy Popescu Ionescu
+Dumitru Petrov Ivanova Sokolov Volkov Kuznetsova Bondarenko Kovalenko Jovanovic Petrovic Nikolic
+Horvat Babic Schreiber Hoffmann Krause Neumann Becker Brandt Vogel Hartmann Zimmermann Lehmann
+Rossi Bianchi Ricci Romano Colombo Greco Gallo Conti Esposito Moretti Lombardi Mancini Dubois
+Lefebvre Moreau Laurent Girard Bonnet Mercier Fontaine Chevalier Garnier Faure Gauthier Byrne Doyle
+Kavanagh Gallagher Quinlan MacLeod Fraser Munro Sinclair Galbraith Lloyd Pritchard Rees Vaughan
+Penhallow Papadopoulos Georgiou Nikolaidis Konstantinou Alexiou Whitfield Ashworth Pembroke
+Calloway Thornbury Merriweather Langley Hargrove Carmichael Dunmore Everett Fenwick Gilchrist
+Kingsley Lockhart Northcott Prescott Sherwood Tolliver Underhill Yardley Ashby Bramwell Cartwright
+Dempsey Ellery Forsythe Jessup Kimball Lowell Mayfield Overton Pickering Quimby Rutledge Stanhope
+Upton Winslow Abernathy Blackwood Darrow Fifita Taufa Kealoha Kahananui Parata Tapsell Horomona
+Kalua Ben-David Mizrahi Shapiro Katz Friedman Levy Peretz Golan Adler Petrosyan Hakobyan Sargsyan
+Grigoryan Beridze Kapanadze Abenova Nurlanov Batbold Sato Kowalczyk Andersen Lindgren Halvorsen
+Okeke Achterhof Vandermeer Oyelami Delacroix Marchand
 """
 
 FIRST_NAMES: list[str] = _clean(_FIRST_RAW.split())
@@ -161,7 +195,6 @@ NICKNAMES: dict[str, str] = {
     "Venkatesh": "Venky",
     "Xiaoling": "Ling",
     "Joselito": "Lito",
-    "Alejandro": "Alex",
     "Valentina": "Vale",
     "Guadalupe": "Lupe",
     "Rafael": "Rafa",
@@ -175,56 +208,30 @@ NICKNAMES: dict[str, str] = {
     "Friederike": "Rike",
     "Theresa": "Resi",
     "Francesca": "Fran",
-    "Alasdair": "Ali",
-    "Theodora": "",
     "Katerina": "Katia",
     "Patricia": "Trish",
     "Elizabeth": "Liz",
-    "Jennifer": "Jen",
-    "Christopher": "Chris",
-    "Jonathan": "Jon",
-    "Nathaniel": "",
     "Abigail": "Abby",
-    "Katherine": "Kate",
-    "Rebecca": "",
-    "Daniel": "Dan",
-    "Michael": "Mike",
-    "William": "Will",
-    "Robert": "Rob",
     "Alexander": "Xander",
     "Victoria": "Tori",
-    "Deborah": "Deb",
     "Douglas": "Doug",
     "Kenneth": "Ken",
-    "Russell": "Russ",
-    "Raymond": "Ray",
     "Eleanor": "Nell",
     "Frederick": "Fred",
-    "": "Hattie",
-    "": "Jo",
     "Rosalind": "Ros",
-    "Tobias": "",
     "Winifred": "Winnie",
     "Cassandra": "Cass",
-    "Dominic": "Dom",
     "Gwendolyn": "Gwen",
-    "Jacqueline": "Jackie",
     "Leonard": "Len",
     "Madeline": "Maddie",
     "Penelope": "Penny",
-    "Reginald": "",
-    "Stanley": "",
-    "Timothy": "Tim",
     "Vanessa": "Nessa",
-    "Zachary": "Zach",
     "Desmond": "Dez",
     "Wiremu": "Wiri",
     "Babajide": "Jide",
     "Adebayo": "Bayo",
     "Chiamaka": "Amaka",
     "Ifeoma": "Ife",
-    "Dong-hyun": "Danny",
-    "Ji-ho": "Jay",
     "Annika": "Anni",
     "Lorenzo": "Enzo",
     "Federica": "Fede",
@@ -248,7 +255,6 @@ NICKNAMES: dict[str, str] = {
 # Near-homophones spelled differently (deliberately confusable in transcripts and notes).
 HOMOPHONE_PAIRS: list[tuple[str, str]] = [
     ("Aileen", "Eileen"),
-    ("Shawn", "Sean"),
     ("Kirsten", "Kristen"),
     ("Mikayla", "Michaela"),
     ("Zara", "Sara"),
@@ -265,10 +271,10 @@ HOMOPHONE_PAIRS: list[tuple[str, str]] = [
 
 # ---------------------------------------------------------------- coinage
 _FIRST_SYLL = [
-    "Cal", "Cor", "Dal", "Del", "El", "Fen", "Gal", "Is", "Kel", "Lu", "Mer", "Nor", "Or", "Per",
-    "Quin", "Ros", "Sel", "Tor", "Val", "Vel", "Zen", "Bri", "Cle", "Dra", "Fle", "Gri", "Tri",
-    "Ves", "Ol", "Am", "En", "Ul", "Sor", "Tam", "Mar", "Nev", "Pal", "Ren", "Sil", "Tal", "Vor",
-    "Ar", "Bel", "Cyr", "Dun", "Eth", "Fal", "Hel", "Ith", "Jor", "Kas", "Lin", "Mol", "Ny",
+    "Cor", "Dal", "Del", "El", "Fen", "Gal", "Is", "Kel", "Lu", "Mer", "Nor", "Or", "Per",
+    "Quin", "Ros", "Sel", "Tor", "Val", "Vel", "Zen", "Bri", "Cle", "Dra", "Fle", "Gri", "Tho",
+    "Ves", "Ol", "Am", "En", "Ul", "Tam", "Mar", "Nev", "Pal", "Ren", "Tal", "Vor",
+    "Ar", "Bel", "Cyr", "Eth", "Fal", "Hel", "Ith", "Jor", "Kas", "Lin", "Mol", "Ny",
 ]
 _MID_SYLL = [
     "la", "ri", "na", "vo", "te", "mi", "ro", "da", "si", "ve", "lo", "qua", "ni", "be", "ca",
@@ -284,15 +290,15 @@ PLACE_SUFFIXES = [
     "ley", "combe", "ford", "fell", "hurst", "minster",
 ]
 PLACE_STEMS = [
-    "Ash", "Birch", "Calder", "Dun", "Elm", "Fen", "Glen", "Hazel", "Ivy", "Kel", "Lin", "Mor",
+    "Ash", "Birch", "Calder", "Elm", "Fen", "Glen", "Hazel", "Ivy", "Kel", "Lin", "Mor",
     "Nor", "Oak", "Pen", "Quen", "Red", "Sel", "Tal", "Ul", "Ver", "Wil", "Yar", "Corr",
-    "Dray", "Fal", "Gar", "Hol", "Ket", "Lan", "Mar", "Nether", "Ost", "Pell", "", "Sand",
+    "Dray", "Fal", "Gar", "Hol", "Ket", "Lan", "Mar", "Nether", "Ost", "Pell", "Sand",
     "Thorn", "Wex", "Alder", "Brin", "Cran", "Dor", "Ember", "Frost", "Gorse", "Heath", "Isel",
     "Juna", "Kirk", "Lom", "Mill", "Nant", "Orm", "Pyke", "Rad", "Stow", "Tey", "Vash", "Whin",
 ]
 VENDOR_SUFFIXES = ["Labs", "Systems", "Software", "Analytics", "Health", "Learning", "Cloud", "AI"]
 CODE_WORDS = [
-    "Heron", "Cobalt", "Marigold", "Saffron", "Tamarack", "Sorrel", "Bramble", "Fennel", "Lichen",
+    "Cobalt", "Marigold", "Tamarack", "Sorrel", "Bramble", "Fennel", "Lichen",
     "Basalt", "Driftwood", "Cinder", "Thicket", "Estuary", "Mistral", "Sirocco", "Halcyon", "Cirrus",
     "Pumice", "Obsidian", "Garnet", "Agate", "Feldspar", "Mica", "Shale", "Clover", "Yarrow", "Tansy",
     "Sedge", "Alder", "Linden", "Sumac", "Bittern", "Plover", "Godwit", "Curlew", "Dunlin", "Pipit",
@@ -316,6 +322,7 @@ class NameGen:
         self.used_first: set[str] = set()
         self.used_last: set[str] = set()
         self.used_words: set[str] = set()
+        self.used_stems: set[str] = set()
 
     # ------------------------------------------------------------ people
     def person(self, *, first: str | None = None, avoid_first: set[str] | None = None) -> tuple[str, str]:
@@ -329,7 +336,7 @@ class NameGen:
             if last in self.used_last:
                 continue
             full = f"{f} {last}"
-            if is_denied(full) or full in self.used_people:
+            if is_denied(full) or is_famous(full) or full in self.used_people:
                 continue
             self.used_people.add(full)
             self.used_first.add(f)
@@ -360,10 +367,15 @@ class NameGen:
         raise RuntimeError("could not coin a word")
 
     def place(self) -> str:
-        """A coined place name such as 'Calderwick' or 'Ostvale'."""
+        """A coined place name such as 'Calderwick' or 'Ostvale'. No two places in a world share
+        a stem (no Vashmere next to Vashthorpe)."""
         for _ in range(500):
-            word = self.rng.choice(PLACE_STEMS) + self.rng.choice(PLACE_SUFFIXES)
+            stem = self.rng.choice(PLACE_STEMS)
+            if stem in self.used_stems:
+                continue
+            word = stem + self.rng.choice(PLACE_SUFFIXES)
             if self._fresh(word):
+                self.used_stems.add(stem)
                 return word
         raise RuntimeError("could not coin a place")
 
@@ -390,7 +402,7 @@ class NameGen:
 
 # ---------------------------------------------------------------- surface forms
 def ascii_slug(s: str) -> str:
-    """'Seo-yeon ' -> 'seo-yeon-osullivan' (lowercase ASCII, for IDs)."""
+    """'Ji-ho Ó Briain' -> 'ji-ho-o-briain' (lowercase ASCII, for IDs)."""
     s = _fold(s).replace("'", "")
     return re.sub(r"[^a-z0-9]+", "-", s).strip("-")
 

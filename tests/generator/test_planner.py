@@ -164,9 +164,10 @@ def test_name_pools_are_large_and_clean():
 
 
 def test_denylist_is_case_insensitive_and_substring():
-    for bad in ("Teague", "THISTLEDOWN Labs", "the quillon project", "Selvafield", "Orrisfield", "quorne",
-                "Brenwick", "Wexmoor"):
-        assert N.is_denied(bad), bad
+    # Example names from early drafts of the public docs, which the hashed hard denylist covers.
+    for bad in ("Teague", "THISTLEDOWN Labs", "the quillon project", "Brenwick"):
+        assert N.is_denied(bad) and N.contains_denied(bad), bad
+    assert not N.contains_denied("Selvora Labs")
     assert N.is_denied("Mara Ilves")  # pilot cast, as a whole token
     assert not N.is_denied("Selvora Labs")
 
@@ -201,8 +202,7 @@ def _pilot_tokens() -> set[str]:
 def test_plans_avoid_denylist_and_pilot_names(seed):
     plan = make_plan(seed, weeks=2)
     blob = json.dumps(plan).lower()
-    for bad in N.HARD_DENYLIST:
-        assert bad not in blob, bad
+    assert not N.contains_denied(blob)
     pilot = _pilot_tokens()
     for x in plan["people"] + plan["orgs"] + plan["projects"]:
         for tok in N._fold(x["name"]).split():
@@ -245,3 +245,20 @@ def test_every_challenge_tag_is_scheduled_every_week(weeks):
         newcomers = [p for p in plan["people"] if p["group"] == "newcomer"]
         assert len(newcomers) == weeks
         assert all(p["appears"] in cal["episode"]["days"] for p in newcomers)
+
+
+def test_no_famous_full_names():
+    """Generated people never share a full name with a well-known person."""
+    assert N.is_famous("Arjun Reddy") and N.is_famous("raymond  chen") and not N.is_famous("Arjun Rao Smith")
+    for seed in range(12):
+        for p in make_plan(seed)["people"]:
+            assert not N.is_famous(p["name"]), p["name"]
+
+
+def test_start_varies_by_seed_and_weekends_are_never_empty():
+    starts = {make_plan(seed)["calendar"]["start"] for seed in range(8)}
+    assert len(starts) >= 4 and all(parse_date(s).weekday() == 0 for s in starts)
+    for seed in range(12):
+        cal = make_plan(seed, size="small")["calendar"]
+        days = cal["seed"]["days"] + cal["episode"]["days"]
+        assert any(parse_date(d).weekday() == 5 for d in days)

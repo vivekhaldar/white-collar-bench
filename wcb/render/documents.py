@@ -129,15 +129,44 @@ def render(ctx: RenderContext, comm: Communication) -> list[Rendered]:
     return [Rendered(aid, ".md", title, content=md, text=md)]
 
 
+def _purpose(noun: str, pname: str) -> str:
+    """What a document is for, from its kind (never the worker's own summary of the project)."""
+    low = noun.lower()
+    kinds = (
+        (("slide", "deck"), f"These slides give a short overview of {pname}."),
+        (("plan", "outline", "run sheet", "schedule", "timeline", "roadmap", "checklist"),
+         f"This {noun} sets out the steps, owners and dates for {pname}."),
+        (("register", "list", "log", "tracker", "inventory", "matrix", "census"),
+         f"This {noun} records the items tracked for {pname} and where each one stands."),
+        (("memo", "brief", "note", "paper", "summary", "one-pager", "statement", "charter", "profile"),
+         f"This {noun} summarizes the current position on {pname} for discussion."),
+        (("spec", "contract", "diagram", "blueprint", "architecture", "export", "extract", "dictionary", "model"),
+         f"This {noun} describes the detail behind {pname}."),
+        (("review", "assessment", "audit", "comments", "case", "findings"),
+         f"This {noun} records what was reviewed for {pname} and what still needs to change."),
+        (("survey", "form", "questions", "script", "guide", "template", "bank", "pack"),
+         f"This {noun} is the working draft used with participants in {pname}."),
+    )
+    for words, text in kinds:
+        if any(w in low for w in words):
+            return text
+    return f"Working document for {pname}."
+
+
+DETAIL_NOTES = ("agreed at the last review", "draft, comments welcome", "unchanged from the previous version",
+                "needs input from the unit", "see appendix", "covers the pilot group only", "reworded after feedback",
+                "two options shown, no preference yet", "carried over from the earlier draft", "to be confirmed",
+                "aligned with the shared glossary", "out of scope for this version")
+
+
 def _markdown(ctx: RenderContext, comm: Communication, noun: str, version: str, proj: dict | None,
               rng: random.Random) -> str:
     pname = proj["name"] if proj else ctx.central["name"]
-    summary = str((proj or {}).get("attrs", {}).get("summary") or "")
     lines = [f"# {noun}", "",
              f"**Version:** {version}  |  **Project:** {pname}  |  **Prepared by:** {ctx.full(comm.sender)}  |  "
              f"**Date:** {day_words(comm.t[:10], 3)} {comm.t[:4]}", "",
              "## Purpose", "",
-             f"This {noun} supports {pname}. {summary}".strip(), "",
+             _purpose(noun, pname), "",
              "## Summary", ""]
     points = rng.sample([
         "Scope is unchanged from the previous version.",
@@ -147,18 +176,20 @@ def _markdown(ctx: RenderContext, comm: Communication, noun: str, version: str, 
         "Two sections are still being drafted and are marked as such.",
         "Terminology follows the shared glossary.",
         "Dependencies on other teams are noted but not yet confirmed.",
+        "Comments are tracked in the margin; resolved ones have been removed.",
+        "This version is shorter than the last; detail moved to the appendix.",
     ], 3)
     lines += [f"- {p}" for p in points] + ["", "## Details", "", "| Area | Notes |", "|---|---|"]
     areas = rng.sample(["Scope", "Users", "Data", "Security", "Support", "Training", "Timeline", "Costs",
-                        "Accessibility", "Integration"], 4)
-    notes = ["in line with the charter", "to be confirmed", "draft", "agreed at the last review",
-             "see appendix", "needs input from the unit"]
-    lines += [f"| {a} | {rng.choice(notes)} |" for a in areas]
+                        "Accessibility", "Integration", "Governance", "Communications"], 4)
+    notes = rng.sample(DETAIL_NOTES, len(areas))
+    lines += [f"| {a} | {n} |" for a, n in zip(areas, notes, strict=True)]
     lines += ["", "## Open questions", ""]
     lines += [f"- {q}" for q in rng.sample([
         "Is the current scope still right?", "Which unit hosts the shared components?",
-        "What is the fallback if the vendor slips?", "Who signs off the final version?",
-        "Are the usage assumptions realistic?"], 2)]
+        "What is the fallback if a dependency slips?", "Who signs off the final version?",
+        "Are the usage assumptions realistic?", "Does this need to go to the council?",
+        "Who maintains this once the project ends?"], 2)]
     return "\n".join(lines) + "\n"
 
 
@@ -166,24 +197,34 @@ def _sheets(ctx: RenderContext, comm: Communication, noun: str, version: str,
             rng: random.Random) -> dict[str, list[list[object]]]:
     proj = ctx.project(comm.project)
     pname = proj["name"] if proj else ctx.central["name"]
+    arch = str(((proj or {}).get("attrs") or {}).get("_archetype") or "")
     head = [[noun], [f"Version {version}", pname, f"Prepared by {ctx.full(comm.sender)}"], []]
     low = noun.lower()
-    if "scorecard" in low or "rubric" in low or "comparison" in low or "workbook" in low:
-        vendors = [ctx.orgs[v]["short"] for v in (proj or {}).get("vendors", []) if v in ctx.orgs] or ["Option A", "Option B"]
-        crit = rng.sample(["Fit to requirements", "Integration effort", "Security posture", "Accessibility",
-                           "Total cost", "Support model", "Usability"], 5)
-        rows: list[list[object]] = [["Criterion", "Weight", *vendors]]
+    if any(w in low for w in ("scorecard", "rubric", "comparison", "workbook", "matrix")):
+        if arch == "hiring_pipeline":
+            cols = ["Interviewer A", "Interviewer B"]
+            crit = rng.sample(["Technical depth", "Communication", "Problem framing", "Collaboration",
+                               "Domain knowledge", "Delivery track record"], 5)
+            sheet = "Interview scores"
+        else:
+            vendors = [ctx.orgs[v]["short"] for v in (proj or {}).get("vendors", []) if v in ctx.orgs] \
+                if arch in ("vendor_pair_evaluation", "supplier_negotiation", "stalled_discovery") else []
+            cols = vendors or ["Option A", "Option B"]
+            crit = rng.sample(["Fit to requirements", "Integration effort", "Security posture", "Accessibility",
+                               "Total cost", "Support model", "Usability"], 5)
+            sheet = "Scorecard"
+        rows: list[list[object]] = [["Criterion", "Weight", *cols]]
         for cname in crit:
-            rows.append([cname, rng.choice([10, 15, 20, 25]), *[rng.randint(2, 5) for _ in vendors]])
+            rows.append([cname, rng.choice([10, 15, 20, 25]), *[rng.randint(2, 5) for _ in cols]])
         r0, r1 = len(head) + 2, len(head) + 1 + len(crit)
         total = ["Weighted total", ""]
-        for j in range(len(vendors)):
+        for j in range(len(cols)):
             col = chr(ord("C") + j)
             val = sum(int(r[1]) * int(r[2 + j]) for r in rows[1:])
             total.append({"f": f"SUMPRODUCT($B${r0}:$B${r1},{col}{r0}:{col}{r1})", "v": val})
         rows.append(total)
-        return {"Scorecard": head + rows, "Notes": [["Scores 1 (poor) to 5 (strong)."], ["Weights sum to the column total."]]}
-    if "cost" in low or "budget" in low:
+        return {sheet: head + rows, "Notes": [["Scores 1 (poor) to 5 (strong)."], ["Weights sum to the column total."]]}
+    if "cost" in low or "budget" in low or "pricing" in low:
         items = rng.sample(["Licences", "Hosting", "Support hours", "Training", "Integration work", "Contingency",
                             "Project management"], 5)
         rows = [["Line item", "Qty", "Unit cost", "Total"]]
@@ -197,11 +238,11 @@ def _sheets(ctx: RenderContext, comm: Communication, noun: str, version: str,
         return {"Model": head + rows, "Assumptions": [["All figures exclude tax."], ["Rates as quoted, not negotiated."]]}
     cols = ["ID", "Item", "Status", "Notes"]
     rows = [cols]
-    for k in range(rng.randint(5, 9)):
-        rows.append([f"{k + 1:02d}", rng.choice(["Access", "Data feed", "Training", "Accessibility review", "Support rota",
-                                                 "Reporting", "Retention", "Integration", "Comms", "Testing"]),
-                     rng.choice(["open", "in review", "done", "not started"]),
-                     rng.choice(["", "see notes", "depends on vendor", "carried over"])])
+    items = rng.sample(["Access", "Data feed", "Training", "Accessibility review", "Support rota", "Reporting",
+                        "Retention", "Integration", "Comms", "Testing", "Sign-off", "Documentation"], rng.randint(5, 9))
+    for k, item in enumerate(items):
+        rows.append([f"{k + 1:02d}", item, rng.choice(["open", "in review", "done", "not started"]),
+                     rng.choice(["", "see notes", "waiting on another team", "carried over", "new this version"])])
     return {"Tracker": head + rows}
 
 
