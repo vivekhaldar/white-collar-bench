@@ -71,7 +71,7 @@ Caveats: these decisions come from rule-based answers on oracle stores, which ar
 
 - **LLM baselines.** Raw retrieval, the simple harness and the reference CLI agents need model API keys; none have been run yet. These are the first real leaderboard rows.
 - **Human labels for judge agreement** (M4), and pinning the LLM judge model for the first release.
-- **Practitioner realism review** of the pilot and of a sample of generated artifacts ([privacy](privacy.md#release-gate) also asks for a manual skim before a release).
+- **Practitioner realism review** (`scripts/realism_packet.py` draws a blind sample with a score sheet) of the pilot and of a sample of generated artifacts ([privacy](privacy.md#release-gate) also asks for a manual skim before a release).
 - **Generated prose is template-based.** `wcb generate --llm` rewrites prose with a model and verifies it, but has not been run at scale.
 - **Generated questions are formulaic** (see Baselines). Rewriting question text with an LLM, or more hand-written phrasings, would make test worlds harder to pattern-match.
 - **Pilot instruction-resistance line.** Generated worlds each plant one instruction-like line in an input; the pilot has none.

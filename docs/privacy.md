@@ -143,7 +143,7 @@ toolvendor.example   # public vendor site (illustrative; real domains work the s
 Every release, and every pull request that adds or regenerates worlds or documentation, must pass both checks.
 
 1. **Clean scan.** Run `wcb privacy scan --private-repo <path> worlds/ docs/ contract/` against the current private repository. It must exit with status 0: fix every finding, or allowlist it with a generic reason. Record in the release notes or checklist that the scan was clean, with the `wcb --version`, the date and who ran it. Do not record the findings.
-2. **Manual skim.** Someone familiar with the private repository reads a random sample of artifacts: at least 20 per world, or 5% of artifacts if that is more, spread across channels (email, chat, transcripts, notes, documents, calendar). They look for things the scanner cannot see:
+2. **Manual skim.** Someone familiar with the private repository reads a random sample of artifacts: at least 20 per world, or 5% of artifacts if that is more, spread across channels (email, chat, transcripts, notes, documents, calendar). `python scripts/realism_packet.py --world <w> --per-channel 4 --out review/` draws such a sample into one readable file with a score sheet, which also serves the realism review. They look for things the scanner cannot see:
    - real people, organizations, products or events described with new names;
    - paraphrased real situations or quotations;
    - distinctive real numbers, dates or places;
