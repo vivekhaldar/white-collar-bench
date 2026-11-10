@@ -190,7 +190,7 @@
     "decision.make": 2,
     "decision.reverse": 1,
     "entity.create": 10,
-    "fact.set": 4
+    "fact.set": 5
   },
   "challenges": {
     "acceptance_vs_occurrence": 1,
@@ -207,5 +207,45 @@
     "weak_evidence": 1,
     "worker_directive": 1
   },
-  "questions": null
+  "questions": {
+    "total": 13,
+    "by_checkpoint": {
+      "cp1": 5,
+      "cp2": 8
+    },
+    "by_template": {
+      "decision_date": 1,
+      "focus_tomorrow": 1,
+      "i_owe": 2,
+      "loop_owner": 1,
+      "owed_to_me": 2,
+      "person_attr": 1,
+      "person_brief": 1,
+      "project_attr": 2,
+      "project_changes": 1,
+      "project_status": 1
+    },
+    "by_type": {
+      "brief": 1,
+      "change": 1,
+      "list": 4,
+      "point": 4,
+      "priority": 1,
+      "status": 1,
+      "temporal": 1
+    },
+    "answerable": 12,
+    "unanswerable": 1,
+    "unanswerable_share": 0.077,
+    "challenges": {
+      "acceptance_vs_occurrence": 1,
+      "alias": 1,
+      "endorsement": 1,
+      "name_collision": 1,
+      "supersession": 1,
+      "transfer": 2,
+      "unobservable": 1,
+      "weak_evidence": 1
+    }
+  }
 }

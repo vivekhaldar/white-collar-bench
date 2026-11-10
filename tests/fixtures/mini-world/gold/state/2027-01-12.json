@@ -148,6 +148,11 @@
             "event": "e-0008"
           },
           {
+            "value": "Evaluating analytics platform vendors; Tessellate is the lead candidate. Steering moved the decision to 5 February.",
+            "t": "2027-01-11T07:45:00-08:00",
+            "event": "e-0024"
+          },
+          {
             "value": "Pilot scope widened to Reno and Sparks depots at steering on 12 Jan; security questionnaire returned to Tessellate. Waiting on volume pricing from Cora. Decision targeted for 5 February.",
             "t": "2027-01-12T10:40:00-08:00",
             "event": "e-0034"
@@ -1083,6 +1088,21 @@
         "c-003",
         "p-ada-quist",
         "p-sam-patel"
+      ],
+      "known_on": "2027-01-11",
+      "artifacts": [
+        "nt-0002"
+      ]
+    },
+    {
+      "id": "e-0024",
+      "t": "2027-01-11T07:45:00-08:00",
+      "date": "2027-01-11",
+      "type": "fact.set",
+      "summary": "Quillon summary updated: decision slips to 5 February",
+      "project": "pr-quillon",
+      "subjects": [
+        "pr-quillon"
       ],
       "known_on": "2027-01-11",
       "artifacts": [

@@ -1,0 +1,156 @@
+{
+  "world": "mini",
+  "checkpoint": "cp1",
+  "date": "2027-01-11",
+  "questions": [
+    {
+      "id": "q-001",
+      "type": "list",
+      "template": "i_owe",
+      "params": {
+        "person": "p-cora-velez"
+      },
+      "text": "What do I currently owe Cora Velez?",
+      "answerable": true,
+      "challenges": [],
+      "support": [
+        "em-0001"
+      ],
+      "gold": {
+        "items": [
+          {
+            "loop": "c-001",
+            "what": "Return the Tessellate security questionnaire",
+            "counterparty": "p-cora-velez",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-01-12",
+            "keywords": [
+              "security questionnaire",
+              "questionnaire"
+            ],
+            "support": [
+              "em-0001"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "q-002",
+      "type": "list",
+      "template": "owed_to_me",
+      "params": {
+        "person": "p-cora-velez"
+      },
+      "text": "What does Cora Velez currently owe me?",
+      "answerable": true,
+      "challenges": [
+        "transfer"
+      ],
+      "support": [
+        "mt-0001",
+        "em-0004"
+      ],
+      "gold": {
+        "items": [
+          {
+            "loop": "c-004",
+            "what": "Send Ada Tessellate volume pricing",
+            "counterparty": "p-cora-velez",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "volume pricing",
+              "pricing"
+            ],
+            "support": [
+              "mt-0001",
+              "em-0004"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "q-003",
+      "type": "point",
+      "template": "project_attr",
+      "params": {
+        "project": "pr-quillon",
+        "attribute": "target_date"
+      },
+      "text": "What is the current target date for Quillon?",
+      "answerable": true,
+      "challenges": [
+        "supersession"
+      ],
+      "support": [
+        "nt-0002"
+      ],
+      "gold": {
+        "kind": "date",
+        "value": "2027-02-05",
+        "entity": null,
+        "accept": [
+          "2027-02-05"
+        ]
+      }
+    },
+    {
+      "id": "q-004",
+      "type": "point",
+      "template": "project_attr",
+      "params": {
+        "project": "pr-quillon",
+        "attribute": "budget"
+      },
+      "text": "What is the budget for Quillon?",
+      "answerable": false,
+      "challenges": [
+        "unobservable"
+      ],
+      "support": [],
+      "gold": {}
+    },
+    {
+      "id": "q-005",
+      "type": "list",
+      "template": "i_owe",
+      "params": {
+        "person": "p-sam-patel"
+      },
+      "text": "What do I owe Samir?",
+      "answerable": true,
+      "challenges": [
+        "alias",
+        "endorsement"
+      ],
+      "support": [
+        "em-0002",
+        "nt-0002"
+      ],
+      "gold": {
+        "items": [
+          {
+            "loop": "c-003",
+            "what": "Review Sam Patel's ingestion design doc",
+            "counterparty": "p-sam-patel",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-01-13",
+            "keywords": [
+              "ingestion design",
+              "design doc"
+            ],
+            "support": [
+              "em-0002",
+              "nt-0002"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

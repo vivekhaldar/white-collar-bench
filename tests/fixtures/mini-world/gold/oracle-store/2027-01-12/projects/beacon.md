@@ -33,6 +33,7 @@ As of 2027-01-12: Pilot scope widened to Reno and Sparks depots at steering on 1
 - 2027-01-07: Sam Reyes will send Tessellate volume pricing [src: mt-0001]
 - 2027-01-07: Decided to limit the Quillon pilot to the Reno depot [src: mt-0001]
 - 2027-01-11: Quillon decision target moved to 5 February [src: nt-0002]
+- 2027-01-11: Quillon summary updated: decision slips to 5 February [src: nt-0002]
 - 2027-01-11: Volume pricing handed from Sam Reyes to Cora [src: em-0004]
 - 2027-01-12: Reno-only pilot reversed at steering [src: mn-0001]
 - 2027-01-12: Decided to run the Quillon pilot at the Reno and Sparks depots [src: mn-0001]

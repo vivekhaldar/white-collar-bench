@@ -1,0 +1,715 @@
+{
+  "world": "mini",
+  "checkpoint": "cp2",
+  "date": "2027-01-12",
+  "questions": [
+    {
+      "id": "q-006",
+      "type": "status",
+      "template": "project_status",
+      "params": {
+        "project": "pr-quillon"
+      },
+      "text": "What is the status of Quillon?",
+      "answerable": true,
+      "challenges": [],
+      "support": [
+        "nt-0001",
+        "mt-0001",
+        "nt-0002",
+        "em-0004",
+        "mn-0001",
+        "em-0005"
+      ],
+      "gold": {
+        "rubric": [
+          {
+            "id": "r1",
+            "aspect": "status",
+            "text": "Quillon is active",
+            "weight": 2,
+            "critical": true,
+            "keywords": [
+              [
+                "active",
+                "in progress",
+                "underway",
+                "on track",
+                "ongoing",
+                "moving"
+              ]
+            ],
+            "stale": [],
+            "support": [
+              "nt-0001"
+            ]
+          },
+          {
+            "id": "r2",
+            "aspect": "phase",
+            "text": "Current phase: pilot planning",
+            "weight": 1,
+            "critical": false,
+            "keywords": [
+              [
+                "pilot"
+              ],
+              [
+                "planning"
+              ]
+            ],
+            "stale": [
+              [
+                "vendor"
+              ],
+              [
+                "evaluation"
+              ]
+            ],
+            "support": [
+              "mn-0001"
+            ]
+          },
+          {
+            "id": "r3",
+            "aspect": "latest_change",
+            "text": "I sent Cora the completed security questionnaire",
+            "weight": 2,
+            "critical": true,
+            "keywords": [
+              [
+                "security questionnaire",
+                "questionnaire"
+              ],
+              [
+                "done",
+                "complete",
+                "completed",
+                "finished",
+                "closed",
+                "resolved",
+                "sent",
+                "delivered",
+                "returned",
+                "submitted",
+                "received"
+              ]
+            ],
+            "stale": [],
+            "support": [
+              "em-0005"
+            ]
+          },
+          {
+            "id": "r4",
+            "aspect": "target_date",
+            "text": "Current target date: 2027-02-05 (moved from 2027-01-29)",
+            "weight": 2,
+            "critical": true,
+            "keywords": [
+              [
+                "02/05",
+                "2/5",
+                "2027-02-05",
+                "5 feb",
+                "5 february",
+                "5th feb",
+                "5th february",
+                "feb 5",
+                "feb 5th",
+                "february 5",
+                "february 5th"
+              ]
+            ],
+            "stale": [
+              [
+                "01/29",
+                "1/29",
+                "2027-01-29",
+                "29 jan",
+                "29 january",
+                "29th jan",
+                "29th january",
+                "jan 29",
+                "jan 29th",
+                "january 29",
+                "january 29th"
+              ]
+            ],
+            "support": [
+              "nt-0002"
+            ]
+          },
+          {
+            "id": "r5",
+            "aspect": "loop",
+            "text": "Send Ada Tessellate volume pricing (owner: Cora Velez)",
+            "weight": 1,
+            "critical": false,
+            "keywords": [
+              [
+                "volume pricing",
+                "pricing"
+              ]
+            ],
+            "stale": [],
+            "support": [
+              "mt-0001",
+              "em-0004"
+            ]
+          }
+        ],
+        "facts": {
+          "project": "pr-quillon",
+          "name": "Quillon",
+          "as_of": "2027-01-12",
+          "attrs": {
+            "status": "active",
+            "owner": "Ada Quist",
+            "phase": "pilot planning",
+            "target_date": "2027-02-05",
+            "summary": "Pilot scope widened to Reno and Sparks depots at steering on 12 Jan; security questionnaire returned to Tessellate. Waiting on volume pricing from Cora. Decision targeted for 5 February.",
+            "members": [
+              "Ada Quist",
+              "Cora Velez"
+            ],
+            "orgs": [
+              "Tessellate Analytics"
+            ]
+          },
+          "superseded": {
+            "phase": "vendor evaluation",
+            "target_date": "2027-01-29"
+          },
+          "active_loops": [
+            {
+              "loop": "c-004",
+              "what": "Send Ada Tessellate volume pricing",
+              "owner": "Cora Velez",
+              "counterparty": "Ada Quist",
+              "status": "open",
+              "due": null
+            }
+          ],
+          "decisions": [
+            {
+              "decision": "d-001",
+              "what": "Limit the Quillon pilot to the Reno depot",
+              "status": "reversed",
+              "made_on": "2027-01-07",
+              "reversed_on": "2027-01-12"
+            },
+            {
+              "decision": "d-002",
+              "what": "Run the Quillon pilot at the Reno and Sparks depots",
+              "status": "made",
+              "made_on": "2027-01-12",
+              "reversed_on": null
+            }
+          ],
+          "recent_events": [
+            {
+              "event": "e-0022",
+              "date": "2027-01-11",
+              "type": "commitment.update",
+              "summary": "Volume pricing handed from Sam Reyes to Cora"
+            },
+            {
+              "event": "e-0030",
+              "date": "2027-01-12",
+              "type": "decision.reverse",
+              "summary": "Reno-only pilot reversed at steering"
+            },
+            {
+              "event": "e-0031",
+              "date": "2027-01-12",
+              "type": "decision.make",
+              "summary": "Decided to run the Quillon pilot at the Reno and Sparks depots"
+            },
+            {
+              "event": "e-0035",
+              "date": "2027-01-12",
+              "type": "fact.set",
+              "summary": "Quillon phase is now pilot planning"
+            },
+            {
+              "event": "e-0032",
+              "date": "2027-01-12",
+              "type": "commitment.resolve",
+              "summary": "I sent Cora the completed security questionnaire"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q-007",
+      "type": "brief",
+      "template": "person_brief",
+      "params": {
+        "person": "p-ben-okoro"
+      },
+      "text": "What am I working on with Ben Okoro?",
+      "answerable": true,
+      "challenges": [],
+      "support": [
+        "ch-0001"
+      ],
+      "gold": {
+        "rubric": [
+          {
+            "id": "r1",
+            "aspect": "shared_project",
+            "text": "Shared project: Ledger cleanup (Ben Okoro is owner)",
+            "weight": 1,
+            "critical": false,
+            "keywords": [
+              [
+                "ledger cleanup",
+                "ledger",
+                "gl cleanup"
+              ]
+            ],
+            "stale": [],
+            "support": [
+              "ch-0001"
+            ]
+          },
+          {
+            "id": "r2",
+            "aspect": "owed_to_me",
+            "text": "Ben Okoro owes me: Send Ada the January reconciliation report",
+            "weight": 2,
+            "critical": true,
+            "keywords": [
+              [
+                "reconciliation report",
+                "january"
+              ]
+            ],
+            "stale": [],
+            "support": [
+              "ch-0001"
+            ]
+          },
+          {
+            "id": "r3",
+            "aspect": "role",
+            "text": "Ben Okoro is Finance systems lead at Larchmont Freight",
+            "weight": 1,
+            "critical": false,
+            "keywords": [
+              [
+                "finance"
+              ],
+              [
+                "systems"
+              ]
+            ],
+            "stale": [],
+            "support": [
+              "ch-0001"
+            ]
+          }
+        ],
+        "facts": {
+          "person": "p-ben-okoro",
+          "name": "Ben Okoro",
+          "as_of": "2027-01-12",
+          "attrs": {
+            "org": "Larchmont Freight",
+            "role": "Finance systems lead",
+            "email": "ben.okoro@larchmont.example",
+            "relationship": "peer"
+          },
+          "shared_projects": [
+            {
+              "project": "pr-ledger",
+              "name": "Ledger cleanup",
+              "status": "active",
+              "involvement": "owner"
+            }
+          ],
+          "i_owe": [],
+          "owed_to_me": [
+            {
+              "loop": "c-002",
+              "what": "Send Ada the January reconciliation report",
+              "owner": "Ben Okoro",
+              "counterparty": "Ada Quist",
+              "status": "open",
+              "due": null
+            }
+          ],
+          "recent_events": [
+            {
+              "event": "e-0004",
+              "date": "2027-01-05",
+              "type": "entity.create",
+              "summary": "Ben Okoro, finance systems lead"
+            },
+            {
+              "event": "e-0012",
+              "date": "2027-01-05",
+              "type": "commitment.create",
+              "summary": "Ben promised the January reconciliation report"
+            },
+            {
+              "event": "e-0017",
+              "date": "2027-01-05",
+              "type": "commitment.create",
+              "summary": "Ben asked me to approve his GL sandbox access request"
+            },
+            {
+              "event": "e-0023",
+              "date": "2027-01-11",
+              "type": "commitment.resolve",
+              "summary": "Ben confirmed his sandbox access works"
+            },
+            {
+              "event": "e-0031",
+              "date": "2027-01-12",
+              "type": "decision.make",
+              "summary": "Decided to run the Quillon pilot at the Reno and Sparks depots"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q-008",
+      "type": "change",
+      "template": "project_changes",
+      "params": {
+        "project": "pr-quillon",
+        "since": "2027-01-08"
+      },
+      "text": "What changed on Quillon since Friday 8 January?",
+      "answerable": true,
+      "challenges": [],
+      "support": [
+        "nt-0002",
+        "em-0004",
+        "mn-0001",
+        "em-0005"
+      ],
+      "gold": {
+        "items": [
+          {
+            "event": "e-0020",
+            "summary": "Quillon decision target moved to 5 February",
+            "date": "2027-01-11",
+            "type": "fact.set",
+            "keywords": [
+              "target date",
+              "02/05",
+              "2/5",
+              "2027-02-05",
+              "5 feb",
+              "5 february",
+              "5th feb",
+              "5th february",
+              "feb 5",
+              "feb 5th",
+              "february 5",
+              "february 5th"
+            ],
+            "support": [
+              "nt-0002"
+            ]
+          },
+          {
+            "event": "e-0022",
+            "summary": "Volume pricing handed from Sam Reyes to Cora",
+            "date": "2027-01-11",
+            "type": "commitment.update",
+            "keywords": [
+              "volume pricing",
+              "pricing"
+            ],
+            "support": [
+              "em-0004"
+            ]
+          },
+          {
+            "event": "e-0030",
+            "summary": "Reno-only pilot reversed at steering",
+            "date": "2027-01-12",
+            "type": "decision.reverse",
+            "keywords": [
+              "reno",
+              "pilot"
+            ],
+            "support": [
+              "mn-0001"
+            ]
+          },
+          {
+            "event": "e-0031",
+            "summary": "Decided to run the Quillon pilot at the Reno and Sparks depots",
+            "date": "2027-01-12",
+            "type": "decision.make",
+            "keywords": [
+              "sparks",
+              "reno",
+              "pilot"
+            ],
+            "support": [
+              "mn-0001"
+            ]
+          },
+          {
+            "event": "e-0035",
+            "summary": "Quillon phase is now pilot planning",
+            "date": "2027-01-12",
+            "type": "fact.set",
+            "keywords": [
+              "phase",
+              "pilot",
+              "planning"
+            ],
+            "support": [
+              "mn-0001"
+            ]
+          },
+          {
+            "event": "e-0032",
+            "summary": "I sent Cora the completed security questionnaire",
+            "date": "2027-01-12",
+            "type": "commitment.resolve",
+            "keywords": [
+              "security questionnaire",
+              "questionnaire"
+            ],
+            "support": [
+              "em-0005"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "q-009",
+      "type": "temporal",
+      "template": "decision_date",
+      "params": {
+        "decision": "d-002"
+      },
+      "text": "When did we decide to run the Quillon pilot at the Reno and Sparks depots?",
+      "answerable": true,
+      "challenges": [],
+      "support": [
+        "mn-0001"
+      ],
+      "gold": {
+        "date": "2027-01-12",
+        "event": "e-0031"
+      }
+    },
+    {
+      "id": "q-010",
+      "type": "priority",
+      "template": "focus_tomorrow",
+      "params": {},
+      "text": "What should I focus on tomorrow?",
+      "answerable": true,
+      "challenges": [],
+      "support": [
+        "em-0002",
+        "nt-0002"
+      ],
+      "gold": {
+        "tomorrow": "2027-01-13",
+        "must_include": [
+          {
+            "loop": "c-003",
+            "what": "Review Sam Patel's ingestion design doc",
+            "counterparty": "p-sam-patel",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-01-13",
+            "keywords": [
+              "ingestion design",
+              "design doc"
+            ],
+            "support": [
+              "em-0002",
+              "nt-0002"
+            ]
+          }
+        ],
+        "worker_active": [
+          {
+            "loop": "c-003",
+            "what": "Review Sam Patel's ingestion design doc",
+            "counterparty": "p-sam-patel",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-01-13",
+            "keywords": [
+              "ingestion design",
+              "design doc"
+            ],
+            "support": [
+              "em-0002",
+              "nt-0002"
+            ]
+          }
+        ],
+        "distractors": [
+          {
+            "loop": "c-001",
+            "what": "Return the Tessellate security questionnaire",
+            "counterparty": "p-cora-velez",
+            "direction": "i_owe",
+            "status": "done",
+            "due": "2027-01-12",
+            "keywords": [
+              "security questionnaire",
+              "questionnaire"
+            ],
+            "support": [
+              "em-0001",
+              "em-0005"
+            ]
+          },
+          {
+            "loop": "c-002",
+            "what": "Send Ada the January reconciliation report",
+            "counterparty": "p-ben-okoro",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "reconciliation report",
+              "january"
+            ],
+            "support": [
+              "ch-0001"
+            ]
+          },
+          {
+            "loop": "c-004",
+            "what": "Send Ada Tessellate volume pricing",
+            "counterparty": "p-cora-velez",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "volume pricing",
+              "pricing"
+            ],
+            "support": [
+              "mt-0001",
+              "em-0004"
+            ]
+          },
+          {
+            "loop": "c-005",
+            "what": "Approve Ben's GL sandbox access request",
+            "counterparty": "p-ben-okoro",
+            "direction": "i_owe",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "access request",
+              "sandbox"
+            ],
+            "support": [
+              "ch-0001",
+              "ch-0002"
+            ]
+          }
+        ],
+        "k": 10
+      }
+    },
+    {
+      "id": "q-011",
+      "type": "list",
+      "template": "owed_to_me",
+      "params": {
+        "person": "p-ben-okoro"
+      },
+      "text": "What does Ben Okoro currently owe me?",
+      "answerable": true,
+      "challenges": [
+        "weak_evidence",
+        "acceptance_vs_occurrence"
+      ],
+      "support": [
+        "ch-0001"
+      ],
+      "gold": {
+        "items": [
+          {
+            "loop": "c-002",
+            "what": "Send Ada the January reconciliation report",
+            "counterparty": "p-ben-okoro",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "reconciliation report",
+              "january"
+            ],
+            "support": [
+              "ch-0001"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "q-012",
+      "type": "point",
+      "template": "loop_owner",
+      "params": {
+        "commitment": "c-004"
+      },
+      "text": "Who is responsible for \"Send Ada Tessellate volume pricing\"?",
+      "answerable": true,
+      "challenges": [
+        "transfer"
+      ],
+      "support": [
+        "em-0004"
+      ],
+      "gold": {
+        "kind": "entity",
+        "value": "Cora Velez",
+        "entity": "p-cora-velez",
+        "accept": [
+          "Cora Velez",
+          "Cora",
+          "cora.velez@tessellate.example"
+        ]
+      }
+    },
+    {
+      "id": "q-013",
+      "type": "point",
+      "template": "person_attr",
+      "params": {
+        "person": "p-sam-reyes",
+        "attribute": "role"
+      },
+      "text": "What is Sam Reyes's role?",
+      "answerable": true,
+      "challenges": [
+        "name_collision"
+      ],
+      "support": [
+        "mt-0001"
+      ],
+      "gold": {
+        "kind": "text",
+        "value": "Solutions engineer",
+        "entity": null,
+        "accept": [
+          "Solutions engineer"
+        ]
+      }
+    }
+  ]
+}

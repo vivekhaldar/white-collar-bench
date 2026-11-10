@@ -86,7 +86,7 @@
         "owner": "p-ada-quist",
         "phase": "vendor evaluation",
         "target_date": "2027-02-05",
-        "summary": "Evaluating analytics platform vendors; Tessellate is the lead candidate. Decision targeted for 29 January.",
+        "summary": "Evaluating analytics platform vendors; Tessellate is the lead candidate. Steering moved the decision to 5 February.",
         "members": [
           "p-ada-quist",
           "p-cora-velez"
@@ -140,6 +140,11 @@
             "value": "Evaluating analytics platform vendors; Tessellate is the lead candidate. Decision targeted for 29 January.",
             "t": "2027-01-04T08:30:00-08:00",
             "event": "e-0008"
+          },
+          {
+            "value": "Evaluating analytics platform vendors; Tessellate is the lead candidate. Steering moved the decision to 5 February.",
+            "t": "2027-01-11T07:45:00-08:00",
+            "event": "e-0024"
           }
         ],
         "members": [
@@ -1036,6 +1041,21 @@
         "c-003",
         "p-ada-quist",
         "p-sam-patel"
+      ],
+      "known_on": "2027-01-11",
+      "artifacts": [
+        "nt-0002"
+      ]
+    },
+    {
+      "id": "e-0024",
+      "t": "2027-01-11T07:45:00-08:00",
+      "date": "2027-01-11",
+      "type": "fact.set",
+      "summary": "Quillon summary updated: decision slips to 5 February",
+      "project": "pr-quillon",
+      "subjects": [
+        "pr-quillon"
       ],
       "known_on": "2027-01-11",
       "artifacts": [
