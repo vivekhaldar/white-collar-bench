@@ -42,7 +42,7 @@ def parse(text: str) -> tuple[dict[str, Any] | None, str]:
         return None, body
     try:
         meta = yaml.safe_load(raw) if raw.strip() else {}
-    except yaml.YAMLError as e:
+    except (yaml.YAMLError, ValueError) as e:  # ValueError: impossible dates such as 2027-02-30
         raise FrontMatterError(f"invalid YAML front matter: {e}") from e
     if meta is None:
         meta = {}

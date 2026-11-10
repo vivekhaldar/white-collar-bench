@@ -21,7 +21,7 @@ def answers_schema() -> dict[str, Any]:
     return read_json(contract_dir() / "answers" / "answers.schema.json")
 
 
-@functools.lru_cache(maxsize=None)
+@functools.cache
 def _validator(qtype: str) -> jsonschema.Draft202012Validator:
     schema = answers_schema()
     sub = {"$defs": schema["$defs"], **schema["$defs"][qtype]}
