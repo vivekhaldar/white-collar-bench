@@ -12,3 +12,4 @@ All benchmark content is synthetic. See [AGENTS.md](AGENTS.md).
 ## Documents
 
 - [Motivation and related work](docs/motivation.md)
+- [Benchmark design](docs/design.md)
