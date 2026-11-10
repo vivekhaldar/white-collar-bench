@@ -99,7 +99,8 @@ def cmd_generate(a) -> int:
     from wcb.world.generate import generate_world
 
     out = generate_world(
-        seed=a.seed, weeks=a.weeks, out_dir=Path(a.out), world_id=a.id, size=a.size, llm=a.llm
+        seed=a.seed, weeks=a.weeks, out_dir=Path(a.out), world_id=a.id, size=a.size, llm=a.llm,
+        llm_model=a.llm_model, build=not a.no_build,
     )
     print(f"generated {out}")
     return 0
@@ -201,6 +202,8 @@ def build_parser() -> argparse.ArgumentParser:
     g.add_argument("--id", help="world id (default: gen-s<seed>-w<weeks>)")
     g.add_argument("--out", required=True, help="output directory")
     g.add_argument("--llm", action="store_true", help="rewrite artifact prose with an LLM")
+    g.add_argument("--llm-model", help="model spec for --llm, e.g. 'cmd:claude -p' or 'anthropic:<model>'")
+    g.add_argument("--no-build", action="store_true", help="skip `wcb world build` after generating")
     g.set_defaults(fn=cmd_generate)
 
     r = sub.add_parser("run", help="run an agent adapter over one or more worlds")
