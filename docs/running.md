@@ -151,6 +151,7 @@ wcb run --adapter adapters/my-agent.yaml --split dev --repeats 3 --out runs/my-a
 | `--workspace-root DIR` | Where temporary workspaces are created (default: the system temp directory). |
 | `--resume` | Continue an interrupted run (see §6). |
 | `--skip-ingest` | Run only oracle query sessions (see §7). |
+| `--meter` | Route each session's model calls through a local metering proxy, so token counts are measured rather than self-reported (see §7a). `--meter-bind` and `--meter-host` set where it listens and how sessions reach it. |
 
 An episode runs like this:
 
@@ -182,6 +183,28 @@ wcb run --adapter adapters/my-agent.yaml --world pilot --out runs/my-agent-synth
 ```
 
 `--skip-ingest` runs no ingestion. For every checkpoint it runs only the query session against the oracle store. This measures synthesis alone, at a fraction of the cost of a full run, and is useful while working on the query side of an agent. It is Track A only.
+
+## 7a. Metered runs
+
+```bash
+wcb run --adapter adapters/my-agent.yaml --world pilot --out runs/my-agent-metered --meter
+```
+
+With `--meter` the runner starts a proxy (`wcb/meter.py`) on a free port and points every session at it:
+
+| Variable | Value |
+|---|---|
+| `ANTHROPIC_BASE_URL` | `http://127.0.0.1:<port>/t/<tag>/anthropic` |
+| `OPENAI_BASE_URL` | `http://127.0.0.1:<port>/t/<tag>/openai/v1` |
+| `WCB_LLM_BASE_URL` | `http://127.0.0.1:<port>/t/<tag>`; append `/anthropic` or `/openai/v1` |
+
+`<tag>` names the world, repeat, session and attempt. The proxy forwards each request unchanged to the real endpoint, which is the provider or whatever `ANTHROPIC_BASE_URL` / `OPENAI_BASE_URL` held when you started `wcb run`. It streams the response back and logs the call to `<run>/meter.jsonl`. After each session the runner adds its totals to `session.json` as `metered_usage`: calls, input, output, cache-read and cache-write tokens, and models. `wcb score` then uses these measured token counts instead of the agent's self-reported ones. Cost and tool calls are still self-reported.
+
+Most SDKs and CLI agents read these variables, including the Anthropic and OpenAI SDKs, Claude Code, Codex and the simple harness. An agent that ignores them, or calls a provider the proxy does not know, is not metered. Its `metered_usage` then shows `calls: 0`, which is itself a useful check.
+
+**Containers.** Inside a container, `127.0.0.1` is the container itself. Either run the container with `--network host` (Linux), or start the proxy on an address the container can reach and give sessions that address, for example `--meter-bind 0.0.0.0 --meter-host host.docker.internal` with `--add-host=host.docker.internal:host-gateway` in the `docker run` command. The proxy forwards your API credentials, so only bind it to addresses that untrusted machines cannot reach.
+
+`wcb meter serve --log FILE` runs the same proxy on its own, and `wcb meter summary FILE [--tag T]` prints totals.
 
 ## 8. Track B
 

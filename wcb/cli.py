@@ -122,6 +122,9 @@ def cmd_run(a) -> int:
         workspace_root=Path(a.workspace_root) if a.workspace_root else None,
         resume=a.resume,
         skip_ingest=a.skip_ingest,
+        meter=a.meter,
+        meter_bind=a.meter_bind,
+        meter_host=a.meter_host,
     )
     return run(cfg)
 
@@ -263,6 +266,10 @@ def build_parser() -> argparse.ArgumentParser:
     r.add_argument("--resume", action="store_true", help="skip sessions that already completed")
     r.add_argument("--skip-ingest", action="store_true",
                    help="only run oracle query sessions (measures synthesis alone)")
+    r.add_argument("--meter", action="store_true",
+                   help="route sessions' model calls through a metering proxy (docs/running.md)")
+    r.add_argument("--meter-bind", default="127.0.0.1", help="address the metering proxy listens on")
+    r.add_argument("--meter-host", help="address sessions use to reach the proxy (default: --meter-bind)")
     r.set_defaults(fn=cmd_run)
 
     dr = sub.add_parser("doctor", help="smoke-test an adapter on the mini world and explain failures")

@@ -328,6 +328,7 @@ def _efficiency(data: dict) -> str:
                 s.get("timeouts", 0),
                 s.get("failures", 0),
                 s.get("usage_reported", 0),
+                s.get("usage_metered", 0),
             ]
         )
     if not rows:
@@ -344,6 +345,7 @@ def _efficiency(data: dict) -> str:
             "Timeouts",
             "Failures",
             "Usage reported",
+            "Metered",
         ],
         rows,
     )
@@ -351,7 +353,8 @@ def _efficiency(data: dict) -> str:
     text += (
         f"\n\nPer episode (agent sessions): {fmt(per_ep.get('wall_s'))} s, "
         f"{fmt(per_ep.get('input_tokens'), 0)} input tokens, {fmt(per_ep.get('output_tokens'), 0)} "
-        f"output tokens, ${fmt(per_ep.get('cost_usd'), 2)}. Usage is self-reported unless the run was metered."
+        f"output tokens, ${fmt(per_ep.get('cost_usd'), 2)}. Token counts are measured for metered "
+        "sessions (`wcb run --meter`) and self-reported otherwise; cost is always self-reported."
     )
     days = eff.get("per_ingest_day") or []
     if days:

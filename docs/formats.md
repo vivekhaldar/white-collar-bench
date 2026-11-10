@@ -408,6 +408,7 @@ Also:
 | `cmd`, `exit_code`, `timed_out`, `wall_s`, `started_at`, `finished_at` | How the command ran |
 | `status` | `ok`, `failed`, `timeout` or `error` |
 | `usage` | The agent's `.wcb/usage.json`, if written |
+| `metered_usage` | With `wcb run --meter`: `calls`, `calls_without_usage`, `errors`, `input_tokens`, `output_tokens`, `cache_read_input_tokens`, `cache_creation_input_tokens` and `models`, measured by the proxy |
 | `timeout_s`, `world`, `repeat`, `track`, `notes` | Context |
 | `seed_dates` | Seed sessions only |
 | `answers: {status, answered, questions}` | Query sessions only |

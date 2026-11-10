@@ -1,6 +1,6 @@
 # Submissions and the leaderboard
 
-Status: v0.1 draft. This describes how results are produced for the public leaderboard (plan milestone M6). The private test split and metered model proxy are not yet available; until they are, results on `pilot` and `dev` are self-reported.
+Status: v0.1 draft. This describes how results are produced for the public leaderboard (plan milestone M6). The tooling for the private test split (`scripts/make_test_split.py`) and metered runs (`wcb run --meter`) is in place. Until the first release's test split is published, results on `pilot` and `dev` are self-reported.
 
 ## What to submit
 
@@ -15,7 +15,7 @@ Maintainers run the submission on the private `test` split:
 - **Track A** and/or **Track B**, 3 repeats per world.
 - **Isolation:** one fresh container per session, with no access to anything outside the workspace.
 - **Scoring:** the pinned judge for the release (see [judges](judge.md)).
-- **Metered mode (planned):** model calls go through the runner's proxy (`WCB_LLM_BASE_URL`) so token use and cost are measured, not self-reported.
+- **Metered mode:** `wcb run --meter` sends model calls through the runner's proxy (`ANTHROPIC_BASE_URL`, `OPENAI_BASE_URL`, `WCB_LLM_BASE_URL`), so token use is measured rather than self-reported. Agents must honour these variables. See [running](running.md#7a-metered-runs).
 
 Published results include the harness version, the wcb version, the models, the date, cost per simulated day, and the WCB score with its 95% confidence interval. Entries whose intervals overlap are reported as tied. Test worlds are regenerated for each release, and older results are marked with their release.
 

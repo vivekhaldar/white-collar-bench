@@ -209,7 +209,7 @@ A small ingestion cost means the agent kept the store about as good as a perfect
 
 The runner records wall time and tool or command counts. Token use and cost come from either:
 
-- **Metered mode:** model calls go through the runner's proxy (`WCB_LLM_BASE_URL`). This is required for a *verified* leaderboard badge.
+- **Metered mode:** model calls go through the runner's proxy (`wcb run --meter`; see [running](running.md#7a-metered-runs)). This is required for a *verified* leaderboard badge.
 - **Self-reported mode:** the adapter writes `.wcb/usage.json` after each session.
 
 Reported per simulated day of ingestion and per checkpoint of querying, alongside a cost-versus-score plot.
@@ -316,7 +316,7 @@ Read from every `sessions/*/session.json`. Sessions fall into three groups:
 - `query`: agent store;
 - `query_oracle`: store `oracle`.
 
-For each group the report gives the session count, `ok` / `timeouts` / `failures` counts, how many sessions reported usage, and the total and mean of `wall_s`, `input_tokens`, `output_tokens`, `cost_usd` and `tool_calls`. Means are taken over the sessions that report the value. `per_episode` is the total of agent sessions (ingest + query) divided by the number of episodes. `per_ingest_day` (by world and date) and `per_query_session` (by world, checkpoint and store) give means over repeats.
+For each group the report gives the session count, `ok` / `timeouts` / `failures` counts, how many sessions reported usage, and the total and mean of `wall_s`, `input_tokens`, `output_tokens`, `cost_usd` and `tool_calls`. Means are taken over the sessions that report the value. Token counts come from `metered_usage` for sessions run with `wcb run --meter` (input tokens include cache reads and writes) and from the agent's own `usage.json` otherwise. `usage_metered` counts the metered sessions. `per_episode` is the total of agent sessions (ingest + query) divided by the number of episodes. `per_ingest_day` (by world and date) and `per_query_session` (by world, checkpoint and store) give means over repeats.
 
 ### `report.json`
 

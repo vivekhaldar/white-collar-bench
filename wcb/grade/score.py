@@ -494,7 +494,11 @@ def sis_row(result: dict) -> dict:
 
 # ---------------------------------------------------------------- sessions and efficiency
 def collect_sessions(ep_dir: Path, world: str, k: int) -> list[dict]:
-    """One row per `sessions/*/session.json`, with wall time and self-reported usage."""
+    """One row per `sessions/*/session.json`, with wall time and usage.
+
+    Token counts come from `metered_usage` (written by `wcb run --meter`) when present, else from
+    the agent's self-reported `usage`. Cost and tool calls are always self-reported.
+    """
     rows = []
     for f in sorted((ep_dir / "sessions").glob("*/session.json")):
         try:
@@ -504,7 +508,14 @@ def collect_sessions(ep_dir: Path, world: str, k: int) -> list[dict]:
         if not isinstance(s, dict):
             continue
         name = f.parent.name
-        usage = s.get("usage") if isinstance(s.get("usage"), dict) else {}
+        usage = dict(s.get("usage")) if isinstance(s.get("usage"), dict) else {}
+        metered = s.get("metered_usage") if isinstance(s.get("metered_usage"), dict) else None
+        if metered is not None:
+            usage["input_tokens"] = sum(
+                _num(metered.get(k)) or 0
+                for k in ("input_tokens", "cache_read_input_tokens", "cache_creation_input_tokens")
+            )
+            usage["output_tokens"] = _num(metered.get("output_tokens")) or 0
         store = s.get("store") or ("oracle" if name.endswith("query-oracle") else "agent")
         phase = s.get("phase") or ("query" if ".query" in name else "ingest")
         rows.append(
@@ -519,7 +530,8 @@ def collect_sessions(ep_dir: Path, world: str, k: int) -> list[dict]:
                 "store": store,
                 "status": s.get("status") or _session_status(s),
                 "wall_s": _num(s.get("wall_s")),
-                "usage_reported": bool(usage),
+                "usage_reported": bool(s.get("usage")) if isinstance(s.get("usage"), dict) else False,
+                "usage_metered": metered is not None,
                 **{key: _num(usage.get(key)) for key in USAGE_KEYS},
             }
         )
@@ -548,6 +560,7 @@ def summarize_sessions(rows: list[dict]) -> dict:
         "timeouts": sum(1 for r in rows if r["status"] == "timeout"),
         "failures": sum(1 for r in rows if r["status"] in ("failed", "error")),
         "usage_reported": sum(1 for r in rows if r["usage_reported"]),
+        "usage_metered": sum(1 for r in rows if r.get("usage_metered")),
     }
     for key in ("wall_s", *USAGE_KEYS):
         vals = [r[key] for r in rows if r[key] is not None]

@@ -43,6 +43,7 @@ from pathlib import Path
 from typing import Any
 
 from wcb import __version__
+from wcb.meter import MeterProxy, summarize
 from wcb.paths import contract_dir, repo_root, resolve_split, resolve_world
 from wcb.runner import prompts
 from wcb.runner.adapter import Adapter, load_adapter
@@ -89,6 +90,9 @@ class RunConfig:
     workspace_root: Path | None = None  # where temporary workspaces go (default: system temp)
     resume: bool = False  # skip sessions that completed in an earlier invocation
     skip_ingest: bool = False  # run only oracle query sessions
+    meter: bool = False  # route model calls through the metering proxy (wcb/meter.py)
+    meter_bind: str = "127.0.0.1"  # address the proxy listens on
+    meter_host: str | None = None  # address sessions use to reach it (default: meter_bind)
 
 
 # ====================================================================== entry point
@@ -132,6 +136,13 @@ def run(cfg: RunConfig) -> int:
         _warn("git is not installed; workspaces will have no git history (snapshots still work)")
 
     ctx = _Context(cfg=cfg, adapter=adapter, out=out, ws_root=ws_root, oracle=oracle)
+    if cfg.meter:
+        ctx.meter = MeterProxy(out / "meter.jsonl", host=cfg.meter_bind).start()
+        _log(
+            f"wcb run: metering model calls via http://{cfg.meter_host or cfg.meter_bind}:"
+            f"{ctx.meter.port} (log: {ctx.meter.log_path}); upstreams: "
+            + ", ".join(f"{k} -> {v}" for k, v in sorted(ctx.meter.upstreams.items()))
+        )
     status = "error"
     try:
         with _sigterm_as_interrupt():
@@ -144,6 +155,8 @@ def run(cfg: RunConfig) -> int:
         _log("wcb run: interrupted; continue later with the same command plus --resume")
         raise
     finally:
+        if ctx.meter is not None:
+            ctx.meter.stop()
         meta["status"] = status
         meta["finished_at"] = _now()
         write_json(out / "run.json", meta)
@@ -396,6 +409,7 @@ def _start_run_json(
                 "max_days": cfg.max_days,
                 "skip_ingest": cfg.skip_ingest,
                 "workspace_root": str(cfg.workspace_root) if cfg.workspace_root else None,
+                "meter": cfg.meter,
             },
         }
     out.mkdir(parents=True, exist_ok=True)
@@ -412,6 +426,7 @@ class _Context:
     ws_root: Path | None
     oracle: bool
     counts: Counter = field(default_factory=Counter)
+    meter: MeterProxy | None = None
 
 
 class _Episode:
@@ -435,6 +450,7 @@ class _Episode:
         self.rerun = not ctx.cfg.resume  # once True, every later agent step runs
         self.state: dict[str, Any] = {}
         self._git_warned = False
+        self.meter_tag: str | None = None  # tag of the running session's metered calls
 
     # ------------------------------------------------------------ paths
     def snap(self, date: str) -> Path:
@@ -666,6 +682,7 @@ class _Episode:
         self._commit(f"wcb: after {what} ingest{suffix}")
 
         record = self._record(result, "ingest", date, None, "agent", usage, notes)
+        self._add_metered(record)
         if seed:
             record["seed_dates"] = list(inbox_dates)
         write_json(sd / "session.json", record)
@@ -712,6 +729,7 @@ class _Episode:
             result, "query", date, cp_id, "oracle" if oracle else "agent", usage, notes
         )
         record["answers"] = {"status": answers_status, "answered": answered, "questions": len(ids)}
+        self._add_metered(record)
         write_json(sd / "session.json", record)
         extra = f"  answers {answered}/{len(ids)}"
         if answers_status != "ok":
@@ -734,6 +752,9 @@ class _Episode:
         }
         cmd, cwd, timeout_s = self.ctx.adapter.command(phase, values)
         env = self.ctx.adapter.environment(values)
+        if self.ctx.meter is not None:
+            self.meter_tag = f"{self.plan.id}/r{self.k}/{sd.name}/{time.time_ns()}"
+            env.update(self.ctx.meter.session_env(self.meter_tag, host=self.ctx.cfg.meter_host))
         result = run_process(cmd, cwd, env, timeout_s, sd / "stdout.log", sd / "stderr.log")
         result.cmd = cmd
         result.timeout_s = timeout_s
@@ -771,6 +792,12 @@ class _Episode:
             "track": self.track,
             "notes": notes,
         }
+
+    def _add_metered(self, record: dict[str, Any]) -> None:
+        """With --meter, add the proxy's usage totals for the session that just ran."""
+        if self.ctx.meter is not None and self.meter_tag:
+            record["metered_usage"] = summarize(self.ctx.meter.log_path, self.meter_tag)
+            self.meter_tag = None
 
     def _report(self, label: str, result: ProcessResult, extra: str = "") -> None:
         self.ctx.counts[result.status] += 1
