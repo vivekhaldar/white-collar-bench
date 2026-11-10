@@ -5,6 +5,8 @@ from __future__ import annotations
 import datetime as dt
 import re
 
+from wcb.util.text import framing, normalize_marked
+
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 
@@ -108,38 +110,122 @@ def _ord(n: int) -> str:
     return {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
 
 
-def normalize_date_text(s: str, *, default_year: int | None = None) -> str | None:
-    """Best-effort parse of a free-text date into 'YYYY-MM-DD'. Returns None on failure."""
+#: Month names and abbreviations as a regex alternation, longest first.
+_MONTH_ALT = "|".join(sorted({*MONTHS, *(m[:3] for m in MONTHS), "sept"}, key=len, reverse=True))
+_MONTH_NUM = {
+    **{m: i for i, m in enumerate(MONTHS, 1)},
+    **{m[:3]: i for i, m in enumerate(MONTHS, 1)},
+    "sept": 9,
+}
+_ORD = r"(?:st|nd|rd|th)?"
+_YEAR_TAIL = r"(?:,?\s*(\d{4})\b(?![/-][0-9]))?"
+#: Date mentions in normalized text: (kind, pattern). Groups give year/month/day by kind.
+_DATE_PATTERNS = (
+    ("iso", re.compile(r"(?<![0-9])(\d{4})-(\d{1,2})-(\d{1,2})(?![0-9])")),
+    ("md", re.compile(r"(?<![0-9/])(\d{1,2})/(\d{1,2})(?:/(\d{4}|\d{2}))?(?![0-9/])")),
+    ("month_day", re.compile(rf"\b({_MONTH_ALT})\b\.?\s*(\d{{1,2}}){_ORD}\b{_YEAR_TAIL}")),
+    ("day_month", re.compile(rf"\b(\d{{1,2}}){_ORD}\s+(?:of\s+)?({_MONTH_ALT})\b\.?{_YEAR_TAIL}")),
+)
+_LONE_YEAR = re.compile(r"(?<![0-9/-])\b(20\d{2})\b(?![/-][0-9])")
+#: A date without a year takes the year that puts it this many days before to
+#: `365 - YEARLESS_BEFORE_DAYS` days after the reference date.
+YEARLESS_BEFORE_DAYS = 91
+
+
+def date_mentions(norm: str) -> list[tuple[int, int, int | None, int, int]]:
+    """Date mentions in normalized text: (start, end, year or None, month, day), by position.
+
+    Recognizes ISO dates (`2027-02-05`), `m/d` and `m/d/y`, and month names or abbreviations
+    before or after the day (`Feb 5th`, `5 February 2027`, `the 5th of Feb`). Overlapping
+    matches keep the earliest, then the longest. Impossible dates are still returned (their
+    validity is checked by the caller).
+    """
+    found = []
+    for kind, pat in _DATE_PATTERNS:
+        for m in pat.finditer(norm):
+            if kind == "iso":
+                y, mo, d = int(m[1]), int(m[2]), int(m[3])
+            elif kind == "md":
+                mo, d = int(m[1]), int(m[2])
+                y = None if m[3] is None else int(m[3]) + (2000 if len(m[3]) == 2 else 0)
+            elif kind == "month_day":
+                mo, d, y = _MONTH_NUM[m[1]], int(m[2]), int(m[3]) if m[3] else None
+            else:
+                d, mo, y = int(m[1]), _MONTH_NUM[m[2]], int(m[3]) if m[3] else None
+            found.append((m.start(), m.end(), y, mo, d))
+    out, taken_until = [], -1
+    for f in sorted(found, key=lambda f: (f[0], -(f[1] - f[0]))):
+        if f[0] >= taken_until:
+            out.append(f)
+            taken_until = f[1]
+    return out
+
+
+def _year_for(month: int, day: int, *, today: str | None, default_year: int | None) -> int | None:
+    """The year of a year-less date: nearest-window around `today`, else `default_year`."""
+    if today:
+        ref = parse_date(today)
+        lo = ref - dt.timedelta(days=YEARLESS_BEFORE_DAYS)
+        for y in (ref.year - 1, ref.year, ref.year + 1):
+            try:
+                d = dt.date(y, month, day)
+            except ValueError:
+                continue
+            if lo <= d < lo + dt.timedelta(days=365):
+                return y
+        return ref.year
+    return default_year
+
+
+def normalize_date_text(
+    s: str, *, default_year: int | None = None, today: str | None = None
+) -> str | None:
+    """Parse the one current date in a free-text answer into 'YYYY-MM-DD'; None on failure.
+
+    Every date mention is found (see `date_mentions`). A mention framed as past or rejected
+    ("moved from 29 Jan", "was 29 Jan", "not 29 Jan"; `wcb.util.text.framing`) is ignored. If
+    the remaining mentions name one date, that is the answer. If they name several, the one
+    framed as current ("to 5 Feb", "now 5 Feb", "29 Jan -> 5 Feb") wins when there is exactly
+    one; otherwise the text is ambiguous and the result is None.
+
+    A mention without a year takes the only standalone year in the text, if there is exactly
+    one; otherwise, with `today` (an ISO date), the year that puts it between
+    `YEARLESS_BEFORE_DAYS` (91) days before and about nine months after `today`, so
+    "December 30" in early January is the previous December; otherwise `default_year`. With
+    no year available the mention is skipped. Impossible dates (`Feb 30`) are skipped.
+    """
     if s is None:
         return None
-    s = str(s).strip().lower()
-    m = re.search(r"(\d{4})-(\d{2})-(\d{2})", s)
-    if m:
+    norm = normalize_marked(str(s))
+    mentions = date_mentions(norm)
+    taken = [(a, b) for a, b, *_ in mentions]
+    lone = {
+        int(m[1])
+        for m in _LONE_YEAR.finditer(norm)
+        if not any(a <= m.start() < b for a, b in taken)
+    }
+    text_year = next(iter(lone)) if len(lone) == 1 else None
+    current: list[str] = []
+    marked: list[str] = []
+    prev_end = 0
+    for start, end, y, mo, d in mentions:
+        role = framing(norm[prev_end:end], start - prev_end)
+        prev_end = end
+        if y is None:
+            y = text_year or _year_for(mo, d, today=today, default_year=default_year)
+        if y is None:
+            continue
         try:
-            return dt.date(int(m[1]), int(m[2]), int(m[3])).isoformat()
+            iso = dt.date(y, mo, d).isoformat()
         except ValueError:
-            return None
-    year = default_year
-    ym = re.search(r"\b(20\d{2})\b", s)
-    if ym:
-        year = int(ym[1])
-        s = s.replace(ym[1], " ")
-    if year is None:
-        return None
-    m = re.search(r"\b(\d{1,2})/(\d{1,2})\b", s)
-    if m:
-        try:
-            return dt.date(year, int(m[1]), int(m[2])).isoformat()
-        except ValueError:
-            return None
-    for i, name in enumerate(MONTHS, 1):
-        for token in (name, name[:3]):
-            m = re.search(rf"\b{token}\b\.?\s*(\d{{1,2}})(st|nd|rd|th)?\b", s) or re.search(
-                rf"\b(\d{{1,2}})(st|nd|rd|th)?\s+(of\s+)?{token}\b", s
-            )
-            if m:
-                try:
-                    return dt.date(year, i, int(m[1])).isoformat()
-                except ValueError:
-                    return None
+            continue
+        if role == "history":
+            continue
+        current.append(iso)
+        if role == "current":
+            marked.append(iso)
+    if len(set(current)) == 1:
+        return current[0]
+    if len(set(marked)) == 1:
+        return marked[0]
     return None

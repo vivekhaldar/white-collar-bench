@@ -221,3 +221,24 @@ def test_load_store_missing_dir(tmp_path):
 
 def test_store_root_is_a_path(sample_store_dir):
     assert load_store(str(sample_store_dir)).root == Path(sample_store_dir)
+
+
+def test_symbolic_links_are_listed_but_never_read(tmp_path):
+    """A store is graded on the host, so a planted link must not pull in outside files."""
+    import os
+
+    from wcb.contract.validate import validate_store
+    from wcb.store.parse import load_store
+
+    outside = tmp_path / "outside.md"
+    outside.write_text("---\nid: loops/x\ntype: loop\n---\nsecret text\n")
+    store = tmp_path / "store"
+    (store / "loops").mkdir(parents=True)
+    (store / "people").mkdir()
+    os.symlink(outside, store / "loops" / "x.md")
+    os.symlink(tmp_path, store / "people" / "elsewhere")
+    s = load_store(store)
+    assert s.records == {} and s.links == ["loops/x.md", "people/elsewhere"]
+    assert "secret" not in s.all_text()
+    codes = [i.code for i in validate_store(store)]
+    assert codes.count("file.symlink") == 2

@@ -34,7 +34,7 @@ The agent sees only `id`, `type` and `text` ([formats §3.4](formats.md#34-agent
 
 - **The worker** (W) is `world.yaml`'s `worker`. "I" and "me" in question text mean the worker.
 - **Active** means status `open`, `waiting` or `blocked`. **Closed** means `done` or `dropped`.
-- **Accepted.** Only accepted loops count in list, brief, status and priority golds. A suggested loop (`accepted: false`, such as an ask nobody agreed to) becomes a commitment only when a later event accepts it.
+- **Accepted.** Only accepted loops count in list, brief, status and priority golds. A suggested loop (`accepted: false`, such as an ask nobody agreed to) becomes a commitment only when a later event accepts it. In a status gold this includes the latest change: events on loops still suggested at the checkpoint are skipped. Change golds list them (a suggestion is a knowable change on the project).
 - **Names in text.** Question text uses the entity's canonical `name`, or `params.name_form` when the spec sets one (an alias such as `Samir`, to exercise alias resolution). A spec's own `text` replaces the template text entirely.
 - **Support** is listed in delivery order. Question-level support is the union of the supports of the gold's items or rubric items.
 - **Keywords** are lowercase. A rubric item's `keywords` is a list of groups: the item is covered when every group has at least one match in the answer. List and change items carry a flat `keywords` list that graders use to match free-text items to gold.
@@ -69,12 +69,12 @@ An **empty list is not unanswerable.** "What do I owe Sam?" with no accepted act
 | `project_loops` | list | `project` | What loops are open on {project}? |
 | `project_status` | status | `project` | What is the status of {project}? |
 | `person_brief` | brief | `person` | What am I working on with {person}? |
-| `project_changes` | change | `project`, `since` | What changed on {project} since {since}? |
+| `project_changes` | change | `project`, `since` | What changed on {project} since the end of {since}? |
 | `decision_date` | temporal | `decision` | When did we decide to {what}? |
 | `event_date` | temporal | `event` | none: the spec must give `text` |
 | `focus_tomorrow` | priority | none | What should I focus on tomorrow? |
 
-`{what}` is the loop's or decision's current `what`. In `decision_date` its first letter is lowercased unless the first word is an acronym. `{since}` is written as weekday, day and month, for example `Friday 8 January`.
+`{what}` is the loop's or decision's current `what`. In `decision_date` its first letter is lowercased unless the first word is an acronym. `{since}` is written as weekday, day and month, for example `Friday 8 January`; the text says "since the end of" it because changes on the `since` day itself are not included.
 
 ### Point questions
 
@@ -87,7 +87,7 @@ Gold: `{"kind", "value", "entity", "accept"}`.
 | `number` | value is numeric | the value | `null` | `[value]` |
 | `text` | anything else | the value | `null` | `[value]` |
 
-Graders resolve entity answers through the world's alias table and normalize dates and numbers ([scoring](scoring.md#query-scoring)).
+Graders resolve entity answers through the world's alias table and normalize dates and numbers ([scoring](scoring.md#query-scoring)). A project `status` is graded as a closed vocabulary: the answer must name exactly the gold status (or one of its [synonyms](#project_status)), so listing several statuses scores 0. Other text values must contain the value's words without hedging or much else, and must not also state the same attribute of another entity of that kind or an earlier value (for "What is Sam Reyes's role?", "Solutions engineer / Data engineer" scores 0 when Data engineer is Sam Patel's role); the names of people, orgs and projects in a value, such as the org in "Registrar, TU Saltmarren", are optional. The full rules are in the [scoring implementation notes](scoring.md#per-question-grading).
 
 #### `project_attr`
 
@@ -141,7 +141,7 @@ Gold: `{"items": [...]}`, one item per loop, in loop-ID order:
 | `owed_to_me` | the person is the debtor and the worker is the creditor |
 | `project_loops` | the loop's current `project` is the project, whoever owes it |
 
-A loop moved by a split or merge belongs to its new project.
+A loop moved by a split or merge belongs to its new project, and the artifacts that reveal the move join its evidence: they are what shows it belongs there.
 
 ### `project_status`
 
@@ -151,7 +151,7 @@ Gold: `{"rubric": [...], "facts": {...}}`. Rubric items are derived in this orde
 |---|---|---|---|---|---|
 | 1 | `status` | always | yes | status synonyms (see below); for `merged`, also the target project's names | previous status's synonyms, if it changed |
 | 2 | `phase` | phase set | no | up to two distinctive words of the phase, one group each | distinctive words of the previous phase not in the current one |
-| 3 | `latest_change` | always | yes | derived from the latest change event (see below) | none |
+| 3 | `latest_change` | always | yes | derived from the latest change event, skipping events on loops that are still suggested (see below) | none |
 | 4 | `blocker` | blocker set | yes | up to two distinctive words, one group each | words of the previous blocker not in the current one |
 | 5 | `target_date` | target date set | yes | one group of date variants | date variants of the previous target date, if it moved |
 | 6 | `loop` | up to six accepted active loops on the project, worker-owned first, then earliest due | no | one group: the loop's keywords | none |
@@ -175,14 +175,14 @@ The text of the latest-change item is the event's `summary`. The text of a loop 
 | Event | Keyword groups |
 |---|---|
 | commitment create | the loop's keywords |
-| commitment update, resolve | the loop's keywords; plus words for a new status (done: done, completed, sent, returned...); the new due date's variants; the new debtor's names on a transfer |
+| commitment update, resolve | the loop's keywords; plus words for a new status (done: done, completed, sent, returned...); the new due date's variants; the new debtor's names on a transfer (for a transfer to the worker, also `me`, `myself`, `mine`, `you`, `yourself`, `yours`) |
 | `decision.make` | the decision's keywords |
 | `decision.reverse` | the decision's keywords, and reversal words (reversed, overturned, scrapped, no longer...) |
-| `fact.set` | the new value: status synonyms, date variants, an entity's names, or distinctive words; "cleared" words for `null` |
+| `fact.set` | the new value: status synonyms, date variants, an entity's names (plus the worker words above when the value is the worker), or distinctive words. For `null`, two groups: "cleared" words (cleared, resolved, removed, no longer, unblocked, fixed, lifted, ended, is over, no blocker(s); not "none", which most status answers contain), and one group naming what was cleared: the cleared value's distinctive words plus up to two distinctive words of the event's summary (the attribute's name if there are none) |
 | split, merge | the other projects' names, and split or merge words |
 | project `entity.create` | distinctive words of the summary |
 
-`facts`, for the LLM judge: the project's public attributes (entity IDs replaced by names, including the `summary` paragraph), superseded values of status, phase, target date, owner, blocker and next step, active accepted loops with owner and counterparty names, the project's decisions with their status, and the last five change events.
+`facts`, for the LLM judge: the project's public attributes (entity IDs replaced by names, including the `summary` paragraph), superseded values of status, phase, target date, owner, blocker and next step, active accepted loops with owner and counterparty names, the project's decisions with their status, and the last five change events (skipping events on loops that are still suggested, as for item 3).
 
 ### `person_brief`
 
@@ -195,18 +195,18 @@ Gold: `{"rubric": [...], "facts": {...}}`.
 | `owed_to_me` | up to five accepted active loops the person owes the worker, earliest due first | yes | one group: the loop's keywords |
 | `role` | the person's role, if known | no | up to two distinctive words of the role, one group each |
 
-If none apply, a single item says that nothing is shared; an answer saying so ("nothing", "no open loops") covers it. `facts` holds the person's attributes, the shared projects, the loops in each direction and the last five events that involve the person.
+If none apply, a single item says that nothing is shared; an answer saying so ("nothing", "no open loops") covers it. `facts` holds the person's attributes, the shared projects, the loops in each direction and the last five events that involve the person (an event's `subjects`, which for a hand-off include both the old and the new owner).
 
 ### `project_changes`
 
-Gold: `{"items": [...]}`, one item per knowable state-changing event on the project (as defined above) whose world date is after `since`, in world order:
+Gold: `{"items": [...]}`, one item per knowable state-changing event on the project (as defined above) whose world date is after `since`, in world order. `since` itself is excluded, which the default text states ("since the end of Friday 8 January"). A spec `text` must read the same way: for "since Wednesday" set `since` to Tuesday, for "this week" to the Sunday before. `wcb world check` warns (`question.since`) when a spec text names the weekday of `since` or says "this week" while `since` falls in the checkpoint's week.
 
 ```json
 {"event": "e-0020", "summary": "Quillon decision target moved to 5 February", "date": "2027-01-11",
  "type": "fact.set", "keywords": ["target date", "2027-02-05", "feb 5", "..."], "support": ["nt-0002"]}
 ```
 
-`keywords` are the loop's or decision's keywords; for a `fact.set`, the attribute name plus the value's keywords; otherwise the flattened groups from the table above. `support` lists the artifacts that reveal the event. The date compared with `since` is when the event happened, not when it was revealed.
+`keywords` are the loop's or decision's keywords; for a `fact.set`, the attribute name plus the value's keywords; otherwise the flattened groups from the table above. The worker words are never change keywords. `support` lists the artifacts that reveal the event. The date compared with `since` is when the event happened, not when it was revealed.
 
 ### `decision_date`, `event_date`
 
@@ -235,7 +235,8 @@ Rubric items are derived mechanically from gold state ([formats §3.3](formats.m
 - **Dates** become one group of prose variants from `wcb.util.dates.text_variants`: `2027-02-05`, `5 feb`, `february 5th`, `2/5` and so on.
 - **Entities** become one group of their name and surface forms.
 - **Free text** (phase, blocker, next step, role) becomes at most two distinctive words, one group each. Stopwords, generic words (`project`, `update`, `status`, `waiting`...), words of fewer than three letters and the project's or person's own name are skipped. Longer words are preferred.
-- **Stale** groups describe a superseded value. The heuristic judge marks an item *contradicted* when every stale group matches and the item is not covered, so presenting an old target date or phase as current costs points. Words shared by the old and new values are dropped from free-text stale groups.
+- **Stale** groups describe a superseded value. The heuristic judge marks an item *contradicted* when every stale group matches somewhere the answer presents it as current, so presenting an old target date or phase as current costs points. Hedging costs the same: an old date next to the new one, or old words in the sentence that gives the new value ("vendor evaluation or pilot planning"), still contradicts. A match framed as history ("moved from 29 Jan", "vendor evaluation is finished") does not count ([judges](judge.md#rubric)). Words shared by the old and new values are dropped from free-text stale groups.
+- Keyword alternatives made only of month or weekday names (a loop keyword such as `january`) are ignored by the heuristic judge, which also covers nothing when the answer is mostly not about the question's `facts` ([judges](judge.md#rubric)).
 
 ### Extra rubric items
 
@@ -270,4 +271,4 @@ The fixture world `tests/fixtures/mini-world` exercises most templates. At `cp2`
 | r4 | target_date | Current target date: 2027-02-05 (moved from 2027-01-29) | variants of 2027-02-05 | variants of 2027-01-29 |
 | r5 | loop | Send Ada Tessellate volume pricing (owner: Cora Velez) | volume pricing / pricing | |
 
-An answer that still gives 29 January as the target date is contradicted on r4. One that says Quillon is "in progress, now planning the pilot" covers r1 and r2.
+An answer that still gives 29 January as the target date is contradicted on r4, and so is one that hedges ("29 Jan or 5 Feb"); one that says the target "moved from 29 January" is not. One that says Quillon is "in progress, now planning the pilot" covers r1 and r2.

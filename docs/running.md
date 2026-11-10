@@ -117,7 +117,9 @@ Sessions do not inherit your whole environment. Each session gets:
 - the variables named in `env_passthrough`, then the `env` mapping;
 - `WCB_DATE`, `WCB_PHASE`, `WCB_TRACK`, `WCB_WORKSPACE`, `WCB_PROMPT_FILE` and `WCB_SESSION_DIR`, which cannot be overridden.
 
-The directory of the Python interpreter running `wcb` is put first on `PATH`. When you run `wcb` from a virtual environment (`.venv/bin/wcb`), `python` in a command therefore resolves to that environment's interpreter, which has `wcb` installed. `adapters/examples/null.yaml` relies on this with `cmd: ["python", "-m", "wcb.baselines.null"]`. If your Python installation provides only `python3`, use that name instead. Setting `PATH` in `env` replaces the whole value.
+The directory of the Python interpreter running `wcb` is put first on `PATH`. When you run `wcb` from a virtual environment (`.venv/bin/wcb`), `python` in a command therefore resolves to that environment's interpreter, which has `wcb` installed. `adapters/examples/null.yaml` relies on this with `cmd: ["python", "-I", "-m", "wcb.baselines.null"]`. If your Python installation provides only `python3`, use that name instead. Setting `PATH` in `env` replaces the whole value.
+
+Keep `-I` (or `-P` on Python 3.11+) when you start a module with `python -m` or code with `python -c`. Without it Python puts its working directory, the workspace, first on `sys.path`, so a file the agent leaves at the store root (`json.py`, a `wcb/` directory) replaces the real module in every later session. `wcb run` warns about adapters that do this ([adapters](adapters.md#environment)).
 
 stdin is empty (`/dev/null`). An agent that waits for interactive input or approval will time out, so run your agent in its non-interactive mode with the permissions it needs to read and write files in the workspace.
 
@@ -157,16 +159,22 @@ wcb run --adapter adapters/my-agent.yaml --split dev --repeats 3 --out runs/my-a
 
 An episode runs like this:
 
-1. **Start.** Track A: the workspace becomes a copy of the world's seed store (`gold/oracle-store/<seed end>/`) plus `CONTRACT.md`, and is committed to git.
+1. **Start.** Track A: the workspace becomes a copy of the world's seed store (`gold/oracle-store/<seed end>/`) plus `CONTRACT.md`, and is committed to git. Like every oracle store it holds only what the inputs delivered by then show: aliases an input has used, and no hint of people or loops revealed later ([worlds](worlds.md#oracle-stores)).
 2. **Each day.** The runner copies `inbox/<date>/` into the workspace, writes the prompt and runs the ingest command in a fresh process. Afterwards it removes `inbox/` and `.wcb/`, snapshots the store to `snapshots/<date>/` and commits (`wcb: after <date> ingest`).
 3. **Checkpoint days.** After that day's ingestion, the runner runs a query session on a read-only copy of the store, saves the answers and discards the copy.
 4. **Oracle sessions.** Track A only: after the episode, each checkpoint's questions are asked again against `gold/oracle-store/<checkpoint date>/` plus `CONTRACT.md`, in a separate session with the same adapter. The scores measure synthesis alone.
 
-**Failed sessions.** A non-zero exit or a timeout fails the session. A failed ingest session leaves the store as it was before the session: the runner restores it from the previous snapshot, and the day's snapshot equals the previous day's. A failed query session counts as empty answers. On timeout the runner sends SIGTERM to the session's whole process group, then SIGKILL after 10 seconds. Any process the agent leaves running after it exits is killed too. The run carries on either way, and `wcb run` exits 0 when the run completes, whatever the sessions' outcomes.
+**Failed sessions.** A non-zero exit or a timeout fails the session. A failed ingest session leaves the store as it was before the session: the runner restores it from the previous snapshot, and the day's snapshot equals the previous day's. A failed query session counts as empty answers. The run carries on either way, and `wcb run` exits 0 when the run completes, whatever the sessions' outcomes.
+
+**Session processes.** On timeout the runner sends SIGTERM to every process of the session, then SIGKILL after 10 seconds. When the agent's main process exits, any process it leaves running is killed too, including processes that left its process group: daemons, `setsid cmd &`, Node's `detached: true`. On Linux the runner makes itself a child subreaper (`prctl(PR_SET_CHILD_SUBREAPER)`) during each session, so such orphans are re-parented to it rather than to init, and it kills them. Elsewhere, macOS included, only the session's process group is signalled; run the agent in a container (`docker run --rm --init`, [isolation](#container-isolation)) so that all its processes stop with the container. A process started by another service is not the session's and is not found either (for example `docker run -d`, `systemd-run`, `at`).
+
+**Between sessions.** Before each ingest session and each query of the agent's store, the runner checks that the workspace still matches the last snapshot. A change, whether from a process that escaped its session or an edit by hand, is reverted and listed in that session's `notes`, so it is never credited to the next day.
+
+**What a session leaves behind.** After each session the runner gives the owner read permission on every file and full permission on every directory in the workspace, clears macOS file flags such as `uchg`, and deletes FIFOs, sockets and device files (noted in `notes`). An agent that runs `chmod 000` on part of its store therefore cannot stop the run. If the store still cannot be read, copied or cleaned, for example because the agent wrote files as another user, the session fails (`status: failed`, with the error in `notes`) and the store is restored from the previous snapshot. If even the workspace cannot be cleaned, the episode continues in a new workspace rebuilt from that snapshot, and `wcb run` prints the old directory's path so you can delete it.
 
 ## 6. Resume
 
-If a run stops (Ctrl-C, SIGTERM, a crash or a machine restart), run the same command again with `--resume`:
+If a run stops (Ctrl-C, SIGTERM, SIGHUP when the terminal or ssh connection closes, SIGQUIT, a crash or a machine restart), run the same command again with `--resume`. On SIGTERM, SIGHUP and SIGQUIT the runner stops the running session's processes and marks `run.json` and `state.json` `interrupted`, as for Ctrl-C:
 
 ```bash
 wcb run --adapter adapters/my-agent.yaml --world pilot --out runs/my-agent-pilot --resume
@@ -176,7 +184,7 @@ wcb run --adapter adapters/my-agent.yaml --world pilot --out runs/my-agent-pilot
 - From the first session that has to run, every later session of that episode runs again, because it depends on the store.
 - The workspace is found through `<run>/<world>/r<k>/state.json`. If the temporary directory is gone, the runner rebuilds it from the latest snapshot. Snapshots are the source of truth, and git history from before the rebuild is lost.
 - Ingest sessions that failed or timed out are run again. `--resume` is for recovering from infrastructure problems. Do not use it to retry an agent's own failures in a reported run.
-- `--resume` with a larger `--max-days`, more `--repeats` or extra `--world`s extends an existing run. `run.json` records each resume in `resumed_at`.
+- `--resume` with a larger `--max-days`, more `--repeats` or extra `--world`s extends an existing run. So does a resume without `--skip-ingest` of a `--skip-ingest` run: it adds the agent's episodes. `run.json` records each resume's time in `resumed_at` and its command line and options in `resumed_with`. Its `options` describe the whole run, and `wcb score` reads them to decide what to score: `max_days` is the largest given, or none if any invocation played every day, and `skip_ingest` stays true only if every invocation used `--skip-ingest`.
 
 ## 7. Oracle-only runs
 
@@ -221,7 +229,8 @@ In Track B there is no contract and no seed store. The workspace starts empty ex
 ```text
 runs/<name>/
   run.json                       adapter (name, version, model, path, sha256), track, oracle,
-                                 worlds, timestamps, status, command line
+                                 worlds, timestamps, status, command line, options,
+                                 resumed_at and resumed_with (see §6)
   <world>/r<k>/
     state.json                   workspace path and progress, used by --resume
     workspace/                   final store (without .git)
@@ -252,9 +261,9 @@ Every session directory holds the exact prompt (`prompt.md`), your agent's outpu
  "status": "ok", "world": "pilot", "repeat": 1, "track": "A", "notes": []}
 ```
 
-- `status` is `ok`, `failed` (non-zero exit), `timeout`, or `error` (the command could not start; `stderr.log` says why).
+- `status` is `ok`, `failed` (non-zero exit, or the runner could not read or copy the store the session left; see §5), `timeout`, or `error` (the command could not start; `stderr.log` says why).
 - `notes` explains anything the runner did on your agent's behalf, such as restoring the store, recording empty answers, or ignoring an invalid `usage.json`.
-- Query sessions add `answers: {status, answered, questions}`. `status` is `ok`, `missing`, `invalid_json` or `not_object`.
+- Query sessions add `answers: {status, answered, questions}`. `status` is `ok`, `missing`, `invalid_json`, `not_object`, `invalid` (a symbolic link), `too_large` or `unreadable`.
 
 Useful commands:
 
@@ -276,6 +285,7 @@ A run is only meaningful if the agent works the way it would for a real person, 
 4. **No outside data.** Network access should be limited to your model provider's endpoints.
 5. **Respect the session boundaries.** Do not edit the store between sessions, do not change the inbox, and do not retry failed sessions in a reported run. `--resume` is for infrastructure failures.
 6. **Report what you ran.** Use real `version` and `model` values. `run.json` records the adapter's sha256 so a result can be traced to an exact adapter file.
+7. **Answer for a person, not for the grader.** Do not shape answers around grading rules: padding status answers with lists of statuses, dates, roles or loop titles; stringing several items into one; repeating items or adding filler; hedging between values; citing records that do not support the answer; or writing instructions to the judge. The graders are built to give such answers no credit, and `tests/grade/test_gaming.py` checks that they stay that way.
 
 ### Container isolation
 
@@ -283,7 +293,7 @@ A run is only meaningful if the agent works the way it would for a real person, 
 
 ```bash
 docker build -f docker/Dockerfile.simple -t wcb-simple .        # an image with the wcb harness, no worlds
-WCB_AGENT_IMAGE=wcb-simple WCB_AGENT_CMD="python -m wcb.baselines.null" \
+WCB_AGENT_IMAGE=wcb-simple WCB_AGENT_CMD="python -I -m wcb.baselines.null" \
   wcb run --adapter adapters/examples/docker.yaml --world pilot --out runs/null-docker
 ```
 
@@ -310,7 +320,11 @@ Replace `WCB_AGENT_IMAGE` and `WCB_AGENT_CMD` with your own image and entry comm
 | An API key does not reach the agent | Add it to `env_passthrough`. `wcb run` warns when a listed variable is not set. |
 | `answers 0/12 (missing)` | The agent did not write `.wcb/answers.json` in the workspace it was given (`{workspace}`, which is also its working directory by default). |
 | `answers ... (invalid_json)` | See `answers.raw.json` in the session directory. |
+| `... could not be graded (...); it scores 0` in the report's notes | The answer passed validation but the grader could not handle it, so that one question scored 0 and scoring went on. Check the answer in `answers/<cp>.json`; if it looks right, report a bug with the note. |
 | `Permission denied` in a query session | Expected: query sessions are read-only. Write scratch files in `.wcb/` or `$TMPDIR`. |
+| Adapter warning `... puts its working directory, the workspace, first on sys.path` | Start Python with `-I` (`python -I -m ...`), or `-P` on Python 3.11+ (§4, Environment). |
+| A background process the agent started stops when the session ends | Expected: no process outlives its session (§5). Finish all work before the main process exits. |
+| `the workspace changed after snapshots/... was taken` in `notes` | Something edited the store between sessions; the runner reverted it (§5). Look for a process outside the session, or edits by hand. |
 | A path with spaces breaks a string command | Remove quotes around placeholders; the runner quotes substituted values. Or use a list command. |
 | `git: ...` warning | Git history is optional; snapshots are unaffected. Install git or check the workspace's `.git`. |
 | Leftover `/tmp/wcb-ws-*` directories | Workspaces kept after an interruption. Resume the run, or delete them. |

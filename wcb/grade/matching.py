@@ -8,8 +8,8 @@ has two steps:
    any of these holds:
 
    * they share an artifact: a `cites` entry of the prediction is in the gold item's `support`;
-   * the prediction's `counterparty` resolves (through the world's alias table) to the gold
-     item's counterparty;
+   * the prediction's `counterparty` names exactly the gold item's counterparty (through the
+     world's alias table; a list of several people names none of them);
    * their text similarity (`similarity`, a Dice coefficient over content tokens) is at least
      `CANDIDATE_SIMILARITY` (0.2).
 
@@ -18,6 +18,12 @@ has two steps:
    one-to-one: first greedily, in order of decreasing text similarity, then improved with
    augmenting paths so that the number of matched pairs is the maximum possible. Ties keep
    input order, so the result is deterministic.
+
+With `distinct=True` (list and change answers; priority answers use `distinct_edges` for
+their worker loops), predictions that repeat an earlier one
+(`item_key`: the same content words of `text` and `counterparty`, and the same due date and
+date) cannot match: a repeated item earns credit once, however many gold items the judge would
+confirm it for, and each copy still counts as a prediction.
 """
 
 from __future__ import annotations
@@ -26,6 +32,7 @@ import json
 from typing import Any
 
 from wcb.grade.judge import gold_text, match_tokens, pred_text
+from wcb.util.dates import date_of
 
 #: Minimum Dice similarity for a pair to become a candidate on text alone.
 CANDIDATE_SIMILARITY = 0.2
@@ -51,7 +58,26 @@ def _counterparty_hit(pred: dict, gold: dict, ctx: Any) -> bool:
     cp, gcp = pred.get("counterparty"), gold.get("counterparty")
     if ctx is None or not isinstance(cp, str) or not cp.strip() or not gcp:
         return False
-    return gcp in ctx.resolve_entities(cp)
+    return ctx.names_exactly(cp, gcp)
+
+
+def item_key(pred: dict) -> tuple:
+    """What makes two predictions the same item: content words of `text` and `counterparty`,
+    plus the due date and date. "Send the pricing." and "send  the PRICING" are the same."""
+
+    def day(v: Any) -> str | None:
+        return date_of(str(v)) if v else None
+
+    return (frozenset(match_tokens(pred_text(pred))), day(pred.get("due")), day(pred.get("date")))
+
+
+def distinct_edges(
+    pred: list[dict], edges: list[tuple[float, int, int]]
+) -> list[tuple[float, int, int]]:
+    """Edges of predictions that do not repeat an earlier prediction (`item_key`)."""
+    first: dict[tuple, int] = {}
+    keep = {i for i, p in enumerate(pred) if first.setdefault(item_key(p), i) == i}
+    return [e for e in edges if e[1] in keep]
 
 
 def candidate_pairs(pred: list[dict], gold: list[dict], ctx: Any) -> list[tuple[int, int]]:
@@ -82,13 +108,12 @@ def _display_gold(gold: dict, ctx: Any) -> dict:
     return gold
 
 
-def match_items(
+def confirmed_edges(
     pred: list[dict], gold: list[dict], judge: Any, *, kind: str, ctx: Any
-) -> list[tuple[int, int]]:
-    """Match predicted to gold items one-to-one; returns sorted (pred_idx, gold_idx) pairs.
+) -> list[tuple[float, int, int]]:
+    """Judge-confirmed candidate pairs as (similarity, pred_idx, gold_idx) edges.
 
-    Only judge-confirmed candidate pairs can match. Among them the assignment has the maximum
-    number of pairs, preferring pairs with higher text similarity (see the module docstring).
+    Each distinct (prediction, gold item) pair is asked once per call.
     """
     shown = [_display_gold(g, ctx) for g in gold]
     asked: dict[tuple[str, int], bool] = {}
@@ -99,7 +124,26 @@ def match_items(
             asked[key] = bool(judge.same_item(pred[i], shown[j], kind=kind))
         if asked[key]:
             edges.append((similarity(pred[i], gold[j]), i, j))
-    return assign(edges)
+    return edges
+
+
+def match_items(
+    pred: list[dict],
+    gold: list[dict],
+    judge: Any,
+    *,
+    kind: str,
+    ctx: Any,
+    distinct: bool = False,
+) -> list[tuple[int, int]]:
+    """Match predicted to gold items one-to-one; returns sorted (pred_idx, gold_idx) pairs.
+
+    Only judge-confirmed candidate pairs can match. Among them the assignment has the maximum
+    number of pairs, preferring pairs with higher text similarity (see the module docstring).
+    With `distinct`, repeated predictions (`item_key`) cannot match.
+    """
+    edges = confirmed_edges(pred, gold, judge, kind=kind, ctx=ctx)
+    return assign(distinct_edges(pred, edges) if distinct else edges)
 
 
 def assign(edges: list[tuple[float, int, int]]) -> list[tuple[int, int]]:

@@ -188,6 +188,10 @@ def check_layout(store: Store) -> list[Issue]:
                 "CONTRACT.md",
             )
         )
+    for rel in store.links:
+        issues.append(
+            warning("file.symlink", "symbolic links are ignored; write a regular file instead", rel)
+        )
     for rel in store.other_files:
         if rel.split("/", 1)[0] in RECORD_DIRS and "/" in rel:
             issues.append(

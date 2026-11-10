@@ -89,6 +89,7 @@ class Store:
     root: Path
     records: dict[str, Record]  # only .md files under RECORD_DIRS
     other_files: list[str]  # every other file, posix-relative; excludes .git/, inbox/, .wcb/
+    links: list[str] = field(default_factory=list)  # symbolic links: never read (see load_store)
 
     def of_type(self, type_: str) -> list[Record]:
         """Records in the directory for `type_` ('person', 'org', 'project', 'loop' or 'log').
@@ -121,20 +122,27 @@ class Store:
 
 # ---------------------------------------------------------------- public functions
 def load_store(root: Path) -> Store:
-    """Parse the store at `root`. Raises FileNotFoundError if `root` is not a directory."""
+    """Parse the store at `root`. Raises FileNotFoundError if `root` is not a directory.
+
+    Symbolic links are listed in `links` and never read: a store is graded on the host, so a
+    link an agent plants (perhaps from inside a container, where it dangles) must not pull in
+    files from elsewhere on the machine.
+    """
     root = Path(root)
     if not root.is_dir():
         raise FileNotFoundError(f"no store directory at {root}")
     records: dict[str, Record] = {}
     other: list[str] = []
-    for rel in _walk_files(root):
+    links: list[str] = []
+    for rel in _walk_files(root, links):
         if is_record_path(rel):
             text = read_text_file(root / rel) or ""
             rec = parse_record(text, rel)
             records[rec.expected_id] = rec
         else:
             other.append(rel)
-    return Store(root=root, records=dict(sorted(records.items())), other_files=sorted(other))
+    return Store(root=root, records=dict(sorted(records.items())), other_files=sorted(other),
+                 links=sorted(links))
 
 
 def is_record_path(rel: str) -> bool:
@@ -227,8 +235,9 @@ def normalize_ref(ref: str) -> str:
 
 
 def read_text_file(path: Path) -> str | None:
-    """File contents as text, or None for binary files (known extension or NUL bytes)."""
-    if path.suffix.lower() in BINARY_EXTENSIONS:
+    """File contents as text, or None for binary files (known extension or NUL bytes) and for
+    symbolic links, which are never followed."""
+    if path.suffix.lower() in BINARY_EXTENSIONS or path.is_symlink():
         return None
     try:
         data = path.read_bytes()
@@ -240,16 +249,30 @@ def read_text_file(path: Path) -> str | None:
 
 
 # ---------------------------------------------------------------- internals
-def _walk_files(root: Path) -> Iterator[str]:
-    """Posix paths of all files under root, relative to it, skipping excluded directories."""
+def _walk_files(root: Path, links: list[str] | None = None) -> Iterator[str]:
+    """Posix paths of all regular files under root, relative to it, skipping excluded
+    directories. Symbolic links (to files or directories) are not followed; their paths go to
+    `links` when given."""
     for dirpath, dirnames, filenames in os.walk(root):
         rel_dir = Path(dirpath).relative_to(root).as_posix()
         if rel_dir == ".":
             dirnames[:] = [d for d in dirnames if d not in EXCLUDED_TOP_DIRS]
             rel_dir = ""
-        dirnames[:] = sorted(d for d in dirnames if d != ".git")
+        kept = []
+        for d in sorted(d for d in dirnames if d != ".git"):
+            if os.path.islink(os.path.join(dirpath, d)):
+                if links is not None:
+                    links.append(f"{rel_dir}/{d}" if rel_dir else d)
+            else:
+                kept.append(d)
+        dirnames[:] = kept
         for name in sorted(filenames):
-            yield f"{rel_dir}/{name}" if rel_dir else name
+            rel = f"{rel_dir}/{name}" if rel_dir else name
+            if os.path.islink(os.path.join(dirpath, name)):
+                if links is not None:
+                    links.append(rel)
+                continue
+            yield rel
 
 
 def _opt_str(v: object) -> str | None:

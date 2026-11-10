@@ -28,7 +28,8 @@ snapshot; an episode's SIS is the mean over its days, and the final-day SIS is r
 separately. Both are averaged over repeats, then over worlds.
 
 Missing pieces never stop scoring: missing answers score 0, missing snapshots skip SIS for
-that day, and every such gap is listed in the report's `notes`.
+that day, an answer the grader cannot handle (`grader_error`) scores 0, and every such gap is
+listed in the report's `notes`.
 """
 
 from __future__ import annotations
@@ -410,6 +411,12 @@ def score_checkpoint(
         store_root = None
     ctx = ScoreContext.from_state(gold.world, gold.state(cp["date"]), store_root=store_root)
     results = score_answers(doc, answers, judge, ctx)
+    for s in results:
+        if s.details.get("grader_error"):
+            acc.notes.append(
+                f"{tag}: {cp['id']} {s.id} ({store}) could not be graded "
+                f"({s.details['grader_error']}); it scores 0"
+            )
     by_id = {q["id"]: q for q in doc.get("questions") or []}
     scored = [
         Scored(gold.world.id, k, cp["id"], cp["date"], store, by_id[s.id], answers.get(s.id), s)

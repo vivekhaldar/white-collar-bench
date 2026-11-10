@@ -229,6 +229,38 @@ def test_missing_answers_and_snapshots_score_zero_with_notes(built_world, tmp_pa
     assert report.data["headline"]["sis"] == pytest.approx(100.0)
 
 
+def test_impossible_temporal_date_scores_zero_without_stopping_the_run(built_world, tmp_path):
+    # The schema only checks the YYYY-MM-DD pattern, so 2027-02-30 is a valid answer; it used
+    # to raise from the business-day arithmetic and abort `wcb score` for the whole run.
+    run = fabricate_run(tmp_path / "run", built_world, ["perfect"])
+    path = run / built_world.id / "r1" / "answers" / "cp2.json"
+    answers = json.loads(path.read_text("utf-8"))
+    qid = next(q["id"] for q in gold_doc(built_world, "cp2")["questions"] if q["type"] == "temporal")
+    answers[qid] = {"type": "temporal", "abstain": False, "date": "2027-02-30", "cites": []}
+    write_json(path, answers)
+    report = score_run(run)
+    row = next(
+        r for r in report.data["questions"] if r["id"] == qid and r["store"] == "agent"
+    )
+    assert row["valid"] and row["score"] == 0.0
+    assert report.data["headline"]["wcb"] > 80
+
+
+def test_grader_errors_score_zero_with_a_note(built_world, tmp_path, monkeypatch):
+    import wcb.grade.answers as answers_mod
+
+    def broken(q, answer, judge, ctx):
+        raise ValueError("cannot read this answer")
+
+    monkeypatch.setitem(answers_mod.GRADERS, "temporal", broken)
+    run = fabricate_run(tmp_path / "run", built_world, ["perfect"])
+    report = score_run(run)
+    rows = [r for r in report.data["questions"] if r["type"] == "temporal"]
+    assert rows and all(r["score"] == 0.0 for r in rows)
+    notes = "\n".join(report.data["notes"])
+    assert "could not be graded (ValueError: cannot read this answer)" in notes
+
+
 def test_track_b_has_no_sis_or_synthesis(built_world, tmp_path):
     run = fabricate_run(tmp_path / "run", built_world, ["perfect"], track="B", oracle=False)
     report = score_run(run)

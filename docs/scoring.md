@@ -71,7 +71,7 @@ Rules:
 - **Query sessions are read-only.** The runner discards any changes made to the store.
 - **Clock.** `WCB_DATE` and the prompt give the simulated date. The agent must treat it as "today".
 - **No outside data.** The network is limited to model endpoints. Gold and world files are never mounted.
-- **Budgets.** Each session has a wall-clock timeout. Timeouts and crashes leave the store as it was (ingestion) or count as empty answers (query).
+- **Budgets.** Each session has a wall-clock timeout. Timeouts and crashes leave the store as it was (ingestion) or count as empty answers (query). So does a session that leaves a store the runner cannot read or copy. No process of a session outlives it, and the store cannot change between sessions: the runner reverts any change it finds before the next session ([running](running.md#5-run)).
 
 ### Standard prompts
 
@@ -155,7 +155,7 @@ Each claim or item cites artifact IDs and, in Track A, store paths. Citation pre
 q_final = q × (0.75 + 0.25 × c)
 ```
 
-Missing citations give `c = 0`, which caps the question at 0.75.
+Missing citations give `c = 0`, which caps the question at 0.75. A question with no supporting artifacts, such as an answerable list whose correct answer is empty, has nothing to cite: `c` does not apply and the score is `q`.
 
 ### Matching
 
@@ -298,15 +298,49 @@ Each gold item carries `what`, `keywords`, `support` (the loop's evidence artifa
 
 `SIS_d = 100 × mean of the six`. An episode's SIS is the mean over its scored days. The final-day SIS is the SIS of its last scored day. Both are averaged over repeats, then over worlds.
 
+### Per-question grading
+
+`wcb/grade/answers.py` grades one answer at a time. Where these rules differ from the tables above, they describe the code.
+
+**Framing.** Answers often mention an old value next to the current one. A value after a history word in the same clause (`from`, `was`, `previously`, `formerly`, `originally`, `not`, `no`, `never`, `instead` and a few others) is *framed as history*; a value after `to`, `now`, `currently`, `new` or `->` is *framed as current*. A clause ends at `. , ; : ( ) [ ] ! ?`. The word lists are `HISTORY_MARKERS` and `CURRENT_MARKERS` in `wcb/util/text.py`.
+
+**Point facts.** Normalized equality with the gold value or an `accept` string always counts. Otherwise, by gold `kind`:
+
+- *entity*: among entities of the gold one's kind (person, org, project), the answer names exactly the gold entity. Names framed as history are skipped ("Cora Velez (took it over from Sam Reyes)" is fine), and so are worker pronouns (`me`, `you`, ...) right after a preposition ("owes it to me"). Other names count, so "Cora Velez or Sam Reyes" and "Cora Velez or me" score 0. So does a name shared by several entities of that kind unless the gold entity is one of them: "Cora Velez or Sam" hedges with a Sam even though "Sam" alone names no one.
+- *date*: every date in the answer is found (ISO, `m/d`, `Feb 5`, `5 February 2027`). Dates framed as history are dropped. If one date remains it is the answer; if several remain, the one framed as current is the answer when there is exactly one ("Moved on 1/11 to Feb 5"); otherwise the answer is ambiguous and scores 0 ("Feb 5 or Feb 12"). A date without a year takes the year that puts it between three months before and nine months after the checkpoint date, so "December 30" at a January checkpoint is the previous December.
+- *number*: the same, for numbers. Dates, numbers glued to letters (`Q3`, `FY2027`, `v2`) and, when another number remains, bare years are skipped. Among several different numbers, the one framed as current wins, else the one marked as money or with a `k`/`m` suffix ("$180k for 3 campuses").
+- *text*, for a project's `status` (`project_attr` with `attribute: status`): a closed vocabulary. The answer must name exactly the gold status among the six statuses and their synonyms (the status synonyms in [questions](questions.md#project_status)), not counting ones framed as history, and contain no hedge word. "In progress" and "Active (no longer paused)" are right; "active, paused, dormant, done or cancelled", "active or paused" and "not active" are wrong.
+- *text*, otherwise: names of people, orgs and projects are compared as entities, not words. The answer must contain every other content word of the gold value; may add at most half as many other content words or entities as the value has content words, not counting words and entities of the question; must not name, instead of an entity in the value, another entity of its kind; and must contain no hedge word (`or`, `either`, `maybe`, `perhaps`, `possibly`, `probably`, `unclear`, `unsure`) that the value lacks. Words framed as history do not count. Finally, for `project_attr` and `person_attr` questions, the answer must not state a *rival* value: the same attribute of another entity of the subject's kind, or the subject's earlier value. A rival is stated when every content word it does not share with the gold value or the question occurs in the answer, not framed as history. So for "Registrar, TU Saltmarren", "Registrar" and "Registrar at Saltmarren" are right; "Registrar at Kestrow", "Former registrar, now Provost", "Registrar or Provost" are wrong. For Sam Reyes's role "Solutions engineer", "Solutions engineer / Data engineer" (Sam Patel's role) is wrong and "Solutions engineer, not a data engineer" is right.
+
+**Temporal.** A `date` that matches the schema's `YYYY-MM-DD` pattern but is not a calendar date (`2027-02-30`) scores 0, with `details.problem` set.
+
+**Lists and changes.** A predicted item that repeats an earlier one (the same content words in `text` and `counterparty`, the same `due` and `date`) cannot match, however many gold items the judge would confirm it for, and still counts as predicted. Counterparty credit needs the predicted name to name exactly the gold counterparty, by the entity rule above: "Cora Velez" and "Cora (Tessellate)" earn it for Cora; "Sam", "Cora Velez, Ben Okoro" and a list of everyone do not. `direction` is not graded: it is not one of the three attributes, and for `i_owe` and `owed_to_me` questions the question fixes it.
+
+**Prioritization.** The top `k` items are matched one-to-one against the worker's loops (must-include and other worker-active ones); a repeated item cannot match. An item is a distractor only when the judge confirms it against some distractor and against none of the worker's loops; each such item counts, duplicates included. The factor is 1 − distractor items / *loop items*, where loop items are the top items the judge confirms against some gold loop (worker's or distractor). An item that describes no loop ("Catch up on email") counts neither way, so filler neither dilutes the penalty nor costs anything.
+
+**Status and brief.** The judge sees the `summary` followed by each claim's `text`. The heuristic judge's rules are in [judges](judge.md#rubric): a superseded value presented as current contradicts its item even when the current value is there too ("29 Jan or 5 Feb", "vendor evaluation or pilot planning"), and an answer whose content words and dates are mostly not in the question's gold `facts` covers nothing, so a generic list of every status, date, role and loop scores 0.
+
+**Citations.**
+
+- `c` = valid citations / distinct citations. A source cited twice in one answer counts once; `loops/x` and `./loops/x.md` are the same record.
+- An artifact ID is valid when it is in the question's `support`.
+- A store path (Track A) is valid when the record exists in the store the answers came from and its text names an artifact of the question's `support`: in its `evidence`, a `[src: ...]` note or a log line. This is how "judged against the record's content" is implemented. A record that cites none of them is invalid (`record_unsupported`).
+- `people/me` is never valid (`worker_record`). Every answer relates to the worker, so citing it is not specific evidence.
+- When the question's `support` is empty, `citation` is `null` and the score is the base score. This covers answerable empty lists, change questions with no changes, and priority questions with no worker loops.
+- Citations are checked against the question as a whole, not against each item or claim.
+
+**Grader errors.** If an answer passes validation but a grader raises a value error on it, the question scores 0, `details.grader_error` says why, and a line is added to `notes`. Errors raised by the judge itself, such as an unreachable model, still stop `wcb score`.
+
 ### Answers and aggregation
 
 - Agent answers come from `answers/<cp>.json` and are graded with store-path citations resolved against `snapshots/<cp date>/`. Oracle answers come from `answers/<cp>.oracle.json` and are resolved against the world's `gold/oracle-store/<cp date>/`. The context's entities and delivered artifacts come from `gold/state/<cp date>.json`. Questions come from `gold/questions/<cp>.json`, or are built from `questions.yaml` with a note when that file is missing.
-- With `options.max_days` in `run.json`, only checkpoints within the played days are scored.
+- With `options.max_days` in `run.json`, only checkpoints within the played days are scored. After `wcb run --resume`, `options` covers every invocation: `max_days` is the largest given (none if any invocation had none) and `skip_ingest` is true only if every invocation used it, so a resume that extends a run is scored in full ([running](running.md#6-resume)).
 - **Buckets.** A question's bucket is its type. Every unanswerable question goes to the bucket `unanswerable`, whatever its type.
 - **Checkpoint score** = the mean over the buckets present of each bucket's mean question score. **Episode score** = the mean over checkpoints. **World score** = the mean over repeats. **WCB** = 100 × the mean over worlds, so every world weighs the same even when repeat counts differ.
 - **Confidence interval.** A 95% percentile bootstrap over worlds: 2000 resamples of the world scores with replacement, `random.Random(20270101)`, taking the 2.5th and 97.5th percentiles of the resampled means. With one world the interval is degenerate `[score, score]`. Repeats are averaged before resampling and are not resampled.
+- **Oracle stores** hold only what the inputs delivered by their date show ([worlds](worlds.md#oracle-stores)): an alias appears once some input has used it, a first name is dropped as ambiguous only once a namesake is knowable, and record-ID suffixes follow reveal order. A person's `## Threads` uses the `person_brief` notion of a shared project (owner, sponsor or member of a live project, or a shared accepted active loop), and a project's `people` includes its sponsor, so an oracle answer finds the same shared projects as the gold.
 - **Synthesis score**: the same aggregation over oracle answers. These are scored when `run.json` has `oracle: true`, or, without that key, when any `*.oracle.json` file exists. Track B has none. **Ingestion cost** = Synthesis − WCB, at every level: world, episode, checkpoint and question type.
-- **Missing pieces.** A missing or unreadable answers file scores every question of its checkpoint 0. A missing episode directory scores all its answers 0 and has no SIS. A missing snapshot skips SIS for that day and makes store-path citations invalid. A `--skip-ingest` run (`options.skip_ingest`) reports only Synthesis: WCB, SIS and Ingestion cost are `null`. Every gap adds a line to `notes`.
+- **Missing pieces.** A missing or unreadable answers file scores every question of its checkpoint 0. A missing episode directory scores all its answers 0 and has no SIS. A missing snapshot skips SIS for that day and makes store-path citations invalid. An answer the grader cannot handle scores 0 (see Grader errors above). A `--skip-ingest` run (`options.skip_ingest`) reports only Synthesis: WCB, SIS and Ingestion cost are `null`. Every gap adds a line to `notes`.
 
 ### Efficiency
 

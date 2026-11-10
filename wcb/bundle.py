@@ -11,6 +11,7 @@ from __future__ import annotations
 import hashlib
 import io
 import json
+import os
 import tarfile
 from datetime import datetime, timezone
 from pathlib import Path
@@ -64,7 +65,7 @@ def bundle_run(
                 if keep:
                     files[f"{rel}/sessions/{sd.name}/{f.name}"] = f
         if snapshots and (ep / "snapshots").is_dir():
-            for f in sorted(p for p in (ep / "snapshots").rglob("*") if p.is_file()):
+            for f in _regular_files(ep / "snapshots"):
                 if ".git" in f.relative_to(ep / "snapshots").parts:
                     continue
                 files[f"{rel}/snapshots/{f.relative_to(ep / 'snapshots')}"] = f
@@ -94,6 +95,18 @@ def bundle_run(
         for name, p in sorted(files.items()):
             tar.add(p, arcname=f"{top}/{name}", recursive=False)
     return manifest
+
+
+def _regular_files(root: Path) -> list[Path]:
+    """Regular files under `root`, without following symbolic links (an agent's store may
+    contain links to files elsewhere on the machine)."""
+    out = []
+    for dirpath, _dirs, names in os.walk(root):  # does not descend into linked directories
+        for n in names:
+            p = Path(dirpath) / n
+            if not p.is_symlink() and p.is_file():
+                out.append(p)
+    return sorted(out)
 
 
 def _headline(report: dict) -> dict:

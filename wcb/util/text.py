@@ -56,3 +56,78 @@ def contains_phrase(text: str, phrase: str) -> bool:
     t = " " + " ".join(_WORD.findall(normalize(text))) + " "
     p = " ".join(_WORD.findall(normalize(phrase)))
     return bool(p) and f" {p} " in t
+
+
+# ---------------------------------------------------------------- framing of values in answers
+# Graders read free-text answers that often mention an old value next to the current one
+# ("5 Feb (moved from 29 Jan)", "Cora Velez, took it over from Sam Reyes"). These markers let
+# them tell a value framed as past or rejected from one stated as current. See
+# docs/scoring.md, "Implementation notes".
+
+#: A value after one of these words, in the same clause, is framed as past or rejected.
+HISTORY_MARKERS = frozenset(
+    """from was were previously formerly former originally earlier old instead rather not no
+    never nor neither isn wasn aren ex""".split()
+)
+#: A value after one of these words is framed as the current one ("moved to 5 Feb").
+CURRENT_MARKERS = frozenset({"to", "now", "currently", "new", "->", "=>"})
+#: A value followed closely by one of these words is framed as finished ("evaluation is done").
+FINISHED_MARKERS = frozenset(
+    "finished done complete completed over ended closed behind superseded obsolete".split()
+)
+#: Punctuation that ends a clause, and so the reach of a marker.
+CLAUSE_BREAKS = frozenset(".,;:()[]!?")
+#: How many words after a value a finished marker may come.
+FINISHED_WINDOW = 3
+
+_MARK_TOKEN = re.compile(r"[a-z0-9]+|->|=>|[.,;:()\[\]!?]")
+
+
+def normalize_marked(text: str | None) -> str:
+    """`normalize`, keeping arrows (`→` becomes `->`) so they can act as markers."""
+    s = str(text or "")
+    for arrow in ("→", "⟶", "➔", "⇒"):
+        s = s.replace(arrow, " -> ")
+    return normalize(s)
+
+
+def marked_tokens(norm: str) -> list[tuple[str, int, int]]:
+    """Words, arrows and clause punctuation of normalized text, with character spans."""
+    return [(m.group(), m.start(), m.end()) for m in _MARK_TOKEN.finditer(norm)]
+
+
+def framing(norm: str, start: int, end: int | None = None, *, finished: bool = False) -> str:
+    """How the mention `norm[start:end]` is framed: 'history', 'current' or ''.
+
+    The nearest marker before the mention in its clause decides: a `HISTORY_MARKERS` word
+    gives 'history' and a `CURRENT_MARKERS` word 'current'. With `finished`, a mention without
+    such a marker is also 'history' when a `FINISHED_MARKERS` word follows it within
+    `FINISHED_WINDOW` words in the same clause. `norm` must come from `normalize_marked`.
+    """
+    for tok, _, _ in reversed(marked_tokens(norm[:start])):
+        if tok in CLAUSE_BREAKS:
+            break
+        if tok in HISTORY_MARKERS:
+            return "history"
+        if tok in CURRENT_MARKERS:
+            return "current"
+    if finished and end is not None:
+        for i, (tok, _, _) in enumerate(marked_tokens(norm[end:])):
+            if tok in CLAUSE_BREAKS or i >= FINISHED_WINDOW:
+                break
+            if tok in FINISHED_MARKERS:
+                return "history"
+    return ""
+
+
+def phrase_spans(norm: str, phrase: str) -> list[tuple[int, int]]:
+    """Character spans of whole-word occurrences of `phrase` in normalized text `norm`.
+
+    Matches the same occurrences as `contains_phrase`: words in order, separated by anything
+    that is not a letter or digit.
+    """
+    words = _WORD.findall(normalize(phrase))
+    if not words:
+        return []
+    pat = r"(?<![a-z0-9])" + r"[^a-z0-9]+".join(map(re.escape, words)) + r"(?![a-z0-9])"
+    return [m.span() for m in re.finditer(pat, norm)]

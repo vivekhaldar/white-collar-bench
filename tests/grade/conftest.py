@@ -24,11 +24,24 @@ def ctx(mini_world: World) -> ScoreContext:
 
 @pytest.fixture
 def store(tmp_path: Path) -> Path:
-    """A tiny store with two records, for store-path citations."""
-    for rid in ("loops/send-volume-pricing", "people/cora-velez"):
+    """A tiny store for store-path citations.
+
+    `loops/send-volume-pricing` cites em-0004 as evidence, `people/cora-velez` cites em-0001
+    in a log line, and `people/me` cites both.
+    """
+    records = {
+        "loops/send-volume-pricing": "evidence:\n- source: em-0004\n  basis: received\n",
+        "people/cora-velez": "",
+        "people/me": "",
+    }
+    bodies = {
+        "people/cora-velez": "- 2027-01-04: Cora asked for the questionnaire [src: em-0001]\n",
+        "people/me": "- Pricing handed to Cora [src: em-0004, em-0001]\n",
+    }
+    for rid, front in records.items():
         p = tmp_path / "store" / f"{rid}.md"
         p.parent.mkdir(parents=True, exist_ok=True)
-        p.write_text(f"---\nid: {rid}\n---\n", encoding="utf-8")
+        p.write_text(f"---\nid: {rid}\n{front}---\n{bodies.get(rid, '')}", encoding="utf-8")
     (tmp_path / "store" / "sources").mkdir()
     (tmp_path / "store" / "sources" / "em-0004.md").write_text("archived\n", encoding="utf-8")
     return tmp_path / "store"

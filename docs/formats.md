@@ -85,7 +85,7 @@ One JSON object per line, sorted by `t`. Ties keep file order. Every event has:
 ```
 
 - `kind`: `person`, `org` or `project`.
-- `surface_forms`: every other way the entity is referred to in inputs. Graders resolve answers through the alias table built from `name` and `surface_forms` across all entities.
+- `surface_forms`: every other way the entity is referred to in inputs. Graders resolve answers through the alias table built from `name` and `surface_forms` across all entities. Surface forms have no reveal of their own: the oracle store lists a form as an alias from the date of the first delivered artifact whose text uses it, and never if no input does.
 - `attrs` are revealed together with the entity. Later changes use `fact.set`.
 - Attribute keys beginning with `_` are hidden metadata and never rendered or graded, for example `_archetype` or `_minor: true`. A person with `_minor: true` is a bit player, such as a newsletter sender. Records for minor people are neither required nor penalized.
 
@@ -251,7 +251,8 @@ Agent-visible. Generated from `artifact.emit` events.
 
 - `entities`, `loops` and `decisions` contain only knowable objects with knowable values.
 - A loop's `status` is one of `open`, `waiting`, `blocked`, `done`, `dropped`.
-- `events` lists every knowable non-artifact event, in `t` order. `subjects` lists the IDs the event touches.
+- `events` lists every knowable non-artifact event, in `t` order. `subjects` lists the IDs the event touches; for a commitment update these are the loop's parties both before and after it, so a hand-off touches the person who gave the loop up.
+- A loop's `evidence` lists every delivered artifact that revealed its creation or a later change, including a split or merge that moved it to another project. An entity's `evidence` likewise gains the artifacts of every `fact.set` on it and of a split or merge that changes it (a split's `into` projects get a `parent`).
 - `unknowable` lists events with `t` on or before the date that no delivered artifact reveals.
 - `delivered` lists all artifact IDs delivered up to the date; `secrets` collects their planted secrets.
 
@@ -279,7 +280,7 @@ Agent-visible. Generated from `artifact.emit` events.
 | `project_loops` | list | `project` | What loops are open on {project}? | Active accepted loops on the project |
 | `project_status` | status | `project` | What is the status of {project}? | Rubric (§3.3) |
 | `person_brief` | brief | `person` | What am I working on with {person}? | Rubric (§3.3) |
-| `project_changes` | change | `project`, `since` | What changed on {project} since {since}? | Knowable state-changing events on the project dated after `since` |
+| `project_changes` | change | `project`, `since` | What changed on {project} since the end of {since}? | Knowable state-changing events on the project dated after `since` (not on it) |
 | `decision_date` | temporal | `decision` | When did we decide to {what}? | Date of `decision.make` |
 | `event_date` | temporal | `event` | text required | Date of the event |
 | `focus_tomorrow` | priority | (none) | What should I focus on tomorrow? | Worker-owned active accepted loops that are overdue or due by the next business day |
@@ -327,8 +328,8 @@ Status and brief questions carry a checklist. Each item has:
 
 - `aspect`: what the item checks, for example `status`, `target_date`, `loop` or `shared_project`.
 - `weight`: 2 for critical items, 1 otherwise.
-- `keywords`: groups of alternatives. The heuristic judge marks the item *covered* when every group has at least one match in the answer.
-- `stale`: groups describing a superseded value. The heuristic judge marks the item *contradicted* when every stale group matches and the item is not covered.
+- `keywords`: groups of alternatives. The heuristic judge marks the item *covered* when every group has at least one match in the answer and the answer is about the question (most of its content words and dates occur in `facts`); see [judges](judge.md#rubric).
+- `stale`: groups describing a superseded value. The heuristic judge marks the item *contradicted* when every stale group matches where the answer presents it as current, not framed as history ("moved from ...", "... is finished"). If the keywords match too, an old date still contradicts ("29 Jan or 5 Feb"), and old words contradict when they are in the same sentence as the current value ("vendor evaluation or pilot planning"); see [judges](judge.md#rubric).
 - The LLM judge receives `text` plus `facts` and decides *covered*, *missing* or *contradicted*.
 
 Rubrics are derived mechanically from gold state: current status and phase, latest change, blockers, active loops with owners, next dated step, and for briefs the shared projects and loops in each direction. A spec may add items with `extra_rubric`.
@@ -354,7 +355,7 @@ A JSON object mapping question IDs to answers; see [`contract/answers/answers.sc
 | temporal | `date`, `text`, `cites` |
 | priority | `items: [{text, due, why, cites}]`, most important first |
 
-`direction` is `i_owe`, `owed_to_me` or `other`. `cites` holds artifact IDs and, in Track A, store record IDs such as `loops/send-capacity-model`. Answers that fail validation score 0.
+`direction` is `i_owe`, `owed_to_me` or `other`. Grading reads only the fields listed here; matching items to gold uses `text`, `counterparty` and `cites`, and extra fields are ignored. `cites` holds artifact IDs and, in Track A, store record IDs such as `loops/send-capacity-model`. A store record counts as a valid citation only when its text cites one of the question's supporting artifacts, and `people/me` never does ([scoring](scoring.md#per-question-grading)). Answers that fail validation score 0, and so does a temporal `date` that fits the pattern but is not a calendar date (`2027-02-30`).
 
 ## 5. Adapter: `adapter.yaml`
 
@@ -376,13 +377,14 @@ env_passthrough: [MY_PROVIDER_API_KEY]
 - `cmd` is a list (run directly) or a string (run with `/bin/sh -c`). A phase's `cmd` overrides the top-level one.
 - Placeholders: `{workspace}`, `{prompt}` (prompt file path), `{prompt_text}`, `{date}`, `{phase}` (`ingest` or `query`), `{track}` (`A` or `B`), `{session_dir}`, `{adapter_dir}` (directory holding the adapter file). In a string `cmd`, substituted values are shell-quoted with `shlex.quote`.
 - Environment: the runner passes `PATH`, `HOME`, `USER`, `LANG`, `LC_ALL`, `TERM`, `TMPDIR`, `SHELL`, the variables listed in `env_passthrough`, `env`, and `WCB_DATE`, `WCB_PHASE`, `WCB_TRACK`, `WCB_WORKSPACE`, `WCB_PROMPT_FILE`, `WCB_SESSION_DIR`. The directory of the Python interpreter running `wcb` is put first on `PATH`, so `python` in an adapter command resolves to the interpreter that has `wcb` installed.
+- Python modules: a command that runs `python -m` or `python -c` in the workspace without `-I` or `-P` loads with a warning, because Python would then import files the agent left at the store root (`json.py`, `wcb/`) in place of real modules. The examples use `python -I -m ...`.
 - Usage reporting: the agent may write `.wcb/usage.json` (`{"input_tokens", "output_tokens", "cost_usd", "tool_calls", "model"}`) in the workspace. The runner collects and removes it. Extra fields, such as `cache_read_input_tokens`, `turns` or `provider`, are kept as they are. `input_tokens` includes cached input tokens.
 
 ## 6. Run directory
 
 ```text
 runs/<name>/
-  run.json                       adapter, track, worlds (with each world's gold/BUILD.json), repeats, versions, timestamps
+  run.json                       adapter, track, worlds (with each world's gold/BUILD.json), repeats, versions, timestamps, options
   <world-id>/r<k>/
     workspace/                   final store
     snapshots/<date>/            store after each ingestion day (excluding .git, inbox/, .wcb/)
@@ -397,6 +399,7 @@ runs/<name>/
 Also:
 
 - `<world-id>/r<k>/state.json`: the runner's resume state, including the temporary workspace path.
+- `run.json` `options`: `max_days`, `skip_ingest`, `workspace_root` and `meter`. After `--resume` they describe every invocation together (`max_days`: the largest, or `null` if any invocation had none; `skip_ingest`: true only if every invocation skipped ingestion; `meter`: true if any metered). `resumed_at` lists each resume's time and `resumed_with` its `command_line` and own `options`.
 - `snapshots/<seed_end>/`: the initial store. In Track A this is the seed oracle store; in Track B it holds only `GOALS.md` until the seed session completes.
 - `sessions/seed.ingest/`: the Track B seed session, which ingests all seed inputs at once.
 - `answers/<cp>.raw.json`: the agent's file as written, kept when it is not valid JSON or fails the schema.
@@ -407,7 +410,7 @@ Also:
 |---|---|
 | `phase`, `date`, `checkpoint`, `store` | Which session this was; `store` is `agent` or `oracle` |
 | `cmd`, `exit_code`, `timed_out`, `wall_s`, `started_at`, `finished_at` | How the command ran |
-| `status` | `ok`, `failed`, `timeout` or `error` |
+| `status` | `ok`, `failed` (non-zero exit, or a store the runner could not read or copy), `timeout` or `error` (could not start) |
 | `usage` | The agent's `.wcb/usage.json`, if written |
 | `metered_usage` | With `wcb run --meter`: `calls`, `calls_without_usage`, `errors`, `input_tokens`, `output_tokens`, `cache_read_input_tokens`, `cache_creation_input_tokens` and `models`, measured by the proxy |
 | `timeout_s`, `world`, `repeat`, `track`, `notes` | Context |

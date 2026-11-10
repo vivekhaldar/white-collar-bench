@@ -19,6 +19,7 @@ from wcb.grade.answers import (
     store_record_id,
 )
 from wcb.grade.judge import HeuristicJudge
+from wcb.util.dates import normalize_date_text
 
 J = HeuristicJudge()
 
@@ -210,6 +211,30 @@ def test_point_entity_worker(ctx):
     q = q_point("entity", "Ada Quist", "p-ada-quist")
     assert score_question(q, point("You"), J, ctx).base == 1.0
     assert score_question(q, point("Ada Quist"), J, ctx).base == 1.0
+    assert score_question(q, point("You (Sam Reyes handed it to you)"), J, ctx).base == 0.0
+
+
+@pytest.mark.parametrize(
+    "value, score",
+    [
+        # A worker pronoun after a preposition is context, not a second owner.
+        ("Cora Velez (took it over from you)", 1.0),
+        ("Cora Velez, who now owes it to me", 1.0),
+        ("Cora Velez -- she owes it to you", 1.0),
+        # A name framed as history is not the answer.
+        ("Cora Velez (handed over from Sam Reyes)", 1.0),
+        ("Cora Velez, previously Sam Reyes", 1.0),
+        ("Not Sam Reyes: Cora Velez", 1.0),
+        # Hedges and stale answers still fail.
+        ("Cora Velez or me", 0.0),
+        ("Cora Velez and you", 0.0),
+        ("Not Cora Velez", 0.0),
+        ("Sam Reyes (previously Cora Velez)", 0.0),
+    ],
+)
+def test_point_entity_context_mentions(ctx, value, score):
+    q = q_point("entity", "Cora Velez", "p-cora-velez")
+    assert score_question(q, point(value), J, ctx).base == score
 
 
 @pytest.mark.parametrize(
@@ -225,11 +250,45 @@ def test_point_entity_worker(ctx):
         ("2027-01-29", 0.0),
         ("5 Feb 2028", 0.0),
         ("early February", 0.0),
+        # The superseded date as history, in any order or format, does not decide.
+        ("February 5 (moved from January 29)", 1.0),
+        ("5 Feb (was 29 Jan)", 1.0),
+        ("2027-02-05 (moved from 2027-01-29)", 1.0),
+        ("Moved from Jan 29 to Feb 5", 1.0),
+        ("January 29 -> February 5", 1.0),
+        ("Jan 29 → Feb 5", 1.0),
+        ("Moved on 1/11 to Feb 5", 1.0),
+        ("Feb 5, not Jan 29", 1.0),
+        ("Feb 5 (moved from March 1)", 1.0),
+        ("29 Jan (moved from 5 Feb)", 0.0),
+        # Two dates with nothing saying which is current: ambiguous.
+        ("Feb 5 or Feb 12", 0.0),
+        ("Jan 29, Feb 5", 0.0),
     ],
 )
 def test_point_date(ctx, value, score):
     q = q_point("date", "2027-02-05")
     assert score_question(q, point(value), J, ctx).base == score
+
+
+@pytest.mark.parametrize(
+    "value, today, expected",
+    [
+        ("December 30", "2027-01-12", "2026-12-30"),  # just before a January checkpoint
+        ("Jan 15", "2026-12-20", "2027-01-15"),  # just after a December checkpoint
+        ("July 15", "2027-01-12", "2027-07-15"),  # months ahead stays in the year
+        ("5 Feb", "2027-01-12", "2027-02-05"),
+        ("Dec 30, 2027", "2027-01-12", "2027-12-30"),  # an explicit year wins
+        ("Feb 30", "2027-01-12", None),
+    ],
+)
+def test_normalize_date_year_inference(value, today, expected):
+    assert normalize_date_text(value, today=today) == expected
+
+
+def test_normalize_date_default_year_still_works():
+    assert normalize_date_text("Friday 8 January", default_year=2027) == "2027-01-08"
+    assert normalize_date_text("8 January") is None
 
 
 @pytest.mark.parametrize(
@@ -243,6 +302,16 @@ def test_point_date(ctx, value, score):
         ("150k", 0.0),
         ("1.8m", 0.0),
         ("unknown", 0.0),
+        # Labels, years, dates and history do not decide.
+        ("Q3 budget: $180k", 1.0),
+        ("FY2027 budget is $180,000", 1.0),
+        ("2027 budget: $180,000", 1.0),
+        ("$180k as of 2027-01-12", 1.0),
+        ("$180k (up from $150k)", 1.0),
+        ("$150k, now $180k", 1.0),
+        ("$180k for 3 campuses", 1.0),
+        ("$150k (was $180k)", 0.0),
+        ("$150k or $180k", 0.0),
     ],
 )
 def test_point_number(ctx, value, score):
@@ -273,15 +342,77 @@ def test_parse_number(raw, expected):
     [
         ("Solutions engineer", 1.0),
         ("solutions ENGINEER", 1.0),
-        ("Solutions engineer at Tessellate", 1.0),  # all gold tokens present
+        ("Solutions engineer at Tessellate", 1.0),  # an org next to the value is fine
+        ("Sam Reyes is a solutions engineer", 1.0),  # the question's own words are fine
+        ("Senior solutions engineer", 1.0),  # one extra word for a two-word value
         ("Engineer", 0.0),
         ("Account executive", 0.0),
         ("SE", 1.0),  # accept alternative
+        # Hedges, negations and lists of options are not the value.
+        ("Not a solutions engineer; finance systems lead", 0.0),
+        ("Not a solutions engineer", 0.0),
+        ("Solutions engineer or account executive", 0.0),
+        ("Maybe a solutions engineer", 0.0),
+        ("Solutions engineer, sales engineer, account executive, finance lead", 0.0),
+        # History framing does not count against the value.
+        ("Solutions engineer (previously account executive)", 1.0),
+        ("Account executive (formerly solutions engineer)", 0.0),
     ],
 )
 def test_point_text(ctx, value, score):
-    q = q_point("text", "Solutions engineer", accept=["SE"])
+    q = {**q_point("text", "Solutions engineer", accept=["SE"]), "text": "What is Sam Reyes's role?"}
     assert score_question(q, point(value), J, ctx).base == score
+
+
+@pytest.mark.parametrize(
+    "value, score",
+    [
+        ("Account executive, Tessellate Analytics", 1.0),
+        ("Account executive", 1.0),  # the org suffix of the gold value is optional
+        ("Account executive at Tessellate", 1.0),  # any alias of the same org
+        ("Account executive at Larchmont Freight", 0.0),  # a different org is an extra
+        ("Former account executive, now CFO", 0.0),
+    ],
+)
+def test_point_text_names_are_entities(ctx, value, score):
+    q = q_point("text", "Account executive, Tessellate Analytics")
+    q["text"] = "What is Cora Velez's role?"
+    assert score_question(q, point(value), J, ctx).base == score
+
+
+def test_point_text_value_that_is_a_name(ctx):
+    q = q_point("text", "cora.velez@tessellate.example")
+    q["text"] = "What is Cora Velez's email address?"
+    assert score_question(q, point("cora.velez@tessellate.example"), J, ctx).base == 1.0
+    assert score_question(q, point("Email: cora.velez@tessellate.example"), J, ctx).base == 1.0
+    assert score_question(q, point("ben.okoro@larchmont.example"), J, ctx).base == 0.0
+
+
+def q_status_point(value):
+    q = q_point("text", value)
+    q["template"] = "project_attr"
+    q["params"] = {"project": "pr-quillon", "attribute": "status"}
+    q["text"] = "What is the current status of Quillon: active, paused, dormant, done or cancelled?"
+    return q
+
+
+@pytest.mark.parametrize(
+    "value, score",
+    [
+        ("active", 1.0),
+        ("Active", 1.0),
+        ("In progress", 1.0),  # a synonym
+        ("Active, on track", 1.0),  # two synonyms of the same status
+        ("Active (no longer paused)", 1.0),  # the old status as history
+        ("active, paused, dormant, done or cancelled", 0.0),  # every option
+        ("active or paused", 0.0),
+        ("not active", 0.0),
+        ("inactive", 0.0),  # a dormant synonym, not 'active'
+        ("paused", 0.0),
+    ],
+)
+def test_point_status_is_a_closed_vocabulary(ctx, value, score):
+    assert score_question(q_status_point("active"), point(value), J, ctx).base == score
 
 
 # ---------------------------------------------------------------- abstention and validity
@@ -509,6 +640,23 @@ RUBRIC = [
     },
 ]
 
+#: Gold facts in the shape `project_status` writes them (the heuristic judge's focus check
+#: reads them).
+FACTS = {
+    "project": "pr-quillon",
+    "name": "Quillon",
+    "attrs": {
+        "status": "active",
+        "target_date": "2027-02-05",
+        "summary": "Decision targeted for 5 February; pilot widened to Reno and Sparks depots.",
+    },
+    "superseded": {"target_date": "2027-01-29"},
+    "active_loops": [
+        {"what": "Send Ada Tessellate volume pricing", "owner": "Cora Velez", "status": "open"}
+    ],
+    "recent_events": [{"date": "2027-01-12", "summary": "Reno-only pilot reversed at steering"}],
+}
+
 
 def q_status(rubric=RUBRIC, qtype="status"):
     return {
@@ -518,7 +666,7 @@ def q_status(rubric=RUBRIC, qtype="status"):
         "answerable": True,
         "challenges": ["supersession"],
         "support": ["nt-0002", "mn-0001", "em-0004"],
-        "gold": {"rubric": rubric, "facts": {"target_date": "2027-02-05"}},
+        "gold": {"rubric": rubric, "facts": FACTS},
     }
 
 
@@ -707,6 +855,42 @@ def test_temporal_bad_date_format_is_invalid(ctx):
     assert not score_question(q_temporal(), ans, J, ctx).valid
 
 
+@pytest.mark.parametrize("got", ["2027-02-30", "2027-13-01", "2027-00-10"])
+def test_temporal_impossible_date_scores_zero(ctx, got):
+    # These match the schema's pattern; they used to raise ValueError and abort scoring.
+    ans = {"type": "temporal", "abstain": False, "date": got, "cites": ["mn-0001"]}
+    res = score_question(q_temporal(), ans, J, ctx)
+    assert res.valid and res.base == 0.0 and res.score == 0.0
+    assert res.details["problem"] == "not a calendar date"
+
+
+def test_grader_error_scores_zero_instead_of_raising(ctx, monkeypatch):
+    import wcb.grade.answers as answers_mod
+
+    def broken(q, answer, judge, ctx):
+        raise ValueError("boom")
+
+    monkeypatch.setitem(answers_mod.GRADERS, "temporal", broken)
+    ans = {"type": "temporal", "abstain": False, "date": "2027-01-12", "cites": ["mn-0001"]}
+    res = score_question(q_temporal(), ans, J, ctx)
+    assert res.score == 0.0 and res.details == {"grader_error": "ValueError: boom"}
+
+
+def test_judge_errors_still_propagate(ctx):
+    class Failing:
+        name = "failing"
+
+        def same_item(self, *_, **__):
+            raise ValueError("judge down")
+
+        def rubric(self, *_):
+            raise ValueError("judge down")
+
+    ans = listing({"text": "Return the security questionnaire", "counterparty": "Cora"})
+    with pytest.raises(ValueError, match="judge down"):
+        score_question(q_list([C001]), ans, Failing(), ctx)
+
+
 # ---------------------------------------------------------------- priority
 C003_DUE = {**C003}
 C006 = loop_item(
@@ -816,6 +1000,36 @@ def test_priority_empty_answer(ctx):
     assert score_question(q_priority(must=(), active=(C006,)), prio(), J, ctx).base == 1.0
 
 
+def test_priority_extra_paraphrase_is_not_pushed_onto_a_distractor(ctx):
+    # A closed loop whose description overlaps the open one: the paraphrase confirms against
+    # both. Maximum matching used to give the open loop to one item and the closed loop to the
+    # other, penalizing a list that names only open worker loops.
+    closed = loop_item(
+        "c-009",
+        "Return the Tessellate security questionnaire draft",
+        "p-cora-velez",
+        status="done",
+        keywords=["security questionnaire", "questionnaire"],
+    )
+    q = q_priority(must=(C001,), active=(C001,), distractors=(closed,))
+    ans = prio("Return the Tessellate security questionnaire", "Tessellate questionnaire return")
+    res = score_question(q, ans, J, ctx)
+    assert res.details["penalty"] == 0.0 and res.base == 1.0
+
+
+def test_priority_each_distractor_item_counts(ctx):
+    ans = prio(
+        "Return the security questionnaire",
+        "Review the ingestion design doc",
+        "Approve Ben's GL sandbox access request",
+        "Approve the GL sandbox access request for Ben",
+    )
+    res = score_question(q_priority(), ans, J, ctx)
+    assert res.details["penalty"] == pytest.approx(2 / 4)
+    roles = sorted(m["role"] for m in res.details["matches"])
+    assert roles == ["distractor", "distractor", "must", "must"]
+
+
 def test_priority_empty_must_with_distractor(ctx):
     res = score_question(
         q_priority(must=(), active=(C006,)), prio("Chase Tessellate volume pricing"), J, ctx
@@ -871,8 +1085,8 @@ def test_citation_reasons(ctx):
     assert [i["why"] for i in d["invalid"]] == ["not_delivered", "unrecognized", "unrecognized"]
 
 
-def test_store_path_citations(ctx, store):
-    sctx = ScoreContext(
+def store_ctx(ctx, store):
+    return ScoreContext(
         alias_table=ctx.alias_table,
         entities=ctx.entities,
         worker=ctx.worker,
@@ -880,20 +1094,79 @@ def test_store_path_citations(ctx, store):
         delivered=ctx.delivered,
         store_root=store,
     )
+
+
+def test_store_path_citations(ctx, store):
+    sctx = store_ctx(ctx, store)
     cites = [
         "loops/send-volume-pricing",
-        "loops/send-volume-pricing.md",
-        "./loops/send-volume-pricing.md",
+        "./loops/send-volume-pricing.md",  # the same record again: counts once
         "[[people/cora-velez]]",
         "loops/missing",
         "sources/em-0004.md",
     ]
-    c, d = citation_precision({"cites": cites}, [], sctx)
-    assert d["valid"] == 4 and c == pytest.approx(4 / 6)
+    c, d = citation_precision({"cites": cites}, ["em-0004", "em-0001"], sctx)
+    assert d["total"] == 4 and d["valid"] == 2 and c == pytest.approx(2 / 4)
     assert {i["why"] for i in d["invalid"]} == {"no_such_record", "unrecognized"}
     # Without a store root, store paths are not checkable and do not count as valid.
-    c2, _ = citation_precision({"cites": cites[:1]}, [], ctx)
+    c2, _ = citation_precision({"cites": cites[:1]}, ["em-0004"], ctx)
     assert c2 == 0.0
+
+
+def test_store_path_citation_must_carry_the_evidence(ctx, store):
+    # A record counts only when its text cites an artifact of the question's support.
+    sctx = store_ctx(ctx, store)
+    c, d = citation_precision({"cites": ["people/cora-velez"]}, ["em-0004"], sctx)
+    assert c == 0.0 and d["invalid"] == [{"cite": "people/cora-velez", "why": "record_unsupported"}]
+    c, _ = citation_precision({"cites": ["loops/send-volume-pricing"]}, ["em-0004"], sctx)
+    assert c == 1.0
+
+
+def test_worker_record_is_never_a_valid_citation(ctx, store):
+    # people/me exists in every Track A store and logs nearly everything; citing it on every
+    # answer must not earn the citation factor.
+    sctx = store_ctx(ctx, store)
+    q = q_point("entity", "Cora Velez", "p-cora-velez", support=("em-0004",))
+    res = score_question(q, point("Cora Velez", cites=("people/me",)), J, sctx)
+    assert res.citation == 0.0 and res.score == pytest.approx(0.75)
+    assert res.details["citations"]["invalid"] == [{"cite": "people/me", "why": "worker_record"}]
+
+
+def test_repeated_cites_count_once(ctx):
+    q = q_point("entity", "Cora Velez", "p-cora-velez", support=("em-0004",))
+    once = score_question(q, point("Cora Velez", cites=("em-0001", "em-0004")), J, ctx)
+    many = score_question(
+        q, point("Cora Velez", cites=("em-0001", "em-0004", "em-0004", "em-0004")), J, ctx
+    )
+    assert once.citation == many.citation == 0.5
+
+
+@pytest.mark.parametrize(
+    "q, answer",
+    [
+        (q_list([], support=()), listing()),
+        (
+            {**q_change([]), "support": []},
+            {"type": "change", "abstain": False, "items": []},
+        ),
+    ],
+)
+def test_correct_empty_answer_with_nothing_to_cite_scores_one(ctx, q, answer):
+    # An empty gold list has empty support, so no citation could be valid; the correct empty
+    # answer must not be capped at 0.75 (abstaining on an unanswerable question scores 1).
+    res = score_question(q, answer, J, ctx)
+    assert res.base == 1.0 and res.citation is None and res.score == 1.0
+
+
+def test_empty_support_still_needs_a_correct_answer(ctx):
+    res = score_question(q_list([], support=()), listing({"text": "Anything"}), J, ctx)
+    assert res.score == 0.0 and res.citation is None
+
+
+def test_priority_with_nothing_due_is_not_capped(ctx):
+    q = {**q_priority(must=(), active=()), "support": []}
+    res = score_question(q, prio(), J, ctx)
+    assert res.score == 1.0 and res.citation is None
 
 
 def test_wrong_answer_scores_zero_even_with_citations(ctx):
