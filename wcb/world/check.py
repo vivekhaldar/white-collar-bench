@@ -856,6 +856,12 @@ def _check_project_summaries(world: World, ix: _Index, issues: list[Issue]) -> N
     fact as current. Replays project attributes in world order (ignoring knowability).
     """
     attrs: dict[str, dict[str, Any]] = {}
+    # A summary rewritten at the same instant as the date change is not stale.
+    same_time_summary = {
+        (str(e.get("subject")), str(e.get("t")))
+        for e in world.events
+        if e.get("type") == "fact.set" and e.get("attribute") == "summary"
+    }
     for e in world.events:
         etype = e.get("type")
         if etype == "entity.create" and e.get("kind") == "project":
@@ -870,6 +876,7 @@ def _check_project_summaries(world: World, ix: _Index, issues: list[Issue]) -> N
                 or not _is_date(old)
                 or old == e.get("value")
                 or not isinstance(summary, str)
+                or (str(e["subject"]), str(e.get("t"))) in same_time_summary
             ):
                 continue
             low = normalize(summary)

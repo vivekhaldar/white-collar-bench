@@ -12,9 +12,19 @@ def test_mini_world_has_no_errors(mini_world_dir):
     assert [i.format() for i in issues if i.severity == "error"] == []
 
 
-def test_mini_world_warns_about_stale_summary(mini_world_dir):
-    # Quillon's target date moves on 11 Jan but its summary still says 29 January until 12 Jan.
-    warnings = [i for i in check_world(mini_world_dir) if i.severity == "warning"]
+def test_mini_world_has_no_warnings(mini_world_dir):
+    assert [i for i in check_world(mini_world_dir) if i.severity == "warning"] == []
+
+
+def test_stale_summary_warns(editor):
+    # Without the same-time summary rewrite (e-0024), Quillon's summary still says 29 January
+    # after the target date moves on 11 Jan.
+    events = [e for e in editor.events() if e.get("id") != "e-0024"]
+    for e in events:
+        if e.get("artifact") == "nt-0002":
+            e["reveals"] = [r for r in e["reveals"] if r != "e-0024"]
+    editor.save(events)
+    warnings = [i for i in check_world(editor.root) if i.severity == "warning"]
     assert any(i.code == "summary.stale" and i.path == "e-0020" for i in warnings)
 
 
