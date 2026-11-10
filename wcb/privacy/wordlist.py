@@ -552,6 +552,7 @@ TECH_TERMS = _words(
     dockerfile gitignore localhost repo repos monorepo frontmatter wikilink wikilinks backlink
     backlinks kanban scrum sprint epic story
     openid idp idps authenticator gpus wcag vpat stem x-request-id request-id mfa totp
+    helvetica arial unsubscribe simplenamespace alliance elevated tech nope
 
     vcalendar vevent vtimezone valarm vtodo vjournal vfreebusy dtstart dtend dtstamp prodid uid
     rrule exdate rdate tzid tzname tzoffsetfrom tzoffsetto partstat cutype mailto attendee
