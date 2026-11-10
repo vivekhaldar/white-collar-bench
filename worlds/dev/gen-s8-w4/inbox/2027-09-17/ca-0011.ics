@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iselmoor//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:a141c109ee361c2e@iselmoor.example
+DTSTAMP:20270918T002000Z
+DTSTART:20270923T193000Z
+DTEND:20270923T200000Z
+SUMMARY:Rosia intro call
+ORGANIZER;CN=Adwoa Kocak:mailto:adwoa.kocak@iselmoor.example
+ATTENDEE;CN=Amira Baek;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:amira.baek@iselmoor.example
+ATTENDEE;CN=Ottavio Bakker;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ottavio.bakker@ivycrest.iselmoor.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.iselmoor.example/j/1705662001?pwd=eXJx5fbr\nPasscode: 332458
+LOCATION:https://meet.iselmoor.example/j/1705662001?pwd=eXJx5fbr
+END:VEVENT
+END:VCALENDAR

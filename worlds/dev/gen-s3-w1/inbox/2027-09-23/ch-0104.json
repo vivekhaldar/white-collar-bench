@@ -1,0 +1,49 @@
+{
+ "workspace": "birchmere",
+ "channel": "#okapi-core",
+ "kind": "channel",
+ "participants": [
+  "Katarzyna Dang",
+  "Alasdair Kaya",
+  "Bisi",
+  "Eleni Fontaine",
+  "Dina Laurent",
+  "Penelope Romano",
+  "Nurlan Jansen",
+  "Giorgi Villanueva",
+  "Tori"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-22T10:42:24-05:00",
+   "user": "Katarzyna Dang",
+   "handle": "@katarzyna",
+   "text": "catching people up since a few of us are out today"
+  },
+  {
+   "ts": "2027-09-22T10:43:00-05:00",
+   "user": "Katarzyna Dang",
+   "handle": "@katarzyna",
+   "text": "alasdair will review bisi's okapi data dictionary, as discussed"
+  },
+  {
+   "ts": "2027-09-22T10:44:10-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "sure, can do"
+  },
+  {
+   "ts": "2027-09-22T10:44:51-05:00",
+   "user": "Katarzyna Dang",
+   "handle": "@katarzyna",
+   "text": "fyi alasdair sent bisi the okapi order set review"
+  },
+  {
+   "ts": "2027-09-22T10:46:15-05:00",
+   "user": "Tori",
+   "handle": "@victoria",
+   "text": "noted",
+   "thread_of": 3
+  }
+ ]
+}

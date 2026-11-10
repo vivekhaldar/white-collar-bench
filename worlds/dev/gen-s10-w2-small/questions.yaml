@@ -1,0 +1,561 @@
+- id: q-001
+  checkpoint: cp1
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - scattered_evidence
+  - worker_directive
+- id: q-002
+  checkpoint: cp1
+  template: project_status
+  params:
+    project: pr-nettle
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - scattered_evidence
+  - worker_directive
+- id: q-003
+  checkpoint: cp1
+  template: project_changes
+  params:
+    project: pr-translation-help-tool-selection
+    since: '2027-08-27'
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+- id: q-004
+  checkpoint: cp1
+  template: i_owe
+  params:
+    person: p-akosua-bergstrom
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - name_collision
+- id: q-005
+  checkpoint: cp1
+  template: owed_to_me
+  params:
+    person: p-douglas-grigoryan
+    name_form: Douglas
+  challenges:
+  - alias
+- id: q-006
+  checkpoint: cp1
+  template: loop_owner
+  params:
+    commitment: c-018
+  challenges:
+  - duplicate_signal
+- id: q-007
+  checkpoint: cp1
+  template: loop_due
+  params:
+    commitment: c-038
+  challenges:
+  - scattered_evidence
+- id: q-008
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-translation-help-tool-selection
+    attribute: sponsor
+  challenges: []
+- id: q-009
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-akosua-bergstrom
+    attribute: relationship
+    name_form: our programs manager
+  challenges:
+  - alias
+  - name_collision
+- id: q-010
+  checkpoint: cp1
+  template: project_loops
+  params:
+    project: pr-pipit
+  challenges: []
+- id: q-011
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-amani-xu
+    attribute: phone
+  challenges:
+  - name_collision
+  - unobservable
+- id: q-012
+  checkpoint: cp2
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - unobservable
+- id: q-013
+  checkpoint: cp2
+  template: project_status
+  params:
+    project: pr-nettle
+  challenges:
+  - supersession
+  - unobservable
+- id: q-014
+  checkpoint: cp2
+  template: project_changes
+  params:
+    project: pr-holworth-duplicate-client-records-discovery
+    since: '2027-08-31'
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-015
+  checkpoint: cp2
+  template: i_owe
+  params:
+    person: p-paula-dubois
+    name_form: Paula
+  challenges:
+  - alias
+- id: q-016
+  checkpoint: cp2
+  template: owed_to_me
+  params:
+    person: p-akosua-carmichael
+  challenges:
+  - duplicate_signal
+  - name_collision
+- id: q-017
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-holworth-duplicate-client-records-discovery
+    attribute: phase
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-018
+  checkpoint: cp2
+  template: person_attr
+  params:
+    person: p-marko-chaiyaporn
+    attribute: org
+    name_form: Marko
+  challenges:
+  - alias
+  - new_entity
+- id: q-019
+  checkpoint: cp2
+  template: project_loops
+  params:
+    project: pr-translation-help-tool-selection
+    name_form: THTS selection
+  challenges:
+  - alias
+- id: q-020
+  checkpoint: cp2
+  template: person_brief
+  params:
+    person: p-sigrid-asante
+    name_form: Sigrid
+  challenges:
+  - alias
+- id: q-021
+  checkpoint: cp2
+  template: decision_date
+  params:
+    decision: d-001
+  challenges: []
+- id: q-022
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-nettle
+    attribute: budget
+  text: What is the budget for Nettle?
+  challenges:
+  - unobservable
+- id: q-023
+  checkpoint: cp3
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - unobservable
+  - worker_directive
+- id: q-024
+  checkpoint: cp3
+  template: project_status
+  params:
+    project: pr-nettle
+  challenges:
+  - duplicate_signal
+  - supersession
+- id: q-025
+  checkpoint: cp3
+  template: project_changes
+  params:
+    project: pr-nettle
+    since: '2027-09-02'
+  challenges: []
+- id: q-026
+  checkpoint: cp3
+  template: i_owe
+  params:
+    person: p-douglas-grigoryan
+    name_form: Doug
+  challenges:
+  - alias
+  - duplicate_signal
+- id: q-027
+  checkpoint: cp3
+  template: owed_to_me
+  params:
+    person: p-gaurav-laine
+  challenges:
+  - transfer
+- id: q-028
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-translation-help-tool-selection
+    attribute: phase
+  challenges: []
+- id: q-029
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-holworth-pantry-inventory-discovery
+    name_form: the pantry inventory work
+  challenges:
+  - alias
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+- id: q-030
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-nare-dempsey
+  challenges:
+  - duplicate_signal
+  - endorsement
+- id: q-031
+  checkpoint: cp3
+  template: event_date
+  params:
+    event: e-0161
+  text: When was "Set up Nettle test tenant login for Aoife" completed?
+  challenges:
+  - silent_closure
+- id: q-032
+  checkpoint: cp3
+  template: loop_owner
+  params:
+    commitment: c-052
+  challenges:
+  - transfer
+- id: q-033
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-holworth-pantry-inventory-discovery
+    attribute: budget_ceiling
+  text: What is the budget ceiling for Holworth Pantry Inventory Discovery?
+  challenges:
+  - unobservable
+- id: q-034
+  checkpoint: cp4
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - reversal
+  - scattered_evidence
+  - unobservable
+- id: q-035
+  checkpoint: cp4
+  template: project_status
+  params:
+    project: pr-nettle
+    name_form: the Ormton pilot
+  challenges:
+  - alias
+  - implied_commitment
+  - new_entity
+  - reversal
+  - supersession
+- id: q-036
+  checkpoint: cp4
+  template: project_changes
+  params:
+    project: pr-pipit
+    since: '2027-09-03'
+  challenges:
+  - endorsement
+- id: q-037
+  checkpoint: cp4
+  template: i_owe
+  params:
+    person: p-bao-tembo
+  challenges:
+  - unobservable
+- id: q-038
+  checkpoint: cp4
+  template: owed_to_me
+  params:
+    person: p-bruna-thapa
+  challenges: []
+- id: q-039
+  checkpoint: cp4
+  template: person_attr
+  params:
+    person: p-kavya-agyeman
+    attribute: org
+  challenges:
+  - new_entity
+- id: q-040
+  checkpoint: cp4
+  template: person_brief
+  params:
+    person: p-catrin-dang
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-041
+  checkpoint: cp4
+  template: event_date
+  params:
+    event: e-0198
+  text: When did the target date for Nettle move to 1 November?
+  challenges:
+  - supersession
+- id: q-042
+  checkpoint: cp4
+  template: loop_due
+  params:
+    commitment: c-039
+  challenges:
+  - endorsement
+  - worker_directive
+- id: q-043
+  checkpoint: cp4
+  template: project_attr
+  params:
+    project: pr-nettle
+    attribute: sponsor
+    name_form: the Ormton pilot
+  challenges:
+  - alias
+- id: q-044
+  checkpoint: cp4
+  template: person_attr
+  params:
+    person: p-akosua-bergstrom
+    attribute: office
+  challenges:
+  - name_collision
+  - unobservable
+- id: q-045
+  checkpoint: cp5
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - supersession
+  - unobservable
+- id: q-046
+  checkpoint: cp5
+  template: project_status
+  params:
+    project: pr-nettle
+  challenges:
+  - correction
+  - implied_commitment
+  - supersession
+  - unobservable
+- id: q-047
+  checkpoint: cp5
+  template: project_changes
+  params:
+    project: pr-holworth-pantry-inventory-discovery
+    since: '2027-09-07'
+  challenges:
+  - batch_catchup
+  - unobservable
+- id: q-048
+  checkpoint: cp5
+  template: i_owe
+  params:
+    person: p-bisi-volkov
+    name_form: Bisi
+  challenges:
+  - alias
+  - implied_commitment
+- id: q-049
+  checkpoint: cp5
+  template: owed_to_me
+  params:
+    person: p-sipho-papadopoulos
+  challenges: []
+- id: q-050
+  checkpoint: cp5
+  template: person_brief
+  params:
+    person: p-bisi-volkov
+    name_form: Bisi
+  challenges:
+  - alias
+  - implied_commitment
+- id: q-051
+  checkpoint: cp5
+  template: event_date
+  params:
+    event: e-0190
+  text: When was "Set up Noris sandbox access for Aoife" completed?
+  challenges: []
+- id: q-052
+  checkpoint: cp5
+  template: loop_owner
+  params:
+    commitment: c-003
+  challenges:
+  - transfer
+- id: q-053
+  checkpoint: cp5
+  template: loop_due
+  params:
+    commitment: c-063
+  challenges:
+  - scattered_evidence
+- id: q-054
+  checkpoint: cp5
+  template: person_attr
+  params:
+    person: p-chiamaka-shami
+    attribute: phone
+  challenges:
+  - unobservable
+- id: q-055
+  checkpoint: cp5
+  template: event_date
+  params:
+    event: e-0159
+  text: When was "Walk Douglas through the Pipit one-page summary" completed?
+  challenges:
+  - unobservable
+  - weak_evidence
+- id: q-056
+  checkpoint: cp6
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - supersession
+  - unobservable
+- id: q-057
+  checkpoint: cp6
+  template: project_status
+  params:
+    project: pr-nettle
+  challenges:
+  - correction
+  - implied_commitment
+  - supersession
+  - unobservable
+- id: q-058
+  checkpoint: cp6
+  template: project_changes
+  params:
+    project: pr-kelholm-referral-matching-idea
+    since: '2027-09-09'
+  challenges:
+  - duplicate_signal
+  - restructuring
+  - worker_directive
+- id: q-059
+  checkpoint: cp6
+  template: i_owe
+  params:
+    person: p-sipho-papadopoulos
+  challenges: []
+- id: q-060
+  checkpoint: cp6
+  template: owed_to_me
+  params:
+    person: p-akosua-bergstrom
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - name_collision
+- id: q-061
+  checkpoint: cp6
+  template: person_brief
+  params:
+    person: p-sipho-papadopoulos
+  challenges: []
+- id: q-062
+  checkpoint: cp6
+  template: decision_date
+  params:
+    decision: d-004
+  challenges: []
+- id: q-063
+  checkpoint: cp6
+  template: event_date
+  params:
+    event: e-0168
+  text: When was "Send Gaurav the Nettle status slide" completed?
+  challenges:
+  - duplicate_signal
+- id: q-064
+  checkpoint: cp6
+  template: loop_due
+  params:
+    commitment: c-074
+  challenges:
+  - endorsement
+  - worker_directive
+- id: q-065
+  checkpoint: cp6
+  template: project_attr
+  params:
+    project: pr-holworth-pantry-inventory-discovery
+    attribute: blocker
+  challenges: []
+- id: q-066
+  checkpoint: cp6
+  template: person_attr
+  params:
+    person: p-sigrid-asante
+    attribute: phone
+    name_form: Sigrid
+  challenges:
+  - alias
+  - unobservable

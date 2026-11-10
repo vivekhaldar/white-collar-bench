@@ -3,22 +3,22 @@
  "channel": "#ai-in-public-service-core",
  "kind": "channel",
  "participants": [
-  "Nomvula Moreira",
-  "Dina Zimmermann",
+  "Nomvula Jansen",
+  "Dina Ricci",
   "Imani",
-  "Tendai Vu",
-  "Catrin Petrov"
+  "Tendai Santos",
+  "Catrin Kuznetsova"
  ],
  "messages": [
   {
    "ts": "2027-03-06T14:52:00-07:00",
-   "user": "Nomvula Moreira",
+   "user": "Nomvula Jansen",
    "handle": "@nomvula",
    "text": "FYI Imani will share the AI in public service workshop session outline with Dina."
   },
   {
    "ts": "2027-03-06T14:53:28-07:00",
-   "user": "Catrin Petrov",
+   "user": "Catrin Kuznetsova",
    "handle": "@catrin",
    "text": "good to know",
    "thread_of": 0

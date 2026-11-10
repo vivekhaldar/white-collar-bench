@@ -1,0 +1,47 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-batbayar",
+ "kind": "dm",
+ "participants": [
+  "Batbayar Galbraith",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-08T13:17:09-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "hey :)"
+  },
+  {
+   "ts": "2027-10-08T13:18:02-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-10-08T13:20:41-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "Recap from Wednesday: you asked Shirin to send you the Fulmar change request v2; nothing agreed yet."
+  },
+  {
+   "ts": "2027-10-08T13:21:59-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-10-08T13:24:33-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-10-08T13:25:21-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "yep, all good"
+  }
+ ]
+}

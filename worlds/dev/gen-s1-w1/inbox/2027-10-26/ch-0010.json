@@ -3,31 +3,31 @@
  "channel": "dm-camila-nadia",
  "kind": "dm",
  "participants": [
-  "Camila Quimby",
-  "Nadia Volkov"
+  "Camila Abernathy",
+  "Nadia Jovanovic"
  ],
  "messages": [
   {
    "ts": "2027-10-26T07:55:00-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "on it, i'll set up a coffee with you about meeting minutes"
   },
   {
    "ts": "2027-10-26T07:55:40-07:00",
-   "user": "Nadia Volkov",
+   "user": "Nadia Jovanovic",
    "handle": "@nadia",
    "text": "that'd be great"
   },
   {
    "ts": "2027-10-26T07:57:47-07:00",
-   "user": "Nadia Volkov",
+   "user": "Nadia Jovanovic",
    "handle": "@nadia",
    "text": "are you in the office tomorrow?"
   },
   {
    "ts": "2027-10-26T07:58:55-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "remote, but online all day"
   }

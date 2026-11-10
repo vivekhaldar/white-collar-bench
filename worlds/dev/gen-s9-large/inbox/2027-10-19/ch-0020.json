@@ -1,0 +1,47 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-anh-aroha",
+ "kind": "dm",
+ "participants": [
+  "Anh Villanueva",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-19T14:56:13-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "hello :)"
+  },
+  {
+   "ts": "2027-10-19T14:57:36-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-10-19T15:01:00-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "Putri asked if you could set up a coffee with them about portal message routing!"
+  },
+  {
+   "ts": "2027-10-19T15:01:09-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "yep, on it"
+  },
+  {
+   "ts": "2027-10-19T15:03:28-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-10-19T15:04:13-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "only the first half"
+  }
+ ]
+}

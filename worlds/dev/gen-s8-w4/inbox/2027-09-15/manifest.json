@@ -1,0 +1,125 @@
+{
+  "date": "2027-09-15",
+  "artifacts": [
+    {
+      "id": "em-0089",
+      "channel": "email",
+      "received_at": "2027-09-15T06:46:00-06:00",
+      "path": "em-0089.eml",
+      "title": "[INC-48648] Ticket updated"
+    },
+    {
+      "id": "em-0090",
+      "channel": "email",
+      "received_at": "2027-09-15T07:44:00-06:00",
+      "path": "em-0090.eml",
+      "title": "Re: Refreshments for the operator AI basics workshop"
+    },
+    {
+      "id": "ch-0074",
+      "channel": "chat",
+      "received_at": "2027-09-15T07:52:00-06:00",
+      "path": "ch-0074.json",
+      "title": "DM: Segun Okeke / Amira Baek"
+    },
+    {
+      "id": "em-0091",
+      "channel": "email",
+      "received_at": "2027-09-15T08:00:00-06:00",
+      "path": "em-0091.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0092",
+      "channel": "email",
+      "received_at": "2027-09-15T08:48:00-06:00",
+      "path": "em-0092.eml",
+      "title": "Introduction: Fulmar"
+    },
+    {
+      "id": "ch-0075",
+      "channel": "chat",
+      "received_at": "2027-09-15T09:47:00-06:00",
+      "path": "ch-0075.json",
+      "title": "#predictive-maintenance-core"
+    },
+    {
+      "id": "mn-0018",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-15T10:00:00-06:00",
+      "path": "mn-0018.md",
+      "title": "Recap: Fulmar standup"
+    },
+    {
+      "id": "nt-0007",
+      "channel": "note",
+      "received_at": "2027-09-15T10:45:00-06:00",
+      "path": "nt-0007.md",
+      "title": "Wed notes"
+    },
+    {
+      "id": "ch-0076",
+      "channel": "chat",
+      "received_at": "2027-09-15T12:21:00-06:00",
+      "path": "ch-0076.json",
+      "title": "DM: Rodrigo Gallo / Amira Baek"
+    },
+    {
+      "id": "ch-0077",
+      "channel": "chat",
+      "received_at": "2027-09-15T13:34:00-06:00",
+      "path": "ch-0077.json",
+      "title": "DM: Nikhil Teixeira / Amira Baek"
+    },
+    {
+      "id": "ch-0078",
+      "channel": "chat",
+      "received_at": "2027-09-15T14:18:00-06:00",
+      "path": "ch-0078.json",
+      "title": "DM: Amira Baek / Amira Baek"
+    },
+    {
+      "id": "mt-0014",
+      "channel": "transcript",
+      "received_at": "2027-09-15T14:30:00-06:00",
+      "path": "mt-0014.vtt",
+      "title": "Wagtail platform sync (transcript)"
+    },
+    {
+      "id": "ch-0079",
+      "channel": "chat",
+      "received_at": "2027-09-15T14:38:00-06:00",
+      "path": "ch-0079.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "ch-0080",
+      "channel": "chat",
+      "received_at": "2027-09-15T16:22:00-06:00",
+      "path": "ch-0080.json",
+      "title": "DM: Nikhil Teixeira / Amira Baek"
+    },
+    {
+      "id": "ch-0081",
+      "channel": "chat",
+      "received_at": "2027-09-15T17:33:00-06:00",
+      "path": "ch-0081.json",
+      "title": "DM: Amira Baek / Ottavio Bakker"
+    },
+    {
+      "id": "dc-0005",
+      "channel": "document",
+      "received_at": "2027-09-15T17:55:00-06:00",
+      "path": "dc-0005.md",
+      "title": "Fulmar privacy review form v2",
+      "parent": "em-0093"
+    },
+    {
+      "id": "em-0093",
+      "channel": "email",
+      "received_at": "2027-09-15T17:55:00-06:00",
+      "path": "em-0093.eml",
+      "title": "Re: Fulmar privacy review form"
+    }
+  ]
+}

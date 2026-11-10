@@ -1,0 +1,31 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Adwoa Kocak",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-30T08:09:16-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "is the wifi on the second floor down for anyone else?",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@amira"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-08-30T08:13:47-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "yep, same here"
+  }
+ ]
+}

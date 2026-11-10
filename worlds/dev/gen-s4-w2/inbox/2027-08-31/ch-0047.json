@@ -3,25 +3,25 @@
  "channel": "dm-darius-ottavio",
  "kind": "dm",
  "participants": [
-  "Ottavio Monteiro",
-  "Darius Sherwood"
+  "Ottavio Moreira",
+  "Darius Bramwell"
  ],
  "messages": [
   {
    "ts": "2027-08-31T15:46:01-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "quick q"
   },
   {
    "ts": "2027-08-31T15:47:25-08:00",
-   "user": "Darius Sherwood",
+   "user": "Darius Bramwell",
    "handle": "@darius",
    "text": "hi :)"
   },
   {
    "ts": "2027-08-31T15:48:00-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "We've agreed to limit the Fjord pilot to five courses.",
    "edited": true,

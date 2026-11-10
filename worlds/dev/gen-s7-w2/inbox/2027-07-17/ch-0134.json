@@ -1,0 +1,30 @@
+{
+ "workspace": "corrstead",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Tyrone Duarte",
+  "Adaeze Fifita",
+  "Rahul Sargsyan"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-17T10:21:25-08:00",
+   "user": "Tyrone Duarte",
+   "handle": "@tyrone",
+   "text": "lost a blue umbrella, might be in the big meeting room"
+  },
+  {
+   "ts": "2027-07-17T10:24:24-08:00",
+   "user": "Adaeze Fifita",
+   "handle": "@adaeze",
+   "text": "will keep an eye out"
+  },
+  {
+   "ts": "2027-07-17T10:27:02-08:00",
+   "user": "Rahul Sargsyan",
+   "handle": "@rahul",
+   "text": "there's one at reception"
+  }
+ ]
+}

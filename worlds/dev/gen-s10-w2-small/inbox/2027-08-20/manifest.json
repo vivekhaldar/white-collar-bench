@@ -1,0 +1,97 @@
+{
+  "date": "2027-08-20",
+  "artifacts": [
+    {
+      "id": "nt-0003",
+      "channel": "note",
+      "received_at": "2027-08-20T07:41:00+01:00",
+      "path": "nt-0003.md",
+      "title": "Fri notes"
+    },
+    {
+      "id": "em-0024",
+      "channel": "email",
+      "received_at": "2027-08-20T08:38:00+01:00",
+      "path": "em-0024.eml",
+      "title": "[REQ-24472] Request resolved"
+    },
+    {
+      "id": "mn-0005",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-20T09:55:00+01:00",
+      "path": "mn-0005.md",
+      "title": "Recap: Nettle standup"
+    },
+    {
+      "id": "em-0025",
+      "channel": "email",
+      "received_at": "2027-08-20T12:08:00+01:00",
+      "path": "em-0025.eml",
+      "title": "Pantry inventory discovery observation notes"
+    },
+    {
+      "id": "em-0026",
+      "channel": "email",
+      "received_at": "2027-08-20T12:12:00+01:00",
+      "path": "em-0026.eml",
+      "title": "Re: FYI: Translation help selection requirements list"
+    },
+    {
+      "id": "ch-0017",
+      "channel": "chat",
+      "received_at": "2027-08-20T12:22:00+01:00",
+      "path": "ch-0017.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "em-0027",
+      "channel": "email",
+      "received_at": "2027-08-20T12:49:00+01:00",
+      "path": "em-0027.eml",
+      "title": "[INC-64998] Ticket updated"
+    },
+    {
+      "id": "mt-0004",
+      "channel": "transcript",
+      "received_at": "2027-08-20T14:30:00+01:00",
+      "path": "mt-0004.vtt",
+      "title": "Nettle / translation help selection sync (transcript)"
+    },
+    {
+      "id": "ch-0018",
+      "channel": "chat",
+      "received_at": "2027-08-20T14:37:00+01:00",
+      "path": "ch-0018.json",
+      "title": "DM: Sigrid Asante / Aoife Everett"
+    },
+    {
+      "id": "ca-0001",
+      "channel": "calendar",
+      "received_at": "2027-08-20T15:17:00+01:00",
+      "path": "ca-0001.ics",
+      "title": "Invite: Catch-up: Aoife / Akosua"
+    },
+    {
+      "id": "em-0028",
+      "channel": "email",
+      "received_at": "2027-08-20T15:57:00+01:00",
+      "path": "em-0028.eml",
+      "title": "[INC-46634] Ticket updated"
+    },
+    {
+      "id": "dc-0001",
+      "channel": "document",
+      "received_at": "2027-08-20T16:48:00+01:00",
+      "path": "dc-0001.xlsx",
+      "title": "Translation help selection requirements list (draft)",
+      "parent": "em-0029"
+    },
+    {
+      "id": "em-0029",
+      "channel": "email",
+      "received_at": "2027-08-20T16:48:00+01:00",
+      "path": "em-0029.eml",
+      "title": "Status note: w/e 20 August"
+    }
+  ]
+}

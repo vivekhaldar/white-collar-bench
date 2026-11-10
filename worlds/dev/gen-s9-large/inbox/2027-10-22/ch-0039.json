@@ -1,0 +1,47 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-michaela",
+ "kind": "dm",
+ "participants": [
+  "Aroha Mendoza",
+  "Michaela Dang"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-22T11:12:58-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-10-22T11:13:19-05:00",
+   "user": "Michaela Dang",
+   "handle": "@michaela",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-10-22T11:16:00-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "I'll join your panel on intake forms."
+  },
+  {
+   "ts": "2027-10-22T11:16:41-05:00",
+   "user": "Michaela Dang",
+   "handle": "@michaela",
+   "text": "perfect, thanks"
+  },
+  {
+   "ts": "2027-10-22T11:20:16-05:00",
+   "user": "Michaela Dang",
+   "handle": "@michaela",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-10-22T11:21:54-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "yep, all good"
+  }
+ ]
+}

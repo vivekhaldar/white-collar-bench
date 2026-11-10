@@ -1,0 +1,31 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-hiba-tane",
+ "kind": "dm",
+ "participants": [
+  "Tane Wisniewska",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-12T09:19:00-08:00",
+   "user": "Tane Wisniewska",
+   "handle": "@tane",
+   "text": "When you get a chance, could you set up a coffee with me about course scheduling? :)",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-12T09:20:24-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "sure, can do"
+  }
+ ]
+}

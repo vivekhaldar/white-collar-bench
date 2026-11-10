@@ -1,0 +1,57 @@
+{
+ "workspace": "reddale",
+ "channel": "#nettle-core",
+ "kind": "channel",
+ "participants": [
+  "Akosua Bergstrom",
+  "Aoife Everett",
+  "Gaurav Laine",
+  "Doug",
+  "Bisi Volkov",
+  "Sigrid Asante",
+  "Sipho Papadopoulos",
+  "Adaeze Morimoto",
+  "Bruna Thapa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-31T17:02:00+01:00",
+   "user": "Akosua Bergstrom",
+   "handle": "@akosua",
+   "text": "FYI Bisi needs the Nettle dependency list by Thursday 2 September!",
+   "edited": true,
+   "original": "FYI Bisi needs the Nettle dependency list by Saturday 4 September!",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@aoife",
+      "@gaurav",
+      "@douglas"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-08-31T17:02:28+01:00",
+   "user": "Bruna Thapa",
+   "handle": "@bruna",
+   "text": "thanks for the heads up",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-08-31T17:03:12+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-08-31T17:04:08+01:00",
+   "user": "Sigrid Asante",
+   "handle": "@sigrid",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  }
+ ]
+}

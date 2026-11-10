@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Adwoa",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-16T17:31:00-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "Leave it with me, I'll share the Fulmar training outline with you."
+  },
+  {
+   "ts": "2027-09-16T17:31:05-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "appreciate it"
+  },
+  {
+   "ts": "2027-09-16T17:31:51-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-09-16T17:34:35-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "anytime"
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-liisa",
+ "kind": "dm",
+ "participants": [
+  "Despina Pereira",
+  "Liisa Babic"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-22T14:04:00-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "Leave it with me, I'll walk you through the Axolotl decision memo.",
+   "edited": true,
+   "original": "Leave it with me, I'll walk you through the Axolotl dceision memo."
+  },
+  {
+   "ts": "2027-02-22T14:04:22-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-02-22T14:05:02-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-02-22T14:08:09-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "only the first half"
+  }
+ ]
+}

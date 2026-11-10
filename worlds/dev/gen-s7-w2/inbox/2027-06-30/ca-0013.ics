@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Corrstead//Calendar//EN
+METHOD:CANCEL
+BEGIN:VEVENT
+UID:3407059948551ef8@corrstead.example
+DTSTAMP:20270630T162100Z
+DTSTART:20270701T230000Z
+DTEND:20270701T234500Z
+SUMMARY:Cancelled: Corrie sync
+ORGANIZER;CN=Bolat Oyelami:mailto:bolat.oyelami@corrstead.example
+ATTENDEE;CN=Hiba Jimenez;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.jimenez@corrstead.example
+ATTENDEE;CN=Kristen Ochieng;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:kristen.ochieng@iselbury.corrstead.example
+SEQUENCE:1
+STATUS:CANCELLED
+DESCRIPTION:Cancelling this one\, nothing to discuss this week.
+END:VEVENT
+END:VCALENDAR

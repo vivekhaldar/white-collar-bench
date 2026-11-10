@@ -1,0 +1,32 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#axolotl-core",
+ "kind": "channel",
+ "participants": [
+  "Despina Pereira",
+  "Losa Moretti",
+  "Andres",
+  "Nathaniel Cartwright",
+  "Karim Navarro",
+  "Liisa Babic",
+  "Tomas Deng",
+  "Carys Laurent",
+  "Lindiwe Baek",
+  "Jurgen Dvorak"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-10T12:49:00-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "@liisa done, i confirmed the axolotl retention schedule with you"
+  },
+  {
+   "ts": "2027-02-10T12:49:42-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "perfect",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-nikhil",
+ "kind": "dm",
+ "participants": [
+  "Nikhil Teixeira",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-15T16:01:00-06:00",
+   "user": "Nikhil Teixeira",
+   "handle": "@nikhil",
+   "text": "Just sent you the notes from the production scheduling session."
+  },
+  {
+   "ts": "2027-09-15T16:01:20-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-09-15T16:03:52-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-09-15T16:07:45-06:00",
+   "user": "Nikhil Teixeira",
+   "handle": "@nikhil",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-andres-aroha",
+ "kind": "dm",
+ "participants": [
+  "Andres Yamamoto",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-05T07:48:00-05:00",
+   "user": "Andres Yamamoto",
+   "handle": "@andres",
+   "text": "Will share the Cirrus evaluation rubric with you.",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@aroha"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-05T07:48:24-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "thanks!"
+  }
+ ]
+}

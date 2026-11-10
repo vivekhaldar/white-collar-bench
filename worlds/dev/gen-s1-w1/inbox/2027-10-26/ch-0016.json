@@ -3,19 +3,19 @@
  "channel": "dm-camila-fernanda",
  "kind": "dm",
  "participants": [
-  "Camila Quimby",
+  "Camila Abernathy",
   "Fernanda Olawale"
  ],
  "messages": [
   {
    "ts": "2027-10-26T13:31:48-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "got a sec?"
   },
   {
    "ts": "2027-10-26T13:34:00-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "I proposed a final name for Tarn.",
    "edited": true,
@@ -35,7 +35,7 @@
   },
   {
    "ts": "2027-10-26T13:35:57-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "remote, but online all day"
   }

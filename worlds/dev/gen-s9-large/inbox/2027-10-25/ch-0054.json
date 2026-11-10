@@ -1,0 +1,31 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Mathieu Wijaya",
+  "Putri Ashby",
+  "Andres Yamamoto"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-25T16:50:51-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "is the wifi on the second floor down for anyone else?"
+  },
+  {
+   "ts": "2027-10-25T16:56:30-05:00",
+   "user": "Putri Ashby",
+   "handle": "@putri",
+   "text": "yep, same here"
+  },
+  {
+   "ts": "2027-10-25T16:59:54-05:00",
+   "user": "Andres Yamamoto",
+   "handle": "@andres",
+   "text": "works for me",
+   "thread_of": 0
+  }
+ ]
+}

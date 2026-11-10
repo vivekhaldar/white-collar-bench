@@ -1,0 +1,29 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-winifred",
+ "kind": "dm",
+ "participants": [
+  "Aroha Mendoza",
+  "Winifred Tanaka"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-20T12:29:00-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "i can introduce you to anh for the referral triage work"
+  },
+  {
+   "ts": "2027-10-20T12:31:03-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-10-20T12:34:15-05:00",
+   "user": "Winifred Tanaka",
+   "handle": "@winifred",
+   "text": "remote, but online all day"
+  }
+ ]
+}

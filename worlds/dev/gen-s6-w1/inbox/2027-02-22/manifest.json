@@ -1,0 +1,153 @@
+{
+  "date": "2027-02-22",
+  "artifacts": [
+    {
+      "id": "em-0081",
+      "channel": "email",
+      "received_at": "2027-02-22T07:04:00-08:00",
+      "path": "em-0081.eml",
+      "title": "Reminder: Friday status note due Friday 26 February"
+    },
+    {
+      "id": "nt-0008",
+      "channel": "note",
+      "received_at": "2027-02-22T07:55:00-08:00",
+      "path": "nt-0008.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "em-0082",
+      "channel": "email",
+      "received_at": "2027-02-22T08:11:00-08:00",
+      "path": "em-0082.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0066",
+      "channel": "chat",
+      "received_at": "2027-02-22T09:45:00-08:00",
+      "path": "ch-0066.json",
+      "title": "DM: Liisa Babic / Despina Pereira"
+    },
+    {
+      "id": "mn-0011",
+      "channel": "meeting_notes",
+      "received_at": "2027-02-22T09:55:00-08:00",
+      "path": "mn-0011.md",
+      "title": "Notes: Axolotl standup"
+    },
+    {
+      "id": "mt-0008",
+      "channel": "transcript",
+      "received_at": "2027-02-22T11:50:00-08:00",
+      "path": "mt-0008.vtt",
+      "title": "OAT leads call (transcript)"
+    },
+    {
+      "id": "ch-0067",
+      "channel": "chat",
+      "received_at": "2027-02-22T12:07:00-08:00",
+      "path": "ch-0067.json",
+      "title": "DM: Liisa Babic / Despina Pereira"
+    },
+    {
+      "id": "mt-0009",
+      "channel": "transcript",
+      "received_at": "2027-02-22T12:30:00-08:00",
+      "path": "mt-0009.vtt",
+      "title": "Office hours with Aiko (transcript)"
+    },
+    {
+      "id": "em-0083",
+      "channel": "email",
+      "received_at": "2027-02-22T13:01:00-08:00",
+      "path": "em-0083.eml",
+      "title": "Andres's Fennel dependency list"
+    },
+    {
+      "id": "em-0084",
+      "channel": "email",
+      "received_at": "2027-02-22T13:11:00-08:00",
+      "path": "em-0084.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "ch-0068",
+      "channel": "chat",
+      "received_at": "2027-02-22T14:34:00-08:00",
+      "path": "ch-0068.json",
+      "title": "DM: Despina Pereira / Liisa Babic"
+    },
+    {
+      "id": "em-0085",
+      "channel": "email",
+      "received_at": "2027-02-22T14:40:00-08:00",
+      "path": "em-0085.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "mt-0010",
+      "channel": "transcript",
+      "received_at": "2027-02-22T16:00:00-08:00",
+      "path": "mt-0010.vtt",
+      "title": "Corrgate relationship check-in (transcript)"
+    },
+    {
+      "id": "ch-0069",
+      "channel": "chat",
+      "received_at": "2027-02-22T17:14:00-08:00",
+      "path": "ch-0069.json",
+      "title": "DM: Despina Pereira / Andres Erdem"
+    },
+    {
+      "id": "em-0086",
+      "channel": "email",
+      "received_at": "2027-02-22T17:19:00-08:00",
+      "path": "em-0086.eml",
+      "title": "Axolotl API contract v2"
+    },
+    {
+      "id": "em-0087",
+      "channel": "email",
+      "received_at": "2027-02-22T17:56:00-08:00",
+      "path": "em-0087.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "em-0088",
+      "channel": "email",
+      "received_at": "2027-02-22T18:07:00-08:00",
+      "path": "em-0088.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "ch-0070",
+      "channel": "chat",
+      "received_at": "2027-02-22T18:11:00-08:00",
+      "path": "ch-0070.json",
+      "title": "DM: Tariq Okeke / Despina Pereira"
+    },
+    {
+      "id": "dc-0002",
+      "channel": "document",
+      "received_at": "2027-02-22T18:21:00-08:00",
+      "path": "dc-0002.docx",
+      "title": "Axolotl stakeholder map v1",
+      "parent": "em-0089"
+    },
+    {
+      "id": "em-0089",
+      "channel": "email",
+      "received_at": "2027-02-22T18:21:00-08:00",
+      "path": "em-0089.eml",
+      "title": "Re: Axolotl stakeholder map"
+    },
+    {
+      "id": "ca-0010",
+      "channel": "calendar",
+      "received_at": "2027-02-22T18:23:00-08:00",
+      "path": "ca-0010.ics",
+      "title": "Invite: Walkthrough: Axolotl decision memo"
+    }
+  ]
+}

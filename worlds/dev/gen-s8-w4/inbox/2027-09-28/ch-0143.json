@@ -1,0 +1,41 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#fulmar-core",
+ "kind": "channel",
+ "participants": [
+  "Giorgi Wisniewska",
+  "Amira Baek",
+  "Ottavio Bakker",
+  "Adwoa Kocak",
+  "Oksana Hoffmann",
+  "Marcelo Meijer",
+  "Batbayar Galbraith",
+  "Thibault Kowalski",
+  "Kamau Greco",
+  "Shirin Oyelami"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-28T14:53:00-06:00",
+   "user": "Giorgi Wisniewska",
+   "handle": "@giorgi",
+   "text": "@amira i set up the fulmar single sign-on role mapping",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@ottavio",
+      "@amira",
+      "@adwoa"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-28T14:53:50-06:00",
+   "user": "Kamau Greco",
+   "handle": "@kamau",
+   "text": "good to know"
+  }
+ ]
+}

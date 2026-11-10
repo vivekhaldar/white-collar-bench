@@ -1,0 +1,31 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Chiamaka Rashed",
+  "Malia Guo",
+  "Putri Ashby",
+  "Andres Yamamoto"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-27T13:24:40-05:00",
+   "user": "Chiamaka Rashed",
+   "handle": "@chiamaka",
+   "text": "the elevator on the east side is out again"
+  },
+  {
+   "ts": "2027-10-27T13:27:01-05:00",
+   "user": "Malia Guo",
+   "handle": "@malia",
+   "text": "stairs it is"
+  },
+  {
+   "ts": "2027-10-27T13:28:33-05:00",
+   "user": "Putri Ashby",
+   "handle": "@putri",
+   "text": "classic"
+  }
+ ]
+}

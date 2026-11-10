@@ -3,15 +3,15 @@
  "channel": "#coffee",
  "kind": "channel",
  "participants": [
-  "Theresa Nagy",
+  "Theresa Petrov",
   "Nomvula Ndlovu",
-  "Tariq Popescu",
-  "Bruna Sinclair"
+  "Tariq Ivanova",
+  "Bruna Vaughan"
  ],
  "messages": [
   {
    "ts": "2027-08-24T10:32:49-08:00",
-   "user": "Theresa Nagy",
+   "user": "Theresa Petrov",
    "handle": "@theresa",
    "text": "lost a blue umbrella, might be in the big meeting room"
   },
@@ -23,7 +23,7 @@
   },
   {
    "ts": "2027-08-24T10:40:06-08:00",
-   "user": "Tariq Popescu",
+   "user": "Tariq Ivanova",
    "handle": "@tariq",
    "text": "there's one at reception"
   }

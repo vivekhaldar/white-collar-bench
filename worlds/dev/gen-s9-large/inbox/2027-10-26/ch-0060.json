@@ -1,0 +1,47 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-lilit",
+ "kind": "dm",
+ "participants": [
+  "Aroha Mendoza",
+  "Lilit Wekesa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-26T17:52:36-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-10-26T17:53:15-05:00",
+   "user": "Lilit Wekesa",
+   "handle": "@lilit",
+   "text": "sure, what's up?"
+  },
+  {
+   "ts": "2027-10-26T17:54:00-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "Done, I introduced you to Isabela for the Vashmere working group."
+  },
+  {
+   "ts": "2027-10-26T17:54:28-05:00",
+   "user": "Lilit Wekesa",
+   "handle": "@lilit",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-10-26T17:55:56-05:00",
+   "user": "Lilit Wekesa",
+   "handle": "@lilit",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-10-26T17:59:14-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "only the first half"
+  }
+ ]
+}

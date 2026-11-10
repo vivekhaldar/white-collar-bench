@@ -1,0 +1,118 @@
+{
+  "date": "2027-07-02",
+  "artifacts": [
+    {
+      "id": "ch-0059",
+      "channel": "chat",
+      "received_at": "2027-07-02T08:26:00-08:00",
+      "path": "ch-0059.json",
+      "title": "DM: Rania Dlamini / Hiba Jimenez"
+    },
+    {
+      "id": "ch-0060",
+      "channel": "chat",
+      "received_at": "2027-07-02T08:45:00-08:00",
+      "path": "ch-0060.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0061",
+      "channel": "chat",
+      "received_at": "2027-07-02T08:58:00-08:00",
+      "path": "ch-0061.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0061",
+      "channel": "email",
+      "received_at": "2027-07-02T09:30:00-08:00",
+      "path": "em-0061.eml",
+      "title": "[INC-58409] Ticket updated"
+    },
+    {
+      "id": "mn-0011",
+      "channel": "meeting_notes",
+      "received_at": "2027-07-02T10:00:00-08:00",
+      "path": "mn-0011.md",
+      "title": "Recap: Garnet standup"
+    },
+    {
+      "id": "ch-0062",
+      "channel": "chat",
+      "received_at": "2027-07-02T12:06:00-08:00",
+      "path": "ch-0062.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0062",
+      "channel": "email",
+      "received_at": "2027-07-02T13:21:00-08:00",
+      "path": "em-0062.eml",
+      "title": "Re: FYI: Desmond's Siskin operating model draft v2"
+    },
+    {
+      "id": "ch-0063",
+      "channel": "chat",
+      "received_at": "2027-07-02T13:54:00-08:00",
+      "path": "ch-0063.json",
+      "title": "#general"
+    },
+    {
+      "id": "ca-0014",
+      "channel": "calendar",
+      "received_at": "2027-07-02T16:03:00-08:00",
+      "path": "ca-0014.ics",
+      "title": "Invite: Corrie sync"
+    },
+    {
+      "id": "em-0063",
+      "channel": "email",
+      "received_at": "2027-07-02T16:08:00-08:00",
+      "path": "em-0063.eml",
+      "title": "Bolat's admissions triage selection demo script"
+    },
+    {
+      "id": "em-0064",
+      "channel": "email",
+      "received_at": "2027-07-02T16:38:00-08:00",
+      "path": "em-0064.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0065",
+      "channel": "email",
+      "received_at": "2027-07-02T16:53:00-08:00",
+      "path": "em-0065.eml",
+      "title": "Status note: w/e 2 July"
+    },
+    {
+      "id": "em-0066",
+      "channel": "email",
+      "received_at": "2027-07-02T17:18:00-08:00",
+      "path": "em-0066.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "dc-0001",
+      "channel": "document",
+      "received_at": "2027-07-02T17:23:00-08:00",
+      "path": "dc-0001.docx",
+      "title": "Siskin support model v2",
+      "parent": "em-0067"
+    },
+    {
+      "id": "em-0067",
+      "channel": "email",
+      "received_at": "2027-07-02T17:23:00-08:00",
+      "path": "em-0067.eml",
+      "title": "Re: Siskin support model"
+    },
+    {
+      "id": "em-0068",
+      "channel": "email",
+      "received_at": "2027-07-02T17:36:00-08:00",
+      "path": "em-0068.eml",
+      "title": "[REQ-22554] Request resolved"
+    }
+  ]
+}

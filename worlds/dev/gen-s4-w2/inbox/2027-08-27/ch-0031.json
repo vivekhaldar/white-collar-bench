@@ -3,37 +3,37 @@
  "channel": "dm-ottavio-tariq",
  "kind": "dm",
  "participants": [
-  "Tariq Popescu",
-  "Ottavio Monteiro"
+  "Tariq Ivanova",
+  "Ottavio Moreira"
  ],
  "messages": [
   {
    "ts": "2027-08-27T16:00:13-08:00",
-   "user": "Tariq Popescu",
+   "user": "Tariq Ivanova",
    "handle": "@tariq",
    "text": "hello"
   },
   {
    "ts": "2027-08-27T16:00:30-08:00",
-   "user": "Tariq Popescu",
+   "user": "Tariq Ivanova",
    "handle": "@tariq",
    "text": "received the friday status note for w/e 27 august, thank you!"
   },
   {
    "ts": "2027-08-27T16:01:58-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "good to know"
   },
   {
    "ts": "2027-08-27T16:06:47-08:00",
-   "user": "Tariq Popescu",
+   "user": "Tariq Ivanova",
    "handle": "@tariq",
    "text": "how's your week going?"
   },
   {
    "ts": "2027-08-27T16:09:44-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "busy, but fine. you?"
   }

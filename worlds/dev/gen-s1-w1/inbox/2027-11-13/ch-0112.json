@@ -4,7 +4,7 @@
  "kind": "channel",
  "participants": [
   "Joselito Moradi",
-  "Jalen Hendriks"
+  "Jalen Sandberg"
  ],
  "messages": [
   {
@@ -15,7 +15,7 @@
   },
   {
    "ts": "2027-11-13T15:56:11-07:00",
-   "user": "Jalen Hendriks",
+   "user": "Jalen Sandberg",
    "handle": "@jalen",
    "text": "not me!",
    "thread_of": 0

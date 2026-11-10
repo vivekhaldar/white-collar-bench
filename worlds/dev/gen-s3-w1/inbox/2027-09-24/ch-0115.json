@@ -1,0 +1,35 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-bisi",
+ "kind": "dm",
+ "participants": [
+  "Bisi",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-24T09:50:00-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "I'll share the funding model chargeback scenarios with you."
+  },
+  {
+   "ts": "2027-09-24T09:50:07-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "that'd be great"
+  },
+  {
+   "ts": "2027-09-24T09:53:44-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-09-24T09:54:43-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

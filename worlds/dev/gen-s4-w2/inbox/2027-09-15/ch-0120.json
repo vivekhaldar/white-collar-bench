@@ -3,19 +3,19 @@
  "channel": "#coffee",
  "kind": "channel",
  "participants": [
-  "Teagan Penhallow",
-  "Magdalena Barbosa"
+  "Teagan Alexiou",
+  "Magdalena Monteiro"
  ],
  "messages": [
   {
    "ts": "2027-09-15T08:19:25-08:00",
-   "user": "Teagan Penhallow",
+   "user": "Teagan Alexiou",
    "handle": "@teagan",
    "text": "lost a blue umbrella, might be in the big meeting room"
   },
   {
    "ts": "2027-09-15T08:25:52-08:00",
-   "user": "Magdalena Barbosa",
+   "user": "Magdalena Monteiro",
    "handle": "@magdalena",
    "text": "will keep an eye out"
   }

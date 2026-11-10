@@ -3,15 +3,15 @@
  "channel": "#random",
  "kind": "channel",
  "participants": [
-  "Tariq Popescu",
+  "Tariq Ivanova",
   "Nomvula Ndlovu",
-  "Bruna Sinclair",
-  "Theresa Nagy"
+  "Bruna Vaughan",
+  "Theresa Petrov"
  ],
  "messages": [
   {
    "ts": "2027-08-26T16:39:00-08:00",
-   "user": "Tariq Popescu",
+   "user": "Tariq Ivanova",
    "handle": "@tariq",
    "text": "the elevator on the east side is out again"
   },
@@ -23,7 +23,7 @@
   },
   {
    "ts": "2027-08-26T16:43:10-08:00",
-   "user": "Bruna Sinclair",
+   "user": "Bruna Vaughan",
    "handle": "@bruna",
    "text": "classic",
    "thread_of": 0

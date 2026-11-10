@@ -1,0 +1,36 @@
+{
+ "workspace": "birchmere",
+ "channel": "#referral-triage-discovery-core",
+ "kind": "channel",
+ "participants": [
+  "Eleni Fontaine",
+  "Alasdair Kaya",
+  "Katarzyna Dang",
+  "Bisi Chatterjee"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-23T16:45:00-05:00",
+   "user": "Eleni Fontaine",
+   "handle": "@eleni",
+   "text": "@alasdair can you send me the referral triage discovery opportunity list by September 24? :)",
+   "edited": true,
+   "original": "@alasdair can you send me the referral triage discovery opportunity list by September 23? :)",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@bisi"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-23T16:45:10-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "ok",
+   "thread_of": 0
+  }
+ ]
+}

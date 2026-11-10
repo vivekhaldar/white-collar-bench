@@ -1,0 +1,35 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-andrei-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Andrei Laurent"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-06T14:16:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "Done, I assembled the Garnet security review package."
+  },
+  {
+   "ts": "2027-07-06T14:16:57-08:00",
+   "user": "Andrei Laurent",
+   "handle": "@andrei",
+   "text": "got it, thanks"
+  },
+  {
+   "ts": "2027-07-06T14:20:24-08:00",
+   "user": "Andrei Laurent",
+   "handle": "@andrei",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-07-06T14:22:26-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "remote, but online all day"
+  }
+ ]
+}

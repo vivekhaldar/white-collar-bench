@@ -1,0 +1,55 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-anastasia-hiba",
+ "kind": "dm",
+ "participants": [
+  "Anastasia Mizrahi",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-22T16:04:06-08:00",
+   "user": "Anastasia Mizrahi",
+   "handle": "@anastasia",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-06-22T16:04:33-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-06-22T16:14:14-08:00",
+   "user": "Anastasia Mizrahi",
+   "handle": "@anastasia",
+   "text": "recap from yesterday: you agreed to send me the friday status note for w/e 25 june",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-06-22T16:15:29-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "sure, can do"
+  },
+  {
+   "ts": "2027-06-22T16:17:52-08:00",
+   "user": "Anastasia Mizrahi",
+   "handle": "@anastasia",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-06-22T16:18:51-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "remote, but online all day"
+  }
+ ]
+}

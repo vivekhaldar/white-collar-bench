@@ -4,10 +4,10 @@
  "kind": "channel",
  "participants": [
   "Meera",
-  "Ottavio Monteiro",
+  "Ottavio Moreira",
   "Roya Chatterjee",
   "Tegan Ogunleye",
-  "Nadia Krause",
+  "Nadia Vogel",
   "Isabela Haidari"
  ],
  "messages": [
@@ -21,14 +21,14 @@
   },
   {
    "ts": "2027-09-02T14:49:56-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "can i come back to you on this?",
    "thread_of": 0
   },
   {
    "ts": "2027-09-02T14:50:57-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "thanks for flagging",
    "thread_of": 0

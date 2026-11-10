@@ -8,14 +8,14 @@ DTSTAMP:20270909T160800Z
 DTSTART:20270909T173000Z
 DTEND:20270909T175500Z
 SUMMARY:Cancelled: Fjord standup
-ORGANIZER;CN=Darius Sherwood:mailto:darius.sherwood@holfield.drayhurst.example
-ATTENDEE;CN=Ottavio Monteiro;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ottavio.monteiro@drayhurst.example
-ATTENDEE;CN=Meera Ivanova;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:meera.ivanova@drayhurst.example
-ATTENDEE;CN=Ratna Bondarenko;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ratna.bondarenko@holfield.drayhurst.example
-ATTENDEE;CN=Theresa Nagy;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:theresa.nagy@drayhurst.example
+ORGANIZER;CN=Darius Bramwell:mailto:darius.bramwell@holfield.drayhurst.example
+ATTENDEE;CN=Ottavio Moreira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ottavio.moreira@drayhurst.example
+ATTENDEE;CN=Meera Bondarenko;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:meera.bondarenko@drayhurst.example
+ATTENDEE;CN=Ratna Nikolic;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ratna.nikolic@holfield.drayhurst.example
+ATTENDEE;CN=Theresa Petrov;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:theresa.petrov@drayhurst.example
 ATTENDEE;CN=Nomvula Ndlovu;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:nomvula.ndlovu@drayhurst.example
-ATTENDEE;CN=Bruna Sinclair;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bruna.sinclair@drayhurst.example
-ATTENDEE;CN=Esperanza Rao;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:esperanza.rao@drayhurst.example
+ATTENDEE;CN=Bruna Vaughan;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bruna.vaughan@drayhurst.example
+ATTENDEE;CN=Esperanza Venkataraman;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:esperanza.venkataraman@drayhurst.example
 RECURRENCE-ID:20270909T173000Z
 SEQUENCE:1
 STATUS:CANCELLED

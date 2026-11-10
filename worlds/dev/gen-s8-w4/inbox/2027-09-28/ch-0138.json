@@ -1,0 +1,31 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-nikhil",
+ "kind": "dm",
+ "participants": [
+  "Nik",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-28T12:03:00-06:00",
+   "user": "Nik",
+   "handle": "@nikhil",
+   "text": "Leave it with me, I'll send you the notes from the scrap analysis session.",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@amira"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-28T12:04:27-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "thanks!"
+  }
+ ]
+}

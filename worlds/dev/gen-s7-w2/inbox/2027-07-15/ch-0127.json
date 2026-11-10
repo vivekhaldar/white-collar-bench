@@ -1,0 +1,29 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolat-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Bolat Oyelami"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-15T13:32:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "just updated the admissions triage selection requirements matrix after your comments"
+  },
+  {
+   "ts": "2027-07-15T13:35:10-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-07-15T13:37:18-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "no worries"
+  }
+ ]
+}

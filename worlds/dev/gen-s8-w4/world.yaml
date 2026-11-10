@@ -1,0 +1,80 @@
+id: gen-s8-w4
+title: 'Generated world: Manufacturing Digital Office, Iselmoor Industries (mid-size manufacturer)'
+version: 1
+split: dev
+worker: p-amira-baek
+timezone: -06:00
+seed:
+  start: '2027-08-30'
+  end: '2027-09-10'
+episode:
+  days:
+  - '2027-09-13'
+  - '2027-09-14'
+  - '2027-09-15'
+  - '2027-09-16'
+  - '2027-09-17'
+  - '2027-09-18'
+  - '2027-09-20'
+  - '2027-09-21'
+  - '2027-09-22'
+  - '2027-09-23'
+  - '2027-09-24'
+  - '2027-09-25'
+  - '2027-09-27'
+  - '2027-09-28'
+  - '2027-09-29'
+  - '2027-09-30'
+  - '2027-10-01'
+  - '2027-10-02'
+  - '2027-10-04'
+  - '2027-10-05'
+  - '2027-10-06'
+  - '2027-10-07'
+  - '2027-10-08'
+  - '2027-10-09'
+checkpoints:
+- id: cp1
+  date: '2027-09-14'
+  label: end of Tuesday (week 1)
+- id: cp2
+  date: '2027-09-16'
+  label: end of Thursday (week 1)
+- id: cp3
+  date: '2027-09-18'
+  label: end of week (week 1)
+- id: cp4
+  date: '2027-09-21'
+  label: end of Tuesday (week 2)
+- id: cp5
+  date: '2027-09-23'
+  label: end of Thursday (week 2)
+- id: cp6
+  date: '2027-09-25'
+  label: end of week (week 2)
+- id: cp7
+  date: '2027-09-28'
+  label: end of Tuesday (week 3)
+- id: cp8
+  date: '2027-09-30'
+  label: end of Thursday (week 3)
+- id: cp9
+  date: '2027-10-02'
+  label: end of week (week 3)
+- id: cp10
+  date: '2027-10-05'
+  label: end of Tuesday (week 4)
+- id: cp11
+  date: '2027-10-07'
+  label: end of Thursday (week 4)
+- id: cp12
+  date: '2027-10-09'
+  label: end of week (week 4)
+generator:
+  kind: wcb-gen
+  version: 1
+  seed: 8
+  weeks: 4
+  size: standard
+  setting: manufacturer
+  llm: false

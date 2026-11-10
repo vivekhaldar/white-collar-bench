@@ -1,0 +1,35 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-luz",
+ "kind": "dm",
+ "participants": [
+  "Luz Ekwueme",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-28T17:59:39-05:00",
+   "user": "Luz Ekwueme",
+   "handle": "@luz",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-10-28T18:00:29-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-10-28T18:01:00-05:00",
+   "user": "Luz Ekwueme",
+   "handle": "@luz",
+   "text": "would you be able to complete the cirrus privacy impact assessment?"
+  },
+  {
+   "ts": "2027-10-28T18:01:08-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "maybe, need to see how the week goes"
+  }
+ ]
+}

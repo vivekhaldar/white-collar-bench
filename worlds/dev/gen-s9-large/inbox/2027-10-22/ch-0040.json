@@ -1,0 +1,29 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-keisha",
+ "kind": "dm",
+ "participants": [
+  "Keisha Hargrove",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-22T17:48:11-05:00",
+   "user": "Keisha Hargrove",
+   "handle": "@keisha",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-10-22T17:50:00-05:00",
+   "user": "Keisha Hargrove",
+   "handle": "@keisha",
+   "text": "Would you be able to send me the referral triage discovery site visit agenda?"
+  },
+  {
+   "ts": "2027-10-22T17:50:18-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "will do"
+  }
+ ]
+}

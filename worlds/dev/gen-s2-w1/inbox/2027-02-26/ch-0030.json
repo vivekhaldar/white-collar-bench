@@ -4,7 +4,7 @@
  "kind": "channel",
  "participants": [
   "Thibault Sahin",
-  "Bogdan Byrne",
+  "Bogdan Quinlan",
   "Mei Obi"
  ],
  "messages": [
@@ -16,7 +16,7 @@
   },
   {
    "ts": "2027-02-26T10:31:32-07:00",
-   "user": "Bogdan Byrne",
+   "user": "Bogdan Quinlan",
    "handle": "@bogdan",
    "text": "morning!"
   },

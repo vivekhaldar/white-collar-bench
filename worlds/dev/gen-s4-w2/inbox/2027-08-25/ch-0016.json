@@ -3,14 +3,14 @@
  "channel": "#coffee",
  "kind": "channel",
  "participants": [
-  "Theresa Nagy",
-  "Esperanza Rao",
+  "Theresa Petrov",
+  "Esperanza Venkataraman",
   "Nomvula Ndlovu"
  ],
  "messages": [
   {
    "ts": "2027-08-25T11:38:33-08:00",
-   "user": "Theresa Nagy",
+   "user": "Theresa Petrov",
    "handle": "@theresa",
    "text": "is it just me or is it freezing on 3 today?",
    "reactions": [
@@ -25,7 +25,7 @@
   },
   {
    "ts": "2027-08-25T11:40:16-08:00",
-   "user": "Esperanza Rao",
+   "user": "Esperanza Venkataraman",
    "handle": "@esperanza",
    "text": "not just you"
   },

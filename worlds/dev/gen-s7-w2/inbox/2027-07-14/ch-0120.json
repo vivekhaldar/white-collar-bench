@@ -1,0 +1,29 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolat-hiba",
+ "kind": "dm",
+ "participants": [
+  "Bolat",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-14T15:44:00-08:00",
+   "user": "Bolat",
+   "handle": "@bolat",
+   "text": "quick q :)"
+  },
+  {
+   "ts": "2027-07-14T15:47:00-08:00",
+   "user": "Bolat",
+   "handle": "@bolat",
+   "text": "I can share the Holmarsh partnership event invitation with you!"
+  },
+  {
+   "ts": "2027-07-14T15:47:51-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "appreciate it"
+  }
+ ]
+}

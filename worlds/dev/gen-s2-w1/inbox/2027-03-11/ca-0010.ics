@@ -9,7 +9,7 @@ DTSTART:20270312T230000Z
 DTEND:20270312T233000Z
 SUMMARY:Accepted: Mistral follow-up
 ORGANIZER;CN=Thibault Sahin:mailto:thibault.sahin@vercliff.example
-ATTENDEE;CN=Dina Zimmermann;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED:mailto:dina.zimmermann@vercliff.example
+ATTENDEE;CN=Dina Ricci;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED:mailto:dina.ricci@vercliff.example
 SEQUENCE:0
 END:VEVENT
 END:VCALENDAR

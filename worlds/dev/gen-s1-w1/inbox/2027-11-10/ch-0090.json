@@ -4,7 +4,7 @@
  "kind": "dm",
  "participants": [
   "Yanni",
-  "Camila Quimby"
+  "Camila Abernathy"
  ],
  "messages": [
   {
@@ -15,7 +15,7 @@
   },
   {
    "ts": "2027-11-10T15:13:28-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "sure, what's up?"
   },
@@ -27,7 +27,7 @@
   },
   {
    "ts": "2027-11-10T15:15:13-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "great, thank you"
   },
@@ -39,7 +39,7 @@
   },
   {
    "ts": "2027-11-10T15:20:11-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "later!"
   }

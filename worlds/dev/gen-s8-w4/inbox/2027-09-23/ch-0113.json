@@ -1,0 +1,37 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-tane",
+ "kind": "dm",
+ "participants": [
+  "Tane Haugen",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-23T10:39:00-06:00",
+   "user": "Tane Haugen",
+   "handle": "@tane",
+   "text": "We're now in readout on Morcliff Safety Reporting Discovery.",
+   "edited": true,
+   "original": "We're now in readotu on Morcliff Safety Reporting Discovery."
+  },
+  {
+   "ts": "2027-09-23T10:40:25-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-09-23T10:43:12-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-09-23T10:45:29-06:00",
+   "user": "Tane Haugen",
+   "handle": "@tane",
+   "text": "only the first half"
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-andrei-hiba",
+ "kind": "dm",
+ "participants": [
+  "Andrei Laurent",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-24T11:00:52-08:00",
+   "user": "Andrei Laurent",
+   "handle": "@andrei",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-06-24T11:01:55-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "sure, what's up?"
+  },
+  {
+   "ts": "2027-06-24T11:03:00-08:00",
+   "user": "Andrei Laurent",
+   "handle": "@andrei",
+   "text": "Heads up: Madeline will deliver the Garnet integration endpoint.",
+   "edited": true,
+   "original": "Heads up: Madeline will dleiver the Garnet integration endpoint."
+  },
+  {
+   "ts": "2027-06-24T11:03:14-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-06-24T11:06:36-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-06-24T11:09:57-08:00",
+   "user": "Andrei Laurent",
+   "handle": "@andrei",
+   "text": "no worries"
+  }
+ ]
+}

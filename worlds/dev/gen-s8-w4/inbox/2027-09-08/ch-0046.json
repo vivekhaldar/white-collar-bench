@@ -1,0 +1,23 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-kiran",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Kiran Merriweather"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T13:18:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "just set up a wilhaven catch-up with you"
+  },
+  {
+   "ts": "2027-09-08T13:18:54-06:00",
+   "user": "Kiran Merriweather",
+   "handle": "@kiran",
+   "text": "great, thanks :)"
+  }
+ ]
+}

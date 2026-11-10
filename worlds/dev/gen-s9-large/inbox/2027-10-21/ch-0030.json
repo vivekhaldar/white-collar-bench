@@ -1,0 +1,35 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-isabela",
+ "kind": "dm",
+ "participants": [
+  "Bela",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-21T09:08:20-05:00",
+   "user": "Bela",
+   "handle": "@isabela",
+   "text": "Just to recap, on Monday Winifred said they'd send you the Clelera volume tiers."
+  },
+  {
+   "ts": "2027-10-21T09:09:10-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "great, thank you"
+  },
+  {
+   "ts": "2027-10-21T09:12:27-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-10-21T09:15:02-05:00",
+   "user": "Bela",
+   "handle": "@isabela",
+   "text": "yep, all good"
+  }
+ ]
+}

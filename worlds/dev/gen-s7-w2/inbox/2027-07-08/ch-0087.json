@@ -1,0 +1,29 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolat-hiba",
+ "kind": "dm",
+ "participants": [
+  "Bolat",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-08T09:20:00-08:00",
+   "user": "Bolat",
+   "handle": "@bolat",
+   "text": "I can send you the Garnet acceptance criteria. :)"
+  },
+  {
+   "ts": "2027-07-08T09:22:32-08:00",
+   "user": "Bolat",
+   "handle": "@bolat",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-07-08T09:25:10-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "yep, all good"
+  }
+ ]
+}

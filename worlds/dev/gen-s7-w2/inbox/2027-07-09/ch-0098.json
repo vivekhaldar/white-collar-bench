@@ -1,0 +1,43 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolatf-hiba",
+ "kind": "dm",
+ "participants": [
+  "Bolat Farah",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-09T18:09:00-08:00",
+   "user": "Bolat Farah",
+   "handle": "@bolatf",
+   "text": "Done, I sent you the notes from the research computing session.",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-09T18:10:18-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "got it, thanks"
+  },
+  {
+   "ts": "2027-07-09T18:11:59-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-07-09T18:13:01-08:00",
+   "user": "Bolat Farah",
+   "handle": "@bolatf",
+   "text": "yep, all good"
+  }
+ ]
+}

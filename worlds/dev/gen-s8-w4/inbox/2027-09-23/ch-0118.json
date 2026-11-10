@@ -1,0 +1,46 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#fulmar-core",
+ "kind": "channel",
+ "participants": [
+  "Adwoa",
+  "Amira Baek",
+  "Ottavio Bakker",
+  "Giorgi Wisniewska",
+  "Oksana Hoffmann",
+  "Marcelo Meijer",
+  "Batbayar Galbraith",
+  "Thibault Kowalski",
+  "Kamau Greco",
+  "Shirin Oyelami"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-23T17:04:00-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "@amira i shared the Fulmar training outline with you earlier today."
+  },
+  {
+   "ts": "2027-09-23T17:05:02-06:00",
+   "user": "Shirin Oyelami",
+   "handle": "@shirin",
+   "text": "thanks for the heads up",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-23T17:14:03-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-23T17:18:42-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

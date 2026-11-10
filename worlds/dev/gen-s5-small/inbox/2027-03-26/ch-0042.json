@@ -1,0 +1,35 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-anahit-hiba",
+ "kind": "dm",
+ "participants": [
+  "Anahit",
+  "Hiba Deng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-26T15:52:00-05:00",
+   "user": "Anahit",
+   "handle": "@anahit",
+   "text": "Picking the clinical documentation discovery opportunity list back up now!"
+  },
+  {
+   "ts": "2027-03-26T15:52:42-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-03-26T15:56:44-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-03-26T15:59:23-05:00",
+   "user": "Anahit",
+   "handle": "@anahit",
+   "text": "anytime :)"
+  }
+ ]
+}

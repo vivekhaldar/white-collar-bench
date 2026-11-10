@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-yasmin",
+ "kind": "dm",
+ "participants": [
+  "Yasmin Guo",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-02T16:52:00-06:00",
+   "user": "Yasmin Guo",
+   "handle": "@yasmin",
+   "text": "I sent you the Fulmar pilot charter v2 earlier today."
+  },
+  {
+   "ts": "2027-10-02T16:53:29-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "thank you!"
+  },
+  {
+   "ts": "2027-10-02T16:57:39-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-10-02T17:00:33-06:00",
+   "user": "Yasmin Guo",
+   "handle": "@yasmin",
+   "text": "only the first half"
+  }
+ ]
+}

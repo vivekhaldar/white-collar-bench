@@ -1,0 +1,23 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-marcelo",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Marcelo Meijer"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T13:06:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "On it, I'll confirm the Fulmar test plan with you."
+  },
+  {
+   "ts": "2027-09-08T13:07:23-06:00",
+   "user": "Marcelo Meijer",
+   "handle": "@marcelo",
+   "text": "that'd be great"
+  }
+ ]
+}

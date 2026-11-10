@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lanhurst//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:440cd5588b6555ea@lanhurst.example
+DTSTAMP:20270216T213500Z
+DTSTART:20270217T220000Z
+DTEND:20270217T223000Z
+SUMMARY:Axolotl scoping call
+ORGANIZER;CN=Losa Moretti:mailto:losa.moretti@dorcliff.lanhurst.example
+ATTENDEE;CN=Andres Erdem;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:andres.erdem@lanhurst.example
+ATTENDEE;CN=Liisa Babic;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:liisa.babic@lanhurst.example
+ATTENDEE;CN=Despina Pereira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:despina.pereira@lanhurst.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.lanhurst.example/j/4486124999?pwd=r9EujapQ\nPasscode: 333723
+LOCATION:https://meet.lanhurst.example/j/4486124999?pwd=r9EujapQ
+END:VEVENT
+END:VCALENDAR

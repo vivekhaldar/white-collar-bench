@@ -1,38 +1,41 @@
 {
  "workspace": "iselvale",
- "channel": "#wagtail-core",
- "kind": "channel",
+ "channel": "dm-anahit-hiba",
+ "kind": "dm",
  "participants": [
-  "Hiba Xu",
-  "Ama Forsythe",
-  "Anahit",
-  "Mateo Pritchard",
-  "Lakshmi Zamora",
-  "Friederike Malhotra",
-  "Jisoo Makinen",
-  "Maricel Herrera",
-  "Isla Mercier"
+  "Anahit Fifita",
+  "Hiba Deng"
  ],
  "messages": [
   {
-   "ts": "2027-03-29T15:26:00-05:00",
-   "user": "Hiba Xu",
+   "ts": "2027-03-29T10:09:21-05:00",
+   "user": "Anahit Fifita",
+   "handle": "@anahit",
+   "text": "hey :)"
+  },
+  {
+   "ts": "2027-03-29T10:10:00-05:00",
+   "user": "Anahit Fifita",
+   "handle": "@anahit",
+   "text": "The clinical documentation discovery findings summary is back on, sorry for the delay. :)"
+  },
+  {
+   "ts": "2027-03-29T10:10:11-05:00",
+   "user": "Hiba Deng",
    "handle": "@hiba",
-   "text": "@friederike the wagtail help-desk script is blocked, waiting on an unsigned agreement"
+   "text": "good to know"
   },
   {
-   "ts": "2027-03-29T15:26:34-05:00",
-   "user": "Friederike Malhotra",
-   "handle": "@friederike",
-   "text": "good to know",
-   "thread_of": 0
+   "ts": "2027-03-29T10:14:04-05:00",
+   "user": "Anahit Fifita",
+   "handle": "@anahit",
+   "text": "did you catch the all-hands? :)"
   },
   {
-   "ts": "2027-03-29T15:30:21-05:00",
-   "user": "Jisoo Makinen",
-   "handle": "@jisoo",
-   "text": "thanks for the update",
-   "thread_of": 0
+   "ts": "2027-03-29T10:16:50-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "only the first half"
   }
  ]
 }

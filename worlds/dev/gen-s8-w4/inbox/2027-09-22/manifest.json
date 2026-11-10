@@ -1,0 +1,117 @@
+{
+  "date": "2027-09-22",
+  "artifacts": [
+    {
+      "id": "em-0135",
+      "channel": "email",
+      "received_at": "2027-09-22T08:42:00-06:00",
+      "path": "em-0135.eml",
+      "title": "Re: FYI: Operator AI basics workshop registration list"
+    },
+    {
+      "id": "em-0136",
+      "channel": "email",
+      "received_at": "2027-09-22T08:55:00-06:00",
+      "path": "em-0136.eml",
+      "title": "[REQ-13116] Request resolved"
+    },
+    {
+      "id": "em-0137",
+      "channel": "email",
+      "received_at": "2027-09-22T09:08:00-06:00",
+      "path": "em-0137.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "mn-0019",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-22T09:55:00-06:00",
+      "path": "mn-0019.md",
+      "title": "Recap: Fulmar standup"
+    },
+    {
+      "id": "em-0138",
+      "channel": "email",
+      "received_at": "2027-09-22T10:05:00-06:00",
+      "path": "em-0138.eml",
+      "title": "Galix sandbox credentials"
+    },
+    {
+      "id": "ch-0108",
+      "channel": "chat",
+      "received_at": "2027-09-22T10:08:00-06:00",
+      "path": "ch-0108.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0109",
+      "channel": "chat",
+      "received_at": "2027-09-22T10:34:00-06:00",
+      "path": "ch-0109.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "em-0139",
+      "channel": "email",
+      "received_at": "2027-09-22T11:05:00-06:00",
+      "path": "em-0139.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "em-0140",
+      "channel": "email",
+      "received_at": "2027-09-22T11:26:00-06:00",
+      "path": "em-0140.eml",
+      "title": "Re: Fulmar help-desk script"
+    },
+    {
+      "id": "ch-0110",
+      "channel": "chat",
+      "received_at": "2027-09-22T13:29:00-06:00",
+      "path": "ch-0110.json",
+      "title": "DM: Amira Baek / Darnell Malouf"
+    },
+    {
+      "id": "em-0141",
+      "channel": "email",
+      "received_at": "2027-09-22T13:49:00-06:00",
+      "path": "em-0141.eml",
+      "title": "Re: Galix deep-dive materials"
+    },
+    {
+      "id": "em-0142",
+      "channel": "email",
+      "received_at": "2027-09-22T14:20:00-06:00",
+      "path": "em-0142.eml",
+      "title": "Re: Work instructions selection decision memo"
+    },
+    {
+      "id": "ca-0013",
+      "channel": "calendar",
+      "received_at": "2027-09-22T14:26:00-06:00",
+      "path": "ca-0013.ics",
+      "title": "Invite: Fulmar review"
+    },
+    {
+      "id": "mn-0020",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-22T15:00:00-06:00",
+      "path": "mn-0020.md",
+      "title": "Recap: Fulmar / tooling wear discovery sync"
+    },
+    {
+      "id": "em-0143",
+      "channel": "email",
+      "received_at": "2027-09-22T16:37:00-06:00",
+      "path": "em-0143.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0144",
+      "channel": "email",
+      "received_at": "2027-09-22T19:00:00-06:00",
+      "path": "em-0144.eml",
+      "title": "Room booking confirmation"
+    }
+  ]
+}

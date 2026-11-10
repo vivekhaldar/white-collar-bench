@@ -3,19 +3,19 @@
  "channel": "dm-camila-petra",
  "kind": "dm",
  "participants": [
-  "Camila Quimby",
+  "Camila Abernathy",
   "Petra Korkmaz"
  ],
  "messages": [
   {
    "ts": "2027-11-02T16:53:28-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "quick q"
   },
   {
    "ts": "2027-11-02T16:54:00-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "I confirmed the notice translation discovery findings summary with you earlier today.",
    "reactions": [

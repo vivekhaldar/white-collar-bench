@@ -4,7 +4,7 @@
  "kind": "dm",
  "participants": [
   "Meera Chebet",
-  "Dina Zimmermann"
+  "Dina Ricci"
  ],
  "messages": [
   {
@@ -21,7 +21,7 @@
   },
   {
    "ts": "2027-03-04T09:35:16-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "got it"
   },
@@ -33,13 +33,13 @@
   },
   {
    "ts": "2027-03-04T09:36:17-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "noted"
   },
   {
    "ts": "2027-03-04T09:40:12-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "thanks again for earlier"
   },

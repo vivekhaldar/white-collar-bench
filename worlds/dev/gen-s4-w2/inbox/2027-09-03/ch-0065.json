@@ -3,16 +3,16 @@
  "channel": "#course-assistant-discovery-core",
  "kind": "channel",
  "participants": [
-  "Ottavio Monteiro",
+  "Ottavio Moreira",
   "Roya Chatterjee",
-  "Meera Ivanova",
+  "Meera Bondarenko",
   "Tegan Ogunleye",
-  "Nadia Krause"
+  "Nadia Vogel"
  ],
  "messages": [
   {
    "ts": "2027-09-03T09:56:00-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "@tegan could you send me the course assistant discovery stakeholder map?"
   },

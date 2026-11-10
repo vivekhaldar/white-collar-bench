@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Corrstead//Calendar//EN
+METHOD:REPLY
+BEGIN:VEVENT
+UID:58f8b24c63734200@corrstead.example
+DTSTAMP:20270709T191700Z
+DTSTART:20270713T000000Z
+DTEND:20270713T003000Z
+SUMMARY:Accepted: Admissions triage selection follow-up
+ORGANIZER;CN=Bolat Oyelami:mailto:bolat.oyelami@corrstead.example
+ATTENDEE;CN=Hiba Jimenez;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED:mailto:hiba.jimenez@corrstead.example
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR

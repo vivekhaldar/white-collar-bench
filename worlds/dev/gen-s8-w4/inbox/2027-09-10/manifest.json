@@ -1,0 +1,104 @@
+{
+  "date": "2027-09-10",
+  "artifacts": [
+    {
+      "id": "ch-0058",
+      "channel": "chat",
+      "received_at": "2027-09-10T09:33:00-06:00",
+      "path": "ch-0058.json",
+      "title": "DM: Marcelo Meijer / Amira Baek"
+    },
+    {
+      "id": "em-0071",
+      "channel": "email",
+      "received_at": "2027-09-10T09:48:00-06:00",
+      "path": "em-0071.eml",
+      "title": "Re: Fulmar pilot to four lines"
+    },
+    {
+      "id": "mn-0013",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-10T10:00:00-06:00",
+      "path": "mn-0013.md",
+      "title": "Recap: Catch-up: Amira / Adwoa"
+    },
+    {
+      "id": "mt-0008",
+      "channel": "transcript",
+      "received_at": "2027-09-10T10:00:00-06:00",
+      "path": "mt-0008.vtt",
+      "title": "Fulmar standup (transcript)"
+    },
+    {
+      "id": "mt-0009",
+      "channel": "transcript",
+      "received_at": "2027-09-10T10:00:00-06:00",
+      "path": "mt-0009.vtt",
+      "title": "Catch-up: Amira / Adwoa (transcript)"
+    },
+    {
+      "id": "ch-0059",
+      "channel": "chat",
+      "received_at": "2027-09-10T13:01:00-06:00",
+      "path": "ch-0059.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0060",
+      "channel": "chat",
+      "received_at": "2027-09-10T13:54:00-06:00",
+      "path": "ch-0060.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    },
+    {
+      "id": "ch-0061",
+      "channel": "chat",
+      "received_at": "2027-09-10T14:13:00-06:00",
+      "path": "ch-0061.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0072",
+      "channel": "email",
+      "received_at": "2027-09-10T15:48:00-06:00",
+      "path": "em-0072.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0073",
+      "channel": "email",
+      "received_at": "2027-09-10T16:05:00-06:00",
+      "path": "em-0073.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "mn-0014",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-10T16:15:00-06:00",
+      "path": "mn-0014.md",
+      "title": "Recap: Catch-up: Amira / Thibault"
+    },
+    {
+      "id": "dc-0004",
+      "channel": "document",
+      "received_at": "2027-09-10T16:46:00-06:00",
+      "path": "dc-0004.docx",
+      "title": "Fulmar lessons-learned note after Adwoa's comments v3",
+      "parent": "em-0074"
+    },
+    {
+      "id": "em-0074",
+      "channel": "email",
+      "received_at": "2027-09-10T16:46:00-06:00",
+      "path": "em-0074.eml",
+      "title": "Status note: w/e 10 September"
+    },
+    {
+      "id": "nt-0004",
+      "channel": "note",
+      "received_at": "2027-09-10T17:46:00-06:00",
+      "path": "nt-0004.md",
+      "title": "Fri notes"
+    }
+  ]
+}

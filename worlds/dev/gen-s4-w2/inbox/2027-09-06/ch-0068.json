@@ -3,15 +3,15 @@
  "channel": "#random",
  "kind": "channel",
  "participants": [
-  "Teagan Penhallow",
-  "Tariq Popescu",
-  "Meera Ivanova",
-  "Ewan Shrestha"
+  "Teagan Alexiou",
+  "Tariq Ivanova",
+  "Meera Bondarenko",
+  "Ewan Naidu"
  ],
  "messages": [
   {
    "ts": "2027-09-06T08:15:43-08:00",
-   "user": "Teagan Penhallow",
+   "user": "Teagan Alexiou",
    "handle": "@teagan",
    "text": "does anyone have a spare laptop charger (usb-c)?",
    "reactions": [
@@ -26,13 +26,13 @@
   },
   {
    "ts": "2027-09-06T08:20:32-08:00",
-   "user": "Tariq Popescu",
+   "user": "Tariq Ivanova",
    "handle": "@tariq",
    "text": "i have one, desk by the window"
   },
   {
    "ts": "2027-09-06T08:23:25-08:00",
-   "user": "Meera Ivanova",
+   "user": "Meera Bondarenko",
    "handle": "@meera",
    "text": "check the supply cupboard"
   }

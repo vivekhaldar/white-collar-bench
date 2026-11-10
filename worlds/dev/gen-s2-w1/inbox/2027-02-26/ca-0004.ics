@@ -8,11 +8,11 @@ DTSTAMP:20270226T170500Z
 DTSTART:20270302T160000Z
 DTEND:20270302T170000Z
 SUMMARY:Mistral scoping call
-ORGANIZER;CN=Yael Yardley:mailto:yael.yardley@nordale.vercliff.example
-ATTENDEE;CN=Naoko Maldonado;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:naoko.maldonado@nordale.vercliff.example
-ATTENDEE;CN=Bilal Blackwood;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bilal.blackwood@vercliff.example
+ORGANIZER;CN=Yael Ellery:mailto:yael.ellery@nordale.vercliff.example
+ATTENDEE;CN=Naoko Sandoval;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:naoko.sandoval@nordale.vercliff.example
+ATTENDEE;CN=Bilal Kahananui;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bilal.kahananui@vercliff.example
 ATTENDEE;CN=Cassandra Yilmaz;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:cassandra.yilmaz@vercliff.example
-ATTENDEE;CN=Dina Zimmermann;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.zimmermann@vercliff.example
+ATTENDEE;CN=Dina Ricci;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.ricci@vercliff.example
 SEQUENCE:0
 DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.vercliff.example/j/6644127204?pwd=754kYZdZ\nPasscode: 837710
 LOCATION:https://meet.vercliff.example/j/6644127204?pwd=754kYZdZ

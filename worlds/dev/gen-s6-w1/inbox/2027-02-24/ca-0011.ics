@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lanhurst//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:065655be4fd59f14@lanhurst.example
+DTSTAMP:20270224T224700Z
+DTSTART:20270225T230000Z
+DTEND:20270225T234500Z
+SUMMARY:Axolotl review
+ORGANIZER;CN=Losa Moretti:mailto:losa.moretti@dorcliff.lanhurst.example
+ATTENDEE;CN=Despina Pereira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:despina.pereira@lanhurst.example
+ATTENDEE;CN=Andres Erdem;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:andres.erdem@lanhurst.example
+SEQUENCE:0
+DESCRIPTION:Placeholder\, agenda to follow.\nJoin video meeting: https://meet.lanhurst.example/j/1760567555?pwd=ejg8UQK8\nPasscode: 136838
+LOCATION:https://meet.lanhurst.example/j/1760567555?pwd=ejg8UQK8
+END:VEVENT
+END:VCALENDAR

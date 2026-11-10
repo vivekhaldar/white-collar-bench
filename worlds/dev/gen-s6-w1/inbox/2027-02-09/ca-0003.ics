@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lanhurst//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:5fa667a05475df34@lanhurst.example
+DTSTAMP:20270209T215300Z
+DTSTART:20270211T223000Z
+DTEND:20270211T233000Z
+SUMMARY:Working session: Fennel tenant onboarding guide
+ORGANIZER;CN=Liisa Babic:mailto:liisa.babic@lanhurst.example
+ATTENDEE;CN=Despina Pereira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:despina.pereira@lanhurst.example
+SEQUENCE:0
+DESCRIPTION:Agenda: Publish the Fennel tenant onboarding guide.\nJoin video meeting: https://meet.lanhurst.example/j/6823296656?pwd=mtXQmAgU\nPasscode: 461630
+LOCATION:https://meet.lanhurst.example/j/6823296656?pwd=mtXQmAgU
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,40 @@
+{
+ "workspace": "birchmere",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Dina Laurent",
+  "Bisi Chatterjee",
+  "Eun-ji Chen"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T09:18:42-05:00",
+   "user": "Dina Laurent",
+   "handle": "@dina",
+   "text": "the elevator on the east side is out again :)",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@bisi",
+      "@eunji"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-07T09:25:09-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "stairs it is",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-07T09:29:31-05:00",
+   "user": "Eun-ji Chen",
+   "handle": "@eunji",
+   "text": "classic"
+  }
+ ]
+}

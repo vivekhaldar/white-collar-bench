@@ -4,9 +4,8 @@
   params: {}
   challenges:
   - duplicate_signal
-  - endorsement
+  - implied_commitment
   - scattered_evidence
-  - worker_directive
 - id: q-002
   checkpoint: cp1
   template: project_status
@@ -17,109 +16,110 @@
   - alias
   - duplicate_signal
   - scattered_evidence
+  - supersession
 - id: q-003
   checkpoint: cp1
   template: project_changes
   params:
-    project: pr-bittern
+    project: pr-okapi
     since: '2027-09-17'
   challenges:
-  - duplicate_signal
-  - endorsement
-  - worker_directive
+  - implied_commitment
+  - scattered_evidence
+  - supersession
 - id: q-004
   checkpoint: cp1
   template: i_owe
   params:
-    person: p-guadalupe-lombardi
-    name_form: Guadalupe
+    person: p-eleni-fontaine
+    name_form: Eleni
   challenges:
   - alias
-  - duplicate_signal
 - id: q-005
   checkpoint: cp1
   template: owed_to_me
   params:
-    person: p-nurlan-moreira
+    person: p-nurlan-jansen
   challenges:
   - duplicate_signal
+  - implied_commitment
+  - transfer
 - id: q-006
   checkpoint: cp1
   template: loop_owner
   params:
-    commitment: c-003
+    commitment: c-021
   challenges:
-  - duplicate_signal
+  - transfer
 - id: q-007
   checkpoint: cp1
   template: loop_due
   params:
-    commitment: c-054
+    commitment: c-058
   challenges:
   - scattered_evidence
 - id: q-008
   checkpoint: cp1
   template: project_attr
   params:
-    project: pr-talwick-partnership
-    attribute: owner
+    project: pr-sirocco-operating-model-review
+    attribute: sponsor
   challenges: []
 - id: q-009
   checkpoint: cp1
   template: person_attr
   params:
-    person: p-giorgi-ngo
+    person: p-eleni-fontaine
     attribute: relationship
-    name_form: Giorgi
+    name_form: Lena
   challenges:
   - alias
 - id: q-010
   checkpoint: cp1
   template: project_loops
   params:
-    project: pr-sirocco
+    project: pr-rosix-enterprise-agreement
   challenges:
   - duplicate_signal
-  - endorsement
 - id: q-011
   checkpoint: cp1
   template: person_brief
   params:
-    person: p-dina-mancini
+    person: p-dina-laurent
   challenges:
-  - duplicate_signal
   - endorsement
-  - scattered_evidence
+  - implied_commitment
+  - worker_directive
 - id: q-012
   checkpoint: cp1
   template: decision_date
   params:
     decision: d-002
-  challenges: []
+  challenges:
+  - duplicate_signal
 - id: q-013
   checkpoint: cp1
   template: event_date
   params:
-    event: e-0126
-  text: When was "Send Alasdair the notes from the denials analytics session" completed?
-  challenges:
-  - silent_closure
+    event: e-0171
+  text: When was "Confirm the bed management discovery process map with Oluwaseun" completed?
+  challenges: []
 - id: q-014
   checkpoint: cp1
   template: project_attr
   params:
-    project: pr-bittern
+    project: pr-lanmoor-bed-management-discovery
     attribute: budget
-  text: What is the budget for Bittern?
+  text: What is the budget for Lanmoor Bed Management Discovery?
   challenges:
   - unobservable
 - id: q-015
   checkpoint: cp1
   template: person_attr
   params:
-    person: p-vitoria-oduro
+    person: p-penelope-romano
     attribute: phone
-    name_form: Vitoria
+    name_form: Penny
   challenges:
   - alias
   - unobservable
@@ -128,103 +128,102 @@
   template: focus_tomorrow
   params: {}
   challenges:
-  - batch_catchup
-  - correction
   - duplicate_signal
-  - endorsement
-  - new_entity
-  - supersession
-  - worker_directive
+  - implied_commitment
+  - unobservable
 - id: q-017
   checkpoint: cp2
   template: project_status
   params:
     project: pr-okapi
   challenges:
-  - batch_catchup
+  - correction
   - duplicate_signal
-  - new_entity
-  - reversal
+  - implied_commitment
   - supersession
+  - transfer
 - id: q-018
   checkpoint: cp2
   template: project_changes
   params:
-    project: pr-lanmoor-outpatient-no-shows-discovery
+    project: pr-lanmoor-bed-management-discovery
     since: '2027-09-21'
+    name_form: the Lanmoor discovery
   challenges:
-  - new_entity
-  - restructuring
+  - alias
+  - transfer
+  - unobservable
 - id: q-019
   checkpoint: cp2
   template: i_owe
   params:
-    person: p-bisi-chatterjee
-  challenges:
-  - duplicate_signal
-  - endorsement
-  - name_collision
-  - worker_directive
+    person: p-tunde-andersen
+  challenges: []
 - id: q-020
   checkpoint: cp2
   template: owed_to_me
   params:
-    person: p-dalisay-sandberg
-  challenges:
-  - duplicate_signal
+    person: p-katarzyna-dang
+  challenges: []
 - id: q-021
-  checkpoint: cp2
-  template: loop_due
-  params:
-    commitment: c-061
-  challenges:
-  - correction
-  - supersession
-- id: q-022
   checkpoint: cp2
   template: project_attr
   params:
-    project: pr-okapi
+    project: pr-dalett-interpreter-booking-diligence
     attribute: owner
-    name_form: the Ketford pilot
+    name_form: the Dalett deep dive
   challenges:
   - alias
-- id: q-023
+- id: q-022
   checkpoint: cp2
   template: person_attr
   params:
-    person: p-margaux-monteiro
+    person: p-phoebe-pickering
     attribute: org
   challenges:
   - new_entity
-- id: q-024
+- id: q-023
   checkpoint: cp2
   template: project_loops
   params:
-    project: pr-lanmoor-outpatient-no-shows-discovery
+    project: pr-okapi
+    name_form: OKAP
   challenges:
+  - alias
+  - correction
   - duplicate_signal
-- id: q-025
+  - implied_commitment
+  - transfer
+- id: q-024
   checkpoint: cp2
   template: person_brief
   params:
-    person: p-katarzyna-feng
+    person: p-nurlan-jansen
+    name_form: Nurlan
   challenges:
-  - correction
+  - alias
   - duplicate_signal
-  - supersession
+  - implied_commitment
+  - transfer
+- id: q-025
+  checkpoint: cp2
+  template: decision_date
+  params:
+    decision: d-001
+  challenges: []
 - id: q-026
   checkpoint: cp2
   template: event_date
   params:
-    event: e-0180
-  text: When was "Confirm the Okapi metrics definition with Penelope" completed?
-  challenges: []
+    event: e-0209
+  text: When was "Publish the Sirocco tenant onboarding guide" completed?
+  challenges:
+  - batch_catchup
 - id: q-027
   checkpoint: cp2
   template: loop_owner
   params:
-    commitment: c-040
+    commitment: c-027
   challenges:
   - transfer
 - id: q-028
@@ -232,124 +231,109 @@
   template: project_attr
   params:
     project: pr-intake-forms-tool-selection
-    attribute: owner
-  challenges: []
+    attribute: target_date
+    name_form: the Kasis/Rosix evaluation
+  challenges:
+  - alias
 - id: q-029
   checkpoint: cp2
   template: project_loops
   params:
-    project: pr-okapi
+    project: pr-lanmoor-bed-management-discovery
   challenges:
-  - batch_catchup
-  - duplicate_signal
-  - new_entity
+  - transfer
+  - unobservable
 - id: q-030
   checkpoint: cp2
-  template: event_date
+  template: project_attr
   params:
-    event: e-0226
-  text: When was "Walk Penelope through the Sirocco requirements matrix" completed?
+    project: pr-ketford-referral-triage-discovery
+    attribute: budget
   challenges:
   - unobservable
-  - weak_evidence
 - id: q-031
   checkpoint: cp3
   template: focus_tomorrow
   params: {}
   challenges:
   - batch_catchup
-  - correction
   - duplicate_signal
-  - endorsement
   - implied_commitment
-  - new_entity
-  - supersession
-  - worker_directive
+  - reversal
+  - unobservable
 - id: q-032
   checkpoint: cp3
   template: project_status
   params:
     project: pr-okapi
-    name_form: OKAP
   challenges:
-  - alias
-  - batch_catchup
   - duplicate_signal
-  - endorsement
   - implied_commitment
-  - new_entity
+  - reversal
   - supersession
-  - worker_directive
 - id: q-033
   checkpoint: cp3
   template: project_changes
   params:
-    project: pr-okapi
+    project: pr-ketford-referral-triage-discovery
     since: '2027-09-23'
+    name_form: the Ketford discovery
   challenges:
-  - endorsement
-  - worker_directive
+  - alias
 - id: q-034
   checkpoint: cp3
   template: i_owe
   params:
-    person: p-dina-mancini
+    person: p-bisi-chatterjee
   challenges:
-  - batch_catchup
+  - duplicate_signal
+  - name_collision
 - id: q-035
   checkpoint: cp3
   template: owed_to_me
   params:
-    person: p-bisi-chatterjee
+    person: p-somchai-korkmaz
   challenges:
-  - batch_catchup
-  - endorsement
   - name_collision
 - id: q-036
   checkpoint: cp3
   template: project_attr
   params:
-    project: pr-ai-safety-rounds-workshop
+    project: pr-sirocco-funding-model
     attribute: target_date
-    name_form: the Emberbury workshop
-  challenges:
-  - alias
+  challenges: []
 - id: q-037
   checkpoint: cp3
   template: project_loops
   params:
-    project: pr-bittern
-  challenges:
-  - batch_catchup
-  - correction
-  - supersession
-- id: q-038
-  checkpoint: cp3
-  template: person_brief
-  params:
-    person: p-bisi-chatterjee
-    name_form: our programs director
+    project: pr-sirocco
+    name_form: the common platform
   challenges:
   - alias
   - batch_catchup
   - duplicate_signal
-  - endorsement
-  - name_collision
+  - implied_commitment
+- id: q-038
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-guadalupe-moreau
+  challenges:
+  - duplicate_signal
   - new_entity
   - restructuring
-  - worker_directive
 - id: q-039
   checkpoint: cp3
   template: event_date
   params:
-    event: e-0116
-  text: When was "Send Guadalupe the bed management discovery process map" completed?
+    event: e-0195
+  text: When was "Write a reference note for Dina's prior authorization fellowship application" completed?
   challenges: []
 - id: q-040
   checkpoint: cp3
   template: loop_due
   params:
-    commitment: c-067
+    commitment: c-055
   challenges:
   - endorsement
   - worker_directive
@@ -357,38 +341,35 @@
   checkpoint: cp3
   template: project_attr
   params:
-    project: pr-lanmoor-bed-management-discovery
-    attribute: owner
+    project: pr-sirocco-funding-model
+    attribute: sponsor
   challenges: []
 - id: q-042
   checkpoint: cp3
   template: project_loops
   params:
-    project: pr-clinical-data-engineer-hire
-  challenges:
-  - duplicate_signal
+    project: pr-ketford-referral-triage-discovery
+  challenges: []
 - id: q-043
   checkpoint: cp3
   template: person_brief
   params:
-    person: p-catrin-kiprono
-  challenges:
-  - transfer
+    person: p-kwame-brandt
+  challenges: []
 - id: q-044
   checkpoint: cp3
-  template: person_attr
+  template: project_attr
   params:
-    person: p-katrin-watanabe
-    attribute: office
+    project: pr-lanmoor-bed-management-discovery
+    attribute: budget
   challenges:
   - unobservable
 - id: q-045
   checkpoint: cp3
-  template: project_attr
+  template: person_attr
   params:
-    project: pr-clinical-data-engineer-hire
-    attribute: budget
-    name_form: REQ-3709
+    person: p-bisi-chatterjee
+    attribute: office
   challenges:
-  - alias
+  - name_collision
   - unobservable

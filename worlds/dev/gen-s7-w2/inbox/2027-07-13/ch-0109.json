@@ -1,0 +1,35 @@
+{
+ "workspace": "corrstead",
+ "channel": "#siskin-core",
+ "kind": "channel",
+ "participants": [
+  "Emre Khumalo",
+  "Hiba Jimenez",
+  "Desmond Visser",
+  "Bolat Oyelami",
+  "Ewan Laine",
+  "Madeline Chikwanha",
+  "Andrei Laurent"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-13T15:56:00-08:00",
+   "user": "Emre Khumalo",
+   "handle": "@emre",
+   "text": "@hiba i fixed the Siskin duplicate notifications."
+  },
+  {
+   "ts": "2027-07-13T15:57:09-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "got it, thanks"
+  },
+  {
+   "ts": "2027-07-13T16:00:07-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

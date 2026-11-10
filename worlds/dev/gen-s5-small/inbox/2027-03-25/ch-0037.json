@@ -1,31 +1,23 @@
 {
  "workspace": "iselvale",
- "channel": "#wagtail-core",
- "kind": "channel",
+ "channel": "dm-hiba-rudo",
+ "kind": "dm",
  "participants": [
-  "Hiba Xu",
-  "Ama Forsythe",
-  "Anahit",
-  "Mateo Pritchard",
-  "Lakshmi Zamora",
-  "Friederike Malhotra",
-  "Jisoo Makinen",
-  "Maricel Herrera",
-  "Isla Mercier"
+  "Rudo Ekwueme",
+  "Hiba Deng"
  ],
  "messages": [
   {
-   "ts": "2027-03-25T13:02:00-05:00",
-   "user": "Hiba Xu",
-   "handle": "@hiba",
-   "text": "@lakshmi just confirmed the wagtail change request with you"
+   "ts": "2027-03-25T18:17:15-05:00",
+   "user": "Rudo Ekwueme",
+   "handle": "@rudo",
+   "text": "for the record, i sent you the wagtail metrics definition on monday"
   },
   {
-   "ts": "2027-03-25T13:02:51-05:00",
-   "user": "Friederike Malhotra",
-   "handle": "@friederike",
-   "text": "good to know",
-   "thread_of": 0
+   "ts": "2027-03-25T18:17:23-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "thank you!"
   }
  ]
 }

@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Adwoa Kocak",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-06T09:44:03-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-10-06T09:45:31-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-10-06T09:49:00-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "Tane is expecting you to present the safety reporting discovery readout to Morcliff."
+  },
+  {
+   "ts": "2027-10-06T09:49:42-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "sure, can do"
+  }
+ ]
+}

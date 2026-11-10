@@ -1,0 +1,23 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-darnell",
+ "kind": "dm",
+ "participants": [
+  "Darnell Malouf",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-21T12:51:00-06:00",
+   "user": "Darnell Malouf",
+   "handle": "@darnell",
+   "text": "Could you send me the reading list on scrap analysis?"
+  },
+  {
+   "ts": "2027-09-21T12:51:30-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "sure, can do"
+  }
+ ]
+}

@@ -1,47 +1,43 @@
 {
  "workspace": "iselvale",
- "channel": "#random",
- "kind": "channel",
+ "channel": "dm-hiba-lakshmi",
+ "kind": "dm",
  "participants": [
-  "Anahit Upton",
-  "Lakshmi Zamora",
-  "Kwame Ortega",
-  "Friederike Malhotra"
+  "Hiba Deng",
+  "Lakshmi Figueroa"
  ],
  "messages": [
   {
-   "ts": "2027-03-30T11:18:29-05:00",
-   "user": "Anahit Upton",
-   "handle": "@anahit",
-   "text": "there's leftover cake in the kitchen on 4",
+   "ts": "2027-03-30T10:07:00-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "thanks for offering to send me the okapi operating model draft v3, that would be great",
    "reactions": [
     {
-     "emoji": "heavy_check_mark",
+     "emoji": "white_check_mark",
      "users": [
-      "@lakshmi",
-      "@kwame"
+      "@lakshmi"
      ]
     }
    ]
   },
   {
-   "ts": "2027-03-30T11:21:43-05:00",
-   "user": "Lakshmi Zamora",
+   "ts": "2027-03-30T10:07:51-05:00",
+   "user": "Lakshmi Figueroa",
    "handle": "@lakshmi",
-   "text": "on my way",
-   "thread_of": 0
+   "text": "no problem"
   },
   {
-   "ts": "2027-03-30T11:23:31-05:00",
-   "user": "Kwame Ortega",
-   "handle": "@kwame",
-   "text": "what kind?"
+   "ts": "2027-03-30T10:12:18-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "did the link work for you?"
   },
   {
-   "ts": "2027-03-30T11:26:00-05:00",
-   "user": "Friederike Malhotra",
-   "handle": "@friederike",
-   "text": "the lemon one is gone already"
+   "ts": "2027-03-30T10:14:01-05:00",
+   "user": "Lakshmi Figueroa",
+   "handle": "@lakshmi",
+   "text": "yep, all good"
   }
  ]
 }

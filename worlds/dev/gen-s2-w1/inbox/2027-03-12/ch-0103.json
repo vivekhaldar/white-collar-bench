@@ -3,13 +3,13 @@
  "channel": "dm-dina-rahul",
  "kind": "dm",
  "participants": [
-  "Dina Zimmermann",
-  "Rahul Almeida"
+  "Dina Ricci",
+  "Rahul Duarte"
  ],
  "messages": [
   {
    "ts": "2027-03-12T18:29:00-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "I can introduce you to Hiba for the records requests work.",
    "edited": true,
@@ -17,7 +17,7 @@
   },
   {
    "ts": "2027-03-12T18:29:26-07:00",
-   "user": "Rahul Almeida",
+   "user": "Rahul Duarte",
    "handle": "@rahul",
    "text": "thanks!"
   }

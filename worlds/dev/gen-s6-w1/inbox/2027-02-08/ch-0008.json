@@ -1,0 +1,42 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#linel-enterprise-agreement-core",
+ "kind": "channel",
+ "participants": [
+  "Andres Erdem",
+  "Despina Pereira",
+  "Wei Rossi",
+  "Losa Moretti",
+  "Nathaniel Cartwright",
+  "Karim Navarro"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-08T15:12:00-08:00",
+   "user": "Andres Erdem",
+   "handle": "@andres",
+   "text": "Despina would like Sipho to send Despina the Linel volume tiers, not agreed yet."
+  },
+  {
+   "ts": "2027-02-08T15:13:05-08:00",
+   "user": "Wei Rossi",
+   "handle": "@wei",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-08T15:16:40-08:00",
+   "user": "Nathaniel Cartwright",
+   "handle": "@nathaniel",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-08T15:19:10-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

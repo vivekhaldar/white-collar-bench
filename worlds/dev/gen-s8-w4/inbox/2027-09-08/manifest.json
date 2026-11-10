@@ -1,0 +1,124 @@
+{
+  "date": "2027-09-08",
+  "artifacts": [
+    {
+      "id": "ch-0042",
+      "channel": "chat",
+      "received_at": "2027-09-08T07:49:00-06:00",
+      "path": "ch-0042.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "ch-0043",
+      "channel": "chat",
+      "received_at": "2027-09-08T10:17:00-06:00",
+      "path": "ch-0043.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    },
+    {
+      "id": "mn-0009",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-08T10:30:00-06:00",
+      "path": "mn-0009.md",
+      "title": "Recap: Morcliff site visit"
+    },
+    {
+      "id": "em-0059",
+      "channel": "email",
+      "received_at": "2027-09-08T10:50:00-06:00",
+      "path": "em-0059.eml",
+      "title": "Re: FYI: Rosia accessibility conformance report"
+    },
+    {
+      "id": "em-0060",
+      "channel": "email",
+      "received_at": "2027-09-08T12:47:00-06:00",
+      "path": "em-0060.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "ch-0044",
+      "channel": "chat",
+      "received_at": "2027-09-08T13:20:00-06:00",
+      "path": "ch-0044.json",
+      "title": "#safety-reporting-discovery-core"
+    },
+    {
+      "id": "ch-0045",
+      "channel": "chat",
+      "received_at": "2027-09-08T13:47:00-06:00",
+      "path": "ch-0045.json",
+      "title": "DM: Amira Baek / Marcelo Meijer"
+    },
+    {
+      "id": "ch-0046",
+      "channel": "chat",
+      "received_at": "2027-09-08T13:56:00-06:00",
+      "path": "ch-0046.json",
+      "title": "DM: Amira Baek / Kiran Merriweather"
+    },
+    {
+      "id": "mn-0010",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-08T14:00:00-06:00",
+      "path": "mn-0010.md",
+      "title": "Notes: Catch-up: Amira / Marcelo"
+    },
+    {
+      "id": "em-0061",
+      "channel": "email",
+      "received_at": "2027-09-08T14:24:00-06:00",
+      "path": "em-0061.eml",
+      "title": "Fwd: Fulmar API contract v2"
+    },
+    {
+      "id": "mn-0011",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-08T14:35:00-06:00",
+      "path": "mn-0011.md",
+      "title": "Notes: Wagtail platform sync"
+    },
+    {
+      "id": "em-0062",
+      "channel": "email",
+      "received_at": "2027-09-08T14:52:00-06:00",
+      "path": "em-0062.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0047",
+      "channel": "chat",
+      "received_at": "2027-09-08T15:04:00-06:00",
+      "path": "ch-0047.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0063",
+      "channel": "email",
+      "received_at": "2027-09-08T16:19:00-06:00",
+      "path": "em-0063.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "ch-0048",
+      "channel": "chat",
+      "received_at": "2027-09-08T16:31:00-06:00",
+      "path": "ch-0048.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "ch-0049",
+      "channel": "chat",
+      "received_at": "2027-09-08T17:31:00-06:00",
+      "path": "ch-0049.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0050",
+      "channel": "chat",
+      "received_at": "2027-09-08T18:30:00-06:00",
+      "path": "ch-0050.json",
+      "title": "#wagtail-core"
+    }
+  ]
+}

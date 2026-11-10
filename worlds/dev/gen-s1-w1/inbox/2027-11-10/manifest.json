@@ -27,7 +27,7 @@
       "channel": "chat",
       "received_at": "2027-11-10T07:41:00-07:00",
       "path": "ch-0083.json",
-      "title": "DM: Petra Korkmaz / Camila Quimby"
+      "title": "DM: Petra Korkmaz / Camila Abernathy"
     },
     {
       "id": "dc-0005",
@@ -56,7 +56,7 @@
       "channel": "chat",
       "received_at": "2027-11-10T08:44:00-07:00",
       "path": "ch-0085.json",
-      "title": "DM: Camila Quimby / Thandiwe Bonnet"
+      "title": "DM: Camila Abernathy / Thandiwe Garnier"
     },
     {
       "id": "mn-0011",
@@ -106,28 +106,28 @@
       "channel": "chat",
       "received_at": "2027-11-10T12:51:00-07:00",
       "path": "ch-0087.json",
-      "title": "DM: Camila Quimby / Jalen Hendriks"
+      "title": "DM: Camila Abernathy / Jalen Sandberg"
     },
     {
       "id": "ch-0088",
       "channel": "chat",
       "received_at": "2027-11-10T13:52:00-07:00",
       "path": "ch-0088.json",
-      "title": "DM: Yasmin Mokoena / Camila Quimby"
+      "title": "DM: Yasmin Mokoena / Camila Abernathy"
     },
     {
       "id": "ch-0089",
       "channel": "chat",
       "received_at": "2027-11-10T15:49:00-07:00",
       "path": "ch-0089.json",
-      "title": "DM: Camila Quimby / Yasmin Mokoena"
+      "title": "DM: Camila Abernathy / Yasmin Mokoena"
     },
     {
       "id": "ch-0090",
       "channel": "chat",
       "received_at": "2027-11-10T15:52:00-07:00",
       "path": "ch-0090.json",
-      "title": "DM: Yiannis Cabrera / Camila Quimby"
+      "title": "DM: Yiannis Bustamante / Camila Abernathy"
     },
     {
       "id": "mt-0013",
@@ -162,14 +162,14 @@
       "channel": "chat",
       "received_at": "2027-11-10T18:02:00-07:00",
       "path": "ch-0092.json",
-      "title": "DM: Camila Quimby / Jalen Hendriks"
+      "title": "DM: Camila Abernathy / Jalen Sandberg"
     },
     {
       "id": "ch-0093",
       "channel": "chat",
       "received_at": "2027-11-10T18:38:00-07:00",
       "path": "ch-0093.json",
-      "title": "DM: Camila Quimby / Andrei Abenova"
+      "title": "DM: Camila Abernathy / Andrei Lindgren"
     }
   ]
 }

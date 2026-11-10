@@ -1,0 +1,80 @@
+{
+ "workspace": "corrstead",
+ "channel": "#garnet-core",
+ "kind": "channel",
+ "participants": [
+  "Ewan Laine",
+  "Hiba Jimenez",
+  "Bolat",
+  "Madeline Chikwanha",
+  "Desmond Visser",
+  "Andrei Laurent",
+  "Emre Khumalo",
+  "Adaeze Fifita",
+  "Eun-ji Valdez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-06T10:08:53-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "catching people up since a few of us are out today"
+  },
+  {
+   "ts": "2027-07-06T10:09:00-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "desmond will generate a synthetic student data set for garnet, as discussed"
+  },
+  {
+   "ts": "2027-07-06T10:10:24-08:00",
+   "user": "Emre Khumalo",
+   "handle": "@emre",
+   "text": "noted",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-07-06T10:19:43-08:00",
+   "user": "Madeline Chikwanha",
+   "handle": "@madeline",
+   "text": "following :)",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-07-06T10:25:26-08:00",
+   "user": "Eun-ji Valdez",
+   "handle": "@eunji",
+   "text": "thanks for flagging",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-07-06T10:29:58-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "good to know",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-07-06T10:30:41-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "looks like hiba sent andrei the garnet service blueprint",
+   "edited": true,
+   "original": "looks like hiba sent andrei the garnet serivce blueprint"
+  },
+  {
+   "ts": "2027-07-06T10:32:00-08:00",
+   "user": "Adaeze Fifita",
+   "handle": "@adaeze",
+   "text": "noted",
+   "thread_of": 6
+  },
+  {
+   "ts": "2027-07-06T10:33:50-08:00",
+   "user": "Adaeze Fifita",
+   "handle": "@adaeze",
+   "text": "thanks for the update",
+   "thread_of": 6
+  }
+ ]
+}

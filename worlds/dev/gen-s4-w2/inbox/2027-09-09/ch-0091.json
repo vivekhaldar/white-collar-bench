@@ -3,34 +3,34 @@
  "channel": "#fjord-core",
  "kind": "channel",
  "participants": [
-  "Darius Sherwood",
-  "Ottavio Monteiro",
+  "Darius Bramwell",
+  "Ottavio Moreira",
   "Meera",
-  "Ratna Bondarenko",
-  "Theresa Nagy",
+  "Ratna Nikolic",
+  "Theresa Petrov",
   "Nomvula Ndlovu",
-  "Bruna Sinclair",
-  "Esperanza Rao",
+  "Bruna Vaughan",
+  "Esperanza Venkataraman",
   "Yaroslav Moyo",
-  "Celine Wisniewska"
+  "Celine Novotny"
  ],
  "messages": [
   {
    "ts": "2027-09-09T09:20:00-08:00",
-   "user": "Darius Sherwood",
+   "user": "Darius Bramwell",
    "handle": "@darius",
    "text": "Fjord is moving into security review!"
   },
   {
    "ts": "2027-09-09T09:21:23-08:00",
-   "user": "Bruna Sinclair",
+   "user": "Bruna Vaughan",
    "handle": "@bruna",
    "text": "good to know",
    "thread_of": 0
   },
   {
    "ts": "2027-09-09T09:28:00-08:00",
-   "user": "Celine Wisniewska",
+   "user": "Celine Novotny",
    "handle": "@celine",
    "text": "thanks for flagging",
    "thread_of": 0
@@ -44,14 +44,14 @@
   },
   {
    "ts": "2027-09-09T09:35:31-08:00",
-   "user": "Ratna Bondarenko",
+   "user": "Ratna Nikolic",
    "handle": "@ratna",
    "text": "following",
    "thread_of": 0
   },
   {
    "ts": "2027-09-09T09:36:10-08:00",
-   "user": "Darius Sherwood",
+   "user": "Darius Bramwell",
    "handle": "@darius",
    "text": "Blocker on Fjord: real student data paused pending the security review. :)"
   },

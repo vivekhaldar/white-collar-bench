@@ -1,0 +1,1743 @@
+plan_version: 1
+world_id: gen-s10-w2-small
+generator:
+  kind: wcb-gen
+  version: 1
+  seed: 10
+  size: small
+  weeks: 2
+setting:
+  key: nonprofit
+  label: nonprofit federation
+  timezone: +01:00
+  vocab:
+    sites: branches
+    site: branch
+    users: volunteers
+    end_users: clients
+    council: Federation Board
+    data: client data
+    agreement: data-sharing agreement
+    platform: shared data platform
+    unit_word: member organization
+  nouns:
+  - risk register
+  - rollout checklist
+  - test plan
+  - decision memo
+  - status slide
+  - comms plan
+  - training outline
+  - budget justification
+  - vendor comparison
+  - architecture diagram
+  - integration spec
+  - access request
+  - pilot charter
+  - evaluation rubric
+  - data dictionary
+  - stakeholder map
+  - dependency list
+  - requirements matrix
+  - lessons-learned note
+  - timeline
+  - RACI chart
+  - cutover plan
+  - acceptance criteria
+  - metrics definition
+  - service blueprint
+  - support model
+  - retention schedule
+  - change request
+  - accessibility review
+  - help-desk script
+  - client intake form
+  - member survey
+  - safeguarding checklist
+  - board paper
+  umbrella: o-reddale-community-federation
+  central: o-federation-data-office
+  video_domain: meet.reddale.example
+  chat_workspace: reddale
+  volume:
+  - 10
+  - 14
+  loops_per_day: 4.2
+calendar:
+  start: '2027-08-30'
+  seed:
+    start: '2027-08-16'
+    end: '2027-08-27'
+    days:
+    - '2027-08-16'
+    - '2027-08-17'
+    - '2027-08-18'
+    - '2027-08-19'
+    - '2027-08-20'
+    - '2027-08-23'
+    - '2027-08-24'
+    - '2027-08-25'
+    - '2027-08-26'
+    - '2027-08-27'
+  episode:
+    days:
+    - '2027-08-30'
+    - '2027-08-31'
+    - '2027-09-01'
+    - '2027-09-02'
+    - '2027-09-03'
+    - '2027-09-06'
+    - '2027-09-07'
+    - '2027-09-08'
+    - '2027-09-09'
+    - '2027-09-10'
+    - '2027-09-11'
+    weeks:
+    - - '2027-08-30'
+      - '2027-08-31'
+      - '2027-09-01'
+      - '2027-09-02'
+      - '2027-09-03'
+    - - '2027-09-06'
+      - '2027-09-07'
+      - '2027-09-08'
+      - '2027-09-09'
+      - '2027-09-10'
+      - '2027-09-11'
+  checkpoints:
+  - id: cp1
+    date: '2027-08-31'
+    label: end of Tuesday (week 1)
+  - id: cp2
+    date: '2027-09-02'
+    label: end of Thursday (week 1)
+  - id: cp3
+    date: '2027-09-03'
+    label: end of week (week 1)
+  - id: cp4
+    date: '2027-09-07'
+    label: end of Tuesday (week 2)
+  - id: cp5
+    date: '2027-09-09'
+    label: end of Thursday (week 2)
+  - id: cp6
+    date: '2027-09-11'
+    label: end of week (week 2)
+worker: p-aoife-everett
+orgs:
+- id: o-reddale-community-federation
+  name: Reddale Community Federation
+  short: Reddale
+  kind: internal
+  role: umbrella
+  domain: reddale.example
+  slug: reddale
+  surface_forms:
+  - Reddale
+  - RCF
+  - reddale.example
+  receptiveness: null
+- id: o-federation-data-office
+  name: Federation Data Office
+  short: FDO
+  kind: internal
+  role: central
+  domain: reddale.example
+  slug: fdo
+  surface_forms:
+  - FDO
+  - central
+  - the FDO team
+  - reddale.example
+  receptiveness: null
+- id: o-ormton-housing-trust
+  name: Ormton Housing Trust
+  short: Ormton
+  kind: internal
+  role: unit
+  domain: ormton.reddale.example
+  slug: ormton
+  surface_forms:
+  - Ormton
+  - OHT
+  - ormton.reddale.example
+  receptiveness: high
+- id: o-holworth-family-services
+  name: Holworth Family Services
+  short: Holworth
+  kind: internal
+  role: unit
+  domain: holworth.reddale.example
+  slug: holworth
+  surface_forms:
+  - Holworth
+  - HFS
+  - holworth.reddale.example
+  receptiveness: medium
+- id: o-kelholm-literacy-council
+  name: Kelholm Literacy Council
+  short: Kelholm
+  kind: internal
+  role: unit
+  domain: kelholm.reddale.example
+  slug: kelholm
+  surface_forms:
+  - Kelholm
+  - KLC
+  - kelholm.reddale.example
+  receptiveness: low
+- id: o-noris-cloud
+  name: Noris Cloud
+  short: Noris
+  kind: vendor
+  role: vendor
+  domain: noris.example
+  slug: noris
+  surface_forms:
+  - Noris
+  - noris.example
+  receptiveness: null
+- id: o-ithtec-analytics
+  name: Ithtec Analytics
+  short: Ithtec
+  kind: vendor
+  role: vendor
+  domain: ithtec.example
+  slug: ithtec
+  surface_forms:
+  - Ithtec
+  - ithtec.example
+  receptiveness: null
+- id: o-morgate-social-research-institute
+  name: Morgate Social Research Institute
+  short: Morgate
+  kind: partner
+  role: partner
+  domain: morgate-research.example
+  slug: morgate
+  surface_forms:
+  - Morgate
+  - MSRI
+  - morgate-research.example
+  receptiveness: null
+people:
+- id: p-aoife-everett
+  name: Aoife Everett
+  first: Aoife
+  last: Everett
+  nickname: null
+  org: o-federation-data-office
+  role: Principal Architect, Data & AI
+  role_phrase: null
+  email: aoife.everett@reddale.example
+  handle: '@aoife'
+  relationship: null
+  group: central
+  tier: core
+  weight: 0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Aoife
+  - A. Everett
+  - aoife.everett@reddale.example
+  - '@aoife'
+- id: p-paula-dubois
+  name: Paula Dubois
+  first: Paula
+  last: Dubois
+  nickname: null
+  org: o-federation-data-office
+  role: Director of Shared Technology
+  role_phrase: the director
+  email: paula.dubois@reddale.example
+  handle: '@paula'
+  relationship: manager
+  group: central
+  tier: core
+  weight: 2.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Paula
+  - P. Dubois
+  - paula.dubois@reddale.example
+  - '@paula'
+  - the director
+- id: p-akosua-bergstrom
+  name: Akosua Bergstrom
+  first: Akosua
+  last: Bergstrom
+  nickname: null
+  org: o-federation-data-office
+  role: Programs Manager
+  role_phrase: our programs manager
+  email: akosua.bergstrom@reddale.example
+  handle: '@akosua'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 7.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Akosua
+  - A. Bergstrom
+  - akosua.bergstrom@reddale.example
+  - '@akosua'
+  - our programs manager
+- id: p-bisi-volkov
+  name: Bisi Volkov
+  first: Bisi
+  last: Volkov
+  nickname: null
+  org: o-federation-data-office
+  role: Platform Lead
+  role_phrase: the platform lead
+  email: bisi.volkov@reddale.example
+  handle: '@bisi'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 3.2
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Bisi
+  - B. Volkov
+  - bisi.volkov@reddale.example
+  - '@bisi'
+  - the platform lead
+- id: p-sipho-papadopoulos
+  name: Sipho Papadopoulos
+  first: Sipho
+  last: Papadopoulos
+  nickname: null
+  org: o-federation-data-office
+  role: Data Engineer
+  role_phrase: the data engineer
+  email: sipho.papadopoulos@reddale.example
+  handle: '@sipho'
+  relationship: stakeholder
+  group: central
+  tier: core
+  weight: 1.2
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Sipho
+  - S. Papadopoulos
+  - sipho.papadopoulos@reddale.example
+  - '@sipho'
+  - the data engineer
+- id: p-sigrid-asante
+  name: Sigrid Asante
+  first: Sigrid
+  last: Asante
+  nickname: null
+  org: o-federation-data-office
+  role: Security & Privacy Lead
+  role_phrase: the security lead
+  email: sigrid.asante@reddale.example
+  handle: '@sigrid'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 2.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Sigrid
+  - S. Asante
+  - sigrid.asante@reddale.example
+  - '@sigrid'
+  - the security lead
+- id: p-adaeze-morimoto
+  name: Adaeze Morimoto
+  first: Adaeze
+  last: Morimoto
+  nickname: null
+  org: o-federation-data-office
+  role: Product Manager
+  role_phrase: the product manager
+  email: adaeze.morimoto@reddale.example
+  handle: '@adaeze'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 1.2
+  appears: null
+  voice: formal
+  surface_forms:
+  - Adaeze
+  - A. Morimoto
+  - adaeze.morimoto@reddale.example
+  - '@adaeze'
+  - the product manager
+- id: p-tuuli-ibekwe
+  name: Tuuli Ibekwe
+  first: Tuuli
+  last: Ibekwe
+  nickname: null
+  org: o-federation-data-office
+  role: Operations Coordinator
+  role_phrase: the ops coordinator
+  email: tuuli.ibekwe@reddale.example
+  handle: '@tuuli'
+  relationship: assistant
+  group: central
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: formal
+  surface_forms:
+  - Tuuli
+  - T. Ibekwe
+  - tuuli.ibekwe@reddale.example
+  - '@tuuli'
+  - the ops coordinator
+- id: p-fdo-shared-inbox
+  name: FDO Shared Inbox
+  first: FDO Team
+  last: Mailbox
+  nickname: null
+  org: o-federation-data-office
+  role: Shared team mailbox
+  role_phrase: the FDO inbox
+  email: fdo-team@reddale.example
+  handle: '@fdo-team'
+  relationship: other
+  group: mailbox
+  tier: core
+  weight: 0.3
+  appears: null
+  voice: formal
+  surface_forms:
+  - FDO Team
+  - the FDO inbox
+  - fdo-team@reddale.example
+- id: p-elizabeth-mwangi
+  name: Elizabeth Mwangi
+  first: Elizabeth
+  last: Mwangi
+  nickname: null
+  org: o-reddale-community-federation
+  role: Grants & Contracts Officer
+  role_phrase: the contracts officer
+  email: elizabeth.mwangi@reddale.example
+  handle: '@elizabeth'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Elizabeth
+  - E. Mwangi
+  - elizabeth.mwangi@reddale.example
+  - '@elizabeth'
+  - the contracts officer
+- id: p-corinne-hossain
+  name: Corinne Hossain
+  first: Corinne
+  last: Hossain
+  nickname: null
+  org: o-reddale-community-federation
+  role: Pro Bono Counsel
+  role_phrase: our counsel
+  email: corinne.hossain@reddale.example
+  handle: '@corinne'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Corinne
+  - C. Hossain
+  - corinne.hossain@reddale.example
+  - '@corinne'
+  - our counsel
+- id: p-bao-tembo
+  name: Bao Tembo
+  first: Bao
+  last: Tembo
+  nickname: null
+  org: o-reddale-community-federation
+  role: Finance Director
+  role_phrase: the finance director
+  email: bao.tembo@reddale.example
+  handle: '@bao'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Bao
+  - B. Tembo
+  - bao.tembo@reddale.example
+  - '@bao'
+  - the finance director
+- id: p-omar-ortega
+  name: Omar Ortega
+  first: Omar
+  last: Ortega
+  nickname: null
+  org: o-reddale-community-federation
+  role: People Partner
+  role_phrase: our people partner
+  email: omar.ortega@reddale.example
+  handle: '@omar'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: terse
+  surface_forms:
+  - Omar
+  - O. Ortega
+  - omar.ortega@reddale.example
+  - '@omar'
+  - our people partner
+- id: p-solene-zimmermann
+  name: Solene Zimmermann
+  first: Solene
+  last: Zimmermann
+  nickname: null
+  org: o-reddale-community-federation
+  role: Data Protection Lead
+  role_phrase: the data protection lead
+  email: solene.zimmermann@reddale.example
+  handle: '@solene'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Solene
+  - S. Zimmermann
+  - solene.zimmermann@reddale.example
+  - '@solene'
+  - the data protection lead
+- id: p-bruna-thapa
+  name: Bruna Thapa
+  first: Bruna
+  last: Thapa
+  nickname: null
+  org: o-ormton-housing-trust
+  role: Executive Director
+  role_phrase: Ormton's ED
+  email: bruna.thapa@ormton.reddale.example
+  handle: '@bruna'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: terse
+  surface_forms:
+  - Bruna
+  - B. Thapa
+  - bruna.thapa@ormton.reddale.example
+  - '@bruna'
+  - Ormton's ED
+- id: p-gaurav-laine
+  name: Gaurav Laine
+  first: Gaurav
+  last: Laine
+  nickname: null
+  org: o-ormton-housing-trust
+  role: Development Director
+  role_phrase: the Ormton lead
+  email: gaurav.laine@ormton.reddale.example
+  handle: '@gaurav'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 2.4
+  appears: null
+  voice: terse
+  surface_forms:
+  - Gaurav
+  - G. Laine
+  - gaurav.laine@ormton.reddale.example
+  - '@gaurav'
+  - the Ormton lead
+- id: p-douglas-grigoryan
+  name: Douglas Grigoryan
+  first: Douglas
+  last: Grigoryan
+  nickname: Doug
+  org: o-ormton-housing-trust
+  role: Program Coordinator
+  role_phrase: null
+  email: douglas.grigoryan@ormton.reddale.example
+  handle: '@douglas'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - Douglas
+  - Doug
+  - D. Grigoryan
+  - douglas.grigoryan@ormton.reddale.example
+  - '@douglas'
+- id: p-lilit-yilmaz
+  name: Lilit Yilmaz
+  first: Lilit
+  last: Yilmaz
+  nickname: null
+  org: o-holworth-family-services
+  role: Executive Director
+  role_phrase: Holworth's ED
+  email: lilit.yilmaz@holworth.reddale.example
+  handle: '@lilit'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: terse
+  surface_forms:
+  - Lilit
+  - L. Yilmaz
+  - lilit.yilmaz@holworth.reddale.example
+  - '@lilit'
+  - Holworth's ED
+- id: p-amani-xu
+  name: Amani Xu
+  first: Amani
+  last: Xu
+  nickname: null
+  org: o-holworth-family-services
+  role: Programs Director
+  role_phrase: the Holworth lead
+  email: amani.xu@holworth.reddale.example
+  handle: '@amani'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Amani
+  - A. Xu
+  - amani.xu@holworth.reddale.example
+  - '@amani'
+  - the Holworth lead
+- id: p-catrin-dang
+  name: Catrin Dang
+  first: Catrin
+  last: Dang
+  nickname: null
+  org: o-holworth-family-services
+  role: Program Coordinator
+  role_phrase: null
+  email: catrin.dang@holworth.reddale.example
+  handle: '@catrin'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Catrin
+  - C. Dang
+  - catrin.dang@holworth.reddale.example
+  - '@catrin'
+- id: p-putri-kulkarni
+  name: Putri Kulkarni
+  first: Putri
+  last: Kulkarni
+  nickname: null
+  org: o-kelholm-literacy-council
+  role: Executive Director
+  role_phrase: Kelholm's ED
+  email: putri.kulkarni@kelholm.reddale.example
+  handle: '@putri'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: terse
+  surface_forms:
+  - Putri
+  - P. Kulkarni
+  - putri.kulkarni@kelholm.reddale.example
+  - '@putri'
+  - Kelholm's ED
+- id: p-nare-dempsey
+  name: Nare Dempsey
+  first: Nare
+  last: Dempsey
+  nickname: null
+  org: o-kelholm-literacy-council
+  role: Operations Lead
+  role_phrase: the Kelholm lead
+  email: nare.dempsey@kelholm.reddale.example
+  handle: '@nare'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Nare
+  - N. Dempsey
+  - nare.dempsey@kelholm.reddale.example
+  - '@nare'
+  - the Kelholm lead
+- id: p-jia-delacroix
+  name: Jia Delacroix
+  first: Jia
+  last: Delacroix
+  nickname: null
+  org: o-kelholm-literacy-council
+  role: Program Coordinator
+  role_phrase: null
+  email: jia.delacroix@kelholm.reddale.example
+  handle: '@jia'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Jia
+  - J. Delacroix
+  - jia.delacroix@kelholm.reddale.example
+  - '@jia'
+- id: p-akosua-carmichael
+  name: Akosua Carmichael
+  first: Akosua
+  last: Carmichael
+  nickname: null
+  org: o-noris-cloud
+  role: Account Executive
+  role_phrase: null
+  email: akosua.carmichael@noris.example
+  handle: '@akosuac'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: terse
+  surface_forms:
+  - Akosua
+  - A. Carmichael
+  - akosua.carmichael@noris.example
+  - '@akosuac'
+- id: p-ayesha-eriksen
+  name: Ayesha Eriksen
+  first: Ayesha
+  last: Eriksen
+  nickname: null
+  org: o-noris-cloud
+  role: Solutions Engineer
+  role_phrase: null
+  email: ayesha.eriksen@noris.example
+  handle: '@ayesha'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: terse
+  surface_forms:
+  - Ayesha
+  - A. Eriksen
+  - ayesha.eriksen@noris.example
+  - '@ayesha'
+- id: p-chiamaka-shami
+  name: Chiamaka Shami
+  first: Chiamaka
+  last: Shami
+  nickname: Amaka
+  org: o-ithtec-analytics
+  role: Account Executive
+  role_phrase: null
+  email: chiamaka.shami@ithtec.example
+  handle: '@chiamaka'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: terse
+  surface_forms:
+  - Chiamaka
+  - Amaka
+  - C. Shami
+  - chiamaka.shami@ithtec.example
+  - '@chiamaka'
+- id: p-amani-katz
+  name: Amani Katz
+  first: Amani
+  last: Katz
+  nickname: null
+  org: o-ithtec-analytics
+  role: Solutions Engineer
+  role_phrase: null
+  email: amani.katz@ithtec.example
+  handle: '@amanik'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Amani
+  - A. Katz
+  - amani.katz@ithtec.example
+  - '@amanik'
+- id: p-katrin-appiah
+  name: Katrin Appiah
+  first: Katrin
+  last: Appiah
+  nickname: null
+  org: o-federation-data-office
+  role: Impact Analyst
+  role_phrase: our impact analyst
+  email: katrin.appiah@reddale.example
+  handle: '@katrin'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Katrin
+  - K. Appiah
+  - katrin.appiah@reddale.example
+  - '@katrin'
+  - our impact analyst
+- id: p-tahmina-ozturk
+  name: Tahmina Ozturk
+  first: Tahmina
+  last: Ozturk
+  nickname: null
+  org: o-morgate-social-research-institute
+  role: Senior Research Scientist
+  role_phrase: null
+  email: tahmina.ozturk@morgate-research.example
+  handle: '@tahmina'
+  relationship: partner
+  group: partner
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: terse
+  surface_forms:
+  - Tahmina
+  - T. Ozturk
+  - tahmina.ozturk@morgate-research.example
+  - '@tahmina'
+- id: p-ligaya-venkataraman
+  name: Ligaya Venkataraman
+  first: Ligaya
+  last: Venkataraman
+  nickname: null
+  org: null
+  role: Candidate
+  role_phrase: null
+  email: ligaya.venkataraman@post.example
+  handle: '@ligaya'
+  relationship: candidate
+  group: candidate
+  tier: core
+  weight: 0.6
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Ligaya
+  - L. Venkataraman
+  - ligaya.venkataraman@post.example
+  - '@ligaya'
+- id: p-marko-chaiyaporn
+  name: Marko Chaiyaporn
+  first: Marko
+  last: Chaiyaporn
+  nickname: null
+  org: o-ormton-housing-trust
+  role: Privacy Officer
+  role_phrase: the new privacy officer
+  email: marko.chaiyaporn@ormton.reddale.example
+  handle: '@marko'
+  relationship: stakeholder
+  group: newcomer
+  tier: core
+  weight: 1.4
+  appears: '2027-09-01'
+  voice: chatty
+  surface_forms:
+  - Marko
+  - M. Chaiyaporn
+  - marko.chaiyaporn@ormton.reddale.example
+  - '@marko'
+  - the new privacy officer
+- id: p-kavya-agyeman
+  name: Kavya Agyeman
+  first: Kavya
+  last: Agyeman
+  nickname: null
+  org: o-noris-cloud
+  role: Senior Account Executive
+  role_phrase: null
+  email: kavya.agyeman@noris.example
+  handle: '@kavya'
+  relationship: vendor
+  group: newcomer
+  tier: core
+  weight: 1.4
+  appears: '2027-09-07'
+  voice: chatty
+  surface_forms:
+  - Kavya
+  - K. Agyeman
+  - kavya.agyeman@noris.example
+  - '@kavya'
+- id: p-nurlan-banda
+  name: Nurlan Banda
+  first: Nurlan
+  last: Banda
+  nickname: null
+  org: null
+  role: Editor, Community Digital Notes
+  role_phrase: null
+  email: nurlan.banda@newsletters.example
+  handle: '@nurlan'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - nurlan.banda@newsletters.example
+  minor_kind: newsletter
+- id: p-reddale-it-service-desk
+  name: Reddale IT Service Desk
+  first: Reddale IT Service Desk
+  last: ''
+  nickname: null
+  org: null
+  role: Reddale IT Service Desk
+  role_phrase: null
+  email: servicedesk-noreply@reddale.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - servicedesk-noreply@reddale.example
+  minor_kind: service_desk
+- id: p-platform-status-page
+  name: Platform Status Page
+  first: Platform Status Page
+  last: ''
+  nickname: null
+  org: null
+  role: Platform Status Page
+  role_phrase: null
+  email: status-noreply@reddale.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - status-noreply@reddale.example
+  minor_kind: status
+- id: p-reddale-internal-communications
+  name: Reddale Internal Communications
+  first: Reddale Internal Communications
+  last: ''
+  nickname: null
+  org: null
+  role: Reddale Internal Communications
+  role_phrase: null
+  email: news@reddale.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - news@reddale.example
+  minor_kind: comms
+- id: p-rafael-esposito
+  name: Rafael Esposito
+  first: Rafael
+  last: Esposito
+  nickname: null
+  org: null
+  role: Events Coordinator
+  role_phrase: null
+  email: rafael.esposito@reddale.example
+  handle: '@rafael'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - rafael.esposito@reddale.example
+  minor_kind: events
+projects:
+- id: pr-nettle
+  name: Nettle
+  short: Nettle
+  kw: nettle
+  code: Nettle
+  surface_forms:
+  - Project Nettle
+  - the outcomes dashboard pilot
+  - the Ormton pilot
+  - NETP
+  archetype: flagship_pilot
+  size: flagship
+  topic: outcomes dashboard
+  topic_a: an AI outcomes dashboard
+  pivot: volunteer no-shows
+  role: ''
+  unit: o-ormton-housing-trust
+  vendors:
+  - o-ithtec-analytics
+  - o-noris-cloud
+  partner: o-morgate-social-research-institute
+  owner: p-gaurav-laine
+  sponsor: p-bruna-thapa
+  members:
+  - p-aoife-everett
+  - p-gaurav-laine
+  - p-akosua-bergstrom
+  - p-douglas-grigoryan
+  - p-bisi-volkov
+  - p-sigrid-asante
+  - p-sipho-papadopoulos
+  - p-adaeze-morimoto
+  - p-bruna-thapa
+  orgs:
+  - o-ormton-housing-trust
+  status: active
+  phase: build
+  target_date: '2027-10-11'
+  n: 4
+  cast:
+    owner: p-gaurav-laine
+    sponsor: p-bruna-thapa
+    lead: p-gaurav-laine
+    unit:
+    - p-douglas-grigoryan
+    - p-gaurav-laine
+    ae:
+    - p-chiamaka-shami
+    - p-akosua-carmichael
+    se:
+    - p-amani-katz
+    - p-ayesha-eriksen
+    eng: p-bisi-volkov
+    sec: p-sigrid-asante
+    privacy: p-solene-zimmermann
+    legal: p-corinne-hossain
+    proc: p-elizabeth-mwangi
+    fin: p-bao-tembo
+    hr: p-omar-ortega
+    ea: p-tuuli-ibekwe
+    collab: p-akosua-bergstrom
+    partner: p-tahmina-ozturk
+    cand: p-ligaya-venkataraman
+  weight: 37.57
+  start: '2027-08-16'
+- id: pr-pipit
+  name: Pipit
+  short: Pipit
+  kw: pipit
+  code: Pipit
+  surface_forms:
+  - the platform
+  - the common platform
+  - Pipit platform
+  - the shared data platform
+  archetype: platform_hub
+  size: hub
+  topic: shared platform
+  topic_a: ''
+  pivot: volunteer no-shows
+  role: ''
+  unit: o-ormton-housing-trust
+  vendors:
+  - o-ithtec-analytics
+  - o-noris-cloud
+  partner: o-morgate-social-research-institute
+  owner: p-bisi-volkov
+  sponsor: p-paula-dubois
+  members:
+  - p-aoife-everett
+  - p-bisi-volkov
+  - p-akosua-bergstrom
+  - p-gaurav-laine
+  - p-douglas-grigoryan
+  - p-sipho-papadopoulos
+  - p-sigrid-asante
+  orgs: []
+  status: active
+  phase: onboarding tenants
+  target_date: null
+  n: 2
+  cast:
+    owner: p-bisi-volkov
+    sponsor: p-paula-dubois
+    lead: p-gaurav-laine
+    unit:
+    - p-douglas-grigoryan
+    - p-gaurav-laine
+    ae:
+    - p-chiamaka-shami
+    - p-akosua-carmichael
+    se:
+    - p-amani-katz
+    - p-ayesha-eriksen
+    eng: p-sipho-papadopoulos
+    sec: p-sigrid-asante
+    privacy: p-solene-zimmermann
+    legal: p-corinne-hossain
+    proc: p-elizabeth-mwangi
+    fin: p-bao-tembo
+    hr: p-omar-ortega
+    ea: p-tuuli-ibekwe
+    collab: p-akosua-bergstrom
+    partner: p-tahmina-ozturk
+    cand: p-ligaya-venkataraman
+  weight: 10.55
+  start: '2027-08-16'
+- id: pr-translation-help-tool-selection
+  name: Translation Help Tool Selection
+  short: translation help selection
+  kw: translation help selection
+  code: null
+  surface_forms:
+  - the translation help bake-off
+  - the Noris/Ithtec evaluation
+  - THTS selection
+  archetype: vendor_pair_evaluation
+  size: mid
+  topic: translation help
+  topic_a: an AI translation helper
+  pivot: volunteer no-shows
+  role: ''
+  unit: o-holworth-family-services
+  vendors:
+  - o-noris-cloud
+  - o-ithtec-analytics
+  partner: o-morgate-social-research-institute
+  owner: p-aoife-everett
+  sponsor: p-lilit-yilmaz
+  members:
+  - p-aoife-everett
+  - p-aoife-everett
+  - p-akosua-bergstrom
+  - p-amani-xu
+  - p-catrin-dang
+  - p-akosua-carmichael
+  orgs:
+  - o-holworth-family-services
+  - o-noris-cloud
+  - o-ithtec-analytics
+  status: active
+  phase: intake
+  target_date: '2027-09-20'
+  n: 2
+  cast:
+    owner: p-aoife-everett
+    sponsor: p-lilit-yilmaz
+    lead: p-amani-xu
+    unit:
+    - p-catrin-dang
+    - p-amani-xu
+    ae:
+    - p-akosua-carmichael
+    - p-chiamaka-shami
+    se:
+    - p-ayesha-eriksen
+    - p-amani-katz
+    eng: p-bisi-volkov
+    sec: p-sigrid-asante
+    privacy: p-solene-zimmermann
+    legal: p-corinne-hossain
+    proc: p-elizabeth-mwangi
+    fin: p-bao-tembo
+    hr: p-omar-ortega
+    ea: p-tuuli-ibekwe
+    collab: p-akosua-bergstrom
+    partner: p-tahmina-ozturk
+    cand: p-ligaya-venkataraman
+  weight: 6.93
+  start: '2027-08-16'
+- id: pr-holworth-pantry-inventory-discovery
+  name: Holworth Pantry Inventory Discovery
+  short: pantry inventory discovery
+  kw: pantry inventory discovery
+  code: null
+  surface_forms:
+  - the Holworth discovery
+  - the pantry inventory work
+  - HPID discovery
+  archetype: pivoting_discovery
+  size: mid
+  topic: pantry inventory
+  topic_a: an AI pantry inventory forecaster
+  pivot: duplicate client records
+  role: ''
+  unit: o-holworth-family-services
+  vendors:
+  - o-noris-cloud
+  - o-ithtec-analytics
+  partner: o-morgate-social-research-institute
+  owner: p-amani-xu
+  sponsor: p-lilit-yilmaz
+  members:
+  - p-aoife-everett
+  - p-amani-xu
+  - p-akosua-bergstrom
+  - p-catrin-dang
+  orgs:
+  - o-holworth-family-services
+  status: active
+  phase: site visit
+  target_date: '2027-09-20'
+  n: 2
+  cast:
+    owner: p-amani-xu
+    sponsor: p-lilit-yilmaz
+    lead: p-amani-xu
+    unit:
+    - p-catrin-dang
+    - p-amani-xu
+    ae:
+    - p-akosua-carmichael
+    - p-chiamaka-shami
+    se:
+    - p-ayesha-eriksen
+    - p-amani-katz
+    eng: p-bisi-volkov
+    sec: p-sigrid-asante
+    privacy: p-solene-zimmermann
+    legal: p-corinne-hossain
+    proc: p-elizabeth-mwangi
+    fin: p-bao-tembo
+    hr: p-omar-ortega
+    ea: p-tuuli-ibekwe
+    collab: p-akosua-bergstrom
+    partner: p-tahmina-ozturk
+    cand: p-ligaya-venkataraman
+  weight: 8.52
+  start: '2027-08-16'
+- id: pr-morgate-partnership
+  name: Morgate Partnership
+  short: Morgate partnership
+  kw: morgate partnership
+  code: null
+  surface_forms:
+  - the Morgate relationship
+  - Morgate
+  archetype: relationship_thread
+  size: small
+  topic: partnership
+  topic_a: ''
+  pivot: volunteer no-shows
+  role: ''
+  unit: o-kelholm-literacy-council
+  vendors:
+  - o-noris-cloud
+  - o-ithtec-analytics
+  partner: o-morgate-social-research-institute
+  owner: p-aoife-everett
+  sponsor: p-paula-dubois
+  members:
+  - p-aoife-everett
+  - p-aoife-everett
+  - p-akosua-bergstrom
+  - p-nare-dempsey
+  orgs:
+  - o-kelholm-literacy-council
+  - o-morgate-social-research-institute
+  status: active
+  phase: ongoing
+  target_date: null
+  n: 2
+  cast:
+    owner: p-aoife-everett
+    sponsor: p-paula-dubois
+    lead: p-nare-dempsey
+    unit:
+    - p-jia-delacroix
+    - p-nare-dempsey
+    ae:
+    - p-akosua-carmichael
+    - p-chiamaka-shami
+    se:
+    - p-ayesha-eriksen
+    - p-amani-katz
+    eng: p-bisi-volkov
+    sec: p-sigrid-asante
+    privacy: p-solene-zimmermann
+    legal: p-corinne-hossain
+    proc: p-elizabeth-mwangi
+    fin: p-bao-tembo
+    hr: p-omar-ortega
+    ea: p-tuuli-ibekwe
+    collab: p-akosua-bergstrom
+    partner: p-tahmina-ozturk
+    cand: p-ligaya-venkataraman
+  weight: 2.93
+  start: '2027-08-16'
+- id: pr-kelholm-referral-matching-idea
+  name: Kelholm Referral Matching Idea
+  short: referral matching
+  kw: referral matching
+  code: null
+  surface_forms:
+  - Nare's referral matching idea
+  - the referral matching placeholder
+  archetype: placeholder
+  size: placeholder
+  topic: referral matching
+  topic_a: an AI referral matching tool
+  pivot: duplicate client records
+  role: ''
+  unit: o-kelholm-literacy-council
+  vendors:
+  - o-noris-cloud
+  - o-ithtec-analytics
+  partner: o-morgate-social-research-institute
+  owner: p-nare-dempsey
+  sponsor: p-paula-dubois
+  members:
+  - p-aoife-everett
+  - p-nare-dempsey
+  - p-akosua-bergstrom
+  orgs:
+  - o-kelholm-literacy-council
+  status: active
+  phase: placeholder
+  target_date: null
+  n: 2
+  cast:
+    owner: p-nare-dempsey
+    sponsor: p-paula-dubois
+    lead: p-nare-dempsey
+    unit:
+    - p-jia-delacroix
+    - p-nare-dempsey
+    ae:
+    - p-akosua-carmichael
+    - p-chiamaka-shami
+    se:
+    - p-ayesha-eriksen
+    - p-amani-katz
+    eng: p-bisi-volkov
+    sec: p-sigrid-asante
+    privacy: p-solene-zimmermann
+    legal: p-corinne-hossain
+    proc: p-elizabeth-mwangi
+    fin: p-bao-tembo
+    hr: p-omar-ortega
+    ea: p-tuuli-ibekwe
+    collab: p-akosua-bergstrom
+    partner: p-tahmina-ozturk
+    cand: p-ligaya-venkataraman
+  weight: 0.15
+  start: '2027-08-16'
+- id: pr-noris-event-signups-diligence
+  name: Noris Event Signups Diligence
+  short: Noris diligence
+  kw: noris diligence
+  code: null
+  surface_forms:
+  - the Noris deep dive
+  - the event signups diligence
+  archetype: stalled_discovery
+  size: dormant
+  topic: event signups
+  topic_a: an AI event signup assistant
+  pivot: volunteer no-shows
+  role: ''
+  unit: o-kelholm-literacy-council
+  vendors:
+  - o-noris-cloud
+  - o-ithtec-analytics
+  partner: o-morgate-social-research-institute
+  owner: p-aoife-everett
+  sponsor: p-paula-dubois
+  members:
+  - p-aoife-everett
+  - p-aoife-everett
+  - p-akosua-bergstrom
+  orgs:
+  - o-kelholm-literacy-council
+  - o-noris-cloud
+  - o-ithtec-analytics
+  status: active
+  phase: diligence
+  target_date: null
+  n: 2
+  cast:
+    owner: p-aoife-everett
+    sponsor: p-paula-dubois
+    lead: p-nare-dempsey
+    unit:
+    - p-jia-delacroix
+    - p-nare-dempsey
+    ae:
+    - p-akosua-carmichael
+    - p-chiamaka-shami
+    se:
+    - p-ayesha-eriksen
+    - p-amani-katz
+    eng: p-bisi-volkov
+    sec: p-sigrid-asante
+    privacy: p-solene-zimmermann
+    legal: p-corinne-hossain
+    proc: p-elizabeth-mwangi
+    fin: p-bao-tembo
+    hr: p-omar-ortega
+    ea: p-tuuli-ibekwe
+    collab: p-akosua-bergstrom
+    partner: p-tahmina-ozturk
+    cand: p-ligaya-venkataraman
+  weight: 0.52
+  start: '2027-08-16'
+collisions:
+  first_names:
+  - - p-akosua-bergstrom
+    - p-akosua-carmichael
+  - - p-amani-xu
+    - p-amani-katz
+  homophones:
+  - p-katrin-appiah
+  - p-catrin-dang
+cadences:
+- key: standup
+  title: Nettle standup
+  kind: meeting
+  project: pr-nettle
+  weekdays:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  every: 1
+  time: 09:30
+  minutes: 25
+  organizer: p-gaurav-laine
+  attendees:
+  - p-aoife-everett
+  - p-gaurav-laine
+  - p-akosua-bergstrom
+  - p-douglas-grigoryan
+  - p-bisi-volkov
+  - p-sigrid-asante
+  - p-sipho-papadopoulos
+  - p-adaeze-morimoto
+- key: leads
+  title: FDO leads call
+  kind: meeting
+  project: null
+  weekdays:
+  - 0
+  every: 1
+  time: '11:00'
+  minutes: 45
+  organizer: p-paula-dubois
+  attendees:
+  - p-aoife-everett
+  - p-akosua-bergstrom
+  - p-bisi-volkov
+  - p-sigrid-asante
+  - p-adaeze-morimoto
+  - p-paula-dubois
+- key: hub_sync
+  title: Pipit platform sync
+  kind: meeting
+  project: pr-pipit
+  weekdays:
+  - 2
+  every: 1
+  time: '14:00'
+  minutes: 30
+  organizer: p-bisi-volkov
+  attendees:
+  - p-aoife-everett
+  - p-bisi-volkov
+  - p-akosua-bergstrom
+  - p-gaurav-laine
+  - p-douglas-grigoryan
+  - p-sipho-papadopoulos
+- key: one_on_one
+  title: 1:1 Aoife / Akosua
+  kind: meeting
+  project: null
+  weekdays:
+  - 1
+  every: 2
+  time: '15:00'
+  minutes: 30
+  organizer: p-akosua-bergstrom
+  attendees:
+  - p-aoife-everett
+  - p-akosua-bergstrom
+- key: forum
+  title: Cross-member organization AI forum
+  kind: meeting
+  project: null
+  weekdays:
+  - 3
+  every: 2
+  time: '13:00'
+  minutes: 60
+  organizer: p-akosua-bergstrom
+  attendees:
+  - p-aoife-everett
+  - p-akosua-bergstrom
+  - p-gaurav-laine
+  - p-amani-xu
+  - p-nare-dempsey
+- key: weekly_update
+  title: Weekly update
+  kind: obligation
+  project: null
+  weekdays:
+  - 0
+  - 4
+  every: 1
+  organizer: p-fdo-shared-inbox
+  attendees:
+  - p-aoife-everett
+  - p-paula-dubois
+challenges:
+- week: 1
+  tag: worker_directive
+  day: '2027-08-30'
+  project: pr-nettle
+- week: 1
+  tag: noise
+  day: '2027-08-30'
+- week: 1
+  tag: implied_commitment
+  day: '2027-08-31'
+  project: pr-nettle
+- week: 1
+  tag: duplicate_signal
+  day: '2027-08-30'
+  project: pr-holworth-pantry-inventory-discovery
+- week: 1
+  tag: privacy
+  day: '2027-09-01'
+- week: 1
+  tag: alias
+  day: '2027-09-01'
+- week: 1
+  tag: name_collision
+  day: '2027-08-31'
+- week: 1
+  tag: new_entity
+  day: '2027-09-01'
+  person: p-marko-chaiyaporn
+  project: pr-nettle
+- week: 1
+  tag: supersession
+  day: '2027-09-01'
+  project: pr-nettle
+- week: 1
+  tag: unobservable
+  day: '2027-09-02'
+  project: pr-nettle
+  attribute: budget
+- week: 1
+  tag: draft_vs_sent
+  day: '2027-09-03'
+  setup: '2027-08-30'
+- week: 1
+  tag: batch_catchup
+  day: '2027-08-31'
+- week: 1
+  tag: transfer
+  day: '2027-09-02'
+- week: 1
+  tag: correction
+  day: '2027-09-02'
+  setup: '2027-08-31'
+- week: 1
+  tag: weak_evidence
+  day: '2027-09-02'
+  setup: '2027-08-30'
+- week: 1
+  tag: acceptance_vs_occurrence
+  day: '2027-09-02'
+- week: 1
+  tag: restructuring
+  day: '2027-09-02'
+  mode: split
+  project: pr-holworth-pantry-inventory-discovery
+- week: 1
+  tag: version_mismatch
+  day: '2027-09-02'
+  setup: '2027-08-30'
+- week: 1
+  tag: silent_closure
+  day: '2027-09-02'
+  setup: '2027-08-31'
+- week: 1
+  tag: reversal
+  day: '2027-09-02'
+  setup: '2027-08-25'
+  project: pr-nettle
+- week: 1
+  tag: endorsement
+  day: '2027-09-03'
+  setup: '2027-08-30'
+- week: 1
+  tag: scattered_evidence
+  day: '2027-09-02'
+  setup: '2027-08-30'
+  steps:
+  - '2027-08-31'
+  - '2027-09-01'
+  - '2027-09-02'
+- week: 2
+  tag: worker_directive
+  day: '2027-09-06'
+  project: pr-nettle
+- week: 2
+  tag: noise
+  day: '2027-09-06'
+- week: 2
+  tag: implied_commitment
+  day: '2027-09-07'
+  project: pr-nettle
+- week: 2
+  tag: duplicate_signal
+  day: '2027-09-06'
+  project: pr-translation-help-tool-selection
+- week: 2
+  tag: privacy
+  day: '2027-09-07'
+- week: 2
+  tag: alias
+  day: '2027-09-08'
+- week: 2
+  tag: name_collision
+  day: '2027-09-07'
+- week: 2
+  tag: new_entity
+  day: '2027-09-07'
+  person: p-kavya-agyeman
+  project: pr-translation-help-tool-selection
+- week: 2
+  tag: supersession
+  day: '2027-09-07'
+  project: pr-nettle
+- week: 2
+  tag: unobservable
+  day: '2027-09-09'
+  project: pr-holworth-pantry-inventory-discovery
+  attribute: budget_ceiling
+- week: 2
+  tag: draft_vs_sent
+  day: '2027-09-07'
+  setup: '2027-09-06'
+- week: 2
+  tag: batch_catchup
+  day: '2027-09-08'
+- week: 2
+  tag: transfer
+  day: '2027-09-09'
+- week: 2
+  tag: correction
+  day: '2027-09-08'
+  setup: '2027-09-07'
+- week: 2
+  tag: weak_evidence
+  day: '2027-09-08'
+  setup: '2027-09-06'
+- week: 2
+  tag: acceptance_vs_occurrence
+  day: '2027-09-09'
+- week: 2
+  tag: restructuring
+  day: '2027-09-10'
+  mode: merge
+  project: pr-kelholm-referral-matching-idea
+  into: pr-nettle
+- week: 2
+  tag: version_mismatch
+  day: '2027-09-09'
+  setup: '2027-09-06'
+- week: 2
+  tag: silent_closure
+  day: '2027-09-10'
+  setup: '2027-09-07'
+- week: 2
+  tag: reversal
+  day: '2027-09-10'
+  setup: '2027-09-02'
+  project: pr-holworth-pantry-inventory-discovery
+- week: 2
+  tag: endorsement
+  day: '2027-09-11'
+  setup: '2027-09-07'
+- week: 2
+  tag: scattered_evidence
+  day: '2027-09-09'
+  setup: '2027-09-06'
+  steps:
+  - '2027-09-07'
+  - '2027-09-08'
+  - '2027-09-09'
+audit:
+  unrevealed:
+    e-0018: never appears
+    e-0019: never appears
+    e-0021: never appears
+    e-0029: never appears
+    e-0036: never appears
+    e-0038: never appears
+    e-0156: unobservable
+    e-0159: 'weak evidence: the walkthrough left no trace'
+    e-0212: 'weak evidence: the walkthrough left no trace'
+    e-0218: unobservable
+  instruction_injection: em-0055
+  attachments:
+  - dc-0001
+  - dc-0002
+  - dc-0003
+  - dc-0004
+  - dc-0005

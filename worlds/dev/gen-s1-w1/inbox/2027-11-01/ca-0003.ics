@@ -9,9 +9,9 @@ DTSTART:20271102T180000Z
 DTEND:20271102T184500Z
 SUMMARY:Panel: Carys
 ORGANIZER;CN=Yasmin Mokoena:mailto:yasmin.mokoena@holcrest.example
-ATTENDEE;CN=Camila Quimby;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:camila.quimby@holcrest.example
-ATTENDEE;CN=Yiannis Cabrera;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:yiannis.cabrera@holcrest.example
-ATTENDEE;CN=Dalisay Nyberg;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dalisay.nyberg@sandstead.holcrest.example
+ATTENDEE;CN=Camila Abernathy;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:camila.abernathy@holcrest.example
+ATTENDEE;CN=Yiannis Bustamante;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:yiannis.bustamante@holcrest.example
+ATTENDEE;CN=Dalisay Dahl;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dalisay.dahl@sandstead.holcrest.example
 SEQUENCE:0
 DESCRIPTION:Quick sync\, 30 minutes.\nJoin video meeting: https://meet.holcrest.example/j/4181797984?pwd=YfnmXVmJ\nPasscode: 546668
 LOCATION:https://meet.holcrest.example/j/4181797984?pwd=YfnmXVmJ

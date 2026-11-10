@@ -3,19 +3,19 @@
  "channel": "dm-ottavio-tegan",
  "kind": "dm",
  "participants": [
-  "Ottavio Monteiro",
+  "Ottavio Moreira",
   "Tegan Ogunleye"
  ],
  "messages": [
   {
    "ts": "2027-08-24T14:55:35-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "got a sec?"
   },
   {
    "ts": "2027-08-24T14:57:00-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "can you pull the course assistant baseline data from heathridge?"
   },
@@ -33,7 +33,7 @@
   },
   {
    "ts": "2027-08-24T15:02:50-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "busy, but fine. you?"
   }

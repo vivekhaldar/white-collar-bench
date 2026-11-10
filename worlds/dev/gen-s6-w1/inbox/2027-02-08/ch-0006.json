@@ -1,0 +1,23 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-sipho",
+ "kind": "dm",
+ "participants": [
+  "Sipho Costa",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-08T15:12:00-08:00",
+   "user": "Sipho Costa",
+   "handle": "@sipho",
+   "text": "Happy to send you the Linel volume tiers if useful, let me know."
+  },
+  {
+   "ts": "2027-02-08T15:12:42-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "appreciate it"
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-adebayo-aroha",
+ "kind": "dm",
+ "participants": [
+  "Aroha Mendoza",
+  "Adebayo Kahananui"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-03T08:21:22-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "morning!"
+  },
+  {
+   "ts": "2027-11-03T08:21:54-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "i sent you the bed management selection pricing comparison earlier today",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@adebayo"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-03T08:22:57-05:00",
+   "user": "Adebayo Kahananui",
+   "handle": "@adebayo",
+   "text": "perfect"
+  }
+ ]
+}

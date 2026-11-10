@@ -3,18 +3,18 @@
  "channel": "#fennel-core",
  "kind": "channel",
  "participants": [
-  "Dina Zimmermann",
+  "Dina Ricci",
   "Cassandra Yilmaz",
-  "Imani Chaiyaporn",
-  "Yael Yardley",
-  "Rudo Alexiou",
-  "Naoko Maldonado",
+  "Imani Navarro",
+  "Yael Ellery",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
   "Thibault Sahin"
  ],
  "messages": [
   {
    "ts": "2027-02-25T09:02:00-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "@imani done, i confirmed the fennel test plan with you",
    "reactions": [

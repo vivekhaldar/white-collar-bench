@@ -1,0 +1,23 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-douglas",
+ "kind": "dm",
+ "participants": [
+  "Douglas Grigoryan",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-02T11:20:00+01:00",
+   "user": "Douglas Grigoryan",
+   "handle": "@douglas",
+   "text": "Correction to what I said earlier: the Pipit stale cache isn't done after all. The change was rolled back, so it's open again."
+  },
+  {
+   "ts": "2027-09-02T11:21:12+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "thanks for the heads up"
+  }
+ ]
+}

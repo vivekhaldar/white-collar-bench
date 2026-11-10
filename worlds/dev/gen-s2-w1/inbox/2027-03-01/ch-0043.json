@@ -3,22 +3,22 @@
  "channel": "#ai-in-public-service-core",
  "kind": "channel",
  "participants": [
-  "Imani Chaiyaporn",
-  "Dina Zimmermann",
-  "Tendai Vu",
-  "Catrin Petrov",
-  "Nomvula Moreira"
+  "Imani Navarro",
+  "Dina Ricci",
+  "Tendai Santos",
+  "Catrin Kuznetsova",
+  "Nomvula Jansen"
  ],
  "messages": [
   {
    "ts": "2027-03-01T16:37:00-07:00",
-   "user": "Imani Chaiyaporn",
+   "user": "Imani Navarro",
    "handle": "@imani",
    "text": "dina would like catrin to send dina the ai in public service workshop speaker brief, not agreed yet"
   },
   {
    "ts": "2027-03-01T16:43:05-07:00",
-   "user": "Tendai Vu",
+   "user": "Tendai Santos",
    "handle": "@tendai",
    "text": "thanks for the update",
    "thread_of": 0

@@ -1,0 +1,47 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#work-instructions-core",
+ "kind": "channel",
+ "participants": [
+  "Amira Baek",
+  "Adwoa Kocak",
+  "Ottavio Bakker",
+  "Giorgi Wisniewska",
+  "Segun Okeke"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-23T17:29:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "@adwoa i'll confirm the work instructions selection risk register with you."
+  },
+  {
+   "ts": "2027-09-23T17:29:07-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "ok :)"
+  },
+  {
+   "ts": "2027-09-23T17:38:36-06:00",
+   "user": "Giorgi Wisniewska",
+   "handle": "@giorgi",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-23T17:47:44-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-23T17:51:40-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  }
+ ]
+}

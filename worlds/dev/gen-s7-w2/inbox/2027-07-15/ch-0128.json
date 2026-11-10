@@ -1,0 +1,40 @@
+{
+ "workspace": "corrstead",
+ "channel": "#garnet-core",
+ "kind": "channel",
+ "participants": [
+  "Emre Khumalo",
+  "Hiba Jimenez",
+  "Ewan Laine",
+  "Bolat",
+  "Madeline Chikwanha",
+  "Desmond Visser",
+  "Andrei Laurent",
+  "Adaeze Fifita",
+  "Eun-ji Valdez",
+  "Dong-hyun Colombo"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-15T14:49:00-08:00",
+   "user": "Emre Khumalo",
+   "handle": "@emre",
+   "text": "@hiba i shared the Garnet LMS integration notes with you earlier today.",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-15T14:49:54-08:00",
+   "user": "Dong-hyun Colombo",
+   "handle": "@donghyun",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

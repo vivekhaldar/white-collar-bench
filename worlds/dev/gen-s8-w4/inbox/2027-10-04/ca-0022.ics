@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iselmoor//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:e5848e5ba9b0ccb2@iselmoor.example
+DTSTAMP:20271004T193900Z
+DTSTART:20271007T200000Z
+DTEND:20271007T203000Z
+SUMMARY:Walkthrough: Fulmar lessons-learned note v2
+ORGANIZER;CN=Amira Baek:mailto:amira.baek@iselmoor.example
+ATTENDEE;CN=Marcelo Meijer;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:marcelo.meijer@iselmoor.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.iselmoor.example/j/6937374602?pwd=TmCKdWyx\nPasscode: 645756
+LOCATION:https://meet.iselmoor.example/j/6937374602?pwd=TmCKdWyx
+END:VEVENT
+END:VCALENDAR

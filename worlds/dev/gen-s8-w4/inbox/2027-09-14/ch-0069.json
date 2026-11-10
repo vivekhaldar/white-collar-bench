@@ -1,0 +1,32 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Oksana Hoffmann",
+  "Thibault Kowalski",
+  "Adwoa Kocak",
+  "Goran Liu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-14T13:19:04-06:00",
+   "user": "Oksana Hoffmann",
+   "handle": "@oksana",
+   "text": "who left a lunchbox in the fridge since last week?"
+  },
+  {
+   "ts": "2027-09-14T13:21:06-06:00",
+   "user": "Thibault Kowalski",
+   "handle": "@thibault",
+   "text": "not me!"
+  },
+  {
+   "ts": "2027-09-14T13:26:10-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "it's been there a while",
+   "thread_of": 0
+  }
+ ]
+}

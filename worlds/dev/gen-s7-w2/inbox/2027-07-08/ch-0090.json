@@ -1,0 +1,41 @@
+{
+ "workspace": "corrstead",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Andrei Laurent",
+  "Desmond Visser",
+  "Tyrone Duarte"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-08T15:16:36-08:00",
+   "user": "Andrei Laurent",
+   "handle": "@andrei",
+   "text": "lost a blue umbrella, might be in the big meeting room",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@desmond",
+      "@tyrone"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-08T15:18:15-08:00",
+   "user": "Desmond Visser",
+   "handle": "@desmond",
+   "text": "will keep an eye out",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-07-08T15:24:16-08:00",
+   "user": "Tyrone Duarte",
+   "handle": "@tyrone",
+   "text": "there's one at reception",
+   "thread_of": 0
+  }
+ ]
+}

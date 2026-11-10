@@ -3,31 +3,31 @@
  "channel": "dm-camila-thandiwe",
  "kind": "dm",
  "participants": [
-  "Camila Quimby",
-  "Thandiwe Bonnet"
+  "Camila Abernathy",
+  "Thandiwe Garnier"
  ],
  "messages": [
   {
    "ts": "2027-11-10T08:00:00-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "i sent you the notice translation discovery stakeholder map"
   },
   {
    "ts": "2027-11-10T08:00:38-07:00",
-   "user": "Thandiwe Bonnet",
+   "user": "Thandiwe Garnier",
    "handle": "@thandiwe",
    "text": "got it, thanks"
   },
   {
    "ts": "2027-11-10T08:04:11-07:00",
-   "user": "Thandiwe Bonnet",
+   "user": "Thandiwe Garnier",
    "handle": "@thandiwe",
    "text": "did you catch the all-hands?"
   },
   {
    "ts": "2027-11-10T08:07:05-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "only the first half"
   }

@@ -1,0 +1,49 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-desmond-hiba",
+ "kind": "dm",
+ "participants": [
+  "Desmond Visser",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-13T16:35:57-08:00",
+   "user": "Desmond Visser",
+   "handle": "@desmond",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-07-13T16:36:52-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-07-13T16:39:00-08:00",
+   "user": "Desmond Visser",
+   "handle": "@desmond",
+   "text": "Siskin Operating Model Review is complete, thanks all!",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-13T16:40:08-08:00",
+   "user": "Desmond Visser",
+   "handle": "@desmond",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-07-13T16:41:27-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "anytime"
+  }
+ ]
+}

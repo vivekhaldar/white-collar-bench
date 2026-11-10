@@ -1,0 +1,25 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-goran",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Goran Liu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-01T12:06:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "i'll complete the fulmar privacy impact assessment by 14 september",
+   "edited": true,
+   "original": "i'll complete the fulmar privacy impact assessment by 15 september"
+  },
+  {
+   "ts": "2027-09-01T12:06:52-06:00",
+   "user": "Goran Liu",
+   "handle": "@goran",
+   "text": "appreciate it"
+  }
+ ]
+}

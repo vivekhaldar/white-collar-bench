@@ -2,7 +2,7 @@ id: gen-s5-small
 title: 'Generated world: Clinical Digital Services, Iselvale Health Partners (regional health network)'
 version: 1
 split: dev
-worker: p-hiba-xu
+worker: p-hiba-deng
 timezone: -05:00
 seed:
   start: '2027-03-15'

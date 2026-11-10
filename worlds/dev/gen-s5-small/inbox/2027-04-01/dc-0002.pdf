@@ -1,0 +1,65 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1439 >>
+stream
+BT
+/F1 10 Tf
+72 760 Td
+0 -15 Td /F1 11 Tf () Tj
+0 -15 Td /F1 16 Tf (Clinical documentation discovery findings summary) Tj
+0 -20 Td /F1 10 Tf (Version: v3 | Project: Falbury Clinical Documentation Discovery | Prepared by: Anahit Fifita |) Tj
+0 -14 Td /F1 10 Tf (Date: 31 March 2027) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (Purpose) Tj
+0 -17 Td /F1 10 Tf (This Clinical documentation discovery findings summary summarizes the current position on) Tj
+0 -14 Td /F1 10 Tf (Falbury Clinical Documentation Discovery for discussion.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (Summary) Tj
+0 -17 Td /F1 10 Tf (• Comments are tracked in the margin; resolved ones have been removed.) Tj
+0 -14 Td /F1 10 Tf (• Terminology follows the shared glossary.) Tj
+0 -14 Td /F1 10 Tf (• Two sections are still being drafted and are marked as such.) Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (Details) Tj
+0 -17 Td /F1 10 Tf (Area | Notes) Tj
+0 -14 Td /F1 10 Tf (Data | covers the pilot group only) Tj
+0 -14 Td /F1 10 Tf (Communications | agreed at the last review) Tj
+0 -14 Td /F1 10 Tf (Timeline | unchanged from the previous version) Tj
+0 -14 Td /F1 10 Tf (Scope | draft, comments welcome) Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (Open questions) Tj
+0 -17 Td /F1 10 Tf (• What is the fallback if a dependency slips?) Tj
+0 -14 Td /F1 10 Tf (• Does this need to go to the council?) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Title (Clinical documentation discovery findings summary v3) /Producer (wcb) >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001732 00000 n 
+0000001829 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R /Info 6 0 R >>
+startxref
+1928
+%%EOF

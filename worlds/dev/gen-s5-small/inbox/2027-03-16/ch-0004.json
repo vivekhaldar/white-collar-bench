@@ -3,13 +3,13 @@
  "channel": "dm-hiba-kwame",
  "kind": "dm",
  "participants": [
-  "Hiba Xu",
-  "Kwame Ortega"
+  "Hiba Deng",
+  "Kwame Zamora"
  ],
  "messages": [
   {
    "ts": "2027-03-16T11:39:00-05:00",
-   "user": "Hiba Xu",
+   "user": "Hiba Deng",
    "handle": "@hiba",
    "text": "When you get a chance, could you send me the notes from the denials analytics session?",
    "edited": true,
@@ -17,7 +17,7 @@
   },
   {
    "ts": "2027-03-16T11:40:09-05:00",
-   "user": "Kwame Ortega",
+   "user": "Kwame Zamora",
    "handle": "@kwame",
    "text": "will do"
   }

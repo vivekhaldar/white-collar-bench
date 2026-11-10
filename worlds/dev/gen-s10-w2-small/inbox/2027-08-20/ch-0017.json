@@ -1,0 +1,40 @@
+{
+ "workspace": "reddale",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Bisi Volkov",
+  "Sigrid Asante",
+  "Akosua Bergstrom"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-20T11:55:51+01:00",
+   "user": "Bisi Volkov",
+   "handle": "@bisi",
+   "text": "does anyone have a spare laptop charger (usb-c)? :)",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@sigrid",
+      "@akosua"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-08-20T11:57:15+01:00",
+   "user": "Sigrid Asante",
+   "handle": "@sigrid",
+   "text": "I have one, desk by the window"
+  },
+  {
+   "ts": "2027-08-20T12:00:45+01:00",
+   "user": "Akosua Bergstrom",
+   "handle": "@akosua",
+   "text": "check the supply cupboard",
+   "thread_of": 0
+  }
+ ]
+}

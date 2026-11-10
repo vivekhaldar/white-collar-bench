@@ -9,7 +9,7 @@ DTSTART:20271112T230000Z
 DTEND:20271112T233000Z
 SUMMARY:Accepted: Nantgate partnership follow-up
 ORGANIZER;CN=Sipho Sengupta:mailto:sipho.sengupta@birchcrest.holcrest.example
-ATTENDEE;CN=Camila Quimby;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED:mailto:camila.quimby@holcrest.example
+ATTENDEE;CN=Camila Abernathy;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED:mailto:camila.abernathy@holcrest.example
 SEQUENCE:0
 END:VEVENT
 END:VCALENDAR

@@ -1,0 +1,29 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-akosua-aoife",
+ "kind": "dm",
+ "participants": [
+  "Akosua Bergstrom",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-09T17:53:30+01:00",
+   "user": "Akosua Bergstrom",
+   "handle": "@akosua",
+   "text": "hey :)"
+  },
+  {
+   "ts": "2027-09-09T17:56:00+01:00",
+   "user": "Akosua Bergstrom",
+   "handle": "@akosua",
+   "text": "Would you be able to run the Nettle go-live checklist with me? :)"
+  },
+  {
+   "ts": "2027-09-09T17:56:16+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "no problem"
+  }
+ ]
+}

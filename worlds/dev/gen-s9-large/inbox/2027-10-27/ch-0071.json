@@ -1,0 +1,43 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-anh-aroha",
+ "kind": "dm",
+ "participants": [
+  "Aroha Mendoza",
+  "Anh Villanueva"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-27T16:49:00-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "Just sent Aylin the AI safety rounds workshop slides v2.",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@anh"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-27T16:49:55-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-10-27T16:54:52-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-10-27T16:58:52-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "busy, but fine. you? :)"
+  }
+ ]
+}

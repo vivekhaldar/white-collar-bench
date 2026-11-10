@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lanhurst//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:d55eb60d25dbbdc0@lanhurst.example
+DTSTAMP:20270226T235700Z
+DTSTART:20270303T000000Z
+DTEND:20270303T003000Z
+SUMMARY:Faculty onboarding sessions for Axolotl
+ORGANIZER;CN=Losa Moretti:mailto:losa.moretti@dorcliff.lanhurst.example
+ATTENDEE;CN=Despina Pereira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:despina.pereira@lanhurst.example
+SEQUENCE:0
+DESCRIPTION:Agenda: Book faculty onboarding sessions for Axolotl.\nJoin video meeting: https://meet.lanhurst.example/j/4311923637?pwd=qgNVPRc5\nPasscode: 874311
+LOCATION:https://meet.lanhurst.example/j/4311923637?pwd=qgNVPRc5
+END:VEVENT
+END:VCALENDAR

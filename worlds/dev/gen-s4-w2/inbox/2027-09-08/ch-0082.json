@@ -3,43 +3,43 @@
  "channel": "dm-ewan-ottavio",
  "kind": "dm",
  "participants": [
-  "Ottavio Monteiro",
-  "Ewan Shrestha"
+  "Ottavio Moreira",
+  "Ewan Naidu"
  ],
  "messages": [
   {
    "ts": "2027-09-08T09:35:34-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "hey"
   },
   {
    "ts": "2027-09-08T09:36:04-08:00",
-   "user": "Ewan Shrestha",
+   "user": "Ewan Naidu",
    "handle": "@ewan",
    "text": "sure, what's up?"
   },
   {
    "ts": "2027-09-08T09:37:00-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "i sent you the room booking selection sourcing requirements"
   },
   {
    "ts": "2027-09-08T09:37:14-08:00",
-   "user": "Ewan Shrestha",
+   "user": "Ewan Naidu",
    "handle": "@ewan",
    "text": "got it, thanks :)"
   },
   {
    "ts": "2027-09-08T09:41:44-08:00",
-   "user": "Ewan Shrestha",
+   "user": "Ewan Naidu",
    "handle": "@ewan",
    "text": "thanks again for earlier"
   },
   {
    "ts": "2027-09-08T09:45:03-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "anytime"
   }

@@ -1,0 +1,24 @@
+{
+ "workspace": "reddale",
+ "channel": "#nettle-core",
+ "kind": "channel",
+ "participants": [
+  "Bisi Volkov",
+  "Aoife Everett",
+  "Gaurav Laine",
+  "Akosua Bergstrom",
+  "Douglas Grigoryan",
+  "Sigrid Asante",
+  "Sipho Papadopoulos",
+  "Adaeze Morimoto",
+  "Bruna Thapa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-18T11:06:00+01:00",
+   "user": "Bisi Volkov",
+   "handle": "@bisi",
+   "text": "@aoife i'll generate a synthetic client data set for Nettle."
+  }
+ ]
+}

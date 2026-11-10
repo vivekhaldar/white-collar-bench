@@ -3,19 +3,19 @@
  "channel": "dm-dina-yael",
  "kind": "dm",
  "participants": [
-  "Yael Yardley",
-  "Dina Zimmermann"
+  "Yael Ellery",
+  "Dina Ricci"
  ],
  "messages": [
   {
    "ts": "2027-03-11T11:23:45-07:00",
-   "user": "Yael Yardley",
+   "user": "Yael Ellery",
    "handle": "@yael",
    "text": "morning!"
   },
   {
    "ts": "2027-03-11T11:26:00-07:00",
-   "user": "Yael Yardley",
+   "user": "Yael Ellery",
    "handle": "@yael",
    "text": "Correction to what I said earlier: the Fennel timeout errors isn't done after all. The change was rolled back, so it's open again.",
    "edited": true,
@@ -23,19 +23,19 @@
   },
   {
    "ts": "2027-03-11T11:27:05-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "noted"
   },
   {
    "ts": "2027-03-11T11:28:32-07:00",
-   "user": "Yael Yardley",
+   "user": "Yael Ellery",
    "handle": "@yael",
    "text": "did you catch the all-hands?"
   },
   {
    "ts": "2027-03-11T11:31:23-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "only the first half"
   }

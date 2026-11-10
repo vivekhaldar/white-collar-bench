@@ -3,18 +3,18 @@
  "channel": "#room-booking-selection-core",
  "kind": "channel",
  "participants": [
-  "Ottavio Monteiro",
+  "Ottavio Moreira",
   "Roya",
   "Meera",
   "Tegan Ogunleye",
-  "Nadia Krause",
+  "Nadia Vogel",
   "Isabela Haidari",
-  "Henrik Mendoza"
+  "Henrik Santoso"
  ],
  "messages": [
   {
    "ts": "2027-09-17T11:38:00-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "@meera i reviewed your room booking selection reference-check notes."
   },
@@ -27,14 +27,14 @@
   },
   {
    "ts": "2027-09-17T11:48:20-08:00",
-   "user": "Nadia Krause",
+   "user": "Nadia Vogel",
    "handle": "@nadia",
    "text": "+1",
    "thread_of": 0
   },
   {
    "ts": "2027-09-17T11:51:20-08:00",
-   "user": "Henrik Mendoza",
+   "user": "Henrik Santoso",
    "handle": "@henrik",
    "text": "good to know :)",
    "thread_of": 0

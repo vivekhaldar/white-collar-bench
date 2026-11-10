@@ -1,0 +1,49 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-jurgen",
+ "kind": "dm",
+ "participants": [
+  "Jurgen Dvorak",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-26T10:40:41-08:00",
+   "user": "Jurgen Dvorak",
+   "handle": "@jurgen",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-02-26T10:42:00-08:00",
+   "user": "Jurgen Dvorak",
+   "handle": "@jurgen",
+   "text": "Change of plan: we're no longer going to limit the Axolotl pilot to five courses. Dorcliff asked for another course! :)"
+  },
+  {
+   "ts": "2027-02-26T10:43:08-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "agreed"
+  },
+  {
+   "ts": "2027-02-26T10:43:42-08:00",
+   "user": "Jurgen Dvorak",
+   "handle": "@jurgen",
+   "text": "Confirming we'll widen the Axolotl pilot to six courses. :)",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@despina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-26T10:44:55-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "agreed"
+  }
+ ]
+}

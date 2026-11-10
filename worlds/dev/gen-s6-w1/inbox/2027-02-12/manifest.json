@@ -1,0 +1,124 @@
+{
+  "date": "2027-02-12",
+  "artifacts": [
+    {
+      "id": "ca-0007",
+      "channel": "calendar",
+      "received_at": "2027-02-12T07:49:00-08:00",
+      "path": "ca-0007.ics",
+      "title": "Cancelled: Axolotl standup"
+    },
+    {
+      "id": "em-0025",
+      "channel": "email",
+      "received_at": "2027-02-12T07:53:00-08:00",
+      "path": "em-0025.eml",
+      "title": "[INC-85680] Ticket updated"
+    },
+    {
+      "id": "em-0026",
+      "channel": "email",
+      "received_at": "2027-02-12T08:11:00-08:00",
+      "path": "em-0026.eml",
+      "title": "[REQ-30059] Request resolved"
+    },
+    {
+      "id": "em-0027",
+      "channel": "email",
+      "received_at": "2027-02-12T08:31:00-08:00",
+      "path": "em-0027.eml",
+      "title": "Re: Axolotl evaluation rubric"
+    },
+    {
+      "id": "em-0028",
+      "channel": "email",
+      "received_at": "2027-02-12T08:35:00-08:00",
+      "path": "em-0028.eml",
+      "title": "Event space survey"
+    },
+    {
+      "id": "mt-0004",
+      "channel": "transcript",
+      "received_at": "2027-02-12T08:45:00-08:00",
+      "path": "mt-0004.vtt",
+      "title": "Catch-up: Despina / Carys (transcript)"
+    },
+    {
+      "id": "em-0029",
+      "channel": "email",
+      "received_at": "2027-02-12T09:32:00-08:00",
+      "path": "em-0029.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0030",
+      "channel": "email",
+      "received_at": "2027-02-12T09:48:00-08:00",
+      "path": "em-0030.eml",
+      "title": "Fwd: Axolotl help-desk script"
+    },
+    {
+      "id": "em-0031",
+      "channel": "email",
+      "received_at": "2027-02-12T10:14:00-08:00",
+      "path": "em-0031.eml",
+      "title": "Re: FYI: Course assistant selection scorecard"
+    },
+    {
+      "id": "em-0032",
+      "channel": "email",
+      "received_at": "2027-02-12T12:24:00-08:00",
+      "path": "em-0032.eml",
+      "title": "Re: FYI: Axolotl solution brief"
+    },
+    {
+      "id": "ch-0028",
+      "channel": "chat",
+      "received_at": "2027-02-12T13:09:00-08:00",
+      "path": "ch-0028.json",
+      "title": "DM: Losa Moretti / Despina Pereira"
+    },
+    {
+      "id": "ch-0029",
+      "channel": "chat",
+      "received_at": "2027-02-12T13:43:00-08:00",
+      "path": "ch-0029.json",
+      "title": "DM: Nathaniel Cartwright / Despina Pereira"
+    },
+    {
+      "id": "em-0033",
+      "channel": "email",
+      "received_at": "2027-02-12T15:51:00-08:00",
+      "path": "em-0033.eml",
+      "title": "Status note: w/e 12 February"
+    },
+    {
+      "id": "em-0034",
+      "channel": "email",
+      "received_at": "2027-02-12T16:17:00-08:00",
+      "path": "em-0034.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "nt-0004",
+      "channel": "note",
+      "received_at": "2027-02-12T17:55:00-08:00",
+      "path": "nt-0004.md",
+      "title": "Fri notes"
+    },
+    {
+      "id": "em-0035",
+      "channel": "email",
+      "received_at": "2027-02-12T18:16:00-08:00",
+      "path": "em-0035.eml",
+      "title": "Re: Fennel model allow-list"
+    },
+    {
+      "id": "em-0036",
+      "channel": "email",
+      "received_at": "2027-02-12T18:59:00-08:00",
+      "path": "em-0036.eml",
+      "title": "Wellbeing week activities"
+    }
+  ]
+}

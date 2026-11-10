@@ -3,25 +3,25 @@
  "channel": "dm-dina-naoko",
  "kind": "dm",
  "participants": [
-  "Naoko Maldonado",
-  "Dina Zimmermann"
+  "Naoko Sandoval",
+  "Dina Ricci"
  ],
  "messages": [
   {
    "ts": "2027-03-12T13:23:16-07:00",
-   "user": "Naoko Maldonado",
+   "user": "Naoko Sandoval",
    "handle": "@naoko",
    "text": "hey"
   },
   {
    "ts": "2027-03-12T13:23:43-07:00",
-   "user": "Naoko Maldonado",
+   "user": "Naoko Sandoval",
    "handle": "@naoko",
    "text": "Can you update the Mistral equity impact review after my comments by Monday 15 March?"
   },
   {
    "ts": "2027-03-12T13:24:55-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "sure, can do"
   }

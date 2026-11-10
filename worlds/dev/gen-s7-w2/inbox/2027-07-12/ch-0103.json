@@ -1,0 +1,39 @@
+{
+ "workspace": "corrstead",
+ "channel": "#garnet-core",
+ "kind": "channel",
+ "participants": [
+  "Dong-hyun Colombo",
+  "Hiba Jimenez",
+  "Ewan Laine",
+  "Bolat",
+  "Madeline Chikwanha",
+  "Dez",
+  "Andrei Laurent",
+  "Emre Khumalo",
+  "Adaeze Fifita",
+  "Eun-ji Valdez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-12T10:55:00-08:00",
+   "user": "Dong-hyun Colombo",
+   "handle": "@donghyun",
+   "text": "@hiba would you be able to send me the Garnet action log?"
+  },
+  {
+   "ts": "2027-07-12T10:58:49-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-07-12T11:00:40-08:00",
+   "user": "Madeline Chikwanha",
+   "handle": "@madeline",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  }
+ ]
+}

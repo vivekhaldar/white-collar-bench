@@ -1,47 +1,41 @@
 {
  "workspace": "birchmere",
- "channel": "dm-alasdair-tunde",
- "kind": "dm",
+ "channel": "#funding-model-core",
+ "kind": "channel",
  "participants": [
-  "Tunde Kapanadze",
-  "Alasdair Kaya"
+  "Somchai",
+  "Alasdair Kaya",
+  "Bisi",
+  "Catrin Kiprono",
+  "Deniz Feng"
  ],
  "messages": [
   {
-   "ts": "2027-09-07T07:46:43-05:00",
-   "user": "Tunde Kapanadze",
-   "handle": "@tunde",
-   "text": "quick q"
+   "ts": "2027-09-07T09:30:00-05:00",
+   "user": "Somchai",
+   "handle": "@somchai",
+   "text": "We're now in options on Sirocco Funding Model."
   },
   {
-   "ts": "2027-09-07T07:47:34-05:00",
+   "ts": "2027-09-07T09:38:12-05:00",
+   "user": "Deniz Feng",
+   "handle": "@deniz",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-07T09:46:45-05:00",
    "user": "Alasdair Kaya",
    "handle": "@alasdair",
-   "text": "hi"
+   "text": "+1",
+   "thread_of": 0
   },
   {
-   "ts": "2027-09-07T07:54:41-05:00",
-   "user": "Tunde Kapanadze",
-   "handle": "@tunde",
-   "text": "just to recap, yesterday you said you'd send me the friday status note for w/e 10 september"
-  },
-  {
-   "ts": "2027-09-07T07:55:39-05:00",
-   "user": "Alasdair Kaya",
-   "handle": "@alasdair",
-   "text": "no problem"
-  },
-  {
-   "ts": "2027-09-07T07:57:18-05:00",
-   "user": "Alasdair Kaya",
-   "handle": "@alasdair",
-   "text": "how's your week going?"
-  },
-  {
-   "ts": "2027-09-07T08:00:33-05:00",
-   "user": "Tunde Kapanadze",
-   "handle": "@tunde",
-   "text": "busy, but fine. you?"
+   "ts": "2027-09-07T09:48:29-05:00",
+   "user": "Catrin Kiprono",
+   "handle": "@catrin",
+   "text": "good to know",
+   "thread_of": 0
   }
  ]
 }

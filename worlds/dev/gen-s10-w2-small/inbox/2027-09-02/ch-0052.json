@@ -1,0 +1,35 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-amani-aoife",
+ "kind": "dm",
+ "participants": [
+  "Aoife Everett",
+  "Amani"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-02T10:14:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "confirming we'll limit the pantry inventory discovery rollout to two branches"
+  },
+  {
+   "ts": "2027-09-02T10:15:20+01:00",
+   "user": "Amani",
+   "handle": "@amani",
+   "text": "agreed"
+  },
+  {
+   "ts": "2027-09-02T10:17:38+01:00",
+   "user": "Amani",
+   "handle": "@amani",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-09-02T10:20:32+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "only the first half"
+  }
+ ]
+}

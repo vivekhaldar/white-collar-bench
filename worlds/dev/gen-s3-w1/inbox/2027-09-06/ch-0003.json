@@ -1,24 +1,29 @@
 {
  "workspace": "birchmere",
- "channel": "#random",
- "kind": "channel",
+ "channel": "dm-alasdair-oluwaseun",
+ "kind": "dm",
  "participants": [
-  "Bisi Chatterjee",
+  "Oluwaseun Hakobyan",
   "Alasdair Kaya"
  ],
  "messages": [
   {
-   "ts": "2027-09-06T11:01:08-05:00",
-   "user": "Bisi Chatterjee",
-   "handle": "@bisi",
-   "text": "who's going to the all-hands later? :)"
+   "ts": "2027-09-06T15:47:46-05:00",
+   "user": "Oluwaseun Hakobyan",
+   "handle": "@oluwaseun",
+   "text": "got a sec?"
   },
   {
-   "ts": "2027-09-06T11:03:38-05:00",
+   "ts": "2027-09-06T15:50:00-05:00",
+   "user": "Oluwaseun Hakobyan",
+   "handle": "@oluwaseun",
+   "text": "from the sync earlier, lupe will countersign the lanmoor data-use agreement by thu 16 sep"
+  },
+  {
+   "ts": "2027-09-06T15:50:35-05:00",
    "user": "Alasdair Kaya",
    "handle": "@alasdair",
-   "text": "I'll dial in",
-   "thread_of": 0
+   "text": "perfect, thanks"
   }
  ]
 }

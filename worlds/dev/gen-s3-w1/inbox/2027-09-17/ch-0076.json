@@ -1,0 +1,35 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-guadalupe",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Lupe"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-17T09:55:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "would you be able to send me the outpatient no-shows wait-time export?"
+  },
+  {
+   "ts": "2027-09-17T09:56:10-05:00",
+   "user": "Lupe",
+   "handle": "@guadalupe",
+   "text": "yep, on it"
+  },
+  {
+   "ts": "2027-09-17T09:57:53-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-09-17T10:00:46-05:00",
+   "user": "Lupe",
+   "handle": "@guadalupe",
+   "text": "no worries"
+  }
+ ]
+}

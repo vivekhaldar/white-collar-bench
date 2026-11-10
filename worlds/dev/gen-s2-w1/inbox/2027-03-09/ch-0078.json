@@ -3,13 +3,13 @@
  "channel": "#mistral-core",
  "kind": "channel",
  "participants": [
-  "Imani Chaiyaporn",
-  "Dina Zimmermann",
-  "Yael Yardley",
-  "Rudo Alexiou",
-  "Naoko Maldonado",
+  "Imani Navarro",
+  "Dina Ricci",
+  "Yael Ellery",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
   "Cassandra Yilmaz",
-  "Bilal Blackwood",
+  "Bilal Kahananui",
   "Thibault Sahin",
   "Mei Obi",
   "Ling"
@@ -17,7 +17,7 @@
  "messages": [
   {
    "ts": "2027-03-09T07:54:00-07:00",
-   "user": "Imani Chaiyaporn",
+   "user": "Imani Navarro",
    "handle": "@imani",
    "text": "fyi yael needs the mistral retention schedule by thursday 11 march"
   },

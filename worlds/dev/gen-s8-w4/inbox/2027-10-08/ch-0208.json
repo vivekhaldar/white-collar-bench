@@ -1,0 +1,23 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Ottavio Bakker"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-08T16:55:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "leave it with me, i'll send you the fulmar line downtime report v2"
+  },
+  {
+   "ts": "2027-10-08T16:55:09-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "appreciate it :)"
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#radiology-follow-up-core",
+ "kind": "channel",
+ "participants": [
+  "Achieng Colombo",
+  "Aroha Mendoza",
+  "Anh Villanueva",
+  "Michaela Dang",
+  "Aino Menon"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-19T12:20:00-05:00",
+   "user": "Achieng Colombo",
+   "handle": "@achieng",
+   "text": "@aroha leave it with me, i'll pull the radiology follow-up baseline data from frostmere"
+  },
+  {
+   "ts": "2027-10-19T12:24:14-05:00",
+   "user": "Michaela Dang",
+   "handle": "@michaela",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

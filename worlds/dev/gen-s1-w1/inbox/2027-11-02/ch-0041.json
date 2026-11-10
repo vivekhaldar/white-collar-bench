@@ -3,43 +3,43 @@
  "channel": "dm-camila-thandiwe",
  "kind": "dm",
  "participants": [
-  "Thandiwe Bonnet",
-  "Camila Quimby"
+  "Thandiwe Garnier",
+  "Camila Abernathy"
  ],
  "messages": [
   {
    "ts": "2027-11-02T16:22:44-07:00",
-   "user": "Thandiwe Bonnet",
+   "user": "Thandiwe Garnier",
    "handle": "@thandiwe",
    "text": "quick q"
   },
   {
    "ts": "2027-11-02T16:23:29-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "hey"
   },
   {
    "ts": "2027-11-02T16:24:18-07:00",
-   "user": "Thandiwe Bonnet",
+   "user": "Thandiwe Garnier",
    "handle": "@thandiwe",
    "text": "just configured the obsidian sso broker for birchcrest"
   },
   {
    "ts": "2027-11-02T16:25:27-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "got it, thanks"
   },
   {
    "ts": "2027-11-02T16:26:43-07:00",
-   "user": "Thandiwe Bonnet",
+   "user": "Thandiwe Garnier",
    "handle": "@thandiwe",
    "text": "did you catch the all-hands?"
   },
   {
    "ts": "2027-11-02T16:27:13-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "only the first half"
   }

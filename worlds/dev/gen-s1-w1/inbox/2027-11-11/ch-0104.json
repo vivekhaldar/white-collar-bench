@@ -1,33 +1,33 @@
 {
  "workspace": "holcrest",
- "channel": "dm-camila-jalenr",
+ "channel": "dm-camila-jalenv",
  "kind": "dm",
  "participants": [
   "Jalen",
-  "Camila Quimby"
+  "Camila Abernathy"
  ],
  "messages": [
   {
    "ts": "2027-11-11T17:28:00-07:00",
    "user": "Jalen",
-   "handle": "@jalenr",
+   "handle": "@jalenv",
    "text": "I'll send you the notes from the inspection scheduling session!"
   },
   {
    "ts": "2027-11-11T17:28:36-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "perfect, thanks"
   },
   {
    "ts": "2027-11-11T17:33:00-07:00",
    "user": "Jalen",
-   "handle": "@jalenr",
+   "handle": "@jalenv",
    "text": "are you in the office tomorrow? :)"
   },
   {
    "ts": "2027-11-11T17:34:43-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "remote, but online all day"
   }

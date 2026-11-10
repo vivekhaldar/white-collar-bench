@@ -2,123 +2,124 @@
   "date": "2027-09-15",
   "artifacts": [
     {
-      "id": "nt-0003",
-      "channel": "note",
-      "received_at": "2027-09-15T07:56:00-05:00",
-      "path": "nt-0003.md",
-      "title": "Wed notes"
-    },
-    {
-      "id": "ch-0050",
-      "channel": "chat",
-      "received_at": "2027-09-15T08:23:00-05:00",
-      "path": "ch-0050.json",
-      "title": "DM: Alasdair Kaya / Oluwaseun Friedman"
-    },
-    {
-      "id": "ch-0051",
-      "channel": "chat",
-      "received_at": "2027-09-15T08:37:00-05:00",
-      "path": "ch-0051.json",
-      "title": "DM: Alasdair Kaya / Bisi Chatterjee"
-    },
-    {
-      "id": "em-0062",
-      "channel": "email",
-      "received_at": "2027-09-15T09:37:00-05:00",
-      "path": "em-0062.eml",
-      "title": "Room booking confirmation"
-    },
-    {
-      "id": "em-0063",
-      "channel": "email",
-      "received_at": "2027-09-15T09:41:00-05:00",
-      "path": "em-0063.eml",
-      "title": "[Investigating] Intermittent sign-in delays"
-    },
-    {
-      "id": "mn-0006",
-      "channel": "meeting_notes",
-      "received_at": "2027-09-15T09:55:00-05:00",
-      "path": "mn-0006.md",
-      "title": "Recap: Okapi standup"
-    },
-    {
       "id": "ch-0052",
       "channel": "chat",
-      "received_at": "2027-09-15T11:33:00-05:00",
+      "received_at": "2027-09-15T09:54:00-05:00",
       "path": "ch-0052.json",
-      "title": "DM: Alasdair Kaya / Lindiwe Ahmadi"
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "mn-0005",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-15T10:00:00-05:00",
+      "path": "mn-0005.md",
+      "title": "Recap: Okapi standup"
     },
     {
       "id": "ch-0053",
       "channel": "chat",
-      "received_at": "2027-09-15T11:37:00-05:00",
+      "received_at": "2027-09-15T11:08:00-05:00",
       "path": "ch-0053.json",
-      "title": "DM: Dina Mancini / Alasdair Kaya"
-    },
-    {
-      "id": "em-0064",
-      "channel": "email",
-      "received_at": "2027-09-15T12:08:00-05:00",
-      "path": "em-0064.eml",
-      "title": "Room booking confirmation"
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
     },
     {
       "id": "ch-0054",
       "channel": "chat",
-      "received_at": "2027-09-15T12:25:00-05:00",
+      "received_at": "2027-09-15T13:56:00-05:00",
       "path": "ch-0054.json",
-      "title": "#coffee"
+      "title": "#general"
     },
     {
-      "id": "em-0065",
+      "id": "em-0050",
       "channel": "email",
-      "received_at": "2027-09-15T13:01:00-05:00",
-      "path": "em-0065.eml",
-      "title": "[REQ-17007] Request resolved"
+      "received_at": "2027-09-15T14:29:00-05:00",
+      "path": "em-0050.eml",
+      "title": "Room booking confirmation"
     },
     {
-      "id": "em-0066",
+      "id": "em-0051",
       "channel": "email",
-      "received_at": "2027-09-15T13:22:00-05:00",
-      "path": "em-0066.eml",
-      "title": "Okapi stakeholder map"
+      "received_at": "2027-09-15T14:30:00-05:00",
+      "path": "em-0051.eml",
+      "title": "[INC-70165] Ticket updated"
+    },
+    {
+      "id": "mn-0006",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-15T14:30:00-05:00",
+      "path": "mn-0006.md",
+      "title": "Notes: Sirocco platform sync"
     },
     {
       "id": "ch-0055",
       "channel": "chat",
-      "received_at": "2027-09-15T14:21:00-05:00",
+      "received_at": "2027-09-15T15:44:00-05:00",
       "path": "ch-0055.json",
-      "title": "#okapi-core"
+      "title": "#random"
     },
     {
-      "id": "mt-0009",
-      "channel": "transcript",
-      "received_at": "2027-09-15T14:35:00-05:00",
-      "path": "mt-0009.vtt",
-      "title": "Sirocco platform sync (transcript)"
-    },
-    {
-      "id": "em-0067",
+      "id": "em-0052",
       "channel": "email",
-      "received_at": "2027-09-15T18:09:00-05:00",
-      "path": "em-0067.eml",
-      "title": "FYI: Bed management discovery opportunity list"
+      "received_at": "2027-09-15T16:11:00-05:00",
+      "path": "em-0052.eml",
+      "title": "Speaker spotlight"
     },
     {
       "id": "ch-0056",
       "channel": "chat",
-      "received_at": "2027-09-15T18:17:00-05:00",
+      "received_at": "2027-09-15T16:18:00-05:00",
       "path": "ch-0056.json",
-      "title": "DM: Alasdair Kaya / Lindiwe Ahmadi"
+      "title": "DM: Dina Laurent / Alasdair Kaya"
+    },
+    {
+      "id": "dc-0004",
+      "channel": "document",
+      "received_at": "2027-09-15T17:15:00-05:00",
+      "path": "dc-0004.xlsx",
+      "title": "Okapi requirements matrix v2",
+      "parent": "em-0053"
+    },
+    {
+      "id": "em-0053",
+      "channel": "email",
+      "received_at": "2027-09-15T17:15:00-05:00",
+      "path": "em-0053.eml",
+      "title": "Okapi requirements matrix"
     },
     {
       "id": "ch-0057",
       "channel": "chat",
-      "received_at": "2027-09-15T18:20:00-05:00",
+      "received_at": "2027-09-15T17:22:00-05:00",
       "path": "ch-0057.json",
-      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+      "title": "DM: Bisi Njoroge / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0058",
+      "channel": "chat",
+      "received_at": "2027-09-15T18:10:00-05:00",
+      "path": "ch-0058.json",
+      "title": "#okapi-core"
+    },
+    {
+      "id": "ch-0059",
+      "channel": "chat",
+      "received_at": "2027-09-15T18:11:00-05:00",
+      "path": "ch-0059.json",
+      "title": "DM: Kwame Brandt / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0060",
+      "channel": "chat",
+      "received_at": "2027-09-15T18:40:00-05:00",
+      "path": "ch-0060.json",
+      "title": "DM: Eun-ji Chen / Alasdair Kaya"
+    },
+    {
+      "id": "nt-0005",
+      "channel": "note",
+      "received_at": "2027-09-15T20:07:00-05:00",
+      "path": "nt-0005.md",
+      "title": "Wed notes"
     }
   ]
 }

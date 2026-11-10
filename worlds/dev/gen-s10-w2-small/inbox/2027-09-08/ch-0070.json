@@ -1,0 +1,47 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-akosua-aoife",
+ "kind": "dm",
+ "participants": [
+  "Aoife Everett",
+  "Akosua"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T12:53:16+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-09-08T12:54:19+01:00",
+   "user": "Akosua",
+   "handle": "@akosua",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-09-08T12:55:04+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "leave it with me, i'll send you the pipit status slide"
+  },
+  {
+   "ts": "2027-09-08T12:56:12+01:00",
+   "user": "Akosua",
+   "handle": "@akosua",
+   "text": "great, thank you"
+  },
+  {
+   "ts": "2027-09-08T13:05:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "Okay, the Pipit status slide is done now."
+  },
+  {
+   "ts": "2027-09-08T13:06:07+01:00",
+   "user": "Akosua",
+   "handle": "@akosua",
+   "text": "perfect :)"
+  }
+ ]
+}

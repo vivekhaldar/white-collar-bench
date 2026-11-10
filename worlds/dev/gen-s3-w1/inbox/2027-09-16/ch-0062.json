@@ -1,23 +1,31 @@
 {
  "workspace": "birchmere",
- "channel": "dm-alasdair-bisi",
- "kind": "dm",
+ "channel": "#coffee",
+ "kind": "channel",
  "participants": [
-  "Alasdair Kaya",
-  "Bisi"
+  "Adebayo Kalua",
+  "Giorgi Villanueva",
+  "Bisi Chatterjee",
+  "Dina Laurent"
  ],
  "messages": [
   {
-   "ts": "2027-09-16T12:31:00-05:00",
-   "user": "Alasdair Kaya",
-   "handle": "@alasdair",
-   "text": "can you send me the bittern user journey map?"
+   "ts": "2027-09-16T09:51:03-05:00",
+   "user": "Adebayo Kalua",
+   "handle": "@adebayo",
+   "text": "is it just me or is it freezing on 3 today?"
   },
   {
-   "ts": "2027-09-16T12:31:49-05:00",
-   "user": "Bisi",
+   "ts": "2027-09-16T09:52:36-05:00",
+   "user": "Giorgi Villanueva",
+   "handle": "@giorgi",
+   "text": "not just you"
+  },
+  {
+   "ts": "2027-09-16T09:57:28-05:00",
+   "user": "Bisi Chatterjee",
    "handle": "@bisi",
-   "text": "on it"
+   "text": "bring a jumper :)"
   }
  ]
 }

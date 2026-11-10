@@ -1,0 +1,166 @@
+{
+  "date": "2027-11-05",
+  "artifacts": [
+    {
+      "id": "em-0140",
+      "channel": "email",
+      "received_at": "2027-11-05T07:03:00-05:00",
+      "path": "em-0140.eml",
+      "title": "Redridge Referral Triage Discovery update"
+    },
+    {
+      "id": "em-0141",
+      "channel": "email",
+      "received_at": "2027-11-05T08:05:00-05:00",
+      "path": "em-0141.eml",
+      "title": "Fwd: Referral triage discovery problem framing note"
+    },
+    {
+      "id": "ch-0131",
+      "channel": "chat",
+      "received_at": "2027-11-05T08:21:00-05:00",
+      "path": "ch-0131.json",
+      "title": "DM: Andres Yamamoto / Aroha Mendoza"
+    },
+    {
+      "id": "em-0142",
+      "channel": "email",
+      "received_at": "2027-11-05T09:05:00-05:00",
+      "path": "em-0142.eml",
+      "title": "[INC-69626] Ticket updated"
+    },
+    {
+      "id": "ch-0132",
+      "channel": "chat",
+      "received_at": "2027-11-05T09:34:00-05:00",
+      "path": "ch-0132.json",
+      "title": "#cirrus-core"
+    },
+    {
+      "id": "ca-0011",
+      "channel": "calendar",
+      "received_at": "2027-11-05T10:26:00-05:00",
+      "path": "ca-0011.ics",
+      "title": "Invite: Working session: Coffee with Dominic about intake forms"
+    },
+    {
+      "id": "em-0143",
+      "channel": "email",
+      "received_at": "2027-11-05T10:37:00-05:00",
+      "path": "em-0143.eml",
+      "title": "Fwd: Current medication reconciliation process map"
+    },
+    {
+      "id": "em-0144",
+      "channel": "email",
+      "received_at": "2027-11-05T12:17:00-05:00",
+      "path": "em-0144.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0145",
+      "channel": "email",
+      "received_at": "2027-11-05T13:09:00-05:00",
+      "path": "em-0145.eml",
+      "title": "Re: Current medication reconciliation process map"
+    },
+    {
+      "id": "em-0146",
+      "channel": "email",
+      "received_at": "2027-11-05T13:09:00-05:00",
+      "path": "em-0146.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0147",
+      "channel": "email",
+      "received_at": "2027-11-05T13:19:00-05:00",
+      "path": "em-0147.eml",
+      "title": "[REQ-12885] Request resolved"
+    },
+    {
+      "id": "mn-0016",
+      "channel": "meeting_notes",
+      "received_at": "2027-11-05T14:00:00-05:00",
+      "path": "mn-0016.md",
+      "title": "Notes: Catch-up: Aroha / Milena"
+    },
+    {
+      "id": "em-0148",
+      "channel": "email",
+      "received_at": "2027-11-05T15:24:00-05:00",
+      "path": "em-0148.eml",
+      "title": "Re: Clelera security questionnaire"
+    },
+    {
+      "id": "em-0149",
+      "channel": "email",
+      "received_at": "2027-11-05T16:37:00-05:00",
+      "path": "em-0149.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0150",
+      "channel": "email",
+      "received_at": "2027-11-05T16:44:00-05:00",
+      "path": "em-0150.eml",
+      "title": "Fwd: Cirrus stakeholder map"
+    },
+    {
+      "id": "ch-0133",
+      "channel": "chat",
+      "received_at": "2027-11-05T16:58:00-05:00",
+      "path": "ch-0133.json",
+      "title": "DM: Putri Ashby / Aroha Mendoza"
+    },
+    {
+      "id": "em-0151",
+      "channel": "email",
+      "received_at": "2027-11-05T17:13:00-05:00",
+      "path": "em-0151.eml",
+      "title": "Status note: w/e 5 November"
+    },
+    {
+      "id": "ch-0134",
+      "channel": "chat",
+      "received_at": "2027-11-05T17:55:00-05:00",
+      "path": "ch-0134.json",
+      "title": "DM: Anh Villanueva / Aroha Mendoza"
+    },
+    {
+      "id": "em-0152",
+      "channel": "email",
+      "received_at": "2027-11-05T18:16:00-05:00",
+      "path": "em-0152.eml",
+      "title": "[INC-40951] Ticket updated"
+    },
+    {
+      "id": "ch-0135",
+      "channel": "chat",
+      "received_at": "2027-11-05T18:44:00-05:00",
+      "path": "ch-0135.json",
+      "title": "DM: Keisha Hargrove / Aroha Mendoza"
+    },
+    {
+      "id": "nt-0006",
+      "channel": "note",
+      "received_at": "2027-11-05T18:48:00-05:00",
+      "path": "nt-0006.md",
+      "title": "Fri notes"
+    },
+    {
+      "id": "ch-0136",
+      "channel": "chat",
+      "received_at": "2027-11-05T19:03:00-05:00",
+      "path": "ch-0136.json",
+      "title": "DM: Anh Villanueva / Aroha Mendoza"
+    },
+    {
+      "id": "ch-0137",
+      "channel": "chat",
+      "received_at": "2027-11-05T20:34:00-05:00",
+      "path": "ch-0137.json",
+      "title": "#okapi-core"
+    }
+  ]
+}

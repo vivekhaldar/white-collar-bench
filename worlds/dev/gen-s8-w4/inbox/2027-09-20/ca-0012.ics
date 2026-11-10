@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iselmoor//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:9bbe766530446d65@iselmoor.example
+DTSTAMP:20270920T191800Z
+DTSTART:20270923T200000Z
+DTEND:20270923T203000Z
+SUMMARY:Walkthrough: Fulmar budget justification
+ORGANIZER;CN=Amira Baek:mailto:amira.baek@iselmoor.example
+ATTENDEE;CN=Ottavio Bakker;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ottavio.bakker@ivycrest.iselmoor.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.iselmoor.example/j/3321906374?pwd=LVadfBtR\nPasscode: 039148
+LOCATION:https://meet.iselmoor.example/j/3321906374?pwd=LVadfBtR
+END:VEVENT
+END:VCALENDAR

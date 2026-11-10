@@ -1,0 +1,31 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-anh-aroha",
+ "kind": "dm",
+ "participants": [
+  "Aroha Mendoza",
+  "Anh Villanueva"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-19T18:11:00-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "i updated the bed management selection reference-check notes after your comments earlier today",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@anh"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-19T18:11:55-05:00",
+   "user": "Anh Villanueva",
+   "handle": "@anh",
+   "text": "perfect"
+  }
+ ]
+}

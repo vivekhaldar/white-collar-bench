@@ -1,0 +1,26 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#work-instructions-core",
+ "kind": "channel",
+ "participants": [
+  "Amira Baek",
+  "Adwoa Kocak",
+  "Ottavio Bakker",
+  "Giorgi Wisniewska",
+  "Segun Okeke"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-23T17:40:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "@adwoa i confirmed the work instructions selection risk register with you earlier today."
+  },
+  {
+   "ts": "2027-09-23T17:41:16-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "thanks!"
+  }
+ ]
+}

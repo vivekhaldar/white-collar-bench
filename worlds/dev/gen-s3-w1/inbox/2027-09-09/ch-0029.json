@@ -1,47 +1,32 @@
 {
  "workspace": "birchmere",
- "channel": "dm-alasdair-dina",
- "kind": "dm",
+ "channel": "#random",
+ "kind": "channel",
  "participants": [
-  "Dina Mancini",
-  "Alasdair Kaya"
+  "Penelope Romano",
+  "Giorgi Villanueva"
  ],
  "messages": [
   {
-   "ts": "2027-09-09T16:33:43-05:00",
-   "user": "Dina Mancini",
-   "handle": "@dina",
-   "text": "got a sec? :)"
+   "ts": "2027-09-09T15:05:04-05:00",
+   "user": "Penelope Romano",
+   "handle": "@penelope",
+   "text": "lost a blue umbrella, might be in the big meeting room",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@giorgi"
+     ]
+    }
+   ]
   },
   {
-   "ts": "2027-09-09T16:35:04-05:00",
-   "user": "Alasdair Kaya",
-   "handle": "@alasdair",
-   "text": "hi"
-  },
-  {
-   "ts": "2027-09-09T16:36:00-05:00",
-   "user": "Dina Mancini",
-   "handle": "@dina",
-   "text": "Sirocco Operating Model Review is moving into revision."
-  },
-  {
-   "ts": "2027-09-09T16:36:52-05:00",
-   "user": "Alasdair Kaya",
-   "handle": "@alasdair",
-   "text": "got it"
-  },
-  {
-   "ts": "2027-09-09T16:38:05-05:00",
-   "user": "Alasdair Kaya",
-   "handle": "@alasdair",
-   "text": "how's your week going?"
-  },
-  {
-   "ts": "2027-09-09T16:40:02-05:00",
-   "user": "Dina Mancini",
-   "handle": "@dina",
-   "text": "busy, but fine. you?"
+   "ts": "2027-09-09T15:08:58-05:00",
+   "user": "Giorgi Villanueva",
+   "handle": "@giorgi",
+   "text": "will keep an eye out :)",
+   "thread_of": 0
   }
  ]
 }

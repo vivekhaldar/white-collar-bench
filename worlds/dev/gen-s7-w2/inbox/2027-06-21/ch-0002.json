@@ -1,0 +1,35 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolat-hiba",
+ "kind": "dm",
+ "participants": [
+  "Bolat Oyelami",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-21T13:24:00-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "From the sync earlier, Emre will set gateway rate limits for Siskin tenants!"
+  },
+  {
+   "ts": "2027-06-21T13:25:29-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "that'd be great"
+  },
+  {
+   "ts": "2027-06-21T13:29:30-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "is the shared drive slow for you too? :)"
+  },
+  {
+   "ts": "2027-06-21T13:32:40-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

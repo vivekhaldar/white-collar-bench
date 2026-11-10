@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iselvale//Calendar//EN
+METHOD:CANCEL
+BEGIN:VEVENT
+UID:b8011e7c64570c25@iselvale.example
+DTSTAMP:20270330T130200Z
+DTSTART:20270330T143000Z
+DTEND:20270330T145500Z
+SUMMARY:Cancelled: Wagtail standup
+ORGANIZER;CN=Isla Faure:mailto:isla.faure@falbury.iselvale.example
+ATTENDEE;CN=Hiba Deng;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.deng@iselvale.example
+ATTENDEE;CN=Anahit Fifita;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:anahit.fifita@iselvale.example
+ATTENDEE;CN=Rudo Ekwueme;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:rudo.ekwueme@falbury.iselvale.example
+ATTENDEE;CN=Lakshmi Figueroa;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:lakshmi.figueroa@iselvale.example
+ATTENDEE;CN=Friederike Bhatt;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:friederike.bhatt@iselvale.example
+ATTENDEE;CN=Jisoo Nowak;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:jisoo.nowak@iselvale.example
+ATTENDEE;CN=Maricel Fuentes;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:maricel.fuentes@iselvale.example
+RECURRENCE-ID:20270330T143000Z
+SEQUENCE:1
+STATUS:CANCELLED
+DESCRIPTION:Cancelling this one\, nothing to discuss this week.
+END:VEVENT
+END:VCALENDAR

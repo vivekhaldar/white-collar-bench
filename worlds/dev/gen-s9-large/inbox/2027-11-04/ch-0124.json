@@ -1,0 +1,60 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#cirrus-core",
+ "kind": "channel",
+ "participants": [
+  "Keisha Hargrove",
+  "Aroha Mendoza",
+  "Anh",
+  "Babajide Hendriks",
+  "Stanley Valdez",
+  "Adebayo Kahananui",
+  "Mathieu Wijaya",
+  "Andres Yamamoto",
+  "Kiran Hayashi",
+  "Marguerite Teixeira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-03T10:33:57-05:00",
+   "user": "Keisha Hargrove",
+   "handle": "@keisha",
+   "text": "catching people up since a few of us are out today"
+  },
+  {
+   "ts": "2027-11-03T10:37:00-05:00",
+   "user": "Keisha Hargrove",
+   "handle": "@keisha",
+   "text": "Aroha will review Mathieu's Cirrus retention schedule, as discussed!"
+  },
+  {
+   "ts": "2027-11-03T10:38:21-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "great, thank you",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-11-03T10:38:35-05:00",
+   "user": "Keisha Hargrove",
+   "handle": "@keisha",
+   "text": "Looks like Aroha looked into the Cirrus slow page loads!",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@aroha",
+      "@babajide",
+      "@anh"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-03T10:39:23-05:00",
+   "user": "Babajide Hendriks",
+   "handle": "@babajide",
+   "text": "got it"
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "workspace": "corrstead",
+ "channel": "#corrie-core",
+ "kind": "channel",
+ "participants": [
+  "Zawadi Grigoryan",
+  "Hiba Jimenez",
+  "Bolat Oyelami",
+  "Kristen Ochieng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-25T15:34:00-08:00",
+   "user": "Zawadi Grigoryan",
+   "handle": "@zawadi",
+   "text": "Corrie has moved to the handover phase."
+  },
+  {
+   "ts": "2027-06-25T15:34:07-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-06-25T15:40:09-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-06-25T15:44:02-08:00",
+   "user": "Kristen Ochieng",
+   "handle": "@kristen",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-06-25T15:49:55-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

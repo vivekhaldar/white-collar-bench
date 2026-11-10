@@ -3,20 +3,20 @@
  "channel": "#fjord-core",
  "kind": "channel",
  "participants": [
-  "Ratna Bondarenko",
-  "Ottavio Monteiro",
-  "Darius Sherwood",
+  "Ratna Nikolic",
+  "Ottavio Moreira",
+  "Darius Bramwell",
   "Meera",
-  "Theresa Nagy",
+  "Theresa Petrov",
   "Nomvula Ndlovu",
-  "Bruna Sinclair",
-  "Esperanza Rao",
+  "Bruna Vaughan",
+  "Esperanza Venkataraman",
   "Yaroslav Moyo"
  ],
  "messages": [
   {
    "ts": "2027-09-04T17:19:52-08:00",
-   "user": "Ratna Bondarenko",
+   "user": "Ratna Nikolic",
    "handle": "@ratna",
    "text": "@ottavio just to recap, on Wednesday I said I'd set up the Fjord single sign-on role mapping.",
    "edited": true,

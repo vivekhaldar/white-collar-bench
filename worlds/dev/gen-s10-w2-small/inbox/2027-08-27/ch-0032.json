@@ -1,0 +1,33 @@
+{
+ "workspace": "reddale",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Adaeze Morimoto",
+  "Akosua Bergstrom",
+  "Bisi Volkov",
+  "Sigrid Asante"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-27T13:03:26+01:00",
+   "user": "Adaeze Morimoto",
+   "handle": "@adaeze",
+   "text": "is it just me or is it freezing on 3 today?"
+  },
+  {
+   "ts": "2027-08-27T13:10:00+01:00",
+   "user": "Akosua Bergstrom",
+   "handle": "@akosua",
+   "text": "not just you",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-08-27T13:12:04+01:00",
+   "user": "Bisi Volkov",
+   "handle": "@bisi",
+   "text": "bring a jumper",
+   "thread_of": 0
+  }
+ ]
+}

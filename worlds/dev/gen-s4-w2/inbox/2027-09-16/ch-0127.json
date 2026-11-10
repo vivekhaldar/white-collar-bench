@@ -3,19 +3,19 @@
  "channel": "#random",
  "kind": "channel",
  "participants": [
-  "Teagan Penhallow",
-  "Meera Ivanova"
+  "Teagan Alexiou",
+  "Meera Bondarenko"
  ],
  "messages": [
   {
    "ts": "2027-09-16T11:43:43-08:00",
-   "user": "Teagan Penhallow",
+   "user": "Teagan Alexiou",
    "handle": "@teagan",
    "text": "is it just me or is it freezing on 3 today?"
   },
   {
    "ts": "2027-09-16T11:47:23-08:00",
-   "user": "Meera Ivanova",
+   "user": "Meera Bondarenko",
    "handle": "@meera",
    "text": "not just you",
    "thread_of": 0

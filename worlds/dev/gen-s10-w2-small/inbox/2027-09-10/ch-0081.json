@@ -1,0 +1,23 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-amanik-aoife",
+ "kind": "dm",
+ "participants": [
+  "Amani Katz",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-10T17:26:00+01:00",
+   "user": "Amani Katz",
+   "handle": "@amanik",
+   "text": "We're folding Kelholm Referral Matching Idea into Nettle; its open items move across!"
+  },
+  {
+   "ts": "2027-09-10T17:26:07+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "ok"
+  }
+ ]
+}

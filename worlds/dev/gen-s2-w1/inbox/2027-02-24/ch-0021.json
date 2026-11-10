@@ -3,19 +3,19 @@
  "channel": "dm-dina-yael",
  "kind": "dm",
  "participants": [
-  "Dina Zimmermann",
-  "Yael Yardley"
+  "Dina Ricci",
+  "Yael Ellery"
  ],
  "messages": [
   {
    "ts": "2027-02-24T17:58:00-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "When you get a chance, could you send me the list of pilot service centers for Mistral?"
   },
   {
    "ts": "2027-02-24T17:58:54-07:00",
-   "user": "Yael Yardley",
+   "user": "Yael Ellery",
    "handle": "@yael",
    "text": "no problem"
   }

@@ -1,0 +1,55 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-somchaik",
+ "kind": "dm",
+ "participants": [
+  "Somchai",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-22T15:02:51-05:00",
+   "user": "Somchai",
+   "handle": "@somchaik",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-09-22T15:03:43-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-09-22T15:05:00-05:00",
+   "user": "Somchai",
+   "handle": "@somchaik",
+   "text": "i can send you the notes from the bed management session",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@alasdair"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-22T15:05:24-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-09-22T15:06:10-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-09-22T15:08:40-05:00",
+   "user": "Somchai",
+   "handle": "@somchaik",
+   "text": "yep, all good"
+  }
+ ]
+}

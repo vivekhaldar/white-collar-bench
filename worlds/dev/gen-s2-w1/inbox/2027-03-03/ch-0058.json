@@ -3,13 +3,13 @@
  "channel": "#random",
  "kind": "channel",
  "participants": [
-  "Bogdan Byrne",
+  "Bogdan Quinlan",
   "Cassandra Yilmaz"
  ],
  "messages": [
   {
    "ts": "2027-03-03T16:12:36-07:00",
-   "user": "Bogdan Byrne",
+   "user": "Bogdan Quinlan",
    "handle": "@bogdan",
    "text": "does anyone have a spare laptop charger (usb-c)?",
    "reactions": [

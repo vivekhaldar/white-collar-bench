@@ -1,0 +1,29 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-bisi",
+ "kind": "dm",
+ "participants": [
+  "Aoife Everett",
+  "Bisi Volkov"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-26T14:05:07+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-08-26T14:07:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "No need for your Nettle vendor comparison any more, no longer needed."
+  },
+  {
+   "ts": "2027-08-26T14:07:33+01:00",
+   "user": "Bisi Volkov",
+   "handle": "@bisi",
+   "text": "got it"
+  }
+ ]
+}

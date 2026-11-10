@@ -3,36 +3,36 @@
  "channel": "#benefits-screening-core",
  "kind": "channel",
  "participants": [
-  "Camila Quimby",
-  "Jalen Hendriks",
-  "Andrei Abenova",
-  "Ifeoma Girard",
+  "Camila Abernathy",
+  "Jalen Sandberg",
+  "Andrei Lindgren",
+  "Ifeoma Chevalier",
   "Corinne Kaya"
  ],
  "messages": [
   {
    "ts": "2027-11-10T10:21:00-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "@jalen just sent you the ranked benefits screening discovery use cases."
   },
   {
    "ts": "2027-11-10T10:22:21-07:00",
-   "user": "Jalen Hendriks",
+   "user": "Jalen Sandberg",
    "handle": "@jalen",
    "text": "great, thanks",
    "thread_of": 0
   },
   {
    "ts": "2027-11-10T10:26:09-07:00",
-   "user": "Ifeoma Girard",
+   "user": "Ifeoma Chevalier",
    "handle": "@ifeoma",
    "text": "following",
    "thread_of": 0
   },
   {
    "ts": "2027-11-10T10:29:51-07:00",
-   "user": "Jalen Hendriks",
+   "user": "Jalen Sandberg",
    "handle": "@jalen",
    "text": "good to know",
    "thread_of": 0

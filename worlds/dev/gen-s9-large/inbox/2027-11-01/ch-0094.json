@@ -1,0 +1,40 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Amira Andersen",
+  "Mathieu Wijaya",
+  "Chiamaka Rashed",
+  "Malia Guo"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-01T11:24:46-05:00",
+   "user": "Amira Andersen",
+   "handle": "@amira",
+   "text": "lost a blue umbrella, might be in the big meeting room",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@mathieu",
+      "@chiamaka"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-01T11:29:19-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "will keep an eye out"
+  },
+  {
+   "ts": "2027-11-01T11:32:34-05:00",
+   "user": "Chiamaka Rashed",
+   "handle": "@chiamaka",
+   "text": "there's one at reception"
+  }
+ ]
+}

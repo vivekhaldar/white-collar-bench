@@ -3,22 +3,59 @@
  "channel": "#wagtail-core",
  "kind": "channel",
  "participants": [
-  "Lakshmi Zamora",
-  "Hiba Xu",
-  "Ama Forsythe",
-  "Anahit Upton",
-  "Mateo Pritchard",
-  "Rike",
-  "Jisoo Makinen",
-  "Maricel Herrera",
-  "Isla Mercier"
+  "Anahit",
+  "Hiba Deng",
+  "Isla Faure",
+  "Rudo Ekwueme",
+  "Lakshmi Figueroa",
+  "Friederike Bhatt",
+  "Jisoo Nowak",
+  "Maricel Fuentes",
+  "Rodrigo Okada"
  ],
  "messages": [
   {
-   "ts": "2027-03-30T08:27:00-05:00",
-   "user": "Lakshmi Zamora",
+   "ts": "2027-03-30T09:56:00-05:00",
+   "user": "Anahit",
+   "handle": "@anahit",
+   "text": "@hiba can you review my Wagtail service blueprint by tomorrow? :)",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@isla",
+      "@rudo",
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-30T09:57:04-05:00",
+   "user": "Lakshmi Figueroa",
    "handle": "@lakshmi",
-   "text": "@hiba when you get a chance, could you send me the wagtail decision memo?"
+   "text": "got it"
+  },
+  {
+   "ts": "2027-03-30T10:00:48-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-30T10:01:18-05:00",
+   "user": "Friederike Bhatt",
+   "handle": "@friederike",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-30T10:04:07-05:00",
+   "user": "Lakshmi Figueroa",
+   "handle": "@lakshmi",
+   "text": "thanks for flagging",
+   "thread_of": 0
   }
  ]
 }

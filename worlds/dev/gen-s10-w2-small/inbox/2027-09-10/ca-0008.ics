@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Reddale//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:d2cf19deaef21df0@reddale.example
+DTSTAMP:20270910T161800Z
+DTSTART:20270914T140000Z
+DTEND:20270914T144500Z
+SUMMARY:Morgate partnership sync
+ORGANIZER;CN=Akosua Bergstrom:mailto:akosua.bergstrom@reddale.example
+ATTENDEE;CN=Aoife Everett;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:aoife.everett@reddale.example
+ATTENDEE;CN=Jia Delacroix;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:jia.delacroix@kelholm.reddale.example
+ATTENDEE;CN=Nare Dempsey;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:nare.dempsey@kelholm.reddale.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.reddale.example/j/4361833811?pwd=6hE8mKSJ\nPasscode: 915301
+LOCATION:https://meet.reddale.example/j/4361833811?pwd=6hE8mKSJ
+END:VEVENT
+END:VCALENDAR

@@ -3,19 +3,19 @@
  "channel": "dm-aarav-camila",
  "kind": "dm",
  "participants": [
-  "Aarav Ortega",
-  "Camila Quimby"
+  "Aarav Zamora",
+  "Camila Abernathy"
  ],
  "messages": [
   {
    "ts": "2027-10-28T13:40:00-07:00",
-   "user": "Aarav Ortega",
+   "user": "Aarav Zamora",
    "handle": "@aarav",
    "text": "Would you be able to complete the Marten privacy impact assessment?"
   },
   {
    "ts": "2027-10-28T13:40:58-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "on it"
   }

@@ -1,0 +1,131 @@
+{
+  "date": "2027-06-22",
+  "artifacts": [
+    {
+      "id": "ch-0008",
+      "channel": "chat",
+      "received_at": "2027-06-22T08:40:00-08:00",
+      "path": "ch-0008.json",
+      "title": "DM: Anastasia Mizrahi / Hiba Jimenez"
+    },
+    {
+      "id": "ch-0009",
+      "channel": "chat",
+      "received_at": "2027-06-22T09:37:00-08:00",
+      "path": "ch-0009.json",
+      "title": "#siskin-core"
+    },
+    {
+      "id": "em-0007",
+      "channel": "email",
+      "received_at": "2027-06-22T10:51:00-08:00",
+      "path": "em-0007.eml",
+      "title": "[REQ-31749] Request resolved"
+    },
+    {
+      "id": "ch-0010",
+      "channel": "chat",
+      "received_at": "2027-06-22T11:37:00-08:00",
+      "path": "ch-0010.json",
+      "title": "DM: Anastasia Mizrahi / Hiba Jimenez"
+    },
+    {
+      "id": "ch-0011",
+      "channel": "chat",
+      "received_at": "2027-06-22T13:50:00-08:00",
+      "path": "ch-0011.json",
+      "title": "#siskin-core"
+    },
+    {
+      "id": "em-0008",
+      "channel": "email",
+      "received_at": "2027-06-22T14:09:00-08:00",
+      "path": "em-0008.eml",
+      "title": "Re: Assessment Design Workshop: moving to logistics"
+    },
+    {
+      "id": "em-0009",
+      "channel": "email",
+      "received_at": "2027-06-22T15:02:00-08:00",
+      "path": "em-0009.eml",
+      "title": "The Quad Ledger: issue 25"
+    },
+    {
+      "id": "em-0010",
+      "channel": "email",
+      "received_at": "2027-06-22T15:19:00-08:00",
+      "path": "em-0010.eml",
+      "title": "FYI: Gateway rate limits for Siskin tenants"
+    },
+    {
+      "id": "mn-0002",
+      "channel": "meeting_notes",
+      "received_at": "2027-06-22T15:30:00-08:00",
+      "path": "mn-0002.md",
+      "title": "Recap: 1:1 Hiba / Bolat"
+    },
+    {
+      "id": "ch-0012",
+      "channel": "chat",
+      "received_at": "2027-06-22T16:06:00-08:00",
+      "path": "ch-0012.json",
+      "title": "#siskin-core"
+    },
+    {
+      "id": "em-0011",
+      "channel": "email",
+      "received_at": "2027-06-22T16:30:00-08:00",
+      "path": "em-0011.eml",
+      "title": "Re: Corrie: moving to user testing"
+    },
+    {
+      "id": "ch-0013",
+      "channel": "chat",
+      "received_at": "2027-06-22T16:48:00-08:00",
+      "path": "ch-0013.json",
+      "title": "DM: Anastasia Mizrahi / Hiba Jimenez"
+    },
+    {
+      "id": "ch-0014",
+      "channel": "chat",
+      "received_at": "2027-06-22T17:06:00-08:00",
+      "path": "ch-0014.json",
+      "title": "#random"
+    },
+    {
+      "id": "ca-0003",
+      "channel": "calendar",
+      "received_at": "2027-06-22T17:33:00-08:00",
+      "path": "ca-0003.ics",
+      "title": "Invite: Elmwick site visit"
+    },
+    {
+      "id": "ch-0015",
+      "channel": "chat",
+      "received_at": "2027-06-22T17:40:00-08:00",
+      "path": "ch-0015.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0016",
+      "channel": "chat",
+      "received_at": "2027-06-22T17:41:00-08:00",
+      "path": "ch-0016.json",
+      "title": "DM: Hiba Jimenez / Catalina Achterhof"
+    },
+    {
+      "id": "em-0012",
+      "channel": "email",
+      "received_at": "2027-06-22T17:58:00-08:00",
+      "path": "em-0012.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "em-0013",
+      "channel": "email",
+      "received_at": "2027-06-22T18:21:00-08:00",
+      "path": "em-0013.eml",
+      "title": "FYI: Gateway rate limits for Siskin tenants"
+    }
+  ]
+}

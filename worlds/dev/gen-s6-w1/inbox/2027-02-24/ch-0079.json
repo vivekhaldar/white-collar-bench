@@ -1,0 +1,31 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Lindiwe Baek",
+  "Wei Rossi",
+  "Liisa Babic"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-24T07:57:34-08:00",
+   "user": "Lindiwe Baek",
+   "handle": "@lindiwe",
+   "text": "good morning all"
+  },
+  {
+   "ts": "2027-02-24T08:01:33-08:00",
+   "user": "Wei Rossi",
+   "handle": "@wei",
+   "text": "morning!",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-24T08:08:03-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "morning"
+  }
+ ]
+}

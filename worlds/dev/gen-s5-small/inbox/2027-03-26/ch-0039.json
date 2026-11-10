@@ -1,43 +1,23 @@
 {
  "workspace": "iselvale",
- "channel": "dm-anahit-hiba",
+ "channel": "dm-anahitj-hiba",
  "kind": "dm",
  "participants": [
-  "Anahit",
-  "Hiba Xu"
+  "Anahit Jeong",
+  "Hiba Deng"
  ],
  "messages": [
   {
-   "ts": "2027-03-26T15:06:42-05:00",
-   "user": "Anahit",
-   "handle": "@anahit",
-   "text": "hello"
+   "ts": "2027-03-26T11:10:00-05:00",
+   "user": "Anahit Jeong",
+   "handle": "@anahitj",
+   "text": "just returned the marys security questionnaire"
   },
   {
-   "ts": "2027-03-26T15:07:07-05:00",
-   "user": "Anahit",
-   "handle": "@anahit",
-   "text": "Recap from Tuesday: I agreed to send you the clinical documentation discovery findings summary.",
-   "reactions": [
-    {
-     "emoji": "raised_hands",
-     "users": [
-      "@hiba"
-     ]
-    }
-   ]
-  },
-  {
-   "ts": "2027-03-26T15:11:13-05:00",
-   "user": "Hiba Xu",
+   "ts": "2027-03-26T11:11:22-05:00",
+   "user": "Hiba Deng",
    "handle": "@hiba",
-   "text": "did the link work for you?"
-  },
-  {
-   "ts": "2027-03-26T15:12:15-05:00",
-   "user": "Anahit",
-   "handle": "@anahit",
-   "text": "yep, all good :)"
+   "text": "thanks!"
   }
  ]
 }

@@ -1,0 +1,37 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolat-hiba",
+ "kind": "dm",
+ "participants": [
+  "Bolat Oyelami",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-13T13:25:00-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "FYI Ewan needs the admissions triage selection reference-check notes by Thu 15 Jul!",
+   "edited": true,
+   "original": "FYI Ewan needs the admissions triage selection reference-check notes by Fri 16 Jul!"
+  },
+  {
+   "ts": "2027-07-13T13:26:26-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-07-13T13:27:14-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "thanks again for earlier :)"
+  },
+  {
+   "ts": "2027-07-13T13:30:10-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "anytime"
+  }
+ ]
+}

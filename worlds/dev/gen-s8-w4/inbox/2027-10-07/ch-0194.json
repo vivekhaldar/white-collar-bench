@@ -1,0 +1,37 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-thibault",
+ "kind": "dm",
+ "participants": [
+  "Thibault Kowalski",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-07T11:39:13-06:00",
+   "user": "Thibault Kowalski",
+   "handle": "@thibault",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-10-07T11:42:00-06:00",
+   "user": "Thibault Kowalski",
+   "handle": "@thibault",
+   "text": "I'll send you the Fulmar architecture diagram v2.",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@amira"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-07T11:42:32-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "appreciate it"
+  }
+ ]
+}

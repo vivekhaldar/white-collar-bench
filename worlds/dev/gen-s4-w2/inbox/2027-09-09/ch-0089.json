@@ -3,33 +3,33 @@
  "channel": "#fjord-core",
  "kind": "channel",
  "participants": [
-  "Darius Sherwood",
-  "Ottavio Monteiro",
+  "Darius Bramwell",
+  "Ottavio Moreira",
   "Meera",
-  "Ratna Bondarenko",
+  "Ratna Nikolic",
   "Resi",
   "Nomvula Ndlovu",
-  "Bruna Sinclair",
-  "Esperanza Rao",
+  "Bruna Vaughan",
+  "Esperanza Venkataraman",
   "Yaroslav Moyo",
-  "Celine Wisniewska"
+  "Celine Novotny"
  ],
  "messages": [
   {
    "ts": "2027-09-08T10:08:54-08:00",
-   "user": "Darius Sherwood",
+   "user": "Darius Bramwell",
    "handle": "@darius",
    "text": "catching people up since a few of us are out today"
   },
   {
    "ts": "2027-09-08T10:09:00-08:00",
-   "user": "Darius Sherwood",
+   "user": "Darius Bramwell",
    "handle": "@darius",
    "text": "FYI Ottavio will confirm the Fjord acceptance criteria with Meera!"
   },
   {
    "ts": "2027-09-08T10:09:55-08:00",
-   "user": "Celine Wisniewska",
+   "user": "Celine Novotny",
    "handle": "@celine",
    "text": "nice",
    "thread_of": 1

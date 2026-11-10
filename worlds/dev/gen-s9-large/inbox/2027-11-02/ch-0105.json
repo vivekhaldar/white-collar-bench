@@ -1,0 +1,43 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#radiology-follow-up-core",
+ "kind": "channel",
+ "participants": [
+  "Anh",
+  "Aroha Mendoza",
+  "Achieng",
+  "Michaela Dang",
+  "Aino Menon"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-02T14:41:00-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "@aroha could you send me the radiology follow-up discovery observation notes?",
+   "edited": true,
+   "original": "@aroha could you send me the radiology follow-up discovery obesrvation notes?"
+  },
+  {
+   "ts": "2027-11-02T14:42:07-05:00",
+   "user": "Achieng",
+   "handle": "@achieng",
+   "text": "noted",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-02T14:47:59-05:00",
+   "user": "Michaela Dang",
+   "handle": "@michaela",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-02T14:57:07-05:00",
+   "user": "Achieng",
+   "handle": "@achieng",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

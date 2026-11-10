@@ -1,0 +1,26 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#ai-use-core",
+ "kind": "channel",
+ "participants": [
+  "Andres",
+  "Despina Pereira",
+  "Tariq",
+  "Karli Banda"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-18T17:46:00-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "@despina just sent you the AI-use risk taxonomy."
+  },
+  {
+   "ts": "2027-02-18T17:46:06-08:00",
+   "user": "Tariq",
+   "handle": "@tariq",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

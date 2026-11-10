@@ -1,0 +1,23 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-andrei-hiba",
+ "kind": "dm",
+ "participants": [
+  "Andrei Laurent",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-01T10:38:19-08:00",
+   "user": "Andrei Laurent",
+   "handle": "@andrei",
+   "text": "Recap from yesterday: you offered to send me the Garnet service blueprint."
+  },
+  {
+   "ts": "2027-07-01T10:38:38-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "will do"
+  }
+ ]
+}

@@ -1,47 +1,43 @@
 {
  "workspace": "birchmere",
- "channel": "#random",
- "kind": "channel",
+ "channel": "dm-alasdair-bisi",
+ "kind": "dm",
  "participants": [
-  "Shira Colombo",
-  "Kwame Hoffmann",
-  "Nurlan Moreira",
-  "Deniz Zhou"
+  "Bisi",
+  "Alasdair Kaya"
  ],
  "messages": [
   {
-   "ts": "2027-09-09T13:11:33-05:00",
-   "user": "Shira Colombo",
-   "handle": "@shira",
-   "text": "there's leftover cake in the kitchen on 4",
+   "ts": "2027-09-09T11:55:26-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "Just to recap, yesterday you said you'd update the Okapi retention schedule after my comments!",
    "reactions": [
     {
-     "emoji": "white_check_mark",
+     "emoji": "heavy_check_mark",
      "users": [
-      "@kwame",
-      "@nurlan"
+      "@alasdair"
      ]
     }
    ]
   },
   {
-   "ts": "2027-09-09T13:15:33-05:00",
-   "user": "Kwame Hoffmann",
-   "handle": "@kwame",
-   "text": "on my way"
+   "ts": "2027-09-09T11:55:49-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "will do"
   },
   {
-   "ts": "2027-09-09T13:19:18-05:00",
-   "user": "Nurlan Moreira",
-   "handle": "@nurlan",
-   "text": "what kind?",
-   "thread_of": 0
+   "ts": "2027-09-09T11:59:23-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "how's your week going?"
   },
   {
-   "ts": "2027-09-09T13:22:55-05:00",
-   "user": "Deniz Zhou",
-   "handle": "@deniz",
-   "text": "the lemon one is gone already :)"
+   "ts": "2027-09-09T12:01:24-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "busy, but fine. you? :)"
   }
  ]
 }

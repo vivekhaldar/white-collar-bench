@@ -1,14 +1,14 @@
 From: Platform Status Page <status-noreply@birchmere.example>
 To: Alasdair Kaya <alasdair.kaya@birchmere.example>
-Date: Mon, 06 Sep 2027 11:49:00 -0500
-Subject: [Scheduled] Network maintenance window
+Date: Mon, 06 Sep 2027 12:07:00 -0500
+Subject: [Resolved] Elevated latency on file storage
 Message-ID: <em-0005.3@birchmere.example>
 Auto-Submitted: auto-generated
 MIME-Version: 1.0
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: 8bit
 
-Planned maintenance will take place on Tuesday 14 September, 22:00 to 02:00. Some services may be unavailable for up to 20 minutes.
+This incident has been resolved. Services are operating normally. A summary will be posted within five business days.
 
 Affected: file storage, single sign-on, video meetings (partial)
 

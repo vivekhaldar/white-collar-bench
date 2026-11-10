@@ -3,21 +3,27 @@
  "channel": "dm-aylin-hiba",
  "kind": "dm",
  "participants": [
-  "Aylin Venkataraman",
-  "Hiba Xu"
+  "Aylin Kocak",
+  "Hiba Deng"
  ],
  "messages": [
   {
    "ts": "2027-03-18T14:19:00-05:00",
-   "user": "Aylin Venkataraman",
+   "user": "Aylin Kocak",
    "handle": "@aylin",
    "text": "Would you be able to complete the Wagtail privacy impact assessment by 31 March?",
-   "edited": true,
-   "original": "Would you be able to complete the Wagtail prviacy impact assessment by 31 March?"
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
   },
   {
    "ts": "2027-03-18T14:20:07-05:00",
-   "user": "Hiba Xu",
+   "user": "Hiba Deng",
    "handle": "@hiba",
    "text": "can i come back to you on this?"
   }

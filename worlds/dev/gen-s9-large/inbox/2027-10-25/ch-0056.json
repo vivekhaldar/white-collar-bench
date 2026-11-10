@@ -1,0 +1,31 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-putri",
+ "kind": "dm",
+ "participants": [
+  "Putri Ashby",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-25T06:49:31-05:00",
+   "user": "Putri Ashby",
+   "handle": "@putri",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-10-25T06:52:00-05:00",
+   "user": "Putri Ashby",
+   "handle": "@putri",
+   "text": "When you get a chance, could you send me the Friday status note for w/e 29 October by Friday 29 October?",
+   "edited": true,
+   "original": "When you get a chance, could you send me the Friday status note for w/e 29 October by Firday 29 October?"
+  },
+  {
+   "ts": "2027-10-25T06:53:30-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "will do"
+  }
+ ]
+}

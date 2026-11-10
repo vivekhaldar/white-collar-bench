@@ -1,0 +1,155 @@
+WEBVTT
+
+NOTE
+Meeting: Wagtail standup
+Date: Friday 26 March 2027, 9:35am to 10am
+Attendees: Isla Faure (Falbury Community Clinics), Hiba Deng, Anahit Fifita, Rudo Ekwueme (Falbury Community Clinics), Lakshmi Figueroa, Friederike Bhatt, Jisoo Nowak, Maricel Fuentes
+Transcript generated automatically. Speaker names and spellings may be inaccurate.
+
+1
+00:00:05.952 --> 00:00:07.491
+<v Friederike Bhatt>How was the weekend?
+
+2
+00:00:08.681 --> 00:00:10.604
+<v Rudo Ekwueme>Good, quiet. Too much gardening.
+
+3
+00:01:01.337 --> 00:01:04.798
+<v Isla Faure>Let's get going, we've got a lot to cover.
+
+4
+00:01:06.052 --> 00:01:07.590
+<v Isla Faure>Let's start with Wagtail.
+
+5
+00:05:59.365 --> 00:06:03.980
+<v Hiba Deng>I'll send Marcelo Brandao (Director, Finance Shared Services) the Wagtail run-cost estimate.
+
+6
+00:06:04.438 --> 00:06:05.438
+<v Isla Faure>Mm-hmm.
+
+7
+00:06:05.749 --> 00:06:06.749
+<v Rudo Ekwueme>Yeah.
+
+8
+00:06:08.000 --> 00:06:09.923
+<v Anahit Fifita>Is that written down anywhere?
+
+9
+00:06:10.812 --> 00:06:13.120
+<v Hiba Deng>It's in the shared folder somewhere.
+
+10
+00:06:13.915 --> 00:06:14.915
+<v Friederike Bhatt>I see.
+
+11
+00:06:16.140 --> 00:06:19.602
+<v Friederike Bhatt>I'm not sure everyone's read the latest version yet.
+
+12
+00:06:20.708 --> 00:06:21.708
+<v Anahit Fifita>Mm.
+
+13
+00:06:22.777 --> 00:06:23.777
+<v Friederike Bhatt>Yeah, true.
+
+14
+00:06:24.421 --> 00:06:25.421
+<v Lakshmi Figueroa>Okay.
+
+15
+00:06:26.403 --> 00:06:29.480
+<v Isla Faure>There's a lot of interest, which is good.
+
+16
+00:06:30.756 --> 00:06:31.756
+<v Lakshmi Figueroa>Got it.
+
+17
+00:10:42.691 --> 00:10:46.153
+<v Isla Faure>Okay, I'll share the Wagtail budget justification with Hiba.
+
+18
+00:10:46.671 --> 00:10:47.825
+<v Hiba Deng>Perfect, thank you.
+
+19
+00:10:48.957 --> 00:10:53.188
+<v Rudo Ekwueme>Is that the same as what we talked about last time?
+
+20
+00:10:53.679 --> 00:10:55.602
+<v Hiba Deng>Roughly, with a few tweaks.
+
+21
+00:10:55.839 --> 00:10:59.301
+<v Friederike Bhatt>It's mostly waiting on other teams at this point.
+
+22
+00:10:59.787 --> 00:11:00.787
+<v Hiba Deng>Right.
+
+23
+00:11:30.528 --> 00:11:33.221
+<v Hiba Deng>Okay, I'll revise the Wagtail evaluation plan.
+
+24
+00:11:34.465 --> 00:11:35.619
+<v Isla Faure>Perfect, thank you.
+
+25
+00:11:36.445 --> 00:11:37.445
+<v Rudo Ekwueme>Fair.
+
+26
+00:11:38.455 --> 00:11:41.148
+<v Rudo Ekwueme>I'm a bit worried we're overcommitting again.
+
+27
+00:11:41.402 --> 00:11:42.402
+<v Jisoo Nowak>Okay, yeah.
+
+28
+00:14:12.423 --> 00:14:13.577
+<v Isla Faure>Any other updates?
+
+29
+00:14:13.968 --> 00:14:15.891
+<v Jisoo Nowak>Nothing from me this week.
+
+30
+00:14:16.782 --> 00:14:17.782
+<v Rudo Ekwueme>Right, right.
+
+31
+00:14:18.660 --> 00:14:20.967
+<v Maricel Fuentes>Just heads-down on the usual stuff.
+
+32
+00:14:21.627 --> 00:14:22.627
+<v Jisoo Nowak>Mm, okay.
+
+33
+00:14:23.980 --> 00:14:25.903
+<v Anahit Fifita>All quiet on my end.
+
+34
+00:14:26.627 --> 00:14:27.627
+<v Rudo Ekwueme>Uh-huh.
+
+35
+00:14:28.318 --> 00:14:30.241
+<v Rudo Ekwueme>Nothing new from my side.
+
+36
+00:16:12.329 --> 00:16:13.867
+<v Isla Faure>Thanks all, talk soon.
+
+37
+00:16:14.848 --> 00:16:15.848
+<v Maricel Fuentes>Thanks, bye.

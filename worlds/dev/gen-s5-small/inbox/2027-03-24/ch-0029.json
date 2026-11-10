@@ -1,23 +1,32 @@
 {
  "workspace": "iselvale",
- "channel": "dm-friederike-hiba",
- "kind": "dm",
+ "channel": "#random",
+ "kind": "channel",
  "participants": [
-  "Hiba Xu",
-  "Friederike Malhotra"
+  "Aylin Kocak",
+  "Friederike Bhatt"
  ],
  "messages": [
   {
-   "ts": "2027-03-24T12:28:00-05:00",
-   "user": "Hiba Xu",
-   "handle": "@hiba",
-   "text": "Just sent you the Wagtail data-flow diagram."
+   "ts": "2027-03-24T08:40:06-05:00",
+   "user": "Aylin Kocak",
+   "handle": "@aylin",
+   "text": "is it just me or is it freezing on 3 today?",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@friederike"
+     ]
+    }
+   ]
   },
   {
-   "ts": "2027-03-24T12:28:59-05:00",
-   "user": "Friederike Malhotra",
+   "ts": "2027-03-24T08:43:17-05:00",
+   "user": "Friederike Bhatt",
    "handle": "@friederike",
-   "text": "thank you!"
+   "text": "not just you",
+   "thread_of": 0
   }
  ]
 }

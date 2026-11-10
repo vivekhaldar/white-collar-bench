@@ -1,0 +1,23 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-deborah-hiba",
+ "kind": "dm",
+ "participants": [
+  "Deborah Nurlanov",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-13T12:42:31-08:00",
+   "user": "Deborah Nurlanov",
+   "handle": "@deborah",
+   "text": "just to recap, yesterday you said you'd set up a coffee with tane about course scheduling"
+  },
+  {
+   "ts": "2027-07-13T12:42:49-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "yep, on it"
+  }
+ ]
+}

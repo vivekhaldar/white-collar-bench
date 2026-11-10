@@ -1,33 +1,40 @@
 {
  "workspace": "birchmere",
- "channel": "#random",
+ "channel": "#coffee",
  "kind": "channel",
  "participants": [
-  "Shira Colombo",
-  "Tunde Kapanadze",
-  "Kwame Hoffmann",
-  "Penelope Lehmann"
+  "Eun-ji Chen",
+  "Bisi Chatterjee",
+  "Giorgi Villanueva",
+  "Dina Laurent"
  ],
  "messages": [
   {
-   "ts": "2027-09-08T09:00:57-05:00",
-   "user": "Shira Colombo",
-   "handle": "@shira",
-   "text": "is it just me or is it freezing on 3 today?"
+   "ts": "2027-09-08T15:31:05-05:00",
+   "user": "Eun-ji Chen",
+   "handle": "@eunji",
+   "text": "the elevator on the east side is out again",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@bisi",
+      "@giorgi"
+     ]
+    }
+   ]
   },
   {
-   "ts": "2027-09-08T09:05:20-05:00",
-   "user": "Tunde Kapanadze",
-   "handle": "@tunde",
-   "text": "not just you",
-   "thread_of": 0
+   "ts": "2027-09-08T15:33:47-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "stairs it is"
   },
   {
-   "ts": "2027-09-08T09:07:42-05:00",
-   "user": "Kwame Hoffmann",
-   "handle": "@kwame",
-   "text": "bring a jumper :)",
-   "thread_of": 0
+   "ts": "2027-09-08T15:35:43-05:00",
+   "user": "Giorgi Villanueva",
+   "handle": "@giorgi",
+   "text": "classic :)"
   }
  ]
 }

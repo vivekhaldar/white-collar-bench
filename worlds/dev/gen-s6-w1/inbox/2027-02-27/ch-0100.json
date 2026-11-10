@@ -1,0 +1,35 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-karim",
+ "kind": "dm",
+ "participants": [
+  "Despina Pereira",
+  "Karim Navarro"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-27T09:07:38-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "morning!"
+  },
+  {
+   "ts": "2027-02-27T09:11:00-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "Could you send me the Axolotl service blueprint?"
+  },
+  {
+   "ts": "2027-02-27T09:13:42-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-02-27T09:14:42-08:00",
+   "user": "Karim Navarro",
+   "handle": "@karim",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

@@ -3,37 +3,37 @@
  "channel": "dm-ewan-ottavio",
  "kind": "dm",
  "participants": [
-  "Ottavio Monteiro",
-  "Ewan Shrestha"
+  "Ottavio Moreira",
+  "Ewan Naidu"
  ],
  "messages": [
   {
    "ts": "2027-08-31T12:39:22-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "hey"
   },
   {
    "ts": "2027-08-31T12:39:48-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "I introduced you to Meera for the course scheduling work."
   },
   {
    "ts": "2027-08-31T12:40:35-08:00",
-   "user": "Ewan Shrestha",
+   "user": "Ewan Naidu",
    "handle": "@ewan",
    "text": "great, thanks"
   },
   {
    "ts": "2027-08-31T12:42:03-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "did you catch the all-hands?"
   },
   {
    "ts": "2027-08-31T12:44:30-08:00",
-   "user": "Ewan Shrestha",
+   "user": "Ewan Naidu",
    "handle": "@ewan",
    "text": "only the first half"
   }

@@ -1,0 +1,52 @@
+{
+ "workspace": "reddale",
+ "channel": "#nettle-core",
+ "kind": "channel",
+ "participants": [
+  "Gaurav Laine",
+  "Aoife Everett",
+  "Akosua Bergstrom",
+  "Douglas Grigoryan",
+  "Bisi Volkov",
+  "Sigrid Asante",
+  "Sipho Papadopoulos",
+  "Adaeze Morimoto",
+  "Bruna Thapa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-26T13:35:00+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "i sent aoife the nettle training outline earlier today"
+  },
+  {
+   "ts": "2027-08-26T13:35:47+01:00",
+   "user": "Adaeze Morimoto",
+   "handle": "@adaeze",
+   "text": "thanks for the heads up",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-08-26T13:37:08+01:00",
+   "user": "Sigrid Asante",
+   "handle": "@sigrid",
+   "text": "+1",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-08-26T13:46:20+01:00",
+   "user": "Akosua Bergstrom",
+   "handle": "@akosua",
+   "text": "good to know :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-08-26T13:51:06+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

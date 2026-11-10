@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iselmoor//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:9ec24ce7b8056b6a@iselmoor.example
+DTSTAMP:20270927T232200Z
+DTSTART:20270929T200000Z
+DTEND:20270929T203000Z
+SUMMARY:Walkthrough: Safety reporting discovery RACI chart
+ORGANIZER;CN=Amira Baek:mailto:amira.baek@iselmoor.example
+ATTENDEE;CN=Tane Haugen;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:tane.haugen@morcliff.iselmoor.example
+SEQUENCE:0
+DESCRIPTION:Quick sync\, 30 minutes.\nJoin video meeting: https://meet.iselmoor.example/j/7045431509?pwd=jSRShvje\nPasscode: 266580
+LOCATION:https://meet.iselmoor.example/j/7045431509?pwd=jSRShvje
+END:VEVENT
+END:VCALENDAR

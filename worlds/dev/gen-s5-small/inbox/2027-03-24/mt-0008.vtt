@@ -1,43 +1,139 @@
 WEBVTT
 
 NOTE
-Meeting: Office hours with Lakshmi
-Date: Wednesday 24 March 2027, 12:30pm to 1pm
-Attendees: Lakshmi Zamora, Hiba Xu
+Meeting: Wagtail security review
+Date: Wednesday 24 March 2027, 10:30am to 11:30am
+Attendees: Isla Faure (Falbury Community Clinics), Anahit Fifita, Lakshmi Figueroa, Hiba Deng
 Transcript generated automatically. Speaker names and spellings may be inaccurate.
 
 1
-00:00:03.993 --> 00:00:05.531
-<v Hiba Xu>How was the weekend?
+00:00:03.836 --> 00:00:06.528
+<v Anahit Fifita>My camera's being weird, bear with me.
 
 2
-00:00:05.944 --> 00:00:07.867
-<v Lakshmi Zamora>Good, quiet. Too much gardening.
+00:00:07.037 --> 00:00:09.729
+<v Isla Faure>We can hear you, that's what matters.
 
 3
-00:02:09.685 --> 00:02:11.223
-<v Lakshmi Zamora>Right, shall we start?
+00:06:24.266 --> 00:06:25.805
+<v Isla Faure>Right, shall we start?
 
 4
-00:07:50.293 --> 00:07:53.370
-<v Lakshmi Zamora>Last time this took longer than we thought.
+00:19:23.798 --> 00:19:27.260
+<v Hiba Deng>Let me confirm the Wagtail decision memo with Freederike.
 
 5
-00:07:54.232 --> 00:07:55.232
-<v Hiba Xu>Right, right.
+00:19:28.350 --> 00:19:29.350
+<v Lakshmi Figueroa>Got it.
 
 6
-00:07:55.996 --> 00:08:00.227
-<v Hiba Xu>I'm not sure I agree, but let's see how it lands.
+00:19:29.788 --> 00:19:34.403
+<v Lakshmi Figueroa>Some of the units are going to see this as us overreaching.
 
 7
-00:08:00.945 --> 00:08:01.945
-<v Lakshmi Zamora>Yeah, true.
+00:19:34.624 --> 00:19:35.624
+<v Anahit Fifita>Right, right.
 
 8
-00:15:01.846 --> 00:15:04.154
-<v Lakshmi Zamora>Okay, I think that's it. Thanks.
+00:19:36.814 --> 00:19:39.891
+<v Anahit Fifita>The main thing is just getting people's time.
 
 9
-00:15:04.913 --> 00:15:05.913
-<v Hiba Xu>Thanks!
+00:19:40.886 --> 00:19:41.886
+<v Hiba Deng>Okay.
+
+10
+00:19:42.739 --> 00:19:43.739
+<v Lakshmi Figueroa>Mm-hmm.
+
+11
+00:19:44.128 --> 00:19:45.128
+<v Isla Faure>Uh-huh.
+
+12
+00:28:43.668 --> 00:28:49.052
+<v Hiba Deng>Our programs director and I can present the clinical documentation discovery readout to Falbury.
+
+13
+00:28:50.063 --> 00:28:51.217
+<v Isla Faure>Thanks, that helps.
+
+14
+00:28:52.049 --> 00:28:53.049
+<v Hiba Deng>Right.
+
+15
+00:28:53.353 --> 00:28:54.353
+<v Lakshmi Figueroa>Yeah.
+
+16
+00:28:55.256 --> 00:28:56.410
+<v Anahit Fifita>How's that looking?
+
+17
+00:28:56.768 --> 00:28:57.922
+<v Isla Faure>It's moving, slowly.
+
+18
+00:28:58.384 --> 00:29:01.461
+<v Hiba Deng>Last time this took longer than we thought.
+
+19
+00:29:02.721 --> 00:29:03.721
+<v Anahit Fifita>Yeah, true.
+
+20
+00:29:04.906 --> 00:29:05.906
+<v Lakshmi Figueroa>Fair.
+
+21
+00:29:06.871 --> 00:29:07.871
+<v Hiba Deng>I see.
+
+22
+00:29:08.302 --> 00:29:10.995
+<v Anahit Fifita>I'd rather we didn't escalate this yet.
+
+23
+00:29:12.369 --> 00:29:13.369
+<v Hiba Deng>Okay, yeah.
+
+24
+00:29:14.511 --> 00:29:15.511
+<v Anahit Fifita>Mm, okay.
+
+25
+00:42:06.663 --> 00:42:10.509
+<v Hiba Deng>Unrelated, but is anyone going to the all-hands on Thursday?
+
+26
+00:42:11.160 --> 00:42:12.160
+<v Isla Faure>Ha, yes.
+
+27
+00:43:48.219 --> 00:43:49.373
+<v Isla Faure>Any other updates?
+
+28
+00:43:50.669 --> 00:43:52.977
+<v Anahit Fifita>Just heads-down on the usual stuff.
+
+29
+00:43:54.359 --> 00:43:55.359
+<v Hiba Deng>Mm.
+
+30
+00:43:55.762 --> 00:43:57.685
+<v Lakshmi Figueroa>All quiet on my end.
+
+31
+00:43:59.026 --> 00:44:00.026
+<v Anahit Fifita>Makes sense.
+
+32
+00:49:32.977 --> 00:49:35.669
+<v Isla Faure>Okay, I think that's it. Thanks everyone.
+
+33
+00:49:36.983 --> 00:49:37.983
+<v Lakshmi Figueroa>Thanks, bye.

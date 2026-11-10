@@ -1,0 +1,35 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-losa",
+ "kind": "dm",
+ "participants": [
+  "Losa Moretti",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-12T12:29:00-08:00",
+   "user": "Losa Moretti",
+   "handle": "@losa",
+   "text": "i'm handing the list of pilot courses for axolotl over to jurgen, jurgen will take it from here"
+  },
+  {
+   "ts": "2027-02-12T12:29:53-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-02-12T12:32:04-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-02-12T12:33:52-08:00",
+   "user": "Losa Moretti",
+   "handle": "@losa",
+   "text": "yep, all good"
+  }
+ ]
+}

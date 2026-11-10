@@ -4,22 +4,22 @@
  "kind": "channel",
  "participants": [
   "Nomvula Ndlovu",
-  "Ottavio Monteiro",
-  "Darius Sherwood",
-  "Meera Ivanova",
-  "Ratna Bondarenko",
-  "Theresa Nagy",
-  "Bruna Sinclair",
-  "Esperanza Rao",
+  "Ottavio Moreira",
+  "Darius Bramwell",
+  "Meera Bondarenko",
+  "Ratna Nikolic",
+  "Theresa Petrov",
+  "Bruna Vaughan",
+  "Esperanza Venkataraman",
   "Yaroslav Moyo",
-  "Celine Wisniewska"
+  "Celine Novotny"
  ],
  "messages": [
   {
    "ts": "2027-09-16T11:14:00-08:00",
    "user": "Nomvula Ndlovu",
    "handle": "@nomvula",
-   "text": "Meera Ivanova sent Darius the Fjord cutover plan, so that one's done."
+   "text": "Meera Bondarenko sent Darius the Fjord cutover plan, so that one's done."
   }
  ]
 }

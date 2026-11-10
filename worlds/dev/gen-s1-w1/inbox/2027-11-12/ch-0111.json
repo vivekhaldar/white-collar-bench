@@ -3,27 +3,27 @@
  "channel": "#marten-core",
  "kind": "channel",
  "participants": [
-  "Camila Quimby",
+  "Camila Abernathy",
   "Petra Korkmaz",
   "Jalen",
   "Sipho Sengupta",
-  "Dina Winslow",
+  "Dina Taufa",
   "Yasmin Mokoena",
-  "Nadia Volkov",
-  "Thandiwe Bonnet",
+  "Nadia Jovanovic",
+  "Thandiwe Garnier",
   "Joselito Moradi",
-  "Imran Sato"
+  "Imran Achterhof"
  ],
  "messages": [
   {
    "ts": "2027-11-12T20:14:00-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "@jalen just sent you the Marten retention schedule."
   },
   {
    "ts": "2027-11-12T20:15:09-07:00",
-   "user": "Thandiwe Bonnet",
+   "user": "Thandiwe Garnier",
    "handle": "@thandiwe",
    "text": "noted",
    "thread_of": 0
@@ -37,7 +37,7 @@
   },
   {
    "ts": "2027-11-12T20:25:09-07:00",
-   "user": "Nadia Volkov",
+   "user": "Nadia Jovanovic",
    "handle": "@nadia",
    "text": "following",
    "thread_of": 0

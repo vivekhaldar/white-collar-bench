@@ -4,7 +4,7 @@
  "kind": "dm",
  "participants": [
   "Fernanda Olawale",
-  "Camila Quimby"
+  "Camila Abernathy"
  ],
  "messages": [
   {
@@ -15,13 +15,13 @@
   },
   {
    "ts": "2027-11-05T16:48:10-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "no problem"
   },
   {
    "ts": "2027-11-05T16:52:38-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "are you in the office tomorrow?"
   },

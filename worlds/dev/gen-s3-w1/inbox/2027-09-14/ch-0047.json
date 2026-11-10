@@ -1,31 +1,37 @@
 {
  "workspace": "birchmere",
- "channel": "#coffee",
- "kind": "channel",
+ "channel": "dm-alasdair-somchai",
+ "kind": "dm",
  "participants": [
-  "Katrin Watanabe",
-  "Deniz Zhou"
+  "Somchai",
+  "Alasdair Kaya"
  ],
  "messages": [
   {
-   "ts": "2027-09-14T14:19:24-05:00",
-   "user": "Katrin Watanabe",
-   "handle": "@katrin",
-   "text": "the elevator on the east side is out again",
+   "ts": "2027-09-14T14:37:00-05:00",
+   "user": "Somchai",
+   "handle": "@somchai",
+   "text": "Bisi Chatterjee is expecting you to send them the Sirocco operating model review comments.",
    "reactions": [
     {
-     "emoji": "eyes",
+     "emoji": "raised_hands",
      "users": [
-      "@deniz"
+      "@alasdair"
      ]
     }
    ]
   },
   {
-   "ts": "2027-09-14T14:24:10-05:00",
-   "user": "Deniz Zhou",
-   "handle": "@deniz",
-   "text": "stairs it is"
+   "ts": "2027-09-14T14:37:45-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-09-14T14:41:00-05:00",
+   "user": "Somchai",
+   "handle": "@somchai",
+   "text": "remote, but online all day"
   }
  ]
 }

@@ -1,0 +1,35 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-donghyun-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Dong-hyun Colombo"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-13T13:28:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "I sent you the Garnet action log earlier today."
+  },
+  {
+   "ts": "2027-07-13T13:28:17-08:00",
+   "user": "Dong-hyun Colombo",
+   "handle": "@donghyun",
+   "text": "got it, thanks"
+  },
+  {
+   "ts": "2027-07-13T13:32:38-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-07-13T13:33:26-08:00",
+   "user": "Dong-hyun Colombo",
+   "handle": "@donghyun",
+   "text": "remote, but online all day"
+  }
+ ]
+}

@@ -3,14 +3,14 @@
  "channel": "#random",
  "kind": "channel",
  "participants": [
-  "Jalen Hendriks",
+  "Jalen Sandberg",
   "Joselito Moradi",
-  "Nadia Volkov"
+  "Nadia Jovanovic"
  ],
  "messages": [
   {
    "ts": "2027-11-03T10:03:30-07:00",
-   "user": "Jalen Hendriks",
+   "user": "Jalen Sandberg",
    "handle": "@jalen",
    "text": "does anyone have a spare laptop charger (usb-c)?"
   },
@@ -22,7 +22,7 @@
   },
   {
    "ts": "2027-11-03T10:10:15-07:00",
-   "user": "Nadia Volkov",
+   "user": "Nadia Jovanovic",
    "handle": "@nadia",
    "text": "check the supply cupboard",
    "thread_of": 0

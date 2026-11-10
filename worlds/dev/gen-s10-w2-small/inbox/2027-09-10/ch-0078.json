@@ -1,0 +1,41 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-lilit",
+ "kind": "dm",
+ "participants": [
+  "Lilit Yilmaz",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-10T10:43:00+01:00",
+   "user": "Lilit Yilmaz",
+   "handle": "@lilit",
+   "text": "we're reversing the decision to limit the pantry inventory discovery rollout to two branches. i want a wider trial"
+  },
+  {
+   "ts": "2027-09-10T10:43:20+01:00",
+   "user": "Lilit Yilmaz",
+   "handle": "@lilit",
+   "text": "decision: widen the pantry inventory discovery rollout to three branches"
+  },
+  {
+   "ts": "2027-09-10T10:44:21+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "sounds good"
+  },
+  {
+   "ts": "2027-09-10T10:47:09+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-09-10T10:48:41+01:00",
+   "user": "Lilit Yilmaz",
+   "handle": "@lilit",
+   "text": "remote, but online all day"
+  }
+ ]
+}

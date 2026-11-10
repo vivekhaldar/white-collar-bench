@@ -3,21 +3,21 @@
  "channel": "#marten-core",
  "kind": "channel",
  "participants": [
-  "Imran Sato",
-  "Camila Quimby",
+  "Imran Achterhof",
+  "Camila Abernathy",
   "Petra Korkmaz",
   "Jalen",
   "Sipho Sengupta",
-  "Dina Winslow",
+  "Dina Taufa",
   "Yasmin Mokoena",
-  "Nadia Volkov",
-  "Thandiwe Bonnet",
+  "Nadia Jovanovic",
+  "Thandiwe Garnier",
   "Lito"
  ],
  "messages": [
   {
    "ts": "2027-10-25T16:43:00-07:00",
-   "user": "Imran Sato",
+   "user": "Imran Achterhof",
    "handle": "@imran",
    "text": "@camila could you update the Marten evaluation rubric after my comments?",
    "reactions": [
@@ -33,14 +33,14 @@
   },
   {
    "ts": "2027-10-25T16:43:18-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "on it",
    "thread_of": 0
   },
   {
    "ts": "2027-10-25T16:52:21-07:00",
-   "user": "Thandiwe Bonnet",
+   "user": "Thandiwe Garnier",
    "handle": "@thandiwe",
    "text": "nice",
    "thread_of": 0

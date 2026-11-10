@@ -1,0 +1,45 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-hiba-madeline",
+ "kind": "dm",
+ "participants": [
+  "Madeline Chikwanha",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-28T08:49:00-08:00",
+   "user": "Madeline Chikwanha",
+   "handle": "@madeline",
+   "text": "I drafted the Garnet load test plan earlier today!",
+   "edited": true,
+   "original": "I drafted the Garent load test plan earlier today!",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-06-28T08:50:24-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "great, thanks"
+  },
+  {
+   "ts": "2027-06-28T08:51:56-08:00",
+   "user": "Madeline Chikwanha",
+   "handle": "@madeline",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-06-28T08:52:33-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "no worries"
+  }
+ ]
+}

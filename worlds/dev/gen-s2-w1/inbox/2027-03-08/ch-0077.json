@@ -3,31 +3,31 @@
  "channel": "dm-dina-naoko",
  "kind": "dm",
  "participants": [
-  "Naoko Maldonado",
-  "Dina Zimmermann"
+  "Naoko Sandoval",
+  "Dina Ricci"
  ],
  "messages": [
   {
    "ts": "2027-03-08T18:29:00-07:00",
-   "user": "Naoko Maldonado",
+   "user": "Naoko Sandoval",
    "handle": "@naoko",
    "text": "thibault is expecting you to send them the mistral vendor comparison"
   },
   {
    "ts": "2027-03-08T18:30:07-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "sure, can do"
   },
   {
    "ts": "2027-03-08T18:31:34-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "is the shared drive slow for you too?"
   },
   {
    "ts": "2027-03-08T18:34:17-07:00",
-   "user": "Naoko Maldonado",
+   "user": "Naoko Sandoval",
    "handle": "@naoko",
    "text": "yeah, it's been crawling all morning"
   }

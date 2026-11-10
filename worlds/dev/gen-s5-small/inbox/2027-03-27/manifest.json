@@ -4,37 +4,37 @@
     {
       "id": "em-0055",
       "channel": "email",
-      "received_at": "2027-03-27T08:35:00-05:00",
+      "received_at": "2027-03-27T08:44:00-05:00",
       "path": "em-0055.eml",
-      "title": "[Scheduled] Network maintenance window"
+      "title": "[REQ-13307] Request resolved"
     },
     {
       "id": "em-0056",
       "channel": "email",
-      "received_at": "2027-03-27T09:30:00-05:00",
+      "received_at": "2027-03-27T08:46:00-05:00",
       "path": "em-0056.eml",
-      "title": "[REQ-14385] Request resolved"
+      "title": "[REQ-32861] Request resolved"
     },
     {
       "id": "em-0057",
       "channel": "email",
-      "received_at": "2027-03-27T10:42:00-05:00",
+      "received_at": "2027-03-27T11:25:00-05:00",
       "path": "em-0057.eml",
-      "title": "[Resolved] Elevated latency on file storage"
+      "title": "Fwd: A coffee with Lakshmi about portal message routing"
     },
     {
-      "id": "ch-0041",
-      "channel": "chat",
-      "received_at": "2027-03-27T13:15:00-05:00",
-      "path": "ch-0041.json",
-      "title": "DM: Ama Forsythe / Hiba Xu"
+      "id": "em-0058",
+      "channel": "email",
+      "received_at": "2027-03-27T11:43:00-05:00",
+      "path": "em-0058.eml",
+      "title": "[INC-87659] Ticket updated"
     },
     {
-      "id": "ch-0042",
-      "channel": "chat",
-      "received_at": "2027-03-27T13:28:00-05:00",
-      "path": "ch-0042.json",
-      "title": "#wagtail-core"
+      "id": "em-0059",
+      "channel": "email",
+      "received_at": "2027-03-27T16:55:00-05:00",
+      "path": "em-0059.eml",
+      "title": "Re: Coffee with Lakshmi about portal message routing"
     }
   ]
 }

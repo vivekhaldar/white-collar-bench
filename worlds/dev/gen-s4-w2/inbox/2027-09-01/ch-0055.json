@@ -4,9 +4,9 @@
  "kind": "channel",
  "participants": [
   "Nomvula Ndlovu",
-  "Theresa Nagy",
-  "Esperanza Rao",
-  "Tariq Popescu"
+  "Theresa Petrov",
+  "Esperanza Venkataraman",
+  "Tariq Ivanova"
  ],
  "messages": [
   {
@@ -17,14 +17,14 @@
   },
   {
    "ts": "2027-09-01T17:21:57-08:00",
-   "user": "Theresa Nagy",
+   "user": "Theresa Petrov",
    "handle": "@theresa",
    "text": "I have one, desk by the window",
    "thread_of": 0
   },
   {
    "ts": "2027-09-01T17:27:21-08:00",
-   "user": "Esperanza Rao",
+   "user": "Esperanza Venkataraman",
    "handle": "@esperanza",
    "text": "check the supply cupboard",
    "thread_of": 0

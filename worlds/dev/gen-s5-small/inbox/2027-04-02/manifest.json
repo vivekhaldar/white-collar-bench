@@ -2,88 +2,102 @@
   "date": "2027-04-02",
   "artifacts": [
     {
-      "id": "ch-0066",
-      "channel": "chat",
-      "received_at": "2027-04-02T08:24:00-05:00",
-      "path": "ch-0066.json",
-      "title": "DM: Hiba Xu / Lakshmi Zamora"
+      "id": "ca-0008",
+      "channel": "calendar",
+      "received_at": "2027-04-02T08:21:00-05:00",
+      "path": "ca-0008.ics",
+      "title": "Accepted: Clinical documentation discovery follow-up"
     },
     {
-      "id": "ch-0067",
+      "id": "ch-0070",
       "channel": "chat",
-      "received_at": "2027-04-02T08:41:00-05:00",
-      "path": "ch-0067.json",
-      "title": "#wagtail-core"
+      "received_at": "2027-04-02T08:23:00-05:00",
+      "path": "ch-0070.json",
+      "title": "DM: Lindiwe Ribeiro / Hiba Deng"
     },
     {
-      "id": "ch-0068",
-      "channel": "chat",
-      "received_at": "2027-04-02T08:50:00-05:00",
-      "path": "ch-0068.json",
-      "title": "#wagtail-core"
-    },
-    {
-      "id": "em-0085",
+      "id": "em-0080",
       "channel": "email",
-      "received_at": "2027-04-02T10:21:00-05:00",
-      "path": "em-0085.eml",
+      "received_at": "2027-04-02T10:49:00-05:00",
+      "path": "em-0080.eml",
+      "title": "Re: Clinical documentation discovery readout to Falbury"
+    },
+    {
+      "id": "em-0081",
+      "channel": "email",
+      "received_at": "2027-04-02T11:34:00-05:00",
+      "path": "em-0081.eml",
       "title": "Room booking confirmation"
     },
     {
-      "id": "ca-0009",
-      "channel": "calendar",
-      "received_at": "2027-04-02T11:50:00-05:00",
-      "path": "ca-0009.ics",
-      "title": "Accepted: Okapi follow-up"
+      "id": "ch-0071",
+      "channel": "chat",
+      "received_at": "2027-04-02T15:00:00-05:00",
+      "path": "ch-0071.json",
+      "title": "DM: Anahit Fifita / Hiba Deng"
     },
     {
-      "id": "mn-0011",
-      "channel": "meeting_notes",
+      "id": "mt-0019",
+      "channel": "transcript",
       "received_at": "2027-04-02T15:45:00-05:00",
-      "path": "mn-0011.md",
-      "title": "Recap: Wagtail / Okapi sync"
+      "path": "mt-0019.vtt",
+      "title": "Nurse scheduling selection review (transcript)"
+    },
+    {
+      "id": "ch-0072",
+      "channel": "chat",
+      "received_at": "2027-04-02T15:52:00-05:00",
+      "path": "ch-0072.json",
+      "title": "DM: Lakshmi Figueroa / Hiba Deng"
+    },
+    {
+      "id": "mt-0020",
+      "channel": "transcript",
+      "received_at": "2027-04-02T16:00:00-05:00",
+      "path": "mt-0020.vtt",
+      "title": "Okapi / Wagtail sync (transcript)"
+    },
+    {
+      "id": "nt-0007",
+      "channel": "note",
+      "received_at": "2027-04-02T16:12:00-05:00",
+      "path": "nt-0007.md",
+      "title": "Fri notes"
+    },
+    {
+      "id": "em-0082",
+      "channel": "email",
+      "received_at": "2027-04-02T16:38:00-05:00",
+      "path": "em-0082.eml",
+      "title": "Status note: w/e 2 April"
+    },
+    {
+      "id": "em-0083",
+      "channel": "email",
+      "received_at": "2027-04-02T17:19:00-05:00",
+      "path": "em-0083.eml",
+      "title": "Re: Burak's panel on referral triage"
     },
     {
       "id": "nt-0008",
       "channel": "note",
-      "received_at": "2027-04-02T15:45:00-05:00",
+      "received_at": "2027-04-02T18:14:00-05:00",
       "path": "nt-0008.md",
-      "title": "Voice debrief: Wagtail review"
-    },
-    {
-      "id": "nt-0009",
-      "channel": "note",
-      "received_at": "2027-04-02T16:01:00-05:00",
-      "path": "nt-0009.md",
       "title": "Fri notes"
     },
     {
-      "id": "ca-0010",
-      "channel": "calendar",
-      "received_at": "2027-04-02T16:37:00-05:00",
-      "path": "ca-0010.ics",
-      "title": "Invite: Working session: Wagtail clinical safety case"
-    },
-    {
-      "id": "em-0086",
+      "id": "em-0084",
       "channel": "email",
-      "received_at": "2027-04-02T16:37:00-05:00",
-      "path": "em-0086.eml",
-      "title": "Status note: w/e 2 April"
+      "received_at": "2027-04-02T19:01:00-05:00",
+      "path": "em-0084.eml",
+      "title": "Re: Anahit's Wagtail order set review"
     },
     {
-      "id": "ch-0069",
-      "channel": "chat",
-      "received_at": "2027-04-02T17:14:00-05:00",
-      "path": "ch-0069.json",
-      "title": "#wagtail-core"
-    },
-    {
-      "id": "em-0087",
+      "id": "em-0085",
       "channel": "email",
-      "received_at": "2027-04-02T22:13:00-05:00",
-      "path": "em-0087.eml",
-      "title": "Draft: Wagtail action log"
+      "received_at": "2027-04-02T22:31:00-05:00",
+      "path": "em-0085.eml",
+      "title": "Draft: Okapi cutover plan"
     }
   ]
 }

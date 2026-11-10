@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Reddale//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:417406bc6e546d8f@reddale.example
+DTSTAMP:20270901T083200Z
+DTSTART:20270902T140000Z
+DTEND:20270902T144500Z
+SUMMARY:Pipit review
+ORGANIZER;CN=Bisi Volkov:mailto:bisi.volkov@reddale.example
+ATTENDEE;CN=Aoife Everett;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:aoife.everett@reddale.example
+ATTENDEE;CN=Akosua Bergstrom;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:akosua.bergstrom@reddale.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.reddale.example/j/5911868385?pwd=JXuHrSqd\nPasscode: 612263
+LOCATION:https://meet.reddale.example/j/5911868385?pwd=JXuHrSqd
+END:VEVENT
+END:VCALENDAR

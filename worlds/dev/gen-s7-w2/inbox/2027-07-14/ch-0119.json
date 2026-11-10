@@ -1,0 +1,43 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-ewan-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Ewan Laine"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-14T14:06:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "I sent you the admissions triage selection reference-check notes.",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@ewan"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-14T14:06:05-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-07-14T14:09:16-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-07-14T14:10:05-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "only the first half"
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-sipho",
+ "kind": "dm",
+ "participants": [
+  "Sipho Papadopoulos",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-18T11:08:00+01:00",
+   "user": "Sipho Papadopoulos",
+   "handle": "@sipho",
+   "text": "Just sent you the Nettle metrics definition!",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@aoife"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-08-18T11:08:49+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "great, thanks"
+  },
+  {
+   "ts": "2027-08-18T11:11:27+01:00",
+   "user": "Sipho Papadopoulos",
+   "handle": "@sipho",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-08-18T11:14:19+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

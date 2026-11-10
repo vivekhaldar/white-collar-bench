@@ -1,0 +1,36 @@
+{
+ "workspace": "birchmere",
+ "channel": "#funding-model-core",
+ "kind": "channel",
+ "participants": [
+  "Bisi",
+  "Alasdair Kaya",
+  "Somchai",
+  "Catrin Kiprono",
+  "Deniz Feng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-16T18:24:00-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "Deniz would like Alasdair to run a sensitivity analysis on the funding model, not agreed yet!",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@somchai",
+      "@catrin"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-16T18:25:03-05:00",
+   "user": "Deniz Feng",
+   "handle": "@deniz",
+   "text": "appreciate it",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-andres-despina",
+ "kind": "dm",
+ "participants": [
+  "Despina Pereira",
+  "Andres"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-15T16:24:44-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-02-15T16:27:00-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "I sent you the Axolotl comms plan."
+  },
+  {
+   "ts": "2027-02-15T16:27:17-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-02-15T16:31:59-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-02-15T16:34:19-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Birchmere//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:adf7302e43caff31@birchmere.example
+DTSTAMP:20270910T230900Z
+DTSTART:20270914T163000Z
+DTEND:20270914T170000Z
+SUMMARY:Updated: Okapi scoping call
+ORGANIZER;CN=Katarzyna Dang:mailto:katarzyna.dang@ketford.birchmere.example
+ATTENDEE;CN=Bisi Chatterjee;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bisi.chatterjee@birchmere.example
+ATTENDEE;CN=Alasdair Kaya;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:alasdair.kaya@birchmere.example
+SEQUENCE:1
+DESCRIPTION:New time\, same agenda.\nJoin video meeting: https://meet.birchmere.example/j/4338214125?pwd=4LQQ66fz\nPasscode: 440627
+LOCATION:https://meet.birchmere.example/j/4338214125?pwd=4LQQ66fz
+END:VEVENT
+END:VCALENDAR

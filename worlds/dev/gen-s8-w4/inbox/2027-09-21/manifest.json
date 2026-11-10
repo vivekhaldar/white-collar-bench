@@ -1,0 +1,138 @@
+{
+  "date": "2027-09-21",
+  "artifacts": [
+    {
+      "id": "nt-0011",
+      "channel": "note",
+      "received_at": "2027-09-21T08:41:00-06:00",
+      "path": "nt-0011.md",
+      "title": "Tue notes"
+    },
+    {
+      "id": "mt-0021",
+      "channel": "transcript",
+      "received_at": "2027-09-21T09:55:00-06:00",
+      "path": "mt-0021.vtt",
+      "title": "Fulmar standup (transcript)"
+    },
+    {
+      "id": "em-0126",
+      "channel": "email",
+      "received_at": "2027-09-21T10:16:00-06:00",
+      "path": "em-0126.eml",
+      "title": "Introduction: operator AI basics workshop"
+    },
+    {
+      "id": "ch-0101",
+      "channel": "chat",
+      "received_at": "2027-09-21T11:27:00-06:00",
+      "path": "ch-0101.json",
+      "title": "DM: Amira Baek / Adwoa Kocak"
+    },
+    {
+      "id": "em-0127",
+      "channel": "email",
+      "received_at": "2027-09-21T11:37:00-06:00",
+      "path": "em-0127.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "ch-0102",
+      "channel": "chat",
+      "received_at": "2027-09-21T11:49:00-06:00",
+      "path": "ch-0102.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "em-0128",
+      "channel": "email",
+      "received_at": "2027-09-21T12:23:00-06:00",
+      "path": "em-0128.eml",
+      "title": "Re: Wagtail dashboard access"
+    },
+    {
+      "id": "em-0129",
+      "channel": "email",
+      "received_at": "2027-09-21T12:55:00-06:00",
+      "path": "em-0129.eml",
+      "title": "Call for proposals closes Wednesday 22 September"
+    },
+    {
+      "id": "ch-0103",
+      "channel": "chat",
+      "received_at": "2027-09-21T13:29:00-06:00",
+      "path": "ch-0103.json",
+      "title": "DM: Darnell Malouf / Amira Baek"
+    },
+    {
+      "id": "ch-0104",
+      "channel": "chat",
+      "received_at": "2027-09-21T14:15:00-06:00",
+      "path": "ch-0104.json",
+      "title": "DM: Ottavio Bakker / Amira Baek"
+    },
+    {
+      "id": "em-0130",
+      "channel": "email",
+      "received_at": "2027-09-21T15:03:00-06:00",
+      "path": "em-0130.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0131",
+      "channel": "email",
+      "received_at": "2027-09-21T15:53:00-06:00",
+      "path": "em-0131.eml",
+      "title": "Fulmar: numbers"
+    },
+    {
+      "id": "ch-0105",
+      "channel": "chat",
+      "received_at": "2027-09-21T15:57:00-06:00",
+      "path": "ch-0105.json",
+      "title": "DM: Amira Baek / Ottavio Bakker"
+    },
+    {
+      "id": "nt-0012",
+      "channel": "note",
+      "received_at": "2027-09-21T16:00:00-06:00",
+      "path": "nt-0012.md",
+      "title": "Voice debrief: Rosia intro call"
+    },
+    {
+      "id": "ch-0106",
+      "channel": "chat",
+      "received_at": "2027-09-21T16:25:00-06:00",
+      "path": "ch-0106.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    },
+    {
+      "id": "ch-0107",
+      "channel": "chat",
+      "received_at": "2027-09-21T17:32:00-06:00",
+      "path": "ch-0107.json",
+      "title": "#operator-ai-basics-core"
+    },
+    {
+      "id": "em-0132",
+      "channel": "email",
+      "received_at": "2027-09-21T17:49:00-06:00",
+      "path": "em-0132.eml",
+      "title": "Industrial Data Digest: issue 38"
+    },
+    {
+      "id": "em-0133",
+      "channel": "email",
+      "received_at": "2027-09-21T18:14:00-06:00",
+      "path": "em-0133.eml",
+      "title": "Re: Refreshments for the operator AI basics workshop"
+    },
+    {
+      "id": "em-0134",
+      "channel": "email",
+      "received_at": "2027-09-21T22:39:00-06:00",
+      "path": "em-0134.eml",
+      "title": "Draft: Fulmar cutover plan"
+    }
+  ]
+}

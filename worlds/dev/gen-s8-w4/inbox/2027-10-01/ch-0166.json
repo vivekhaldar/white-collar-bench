@@ -1,0 +1,55 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#fulmar-core",
+ "kind": "channel",
+ "participants": [
+  "Amira Baek",
+  "Ottavio Bakker",
+  "Adwoa",
+  "Giorgi Wisniewska",
+  "Oksana Hoffmann",
+  "Marcelo Meijer",
+  "Batbayar Galbraith",
+  "Thibault Kowalski",
+  "Kamau Greco",
+  "Shirin Oyelami"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-01T15:01:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "@adwoa on it, I'll update the Fulmar vendor comparison v2 after your comments.",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@giorgi",
+      "@adwoa",
+      "@ottavio"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-01T15:01:07-06:00",
+   "user": "Shirin Oyelami",
+   "handle": "@shirin",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-10-01T15:06:28-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-10-01T15:13:19-06:00",
+   "user": "Shirin Oyelami",
+   "handle": "@shirin",
+   "text": "following :)",
+   "thread_of": 0
+  }
+ ]
+}

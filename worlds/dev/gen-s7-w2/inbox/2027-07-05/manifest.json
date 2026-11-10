@@ -1,0 +1,152 @@
+{
+  "date": "2027-07-05",
+  "artifacts": [
+    {
+      "id": "em-0074",
+      "channel": "email",
+      "received_at": "2027-07-05T07:01:00-08:00",
+      "path": "em-0074.eml",
+      "title": "Reminder: Friday status note due Friday 9 July"
+    },
+    {
+      "id": "nt-0006",
+      "channel": "note",
+      "received_at": "2027-07-05T07:35:00-08:00",
+      "path": "nt-0006.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "em-0075",
+      "channel": "email",
+      "received_at": "2027-07-05T09:06:00-08:00",
+      "path": "em-0075.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "ch-0065",
+      "channel": "chat",
+      "received_at": "2027-07-05T09:33:00-08:00",
+      "path": "ch-0065.json",
+      "title": "DM: Hiba Jimenez / Bolat Oyelami"
+    },
+    {
+      "id": "em-0076",
+      "channel": "email",
+      "received_at": "2027-07-05T09:40:00-08:00",
+      "path": "em-0076.eml",
+      "title": "Re: Alumni outreach discovery sandbox access"
+    },
+    {
+      "id": "em-0077",
+      "channel": "email",
+      "received_at": "2027-07-05T09:44:00-08:00",
+      "path": "em-0077.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "em-0078",
+      "channel": "email",
+      "received_at": "2027-07-05T10:02:00-08:00",
+      "path": "em-0078.eml",
+      "title": "Torane sandbox credentials"
+    },
+    {
+      "id": "em-0079",
+      "channel": "email",
+      "received_at": "2027-07-05T11:07:00-08:00",
+      "path": "em-0079.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "em-0080",
+      "channel": "email",
+      "received_at": "2027-07-05T11:25:00-08:00",
+      "path": "em-0080.eml",
+      "title": "Re: Corrie in-house rather than buy"
+    },
+    {
+      "id": "mn-0012",
+      "channel": "meeting_notes",
+      "received_at": "2027-07-05T11:30:00-08:00",
+      "path": "mn-0012.md",
+      "title": "Recap: Corrie / Garnet sync"
+    },
+    {
+      "id": "mn-0013",
+      "channel": "meeting_notes",
+      "received_at": "2027-07-05T11:45:00-08:00",
+      "path": "mn-0013.md",
+      "title": "Recap: SLIO leads call"
+    },
+    {
+      "id": "em-0081",
+      "channel": "email",
+      "received_at": "2027-07-05T12:43:00-08:00",
+      "path": "em-0081.eml",
+      "title": "Re: Garnet LMS integration notes"
+    },
+    {
+      "id": "ca-0015",
+      "channel": "calendar",
+      "received_at": "2027-07-05T13:27:00-08:00",
+      "path": "ca-0015.ics",
+      "title": "Invite: Walkthrough: Siskin metrics definition"
+    },
+    {
+      "id": "em-0082",
+      "channel": "email",
+      "received_at": "2027-07-05T14:00:00-08:00",
+      "path": "em-0082.eml",
+      "title": "[INC-79170] Ticket updated"
+    },
+    {
+      "id": "ca-0016",
+      "channel": "calendar",
+      "received_at": "2027-07-05T14:18:00-08:00",
+      "path": "ca-0016.ics",
+      "title": "Invite: Garnet review"
+    },
+    {
+      "id": "em-0083",
+      "channel": "email",
+      "received_at": "2027-07-05T14:20:00-08:00",
+      "path": "em-0083.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0084",
+      "channel": "email",
+      "received_at": "2027-07-05T16:29:00-08:00",
+      "path": "em-0084.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "em-0085",
+      "channel": "email",
+      "received_at": "2027-07-05T17:24:00-08:00",
+      "path": "em-0085.eml",
+      "title": "Assessment design workshop action log"
+    },
+    {
+      "id": "ch-0066",
+      "channel": "chat",
+      "received_at": "2027-07-05T18:05:00-08:00",
+      "path": "ch-0066.json",
+      "title": "DM: Bolat Oyelami / Hiba Jimenez"
+    },
+    {
+      "id": "em-0086",
+      "channel": "email",
+      "received_at": "2027-07-05T18:55:00-08:00",
+      "path": "em-0086.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "nt-0007",
+      "channel": "note",
+      "received_at": "2027-07-05T20:04:00-08:00",
+      "path": "nt-0007.md",
+      "title": "Mon notes"
+    }
+  ]
+}

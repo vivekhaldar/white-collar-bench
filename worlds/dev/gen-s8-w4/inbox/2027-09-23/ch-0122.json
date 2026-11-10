@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Adwoa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-23T18:26:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "will send you the fulmar sensor tag list"
+  },
+  {
+   "ts": "2027-09-23T18:26:23-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "that'd be great"
+  },
+  {
+   "ts": "2027-09-23T18:31:23-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-09-23T18:32:30-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "yep, all good"
+  }
+ ]
+}

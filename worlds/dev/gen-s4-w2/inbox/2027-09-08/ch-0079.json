@@ -4,9 +4,9 @@
  "kind": "channel",
  "participants": [
   "Ish",
-  "Ottavio Monteiro",
-  "Meera Ivanova",
-  "Margaux Choi"
+  "Ottavio Moreira",
+  "Meera Bondarenko",
+  "Margaux Kang"
  ],
  "messages": [
   {
@@ -25,21 +25,21 @@
   },
   {
    "ts": "2027-09-08T08:37:39-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "appreciate it",
    "thread_of": 0
   },
   {
    "ts": "2027-09-08T08:42:27-08:00",
-   "user": "Margaux Choi",
+   "user": "Margaux Kang",
    "handle": "@margaux",
    "text": "+1",
    "thread_of": 0
   },
   {
    "ts": "2027-09-08T08:45:36-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "thanks for the update",
    "thread_of": 0

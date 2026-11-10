@@ -1,0 +1,75 @@
+{
+  "date": "2027-09-08",
+  "artifacts": [
+    {
+      "id": "em-0096",
+      "channel": "email",
+      "received_at": "2027-09-08T07:50:00+01:00",
+      "path": "em-0096.eml",
+      "title": "Re: Volunteers FAQ for Nettle"
+    },
+    {
+      "id": "ch-0069",
+      "channel": "chat",
+      "received_at": "2027-09-08T10:32:00+01:00",
+      "path": "ch-0069.json",
+      "title": "DM: Aoife Everett / Sigrid Asante"
+    },
+    {
+      "id": "em-0097",
+      "channel": "email",
+      "received_at": "2027-09-08T11:47:00+01:00",
+      "path": "em-0097.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "em-0098",
+      "channel": "email",
+      "received_at": "2027-09-08T12:20:00+01:00",
+      "path": "em-0098.eml",
+      "title": "[INC-65143] Ticket updated"
+    },
+    {
+      "id": "ch-0070",
+      "channel": "chat",
+      "received_at": "2027-09-08T13:30:00+01:00",
+      "path": "ch-0070.json",
+      "title": "DM: Aoife Everett / Akosua Bergstrom"
+    },
+    {
+      "id": "ch-0071",
+      "channel": "chat",
+      "received_at": "2027-09-08T14:18:00+01:00",
+      "path": "ch-0071.json",
+      "title": "DM: Aoife Everett / Akosua Bergstrom"
+    },
+    {
+      "id": "mt-0015",
+      "channel": "transcript",
+      "received_at": "2027-09-08T14:30:00+01:00",
+      "path": "mt-0015.vtt",
+      "title": "Pipit platform sync (transcript)"
+    },
+    {
+      "id": "mt-0016",
+      "channel": "transcript",
+      "received_at": "2027-09-08T15:45:00+01:00",
+      "path": "mt-0016.vtt",
+      "title": "Nettle review (transcript)"
+    },
+    {
+      "id": "ch-0072",
+      "channel": "chat",
+      "received_at": "2027-09-08T16:09:00+01:00",
+      "path": "ch-0072.json",
+      "title": "DM: Sigrid Asante / Aoife Everett"
+    },
+    {
+      "id": "ch-0073",
+      "channel": "chat",
+      "received_at": "2027-09-08T18:47:00+01:00",
+      "path": "ch-0073.json",
+      "title": "DM: Chiamaka Shami / Aoife Everett"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Corrstead//Calendar//EN
+METHOD:CANCEL
+BEGIN:VEVENT
+UID:69131e002a9cd7ab@corrstead.example
+DTSTAMP:20270628T160600Z
+DTSTART:20270628T173000Z
+DTEND:20270628T175500Z
+SUMMARY:Cancelled: Garnet standup
+ORGANIZER;CN=Ewan Laine:mailto:ewan.laine@crandale.corrstead.example
+ATTENDEE;CN=Hiba Jimenez;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.jimenez@corrstead.example
+ATTENDEE;CN=Bolat Oyelami;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bolat.oyelami@corrstead.example
+ATTENDEE;CN=Madeline Chikwanha;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:madeline.chikwanha@crandale.corrstead.example
+ATTENDEE;CN=Desmond Visser;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:desmond.visser@corrstead.example
+ATTENDEE;CN=Andrei Laurent;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:andrei.laurent@corrstead.example
+ATTENDEE;CN=Emre Khumalo;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:emre.khumalo@corrstead.example
+ATTENDEE;CN=Adaeze Fifita;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:adaeze.fifita@corrstead.example
+RECURRENCE-ID:20270628T173000Z
+SEQUENCE:1
+STATUS:CANCELLED
+DESCRIPTION:Cancelling\, a few people are out.
+END:VEVENT
+END:VCALENDAR

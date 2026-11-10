@@ -1,0 +1,152 @@
+{
+  "date": "2027-08-30",
+  "artifacts": [
+    {
+      "id": "em-0001",
+      "channel": "email",
+      "received_at": "2027-08-30T07:04:00-06:00",
+      "path": "em-0001.eml",
+      "title": "Reminder: Friday status note due Friday 3 September"
+    },
+    {
+      "id": "em-0002",
+      "channel": "email",
+      "received_at": "2027-08-30T07:21:00-06:00",
+      "path": "em-0002.eml",
+      "title": "Wellbeing week activities"
+    },
+    {
+      "id": "nt-0001",
+      "channel": "note",
+      "received_at": "2027-08-30T08:05:00-06:00",
+      "path": "nt-0001.md",
+      "title": "Portfolio map"
+    },
+    {
+      "id": "ch-0001",
+      "channel": "chat",
+      "received_at": "2027-08-30T08:53:00-06:00",
+      "path": "ch-0001.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0002",
+      "channel": "chat",
+      "received_at": "2027-08-30T08:56:00-06:00",
+      "path": "ch-0002.json",
+      "title": "DM: Adwoa Chukwu / Amira Baek"
+    },
+    {
+      "id": "nt-0002",
+      "channel": "note",
+      "received_at": "2027-08-30T09:07:00-06:00",
+      "path": "nt-0002.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "ch-0003",
+      "channel": "chat",
+      "received_at": "2027-08-30T09:44:00-06:00",
+      "path": "ch-0003.json",
+      "title": "DM: Hamish Okada / Amira Baek"
+    },
+    {
+      "id": "ca-0001",
+      "channel": "calendar",
+      "received_at": "2027-08-30T09:55:00-06:00",
+      "path": "ca-0001.ics",
+      "title": "Invite: Fulmar build sync"
+    },
+    {
+      "id": "mt-0001",
+      "channel": "transcript",
+      "received_at": "2027-08-30T10:00:00-06:00",
+      "path": "mt-0001.vtt",
+      "title": "Fulmar standup (transcript)"
+    },
+    {
+      "id": "em-0003",
+      "channel": "email",
+      "received_at": "2027-08-30T10:04:00-06:00",
+      "path": "em-0003.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "ch-0004",
+      "channel": "chat",
+      "received_at": "2027-08-30T10:18:00-06:00",
+      "path": "ch-0004.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0005",
+      "channel": "chat",
+      "received_at": "2027-08-30T10:21:00-06:00",
+      "path": "ch-0005.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0004",
+      "channel": "email",
+      "received_at": "2027-08-30T10:53:00-06:00",
+      "path": "em-0004.eml",
+      "title": "Re: FYI: Fulmar API contract v2"
+    },
+    {
+      "id": "em-0005",
+      "channel": "email",
+      "received_at": "2027-08-30T10:57:00-06:00",
+      "path": "em-0005.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0006",
+      "channel": "email",
+      "received_at": "2027-08-30T12:56:00-06:00",
+      "path": "em-0006.eml",
+      "title": "FYI: Wagtail model allow-list"
+    },
+    {
+      "id": "ch-0006",
+      "channel": "chat",
+      "received_at": "2027-08-30T12:57:00-06:00",
+      "path": "ch-0006.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0007",
+      "channel": "email",
+      "received_at": "2027-08-30T14:18:00-06:00",
+      "path": "em-0007.eml",
+      "title": "[INC-51157] Ticket updated"
+    },
+    {
+      "id": "ch-0007",
+      "channel": "chat",
+      "received_at": "2027-08-30T16:14:00-06:00",
+      "path": "ch-0007.json",
+      "title": "DM: Ottavio Bakker / Amira Baek"
+    },
+    {
+      "id": "mt-0002",
+      "channel": "transcript",
+      "received_at": "2027-08-30T16:45:00-06:00",
+      "path": "mt-0002.vtt",
+      "title": "Catch-up: Amira / Baraka (transcript)"
+    },
+    {
+      "id": "ca-0002",
+      "channel": "calendar",
+      "received_at": "2027-08-30T17:10:00-06:00",
+      "path": "ca-0002.ics",
+      "title": "Invite: Catch-up: Amira / Vitoria"
+    },
+    {
+      "id": "em-0008",
+      "channel": "email",
+      "received_at": "2027-08-30T17:33:00-06:00",
+      "path": "em-0008.eml",
+      "title": "Fwd: Galix deep-dive materials"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+From: Guadalupe Moreau <guadalupe.moreau@lanmoor.birchmere.example>
+To: Alasdair Kaya <alasdair.kaya@birchmere.example>
+Date: Fri, 24 Sep 2027 15:49:00 -0500
+Subject: Re: Splitting out outpatient no-shows discovery
+Message-ID: <em-0112.3@lanmoor.birchmere.example>
+In-Reply-To: <em-0112-prev.3@birchmere.example>
+References: <em-0112-prev.3@birchmere.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Alasdair,
+
+We're splitting Lanmoor Outpatient No-shows Discovery out of Lanmoor Bed
+Management Discovery as its own project, so it can move at its own pace. The
+bed management discovery change request moves over with it.
+
+L
+
+On Thu, 23 Sep 2027 16:08:00 -0500, Alasdair Kaya wrote:
+> Is there anything you need from me on Lanmoor Bed Management Discovery?
+>
+> Alasdair

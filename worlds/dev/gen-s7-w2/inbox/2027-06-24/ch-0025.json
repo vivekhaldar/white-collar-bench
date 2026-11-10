@@ -1,0 +1,42 @@
+{
+ "workspace": "corrstead",
+ "channel": "#alumni-outreach-discovery-core",
+ "kind": "channel",
+ "participants": [
+  "Mere Hidayat",
+  "Hiba Jimenez",
+  "Bolat Oyelami",
+  "Deborah Nurlanov"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-24T14:39:00-08:00",
+   "user": "Mere Hidayat",
+   "handle": "@mere",
+   "text": "@hiba i'll countersign the elmwick data-sharing agreement",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@deborah",
+      "@bolat"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-06-24T14:39:45-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "appreciate it",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-06-24T14:45:45-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

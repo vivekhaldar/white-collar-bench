@@ -2,109 +2,109 @@
   "date": "2027-03-22",
   "artifacts": [
     {
-      "id": "em-0027",
+      "id": "em-0026",
       "channel": "email",
-      "received_at": "2027-03-22T06:59:00-05:00",
-      "path": "em-0027.eml",
+      "received_at": "2027-03-22T07:02:00-05:00",
+      "path": "em-0026.eml",
       "title": "Reminder: Friday status note due Friday 26 March"
     },
     {
-      "id": "em-0028",
-      "channel": "email",
-      "received_at": "2027-03-22T07:44:00-05:00",
-      "path": "em-0028.eml",
-      "title": "Room booking confirmation"
-    },
-    {
-      "id": "em-0029",
+      "id": "em-0027",
       "channel": "email",
       "received_at": "2027-03-22T08:01:00-05:00",
-      "path": "em-0029.eml",
+      "path": "em-0027.eml",
       "title": "Reminder: all-staff meeting Thursday"
-    },
-    {
-      "id": "ca-0002",
-      "channel": "calendar",
-      "received_at": "2027-03-22T08:20:00-05:00",
-      "path": "ca-0002.ics",
-      "title": "Cancelled: Wagtail standup"
-    },
-    {
-      "id": "mn-0005",
-      "channel": "meeting_notes",
-      "received_at": "2027-03-22T09:15:00-05:00",
-      "path": "mn-0005.md",
-      "title": "Recap: Quarterly priorities"
-    },
-    {
-      "id": "em-0030",
-      "channel": "email",
-      "received_at": "2027-03-22T09:36:00-05:00",
-      "path": "em-0030.eml",
-      "title": "Room booking confirmation"
-    },
-    {
-      "id": "ch-0018",
-      "channel": "chat",
-      "received_at": "2027-03-22T09:39:00-05:00",
-      "path": "ch-0018.json",
-      "title": "#general"
-    },
-    {
-      "id": "mt-0006",
-      "channel": "transcript",
-      "received_at": "2027-03-22T11:50:00-05:00",
-      "path": "mt-0006.vtt",
-      "title": "CDS leads call (transcript)"
     },
     {
       "id": "ch-0019",
       "channel": "chat",
-      "received_at": "2027-03-22T12:17:00-05:00",
+      "received_at": "2027-03-22T08:16:00-05:00",
       "path": "ch-0019.json",
-      "title": "DM: Lakshmi Zamora / Hiba Xu"
+      "title": "DM: Anahit Fifita / Hiba Deng"
+    },
+    {
+      "id": "em-0028",
+      "channel": "email",
+      "received_at": "2027-03-22T09:42:00-05:00",
+      "path": "em-0028.eml",
+      "title": "Re: Coffee with Tahmina about prior authorization"
     },
     {
       "id": "ch-0020",
       "channel": "chat",
-      "received_at": "2027-03-22T12:53:00-05:00",
+      "received_at": "2027-03-22T11:35:00-05:00",
       "path": "ch-0020.json",
       "title": "#wagtail-core"
     },
     {
       "id": "ch-0021",
       "channel": "chat",
-      "received_at": "2027-03-22T13:52:00-05:00",
+      "received_at": "2027-03-22T11:44:00-05:00",
       "path": "ch-0021.json",
-      "title": "DM: Mateo Pritchard / Hiba Xu"
+      "title": "#wagtail-core"
+    },
+    {
+      "id": "mt-0007",
+      "channel": "transcript",
+      "received_at": "2027-03-22T11:45:00-05:00",
+      "path": "mt-0007.vtt",
+      "title": "CDS leads call (transcript)"
     },
     {
       "id": "ch-0022",
       "channel": "chat",
-      "received_at": "2027-03-22T14:08:00-05:00",
+      "received_at": "2027-03-22T12:12:00-05:00",
       "path": "ch-0022.json",
-      "title": "#general"
-    },
-    {
-      "id": "em-0031",
-      "channel": "email",
-      "received_at": "2027-03-22T14:23:00-05:00",
-      "path": "em-0031.eml",
-      "title": "Mateo's Okapi test plan"
+      "title": "DM: Rudo Ekwueme / Hiba Deng"
     },
     {
       "id": "ch-0023",
       "channel": "chat",
-      "received_at": "2027-03-22T15:02:00-05:00",
+      "received_at": "2027-03-22T12:38:00-05:00",
       "path": "ch-0023.json",
-      "title": "#general"
+      "title": "#okapi-core"
+    },
+    {
+      "id": "em-0029",
+      "channel": "email",
+      "received_at": "2027-03-22T13:12:00-05:00",
+      "path": "em-0029.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "em-0030",
+      "channel": "email",
+      "received_at": "2027-03-22T13:43:00-05:00",
+      "path": "em-0030.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "ch-0024",
+      "channel": "chat",
+      "received_at": "2027-03-22T14:19:00-05:00",
+      "path": "ch-0024.json",
+      "title": "#okapi-core"
+    },
+    {
+      "id": "em-0031",
+      "channel": "email",
+      "received_at": "2027-03-22T16:17:00-05:00",
+      "path": "em-0031.eml",
+      "title": "Scheduled maintenance this weekend"
     },
     {
       "id": "em-0032",
       "channel": "email",
-      "received_at": "2027-03-22T18:36:00-05:00",
+      "received_at": "2027-03-22T17:03:00-05:00",
       "path": "em-0032.eml",
-      "title": "[REQ-17366] Request resolved"
+      "title": "Re: Falbury Clinical Documentation Discovery: moving to readout"
+    },
+    {
+      "id": "ch-0025",
+      "channel": "chat",
+      "received_at": "2027-03-22T19:06:00-05:00",
+      "path": "ch-0025.json",
+      "title": "#wagtail-core"
     }
   ]
 }

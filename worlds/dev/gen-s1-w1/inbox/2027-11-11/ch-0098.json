@@ -4,7 +4,7 @@
  "kind": "dm",
  "participants": [
   "Yasmin Mokoena",
-  "Camila Quimby"
+  "Camila Abernathy"
  ],
  "messages": [
   {
@@ -15,7 +15,7 @@
   },
   {
    "ts": "2027-11-11T13:16:11-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "hey"
   },
@@ -27,7 +27,7 @@
   },
   {
    "ts": "2027-11-11T13:17:29-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "that'd be great"
   }

@@ -1,0 +1,35 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-anahit-hiba",
+ "kind": "dm",
+ "participants": [
+  "Anahit Fifita",
+  "Hiba Deng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-04-02T14:43:00-05:00",
+   "user": "Anahit Fifita",
+   "handle": "@anahit",
+   "text": "Anahit Jeong will collect two customer references from Marys, as discussed! :)"
+  },
+  {
+   "ts": "2027-04-02T14:43:59-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-04-02T14:47:29-05:00",
+   "user": "Anahit Fifita",
+   "handle": "@anahit",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-04-02T14:49:59-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "no worries"
+  }
+ ]
+}

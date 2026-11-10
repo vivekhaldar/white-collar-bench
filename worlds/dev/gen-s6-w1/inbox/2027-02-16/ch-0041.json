@@ -1,0 +1,35 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-wei",
+ "kind": "dm",
+ "participants": [
+  "Wei Rossi",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-16T08:19:00-08:00",
+   "user": "Wei Rossi",
+   "handle": "@wei",
+   "text": "We're now in signed on Linel Enterprise Agreement."
+  },
+  {
+   "ts": "2027-02-16T08:19:42-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-02-16T08:20:36-08:00",
+   "user": "Wei Rossi",
+   "handle": "@wei",
+   "text": "Linel Enterprise Agreement is complete, thanks all."
+  },
+  {
+   "ts": "2027-02-16T08:21:23-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "good to know"
+  }
+ ]
+}

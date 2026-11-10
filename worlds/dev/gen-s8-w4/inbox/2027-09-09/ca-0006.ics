@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iselmoor//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:87fd252e738ae6b4@iselmoor.example
+DTSTAMP:20270909T172900Z
+DTSTART:20270910T153000Z
+DTEND:20270910T160000Z
+SUMMARY:Catch-up: Amira / Adwoa
+ORGANIZER;CN=Adwoa Kocak:mailto:adwoa.kocak@iselmoor.example
+ATTENDEE;CN=Amira Baek;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:amira.baek@iselmoor.example
+SEQUENCE:0
+DESCRIPTION:Placeholder\, agenda to follow.\nJoin video meeting: https://meet.iselmoor.example/j/9288371000?pwd=SbvB6V8m\nPasscode: 017549
+LOCATION:https://meet.iselmoor.example/j/9288371000?pwd=SbvB6V8m
+END:VEVENT
+END:VCALENDAR

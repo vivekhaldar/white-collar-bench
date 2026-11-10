@@ -1,0 +1,54 @@
+{
+  "date": "2027-09-18",
+  "artifacts": [
+    {
+      "id": "em-0112",
+      "channel": "email",
+      "received_at": "2027-09-18T09:37:00-06:00",
+      "path": "em-0112.eml",
+      "title": "Programme now live"
+    },
+    {
+      "id": "em-0113",
+      "channel": "email",
+      "received_at": "2027-09-18T09:52:00-06:00",
+      "path": "em-0113.eml",
+      "title": "[INC-47009] Ticket updated"
+    },
+    {
+      "id": "ch-0090",
+      "channel": "chat",
+      "received_at": "2027-09-18T10:10:00-06:00",
+      "path": "ch-0090.json",
+      "title": "DM: Kamau Greco / Amira Baek"
+    },
+    {
+      "id": "em-0114",
+      "channel": "email",
+      "received_at": "2027-09-18T10:23:00-06:00",
+      "path": "em-0114.eml",
+      "title": "Fwd: Fulmar change request after Batbayar's comments"
+    },
+    {
+      "id": "ch-0091",
+      "channel": "chat",
+      "received_at": "2027-09-18T12:20:00-06:00",
+      "path": "ch-0091.json",
+      "title": "DM: Thibault Kowalski / Amira Baek"
+    },
+    {
+      "id": "em-0115",
+      "channel": "email",
+      "received_at": "2027-09-18T12:48:00-06:00",
+      "path": "em-0115.eml",
+      "title": "[INC-70641] Ticket updated"
+    },
+    {
+      "id": "nt-0008",
+      "channel": "note",
+      "received_at": "2027-09-18T16:10:00-06:00",
+      "path": "nt-0008.md",
+      "title": "Sat voice memo"
+    }
+  ]
+}

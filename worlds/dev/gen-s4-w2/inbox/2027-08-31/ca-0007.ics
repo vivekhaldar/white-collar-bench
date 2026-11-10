@@ -8,11 +8,11 @@ DTSTAMP:20270831T213300Z
 DTSTART:20270903T000000Z
 DTEND:20270903T003000Z
 SUMMARY:Fjord scoping call
-ORGANIZER;CN=Darius Sherwood:mailto:darius.sherwood@holfield.drayhurst.example
-ATTENDEE;CN=Theresa Nagy;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:theresa.nagy@drayhurst.example
-ATTENDEE;CN=Esperanza Rao;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:esperanza.rao@drayhurst.example
+ORGANIZER;CN=Darius Bramwell:mailto:darius.bramwell@holfield.drayhurst.example
+ATTENDEE;CN=Theresa Petrov;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:theresa.petrov@drayhurst.example
+ATTENDEE;CN=Esperanza Venkataraman;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:esperanza.venkataraman@drayhurst.example
 ATTENDEE;CN=Nomvula Ndlovu;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:nomvula.ndlovu@drayhurst.example
-ATTENDEE;CN=Ottavio Monteiro;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ottavio.monteiro@drayhurst.example
+ATTENDEE;CN=Ottavio Moreira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ottavio.moreira@drayhurst.example
 SEQUENCE:0
 DESCRIPTION:Join video meeting: https://meet.drayhurst.example/j/4657787085?pwd=nxnPKRZr\nPasscode: 409842
 LOCATION:https://meet.drayhurst.example/j/4657787085?pwd=nxnPKRZr

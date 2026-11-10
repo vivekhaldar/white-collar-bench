@@ -3,15 +3,15 @@
  "channel": "#general",
  "kind": "channel",
  "participants": [
-  "Aarav Ortega",
-  "Kirsten Yardley",
+  "Aarav Zamora",
+  "Kirsten Ellery",
   "Fernanda Olawale",
-  "Jalen Hendriks"
+  "Jalen Sandberg"
  ],
  "messages": [
   {
    "ts": "2027-11-06T13:21:59-07:00",
-   "user": "Aarav Ortega",
+   "user": "Aarav Zamora",
    "handle": "@aarav",
    "text": "who left a lunchbox in the fridge since last week?",
    "reactions": [
@@ -26,7 +26,7 @@
   },
   {
    "ts": "2027-11-06T13:25:53-07:00",
-   "user": "Kirsten Yardley",
+   "user": "Kirsten Ellery",
    "handle": "@kirsten",
    "text": "not me!"
   },

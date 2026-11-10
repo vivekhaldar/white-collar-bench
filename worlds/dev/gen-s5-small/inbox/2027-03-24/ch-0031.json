@@ -1,23 +1,40 @@
 {
  "workspace": "iselvale",
- "channel": "dm-anahitt-hiba",
- "kind": "dm",
+ "channel": "#coffee",
+ "kind": "channel",
  "participants": [
-  "Anahit Tanaka",
-  "Hiba Xu"
+  "Tahmina Rosales",
+  "Kwame Zamora",
+  "Friederike Bhatt"
  ],
  "messages": [
   {
-   "ts": "2027-03-24T13:37:55-05:00",
-   "user": "Anahit Tanaka",
-   "handle": "@anahitt",
-   "text": "hello"
+   "ts": "2027-03-24T15:45:47-05:00",
+   "user": "Tahmina Rosales",
+   "handle": "@tahmina",
+   "text": "there's leftover cake in the kitchen on 4",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@kwame",
+      "@friederike"
+     ]
+    }
+   ]
   },
   {
-   "ts": "2027-03-24T13:38:00-05:00",
-   "user": "Anahit Tanaka",
-   "handle": "@anahitt",
-   "text": "just sent you marys volume pricing"
+   "ts": "2027-03-24T15:51:12-05:00",
+   "user": "Kwame Zamora",
+   "handle": "@kwame",
+   "text": "on my way",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-24T15:54:32-05:00",
+   "user": "Friederike Bhatt",
+   "handle": "@friederike",
+   "text": "what kind?"
   }
  ]
 }

@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Kirkmarsh//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:7e62d212bead3e0c@kirkmarsh.example
+DTSTAMP:20271101T184100Z
+DTSTART:20271103T210000Z
+DTEND:20271103T213000Z
+SUMMARY:Catch-up: Aroha / Anh
+ORGANIZER;CN=Anh Villanueva:mailto:anh.villanueva@kirkmarsh.example
+ATTENDEE;CN=Aroha Mendoza;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:aroha.mendoza@kirkmarsh.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.kirkmarsh.example/j/4324132996?pwd=dKcmcHkW\nPasscode: 844181
+LOCATION:https://meet.kirkmarsh.example/j/4324132996?pwd=dKcmcHkW
+END:VEVENT
+END:VCALENDAR

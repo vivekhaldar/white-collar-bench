@@ -2,82 +2,75 @@
   "date": "2027-03-19",
   "artifacts": [
     {
+      "id": "mt-0006",
+      "channel": "transcript",
+      "received_at": "2027-03-19T09:55:00-05:00",
+      "path": "mt-0006.vtt",
+      "title": "Wagtail standup (transcript)"
+    },
+    {
       "id": "em-0018",
       "channel": "email",
-      "received_at": "2027-03-19T08:53:00-05:00",
+      "received_at": "2027-03-19T10:23:00-05:00",
       "path": "em-0018.eml",
-      "title": "[REQ-17883] Request resolved"
+      "title": "[REQ-37046] Request resolved"
+    },
+    {
+      "id": "ch-0015",
+      "channel": "chat",
+      "received_at": "2027-03-19T10:58:00-05:00",
+      "path": "ch-0015.json",
+      "title": "#random"
     },
     {
       "id": "em-0019",
       "channel": "email",
-      "received_at": "2027-03-19T09:12:00-05:00",
+      "received_at": "2027-03-19T11:13:00-05:00",
       "path": "em-0019.eml",
       "title": "Parking lot resurfacing"
     },
     {
       "id": "em-0020",
       "channel": "email",
-      "received_at": "2027-03-19T10:09:00-05:00",
+      "received_at": "2027-03-19T15:29:00-05:00",
       "path": "em-0020.eml",
-      "title": "Fwd: Wagtail one-page summary"
-    },
-    {
-      "id": "mn-0004",
-      "channel": "meeting_notes",
-      "received_at": "2027-03-19T13:00:00-05:00",
-      "path": "mn-0004.md",
-      "title": "Recap: Catch-up: Hiba / Ama"
-    },
-    {
-      "id": "dc-0001",
-      "channel": "document",
-      "received_at": "2027-03-19T14:13:00-05:00",
-      "path": "dc-0001.docx",
-      "title": "Grion demo notes v1",
-      "parent": "em-0021"
+      "title": "[REQ-37278] Request resolved"
     },
     {
       "id": "em-0021",
       "channel": "email",
-      "received_at": "2027-03-19T14:13:00-05:00",
+      "received_at": "2027-03-19T16:25:00-05:00",
       "path": "em-0021.eml",
-      "title": "Grion demo notes"
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "dc-0001",
+      "channel": "document",
+      "received_at": "2027-03-19T16:31:00-05:00",
+      "path": "dc-0001.docx",
+      "title": "Wagtail security review package v1",
+      "parent": "em-0022"
     },
     {
       "id": "em-0022",
       "channel": "email",
-      "received_at": "2027-03-19T14:14:00-05:00",
+      "received_at": "2027-03-19T16:31:00-05:00",
       "path": "em-0022.eml",
-      "title": "[INC-71244] Ticket updated"
-    },
-    {
-      "id": "em-0023",
-      "channel": "email",
-      "received_at": "2027-03-19T15:35:00-05:00",
-      "path": "em-0023.eml",
       "title": "Status note: w/e 19 March"
     },
     {
-      "id": "em-0024",
-      "channel": "email",
-      "received_at": "2027-03-19T16:37:00-05:00",
-      "path": "em-0024.eml",
-      "title": "[INC-80577] Ticket updated"
-    },
-    {
-      "id": "ch-0015",
+      "id": "ch-0016",
       "channel": "chat",
-      "received_at": "2027-03-19T17:36:00-05:00",
-      "path": "ch-0015.json",
-      "title": "#coffee"
+      "received_at": "2027-03-19T18:53:00-05:00",
+      "path": "ch-0016.json",
+      "title": "#wagtail-core"
     },
     {
       "id": "nt-0002",
       "channel": "note",
-      "received_at": "2027-03-19T20:59:00-05:00",
+      "received_at": "2027-03-19T19:59:00-05:00",
       "path": "nt-0002.md",
-      "title": "Fri voice memo"
+      "title": "Fri notes"
     }
   ]
 }

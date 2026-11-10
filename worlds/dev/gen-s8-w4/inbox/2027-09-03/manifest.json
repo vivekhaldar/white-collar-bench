@@ -1,0 +1,104 @@
+{
+  "date": "2027-09-03",
+  "artifacts": [
+    {
+      "id": "em-0034",
+      "channel": "email",
+      "received_at": "2027-09-03T06:36:00-06:00",
+      "path": "em-0034.eml",
+      "title": "[REQ-36368] Request resolved"
+    },
+    {
+      "id": "mt-0004",
+      "channel": "transcript",
+      "received_at": "2027-09-03T09:55:00-06:00",
+      "path": "mt-0004.vtt",
+      "title": "Fulmar standup (transcript)"
+    },
+    {
+      "id": "em-0035",
+      "channel": "email",
+      "received_at": "2027-09-03T10:33:00-06:00",
+      "path": "em-0035.eml",
+      "title": "Re: FYI: Fulmar lessons-learned note after Adwoa's comments"
+    },
+    {
+      "id": "em-0036",
+      "channel": "email",
+      "received_at": "2027-09-03T10:48:00-06:00",
+      "path": "em-0036.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0037",
+      "channel": "email",
+      "received_at": "2027-09-03T11:19:00-06:00",
+      "path": "em-0037.eml",
+      "title": "[INC-64319] Ticket updated"
+    },
+    {
+      "id": "em-0038",
+      "channel": "email",
+      "received_at": "2027-09-03T12:09:00-06:00",
+      "path": "em-0038.eml",
+      "title": "Wellness credit deadline"
+    },
+    {
+      "id": "em-0039",
+      "channel": "email",
+      "received_at": "2027-09-03T12:12:00-06:00",
+      "path": "em-0039.eml",
+      "title": "Re: Wagtail update"
+    },
+    {
+      "id": "em-0040",
+      "channel": "email",
+      "received_at": "2027-09-03T12:40:00-06:00",
+      "path": "em-0040.eml",
+      "title": "[INC-56346] Ticket updated"
+    },
+    {
+      "id": "dc-0002",
+      "channel": "document",
+      "received_at": "2027-09-03T13:53:00-06:00",
+      "path": "dc-0002.xlsx",
+      "title": "Fulmar rollout checklist (draft)",
+      "parent": "em-0041"
+    },
+    {
+      "id": "em-0041",
+      "channel": "email",
+      "received_at": "2027-09-03T13:53:00-06:00",
+      "path": "em-0041.eml",
+      "title": "Fulmar rollout checklist"
+    },
+    {
+      "id": "mn-0004",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-03T14:15:00-06:00",
+      "path": "mn-0004.md",
+      "title": "Recap: Office hours with Thibault"
+    },
+    {
+      "id": "ch-0026",
+      "channel": "chat",
+      "received_at": "2027-09-03T15:04:00-06:00",
+      "path": "ch-0026.json",
+      "title": "#ai-use-core"
+    },
+    {
+      "id": "em-0042",
+      "channel": "email",
+      "received_at": "2027-09-03T17:07:00-06:00",
+      "path": "em-0042.eml",
+      "title": "Status note: w/e 3 September"
+    },
+    {
+      "id": "em-0043",
+      "channel": "email",
+      "received_at": "2027-09-03T18:28:00-06:00",
+      "path": "em-0043.eml",
+      "title": "Fwd: Fulmar single sign-on role mapping"
+    }
+  ]
+}

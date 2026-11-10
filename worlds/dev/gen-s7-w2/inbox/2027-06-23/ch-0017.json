@@ -1,0 +1,35 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-andrei-hiba",
+ "kind": "dm",
+ "participants": [
+  "Andrei Laurent",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-23T11:28:38-08:00",
+   "user": "Andrei Laurent",
+   "handle": "@andrei",
+   "text": "Just to recap, yesterday you said you'd send Bolat Oyelami the Garnet solution brief."
+  },
+  {
+   "ts": "2027-06-23T11:29:54-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "no problem"
+  },
+  {
+   "ts": "2027-06-23T11:31:29-08:00",
+   "user": "Andrei Laurent",
+   "handle": "@andrei",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-06-23T11:33:34-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

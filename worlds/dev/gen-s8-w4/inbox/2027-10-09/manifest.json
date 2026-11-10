@@ -1,0 +1,47 @@
+{
+  "date": "2027-10-09",
+  "artifacts": [
+    {
+      "id": "em-0251",
+      "channel": "email",
+      "received_at": "2027-10-09T10:15:00-06:00",
+      "path": "em-0251.eml",
+      "title": "[INC-59477] Ticket updated"
+    },
+    {
+      "id": "em-0252",
+      "channel": "email",
+      "received_at": "2027-10-09T10:23:00-06:00",
+      "path": "em-0252.eml",
+      "title": "[INC-47690] Ticket updated"
+    },
+    {
+      "id": "em-0253",
+      "channel": "email",
+      "received_at": "2027-10-09T11:18:00-06:00",
+      "path": "em-0253.eml",
+      "title": "[REQ-29408] Request resolved"
+    },
+    {
+      "id": "em-0254",
+      "channel": "email",
+      "received_at": "2027-10-09T11:41:00-06:00",
+      "path": "em-0254.eml",
+      "title": "[INC-84342] Ticket updated"
+    },
+    {
+      "id": "em-0255",
+      "channel": "email",
+      "received_at": "2027-10-09T12:22:00-06:00",
+      "path": "em-0255.eml",
+      "title": "[REQ-23955] Request resolved"
+    },
+    {
+      "id": "ch-0209",
+      "channel": "chat",
+      "received_at": "2027-10-09T18:55:00-06:00",
+      "path": "ch-0209.json",
+      "title": "DM: Shirin Oyelami / Amira Baek"
+    }
+  ]
+}

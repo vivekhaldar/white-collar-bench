@@ -3,16 +3,16 @@
  "channel": "#ai-in-public-service-core",
  "kind": "channel",
  "participants": [
-  "Dina Zimmermann",
-  "Imani Chaiyaporn",
+  "Dina Ricci",
+  "Imani Navarro",
   "Tendai",
-  "Catrin Petrov",
-  "Nomvula Moreira"
+  "Catrin Kuznetsova",
+  "Nomvula Jansen"
  ],
  "messages": [
   {
    "ts": "2027-02-25T18:05:00-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "@imani you mentioned you'd send the ai in public service workshop post-event survey, that works for me",
    "reactions": [
@@ -35,14 +35,14 @@
   },
   {
    "ts": "2027-02-25T18:14:05-07:00",
-   "user": "Catrin Petrov",
+   "user": "Catrin Kuznetsova",
    "handle": "@catrin",
    "text": "thanks for flagging",
    "thread_of": 0
   },
   {
    "ts": "2027-02-25T18:22:28-07:00",
-   "user": "Nomvula Moreira",
+   "user": "Nomvula Jansen",
    "handle": "@nomvula",
    "text": "following",
    "thread_of": 0

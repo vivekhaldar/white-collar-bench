@@ -1,0 +1,61 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Adwoa Kocak"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-16T08:39:53-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-09-16T08:40:31-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-09-16T09:12:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "Just sent you the Fulmar action log.",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@adwoa"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-16T09:12:43-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-09-16T09:12:55-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "i updated the ai-use one-page summary after your comments earlier today"
+  },
+  {
+   "ts": "2027-09-16T09:14:39-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-09-16T09:15:19-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "anytime"
+  }
+ ]
+}

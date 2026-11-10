@@ -1,0 +1,110 @@
+{
+  "date": "2027-08-30",
+  "artifacts": [
+    {
+      "id": "em-0054",
+      "channel": "email",
+      "received_at": "2027-08-30T06:58:00+01:00",
+      "path": "em-0054.eml",
+      "title": "Reminder: Friday status note due Friday 3 September"
+    },
+    {
+      "id": "em-0055",
+      "channel": "email",
+      "received_at": "2027-08-30T08:06:00+01:00",
+      "path": "em-0055.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "nt-0006",
+      "channel": "note",
+      "received_at": "2027-08-30T08:11:00+01:00",
+      "path": "nt-0006.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "ch-0035",
+      "channel": "chat",
+      "received_at": "2027-08-30T08:46:00+01:00",
+      "path": "ch-0035.json",
+      "title": "DM: Aoife Everett / Bisi Volkov"
+    },
+    {
+      "id": "em-0056",
+      "channel": "email",
+      "received_at": "2027-08-30T09:48:00+01:00",
+      "path": "em-0056.eml",
+      "title": "Pantry inventory discovery pain-point list"
+    },
+    {
+      "id": "mt-0010",
+      "channel": "transcript",
+      "received_at": "2027-08-30T09:55:00+01:00",
+      "path": "mt-0010.vtt",
+      "title": "Nettle standup (transcript)"
+    },
+    {
+      "id": "em-0057",
+      "channel": "email",
+      "received_at": "2027-08-30T10:48:00+01:00",
+      "path": "em-0057.eml",
+      "title": "Pipit one-page summary"
+    },
+    {
+      "id": "ch-0036",
+      "channel": "chat",
+      "received_at": "2027-08-30T10:51:00+01:00",
+      "path": "ch-0036.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "em-0058",
+      "channel": "email",
+      "received_at": "2027-08-30T11:59:00+01:00",
+      "path": "em-0058.eml",
+      "title": "[REQ-33206] Request resolved"
+    },
+    {
+      "id": "ca-0002",
+      "channel": "calendar",
+      "received_at": "2027-08-30T13:23:00+01:00",
+      "path": "ca-0002.ics",
+      "title": "Invite: Walkthrough: Pipit one-page summary"
+    },
+    {
+      "id": "em-0059",
+      "channel": "email",
+      "received_at": "2027-08-30T13:42:00+01:00",
+      "path": "em-0059.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "mt-0011",
+      "channel": "transcript",
+      "received_at": "2027-08-30T13:45:00+01:00",
+      "path": "mt-0011.vtt",
+      "title": "Nettle security review (transcript)"
+    },
+    {
+      "id": "mn-0015",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-30T14:00:00+01:00",
+      "path": "mn-0015.md",
+      "title": "Recap: Holworth site visit"
+    },
+    {
+      "id": "em-0060",
+      "channel": "email",
+      "received_at": "2027-08-30T15:39:00+01:00",
+      "path": "em-0060.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "nt-0007",
+      "channel": "note",
+      "received_at": "2027-08-30T18:23:00+01:00",
+      "path": "nt-0007.md",
+      "title": "Mon notes"
+    }
+  ]
+}

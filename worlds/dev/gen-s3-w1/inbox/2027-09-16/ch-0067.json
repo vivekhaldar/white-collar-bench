@@ -1,0 +1,48 @@
+{
+ "workspace": "birchmere",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Dina Laurent",
+  "Nurlan Jansen",
+  "Eun-ji Chen",
+  "Deniz Feng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-16T13:51:00-05:00",
+   "user": "Dina Laurent",
+   "handle": "@dina",
+   "text": "anyone up for coffee at 3? :)",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@nurlan",
+      "@eunji"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-16T13:53:24-05:00",
+   "user": "Nurlan Jansen",
+   "handle": "@nurlan",
+   "text": "me!",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-16T13:59:42-05:00",
+   "user": "Eun-ji Chen",
+   "handle": "@eunji",
+   "text": "can't today, back to back",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-16T14:00:30-05:00",
+   "user": "Deniz Feng",
+   "handle": "@deniz",
+   "text": "yes please"
+  }
+ ]
+}

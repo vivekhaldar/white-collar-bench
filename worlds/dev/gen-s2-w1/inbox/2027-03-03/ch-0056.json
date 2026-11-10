@@ -3,25 +3,25 @@
  "channel": "dm-dina-rudo",
  "kind": "dm",
  "participants": [
-  "Dina Zimmermann",
-  "Rudo Alexiou"
+  "Dina Ricci",
+  "Rudo Thornbury"
  ],
  "messages": [
   {
    "ts": "2027-03-03T15:29:33-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "hey"
   },
   {
    "ts": "2027-03-03T15:30:24-07:00",
-   "user": "Rudo Alexiou",
+   "user": "Rudo Thornbury",
    "handle": "@rudo",
    "text": "hey"
   },
   {
    "ts": "2027-03-03T15:32:00-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "heads up: yael will send you the mistral action log",
    "reactions": [
@@ -35,19 +35,19 @@
   },
   {
    "ts": "2027-03-03T15:32:18-07:00",
-   "user": "Rudo Alexiou",
+   "user": "Rudo Thornbury",
    "handle": "@rudo",
    "text": "great, thank you"
   },
   {
    "ts": "2027-03-03T15:33:57-07:00",
-   "user": "Rudo Alexiou",
+   "user": "Rudo Thornbury",
    "handle": "@rudo",
    "text": "how's your week going?"
   },
   {
    "ts": "2027-03-03T15:35:50-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "busy, but fine. you?"
   }

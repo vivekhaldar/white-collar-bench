@@ -1,23 +1,32 @@
 {
  "workspace": "birchmere",
- "channel": "dm-alasdair-nurlan",
- "kind": "dm",
+ "channel": "#coffee",
+ "kind": "channel",
  "participants": [
-  "Alasdair Kaya",
-  "Nurlan Moreira"
+  "Giorgi Villanueva",
+  "Bisi Chatterjee"
  ],
  "messages": [
   {
-   "ts": "2027-09-10T10:07:00-05:00",
-   "user": "Alasdair Kaya",
-   "handle": "@alasdair",
-   "text": "just sent you the reading list on radiology follow-up"
+   "ts": "2027-09-10T16:45:07-05:00",
+   "user": "Giorgi Villanueva",
+   "handle": "@giorgi",
+   "text": "is the wifi on the second floor down for anyone else?",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@bisi"
+     ]
+    }
+   ]
   },
   {
-   "ts": "2027-09-10T10:07:08-05:00",
-   "user": "Nurlan Moreira",
-   "handle": "@nurlan",
-   "text": "thanks!"
+   "ts": "2027-09-10T16:48:58-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "yep, same here",
+   "thread_of": 0
   }
  ]
 }

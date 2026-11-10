@@ -3,15 +3,15 @@
  "channel": "#general",
  "kind": "channel",
  "participants": [
-  "Magdalena Barbosa",
-  "Teagan Penhallow",
+  "Magdalena Monteiro",
+  "Teagan Alexiou",
   "Mei Wekesa",
-  "Bruna Sinclair"
+  "Bruna Vaughan"
  ],
  "messages": [
   {
    "ts": "2027-09-11T15:18:17-08:00",
-   "user": "Magdalena Barbosa",
+   "user": "Magdalena Monteiro",
    "handle": "@magdalena",
    "text": "lost a blue umbrella, might be in the big meeting room",
    "reactions": [
@@ -26,7 +26,7 @@
   },
   {
    "ts": "2027-09-11T15:19:49-08:00",
-   "user": "Teagan Penhallow",
+   "user": "Teagan Alexiou",
    "handle": "@teagan",
    "text": "will keep an eye out"
   },

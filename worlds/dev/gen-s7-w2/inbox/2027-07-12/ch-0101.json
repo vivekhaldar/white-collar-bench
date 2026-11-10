@@ -1,0 +1,37 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-ewan-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Ewan Laine"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-12T10:28:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "Will walk you through the Garnet stakeholder map.",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@ewan"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-12T10:30:00-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-07-12T10:30:31-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

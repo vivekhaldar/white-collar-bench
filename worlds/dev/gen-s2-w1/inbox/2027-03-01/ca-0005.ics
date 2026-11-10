@@ -8,10 +8,10 @@ DTSTAMP:20270301T145500Z
 DTSTART:20270303T213000Z
 DTEND:20270303T223000Z
 SUMMARY:Funding model options review
-ORGANIZER;CN=Imani Chaiyaporn:mailto:imani.chaiyaporn@vercliff.example
-ATTENDEE;CN=Dina Zimmermann;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.zimmermann@vercliff.example
-ATTENDEE;CN=Yael Yardley;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:yael.yardley@nordale.vercliff.example
-ATTENDEE;CN=Rudo Alexiou;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:rudo.alexiou@nordale.vercliff.example
+ORGANIZER;CN=Imani Navarro:mailto:imani.navarro@vercliff.example
+ATTENDEE;CN=Dina Ricci;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.ricci@vercliff.example
+ATTENDEE;CN=Yael Ellery;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:yael.ellery@nordale.vercliff.example
+ATTENDEE;CN=Rudo Thornbury;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:rudo.thornbury@nordale.vercliff.example
 SEQUENCE:0
 DESCRIPTION:Quick sync\, 30 minutes.\nJoin video meeting: https://meet.vercliff.example/j/8344779077?pwd=NjyxTXya\nPasscode: 995415
 LOCATION:https://meet.vercliff.example/j/8344779077?pwd=NjyxTXya

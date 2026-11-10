@@ -4,12 +4,12 @@
  "kind": "channel",
  "participants": [
   "Yasmin Mokoena",
-  "Camila Quimby",
-  "Jalen Hendriks",
+  "Camila Abernathy",
+  "Jalen Sandberg",
   "Petra Korkmaz",
   "Sipho Sengupta",
-  "Dina Winslow",
-  "Thandiwe Bonnet"
+  "Dina Taufa",
+  "Thandiwe Garnier"
  ],
  "messages": [
   {
@@ -36,7 +36,7 @@
   },
   {
    "ts": "2027-10-26T12:44:26-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "good to know",
    "thread_of": 0

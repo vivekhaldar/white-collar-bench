@@ -3,13 +3,13 @@
  "channel": "dm-camila-jalen",
  "kind": "dm",
  "participants": [
-  "Camila Quimby",
+  "Camila Abernathy",
   "Jalen"
  ],
  "messages": [
   {
    "ts": "2027-10-26T12:41:35-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "hello"
   },
@@ -21,7 +21,7 @@
   },
   {
    "ts": "2027-10-26T12:45:00-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "Will send you the plain language workshop attendee list."
   },
@@ -39,7 +39,7 @@
   },
   {
    "ts": "2027-10-26T12:47:53-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "yep, all good"
   }

@@ -3,13 +3,13 @@
  "channel": "dm-cassandra-dina",
  "kind": "dm",
  "participants": [
-  "Dina Zimmermann",
+  "Dina Ricci",
   "Cassandra Yilmaz"
  ],
  "messages": [
   {
    "ts": "2027-03-12T13:14:00-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "done, i reviewed your mistral timeline"
   },
@@ -21,7 +21,7 @@
   },
   {
    "ts": "2027-03-12T13:16:16-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "how's your week going?"
   },

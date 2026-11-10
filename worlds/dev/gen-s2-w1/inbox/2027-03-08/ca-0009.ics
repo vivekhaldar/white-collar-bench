@@ -8,7 +8,7 @@ DTSTAMP:20270309T032100Z
 DTSTART:20270311T210000Z
 DTEND:20270311T213000Z
 SUMMARY:Walkthrough: Mistral equity impact review
-ORGANIZER;CN=Dina Zimmermann:mailto:dina.zimmermann@vercliff.example
+ORGANIZER;CN=Dina Ricci:mailto:dina.ricci@vercliff.example
 ATTENDEE;CN=Cassandra Yilmaz;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:cassandra.yilmaz@vercliff.example
 SEQUENCE:0
 DESCRIPTION:Quick sync\, 30 minutes.\nJoin video meeting: https://meet.vercliff.example/j/6463405992?pwd=Fn59d8EN\nPasscode: 813326

@@ -3,19 +3,19 @@
  "channel": "dm-camila-jalen",
  "kind": "dm",
  "participants": [
-  "Camila Quimby",
+  "Camila Abernathy",
   "Jalen"
  ],
  "messages": [
   {
    "ts": "2027-11-11T15:23:09-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "hello"
   },
   {
    "ts": "2027-11-11T15:24:00-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "Pulled the Marten training outline into the deck, thanks Jalen.",
    "reactions": [
@@ -41,7 +41,7 @@
   },
   {
    "ts": "2027-11-11T15:28:04-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "only the first half"
   }

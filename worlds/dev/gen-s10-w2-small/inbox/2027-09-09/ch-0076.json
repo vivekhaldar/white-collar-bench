@@ -1,0 +1,53 @@
+{
+ "workspace": "reddale",
+ "channel": "#nettle-core",
+ "kind": "channel",
+ "participants": [
+  "Aoife Everett",
+  "Gaurav Laine",
+  "Akosua",
+  "Douglas Grigoryan",
+  "Bisi Volkov",
+  "Sigrid Asante",
+  "Sipho Papadopoulos",
+  "Adaeze Morimoto",
+  "Bruna Thapa",
+  "Marko Chaiyaporn"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-09T07:14:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "@marko i sent you the nettle privacy review form earlier today"
+  },
+  {
+   "ts": "2027-09-09T07:15:24+01:00",
+   "user": "Bruna Thapa",
+   "handle": "@bruna",
+   "text": "thanks for the heads up",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T07:21:18+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T07:22:19+01:00",
+   "user": "Akosua",
+   "handle": "@akosua",
+   "text": "+1",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T07:31:18+01:00",
+   "user": "Sipho Papadopoulos",
+   "handle": "@sipho",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

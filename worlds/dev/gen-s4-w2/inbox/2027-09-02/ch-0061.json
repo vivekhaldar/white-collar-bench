@@ -3,14 +3,14 @@
  "channel": "#general",
  "kind": "channel",
  "participants": [
-  "Bruna Sinclair",
-  "Teagan Penhallow",
-  "Ewan Shrestha"
+  "Bruna Vaughan",
+  "Teagan Alexiou",
+  "Ewan Naidu"
  ],
  "messages": [
   {
    "ts": "2027-09-02T16:42:41-08:00",
-   "user": "Bruna Sinclair",
+   "user": "Bruna Vaughan",
    "handle": "@bruna",
    "text": "who left a lunchbox in the fridge since last week?",
    "reactions": [
@@ -25,13 +25,13 @@
   },
   {
    "ts": "2027-09-02T16:47:52-08:00",
-   "user": "Teagan Penhallow",
+   "user": "Teagan Alexiou",
    "handle": "@teagan",
    "text": "not me!"
   },
   {
    "ts": "2027-09-02T16:54:01-08:00",
-   "user": "Ewan Shrestha",
+   "user": "Ewan Naidu",
    "handle": "@ewan",
    "text": "it's been there a while"
   }

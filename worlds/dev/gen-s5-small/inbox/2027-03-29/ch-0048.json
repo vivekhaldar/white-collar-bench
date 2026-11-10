@@ -1,0 +1,25 @@
+{
+ "workspace": "iselvale",
+ "channel": "#clinical-documentation-core",
+ "kind": "channel",
+ "participants": [
+  "Isla Faure",
+  "Hiba Deng",
+  "Anahit Fifita",
+  "Rudo Ekwueme"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-29T17:04:00-05:00",
+   "user": "Isla Faure",
+   "handle": "@isla",
+   "text": "@hiba when you get a chance, could you send me the clinical documentation discovery stakeholder map?"
+  },
+  {
+   "ts": "2027-03-29T17:05:18-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "will do"
+  }
+ ]
+}

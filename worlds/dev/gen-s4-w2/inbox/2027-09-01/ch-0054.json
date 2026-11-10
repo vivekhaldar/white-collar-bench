@@ -3,13 +3,13 @@
  "channel": "dm-nomvula-ottavio",
  "kind": "dm",
  "participants": [
-  "Ottavio Monteiro",
+  "Ottavio Moreira",
   "Nomvula Ndlovu"
  ],
  "messages": [
   {
    "ts": "2027-09-01T17:30:00-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "I'll turn around the Fjord API contract v2.",
    "edited": true,
@@ -23,7 +23,7 @@
   },
   {
    "ts": "2027-09-01T17:31:11-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "are you in the office tomorrow?"
   },

@@ -3,49 +3,49 @@
  "channel": "dm-ishaan-ottavio",
  "kind": "dm",
  "participants": [
-  "Ishaan Smit",
-  "Ottavio Monteiro"
+  "Ishaan Bergstrom",
+  "Ottavio Moreira"
  ],
  "messages": [
   {
    "ts": "2027-09-13T08:25:00-08:00",
-   "user": "Ishaan Smit",
+   "user": "Ishaan Bergstrom",
    "handle": "@ishaan",
    "text": "got a sec?"
   },
   {
    "ts": "2027-09-13T08:25:23-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "sure, what's up?"
   },
   {
    "ts": "2027-09-13T08:25:46-08:00",
-   "user": "Ishaan Smit",
+   "user": "Ishaan Bergstrom",
    "handle": "@ishaan",
    "text": "Early Alert Advisory has moved to the fading phase!"
   },
   {
    "ts": "2027-09-13T08:26:41-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "thanks for the heads up"
   },
   {
    "ts": "2027-09-13T08:27:31-08:00",
-   "user": "Ishaan Smit",
+   "user": "Ishaan Bergstrom",
    "handle": "@ishaan",
    "text": "Early Alert Advisory has gone quiet, treat it as dormant for now."
   },
   {
    "ts": "2027-09-13T08:32:27-08:00",
-   "user": "Ishaan Smit",
+   "user": "Ishaan Bergstrom",
    "handle": "@ishaan",
    "text": "thanks again for earlier :)"
   },
   {
    "ts": "2027-09-13T08:35:33-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "anytime"
   }

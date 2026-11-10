@@ -1,0 +1,23 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-sigrid",
+ "kind": "dm",
+ "participants": [
+  "Sigrid Asante",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-11T09:39:00+01:00",
+   "user": "Sigrid Asante",
+   "handle": "@sigrid",
+   "text": "Sipho is expecting you to review their Nettle comms plan."
+  },
+  {
+   "ts": "2027-09-11T09:39:47+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "sure, can do"
+  }
+ ]
+}

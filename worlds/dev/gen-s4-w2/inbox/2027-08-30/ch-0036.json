@@ -3,30 +3,30 @@
  "channel": "#cairn-core",
  "kind": "channel",
  "participants": [
-  "Ratna Bondarenko",
-  "Ottavio Monteiro",
+  "Ratna Nikolic",
+  "Ottavio Moreira",
   "Resi",
-  "Meera Ivanova",
-  "Darius Sherwood",
-  "Bruna Sinclair",
+  "Meera Bondarenko",
+  "Darius Bramwell",
+  "Bruna Vaughan",
   "Nomvula Ndlovu"
  ],
  "messages": [
   {
    "ts": "2027-08-30T12:26:00-08:00",
-   "user": "Ratna Bondarenko",
+   "user": "Ratna Nikolic",
    "handle": "@ratna",
    "text": "looks like bruna configured the cairn sso broker for holfield"
   },
   {
    "ts": "2027-08-30T12:26:43-08:00",
-   "user": "Darius Sherwood",
+   "user": "Darius Bramwell",
    "handle": "@darius",
    "text": "good to know"
   },
   {
    "ts": "2027-08-30T12:33:46-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "thanks for the update",
    "thread_of": 0

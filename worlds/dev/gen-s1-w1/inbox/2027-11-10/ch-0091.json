@@ -3,16 +3,16 @@
  "channel": "#plain-language-workshop-core",
  "kind": "channel",
  "participants": [
-  "Jalen Hendriks",
-  "Camila Quimby",
+  "Jalen Sandberg",
+  "Camila Abernathy",
   "Petra Korkmaz",
   "Sipho Sengupta",
-  "Dina Winslow"
+  "Dina Taufa"
  ],
  "messages": [
   {
    "ts": "2027-11-10T16:40:00-07:00",
-   "user": "Jalen Hendriks",
+   "user": "Jalen Sandberg",
    "handle": "@jalen",
    "text": "plain language workshop is complete, thanks all"
   },
@@ -38,21 +38,21 @@
   },
   {
    "ts": "2027-11-10T16:56:05-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "good to know",
    "thread_of": 0
   },
   {
    "ts": "2027-11-10T16:56:48-07:00",
-   "user": "Jalen Hendriks",
+   "user": "Jalen Sandberg",
    "handle": "@jalen",
    "text": "We're spinning up Plain language Peer Network as a follow-on to Plain Language Workshop. Keeping the relationship with Nantgate warm: introductions, catch-ups and favours. Ongoing.",
    "thread_of": 0
   },
   {
    "ts": "2027-11-10T16:57:06-07:00",
-   "user": "Dina Winslow",
+   "user": "Dina Taufa",
    "handle": "@dina",
    "text": "thanks for the heads up"
   }

@@ -1,0 +1,37 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-anh-aroha",
+ "kind": "dm",
+ "participants": [
+  "Anh",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-18T06:56:50-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-10-18T06:57:56-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-10-18T07:02:00-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "Putri asked if you could send them the Friday status note for w/e 22 October by October 22. :)",
+   "edited": true,
+   "original": "Putri asked if you could send them the Friday status note for w/e 22 October by October 24. :)"
+  },
+  {
+   "ts": "2027-10-18T07:03:01-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "sure, can do"
+  }
+ ]
+}

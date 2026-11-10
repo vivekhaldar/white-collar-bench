@@ -1,0 +1,62 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#fulmar-core",
+ "kind": "channel",
+ "participants": [
+  "Ottavio Bakker",
+  "Amira Baek",
+  "Adwoa Kocak",
+  "Giorgi Wisniewska",
+  "Oksana Hoffmann",
+  "Marcelo Meijer",
+  "Batbayar Galbraith",
+  "Thibault Kowalski",
+  "Kamau Greco",
+  "Shirin Oyelami"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-29T10:15:07-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "catching people up since a few of us are out today :)"
+  },
+  {
+   "ts": "2027-09-29T10:17:00-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "From the sync earlier, Kamau will share the Fulmar access request v2 with Amira.",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@adwoa",
+      "@giorgi",
+      "@amira"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-29T10:18:18-06:00",
+   "user": "Kamau Greco",
+   "handle": "@kamau",
+   "text": "on it",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-09-29T10:18:42-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "Looks like the new privacy officer sent Amira the Fulmar PLC export.",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-09-29T10:19:49-06:00",
+   "user": "Thibault Kowalski",
+   "handle": "@thibault",
+   "text": "got it",
+   "thread_of": 3
+  }
+ ]
+}

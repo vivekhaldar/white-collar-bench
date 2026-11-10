@@ -1,0 +1,49 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-losa",
+ "kind": "dm",
+ "participants": [
+  "Losa Moretti",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-24T14:44:47-08:00",
+   "user": "Losa Moretti",
+   "handle": "@losa",
+   "text": "catching people up since a few of us are out today"
+  },
+  {
+   "ts": "2027-02-24T14:45:00-08:00",
+   "user": "Losa Moretti",
+   "handle": "@losa",
+   "text": "Andres is expecting you to send them the Axolotl course roster export."
+  },
+  {
+   "ts": "2027-02-24T14:45:42-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "yep, on it"
+  },
+  {
+   "ts": "2027-02-24T14:46:14-08:00",
+   "user": "Losa Moretti",
+   "handle": "@losa",
+   "text": "Carys shared the Axolotl LMS integration notes with you, so that one's done.",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@despina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-24T14:47:19-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "got it, thanks"
+  }
+ ]
+}

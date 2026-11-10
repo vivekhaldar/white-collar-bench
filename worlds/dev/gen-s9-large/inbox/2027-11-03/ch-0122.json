@@ -1,0 +1,35 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#clelera-enterprise-core",
+ "kind": "channel",
+ "participants": [
+  "Anh",
+  "Aroha Mendoza",
+  "Kenji Faure",
+  "Ronit Kusuma",
+  "Isabela Mensah",
+  "Mpho Sengupta"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-03T18:30:00-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "FYI Aroha will update the Clelera enterprise agreement term sheet after Isabela's comments! :)"
+  },
+  {
+   "ts": "2027-11-03T18:30:55-05:00",
+   "user": "Mpho Sengupta",
+   "handle": "@mpho",
+   "text": "got it :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-03T18:34:32-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

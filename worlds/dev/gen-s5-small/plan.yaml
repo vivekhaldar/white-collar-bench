@@ -106,7 +106,7 @@ calendar:
   - id: cp3
     date: '2027-04-03'
     label: end of week
-worker: p-hiba-xu
+worker: p-hiba-deng
 orgs:
 - id: o-iselvale-health-partners
   name: Iselvale Health Partners
@@ -204,15 +204,15 @@ orgs:
   - vervale-research.example
   receptiveness: null
 people:
-- id: p-hiba-xu
-  name: Hiba Xu
+- id: p-hiba-deng
+  name: Hiba Deng
   first: Hiba
-  last: Xu
+  last: Deng
   nickname: null
   org: o-clinical-digital-services
   role: Lead Solutions Architect, Shared Services
   role_phrase: null
-  email: hiba.xu@iselvale.example
+  email: hiba.deng@iselvale.example
   handle: '@hiba'
   relationship: null
   group: central
@@ -222,18 +222,18 @@ people:
   voice: terse
   surface_forms:
   - Hiba
-  - H. Xu
-  - hiba.xu@iselvale.example
+  - H. Deng
+  - hiba.deng@iselvale.example
   - '@hiba'
-- id: p-lindiwe-valdez
-  name: Lindiwe Valdez
+- id: p-lindiwe-ribeiro
+  name: Lindiwe Ribeiro
   first: Lindiwe
-  last: Valdez
+  last: Ribeiro
   nickname: null
   org: o-clinical-digital-services
   role: Chief Digital Officer
   role_phrase: the CDO
-  email: lindiwe.valdez@iselvale.example
+  email: lindiwe.ribeiro@iselvale.example
   handle: '@lindiwe'
   relationship: manager
   group: central
@@ -243,19 +243,19 @@ people:
   voice: chatty
   surface_forms:
   - Lindiwe
-  - L. Valdez
-  - lindiwe.valdez@iselvale.example
+  - L. Ribeiro
+  - lindiwe.ribeiro@iselvale.example
   - '@lindiwe'
   - the CDO
-- id: p-anahit-upton
-  name: Anahit Upton
+- id: p-anahit-fifita
+  name: Anahit Fifita
   first: Anahit
-  last: Upton
+  last: Fifita
   nickname: null
   org: o-clinical-digital-services
   role: Director of Digital Programs
   role_phrase: our programs director
-  email: anahit.upton@iselvale.example
+  email: anahit.fifita@iselvale.example
   handle: '@anahit'
   relationship: peer
   group: central
@@ -265,19 +265,19 @@ people:
   voice: chatty
   surface_forms:
   - Anahit
-  - A. Upton
-  - anahit.upton@iselvale.example
+  - A. Fifita
+  - anahit.fifita@iselvale.example
   - '@anahit'
   - our programs director
-- id: p-lakshmi-zamora
-  name: Lakshmi Zamora
+- id: p-lakshmi-figueroa
+  name: Lakshmi Figueroa
   first: Lakshmi
-  last: Zamora
+  last: Figueroa
   nickname: null
   org: o-clinical-digital-services
   role: Principal, Integration Platform
   role_phrase: the platform lead
-  email: lakshmi.zamora@iselvale.example
+  email: lakshmi.figueroa@iselvale.example
   handle: '@lakshmi'
   relationship: peer
   group: central
@@ -287,19 +287,19 @@ people:
   voice: lowercase
   surface_forms:
   - Lakshmi
-  - L. Zamora
-  - lakshmi.zamora@iselvale.example
+  - L. Figueroa
+  - lakshmi.figueroa@iselvale.example
   - '@lakshmi'
   - the platform lead
-- id: p-jisoo-makinen
-  name: Jisoo Makinen
+- id: p-jisoo-nowak
+  name: Jisoo Nowak
   first: Jisoo
-  last: Makinen
+  last: Nowak
   nickname: null
   org: o-clinical-digital-services
   role: Integration Engineer
   role_phrase: the integration engineer
-  email: jisoo.makinen@iselvale.example
+  email: jisoo.nowak@iselvale.example
   handle: '@jisoo'
   relationship: stakeholder
   group: central
@@ -309,19 +309,19 @@ people:
   voice: formal
   surface_forms:
   - Jisoo
-  - J. Makinen
-  - jisoo.makinen@iselvale.example
+  - J. Nowak
+  - jisoo.nowak@iselvale.example
   - '@jisoo'
   - the integration engineer
-- id: p-friederike-malhotra
-  name: Friederike Malhotra
+- id: p-friederike-bhatt
+  name: Friederike Bhatt
   first: Friederike
-  last: Malhotra
+  last: Bhatt
   nickname: Rike
   org: o-clinical-digital-services
   role: Principal, Information Security
   role_phrase: the security principal
-  email: friederike.malhotra@iselvale.example
+  email: friederike.bhatt@iselvale.example
   handle: '@friederike'
   relationship: peer
   group: central
@@ -332,19 +332,19 @@ people:
   surface_forms:
   - Friederike
   - Rike
-  - F. Malhotra
-  - friederike.malhotra@iselvale.example
+  - F. Bhatt
+  - friederike.bhatt@iselvale.example
   - '@friederike'
   - the security principal
-- id: p-maricel-herrera
-  name: Maricel Herrera
+- id: p-maricel-fuentes
+  name: Maricel Fuentes
   first: Maricel
-  last: Herrera
+  last: Fuentes
   nickname: null
   org: o-clinical-digital-services
   role: Product Lead, Clinical Apps
   role_phrase: the product lead
-  email: maricel.herrera@iselvale.example
+  email: maricel.fuentes@iselvale.example
   handle: '@maricel'
   relationship: peer
   group: central
@@ -354,19 +354,19 @@ people:
   voice: chatty
   surface_forms:
   - Maricel
-  - M. Herrera
-  - maricel.herrera@iselvale.example
+  - M. Fuentes
+  - maricel.fuentes@iselvale.example
   - '@maricel'
   - the product lead
-- id: p-kwame-ortega
-  name: Kwame Ortega
+- id: p-kwame-zamora
+  name: Kwame Zamora
   first: Kwame
-  last: Ortega
+  last: Zamora
   nickname: null
   org: o-clinical-digital-services
   role: Executive Assistant to the CDO
   role_phrase: the CDO's EA
-  email: kwame.ortega@iselvale.example
+  email: kwame.zamora@iselvale.example
   handle: '@kwame'
   relationship: assistant
   group: central
@@ -376,8 +376,8 @@ people:
   voice: lowercase
   surface_forms:
   - Kwame
-  - K. Ortega
-  - kwame.ortega@iselvale.example
+  - K. Zamora
+  - kwame.zamora@iselvale.example
   - '@kwame'
   - the CDO's EA
 - id: p-cds-shared-inbox
@@ -400,15 +400,15 @@ people:
   - CDS Team
   - the CDS inbox
   - cds-team@iselvale.example
-- id: p-tahmina-lozano
-  name: Tahmina Lozano
+- id: p-tahmina-rosales
+  name: Tahmina Rosales
   first: Tahmina
-  last: Lozano
+  last: Rosales
   nickname: null
   org: o-iselvale-health-partners
   role: Supply Chain Contracts Manager
   role_phrase: the contracts manager
-  email: tahmina.lozano@iselvale.example
+  email: tahmina.rosales@iselvale.example
   handle: '@tahmina'
   relationship: stakeholder
   group: functional
@@ -418,19 +418,19 @@ people:
   voice: terse
   surface_forms:
   - Tahmina
-  - T. Lozano
-  - tahmina.lozano@iselvale.example
+  - T. Rosales
+  - tahmina.rosales@iselvale.example
   - '@tahmina'
   - the contracts manager
-- id: p-dragan-siregar
-  name: Dragan Siregar
+- id: p-dragan-herrera
+  name: Dragan Herrera
   first: Dragan
-  last: Siregar
+  last: Herrera
   nickname: null
   org: o-iselvale-health-partners
   role: Associate General Counsel
   role_phrase: network counsel
-  email: dragan.siregar@iselvale.example
+  email: dragan.herrera@iselvale.example
   handle: '@dragan'
   relationship: stakeholder
   group: functional
@@ -440,20 +440,20 @@ people:
   voice: chatty
   surface_forms:
   - Dragan
-  - D. Siregar
-  - dragan.siregar@iselvale.example
+  - D. Herrera
+  - dragan.herrera@iselvale.example
   - '@dragan'
   - network counsel
-- id: p-declan-byrne
-  name: Declan Byrne
-  first: Declan
-  last: Byrne
+- id: p-marcelo-brandao
+  name: Marcelo Brandao
+  first: Marcelo
+  last: Brandao
   nickname: null
   org: o-iselvale-health-partners
   role: Director, Finance Shared Services
   role_phrase: the finance director
-  email: declan.byrne@iselvale.example
-  handle: '@declan'
+  email: marcelo.brandao@iselvale.example
+  handle: '@marcelo'
   relationship: stakeholder
   group: functional
   tier: core
@@ -461,131 +461,130 @@ people:
   appears: null
   voice: terse
   surface_forms:
-  - Declan
-  - D. Byrne
-  - declan.byrne@iselvale.example
-  - '@declan'
+  - Marcelo
+  - M. Brandao
+  - marcelo.brandao@iselvale.example
+  - '@marcelo'
   - the finance director
-- id: p-nikhil-sahin
-  name: Nikhil Sahin
-  first: Nikhil
-  last: Sahin
-  nickname: Nik
+- id: p-femi-laurent
+  name: Femi Laurent
+  first: Femi
+  last: Laurent
+  nickname: null
   org: o-iselvale-health-partners
   role: Talent Acquisition Partner
   role_phrase: our talent partner
-  email: nikhil.sahin@iselvale.example
-  handle: '@nikhil'
+  email: femi.laurent@iselvale.example
+  handle: '@femi'
   relationship: stakeholder
   group: functional
   tier: core
   weight: 0.9
   appears: null
-  voice: formal
+  voice: terse
   surface_forms:
-  - Nikhil
-  - Nik
-  - N. Sahin
-  - nikhil.sahin@iselvale.example
-  - '@nikhil'
+  - Femi
+  - F. Laurent
+  - femi.laurent@iselvale.example
+  - '@femi'
   - our talent partner
-- id: p-aylin-venkataraman
-  name: Aylin Venkataraman
+- id: p-aylin-kocak
+  name: Aylin Kocak
   first: Aylin
-  last: Venkataraman
+  last: Kocak
   nickname: null
   org: o-iselvale-health-partners
   role: Network Privacy Officer
   role_phrase: the privacy officer
-  email: aylin.venkataraman@iselvale.example
+  email: aylin.kocak@iselvale.example
   handle: '@aylin'
   relationship: stakeholder
   group: functional
   tier: core
   weight: 0.9
   appears: null
-  voice: chatty
+  voice: formal
   surface_forms:
   - Aylin
-  - A. Venkataraman
-  - aylin.venkataraman@iselvale.example
+  - A. Kocak
+  - aylin.kocak@iselvale.example
   - '@aylin'
   - the privacy officer
-- id: p-isla-mercier
-  name: Isla Mercier
-  first: Isla
-  last: Mercier
+- id: p-rodrigo-okada
+  name: Rodrigo Okada
+  first: Rodrigo
+  last: Okada
   nickname: null
   org: o-falbury-community-clinics
   role: Chief Medical Information Officer
   role_phrase: Falbury's CMIO
-  email: isla.mercier@falbury.iselvale.example
-  handle: '@isla'
+  email: rodrigo.okada@falbury.iselvale.example
+  handle: '@rodrigo'
   relationship: executive
   group: unit
   tier: core
   weight: 0.7
   appears: null
-  voice: chatty
+  voice: formal
   surface_forms:
-  - Isla
-  - I. Mercier
-  - isla.mercier@falbury.iselvale.example
-  - '@isla'
+  - Rodrigo
+  - R. Okada
+  - rodrigo.okada@falbury.iselvale.example
+  - '@rodrigo'
   - Falbury's CMIO
-- id: p-ama-forsythe
-  name: Ama Forsythe
-  first: Ama
-  last: Forsythe
+- id: p-isla-faure
+  name: Isla Faure
+  first: Isla
+  last: Faure
   nickname: null
   org: o-falbury-community-clinics
-  role: Director of Pharmacy
+  role: Chief Nursing Officer
   role_phrase: the Falbury lead
-  email: ama.forsythe@falbury.iselvale.example
-  handle: '@ama'
+  email: isla.faure@falbury.iselvale.example
+  handle: '@isla'
   relationship: stakeholder
   group: unit
   tier: core
   weight: 2.4
   appears: null
-  voice: formal
+  voice: chatty
   surface_forms:
-  - Ama
-  - A. Forsythe
-  - ama.forsythe@falbury.iselvale.example
-  - '@ama'
+  - Isla
+  - I. Faure
+  - isla.faure@falbury.iselvale.example
+  - '@isla'
   - the Falbury lead
-- id: p-mateo-pritchard
-  name: Mateo Pritchard
-  first: Mateo
-  last: Pritchard
+- id: p-rudo-ekwueme
+  name: Rudo Ekwueme
+  first: Rudo
+  last: Ekwueme
   nickname: null
   org: o-falbury-community-clinics
-  role: Nurse Informaticist
+  role: Revenue Cycle Analyst
   role_phrase: null
-  email: mateo.pritchard@falbury.iselvale.example
-  handle: '@mateo'
+  email: rudo.ekwueme@falbury.iselvale.example
+  handle: '@rudo'
   relationship: stakeholder
   group: unit
   tier: core
   weight: 1.0
   appears: null
-  voice: terse
+  voice: lowercase
   surface_forms:
-  - Mateo
-  - M. Pritchard
-  - mateo.pritchard@falbury.iselvale.example
-  - '@mateo'
-- id: p-idris-el-amin
-  name: Idris El-Amin
-  first: Idris
-  last: El-Amin
+  - Rudo
+  - R. Ekwueme
+  - rudo.ekwueme@falbury.iselvale.example
+  - '@rudo'
+- id: p-minji-kalua
+  name: Minji Kalua
+  first: Minji
+  last: Kalua
   nickname: null
   org: o-talton-rehabilitation-center
   role: Chief Medical Information Officer
   role_phrase: Talton's CMIO
-  email: idris.elamin@talton.iselvale.example
-  handle: '@idris'
+  email: minji.kalua@talton.iselvale.example
+  handle: '@minji'
   relationship: executive
   group: unit
   tier: core
@@ -593,10 +592,10 @@ people:
   appears: null
   voice: lowercase
   surface_forms:
-  - Idris
-  - I. El-Amin
-  - idris.elamin@talton.iselvale.example
-  - '@idris'
+  - Minji
+  - M. Kalua
+  - minji.kalua@talton.iselvale.example
+  - '@minji'
   - Talton's CMIO
 - id: p-burak-jaber
   name: Burak Jaber
@@ -604,7 +603,7 @@ people:
   last: Jaber
   nickname: null
   org: o-talton-rehabilitation-center
-  role: Operations Director
+  role: Clinical Informatics Lead
   role_phrase: the Talton lead
   email: burak.jaber@talton.iselvale.example
   handle: '@burak'
@@ -620,15 +619,15 @@ people:
   - burak.jaber@talton.iselvale.example
   - '@burak'
   - the Talton lead
-- id: p-eileen-jovanovic
-  name: Eileen Jovanovic
+- id: p-eileen-babic
+  name: Eileen Babic
   first: Eileen
-  last: Jovanovic
+  last: Babic
   nickname: null
   org: o-talton-rehabilitation-center
   role: Service Desk Lead
   role_phrase: null
-  email: eileen.jovanovic@talton.iselvale.example
+  email: eileen.babic@talton.iselvale.example
   handle: '@eileen'
   relationship: stakeholder
   group: unit
@@ -638,8 +637,8 @@ people:
   voice: formal
   surface_forms:
   - Eileen
-  - E. Jovanovic
-  - eileen.jovanovic@talton.iselvale.example
+  - E. Babic
+  - eileen.babic@talton.iselvale.example
   - '@eileen'
 - id: p-cem-haidari
   name: Cem Haidari
@@ -663,38 +662,38 @@ people:
   - cem.haidari@garfield.iselvale.example
   - '@cem'
   - Garfield's CMIO
-- id: p-ciaran-rocha
-  name: Ciaran Rocha
-  first: Ciaran
-  last: Rocha
+- id: p-sneha-arslan
+  name: Sneha Arslan
+  first: Sneha
+  last: Arslan
   nickname: null
   org: o-garfield-general-hospital
-  role: Chief Nursing Officer
+  role: Director of Pharmacy
   role_phrase: the Garfield lead
-  email: ciaran.rocha@garfield.iselvale.example
-  handle: '@ciaran'
+  email: sneha.arslan@garfield.iselvale.example
+  handle: '@sneha'
   relationship: stakeholder
   group: unit
   tier: core
   weight: 1.3
   appears: null
-  voice: terse
+  voice: chatty
   surface_forms:
-  - Ciaran
-  - C. Rocha
-  - ciaran.rocha@garfield.iselvale.example
-  - '@ciaran'
+  - Sneha
+  - S. Arslan
+  - sneha.arslan@garfield.iselvale.example
+  - '@sneha'
   - the Garfield lead
-- id: p-mei-asante
-  name: Mei Asante
-  first: Mei
-  last: Asante
+- id: p-kofi-horvath
+  name: Kofi Horvath
+  first: Kofi
+  last: Horvath
   nickname: null
   org: o-garfield-general-hospital
-  role: Revenue Cycle Analyst
+  role: Nurse Informaticist
   role_phrase: null
-  email: mei.asante@garfield.iselvale.example
-  handle: '@mei'
+  email: kofi.horvath@garfield.iselvale.example
+  handle: '@kofi'
   relationship: stakeholder
   group: unit
   tier: core
@@ -702,20 +701,20 @@ people:
   appears: null
   voice: chatty
   surface_forms:
-  - Mei
-  - M. Asante
-  - mei.asante@garfield.iselvale.example
-  - '@mei'
-- id: p-anahit-tanaka
-  name: Anahit Tanaka
+  - Kofi
+  - K. Horvath
+  - kofi.horvath@garfield.iselvale.example
+  - '@kofi'
+- id: p-anahit-jeong
+  name: Anahit Jeong
   first: Anahit
-  last: Tanaka
+  last: Jeong
   nickname: null
   org: o-marys-health
   role: Account Executive
   role_phrase: null
-  email: anahit.tanaka@marys.example
-  handle: '@anahitt'
+  email: anahit.jeong@marys.example
+  handle: '@anahitj'
   relationship: vendor
   group: vendor
   tier: core
@@ -724,9 +723,9 @@ people:
   voice: lowercase
   surface_forms:
   - Anahit
-  - A. Tanaka
-  - anahit.tanaka@marys.example
-  - '@anahitt'
+  - A. Jeong
+  - anahit.jeong@marys.example
+  - '@anahitj'
 - id: p-baraka-krishnan
   name: Baraka Krishnan
   first: Baraka
@@ -748,15 +747,15 @@ people:
   - B. Krishnan
   - baraka.krishnan@marys.example
   - '@baraka'
-- id: p-petra-greco
-  name: Petra Greco
+- id: p-petra-moretti
+  name: Petra Moretti
   first: Petra
-  last: Greco
+  last: Moretti
   nickname: null
   org: o-grion-systems
   role: Account Executive
   role_phrase: null
-  email: petra.greco@grion.example
+  email: petra.moretti@grion.example
   handle: '@petra'
   relationship: vendor
   group: vendor
@@ -766,19 +765,19 @@ people:
   voice: formal
   surface_forms:
   - Petra
-  - P. Greco
-  - petra.greco@grion.example
+  - P. Moretti
+  - petra.moretti@grion.example
   - '@petra'
-- id: p-burak-kuznetsova
-  name: Burak Kuznetsova
+- id: p-burak-petrovic
+  name: Burak Petrovic
   first: Burak
-  last: Kuznetsova
+  last: Petrovic
   nickname: null
   org: o-grion-systems
   role: Solutions Engineer
   role_phrase: null
-  email: burak.kuznetsova@grion.example
-  handle: '@burakk'
+  email: burak.petrovic@grion.example
+  handle: '@burakp'
   relationship: vendor
   group: vendor
   tier: core
@@ -787,18 +786,18 @@ people:
   voice: lowercase
   surface_forms:
   - Burak
-  - B. Kuznetsova
-  - burak.kuznetsova@grion.example
-  - '@burakk'
-- id: p-aileen-hossain
-  name: Aileen Hossain
+  - B. Petrovic
+  - burak.petrovic@grion.example
+  - '@burakp'
+- id: p-aileen-karunaratne
+  name: Aileen Karunaratne
   first: Aileen
-  last: Hossain
+  last: Karunaratne
   nickname: null
   org: o-clinical-digital-services
   role: Clinical Data Analyst
   role_phrase: our clinical analyst
-  email: aileen.hossain@iselvale.example
+  email: aileen.karunaratne@iselvale.example
   handle: '@aileen'
   relationship: peer
   group: central
@@ -808,19 +807,19 @@ people:
   voice: lowercase
   surface_forms:
   - Aileen
-  - A. Hossain
-  - aileen.hossain@iselvale.example
+  - A. Karunaratne
+  - aileen.karunaratne@iselvale.example
   - '@aileen'
   - our clinical analyst
-- id: p-elena-bhatt
-  name: Elena Bhatt
+- id: p-elena-chaudhry
+  name: Elena Chaudhry
   first: Elena
-  last: Bhatt
+  last: Chaudhry
   nickname: null
   org: o-vervale-institute-for-health-services-research
   role: Senior Research Scientist
   role_phrase: null
-  email: elena.bhatt@vervale-research.example
+  email: elena.chaudhry@vervale-research.example
   handle: '@elena'
   relationship: partner
   group: partner
@@ -830,18 +829,18 @@ people:
   voice: lowercase
   surface_forms:
   - Elena
-  - E. Bhatt
-  - elena.bhatt@vervale-research.example
+  - E. Chaudhry
+  - elena.chaudhry@vervale-research.example
   - '@elena'
-- id: p-tyrone-fraser
-  name: Tyrone Fraser
+- id: p-tyrone-pritchard
+  name: Tyrone Pritchard
   first: Tyrone
-  last: Fraser
+  last: Pritchard
   nickname: null
   org: null
   role: Candidate
   role_phrase: null
-  email: tyrone.fraser@post.example
+  email: tyrone.pritchard@post.example
   handle: '@tyrone'
   relationship: candidate
   group: candidate
@@ -851,18 +850,18 @@ people:
   voice: chatty
   surface_forms:
   - Tyrone
-  - T. Fraser
-  - tyrone.fraser@post.example
+  - T. Pritchard
+  - tyrone.pritchard@post.example
   - '@tyrone'
-- id: p-giorgi-morimoto
-  name: Giorgi Morimoto
+- id: p-giorgi-choi
+  name: Giorgi Choi
   first: Giorgi
-  last: Morimoto
+  last: Choi
   nickname: null
   org: o-falbury-community-clinics
   role: Privacy Officer
   role_phrase: the new privacy officer
-  email: giorgi.morimoto@falbury.iselvale.example
+  email: giorgi.choi@falbury.iselvale.example
   handle: '@giorgi'
   relationship: stakeholder
   group: newcomer
@@ -872,19 +871,19 @@ people:
   voice: formal
   surface_forms:
   - Giorgi
-  - G. Morimoto
-  - giorgi.morimoto@falbury.iselvale.example
+  - G. Choi
+  - giorgi.choi@falbury.iselvale.example
   - '@giorgi'
   - the new privacy officer
-- id: p-bruna-smit
-  name: Bruna Smit
+- id: p-bruna-bergstrom
+  name: Bruna Bergstrom
   first: Bruna
-  last: Smit
+  last: Bergstrom
   nickname: null
   org: null
   role: Editor, Clinical IT Briefing
   role_phrase: null
-  email: bruna.smit@newsletters.example
+  email: bruna.bergstrom@newsletters.example
   handle: '@bruna'
   relationship: null
   group: minor
@@ -893,7 +892,7 @@ people:
   appears: null
   voice: terse
   surface_forms:
-  - bruna.smit@newsletters.example
+  - bruna.bergstrom@newsletters.example
   minor_kind: newsletter
 - id: p-iselvale-it-service-desk
   name: Iselvale IT Service Desk
@@ -952,16 +951,16 @@ people:
   surface_forms:
   - news@iselvale.example
   minor_kind: comms
-- id: p-kofi-conti
-  name: Kofi Conti
-  first: Kofi
-  last: Conti
+- id: p-theodora-vu
+  name: Theodora Vu
+  first: Theodora
+  last: Vu
   nickname: null
   org: null
   role: Events Coordinator
   role_phrase: null
-  email: kofi.conti@iselvale.example
-  handle: '@kofi'
+  email: theodora.vu@iselvale.example
+  handle: '@theodora'
   relationship: null
   group: minor
   tier: minor
@@ -969,7 +968,7 @@ people:
   appears: null
   voice: chatty
   surface_forms:
-  - kofi.conti@iselvale.example
+  - theodora.vu@iselvale.example
   minor_kind: events
 projects:
 - id: pr-wagtail
@@ -993,18 +992,18 @@ projects:
   - o-grion-systems
   - o-marys-health
   partner: o-vervale-institute-for-health-services-research
-  owner: p-ama-forsythe
-  sponsor: p-lindiwe-valdez
+  owner: p-isla-faure
+  sponsor: p-lindiwe-ribeiro
   members:
-  - p-hiba-xu
-  - p-ama-forsythe
-  - p-anahit-upton
-  - p-mateo-pritchard
-  - p-lakshmi-zamora
-  - p-friederike-malhotra
-  - p-jisoo-makinen
-  - p-maricel-herrera
-  - p-isla-mercier
+  - p-hiba-deng
+  - p-isla-faure
+  - p-anahit-fifita
+  - p-rudo-ekwueme
+  - p-lakshmi-figueroa
+  - p-friederike-bhatt
+  - p-jisoo-nowak
+  - p-maricel-fuentes
+  - p-rodrigo-okada
   orgs:
   - o-falbury-community-clinics
   status: active
@@ -1012,29 +1011,29 @@ projects:
   target_date: '2027-04-21'
   n: 4
   cast:
-    owner: p-ama-forsythe
-    sponsor: p-lindiwe-valdez
-    lead: p-ama-forsythe
+    owner: p-isla-faure
+    sponsor: p-lindiwe-ribeiro
+    lead: p-isla-faure
     unit:
-    - p-mateo-pritchard
-    - p-ama-forsythe
+    - p-rudo-ekwueme
+    - p-isla-faure
     ae:
-    - p-petra-greco
-    - p-anahit-tanaka
+    - p-petra-moretti
+    - p-anahit-jeong
     se:
-    - p-burak-kuznetsova
+    - p-burak-petrovic
     - p-baraka-krishnan
-    eng: p-lakshmi-zamora
-    sec: p-friederike-malhotra
-    privacy: p-aylin-venkataraman
-    legal: p-dragan-siregar
-    proc: p-tahmina-lozano
-    fin: p-declan-byrne
-    hr: p-nikhil-sahin
-    ea: p-kwame-ortega
-    collab: p-anahit-upton
-    partner: p-elena-bhatt
-    cand: p-tyrone-fraser
+    eng: p-lakshmi-figueroa
+    sec: p-friederike-bhatt
+    privacy: p-aylin-kocak
+    legal: p-dragan-herrera
+    proc: p-tahmina-rosales
+    fin: p-marcelo-brandao
+    hr: p-femi-laurent
+    ea: p-kwame-zamora
+    collab: p-anahit-fifita
+    partner: p-elena-chaudhry
+    cand: p-tyrone-pritchard
   weight: 31.22
   start: '2027-03-15'
 - id: pr-okapi
@@ -1058,45 +1057,45 @@ projects:
   - o-marys-health
   - o-grion-systems
   partner: o-vervale-institute-for-health-services-research
-  owner: p-lakshmi-zamora
-  sponsor: p-lindiwe-valdez
+  owner: p-lakshmi-figueroa
+  sponsor: p-lindiwe-ribeiro
   members:
-  - p-hiba-xu
-  - p-lakshmi-zamora
-  - p-anahit-upton
-  - p-ama-forsythe
-  - p-mateo-pritchard
-  - p-jisoo-makinen
-  - p-friederike-malhotra
+  - p-hiba-deng
+  - p-lakshmi-figueroa
+  - p-anahit-fifita
+  - p-isla-faure
+  - p-rudo-ekwueme
+  - p-jisoo-nowak
+  - p-friederike-bhatt
   orgs: []
   status: active
   phase: onboarding tenants
   target_date: null
   n: 2
   cast:
-    owner: p-lakshmi-zamora
-    sponsor: p-lindiwe-valdez
-    lead: p-ama-forsythe
+    owner: p-lakshmi-figueroa
+    sponsor: p-lindiwe-ribeiro
+    lead: p-isla-faure
     unit:
-    - p-mateo-pritchard
-    - p-ama-forsythe
+    - p-rudo-ekwueme
+    - p-isla-faure
     ae:
-    - p-anahit-tanaka
-    - p-petra-greco
+    - p-anahit-jeong
+    - p-petra-moretti
     se:
     - p-baraka-krishnan
-    - p-burak-kuznetsova
-    eng: p-jisoo-makinen
-    sec: p-friederike-malhotra
-    privacy: p-aylin-venkataraman
-    legal: p-dragan-siregar
-    proc: p-tahmina-lozano
-    fin: p-declan-byrne
-    hr: p-nikhil-sahin
-    ea: p-kwame-ortega
-    collab: p-anahit-upton
-    partner: p-elena-bhatt
-    cand: p-tyrone-fraser
+    - p-burak-petrovic
+    eng: p-jisoo-nowak
+    sec: p-friederike-bhatt
+    privacy: p-aylin-kocak
+    legal: p-dragan-herrera
+    proc: p-tahmina-rosales
+    fin: p-marcelo-brandao
+    hr: p-femi-laurent
+    ea: p-kwame-zamora
+    collab: p-anahit-fifita
+    partner: p-elena-chaudhry
+    cand: p-tyrone-pritchard
   weight: 12.86
   start: '2027-03-15'
 - id: pr-nurse-scheduling-tool-selection
@@ -1119,15 +1118,15 @@ projects:
   - o-grion-systems
   - o-marys-health
   partner: o-vervale-institute-for-health-services-research
-  owner: p-ama-forsythe
-  sponsor: p-lindiwe-valdez
+  owner: p-isla-faure
+  sponsor: p-lindiwe-ribeiro
   members:
-  - p-hiba-xu
-  - p-ama-forsythe
-  - p-anahit-upton
-  - p-mateo-pritchard
-  - p-petra-greco
-  - p-tahmina-lozano
+  - p-hiba-deng
+  - p-isla-faure
+  - p-anahit-fifita
+  - p-rudo-ekwueme
+  - p-petra-moretti
+  - p-tahmina-rosales
   orgs:
   - o-falbury-community-clinics
   - o-grion-systems
@@ -1137,29 +1136,29 @@ projects:
   target_date: '2027-04-09'
   n: 2
   cast:
-    owner: p-ama-forsythe
-    sponsor: p-lindiwe-valdez
-    lead: p-ama-forsythe
+    owner: p-isla-faure
+    sponsor: p-lindiwe-ribeiro
+    lead: p-isla-faure
     unit:
-    - p-mateo-pritchard
-    - p-ama-forsythe
+    - p-rudo-ekwueme
+    - p-isla-faure
     ae:
-    - p-petra-greco
-    - p-anahit-tanaka
+    - p-petra-moretti
+    - p-anahit-jeong
     se:
-    - p-burak-kuznetsova
+    - p-burak-petrovic
     - p-baraka-krishnan
-    eng: p-lakshmi-zamora
-    sec: p-friederike-malhotra
-    privacy: p-aylin-venkataraman
-    legal: p-dragan-siregar
-    proc: p-tahmina-lozano
-    fin: p-declan-byrne
-    hr: p-nikhil-sahin
-    ea: p-kwame-ortega
-    collab: p-anahit-upton
-    partner: p-elena-bhatt
-    cand: p-tyrone-fraser
+    eng: p-lakshmi-figueroa
+    sec: p-friederike-bhatt
+    privacy: p-aylin-kocak
+    legal: p-dragan-herrera
+    proc: p-tahmina-rosales
+    fin: p-marcelo-brandao
+    hr: p-femi-laurent
+    ea: p-kwame-zamora
+    collab: p-anahit-fifita
+    partner: p-elena-chaudhry
+    cand: p-tyrone-pritchard
   weight: 8.12
   start: '2027-03-15'
 - id: pr-falbury-clinical-documentation-discovery
@@ -1182,14 +1181,14 @@ projects:
   - o-marys-health
   - o-grion-systems
   partner: o-vervale-institute-for-health-services-research
-  owner: p-hiba-xu
-  sponsor: p-lindiwe-valdez
+  owner: p-hiba-deng
+  sponsor: p-lindiwe-ribeiro
   members:
-  - p-hiba-xu
-  - p-hiba-xu
-  - p-anahit-upton
-  - p-ama-forsythe
-  - p-mateo-pritchard
+  - p-hiba-deng
+  - p-hiba-deng
+  - p-anahit-fifita
+  - p-isla-faure
+  - p-rudo-ekwueme
   orgs:
   - o-falbury-community-clinics
   status: active
@@ -1197,29 +1196,29 @@ projects:
   target_date: '2027-05-05'
   n: 2
   cast:
-    owner: p-hiba-xu
-    sponsor: p-lindiwe-valdez
-    lead: p-ama-forsythe
+    owner: p-hiba-deng
+    sponsor: p-lindiwe-ribeiro
+    lead: p-isla-faure
     unit:
-    - p-mateo-pritchard
-    - p-ama-forsythe
+    - p-rudo-ekwueme
+    - p-isla-faure
     ae:
-    - p-anahit-tanaka
-    - p-petra-greco
+    - p-anahit-jeong
+    - p-petra-moretti
     se:
     - p-baraka-krishnan
-    - p-burak-kuznetsova
-    eng: p-lakshmi-zamora
-    sec: p-friederike-malhotra
-    privacy: p-aylin-venkataraman
-    legal: p-dragan-siregar
-    proc: p-tahmina-lozano
-    fin: p-declan-byrne
-    hr: p-nikhil-sahin
-    ea: p-kwame-ortega
-    collab: p-anahit-upton
-    partner: p-elena-bhatt
-    cand: p-tyrone-fraser
+    - p-burak-petrovic
+    eng: p-lakshmi-figueroa
+    sec: p-friederike-bhatt
+    privacy: p-aylin-kocak
+    legal: p-dragan-herrera
+    proc: p-tahmina-rosales
+    fin: p-marcelo-brandao
+    hr: p-femi-laurent
+    ea: p-kwame-zamora
+    collab: p-anahit-fifita
+    partner: p-elena-chaudhry
+    cand: p-tyrone-pritchard
   weight: 8.19
   start: '2027-03-15'
 - id: pr-okapi-operating-model-review
@@ -1242,13 +1241,13 @@ projects:
   - o-marys-health
   - o-grion-systems
   partner: o-vervale-institute-for-health-services-research
-  owner: p-lakshmi-zamora
-  sponsor: p-lindiwe-valdez
+  owner: p-lakshmi-figueroa
+  sponsor: p-lindiwe-ribeiro
   members:
-  - p-hiba-xu
-  - p-lakshmi-zamora
-  - p-anahit-upton
-  - p-ciaran-rocha
+  - p-hiba-deng
+  - p-lakshmi-figueroa
+  - p-anahit-fifita
+  - p-sneha-arslan
   orgs:
   - o-garfield-general-hospital
   status: active
@@ -1256,29 +1255,29 @@ projects:
   target_date: null
   n: 2
   cast:
-    owner: p-lakshmi-zamora
-    sponsor: p-lindiwe-valdez
-    lead: p-ciaran-rocha
+    owner: p-lakshmi-figueroa
+    sponsor: p-lindiwe-ribeiro
+    lead: p-sneha-arslan
     unit:
-    - p-mei-asante
-    - p-ciaran-rocha
+    - p-kofi-horvath
+    - p-sneha-arslan
     ae:
-    - p-anahit-tanaka
-    - p-petra-greco
+    - p-anahit-jeong
+    - p-petra-moretti
     se:
     - p-baraka-krishnan
-    - p-burak-kuznetsova
-    eng: p-lakshmi-zamora
-    sec: p-friederike-malhotra
-    privacy: p-aylin-venkataraman
-    legal: p-dragan-siregar
-    proc: p-tahmina-lozano
-    fin: p-declan-byrne
-    hr: p-nikhil-sahin
-    ea: p-kwame-ortega
-    collab: p-anahit-upton
-    partner: p-elena-bhatt
-    cand: p-tyrone-fraser
+    - p-burak-petrovic
+    eng: p-lakshmi-figueroa
+    sec: p-friederike-bhatt
+    privacy: p-aylin-kocak
+    legal: p-dragan-herrera
+    proc: p-tahmina-rosales
+    fin: p-marcelo-brandao
+    hr: p-femi-laurent
+    ea: p-kwame-zamora
+    collab: p-anahit-fifita
+    partner: p-elena-chaudhry
+    cand: p-tyrone-pritchard
   weight: 2.03
   start: '2027-03-15'
 - id: pr-garfield-supply-par-levels-idea
@@ -1287,7 +1286,7 @@ projects:
   kw: supply par levels
   code: null
   surface_forms:
-  - Ciaran's supply par levels idea
+  - Sneha's supply par levels idea
   - the supply par levels placeholder
   archetype: placeholder
   size: placeholder
@@ -1300,12 +1299,12 @@ projects:
   - o-grion-systems
   - o-marys-health
   partner: o-vervale-institute-for-health-services-research
-  owner: p-ciaran-rocha
-  sponsor: p-lindiwe-valdez
+  owner: p-sneha-arslan
+  sponsor: p-lindiwe-ribeiro
   members:
-  - p-hiba-xu
-  - p-ciaran-rocha
-  - p-anahit-upton
+  - p-hiba-deng
+  - p-sneha-arslan
+  - p-anahit-fifita
   orgs:
   - o-garfield-general-hospital
   status: active
@@ -1313,29 +1312,29 @@ projects:
   target_date: null
   n: 2
   cast:
-    owner: p-ciaran-rocha
-    sponsor: p-lindiwe-valdez
-    lead: p-ciaran-rocha
+    owner: p-sneha-arslan
+    sponsor: p-lindiwe-ribeiro
+    lead: p-sneha-arslan
     unit:
-    - p-mei-asante
-    - p-ciaran-rocha
+    - p-kofi-horvath
+    - p-sneha-arslan
     ae:
-    - p-petra-greco
-    - p-anahit-tanaka
+    - p-petra-moretti
+    - p-anahit-jeong
     se:
-    - p-burak-kuznetsova
+    - p-burak-petrovic
     - p-baraka-krishnan
-    eng: p-lakshmi-zamora
-    sec: p-friederike-malhotra
-    privacy: p-aylin-venkataraman
-    legal: p-dragan-siregar
-    proc: p-tahmina-lozano
-    fin: p-declan-byrne
-    hr: p-nikhil-sahin
-    ea: p-kwame-ortega
-    collab: p-anahit-upton
-    partner: p-elena-bhatt
-    cand: p-tyrone-fraser
+    eng: p-lakshmi-figueroa
+    sec: p-friederike-bhatt
+    privacy: p-aylin-kocak
+    legal: p-dragan-herrera
+    proc: p-tahmina-rosales
+    fin: p-marcelo-brandao
+    hr: p-femi-laurent
+    ea: p-kwame-zamora
+    collab: p-anahit-fifita
+    partner: p-elena-chaudhry
+    cand: p-tyrone-pritchard
   weight: 0.13
   start: '2027-03-15'
 - id: pr-grion-referral-triage-diligence
@@ -1357,12 +1356,12 @@ projects:
   - o-grion-systems
   - o-marys-health
   partner: o-vervale-institute-for-health-services-research
-  owner: p-hiba-xu
-  sponsor: p-lindiwe-valdez
+  owner: p-hiba-deng
+  sponsor: p-lindiwe-ribeiro
   members:
-  - p-hiba-xu
-  - p-hiba-xu
-  - p-anahit-upton
+  - p-hiba-deng
+  - p-hiba-deng
+  - p-anahit-fifita
   orgs:
   - o-garfield-general-hospital
   - o-grion-systems
@@ -1372,40 +1371,40 @@ projects:
   target_date: null
   n: 2
   cast:
-    owner: p-hiba-xu
-    sponsor: p-lindiwe-valdez
-    lead: p-ciaran-rocha
+    owner: p-hiba-deng
+    sponsor: p-lindiwe-ribeiro
+    lead: p-sneha-arslan
     unit:
-    - p-mei-asante
-    - p-ciaran-rocha
+    - p-kofi-horvath
+    - p-sneha-arslan
     ae:
-    - p-petra-greco
-    - p-anahit-tanaka
+    - p-petra-moretti
+    - p-anahit-jeong
     se:
-    - p-burak-kuznetsova
+    - p-burak-petrovic
     - p-baraka-krishnan
-    eng: p-lakshmi-zamora
-    sec: p-friederike-malhotra
-    privacy: p-aylin-venkataraman
-    legal: p-dragan-siregar
-    proc: p-tahmina-lozano
-    fin: p-declan-byrne
-    hr: p-nikhil-sahin
-    ea: p-kwame-ortega
-    collab: p-anahit-upton
-    partner: p-elena-bhatt
-    cand: p-tyrone-fraser
+    eng: p-lakshmi-figueroa
+    sec: p-friederike-bhatt
+    privacy: p-aylin-kocak
+    legal: p-dragan-herrera
+    proc: p-tahmina-rosales
+    fin: p-marcelo-brandao
+    hr: p-femi-laurent
+    ea: p-kwame-zamora
+    collab: p-anahit-fifita
+    partner: p-elena-chaudhry
+    cand: p-tyrone-pritchard
   weight: 0.74
   start: '2027-03-15'
 collisions:
   first_names:
-  - - p-anahit-upton
-    - p-anahit-tanaka
+  - - p-anahit-fifita
+    - p-anahit-jeong
   - - p-burak-jaber
-    - p-burak-kuznetsova
+    - p-burak-petrovic
   homophones:
-  - p-aileen-hossain
-  - p-eileen-jovanovic
+  - p-aileen-karunaratne
+  - p-eileen-babic
 cadences:
 - key: standup
   title: Wagtail standup
@@ -1420,16 +1419,16 @@ cadences:
   every: 1
   time: 09:30
   minutes: 25
-  organizer: p-ama-forsythe
+  organizer: p-isla-faure
   attendees:
-  - p-hiba-xu
-  - p-ama-forsythe
-  - p-anahit-upton
-  - p-mateo-pritchard
-  - p-lakshmi-zamora
-  - p-friederike-malhotra
-  - p-jisoo-makinen
-  - p-maricel-herrera
+  - p-hiba-deng
+  - p-isla-faure
+  - p-anahit-fifita
+  - p-rudo-ekwueme
+  - p-lakshmi-figueroa
+  - p-friederike-bhatt
+  - p-jisoo-nowak
+  - p-maricel-fuentes
 - key: leads
   title: CDS leads call
   kind: meeting
@@ -1439,14 +1438,14 @@ cadences:
   every: 1
   time: '11:00'
   minutes: 45
-  organizer: p-lindiwe-valdez
+  organizer: p-lindiwe-ribeiro
   attendees:
-  - p-hiba-xu
-  - p-anahit-upton
-  - p-lakshmi-zamora
-  - p-friederike-malhotra
-  - p-maricel-herrera
-  - p-lindiwe-valdez
+  - p-hiba-deng
+  - p-anahit-fifita
+  - p-lakshmi-figueroa
+  - p-friederike-bhatt
+  - p-maricel-fuentes
+  - p-lindiwe-ribeiro
 - key: hub_sync
   title: Okapi platform sync
   kind: meeting
@@ -1456,14 +1455,14 @@ cadences:
   every: 1
   time: '14:00'
   minutes: 30
-  organizer: p-lakshmi-zamora
+  organizer: p-lakshmi-figueroa
   attendees:
-  - p-hiba-xu
-  - p-lakshmi-zamora
-  - p-anahit-upton
-  - p-ama-forsythe
-  - p-mateo-pritchard
-  - p-jisoo-makinen
+  - p-hiba-deng
+  - p-lakshmi-figueroa
+  - p-anahit-fifita
+  - p-isla-faure
+  - p-rudo-ekwueme
+  - p-jisoo-nowak
 - key: one_on_one
   title: 1:1 Hiba / Anahit
   kind: meeting
@@ -1473,10 +1472,10 @@ cadences:
   every: 2
   time: '15:00'
   minutes: 30
-  organizer: p-anahit-upton
+  organizer: p-anahit-fifita
   attendees:
-  - p-hiba-xu
-  - p-anahit-upton
+  - p-hiba-deng
+  - p-anahit-fifita
 - key: forum
   title: Cross-hospital AI forum
   kind: meeting
@@ -1486,13 +1485,13 @@ cadences:
   every: 2
   time: '13:00'
   minutes: 60
-  organizer: p-anahit-upton
+  organizer: p-anahit-fifita
   attendees:
-  - p-hiba-xu
-  - p-anahit-upton
-  - p-ama-forsythe
+  - p-hiba-deng
+  - p-anahit-fifita
+  - p-isla-faure
   - p-burak-jaber
-  - p-ciaran-rocha
+  - p-sneha-arslan
 - key: weekly_update
   title: Weekly update
   kind: obligation
@@ -1503,8 +1502,8 @@ cadences:
   every: 1
   organizer: p-cds-shared-inbox
   attendees:
-  - p-hiba-xu
-  - p-lindiwe-valdez
+  - p-hiba-deng
+  - p-lindiwe-ribeiro
 challenges:
 - week: 1
   tag: worker_directive
@@ -1533,7 +1532,7 @@ challenges:
 - week: 1
   tag: new_entity
   day: '2027-03-31'
-  person: p-giorgi-morimoto
+  person: p-giorgi-choi
   project: pr-wagtail
 - week: 1
   tag: supersession
@@ -1597,24 +1596,19 @@ challenges:
   - '2027-04-01'
 audit:
   unrevealed:
-    e-0009: never appears
     e-0019: never appears
     e-0021: never appears
     e-0026: never appears
     e-0028: never appears
     e-0029: never appears
     e-0031: never appears
-    e-0035: never appears
+    e-0033: never appears
     e-0036: never appears
-    e-0037: never appears
     e-0038: never appears
-    e-0154: unobservable
-    e-0179: 'weak evidence: the walkthrough left no trace'
-    e-0185: unreported closure
-  instruction_injection: em-0062
+    e-0164: unobservable
+    e-0187: 'weak evidence: the walkthrough left no trace'
+  instruction_injection: em-0066
   attachments:
   - dc-0001
   - dc-0002
   - dc-0003
-  - dc-0004
-  - dc-0005

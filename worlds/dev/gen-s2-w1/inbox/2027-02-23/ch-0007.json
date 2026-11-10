@@ -4,11 +4,11 @@
  "kind": "channel",
  "participants": [
   "Imani",
-  "Dina Zimmermann",
+  "Dina Ricci",
   "Cassandra Yilmaz",
-  "Yael Yardley",
-  "Rudo Alexiou",
-  "Naoko Maldonado",
+  "Yael Ellery",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
   "Thibault Sahin"
  ],
  "messages": [
@@ -29,14 +29,14 @@
   },
   {
    "ts": "2027-02-23T12:37:50-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "can I come back to you on this?",
    "thread_of": 0
   },
   {
    "ts": "2027-02-23T12:46:50-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "nice",
    "thread_of": 0

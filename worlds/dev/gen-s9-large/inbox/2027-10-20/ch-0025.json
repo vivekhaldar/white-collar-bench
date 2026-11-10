@@ -1,0 +1,23 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-mathieu",
+ "kind": "dm",
+ "participants": [
+  "Mathieu Wijaya",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-20T10:15:00-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "leave it with me, i'll share the informatics nurse specialist role profile with you"
+  },
+  {
+   "ts": "2027-10-20T10:15:28-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "thanks!"
+  }
+ ]
+}

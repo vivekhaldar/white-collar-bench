@@ -4,7 +4,7 @@
  "kind": "channel",
  "participants": [
   "Nomvula Ndlovu",
-  "Tariq Popescu"
+  "Tariq Ivanova"
  ],
  "messages": [
   {
@@ -15,7 +15,7 @@
   },
   {
    "ts": "2027-09-01T10:19:15-08:00",
-   "user": "Tariq Popescu",
+   "user": "Tariq Ivanova",
    "handle": "@tariq",
    "text": "i'll dial in",
    "thread_of": 0

@@ -3,13 +3,13 @@
  "channel": "#mistral-core",
  "kind": "channel",
  "participants": [
-  "Dina Zimmermann",
-  "Yael Yardley",
-  "Imani Chaiyaporn",
-  "Rudo Alexiou",
-  "Naoko Maldonado",
+  "Dina Ricci",
+  "Yael Ellery",
+  "Imani Navarro",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
   "Cassandra Yilmaz",
-  "Bilal Blackwood",
+  "Bilal Kahananui",
   "Thibault Sahin",
   "Mei Obi",
   "Ling"
@@ -17,13 +17,13 @@
  "messages": [
   {
    "ts": "2027-03-08T08:19:00-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "@cassandra i can send you the mistral vendor comparison"
   },
   {
    "ts": "2027-03-08T08:19:14-07:00",
-   "user": "Bilal Blackwood",
+   "user": "Bilal Kahananui",
    "handle": "@bilal",
    "text": "good to know",
    "thread_of": 0

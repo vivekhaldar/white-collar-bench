@@ -1,0 +1,28 @@
+{
+ "workspace": "reddale",
+ "channel": "#pipit-core",
+ "kind": "channel",
+ "participants": [
+  "Bisi Volkov",
+  "Aoife Everett",
+  "Akosua Bergstrom",
+  "Gaurav Laine",
+  "Douglas Grigoryan",
+  "Sipho Papadopoulos",
+  "Sigrid Asante"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-26T14:52:00+01:00",
+   "user": "Bisi Volkov",
+   "handle": "@bisi",
+   "text": "From the sync earlier, Aoife will send Gaurav the Pipit rollout checklist."
+  },
+  {
+   "ts": "2027-08-26T14:52:11+01:00",
+   "user": "Akosua Bergstrom",
+   "handle": "@akosua",
+   "text": "ok"
+  }
+ ]
+}

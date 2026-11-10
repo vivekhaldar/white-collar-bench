@@ -1,0 +1,52 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#fulmar-core",
+ "kind": "channel",
+ "participants": [
+  "Amira Baek",
+  "Ottavio Bakker",
+  "Adwoa Kocak",
+  "Giorgi Wisniewska",
+  "Oksana Hoffmann",
+  "Marcelo Meijer",
+  "Batbayar Galbraith",
+  "Thibault Kowalski",
+  "Kamau Greco"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-15T14:06:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "@adwoa i confirmed the Fulmar control plan with you earlier today."
+  },
+  {
+   "ts": "2027-09-15T14:06:50-06:00",
+   "user": "Thibault Kowalski",
+   "handle": "@thibault",
+   "text": "ok",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-15T14:12:43-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-15T14:21:40-06:00",
+   "user": "Giorgi Wisniewska",
+   "handle": "@giorgi",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-15T14:23:43-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-liisa",
+ "kind": "dm",
+ "participants": [
+  "Despina Pereira",
+  "Liisa Babic"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-11T21:01:00-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "just sent you the axolotl acceptance criteria"
+  },
+  {
+   "ts": "2027-02-11T21:02:09-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "great, thanks"
+  }
+ ]
+}

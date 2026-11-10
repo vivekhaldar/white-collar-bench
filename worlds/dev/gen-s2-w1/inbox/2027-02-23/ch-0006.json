@@ -3,31 +3,31 @@
  "channel": "dm-dina-nathaniel",
  "kind": "dm",
  "participants": [
-  "Dina Zimmermann",
-  "Nathaniel Langley"
+  "Dina Ricci",
+  "Nathaniel Fenwick"
  ],
  "messages": [
   {
    "ts": "2027-02-23T11:39:08-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "quick q"
   },
   {
    "ts": "2027-02-23T11:40:24-07:00",
-   "user": "Nathaniel Langley",
+   "user": "Nathaniel Fenwick",
    "handle": "@nathaniel",
    "text": "yep, go ahead :)"
   },
   {
    "ts": "2027-02-23T11:41:14-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "I reviewed your Marmara diligence diligence notes earlier today."
   },
   {
    "ts": "2027-02-23T11:42:20-07:00",
-   "user": "Nathaniel Langley",
+   "user": "Nathaniel Fenwick",
    "handle": "@nathaniel",
    "text": "perfect"
   }

@@ -1,0 +1,1578 @@
+- id: q-001
+  checkpoint: cp1
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - scattered_evidence
+  - worker_directive
+- id: q-002
+  checkpoint: cp1
+  template: project_status
+  params:
+    project: pr-fulmar
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - supersession
+  - worker_directive
+- id: q-003
+  checkpoint: cp1
+  template: project_changes
+  params:
+    project: pr-iselmoor-responsible-ai-use-framework
+    since: '2027-09-10'
+    name_form: the responsible-use framework
+  challenges:
+  - alias
+  - scattered_evidence
+  - worker_directive
+- id: q-004
+  checkpoint: cp1
+  template: i_owe
+  params:
+    person: p-adwoa-kocak
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+  - name_collision
+- id: q-005
+  checkpoint: cp1
+  template: owed_to_me
+  params:
+    person: p-tane-haugen
+  challenges: []
+- id: q-006
+  checkpoint: cp1
+  template: loop_owner
+  params:
+    commitment: c-049
+  challenges:
+  - duplicate_signal
+  - transfer
+- id: q-007
+  checkpoint: cp1
+  template: loop_due
+  params:
+    commitment: c-057
+  challenges:
+  - scattered_evidence
+- id: q-008
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-fulmar
+    attribute: target_date
+    name_form: the warranty claims pilot
+  challenges:
+  - alias
+  - supersession
+- id: q-009
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-rodrigo-oduro
+    attribute: role
+  challenges:
+  - name_collision
+- id: q-010
+  checkpoint: cp1
+  template: project_loops
+  params:
+    project: pr-iselmoor-responsible-ai-use-framework
+  challenges:
+  - scattered_evidence
+- id: q-011
+  checkpoint: cp1
+  template: person_brief
+  params:
+    person: p-ottavio-bakker
+  challenges:
+  - endorsement
+  - implied_commitment
+  - scattered_evidence
+  - worker_directive
+- id: q-012
+  checkpoint: cp1
+  template: decision_date
+  params:
+    decision: d-002
+  challenges:
+  - worker_directive
+- id: q-013
+  checkpoint: cp1
+  template: event_date
+  params:
+    event: e-0106
+  text: When was "Send Adwoa the Fulmar rollout checklist" completed?
+  challenges: []
+- id: q-014
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-tane-haugen
+    attribute: phone
+    name_form: Tane
+  challenges:
+  - alias
+  - unobservable
+- id: q-015
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-operator-ai-basics-workshop
+    attribute: budget
+  challenges:
+  - unobservable
+- id: q-016
+  checkpoint: cp2
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - unobservable
+  - worker_directive
+- id: q-017
+  checkpoint: cp2
+  template: project_status
+  params:
+    project: pr-fulmar
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - supersession
+  - worker_directive
+- id: q-018
+  checkpoint: cp2
+  template: project_changes
+  params:
+    project: pr-morcliff-safety-reporting-discovery
+    since: '2027-09-14'
+  challenges:
+  - endorsement
+  - new_entity
+  - restructuring
+  - worker_directive
+- id: q-019
+  checkpoint: cp2
+  template: i_owe
+  params:
+    person: p-ottavio-bakker
+  challenges:
+  - batch_catchup
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - worker_directive
+- id: q-020
+  checkpoint: cp2
+  template: owed_to_me
+  params:
+    person: p-thibault-kowalski
+    name_form: Thibault
+  challenges:
+  - alias
+- id: q-021
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-galix-scrap-analysis-diligence
+    attribute: owner
+  challenges: []
+- id: q-022
+  checkpoint: cp2
+  template: person_attr
+  params:
+    person: p-shirin-oyelami
+    attribute: relationship
+    name_form: Shirin
+  challenges:
+  - alias
+  - new_entity
+- id: q-023
+  checkpoint: cp2
+  template: project_loops
+  params:
+    project: pr-operator-ai-basics-workshop
+  challenges:
+  - duplicate_signal
+  - transfer
+- id: q-024
+  checkpoint: cp2
+  template: person_brief
+  params:
+    person: p-oksana-hoffmann
+    name_form: the platform lead
+  challenges:
+  - alias
+- id: q-025
+  checkpoint: cp2
+  template: decision_date
+  params:
+    decision: d-001
+  challenges:
+  - duplicate_signal
+- id: q-026
+  checkpoint: cp2
+  template: event_date
+  params:
+    event: e-0188
+  text: When was "Look into the Fulmar export failures" completed?
+  challenges:
+  - duplicate_signal
+- id: q-027
+  checkpoint: cp2
+  template: loop_owner
+  params:
+    commitment: c-059
+  challenges:
+  - transfer
+- id: q-028
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-wagtail-operating-model-review
+    attribute: owner
+  challenges: []
+- id: q-029
+  checkpoint: cp2
+  template: project_loops
+  params:
+    project: pr-morcliff-tooling-wear-discovery
+  challenges:
+  - endorsement
+  - worker_directive
+- id: q-030
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-fulmar
+    attribute: budget
+  text: What is the budget for Fulmar?
+  challenges:
+  - unobservable
+- id: q-031
+  checkpoint: cp3
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - unobservable
+  - worker_directive
+- id: q-032
+  checkpoint: cp3
+  template: project_status
+  params:
+    project: pr-fulmar
+    name_form: the warranty claims pilot
+  challenges:
+  - alias
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - supersession
+  - worker_directive
+- id: q-033
+  checkpoint: cp3
+  template: project_changes
+  params:
+    project: pr-production-scheduling-learning-series
+    since: '2027-09-16'
+    name_form: the learning series
+  challenges:
+  - alias
+- id: q-034
+  checkpoint: cp3
+  template: i_owe
+  params:
+    person: p-batbayar-galbraith
+    name_form: Batbayar
+  challenges:
+  - alias
+- id: q-035
+  checkpoint: cp3
+  template: owed_to_me
+  params:
+    person: p-wei-suwannarat
+  challenges:
+  - duplicate_signal
+  - transfer
+- id: q-036
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-wagtail-operating-model-review
+    attribute: sponsor
+  challenges: []
+- id: q-037
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-wagtail
+  challenges:
+  - batch_catchup
+  - correction
+- id: q-038
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-kiran-merriweather
+  challenges: []
+- id: q-039
+  checkpoint: cp3
+  template: event_date
+  params:
+    event: e-0210
+  text: When was "Confirm the Fulmar control plan with Adwoa" completed?
+  challenges:
+  - duplicate_signal
+- id: q-040
+  checkpoint: cp3
+  template: loop_owner
+  params:
+    commitment: c-026
+  challenges:
+  - transfer
+- id: q-041
+  checkpoint: cp3
+  template: loop_due
+  params:
+    commitment: c-068
+  challenges:
+  - endorsement
+  - worker_directive
+- id: q-042
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-fulmar
+    attribute: sponsor
+  challenges: []
+- id: q-043
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-work-instructions-tool-selection
+  challenges:
+  - duplicate_signal
+- id: q-044
+  checkpoint: cp3
+  template: person_attr
+  params:
+    person: p-rodrigo-oduro
+    attribute: phone
+  challenges:
+  - name_collision
+  - unobservable
+- id: q-045
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-iselmoor-responsible-ai-use-framework
+    attribute: discount
+  text: What discount did we negotiate on Iselmoor Responsible AI Use Framework?
+  challenges:
+  - unobservable
+- id: q-046
+  checkpoint: cp4
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - scattered_evidence
+  - unobservable
+  - worker_directive
+- id: q-047
+  checkpoint: cp4
+  template: project_status
+  params:
+    project: pr-fulmar
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+  - scattered_evidence
+  - supersession
+  - unobservable
+- id: q-048
+  checkpoint: cp4
+  template: project_changes
+  params:
+    project: pr-fulmar
+    since: '2027-09-18'
+    name_form: Project Fulmar
+  challenges:
+  - alias
+  - endorsement
+  - implied_commitment
+  - scattered_evidence
+  - silent_closure
+  - supersession
+  - unobservable
+- id: q-049
+  checkpoint: cp4
+  template: i_owe
+  params:
+    person: p-hamish-okada
+    name_form: Hamish
+  challenges:
+  - alias
+- id: q-050
+  checkpoint: cp4
+  template: owed_to_me
+  params:
+    person: p-rodrigo-oduro
+  challenges:
+  - name_collision
+- id: q-051
+  checkpoint: cp4
+  template: person_attr
+  params:
+    person: p-despina-eriksen
+    attribute: relationship
+  challenges:
+  - new_entity
+- id: q-052
+  checkpoint: cp4
+  template: project_loops
+  params:
+    project: pr-morcliff-safety-reporting-discovery
+  challenges:
+  - supersession
+- id: q-053
+  checkpoint: cp4
+  template: person_brief
+  params:
+    person: p-adwoa-kocak
+    name_form: our programs director
+  challenges:
+  - alias
+  - duplicate_signal
+  - endorsement
+  - name_collision
+  - new_entity
+  - restructuring
+  - supersession
+  - worker_directive
+- id: q-054
+  checkpoint: cp4
+  template: event_date
+  params:
+    event: e-0194
+  text: When was "Arrange refreshments for the operator AI basics workshop" handed over to Wei Suwannarat?
+  challenges:
+  - transfer
+- id: q-055
+  checkpoint: cp4
+  template: loop_due
+  params:
+    commitment: c-087
+  challenges:
+  - scattered_evidence
+- id: q-056
+  checkpoint: cp4
+  template: project_attr
+  params:
+    project: pr-morcliff-safety-reporting-discovery
+    attribute: next_step
+  challenges: []
+- id: q-057
+  checkpoint: cp4
+  template: person_brief
+  params:
+    person: p-tane-haugen
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-058
+  checkpoint: cp4
+  template: event_date
+  params:
+    event: e-0208
+  text: When was "Share the AI-use timeline with Amira" completed?
+  challenges:
+  - batch_catchup
+- id: q-059
+  checkpoint: cp4
+  template: project_attr
+  params:
+    project: pr-wagtail
+    attribute: phase
+    name_form: Wagtail platform
+  challenges:
+  - alias
+- id: q-060
+  checkpoint: cp4
+  template: event_date
+  params:
+    event: e-0211
+  text: When was "Walk Adwoa through the operator AI basics workshop room plan" completed?
+  challenges:
+  - unobservable
+  - weak_evidence
+- id: q-061
+  checkpoint: cp5
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - supersession
+  - unobservable
+  - worker_directive
+- id: q-062
+  checkpoint: cp5
+  template: project_status
+  params:
+    project: pr-fulmar
+  challenges:
+  - correction
+  - duplicate_signal
+  - implied_commitment
+  - supersession
+  - unobservable
+- id: q-063
+  checkpoint: cp5
+  template: project_changes
+  params:
+    project: pr-wagtail
+    since: '2027-09-21'
+    name_form: the common platform
+  challenges:
+  - alias
+  - batch_catchup
+  - silent_closure
+- id: q-064
+  checkpoint: cp5
+  template: i_owe
+  params:
+    person: p-oksana-hoffmann
+  challenges: []
+- id: q-065
+  checkpoint: cp5
+  template: owed_to_me
+  params:
+    person: p-giorgi-wisniewska
+  challenges:
+  - duplicate_signal
+- id: q-066
+  checkpoint: cp5
+  template: project_loops
+  params:
+    project: pr-wilhaven-partnership
+  challenges: []
+- id: q-067
+  checkpoint: cp5
+  template: person_brief
+  params:
+    person: p-thibault-kowalski
+  challenges: []
+- id: q-068
+  checkpoint: cp5
+  template: event_date
+  params:
+    event: e-0201
+  text: When was "Send Adwoa the Fulmar timeline" completed?
+  challenges:
+  - batch_catchup
+- id: q-069
+  checkpoint: cp5
+  template: loop_owner
+  params:
+    commitment: c-003
+  challenges:
+  - transfer
+- id: q-070
+  checkpoint: cp5
+  template: loop_due
+  params:
+    commitment: c-096
+  challenges:
+  - correction
+  - supersession
+- id: q-071
+  checkpoint: cp5
+  template: project_attr
+  params:
+    project: pr-wagtail-operating-model-review
+    attribute: phase
+  challenges:
+  - implied_commitment
+- id: q-072
+  checkpoint: cp5
+  template: project_loops
+  params:
+    project: pr-predictive-maintenance-input-round
+  challenges: []
+- id: q-073
+  checkpoint: cp5
+  template: person_brief
+  params:
+    person: p-kian-ishikawa
+    name_form: Kian
+  challenges:
+  - alias
+- id: q-074
+  checkpoint: cp5
+  template: event_date
+  params:
+    event: e-0307
+  text: When was "Walk Ottavio through the Fulmar budget justification" completed?
+  challenges:
+  - unobservable
+  - weak_evidence
+- id: q-075
+  checkpoint: cp5
+  template: project_attr
+  params:
+    project: pr-fulmar
+    attribute: budget_ceiling
+  text: What is the budget ceiling for Fulmar?
+  challenges:
+  - unobservable
+- id: q-076
+  checkpoint: cp6
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - supersession
+  - unobservable
+  - worker_directive
+- id: q-077
+  checkpoint: cp6
+  template: project_status
+  params:
+    project: pr-fulmar
+  challenges:
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - supersession
+  - worker_directive
+- id: q-078
+  checkpoint: cp6
+  template: project_changes
+  params:
+    project: pr-work-instructions-tool-selection
+    since: '2027-09-23'
+  challenges:
+  - reversal
+- id: q-079
+  checkpoint: cp6
+  template: i_owe
+  params:
+    person: p-marcelo-meijer
+  challenges:
+  - correction
+  - implied_commitment
+  - supersession
+- id: q-080
+  checkpoint: cp6
+  template: owed_to_me
+  params:
+    person: p-adwoa-kocak
+    name_form: our programs director
+  challenges:
+  - alias
+  - name_collision
+- id: q-081
+  checkpoint: cp6
+  template: person_brief
+  params:
+    person: p-segun-okeke
+  challenges:
+  - duplicate_signal
+- id: q-082
+  checkpoint: cp6
+  template: decision_date
+  params:
+    decision: d-003
+  challenges:
+  - duplicate_signal
+- id: q-083
+  checkpoint: cp6
+  template: event_date
+  params:
+    event: e-0321
+  text: When was "Send Adwoa the Fulmar sensor tag list" completed?
+  challenges: []
+- id: q-084
+  checkpoint: cp6
+  template: loop_due
+  params:
+    commitment: c-091
+  challenges:
+  - endorsement
+  - worker_directive
+- id: q-085
+  checkpoint: cp6
+  template: project_attr
+  params:
+    project: pr-operator-ai-basics-workshop
+    attribute: owner
+    name_form: the workshop
+  challenges:
+  - alias
+- id: q-086
+  checkpoint: cp6
+  template: person_brief
+  params:
+    person: p-batbayar-galbraith
+    name_form: Batbayar
+  challenges:
+  - alias
+- id: q-087
+  checkpoint: cp6
+  template: event_date
+  params:
+    event: e-0205
+  text: When was "Send Oksana the Wagtail status slide" completed?
+  challenges:
+  - batch_catchup
+- id: q-088
+  checkpoint: cp6
+  template: project_attr
+  params:
+    project: pr-sandfield-changeover-planning-idea
+    attribute: phase
+  challenges: []
+- id: q-089
+  checkpoint: cp6
+  template: person_brief
+  params:
+    person: p-marcelo-meijer
+  challenges:
+  - correction
+  - implied_commitment
+  - supersession
+- id: q-090
+  checkpoint: cp6
+  template: person_attr
+  params:
+    person: p-oksana-hoffmann
+    attribute: phone
+  challenges:
+  - unobservable
+- id: q-091
+  checkpoint: cp7
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - scattered_evidence
+  - supersession
+  - unobservable
+  - worker_directive
+- id: q-092
+  checkpoint: cp7
+  template: project_status
+  params:
+    project: pr-fulmar
+    name_form: Project Fulmar
+  challenges:
+  - alias
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - supersession
+  - worker_directive
+- id: q-093
+  checkpoint: cp7
+  template: project_changes
+  params:
+    project: pr-morcliff-tooling-wear-discovery
+    since: '2027-09-25'
+  challenges: []
+- id: q-094
+  checkpoint: cp7
+  template: i_owe
+  params:
+    person: p-jonathan-gurung
+  challenges:
+  - unobservable
+- id: q-095
+  checkpoint: cp7
+  template: owed_to_me
+  params:
+    person: p-ottavio-bakker
+    name_form: Tavo
+  challenges:
+  - alias
+  - duplicate_signal
+  - transfer
+- id: q-096
+  checkpoint: cp7
+  template: event_date
+  params:
+    event: e-0245
+  text: When was "Review Ottavio's Fulmar vendor comparison" completed?
+  challenges:
+  - duplicate_signal
+- id: q-097
+  checkpoint: cp7
+  template: loop_due
+  params:
+    commitment: c-128
+  challenges:
+  - scattered_evidence
+- id: q-098
+  checkpoint: cp7
+  template: project_attr
+  params:
+    project: pr-sandfield-changeover-planning-idea
+    attribute: sponsor
+  challenges: []
+- id: q-099
+  checkpoint: cp7
+  template: person_attr
+  params:
+    person: p-yasmin-guo
+    attribute: relationship
+    name_form: Yasmin
+  challenges:
+  - alias
+  - new_entity
+- id: q-100
+  checkpoint: cp7
+  template: person_brief
+  params:
+    person: p-kamau-greco
+  challenges: []
+- id: q-101
+  checkpoint: cp7
+  template: event_date
+  params:
+    event: e-0169
+  text: When was "Summarize the predictive maintenance input for Hamish" handed over to Adwoa Kocak?
+  challenges:
+  - duplicate_signal
+  - transfer
+- id: q-102
+  checkpoint: cp7
+  template: project_attr
+  params:
+    project: pr-operator-ai-basics-workshop
+    attribute: phase
+  challenges: []
+- id: q-103
+  checkpoint: cp7
+  template: person_brief
+  params:
+    person: p-wei-suwannarat
+  challenges:
+  - duplicate_signal
+  - transfer
+- id: q-104
+  checkpoint: cp7
+  template: project_attr
+  params:
+    project: pr-operator-ai-basics-workshop
+    attribute: savings_target
+  text: What is the savings target for Operator AI Basics Workshop?
+  challenges:
+  - unobservable
+- id: q-105
+  checkpoint: cp7
+  template: project_attr
+  params:
+    project: pr-morcliff-safety-reporting-discovery
+    attribute: budget
+  challenges:
+  - unobservable
+- id: q-106
+  checkpoint: cp8
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - supersession
+  - unobservable
+  - worker_directive
+- id: q-107
+  checkpoint: cp8
+  template: project_status
+  params:
+    project: pr-fulmar
+  challenges:
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - supersession
+  - transfer
+  - worker_directive
+- id: q-108
+  checkpoint: cp8
+  template: project_changes
+  params:
+    project: pr-operator-ai-basics-workshop
+    since: '2027-09-28'
+  challenges:
+  - new_entity
+  - unobservable
+- id: q-109
+  checkpoint: cp8
+  template: i_owe
+  params:
+    person: p-segun-okeke
+  challenges:
+  - duplicate_signal
+- id: q-110
+  checkpoint: cp8
+  template: owed_to_me
+  params:
+    person: p-oksana-hoffmann
+    name_form: the platform lead
+  challenges:
+  - alias
+  - correction
+  - duplicate_signal
+- id: q-111
+  checkpoint: cp8
+  template: event_date
+  params:
+    event: e-0326
+  text: When was "Review Oksana's Wagtail action log" completed?
+  challenges: []
+- id: q-112
+  checkpoint: cp8
+  template: loop_owner
+  params:
+    commitment: c-052
+  challenges:
+  - transfer
+- id: q-113
+  checkpoint: cp8
+  template: project_attr
+  params:
+    project: pr-sandfield-changeover-planning-idea
+    attribute: owner
+  challenges: []
+- id: q-114
+  checkpoint: cp8
+  template: person_attr
+  params:
+    person: p-adwoa-kocak
+    attribute: relationship
+  challenges:
+  - name_collision
+- id: q-115
+  checkpoint: cp8
+  template: person_brief
+  params:
+    person: p-hamish-okada
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-116
+  checkpoint: cp8
+  template: decision_date
+  params:
+    decision: d-007
+  challenges: []
+- id: q-117
+  checkpoint: cp8
+  template: event_date
+  params:
+    event: e-0367
+  text: When was "Send Amira the Fulmar PLC export" completed?
+  challenges:
+  - batch_catchup
+- id: q-118
+  checkpoint: cp8
+  template: loop_owner
+  params:
+    commitment: c-145
+  challenges:
+  - transfer
+- id: q-119
+  checkpoint: cp8
+  template: project_attr
+  params:
+    project: pr-operator-ai-basics-peer-network
+    attribute: owner
+  challenges:
+  - new_entity
+- id: q-120
+  checkpoint: cp8
+  template: event_date
+  params:
+    event: e-0375
+  text: When was "Walk Tane through the safety reporting discovery RACI chart" completed?
+  challenges:
+  - unobservable
+  - weak_evidence
+- id: q-121
+  checkpoint: cp9
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - supersession
+  - unobservable
+  - worker_directive
+- id: q-122
+  checkpoint: cp9
+  template: project_status
+  params:
+    project: pr-fulmar
+    name_form: the warranty claims pilot
+  challenges:
+  - alias
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - supersession
+  - worker_directive
+- id: q-123
+  checkpoint: cp9
+  template: project_changes
+  params:
+    project: pr-ai-use-support-model-workstream
+    since: '2027-09-30'
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-124
+  checkpoint: cp9
+  template: i_owe
+  params:
+    person: p-yasmin-guo
+  challenges:
+  - new_entity
+- id: q-125
+  checkpoint: cp9
+  template: owed_to_me
+  params:
+    person: p-marcelo-meijer
+    name_form: Marcelo
+  challenges:
+  - alias
+  - duplicate_signal
+  - transfer
+- id: q-126
+  checkpoint: cp9
+  template: loop_due
+  params:
+    commitment: c-134
+  challenges:
+  - endorsement
+  - worker_directive
+- id: q-127
+  checkpoint: cp9
+  template: project_attr
+  params:
+    project: pr-predictive-maintenance-input-round
+    attribute: sponsor
+    name_form: the predictive maintenance input
+  challenges:
+  - alias
+- id: q-128
+  checkpoint: cp9
+  template: person_attr
+  params:
+    person: p-quentin-ribeiro
+    attribute: role
+  challenges: []
+- id: q-129
+  checkpoint: cp9
+  template: person_brief
+  params:
+    person: p-rodrigo-gallo
+  challenges:
+  - name_collision
+- id: q-130
+  checkpoint: cp9
+  template: event_date
+  params:
+    event: e-0304
+  text: When was "Send Amira the safety reporting discovery findings summary" completed?
+  challenges:
+  - duplicate_signal
+  - version_mismatch
+- id: q-131
+  checkpoint: cp9
+  template: project_attr
+  params:
+    project: pr-morcliff-tooling-wear-discovery
+    attribute: phase
+  challenges: []
+- id: q-132
+  checkpoint: cp9
+  template: person_brief
+  params:
+    person: p-rodrigo-oduro
+  challenges:
+  - name_collision
+- id: q-133
+  checkpoint: cp9
+  template: event_date
+  params:
+    event: e-0402
+  text: When was "Send Amira the Fulmar service blueprint" handed over to Marcelo Meijer?
+  challenges:
+  - transfer
+- id: q-134
+  checkpoint: cp9
+  template: project_attr
+  params:
+    project: pr-morcliff-tooling-wear-discovery
+    attribute: budget
+  challenges:
+  - unobservable
+- id: q-135
+  checkpoint: cp9
+  template: person_attr
+  params:
+    person: p-kian-ishikawa
+    attribute: office
+    name_form: Kian
+  challenges:
+  - alias
+  - unobservable
+- id: q-136
+  checkpoint: cp10
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - scattered_evidence
+  - supersession
+  - unobservable
+  - worker_directive
+- id: q-137
+  checkpoint: cp10
+  template: project_status
+  params:
+    project: pr-fulmar
+  challenges:
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - scattered_evidence
+  - supersession
+  - worker_directive
+- id: q-138
+  checkpoint: cp10
+  template: project_changes
+  params:
+    project: pr-fulmar
+    since: '2027-10-02'
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+  - scattered_evidence
+  - transfer
+  - worker_directive
+- id: q-139
+  checkpoint: cp10
+  template: i_owe
+  params:
+    person: p-wei-suwannarat
+    name_form: Wei
+  challenges:
+  - alias
+  - scattered_evidence
+- id: q-140
+  checkpoint: cp10
+  template: owed_to_me
+  params:
+    person: p-kian-ishikawa
+  challenges: []
+- id: q-141
+  checkpoint: cp10
+  template: loop_due
+  params:
+    commitment: c-167
+  challenges:
+  - scattered_evidence
+- id: q-142
+  checkpoint: cp10
+  template: project_attr
+  params:
+    project: pr-morcliff-tooling-wear-discovery
+    attribute: sponsor
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-143
+  checkpoint: cp10
+  template: person_attr
+  params:
+    person: p-ilse-langley
+    attribute: role
+    name_form: Ilse
+  challenges:
+  - alias
+  - new_entity
+- id: q-144
+  checkpoint: cp10
+  template: person_brief
+  params:
+    person: p-shirin-oyelami
+  challenges:
+  - new_entity
+- id: q-145
+  checkpoint: cp10
+  template: event_date
+  params:
+    event: e-0377
+  text: When was "Send Thibault the AI-use principles draft v2" completed?
+  challenges:
+  - duplicate_signal
+  - scattered_evidence
+- id: q-146
+  checkpoint: cp10
+  template: project_attr
+  params:
+    project: pr-galix-scrap-analysis-diligence
+    attribute: phase
+  challenges: []
+- id: q-147
+  checkpoint: cp10
+  template: person_brief
+  params:
+    person: p-ilse-langley
+    name_form: Ilse
+  challenges:
+  - alias
+  - new_entity
+- id: q-148
+  checkpoint: cp10
+  template: event_date
+  params:
+    event: e-0100
+  text: When was "Update the Fulmar lessons-learned note after Adwoa's comments" completed?
+  challenges:
+  - duplicate_signal
+- id: q-149
+  checkpoint: cp10
+  template: project_attr
+  params:
+    project: pr-falhaven-shift-handover-idea
+    attribute: sponsor
+  challenges: []
+- id: q-150
+  checkpoint: cp10
+  template: person_attr
+  params:
+    person: p-kiran-merriweather
+    attribute: phone
+  challenges:
+  - unobservable
+- id: q-151
+  checkpoint: cp11
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - supersession
+  - unobservable
+  - worker_directive
+- id: q-152
+  checkpoint: cp11
+  template: project_status
+  params:
+    project: pr-fulmar
+  challenges:
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - supersession
+  - worker_directive
+- id: q-153
+  checkpoint: cp11
+  template: project_changes
+  params:
+    project: pr-wilhaven-partnership
+    since: '2027-10-05'
+    name_form: the Wilhaven relationship
+  challenges:
+  - alias
+- id: q-154
+  checkpoint: cp11
+  template: i_owe
+  params:
+    person: p-giorgi-wisniewska
+    name_form: Giorgi
+  challenges:
+  - alias
+  - batch_catchup
+- id: q-155
+  checkpoint: cp11
+  template: owed_to_me
+  params:
+    person: p-quentin-ribeiro
+    name_form: Quentin
+  challenges:
+  - alias
+  - new_entity
+- id: q-156
+  checkpoint: cp11
+  template: project_attr
+  params:
+    project: pr-morcliff-safety-reporting-discovery
+    attribute: phase
+    name_form: MSRD discovery
+  challenges:
+  - alias
+- id: q-157
+  checkpoint: cp11
+  template: person_brief
+  params:
+    person: p-adwoa-chukwu
+  challenges:
+  - name_collision
+- id: q-158
+  checkpoint: cp11
+  template: event_date
+  params:
+    event: e-0396
+  text: When did we reverse the decision to weight integration effort at 25% in the work instructions
+    selection scoring?
+  challenges:
+  - reversal
+- id: q-159
+  checkpoint: cp11
+  template: loop_due
+  params:
+    commitment: c-169
+  challenges:
+  - correction
+  - supersession
+- id: q-160
+  checkpoint: cp11
+  template: project_attr
+  params:
+    project: pr-iselmoor-responsible-ai-use-framework
+    attribute: phase
+  challenges:
+  - duplicate_signal
+- id: q-161
+  checkpoint: cp11
+  template: person_brief
+  params:
+    person: p-giorgi-wisniewska
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - transfer
+- id: q-162
+  checkpoint: cp11
+  template: event_date
+  params:
+    event: e-0289
+  text: When was "Share the AI-use comms plan with Amira" completed?
+  challenges:
+  - batch_catchup
+- id: q-163
+  checkpoint: cp11
+  template: project_attr
+  params:
+    project: pr-operator-ai-basics-workshop
+    attribute: target_date
+  challenges: []
+- id: q-164
+  checkpoint: cp11
+  template: person_attr
+  params:
+    person: p-adwoa-kocak
+    attribute: phone
+  challenges:
+  - name_collision
+  - unobservable
+- id: q-165
+  checkpoint: cp11
+  template: project_attr
+  params:
+    project: pr-operator-ai-basics-peer-network
+    attribute: budget
+  challenges:
+  - unobservable
+- id: q-166
+  checkpoint: cp12
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - supersession
+  - unobservable
+  - worker_directive
+- id: q-167
+  checkpoint: cp12
+  template: project_status
+  params:
+    project: pr-fulmar
+  challenges:
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - supersession
+  - worker_directive
+- id: q-168
+  checkpoint: cp12
+  template: project_changes
+  params:
+    project: pr-iselmoor-responsible-ai-use-framework
+    since: '2027-10-07'
+  challenges: []
+- id: q-169
+  checkpoint: cp12
+  template: i_owe
+  params:
+    person: p-tane-haugen
+    name_form: Tane
+  challenges:
+  - alias
+  - duplicate_signal
+- id: q-170
+  checkpoint: cp12
+  template: owed_to_me
+  params:
+    person: p-batbayar-galbraith
+    name_form: Batbayar
+  challenges:
+  - alias
+  - duplicate_signal
+- id: q-171
+  checkpoint: cp12
+  template: person_brief
+  params:
+    person: p-zawadi-quintero
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-172
+  checkpoint: cp12
+  template: decision_date
+  params:
+    decision: d-009
+  challenges:
+  - endorsement
+  - worker_directive
+- id: q-173
+  checkpoint: cp12
+  template: event_date
+  params:
+    event: e-0406
+  text: When was "Set up Fulmar staging access for Amira" completed?
+  challenges:
+  - silent_closure
+- id: q-174
+  checkpoint: cp12
+  template: loop_due
+  params:
+    commitment: c-176
+  challenges:
+  - endorsement
+  - worker_directive
+- id: q-175
+  checkpoint: cp12
+  template: project_attr
+  params:
+    project: pr-iselmoor-responsible-ai-use-framework
+    attribute: target_date
+  challenges:
+  - supersession
+- id: q-176
+  checkpoint: cp12
+  template: person_brief
+  params:
+    person: p-yasmin-guo
+    name_form: Yasmin
+  challenges:
+  - alias
+  - new_entity
+  - transfer
+- id: q-177
+  checkpoint: cp12
+  template: event_date
+  params:
+    event: e-0442
+  text: When was "Look into the Fulmar duplicate notifications" completed?
+  challenges: []
+- id: q-178
+  checkpoint: cp12
+  template: project_attr
+  params:
+    project: pr-iselmoor-responsible-ai-use-framework
+    attribute: owner
+  challenges: []
+- id: q-179
+  checkpoint: cp12
+  template: person_brief
+  params:
+    person: p-quentin-ribeiro
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-180
+  checkpoint: cp12
+  template: event_date
+  params:
+    event: e-0488
+  text: When was "Walk Marcelo through the Fulmar lessons-learned note v2" completed?
+  challenges:
+  - unobservable
+  - weak_evidence

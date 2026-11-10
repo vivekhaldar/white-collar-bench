@@ -1,0 +1,26 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#radiology-follow-up-core",
+ "kind": "channel",
+ "participants": [
+  "Achieng",
+  "Aroha Mendoza",
+  "Anh",
+  "Michaela Dang",
+  "Aino Menon"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-29T11:02:22-05:00",
+   "user": "Achieng",
+   "handle": "@achieng",
+   "text": "just to recap, yesterday aroha said they'd review anh's radiology follow-up discovery process map"
+  },
+  {
+   "ts": "2027-10-29T11:03:36-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "sure, can do"
+  }
+ ]
+}

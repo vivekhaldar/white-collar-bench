@@ -1,0 +1,55 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-liisa",
+ "kind": "dm",
+ "participants": [
+  "Despina Pereira",
+  "Liisa Babic"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-15T09:17:59-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-02-15T09:19:07-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-02-15T09:33:00-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "i reviewed the fennel model allow-list earlier today",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@liisa"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-15T09:33:53-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "I sent you the Axolotl help-desk script."
+  },
+  {
+   "ts": "2027-02-15T09:38:24-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-02-15T09:40:26-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "anytime"
+  }
+ ]
+}

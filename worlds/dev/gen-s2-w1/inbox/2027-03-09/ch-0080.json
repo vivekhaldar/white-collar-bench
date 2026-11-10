@@ -3,21 +3,21 @@
  "channel": "#mistral-core",
  "kind": "channel",
  "participants": [
-  "Dina Zimmermann",
-  "Yael Yardley",
-  "Imani Chaiyaporn",
-  "Rudo Alexiou",
-  "Naoko Maldonado",
+  "Dina Ricci",
+  "Yael Ellery",
+  "Imani Navarro",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
   "Cassandra Yilmaz",
-  "Bilal Blackwood",
+  "Bilal Kahananui",
   "Thibault Sahin",
   "Mei Obi",
-  "Xiaoling Winslow"
+  "Xiaoling Taufa"
  ],
  "messages": [
   {
    "ts": "2027-03-09T09:15:00-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "@imani i sent you the Mistral architecture diagram.",
    "reactions": [

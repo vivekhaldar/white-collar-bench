@@ -1,0 +1,78 @@
+{
+ "workspace": "reddale",
+ "channel": "#nettle-core",
+ "kind": "channel",
+ "participants": [
+  "Gaurav Laine",
+  "Aoife Everett",
+  "Akosua",
+  "Douglas Grigoryan",
+  "Bisi Volkov",
+  "Sigrid Asante",
+  "Sipho Papadopoulos",
+  "Adaeze Morimoto",
+  "Bruna Thapa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-31T10:54:38+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "catching people up since a few of us are out today"
+  },
+  {
+   "ts": "2027-08-31T10:55:22+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "fyi aoife will review bisi's nettle service blueprint"
+  },
+  {
+   "ts": "2027-08-31T10:55:55+01:00",
+   "user": "Sigrid Asante",
+   "handle": "@sigrid",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-08-31T10:56:37+01:00",
+   "user": "Akosua",
+   "handle": "@akosua",
+   "text": "nice",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-08-31T11:03:24+01:00",
+   "user": "Douglas Grigoryan",
+   "handle": "@douglas",
+   "text": "nice",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-08-31T11:08:48+01:00",
+   "user": "Sipho Papadopoulos",
+   "handle": "@sipho",
+   "text": "nice :)",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-08-31T11:09:06+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "Looks like Aoife assembled the Nettle security review package.",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@aoife"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-08-31T11:10:36+01:00",
+   "user": "Bisi Volkov",
+   "handle": "@bisi",
+   "text": "ok",
+   "thread_of": 6
+  }
+ ]
+}

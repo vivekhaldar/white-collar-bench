@@ -4,7 +4,7 @@
  "kind": "dm",
  "participants": [
   "Cassandra Yilmaz",
-  "Dina Zimmermann"
+  "Dina Ricci"
  ],
  "messages": [
   {
@@ -17,11 +17,11 @@
    "ts": "2027-03-01T15:58:45-07:00",
    "user": "Cassandra Yilmaz",
    "handle": "@cassandra",
-   "text": "For the record, you confirmed the Mistral risk register with Imani Chaiyaporn on Thursday."
+   "text": "For the record, you confirmed the Mistral risk register with Imani Navarro on Thursday."
   },
   {
    "ts": "2027-03-01T15:59:34-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "got it"
   }

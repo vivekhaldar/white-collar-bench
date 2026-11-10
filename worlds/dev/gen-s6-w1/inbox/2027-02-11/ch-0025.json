@@ -1,0 +1,32 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Aiko Venkataraman",
+  "Liisa Babic"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-11T16:53:22-08:00",
+   "user": "Aiko Venkataraman",
+   "handle": "@aiko",
+   "text": "is the wifi on the second floor down for anyone else?",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@liisa"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-11T16:59:47-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "yep, same here",
+   "thread_of": 0
+  }
+ ]
+}

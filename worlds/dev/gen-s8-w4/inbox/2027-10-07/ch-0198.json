@@ -1,0 +1,49 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-giorgi",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Giorgi Wisniewska"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-07T16:17:41-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-10-07T16:18:14-06:00",
+   "user": "Giorgi Wisniewska",
+   "handle": "@giorgi",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-10-07T16:20:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "Could you send me the Fulmar accessibility review v2?",
+   "edited": true,
+   "original": "Could you send me the Fumlar accessibility review v2?"
+  },
+  {
+   "ts": "2027-10-07T16:21:12-06:00",
+   "user": "Giorgi Wisniewska",
+   "handle": "@giorgi",
+   "text": "no problem"
+  },
+  {
+   "ts": "2027-10-07T16:23:12-06:00",
+   "user": "Giorgi Wisniewska",
+   "handle": "@giorgi",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-10-07T16:25:14-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

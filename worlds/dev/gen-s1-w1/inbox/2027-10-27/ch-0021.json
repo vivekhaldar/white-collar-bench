@@ -4,7 +4,7 @@
  "kind": "dm",
  "participants": [
   "Jalen",
-  "Camila Quimby"
+  "Camila Abernathy"
  ],
  "messages": [
   {
@@ -15,7 +15,7 @@
   },
   {
    "ts": "2027-10-27T16:56:23-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "hey"
   },
@@ -27,7 +27,7 @@
   },
   {
    "ts": "2027-10-27T17:03:22-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "ok, talk later"
   },

@@ -1,0 +1,131 @@
+{
+  "date": "2027-09-06",
+  "artifacts": [
+    {
+      "id": "em-0080",
+      "channel": "email",
+      "received_at": "2027-09-06T06:45:00+01:00",
+      "path": "em-0080.eml",
+      "title": "[REQ-39867] Request resolved"
+    },
+    {
+      "id": "em-0081",
+      "channel": "email",
+      "received_at": "2027-09-06T06:59:00+01:00",
+      "path": "em-0081.eml",
+      "title": "Reminder: Friday status note due Friday 10 September"
+    },
+    {
+      "id": "em-0082",
+      "channel": "email",
+      "received_at": "2027-09-06T08:08:00+01:00",
+      "path": "em-0082.eml",
+      "title": "Translation help selection risk register"
+    },
+    {
+      "id": "nt-0011",
+      "channel": "note",
+      "received_at": "2027-09-06T08:10:00+01:00",
+      "path": "nt-0011.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "em-0083",
+      "channel": "email",
+      "received_at": "2027-09-06T08:57:00+01:00",
+      "path": "em-0083.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "mn-0023",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-06T09:00:00+01:00",
+      "path": "mn-0023.md",
+      "title": "Notes: Catch-up: Aoife / Nare"
+    },
+    {
+      "id": "mn-0024",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-06T09:55:00+01:00",
+      "path": "mn-0024.md",
+      "title": "Recap: Nettle standup"
+    },
+    {
+      "id": "mn-0025",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-06T10:00:00+01:00",
+      "path": "mn-0025.md",
+      "title": "Recap: Nettle readiness review"
+    },
+    {
+      "id": "ch-0061",
+      "channel": "chat",
+      "received_at": "2027-09-06T10:01:00+01:00",
+      "path": "ch-0061.json",
+      "title": "DM: Aoife Everett / Catrin Dang"
+    },
+    {
+      "id": "mt-0013",
+      "channel": "transcript",
+      "received_at": "2027-09-06T11:45:00+01:00",
+      "path": "mt-0013.vtt",
+      "title": "FDO leads call (transcript)"
+    },
+    {
+      "id": "em-0084",
+      "channel": "email",
+      "received_at": "2027-09-06T12:03:00+01:00",
+      "path": "em-0084.eml",
+      "title": "Pantry inventory discovery problem framing note"
+    },
+    {
+      "id": "em-0085",
+      "channel": "email",
+      "received_at": "2027-09-06T12:05:00+01:00",
+      "path": "em-0085.eml",
+      "title": "Nettle rollout checklist"
+    },
+    {
+      "id": "em-0086",
+      "channel": "email",
+      "received_at": "2027-09-06T15:28:00+01:00",
+      "path": "em-0086.eml",
+      "title": "[REQ-20646] Request resolved"
+    },
+    {
+      "id": "em-0087",
+      "channel": "email",
+      "received_at": "2027-09-06T16:01:00+01:00",
+      "path": "em-0087.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0088",
+      "channel": "email",
+      "received_at": "2027-09-06T16:06:00+01:00",
+      "path": "em-0088.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "ch-0062",
+      "channel": "chat",
+      "received_at": "2027-09-06T16:14:00+01:00",
+      "path": "ch-0062.json",
+      "title": "DM: Marko Chaiyaporn / Aoife Everett"
+    },
+    {
+      "id": "ca-0005",
+      "channel": "calendar",
+      "received_at": "2027-09-06T16:53:00+01:00",
+      "path": "ca-0005.ics",
+      "title": "Invite: Walkthrough: Pantry inventory discovery problem framing note"
+    },
+    {
+      "id": "em-0089",
+      "channel": "email",
+      "received_at": "2027-09-06T17:17:00+01:00",
+      "path": "em-0089.eml",
+      "title": "Fwd: Nettle lessons-learned note"
+    }
+  ]
+}

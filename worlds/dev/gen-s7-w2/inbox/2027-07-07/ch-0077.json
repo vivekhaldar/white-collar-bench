@@ -1,0 +1,50 @@
+{
+ "workspace": "corrstead",
+ "channel": "#siskin-core",
+ "kind": "channel",
+ "participants": [
+  "Bolat Oyelami",
+  "Hiba Jimenez",
+  "Desmond Visser",
+  "Ewan Laine",
+  "Madeline Chikwanha",
+  "Emre Khumalo",
+  "Andrei Laurent"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-07T09:12:00-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "@hiba when you get a chance, could you send me the Siskin faculty survey? :)"
+  },
+  {
+   "ts": "2027-07-07T09:13:04-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "no problem",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-07-07T09:16:58-08:00",
+   "user": "Desmond Visser",
+   "handle": "@desmond",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-07-07T09:26:50-08:00",
+   "user": "Andrei Laurent",
+   "handle": "@andrei",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-07-07T09:35:05-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

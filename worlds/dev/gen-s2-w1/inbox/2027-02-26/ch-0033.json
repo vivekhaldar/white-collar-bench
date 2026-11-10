@@ -3,18 +3,18 @@
  "channel": "#fennel-core",
  "kind": "channel",
  "participants": [
-  "Yael Yardley",
-  "Dina Zimmermann",
+  "Yael Ellery",
+  "Dina Ricci",
   "Cassandra Yilmaz",
   "Imani",
-  "Rudo Alexiou",
-  "Naoko Maldonado",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
   "Thibault Sahin"
  ],
  "messages": [
   {
    "ts": "2027-02-26T16:41:10-07:00",
-   "user": "Yael Yardley",
+   "user": "Yael Ellery",
    "handle": "@yael",
    "text": "Recap from yesterday: Dina confirmed the Fennel test plan with Imani."
   },

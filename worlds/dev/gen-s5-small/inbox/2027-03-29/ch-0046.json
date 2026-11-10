@@ -1,34 +1,35 @@
 {
  "workspace": "iselvale",
- "channel": "#clinical-documentation-core",
- "kind": "channel",
+ "channel": "dm-hiba-marcelo",
+ "kind": "dm",
  "participants": [
-  "Anahit",
-  "Hiba Xu",
-  "Ama Forsythe",
-  "Mateo Pritchard"
+  "Hiba Deng",
+  "Marcelo Brandao"
  ],
  "messages": [
   {
-   "ts": "2027-03-29T13:25:00-05:00",
-   "user": "Anahit",
-   "handle": "@anahit",
-   "text": "@hiba could you send me the clinical documentation discovery pain-point list?",
-   "reactions": [
-    {
-     "emoji": "heavy_check_mark",
-     "users": [
-      "@mateo"
-     ]
-    }
-   ]
+   "ts": "2027-03-29T11:09:00-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "just sent you the wagtail run-cost estimate"
   },
   {
-   "ts": "2027-03-29T13:31:59-05:00",
-   "user": "Ama Forsythe",
-   "handle": "@ama",
-   "text": "thanks for flagging",
-   "thread_of": 0
+   "ts": "2027-03-29T11:09:34-05:00",
+   "user": "Marcelo Brandao",
+   "handle": "@marcelo",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-03-29T11:11:42-05:00",
+   "user": "Marcelo Brandao",
+   "handle": "@marcelo",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-03-29T11:13:43-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "remote, but online all day"
   }
  ]
 }

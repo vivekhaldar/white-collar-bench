@@ -1,59 +1,41 @@
 {
  "workspace": "iselvale",
- "channel": "#wagtail-core",
+ "channel": "#random",
  "kind": "channel",
  "participants": [
-  "Lakshmi Zamora",
-  "Hiba Xu",
-  "Ama Forsythe",
-  "Anahit Upton",
-  "Mateo Pritchard",
-  "Friederike Malhotra",
-  "Jisoo Makinen",
-  "Maricel Herrera",
-  "Isla Mercier"
+  "Lindiwe Ribeiro",
+  "Jisoo Nowak",
+  "Anahit Fifita",
+  "Maricel Fuentes"
  ],
  "messages": [
   {
-   "ts": "2027-03-25T10:27:00-05:00",
-   "user": "Lakshmi Zamora",
-   "handle": "@lakshmi",
-   "text": "@hiba could you confirm the wagtail change request with me?",
+   "ts": "2027-03-25T15:55:57-05:00",
+   "user": "Lindiwe Ribeiro",
+   "handle": "@lindiwe",
+   "text": "does anyone have a spare laptop charger (usb-c)?",
    "reactions": [
     {
      "emoji": "tada",
      "users": [
-      "@hiba"
+      "@jisoo",
+      "@anahit"
      ]
     }
    ]
   },
   {
-   "ts": "2027-03-25T10:27:17-05:00",
-   "user": "Maricel Herrera",
-   "handle": "@maricel",
-   "text": "ok",
+   "ts": "2027-03-25T15:57:27-05:00",
+   "user": "Jisoo Nowak",
+   "handle": "@jisoo",
+   "text": "I have one, desk by the window",
    "thread_of": 0
   },
   {
-   "ts": "2027-03-25T10:29:36-05:00",
-   "user": "Anahit Upton",
+   "ts": "2027-03-25T16:02:29-05:00",
+   "user": "Anahit Fifita",
    "handle": "@anahit",
-   "text": "thanks for the update :)",
-   "thread_of": 0
-  },
-  {
-   "ts": "2027-03-25T10:35:37-05:00",
-   "user": "Maricel Herrera",
-   "handle": "@maricel",
-   "text": "nice",
-   "thread_of": 0
-  },
-  {
-   "ts": "2027-03-25T10:36:11-05:00",
-   "user": "Ama Forsythe",
-   "handle": "@ama",
-   "text": "+1",
+   "text": "check the supply cupboard",
    "thread_of": 0
   }
  ]

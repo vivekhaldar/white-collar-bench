@@ -36,7 +36,7 @@
   checkpoint: cp1
   template: i_owe
   params:
-    person: p-tariq-popescu
+    person: p-tariq-ivanova
     name_form: Tariq
   challenges:
   - alias
@@ -72,7 +72,7 @@
   checkpoint: cp1
   template: person_attr
   params:
-    person: p-meera-ivanova
+    person: p-meera-bondarenko
     attribute: relationship
   challenges:
   - name_collision
@@ -88,7 +88,7 @@
   checkpoint: cp1
   template: person_brief
   params:
-    person: p-ratna-bondarenko
+    person: p-ratna-nikolic
   challenges:
   - duplicate_signal
 - id: q-012
@@ -112,7 +112,7 @@
   checkpoint: cp1
   template: person_attr
   params:
-    person: p-margaux-choi
+    person: p-margaux-kang
     attribute: office
   challenges:
   - unobservable
@@ -157,7 +157,7 @@
   checkpoint: cp2
   template: i_owe
   params:
-    person: p-meera-ivanova
+    person: p-meera-bondarenko
   challenges:
   - duplicate_signal
   - implied_commitment
@@ -167,7 +167,7 @@
   checkpoint: cp2
   template: owed_to_me
   params:
-    person: p-theresa-nagy
+    person: p-theresa-petrov
     name_form: Resi
   challenges:
   - alias
@@ -198,7 +198,7 @@
   checkpoint: cp2
   template: person_brief
   params:
-    person: p-bruna-sinclair
+    person: p-bruna-vaughan
   challenges:
   - correction
 - id: q-025
@@ -233,7 +233,7 @@
   checkpoint: cp2
   template: person_attr
   params:
-    person: p-celine-wisniewska
+    person: p-celine-novotny
     attribute: org
     name_form: Celine
   challenges:
@@ -282,13 +282,13 @@
   checkpoint: cp3
   template: i_owe
   params:
-    person: p-theresa-nagy
+    person: p-theresa-petrov
   challenges: []
 - id: q-035
   checkpoint: cp3
   template: owed_to_me
   params:
-    person: p-celine-wisniewska
+    person: p-celine-novotny
     name_form: Celine
   challenges:
   - alias
@@ -303,7 +303,7 @@
   checkpoint: cp3
   template: person_attr
   params:
-    person: p-ratna-bondarenko
+    person: p-ratna-nikolic
     attribute: org
   challenges: []
 - id: q-038
@@ -319,7 +319,7 @@
   checkpoint: cp3
   template: person_brief
   params:
-    person: p-celine-wisniewska
+    person: p-celine-novotny
     name_form: Celine
   challenges:
   - alias
@@ -409,7 +409,7 @@
   checkpoint: cp4
   template: i_owe
   params:
-    person: p-darius-sherwood
+    person: p-darius-bramwell
     name_form: Darius
   challenges:
   - alias
@@ -418,13 +418,13 @@
   checkpoint: cp4
   template: owed_to_me
   params:
-    person: p-bruna-sinclair
+    person: p-bruna-vaughan
   challenges: []
 - id: q-051
   checkpoint: cp4
   template: person_attr
   params:
-    person: p-henrik-mendoza
+    person: p-henrik-santoso
     attribute: org
     name_form: Henrik
   challenges:
@@ -434,7 +434,7 @@
   checkpoint: cp4
   template: person_brief
   params:
-    person: p-nadia-krause
+    person: p-nadia-vogel
   challenges:
   - transfer
 - id: q-053
@@ -464,7 +464,7 @@
   checkpoint: cp4
   template: person_brief
   params:
-    person: p-meera-ivanova
+    person: p-meera-bondarenko
   challenges:
   - duplicate_signal
   - endorsement
@@ -496,7 +496,7 @@
   checkpoint: cp4
   template: person_brief
   params:
-    person: p-darius-sherwood
+    person: p-darius-bramwell
     name_form: the Holfield lead
   challenges:
   - alias
@@ -560,7 +560,7 @@
   checkpoint: cp5
   template: owed_to_me
   params:
-    person: p-darius-sherwood
+    person: p-darius-bramwell
   challenges: []
 - id: q-066
   checkpoint: cp5
@@ -576,7 +576,7 @@
   checkpoint: cp5
   template: person_brief
   params:
-    person: p-theresa-nagy
+    person: p-theresa-petrov
   challenges:
   - correction
 - id: q-068
@@ -638,7 +638,7 @@
   checkpoint: cp5
   template: person_attr
   params:
-    person: p-ratna-bondarenko
+    person: p-ratna-nikolic
     attribute: office
     name_form: Ratna
   challenges:
@@ -683,7 +683,7 @@
   checkpoint: cp6
   template: i_owe
   params:
-    person: p-celine-wisniewska
+    person: p-celine-novotny
     name_form: Celine
   challenges:
   - alias
@@ -694,7 +694,7 @@
   checkpoint: cp6
   template: owed_to_me
   params:
-    person: p-nadia-krause
+    person: p-nadia-vogel
   challenges:
   - batch_catchup
   - transfer
@@ -743,7 +743,7 @@
   checkpoint: cp6
   template: person_brief
   params:
-    person: p-margaux-choi
+    person: p-margaux-kang
   challenges:
   - duplicate_signal
 - id: q-087
@@ -767,7 +767,7 @@
   checkpoint: cp6
   template: person_brief
   params:
-    person: p-esperanza-rao
+    person: p-esperanza-venkataraman
   challenges: []
 - id: q-090
   checkpoint: cp6

@@ -1,0 +1,43 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-akosua-aoife",
+ "kind": "dm",
+ "participants": [
+  "Akosua Bergstrom",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T16:37:59+01:00",
+   "user": "Akosua Bergstrom",
+   "handle": "@akosua",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-09-07T16:39:04+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "sure, what's up?"
+  },
+  {
+   "ts": "2027-09-07T16:40:00+01:00",
+   "user": "Akosua Bergstrom",
+   "handle": "@akosua",
+   "text": "FYI Sigrid needs the translation help selection risk register by Thu 9 Sep!",
+   "edited": true,
+   "original": "FYI Sigrid needs the translation help selection risk register by Sat 11 Sep!"
+  },
+  {
+   "ts": "2027-09-07T16:40:45+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-09-07T16:44:08+01:00",
+   "user": "Akosua Bergstrom",
+   "handle": "@akosua",
+   "text": "yeah, it's been crawling all morning :)"
+  }
+ ]
+}

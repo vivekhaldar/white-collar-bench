@@ -3,19 +3,19 @@
  "channel": "#random",
  "kind": "channel",
  "participants": [
-  "Bruna Sinclair",
-  "Tariq Popescu"
+  "Bruna Vaughan",
+  "Tariq Ivanova"
  ],
  "messages": [
   {
    "ts": "2027-08-27T16:29:06-08:00",
-   "user": "Bruna Sinclair",
+   "user": "Bruna Vaughan",
    "handle": "@bruna",
    "text": "does anyone have a spare laptop charger (usb-c)?"
   },
   {
    "ts": "2027-08-27T16:31:09-08:00",
-   "user": "Tariq Popescu",
+   "user": "Tariq Ivanova",
    "handle": "@tariq",
    "text": "i have one, desk by the window"
   }

@@ -34,7 +34,7 @@
       "channel": "chat",
       "received_at": "2027-10-28T11:24:00-07:00",
       "path": "ch-0022.json",
-      "title": "DM: Yasmin Mokoena / Camila Quimby"
+      "title": "DM: Yasmin Mokoena / Camila Abernathy"
     },
     {
       "id": "em-0027",
@@ -69,7 +69,7 @@
       "channel": "chat",
       "received_at": "2027-10-28T14:01:00-07:00",
       "path": "ch-0023.json",
-      "title": "DM: Aarav Ortega / Camila Quimby"
+      "title": "DM: Aarav Zamora / Camila Abernathy"
     },
     {
       "id": "em-0029",
@@ -97,7 +97,7 @@
       "channel": "chat",
       "received_at": "2027-10-28T16:12:00-07:00",
       "path": "ch-0024.json",
-      "title": "DM: Fernanda Olawale / Camila Quimby"
+      "title": "DM: Fernanda Olawale / Camila Abernathy"
     },
     {
       "id": "ch-0025",
@@ -111,14 +111,14 @@
       "channel": "chat",
       "received_at": "2027-10-28T17:19:00-07:00",
       "path": "ch-0026.json",
-      "title": "DM: Camila Quimby / Yasmin Mokoena"
+      "title": "DM: Camila Abernathy / Yasmin Mokoena"
     },
     {
       "id": "ch-0027",
       "channel": "chat",
       "received_at": "2027-10-28T17:51:00-07:00",
       "path": "ch-0027.json",
-      "title": "DM: Yasmin Mokoena / Camila Quimby"
+      "title": "DM: Yasmin Mokoena / Camila Abernathy"
     }
   ]
 }

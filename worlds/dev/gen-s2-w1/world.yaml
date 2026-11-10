@@ -2,7 +2,7 @@ id: gen-s2-w1
 title: 'Generated world: Vercliff Digital Service, City of Vercliff (city government digital service)'
 version: 1
 split: dev
-worker: p-dina-zimmermann
+worker: p-dina-ricci
 timezone: -07:00
 seed:
   start: '2027-02-22'

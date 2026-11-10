@@ -3,13 +3,13 @@
  "channel": "dm-camila-petra",
  "kind": "dm",
  "participants": [
-  "Camila Quimby",
+  "Camila Abernathy",
   "Petra Korkmaz"
  ],
  "messages": [
   {
    "ts": "2027-11-04T18:16:00-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "I'll send you the plain language workshop room plan."
   },
@@ -21,7 +21,7 @@
   },
   {
    "ts": "2027-11-04T18:19:51-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "did the link work for you?"
   },

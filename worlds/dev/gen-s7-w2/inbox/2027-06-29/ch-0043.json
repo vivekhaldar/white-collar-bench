@@ -1,0 +1,31 @@
+{
+ "workspace": "corrstead",
+ "channel": "#garnet-core",
+ "kind": "channel",
+ "participants": [
+  "Madeline Chikwanha",
+  "Hiba Jimenez",
+  "Ewan Laine",
+  "Bolat Oyelami",
+  "Dez",
+  "Andrei Laurent",
+  "Emre Khumalo",
+  "Adaeze Fifita",
+  "Eun-ji Valdez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-29T17:44:00-08:00",
+   "user": "Madeline Chikwanha",
+   "handle": "@madeline",
+   "text": "@hiba i wrote the Garnet support playbook earlier today! :)"
+  },
+  {
+   "ts": "2027-06-29T17:44:23-08:00",
+   "user": "Adaeze Fifita",
+   "handle": "@adaeze",
+   "text": "thanks for the heads up",
+   "thread_of": 0
+  }
+ ]
+}

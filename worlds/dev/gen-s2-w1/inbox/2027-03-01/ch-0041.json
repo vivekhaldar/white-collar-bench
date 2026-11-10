@@ -4,9 +4,9 @@
  "kind": "channel",
  "participants": [
   "Mei Obi",
-  "Bilal Blackwood",
-  "Imani Chaiyaporn",
-  "Kayode Papadopoulos"
+  "Bilal Kahananui",
+  "Imani Navarro",
+  "Kayode Whitfield"
  ],
  "messages": [
   {
@@ -26,13 +26,13 @@
   },
   {
    "ts": "2027-03-01T15:58:31-07:00",
-   "user": "Bilal Blackwood",
+   "user": "Bilal Kahananui",
    "handle": "@bilal",
    "text": "not me!"
   },
   {
    "ts": "2027-03-01T16:00:06-07:00",
-   "user": "Imani Chaiyaporn",
+   "user": "Imani Navarro",
    "handle": "@imani",
    "text": "it's been there a while",
    "thread_of": 0

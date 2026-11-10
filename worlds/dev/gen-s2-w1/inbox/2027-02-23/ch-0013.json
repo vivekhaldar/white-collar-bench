@@ -3,13 +3,13 @@
  "channel": "dm-dina-imani",
  "kind": "dm",
  "participants": [
-  "Dina Zimmermann",
+  "Dina Ricci",
   "Imani"
  ],
  "messages": [
   {
    "ts": "2027-02-23T15:16:00-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "i wrote a reference note for your inspection scheduling fellowship application earlier today"
   },
@@ -27,7 +27,7 @@
   },
   {
    "ts": "2027-02-23T15:21:18-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "no worries"
   }

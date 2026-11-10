@@ -3,19 +3,19 @@
  "channel": "dm-catrin-dina",
  "kind": "dm",
  "participants": [
-  "Catrin Petrov",
-  "Dina Zimmermann"
+  "Catrin Kuznetsova",
+  "Dina Ricci"
  ],
  "messages": [
   {
    "ts": "2027-02-23T15:39:01-07:00",
-   "user": "Catrin Petrov",
+   "user": "Catrin Kuznetsova",
    "handle": "@catrin",
    "text": "For the record, you sent Nomvula the pothole reporting selection requirements list yesterday."
   },
   {
    "ts": "2027-02-23T15:39:22-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "noted"
   }

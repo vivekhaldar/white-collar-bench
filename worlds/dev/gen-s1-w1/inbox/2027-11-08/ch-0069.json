@@ -3,19 +3,19 @@
  "channel": "dm-camila-petra",
  "kind": "dm",
  "participants": [
-  "Camila Quimby",
+  "Camila Abernathy",
   "Petra Korkmaz"
  ],
  "messages": [
   {
    "ts": "2027-11-08T15:17:45-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "hello"
   },
   {
    "ts": "2027-11-08T15:22:00-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "I can send you the Marten test plan."
   },
@@ -33,7 +33,7 @@
   },
   {
    "ts": "2027-11-08T15:28:06-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "busy, but fine. you?"
   }

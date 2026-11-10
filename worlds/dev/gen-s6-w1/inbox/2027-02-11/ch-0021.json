@@ -1,0 +1,47 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-aiko-despina",
+ "kind": "dm",
+ "participants": [
+  "Aiko Venkataraman",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-11T08:29:39-08:00",
+   "user": "Aiko Venkataraman",
+   "handle": "@aiko",
+   "text": "morning!"
+  },
+  {
+   "ts": "2027-02-11T08:30:34-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "sure, what's up?"
+  },
+  {
+   "ts": "2027-02-11T08:32:54-08:00",
+   "user": "Aiko Venkataraman",
+   "handle": "@aiko",
+   "text": "just to recap, on monday you said you'd send me the friday status note for w/e 12 february"
+  },
+  {
+   "ts": "2027-02-11T08:34:10-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "sure, can do"
+  },
+  {
+   "ts": "2027-02-11T08:37:49-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-02-11T08:39:31-08:00",
+   "user": "Aiko Venkataraman",
+   "handle": "@aiko",
+   "text": "only the first half"
+  }
+ ]
+}

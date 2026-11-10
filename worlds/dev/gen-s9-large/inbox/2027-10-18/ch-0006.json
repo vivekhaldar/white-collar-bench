@@ -1,0 +1,29 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-aylin",
+ "kind": "dm",
+ "participants": [
+  "Aylin Bianchi",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-18T13:44:33-05:00",
+   "user": "Aylin Bianchi",
+   "handle": "@aylin",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-10-18T13:46:00-05:00",
+   "user": "Aylin Bianchi",
+   "handle": "@aylin",
+   "text": "Informatics Nurse Specialist Hire is moving into screens. :)"
+  },
+  {
+   "ts": "2027-10-18T13:46:46-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "thanks for the heads up"
+  }
+ ]
+}

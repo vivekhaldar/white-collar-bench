@@ -3,13 +3,13 @@
  "channel": "dm-margaux-ottavio",
  "kind": "dm",
  "participants": [
-  "Margaux Choi",
-  "Ottavio Monteiro"
+  "Margaux Kang",
+  "Ottavio Moreira"
  ],
  "messages": [
   {
    "ts": "2027-08-24T09:38:00-08:00",
-   "user": "Margaux Choi",
+   "user": "Margaux Kang",
    "handle": "@margaux",
    "text": "i'll send you the notes from the financial aid chat session",
    "reactions": [
@@ -23,7 +23,7 @@
   },
   {
    "ts": "2027-08-24T09:38:41-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "that'd be great"
   }

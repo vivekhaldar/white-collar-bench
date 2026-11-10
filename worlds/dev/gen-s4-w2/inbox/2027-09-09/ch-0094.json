@@ -3,23 +3,23 @@
  "channel": "#room-booking-selection-core",
  "kind": "channel",
  "participants": [
-  "Meera Ivanova",
-  "Ottavio Monteiro",
+  "Meera Bondarenko",
+  "Ottavio Moreira",
   "Roya",
   "Tegan Ogunleye",
-  "Nadia Krause",
+  "Nadia Vogel",
   "Isabela Haidari"
  ],
  "messages": [
   {
    "ts": "2027-09-09T11:00:00-08:00",
-   "user": "Meera Ivanova",
+   "user": "Meera Bondarenko",
    "handle": "@meera",
    "text": "@ottavio leave it with me, I'll send you the room booking selection risk register."
   },
   {
    "ts": "2027-09-09T11:00:49-08:00",
-   "user": "Nadia Krause",
+   "user": "Nadia Vogel",
    "handle": "@nadia",
    "text": "good to know",
    "thread_of": 0
@@ -33,7 +33,7 @@
   },
   {
    "ts": "2027-09-09T11:13:27-08:00",
-   "user": "Nadia Krause",
+   "user": "Nadia Vogel",
    "handle": "@nadia",
    "text": "following :)",
    "thread_of": 0

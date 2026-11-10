@@ -1,0 +1,23 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolat-hiba",
+ "kind": "dm",
+ "participants": [
+  "Bolat Oyelami",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-29T10:33:00-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "Leave it with me, I'll send you the Garnet evaluation rubric!"
+  },
+  {
+   "ts": "2027-06-29T10:34:29-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "perfect, thanks"
+  }
+ ]
+}

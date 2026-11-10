@@ -3,25 +3,25 @@
  "channel": "dm-dina-imani",
  "kind": "dm",
  "participants": [
-  "Imani Chaiyaporn",
-  "Dina Zimmermann"
+  "Imani Navarro",
+  "Dina Ricci"
  ],
  "messages": [
   {
    "ts": "2027-03-01T13:15:23-07:00",
-   "user": "Imani Chaiyaporn",
+   "user": "Imani Navarro",
    "handle": "@imani",
    "text": "quick q"
   },
   {
    "ts": "2027-03-01T13:16:00-07:00",
-   "user": "Imani Chaiyaporn",
+   "user": "Imani Navarro",
    "handle": "@imani",
    "text": "can you introduce me to tendai for the permit intake work?"
   },
   {
    "ts": "2027-03-01T13:17:05-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "will do"
   }

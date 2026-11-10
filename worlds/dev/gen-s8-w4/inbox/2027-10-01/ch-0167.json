@@ -1,0 +1,40 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#ai-use-core",
+ "kind": "channel",
+ "participants": [
+  "Kian Ishikawa",
+  "Amira Baek",
+  "Adwoa",
+  "Zawadi Quintero",
+  "Wei Suwannarat"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-01T15:44:00-06:00",
+   "user": "Kian Ishikawa",
+   "handle": "@kian",
+   "text": "Amira will update the AI-use risk register v2 after Zawadi's comments, as discussed."
+  },
+  {
+   "ts": "2027-10-01T15:44:57-06:00",
+   "user": "Zawadi Quintero",
+   "handle": "@zawadi",
+   "text": "that'd be great"
+  },
+  {
+   "ts": "2027-10-01T15:53:50-06:00",
+   "user": "Zawadi Quintero",
+   "handle": "@zawadi",
+   "text": "thanks for the update :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-10-01T15:56:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

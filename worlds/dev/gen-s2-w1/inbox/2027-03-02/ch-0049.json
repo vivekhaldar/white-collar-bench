@@ -4,11 +4,11 @@
  "kind": "channel",
  "participants": [
   "Imani",
-  "Dina Zimmermann",
+  "Dina Ricci",
   "Cassandra Yilmaz",
-  "Yael Yardley",
-  "Rudo Alexiou",
-  "Naoko Maldonado",
+  "Yael Ellery",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
   "Thibault Sahin"
  ],
  "messages": [
@@ -20,13 +20,13 @@
   },
   {
    "ts": "2027-03-02T11:22:40-07:00",
-   "user": "Yael Yardley",
+   "user": "Yael Ellery",
    "handle": "@yael",
    "text": "noted"
   },
   {
    "ts": "2027-03-02T11:29:47-07:00",
-   "user": "Yael Yardley",
+   "user": "Yael Ellery",
    "handle": "@yael",
    "text": "good to know",
    "thread_of": 0

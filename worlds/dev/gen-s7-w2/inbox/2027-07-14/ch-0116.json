@@ -1,0 +1,33 @@
+{
+ "workspace": "corrstead",
+ "channel": "#alumni-outreach-discovery-core",
+ "kind": "channel",
+ "participants": [
+  "Bolat",
+  "Hiba Jimenez",
+  "Mere Hidayat",
+  "Deborah Nurlanov"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-14T11:27:00-08:00",
+   "user": "Bolat",
+   "handle": "@bolat",
+   "text": "@hiba will send you the alumni outreach discovery opportunity list."
+  },
+  {
+   "ts": "2027-07-14T11:27:18-08:00",
+   "user": "Deborah Nurlanov",
+   "handle": "@deborah",
+   "text": "thanks for the heads up",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-07-14T11:36:37-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

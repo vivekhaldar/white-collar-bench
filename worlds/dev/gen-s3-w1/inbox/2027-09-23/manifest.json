@@ -2,153 +2,152 @@
   "date": "2027-09-23",
   "artifacts": [
     {
-      "id": "ch-0090",
+      "id": "ch-0104",
       "channel": "chat",
       "received_at": "2027-09-23T07:38:00-05:00",
-      "path": "ch-0090.json",
+      "path": "ch-0104.json",
       "title": "#okapi-core (catch-up)"
     },
     {
-      "id": "mt-0014",
+      "id": "mt-0016",
       "channel": "transcript",
       "received_at": "2027-09-23T07:39:00-05:00",
-      "path": "mt-0014.vtt",
+      "path": "mt-0016.vtt",
       "title": "Sirocco sync (transcript)"
     },
     {
-      "id": "em-0108",
+      "id": "em-0102",
       "channel": "email",
       "received_at": "2027-09-23T07:40:00-05:00",
-      "path": "em-0108.eml",
-      "title": "While you were out: Bittern"
+      "path": "em-0102.eml",
+      "title": "Re: While you were out: funding model"
     },
     {
-      "id": "ch-0091",
+      "id": "ch-0105",
       "channel": "chat",
       "received_at": "2027-09-23T07:41:00-05:00",
-      "path": "ch-0091.json",
-      "title": "DM: Katarzyna Feng / Alasdair Kaya"
+      "path": "ch-0105.json",
+      "title": "DM: Katarzyna Dang / Alasdair Kaya"
     },
     {
-      "id": "ch-0092",
-      "channel": "chat",
-      "received_at": "2027-09-23T09:51:00-05:00",
-      "path": "ch-0092.json",
-      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
-    },
-    {
-      "id": "ca-0008",
+      "id": "ca-0010",
       "channel": "calendar",
-      "received_at": "2027-09-23T09:58:00-05:00",
-      "path": "ca-0008.ics",
-      "title": "Accepted: Clinical data engineer follow-up"
+      "received_at": "2027-09-23T08:30:00-05:00",
+      "path": "ca-0010.ics",
+      "title": "Accepted: Sirocco follow-up"
     },
     {
-      "id": "em-0109",
-      "channel": "email",
-      "received_at": "2027-09-23T10:10:00-05:00",
-      "path": "em-0109.eml",
-      "title": "Re: Okapi metrics definition"
-    },
-    {
-      "id": "ch-0093",
+      "id": "ch-0106",
       "channel": "chat",
-      "received_at": "2027-09-23T10:44:00-05:00",
-      "path": "ch-0093.json",
-      "title": "DM: Katarzyna Feng / Alasdair Kaya"
+      "received_at": "2027-09-23T08:38:00-05:00",
+      "path": "ch-0106.json",
+      "title": "DM: Kwame Brandt / Alasdair Kaya"
     },
     {
-      "id": "em-0110",
+      "id": "em-0103",
       "channel": "email",
-      "received_at": "2027-09-23T11:24:00-05:00",
-      "path": "em-0110.eml",
-      "title": "Re: Okapi security review package"
+      "received_at": "2027-09-23T08:58:00-05:00",
+      "path": "em-0103.eml",
+      "title": "Room booking confirmation"
     },
     {
-      "id": "ca-0009",
+      "id": "ca-0011",
       "channel": "calendar",
-      "received_at": "2027-09-23T12:11:00-05:00",
-      "path": "ca-0009.ics",
-      "title": "Invite: Working session: Bittern dependency list with Bisi"
-    },
-    {
-      "id": "dc-0005",
-      "channel": "document",
-      "received_at": "2027-09-23T12:11:00-05:00",
-      "path": "dc-0005.docx",
-      "title": "Intake forms selection risk register v3",
-      "parent": "em-0111"
-    },
-    {
-      "id": "em-0111",
-      "channel": "email",
-      "received_at": "2027-09-23T12:11:00-05:00",
-      "path": "em-0111.eml",
-      "title": "Intake forms selection risk register"
-    },
-    {
-      "id": "ch-0094",
-      "channel": "chat",
-      "received_at": "2027-09-23T12:53:00-05:00",
-      "path": "ch-0094.json",
-      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
-    },
-    {
-      "id": "mt-0015",
-      "channel": "transcript",
-      "received_at": "2027-09-23T13:30:00-05:00",
-      "path": "mt-0015.vtt",
-      "title": "Intake forms selection / Sirocco sync (transcript)"
+      "received_at": "2027-09-23T09:43:00-05:00",
+      "path": "ca-0011.ics",
+      "title": "Invite: Okapi review"
     },
     {
       "id": "dc-0006",
       "channel": "document",
-      "received_at": "2027-09-23T13:32:00-05:00",
-      "path": "dc-0006.docx",
-      "title": "Bittern stakeholder map v2",
-      "parent": "em-0112"
+      "received_at": "2027-09-23T12:47:00-05:00",
+      "path": "dc-0006.xlsx",
+      "title": "Referral triage discovery observation notes v2",
+      "parent": "em-0104"
     },
     {
-      "id": "em-0112",
+      "id": "em-0104",
       "channel": "email",
-      "received_at": "2027-09-23T13:32:00-05:00",
-      "path": "em-0112.eml",
-      "title": "Re: Bittern stakeholder map"
+      "received_at": "2027-09-23T12:47:00-05:00",
+      "path": "em-0104.eml",
+      "title": "Referral triage discovery observation notes"
     },
     {
-      "id": "mn-0014",
+      "id": "ch-0107",
+      "channel": "chat",
+      "received_at": "2027-09-23T13:57:00-05:00",
+      "path": "ch-0107.json",
+      "title": "DM: Alasdair Kaya / Katarzyna Dang"
+    },
+    {
+      "id": "mn-0010",
       "channel": "meeting_notes",
       "received_at": "2027-09-23T14:00:00-05:00",
-      "path": "mn-0014.md",
-      "title": "Notes: Cross-hospital AI forum"
+      "path": "mn-0010.md",
+      "title": "Recap: Office hours with Bisi"
     },
     {
-      "id": "em-0113",
+      "id": "mt-0017",
+      "channel": "transcript",
+      "received_at": "2027-09-23T14:05:00-05:00",
+      "path": "mt-0017.vtt",
+      "title": "Cross-hospital AI forum (transcript)"
+    },
+    {
+      "id": "em-0105",
       "channel": "email",
-      "received_at": "2027-09-23T14:04:00-05:00",
-      "path": "em-0113.eml",
-      "title": "Re: Clinical Data Engineer Hire: moving to panel"
+      "received_at": "2027-09-23T14:10:00-05:00",
+      "path": "em-0105.eml",
+      "title": "Rosix sandbox credentials"
     },
     {
-      "id": "em-0114",
-      "channel": "email",
-      "received_at": "2027-09-23T14:18:00-05:00",
-      "path": "em-0114.eml",
-      "title": "Room booking confirmation"
-    },
-    {
-      "id": "em-0115",
-      "channel": "email",
-      "received_at": "2027-09-23T15:31:00-05:00",
-      "path": "em-0115.eml",
-      "title": "Re: Splitting out outpatient no-shows discovery"
-    },
-    {
-      "id": "ch-0095",
+      "id": "ch-0108",
       "channel": "chat",
-      "received_at": "2027-09-23T16:31:00-05:00",
-      "path": "ch-0095.json",
-      "title": "DM: Victoria Nikolic / Alasdair Kaya"
+      "received_at": "2027-09-23T14:23:00-05:00",
+      "path": "ch-0108.json",
+      "title": "#okapi-core"
+    },
+    {
+      "id": "em-0106",
+      "channel": "email",
+      "received_at": "2027-09-23T14:48:00-05:00",
+      "path": "em-0106.eml",
+      "title": "Re: Intake Forms Tool Selection: moving to procurement"
+    },
+    {
+      "id": "em-0107",
+      "channel": "email",
+      "received_at": "2027-09-23T15:53:00-05:00",
+      "path": "em-0107.eml",
+      "title": "Okapi evaluation rubric"
+    },
+    {
+      "id": "ch-0109",
+      "channel": "chat",
+      "received_at": "2027-09-23T17:00:00-05:00",
+      "path": "ch-0109.json",
+      "title": "#referral-triage-discovery-core"
+    },
+    {
+      "id": "ch-0110",
+      "channel": "chat",
+      "received_at": "2027-09-23T17:49:00-05:00",
+      "path": "ch-0110.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "em-0108",
+      "channel": "email",
+      "received_at": "2027-09-23T17:52:00-05:00",
+      "path": "em-0108.eml",
+      "title": "Lanmoor Bed Management Discovery: numbers"
+    },
+    {
+      "id": "ch-0111",
+      "channel": "chat",
+      "received_at": "2027-09-23T18:21:00-05:00",
+      "path": "ch-0111.json",
+      "title": "#sirocco-core"
     }
   ]
 }

@@ -3,18 +3,18 @@
  "channel": "#cairn-core",
  "kind": "channel",
  "participants": [
-  "Bruna Sinclair",
-  "Ottavio Monteiro",
+  "Bruna Vaughan",
+  "Ottavio Moreira",
   "Resi",
-  "Meera Ivanova",
-  "Darius Sherwood",
-  "Ratna Bondarenko",
+  "Meera Bondarenko",
+  "Darius Bramwell",
+  "Ratna Nikolic",
   "Nomvula Ndlovu"
  ],
  "messages": [
   {
    "ts": "2027-09-07T17:59:00-08:00",
-   "user": "Bruna Sinclair",
+   "user": "Bruna Vaughan",
    "handle": "@bruna",
    "text": "@ottavio i fixed the Cairn broken deep links."
   },

@@ -8,9 +8,9 @@ DTSTAMP:20270831T200300Z
 DTSTART:20270906T170000Z
 DTEND:20270906T174500Z
 SUMMARY:Cairn platform sync
-ORGANIZER;CN=Theresa Nagy:mailto:theresa.nagy@drayhurst.example
-ATTENDEE;CN=Meera Ivanova;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:meera.ivanova@drayhurst.example
-ATTENDEE;CN=Ottavio Monteiro;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ottavio.monteiro@drayhurst.example
+ORGANIZER;CN=Theresa Petrov:mailto:theresa.petrov@drayhurst.example
+ATTENDEE;CN=Meera Bondarenko;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:meera.bondarenko@drayhurst.example
+ATTENDEE;CN=Ottavio Moreira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ottavio.moreira@drayhurst.example
 SEQUENCE:0
 DESCRIPTION:Quick sync\, 30 minutes.\nJoin video meeting: https://meet.drayhurst.example/j/3949862495?pwd=d2F32GSK\nPasscode: 281256
 LOCATION:https://meet.drayhurst.example/j/3949862495?pwd=d2F32GSK

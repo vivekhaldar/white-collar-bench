@@ -1,0 +1,43 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolat-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Bolat Oyelami"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-09T12:58:07-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-07-09T13:03:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "Logged in fine, so the alumni outreach discovery sandbox access is sorted. Starting the walkthrough tomorrow.",
+   "edited": true,
+   "original": "Logged in fine, so the alumin outreach discovery sandbox access is sorted. Starting the walkthrough tomorrow."
+  },
+  {
+   "ts": "2027-07-09T13:03:14-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-07-09T13:07:50-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-07-09T13:11:17-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "remote, but online all day"
+  }
+ ]
+}

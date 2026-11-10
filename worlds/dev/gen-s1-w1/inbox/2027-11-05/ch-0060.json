@@ -4,7 +4,7 @@
  "kind": "dm",
  "participants": [
   "Jalen",
-  "Camila Quimby"
+  "Camila Abernathy"
  ],
  "messages": [
   {
@@ -23,13 +23,13 @@
   },
   {
    "ts": "2027-11-05T13:23:24-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "appreciate it"
   },
   {
    "ts": "2027-11-05T13:26:03-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "ok, talk later"
   },

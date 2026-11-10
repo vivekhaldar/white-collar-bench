@@ -1,0 +1,32 @@
+{
+ "workspace": "corrstead",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Bolat Oyelami",
+  "Adaeze Fifita"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-02T08:31:41-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "does anyone have a spare laptop charger (usb-c)?",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@adaeze"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-02T08:36:39-08:00",
+   "user": "Adaeze Fifita",
+   "handle": "@adaeze",
+   "text": "i have one, desk by the window",
+   "thread_of": 0
+  }
+ ]
+}

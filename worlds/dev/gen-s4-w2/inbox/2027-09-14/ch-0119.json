@@ -3,19 +3,19 @@
  "channel": "dm-ottavio-theresa",
  "kind": "dm",
  "participants": [
-  "Theresa Nagy",
-  "Ottavio Monteiro"
+  "Theresa Petrov",
+  "Ottavio Moreira"
  ],
  "messages": [
   {
    "ts": "2027-09-14T18:16:26-08:00",
-   "user": "Theresa Nagy",
+   "user": "Theresa Petrov",
    "handle": "@theresa",
    "text": "hey"
   },
   {
    "ts": "2027-09-14T18:21:00-08:00",
-   "user": "Theresa Nagy",
+   "user": "Theresa Petrov",
    "handle": "@theresa",
    "text": "I fixed the waitlist management discovery missing roster sync earlier today.",
    "edited": true,
@@ -31,19 +31,19 @@
   },
   {
    "ts": "2027-09-14T18:21:29-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "thank you!"
   },
   {
    "ts": "2027-09-14T18:24:06-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "did you catch the all-hands?"
   },
   {
    "ts": "2027-09-14T18:26:31-08:00",
-   "user": "Theresa Nagy",
+   "user": "Theresa Petrov",
    "handle": "@theresa",
    "text": "only the first half"
   }

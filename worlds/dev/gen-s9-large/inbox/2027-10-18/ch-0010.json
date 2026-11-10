@@ -1,0 +1,31 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-winifred",
+ "kind": "dm",
+ "participants": [
+  "Winifred Tanaka",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-18T07:00:00-05:00",
+   "user": "Winifred Tanaka",
+   "handle": "@winifred",
+   "text": "will send you the clelera deep-dive materials",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@aroha"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-18T07:00:47-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "appreciate it"
+  }
+ ]
+}

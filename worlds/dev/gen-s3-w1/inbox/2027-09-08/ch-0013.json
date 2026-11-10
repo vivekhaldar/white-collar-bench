@@ -1,0 +1,45 @@
+{
+ "workspace": "birchmere",
+ "channel": "#okapi-core",
+ "kind": "channel",
+ "participants": [
+  "Alasdair Kaya",
+  "Katarzyna Dang",
+  "Bisi Chatterjee",
+  "Eleni Fontaine",
+  "Dina Laurent",
+  "Penelope Romano",
+  "Nurlan Jansen",
+  "Giorgi Villanueva",
+  "Victoria Hoffmann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T07:36:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "@bisi i'll update the Okapi retention schedule after your comments."
+  },
+  {
+   "ts": "2027-09-08T07:37:03-05:00",
+   "user": "Eleni Fontaine",
+   "handle": "@eleni",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-08T07:42:24-05:00",
+   "user": "Nurlan Jansen",
+   "handle": "@nurlan",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-08T07:45:24-05:00",
+   "user": "Katarzyna Dang",
+   "handle": "@katarzyna",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

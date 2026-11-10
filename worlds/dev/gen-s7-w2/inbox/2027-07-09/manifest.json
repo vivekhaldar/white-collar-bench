@@ -1,0 +1,132 @@
+{
+  "date": "2027-07-09",
+  "artifacts": [
+    {
+      "id": "em-0114",
+      "channel": "email",
+      "received_at": "2027-07-09T08:36:00-08:00",
+      "path": "em-0114.eml",
+      "title": "Fwd: Garnet data-flow diagram"
+    },
+    {
+      "id": "em-0115",
+      "channel": "email",
+      "received_at": "2027-07-09T09:32:00-08:00",
+      "path": "em-0115.eml",
+      "title": "[INC-79645] Ticket updated"
+    },
+    {
+      "id": "mn-0017",
+      "channel": "meeting_notes",
+      "received_at": "2027-07-09T10:00:00-08:00",
+      "path": "mn-0017.md",
+      "title": "Recap: Lunch and learn"
+    },
+    {
+      "id": "ch-0091",
+      "channel": "chat",
+      "received_at": "2027-07-09T10:40:00-08:00",
+      "path": "ch-0091.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0092",
+      "channel": "chat",
+      "received_at": "2027-07-09T10:56:00-08:00",
+      "path": "ch-0092.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ca-0017",
+      "channel": "calendar",
+      "received_at": "2027-07-09T11:17:00-08:00",
+      "path": "ca-0017.ics",
+      "title": "Accepted: Admissions triage selection follow-up"
+    },
+    {
+      "id": "em-0116",
+      "channel": "email",
+      "received_at": "2027-07-09T12:27:00-08:00",
+      "path": "em-0116.eml",
+      "title": "Fwd: Assessment design workshop post-event survey"
+    },
+    {
+      "id": "ch-0093",
+      "channel": "chat",
+      "received_at": "2027-07-09T12:31:00-08:00",
+      "path": "ch-0093.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0094",
+      "channel": "chat",
+      "received_at": "2027-07-09T13:19:00-08:00",
+      "path": "ch-0094.json",
+      "title": "DM: Hiba Jimenez / Bolat Oyelami"
+    },
+    {
+      "id": "ch-0095",
+      "channel": "chat",
+      "received_at": "2027-07-09T13:31:00-08:00",
+      "path": "ch-0095.json",
+      "title": "DM: Desmond Visser / Hiba Jimenez"
+    },
+    {
+      "id": "ch-0096",
+      "channel": "chat",
+      "received_at": "2027-07-09T14:21:00-08:00",
+      "path": "ch-0096.json",
+      "title": "#garnet-core"
+    },
+    {
+      "id": "dc-0003",
+      "channel": "document",
+      "received_at": "2027-07-09T15:52:00-08:00",
+      "path": "dc-0003.pdf",
+      "title": "Garnet service blueprint v1",
+      "parent": "em-0117"
+    },
+    {
+      "id": "em-0117",
+      "channel": "email",
+      "received_at": "2027-07-09T15:52:00-08:00",
+      "path": "em-0117.eml",
+      "title": "Status note: w/e 9 July"
+    },
+    {
+      "id": "ch-0097",
+      "channel": "chat",
+      "received_at": "2027-07-09T16:12:00-08:00",
+      "path": "ch-0097.json",
+      "title": "DM: Tane Wisniewska / Hiba Jimenez"
+    },
+    {
+      "id": "em-0118",
+      "channel": "email",
+      "received_at": "2027-07-09T16:42:00-08:00",
+      "path": "em-0118.eml",
+      "title": "[INC-89842] Ticket updated"
+    },
+    {
+      "id": "nt-0009",
+      "channel": "note",
+      "received_at": "2027-07-09T16:48:00-08:00",
+      "path": "nt-0009.md",
+      "title": "Fri notes"
+    },
+    {
+      "id": "em-0119",
+      "channel": "email",
+      "received_at": "2027-07-09T17:31:00-08:00",
+      "path": "em-0119.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0098",
+      "channel": "chat",
+      "received_at": "2027-07-09T18:33:00-08:00",
+      "path": "ch-0098.json",
+      "title": "DM: Bolat Farah / Hiba Jimenez"
+    }
+  ]
+}

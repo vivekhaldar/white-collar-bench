@@ -1,0 +1,23 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolat-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Bolat Oyelami"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-29T11:49:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "Leave it with me, I'll send you the alumni outreach discovery problem framing note."
+  },
+  {
+   "ts": "2027-06-29T11:50:00-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "that'd be great"
+  }
+ ]
+}

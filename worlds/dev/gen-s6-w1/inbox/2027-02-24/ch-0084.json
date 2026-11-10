@@ -1,0 +1,40 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#axolotl-core",
+ "kind": "channel",
+ "participants": [
+  "Despina Pereira",
+  "Losa Moretti",
+  "Andres",
+  "Nathaniel Cartwright",
+  "Karim Navarro",
+  "Liisa Babic",
+  "Tomas Deng",
+  "Carys Laurent",
+  "Lindiwe Baek",
+  "Jurgen Dvorak"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-24T15:00:00-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "@nathaniel just sent you the Axolotl stakeholder map.",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@losa"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-24T15:00:38-08:00",
+   "user": "Karim Navarro",
+   "handle": "@karim",
+   "text": "noted :)",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "workspace": "corrstead",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Rodrigo Gurung",
+  "Andrei Laurent"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-02T08:04:42-08:00",
+   "user": "Rodrigo Gurung",
+   "handle": "@rodrigo",
+   "text": "lost a blue umbrella, might be in the big meeting room",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@andrei"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-02T08:06:12-08:00",
+   "user": "Andrei Laurent",
+   "handle": "@andrei",
+   "text": "will keep an eye out"
+  }
+ ]
+}

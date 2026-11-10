@@ -8,13 +8,13 @@ DTSTAMP:20270223T155800Z
 DTSTART:20270223T163000Z
 DTEND:20270223T165500Z
 SUMMARY:Cancelled: Mistral standup
-ORGANIZER;CN=Yael Yardley:mailto:yael.yardley@nordale.vercliff.example
-ATTENDEE;CN=Dina Zimmermann;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.zimmermann@vercliff.example
-ATTENDEE;CN=Imani Chaiyaporn;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:imani.chaiyaporn@vercliff.example
-ATTENDEE;CN=Rudo Alexiou;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:rudo.alexiou@nordale.vercliff.example
-ATTENDEE;CN=Naoko Maldonado;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:naoko.maldonado@nordale.vercliff.example
+ORGANIZER;CN=Yael Ellery:mailto:yael.ellery@nordale.vercliff.example
+ATTENDEE;CN=Dina Ricci;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.ricci@vercliff.example
+ATTENDEE;CN=Imani Navarro;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:imani.navarro@vercliff.example
+ATTENDEE;CN=Rudo Thornbury;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:rudo.thornbury@nordale.vercliff.example
+ATTENDEE;CN=Naoko Sandoval;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:naoko.sandoval@nordale.vercliff.example
 ATTENDEE;CN=Cassandra Yilmaz;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:cassandra.yilmaz@vercliff.example
-ATTENDEE;CN=Bilal Blackwood;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bilal.blackwood@vercliff.example
+ATTENDEE;CN=Bilal Kahananui;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bilal.kahananui@vercliff.example
 ATTENDEE;CN=Thibault Sahin;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:thibault.sahin@vercliff.example
 RECURRENCE-ID:20270223T163000Z
 SEQUENCE:1

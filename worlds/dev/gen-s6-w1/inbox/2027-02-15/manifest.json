@@ -1,0 +1,131 @@
+{
+  "date": "2027-02-15",
+  "artifacts": [
+    {
+      "id": "em-0037",
+      "channel": "email",
+      "received_at": "2027-02-15T07:05:00-08:00",
+      "path": "em-0037.eml",
+      "title": "Reminder: Friday status note due Friday 19 February"
+    },
+    {
+      "id": "ch-0030",
+      "channel": "chat",
+      "received_at": "2027-02-15T08:49:00-08:00",
+      "path": "ch-0030.json",
+      "title": "DM: Liisa Babic / Despina Pereira"
+    },
+    {
+      "id": "em-0038",
+      "channel": "email",
+      "received_at": "2027-02-15T09:51:00-08:00",
+      "path": "em-0038.eml",
+      "title": "Call for proposals closes Monday 1 March"
+    },
+    {
+      "id": "ch-0031",
+      "channel": "chat",
+      "received_at": "2027-02-15T10:08:00-08:00",
+      "path": "ch-0031.json",
+      "title": "DM: Despina Pereira / Liisa Babic"
+    },
+    {
+      "id": "em-0039",
+      "channel": "email",
+      "received_at": "2027-02-15T11:18:00-08:00",
+      "path": "em-0039.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "ch-0032",
+      "channel": "chat",
+      "received_at": "2027-02-15T11:47:00-08:00",
+      "path": "ch-0032.json",
+      "title": "DM: Tariq Okeke / Despina Pereira"
+    },
+    {
+      "id": "em-0040",
+      "channel": "email",
+      "received_at": "2027-02-15T12:35:00-08:00",
+      "path": "em-0040.eml",
+      "title": "Re: Tomas's panel on syllabus review"
+    },
+    {
+      "id": "ch-0033",
+      "channel": "chat",
+      "received_at": "2027-02-15T13:21:00-08:00",
+      "path": "ch-0033.json",
+      "title": "DM: Wei Rossi / Despina Pereira"
+    },
+    {
+      "id": "ch-0034",
+      "channel": "chat",
+      "received_at": "2027-02-15T14:13:00-08:00",
+      "path": "ch-0034.json",
+      "title": "DM: Lindiwe Baek / Despina Pereira"
+    },
+    {
+      "id": "ch-0035",
+      "channel": "chat",
+      "received_at": "2027-02-15T14:28:00-08:00",
+      "path": "ch-0035.json",
+      "title": "DM: Haruto Vaughan / Despina Pereira"
+    },
+    {
+      "id": "ch-0036",
+      "channel": "chat",
+      "received_at": "2027-02-15T14:31:00-08:00",
+      "path": "ch-0036.json",
+      "title": "#axolotl-core"
+    },
+    {
+      "id": "ch-0037",
+      "channel": "chat",
+      "received_at": "2027-02-15T14:40:00-08:00",
+      "path": "ch-0037.json",
+      "title": "#thesis-formatting-input-core"
+    },
+    {
+      "id": "nt-0005",
+      "channel": "note",
+      "received_at": "2027-02-15T14:50:00-08:00",
+      "path": "nt-0005.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "em-0041",
+      "channel": "email",
+      "received_at": "2027-02-15T15:17:00-08:00",
+      "path": "em-0041.eml",
+      "title": "Axolotl comms plan"
+    },
+    {
+      "id": "em-0042",
+      "channel": "email",
+      "received_at": "2027-02-15T16:03:00-08:00",
+      "path": "em-0042.eml",
+      "title": "Re: Axolotl architecture diagram"
+    },
+    {
+      "id": "ch-0038",
+      "channel": "chat",
+      "received_at": "2027-02-15T16:44:00-08:00",
+      "path": "ch-0038.json",
+      "title": "DM: Friederike Agyeman / Despina Pereira"
+    },
+    {
+      "id": "ch-0039",
+      "channel": "chat",
+      "received_at": "2027-02-15T16:53:00-08:00",
+      "path": "ch-0039.json",
+      "title": "DM: Despina Pereira / Andres Erdem"
+    },
+    {
+      "id": "em-0043",
+      "channel": "email",
+      "received_at": "2027-02-15T17:31:00-08:00",
+      "path": "em-0043.eml",
+      "title": "Re: List of pilot courses for Axolotl"
+    }
+  ]
+}

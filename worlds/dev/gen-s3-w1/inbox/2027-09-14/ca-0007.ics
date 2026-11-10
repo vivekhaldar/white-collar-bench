@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Birchmere//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:fa400d81c11ccc47@birchmere.example
+DTSTAMP:20270914T122100Z
+DTSTART:20270917T180000Z
+DTEND:20270917T183000Z
+SUMMARY:Notes from the intake forms session
+ORGANIZER;CN=Adebayo Kalua:mailto:adebayo.kalua@birchmere.example
+ATTENDEE;CN=Alasdair Kaya;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:alasdair.kaya@birchmere.example
+SEQUENCE:0
+DESCRIPTION:Agenda: Send Alasdair the notes from the intake forms session.\nJoin video meeting: https://meet.birchmere.example/j/3261695621?pwd=ng8dpBqt\nPasscode: 483340
+LOCATION:https://meet.birchmere.example/j/3261695621?pwd=ng8dpBqt
+END:VEVENT
+END:VCALENDAR

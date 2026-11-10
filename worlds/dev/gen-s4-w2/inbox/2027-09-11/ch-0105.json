@@ -3,14 +3,14 @@
  "channel": "#general",
  "kind": "channel",
  "participants": [
-  "Meera Ivanova",
-  "Achieng Ibarra",
-  "Bruna Sinclair"
+  "Meera Bondarenko",
+  "Achieng Montoya",
+  "Bruna Vaughan"
  ],
  "messages": [
   {
    "ts": "2027-09-11T16:58:37-08:00",
-   "user": "Meera Ivanova",
+   "user": "Meera Bondarenko",
    "handle": "@meera",
    "text": "the elevator on the east side is out again",
    "reactions": [
@@ -25,14 +25,14 @@
   },
   {
    "ts": "2027-09-11T17:04:26-08:00",
-   "user": "Achieng Ibarra",
+   "user": "Achieng Montoya",
    "handle": "@achieng",
    "text": "stairs it is",
    "thread_of": 0
   },
   {
    "ts": "2027-09-11T17:06:09-08:00",
-   "user": "Bruna Sinclair",
+   "user": "Bruna Vaughan",
    "handle": "@bruna",
    "text": "classic",
    "thread_of": 0

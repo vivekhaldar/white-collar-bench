@@ -1,0 +1,35 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-wei",
+ "kind": "dm",
+ "participants": [
+  "Wei Rossi",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-10T11:12:07-08:00",
+   "user": "Wei Rossi",
+   "handle": "@wei",
+   "text": "Just to recap, yesterday Andres said they'd collect two customer references from Zenia."
+  },
+  {
+   "ts": "2027-02-10T11:12:34-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-02-10T11:13:35-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-02-10T11:17:35-08:00",
+   "user": "Wei Rossi",
+   "handle": "@wei",
+   "text": "only the first half"
+  }
+ ]
+}

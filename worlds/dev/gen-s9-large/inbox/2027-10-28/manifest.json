@@ -1,0 +1,138 @@
+{
+  "date": "2027-10-28",
+  "artifacts": [
+    {
+      "id": "em-0077",
+      "channel": "email",
+      "received_at": "2027-10-28T06:47:00-05:00",
+      "path": "em-0077.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0078",
+      "channel": "email",
+      "received_at": "2027-10-28T07:04:00-05:00",
+      "path": "em-0078.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0079",
+      "channel": "email",
+      "received_at": "2027-10-28T07:24:00-05:00",
+      "path": "em-0079.eml",
+      "title": "Okapi user journey map"
+    },
+    {
+      "id": "ch-0076",
+      "channel": "chat",
+      "received_at": "2027-10-28T07:53:00-05:00",
+      "path": "ch-0076.json",
+      "title": "#ai-use-core"
+    },
+    {
+      "id": "mn-0011",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-28T09:55:00-05:00",
+      "path": "mn-0011.md",
+      "title": "Recap: Cirrus standup"
+    },
+    {
+      "id": "ch-0077",
+      "channel": "chat",
+      "received_at": "2027-10-28T12:06:00-05:00",
+      "path": "ch-0077.json",
+      "title": "DM: Mathieu Wijaya / Aroha Mendoza"
+    },
+    {
+      "id": "em-0080",
+      "channel": "email",
+      "received_at": "2027-10-28T12:39:00-05:00",
+      "path": "em-0080.eml",
+      "title": "Re: Panel feedback"
+    },
+    {
+      "id": "ch-0078",
+      "channel": "chat",
+      "received_at": "2027-10-28T13:01:00-05:00",
+      "path": "ch-0078.json",
+      "title": "DM: Michaela Dang / Aroha Mendoza"
+    },
+    {
+      "id": "em-0081",
+      "channel": "email",
+      "received_at": "2027-10-28T13:21:00-05:00",
+      "path": "em-0081.eml",
+      "title": "[INC-54960] Ticket updated"
+    },
+    {
+      "id": "ch-0079",
+      "channel": "chat",
+      "received_at": "2027-10-28T13:30:00-05:00",
+      "path": "ch-0079.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0082",
+      "channel": "email",
+      "received_at": "2027-10-28T13:37:00-05:00",
+      "path": "em-0082.eml",
+      "title": "FYI: Notes from the interpreter booking session"
+    },
+    {
+      "id": "em-0083",
+      "channel": "email",
+      "received_at": "2027-10-28T15:13:00-05:00",
+      "path": "em-0083.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "ch-0080",
+      "channel": "chat",
+      "received_at": "2027-10-28T15:22:00-05:00",
+      "path": "ch-0080.json",
+      "title": "DM: Keisha Hargrove / Aroha Mendoza"
+    },
+    {
+      "id": "em-0084",
+      "channel": "email",
+      "received_at": "2027-10-28T16:15:00-05:00",
+      "path": "em-0084.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0085",
+      "channel": "email",
+      "received_at": "2027-10-28T16:21:00-05:00",
+      "path": "em-0085.eml",
+      "title": "Clelera security questionnaire"
+    },
+    {
+      "id": "ch-0081",
+      "channel": "chat",
+      "received_at": "2027-10-28T16:49:00-05:00",
+      "path": "ch-0081.json",
+      "title": "DM: Aroha Mendoza / Anh Villanueva"
+    },
+    {
+      "id": "nt-0004",
+      "channel": "note",
+      "received_at": "2027-10-28T17:08:00-05:00",
+      "path": "nt-0004.md",
+      "title": "Thu voice memo"
+    },
+    {
+      "id": "em-0086",
+      "channel": "email",
+      "received_at": "2027-10-28T17:40:00-05:00",
+      "path": "em-0086.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0082",
+      "channel": "chat",
+      "received_at": "2027-10-28T18:37:00-05:00",
+      "path": "ch-0082.json",
+      "title": "DM: Luz Ekwueme / Aroha Mendoza"
+    }
+  ]
+}

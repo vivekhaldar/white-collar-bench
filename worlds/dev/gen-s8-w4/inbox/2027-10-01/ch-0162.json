@@ -1,0 +1,31 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-yasmin",
+ "kind": "dm",
+ "participants": [
+  "Yasmin Guo",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-01T07:48:00-06:00",
+   "user": "Yasmin Guo",
+   "handle": "@yasmin",
+   "text": "Heads up: Batbayar will send you the Fulmar decision memo v2.",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@amira"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-01T07:48:30-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "that'd be great"
+  }
+ ]
+}

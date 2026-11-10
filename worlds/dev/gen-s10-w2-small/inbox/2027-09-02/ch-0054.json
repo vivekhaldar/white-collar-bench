@@ -1,0 +1,37 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-tuuli",
+ "kind": "dm",
+ "participants": [
+  "Tuuli Ibekwe",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-02T11:40:00+01:00",
+   "user": "Tuuli Ibekwe",
+   "handle": "@tuuli",
+   "text": "When you get a chance, could you join my panel on helpline triage?",
+   "edited": true,
+   "original": "When you get a chance, could you join my panel on hellpine triage?"
+  },
+  {
+   "ts": "2027-09-02T11:40:44+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "let me check and get back to you"
+  },
+  {
+   "ts": "2027-09-02T11:44:19+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-09-02T11:46:28+01:00",
+   "user": "Tuuli Ibekwe",
+   "handle": "@tuuli",
+   "text": "remote, but online all day"
+  }
+ ]
+}

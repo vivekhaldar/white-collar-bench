@@ -1,43 +1,43 @@
 {
  "workspace": "iselvale",
- "channel": "dm-hiba-lakshmi",
- "kind": "dm",
+ "channel": "#okapi-core",
+ "kind": "channel",
  "participants": [
-  "Lakshmi Zamora",
-  "Hiba Xu"
+  "Hiba Deng",
+  "Lakshmi Figueroa",
+  "Anahit",
+  "Isla Faure",
+  "Rudo Ekwueme",
+  "Jisoo Nowak",
+  "Friederike Bhatt"
  ],
  "messages": [
   {
-   "ts": "2027-03-24T15:12:00-05:00",
-   "user": "Lakshmi Zamora",
-   "handle": "@lakshmi",
-   "text": "okapi operating model review has moved to the revision phase",
-   "reactions": [
-    {
-     "emoji": "eyes",
-     "users": [
-      "@hiba"
-     ]
-    }
-   ]
-  },
-  {
-   "ts": "2027-03-24T15:12:50-05:00",
-   "user": "Hiba Xu",
+   "ts": "2027-03-24T17:40:00-05:00",
+   "user": "Hiba Deng",
    "handle": "@hiba",
-   "text": "got it"
+   "text": "@friederike i reviewed your Okapi order set review."
   },
   {
-   "ts": "2027-03-24T15:17:42-05:00",
-   "user": "Lakshmi Zamora",
+   "ts": "2027-03-24T17:41:27-05:00",
+   "user": "Lakshmi Figueroa",
    "handle": "@lakshmi",
-   "text": "how's your week going?"
+   "text": "good to know",
+   "thread_of": 0
   },
   {
-   "ts": "2027-03-24T15:19:45-05:00",
-   "user": "Hiba Xu",
-   "handle": "@hiba",
-   "text": "busy, but fine. you?"
+   "ts": "2027-03-24T17:42:04-05:00",
+   "user": "Jisoo Nowak",
+   "handle": "@jisoo",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-24T17:50:19-05:00",
+   "user": "Anahit",
+   "handle": "@anahit",
+   "text": "+1",
+   "thread_of": 0
   }
  ]
 }

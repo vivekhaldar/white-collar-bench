@@ -3,37 +3,37 @@
  "channel": "dm-ottavio-theresa",
  "kind": "dm",
  "participants": [
-  "Ottavio Monteiro",
-  "Theresa Nagy"
+  "Ottavio Moreira",
+  "Theresa Petrov"
  ],
  "messages": [
   {
    "ts": "2027-09-13T17:01:39-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "got a sec?"
   },
   {
    "ts": "2027-09-13T17:03:00-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "i can send you the fjord dependency list"
   },
   {
    "ts": "2027-09-13T17:04:01-08:00",
-   "user": "Theresa Nagy",
+   "user": "Theresa Petrov",
    "handle": "@theresa",
    "text": "great, thank you"
   },
   {
    "ts": "2027-09-13T17:06:45-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "how's your week going?"
   },
   {
    "ts": "2027-09-13T17:08:51-08:00",
-   "user": "Theresa Nagy",
+   "user": "Theresa Petrov",
    "handle": "@theresa",
    "text": "busy, but fine. you?"
   }

@@ -13,7 +13,7 @@
       "channel": "chat",
       "received_at": "2027-10-26T08:15:00-07:00",
       "path": "ch-0010.json",
-      "title": "DM: Camila Quimby / Nadia Volkov"
+      "title": "DM: Camila Abernathy / Nadia Jovanovic"
     },
     {
       "id": "em-0010",
@@ -69,7 +69,7 @@
       "channel": "chat",
       "received_at": "2027-10-26T12:47:00-07:00",
       "path": "ch-0013.json",
-      "title": "DM: Jalen Hendriks / Camila Quimby"
+      "title": "DM: Jalen Sandberg / Camila Abernathy"
     },
     {
       "id": "ch-0014",
@@ -83,21 +83,21 @@
       "channel": "chat",
       "received_at": "2027-10-26T13:11:00-07:00",
       "path": "ch-0015.json",
-      "title": "DM: Camila Quimby / Jalen Hendriks"
+      "title": "DM: Camila Abernathy / Jalen Sandberg"
     },
     {
       "id": "ch-0016",
       "channel": "chat",
       "received_at": "2027-10-26T13:55:00-07:00",
       "path": "ch-0016.json",
-      "title": "DM: Camila Quimby / Fernanda Olawale"
+      "title": "DM: Camila Abernathy / Fernanda Olawale"
     },
     {
       "id": "ch-0017",
       "channel": "chat",
       "received_at": "2027-10-26T14:06:00-07:00",
       "path": "ch-0017.json",
-      "title": "DM: Camila Quimby / Jalen Hendriks"
+      "title": "DM: Camila Abernathy / Jalen Sandberg"
     },
     {
       "id": "mn-0002",

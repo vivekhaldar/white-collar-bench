@@ -1,0 +1,27 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#course-assistant-selection-core",
+ "kind": "channel",
+ "participants": [
+  "Tariq Okeke",
+  "Despina Pereira",
+  "Andres Erdem",
+  "Karli Banda",
+  "Sipho Costa",
+  "Wei Rossi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-23T17:38:00-08:00",
+   "user": "Tariq Okeke",
+   "handle": "@tariq",
+   "text": "Course Assistant Tool Selection is moving into contracting."
+  },
+  {
+   "ts": "2027-02-23T17:38:10-08:00",
+   "user": "Karli Banda",
+   "handle": "@karli",
+   "text": "got it :)"
+  }
+ ]
+}

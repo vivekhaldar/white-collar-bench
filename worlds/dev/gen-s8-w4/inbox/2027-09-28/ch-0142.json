@@ -1,0 +1,51 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Adwoa",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-28T14:48:06-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-09-28T14:49:00-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "For info, Thibault needs the AI-use principles draft v2 by September 30.",
+   "edited": true,
+   "original": "For info, Thibault needs the AI-use principles draft v2 by October 1.",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@amira"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-28T14:49:17-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-09-28T14:50:40-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-09-28T14:54:19-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "no worries"
+  }
+ ]
+}

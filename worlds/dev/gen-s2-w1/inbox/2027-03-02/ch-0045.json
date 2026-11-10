@@ -4,7 +4,7 @@
  "kind": "dm",
  "participants": [
   "Hiba Jaber",
-  "Dina Zimmermann"
+  "Dina Ricci"
  ],
  "messages": [
   {
@@ -15,7 +15,7 @@
   },
   {
    "ts": "2027-03-02T07:02:18-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "hi"
   },
@@ -27,7 +27,7 @@
   },
   {
    "ts": "2027-03-02T07:03:19-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "thanks for the heads up"
   }

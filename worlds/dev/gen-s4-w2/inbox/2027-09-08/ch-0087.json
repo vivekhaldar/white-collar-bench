@@ -3,31 +3,31 @@
  "channel": "dm-ottavio-ratna",
  "kind": "dm",
  "participants": [
-  "Ottavio Monteiro",
-  "Ratna Bondarenko"
+  "Ottavio Moreira",
+  "Ratna Nikolic"
  ],
  "messages": [
   {
    "ts": "2027-09-08T15:13:00-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "great if you can deliver the fjord integration endpoint by 22 september"
   },
   {
    "ts": "2027-09-08T15:14:09-08:00",
-   "user": "Ratna Bondarenko",
+   "user": "Ratna Nikolic",
    "handle": "@ratna",
    "text": "sure, can do"
   },
   {
    "ts": "2027-09-08T17:46:00-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "Got the Fjord integration endpoint, building on it this week."
   },
   {
    "ts": "2027-09-08T17:46:34-08:00",
-   "user": "Ratna Bondarenko",
+   "user": "Ratna Nikolic",
    "handle": "@ratna",
    "text": "noted"
   }

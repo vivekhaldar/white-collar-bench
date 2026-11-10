@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lanhurst//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:f8675cae5dfc5f75@lanhurst.example
+DTSTAMP:20270210T160200Z
+DTSTART:20270211T190000Z
+DTEND:20270211T200000Z
+SUMMARY:Catch-up: Despina / Carys
+ORGANIZER;CN=Carys Laurent:mailto:carys.laurent@lanhurst.example
+ATTENDEE;CN=Despina Pereira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:despina.pereira@lanhurst.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.lanhurst.example/j/9372218889?pwd=AwHpfZhD\nPasscode: 865059
+LOCATION:https://meet.lanhurst.example/j/9372218889?pwd=AwHpfZhD
+END:VEVENT
+END:VCALENDAR

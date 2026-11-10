@@ -1,0 +1,96 @@
+{
+  "date": "2027-08-19",
+  "artifacts": [
+    {
+      "id": "em-0017",
+      "channel": "email",
+      "received_at": "2027-08-19T09:35:00+01:00",
+      "path": "em-0017.eml",
+      "title": "Re: FYI: Nettle metrics definition"
+    },
+    {
+      "id": "mn-0003",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-19T09:55:00+01:00",
+      "path": "mn-0003.md",
+      "title": "Notes: Nettle standup"
+    },
+    {
+      "id": "mt-0003",
+      "channel": "transcript",
+      "received_at": "2027-08-19T10:00:00+01:00",
+      "path": "mt-0003.vtt",
+      "title": "Nettle security review (transcript)"
+    },
+    {
+      "id": "em-0018",
+      "channel": "email",
+      "received_at": "2027-08-19T10:37:00+01:00",
+      "path": "em-0018.eml",
+      "title": "Parking lot resurfacing"
+    },
+    {
+      "id": "em-0019",
+      "channel": "email",
+      "received_at": "2027-08-19T11:27:00+01:00",
+      "path": "em-0019.eml",
+      "title": "Wellbeing week activities"
+    },
+    {
+      "id": "em-0020",
+      "channel": "email",
+      "received_at": "2027-08-19T11:43:00+01:00",
+      "path": "em-0020.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0021",
+      "channel": "email",
+      "received_at": "2027-08-19T12:40:00+01:00",
+      "path": "em-0021.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "ch-0014",
+      "channel": "chat",
+      "received_at": "2027-08-19T13:04:00+01:00",
+      "path": "ch-0014.json",
+      "title": "#pantry-inventory-discovery-core"
+    },
+    {
+      "id": "mn-0004",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-19T14:05:00+01:00",
+      "path": "mn-0004.md",
+      "title": "Recap: Cross-member organization AI forum"
+    },
+    {
+      "id": "ch-0015",
+      "channel": "chat",
+      "received_at": "2027-08-19T16:33:00+01:00",
+      "path": "ch-0015.json",
+      "title": "DM: Sigrid Asante / Aoife Everett"
+    },
+    {
+      "id": "ch-0016",
+      "channel": "chat",
+      "received_at": "2027-08-19T18:12:00+01:00",
+      "path": "ch-0016.json",
+      "title": "DM: Solene Zimmermann / Aoife Everett"
+    },
+    {
+      "id": "em-0022",
+      "channel": "email",
+      "received_at": "2027-08-19T18:15:00+01:00",
+      "path": "em-0022.eml",
+      "title": "Catering menu for next month"
+    },
+    {
+      "id": "em-0023",
+      "channel": "email",
+      "received_at": "2027-08-19T18:43:00+01:00",
+      "path": "em-0023.eml",
+      "title": "Event space survey"
+    }
+  ]
+}

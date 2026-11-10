@@ -1,0 +1,48 @@
+{
+ "workspace": "reddale",
+ "channel": "#nettle-core",
+ "kind": "channel",
+ "participants": [
+  "Gaurav Laine",
+  "Aoife Everett",
+  "Akosua",
+  "Doug",
+  "Bisi Volkov",
+  "Sigrid Asante",
+  "Sipho Papadopoulos",
+  "Adaeze Morimoto",
+  "Bruna Thapa",
+  "Marko Chaiyaporn"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T16:31:00+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "we're pushing nettle to november 1, from 19 october",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@aoife",
+      "@douglas",
+      "@akosua"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-07T16:31:06+01:00",
+   "user": "Bisi Volkov",
+   "handle": "@bisi",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-09-07T16:35:38+01:00",
+   "user": "Sigrid Asante",
+   "handle": "@sigrid",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

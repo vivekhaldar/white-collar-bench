@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-shirin",
+ "kind": "dm",
+ "participants": [
+  "Shirin Oyelami",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-09T18:14:12-06:00",
+   "user": "Shirin Oyelami",
+   "handle": "@shirin",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-10-09T18:15:13-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-10-09T18:15:57-06:00",
+   "user": "Shirin Oyelami",
+   "handle": "@shirin",
+   "text": "Adwoa could probably send you the Fulmar support model v2, not agreed though!"
+  },
+  {
+   "ts": "2027-10-09T18:16:19-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "that'd be great"
+  }
+ ]
+}

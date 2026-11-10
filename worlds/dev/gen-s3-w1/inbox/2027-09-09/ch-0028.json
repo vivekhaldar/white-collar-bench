@@ -1,23 +1,41 @@
 {
  "workspace": "birchmere",
- "channel": "dm-alasdair-bisid",
- "kind": "dm",
+ "channel": "#random",
+ "kind": "channel",
  "participants": [
-  "Alasdair Kaya",
-  "Bisi"
+  "Giorgi Villanueva",
+  "Penelope Romano",
+  "Deniz Feng",
+  "Tunde Andersen"
  ],
  "messages": [
   {
-   "ts": "2027-09-09T15:41:00-05:00",
-   "user": "Alasdair Kaya",
-   "handle": "@alasdair",
-   "text": "done, i wrote a reference note for your nurse scheduling fellowship application"
+   "ts": "2027-09-09T14:24:17-05:00",
+   "user": "Giorgi Villanueva",
+   "handle": "@giorgi",
+   "text": "the elevator on the east side is out again",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@penelope",
+      "@deniz"
+     ]
+    }
+   ]
   },
   {
-   "ts": "2027-09-09T15:41:35-05:00",
-   "user": "Bisi",
-   "handle": "@bisid",
-   "text": "thank you!"
+   "ts": "2027-09-09T14:25:54-05:00",
+   "user": "Penelope Romano",
+   "handle": "@penelope",
+   "text": "stairs it is"
+  },
+  {
+   "ts": "2027-09-09T14:28:19-05:00",
+   "user": "Deniz Feng",
+   "handle": "@deniz",
+   "text": "classic",
+   "thread_of": 0
   }
  ]
 }

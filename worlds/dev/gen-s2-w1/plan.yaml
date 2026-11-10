@@ -104,7 +104,7 @@ calendar:
   - id: cp3
     date: '2027-03-12'
     label: end of week
-worker: p-dina-zimmermann
+worker: p-dina-ricci
 orgs:
 - id: o-city-of-vercliff
   name: City of Vercliff
@@ -237,15 +237,15 @@ orgs:
   - talton-research.example
   receptiveness: null
 people:
-- id: p-dina-zimmermann
-  name: Dina Zimmermann
+- id: p-dina-ricci
+  name: Dina Ricci
   first: Dina
-  last: Zimmermann
+  last: Ricci
   nickname: null
   org: o-vercliff-digital-service
   role: Senior Technologist, Civic AI
   role_phrase: null
-  email: dina.zimmermann@vercliff.example
+  email: dina.ricci@vercliff.example
   handle: '@dina'
   relationship: null
   group: central
@@ -255,18 +255,18 @@ people:
   voice: terse
   surface_forms:
   - Dina
-  - D. Zimmermann
-  - dina.zimmermann@vercliff.example
+  - D. Ricci
+  - dina.ricci@vercliff.example
   - '@dina'
-- id: p-kayode-papadopoulos
-  name: Kayode Papadopoulos
+- id: p-kayode-whitfield
+  name: Kayode Whitfield
   first: Kayode
-  last: Papadopoulos
+  last: Whitfield
   nickname: null
   org: o-vercliff-digital-service
   role: Chief Digital Officer
   role_phrase: the CDO
-  email: kayode.papadopoulos@vercliff.example
+  email: kayode.whitfield@vercliff.example
   handle: '@kayode'
   relationship: manager
   group: central
@@ -276,19 +276,19 @@ people:
   voice: chatty
   surface_forms:
   - Kayode
-  - K. Papadopoulos
-  - kayode.papadopoulos@vercliff.example
+  - K. Whitfield
+  - kayode.whitfield@vercliff.example
   - '@kayode'
   - the CDO
-- id: p-imani-chaiyaporn
-  name: Imani Chaiyaporn
+- id: p-imani-navarro
+  name: Imani Navarro
   first: Imani
-  last: Chaiyaporn
+  last: Navarro
   nickname: null
   org: o-vercliff-digital-service
   role: Director of Delivery
   role_phrase: our delivery director
-  email: imani.chaiyaporn@vercliff.example
+  email: imani.navarro@vercliff.example
   handle: '@imani'
   relationship: peer
   group: central
@@ -298,8 +298,8 @@ people:
   voice: terse
   surface_forms:
   - Imani
-  - I. Chaiyaporn
-  - imani.chaiyaporn@vercliff.example
+  - I. Navarro
+  - imani.navarro@vercliff.example
   - '@imani'
   - our delivery director
 - id: p-cassandra-yilmaz
@@ -346,15 +346,15 @@ people:
   - thibault.sahin@vercliff.example
   - '@thibault'
   - the platform engineer
-- id: p-bilal-blackwood
-  name: Bilal Blackwood
+- id: p-bilal-kahananui
+  name: Bilal Kahananui
   first: Bilal
-  last: Blackwood
+  last: Kahananui
   nickname: null
   org: o-vercliff-digital-service
   role: Chief Information Security Officer
   role_phrase: the CISO
-  email: bilal.blackwood@vercliff.example
+  email: bilal.kahananui@vercliff.example
   handle: '@bilal'
   relationship: peer
   group: central
@@ -364,8 +364,8 @@ people:
   voice: formal
   surface_forms:
   - Bilal
-  - B. Blackwood
-  - bilal.blackwood@vercliff.example
+  - B. Kahananui
+  - bilal.kahananui@vercliff.example
   - '@bilal'
   - the CISO
 - id: p-mei-obi
@@ -390,15 +390,15 @@ people:
   - mei.obi@vercliff.example
   - '@mei'
   - the product lead
-- id: p-bogdan-byrne
-  name: Bogdan Byrne
+- id: p-bogdan-quinlan
+  name: Bogdan Quinlan
   first: Bogdan
-  last: Byrne
+  last: Quinlan
   nickname: null
   org: o-vercliff-digital-service
   role: Executive Assistant to the CDO
   role_phrase: the CDO's EA
-  email: bogdan.byrne@vercliff.example
+  email: bogdan.quinlan@vercliff.example
   handle: '@bogdan'
   relationship: assistant
   group: central
@@ -408,19 +408,19 @@ people:
   voice: formal
   surface_forms:
   - Bogdan
-  - B. Byrne
-  - bogdan.byrne@vercliff.example
+  - B. Quinlan
+  - bogdan.quinlan@vercliff.example
   - '@bogdan'
   - the CDO's EA
-- id: p-katrin-meijer
-  name: Katrin Meijer
+- id: p-katrin-nyberg
+  name: Katrin Nyberg
   first: Katrin
-  last: Meijer
+  last: Nyberg
   nickname: null
   org: o-vercliff-digital-service
   role: Performance Analyst
   role_phrase: our performance analyst
-  email: katrin.meijer@vercliff.example
+  email: katrin.nyberg@vercliff.example
   handle: '@katrin'
   relationship: peer
   group: central
@@ -430,8 +430,8 @@ people:
   voice: terse
   surface_forms:
   - Katrin
-  - K. Meijer
-  - katrin.meijer@vercliff.example
+  - K. Nyberg
+  - katrin.nyberg@vercliff.example
   - '@katrin'
   - our performance analyst
 - id: p-ds-shared-inbox
@@ -476,15 +476,15 @@ people:
   - ilse.menon@vercliff.example
   - '@ilse'
   - the purchasing agent
-- id: p-magdalena-parata
-  name: Magdalena Parata
+- id: p-magdalena-shapiro
+  name: Magdalena Shapiro
   first: Magdalena
-  last: Parata
+  last: Shapiro
   nickname: Magda
   org: o-city-of-vercliff
   role: Deputy City Attorney
   role_phrase: the deputy city attorney
-  email: magdalena.parata@vercliff.example
+  email: magdalena.shapiro@vercliff.example
   handle: '@magdalena'
   relationship: stakeholder
   group: functional
@@ -495,8 +495,8 @@ people:
   surface_forms:
   - Magdalena
   - Magda
-  - M. Parata
-  - magdalena.parata@vercliff.example
+  - M. Shapiro
+  - magdalena.shapiro@vercliff.example
   - '@magdalena'
   - the deputy city attorney
 - id: p-freja-mutasa
@@ -521,15 +521,15 @@ people:
   - freja.mutasa@vercliff.example
   - '@freja'
   - the budget director
-- id: p-jisoo-grigoryan
-  name: Jisoo Grigoryan
+- id: p-jisoo-sato
+  name: Jisoo Sato
   first: Jisoo
-  last: Grigoryan
+  last: Sato
   nickname: null
   org: o-city-of-vercliff
   role: Recruitment Partner
   role_phrase: our recruitment partner
-  email: jisoo.grigoryan@vercliff.example
+  email: jisoo.sato@vercliff.example
   handle: '@jisoo'
   relationship: stakeholder
   group: functional
@@ -539,19 +539,19 @@ people:
   voice: formal
   surface_forms:
   - Jisoo
-  - J. Grigoryan
-  - jisoo.grigoryan@vercliff.example
+  - J. Sato
+  - jisoo.sato@vercliff.example
   - '@jisoo'
   - our recruitment partner
-- id: p-rahul-almeida
-  name: Rahul Almeida
+- id: p-rahul-duarte
+  name: Rahul Duarte
   first: Rahul
-  last: Almeida
+  last: Duarte
   nickname: null
   org: o-city-of-vercliff
   role: Privacy Officer
   role_phrase: the privacy officer
-  email: rahul.almeida@vercliff.example
+  email: rahul.duarte@vercliff.example
   handle: '@rahul'
   relationship: stakeholder
   group: functional
@@ -561,19 +561,19 @@ people:
   voice: lowercase
   surface_forms:
   - Rahul
-  - R. Almeida
-  - rahul.almeida@vercliff.example
+  - R. Duarte
+  - rahul.duarte@vercliff.example
   - '@rahul'
   - the privacy officer
-- id: p-xiaoling-winslow
-  name: Xiaoling Winslow
+- id: p-xiaoling-taufa
+  name: Xiaoling Taufa
   first: Xiaoling
-  last: Winslow
+  last: Taufa
   nickname: Ling
   org: o-nordale-department-of-transportation
   role: Department Director
   role_phrase: Nordale's director
-  email: xiaoling.winslow@nordale.vercliff.example
+  email: xiaoling.taufa@nordale.vercliff.example
   handle: '@xiaoling'
   relationship: executive
   group: unit
@@ -584,19 +584,19 @@ people:
   surface_forms:
   - Xiaoling
   - Ling
-  - X. Winslow
-  - xiaoling.winslow@nordale.vercliff.example
+  - X. Taufa
+  - xiaoling.taufa@nordale.vercliff.example
   - '@xiaoling'
   - Nordale's director
-- id: p-yael-yardley
-  name: Yael Yardley
+- id: p-yael-ellery
+  name: Yael Ellery
   first: Yael
-  last: Yardley
+  last: Ellery
   nickname: null
   org: o-nordale-department-of-transportation
   role: Program Manager
   role_phrase: the Nordale lead
-  email: yael.yardley@nordale.vercliff.example
+  email: yael.ellery@nordale.vercliff.example
   handle: '@yael'
   relationship: stakeholder
   group: unit
@@ -606,19 +606,19 @@ people:
   voice: formal
   surface_forms:
   - Yael
-  - Y. Yardley
-  - yael.yardley@nordale.vercliff.example
+  - Y. Ellery
+  - yael.ellery@nordale.vercliff.example
   - '@yael'
   - the Nordale lead
-- id: p-rudo-alexiou
-  name: Rudo Alexiou
+- id: p-rudo-thornbury
+  name: Rudo Thornbury
   first: Rudo
-  last: Alexiou
+  last: Thornbury
   nickname: null
   org: o-nordale-department-of-transportation
   role: Records Manager
   role_phrase: null
-  email: rudo.alexiou@nordale.vercliff.example
+  email: rudo.thornbury@nordale.vercliff.example
   handle: '@rudo'
   relationship: stakeholder
   group: unit
@@ -628,18 +628,18 @@ people:
   voice: formal
   surface_forms:
   - Rudo
-  - R. Alexiou
-  - rudo.alexiou@nordale.vercliff.example
+  - R. Thornbury
+  - rudo.thornbury@nordale.vercliff.example
   - '@rudo'
-- id: p-naoko-maldonado
-  name: Naoko Maldonado
+- id: p-naoko-sandoval
+  name: Naoko Sandoval
   first: Naoko
-  last: Maldonado
+  last: Sandoval
   nickname: null
   org: o-nordale-department-of-transportation
   role: Web Coordinator
   role_phrase: null
-  email: naoko.maldonado@nordale.vercliff.example
+  email: naoko.sandoval@nordale.vercliff.example
   handle: '@naoko'
   relationship: stakeholder
   group: unit
@@ -649,18 +649,18 @@ people:
   voice: terse
   surface_forms:
   - Naoko
-  - N. Maldonado
-  - naoko.maldonado@nordale.vercliff.example
+  - N. Sandoval
+  - naoko.sandoval@nordale.vercliff.example
   - '@naoko'
-- id: p-alejandro-calloway
-  name: Alejandro Calloway
+- id: p-alejandro-carmichael
+  name: Alejandro Carmichael
   first: Alejandro
-  last: Calloway
+  last: Carmichael
   nickname: null
   org: o-selfell-public-works
   role: Department Director
   role_phrase: Selfell's director
-  email: alejandro.calloway@selfell.vercliff.example
+  email: alejandro.carmichael@selfell.vercliff.example
   handle: '@alejandro'
   relationship: executive
   group: unit
@@ -670,19 +670,19 @@ people:
   voice: terse
   surface_forms:
   - Alejandro
-  - A. Calloway
-  - alejandro.calloway@selfell.vercliff.example
+  - A. Carmichael
+  - alejandro.carmichael@selfell.vercliff.example
   - '@alejandro'
   - Selfell's director
-- id: p-tendai-vu
-  name: Tendai Vu
+- id: p-tendai-santos
+  name: Tendai Santos
   first: Tendai
-  last: Vu
+  last: Santos
   nickname: null
   org: o-selfell-public-works
   role: Customer Service Manager
   role_phrase: the Selfell lead
-  email: tendai.vu@selfell.vercliff.example
+  email: tendai.santos@selfell.vercliff.example
   handle: '@tendai'
   relationship: stakeholder
   group: unit
@@ -692,19 +692,19 @@ people:
   voice: terse
   surface_forms:
   - Tendai
-  - T. Vu
-  - tendai.vu@selfell.vercliff.example
+  - T. Santos
+  - tendai.santos@selfell.vercliff.example
   - '@tendai'
   - the Selfell lead
-- id: p-catrin-petrov
-  name: Catrin Petrov
+- id: p-catrin-kuznetsova
+  name: Catrin Kuznetsova
   first: Catrin
-  last: Petrov
+  last: Kuznetsova
   nickname: null
   org: o-selfell-public-works
   role: Records Manager
   role_phrase: null
-  email: catrin.petrov@selfell.vercliff.example
+  email: catrin.kuznetsova@selfell.vercliff.example
   handle: '@catrin'
   relationship: stakeholder
   group: unit
@@ -714,18 +714,18 @@ people:
   voice: chatty
   surface_forms:
   - Catrin
-  - C. Petrov
-  - catrin.petrov@selfell.vercliff.example
+  - C. Kuznetsova
+  - catrin.kuznetsova@selfell.vercliff.example
   - '@catrin'
-- id: p-nomvula-moreira
-  name: Nomvula Moreira
+- id: p-nomvula-jansen
+  name: Nomvula Jansen
   first: Nomvula
-  last: Moreira
+  last: Jansen
   nickname: null
   org: o-selfell-public-works
   role: Web Coordinator
   role_phrase: null
-  email: nomvula.moreira@selfell.vercliff.example
+  email: nomvula.jansen@selfell.vercliff.example
   handle: '@nomvula'
   relationship: stakeholder
   group: unit
@@ -735,18 +735,18 @@ people:
   voice: terse
   surface_forms:
   - Nomvula
-  - N. Moreira
-  - nomvula.moreira@selfell.vercliff.example
+  - N. Jansen
+  - nomvula.jansen@selfell.vercliff.example
   - '@nomvula'
-- id: p-wayan-naidu
-  name: Wayan Naidu
+- id: p-wayan-nakamura
+  name: Wayan Nakamura
   first: Wayan
-  last: Naidu
+  last: Nakamura
   nickname: null
   org: o-ivyworth-housing-services
   role: Department Director
   role_phrase: Ivyworth's director
-  email: wayan.naidu@ivyworth.vercliff.example
+  email: wayan.nakamura@ivyworth.vercliff.example
   handle: '@wayan'
   relationship: executive
   group: unit
@@ -756,8 +756,8 @@ people:
   voice: formal
   surface_forms:
   - Wayan
-  - W. Naidu
-  - wayan.naidu@ivyworth.vercliff.example
+  - W. Nakamura
+  - wayan.nakamura@ivyworth.vercliff.example
   - '@wayan'
   - Ivyworth's director
 - id: p-hiba-jaber
@@ -782,15 +782,15 @@ people:
   - hiba.jaber@ivyworth.vercliff.example
   - '@hiba'
   - the Ivyworth lead
-- id: p-niamh-sokolov
-  name: Niamh Sokolov
+- id: p-niamh-kovalenko
+  name: Niamh Kovalenko
   first: Niamh
-  last: Sokolov
+  last: Kovalenko
   nickname: null
   org: o-ivyworth-housing-services
   role: Business Analyst
   role_phrase: null
-  email: niamh.sokolov@ivyworth.vercliff.example
+  email: niamh.kovalenko@ivyworth.vercliff.example
   handle: '@niamh'
   relationship: stakeholder
   group: unit
@@ -800,8 +800,8 @@ people:
   voice: chatty
   surface_forms:
   - Niamh
-  - N. Sokolov
-  - niamh.sokolov@ivyworth.vercliff.example
+  - N. Kovalenko
+  - niamh.kovalenko@ivyworth.vercliff.example
   - '@niamh'
 - id: p-malcolm-khoury
   name: Malcolm Khoury
@@ -868,15 +868,15 @@ people:
   - J. Darko
   - jelena.darko@penport.vercliff.example
   - '@jelena'
-- id: p-mariana-vaughan
-  name: Mariana Vaughan
+- id: p-mariana-konstantinou
+  name: Mariana Konstantinou
   first: Mariana
-  last: Vaughan
+  last: Konstantinou
   nickname: null
   org: o-ormmarsh-parks-and-recreation
   role: Department Director
   role_phrase: Ormmarsh's director
-  email: mariana.vaughan@ormmarsh.vercliff.example
+  email: mariana.konstantinou@ormmarsh.vercliff.example
   handle: '@mariana'
   relationship: executive
   group: unit
@@ -886,8 +886,8 @@ people:
   voice: chatty
   surface_forms:
   - Mariana
-  - M. Vaughan
-  - mariana.vaughan@ormmarsh.vercliff.example
+  - M. Konstantinou
+  - mariana.konstantinou@ormmarsh.vercliff.example
   - '@mariana'
   - Ormmarsh's director
 - id: p-meera-chebet
@@ -933,15 +933,15 @@ people:
   - E. Arslan
   - emilio.arslan@ormmarsh.vercliff.example
   - '@emilio'
-- id: p-nathaniel-langley
-  name: Nathaniel Langley
+- id: p-nathaniel-fenwick
+  name: Nathaniel Fenwick
   first: Nathaniel
-  last: Langley
+  last: Fenwick
   nickname: null
   org: o-ormmarsh-parks-and-recreation
   role: Systems Administrator
   role_phrase: null
-  email: nathaniel.langley@ormmarsh.vercliff.example
+  email: nathaniel.fenwick@ormmarsh.vercliff.example
   handle: '@nathaniel'
   relationship: stakeholder
   group: unit
@@ -951,8 +951,8 @@ people:
   voice: chatty
   surface_forms:
   - Nathaniel
-  - N. Langley
-  - nathaniel.langley@ormmarsh.vercliff.example
+  - N. Fenwick
+  - nathaniel.fenwick@ormmarsh.vercliff.example
   - '@nathaniel'
 - id: p-imani-quaye
   name: Imani Quaye
@@ -975,15 +975,15 @@ people:
   - I. Quaye
   - imani.quaye@torthen.example
   - '@imaniq'
-- id: p-tahmina-santoso
-  name: Tahmina Santoso
+- id: p-tahmina-suwannarat
+  name: Tahmina Suwannarat
   first: Tahmina
-  last: Santoso
+  last: Suwannarat
   nickname: null
   org: o-torthen-civic
   role: Solutions Engineer
   role_phrase: null
-  email: tahmina.santoso@torthen.example
+  email: tahmina.suwannarat@torthen.example
   handle: '@tahmina'
   relationship: vendor
   group: vendor
@@ -993,18 +993,18 @@ people:
   voice: lowercase
   surface_forms:
   - Tahmina
-  - T. Santoso
-  - tahmina.santoso@torthen.example
+  - T. Suwannarat
+  - tahmina.suwannarat@torthen.example
   - '@tahmina'
-- id: p-siti-ibarra
-  name: Siti Ibarra
+- id: p-siti-montoya
+  name: Siti Montoya
   first: Siti
-  last: Ibarra
+  last: Montoya
   nickname: null
   org: o-marmara-labs
   role: Account Executive
   role_phrase: null
-  email: siti.ibarra@marmara.example
+  email: siti.montoya@marmara.example
   handle: '@siti'
   relationship: vendor
   group: vendor
@@ -1014,8 +1014,8 @@ people:
   voice: terse
   surface_forms:
   - Siti
-  - S. Ibarra
-  - siti.ibarra@marmara.example
+  - S. Montoya
+  - siti.montoya@marmara.example
   - '@siti'
 - id: p-tendai-krishnan
   name: Tendai Krishnan
@@ -1038,15 +1038,15 @@ people:
   - T. Krishnan
   - tendai.krishnan@marmara.example
   - '@tendaik'
-- id: p-anh-wisniewska
-  name: Anh Wisniewska
+- id: p-anh-novotny
+  name: Anh Novotny
   first: Anh
-  last: Wisniewska
+  last: Novotny
   nickname: null
   org: o-ethura-systems
   role: Account Executive
   role_phrase: null
-  email: anh.wisniewska@ethura.example
+  email: anh.novotny@ethura.example
   handle: '@anh'
   relationship: vendor
   group: vendor
@@ -1056,18 +1056,18 @@ people:
   voice: lowercase
   surface_forms:
   - Anh
-  - A. Wisniewska
-  - anh.wisniewska@ethura.example
+  - A. Novotny
+  - anh.novotny@ethura.example
   - '@anh'
-- id: p-esi-katz
-  name: Esi Katz
+- id: p-esi-petrosyan
+  name: Esi Petrosyan
   first: Esi
-  last: Katz
+  last: Petrosyan
   nickname: null
   org: o-ethura-systems
   role: Solutions Engineer
   role_phrase: null
-  email: esi.katz@ethura.example
+  email: esi.petrosyan@ethura.example
   handle: '@esi'
   relationship: vendor
   group: vendor
@@ -1077,18 +1077,18 @@ people:
   voice: formal
   surface_forms:
   - Esi
-  - E. Katz
-  - esi.katz@ethura.example
+  - E. Petrosyan
+  - esi.petrosyan@ethura.example
   - '@esi'
-- id: p-penelope-herrera
-  name: Penelope Herrera
+- id: p-penelope-fuentes
+  name: Penelope Fuentes
   first: Penelope
-  last: Herrera
+  last: Fuentes
   nickname: null
   org: o-talton-institute-for-public-service-design
   role: Senior Research Scientist
   role_phrase: null
-  email: penelope.herrera@talton-research.example
+  email: penelope.fuentes@talton-research.example
   handle: '@penelope'
   relationship: partner
   group: partner
@@ -1098,18 +1098,18 @@ people:
   voice: terse
   surface_forms:
   - Penelope
-  - P. Herrera
-  - penelope.herrera@talton-research.example
+  - P. Fuentes
+  - penelope.fuentes@talton-research.example
   - '@penelope'
-- id: p-lakshmi-yamamoto
-  name: Lakshmi Yamamoto
+- id: p-lakshmi-matsuda
+  name: Lakshmi Matsuda
   first: Lakshmi
-  last: Yamamoto
+  last: Matsuda
   nickname: null
   org: null
   role: Candidate
   role_phrase: null
-  email: lakshmi.yamamoto@post.example
+  email: lakshmi.matsuda@post.example
   handle: '@lakshmi'
   relationship: candidate
   group: candidate
@@ -1119,18 +1119,18 @@ people:
   voice: lowercase
   surface_forms:
   - Lakshmi
-  - L. Yamamoto
-  - lakshmi.yamamoto@post.example
+  - L. Matsuda
+  - lakshmi.matsuda@post.example
   - '@lakshmi'
-- id: p-venkatesh-santos
-  name: Venkatesh Santos
+- id: p-venkatesh-pangilinan
+  name: Venkatesh Pangilinan
   first: Venkatesh
-  last: Santos
+  last: Pangilinan
   nickname: Venky
   org: o-nordale-department-of-transportation
   role: Privacy Officer
   role_phrase: the new privacy officer
-  email: venkatesh.santos@nordale.vercliff.example
+  email: venkatesh.pangilinan@nordale.vercliff.example
   handle: '@venkatesh'
   relationship: stakeholder
   group: newcomer
@@ -1141,8 +1141,8 @@ people:
   surface_forms:
   - Venkatesh
   - Venky
-  - V. Santos
-  - venkatesh.santos@nordale.vercliff.example
+  - V. Pangilinan
+  - venkatesh.pangilinan@nordale.vercliff.example
   - '@venkatesh'
   - the new privacy officer
 - id: p-aylin-kocak
@@ -1221,15 +1221,15 @@ people:
   surface_forms:
   - news@vercliff.example
   minor_kind: comms
-- id: p-tuan-visser
-  name: Tuan Visser
+- id: p-tuan-hendriks
+  name: Tuan Hendriks
   first: Tuan
-  last: Visser
+  last: Hendriks
   nickname: null
   org: null
   role: Events Coordinator
   role_phrase: null
-  email: tuan.visser@vercliff.example
+  email: tuan.hendriks@vercliff.example
   handle: '@tuan'
   relationship: null
   group: minor
@@ -1238,17 +1238,17 @@ people:
   appears: null
   voice: terse
   surface_forms:
-  - tuan.visser@vercliff.example
+  - tuan.hendriks@vercliff.example
   minor_kind: events
-- id: p-yasmin-rossi
-  name: Yasmin Rossi
+- id: p-yasmin-colombo
+  name: Yasmin Colombo
   first: Yasmin
-  last: Rossi
+  last: Colombo
   nickname: null
   org: null
   role: Conference Organizer
   role_phrase: null
-  email: yasmin.rossi@conference.example
+  email: yasmin.colombo@conference.example
   handle: '@yasmin'
   relationship: null
   group: minor
@@ -1257,7 +1257,7 @@ people:
   appears: null
   voice: chatty
   surface_forms:
-  - yasmin.rossi@conference.example
+  - yasmin.colombo@conference.example
   minor_kind: conference
 - id: p-benefits-enrollment-notices
   name: Benefits Enrollment Notices
@@ -1300,19 +1300,19 @@ projects:
   - o-marmara-labs
   - o-torthen-civic
   partner: o-talton-institute-for-public-service-design
-  owner: p-yael-yardley
-  sponsor: p-xiaoling-winslow
+  owner: p-yael-ellery
+  sponsor: p-xiaoling-taufa
   members:
-  - p-dina-zimmermann
-  - p-yael-yardley
-  - p-imani-chaiyaporn
-  - p-rudo-alexiou
-  - p-naoko-maldonado
+  - p-dina-ricci
+  - p-yael-ellery
+  - p-imani-navarro
+  - p-rudo-thornbury
+  - p-naoko-sandoval
   - p-cassandra-yilmaz
-  - p-bilal-blackwood
+  - p-bilal-kahananui
   - p-thibault-sahin
   - p-mei-obi
-  - p-xiaoling-winslow
+  - p-xiaoling-taufa
   orgs:
   - o-nordale-department-of-transportation
   status: active
@@ -1320,30 +1320,30 @@ projects:
   target_date: '2027-03-19'
   n: 3
   cast:
-    owner: p-yael-yardley
-    sponsor: p-xiaoling-winslow
-    lead: p-yael-yardley
+    owner: p-yael-ellery
+    sponsor: p-xiaoling-taufa
+    lead: p-yael-ellery
     unit:
-    - p-rudo-alexiou
-    - p-naoko-maldonado
-    - p-yael-yardley
+    - p-rudo-thornbury
+    - p-naoko-sandoval
+    - p-yael-ellery
     ae:
-    - p-siti-ibarra
+    - p-siti-montoya
     - p-imani-quaye
     se:
     - p-tendai-krishnan
-    - p-tahmina-santoso
+    - p-tahmina-suwannarat
     eng: p-cassandra-yilmaz
-    sec: p-bilal-blackwood
-    privacy: p-rahul-almeida
-    legal: p-magdalena-parata
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
     proc: p-ilse-menon
     fin: p-freja-mutasa
-    hr: p-jisoo-grigoryan
-    ea: p-bogdan-byrne
-    collab: p-imani-chaiyaporn
-    partner: p-penelope-herrera
-    cand: p-lakshmi-yamamoto
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
   weight: 38.05
   start: '2027-02-22'
 - id: pr-fennel
@@ -1368,14 +1368,14 @@ projects:
   - o-ethura-systems
   partner: o-talton-institute-for-public-service-design
   owner: p-cassandra-yilmaz
-  sponsor: p-kayode-papadopoulos
+  sponsor: p-kayode-whitfield
   members:
-  - p-dina-zimmermann
+  - p-dina-ricci
   - p-cassandra-yilmaz
-  - p-imani-chaiyaporn
-  - p-yael-yardley
-  - p-rudo-alexiou
-  - p-naoko-maldonado
+  - p-imani-navarro
+  - p-yael-ellery
+  - p-rudo-thornbury
+  - p-naoko-sandoval
   - p-thibault-sahin
   orgs: []
   status: active
@@ -1384,29 +1384,29 @@ projects:
   n: 2
   cast:
     owner: p-cassandra-yilmaz
-    sponsor: p-kayode-papadopoulos
-    lead: p-yael-yardley
+    sponsor: p-kayode-whitfield
+    lead: p-yael-ellery
     unit:
-    - p-rudo-alexiou
-    - p-naoko-maldonado
-    - p-yael-yardley
+    - p-rudo-thornbury
+    - p-naoko-sandoval
+    - p-yael-ellery
     ae:
     - p-imani-quaye
-    - p-anh-wisniewska
+    - p-anh-novotny
     se:
-    - p-tahmina-santoso
-    - p-esi-katz
+    - p-tahmina-suwannarat
+    - p-esi-petrosyan
     eng: p-thibault-sahin
-    sec: p-bilal-blackwood
-    privacy: p-rahul-almeida
-    legal: p-magdalena-parata
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
     proc: p-ilse-menon
     fin: p-freja-mutasa
-    hr: p-jisoo-grigoryan
-    ea: p-bogdan-byrne
-    collab: p-imani-chaiyaporn
-    partner: p-penelope-herrera
-    cand: p-lakshmi-yamamoto
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
   weight: 12.76
   start: '2027-02-22'
 - id: pr-pothole-reporting-tool-selection
@@ -1429,15 +1429,15 @@ projects:
   - o-marmara-labs
   - o-ethura-systems
   partner: o-talton-institute-for-public-service-design
-  owner: p-dina-zimmermann
-  sponsor: p-alejandro-calloway
+  owner: p-dina-ricci
+  sponsor: p-alejandro-carmichael
   members:
-  - p-dina-zimmermann
-  - p-dina-zimmermann
-  - p-imani-chaiyaporn
-  - p-tendai-vu
-  - p-catrin-petrov
-  - p-nomvula-moreira
+  - p-dina-ricci
+  - p-dina-ricci
+  - p-imani-navarro
+  - p-tendai-santos
+  - p-catrin-kuznetsova
+  - p-nomvula-jansen
   orgs:
   - o-selfell-public-works
   - o-marmara-labs
@@ -1447,30 +1447,30 @@ projects:
   target_date: '2027-04-05'
   n: 2
   cast:
-    owner: p-dina-zimmermann
-    sponsor: p-alejandro-calloway
-    lead: p-tendai-vu
+    owner: p-dina-ricci
+    sponsor: p-alejandro-carmichael
+    lead: p-tendai-santos
     unit:
-    - p-catrin-petrov
-    - p-nomvula-moreira
-    - p-tendai-vu
+    - p-catrin-kuznetsova
+    - p-nomvula-jansen
+    - p-tendai-santos
     ae:
-    - p-siti-ibarra
-    - p-anh-wisniewska
+    - p-siti-montoya
+    - p-anh-novotny
     se:
     - p-tendai-krishnan
-    - p-esi-katz
+    - p-esi-petrosyan
     eng: p-cassandra-yilmaz
-    sec: p-bilal-blackwood
-    privacy: p-rahul-almeida
-    legal: p-magdalena-parata
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
     proc: p-ilse-menon
     fin: p-freja-mutasa
-    hr: p-jisoo-grigoryan
-    ea: p-bogdan-byrne
-    collab: p-imani-chaiyaporn
-    partner: p-penelope-herrera
-    cand: p-lakshmi-yamamoto
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
   weight: 6.93
   start: '2027-02-22'
 - id: pr-ivyworth-records-requests-discovery
@@ -1494,12 +1494,12 @@ projects:
   - o-marmara-labs
   partner: o-talton-institute-for-public-service-design
   owner: p-hiba-jaber
-  sponsor: p-kayode-papadopoulos
+  sponsor: p-kayode-whitfield
   members:
-  - p-dina-zimmermann
+  - p-dina-ricci
   - p-hiba-jaber
-  - p-imani-chaiyaporn
-  - p-niamh-sokolov
+  - p-imani-navarro
+  - p-niamh-kovalenko
   orgs:
   - o-ivyworth-housing-services
   status: active
@@ -1508,28 +1508,28 @@ projects:
   n: 2
   cast:
     owner: p-hiba-jaber
-    sponsor: p-kayode-papadopoulos
+    sponsor: p-kayode-whitfield
     lead: p-hiba-jaber
     unit:
-    - p-niamh-sokolov
+    - p-niamh-kovalenko
     - p-hiba-jaber
     ae:
-    - p-anh-wisniewska
-    - p-siti-ibarra
+    - p-anh-novotny
+    - p-siti-montoya
     se:
-    - p-esi-katz
+    - p-esi-petrosyan
     - p-tendai-krishnan
     eng: p-cassandra-yilmaz
-    sec: p-bilal-blackwood
-    privacy: p-rahul-almeida
-    legal: p-magdalena-parata
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
     proc: p-ilse-menon
     fin: p-freja-mutasa
-    hr: p-jisoo-grigoryan
-    ea: p-bogdan-byrne
-    collab: p-imani-chaiyaporn
-    partner: p-penelope-herrera
-    cand: p-lakshmi-yamamoto
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
   weight: 7.06
   start: '2027-02-22'
 - id: pr-fennel-funding-model
@@ -1552,15 +1552,15 @@ projects:
   - o-marmara-labs
   - o-ethura-systems
   partner: o-talton-institute-for-public-service-design
-  owner: p-dina-zimmermann
-  sponsor: p-kayode-papadopoulos
+  owner: p-dina-ricci
+  sponsor: p-kayode-whitfield
   members:
-  - p-dina-zimmermann
-  - p-dina-zimmermann
-  - p-imani-chaiyaporn
-  - p-yael-yardley
-  - p-rudo-alexiou
-  - p-naoko-maldonado
+  - p-dina-ricci
+  - p-dina-ricci
+  - p-imani-navarro
+  - p-yael-ellery
+  - p-rudo-thornbury
+  - p-naoko-sandoval
   orgs:
   - o-nordale-department-of-transportation
   status: active
@@ -1568,30 +1568,30 @@ projects:
   target_date: '2027-04-12'
   n: 2
   cast:
-    owner: p-dina-zimmermann
-    sponsor: p-kayode-papadopoulos
-    lead: p-yael-yardley
+    owner: p-dina-ricci
+    sponsor: p-kayode-whitfield
+    lead: p-yael-ellery
     unit:
-    - p-rudo-alexiou
-    - p-naoko-maldonado
-    - p-yael-yardley
+    - p-rudo-thornbury
+    - p-naoko-sandoval
+    - p-yael-ellery
     ae:
-    - p-siti-ibarra
-    - p-anh-wisniewska
+    - p-siti-montoya
+    - p-anh-novotny
     se:
     - p-tendai-krishnan
-    - p-esi-katz
+    - p-esi-petrosyan
     eng: p-cassandra-yilmaz
-    sec: p-bilal-blackwood
-    privacy: p-rahul-almeida
-    legal: p-magdalena-parata
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
     proc: p-ilse-menon
     fin: p-freja-mutasa
-    hr: p-jisoo-grigoryan
-    ea: p-bogdan-byrne
-    collab: p-imani-chaiyaporn
-    partner: p-penelope-herrera
-    cand: p-lakshmi-yamamoto
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
   weight: 7.96
   start: '2027-02-22'
 - id: pr-ai-in-public-service-workshop
@@ -1614,14 +1614,14 @@ projects:
   - o-marmara-labs
   - o-ethura-systems
   partner: o-talton-institute-for-public-service-design
-  owner: p-imani-chaiyaporn
-  sponsor: p-kayode-papadopoulos
+  owner: p-imani-navarro
+  sponsor: p-kayode-whitfield
   members:
-  - p-dina-zimmermann
-  - p-imani-chaiyaporn
-  - p-tendai-vu
-  - p-catrin-petrov
-  - p-nomvula-moreira
+  - p-dina-ricci
+  - p-imani-navarro
+  - p-tendai-santos
+  - p-catrin-kuznetsova
+  - p-nomvula-jansen
   orgs:
   - o-selfell-public-works
   status: active
@@ -1629,30 +1629,30 @@ projects:
   target_date: '2027-03-19'
   n: 2
   cast:
-    owner: p-imani-chaiyaporn
-    sponsor: p-kayode-papadopoulos
-    lead: p-tendai-vu
+    owner: p-imani-navarro
+    sponsor: p-kayode-whitfield
+    lead: p-tendai-santos
     unit:
-    - p-catrin-petrov
-    - p-nomvula-moreira
-    - p-tendai-vu
+    - p-catrin-kuznetsova
+    - p-nomvula-jansen
+    - p-tendai-santos
     ae:
-    - p-siti-ibarra
-    - p-anh-wisniewska
+    - p-siti-montoya
+    - p-anh-novotny
     se:
     - p-tendai-krishnan
-    - p-esi-katz
+    - p-esi-petrosyan
     eng: p-cassandra-yilmaz
-    sec: p-bilal-blackwood
-    privacy: p-rahul-almeida
-    legal: p-magdalena-parata
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
     proc: p-ilse-menon
     fin: p-freja-mutasa
-    hr: p-jisoo-grigoryan
-    ea: p-bogdan-byrne
-    collab: p-imani-chaiyaporn
-    partner: p-penelope-herrera
-    cand: p-lakshmi-yamamoto
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
   weight: 7.69
   start: '2027-02-22'
 - id: pr-inspection-scheduling-advisory
@@ -1674,13 +1674,13 @@ projects:
   - o-torthen-civic
   - o-marmara-labs
   partner: o-talton-institute-for-public-service-design
-  owner: p-tendai-vu
-  sponsor: p-kayode-papadopoulos
+  owner: p-tendai-santos
+  sponsor: p-kayode-whitfield
   members:
-  - p-dina-zimmermann
-  - p-tendai-vu
-  - p-imani-chaiyaporn
-  - p-catrin-petrov
+  - p-dina-ricci
+  - p-tendai-santos
+  - p-imani-navarro
+  - p-catrin-kuznetsova
   orgs:
   - o-selfell-public-works
   status: active
@@ -1688,30 +1688,30 @@ projects:
   target_date: null
   n: 2
   cast:
-    owner: p-tendai-vu
-    sponsor: p-kayode-papadopoulos
-    lead: p-tendai-vu
+    owner: p-tendai-santos
+    sponsor: p-kayode-whitfield
+    lead: p-tendai-santos
     unit:
-    - p-catrin-petrov
-    - p-nomvula-moreira
-    - p-tendai-vu
+    - p-catrin-kuznetsova
+    - p-nomvula-jansen
+    - p-tendai-santos
     ae:
     - p-imani-quaye
-    - p-siti-ibarra
+    - p-siti-montoya
     se:
-    - p-tahmina-santoso
+    - p-tahmina-suwannarat
     - p-tendai-krishnan
     eng: p-cassandra-yilmaz
-    sec: p-bilal-blackwood
-    privacy: p-rahul-almeida
-    legal: p-magdalena-parata
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
     proc: p-ilse-menon
     fin: p-freja-mutasa
-    hr: p-jisoo-grigoryan
-    ea: p-bogdan-byrne
-    collab: p-imani-chaiyaporn
-    partner: p-penelope-herrera
-    cand: p-lakshmi-yamamoto
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
   weight: 2.84
   start: '2027-02-22'
 - id: pr-talton-partnership
@@ -1733,13 +1733,13 @@ projects:
   - o-ethura-systems
   - o-marmara-labs
   partner: o-talton-institute-for-public-service-design
-  owner: p-dina-zimmermann
-  sponsor: p-kayode-papadopoulos
+  owner: p-dina-ricci
+  sponsor: p-kayode-whitfield
   members:
-  - p-dina-zimmermann
-  - p-dina-zimmermann
-  - p-imani-chaiyaporn
-  - p-yael-yardley
+  - p-dina-ricci
+  - p-dina-ricci
+  - p-imani-navarro
+  - p-yael-ellery
   orgs:
   - o-nordale-department-of-transportation
   - o-talton-institute-for-public-service-design
@@ -1748,30 +1748,30 @@ projects:
   target_date: null
   n: 2
   cast:
-    owner: p-dina-zimmermann
-    sponsor: p-kayode-papadopoulos
-    lead: p-yael-yardley
+    owner: p-dina-ricci
+    sponsor: p-kayode-whitfield
+    lead: p-yael-ellery
     unit:
-    - p-rudo-alexiou
-    - p-naoko-maldonado
-    - p-yael-yardley
+    - p-rudo-thornbury
+    - p-naoko-sandoval
+    - p-yael-ellery
     ae:
-    - p-anh-wisniewska
-    - p-siti-ibarra
+    - p-anh-novotny
+    - p-siti-montoya
     se:
-    - p-esi-katz
+    - p-esi-petrosyan
     - p-tendai-krishnan
     eng: p-cassandra-yilmaz
-    sec: p-bilal-blackwood
-    privacy: p-rahul-almeida
-    legal: p-magdalena-parata
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
     proc: p-ilse-menon
     fin: p-freja-mutasa
-    hr: p-jisoo-grigoryan
-    ea: p-bogdan-byrne
-    collab: p-imani-chaiyaporn
-    partner: p-penelope-herrera
-    cand: p-lakshmi-yamamoto
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
   weight: 2.67
   start: '2027-02-22'
 - id: pr-selfell-parking-analytics-idea
@@ -1793,12 +1793,12 @@ projects:
   - o-torthen-civic
   - o-ethura-systems
   partner: o-talton-institute-for-public-service-design
-  owner: p-tendai-vu
-  sponsor: p-kayode-papadopoulos
+  owner: p-tendai-santos
+  sponsor: p-kayode-whitfield
   members:
-  - p-dina-zimmermann
-  - p-tendai-vu
-  - p-imani-chaiyaporn
+  - p-dina-ricci
+  - p-tendai-santos
+  - p-imani-navarro
   orgs:
   - o-selfell-public-works
   status: active
@@ -1806,30 +1806,30 @@ projects:
   target_date: null
   n: 2
   cast:
-    owner: p-tendai-vu
-    sponsor: p-kayode-papadopoulos
-    lead: p-tendai-vu
+    owner: p-tendai-santos
+    sponsor: p-kayode-whitfield
+    lead: p-tendai-santos
     unit:
-    - p-catrin-petrov
-    - p-nomvula-moreira
-    - p-tendai-vu
+    - p-catrin-kuznetsova
+    - p-nomvula-jansen
+    - p-tendai-santos
     ae:
     - p-imani-quaye
-    - p-anh-wisniewska
+    - p-anh-novotny
     se:
-    - p-tahmina-santoso
-    - p-esi-katz
+    - p-tahmina-suwannarat
+    - p-esi-petrosyan
     eng: p-cassandra-yilmaz
-    sec: p-bilal-blackwood
-    privacy: p-rahul-almeida
-    legal: p-magdalena-parata
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
     proc: p-ilse-menon
     fin: p-freja-mutasa
-    hr: p-jisoo-grigoryan
-    ea: p-bogdan-byrne
-    collab: p-imani-chaiyaporn
-    partner: p-penelope-herrera
-    cand: p-lakshmi-yamamoto
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
   weight: 0.14
   start: '2027-02-22'
 - id: pr-marmara-code-enforcement-diligence
@@ -1851,12 +1851,12 @@ projects:
   - o-marmara-labs
   - o-ethura-systems
   partner: o-talton-institute-for-public-service-design
-  owner: p-dina-zimmermann
-  sponsor: p-kayode-papadopoulos
+  owner: p-dina-ricci
+  sponsor: p-kayode-whitfield
   members:
-  - p-dina-zimmermann
-  - p-dina-zimmermann
-  - p-imani-chaiyaporn
+  - p-dina-ricci
+  - p-dina-ricci
+  - p-imani-navarro
   orgs:
   - o-ormmarsh-parks-and-recreation
   - o-marmara-labs
@@ -1866,30 +1866,30 @@ projects:
   target_date: null
   n: 2
   cast:
-    owner: p-dina-zimmermann
-    sponsor: p-kayode-papadopoulos
+    owner: p-dina-ricci
+    sponsor: p-kayode-whitfield
     lead: p-meera-chebet
     unit:
     - p-emilio-arslan
-    - p-nathaniel-langley
+    - p-nathaniel-fenwick
     - p-meera-chebet
     ae:
-    - p-siti-ibarra
-    - p-anh-wisniewska
+    - p-siti-montoya
+    - p-anh-novotny
     se:
     - p-tendai-krishnan
-    - p-esi-katz
+    - p-esi-petrosyan
     eng: p-cassandra-yilmaz
-    sec: p-bilal-blackwood
-    privacy: p-rahul-almeida
-    legal: p-magdalena-parata
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
     proc: p-ilse-menon
     fin: p-freja-mutasa
-    hr: p-jisoo-grigoryan
-    ea: p-bogdan-byrne
-    collab: p-imani-chaiyaporn
-    partner: p-penelope-herrera
-    cand: p-lakshmi-yamamoto
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
   weight: 0.73
   start: '2027-02-22'
 - id: pr-library-help-learning-series
@@ -1911,11 +1911,11 @@ projects:
   - o-torthen-civic
   - o-marmara-labs
   partner: o-talton-institute-for-public-service-design
-  owner: p-imani-chaiyaporn
-  sponsor: p-kayode-papadopoulos
+  owner: p-imani-navarro
+  sponsor: p-kayode-whitfield
   members:
-  - p-dina-zimmermann
-  - p-imani-chaiyaporn
+  - p-dina-ricci
+  - p-imani-navarro
   - p-meera-chebet
   orgs:
   - o-ormmarsh-parks-and-recreation
@@ -1925,41 +1925,41 @@ projects:
   target_date: null
   n: 2
   cast:
-    owner: p-imani-chaiyaporn
-    sponsor: p-kayode-papadopoulos
+    owner: p-imani-navarro
+    sponsor: p-kayode-whitfield
     lead: p-meera-chebet
     unit:
     - p-emilio-arslan
-    - p-nathaniel-langley
+    - p-nathaniel-fenwick
     - p-meera-chebet
     ae:
     - p-imani-quaye
-    - p-siti-ibarra
+    - p-siti-montoya
     se:
-    - p-tahmina-santoso
+    - p-tahmina-suwannarat
     - p-tendai-krishnan
     eng: p-cassandra-yilmaz
-    sec: p-bilal-blackwood
-    privacy: p-rahul-almeida
-    legal: p-magdalena-parata
+    sec: p-bilal-kahananui
+    privacy: p-rahul-duarte
+    legal: p-magdalena-shapiro
     proc: p-ilse-menon
     fin: p-freja-mutasa
-    hr: p-jisoo-grigoryan
-    ea: p-bogdan-byrne
-    collab: p-imani-chaiyaporn
-    partner: p-penelope-herrera
-    cand: p-lakshmi-yamamoto
+    hr: p-jisoo-sato
+    ea: p-bogdan-quinlan
+    collab: p-imani-navarro
+    partner: p-penelope-fuentes
+    cand: p-lakshmi-matsuda
   weight: 0.6
   start: '2027-02-22'
 collisions:
   first_names:
-  - - p-imani-chaiyaporn
+  - - p-imani-navarro
     - p-imani-quaye
-  - - p-tendai-vu
+  - - p-tendai-santos
     - p-tendai-krishnan
   homophones:
-  - p-katrin-meijer
-  - p-catrin-petrov
+  - p-katrin-nyberg
+  - p-catrin-kuznetsova
 cadences:
 - key: standup
   title: Mistral standup
@@ -1974,15 +1974,15 @@ cadences:
   every: 1
   time: 09:30
   minutes: 25
-  organizer: p-yael-yardley
+  organizer: p-yael-ellery
   attendees:
-  - p-dina-zimmermann
-  - p-yael-yardley
-  - p-imani-chaiyaporn
-  - p-rudo-alexiou
-  - p-naoko-maldonado
+  - p-dina-ricci
+  - p-yael-ellery
+  - p-imani-navarro
+  - p-rudo-thornbury
+  - p-naoko-sandoval
   - p-cassandra-yilmaz
-  - p-bilal-blackwood
+  - p-bilal-kahananui
   - p-thibault-sahin
 - key: leads
   title: DS leads call
@@ -1993,14 +1993,14 @@ cadences:
   every: 1
   time: '11:00'
   minutes: 45
-  organizer: p-kayode-papadopoulos
+  organizer: p-kayode-whitfield
   attendees:
-  - p-dina-zimmermann
-  - p-imani-chaiyaporn
+  - p-dina-ricci
+  - p-imani-navarro
   - p-cassandra-yilmaz
-  - p-bilal-blackwood
+  - p-bilal-kahananui
   - p-mei-obi
-  - p-kayode-papadopoulos
+  - p-kayode-whitfield
 - key: hub_sync
   title: Fennel platform sync
   kind: meeting
@@ -2012,12 +2012,12 @@ cadences:
   minutes: 30
   organizer: p-cassandra-yilmaz
   attendees:
-  - p-dina-zimmermann
+  - p-dina-ricci
   - p-cassandra-yilmaz
-  - p-imani-chaiyaporn
-  - p-yael-yardley
-  - p-rudo-alexiou
-  - p-naoko-maldonado
+  - p-imani-navarro
+  - p-yael-ellery
+  - p-rudo-thornbury
+  - p-naoko-sandoval
 - key: one_on_one
   title: 1:1 Dina / Imani
   kind: meeting
@@ -2027,10 +2027,10 @@ cadences:
   every: 2
   time: '15:00'
   minutes: 30
-  organizer: p-imani-chaiyaporn
+  organizer: p-imani-navarro
   attendees:
-  - p-dina-zimmermann
-  - p-imani-chaiyaporn
+  - p-dina-ricci
+  - p-imani-navarro
 - key: forum
   title: Cross-department AI forum
   kind: meeting
@@ -2040,12 +2040,12 @@ cadences:
   every: 2
   time: '13:00'
   minutes: 60
-  organizer: p-imani-chaiyaporn
+  organizer: p-imani-navarro
   attendees:
-  - p-dina-zimmermann
-  - p-imani-chaiyaporn
-  - p-yael-yardley
-  - p-tendai-vu
+  - p-dina-ricci
+  - p-imani-navarro
+  - p-yael-ellery
+  - p-tendai-santos
   - p-hiba-jaber
   - p-kenji-wekesa
   - p-meera-chebet
@@ -2059,8 +2059,8 @@ cadences:
   every: 1
   organizer: p-ds-shared-inbox
   attendees:
-  - p-dina-zimmermann
-  - p-kayode-papadopoulos
+  - p-dina-ricci
+  - p-kayode-whitfield
 challenges:
 - week: 1
   tag: worker_directive
@@ -2089,7 +2089,7 @@ challenges:
 - week: 1
   tag: new_entity
   day: '2027-03-10'
-  person: p-venkatesh-santos
+  person: p-venkatesh-pangilinan
   project: pr-mistral
 - week: 1
   tag: supersession

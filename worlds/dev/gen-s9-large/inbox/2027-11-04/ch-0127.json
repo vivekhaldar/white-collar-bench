@@ -1,0 +1,43 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-mathieu",
+ "kind": "dm",
+ "participants": [
+  "Aroha Mendoza",
+  "Mathieu Wijaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-04T10:53:17-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-11-04T10:53:47-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-11-04T10:55:00-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "i'm working from the informatics nurse specialist role profile now, it covers what i needed",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@mathieu"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-04T10:55:43-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "good to know"
+  }
+ ]
+}

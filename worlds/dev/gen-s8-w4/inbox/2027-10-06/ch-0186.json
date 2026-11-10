@@ -1,0 +1,33 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#fulmar-core",
+ "kind": "channel",
+ "participants": [
+  "Ottavio Bakker",
+  "Amira Baek",
+  "Adwoa",
+  "Giorgi Wisniewska",
+  "Oksana Hoffmann",
+  "Marcelo Meijer",
+  "Batbayar Galbraith",
+  "Thibault Kowalski",
+  "Kamau Greco",
+  "Shirin Oyelami"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-05T10:26:08-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "catching people up since a few of us are out today :)"
+  },
+  {
+   "ts": "2027-10-05T10:29:00-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "Heads up: Amira will send Giorgi the Fulmar sensor tag list v2.",
+   "edited": true,
+   "original": "Heads up: Amira will send Giorgi the Fulmar sesnor tag list v2."
+  }
+ ]
+}

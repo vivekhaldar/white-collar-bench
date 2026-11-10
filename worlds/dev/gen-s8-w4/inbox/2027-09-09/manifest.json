@@ -1,0 +1,124 @@
+{
+  "date": "2027-09-09",
+  "artifacts": [
+    {
+      "id": "em-0064",
+      "channel": "email",
+      "received_at": "2027-09-09T06:36:00-06:00",
+      "path": "em-0064.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0065",
+      "channel": "email",
+      "received_at": "2027-09-09T07:53:00-06:00",
+      "path": "em-0065.eml",
+      "title": "Re: Marcelo's Fulmar data dictionary"
+    },
+    {
+      "id": "em-0066",
+      "channel": "email",
+      "received_at": "2027-09-09T08:06:00-06:00",
+      "path": "em-0066.eml",
+      "title": "Re: Batbayar's Wagtail cutover plan"
+    },
+    {
+      "id": "em-0067",
+      "channel": "email",
+      "received_at": "2027-09-09T08:27:00-06:00",
+      "path": "em-0067.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "ch-0051",
+      "channel": "chat",
+      "received_at": "2027-09-09T09:49:00-06:00",
+      "path": "ch-0051.json",
+      "title": "DM: Amira Baek / Marcelo Meijer"
+    },
+    {
+      "id": "mt-0007",
+      "channel": "transcript",
+      "received_at": "2027-09-09T09:55:00-06:00",
+      "path": "mt-0007.vtt",
+      "title": "Fulmar standup (transcript)"
+    },
+    {
+      "id": "ch-0052",
+      "channel": "chat",
+      "received_at": "2027-09-09T10:13:00-06:00",
+      "path": "ch-0052.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "mn-0012",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-09T10:15:00-06:00",
+      "path": "mn-0012.md",
+      "title": "Notes: Fulmar security review"
+    },
+    {
+      "id": "ch-0053",
+      "channel": "chat",
+      "received_at": "2027-09-09T10:44:00-06:00",
+      "path": "ch-0053.json",
+      "title": "DM: Batbayar Galbraith / Amira Baek"
+    },
+    {
+      "id": "ca-0006",
+      "channel": "calendar",
+      "received_at": "2027-09-09T11:29:00-06:00",
+      "path": "ca-0006.ics",
+      "title": "Invite: Catch-up: Amira / Adwoa"
+    },
+    {
+      "id": "ch-0054",
+      "channel": "chat",
+      "received_at": "2027-09-09T13:09:00-06:00",
+      "path": "ch-0054.json",
+      "title": "#work-instructions-core"
+    },
+    {
+      "id": "em-0068",
+      "channel": "email",
+      "received_at": "2027-09-09T13:19:00-06:00",
+      "path": "em-0068.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0055",
+      "channel": "chat",
+      "received_at": "2027-09-09T14:38:00-06:00",
+      "path": "ch-0055.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0056",
+      "channel": "chat",
+      "received_at": "2027-09-09T14:41:00-06:00",
+      "path": "ch-0056.json",
+      "title": "DM: Hamish Okada / Amira Baek"
+    },
+    {
+      "id": "em-0069",
+      "channel": "email",
+      "received_at": "2027-09-09T15:04:00-06:00",
+      "path": "em-0069.eml",
+      "title": "[INC-78782] Ticket updated"
+    },
+    {
+      "id": "ch-0057",
+      "channel": "chat",
+      "received_at": "2027-09-09T16:38:00-06:00",
+      "path": "ch-0057.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    },
+    {
+      "id": "em-0070",
+      "channel": "email",
+      "received_at": "2027-09-09T18:11:00-06:00",
+      "path": "em-0070.eml",
+      "title": "Call for proposals closes Wednesday 22 September"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Liisa Babic",
+  "Wei Rossi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-16T08:01:25-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "reminder that the fire drill is at 11"
+  },
+  {
+   "ts": "2027-02-16T08:03:55-08:00",
+   "user": "Wei Rossi",
+   "handle": "@wei",
+   "text": "thanks for the heads up",
+   "thread_of": 0
+  }
+ ]
+}

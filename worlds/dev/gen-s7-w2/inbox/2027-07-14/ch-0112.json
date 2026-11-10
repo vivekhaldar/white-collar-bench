@@ -1,0 +1,82 @@
+{
+ "workspace": "corrstead",
+ "channel": "#garnet-core",
+ "kind": "channel",
+ "participants": [
+  "Ewan Laine",
+  "Hiba Jimenez",
+  "Bolat",
+  "Madeline Chikwanha",
+  "Desmond Visser",
+  "Andrei Laurent",
+  "Emre Khumalo",
+  "Adaeze Fifita",
+  "Eun-ji Valdez",
+  "Dong-hyun Colombo"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-13T10:38:55-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "catching people up since a few of us are out today"
+  },
+  {
+   "ts": "2027-07-13T10:41:00-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "from the sync earlier, emre will send hiba the garnet dependency list",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@bolat",
+      "@madeline",
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-13T10:41:14-08:00",
+   "user": "Dong-hyun Colombo",
+   "handle": "@donghyun",
+   "text": "noted",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-07-13T10:44:05-08:00",
+   "user": "Dong-hyun Colombo",
+   "handle": "@donghyun",
+   "text": "thanks for flagging :)",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-07-13T10:46:39-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "following",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-07-13T10:47:42-08:00",
+   "user": "Eun-ji Valdez",
+   "handle": "@eunji",
+   "text": "following",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-07-13T10:48:13-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "@hiba i set up the garnet single sign-on role mapping"
+  },
+  {
+   "ts": "2027-07-13T10:49:23-08:00",
+   "user": "Adaeze Fifita",
+   "handle": "@adaeze",
+   "text": "thanks for the heads up",
+   "thread_of": 6
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Kirkmarsh//Calendar//EN
+METHOD:CANCEL
+BEGIN:VEVENT
+UID:1769438b766446a0@kirkmarsh.example
+DTSTAMP:20271019T141100Z
+DTSTART:20271019T143000Z
+DTEND:20271019T145500Z
+SUMMARY:Cancelled: Cirrus standup
+ORGANIZER;CN=Keisha Hargrove:mailto:keisha.hargrove@redridge.kirkmarsh.example
+ATTENDEE;CN=Aroha Mendoza;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:aroha.mendoza@kirkmarsh.example
+ATTENDEE;CN=Anh Villanueva;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:anh.villanueva@kirkmarsh.example
+ATTENDEE;CN=Babajide Hendriks;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:babajide.hendriks@redridge.kirkmarsh.example
+ATTENDEE;CN=Stanley Valdez;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:stanley.valdez@redridge.kirkmarsh.example
+ATTENDEE;CN=Adebayo Kahananui;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:adebayo.kahananui@redridge.kirkmarsh.example
+ATTENDEE;CN=Mathieu Wijaya;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:mathieu.wijaya@kirkmarsh.example
+ATTENDEE;CN=Andres Yamamoto;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:andres.yamamoto@kirkmarsh.example
+RECURRENCE-ID:20271019T143000Z
+SEQUENCE:1
+STATUS:CANCELLED
+DESCRIPTION:Not needed this time\, covered in the leads call.
+END:VEVENT
+END:VCALENDAR

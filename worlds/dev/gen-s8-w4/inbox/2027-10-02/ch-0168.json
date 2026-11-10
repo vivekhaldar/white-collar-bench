@@ -1,0 +1,32 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Baraka Chevalier",
+  "Jonathan Gurung"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-02T14:08:57-06:00",
+   "user": "Baraka Chevalier",
+   "handle": "@baraka",
+   "text": "anyone up for coffee at 3?",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@jonathan"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-02T14:12:55-06:00",
+   "user": "Jonathan Gurung",
+   "handle": "@jonathan",
+   "text": "me!",
+   "thread_of": 0
+  }
+ ]
+}

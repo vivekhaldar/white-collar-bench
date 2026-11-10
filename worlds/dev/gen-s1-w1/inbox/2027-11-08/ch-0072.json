@@ -4,9 +4,9 @@
  "kind": "channel",
  "participants": [
   "Jalen",
-  "Camila Quimby",
-  "Andrei Abenova",
-  "Ifeoma Girard",
+  "Camila Abernathy",
+  "Andrei Lindgren",
+  "Ifeoma Chevalier",
   "Corinne Kaya"
  ],
  "messages": [
@@ -24,7 +24,7 @@
   },
   {
    "ts": "2027-11-08T15:54:33-07:00",
-   "user": "Andrei Abenova",
+   "user": "Andrei Lindgren",
    "handle": "@andrei",
    "text": "thanks for the update",
    "thread_of": 0

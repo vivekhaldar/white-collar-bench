@@ -1,35 +1,55 @@
 {
  "workspace": "iselvale",
- "channel": "dm-anahit-hiba",
+ "channel": "dm-hiba-jisoo",
  "kind": "dm",
  "participants": [
-  "Hiba Xu",
-  "Anahit Upton"
+  "Hiba Deng",
+  "Jisoo Nowak"
  ],
  "messages": [
   {
-   "ts": "2027-03-23T16:14:00-05:00",
-   "user": "Hiba Xu",
+   "ts": "2027-03-23T17:05:27-05:00",
+   "user": "Hiba Deng",
    "handle": "@hiba",
-   "text": "I confirmed the Okapi training outline with you earlier today."
+   "text": "hi!"
   },
   {
-   "ts": "2027-03-23T16:15:18-05:00",
-   "user": "Anahit Upton",
-   "handle": "@anahit",
-   "text": "great, thanks :)"
+   "ts": "2027-03-23T17:06:09-05:00",
+   "user": "Jisoo Nowak",
+   "handle": "@jisoo",
+   "text": "hi"
   },
   {
-   "ts": "2027-03-23T16:17:18-05:00",
-   "user": "Hiba Xu",
+   "ts": "2027-03-23T17:07:00-05:00",
+   "user": "Hiba Deng",
    "handle": "@hiba",
-   "text": "did the link work for you?"
+   "text": "i set up a coffee with you about prior authorization earlier today",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@jisoo"
+     ]
+    }
+   ]
   },
   {
-   "ts": "2027-03-23T16:17:44-05:00",
-   "user": "Anahit Upton",
-   "handle": "@anahit",
-   "text": "yep, all good"
+   "ts": "2027-03-23T17:07:31-05:00",
+   "user": "Jisoo Nowak",
+   "handle": "@jisoo",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-03-23T17:09:16-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-03-23T17:12:56-05:00",
+   "user": "Jisoo Nowak",
+   "handle": "@jisoo",
+   "text": "anytime"
   }
  ]
 }

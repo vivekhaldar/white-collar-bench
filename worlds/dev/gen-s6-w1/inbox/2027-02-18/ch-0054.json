@@ -1,0 +1,48 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#axolotl-core",
+ "kind": "channel",
+ "participants": [
+  "Despina Pereira",
+  "Losa Moretti",
+  "Andres",
+  "Nathaniel Cartwright",
+  "Karim Navarro",
+  "Liisa Babic",
+  "Tomas Deng",
+  "Carys Laurent",
+  "Lindiwe Baek",
+  "Jurgen Dvorak"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-18T11:48:00-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "We've agreed to limit the Axolotl pilot to five courses.",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@losa",
+      "@andres"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-18T11:55:38-08:00",
+   "user": "Losa Moretti",
+   "handle": "@losa",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-18T11:56:32-08:00",
+   "user": "Nathaniel Cartwright",
+   "handle": "@nathaniel",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

@@ -29,14 +29,14 @@
   checkpoint: cp1
   template: i_owe
   params:
-    person: p-yael-yardley
+    person: p-yael-ellery
   challenges:
   - scattered_evidence
 - id: q-005
   checkpoint: cp1
   template: owed_to_me
   params:
-    person: p-tendai-vu
+    person: p-tendai-santos
     name_form: the Selfell lead
   challenges:
   - alias
@@ -68,7 +68,7 @@
   checkpoint: cp1
   template: person_attr
   params:
-    person: p-tendai-vu
+    person: p-tendai-santos
     attribute: relationship
   challenges:
   - name_collision
@@ -85,7 +85,7 @@
   checkpoint: cp1
   template: person_brief
   params:
-    person: p-kayode-papadopoulos
+    person: p-kayode-whitfield
   challenges:
   - new_entity
 - id: q-012
@@ -155,7 +155,7 @@
   checkpoint: cp2
   template: i_owe
   params:
-    person: p-imani-chaiyaporn
+    person: p-imani-navarro
   challenges:
   - duplicate_signal
   - endorsement
@@ -166,7 +166,7 @@
   checkpoint: cp2
   template: owed_to_me
   params:
-    person: p-anh-wisniewska
+    person: p-anh-novotny
   challenges: []
 - id: q-021
   checkpoint: cp2
@@ -188,7 +188,7 @@
   checkpoint: cp2
   template: person_attr
   params:
-    person: p-venkatesh-santos
+    person: p-venkatesh-pangilinan
     attribute: org
     name_form: Venkatesh
   challenges:
@@ -205,7 +205,7 @@
   checkpoint: cp2
   template: person_brief
   params:
-    person: p-rudo-alexiou
+    person: p-rudo-thornbury
     name_form: Rudo
   challenges:
   - alias
@@ -243,7 +243,7 @@
   checkpoint: cp2
   template: person_attr
   params:
-    person: p-anh-wisniewska
+    person: p-anh-novotny
     attribute: phone
   challenges:
   - unobservable
@@ -290,7 +290,7 @@
   checkpoint: cp3
   template: owed_to_me
   params:
-    person: p-naoko-maldonado
+    person: p-naoko-sandoval
   challenges:
   - duplicate_signal
 - id: q-036
@@ -311,7 +311,7 @@
   checkpoint: cp3
   template: person_brief
   params:
-    person: p-imani-chaiyaporn
+    person: p-imani-navarro
     name_form: our delivery director
   challenges:
   - alias

@@ -3,13 +3,13 @@
  "channel": "dm-ottavio-ratna",
  "kind": "dm",
  "participants": [
-  "Ottavio Monteiro",
-  "Ratna Bondarenko"
+  "Ottavio Moreira",
+  "Ratna Nikolic"
  ],
  "messages": [
   {
    "ts": "2027-09-01T13:44:00-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "i can send you the syllabus review discovery service blueprint",
    "reactions": [
@@ -23,19 +23,19 @@
   },
   {
    "ts": "2027-09-01T13:44:29-08:00",
-   "user": "Ratna Bondarenko",
+   "user": "Ratna Nikolic",
    "handle": "@ratna",
    "text": "perfect, thanks"
   },
   {
    "ts": "2027-09-01T13:47:54-08:00",
-   "user": "Ratna Bondarenko",
+   "user": "Ratna Nikolic",
    "handle": "@ratna",
    "text": "did you catch the all-hands?"
   },
   {
    "ts": "2027-09-01T13:51:05-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "only the first half"
   }

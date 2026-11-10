@@ -1,0 +1,43 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-hiba-lindiwe",
+ "kind": "dm",
+ "participants": [
+  "Lindiwe Ribeiro",
+  "Hiba Deng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-04-02T07:55:28-05:00",
+   "user": "Lindiwe Ribeiro",
+   "handle": "@lindiwe",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-04-02T08:00:00-05:00",
+   "user": "Lindiwe Ribeiro",
+   "handle": "@lindiwe",
+   "text": "Change of plan: we're no longer going to limit the Wagtail pilot to four wards. Falbury asked for another ward.",
+   "edited": true,
+   "original": "Change of plan: we're no longer going to limit the Wagtali pilot to four wards. Falbury asked for another ward."
+  },
+  {
+   "ts": "2027-04-02T08:01:27-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "agreed"
+  },
+  {
+   "ts": "2027-04-02T08:01:55-05:00",
+   "user": "Lindiwe Ribeiro",
+   "handle": "@lindiwe",
+   "text": "Confirming we'll widen the Wagtail pilot to five wards!"
+  },
+  {
+   "ts": "2027-04-02T08:02:20-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "makes sense"
+  }
+ ]
+}

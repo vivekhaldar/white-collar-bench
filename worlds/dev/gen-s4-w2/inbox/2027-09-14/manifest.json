@@ -27,7 +27,7 @@
       "channel": "chat",
       "received_at": "2027-09-14T09:10:00-08:00",
       "path": "ch-0111.json",
-      "title": "DM: Nadia Krause / Ottavio Monteiro"
+      "title": "DM: Nadia Vogel / Ottavio Moreira"
     },
     {
       "id": "em-0158",
@@ -41,7 +41,7 @@
       "channel": "chat",
       "received_at": "2027-09-14T10:07:00-08:00",
       "path": "ch-0112.json",
-      "title": "DM: Meera Ivanova / Ottavio Monteiro"
+      "title": "DM: Meera Bondarenko / Ottavio Moreira"
     },
     {
       "id": "em-0159",
@@ -69,21 +69,21 @@
       "channel": "chat",
       "received_at": "2027-09-14T12:50:00-08:00",
       "path": "ch-0113.json",
-      "title": "DM: Magdalena Barbosa / Ottavio Monteiro"
+      "title": "DM: Magdalena Monteiro / Ottavio Moreira"
     },
     {
       "id": "ch-0114",
       "channel": "chat",
       "received_at": "2027-09-14T12:55:00-08:00",
       "path": "ch-0114.json",
-      "title": "DM: Ottavio Monteiro / Theresa Nagy"
+      "title": "DM: Ottavio Moreira / Theresa Petrov"
     },
     {
       "id": "ch-0115",
       "channel": "chat",
       "received_at": "2027-09-14T13:01:00-08:00",
       "path": "ch-0115.json",
-      "title": "DM: Meera Ivanova / Ottavio Monteiro"
+      "title": "DM: Meera Bondarenko / Ottavio Moreira"
     },
     {
       "id": "ca-0013",
@@ -111,7 +111,7 @@
       "channel": "chat",
       "received_at": "2027-09-14T15:59:00-08:00",
       "path": "ch-0116.json",
-      "title": "DM: Meera Kariuki / Ottavio Monteiro"
+      "title": "DM: Meera Kariuki / Ottavio Moreira"
     },
     {
       "id": "em-0164",
@@ -139,14 +139,14 @@
       "channel": "chat",
       "received_at": "2027-09-14T18:45:00-08:00",
       "path": "ch-0118.json",
-      "title": "DM: Theresa Nagy / Ottavio Monteiro"
+      "title": "DM: Theresa Petrov / Ottavio Moreira"
     },
     {
       "id": "ch-0119",
       "channel": "chat",
       "received_at": "2027-09-14T19:04:00-08:00",
       "path": "ch-0119.json",
-      "title": "DM: Theresa Nagy / Ottavio Monteiro"
+      "title": "DM: Theresa Petrov / Ottavio Moreira"
     },
     {
       "id": "nt-0012",

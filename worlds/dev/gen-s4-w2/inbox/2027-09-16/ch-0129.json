@@ -3,25 +3,25 @@
  "channel": "dm-ottavio-siobhan",
  "kind": "dm",
  "participants": [
-  "Siobhan Munro",
-  "Ottavio Monteiro"
+  "Siobhan Rees",
+  "Ottavio Moreira"
  ],
  "messages": [
   {
    "ts": "2027-09-16T17:00:14-08:00",
-   "user": "Siobhan Munro",
+   "user": "Siobhan Rees",
    "handle": "@siobhan",
    "text": "got a sec?"
   },
   {
    "ts": "2027-09-16T17:02:00-08:00",
-   "user": "Siobhan Munro",
+   "user": "Siobhan Rees",
    "handle": "@siobhan",
    "text": "Heads up: Magdalena will send you the notes from the financial aid chat session. :)"
   },
   {
    "ts": "2027-09-16T17:02:34-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "great, thank you"
   }

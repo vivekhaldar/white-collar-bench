@@ -4,7 +4,7 @@
  "kind": "dm",
  "participants": [
   "Yasmin Mokoena",
-  "Camila Quimby"
+  "Camila Abernathy"
  ],
  "messages": [
   {
@@ -21,13 +21,13 @@
   },
   {
    "ts": "2027-11-01T13:38:30-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "perfect, thanks"
   },
   {
    "ts": "2027-11-01T13:39:40-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "did you catch the all-hands?"
   },

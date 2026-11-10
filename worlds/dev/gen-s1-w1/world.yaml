@@ -2,7 +2,7 @@ id: gen-s1-w1
 title: 'Generated world: Office of Civic Technology, City of Holcrest (city government digital service)'
 version: 1
 split: dev
-worker: p-camila-quimby
+worker: p-camila-abernathy
 timezone: -07:00
 seed:
   start: '2027-10-25'

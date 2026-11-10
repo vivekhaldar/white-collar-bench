@@ -1,0 +1,174 @@
+{
+  "date": "2027-11-03",
+  "artifacts": [
+    {
+      "id": "em-0119",
+      "channel": "email",
+      "received_at": "2027-11-03T07:57:00-05:00",
+      "path": "em-0119.eml",
+      "title": "[REQ-27373] Request resolved"
+    },
+    {
+      "id": "ch-0111",
+      "channel": "chat",
+      "received_at": "2027-11-03T08:20:00-05:00",
+      "path": "ch-0111.json",
+      "title": "DM: Eleni Rattanakorn / Aroha Mendoza"
+    },
+    {
+      "id": "ch-0112",
+      "channel": "chat",
+      "received_at": "2027-11-03T08:59:00-05:00",
+      "path": "ch-0112.json",
+      "title": "DM: Aroha Mendoza / Adebayo Kahananui"
+    },
+    {
+      "id": "ch-0113",
+      "channel": "chat",
+      "received_at": "2027-11-03T09:10:00-05:00",
+      "path": "ch-0113.json",
+      "title": "DM: Mathieu Wijaya / Aroha Mendoza"
+    },
+    {
+      "id": "ch-0114",
+      "channel": "chat",
+      "received_at": "2027-11-03T09:24:00-05:00",
+      "path": "ch-0114.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0120",
+      "channel": "email",
+      "received_at": "2027-11-03T09:27:00-05:00",
+      "path": "em-0120.eml",
+      "title": "[INC-87437] Ticket updated"
+    },
+    {
+      "id": "ch-0115",
+      "channel": "chat",
+      "received_at": "2027-11-03T09:40:00-05:00",
+      "path": "ch-0115.json",
+      "title": "DM: Aroha Mendoza / Keisha Hargrove"
+    },
+    {
+      "id": "mn-0013",
+      "channel": "meeting_notes",
+      "received_at": "2027-11-03T09:55:00-05:00",
+      "path": "mn-0013.md",
+      "title": "Notes: Cirrus standup"
+    },
+    {
+      "id": "em-0121",
+      "channel": "email",
+      "received_at": "2027-11-03T10:00:00-05:00",
+      "path": "em-0121.eml",
+      "title": "Introduction: Cirrus"
+    },
+    {
+      "id": "em-0122",
+      "channel": "email",
+      "received_at": "2027-11-03T11:06:00-05:00",
+      "path": "em-0122.eml",
+      "title": "Re: Okapi user journey map"
+    },
+    {
+      "id": "em-0123",
+      "channel": "email",
+      "received_at": "2027-11-03T11:10:00-05:00",
+      "path": "em-0123.eml",
+      "title": "[REQ-10559] Request resolved"
+    },
+    {
+      "id": "em-0124",
+      "channel": "email",
+      "received_at": "2027-11-03T12:28:00-05:00",
+      "path": "em-0124.eml",
+      "title": "[INC-49848] Ticket updated"
+    },
+    {
+      "id": "ca-0009",
+      "channel": "calendar",
+      "received_at": "2027-11-03T12:57:00-05:00",
+      "path": "ca-0009.ics",
+      "title": "Invite: Catch-up: Aroha / Milena"
+    },
+    {
+      "id": "em-0125",
+      "channel": "email",
+      "received_at": "2027-11-03T13:03:00-05:00",
+      "path": "em-0125.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "ch-0116",
+      "channel": "chat",
+      "received_at": "2027-11-03T13:04:00-05:00",
+      "path": "ch-0116.json",
+      "title": "DM: Achieng Colombo / Aroha Mendoza"
+    },
+    {
+      "id": "ch-0117",
+      "channel": "chat",
+      "received_at": "2027-11-03T14:14:00-05:00",
+      "path": "ch-0117.json",
+      "title": "DM: Luz Ekwueme / Aroha Mendoza"
+    },
+    {
+      "id": "ch-0118",
+      "channel": "chat",
+      "received_at": "2027-11-03T15:08:00-05:00",
+      "path": "ch-0118.json",
+      "title": "DM: Achieng Trujillo / Aroha Mendoza"
+    },
+    {
+      "id": "dc-0005",
+      "channel": "document",
+      "received_at": "2027-11-03T15:12:00-05:00",
+      "path": "dc-0005.pdf",
+      "title": "Bed management selection decision memo v1",
+      "parent": "em-0126"
+    },
+    {
+      "id": "em-0126",
+      "channel": "email",
+      "received_at": "2027-11-03T15:12:00-05:00",
+      "path": "em-0126.eml",
+      "title": "Bed management selection decision memo"
+    },
+    {
+      "id": "mn-0014",
+      "channel": "meeting_notes",
+      "received_at": "2027-11-03T16:30:00-05:00",
+      "path": "mn-0014.md",
+      "title": "Notes: Catch-up: Aroha / Anh"
+    },
+    {
+      "id": "ch-0119",
+      "channel": "chat",
+      "received_at": "2027-11-03T16:31:00-05:00",
+      "path": "ch-0119.json",
+      "title": "DM: Mathieu Wijaya / Aroha Mendoza"
+    },
+    {
+      "id": "ch-0120",
+      "channel": "chat",
+      "received_at": "2027-11-03T17:03:00-05:00",
+      "path": "ch-0120.json",
+      "title": "DM: Adebayo Kahananui / Aroha Mendoza"
+    },
+    {
+      "id": "ch-0121",
+      "channel": "chat",
+      "received_at": "2027-11-03T17:50:00-05:00",
+      "path": "ch-0121.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0122",
+      "channel": "chat",
+      "received_at": "2027-11-03T19:03:00-05:00",
+      "path": "ch-0122.json",
+      "title": "#clelera-enterprise-core"
+    }
+  ]
+}

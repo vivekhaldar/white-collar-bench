@@ -3,15 +3,15 @@
  "channel": "#coffee",
  "kind": "channel",
  "participants": [
-  "Bogdan Byrne",
+  "Bogdan Quinlan",
   "Thibault Sahin",
-  "Imani Chaiyaporn",
+  "Imani Navarro",
   "Mei Obi"
  ],
  "messages": [
   {
    "ts": "2027-03-01T12:34:02-07:00",
-   "user": "Bogdan Byrne",
+   "user": "Bogdan Quinlan",
    "handle": "@bogdan",
    "text": "is it just me or is it freezing on 3 today?"
   },
@@ -23,7 +23,7 @@
   },
   {
    "ts": "2027-03-01T12:41:56-07:00",
-   "user": "Imani Chaiyaporn",
+   "user": "Imani Navarro",
    "handle": "@imani",
    "text": "bring a jumper",
    "thread_of": 0

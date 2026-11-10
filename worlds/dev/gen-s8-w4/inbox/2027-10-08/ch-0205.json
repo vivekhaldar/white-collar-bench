@@ -1,0 +1,47 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Adwoa",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-08T08:58:51-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-10-08T08:59:32-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-10-08T09:04:00-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "Zawadi will send Kian the AI-use lessons-learned note v2, as discussed."
+  },
+  {
+   "ts": "2027-10-08T09:05:11-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-10-08T09:09:50-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-10-08T09:10:41-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "later!"
+  }
+ ]
+}

@@ -3,25 +3,25 @@
  "channel": "dm-dina-yael",
  "kind": "dm",
  "participants": [
-  "Yael Yardley",
-  "Dina Zimmermann"
+  "Yael Ellery",
+  "Dina Ricci"
  ],
  "messages": [
   {
    "ts": "2027-02-23T13:57:00-07:00",
-   "user": "Yael Yardley",
+   "user": "Yael Ellery",
    "handle": "@yael",
    "text": "Cassandra is expecting you to review the Fennel model allow-list."
   },
   {
    "ts": "2027-02-23T13:58:29-07:00",
-   "user": "Yael Yardley",
+   "user": "Yael Ellery",
    "handle": "@yael",
    "text": "thanks again for earlier"
   },
   {
    "ts": "2027-02-23T14:00:47-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "anytime"
   }

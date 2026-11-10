@@ -1,0 +1,47 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-anh-aroha",
+ "kind": "dm",
+ "participants": [
+  "Aroha Mendoza",
+  "Anh"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-29T12:28:00-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "let's make it official: you'll send me the cirrus help-desk script"
+  },
+  {
+   "ts": "2027-10-29T12:28:05-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "thanks for the heads up :)"
+  },
+  {
+   "ts": "2027-10-29T12:28:21-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "I reviewed your funding model cost model."
+  },
+  {
+   "ts": "2027-10-29T12:28:38-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-10-29T12:32:53-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-10-29T12:34:38-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "remote, but online all day"
+  }
+ ]
+}

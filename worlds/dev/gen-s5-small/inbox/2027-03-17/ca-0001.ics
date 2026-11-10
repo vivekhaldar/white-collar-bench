@@ -8,9 +8,9 @@ DTSTAMP:20270317T130700Z
 DTSTART:20270318T200000Z
 DTEND:20270318T210000Z
 SUMMARY:Wagtail build sync
-ORGANIZER;CN=Ama Forsythe:mailto:ama.forsythe@falbury.iselvale.example
-ATTENDEE;CN=Anahit Upton;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:anahit.upton@iselvale.example
-ATTENDEE;CN=Hiba Xu;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.xu@iselvale.example
+ORGANIZER;CN=Isla Faure:mailto:isla.faure@falbury.iselvale.example
+ATTENDEE;CN=Anahit Fifita;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:anahit.fifita@iselvale.example
+ATTENDEE;CN=Hiba Deng;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.deng@iselvale.example
 SEQUENCE:0
 DESCRIPTION:Placeholder\, agenda to follow.\nJoin video meeting: https://meet.iselvale.example/j/5248533915?pwd=9R9TMu3V\nPasscode: 476507
 LOCATION:https://meet.iselvale.example/j/5248533915?pwd=9R9TMu3V

@@ -1,0 +1,59 @@
+{
+ "workspace": "corrstead",
+ "channel": "#garnet-core",
+ "kind": "channel",
+ "participants": [
+  "Hiba Jimenez",
+  "Ewan Laine",
+  "Bolat Oyelami",
+  "Madeline Chikwanha",
+  "Dez",
+  "Andrei Laurent",
+  "Emre Khumalo",
+  "Adaeze Fifita",
+  "Eun-ji Valdez",
+  "Dong-hyun Colombo"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-13T14:30:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "@bolat on it, I'll send you the Garnet one-page summary."
+  },
+  {
+   "ts": "2027-07-13T14:31:51-08:00",
+   "user": "Dong-hyun Colombo",
+   "handle": "@donghyun",
+   "text": "following :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-07-13T17:23:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "@bolat okay, the garnet one-page summary is done now"
+  },
+  {
+   "ts": "2027-07-13T17:23:45-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "thank you! :)",
+   "thread_of": 2
+  },
+  {
+   "ts": "2027-07-13T17:27:34-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "good to know",
+   "thread_of": 2
+  },
+  {
+   "ts": "2027-07-13T17:33:16-08:00",
+   "user": "Madeline Chikwanha",
+   "handle": "@madeline",
+   "text": "thanks for flagging :)",
+   "thread_of": 2
+  }
+ ]
+}

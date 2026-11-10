@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-giorgi",
+ "kind": "dm",
+ "participants": [
+  "Giorgi Wisniewska",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-29T15:35:16-06:00",
+   "user": "Giorgi Wisniewska",
+   "handle": "@giorgi",
+   "text": "recap from monday: you looked into the fulmar slow page loads"
+  },
+  {
+   "ts": "2027-09-29T15:36:21-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-09-29T15:41:10-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-09-29T15:43:15-06:00",
+   "user": "Giorgi Wisniewska",
+   "handle": "@giorgi",
+   "text": "remote, but online all day"
+  }
+ ]
+}

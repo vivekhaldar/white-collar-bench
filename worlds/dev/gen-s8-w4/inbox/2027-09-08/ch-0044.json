@@ -1,0 +1,76 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#safety-reporting-discovery-core",
+ "kind": "channel",
+ "participants": [
+  "Tane Haugen",
+  "Amira Baek",
+  "Adwoa Kocak",
+  "Quentin Ribeiro"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T12:52:00-06:00",
+   "user": "Tane Haugen",
+   "handle": "@tane",
+   "text": "We're now in pivot on Morcliff Safety Reporting Discovery."
+  },
+  {
+   "ts": "2027-09-08T12:52:57-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-09-08T12:58:41-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-08T13:00:39-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-08T13:06:45-06:00",
+   "user": "Quentin Ribeiro",
+   "handle": "@quentin",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-08T13:06:59-06:00",
+   "user": "Tane Haugen",
+   "handle": "@tane",
+   "text": "Next step on Morcliff Safety Reporting Discovery: decide whether tooling wear becomes its own effort.",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@quentin",
+      "@adwoa",
+      "@amira"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-08T13:07:54-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "good to know",
+   "thread_of": 5
+  },
+  {
+   "ts": "2027-09-08T13:08:55-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "+1",
+   "thread_of": 5
+  }
+ ]
+}

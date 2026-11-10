@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-kamau",
+ "kind": "dm",
+ "participants": [
+  "Kamau Greco",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-24T08:17:00-06:00",
+   "user": "Kamau Greco",
+   "handle": "@kamau",
+   "text": "We're reversing the decision to shortlist Rosia and Galix for work instructions selection. Rosia could not meet the data terms."
+  },
+  {
+   "ts": "2027-09-24T08:18:30-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "makes sense"
+  },
+  {
+   "ts": "2027-09-24T08:19:09-06:00",
+   "user": "Kamau Greco",
+   "handle": "@kamau",
+   "text": "let's add a third bidder to the work instructions selection shortlist"
+  },
+  {
+   "ts": "2027-09-24T08:19:31-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "agreed"
+  }
+ ]
+}

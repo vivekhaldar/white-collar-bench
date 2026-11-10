@@ -1,0 +1,23 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-lilit",
+ "kind": "dm",
+ "participants": [
+  "Lilit Wekesa",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-27T13:20:00-05:00",
+   "user": "Lilit Wekesa",
+   "handle": "@lilit",
+   "text": "Putri is expecting you to set up a coffee with them about prior authorization."
+  },
+  {
+   "ts": "2027-10-27T13:21:02-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "maybe, need to see how the week goes"
+  }
+ ]
+}

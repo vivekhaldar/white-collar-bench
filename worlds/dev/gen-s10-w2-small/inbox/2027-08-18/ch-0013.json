@@ -1,0 +1,39 @@
+{
+ "workspace": "reddale",
+ "channel": "#pantry-inventory-discovery-core",
+ "kind": "channel",
+ "participants": [
+  "Aoife Everett",
+  "Amani",
+  "Akosua",
+  "Catrin Dang"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-18T18:17:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "@akosua i can confirm the pantry inventory discovery observation notes with you"
+  },
+  {
+   "ts": "2027-08-18T18:17:42+01:00",
+   "user": "Catrin Dang",
+   "handle": "@catrin",
+   "text": "ok :)"
+  },
+  {
+   "ts": "2027-08-18T18:18:58+01:00",
+   "user": "Amani",
+   "handle": "@amani",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-08-18T18:22:40+01:00",
+   "user": "Catrin Dang",
+   "handle": "@catrin",
+   "text": "+1",
+   "thread_of": 0
+  }
+ ]
+}

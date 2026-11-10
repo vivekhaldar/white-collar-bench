@@ -3,43 +3,43 @@
  "channel": "dm-nadia-ottavio",
  "kind": "dm",
  "participants": [
-  "Nadia Krause",
-  "Ottavio Monteiro"
+  "Nadia Vogel",
+  "Ottavio Moreira"
  ],
  "messages": [
   {
    "ts": "2027-08-23T16:12:01-08:00",
-   "user": "Nadia Krause",
+   "user": "Nadia Vogel",
    "handle": "@nadia",
    "text": "quick q :)"
   },
   {
    "ts": "2027-08-23T16:12:40-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "hey"
   },
   {
    "ts": "2027-08-23T16:13:02-08:00",
-   "user": "Nadia Krause",
+   "user": "Nadia Vogel",
    "handle": "@nadia",
-   "text": "You updated the course assistant discovery accessibility review after Meera Ivanova's comments, so that one's done. :)"
+   "text": "You updated the course assistant discovery accessibility review after Meera Bondarenko's comments, so that one's done. :)"
   },
   {
    "ts": "2027-08-23T16:13:57-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "good to know"
   },
   {
    "ts": "2027-08-23T16:16:24-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "how's your week going?"
   },
   {
    "ts": "2027-08-23T16:18:04-08:00",
-   "user": "Nadia Krause",
+   "user": "Nadia Vogel",
    "handle": "@nadia",
    "text": "busy, but fine. you?"
   }

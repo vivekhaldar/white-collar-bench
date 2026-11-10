@@ -1,0 +1,31 @@
+{
+ "workspace": "corrstead",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Desmond Visser",
+  "Emre Khumalo"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-25T08:50:54-08:00",
+   "user": "Desmond Visser",
+   "handle": "@desmond",
+   "text": "anyone up for coffee at 3?",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@emre"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-06-25T08:56:37-08:00",
+   "user": "Emre Khumalo",
+   "handle": "@emre",
+   "text": "me!"
+  }
+ ]
+}

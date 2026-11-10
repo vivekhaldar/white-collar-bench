@@ -1,0 +1,110 @@
+{
+  "date": "2027-02-09",
+  "artifacts": [
+    {
+      "id": "ch-0009",
+      "channel": "chat",
+      "received_at": "2027-02-09T07:54:00-08:00",
+      "path": "ch-0009.json",
+      "title": "#axolotl-core"
+    },
+    {
+      "id": "mn-0001",
+      "channel": "meeting_notes",
+      "received_at": "2027-02-09T09:30:00-08:00",
+      "path": "mn-0001.md",
+      "title": "Recap: Catch-up: Despina / Losa"
+    },
+    {
+      "id": "mt-0001",
+      "channel": "transcript",
+      "received_at": "2027-02-09T10:00:00-08:00",
+      "path": "mt-0001.vtt",
+      "title": "Axolotl standup (transcript)"
+    },
+    {
+      "id": "em-0009",
+      "channel": "email",
+      "received_at": "2027-02-09T13:05:00-08:00",
+      "path": "em-0009.eml",
+      "title": "FYI: Linel volume tiers"
+    },
+    {
+      "id": "em-0010",
+      "channel": "email",
+      "received_at": "2027-02-09T13:37:00-08:00",
+      "path": "em-0010.eml",
+      "title": "Re: Axolotl API contract v1"
+    },
+    {
+      "id": "ch-0010",
+      "channel": "chat",
+      "received_at": "2027-02-09T13:44:00-08:00",
+      "path": "ch-0010.json",
+      "title": "DM: Tariq Okeke / Despina Pereira"
+    },
+    {
+      "id": "ca-0003",
+      "channel": "calendar",
+      "received_at": "2027-02-09T13:53:00-08:00",
+      "path": "ca-0003.ics",
+      "title": "Invite: Working session: Fennel tenant onboarding guide"
+    },
+    {
+      "id": "em-0011",
+      "channel": "email",
+      "received_at": "2027-02-09T14:33:00-08:00",
+      "path": "em-0011.eml",
+      "title": "Your benefits statement is ready"
+    },
+    {
+      "id": "em-0012",
+      "channel": "email",
+      "received_at": "2027-02-09T15:15:00-08:00",
+      "path": "em-0012.eml",
+      "title": "All-staff: building access changes"
+    },
+    {
+      "id": "ch-0011",
+      "channel": "chat",
+      "received_at": "2027-02-09T16:16:00-08:00",
+      "path": "ch-0011.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0013",
+      "channel": "email",
+      "received_at": "2027-02-09T16:29:00-08:00",
+      "path": "em-0013.eml",
+      "title": "Parking lot resurfacing"
+    },
+    {
+      "id": "ch-0012",
+      "channel": "chat",
+      "received_at": "2027-02-09T16:43:00-08:00",
+      "path": "ch-0012.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0013",
+      "channel": "chat",
+      "received_at": "2027-02-09T16:45:00-08:00",
+      "path": "ch-0013.json",
+      "title": "#axolotl-core"
+    },
+    {
+      "id": "mn-0002",
+      "channel": "meeting_notes",
+      "received_at": "2027-02-09T17:00:00-08:00",
+      "path": "mn-0002.md",
+      "title": "Recap: Dorcliff site visit"
+    },
+    {
+      "id": "ch-0014",
+      "channel": "chat",
+      "received_at": "2027-02-09T18:23:00-08:00",
+      "path": "ch-0014.json",
+      "title": "DM: Tariq Okeke / Despina Pereira"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Corrstead//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:8069039c3b4da221@corrstead.example
+DTSTAMP:20270713T214700Z
+DTSTART:20270719T220000Z
+DTEND:20270719T223000Z
+SUMMARY:Catch-up: Hiba / Kristen
+ORGANIZER;CN=Kristen Ochieng:mailto:kristen.ochieng@iselbury.corrstead.example
+ATTENDEE;CN=Hiba Jimenez;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.jimenez@corrstead.example
+SEQUENCE:0
+DESCRIPTION:Quick sync\, 30 minutes.\nJoin video meeting: https://meet.corrstead.example/j/9047465312?pwd=V5vUTREX\nPasscode: 292459
+LOCATION:https://meet.corrstead.example/j/9047465312?pwd=V5vUTREX
+END:VEVENT
+END:VCALENDAR

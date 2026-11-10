@@ -1,0 +1,45 @@
+{
+ "workspace": "corrstead",
+ "channel": "#garnet-core",
+ "kind": "channel",
+ "participants": [
+  "Hiba Jimenez",
+  "Ewan Laine",
+  "Bolat Oyelami",
+  "Madeline Chikwanha",
+  "Dez",
+  "Andrei Laurent",
+  "Emre Khumalo",
+  "Adaeze Fifita",
+  "Eun-ji Valdez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-06T08:26:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "@desmond let's make it official: you'll send me the garnet test plan"
+  },
+  {
+   "ts": "2027-07-06T08:26:39-08:00",
+   "user": "Madeline Chikwanha",
+   "handle": "@madeline",
+   "text": "got it",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-07-06T08:27:59-08:00",
+   "user": "Ewan Laine",
+   "handle": "@ewan",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-07-06T08:29:36-08:00",
+   "user": "Madeline Chikwanha",
+   "handle": "@madeline",
+   "text": "thanks for the update :)",
+   "thread_of": 0
+  }
+ ]
+}

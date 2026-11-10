@@ -1,0 +1,153 @@
+{
+  "date": "2027-02-24",
+  "artifacts": [
+    {
+      "id": "em-0098",
+      "channel": "email",
+      "received_at": "2027-02-24T08:25:00-08:00",
+      "path": "em-0098.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0079",
+      "channel": "chat",
+      "received_at": "2027-02-24T08:31:00-08:00",
+      "path": "ch-0079.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "em-0099",
+      "channel": "email",
+      "received_at": "2027-02-24T09:13:00-08:00",
+      "path": "em-0099.eml",
+      "title": "Early-bird registration ends Friday"
+    },
+    {
+      "id": "em-0100",
+      "channel": "email",
+      "received_at": "2027-02-24T10:25:00-08:00",
+      "path": "em-0100.eml",
+      "title": "Introduction: Axolotl"
+    },
+    {
+      "id": "ch-0080",
+      "channel": "chat",
+      "received_at": "2027-02-24T10:33:00-08:00",
+      "path": "ch-0080.json",
+      "title": "#axolotl-core"
+    },
+    {
+      "id": "em-0101",
+      "channel": "email",
+      "received_at": "2027-02-24T10:42:00-08:00",
+      "path": "em-0101.eml",
+      "title": "Re: Fennel rollout checklist"
+    },
+    {
+      "id": "ch-0081",
+      "channel": "chat",
+      "received_at": "2027-02-24T11:09:00-08:00",
+      "path": "ch-0081.json",
+      "title": "#ai-use-core"
+    },
+    {
+      "id": "em-0102",
+      "channel": "email",
+      "received_at": "2027-02-24T12:17:00-08:00",
+      "path": "em-0102.eml",
+      "title": "Zenia sandbox credentials"
+    },
+    {
+      "id": "em-0103",
+      "channel": "email",
+      "received_at": "2027-02-24T12:29:00-08:00",
+      "path": "em-0103.eml",
+      "title": "Campus Systems Weekly: issue 8"
+    },
+    {
+      "id": "em-0104",
+      "channel": "email",
+      "received_at": "2027-02-24T13:02:00-08:00",
+      "path": "em-0104.eml",
+      "title": "Call for proposals closes Monday 1 March"
+    },
+    {
+      "id": "ch-0082",
+      "channel": "chat",
+      "received_at": "2027-02-24T13:04:00-08:00",
+      "path": "ch-0082.json",
+      "title": "DM: Despina Pereira / Liisa Babic"
+    },
+    {
+      "id": "em-0105",
+      "channel": "email",
+      "received_at": "2027-02-24T13:52:00-08:00",
+      "path": "em-0105.eml",
+      "title": "Re: Transcript intake wait-time export"
+    },
+    {
+      "id": "dc-0003",
+      "channel": "document",
+      "received_at": "2027-02-24T14:01:00-08:00",
+      "path": "dc-0003.docx",
+      "title": "Fennel access request v3",
+      "parent": "em-0106"
+    },
+    {
+      "id": "em-0106",
+      "channel": "email",
+      "received_at": "2027-02-24T14:01:00-08:00",
+      "path": "em-0106.eml",
+      "title": "Re: Fennel access request"
+    },
+    {
+      "id": "ch-0083",
+      "channel": "chat",
+      "received_at": "2027-02-24T14:08:00-08:00",
+      "path": "ch-0083.json",
+      "title": "DM: Andres Garnier / Despina Pereira"
+    },
+    {
+      "id": "ca-0011",
+      "channel": "calendar",
+      "received_at": "2027-02-24T14:47:00-08:00",
+      "path": "ca-0011.ics",
+      "title": "Invite: Axolotl review"
+    },
+    {
+      "id": "ch-0084",
+      "channel": "chat",
+      "received_at": "2027-02-24T15:19:00-08:00",
+      "path": "ch-0084.json",
+      "title": "#axolotl-core"
+    },
+    {
+      "id": "em-0107",
+      "channel": "email",
+      "received_at": "2027-02-24T15:58:00-08:00",
+      "path": "em-0107.eml",
+      "title": "[INC-79128] Ticket updated"
+    },
+    {
+      "id": "em-0108",
+      "channel": "email",
+      "received_at": "2027-02-24T16:38:00-08:00",
+      "path": "em-0108.eml",
+      "title": "[INC-55539] Ticket updated"
+    },
+    {
+      "id": "em-0109",
+      "channel": "email",
+      "received_at": "2027-02-24T17:23:00-08:00",
+      "path": "em-0109.eml",
+      "title": "Re: Course Assistant Tool Selection: numbers"
+    },
+    {
+      "id": "ch-0085",
+      "channel": "chat",
+      "received_at": "2027-02-24T18:31:00-08:00",
+      "path": "ch-0085.json",
+      "title": "DM: Oluwaseun Demir / Despina Pereira"
+    }
+  ]
+}

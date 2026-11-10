@@ -4,12 +4,12 @@
  "kind": "channel",
  "participants": [
   "Cassandra Yilmaz",
-  "Dina Zimmermann",
-  "Yael Yardley",
+  "Dina Ricci",
+  "Yael Ellery",
   "Imani",
-  "Rudo Alexiou",
-  "Naoko Maldonado",
-  "Bilal Blackwood",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
+  "Bilal Kahananui",
   "Thibault Sahin",
   "Mei Obi",
   "Ling"
@@ -39,14 +39,14 @@
   },
   {
    "ts": "2027-02-23T17:20:35-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "nice",
    "thread_of": 0
   },
   {
    "ts": "2027-02-23T17:22:31-07:00",
-   "user": "Bilal Blackwood",
+   "user": "Bilal Kahananui",
    "handle": "@bilal",
    "text": "thanks for the update",
    "thread_of": 0

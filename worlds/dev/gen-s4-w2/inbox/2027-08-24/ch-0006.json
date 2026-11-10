@@ -3,31 +3,31 @@
  "channel": "dm-darius-ottavio",
  "kind": "dm",
  "participants": [
-  "Darius Sherwood",
-  "Ottavio Monteiro"
+  "Darius Bramwell",
+  "Ottavio Moreira"
  ],
  "messages": [
   {
    "ts": "2027-08-24T10:02:00-08:00",
-   "user": "Darius Sherwood",
+   "user": "Darius Bramwell",
    "handle": "@darius",
    "text": "Thesis Formatting Input Round is complete, thanks all."
   },
   {
    "ts": "2027-08-24T10:02:24-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "thanks for the heads up"
   },
   {
    "ts": "2027-08-24T10:04:10-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "sorry, was in back-to-backs"
   },
   {
    "ts": "2027-08-24T10:05:10-08:00",
-   "user": "Darius Sherwood",
+   "user": "Darius Bramwell",
    "handle": "@darius",
    "text": "no worries :)"
   }

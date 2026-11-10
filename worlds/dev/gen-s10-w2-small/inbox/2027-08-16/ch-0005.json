@@ -1,0 +1,32 @@
+{
+ "workspace": "reddale",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Akosua Bergstrom",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-16T16:14:48+01:00",
+   "user": "Akosua Bergstrom",
+   "handle": "@akosua",
+   "text": "the elevator on the east side is out again :)",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@aoife"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-08-16T16:18:37+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "stairs it is",
+   "thread_of": 0
+  }
+ ]
+}

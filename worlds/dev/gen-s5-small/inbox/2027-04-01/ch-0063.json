@@ -1,35 +1,64 @@
 {
  "workspace": "iselvale",
- "channel": "dm-anahit-hiba",
- "kind": "dm",
+ "channel": "#wagtail-core",
+ "kind": "channel",
  "participants": [
+  "Isla Faure",
+  "Hiba Deng",
   "Anahit",
-  "Hiba Xu"
+  "Rudo Ekwueme",
+  "Lakshmi Figueroa",
+  "Friederike Bhatt",
+  "Jisoo Nowak",
+  "Maricel Fuentes",
+  "Rodrigo Okada"
  ],
  "messages": [
   {
-   "ts": "2027-04-01T13:09:05-05:00",
-   "user": "Anahit",
-   "handle": "@anahit",
-   "text": "got a sec? :)"
+   "ts": "2027-03-31T10:52:08-05:00",
+   "user": "Isla Faure",
+   "handle": "@isla",
+   "text": "catching people up since a few of us are out today"
   },
   {
-   "ts": "2027-04-01T13:10:25-05:00",
-   "user": "Hiba Xu",
+   "ts": "2027-03-31T10:55:00-05:00",
+   "user": "Isla Faure",
+   "handle": "@isla",
+   "text": "FYI Lakshmi will share the Wagtail requirements matrix with Hiba. :)"
+  },
+  {
+   "ts": "2027-03-31T10:55:25-05:00",
+   "user": "Hiba Deng",
    "handle": "@hiba",
-   "text": "hi"
+   "text": "thanks!"
   },
   {
-   "ts": "2027-04-01T13:12:00-05:00",
-   "user": "Anahit",
-   "handle": "@anahit",
-   "text": "Leave it with me, I'll send you the Wagtail comms plan!"
+   "ts": "2027-03-31T11:04:22-05:00",
+   "user": "Rudo Ekwueme",
+   "handle": "@rudo",
+   "text": "good to know",
+   "thread_of": 1
   },
   {
-   "ts": "2027-04-01T13:13:27-05:00",
-   "user": "Hiba Xu",
-   "handle": "@hiba",
-   "text": "great, thank you"
+   "ts": "2027-03-31T11:04:35-05:00",
+   "user": "Isla Faure",
+   "handle": "@isla",
+   "text": "Looks like Hiba reviewed Anahit's Wagtail service blueprint.",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@anahit",
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-31T11:04:57-05:00",
+   "user": "Rodrigo Okada",
+   "handle": "@rodrigo",
+   "text": "ok"
   }
  ]
 }

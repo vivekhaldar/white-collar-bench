@@ -1,0 +1,54 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#fulmar-core",
+ "kind": "channel",
+ "participants": [
+  "Adwoa Kocak",
+  "Amira Baek",
+  "Tavo",
+  "Giorgi Wisniewska",
+  "Oksana Hoffmann",
+  "Marcelo Meijer",
+  "Batbayar Galbraith",
+  "Thibault Kowalski",
+  "Kamau Greco",
+  "Shirin Oyelami"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-24T11:53:00-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "@amira would you be able to update the Fulmar line downtime report after my comments?",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@ottavio"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-24T11:53:37-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "ok",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-24T11:56:33-06:00",
+   "user": "Giorgi Wisniewska",
+   "handle": "@giorgi",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-24T12:00:11-06:00",
+   "user": "Kamau Greco",
+   "handle": "@kamau",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-catrin",
+ "kind": "dm",
+ "participants": [
+  "Catrin Dang",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-24T07:30:00+01:00",
+   "user": "Catrin Dang",
+   "handle": "@catrin",
+   "text": "Recap from yesterday: I agreed to pull the pantry inventory baseline data from Holworth!",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@aoife"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-08-24T07:33:20+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-08-24T07:34:48+01:00",
+   "user": "Catrin Dang",
+   "handle": "@catrin",
+   "text": "later! :)"
+  }
+ ]
+}

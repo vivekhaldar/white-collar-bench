@@ -1,23 +1,41 @@
 {
  "workspace": "birchmere",
- "channel": "dm-alasdair-lindiwe",
+ "channel": "dm-alasdair-bisi",
  "kind": "dm",
  "participants": [
-  "Alasdair Kaya",
-  "Lindiwe Ahmadi"
+  "Bisi Chatterjee",
+  "Alasdair Kaya"
  ],
  "messages": [
   {
-   "ts": "2027-09-15T10:56:00-05:00",
-   "user": "Alasdair Kaya",
-   "handle": "@alasdair",
-   "text": "nikolai and i will introduce you to bisi for the talwick working group"
+   "ts": "2027-09-15T08:59:57-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "hey"
   },
   {
-   "ts": "2027-09-15T10:56:23-05:00",
-   "user": "Lindiwe Ahmadi",
-   "handle": "@lindiwe",
-   "text": "appreciate it"
+   "ts": "2027-09-15T09:03:43-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "Just to recap, on Friday I raised whether you could answer my after-hours support question on intake forms selection. Not agreed yet!"
+  },
+  {
+   "ts": "2027-09-15T09:04:58-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "can I come back to you on this?"
+  },
+  {
+   "ts": "2027-09-15T09:06:09-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-09-15T09:08:52-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "busy, but fine. you? :)"
   }
  ]
 }

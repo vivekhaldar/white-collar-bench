@@ -1,0 +1,179 @@
+WEBVTT
+
+NOTE
+Meeting: Cirrus standup
+Date: Wednesday 27 October 2027, 9:35am to 10am
+Attendees: Keisha Hargrove (Redridge Children's Hospital), Aroha Mendoza, Anh Villanueva, Babajide Hendriks (Redridge Children's Hospital), Stanley Valdez (Redridge Children's Hospital), Adebayo Kahananui (Redridge Children's Hospital), Mathieu Wijaya, Andres Yamamoto
+Transcript generated automatically. Speaker names and spellings may be inaccurate.
+
+1
+00:00:04.097 --> 00:00:06.405
+<v Keisha Hargrove>Are we waiting for anyone else?
+
+2
+00:00:06.748 --> 00:00:08.287
+<v Mathieu Wijaya>I think that's everyone.
+
+3
+00:02:51.301 --> 00:02:52.840
+<v Keisha Hargrove>Okay, let's get started.
+
+4
+00:07:02.113 --> 00:07:05.574
+<v Andres Yamamoto>Aroha, could you send me the Cirrus data-flow diagram?
+
+5
+00:07:06.227 --> 00:07:08.150
+<v Aroha Mendoza>Sure, I can do that.
+
+6
+00:07:09.152 --> 00:07:10.152
+<v Anh Villanueva>Yeah.
+
+7
+00:07:10.803 --> 00:07:13.880
+<v Babajide Hendriks>Last time this took longer than we thought.
+
+8
+00:07:14.404 --> 00:07:15.404
+<v Stanley Valdez>Uh-huh.
+
+9
+00:09:47.512 --> 00:09:51.358
+<v Anh Villanueva>Okay, I'll share the Okapi user journey map with Arohah.
+
+10
+00:09:52.526 --> 00:09:53.526
+<v Mathieu Wijaya>Makes sense.
+
+11
+00:09:54.908 --> 00:09:59.138
+<v Aroha Mendoza>Are we sure that's the right order to do things in?
+
+12
+00:09:59.642 --> 00:10:02.719
+<v Anh Villanueva>Not completely, but it's the best we've got.
+
+13
+00:10:03.219 --> 00:10:04.219
+<v Aroha Mendoza>Fair.
+
+14
+00:12:47.042 --> 00:12:51.657
+<v Mathieu Wijaya>I could share the Cirrus requirements matrix with Arohah, if that's useful?
+
+15
+00:12:52.371 --> 00:12:53.371
+<v Babajide Hendriks>Right, right.
+
+16
+00:12:53.793 --> 00:12:54.793
+<v Keisha Hargrove>Mm-hmm.
+
+17
+00:12:55.352 --> 00:12:56.352
+<v Mathieu Wijaya>Got it.
+
+18
+00:12:57.159 --> 00:12:59.082
+<v Aroha Mendoza>Does that work for everyone?
+
+19
+00:12:59.773 --> 00:13:00.927
+<v Mathieu Wijaya>Works for me.
+
+20
+00:13:02.168 --> 00:13:05.245
+<v Aroha Mendoza>There's a lot of interest, which is good.
+
+21
+00:13:06.176 --> 00:13:07.176
+<v Stanley Valdez>Mm, okay.
+
+22
+00:13:07.534 --> 00:13:08.534
+<v Andres Yamamoto>I see.
+
+23
+00:13:09.791 --> 00:13:13.637
+<v Adebayo Kahananui>Unfortunately the people who'd use it aren't in this room.
+
+24
+00:13:14.333 --> 00:13:15.333
+<v Stanley Valdez>Mm.
+
+25
+00:13:16.099 --> 00:13:17.099
+<v Adebayo Kahananui>Yeah, true.
+
+26
+00:13:17.578 --> 00:13:18.578
+<v Babajide Hendriks>Okay, yeah.
+
+27
+00:13:37.347 --> 00:13:41.193
+<v Mathieu Wijaya>I'll share the informatics nurse specialist interview plan with Aroha.
+
+28
+00:13:42.269 --> 00:13:43.269
+<v Keisha Hargrove>Right.
+
+29
+00:13:44.604 --> 00:13:45.604
+<v Babajide Hendriks>Okay.
+
+30
+00:13:46.302 --> 00:13:47.456
+<v Anh Villanueva>Any blockers there?
+
+31
+00:13:48.784 --> 00:13:49.784
+<v Mathieu Wijaya>Nothing major.
+
+32
+00:13:50.487 --> 00:13:51.487
+<v Stanley Valdez>Fair.
+
+33
+00:13:51.753 --> 00:13:52.753
+<v Anh Villanueva>Mm.
+
+34
+00:13:53.134 --> 00:13:55.827
+<v Mathieu Wijaya>People seem positive about it so far.
+
+35
+00:13:56.832 --> 00:13:57.832
+<v Adebayo Kahananui>Okay.
+
+36
+00:14:47.154 --> 00:14:52.539
+<v Aroha Mendoza>I updated the radiology follow-up discovery opportunity list after Anhe Villanueva's comments earlier today.
+
+37
+00:14:53.844 --> 00:14:54.844
+<v Stanley Valdez>Okay, yeah.
+
+38
+00:14:56.210 --> 00:14:57.210
+<v Aroha Mendoza>Makes sense.
+
+39
+00:17:26.067 --> 00:17:27.990
+<v Keisha Hargrove>Quick round, anything to flag?
+
+40
+00:17:28.698 --> 00:17:30.621
+<v Stanley Valdez>All quiet on my end.
+
+41
+00:17:31.198 --> 00:17:33.506
+<v Adebayo Kahananui>Just heads-down on the usual stuff.
+
+42
+00:20:20.456 --> 00:20:23.148
+<v Keisha Hargrove>Okay, thanks, I'll let you all go.
+
+43
+00:20:23.547 --> 00:20:24.547
+<v Stanley Valdez>Bye.

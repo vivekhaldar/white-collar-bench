@@ -1,0 +1,40 @@
+{
+ "workspace": "birchmere",
+ "channel": "#referral-triage-discovery-core",
+ "kind": "channel",
+ "participants": [
+  "Katarzyna Dang",
+  "Alasdair Kaya",
+  "Bisi",
+  "Eleni Fontaine"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-24T07:47:00-05:00",
+   "user": "Katarzyna Dang",
+   "handle": "@katarzyna",
+   "text": "we're now in site visit on ketford referral triage discovery"
+  },
+  {
+   "ts": "2027-09-24T07:48:20-05:00",
+   "user": "Eleni Fontaine",
+   "handle": "@eleni",
+   "text": "got it",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-24T07:55:45-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "+1",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-24T07:56:32-05:00",
+   "user": "Eleni Fontaine",
+   "handle": "@eleni",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

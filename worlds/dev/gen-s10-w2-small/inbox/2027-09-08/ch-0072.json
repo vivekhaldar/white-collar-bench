@@ -1,0 +1,35 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-sigrid",
+ "kind": "dm",
+ "participants": [
+  "Sigrid Asante",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T15:36:23+01:00",
+   "user": "Sigrid Asante",
+   "handle": "@sigrid",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-08T15:37:51+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-09-08T15:38:19+01:00",
+   "user": "Sigrid Asante",
+   "handle": "@sigrid",
+   "text": "For info, the Nettle privacy review form has been reopened."
+  },
+  {
+   "ts": "2027-09-08T15:38:32+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "got it"
+  }
+ ]
+}

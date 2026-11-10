@@ -4,10 +4,10 @@
  "kind": "channel",
  "participants": [
   "Petra Korkmaz",
-  "Camila Quimby",
-  "Jalen Hendriks",
+  "Camila Abernathy",
+  "Jalen Sandberg",
   "Sipho Sengupta",
-  "Dina Winslow"
+  "Dina Taufa"
  ],
  "messages": [
   {
@@ -18,13 +18,13 @@
   },
   {
    "ts": "2027-10-29T12:17:28-07:00",
-   "user": "Jalen Hendriks",
+   "user": "Jalen Sandberg",
    "handle": "@jalen",
    "text": "ok"
   },
   {
    "ts": "2027-10-29T12:21:50-07:00",
-   "user": "Jalen Hendriks",
+   "user": "Jalen Sandberg",
    "handle": "@jalen",
    "text": "nice",
    "thread_of": 0

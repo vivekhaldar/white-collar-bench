@@ -1,47 +1,37 @@
 {
  "workspace": "birchmere",
- "channel": "dm-alasdair-dina",
+ "channel": "dm-alasdair-bisi",
  "kind": "dm",
  "participants": [
-  "Dina Mancini",
+  "Bisi Chatterjee",
   "Alasdair Kaya"
  ],
  "messages": [
   {
-   "ts": "2027-09-15T11:04:38-05:00",
-   "user": "Dina Mancini",
-   "handle": "@dina",
-   "text": "quick q :)"
+   "ts": "2027-09-15T10:45:00-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "Kwame Brandt (Associate General Counsel) will return redlines on the Rosix master agreement, as discussed. :)",
+   "edited": true,
+   "original": "Kwame Brandt (Associate Generla Counsel) will return redlines on the Rosix master agreement, as discussed. :)"
   },
   {
-   "ts": "2027-09-15T11:06:05-05:00",
+   "ts": "2027-09-15T10:45:29-05:00",
    "user": "Alasdair Kaya",
    "handle": "@alasdair",
-   "text": "hi"
+   "text": "great, thank you"
   },
   {
-   "ts": "2027-09-15T11:08:00-05:00",
-   "user": "Dina Mancini",
-   "handle": "@dina",
-   "text": "Sirocco has moved to the hardening phase."
+   "ts": "2027-09-15T10:46:25-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "FYI Sneha will collect two customer references from Kasis!"
   },
   {
-   "ts": "2027-09-15T11:09:00-05:00",
+   "ts": "2027-09-15T10:47:45-05:00",
    "user": "Alasdair Kaya",
    "handle": "@alasdair",
-   "text": "ok"
-  },
-  {
-   "ts": "2027-09-15T11:10:41-05:00",
-   "user": "Alasdair Kaya",
-   "handle": "@alasdair",
-   "text": "are you in the office tomorrow?"
-  },
-  {
-   "ts": "2027-09-15T11:13:31-05:00",
-   "user": "Dina Mancini",
-   "handle": "@dina",
-   "text": "remote, but online all day"
+   "text": "that'd be great"
   }
  ]
 }

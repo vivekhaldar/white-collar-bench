@@ -1,0 +1,138 @@
+{
+  "date": "2027-02-26",
+  "artifacts": [
+    {
+      "id": "em-0114",
+      "channel": "email",
+      "received_at": "2027-02-26T08:32:00-08:00",
+      "path": "em-0114.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0115",
+      "channel": "email",
+      "received_at": "2027-02-26T09:05:00-08:00",
+      "path": "em-0115.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0116",
+      "channel": "email",
+      "received_at": "2027-02-26T09:16:00-08:00",
+      "path": "em-0116.eml",
+      "title": "[INC-73923] Ticket updated"
+    },
+    {
+      "id": "mt-0014",
+      "channel": "transcript",
+      "received_at": "2027-02-26T09:55:00-08:00",
+      "path": "mt-0014.vtt",
+      "title": "Axolotl standup (transcript)"
+    },
+    {
+      "id": "ch-0098",
+      "channel": "chat",
+      "received_at": "2027-02-26T10:03:00-08:00",
+      "path": "ch-0098.json",
+      "title": "DM: Tariq Okeke / Despina Pereira"
+    },
+    {
+      "id": "em-0117",
+      "channel": "email",
+      "received_at": "2027-02-26T10:28:00-08:00",
+      "path": "em-0117.eml",
+      "title": "[INC-53511] Ticket updated"
+    },
+    {
+      "id": "em-0118",
+      "channel": "email",
+      "received_at": "2027-02-26T10:35:00-08:00",
+      "path": "em-0118.eml",
+      "title": "Re: Splitting out transcript intake discovery"
+    },
+    {
+      "id": "em-0119",
+      "channel": "email",
+      "received_at": "2027-02-26T10:46:00-08:00",
+      "path": "em-0119.eml",
+      "title": "Re: Captioning discovery stale cache"
+    },
+    {
+      "id": "ch-0099",
+      "channel": "chat",
+      "received_at": "2027-02-26T11:01:00-08:00",
+      "path": "ch-0099.json",
+      "title": "DM: Jurgen Dvorak / Despina Pereira"
+    },
+    {
+      "id": "em-0120",
+      "channel": "email",
+      "received_at": "2027-02-26T11:35:00-08:00",
+      "path": "em-0120.eml",
+      "title": "[INC-76936] Ticket updated"
+    },
+    {
+      "id": "em-0121",
+      "channel": "email",
+      "received_at": "2027-02-26T12:33:00-08:00",
+      "path": "em-0121.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0122",
+      "channel": "email",
+      "received_at": "2027-02-26T14:05:00-08:00",
+      "path": "em-0122.eml",
+      "title": "Re: FYI: Axolotl stakeholder map"
+    },
+    {
+      "id": "em-0123",
+      "channel": "email",
+      "received_at": "2027-02-26T15:42:00-08:00",
+      "path": "em-0123.eml",
+      "title": "[INC-64470] Ticket updated"
+    },
+    {
+      "id": "em-0124",
+      "channel": "email",
+      "received_at": "2027-02-26T15:50:00-08:00",
+      "path": "em-0124.eml",
+      "title": "Status note: w/e 26 February"
+    },
+    {
+      "id": "ca-0013",
+      "channel": "calendar",
+      "received_at": "2027-02-26T15:57:00-08:00",
+      "path": "ca-0013.ics",
+      "title": "Invite: Faculty onboarding sessions for Axolotl"
+    },
+    {
+      "id": "em-0125",
+      "channel": "email",
+      "received_at": "2027-02-26T16:11:00-08:00",
+      "path": "em-0125.eml",
+      "title": "[INC-55935] Ticket updated"
+    },
+    {
+      "id": "em-0126",
+      "channel": "email",
+      "received_at": "2027-02-26T16:41:00-08:00",
+      "path": "em-0126.eml",
+      "title": "Re: Faculty onboarding sessions for Axolotl"
+    },
+    {
+      "id": "em-0127",
+      "channel": "email",
+      "received_at": "2027-02-26T17:42:00-08:00",
+      "path": "em-0127.eml",
+      "title": "Fwd: A coffee with Aiko about room booking"
+    },
+    {
+      "id": "nt-0011",
+      "channel": "note",
+      "received_at": "2027-02-26T18:29:00-08:00",
+      "path": "nt-0011.md",
+      "title": "Fri notes"
+    }
+  ]
+}

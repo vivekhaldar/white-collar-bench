@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-batbayar",
+ "kind": "dm",
+ "participants": [
+  "Batbayar Galbraith",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-14T16:10:18-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-09-14T16:12:00-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "I fixed the Wagtail export failures earlier today! :)"
+  },
+  {
+   "ts": "2027-09-14T16:12:55-06:00",
+   "user": "Batbayar Galbraith",
+   "handle": "@batbayar",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-09-14T16:15:49-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "no worries"
+  }
+ ]
+}

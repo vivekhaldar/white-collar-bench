@@ -4,7 +4,7 @@
  "kind": "dm",
  "participants": [
   "Lito",
-  "Camila Quimby"
+  "Camila Abernathy"
  ],
  "messages": [
   {
@@ -15,13 +15,13 @@
   },
   {
    "ts": "2027-11-06T16:44:09-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "thanks!"
   },
   {
    "ts": "2027-11-06T16:45:07-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "sorry, was in back-to-backs"
   },

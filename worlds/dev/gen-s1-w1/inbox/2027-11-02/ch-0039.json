@@ -4,15 +4,15 @@
  "kind": "channel",
  "participants": [
   "Yasmin Mokoena",
-  "Camila Quimby",
+  "Camila Abernathy",
   "Petra Korkmaz",
   "Jalen",
   "Sipho Sengupta",
-  "Dina Winslow",
-  "Nadia Volkov",
+  "Dina Taufa",
+  "Nadia Jovanovic",
   "Thandi",
   "Lito",
-  "Imran Sato"
+  "Imran Achterhof"
  ],
  "messages": [
   {
@@ -36,7 +36,7 @@
   },
   {
    "ts": "2027-11-02T14:03:38-07:00",
-   "user": "Dina Winslow",
+   "user": "Dina Taufa",
    "handle": "@dina",
    "text": "thanks for flagging",
    "thread_of": 0

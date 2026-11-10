@@ -1,0 +1,47 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-anastasia-hiba",
+ "kind": "dm",
+ "participants": [
+  "Nastya",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-14T12:03:05-08:00",
+   "user": "Nastya",
+   "handle": "@anastasia",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-07-14T12:04:28-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-07-14T12:05:04-08:00",
+   "user": "Nastya",
+   "handle": "@anastasia",
+   "text": "I can send you the notes from the course scheduling session."
+  },
+  {
+   "ts": "2027-07-14T12:05:40-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "great, thank you"
+  },
+  {
+   "ts": "2027-07-14T12:09:57-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-07-14T12:12:39-08:00",
+   "user": "Nastya",
+   "handle": "@anastasia",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

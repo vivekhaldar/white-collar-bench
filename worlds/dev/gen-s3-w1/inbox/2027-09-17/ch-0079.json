@@ -1,0 +1,37 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-bisi",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Bisi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-17T16:51:29-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-09-17T16:52:39-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "sure, what's up?"
+  },
+  {
+   "ts": "2027-09-17T16:55:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "pulled the okapi budget justification into the deck, thanks bisi",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@bisi"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,125 @@
+{
+  "date": "2027-09-16",
+  "artifacts": [
+    {
+      "id": "ch-0082",
+      "channel": "chat",
+      "received_at": "2027-09-16T07:38:00-06:00",
+      "path": "ch-0082.json",
+      "title": "#fulmar-core (catch-up)"
+    },
+    {
+      "id": "mt-0015",
+      "channel": "transcript",
+      "received_at": "2027-09-16T07:39:00-06:00",
+      "path": "mt-0015.vtt",
+      "title": "Wagtail sync (transcript)"
+    },
+    {
+      "id": "em-0094",
+      "channel": "email",
+      "received_at": "2027-09-16T07:40:00-06:00",
+      "path": "em-0094.eml",
+      "title": "While you were out: AI-use"
+    },
+    {
+      "id": "ch-0083",
+      "channel": "chat",
+      "received_at": "2027-09-16T09:06:00-06:00",
+      "path": "ch-0083.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "ch-0084",
+      "channel": "chat",
+      "received_at": "2027-09-16T09:31:00-06:00",
+      "path": "ch-0084.json",
+      "title": "DM: Amira Baek / Adwoa Kocak"
+    },
+    {
+      "id": "mt-0016",
+      "channel": "transcript",
+      "received_at": "2027-09-16T09:55:00-06:00",
+      "path": "mt-0016.vtt",
+      "title": "Fulmar standup (transcript)"
+    },
+    {
+      "id": "dc-0006",
+      "channel": "document",
+      "received_at": "2027-09-16T11:45:00-06:00",
+      "path": "dc-0006.xlsx",
+      "title": "Fulmar comms plan v4",
+      "parent": "em-0095"
+    },
+    {
+      "id": "em-0095",
+      "channel": "email",
+      "received_at": "2027-09-16T11:45:00-06:00",
+      "path": "em-0095.eml",
+      "title": "Fulmar comms plan"
+    },
+    {
+      "id": "em-0096",
+      "channel": "email",
+      "received_at": "2027-09-16T13:49:00-06:00",
+      "path": "em-0096.eml",
+      "title": "AI-use glossary"
+    },
+    {
+      "id": "mt-0017",
+      "channel": "transcript",
+      "received_at": "2027-09-16T14:05:00-06:00",
+      "path": "mt-0017.vtt",
+      "title": "Cross-plant AI forum (transcript)"
+    },
+    {
+      "id": "em-0097",
+      "channel": "email",
+      "received_at": "2027-09-16T14:16:00-06:00",
+      "path": "em-0097.eml",
+      "title": "Fulmar: numbers"
+    },
+    {
+      "id": "em-0098",
+      "channel": "email",
+      "received_at": "2027-09-16T14:59:00-06:00",
+      "path": "em-0098.eml",
+      "title": "Re: Predictive maintenance input"
+    },
+    {
+      "id": "em-0099",
+      "channel": "email",
+      "received_at": "2027-09-16T15:18:00-06:00",
+      "path": "em-0099.eml",
+      "title": "Splitting out tooling wear discovery"
+    },
+    {
+      "id": "ch-0085",
+      "channel": "chat",
+      "received_at": "2027-09-16T16:46:00-06:00",
+      "path": "ch-0085.json",
+      "title": "DM: Amira Baek / Ottavio Bakker"
+    },
+    {
+      "id": "mt-0018",
+      "channel": "transcript",
+      "received_at": "2027-09-16T17:00:00-06:00",
+      "path": "mt-0018.vtt",
+      "title": "Team retro (transcript)"
+    },
+    {
+      "id": "em-0100",
+      "channel": "email",
+      "received_at": "2027-09-16T17:03:00-06:00",
+      "path": "em-0100.eml",
+      "title": "[REQ-13124] Request resolved"
+    },
+    {
+      "id": "ch-0086",
+      "channel": "chat",
+      "received_at": "2027-09-16T18:01:00-06:00",
+      "path": "ch-0086.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    }
+  ]
+}

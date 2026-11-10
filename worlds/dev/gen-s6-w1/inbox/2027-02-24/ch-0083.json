@@ -1,0 +1,37 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-andresg-despina",
+ "kind": "dm",
+ "participants": [
+  "Andres",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-24T13:36:15-08:00",
+   "user": "Andres",
+   "handle": "@andresg",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-02-24T13:39:00-08:00",
+   "user": "Andres",
+   "handle": "@andresg",
+   "text": "on it, i'll send you the notes from the course assistant session",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@despina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-24T13:39:46-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "thanks!"
+  }
+ ]
+}

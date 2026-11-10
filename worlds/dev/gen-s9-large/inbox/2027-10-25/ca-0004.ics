@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Kirkmarsh//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:451f1e884aae458b@kirkmarsh.example
+DTSTAMP:20271025T150900Z
+DTSTART:20271027T183000Z
+DTEND:20271027T190000Z
+SUMMARY:Kasane intro call
+ORGANIZER;CN=Anh Villanueva:mailto:anh.villanueva@kirkmarsh.example
+ATTENDEE;CN=Aroha Mendoza;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:aroha.mendoza@kirkmarsh.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.kirkmarsh.example/j/2532869050?pwd=GthvgnpC\nPasscode: 146369
+LOCATION:https://meet.kirkmarsh.example/j/2532869050?pwd=GthvgnpC
+END:VEVENT
+END:VCALENDAR

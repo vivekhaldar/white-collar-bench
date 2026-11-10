@@ -1,0 +1,138 @@
+{
+  "date": "2027-09-07",
+  "artifacts": [
+    {
+      "id": "em-0050",
+      "channel": "email",
+      "received_at": "2027-09-07T06:54:00-06:00",
+      "path": "em-0050.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0051",
+      "channel": "email",
+      "received_at": "2027-09-07T08:29:00-06:00",
+      "path": "em-0051.eml",
+      "title": "Re: Rosia accessibility conformance report"
+    },
+    {
+      "id": "ca-0004",
+      "channel": "calendar",
+      "received_at": "2027-09-07T08:47:00-06:00",
+      "path": "ca-0004.ics",
+      "title": "Cancelled: Fulmar standup"
+    },
+    {
+      "id": "em-0052",
+      "channel": "email",
+      "received_at": "2027-09-07T10:19:00-06:00",
+      "path": "em-0052.eml",
+      "title": "Industrial Data Digest: issue 36"
+    },
+    {
+      "id": "ch-0035",
+      "channel": "chat",
+      "received_at": "2027-09-07T11:42:00-06:00",
+      "path": "ch-0035.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0053",
+      "channel": "email",
+      "received_at": "2027-09-07T11:46:00-06:00",
+      "path": "em-0053.eml",
+      "title": "Re: Current safety reporting process map"
+    },
+    {
+      "id": "ch-0036",
+      "channel": "chat",
+      "received_at": "2027-09-07T12:01:00-06:00",
+      "path": "ch-0036.json",
+      "title": "DM: Kiran Merriweather / Amira Baek"
+    },
+    {
+      "id": "em-0054",
+      "channel": "email",
+      "received_at": "2027-09-07T12:02:00-06:00",
+      "path": "em-0054.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0055",
+      "channel": "email",
+      "received_at": "2027-09-07T12:08:00-06:00",
+      "path": "em-0055.eml",
+      "title": "Fwd: Fulmar acceptance criteria"
+    },
+    {
+      "id": "ch-0037",
+      "channel": "chat",
+      "received_at": "2027-09-07T12:11:00-06:00",
+      "path": "ch-0037.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0056",
+      "channel": "email",
+      "received_at": "2027-09-07T12:19:00-06:00",
+      "path": "em-0056.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0038",
+      "channel": "chat",
+      "received_at": "2027-09-07T13:19:00-06:00",
+      "path": "ch-0038.json",
+      "title": "DM: Amira Baek / Ignacio Choi"
+    },
+    {
+      "id": "ch-0039",
+      "channel": "chat",
+      "received_at": "2027-09-07T13:50:00-06:00",
+      "path": "ch-0039.json",
+      "title": "DM: Amira Baek / Adwoa Kocak"
+    },
+    {
+      "id": "em-0057",
+      "channel": "email",
+      "received_at": "2027-09-07T14:01:00-06:00",
+      "path": "em-0057.eml",
+      "title": "Re: Operator AI basics workshop registration reminder"
+    },
+    {
+      "id": "ca-0005",
+      "channel": "calendar",
+      "received_at": "2027-09-07T14:39:00-06:00",
+      "path": "ca-0005.ics",
+      "title": "Invite: Catch-up: Amira / Marcelo"
+    },
+    {
+      "id": "ch-0040",
+      "channel": "chat",
+      "received_at": "2027-09-07T15:27:00-06:00",
+      "path": "ch-0040.json",
+      "title": "#wagtail-core"
+    },
+    {
+      "id": "ch-0041",
+      "channel": "chat",
+      "received_at": "2027-09-07T15:38:00-06:00",
+      "path": "ch-0041.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "mt-0006",
+      "channel": "transcript",
+      "received_at": "2027-09-07T16:00:00-06:00",
+      "path": "mt-0006.vtt",
+      "title": "Sandfield relationship check-in (transcript)"
+    },
+    {
+      "id": "em-0058",
+      "channel": "email",
+      "received_at": "2027-09-07T18:31:00-06:00",
+      "path": "em-0058.eml",
+      "title": "Open enrollment reminder"
+    }
+  ]
+}

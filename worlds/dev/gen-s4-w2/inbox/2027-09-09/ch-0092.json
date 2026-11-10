@@ -3,21 +3,21 @@
  "channel": "#fjord-core",
  "kind": "channel",
  "participants": [
-  "Meera Ivanova",
-  "Ottavio Monteiro",
-  "Darius Sherwood",
-  "Ratna Bondarenko",
-  "Theresa Nagy",
+  "Meera Bondarenko",
+  "Ottavio Moreira",
+  "Darius Bramwell",
+  "Ratna Nikolic",
+  "Theresa Petrov",
   "Nomvula Ndlovu",
-  "Bruna Sinclair",
-  "Esperanza Rao",
+  "Bruna Vaughan",
+  "Esperanza Venkataraman",
   "Yaroslav Moyo",
-  "Celine Wisniewska"
+  "Celine Novotny"
  ],
  "messages": [
   {
    "ts": "2027-09-09T09:59:00-08:00",
-   "user": "Meera Ivanova",
+   "user": "Meera Bondarenko",
    "handle": "@meera",
    "text": "Nomvula would like Ottavio to send Nomvula the Fjord data-flow diagram, not agreed yet."
   },
@@ -29,7 +29,7 @@
   },
   {
    "ts": "2027-09-09T10:08:55-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "following",
    "thread_of": 0

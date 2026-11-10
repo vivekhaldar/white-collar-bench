@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Birchmere//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:ef9c2a3c9eb48a7c@birchmere.example
+DTSTAMP:20270907T200800Z
+DTSTART:20270908T213000Z
+DTEND:20270908T221500Z
+SUMMARY:Referral triage discovery working session
+ORGANIZER;CN=Katarzyna Dang:mailto:katarzyna.dang@ketford.birchmere.example
+ATTENDEE;CN=Bisi Chatterjee;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bisi.chatterjee@birchmere.example
+ATTENDEE;CN=Alasdair Kaya;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:alasdair.kaya@birchmere.example
+SEQUENCE:0
+DESCRIPTION:Quick sync\, 30 minutes.\nJoin video meeting: https://meet.birchmere.example/j/6115357184?pwd=fWqj4VSR\nPasscode: 384012
+LOCATION:https://meet.birchmere.example/j/6115357184?pwd=fWqj4VSR
+END:VEVENT
+END:VCALENDAR

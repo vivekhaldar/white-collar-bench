@@ -1,30 +1,32 @@
 {
  "workspace": "iselvale",
- "channel": "#coffee",
+ "channel": "#random",
  "kind": "channel",
  "participants": [
-  "Tahmina Lozano",
-  "Kwame Ortega",
-  "Lindiwe Valdez"
+  "Tahmina Rosales",
+  "Friederike Bhatt",
+  "Lindiwe Ribeiro"
  ],
  "messages": [
   {
-   "ts": "2027-03-19T16:55:47-05:00",
-   "user": "Tahmina Lozano",
+   "ts": "2027-03-19T10:13:33-05:00",
+   "user": "Tahmina Rosales",
    "handle": "@tahmina",
-   "text": "the elevator on the east side is out again"
+   "text": "does anyone have a spare laptop charger (usb-c)?"
   },
   {
-   "ts": "2027-03-19T16:57:28-05:00",
-   "user": "Kwame Ortega",
-   "handle": "@kwame",
-   "text": "stairs it is"
+   "ts": "2027-03-19T10:18:25-05:00",
+   "user": "Friederike Bhatt",
+   "handle": "@friederike",
+   "text": "i have one, desk by the window",
+   "thread_of": 0
   },
   {
-   "ts": "2027-03-19T16:58:04-05:00",
-   "user": "Lindiwe Valdez",
+   "ts": "2027-03-19T10:22:29-05:00",
+   "user": "Lindiwe Ribeiro",
    "handle": "@lindiwe",
-   "text": "classic"
+   "text": "check the supply cupboard",
+   "thread_of": 0
   }
  ]
 }

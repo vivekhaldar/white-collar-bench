@@ -3,13 +3,13 @@
  "channel": "dm-camila-fernanda",
  "kind": "dm",
  "participants": [
-  "Camila Quimby",
+  "Camila Abernathy",
   "Fernanda Olawale"
  ],
  "messages": [
   {
    "ts": "2027-11-12T18:13:00-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "I wrote the Tarn product brief earlier today."
   },
@@ -21,7 +21,7 @@
   },
   {
    "ts": "2027-11-12T18:15:35-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "did the link work for you?"
   },

@@ -3,25 +3,25 @@
  "channel": "dm-camila-sipho",
  "kind": "dm",
  "participants": [
-  "Camila Quimby",
+  "Camila Abernathy",
   "Sipho Sengupta"
  ],
  "messages": [
   {
    "ts": "2027-11-11T17:42:36-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "hey"
   },
   {
    "ts": "2027-11-11T17:45:00-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "Thanks for offering to share the notice translation discovery observation notes with me, that would be great."
   },
   {
    "ts": "2027-11-11T17:48:27-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "is the shared drive slow for you too?"
   },

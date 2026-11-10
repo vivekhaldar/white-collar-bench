@@ -106,7 +106,7 @@ calendar:
   - id: cp3
     date: '2027-11-13'
     label: end of week
-worker: p-camila-quimby
+worker: p-camila-abernathy
 orgs:
 - id: o-city-of-holcrest
   name: City of Holcrest
@@ -251,15 +251,15 @@ orgs:
   - morshaw-research.example
   receptiveness: null
 people:
-- id: p-camila-quimby
-  name: Camila Quimby
+- id: p-camila-abernathy
+  name: Camila Abernathy
   first: Camila
-  last: Quimby
+  last: Abernathy
   nickname: null
   org: o-office-of-civic-technology
   role: Principal Architect, AI Services
   role_phrase: null
-  email: camila.quimby@holcrest.example
+  email: camila.abernathy@holcrest.example
   handle: '@camila'
   relationship: null
   group: central
@@ -269,8 +269,8 @@ people:
   voice: terse
   surface_forms:
   - Camila
-  - C. Quimby
-  - camila.quimby@holcrest.example
+  - C. Abernathy
+  - camila.abernathy@holcrest.example
   - '@camila'
 - id: p-fernanda-olawale
   name: Fernanda Olawale
@@ -294,15 +294,15 @@ people:
   - fernanda.olawale@holcrest.example
   - '@fernanda'
   - the CDO
-- id: p-jalen-hendriks
-  name: Jalen Hendriks
+- id: p-jalen-sandberg
+  name: Jalen Sandberg
   first: Jalen
-  last: Hendriks
+  last: Sandberg
   nickname: null
   org: o-office-of-civic-technology
   role: Director of Delivery
   role_phrase: our delivery director
-  email: jalen.hendriks@holcrest.example
+  email: jalen.sandberg@holcrest.example
   handle: '@jalen'
   relationship: peer
   group: central
@@ -312,8 +312,8 @@ people:
   voice: terse
   surface_forms:
   - Jalen
-  - J. Hendriks
-  - jalen.hendriks@holcrest.example
+  - J. Sandberg
+  - jalen.sandberg@holcrest.example
   - '@jalen'
   - our delivery director
 - id: p-yasmin-mokoena
@@ -338,15 +338,15 @@ people:
   - yasmin.mokoena@holcrest.example
   - '@yasmin'
   - the platform lead
-- id: p-thandiwe-bonnet
-  name: Thandiwe Bonnet
+- id: p-thandiwe-garnier
+  name: Thandiwe Garnier
   first: Thandiwe
-  last: Bonnet
+  last: Garnier
   nickname: Thandi
   org: o-office-of-civic-technology
   role: Platform Engineer
   role_phrase: the platform engineer
-  email: thandiwe.bonnet@holcrest.example
+  email: thandiwe.garnier@holcrest.example
   handle: '@thandiwe'
   relationship: stakeholder
   group: central
@@ -357,19 +357,19 @@ people:
   surface_forms:
   - Thandiwe
   - Thandi
-  - T. Bonnet
-  - thandiwe.bonnet@holcrest.example
+  - T. Garnier
+  - thandiwe.garnier@holcrest.example
   - '@thandiwe'
   - the platform engineer
-- id: p-nadia-volkov
-  name: Nadia Volkov
+- id: p-nadia-jovanovic
+  name: Nadia Jovanovic
   first: Nadia
-  last: Volkov
+  last: Jovanovic
   nickname: null
   org: o-office-of-civic-technology
   role: Chief Information Security Officer
   role_phrase: the CISO
-  email: nadia.volkov@holcrest.example
+  email: nadia.jovanovic@holcrest.example
   handle: '@nadia'
   relationship: peer
   group: central
@@ -379,8 +379,8 @@ people:
   voice: terse
   surface_forms:
   - Nadia
-  - N. Volkov
-  - nadia.volkov@holcrest.example
+  - N. Jovanovic
+  - nadia.jovanovic@holcrest.example
   - '@nadia'
   - the CISO
 - id: p-joselito-moradi
@@ -428,15 +428,15 @@ people:
   - niamh.obi@holcrest.example
   - '@niamh'
   - the CDO's EA
-- id: p-kirsten-yardley
-  name: Kirsten Yardley
+- id: p-kirsten-ellery
+  name: Kirsten Ellery
   first: Kirsten
-  last: Yardley
+  last: Ellery
   nickname: null
   org: o-office-of-civic-technology
   role: Performance Analyst
   role_phrase: our performance analyst
-  email: kirsten.yardley@holcrest.example
+  email: kirsten.ellery@holcrest.example
   handle: '@kirsten'
   relationship: peer
   group: central
@@ -446,8 +446,8 @@ people:
   voice: formal
   surface_forms:
   - Kirsten
-  - K. Yardley
-  - kirsten.yardley@holcrest.example
+  - K. Ellery
+  - kirsten.ellery@holcrest.example
   - '@kirsten'
   - our performance analyst
 - id: p-oct-shared-inbox
@@ -470,15 +470,15 @@ people:
   - OCT Team
   - the OCT inbox
   - oct-team@holcrest.example
-- id: p-guadalupe-medeiros
-  name: Guadalupe Medeiros
+- id: p-guadalupe-smit
+  name: Guadalupe Smit
   first: Guadalupe
-  last: Medeiros
+  last: Smit
   nickname: null
   org: o-city-of-holcrest
   role: Purchasing Agent
   role_phrase: the purchasing agent
-  email: guadalupe.medeiros@holcrest.example
+  email: guadalupe.smit@holcrest.example
   handle: '@guadalupe'
   relationship: stakeholder
   group: functional
@@ -488,19 +488,19 @@ people:
   voice: formal
   surface_forms:
   - Guadalupe
-  - G. Medeiros
-  - guadalupe.medeiros@holcrest.example
+  - G. Smit
+  - guadalupe.smit@holcrest.example
   - '@guadalupe'
   - the purchasing agent
-- id: p-sorina-lefebvre
-  name: Sorina Lefebvre
+- id: p-sorina-bonnet
+  name: Sorina Bonnet
   first: Sorina
-  last: Lefebvre
+  last: Bonnet
   nickname: null
   org: o-city-of-holcrest
   role: Deputy City Attorney
   role_phrase: the deputy city attorney
-  email: sorina.lefebvre@holcrest.example
+  email: sorina.bonnet@holcrest.example
   handle: '@sorina'
   relationship: stakeholder
   group: functional
@@ -510,8 +510,8 @@ people:
   voice: lowercase
   surface_forms:
   - Sorina
-  - S. Lefebvre
-  - sorina.lefebvre@holcrest.example
+  - S. Bonnet
+  - sorina.bonnet@holcrest.example
   - '@sorina'
   - the deputy city attorney
 - id: p-venkatesh-yassin
@@ -537,15 +537,15 @@ people:
   - venkatesh.yassin@holcrest.example
   - '@venkatesh'
   - the budget director
-- id: p-yiannis-cabrera
-  name: Yiannis Cabrera
+- id: p-yiannis-bustamante
+  name: Yiannis Bustamante
   first: Yiannis
-  last: Cabrera
+  last: Bustamante
   nickname: Yanni
   org: o-city-of-holcrest
   role: Recruitment Partner
   role_phrase: our recruitment partner
-  email: yiannis.cabrera@holcrest.example
+  email: yiannis.bustamante@holcrest.example
   handle: '@yiannis'
   relationship: stakeholder
   group: functional
@@ -556,19 +556,19 @@ people:
   surface_forms:
   - Yiannis
   - Yanni
-  - Y. Cabrera
-  - yiannis.cabrera@holcrest.example
+  - Y. Bustamante
+  - yiannis.bustamante@holcrest.example
   - '@yiannis'
   - our recruitment partner
-- id: p-aarav-ortega
-  name: Aarav Ortega
+- id: p-aarav-zamora
+  name: Aarav Zamora
   first: Aarav
-  last: Ortega
+  last: Zamora
   nickname: null
   org: o-city-of-holcrest
   role: Privacy Officer
   role_phrase: the privacy officer
-  email: aarav.ortega@holcrest.example
+  email: aarav.zamora@holcrest.example
   handle: '@aarav'
   relationship: stakeholder
   group: functional
@@ -578,19 +578,19 @@ people:
   voice: formal
   surface_forms:
   - Aarav
-  - A. Ortega
-  - aarav.ortega@holcrest.example
+  - A. Zamora
+  - aarav.zamora@holcrest.example
   - '@aarav'
   - the privacy officer
-- id: p-imran-sato
-  name: Imran Sato
+- id: p-imran-achterhof
+  name: Imran Achterhof
   first: Imran
-  last: Sato
+  last: Achterhof
   nickname: null
   org: o-birchcrest-department-of-transportation
   role: Department Director
   role_phrase: Birchcrest's director
-  email: imran.sato@birchcrest.holcrest.example
+  email: imran.achterhof@birchcrest.holcrest.example
   handle: '@imran'
   relationship: executive
   group: unit
@@ -600,8 +600,8 @@ people:
   voice: chatty
   surface_forms:
   - Imran
-  - I. Sato
-  - imran.sato@birchcrest.holcrest.example
+  - I. Achterhof
+  - imran.achterhof@birchcrest.holcrest.example
   - '@imran'
   - Birchcrest's director
 - id: p-petra-korkmaz
@@ -647,15 +647,15 @@ people:
   - S. Sengupta
   - sipho.sengupta@birchcrest.holcrest.example
   - '@sipho'
-- id: p-dina-winslow
-  name: Dina Winslow
+- id: p-dina-taufa
+  name: Dina Taufa
   first: Dina
-  last: Winslow
+  last: Taufa
   nickname: null
   org: o-birchcrest-department-of-transportation
   role: Systems Administrator
   role_phrase: null
-  email: dina.winslow@birchcrest.holcrest.example
+  email: dina.taufa@birchcrest.holcrest.example
   handle: '@dina'
   relationship: stakeholder
   group: unit
@@ -665,18 +665,18 @@ people:
   voice: formal
   surface_forms:
   - Dina
-  - D. Winslow
-  - dina.winslow@birchcrest.holcrest.example
+  - D. Taufa
+  - dina.taufa@birchcrest.holcrest.example
   - '@dina'
-- id: p-bisi-kapanadze
-  name: Bisi Kapanadze
+- id: p-bisi-andersen
+  name: Bisi Andersen
   first: Bisi
-  last: Kapanadze
+  last: Andersen
   nickname: null
   org: o-corrbrook-housing-services
   role: Department Director
   role_phrase: Corrbrook's director
-  email: bisi.kapanadze@corrbrook.holcrest.example
+  email: bisi.andersen@corrbrook.holcrest.example
   handle: '@bisi'
   relationship: executive
   group: unit
@@ -686,19 +686,19 @@ people:
   voice: chatty
   surface_forms:
   - Bisi
-  - B. Kapanadze
-  - bisi.kapanadze@corrbrook.holcrest.example
+  - B. Andersen
+  - bisi.andersen@corrbrook.holcrest.example
   - '@bisi'
   - Corrbrook's director
-- id: p-minji-luo
-  name: Minji Luo
+- id: p-minji-vu
+  name: Minji Vu
   first: Minji
-  last: Luo
+  last: Vu
   nickname: null
   org: o-corrbrook-housing-services
   role: Customer Service Manager
   role_phrase: the Corrbrook lead
-  email: minji.luo@corrbrook.holcrest.example
+  email: minji.vu@corrbrook.holcrest.example
   handle: '@minji'
   relationship: stakeholder
   group: unit
@@ -708,8 +708,8 @@ people:
   voice: formal
   surface_forms:
   - Minji
-  - M. Luo
-  - minji.luo@corrbrook.holcrest.example
+  - M. Vu
+  - minji.vu@corrbrook.holcrest.example
   - '@minji'
   - the Corrbrook lead
 - id: p-kristen-kocak
@@ -754,15 +754,15 @@ people:
   - E. Moyo
   - eunji.moyo@corrbrook.holcrest.example
   - '@eunji'
-- id: p-karim-moreira
-  name: Karim Moreira
+- id: p-karim-jansen
+  name: Karim Jansen
   first: Karim
-  last: Moreira
+  last: Jansen
   nickname: null
   org: o-ulworth-library-services
   role: Department Director
   role_phrase: Ulworth's director
-  email: karim.moreira@ulworth.holcrest.example
+  email: karim.jansen@ulworth.holcrest.example
   handle: '@karim'
   relationship: executive
   group: unit
@@ -772,19 +772,19 @@ people:
   voice: lowercase
   surface_forms:
   - Karim
-  - K. Moreira
-  - karim.moreira@ulworth.holcrest.example
+  - K. Jansen
+  - karim.jansen@ulworth.holcrest.example
   - '@karim'
   - Ulworth's director
-- id: p-andrei-abenova
-  name: Andrei Abenova
+- id: p-andrei-lindgren
+  name: Andrei Lindgren
   first: Andrei
-  last: Abenova
+  last: Lindgren
   nickname: null
   org: o-ulworth-library-services
   role: Chief of Staff
   role_phrase: the Ulworth lead
-  email: andrei.abenova@ulworth.holcrest.example
+  email: andrei.lindgren@ulworth.holcrest.example
   handle: '@andrei'
   relationship: stakeholder
   group: unit
@@ -794,19 +794,19 @@ people:
   voice: terse
   surface_forms:
   - Andrei
-  - A. Abenova
-  - andrei.abenova@ulworth.holcrest.example
+  - A. Lindgren
+  - andrei.lindgren@ulworth.holcrest.example
   - '@andrei'
   - the Ulworth lead
-- id: p-ifeoma-girard
-  name: Ifeoma Girard
+- id: p-ifeoma-chevalier
+  name: Ifeoma Chevalier
   first: Ifeoma
-  last: Girard
+  last: Chevalier
   nickname: null
   org: o-ulworth-library-services
   role: GIS Analyst
   role_phrase: null
-  email: ifeoma.girard@ulworth.holcrest.example
+  email: ifeoma.chevalier@ulworth.holcrest.example
   handle: '@ifeoma'
   relationship: stakeholder
   group: unit
@@ -816,8 +816,8 @@ people:
   voice: formal
   surface_forms:
   - Ifeoma
-  - I. Girard
-  - ifeoma.girard@ulworth.holcrest.example
+  - I. Chevalier
+  - ifeoma.chevalier@ulworth.holcrest.example
   - '@ifeoma'
 - id: p-corinne-kaya
   name: Corinne Kaya
@@ -840,15 +840,15 @@ people:
   - C. Kaya
   - corinne.kaya@ulworth.holcrest.example
   - '@corinne'
-- id: p-darnell-babic
-  name: Darnell Babic
+- id: p-darnell-neumann
+  name: Darnell Neumann
   first: Darnell
-  last: Babic
+  last: Neumann
   nickname: null
   org: o-sandstead-permitting-office
   role: Department Director
   role_phrase: Sandstead's director
-  email: darnell.babic@sandstead.holcrest.example
+  email: darnell.neumann@sandstead.holcrest.example
   handle: '@darnell'
   relationship: executive
   group: unit
@@ -858,19 +858,19 @@ people:
   voice: terse
   surface_forms:
   - Darnell
-  - D. Babic
-  - darnell.babic@sandstead.holcrest.example
+  - D. Neumann
+  - darnell.neumann@sandstead.holcrest.example
   - '@darnell'
   - Sandstead's director
-- id: p-dalisay-nyberg
-  name: Dalisay Nyberg
+- id: p-dalisay-dahl
+  name: Dalisay Dahl
   first: Dalisay
-  last: Nyberg
+  last: Dahl
   nickname: null
   org: o-sandstead-permitting-office
   role: Program Manager
   role_phrase: the Sandstead lead
-  email: dalisay.nyberg@sandstead.holcrest.example
+  email: dalisay.dahl@sandstead.holcrest.example
   handle: '@dalisay'
   relationship: stakeholder
   group: unit
@@ -880,19 +880,19 @@ people:
   voice: lowercase
   surface_forms:
   - Dalisay
-  - D. Nyberg
-  - dalisay.nyberg@sandstead.holcrest.example
+  - D. Dahl
+  - dalisay.dahl@sandstead.holcrest.example
   - '@dalisay'
   - the Sandstead lead
-- id: p-sigrid-malhotra
-  name: Sigrid Malhotra
+- id: p-sigrid-bhatt
+  name: Sigrid Bhatt
   first: Sigrid
-  last: Malhotra
+  last: Bhatt
   nickname: null
   org: o-sandstead-permitting-office
   role: Web Coordinator
   role_phrase: null
-  email: sigrid.malhotra@sandstead.holcrest.example
+  email: sigrid.bhatt@sandstead.holcrest.example
   handle: '@sigrid'
   relationship: stakeholder
   group: unit
@@ -902,18 +902,18 @@ people:
   voice: chatty
   surface_forms:
   - Sigrid
-  - S. Malhotra
-  - sigrid.malhotra@sandstead.holcrest.example
+  - S. Bhatt
+  - sigrid.bhatt@sandstead.holcrest.example
   - '@sigrid'
-- id: p-tomasz-popescu
-  name: Tomasz Popescu
+- id: p-tomasz-ivanova
+  name: Tomasz Ivanova
   first: Tomasz
-  last: Popescu
+  last: Ivanova
   nickname: null
   org: o-thorndale-public-works
   role: Department Director
   role_phrase: Thorndale's director
-  email: tomasz.popescu@thorndale.holcrest.example
+  email: tomasz.ivanova@thorndale.holcrest.example
   handle: '@tomasz'
   relationship: executive
   group: unit
@@ -923,8 +923,8 @@ people:
   voice: lowercase
   surface_forms:
   - Tomasz
-  - T. Popescu
-  - tomasz.popescu@thorndale.holcrest.example
+  - T. Ivanova
+  - tomasz.ivanova@thorndale.holcrest.example
   - '@tomasz'
   - Thorndale's director
 - id: p-rafiq-tetteh
@@ -949,15 +949,15 @@ people:
   - rafiq.tetteh@thorndale.holcrest.example
   - '@rafiq'
   - the Thorndale lead
-- id: p-hiba-forsythe
-  name: Hiba Forsythe
+- id: p-hiba-overton
+  name: Hiba Overton
   first: Hiba
-  last: Forsythe
+  last: Overton
   nickname: null
   org: o-thorndale-public-works
   role: Web Coordinator
   role_phrase: null
-  email: hiba.forsythe@thorndale.holcrest.example
+  email: hiba.overton@thorndale.holcrest.example
   handle: '@hiba'
   relationship: stakeholder
   group: unit
@@ -967,19 +967,19 @@ people:
   voice: lowercase
   surface_forms:
   - Hiba
-  - H. Forsythe
-  - hiba.forsythe@thorndale.holcrest.example
+  - H. Overton
+  - hiba.overton@thorndale.holcrest.example
   - '@hiba'
-- id: p-jalen-rao
-  name: Jalen Rao
+- id: p-jalen-venkataraman
+  name: Jalen Venkataraman
   first: Jalen
-  last: Rao
+  last: Venkataraman
   nickname: null
   org: o-quino-systems
   role: Account Executive
   role_phrase: null
-  email: jalen.rao@quino.example
-  handle: '@jalenr'
+  email: jalen.venkataraman@quino.example
+  handle: '@jalenv'
   relationship: vendor
   group: vendor
   tier: core
@@ -988,9 +988,9 @@ people:
   voice: chatty
   surface_forms:
   - Jalen
-  - J. Rao
-  - jalen.rao@quino.example
-  - '@jalenr'
+  - J. Venkataraman
+  - jalen.venkataraman@quino.example
+  - '@jalenv'
 - id: p-mateo-eze
   name: Mateo Eze
   first: Mateo
@@ -1054,15 +1054,15 @@ people:
   - M. Chebet
   - minji.chebet@zeneth.example
   - '@minjic'
-- id: p-eleanor-jimenez
-  name: Eleanor Jimenez
+- id: p-eleanor-quintero
+  name: Eleanor Quintero
   first: Eleanor
-  last: Jimenez
+  last: Quintero
   nickname: Nell
   org: o-talis-civic
   role: Account Executive
   role_phrase: null
-  email: eleanor.jimenez@talis.example
+  email: eleanor.quintero@talis.example
   handle: '@eleanor'
   relationship: vendor
   group: vendor
@@ -1073,18 +1073,18 @@ people:
   surface_forms:
   - Eleanor
   - Nell
-  - E. Jimenez
-  - eleanor.jimenez@talis.example
+  - E. Quintero
+  - eleanor.quintero@talis.example
   - '@eleanor'
-- id: p-andres-zimmermann
-  name: Andres Zimmermann
+- id: p-andres-ricci
+  name: Andres Ricci
   first: Andres
-  last: Zimmermann
+  last: Ricci
   nickname: null
   org: o-talis-civic
   role: Solutions Engineer
   role_phrase: null
-  email: andres.zimmermann@talis.example
+  email: andres.ricci@talis.example
   handle: '@andres'
   relationship: vendor
   group: vendor
@@ -1094,18 +1094,18 @@ people:
   voice: formal
   surface_forms:
   - Andres
-  - A. Zimmermann
-  - andres.zimmermann@talis.example
+  - A. Ricci
+  - andres.ricci@talis.example
   - '@andres'
-- id: p-katerina-sinclair
-  name: Katerina Sinclair
+- id: p-katerina-vaughan
+  name: Katerina Vaughan
   first: Katerina
-  last: Sinclair
+  last: Vaughan
   nickname: Katia
   org: o-nantgate-institute-for-public-service-design
   role: Senior Research Scientist
   role_phrase: null
-  email: katerina.sinclair@nantgate-research.example
+  email: katerina.vaughan@nantgate-research.example
   handle: '@katerina'
   relationship: partner
   group: partner
@@ -1116,8 +1116,8 @@ people:
   surface_forms:
   - Katerina
   - Katia
-  - K. Sinclair
-  - katerina.sinclair@nantgate-research.example
+  - K. Vaughan
+  - katerina.vaughan@nantgate-research.example
   - '@katerina'
 - id: p-lindiwe-rostami
   name: Lindiwe Rostami
@@ -1140,15 +1140,15 @@ people:
   - L. Rostami
   - lindiwe.rostami@morshaw-research.example
   - '@lindiwe'
-- id: p-carys-kuznetsova
-  name: Carys Kuznetsova
+- id: p-carys-petrovic
+  name: Carys Petrovic
   first: Carys
-  last: Kuznetsova
+  last: Petrovic
   nickname: null
   org: null
   role: Candidate
   role_phrase: null
-  email: carys.kuznetsova@post.example
+  email: carys.petrovic@post.example
   handle: '@carys'
   relationship: candidate
   group: candidate
@@ -1158,18 +1158,18 @@ people:
   voice: lowercase
   surface_forms:
   - Carys
-  - C. Kuznetsova
-  - carys.kuznetsova@post.example
+  - C. Petrovic
+  - carys.petrovic@post.example
   - '@carys'
-- id: p-omar-moretti
-  name: Omar Moretti
+- id: p-omar-lefebvre
+  name: Omar Lefebvre
   first: Omar
-  last: Moretti
+  last: Lefebvre
   nickname: null
   org: o-birchcrest-department-of-transportation
   role: Privacy Officer
   role_phrase: the new privacy officer
-  email: omar.moretti@birchcrest.holcrest.example
+  email: omar.lefebvre@birchcrest.holcrest.example
   handle: '@omar'
   relationship: stakeholder
   group: newcomer
@@ -1179,8 +1179,8 @@ people:
   voice: lowercase
   surface_forms:
   - Omar
-  - O. Moretti
-  - omar.moretti@birchcrest.holcrest.example
+  - O. Lefebvre
+  - omar.lefebvre@birchcrest.holcrest.example
   - '@omar'
   - the new privacy officer
 - id: p-bayani-bishara
@@ -1341,16 +1341,16 @@ projects:
   owner: p-petra-korkmaz
   sponsor: p-fernanda-olawale
   members:
-  - p-camila-quimby
+  - p-camila-abernathy
   - p-petra-korkmaz
-  - p-jalen-hendriks
+  - p-jalen-sandberg
   - p-sipho-sengupta
-  - p-dina-winslow
+  - p-dina-taufa
   - p-yasmin-mokoena
-  - p-nadia-volkov
-  - p-thandiwe-bonnet
+  - p-nadia-jovanovic
+  - p-thandiwe-garnier
   - p-joselito-moradi
-  - p-imran-sato
+  - p-imran-achterhof
   orgs:
   - o-birchcrest-department-of-transportation
   status: active
@@ -1363,25 +1363,25 @@ projects:
     lead: p-petra-korkmaz
     unit:
     - p-sipho-sengupta
-    - p-dina-winslow
+    - p-dina-taufa
     - p-petra-korkmaz
     ae:
-    - p-jalen-rao
+    - p-jalen-venkataraman
     - p-caio-mehta
     se:
     - p-mateo-eze
     - p-minji-chebet
     eng: p-yasmin-mokoena
-    sec: p-nadia-volkov
-    privacy: p-aarav-ortega
-    legal: p-sorina-lefebvre
-    proc: p-guadalupe-medeiros
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
     fin: p-venkatesh-yassin
-    hr: p-yiannis-cabrera
+    hr: p-yiannis-bustamante
     ea: p-niamh-obi
-    collab: p-jalen-hendriks
-    partner: p-katerina-sinclair
-    cand: p-carys-kuznetsova
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
   weight: 24.34
   start: '2027-10-25'
 - id: pr-obsidian
@@ -1408,13 +1408,13 @@ projects:
   owner: p-yasmin-mokoena
   sponsor: p-fernanda-olawale
   members:
-  - p-camila-quimby
+  - p-camila-abernathy
   - p-yasmin-mokoena
-  - p-jalen-hendriks
+  - p-jalen-sandberg
   - p-petra-korkmaz
   - p-sipho-sengupta
-  - p-dina-winslow
-  - p-thandiwe-bonnet
+  - p-dina-taufa
+  - p-thandiwe-garnier
   orgs: []
   status: active
   phase: onboarding tenants
@@ -1426,25 +1426,25 @@ projects:
     lead: p-petra-korkmaz
     unit:
     - p-sipho-sengupta
-    - p-dina-winslow
+    - p-dina-taufa
     - p-petra-korkmaz
     ae:
-    - p-jalen-rao
+    - p-jalen-venkataraman
     - p-caio-mehta
     se:
     - p-mateo-eze
     - p-minji-chebet
-    eng: p-thandiwe-bonnet
-    sec: p-nadia-volkov
-    privacy: p-aarav-ortega
-    legal: p-sorina-lefebvre
-    proc: p-guadalupe-medeiros
+    eng: p-thandiwe-garnier
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
     fin: p-venkatesh-yassin
-    hr: p-yiannis-cabrera
+    hr: p-yiannis-bustamante
     ea: p-niamh-obi
-    collab: p-jalen-hendriks
-    partner: p-katerina-sinclair
-    cand: p-carys-kuznetsova
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
   weight: 12.25
   start: '2027-10-25'
 - id: pr-parking-analytics-tool-selection
@@ -1467,15 +1467,15 @@ projects:
   - o-zeneth-labs
   - o-quino-systems
   partner: o-nantgate-institute-for-public-service-design
-  owner: p-camila-quimby
-  sponsor: p-imran-sato
+  owner: p-camila-abernathy
+  sponsor: p-imran-achterhof
   members:
-  - p-camila-quimby
-  - p-camila-quimby
-  - p-jalen-hendriks
+  - p-camila-abernathy
+  - p-camila-abernathy
+  - p-jalen-sandberg
   - p-petra-korkmaz
   - p-sipho-sengupta
-  - p-dina-winslow
+  - p-dina-taufa
   orgs:
   - o-birchcrest-department-of-transportation
   - o-zeneth-labs
@@ -1485,30 +1485,30 @@ projects:
   target_date: '2027-11-22'
   n: 2
   cast:
-    owner: p-camila-quimby
-    sponsor: p-imran-sato
+    owner: p-camila-abernathy
+    sponsor: p-imran-achterhof
     lead: p-petra-korkmaz
     unit:
     - p-sipho-sengupta
-    - p-dina-winslow
+    - p-dina-taufa
     - p-petra-korkmaz
     ae:
     - p-caio-mehta
-    - p-jalen-rao
+    - p-jalen-venkataraman
     se:
     - p-minji-chebet
     - p-mateo-eze
     eng: p-yasmin-mokoena
-    sec: p-nadia-volkov
-    privacy: p-aarav-ortega
-    legal: p-sorina-lefebvre
-    proc: p-guadalupe-medeiros
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
     fin: p-venkatesh-yassin
-    hr: p-yiannis-cabrera
+    hr: p-yiannis-bustamante
     ea: p-niamh-obi
-    collab: p-jalen-hendriks
-    partner: p-katerina-sinclair
-    cand: p-carys-kuznetsova
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
   weight: 6.4
   start: '2027-10-25'
 - id: pr-ulworth-benefits-screening-discovery
@@ -1531,14 +1531,14 @@ projects:
   - o-zeneth-labs
   - o-talis-civic
   partner: o-nantgate-institute-for-public-service-design
-  owner: p-camila-quimby
-  sponsor: p-karim-moreira
+  owner: p-camila-abernathy
+  sponsor: p-karim-jansen
   members:
-  - p-camila-quimby
-  - p-camila-quimby
-  - p-jalen-hendriks
-  - p-andrei-abenova
-  - p-ifeoma-girard
+  - p-camila-abernathy
+  - p-camila-abernathy
+  - p-jalen-sandberg
+  - p-andrei-lindgren
+  - p-ifeoma-chevalier
   - p-corinne-kaya
   orgs:
   - o-ulworth-library-services
@@ -1547,30 +1547,30 @@ projects:
   target_date: '2027-12-10'
   n: 2
   cast:
-    owner: p-camila-quimby
-    sponsor: p-karim-moreira
-    lead: p-andrei-abenova
+    owner: p-camila-abernathy
+    sponsor: p-karim-jansen
+    lead: p-andrei-lindgren
     unit:
-    - p-ifeoma-girard
+    - p-ifeoma-chevalier
     - p-corinne-kaya
-    - p-andrei-abenova
+    - p-andrei-lindgren
     ae:
     - p-caio-mehta
-    - p-eleanor-jimenez
+    - p-eleanor-quintero
     se:
     - p-minji-chebet
-    - p-andres-zimmermann
+    - p-andres-ricci
     eng: p-yasmin-mokoena
-    sec: p-nadia-volkov
-    privacy: p-aarav-ortega
-    legal: p-sorina-lefebvre
-    proc: p-guadalupe-medeiros
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
     fin: p-venkatesh-yassin
-    hr: p-yiannis-cabrera
+    hr: p-yiannis-bustamante
     ea: p-niamh-obi
-    collab: p-jalen-hendriks
-    partner: p-katerina-sinclair
-    cand: p-carys-kuznetsova
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
   weight: 5.96
   start: '2027-10-25'
 - id: pr-birchcrest-notice-translation-discovery
@@ -1593,15 +1593,15 @@ projects:
   - o-zeneth-labs
   - o-quino-systems
   partner: o-nantgate-institute-for-public-service-design
-  owner: p-camila-quimby
+  owner: p-camila-abernathy
   sponsor: p-fernanda-olawale
   members:
-  - p-camila-quimby
-  - p-camila-quimby
-  - p-jalen-hendriks
+  - p-camila-abernathy
+  - p-camila-abernathy
+  - p-jalen-sandberg
   - p-petra-korkmaz
   - p-sipho-sengupta
-  - p-dina-winslow
+  - p-dina-taufa
   orgs:
   - o-birchcrest-department-of-transportation
   status: active
@@ -1609,30 +1609,30 @@ projects:
   target_date: '2027-11-22'
   n: 2
   cast:
-    owner: p-camila-quimby
+    owner: p-camila-abernathy
     sponsor: p-fernanda-olawale
     lead: p-petra-korkmaz
     unit:
     - p-sipho-sengupta
-    - p-dina-winslow
+    - p-dina-taufa
     - p-petra-korkmaz
     ae:
     - p-caio-mehta
-    - p-jalen-rao
+    - p-jalen-venkataraman
     se:
     - p-minji-chebet
     - p-mateo-eze
     eng: p-yasmin-mokoena
-    sec: p-nadia-volkov
-    privacy: p-aarav-ortega
-    legal: p-sorina-lefebvre
-    proc: p-guadalupe-medeiros
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
     fin: p-venkatesh-yassin
-    hr: p-yiannis-cabrera
+    hr: p-yiannis-bustamante
     ea: p-niamh-obi
-    collab: p-jalen-hendriks
-    partner: p-katerina-sinclair
-    cand: p-carys-kuznetsova
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
   weight: 5.42
   start: '2027-10-25'
 - id: pr-tarn
@@ -1654,15 +1654,15 @@ projects:
   - o-zeneth-labs
   - o-talis-civic
   partner: o-nantgate-institute-for-public-service-design
-  owner: p-camila-quimby
+  owner: p-camila-abernathy
   sponsor: p-fernanda-olawale
   members:
-  - p-camila-quimby
-  - p-camila-quimby
-  - p-jalen-hendriks
+  - p-camila-abernathy
+  - p-camila-abernathy
+  - p-jalen-sandberg
   - p-petra-korkmaz
   - p-sipho-sengupta
-  - p-dina-winslow
+  - p-dina-taufa
   orgs:
   - o-birchcrest-department-of-transportation
   status: active
@@ -1670,30 +1670,30 @@ projects:
   target_date: '2027-12-14'
   n: 2
   cast:
-    owner: p-camila-quimby
+    owner: p-camila-abernathy
     sponsor: p-fernanda-olawale
     lead: p-petra-korkmaz
     unit:
     - p-sipho-sengupta
-    - p-dina-winslow
+    - p-dina-taufa
     - p-petra-korkmaz
     ae:
     - p-caio-mehta
-    - p-eleanor-jimenez
+    - p-eleanor-quintero
     se:
     - p-minji-chebet
-    - p-andres-zimmermann
+    - p-andres-ricci
     eng: p-yasmin-mokoena
-    sec: p-nadia-volkov
-    privacy: p-aarav-ortega
-    legal: p-sorina-lefebvre
-    proc: p-guadalupe-medeiros
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
     fin: p-venkatesh-yassin
-    hr: p-yiannis-cabrera
+    hr: p-yiannis-bustamante
     ea: p-niamh-obi
-    collab: p-jalen-hendriks
-    partner: p-katerina-sinclair
-    cand: p-carys-kuznetsova
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
   weight: 6.45
   start: '2027-10-25'
 - id: pr-plain-language-workshop
@@ -1716,14 +1716,14 @@ projects:
   - o-talis-civic
   - o-zeneth-labs
   partner: o-nantgate-institute-for-public-service-design
-  owner: p-jalen-hendriks
+  owner: p-jalen-sandberg
   sponsor: p-fernanda-olawale
   members:
-  - p-camila-quimby
-  - p-jalen-hendriks
+  - p-camila-abernathy
+  - p-jalen-sandberg
   - p-petra-korkmaz
   - p-sipho-sengupta
-  - p-dina-winslow
+  - p-dina-taufa
   orgs:
   - o-birchcrest-department-of-transportation
   status: active
@@ -1731,30 +1731,30 @@ projects:
   target_date: '2027-12-08'
   n: 2
   cast:
-    owner: p-jalen-hendriks
+    owner: p-jalen-sandberg
     sponsor: p-fernanda-olawale
     lead: p-petra-korkmaz
     unit:
     - p-sipho-sengupta
-    - p-dina-winslow
+    - p-dina-taufa
     - p-petra-korkmaz
     ae:
-    - p-eleanor-jimenez
+    - p-eleanor-quintero
     - p-caio-mehta
     se:
-    - p-andres-zimmermann
+    - p-andres-ricci
     - p-minji-chebet
     eng: p-yasmin-mokoena
-    sec: p-nadia-volkov
-    privacy: p-aarav-ortega
-    legal: p-sorina-lefebvre
-    proc: p-guadalupe-medeiros
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
     fin: p-venkatesh-yassin
-    hr: p-yiannis-cabrera
+    hr: p-yiannis-bustamante
     ea: p-niamh-obi
-    collab: p-jalen-hendriks
-    partner: p-katerina-sinclair
-    cand: p-carys-kuznetsova
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
   weight: 7.35
   start: '2027-10-25'
 - id: pr-data-engineer-hire
@@ -1777,12 +1777,12 @@ projects:
   - o-zeneth-labs
   - o-talis-civic
   partner: o-nantgate-institute-for-public-service-design
-  owner: p-camila-quimby
+  owner: p-camila-abernathy
   sponsor: p-fernanda-olawale
   members:
-  - p-camila-quimby
-  - p-camila-quimby
-  - p-yiannis-cabrera
+  - p-camila-abernathy
+  - p-camila-abernathy
+  - p-yiannis-bustamante
   - p-yasmin-mokoena
   orgs: []
   status: active
@@ -1790,29 +1790,29 @@ projects:
   target_date: null
   n: 2
   cast:
-    owner: p-camila-quimby
+    owner: p-camila-abernathy
     sponsor: p-fernanda-olawale
-    lead: p-dalisay-nyberg
+    lead: p-dalisay-dahl
     unit:
-    - p-sigrid-malhotra
-    - p-dalisay-nyberg
+    - p-sigrid-bhatt
+    - p-dalisay-dahl
     ae:
     - p-caio-mehta
-    - p-eleanor-jimenez
+    - p-eleanor-quintero
     se:
     - p-minji-chebet
-    - p-andres-zimmermann
+    - p-andres-ricci
     eng: p-yasmin-mokoena
-    sec: p-nadia-volkov
-    privacy: p-aarav-ortega
-    legal: p-sorina-lefebvre
-    proc: p-guadalupe-medeiros
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
     fin: p-venkatesh-yassin
-    hr: p-yiannis-cabrera
+    hr: p-yiannis-bustamante
     ea: p-niamh-obi
-    collab: p-jalen-hendriks
-    partner: p-katerina-sinclair
-    cand: p-carys-kuznetsova
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
   weight: 7.15
   start: '2027-10-25'
 - id: pr-obsidian-operating-model-review
@@ -1838,10 +1838,10 @@ projects:
   owner: p-yasmin-mokoena
   sponsor: p-fernanda-olawale
   members:
-  - p-camila-quimby
+  - p-camila-abernathy
   - p-yasmin-mokoena
-  - p-jalen-hendriks
-  - p-andrei-abenova
+  - p-jalen-sandberg
+  - p-andrei-lindgren
   orgs:
   - o-ulworth-library-services
   status: active
@@ -1851,28 +1851,28 @@ projects:
   cast:
     owner: p-yasmin-mokoena
     sponsor: p-fernanda-olawale
-    lead: p-andrei-abenova
+    lead: p-andrei-lindgren
     unit:
-    - p-ifeoma-girard
+    - p-ifeoma-chevalier
     - p-corinne-kaya
-    - p-andrei-abenova
+    - p-andrei-lindgren
     ae:
     - p-caio-mehta
-    - p-jalen-rao
+    - p-jalen-venkataraman
     se:
     - p-minji-chebet
     - p-mateo-eze
     eng: p-yasmin-mokoena
-    sec: p-nadia-volkov
-    privacy: p-aarav-ortega
-    legal: p-sorina-lefebvre
-    proc: p-guadalupe-medeiros
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
     fin: p-venkatesh-yassin
-    hr: p-yiannis-cabrera
+    hr: p-yiannis-bustamante
     ea: p-niamh-obi
-    collab: p-jalen-hendriks
-    partner: p-katerina-sinclair
-    cand: p-carys-kuznetsova
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
   weight: 2.36
   start: '2027-10-25'
 - id: pr-service-request-triage-input-round
@@ -1894,13 +1894,13 @@ projects:
   - o-quino-systems
   - o-zeneth-labs
   partner: o-nantgate-institute-for-public-service-design
-  owner: p-camila-quimby
+  owner: p-camila-abernathy
   sponsor: p-fernanda-olawale
   members:
-  - p-camila-quimby
-  - p-camila-quimby
-  - p-jalen-hendriks
-  - p-minji-luo
+  - p-camila-abernathy
+  - p-camila-abernathy
+  - p-jalen-sandberg
+  - p-minji-vu
   orgs:
   - o-corrbrook-housing-services
   status: active
@@ -1908,30 +1908,30 @@ projects:
   target_date: null
   n: 2
   cast:
-    owner: p-camila-quimby
+    owner: p-camila-abernathy
     sponsor: p-fernanda-olawale
-    lead: p-minji-luo
+    lead: p-minji-vu
     unit:
     - p-kristen-kocak
     - p-eun-ji-moyo
-    - p-minji-luo
+    - p-minji-vu
     ae:
-    - p-jalen-rao
+    - p-jalen-venkataraman
     - p-caio-mehta
     se:
     - p-mateo-eze
     - p-minji-chebet
     eng: p-yasmin-mokoena
-    sec: p-nadia-volkov
-    privacy: p-aarav-ortega
-    legal: p-sorina-lefebvre
-    proc: p-guadalupe-medeiros
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
     fin: p-venkatesh-yassin
-    hr: p-yiannis-cabrera
+    hr: p-yiannis-bustamante
     ea: p-niamh-obi
-    collab: p-jalen-hendriks
-    partner: p-katerina-sinclair
-    cand: p-carys-kuznetsova
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
   weight: 2.15
   start: '2027-10-25'
 - id: pr-nantgate-partnership
@@ -1953,12 +1953,12 @@ projects:
   - o-quino-systems
   - o-zeneth-labs
   partner: o-nantgate-institute-for-public-service-design
-  owner: p-camila-quimby
+  owner: p-camila-abernathy
   sponsor: p-fernanda-olawale
   members:
-  - p-camila-quimby
-  - p-camila-quimby
-  - p-jalen-hendriks
+  - p-camila-abernathy
+  - p-camila-abernathy
+  - p-jalen-sandberg
   - p-petra-korkmaz
   orgs:
   - o-birchcrest-department-of-transportation
@@ -1968,30 +1968,30 @@ projects:
   target_date: null
   n: 2
   cast:
-    owner: p-camila-quimby
+    owner: p-camila-abernathy
     sponsor: p-fernanda-olawale
     lead: p-petra-korkmaz
     unit:
     - p-sipho-sengupta
-    - p-dina-winslow
+    - p-dina-taufa
     - p-petra-korkmaz
     ae:
-    - p-jalen-rao
+    - p-jalen-venkataraman
     - p-caio-mehta
     se:
     - p-mateo-eze
     - p-minji-chebet
     eng: p-yasmin-mokoena
-    sec: p-nadia-volkov
-    privacy: p-aarav-ortega
-    legal: p-sorina-lefebvre
-    proc: p-guadalupe-medeiros
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
     fin: p-venkatesh-yassin
-    hr: p-yiannis-cabrera
+    hr: p-yiannis-bustamante
     ea: p-niamh-obi
-    collab: p-jalen-hendriks
-    partner: p-katerina-sinclair
-    cand: p-carys-kuznetsova
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
   weight: 2.13
   start: '2027-10-25'
 - id: pr-thorndale-meeting-minutes-idea
@@ -2016,9 +2016,9 @@ projects:
   owner: p-rafiq-tetteh
   sponsor: p-fernanda-olawale
   members:
-  - p-camila-quimby
+  - p-camila-abernathy
   - p-rafiq-tetteh
-  - p-jalen-hendriks
+  - p-jalen-sandberg
   orgs:
   - o-thorndale-public-works
   status: active
@@ -2030,25 +2030,25 @@ projects:
     sponsor: p-fernanda-olawale
     lead: p-rafiq-tetteh
     unit:
-    - p-hiba-forsythe
+    - p-hiba-overton
     - p-rafiq-tetteh
     ae:
-    - p-eleanor-jimenez
-    - p-jalen-rao
+    - p-eleanor-quintero
+    - p-jalen-venkataraman
     se:
-    - p-andres-zimmermann
+    - p-andres-ricci
     - p-mateo-eze
     eng: p-yasmin-mokoena
-    sec: p-nadia-volkov
-    privacy: p-aarav-ortega
-    legal: p-sorina-lefebvre
-    proc: p-guadalupe-medeiros
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
     fin: p-venkatesh-yassin
-    hr: p-yiannis-cabrera
+    hr: p-yiannis-bustamante
     ea: p-niamh-obi
-    collab: p-jalen-hendriks
-    partner: p-katerina-sinclair
-    cand: p-carys-kuznetsova
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
   weight: 0.18
   start: '2027-10-25'
 - id: pr-quino-permit-intake-diligence
@@ -2070,12 +2070,12 @@ projects:
   - o-quino-systems
   - o-zeneth-labs
   partner: o-nantgate-institute-for-public-service-design
-  owner: p-camila-quimby
+  owner: p-camila-abernathy
   sponsor: p-fernanda-olawale
   members:
-  - p-camila-quimby
-  - p-camila-quimby
-  - p-jalen-hendriks
+  - p-camila-abernathy
+  - p-camila-abernathy
+  - p-jalen-sandberg
   orgs:
   - o-ulworth-library-services
   - o-quino-systems
@@ -2085,40 +2085,40 @@ projects:
   target_date: null
   n: 2
   cast:
-    owner: p-camila-quimby
+    owner: p-camila-abernathy
     sponsor: p-fernanda-olawale
-    lead: p-andrei-abenova
+    lead: p-andrei-lindgren
     unit:
-    - p-ifeoma-girard
+    - p-ifeoma-chevalier
     - p-corinne-kaya
-    - p-andrei-abenova
+    - p-andrei-lindgren
     ae:
-    - p-jalen-rao
+    - p-jalen-venkataraman
     - p-caio-mehta
     se:
     - p-mateo-eze
     - p-minji-chebet
     eng: p-yasmin-mokoena
-    sec: p-nadia-volkov
-    privacy: p-aarav-ortega
-    legal: p-sorina-lefebvre
-    proc: p-guadalupe-medeiros
+    sec: p-nadia-jovanovic
+    privacy: p-aarav-zamora
+    legal: p-sorina-bonnet
+    proc: p-guadalupe-smit
     fin: p-venkatesh-yassin
-    hr: p-yiannis-cabrera
+    hr: p-yiannis-bustamante
     ea: p-niamh-obi
-    collab: p-jalen-hendriks
-    partner: p-katerina-sinclair
-    cand: p-carys-kuznetsova
+    collab: p-jalen-sandberg
+    partner: p-katerina-vaughan
+    cand: p-carys-petrovic
   weight: 0.54
   start: '2027-10-25'
 collisions:
   first_names:
-  - - p-jalen-hendriks
-    - p-jalen-rao
-  - - p-minji-luo
+  - - p-jalen-sandberg
+    - p-jalen-venkataraman
+  - - p-minji-vu
     - p-minji-chebet
   homophones:
-  - p-kirsten-yardley
+  - p-kirsten-ellery
   - p-kristen-kocak
 cadences:
 - key: standup
@@ -2136,14 +2136,14 @@ cadences:
   minutes: 25
   organizer: p-petra-korkmaz
   attendees:
-  - p-camila-quimby
+  - p-camila-abernathy
   - p-petra-korkmaz
-  - p-jalen-hendriks
+  - p-jalen-sandberg
   - p-sipho-sengupta
-  - p-dina-winslow
+  - p-dina-taufa
   - p-yasmin-mokoena
-  - p-nadia-volkov
-  - p-thandiwe-bonnet
+  - p-nadia-jovanovic
+  - p-thandiwe-garnier
 - key: leads
   title: OCT leads call
   kind: meeting
@@ -2155,10 +2155,10 @@ cadences:
   minutes: 45
   organizer: p-fernanda-olawale
   attendees:
-  - p-camila-quimby
-  - p-jalen-hendriks
+  - p-camila-abernathy
+  - p-jalen-sandberg
   - p-yasmin-mokoena
-  - p-nadia-volkov
+  - p-nadia-jovanovic
   - p-joselito-moradi
   - p-fernanda-olawale
 - key: hub_sync
@@ -2172,12 +2172,12 @@ cadences:
   minutes: 30
   organizer: p-yasmin-mokoena
   attendees:
-  - p-camila-quimby
+  - p-camila-abernathy
   - p-yasmin-mokoena
-  - p-jalen-hendriks
+  - p-jalen-sandberg
   - p-petra-korkmaz
   - p-sipho-sengupta
-  - p-dina-winslow
+  - p-dina-taufa
 - key: one_on_one
   title: 1:1 Camila / Jalen
   kind: meeting
@@ -2187,10 +2187,10 @@ cadences:
   every: 2
   time: '15:00'
   minutes: 30
-  organizer: p-jalen-hendriks
+  organizer: p-jalen-sandberg
   attendees:
-  - p-camila-quimby
-  - p-jalen-hendriks
+  - p-camila-abernathy
+  - p-jalen-sandberg
 - key: forum
   title: Cross-department AI forum
   kind: meeting
@@ -2200,14 +2200,14 @@ cadences:
   every: 2
   time: '13:00'
   minutes: 60
-  organizer: p-jalen-hendriks
+  organizer: p-jalen-sandberg
   attendees:
-  - p-camila-quimby
-  - p-jalen-hendriks
+  - p-camila-abernathy
+  - p-jalen-sandberg
   - p-petra-korkmaz
-  - p-minji-luo
-  - p-andrei-abenova
-  - p-dalisay-nyberg
+  - p-minji-vu
+  - p-andrei-lindgren
+  - p-dalisay-dahl
   - p-rafiq-tetteh
 - key: weekly_update
   title: Weekly update
@@ -2219,7 +2219,7 @@ cadences:
   every: 1
   organizer: p-oct-shared-inbox
   attendees:
-  - p-camila-quimby
+  - p-camila-abernathy
   - p-fernanda-olawale
 challenges:
 - week: 1
@@ -2249,7 +2249,7 @@ challenges:
 - week: 1
   tag: new_entity
   day: '2027-11-10'
-  person: p-omar-moretti
+  person: p-omar-lefebvre
   project: pr-marten
 - week: 1
   tag: supersession

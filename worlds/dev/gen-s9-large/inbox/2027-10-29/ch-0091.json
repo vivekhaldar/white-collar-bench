@@ -1,0 +1,41 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-achieng-aroha",
+ "kind": "dm",
+ "participants": [
+  "Achieng",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-29T15:08:24-05:00",
+   "user": "Achieng",
+   "handle": "@achieng",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-10-29T15:10:45-05:00",
+   "user": "Achieng",
+   "handle": "@achieng",
+   "text": "just to recap, on tuesday i said i'd countersign the frostmere data-use agreement"
+  },
+  {
+   "ts": "2027-10-29T15:11:41-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "that'd be great"
+  },
+  {
+   "ts": "2027-10-29T15:13:19-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-10-29T15:14:13-05:00",
+   "user": "Achieng",
+   "handle": "@achieng",
+   "text": "yep, all good"
+  }
+ ]
+}

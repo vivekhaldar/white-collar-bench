@@ -1,0 +1,54 @@
+{
+  "date": "2027-09-25",
+  "artifacts": [
+    {
+      "id": "ch-0132",
+      "channel": "chat",
+      "received_at": "2027-09-25T09:12:00-06:00",
+      "path": "ch-0132.json",
+      "title": "DM: Kian Ishikawa / Amira Baek"
+    },
+    {
+      "id": "em-0156",
+      "channel": "email",
+      "received_at": "2027-09-25T09:16:00-06:00",
+      "path": "em-0156.eml",
+      "title": "[INC-65955] Ticket updated"
+    },
+    {
+      "id": "ch-0133",
+      "channel": "chat",
+      "received_at": "2027-09-25T10:15:00-06:00",
+      "path": "ch-0133.json",
+      "title": "DM: Shirin Oyelami / Amira Baek"
+    },
+    {
+      "id": "em-0157",
+      "channel": "email",
+      "received_at": "2027-09-25T12:32:00-06:00",
+      "path": "em-0157.eml",
+      "title": "[INC-68854] Ticket updated"
+    },
+    {
+      "id": "nt-0015",
+      "channel": "note",
+      "received_at": "2027-09-25T15:05:00-06:00",
+      "path": "nt-0015.md",
+      "title": "Sat voice memo"
+    },
+    {
+      "id": "nt-0016",
+      "channel": "note",
+      "received_at": "2027-09-25T17:41:00-06:00",
+      "path": "nt-0016.md",
+      "title": "Sat voice memo"
+    },
+    {
+      "id": "em-0158",
+      "channel": "email",
+      "received_at": "2027-09-25T18:23:00-06:00",
+      "path": "em-0158.eml",
+      "title": "Re: Fulmar training outline v2"
+    }
+  ]
+}

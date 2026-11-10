@@ -1,0 +1,29 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-mathieu",
+ "kind": "dm",
+ "participants": [
+  "Mathieu Wijaya",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-29T14:14:02-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-10-29T14:14:23-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "recap from tuesday: i generated a synthetic patient data set for cirrus"
+  },
+  {
+   "ts": "2027-10-29T14:14:59-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "got it, thanks"
+  }
+ ]
+}

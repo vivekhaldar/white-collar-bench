@@ -1,0 +1,173 @@
+{
+  "date": "2027-10-19",
+  "artifacts": [
+    {
+      "id": "em-0007",
+      "channel": "email",
+      "received_at": "2027-10-19T06:58:00-05:00",
+      "path": "em-0007.eml",
+      "title": "Event space survey"
+    },
+    {
+      "id": "em-0008",
+      "channel": "email",
+      "received_at": "2027-10-19T07:51:00-05:00",
+      "path": "em-0008.eml",
+      "title": "[REQ-32380] Request resolved"
+    },
+    {
+      "id": "em-0009",
+      "channel": "email",
+      "received_at": "2027-10-19T07:55:00-05:00",
+      "path": "em-0009.eml",
+      "title": "To Anh for the Vashmere working group"
+    },
+    {
+      "id": "ch-0015",
+      "channel": "chat",
+      "received_at": "2027-10-19T08:34:00-05:00",
+      "path": "ch-0015.json",
+      "title": "DM: Aroha Mendoza / Winifred Tanaka"
+    },
+    {
+      "id": "ca-0002",
+      "channel": "calendar",
+      "received_at": "2027-10-19T09:11:00-05:00",
+      "path": "ca-0002.ics",
+      "title": "Cancelled: Cirrus standup"
+    },
+    {
+      "id": "mn-0002",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-19T09:15:00-05:00",
+      "path": "mn-0002.md",
+      "title": "Notes: Team retro"
+    },
+    {
+      "id": "em-0010",
+      "channel": "email",
+      "received_at": "2027-10-19T09:22:00-05:00",
+      "path": "em-0010.eml",
+      "title": "Re: To Anh for the Vashmere working group"
+    },
+    {
+      "id": "ch-0016",
+      "channel": "chat",
+      "received_at": "2027-10-19T09:45:00-05:00",
+      "path": "ch-0016.json",
+      "title": "DM: Aroha Mendoza / Mpho Sengupta"
+    },
+    {
+      "id": "mn-0003",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-19T10:00:00-05:00",
+      "path": "mn-0003.md",
+      "title": "Recap: Cirrus build sync"
+    },
+    {
+      "id": "em-0011",
+      "channel": "email",
+      "received_at": "2027-10-19T10:07:00-05:00",
+      "path": "em-0011.eml",
+      "title": "Funding model funding options memo"
+    },
+    {
+      "id": "ch-0017",
+      "channel": "chat",
+      "received_at": "2027-10-19T11:00:00-05:00",
+      "path": "ch-0017.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0012",
+      "channel": "email",
+      "received_at": "2027-10-19T12:21:00-05:00",
+      "path": "em-0012.eml",
+      "title": "Customer story: faster onboarding"
+    },
+    {
+      "id": "ch-0018",
+      "channel": "chat",
+      "received_at": "2027-10-19T12:52:00-05:00",
+      "path": "ch-0018.json",
+      "title": "#radiology-follow-up-core"
+    },
+    {
+      "id": "em-0013",
+      "channel": "email",
+      "received_at": "2027-10-19T14:44:00-05:00",
+      "path": "em-0013.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "mn-0004",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-19T15:30:00-05:00",
+      "path": "mn-0004.md",
+      "title": "Recap: 1:1 Aroha / Anh"
+    },
+    {
+      "id": "ch-0019",
+      "channel": "chat",
+      "received_at": "2027-10-19T15:38:00-05:00",
+      "path": "ch-0019.json",
+      "title": "DM: Aroha Mendoza / Putri Ashby"
+    },
+    {
+      "id": "em-0014",
+      "channel": "email",
+      "received_at": "2027-10-19T15:52:00-05:00",
+      "path": "em-0014.eml",
+      "title": "FYI: A coffee with Putri about portal message routing"
+    },
+    {
+      "id": "ch-0020",
+      "channel": "chat",
+      "received_at": "2027-10-19T16:16:00-05:00",
+      "path": "ch-0020.json",
+      "title": "DM: Anh Villanueva / Aroha Mendoza"
+    },
+    {
+      "id": "em-0015",
+      "channel": "email",
+      "received_at": "2027-10-19T16:58:00-05:00",
+      "path": "em-0015.eml",
+      "title": "Re: Bed management selection evaluation rubric"
+    },
+    {
+      "id": "ch-0021",
+      "channel": "chat",
+      "received_at": "2027-10-19T17:59:00-05:00",
+      "path": "ch-0021.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0022",
+      "channel": "chat",
+      "received_at": "2027-10-19T18:14:00-05:00",
+      "path": "ch-0022.json",
+      "title": "DM: Andres Yamamoto / Aroha Mendoza"
+    },
+    {
+      "id": "em-0016",
+      "channel": "email",
+      "received_at": "2027-10-19T18:21:00-05:00",
+      "path": "em-0016.eml",
+      "title": "Re: FYI: Clelera volume tiers"
+    },
+    {
+      "id": "ch-0023",
+      "channel": "chat",
+      "received_at": "2027-10-19T18:27:00-05:00",
+      "path": "ch-0023.json",
+      "title": "DM: Aroha Mendoza / Anh Villanueva"
+    },
+    {
+      "id": "em-0017",
+      "channel": "email",
+      "received_at": "2027-10-19T18:32:00-05:00",
+      "path": "em-0017.eml",
+      "title": "Webinar: getting more from your data"
+    }
+  ]
+}

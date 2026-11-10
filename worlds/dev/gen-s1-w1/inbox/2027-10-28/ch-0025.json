@@ -4,15 +4,15 @@
  "kind": "channel",
  "participants": [
   "Petra Korkmaz",
-  "Camila Quimby",
+  "Camila Abernathy",
   "Jalen",
   "Sipho Sengupta",
-  "Dina Winslow",
+  "Dina Taufa",
   "Yasmin Mokoena",
-  "Nadia Volkov",
+  "Nadia Jovanovic",
   "Thandi",
   "Joselito Moradi",
-  "Imran Sato"
+  "Imran Achterhof"
  ],
  "messages": [
   {
@@ -31,7 +31,7 @@
   },
   {
    "ts": "2027-10-28T16:10:45-07:00",
-   "user": "Imran Sato",
+   "user": "Imran Achterhof",
    "handle": "@imran",
    "text": "got it",
    "thread_of": 0

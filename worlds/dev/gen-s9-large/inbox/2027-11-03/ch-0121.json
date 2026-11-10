@@ -1,0 +1,32 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Mathieu Wijaya",
+  "Kiran Hayashi",
+  "Mikayla Babic"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-03T17:03:34-05:00",
+   "user": "Mathieu Wijaya",
+   "handle": "@mathieu",
+   "text": "lost a blue umbrella, might be in the big meeting room"
+  },
+  {
+   "ts": "2027-11-03T17:09:51-05:00",
+   "user": "Kiran Hayashi",
+   "handle": "@kiran",
+   "text": "will keep an eye out :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-03T17:15:14-05:00",
+   "user": "Mikayla Babic",
+   "handle": "@mikayla",
+   "text": "there's one at reception",
+   "thread_of": 0
+  }
+ ]
+}

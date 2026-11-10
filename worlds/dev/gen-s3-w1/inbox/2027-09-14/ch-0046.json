@@ -1,32 +1,31 @@
 {
  "workspace": "birchmere",
- "channel": "#general",
- "kind": "channel",
+ "channel": "dm-alasdair-guadalupe",
+ "kind": "dm",
  "participants": [
-  "Katrin Watanabe",
-  "Deniz Zhou"
+  "Lupe",
+  "Alasdair Kaya"
  ],
  "messages": [
   {
-   "ts": "2027-09-14T12:47:47-05:00",
-   "user": "Katrin Watanabe",
-   "handle": "@katrin",
-   "text": "is it just me or is it freezing on 3 today?",
+   "ts": "2027-09-14T13:35:00-05:00",
+   "user": "Lupe",
+   "handle": "@guadalupe",
+   "text": "We're now in pivot on Lanmoor Bed Management Discovery.",
    "reactions": [
     {
-     "emoji": "pray",
+     "emoji": "+1",
      "users": [
-      "@deniz"
+      "@alasdair"
      ]
     }
    ]
   },
   {
-   "ts": "2027-09-14T12:48:32-05:00",
-   "user": "Deniz Zhou",
-   "handle": "@deniz",
-   "text": "not just you",
-   "thread_of": 0
+   "ts": "2027-09-14T13:35:12-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "good to know"
   }
  ]
 }

@@ -3,16 +3,16 @@
  "channel": "#benefits-screening-core",
  "kind": "channel",
  "participants": [
-  "Camila Quimby",
+  "Camila Abernathy",
   "Jalen",
-  "Andrei Abenova",
-  "Ifeoma Girard",
+  "Andrei Lindgren",
+  "Ifeoma Chevalier",
   "Corinne Kaya"
  ],
  "messages": [
   {
    "ts": "2027-10-29T18:25:00-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "@ifeoma just updated the benefits screening discovery pain-point list after your comments."
   },

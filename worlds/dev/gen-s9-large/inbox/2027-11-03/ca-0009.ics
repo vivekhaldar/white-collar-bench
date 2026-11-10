@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Kirkmarsh//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:874c6f87720f88f3@kirkmarsh.example
+DTSTAMP:20271103T175700Z
+DTSTART:20271105T180000Z
+DTEND:20271105T190000Z
+SUMMARY:Catch-up: Aroha / Milena
+ORGANIZER;CN=Milena Chebet:mailto:milena.chebet@clelera.example
+ATTENDEE;CN=Aroha Mendoza;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:aroha.mendoza@kirkmarsh.example
+SEQUENCE:0
+DESCRIPTION:Agenda: \nJoin video meeting: https://meet.kirkmarsh.example/j/2822189043?pwd=z7BMHNPb\nPasscode: 970425
+LOCATION:https://meet.kirkmarsh.example/j/2822189043?pwd=z7BMHNPb
+END:VEVENT
+END:VCALENDAR

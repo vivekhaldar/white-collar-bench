@@ -2,116 +2,138 @@
   "date": "2027-09-08",
   "artifacts": [
     {
+      "id": "ch-0013",
+      "channel": "chat",
+      "received_at": "2027-09-08T07:51:00-05:00",
+      "path": "ch-0013.json",
+      "title": "#okapi-core"
+    },
+    {
+      "id": "ch-0014",
+      "channel": "chat",
+      "received_at": "2027-09-08T08:55:00-05:00",
+      "path": "ch-0014.json",
+      "title": "DM: Alasdair Kaya / Eleni Fontaine"
+    },
+    {
+      "id": "ch-0015",
+      "channel": "chat",
+      "received_at": "2027-09-08T09:02:00-05:00",
+      "path": "ch-0015.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "em-0013",
+      "channel": "email",
+      "received_at": "2027-09-08T09:18:00-05:00",
+      "path": "em-0013.eml",
+      "title": "Wellbeing week activities"
+    },
+    {
+      "id": "ch-0016",
+      "channel": "chat",
+      "received_at": "2027-09-08T10:53:00-05:00",
+      "path": "ch-0016.json",
+      "title": "DM: Penelope Romano / Alasdair Kaya"
+    },
+    {
+      "id": "mt-0007",
+      "channel": "transcript",
+      "received_at": "2027-09-08T11:30:00-05:00",
+      "path": "mt-0007.vtt",
+      "title": "Funding model options review (transcript)"
+    },
+    {
+      "id": "em-0014",
+      "channel": "email",
+      "received_at": "2027-09-08T11:33:00-05:00",
+      "path": "em-0014.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
       "id": "ch-0017",
       "channel": "chat",
-      "received_at": "2027-09-08T07:54:00-05:00",
+      "received_at": "2027-09-08T11:34:00-05:00",
       "path": "ch-0017.json",
-      "title": "DM: Alasdair Kaya / Tunde Kapanadze"
+      "title": "#general"
     },
     {
       "id": "ch-0018",
       "channel": "chat",
-      "received_at": "2027-09-08T09:17:00-05:00",
+      "received_at": "2027-09-08T14:16:00-05:00",
       "path": "ch-0018.json",
-      "title": "DM: Guadalupe Lombardi / Alasdair Kaya"
+      "title": "#coffee"
+    },
+    {
+      "id": "ca-0003",
+      "channel": "calendar",
+      "received_at": "2027-09-08T14:57:00-05:00",
+      "path": "ca-0003.ics",
+      "title": "Invite: Okapi scoping call"
+    },
+    {
+      "id": "em-0015",
+      "channel": "email",
+      "received_at": "2027-09-08T15:28:00-05:00",
+      "path": "em-0015.eml",
+      "title": "[Scheduled] Network maintenance window"
     },
     {
       "id": "ch-0019",
       "channel": "chat",
-      "received_at": "2027-09-08T09:26:00-05:00",
+      "received_at": "2027-09-08T15:54:00-05:00",
       "path": "ch-0019.json",
-      "title": "#random"
+      "title": "#coffee"
     },
     {
-      "id": "em-0019",
+      "id": "em-0016",
       "channel": "email",
-      "received_at": "2027-09-08T09:36:00-05:00",
-      "path": "em-0019.eml",
-      "title": "Final name for Bittern"
+      "received_at": "2027-09-08T16:39:00-05:00",
+      "path": "em-0016.eml",
+      "title": "The Ward Round Digest: issue 36"
     },
     {
-      "id": "em-0020",
-      "channel": "email",
-      "received_at": "2027-09-08T09:37:00-05:00",
-      "path": "em-0020.eml",
-      "title": "Clinical IT Briefing: issue 36"
+      "id": "dc-0001",
+      "channel": "document",
+      "received_at": "2027-09-08T16:50:00-05:00",
+      "path": "dc-0001.pdf",
+      "title": "Okapi solution brief v3",
+      "parent": "em-0017"
     },
     {
-      "id": "em-0021",
+      "id": "em-0017",
       "channel": "email",
-      "received_at": "2027-09-08T09:43:00-05:00",
-      "path": "em-0021.eml",
-      "title": "Re: AI-use endorsement paper"
+      "received_at": "2027-09-08T16:50:00-05:00",
+      "path": "em-0017.eml",
+      "title": "Re: Okapi solution brief"
     },
     {
-      "id": "em-0022",
+      "id": "em-0018",
       "channel": "email",
-      "received_at": "2027-09-08T11:29:00-05:00",
-      "path": "em-0022.eml",
-      "title": "Room booking confirmation"
+      "received_at": "2027-09-08T16:59:00-05:00",
+      "path": "em-0018.eml",
+      "title": "FYI: Okapi solution brief"
     },
     {
       "id": "ch-0020",
       "channel": "chat",
-      "received_at": "2027-09-08T12:12:00-05:00",
+      "received_at": "2027-09-08T17:06:00-05:00",
       "path": "ch-0020.json",
-      "title": "#bed-management-discovery-core"
+      "title": "#coffee"
+    },
+    {
+      "id": "mn-0002",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-08T17:15:00-05:00",
+      "path": "mn-0002.md",
+      "title": "Recap: Referral triage discovery working session"
     },
     {
       "id": "ch-0021",
       "channel": "chat",
-      "received_at": "2027-09-08T13:34:00-05:00",
+      "received_at": "2027-09-08T17:46:00-05:00",
       "path": "ch-0021.json",
-      "title": "#random"
-    },
-    {
-      "id": "ch-0022",
-      "channel": "chat",
-      "received_at": "2027-09-08T13:36:00-05:00",
-      "path": "ch-0022.json",
-      "title": "DM: Tunde Kapanadze / Alasdair Kaya"
-    },
-    {
-      "id": "em-0023",
-      "channel": "email",
-      "received_at": "2027-09-08T14:06:00-05:00",
-      "path": "em-0023.eml",
-      "title": "Birchmere Responsible AI Use Framework: moving to endorsement"
-    },
-    {
-      "id": "ch-0023",
-      "channel": "chat",
-      "received_at": "2027-09-08T14:12:00-05:00",
-      "path": "ch-0023.json",
-      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
-    },
-    {
-      "id": "mt-0005",
-      "channel": "transcript",
-      "received_at": "2027-09-08T15:00:00-05:00",
-      "path": "mt-0005.vtt",
-      "title": "Intake forms selection scoring session (transcript)"
-    },
-    {
-      "id": "em-0024",
-      "channel": "email",
-      "received_at": "2027-09-08T16:20:00-05:00",
-      "path": "em-0024.eml",
-      "title": "Catering menu for next month"
-    },
-    {
-      "id": "ch-0024",
-      "channel": "chat",
-      "received_at": "2027-09-08T17:53:00-05:00",
-      "path": "ch-0024.json",
-      "title": "#general"
-    },
-    {
-      "id": "em-0025",
-      "channel": "email",
-      "received_at": "2027-09-08T18:12:00-05:00",
-      "path": "em-0025.eml",
-      "title": "Speaker spotlight"
+      "title": "#coffee"
     }
   ]
 }

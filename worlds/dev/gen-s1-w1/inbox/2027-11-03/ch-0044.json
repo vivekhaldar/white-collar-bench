@@ -3,14 +3,14 @@
  "channel": "#general",
  "kind": "channel",
  "participants": [
-  "Nadia Volkov",
-  "Yiannis Cabrera",
+  "Nadia Jovanovic",
+  "Yiannis Bustamante",
   "Joselito Moradi"
  ],
  "messages": [
   {
    "ts": "2027-11-03T08:18:55-07:00",
-   "user": "Nadia Volkov",
+   "user": "Nadia Jovanovic",
    "handle": "@nadia",
    "text": "lost a blue umbrella, might be in the big meeting room",
    "reactions": [
@@ -25,7 +25,7 @@
   },
   {
    "ts": "2027-11-03T08:22:38-07:00",
-   "user": "Yiannis Cabrera",
+   "user": "Yiannis Bustamante",
    "handle": "@yiannis",
    "text": "will keep an eye out"
   },

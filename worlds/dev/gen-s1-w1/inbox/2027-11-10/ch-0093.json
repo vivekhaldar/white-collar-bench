@@ -3,43 +3,43 @@
  "channel": "dm-andrei-camila",
  "kind": "dm",
  "participants": [
-  "Camila Quimby",
-  "Andrei Abenova"
+  "Camila Abernathy",
+  "Andrei Lindgren"
  ],
  "messages": [
   {
    "ts": "2027-11-10T18:10:10-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "hey"
   },
   {
    "ts": "2027-11-10T18:11:32-07:00",
-   "user": "Andrei Abenova",
+   "user": "Andrei Lindgren",
    "handle": "@andrei",
    "text": "sure, what's up?"
   },
   {
    "ts": "2027-11-10T18:11:53-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "done, i finished the benefits screening baseline analysis"
   },
   {
    "ts": "2027-11-10T18:13:11-07:00",
-   "user": "Andrei Abenova",
+   "user": "Andrei Lindgren",
    "handle": "@andrei",
    "text": "thank you!"
   },
   {
    "ts": "2027-11-10T18:16:29-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "did you catch the all-hands?"
   },
   {
    "ts": "2027-11-10T18:19:34-07:00",
-   "user": "Andrei Abenova",
+   "user": "Andrei Lindgren",
    "handle": "@andrei",
    "text": "only the first half"
   }

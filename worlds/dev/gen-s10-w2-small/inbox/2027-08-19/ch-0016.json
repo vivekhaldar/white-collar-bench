@@ -1,0 +1,47 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-solene",
+ "kind": "dm",
+ "participants": [
+  "Solene Zimmermann",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-19T17:51:48+01:00",
+   "user": "Solene Zimmermann",
+   "handle": "@solene",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-08-19T17:52:24+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-08-19T17:55:00+01:00",
+   "user": "Solene Zimmermann",
+   "handle": "@solene",
+   "text": "Would you be able to complete the Nettle privacy impact assessment?"
+  },
+  {
+   "ts": "2027-08-19T17:55:46+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "maybe, need to see how the week goes"
+  },
+  {
+   "ts": "2027-08-19T17:56:33+01:00",
+   "user": "Solene Zimmermann",
+   "handle": "@solene",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-08-19T17:59:52+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

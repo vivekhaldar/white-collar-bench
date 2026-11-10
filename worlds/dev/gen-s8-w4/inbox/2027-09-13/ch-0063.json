@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Amira Baek",
+  "Adwoa Kocak"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-13T13:21:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "you mentioned you'd arrange refreshments for the operator ai basics workshop, that works for me"
+  },
+  {
+   "ts": "2027-09-13T13:21:39-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "yep, on it"
+  },
+  {
+   "ts": "2027-09-13T13:26:14-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-09-13T13:29:24-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "remote, but online all day"
+  }
+ ]
+}

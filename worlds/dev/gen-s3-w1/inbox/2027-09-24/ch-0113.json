@@ -1,0 +1,43 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-victoria",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Victoria Hoffmann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-24T08:52:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "could you send me the okapi dependency list?",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@victoria"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-24T08:53:09-05:00",
+   "user": "Victoria Hoffmann",
+   "handle": "@victoria",
+   "text": "on it"
+  },
+  {
+   "ts": "2027-09-24T08:56:24-05:00",
+   "user": "Victoria Hoffmann",
+   "handle": "@victoria",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-09-24T08:59:32-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "yep, all good"
+  }
+ ]
+}

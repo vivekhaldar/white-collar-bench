@@ -1,0 +1,35 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-despina-wei",
+ "kind": "dm",
+ "participants": [
+  "Despina Pereira",
+  "Wei Rossi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-25T13:22:00-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "Leave it with me, I'll send you the reading list on captioning."
+  },
+  {
+   "ts": "2027-02-25T13:22:25-08:00",
+   "user": "Wei Rossi",
+   "handle": "@wei",
+   "text": "perfect, thanks"
+  },
+  {
+   "ts": "2027-02-25T13:23:28-08:00",
+   "user": "Wei Rossi",
+   "handle": "@wei",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-02-25T13:25:33-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

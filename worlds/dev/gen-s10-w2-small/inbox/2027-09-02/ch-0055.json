@@ -1,0 +1,31 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-akosua-aoife",
+ "kind": "dm",
+ "participants": [
+  "Aoife Everett",
+  "Akosua"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-02T16:23:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "Logged in fine, so the Nettle test tenant login is sorted. Starting the walkthrough tomorrow.",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@akosua"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-02T16:23:28+01:00",
+   "user": "Akosua",
+   "handle": "@akosua",
+   "text": "thanks for the heads up"
+  }
+ ]
+}

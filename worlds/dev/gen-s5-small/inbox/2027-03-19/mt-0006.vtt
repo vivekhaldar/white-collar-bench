@@ -1,0 +1,199 @@
+WEBVTT
+
+NOTE
+Meeting: Wagtail standup
+Date: Friday 19 March 2027, 9:30am to 9:55am
+Attendees: Isla Faure (Falbury Community Clinics), Hiba Deng, Anahit Fifita, Rudo Ekwueme (Falbury Community Clinics), Lakshmi Figueroa, Friederike Bhatt, Jisoo Nowak, Maricel Fuentes
+Transcript generated automatically. Speaker names and spellings may be inaccurate.
+
+1
+00:00:04.332 --> 00:00:05.871
+<v Isla Faure>Is the recording on?
+
+2
+00:00:07.020 --> 00:00:09.327
+<v Rudo Ekwueme>I think so, the light's on.
+
+3
+00:02:07.730 --> 00:02:11.191
+<v Isla Faure>Let's get going, we've got a lot to cover.
+
+4
+00:02:12.447 --> 00:02:13.985
+<v Isla Faure>Let's start with Wagtail.
+
+5
+00:03:47.272 --> 00:03:51.118
+<v Hiba Deng>Falbury Clinical Documentation Discovery has moved to the analysis phase.
+
+6
+00:03:52.339 --> 00:03:53.339
+<v Maricel Fuentes>I see.
+
+7
+00:03:54.397 --> 00:03:56.320
+<v Jisoo Nowak>Is that written down anywhere?
+
+8
+00:03:56.902 --> 00:03:59.209
+<v Hiba Deng>It's in the shared folder somewhere.
+
+9
+00:04:00.075 --> 00:04:02.767
+<v Rudo Ekwueme>I'd rather we didn't escalate this yet.
+
+10
+00:04:03.279 --> 00:04:04.279
+<v Anahit Fifita>Right.
+
+11
+00:04:04.571 --> 00:04:05.571
+<v Rudo Ekwueme>Yeah.
+
+12
+00:04:29.722 --> 00:04:32.799
+<v Rudo Ekwueme>Could you review my Okapi metrics definition, Hibah?
+
+13
+00:04:33.757 --> 00:04:38.372
+<v Hiba Deng>Let me check what I've got on and come back to you.
+
+14
+00:04:39.236 --> 00:04:40.236
+<v Isla Faure>Makes sense.
+
+15
+00:04:41.489 --> 00:04:42.489
+<v Anahit Fifita>Uh-huh.
+
+16
+00:04:43.548 --> 00:04:46.625
+<v Hiba Deng>We said the same thing a month ago.
+
+17
+00:04:47.130 --> 00:04:48.130
+<v Rudo Ekwueme>Yeah, true.
+
+18
+00:04:48.741 --> 00:04:49.741
+<v Anahit Fifita>Okay, yeah.
+
+19
+00:08:09.036 --> 00:08:12.498
+<v Friederike Bhatt>Also, cake in the kitchen if anyone wants some.
+
+20
+00:08:13.242 --> 00:08:14.242
+<v Isla Faure>Mm.
+
+21
+00:10:33.087 --> 00:10:39.241
+<v Anahit Fifita>Hiba, would you be able to write a reference note for my referral triage fellowship application?
+
+22
+00:10:39.441 --> 00:10:40.980
+<v Hiba Deng>I'll think about it.
+
+23
+00:10:41.635 --> 00:10:42.635
+<v Isla Faure>Mm, okay.
+
+24
+00:10:43.808 --> 00:10:44.808
+<v Hiba Deng>Right, right.
+
+25
+00:10:45.816 --> 00:10:47.739
+<v Rudo Ekwueme>Does that work for everyone?
+
+26
+00:10:48.049 --> 00:10:49.203
+<v Hiba Deng>Fine by me.
+
+27
+00:10:49.878 --> 00:10:50.878
+<v Friederike Bhatt>Mm.
+
+28
+00:10:52.240 --> 00:10:53.240
+<v Rudo Ekwueme>Got it.
+
+29
+00:10:54.425 --> 00:10:57.886
+<v Lakshmi F.>My concern is mostly the timeline, to be honest.
+
+30
+00:10:58.417 --> 00:10:59.417
+<v Hiba Deng>Mm-hmm.
+
+31
+00:11:00.672 --> 00:11:01.672
+<v Maricel Fuentes>Fair.
+
+32
+00:11:02.258 --> 00:11:05.719
+<v Friederike Bhatt>The feedback from the last session was pretty mixed.
+
+33
+00:11:06.549 --> 00:11:07.549
+<v Anahit Fifita>Okay.
+
+34
+00:11:08.879 --> 00:11:09.879
+<v Rudo Ekwueme>Yeah.
+
+35
+00:15:08.848 --> 00:15:13.463
+<v Hiba Deng>Freederike, would you be able to send me the Wagtail change request?
+
+36
+00:15:13.756 --> 00:15:15.679
+<v Friederike Bhatt>Sure, I can do that.
+
+37
+00:15:16.341 --> 00:15:17.341
+<v Hiba Deng>Makes sense.
+
+38
+00:15:18.530 --> 00:15:19.530
+<v Maricel Fuentes>Uh-huh.
+
+39
+00:15:20.113 --> 00:15:22.805
+<v Jisoo Nowak>Who else needs to know about this?
+
+40
+00:15:23.326 --> 00:15:26.018
+<v Friederike Bhatt>Probably just the people here for now.
+
+41
+00:15:27.142 --> 00:15:28.142
+<v Rudo Ekwueme>Got it.
+
+42
+00:15:29.033 --> 00:15:30.033
+<v Isla Faure>Mm-hmm.
+
+43
+00:15:31.360 --> 00:15:34.437
+<v Jisoo Nowak>The main thing is just getting people's time.
+
+44
+00:15:35.263 --> 00:15:36.263
+<v Rudo Ekwueme>Okay, yeah.
+
+45
+00:15:37.529 --> 00:15:38.529
+<v Maricel Fuentes>Yeah, true.
+
+46
+00:15:39.470 --> 00:15:40.470
+<v Friederike Bhatt>Right.
+
+47
+00:15:44.091 --> 00:15:46.784
+<v Isla Faure>Okay, thanks, I'll let you all go.
+
+48
+00:15:47.384 --> 00:15:48.384
+<v Anahit Fifita>Bye.

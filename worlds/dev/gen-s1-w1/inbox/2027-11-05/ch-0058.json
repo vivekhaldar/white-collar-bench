@@ -3,13 +3,13 @@
  "channel": "dm-camila-jalen",
  "kind": "dm",
  "participants": [
-  "Jalen Hendriks",
-  "Camila Quimby"
+  "Jalen Sandberg",
+  "Camila Abernathy"
  ],
  "messages": [
   {
    "ts": "2027-11-05T09:14:00-07:00",
-   "user": "Jalen Hendriks",
+   "user": "Jalen Sandberg",
    "handle": "@jalen",
    "text": "Leave it with me, I'll send you the Marten council memo."
   }

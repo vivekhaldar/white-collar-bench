@@ -1,0 +1,43 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#funding-model-core",
+ "kind": "channel",
+ "participants": [
+  "Anh",
+  "Aroha Mendoza",
+  "Achieng Colombo",
+  "Michaela Dang",
+  "Aino Menon"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-04T07:35:00-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "Aroha would like Achieng Colombo to share the funding model pricing options table with Aroha, not agreed yet! :)",
+   "edited": true,
+   "original": "Aroha would like Achieng Colombo to share the funding model prciing options table with Aroha, not agreed yet! :)"
+  },
+  {
+   "ts": "2027-11-04T07:36:01-05:00",
+   "user": "Aino Menon",
+   "handle": "@aino",
+   "text": "noted",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-04T07:45:30-05:00",
+   "user": "Aino Menon",
+   "handle": "@aino",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-04T07:51:08-05:00",
+   "user": "Michaela Dang",
+   "handle": "@michaela",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

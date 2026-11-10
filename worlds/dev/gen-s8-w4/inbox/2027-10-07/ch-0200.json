@@ -1,0 +1,29 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Adwoa Kocak",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-07T16:46:24-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-10-07T16:47:00-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "Kiran asked if you could introduce them to Adwoa for the Wilhaven working group."
+  },
+  {
+   "ts": "2027-10-07T16:47:28-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "on it"
+  }
+ ]
+}

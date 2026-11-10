@@ -8,8 +8,8 @@ DTSTAMP:20271110T004400Z
 DTSTART:20271110T220000Z
 DTEND:20271110T230000Z
 SUMMARY:Nantgate partnership sync
-ORGANIZER;CN=Jalen Hendriks:mailto:jalen.hendriks@holcrest.example
-ATTENDEE;CN=Camila Quimby;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:camila.quimby@holcrest.example
+ORGANIZER;CN=Jalen Sandberg:mailto:jalen.sandberg@holcrest.example
+ATTENDEE;CN=Camila Abernathy;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:camila.abernathy@holcrest.example
 ATTENDEE;CN=Petra Korkmaz;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:petra.korkmaz@birchcrest.holcrest.example
 SEQUENCE:0
 DESCRIPTION:Quick sync\, 30 minutes.\nJoin video meeting: https://meet.holcrest.example/j/9180643597?pwd=qF7mDTfy\nPasscode: 073315

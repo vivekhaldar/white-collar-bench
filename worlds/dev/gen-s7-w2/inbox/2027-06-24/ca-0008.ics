@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Corrstead//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:f8bcf99cfb9809eb@corrstead.example
+DTSTAMP:20270625T010800Z
+DTSTART:20270628T190000Z
+DTEND:20270628T193000Z
+SUMMARY:Updated: Catch-up: Hiba / Catalina
+ORGANIZER;CN=Catalina Achterhof:mailto:catalina.achterhof@torane.example
+ATTENDEE;CN=Hiba Jimenez;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.jimenez@corrstead.example
+SEQUENCE:1
+DESCRIPTION:New time\, same agenda.\nJoin video meeting: https://meet.corrstead.example/j/9171152729?pwd=faBFNMkB\nPasscode: 029294
+LOCATION:https://meet.corrstead.example/j/9171152729?pwd=faBFNMkB
+END:VEVENT
+END:VCALENDAR

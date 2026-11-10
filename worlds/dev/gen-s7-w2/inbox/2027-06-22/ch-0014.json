@@ -1,0 +1,24 @@
+{
+ "workspace": "corrstead",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Emre Khumalo",
+  "Desmond Visser"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-22T16:27:24-08:00",
+   "user": "Emre Khumalo",
+   "handle": "@emre",
+   "text": "lost a blue umbrella, might be in the big meeting room"
+  },
+  {
+   "ts": "2027-06-22T16:30:20-08:00",
+   "user": "Desmond Visser",
+   "handle": "@desmond",
+   "text": "will keep an eye out :)",
+   "thread_of": 0
+  }
+ ]
+}

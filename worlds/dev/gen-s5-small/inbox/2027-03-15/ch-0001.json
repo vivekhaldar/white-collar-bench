@@ -3,19 +3,19 @@
  "channel": "#general",
  "kind": "channel",
  "participants": [
-  "Anahit Upton",
-  "Hiba Xu"
+  "Anahit Fifita",
+  "Hiba Deng"
  ],
  "messages": [
   {
    "ts": "2027-03-15T13:06:35-05:00",
-   "user": "Anahit Upton",
+   "user": "Anahit Fifita",
    "handle": "@anahit",
    "text": "anyone up for coffee at 3?"
   },
   {
    "ts": "2027-03-15T13:12:02-05:00",
-   "user": "Hiba Xu",
+   "user": "Hiba Deng",
    "handle": "@hiba",
    "text": "me!"
   }

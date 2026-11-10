@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Birchmere//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:6f24a1480d580c1a@birchmere.example
+DTSTAMP:20270920T233500Z
+DTSTART:20270923T190000Z
+DTEND:20270923T193000Z
+SUMMARY:Walkthrough: Okapi downtime procedure
+ORGANIZER;CN=Alasdair Kaya:mailto:alasdair.kaya@birchmere.example
+ATTENDEE;CN=Penelope Romano;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:penelope.romano@birchmere.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.birchmere.example/j/4471740310?pwd=z7J8GrD6\nPasscode: 257476
+LOCATION:https://meet.birchmere.example/j/4471740310?pwd=z7J8GrD6
+END:VEVENT
+END:VCALENDAR

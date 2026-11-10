@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lanhurst//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:3c8047618656a79c@lanhurst.example
+DTSTAMP:20270223T022300Z
+DTSTART:20270225T220000Z
+DTEND:20270225T223000Z
+SUMMARY:Walkthrough: Axolotl decision memo
+ORGANIZER;CN=Despina Pereira:mailto:despina.pereira@lanhurst.example
+ATTENDEE;CN=Liisa Babic;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:liisa.babic@lanhurst.example
+SEQUENCE:0
+DESCRIPTION:Quick sync\, 30 minutes.\nJoin video meeting: https://meet.lanhurst.example/j/3718524782?pwd=Y7yZTczJ\nPasscode: 588509
+LOCATION:https://meet.lanhurst.example/j/3718524782?pwd=Y7yZTczJ
+END:VEVENT
+END:VCALENDAR

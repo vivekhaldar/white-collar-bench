@@ -1,0 +1,29 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-putri",
+ "kind": "dm",
+ "participants": [
+  "Aroha Mendoza",
+  "Putri Ashby"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-04T15:41:00-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "A coffee with you about portal message routing is on hold until I hear back from you."
+  },
+  {
+   "ts": "2027-11-04T15:43:40-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-11-04T15:46:40-05:00",
+   "user": "Putri Ashby",
+   "handle": "@putri",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

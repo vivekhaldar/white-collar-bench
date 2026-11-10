@@ -3,19 +3,19 @@
  "channel": "dm-aarav-camila",
  "kind": "dm",
  "participants": [
-  "Aarav Ortega",
-  "Camila Quimby"
+  "Aarav Zamora",
+  "Camila Abernathy"
  ],
  "messages": [
   {
    "ts": "2027-11-01T12:28:55-07:00",
-   "user": "Aarav Ortega",
+   "user": "Aarav Zamora",
    "handle": "@aarav",
    "text": "For the record, you completed the Marten privacy impact assessment on Friday."
   },
   {
    "ts": "2027-11-01T12:29:31-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "thanks for the heads up"
   }

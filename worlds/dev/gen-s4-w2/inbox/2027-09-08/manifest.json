@@ -13,14 +13,14 @@
       "channel": "chat",
       "received_at": "2027-09-08T09:16:00-08:00",
       "path": "ch-0080.json",
-      "title": "DM: Meera Kariuki / Ottavio Monteiro"
+      "title": "DM: Meera Kariuki / Ottavio Moreira"
     },
     {
       "id": "ch-0081",
       "channel": "chat",
       "received_at": "2027-09-08T09:38:00-08:00",
       "path": "ch-0081.json",
-      "title": "DM: Ottavio Monteiro / Esperanza Rao"
+      "title": "DM: Ottavio Moreira / Esperanza Venkataraman"
     },
     {
       "id": "ca-0009",
@@ -41,7 +41,7 @@
       "channel": "chat",
       "received_at": "2027-09-08T10:12:00-08:00",
       "path": "ch-0082.json",
-      "title": "DM: Ottavio Monteiro / Ewan Shrestha"
+      "title": "DM: Ottavio Moreira / Ewan Naidu"
     },
     {
       "id": "em-0115",
@@ -104,28 +104,28 @@
       "channel": "chat",
       "received_at": "2027-09-08T17:16:00-08:00",
       "path": "ch-0085.json",
-      "title": "DM: Ottavio Monteiro / Magdalena Barbosa"
+      "title": "DM: Ottavio Moreira / Magdalena Monteiro"
     },
     {
       "id": "ch-0086",
       "channel": "chat",
       "received_at": "2027-09-08T18:21:00-08:00",
       "path": "ch-0086.json",
-      "title": "DM: Darius Sherwood / Ottavio Monteiro"
+      "title": "DM: Darius Bramwell / Ottavio Moreira"
     },
     {
       "id": "ch-0087",
       "channel": "chat",
       "received_at": "2027-09-08T18:25:00-08:00",
       "path": "ch-0087.json",
-      "title": "DM: Ottavio Monteiro / Ratna Bondarenko"
+      "title": "DM: Ottavio Moreira / Ratna Nikolic"
     },
     {
       "id": "ch-0088",
       "channel": "chat",
       "received_at": "2027-09-08T18:28:00-08:00",
       "path": "ch-0088.json",
-      "title": "DM: Ottavio Monteiro / Meera Ivanova"
+      "title": "DM: Ottavio Moreira / Meera Bondarenko"
     }
   ]
 }

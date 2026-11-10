@@ -1,0 +1,43 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Tavo",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-05T12:27:03-06:00",
+   "user": "Tavo",
+   "handle": "@ottavio",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-10-05T12:31:00-06:00",
+   "user": "Tavo",
+   "handle": "@ottavio",
+   "text": "On it, I'll send you Rosia volume pricing!",
+   "edited": true,
+   "original": "On it, I'll send you Rsoia volume pricing!"
+  },
+  {
+   "ts": "2027-10-05T12:31:08-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "great, thank you"
+  },
+  {
+   "ts": "2027-10-05T12:32:13-06:00",
+   "user": "Tavo",
+   "handle": "@ottavio",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-10-05T12:32:36-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "yep, all good"
+  }
+ ]
+}

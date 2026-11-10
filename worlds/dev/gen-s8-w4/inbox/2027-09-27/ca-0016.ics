@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iselmoor//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:547ed83cbfa33b52@iselmoor.example
+DTSTAMP:20270927T194300Z
+DTSTART:20270928T210000Z
+DTEND:20270928T214500Z
+SUMMARY:Safety reporting discovery review
+ORGANIZER;CN=Adwoa Kocak:mailto:adwoa.kocak@iselmoor.example
+ATTENDEE;CN=Amira Baek;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:amira.baek@iselmoor.example
+ATTENDEE;CN=Tane Haugen;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:tane.haugen@morcliff.iselmoor.example
+SEQUENCE:0
+DESCRIPTION:Placeholder\, agenda to follow.\nJoin video meeting: https://meet.iselmoor.example/j/0362563907?pwd=Je7rAXq5\nPasscode: 725029
+LOCATION:https://meet.iselmoor.example/j/0362563907?pwd=Je7rAXq5
+END:VEVENT
+END:VCALENDAR

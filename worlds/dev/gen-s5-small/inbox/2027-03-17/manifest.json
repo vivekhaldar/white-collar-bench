@@ -27,7 +27,7 @@
       "channel": "chat",
       "received_at": "2027-03-17T09:05:00-05:00",
       "path": "ch-0009.json",
-      "title": "DM: Jisoo Makinen / Hiba Xu"
+      "title": "DM: Jisoo Nowak / Hiba Deng"
     },
     {
       "id": "mt-0003",
@@ -62,14 +62,14 @@
       "channel": "email",
       "received_at": "2027-03-17T17:13:00-05:00",
       "path": "em-0014.eml",
-      "title": "Referral backlog wait-time export"
+      "title": "Re: Referral backlog wait-time export"
     },
     {
       "id": "ch-0010",
       "channel": "chat",
       "received_at": "2027-03-17T18:46:00-05:00",
       "path": "ch-0010.json",
-      "title": "DM: Mateo Pritchard / Hiba Xu"
+      "title": "DM: Rudo Ekwueme / Hiba Deng"
     }
   ]
 }

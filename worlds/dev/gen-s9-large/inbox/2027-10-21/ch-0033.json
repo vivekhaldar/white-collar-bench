@@ -1,0 +1,41 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-aroha-putri",
+ "kind": "dm",
+ "participants": [
+  "Aroha Mendoza",
+  "Putri Ashby"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-21T15:57:11-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-10-21T15:57:41-05:00",
+   "user": "Putri Ashby",
+   "handle": "@putri",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-10-21T15:59:00-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "i can circulate the ai-use framework draft v1"
+  },
+  {
+   "ts": "2027-10-21T16:00:27-05:00",
+   "user": "Putri Ashby",
+   "handle": "@putri",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-10-21T16:02:46-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "yep, all good"
+  }
+ ]
+}

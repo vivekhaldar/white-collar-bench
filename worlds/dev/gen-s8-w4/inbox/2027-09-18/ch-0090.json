@@ -1,0 +1,23 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-kamau",
+ "kind": "dm",
+ "participants": [
+  "Kamau Greco",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-18T09:45:47-06:00",
+   "user": "Kamau Greco",
+   "handle": "@kamau",
+   "text": "recap from tuesday: you looked into the fulmar export failures"
+  },
+  {
+   "ts": "2027-09-18T09:46:27-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "got it"
+  }
+ ]
+}

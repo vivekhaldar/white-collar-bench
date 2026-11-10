@@ -5,8 +5,8 @@
  "participants": [
   "Yasmin Mokoena",
   "Joselito Moradi",
-  "Jalen Hendriks",
-  "Yiannis Cabrera"
+  "Jalen Sandberg",
+  "Yiannis Bustamante"
  ],
  "messages": [
   {
@@ -33,7 +33,7 @@
   },
   {
    "ts": "2027-10-26T08:31:15-07:00",
-   "user": "Jalen Hendriks",
+   "user": "Jalen Sandberg",
    "handle": "@jalen",
    "text": "again?"
   }

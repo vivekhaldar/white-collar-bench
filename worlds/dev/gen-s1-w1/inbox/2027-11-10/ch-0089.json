@@ -3,13 +3,13 @@
  "channel": "dm-camila-yasmin",
  "kind": "dm",
  "participants": [
-  "Camila Quimby",
+  "Camila Abernathy",
   "Yasmin Mokoena"
  ],
  "messages": [
   {
    "ts": "2027-11-10T15:19:30-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "got a sec?"
   },
@@ -21,7 +21,7 @@
   },
   {
    "ts": "2027-11-10T15:20:30-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "i reviewed your marten service blueprint"
   },
@@ -33,7 +33,7 @@
   },
   {
    "ts": "2027-11-10T15:25:30-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "sorry, was in back-to-backs"
   },

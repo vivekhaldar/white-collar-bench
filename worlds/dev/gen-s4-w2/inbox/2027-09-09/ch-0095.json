@@ -3,18 +3,18 @@
  "channel": "#cairn-core",
  "kind": "channel",
  "participants": [
-  "Meera Ivanova",
-  "Ottavio Monteiro",
-  "Theresa Nagy",
-  "Darius Sherwood",
-  "Ratna Bondarenko",
-  "Bruna Sinclair",
+  "Meera Bondarenko",
+  "Ottavio Moreira",
+  "Theresa Petrov",
+  "Darius Bramwell",
+  "Ratna Nikolic",
+  "Bruna Vaughan",
   "Nomvula Ndlovu"
  ],
  "messages": [
   {
    "ts": "2027-09-09T12:01:00-08:00",
-   "user": "Meera Ivanova",
+   "user": "Meera Bondarenko",
    "handle": "@meera",
    "text": "@ottavio could you update the Cairn evaluation rubric after my comments by 10 September?",
    "edited": true,
@@ -29,21 +29,21 @@
   },
   {
    "ts": "2027-09-09T12:03:10-08:00",
-   "user": "Ratna Bondarenko",
+   "user": "Ratna Nikolic",
    "handle": "@ratna",
    "text": "following",
    "thread_of": 0
   },
   {
    "ts": "2027-09-09T12:12:51-08:00",
-   "user": "Theresa Nagy",
+   "user": "Theresa Petrov",
    "handle": "@theresa",
    "text": "following",
    "thread_of": 0
   },
   {
    "ts": "2027-09-09T12:15:13-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "following",
    "thread_of": 0

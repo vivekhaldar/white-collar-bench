@@ -3,37 +3,37 @@
  "channel": "dm-dina-xiaoling",
  "kind": "dm",
  "participants": [
-  "Dina Zimmermann",
-  "Xiaoling Winslow"
+  "Dina Ricci",
+  "Xiaoling Taufa"
  ],
  "messages": [
   {
    "ts": "2027-03-03T07:14:54-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "got a sec?"
   },
   {
    "ts": "2027-03-03T07:20:00-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "Done, I sent you the Mistral RACI chart."
   },
   {
    "ts": "2027-03-03T07:20:32-07:00",
-   "user": "Xiaoling Winslow",
+   "user": "Xiaoling Taufa",
    "handle": "@xiaoling",
    "text": "got it, thanks :)"
   },
   {
    "ts": "2027-03-03T07:23:44-07:00",
-   "user": "Xiaoling Winslow",
+   "user": "Xiaoling Taufa",
    "handle": "@xiaoling",
    "text": "thanks again for earlier"
   },
   {
    "ts": "2027-03-03T07:25:01-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "anytime"
   }

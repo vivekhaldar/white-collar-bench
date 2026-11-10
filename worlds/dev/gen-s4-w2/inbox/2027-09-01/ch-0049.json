@@ -3,20 +3,20 @@
  "channel": "#fjord-core",
  "kind": "channel",
  "participants": [
-  "Ottavio Monteiro",
-  "Darius Sherwood",
+  "Ottavio Moreira",
+  "Darius Bramwell",
   "Meera",
-  "Ratna Bondarenko",
+  "Ratna Nikolic",
   "Resi",
   "Nomvula Ndlovu",
-  "Bruna Sinclair",
+  "Bruna Vaughan",
   "Espe",
   "Yaroslav Moyo"
  ],
  "messages": [
   {
    "ts": "2027-09-01T09:54:00-08:00",
-   "user": "Ottavio Monteiro",
+   "user": "Ottavio Moreira",
    "handle": "@ottavio",
    "text": "@darius before I can finish the Fjord solution brief I need your input, over to you for now.",
    "reactions": [
@@ -30,7 +30,7 @@
   },
   {
    "ts": "2027-09-01T09:54:49-08:00",
-   "user": "Bruna Sinclair",
+   "user": "Bruna Vaughan",
    "handle": "@bruna",
    "text": "ok"
   },

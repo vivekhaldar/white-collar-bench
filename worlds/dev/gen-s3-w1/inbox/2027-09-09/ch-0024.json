@@ -1,0 +1,47 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-lindiwe",
+ "kind": "dm",
+ "participants": [
+  "Lindiwe Ahmadi",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-09T08:05:29-05:00",
+   "user": "Lindiwe Ahmadi",
+   "handle": "@lindiwe",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-09T08:06:49-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-09T08:09:00-05:00",
+   "user": "Lindiwe Ahmadi",
+   "handle": "@lindiwe",
+   "text": "Dina is expecting you to write a reference note for their prior authorization fellowship application."
+  },
+  {
+   "ts": "2027-09-09T08:09:24-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "yep, on it"
+  },
+  {
+   "ts": "2027-09-09T08:13:02-05:00",
+   "user": "Lindiwe Ahmadi",
+   "handle": "@lindiwe",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-09-09T08:16:48-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "later!"
+  }
+ ]
+}

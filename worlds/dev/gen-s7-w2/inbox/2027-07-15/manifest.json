@@ -1,0 +1,153 @@
+{
+  "date": "2027-07-15",
+  "artifacts": [
+    {
+      "id": "ch-0122",
+      "channel": "chat",
+      "received_at": "2027-07-15T08:17:00-08:00",
+      "path": "ch-0122.json",
+      "title": "DM: Desmond Visser / Hiba Jimenez"
+    },
+    {
+      "id": "ch-0123",
+      "channel": "chat",
+      "received_at": "2027-07-15T08:23:00-08:00",
+      "path": "ch-0123.json",
+      "title": "DM: Andrei Laurent / Hiba Jimenez"
+    },
+    {
+      "id": "ch-0124",
+      "channel": "chat",
+      "received_at": "2027-07-15T08:46:00-08:00",
+      "path": "ch-0124.json",
+      "title": "DM: Bolat Oyelami / Hiba Jimenez"
+    },
+    {
+      "id": "em-0148",
+      "channel": "email",
+      "received_at": "2027-07-15T09:36:00-08:00",
+      "path": "em-0148.eml",
+      "title": "Holmarsh working paper"
+    },
+    {
+      "id": "em-0149",
+      "channel": "email",
+      "received_at": "2027-07-15T09:37:00-08:00",
+      "path": "em-0149.eml",
+      "title": "Re: Admissions triage selection reference-check notes"
+    },
+    {
+      "id": "em-0150",
+      "channel": "email",
+      "received_at": "2027-07-15T09:37:00-08:00",
+      "path": "em-0150.eml",
+      "title": "Re: Holmarsh partnership event invitation"
+    },
+    {
+      "id": "mn-0020",
+      "channel": "meeting_notes",
+      "received_at": "2027-07-15T10:00:00-08:00",
+      "path": "mn-0020.md",
+      "title": "Recap: Garnet standup"
+    },
+    {
+      "id": "mt-0023",
+      "channel": "transcript",
+      "received_at": "2027-07-15T10:00:00-08:00",
+      "path": "mt-0023.vtt",
+      "title": "Garnet standup (transcript)"
+    },
+    {
+      "id": "ch-0125",
+      "channel": "chat",
+      "received_at": "2027-07-15T10:04:00-08:00",
+      "path": "ch-0125.json",
+      "title": "DM: Hiba Jimenez / Ewan Laine"
+    },
+    {
+      "id": "em-0151",
+      "channel": "email",
+      "received_at": "2027-07-15T10:40:00-08:00",
+      "path": "em-0151.eml",
+      "title": "[REQ-38675] Request resolved"
+    },
+    {
+      "id": "dc-0005",
+      "channel": "document",
+      "received_at": "2027-07-15T10:52:00-08:00",
+      "path": "dc-0005.xlsx",
+      "title": "Siskin stakeholder map v3",
+      "parent": "em-0152"
+    },
+    {
+      "id": "em-0152",
+      "channel": "email",
+      "received_at": "2027-07-15T10:52:00-08:00",
+      "path": "em-0152.eml",
+      "title": "Siskin stakeholder map"
+    },
+    {
+      "id": "em-0153",
+      "channel": "email",
+      "received_at": "2027-07-15T11:34:00-08:00",
+      "path": "em-0153.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0126",
+      "channel": "chat",
+      "received_at": "2027-07-15T11:54:00-08:00",
+      "path": "ch-0126.json",
+      "title": "DM: Emre Khumalo / Hiba Jimenez"
+    },
+    {
+      "id": "em-0154",
+      "channel": "email",
+      "received_at": "2027-07-15T13:18:00-08:00",
+      "path": "em-0154.eml",
+      "title": "Re: Waitlist management discovery site visit agenda"
+    },
+    {
+      "id": "ch-0127",
+      "channel": "chat",
+      "received_at": "2027-07-15T14:15:00-08:00",
+      "path": "ch-0127.json",
+      "title": "DM: Hiba Jimenez / Bolat Oyelami"
+    },
+    {
+      "id": "nt-0013",
+      "channel": "note",
+      "received_at": "2027-07-15T15:00:00-08:00",
+      "path": "nt-0013.md",
+      "title": "Voice debrief: Garnet security review"
+    },
+    {
+      "id": "ch-0128",
+      "channel": "chat",
+      "received_at": "2027-07-15T15:07:00-08:00",
+      "path": "ch-0128.json",
+      "title": "#garnet-core"
+    },
+    {
+      "id": "em-0155",
+      "channel": "email",
+      "received_at": "2027-07-15T15:30:00-08:00",
+      "path": "em-0155.eml",
+      "title": "Garnet integration spec"
+    },
+    {
+      "id": "em-0156",
+      "channel": "email",
+      "received_at": "2027-07-15T16:51:00-08:00",
+      "path": "em-0156.eml",
+      "title": "[INC-43383] Ticket updated"
+    },
+    {
+      "id": "ch-0129",
+      "channel": "chat",
+      "received_at": "2027-07-15T18:17:00-08:00",
+      "path": "ch-0129.json",
+      "title": "DM: Hiba Jimenez / Bolat Oyelami"
+    }
+  ]
+}

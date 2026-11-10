@@ -1,35 +1,35 @@
 {
  "workspace": "birchmere",
- "channel": "dm-alasdair-katarzyna",
+ "channel": "dm-alasdair-bisi",
  "kind": "dm",
  "participants": [
-  "Alasdair Kaya",
-  "Kasia"
+  "Bisi Chatterjee",
+  "Alasdair Kaya"
  ],
  "messages": [
   {
-   "ts": "2027-09-06T08:33:00-05:00",
+   "ts": "2027-09-06T07:31:00-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "The finance director is expecting you to update the funding model assumptions log after their comments! :)"
+  },
+  {
+   "ts": "2027-09-06T07:31:36-05:00",
    "user": "Alasdair Kaya",
    "handle": "@alasdair",
-   "text": "when you get a chance, could you send me the list of pilot wards for okapi?"
+   "text": "sure, can do"
   },
   {
-   "ts": "2027-09-06T08:33:15-05:00",
-   "user": "Kasia",
-   "handle": "@katarzyna",
-   "text": "on it"
-  },
-  {
-   "ts": "2027-09-06T08:38:10-05:00",
-   "user": "Kasia",
-   "handle": "@katarzyna",
-   "text": "did you catch the all-hands?"
-  },
-  {
-   "ts": "2027-09-06T08:38:48-05:00",
+   "ts": "2027-09-06T07:34:19-05:00",
    "user": "Alasdair Kaya",
    "handle": "@alasdair",
-   "text": "only the first half"
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-09-06T07:38:04-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "no worries"
   }
  ]
 }

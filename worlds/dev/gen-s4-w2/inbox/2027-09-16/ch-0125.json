@@ -3,27 +3,27 @@
  "channel": "#fjord-core",
  "kind": "channel",
  "participants": [
-  "Darius Sherwood",
-  "Ottavio Monteiro",
+  "Darius Bramwell",
+  "Ottavio Moreira",
   "Meera",
-  "Ratna Bondarenko",
-  "Theresa Nagy",
+  "Ratna Nikolic",
+  "Theresa Petrov",
   "Nomvula Ndlovu",
-  "Bruna Sinclair",
-  "Esperanza Rao",
+  "Bruna Vaughan",
+  "Esperanza Venkataraman",
   "Yaroslav Moyo",
-  "Celine Wisniewska"
+  "Celine Novotny"
  ],
  "messages": [
   {
    "ts": "2027-09-15T10:27:19-08:00",
-   "user": "Darius Sherwood",
+   "user": "Darius Bramwell",
    "handle": "@darius",
    "text": "catching people up since a few of us are out today"
   },
   {
    "ts": "2027-09-15T10:31:00-08:00",
-   "user": "Darius Sherwood",
+   "user": "Darius Bramwell",
    "handle": "@darius",
    "text": "@ottavio could you review my Fjord support model?"
   },
@@ -42,21 +42,21 @@
   },
   {
    "ts": "2027-09-15T10:37:27-08:00",
-   "user": "Celine Wisniewska",
+   "user": "Celine Novotny",
    "handle": "@celine",
    "text": "thanks for flagging",
    "thread_of": 1
   },
   {
    "ts": "2027-09-15T10:40:53-08:00",
-   "user": "Ratna Bondarenko",
+   "user": "Ratna Nikolic",
    "handle": "@ratna",
    "text": "thanks for flagging",
    "thread_of": 1
   },
   {
    "ts": "2027-09-15T10:41:26-08:00",
-   "user": "Darius Sherwood",
+   "user": "Darius Bramwell",
    "handle": "@darius",
    "text": "Ottavio confirmed the Fjord course roster export with Nomvula, so that one's done!"
   },

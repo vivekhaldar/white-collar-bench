@@ -1,0 +1,27 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#funding-model-core",
+ "kind": "channel",
+ "participants": [
+  "Aroha Mendoza",
+  "Anh Villanueva",
+  "Achieng",
+  "Michaela Dang",
+  "Aino Menon"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-04T13:46:00-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "Logged in fine, so the funding model API credentials is sorted. Starting the walkthrough tomorrow."
+  },
+  {
+   "ts": "2027-11-04T13:47:21-05:00",
+   "user": "Aino Menon",
+   "handle": "@aino",
+   "text": "thanks for the heads up",
+   "thread_of": 0
+  }
+ ]
+}

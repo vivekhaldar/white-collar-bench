@@ -3,19 +3,19 @@
  "channel": "#general",
  "kind": "channel",
  "participants": [
-  "Jalen Hendriks",
-  "Camila Quimby"
+  "Jalen Sandberg",
+  "Camila Abernathy"
  ],
  "messages": [
   {
    "ts": "2027-10-25T10:07:54-07:00",
-   "user": "Jalen Hendriks",
+   "user": "Jalen Sandberg",
    "handle": "@jalen",
    "text": "is the wifi on the second floor down for anyone else?"
   },
   {
    "ts": "2027-10-25T10:09:17-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "yep, same here",
    "thread_of": 0

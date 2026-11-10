@@ -1,35 +1,45 @@
 {
  "workspace": "birchmere",
- "channel": "dm-alasdair-katarzyna",
- "kind": "dm",
+ "channel": "#sirocco-core",
+ "kind": "channel",
  "participants": [
+  "Bisi",
   "Alasdair Kaya",
-  "Katarzyna Feng"
+  "Dina Laurent",
+  "Katarzyna Dang",
+  "Eleni Fontaine",
+  "Nurlan Jansen",
+  "Penelope Romano"
  ],
  "messages": [
   {
-   "ts": "2027-09-14T15:22:06-05:00",
-   "user": "Alasdair Kaya",
-   "handle": "@alasdair",
-   "text": "hello"
+   "ts": "2027-09-14T17:36:25-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "Just to recap, yesterday Nurlan said they'd configure the Sirocco SSO broker for Ketford!",
+   "edited": true,
+   "original": "Just to recap, yesterday Nurlan said they'd configure the Sirocco SSO brokre for Ketford!"
   },
   {
-   "ts": "2027-09-14T15:23:00-05:00",
-   "user": "Katarzyna Feng",
-   "handle": "@katarzyna",
-   "text": "hi"
+   "ts": "2027-09-14T17:37:25-05:00",
+   "user": "Penelope Romano",
+   "handle": "@penelope",
+   "text": "good to know",
+   "thread_of": 0
   },
   {
-   "ts": "2027-09-14T15:23:36-05:00",
-   "user": "Alasdair Kaya",
-   "handle": "@alasdair",
-   "text": "Can you send me the clinical data engineer sourcing plan?"
+   "ts": "2027-09-14T17:43:05-05:00",
+   "user": "Eleni Fontaine",
+   "handle": "@eleni",
+   "text": "nice",
+   "thread_of": 0
   },
   {
-   "ts": "2027-09-14T15:24:25-05:00",
-   "user": "Katarzyna Feng",
-   "handle": "@katarzyna",
-   "text": "sure, can do"
+   "ts": "2027-09-14T17:46:04-05:00",
+   "user": "Dina Laurent",
+   "handle": "@dina",
+   "text": "thanks for flagging",
+   "thread_of": 0
   }
  ]
 }

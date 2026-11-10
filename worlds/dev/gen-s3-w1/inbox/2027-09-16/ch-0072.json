@@ -1,0 +1,35 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-bisi",
+ "kind": "dm",
+ "participants": [
+  "Bisi Chatterjee",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-16T18:22:43-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-16T18:24:02-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-16T18:24:17-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "I sent you the funding model usage forecast earlier today!"
+  },
+  {
+   "ts": "2027-09-16T18:25:08-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "perfect"
+  }
+ ]
+}

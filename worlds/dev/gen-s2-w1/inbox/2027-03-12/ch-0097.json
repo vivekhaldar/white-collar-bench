@@ -3,18 +3,18 @@
  "channel": "#fennel-core",
  "kind": "channel",
  "participants": [
-  "Dina Zimmermann",
+  "Dina Ricci",
   "Cassandra Yilmaz",
-  "Imani Chaiyaporn",
-  "Yael Yardley",
-  "Rudo Alexiou",
-  "Naoko Maldonado",
+  "Imani Navarro",
+  "Yael Ellery",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
   "Thibault Sahin"
  ],
  "messages": [
   {
    "ts": "2027-03-12T07:27:00-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "no more trouble with the fennel timeout errors since this morning"
   },
@@ -26,14 +26,14 @@
   },
   {
    "ts": "2027-03-12T07:29:10-07:00",
-   "user": "Rudo Alexiou",
+   "user": "Rudo Thornbury",
    "handle": "@rudo",
    "text": "good to know",
    "thread_of": 0
   },
   {
    "ts": "2027-03-12T07:32:12-07:00",
-   "user": "Imani Chaiyaporn",
+   "user": "Imani Navarro",
    "handle": "@imani",
    "text": "thanks for flagging",
    "thread_of": 0

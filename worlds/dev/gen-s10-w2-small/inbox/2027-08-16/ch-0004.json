@@ -1,0 +1,31 @@
+{
+ "workspace": "reddale",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Akosua Bergstrom",
+  "Aoife Everett"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-16T11:00:25+01:00",
+   "user": "Akosua Bergstrom",
+   "handle": "@akosua",
+   "text": "anyone up for coffee at 3?",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@aoife"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-08-16T11:04:33+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "me!"
+  }
+ ]
+}

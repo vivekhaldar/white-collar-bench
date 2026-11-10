@@ -1,0 +1,30 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Lindiwe Baek",
+  "Andres Erdem",
+  "Aiko Venkataraman"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-10T09:33:52-08:00",
+   "user": "Lindiwe Baek",
+   "handle": "@lindiwe",
+   "text": "is it just me or is it freezing on 3 today?"
+  },
+  {
+   "ts": "2027-02-10T09:35:54-08:00",
+   "user": "Andres Erdem",
+   "handle": "@andres",
+   "text": "not just you"
+  },
+  {
+   "ts": "2027-02-10T09:40:17-08:00",
+   "user": "Aiko Venkataraman",
+   "handle": "@aiko",
+   "text": "bring a jumper"
+  }
+ ]
+}

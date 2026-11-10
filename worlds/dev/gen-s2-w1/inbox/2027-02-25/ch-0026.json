@@ -4,8 +4,8 @@
  "kind": "channel",
  "participants": [
   "Thibault Sahin",
-  "Bilal Blackwood",
-  "Imani Chaiyaporn"
+  "Bilal Kahananui",
+  "Imani Navarro"
  ],
  "messages": [
   {
@@ -25,13 +25,13 @@
   },
   {
    "ts": "2027-02-25T17:10:55-07:00",
-   "user": "Bilal Blackwood",
+   "user": "Bilal Kahananui",
    "handle": "@bilal",
    "text": "will keep an eye out"
   },
   {
    "ts": "2027-02-25T17:16:30-07:00",
-   "user": "Imani Chaiyaporn",
+   "user": "Imani Navarro",
    "handle": "@imani",
    "text": "there's one at reception",
    "thread_of": 0

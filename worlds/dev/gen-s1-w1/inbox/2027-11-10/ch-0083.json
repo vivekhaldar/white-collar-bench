@@ -4,7 +4,7 @@
  "kind": "dm",
  "participants": [
   "Petra Korkmaz",
-  "Camila Quimby"
+  "Camila Abernathy"
  ],
  "messages": [
   {
@@ -15,7 +15,7 @@
   },
   {
    "ts": "2027-11-09T15:19:26-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "sure, what's up?"
   },
@@ -41,7 +41,7 @@
   },
   {
    "ts": "2027-11-09T15:22:25-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "on it"
   },
@@ -53,7 +53,7 @@
   },
   {
    "ts": "2027-11-09T15:27:52-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "anytime"
   }

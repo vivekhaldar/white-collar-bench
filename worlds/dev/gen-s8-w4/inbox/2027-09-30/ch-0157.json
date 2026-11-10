@@ -1,0 +1,43 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-tane",
+ "kind": "dm",
+ "participants": [
+  "Tane Haugen",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-30T14:17:00-06:00",
+   "user": "Tane Haugen",
+   "handle": "@tane",
+   "text": "Picking the safety reporting discovery interview guide back up now.",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@amira"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-30T14:17:13-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-09-30T14:20:52-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-09-30T14:23:35-06:00",
+   "user": "Tane Haugen",
+   "handle": "@tane",
+   "text": "only the first half"
+  }
+ ]
+}

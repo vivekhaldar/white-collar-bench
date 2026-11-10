@@ -3,42 +3,28 @@
  "channel": "#wagtail-core",
  "kind": "channel",
  "participants": [
-  "Lakshmi Zamora",
-  "Hiba Xu",
-  "Ama Forsythe",
+  "Lakshmi Figueroa",
+  "Hiba Deng",
+  "Isla Faure",
   "Anahit",
-  "Mateo Pritchard",
-  "Friederike Malhotra",
-  "Jisoo Makinen",
-  "Maricel Herrera",
-  "Isla Mercier"
+  "Rudo Ekwueme",
+  "Friederike Bhatt",
+  "Jisoo Nowak",
+  "Maricel Fuentes",
+  "Rodrigo Okada"
  ],
  "messages": [
   {
    "ts": "2027-03-18T07:47:00-05:00",
-   "user": "Lakshmi Zamora",
+   "user": "Lakshmi Figueroa",
    "handle": "@lakshmi",
    "text": "@hiba i can generate a synthetic patient data set for wagtail"
   },
   {
-   "ts": "2027-03-18T07:47:33-05:00",
-   "user": "Mateo Pritchard",
-   "handle": "@mateo",
+   "ts": "2027-03-18T07:47:41-05:00",
+   "user": "Rudo Ekwueme",
+   "handle": "@rudo",
    "text": "ok",
-   "thread_of": 0
-  },
-  {
-   "ts": "2027-03-18T07:55:18-05:00",
-   "user": "Isla Mercier",
-   "handle": "@isla",
-   "text": "nice",
-   "thread_of": 0
-  },
-  {
-   "ts": "2027-03-18T07:58:18-05:00",
-   "user": "Mateo Pritchard",
-   "handle": "@mateo",
-   "text": "good to know",
    "thread_of": 0
   }
  ]

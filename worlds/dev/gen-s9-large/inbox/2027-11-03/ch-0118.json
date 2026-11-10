@@ -1,0 +1,35 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-achiengt-aroha",
+ "kind": "dm",
+ "participants": [
+  "Achieng",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-03T14:38:00-05:00",
+   "user": "Achieng",
+   "handle": "@achiengt",
+   "text": "Leave it with me, I'll send you the notes from the referral triage session. :)"
+  },
+  {
+   "ts": "2027-11-03T14:38:21-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-11-03T14:41:34-05:00",
+   "user": "Achieng",
+   "handle": "@achiengt",
+   "text": "is the shared drive slow for you too? :)"
+  },
+  {
+   "ts": "2027-11-03T14:43:04-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

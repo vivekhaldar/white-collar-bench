@@ -1,43 +1,24 @@
 {
  "workspace": "iselvale",
- "channel": "dm-hiba-mateo",
- "kind": "dm",
+ "channel": "#wagtail-core",
+ "kind": "channel",
  "participants": [
-  "Mateo Pritchard",
-  "Hiba Xu"
+  "Anahit Fifita",
+  "Hiba Deng",
+  "Isla Faure",
+  "Rudo Ekwueme",
+  "Lakshmi Figueroa",
+  "Rike",
+  "Jisoo Nowak",
+  "Maricel Fuentes",
+  "Rodrigo Okada"
  ],
  "messages": [
   {
-   "ts": "2027-03-22T13:21:12-05:00",
-   "user": "Mateo Pritchard",
-   "handle": "@mateo",
-   "text": "recap from wednesday: i sent you the referral backlog wait-time export",
-   "reactions": [
-    {
-     "emoji": "tada",
-     "users": [
-      "@hiba"
-     ]
-    }
-   ]
-  },
-  {
-   "ts": "2027-03-22T13:21:40-05:00",
-   "user": "Hiba Xu",
-   "handle": "@hiba",
-   "text": "thanks!"
-  },
-  {
-   "ts": "2027-03-22T13:26:26-05:00",
-   "user": "Mateo Pritchard",
-   "handle": "@mateo",
-   "text": "how's your week going?"
-  },
-  {
-   "ts": "2027-03-22T13:28:06-05:00",
-   "user": "Hiba Xu",
-   "handle": "@hiba",
-   "text": "busy, but fine. you?"
+   "ts": "2027-03-22T11:07:28-05:00",
+   "user": "Anahit Fifita",
+   "handle": "@anahit",
+   "text": "@hiba recap from Saturday: I sent you the Wagtail accessibility review."
   }
  ]
 }

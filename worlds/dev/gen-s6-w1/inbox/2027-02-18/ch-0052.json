@@ -1,0 +1,35 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#fennel-core",
+ "kind": "channel",
+ "participants": [
+  "Liisa Babic",
+  "Despina Pereira",
+  "Andres Erdem",
+  "Losa Moretti",
+  "Nathaniel Cartwright",
+  "Karim Navarro",
+  "Carys Laurent"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-18T10:48:00-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "@despina got what I needed, the Fennel tenant onboarding guide is moving again."
+  },
+  {
+   "ts": "2027-02-18T10:48:32-08:00",
+   "user": "Karim Navarro",
+   "handle": "@karim",
+   "text": "noted"
+  },
+  {
+   "ts": "2027-02-18T10:55:14-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

@@ -3,13 +3,13 @@
  "channel": "#random",
  "kind": "channel",
  "participants": [
-  "Esperanza Rao",
-  "Teagan Penhallow"
+  "Esperanza Venkataraman",
+  "Teagan Alexiou"
  ],
  "messages": [
   {
    "ts": "2027-08-27T08:31:18-08:00",
-   "user": "Esperanza Rao",
+   "user": "Esperanza Venkataraman",
    "handle": "@esperanza",
    "text": "good morning all",
    "reactions": [
@@ -23,7 +23,7 @@
   },
   {
    "ts": "2027-08-27T08:31:48-08:00",
-   "user": "Teagan Penhallow",
+   "user": "Teagan Alexiou",
    "handle": "@teagan",
    "text": "morning!",
    "thread_of": 0

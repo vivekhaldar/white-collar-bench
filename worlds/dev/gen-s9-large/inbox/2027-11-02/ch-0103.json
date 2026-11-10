@@ -1,0 +1,47 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-anh-aroha",
+ "kind": "dm",
+ "participants": [
+  "Anh",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-02T11:51:17-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "morning!"
+  },
+  {
+   "ts": "2027-11-02T11:52:33-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "sure, what's up?"
+  },
+  {
+   "ts": "2027-11-02T11:53:04-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "FYI Adebayo needs the bed management selection pricing comparison by Thursday 4 November! :)"
+  },
+  {
+   "ts": "2027-11-02T11:53:23-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-11-02T11:56:04-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-11-02T11:59:46-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "no worries"
+  }
+ ]
+}

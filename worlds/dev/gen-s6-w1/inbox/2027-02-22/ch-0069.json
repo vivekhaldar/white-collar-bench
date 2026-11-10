@@ -1,0 +1,67 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-andres-despina",
+ "kind": "dm",
+ "participants": [
+  "Despina Pereira",
+  "Andres"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-22T16:45:00-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "i can send you the fennel access request",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@andres"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-22T16:45:21-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "appreciate it"
+  },
+  {
+   "ts": "2027-02-22T16:45:35-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "i can review your fennel course roster export"
+  },
+  {
+   "ts": "2027-02-22T16:46:23-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "great, thank you"
+  },
+  {
+   "ts": "2027-02-22T16:46:44-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "i can send you the axolotl stakeholder map"
+  },
+  {
+   "ts": "2027-02-22T16:48:00-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "that'd be great"
+  },
+  {
+   "ts": "2027-02-22T16:49:38-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-02-22T16:52:30-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

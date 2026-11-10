@@ -1,0 +1,166 @@
+{
+  "date": "2027-10-21",
+  "artifacts": [
+    {
+      "id": "em-0027",
+      "channel": "email",
+      "received_at": "2027-10-21T07:41:00-05:00",
+      "path": "em-0027.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "ch-0030",
+      "channel": "chat",
+      "received_at": "2027-10-21T09:31:00-05:00",
+      "path": "ch-0030.json",
+      "title": "DM: Isabela Mensah / Aroha Mendoza"
+    },
+    {
+      "id": "mn-0007",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-21T09:55:00-05:00",
+      "path": "mn-0007.md",
+      "title": "Recap: Cirrus standup"
+    },
+    {
+      "id": "em-0028",
+      "channel": "email",
+      "received_at": "2027-10-21T11:02:00-05:00",
+      "path": "em-0028.eml",
+      "title": "AI safety rounds workshop registration reminder"
+    },
+    {
+      "id": "ch-0031",
+      "channel": "chat",
+      "received_at": "2027-10-21T11:12:00-05:00",
+      "path": "ch-0031.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "em-0029",
+      "channel": "email",
+      "received_at": "2027-10-21T12:09:00-05:00",
+      "path": "em-0029.eml",
+      "title": "Re: Funding model usage forecast"
+    },
+    {
+      "id": "em-0030",
+      "channel": "email",
+      "received_at": "2027-10-21T13:03:00-05:00",
+      "path": "em-0030.eml",
+      "title": "[INC-77816] Ticket updated"
+    },
+    {
+      "id": "em-0031",
+      "channel": "email",
+      "received_at": "2027-10-21T13:15:00-05:00",
+      "path": "em-0031.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "em-0032",
+      "channel": "email",
+      "received_at": "2027-10-21T13:55:00-05:00",
+      "path": "em-0032.eml",
+      "title": "[INC-66246] Ticket updated"
+    },
+    {
+      "id": "mt-0002",
+      "channel": "transcript",
+      "received_at": "2027-10-21T14:00:00-05:00",
+      "path": "mt-0002.vtt",
+      "title": "Cross-hospital AI forum (transcript)"
+    },
+    {
+      "id": "em-0033",
+      "channel": "email",
+      "received_at": "2027-10-21T14:09:00-05:00",
+      "path": "em-0033.eml",
+      "title": "Health Systems Dispatch: issue 42"
+    },
+    {
+      "id": "em-0034",
+      "channel": "email",
+      "received_at": "2027-10-21T15:13:00-05:00",
+      "path": "em-0034.eml",
+      "title": "Catering menu for next month"
+    },
+    {
+      "id": "em-0035",
+      "channel": "email",
+      "received_at": "2027-10-21T15:24:00-05:00",
+      "path": "em-0035.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0032",
+      "channel": "chat",
+      "received_at": "2027-10-21T15:41:00-05:00",
+      "path": "ch-0032.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0033",
+      "channel": "chat",
+      "received_at": "2027-10-21T16:44:00-05:00",
+      "path": "ch-0033.json",
+      "title": "DM: Aroha Mendoza / Putri Ashby"
+    },
+    {
+      "id": "ch-0034",
+      "channel": "chat",
+      "received_at": "2027-10-21T16:51:00-05:00",
+      "path": "ch-0034.json",
+      "title": "#informatics-nurse-core"
+    },
+    {
+      "id": "ch-0035",
+      "channel": "chat",
+      "received_at": "2027-10-21T17:12:00-05:00",
+      "path": "ch-0035.json",
+      "title": "DM: Aroha Mendoza / Putri Ashby"
+    },
+    {
+      "id": "ch-0036",
+      "channel": "chat",
+      "received_at": "2027-10-21T17:50:00-05:00",
+      "path": "ch-0036.json",
+      "title": "DM: Anh Villanueva / Aroha Mendoza"
+    },
+    {
+      "id": "ch-0037",
+      "channel": "chat",
+      "received_at": "2027-10-21T17:52:00-05:00",
+      "path": "ch-0037.json",
+      "title": "DM: Anh Villanueva / Daniela Ochieng"
+    },
+    {
+      "id": "nt-0002",
+      "channel": "note",
+      "received_at": "2027-10-21T17:59:00-05:00",
+      "path": "nt-0002.md",
+      "title": "Thu notes"
+    },
+    {
+      "id": "em-0036",
+      "channel": "email",
+      "received_at": "2027-10-21T18:12:00-05:00",
+      "path": "em-0036.eml",
+      "title": "Fwd: Informatics nurse specialist candidate pack"
+    },
+    {
+      "id": "ch-0038",
+      "channel": "chat",
+      "received_at": "2027-10-21T18:24:00-05:00",
+      "path": "ch-0038.json",
+      "title": "DM: Anh Villanueva / Aroha Mendoza"
+    },
+    {
+      "id": "em-0037",
+      "channel": "email",
+      "received_at": "2027-10-21T18:48:00-05:00",
+      "path": "em-0037.eml",
+      "title": "Room booking confirmation"
+    }
+  ]
+}

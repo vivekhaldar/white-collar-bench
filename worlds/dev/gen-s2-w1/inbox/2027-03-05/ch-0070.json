@@ -3,21 +3,21 @@
  "channel": "#mistral-core",
  "kind": "channel",
  "participants": [
-  "Yael Yardley",
-  "Dina Zimmermann",
+  "Yael Ellery",
+  "Dina Ricci",
   "Imani",
-  "Rudo Alexiou",
-  "Naoko Maldonado",
+  "Rudo Thornbury",
+  "Naoko Sandoval",
   "Cassandra Yilmaz",
-  "Bilal Blackwood",
+  "Bilal Kahananui",
   "Thibault Sahin",
   "Mei Obi",
-  "Xiaoling Winslow"
+  "Xiaoling Taufa"
  ],
  "messages": [
   {
    "ts": "2027-03-05T17:31:15-07:00",
-   "user": "Yael Yardley",
+   "user": "Yael Ellery",
    "handle": "@yael",
    "text": "@dina picking the Mistral rollout checklist back up now.",
    "reactions": [
@@ -37,7 +37,7 @@
   },
   {
    "ts": "2027-03-05T17:37:05-07:00",
-   "user": "Naoko Maldonado",
+   "user": "Naoko Sandoval",
    "handle": "@naoko",
    "text": "nice",
    "thread_of": 0

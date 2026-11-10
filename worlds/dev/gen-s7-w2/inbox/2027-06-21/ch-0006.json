@@ -1,0 +1,35 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolat-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Bolat Oyelami"
+ ],
+ "messages": [
+  {
+   "ts": "2027-06-21T17:14:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "i sent you the alumni outreach discovery interview guide earlier today"
+  },
+  {
+   "ts": "2027-06-21T17:14:12-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-06-21T17:18:11-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-06-21T17:22:01-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

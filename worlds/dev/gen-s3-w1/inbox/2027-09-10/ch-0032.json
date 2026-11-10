@@ -1,33 +1,41 @@
 {
  "workspace": "birchmere",
- "channel": "#random",
+ "channel": "#coffee",
  "kind": "channel",
  "participants": [
-  "Deniz Zhou",
-  "Shira Colombo",
-  "Kwame Hoffmann",
+  "Penelope Romano",
+  "Eun-ji Chen",
+  "Tunde Andersen",
   "Bisi Chatterjee"
  ],
  "messages": [
   {
-   "ts": "2027-09-10T08:59:46-05:00",
-   "user": "Deniz Zhou",
-   "handle": "@deniz",
-   "text": "the elevator on the east side is out again"
+   "ts": "2027-09-10T12:42:46-05:00",
+   "user": "Penelope Romano",
+   "handle": "@penelope",
+   "text": "does anyone have a spare laptop charger (usb-c)?",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@eunji",
+      "@tunde"
+     ]
+    }
+   ]
   },
   {
-   "ts": "2027-09-10T09:04:47-05:00",
-   "user": "Shira Colombo",
-   "handle": "@shira",
-   "text": "stairs it is",
+   "ts": "2027-09-10T12:47:47-05:00",
+   "user": "Eun-ji Chen",
+   "handle": "@eunji",
+   "text": "i have one, desk by the window",
    "thread_of": 0
   },
   {
-   "ts": "2027-09-10T09:09:30-05:00",
-   "user": "Kwame Hoffmann",
-   "handle": "@kwame",
-   "text": "classic",
-   "thread_of": 0
+   "ts": "2027-09-10T12:51:59-05:00",
+   "user": "Tunde Andersen",
+   "handle": "@tunde",
+   "text": "check the supply cupboard"
   }
  ]
 }

@@ -4,7 +4,7 @@
  "kind": "dm",
  "participants": [
   "Fernanda Olawale",
-  "Camila Quimby"
+  "Camila Abernathy"
  ],
  "messages": [
   {
@@ -15,7 +15,7 @@
   },
   {
    "ts": "2027-11-11T13:36:43-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "hey"
   },
@@ -27,7 +27,7 @@
   },
   {
    "ts": "2027-11-11T13:41:13-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "agreed"
   },
@@ -41,7 +41,7 @@
   },
   {
    "ts": "2027-11-11T13:42:23-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "noted"
   }

@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Corrstead//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:2c3e140175301daa@corrstead.example
+DTSTAMP:20270703T000300Z
+DTSTART:20270706T170000Z
+DTEND:20270706T173000Z
+SUMMARY:Corrie sync
+ORGANIZER;CN=Zawadi Grigoryan:mailto:zawadi.grigoryan@iselbury.corrstead.example
+ATTENDEE;CN=Hiba Jimenez;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.jimenez@corrstead.example
+ATTENDEE;CN=Bolat Oyelami;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bolat.oyelami@corrstead.example
+ATTENDEE;CN=Kristen Ochieng;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:kristen.ochieng@iselbury.corrstead.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.corrstead.example/j/1910658654?pwd=cmaakaaV\nPasscode: 578349
+LOCATION:https://meet.corrstead.example/j/1910658654?pwd=cmaakaaV
+END:VEVENT
+END:VCALENDAR

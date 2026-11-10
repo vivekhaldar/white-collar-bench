@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Reddale//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:ae642382c63499f3@reddale.example
+DTSTAMP:20270906T155300Z
+DTSTART:20270908T130000Z
+DTEND:20270908T133000Z
+SUMMARY:Walkthrough: Pantry inventory discovery problem framing note
+ORGANIZER;CN=Aoife Everett:mailto:aoife.everett@reddale.example
+ATTENDEE;CN=Akosua Bergstrom;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:akosua.bergstrom@reddale.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.reddale.example/j/4418328160?pwd=rE4gj7rD\nPasscode: 563563
+LOCATION:https://meet.reddale.example/j/4418328160?pwd=rE4gj7rD
+END:VEVENT
+END:VCALENDAR

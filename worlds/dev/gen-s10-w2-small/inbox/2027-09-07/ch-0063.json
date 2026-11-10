@@ -1,0 +1,33 @@
+{
+ "workspace": "reddale",
+ "channel": "#nettle-core",
+ "kind": "channel",
+ "participants": [
+  "Aoife Everett",
+  "Gaurav Laine",
+  "Akosua Bergstrom",
+  "Doug",
+  "Bisi Volkov",
+  "Sigrid Asante",
+  "Sipho Papadopoulos",
+  "Adaeze Morimoto",
+  "Bruna Thapa",
+  "Marko Chaiyaporn"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T08:49:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "@bisi done, i reviewed your nettle service blueprint",
+   "edited": true,
+   "original": "@bisi done, i reviewed your nettle sevrice blueprint"
+  },
+  {
+   "ts": "2027-09-07T08:49:28+01:00",
+   "user": "Sigrid Asante",
+   "handle": "@sigrid",
+   "text": "ok"
+  }
+ ]
+}

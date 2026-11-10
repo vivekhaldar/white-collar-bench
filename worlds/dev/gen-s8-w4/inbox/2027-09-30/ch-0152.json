@@ -1,0 +1,41 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Ottavio Bakker",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-29T14:50:27-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "catching people up since a few of us are out today"
+  },
+  {
+   "ts": "2027-09-29T14:53:00-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "From the sync earlier, Batbayar will send you the Fulmar retention schedule v2."
+  },
+  {
+   "ts": "2027-09-29T14:54:23-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "perfect, thanks"
+  },
+  {
+   "ts": "2027-09-29T14:55:46-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-09-29T14:57:44-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "anytime"
+  }
+ ]
+}

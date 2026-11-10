@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iselvale//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:a58d980d1069bdd3@iselvale.example
+DTSTAMP:20270401T161300Z
+DTSTART:20270402T200000Z
+DTEND:20270402T204500Z
+SUMMARY:Nurse scheduling selection review
+ORGANIZER;CN=Isla Faure:mailto:isla.faure@falbury.iselvale.example
+ATTENDEE;CN=Hiba Deng;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.deng@iselvale.example
+ATTENDEE;CN=Anahit Fifita;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:anahit.fifita@iselvale.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.iselvale.example/j/1188323483?pwd=jNmNf8GU\nPasscode: 775051
+LOCATION:https://meet.iselvale.example/j/1188323483?pwd=jNmNf8GU
+END:VEVENT
+END:VCALENDAR

@@ -9,13 +9,13 @@ DTSTART:20271026T163000Z
 DTEND:20271026T165500Z
 SUMMARY:Cancelled: Marten standup
 ORGANIZER;CN=Petra Korkmaz:mailto:petra.korkmaz@birchcrest.holcrest.example
-ATTENDEE;CN=Camila Quimby;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:camila.quimby@holcrest.example
-ATTENDEE;CN=Jalen Hendriks;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:jalen.hendriks@holcrest.example
+ATTENDEE;CN=Camila Abernathy;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:camila.abernathy@holcrest.example
+ATTENDEE;CN=Jalen Sandberg;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:jalen.sandberg@holcrest.example
 ATTENDEE;CN=Sipho Sengupta;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:sipho.sengupta@birchcrest.holcrest.example
-ATTENDEE;CN=Dina Winslow;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.winslow@birchcrest.holcrest.example
+ATTENDEE;CN=Dina Taufa;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.taufa@birchcrest.holcrest.example
 ATTENDEE;CN=Yasmin Mokoena;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:yasmin.mokoena@holcrest.example
-ATTENDEE;CN=Nadia Volkov;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:nadia.volkov@holcrest.example
-ATTENDEE;CN=Thandiwe Bonnet;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:thandiwe.bonnet@holcrest.example
+ATTENDEE;CN=Nadia Jovanovic;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:nadia.jovanovic@holcrest.example
+ATTENDEE;CN=Thandiwe Garnier;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:thandiwe.garnier@holcrest.example
 RECURRENCE-ID:20271026T163000Z
 SEQUENCE:1
 STATUS:CANCELLED

@@ -1,0 +1,31 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-andres-despina",
+ "kind": "dm",
+ "participants": [
+  "Andres",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-18T10:52:05-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-02-18T10:52:38-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "Recap from Monday: I asked you to update the Fennel integration spec after my comments; nothing agreed yet.",
+   "edited": true,
+   "original": "Recap from Monday: I asked you to update the Fennel integrtaion spec after my comments; nothing agreed yet."
+  },
+  {
+   "ts": "2027-02-18T10:52:47-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "maybe, need to see how the week goes"
+  }
+ ]
+}

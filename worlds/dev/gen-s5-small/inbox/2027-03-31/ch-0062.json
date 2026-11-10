@@ -1,0 +1,37 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-hiba-lakshmi",
+ "kind": "dm",
+ "participants": [
+  "Lakshmi Figueroa",
+  "Hiba Deng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-31T10:55:00-05:00",
+   "user": "Lakshmi Figueroa",
+   "handle": "@lakshmi",
+   "text": "will share the wagtail requirements matrix with you",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-31T17:39:00-05:00",
+   "user": "Lakshmi Figueroa",
+   "handle": "@lakshmi",
+   "text": "okay, the wagtail requirements matrix is done now"
+  },
+  {
+   "ts": "2027-03-31T17:39:45-05:00",
+   "user": "Hiba Deng",
+   "handle": "@hiba",
+   "text": "perfect"
+  }
+ ]
+}

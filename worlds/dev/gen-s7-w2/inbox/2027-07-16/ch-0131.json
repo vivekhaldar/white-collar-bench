@@ -1,0 +1,29 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-anastasia-hiba",
+ "kind": "dm",
+ "participants": [
+  "Anastasia Mizrahi",
+  "Hiba Jimenez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-16T13:46:00-08:00",
+   "user": "Anastasia Mizrahi",
+   "handle": "@anastasia",
+   "text": "we're reversing the decision to build corrie in-house rather than buy. i does not want to staff a build"
+  },
+  {
+   "ts": "2027-07-16T13:46:18-08:00",
+   "user": "Anastasia Mizrahi",
+   "handle": "@anastasia",
+   "text": "confirming we'll buy an off-the-shelf tool instead of building corrie"
+  },
+  {
+   "ts": "2027-07-16T13:47:22-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "makes sense"
+  }
+ ]
+}

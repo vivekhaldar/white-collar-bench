@@ -1,0 +1,152 @@
+{
+  "date": "2027-07-13",
+  "artifacts": [
+    {
+      "id": "em-0132",
+      "channel": "email",
+      "received_at": "2027-07-13T07:17:00-08:00",
+      "path": "em-0132.eml",
+      "title": "Early-bird registration ends Friday"
+    },
+    {
+      "id": "em-0133",
+      "channel": "email",
+      "received_at": "2027-07-13T09:11:00-08:00",
+      "path": "em-0133.eml",
+      "title": "Mere's alumni outreach discovery findings summary"
+    },
+    {
+      "id": "em-0134",
+      "channel": "email",
+      "received_at": "2027-07-13T09:11:00-08:00",
+      "path": "em-0134.eml",
+      "title": "[INC-50035] Ticket updated"
+    },
+    {
+      "id": "em-0135",
+      "channel": "email",
+      "received_at": "2027-07-13T09:28:00-08:00",
+      "path": "em-0135.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "mt-0019",
+      "channel": "transcript",
+      "received_at": "2027-07-13T11:30:00-08:00",
+      "path": "mt-0019.vtt",
+      "title": "Garnet security review (transcript)"
+    },
+    {
+      "id": "ch-0104",
+      "channel": "chat",
+      "received_at": "2027-07-13T12:24:00-08:00",
+      "path": "ch-0104.json",
+      "title": "DM: Zawadi Grigoryan / Hiba Jimenez"
+    },
+    {
+      "id": "ca-0020",
+      "channel": "calendar",
+      "received_at": "2027-07-13T12:31:00-08:00",
+      "path": "ca-0020.ics",
+      "title": "Invite: Garnet review"
+    },
+    {
+      "id": "em-0136",
+      "channel": "email",
+      "received_at": "2027-07-13T12:46:00-08:00",
+      "path": "em-0136.eml",
+      "title": "The Quad Ledger: issue 28"
+    },
+    {
+      "id": "em-0137",
+      "channel": "email",
+      "received_at": "2027-07-13T12:57:00-08:00",
+      "path": "em-0137.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "ch-0105",
+      "channel": "chat",
+      "received_at": "2027-07-13T13:32:00-08:00",
+      "path": "ch-0105.json",
+      "title": "DM: Deborah Nurlanov / Hiba Jimenez"
+    },
+    {
+      "id": "ca-0021",
+      "channel": "calendar",
+      "received_at": "2027-07-13T13:47:00-08:00",
+      "path": "ca-0021.ics",
+      "title": "Invite: Catch-up: Hiba / Kristen"
+    },
+    {
+      "id": "ch-0106",
+      "channel": "chat",
+      "received_at": "2027-07-13T13:52:00-08:00",
+      "path": "ch-0106.json",
+      "title": "DM: Hiba Jimenez / Dong-hyun Colombo"
+    },
+    {
+      "id": "ch-0107",
+      "channel": "chat",
+      "received_at": "2027-07-13T14:10:00-08:00",
+      "path": "ch-0107.json",
+      "title": "DM: Bolat Oyelami / Hiba Jimenez"
+    },
+    {
+      "id": "ch-0108",
+      "channel": "chat",
+      "received_at": "2027-07-13T14:30:00-08:00",
+      "path": "ch-0108.json",
+      "title": "#garnet-core"
+    },
+    {
+      "id": "em-0138",
+      "channel": "email",
+      "received_at": "2027-07-13T14:53:00-08:00",
+      "path": "em-0138.eml",
+      "title": "Re: Siskin duplicate notifications"
+    },
+    {
+      "id": "em-0139",
+      "channel": "email",
+      "received_at": "2027-07-13T16:36:00-08:00",
+      "path": "em-0139.eml",
+      "title": "Merol sandbox credentials"
+    },
+    {
+      "id": "ch-0109",
+      "channel": "chat",
+      "received_at": "2027-07-13T16:41:00-08:00",
+      "path": "ch-0109.json",
+      "title": "#siskin-core"
+    },
+    {
+      "id": "em-0140",
+      "channel": "email",
+      "received_at": "2027-07-13T16:55:00-08:00",
+      "path": "em-0140.eml",
+      "title": "Admissions Triage Tool Selection: numbers"
+    },
+    {
+      "id": "ch-0110",
+      "channel": "chat",
+      "received_at": "2027-07-13T16:56:00-08:00",
+      "path": "ch-0110.json",
+      "title": "DM: Desmond Visser / Hiba Jimenez"
+    },
+    {
+      "id": "em-0141",
+      "channel": "email",
+      "received_at": "2027-07-13T17:28:00-08:00",
+      "path": "em-0141.eml",
+      "title": "[REQ-33260] Request resolved"
+    },
+    {
+      "id": "ch-0111",
+      "channel": "chat",
+      "received_at": "2027-07-13T17:56:00-08:00",
+      "path": "ch-0111.json",
+      "title": "#garnet-core"
+    }
+  ]
+}

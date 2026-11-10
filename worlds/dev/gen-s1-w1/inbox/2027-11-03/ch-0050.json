@@ -3,43 +3,43 @@
  "channel": "dm-camila-dalisay",
  "kind": "dm",
  "participants": [
-  "Dalisay Nyberg",
-  "Camila Quimby"
+  "Dalisay Dahl",
+  "Camila Abernathy"
  ],
  "messages": [
   {
    "ts": "2027-11-03T15:17:01-07:00",
-   "user": "Dalisay Nyberg",
+   "user": "Dalisay Dahl",
    "handle": "@dalisay",
    "text": "hello"
   },
   {
    "ts": "2027-11-03T15:17:41-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "hi"
   },
   {
    "ts": "2027-11-03T15:17:54-07:00",
-   "user": "Dalisay Nyberg",
+   "user": "Dalisay Dahl",
    "handle": "@dalisay",
    "text": "data engineer hire is moving into offer"
   },
   {
    "ts": "2027-11-03T15:18:51-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "got it"
   },
   {
    "ts": "2027-11-03T15:21:49-07:00",
-   "user": "Dalisay Nyberg",
+   "user": "Dalisay Dahl",
    "handle": "@dalisay",
    "text": "how's your week going?"
   },
   {
    "ts": "2027-11-03T15:22:28-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "busy, but fine. you?"
   }

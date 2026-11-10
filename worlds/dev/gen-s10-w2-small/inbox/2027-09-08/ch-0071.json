@@ -1,0 +1,35 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-akosua-aoife",
+ "kind": "dm",
+ "participants": [
+  "Aoife Everett",
+  "Akosua Bergstrom"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T13:48:51+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-08T13:49:49+01:00",
+   "user": "Akosua Bergstrom",
+   "handle": "@akosua",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-09-08T13:51:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "let's drop the pantry inventory discovery interview guide, overtaken by events"
+  },
+  {
+   "ts": "2027-09-08T13:51:49+01:00",
+   "user": "Akosua Bergstrom",
+   "handle": "@akosua",
+   "text": "good to know"
+  }
+ ]
+}

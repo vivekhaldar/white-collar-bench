@@ -4,10 +4,10 @@
  "kind": "channel",
  "participants": [
   "Roya",
-  "Ottavio Monteiro",
+  "Ottavio Moreira",
   "Meera",
   "Tegan Ogunleye",
-  "Nadia Krause"
+  "Nadia Vogel"
  ],
  "messages": [
   {
@@ -28,7 +28,7 @@
   },
   {
    "ts": "2027-09-08T16:41:04-08:00",
-   "user": "Nadia Krause",
+   "user": "Nadia Vogel",
    "handle": "@nadia",
    "text": "thanks for flagging",
    "thread_of": 0

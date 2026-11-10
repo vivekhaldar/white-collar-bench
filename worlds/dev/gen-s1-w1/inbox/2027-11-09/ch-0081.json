@@ -3,43 +3,43 @@
  "channel": "dm-camila-thandiwe",
  "kind": "dm",
  "participants": [
-  "Thandiwe Bonnet",
-  "Camila Quimby"
+  "Thandiwe Garnier",
+  "Camila Abernathy"
  ],
  "messages": [
   {
    "ts": "2027-11-09T18:13:46-07:00",
-   "user": "Thandiwe Bonnet",
+   "user": "Thandiwe Garnier",
    "handle": "@thandiwe",
    "text": "got a sec?"
   },
   {
    "ts": "2027-11-09T18:14:55-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "hi"
   },
   {
    "ts": "2027-11-09T18:15:00-07:00",
-   "user": "Thandiwe Bonnet",
+   "user": "Thandiwe Garnier",
    "handle": "@thandiwe",
    "text": "You confirmed the Marten RACI chart with Yasmin, so that one's done."
   },
   {
    "ts": "2027-11-09T18:15:26-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "ok"
   },
   {
    "ts": "2027-11-09T18:16:43-07:00",
-   "user": "Thandiwe Bonnet",
+   "user": "Thandiwe Garnier",
    "handle": "@thandiwe",
    "text": "are you in the office tomorrow?"
   },
   {
    "ts": "2027-11-09T18:17:14-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "remote, but online all day"
   }

@@ -3,31 +3,31 @@
  "channel": "dm-dina-nathaniel",
  "kind": "dm",
  "participants": [
-  "Dina Zimmermann",
-  "Nathaniel Langley"
+  "Dina Ricci",
+  "Nathaniel Fenwick"
  ],
  "messages": [
   {
    "ts": "2027-02-23T11:26:00-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "will review your marmara diligence diligence notes"
   },
   {
    "ts": "2027-02-23T11:27:00-07:00",
-   "user": "Nathaniel Langley",
+   "user": "Nathaniel Fenwick",
    "handle": "@nathaniel",
    "text": "thanks!"
   },
   {
    "ts": "2027-02-23T11:31:36-07:00",
-   "user": "Nathaniel Langley",
+   "user": "Nathaniel Fenwick",
    "handle": "@nathaniel",
    "text": "thanks again for earlier"
   },
   {
    "ts": "2027-02-23T11:33:11-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "anytime"
   }

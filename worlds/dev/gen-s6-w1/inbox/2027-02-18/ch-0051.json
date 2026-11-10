@@ -1,0 +1,49 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-andres-despina",
+ "kind": "dm",
+ "participants": [
+  "Andres",
+  "Despina Pereira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-18T07:47:20-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-02-18T07:49:00-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "Heads up: the platform engineer will share the Axolotl LMS integration notes with you.",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@despina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-18T07:49:59-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "perfect, thanks"
+  },
+  {
+   "ts": "2027-02-18T07:51:46-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-02-18T07:54:26-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "remote, but online all day"
+  }
+ ]
+}

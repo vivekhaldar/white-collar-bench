@@ -1,0 +1,67 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-andres-despina",
+ "kind": "dm",
+ "participants": [
+  "Despina Pereira",
+  "Andres"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-18T12:33:23-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-02-18T12:33:46-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-02-18T12:56:00-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "No need for the Axolotl faculty survey any more, no longer needed.",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@andres"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-18T12:57:30-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "noted"
+  },
+  {
+   "ts": "2027-02-18T12:58:18-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "Just confirmed the Axolotl lessons-learned note with you."
+  },
+  {
+   "ts": "2027-02-18T12:59:19-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "great, thanks"
+  },
+  {
+   "ts": "2027-02-18T13:01:09-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-02-18T13:01:40-08:00",
+   "user": "Andres",
+   "handle": "@andres",
+   "text": "anytime"
+  }
+ ]
+}

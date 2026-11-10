@@ -1,0 +1,31 @@
+{
+ "workspace": "corrstead",
+ "channel": "#garnet-core",
+ "kind": "channel",
+ "participants": [
+  "Hiba Jimenez",
+  "Ewan Laine",
+  "Bolat Oyelami",
+  "Maddie",
+  "Desmond Visser",
+  "Andrei Laurent",
+  "Emre Khumalo",
+  "Adaeze Fifita",
+  "Eun-ji Valdez",
+  "Dong-hyun Colombo"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-08T08:31:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "@bolat okay, I'll take it: review your Garnet budget justification."
+  },
+  {
+   "ts": "2027-07-08T08:31:19-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "good to know :)"
+  }
+ ]
+}

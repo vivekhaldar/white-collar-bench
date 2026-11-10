@@ -3,17 +3,17 @@
  "channel": "dm-camila-petra",
  "kind": "dm",
  "participants": [
-  "Camila Quimby",
+  "Camila Abernathy",
   "Petra Korkmaz"
  ],
  "messages": [
   {
    "ts": "2027-11-05T11:02:00-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
-   "text": "I pulled together the Tarn risk register with Jalen Hendriks.",
+   "text": "I pulled together the Tarn risk register with Jalen Sandberg.",
    "edited": true,
-   "original": "I pulled together the Tarn risk rgeister with Jalen Hendriks."
+   "original": "I pulled together the Tarn risk rgeister with Jalen Sandberg."
   },
   {
    "ts": "2027-11-05T11:02:44-07:00",
@@ -23,7 +23,7 @@
   },
   {
    "ts": "2027-11-05T11:07:06-07:00",
-   "user": "Camila Quimby",
+   "user": "Camila Abernathy",
    "handle": "@camila",
    "text": "is the shared drive slow for you too?"
   },

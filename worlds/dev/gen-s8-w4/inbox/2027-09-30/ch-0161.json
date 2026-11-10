@@ -1,0 +1,34 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#ai-use-core",
+ "kind": "channel",
+ "participants": [
+  "Kian Ishikawa",
+  "Amira Baek",
+  "Adwoa Kocak",
+  "Zawadi Quintero",
+  "Wei Suwannarat"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-30T17:42:00-06:00",
+   "user": "Kian Ishikawa",
+   "handle": "@kian",
+   "text": "@amira just sent you the ai-use dependency list v2"
+  },
+  {
+   "ts": "2027-09-30T17:42:33-06:00",
+   "user": "Zawadi Quintero",
+   "handle": "@zawadi",
+   "text": "ok",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-30T17:46:38-06:00",
+   "user": "Wei Suwannarat",
+   "handle": "@wei",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "workspace": "corrstead",
+ "channel": "#siskin-operating-model-core",
+ "kind": "channel",
+ "participants": [
+  "Hiba Jimenez",
+  "Dez",
+  "Bolat",
+  "Ewan Laine"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-07T08:55:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "@bolat i can update the siskin operating model review comments after your comments"
+  },
+  {
+   "ts": "2027-07-07T08:56:30-08:00",
+   "user": "Dez",
+   "handle": "@desmond",
+   "text": "got it",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-07-07T09:06:21-08:00",
+   "user": "Bolat",
+   "handle": "@bolat",
+   "text": "nice :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-07-07T09:11:21-08:00",
+   "user": "Dez",
+   "handle": "@desmond",
+   "text": "thanks for the update :)",
+   "thread_of": 0
+  }
+ ]
+}

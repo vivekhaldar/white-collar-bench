@@ -3,13 +3,13 @@
  "channel": "dm-dina-imani",
  "kind": "dm",
  "participants": [
-  "Dina Zimmermann",
+  "Dina Ricci",
   "Imani"
  ],
  "messages": [
   {
    "ts": "2027-03-04T13:00:27-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "hey"
   },
@@ -21,7 +21,7 @@
   },
   {
    "ts": "2027-03-04T13:01:51-07:00",
-   "user": "Dina Zimmermann",
+   "user": "Dina Ricci",
    "handle": "@dina",
    "text": "just sent you the mistral requirements matrix"
   },

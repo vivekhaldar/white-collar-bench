@@ -1,0 +1,35 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Adwoa",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-04T11:49:00-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "Can you send me the Wagtail vendor comparison?"
+  },
+  {
+   "ts": "2027-10-04T11:49:20-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "yep, on it"
+  },
+  {
+   "ts": "2027-10-04T11:53:31-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-10-04T11:56:56-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "no worries"
+  }
+ ]
+}

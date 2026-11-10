@@ -4,9 +4,9 @@
  "kind": "channel",
  "participants": [
   "Nomvula Ndlovu",
-  "Esperanza Rao",
-  "Tariq Popescu",
-  "Bruna Sinclair"
+  "Esperanza Venkataraman",
+  "Tariq Ivanova",
+  "Bruna Vaughan"
  ],
  "messages": [
   {
@@ -26,13 +26,13 @@
   },
   {
    "ts": "2027-08-27T14:57:16-08:00",
-   "user": "Esperanza Rao",
+   "user": "Esperanza Venkataraman",
    "handle": "@esperanza",
    "text": "will keep an eye out"
   },
   {
    "ts": "2027-08-27T14:59:52-08:00",
-   "user": "Tariq Popescu",
+   "user": "Tariq Ivanova",
    "handle": "@tariq",
    "text": "there's one at reception"
   }

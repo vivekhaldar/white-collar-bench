@@ -1,0 +1,152 @@
+{
+  "date": "2027-10-04",
+  "artifacts": [
+    {
+      "id": "em-0210",
+      "channel": "email",
+      "received_at": "2027-10-04T06:53:00-06:00",
+      "path": "em-0210.eml",
+      "title": "Reminder: Friday status note due Friday 8 October"
+    },
+    {
+      "id": "nt-0021",
+      "channel": "note",
+      "received_at": "2027-10-04T07:23:00-06:00",
+      "path": "nt-0021.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "em-0211",
+      "channel": "email",
+      "received_at": "2027-10-04T07:43:00-06:00",
+      "path": "em-0211.eml",
+      "title": "Re: Oksana's Fulmar pilot charter v2"
+    },
+    {
+      "id": "ca-0020",
+      "channel": "calendar",
+      "received_at": "2027-10-04T07:53:00-06:00",
+      "path": "ca-0020.ics",
+      "title": "Cancelled: Fulmar standup"
+    },
+    {
+      "id": "ch-0171",
+      "channel": "chat",
+      "received_at": "2027-10-04T08:32:00-06:00",
+      "path": "ch-0171.json",
+      "title": "DM: Marcelo Meijer / Amira Baek"
+    },
+    {
+      "id": "em-0212",
+      "channel": "email",
+      "received_at": "2027-10-04T09:07:00-06:00",
+      "path": "em-0212.eml",
+      "title": "Re: Notes from the predictive maintenance session"
+    },
+    {
+      "id": "ch-0172",
+      "channel": "chat",
+      "received_at": "2027-10-04T09:08:00-06:00",
+      "path": "ch-0172.json",
+      "title": "#wagtail-core"
+    },
+    {
+      "id": "mt-0034",
+      "channel": "transcript",
+      "received_at": "2027-10-04T11:15:00-06:00",
+      "path": "mt-0034.vtt",
+      "title": "Fulmar working session (transcript)"
+    },
+    {
+      "id": "ch-0173",
+      "channel": "chat",
+      "received_at": "2027-10-04T12:22:00-06:00",
+      "path": "ch-0173.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    },
+    {
+      "id": "ca-0021",
+      "channel": "calendar",
+      "received_at": "2027-10-04T12:31:00-06:00",
+      "path": "ca-0021.ics",
+      "title": "Invite: Fulmar review"
+    },
+    {
+      "id": "ch-0174",
+      "channel": "chat",
+      "received_at": "2027-10-04T12:32:00-06:00",
+      "path": "ch-0174.json",
+      "title": "#fulmar-core"
+    },
+    {
+      "id": "em-0213",
+      "channel": "email",
+      "received_at": "2027-10-04T12:55:00-06:00",
+      "path": "em-0213.eml",
+      "title": "Galix sandbox credentials"
+    },
+    {
+      "id": "ca-0022",
+      "channel": "calendar",
+      "received_at": "2027-10-04T13:39:00-06:00",
+      "path": "ca-0022.ics",
+      "title": "Invite: Walkthrough: Fulmar lessons-learned note v2"
+    },
+    {
+      "id": "em-0214",
+      "channel": "email",
+      "received_at": "2027-10-04T14:37:00-06:00",
+      "path": "em-0214.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0215",
+      "channel": "email",
+      "received_at": "2027-10-04T15:02:00-06:00",
+      "path": "em-0215.eml",
+      "title": "Re: FYI: Fulmar access request v2"
+    },
+    {
+      "id": "ch-0175",
+      "channel": "chat",
+      "received_at": "2027-10-04T15:11:00-06:00",
+      "path": "ch-0175.json",
+      "title": "DM: Ottavio Bakker / Amira Baek"
+    },
+    {
+      "id": "em-0216",
+      "channel": "email",
+      "received_at": "2027-10-04T15:18:00-06:00",
+      "path": "em-0216.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "em-0217",
+      "channel": "email",
+      "received_at": "2027-10-04T16:01:00-06:00",
+      "path": "em-0217.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "em-0218",
+      "channel": "email",
+      "received_at": "2027-10-04T16:25:00-06:00",
+      "path": "em-0218.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0219",
+      "channel": "email",
+      "received_at": "2027-10-04T16:30:00-06:00",
+      "path": "em-0219.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "mn-0024",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-04T17:00:00-06:00",
+      "path": "mn-0024.md",
+      "title": "Recap: Fulmar / AI-use sync"
+    }
+  ]
+}

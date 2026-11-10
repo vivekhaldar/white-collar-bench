@@ -1,0 +1,25 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-anahit-hiba",
+ "kind": "dm",
+ "participants": [
+  "Anahit",
+  "Hiba Deng"
+ ],
+ "messages": [
+  {
+   "ts": "2027-04-01T17:31:00-05:00",
+   "user": "Anahit",
+   "handle": "@anahit",
+   "text": "Picking the Okapi service blueprint back up now! :)",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  }
+ ]
+}

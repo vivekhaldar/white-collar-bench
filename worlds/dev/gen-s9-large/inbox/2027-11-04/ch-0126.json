@@ -1,0 +1,32 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#cirrus-core",
+ "kind": "channel",
+ "participants": [
+  "Stanley Valdez",
+  "Aroha Mendoza",
+  "Keisha Hargrove",
+  "Anh Villanueva",
+  "Jide",
+  "Adebayo Kahananui",
+  "Mathieu Wijaya",
+  "Andres Yamamoto",
+  "Kiran Hayashi",
+  "Marguerite Teixeira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-04T10:31:00-05:00",
+   "user": "Stanley Valdez",
+   "handle": "@stanley",
+   "text": "@aroha got what i needed, the cirrus single sign-on role mapping is moving again"
+  },
+  {
+   "ts": "2027-11-04T10:32:14-05:00",
+   "user": "Jide",
+   "handle": "@babajide",
+   "text": "noted",
+   "thread_of": 0
+  }
+ ]
+}

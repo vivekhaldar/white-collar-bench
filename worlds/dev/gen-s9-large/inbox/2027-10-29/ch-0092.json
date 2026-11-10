@@ -1,0 +1,27 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#referral-triage-discovery-core",
+ "kind": "channel",
+ "participants": [
+  "Keisha Hargrove",
+  "Aroha Mendoza",
+  "Anh",
+  "Babajide Hendriks",
+  "Stanley Valdez",
+  "Adebayo Kahananui"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-29T15:41:50-05:00",
+   "user": "Keisha Hargrove",
+   "handle": "@keisha",
+   "text": "@aroha recap from Tuesday: I offered to countersign the Redridge data-use agreement!"
+  },
+  {
+   "ts": "2027-10-29T15:42:51-05:00",
+   "user": "Babajide Hendriks",
+   "handle": "@babajide",
+   "text": "noted"
+  }
+ ]
+}

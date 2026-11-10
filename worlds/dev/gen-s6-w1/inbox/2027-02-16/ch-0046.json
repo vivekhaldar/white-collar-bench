@@ -1,0 +1,43 @@
+{
+ "workspace": "lanhurst",
+ "channel": "dm-carys-despina",
+ "kind": "dm",
+ "participants": [
+  "Despina Pereira",
+  "Carys Laurent"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-16T16:39:00-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "I'm in now (the gateway rate limits for Fennel tenants), starting on the testing this afternoon.",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@carys"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-16T16:39:47-08:00",
+   "user": "Carys Laurent",
+   "handle": "@carys",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-02-16T16:43:49-08:00",
+   "user": "Carys Laurent",
+   "handle": "@carys",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-02-16T16:46:09-08:00",
+   "user": "Despina Pereira",
+   "handle": "@despina",
+   "text": "no worries"
+  }
+ ]
+}

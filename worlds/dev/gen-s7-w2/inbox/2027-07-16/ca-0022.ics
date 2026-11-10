@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Corrstead//Calendar//EN
+METHOD:REPLY
+BEGIN:VEVENT
+UID:00c2a2f10fbdd5af@corrstead.example
+DTSTAMP:20270716T170600Z
+DTSTART:20270717T000000Z
+DTEND:20270717T003000Z
+SUMMARY:Accepted: Admissions triage selection follow-up
+ORGANIZER;CN=Madeline Chikwanha:mailto:madeline.chikwanha@crandale.corrstead.example
+ATTENDEE;CN=Hiba Jimenez;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED:mailto:hiba.jimenez@corrstead.example
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR

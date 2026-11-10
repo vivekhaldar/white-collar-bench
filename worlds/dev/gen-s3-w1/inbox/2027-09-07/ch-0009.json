@@ -1,38 +1,43 @@
 {
  "workspace": "birchmere",
- "channel": "#general",
- "kind": "channel",
+ "channel": "dm-alasdair-bisi",
+ "kind": "dm",
  "participants": [
-  "Tunde Kapanadze",
-  "Penelope Lehmann",
   "Bisi Chatterjee",
-  "Giorgi Ngo"
+  "Alasdair Kaya"
  ],
  "messages": [
   {
-   "ts": "2027-09-07T08:12:59-05:00",
-   "user": "Tunde Kapanadze",
-   "handle": "@tunde",
-   "text": "anyone up for coffee at 3?"
-  },
-  {
-   "ts": "2027-09-07T08:18:28-05:00",
-   "user": "Penelope Lehmann",
-   "handle": "@penelope",
-   "text": "me!"
-  },
-  {
-   "ts": "2027-09-07T08:22:27-05:00",
+   "ts": "2027-09-07T09:51:23-05:00",
    "user": "Bisi Chatterjee",
    "handle": "@bisi",
-   "text": "can't today, back to back",
-   "thread_of": 0
+   "text": "hello"
   },
   {
-   "ts": "2027-09-07T08:24:25-05:00",
-   "user": "Giorgi Ngo",
-   "handle": "@giorgi",
-   "text": "yes please"
+   "ts": "2027-09-07T09:52:44-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "sure, what's up?"
+  },
+  {
+   "ts": "2027-09-07T09:53:00-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "From the sync earlier, Bisi Njoroge will send you the Rosix volume tiers.",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@alasdair"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-07T09:54:22-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "appreciate it"
   }
  ]
 }

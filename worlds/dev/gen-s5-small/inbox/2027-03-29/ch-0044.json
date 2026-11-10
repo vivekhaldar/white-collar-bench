@@ -3,39 +3,26 @@
  "channel": "#okapi-core",
  "kind": "channel",
  "participants": [
-  "Lakshmi Zamora",
-  "Hiba Xu",
-  "Anahit",
-  "Ama Forsythe",
-  "Mateo Pritchard",
-  "Jisoo Makinen",
-  "Rike"
+  "Lakshmi Figueroa",
+  "Hiba Deng",
+  "Anahit Fifita",
+  "Isla Faure",
+  "Rudo Ekwueme",
+  "Jisoo Nowak",
+  "Friederike Bhatt"
  ],
  "messages": [
   {
-   "ts": "2027-03-29T11:36:00-05:00",
-   "user": "Lakshmi Zamora",
+   "ts": "2027-03-29T08:03:00-05:00",
+   "user": "Lakshmi Figueroa",
    "handle": "@lakshmi",
-   "text": "from the sync earlier, the integration engineer will send hiba the okapi timeline"
+   "text": "done, i drafted the okapi on-call rota"
   },
   {
-   "ts": "2027-03-29T11:37:19-05:00",
-   "user": "Anahit",
-   "handle": "@anahit",
-   "text": "noted"
-  },
-  {
-   "ts": "2027-03-29T11:39:42-05:00",
-   "user": "Rike",
+   "ts": "2027-03-29T08:03:14-05:00",
+   "user": "Friederike Bhatt",
    "handle": "@friederike",
-   "text": "good to know",
-   "thread_of": 0
-  },
-  {
-   "ts": "2027-03-29T11:40:42-05:00",
-   "user": "Hiba Xu",
-   "handle": "@hiba",
-   "text": "thanks for the update",
+   "text": "got it",
    "thread_of": 0
   }
  ]

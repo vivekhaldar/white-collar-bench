@@ -1,0 +1,41 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-andres-aroha",
+ "kind": "dm",
+ "participants": [
+  "Andres Yamamoto",
+  "Aroha Mendoza"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-19T17:52:59-05:00",
+   "user": "Andres Yamamoto",
+   "handle": "@andres",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-10-19T17:54:00-05:00",
+   "user": "Andres Yamamoto",
+   "handle": "@andres",
+   "text": "Heads up: Stanley will write the Cirrus support playbook."
+  },
+  {
+   "ts": "2027-10-19T17:55:11-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-10-19T17:59:19-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-10-19T18:03:16-05:00",
+   "user": "Andres Yamamoto",
+   "handle": "@andres",
+   "text": "only the first half"
+  }
+ ]
+}

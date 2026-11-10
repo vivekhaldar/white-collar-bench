@@ -4,8 +4,8 @@
  "kind": "channel",
  "participants": [
   "Joselito Moradi",
-  "Aarav Ortega",
-  "Kirsten Yardley",
+  "Aarav Zamora",
+  "Kirsten Ellery",
   "Fernanda Olawale"
  ],
  "messages": [
@@ -26,14 +26,14 @@
   },
   {
    "ts": "2027-11-02T14:36:23-07:00",
-   "user": "Aarav Ortega",
+   "user": "Aarav Zamora",
    "handle": "@aarav",
    "text": "stairs it is",
    "thread_of": 0
   },
   {
    "ts": "2027-11-02T14:37:07-07:00",
-   "user": "Kirsten Yardley",
+   "user": "Kirsten Ellery",
    "handle": "@kirsten",
    "text": "classic",
    "thread_of": 0

@@ -1,0 +1,47 @@
+{
+ "workspace": "reddale",
+ "channel": "#pantry-inventory-discovery-core",
+ "kind": "channel",
+ "participants": [
+  "Aoife Everett",
+  "Amani Xu",
+  "Akosua",
+  "Catrin Dang"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-03T12:06:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "@akosua will send you the pantry inventory discovery pain-point list."
+  },
+  {
+   "ts": "2027-09-03T12:06:19+01:00",
+   "user": "Catrin Dang",
+   "handle": "@catrin",
+   "text": "got it :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-03T12:14:40+01:00",
+   "user": "Catrin Dang",
+   "handle": "@catrin",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-03T12:17:15+01:00",
+   "user": "Akosua",
+   "handle": "@akosua",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-03T12:18:05+01:00",
+   "user": "Amani Xu",
+   "handle": "@amani",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

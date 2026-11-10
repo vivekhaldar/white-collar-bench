@@ -1,0 +1,37 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "dm-anh-aroha",
+ "kind": "dm",
+ "participants": [
+  "Aroha Mendoza",
+  "Anh"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-04T14:19:00-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "you mentioned you'd share the cirrus integration spec with me, that works for me",
+   "edited": true,
+   "original": "you mentioned you'd shrae the cirrus integration spec with me, that works for me"
+  },
+  {
+   "ts": "2027-11-04T14:19:15-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "yep, on it"
+  },
+  {
+   "ts": "2027-11-04T14:21:03-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-11-04T14:24:37-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "anytime"
+  }
+ ]
+}

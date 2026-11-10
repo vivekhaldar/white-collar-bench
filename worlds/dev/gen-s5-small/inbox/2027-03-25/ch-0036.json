@@ -1,40 +1,60 @@
 {
  "workspace": "iselvale",
- "channel": "#random",
+ "channel": "#wagtail-core",
  "kind": "channel",
  "participants": [
-  "Aylin Venkataraman",
-  "Maricel Herrera",
-  "Kwame Ortega",
-  "Tahmina Lozano"
+  "Lakshmi Figueroa",
+  "Hiba Deng",
+  "Isla Faure",
+  "Anahit Fifita",
+  "Rudo Ekwueme",
+  "Friederike Bhatt",
+  "Jisoo Nowak",
+  "Maricel Fuentes",
+  "Rodrigo Okada"
  ],
  "messages": [
   {
-   "ts": "2027-03-25T10:40:51-05:00",
-   "user": "Aylin Venkataraman",
-   "handle": "@aylin",
-   "text": "any lunch recommendations near the office?",
+   "ts": "2027-03-25T16:31:00-05:00",
+   "user": "Lakshmi Figueroa",
+   "handle": "@lakshmi",
+   "text": "@hiba just sent you the wagtail integration spec",
    "reactions": [
     {
-     "emoji": "white_check_mark",
+     "emoji": "thumbsup",
      "users": [
-      "@maricel",
-      "@kwame"
+      "@hiba",
+      "@anahit"
      ]
     }
    ]
   },
   {
-   "ts": "2027-03-25T10:41:37-05:00",
-   "user": "Maricel Herrera",
-   "handle": "@maricel",
-   "text": "the noodle place on the corner"
+   "ts": "2027-03-25T16:32:21-05:00",
+   "user": "Jisoo Nowak",
+   "handle": "@jisoo",
+   "text": "good to know",
+   "thread_of": 0
   },
   {
-   "ts": "2027-03-25T10:46:01-05:00",
-   "user": "Kwame Ortega",
-   "handle": "@kwame",
-   "text": "the salad bar is decent",
+   "ts": "2027-03-25T16:35:05-05:00",
+   "user": "Friederike Bhatt",
+   "handle": "@friederike",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-25T16:42:09-05:00",
+   "user": "Jisoo Nowak",
+   "handle": "@jisoo",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-25T16:44:24-05:00",
+   "user": "Rudo Ekwueme",
+   "handle": "@rudo",
+   "text": "thanks for the update",
    "thread_of": 0
   }
  ]

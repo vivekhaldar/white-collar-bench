@@ -1,0 +1,48 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#work-instructions-core",
+ "kind": "channel",
+ "participants": [
+  "Segun Okeke",
+  "Amira Baek",
+  "Adwoa",
+  "Ottavio Bakker",
+  "Giorgi Wisniewska"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-09T12:43:00-06:00",
+   "user": "Segun Okeke",
+   "handle": "@segun",
+   "text": "@amira i'm stuck on the rosia accessibility conformance report: waiting on an unsigned agreement"
+  },
+  {
+   "ts": "2027-09-09T12:44:02-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "noted :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T12:53:37-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T12:59:03-06:00",
+   "user": "Adwoa",
+   "handle": "@adwoa",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T13:04:09-06:00",
+   "user": "Giorgi Wisniewska",
+   "handle": "@giorgi",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Kirkmarsh//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:b110dd6a0ee9e660@kirkmarsh.example
+DTSTAMP:20271101T162000Z
+DTSTART:20271102T200000Z
+DTEND:20271102T204500Z
+SUMMARY:Cirrus review
+ORGANIZER;CN=Keisha Hargrove:mailto:keisha.hargrove@redridge.kirkmarsh.example
+ATTENDEE;CN=Aroha Mendoza;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:aroha.mendoza@kirkmarsh.example
+ATTENDEE;CN=Anh Villanueva;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:anh.villanueva@kirkmarsh.example
+SEQUENCE:0
+DESCRIPTION:Placeholder\, agenda to follow.\nJoin video meeting: https://meet.kirkmarsh.example/j/8595712193?pwd=G6UnzNy2\nPasscode: 322169
+LOCATION:https://meet.kirkmarsh.example/j/8595712193?pwd=G6UnzNy2
+END:VEVENT
+END:VCALENDAR

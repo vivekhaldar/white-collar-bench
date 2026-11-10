@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Corrstead//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:3e2f68a511d100e8@corrstead.example
+DTSTAMP:20270705T212700Z
+DTSTART:20270708T220000Z
+DTEND:20270708T223000Z
+SUMMARY:Walkthrough: Siskin metrics definition
+ORGANIZER;CN=Hiba Jimenez:mailto:hiba.jimenez@corrstead.example
+ATTENDEE;CN=Bolat Oyelami;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bolat.oyelami@corrstead.example
+SEQUENCE:0
+DESCRIPTION:Quick sync\, 30 minutes.\nJoin video meeting: https://meet.corrstead.example/j/9699419098?pwd=t3PN3wR2\nPasscode: 702696
+LOCATION:https://meet.corrstead.example/j/9699419098?pwd=t3PN3wR2
+END:VEVENT
+END:VCALENDAR

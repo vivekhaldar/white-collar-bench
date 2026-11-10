@@ -1,0 +1,32 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Liisa Babic",
+  "Wei Rossi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-16T10:35:09-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "does anyone have a spare laptop charger (usb-c)?",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@wei"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-16T10:41:21-08:00",
+   "user": "Wei Rossi",
+   "handle": "@wei",
+   "text": "I have one, desk by the window",
+   "thread_of": 0
+  }
+ ]
+}

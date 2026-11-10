@@ -1,0 +1,35 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-bisi",
+ "kind": "dm",
+ "participants": [
+  "Aoife Everett",
+  "Bisi Volkov"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-01T10:22:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "I sent you the Nettle dependency list."
+  },
+  {
+   "ts": "2027-09-01T10:22:26+01:00",
+   "user": "Bisi Volkov",
+   "handle": "@bisi",
+   "text": "great, thanks"
+  },
+  {
+   "ts": "2027-09-01T10:26:02+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-09-01T10:28:51+01:00",
+   "user": "Bisi Volkov",
+   "handle": "@bisi",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

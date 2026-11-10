@@ -1,0 +1,43 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Ottavio Bakker",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-01T18:07:00-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "We're now in security review on Fulmar! :)",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@amira"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-01T18:08:08-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-09-01T18:09:57-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-09-01T18:11:06-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "no worries"
+  }
+ ]
+}

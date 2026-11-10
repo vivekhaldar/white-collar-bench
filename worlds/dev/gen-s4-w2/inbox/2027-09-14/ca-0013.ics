@@ -8,9 +8,9 @@ DTSTAMP:20270914T220400Z
 DTSTART:20270915T230000Z
 DTEND:20270915T234500Z
 SUMMARY:Fjord review
-ORGANIZER;CN=Darius Sherwood:mailto:darius.sherwood@holfield.drayhurst.example
-ATTENDEE;CN=Ottavio Monteiro;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ottavio.monteiro@drayhurst.example
-ATTENDEE;CN=Meera Ivanova;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:meera.ivanova@drayhurst.example
+ORGANIZER;CN=Darius Bramwell:mailto:darius.bramwell@holfield.drayhurst.example
+ATTENDEE;CN=Ottavio Moreira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ottavio.moreira@drayhurst.example
+ATTENDEE;CN=Meera Bondarenko;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:meera.bondarenko@drayhurst.example
 SEQUENCE:0
 DESCRIPTION:Join video meeting: https://meet.drayhurst.example/j/1016482434?pwd=C9PhfSc5\nPasscode: 640659
 LOCATION:https://meet.drayhurst.example/j/1016482434?pwd=C9PhfSc5

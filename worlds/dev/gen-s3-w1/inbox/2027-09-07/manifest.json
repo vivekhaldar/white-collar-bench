@@ -2,53 +2,25 @@
   "date": "2027-09-07",
   "artifacts": [
     {
-      "id": "em-0012",
-      "channel": "email",
-      "received_at": "2027-09-07T06:41:00-05:00",
-      "path": "em-0012.eml",
-      "title": "All-staff: building access changes"
+      "id": "ch-0006",
+      "channel": "chat",
+      "received_at": "2027-09-07T09:06:00-05:00",
+      "path": "ch-0006.json",
+      "title": "DM: Alasdair Kaya / Eun-ji Chen"
+    },
+    {
+      "id": "ch-0007",
+      "channel": "chat",
+      "received_at": "2027-09-07T09:40:00-05:00",
+      "path": "ch-0007.json",
+      "title": "#random"
     },
     {
       "id": "ch-0008",
       "channel": "chat",
-      "received_at": "2027-09-07T08:31:00-05:00",
+      "received_at": "2027-09-07T09:49:00-05:00",
       "path": "ch-0008.json",
-      "title": "DM: Tunde Kapanadze / Alasdair Kaya"
-    },
-    {
-      "id": "ch-0009",
-      "channel": "chat",
-      "received_at": "2027-09-07T08:52:00-05:00",
-      "path": "ch-0009.json",
-      "title": "#general"
-    },
-    {
-      "id": "mn-0001",
-      "channel": "meeting_notes",
-      "received_at": "2027-09-07T09:00:00-05:00",
-      "path": "mn-0001.md",
-      "title": "Recap: Office hours with Nurlan"
-    },
-    {
-      "id": "ch-0010",
-      "channel": "chat",
-      "received_at": "2027-09-07T09:19:00-05:00",
-      "path": "ch-0010.json",
-      "title": "#general"
-    },
-    {
-      "id": "mt-0003",
-      "channel": "transcript",
-      "received_at": "2027-09-07T09:45:00-05:00",
-      "path": "mt-0003.vtt",
-      "title": "Office hours with Deniz (transcript)"
-    },
-    {
-      "id": "em-0013",
-      "channel": "email",
-      "received_at": "2027-09-07T09:55:00-05:00",
-      "path": "em-0013.eml",
-      "title": "[REQ-20765] Request resolved"
+      "title": "#funding-model-core"
     },
     {
       "id": "mt-0004",
@@ -58,88 +30,102 @@
       "title": "Okapi standup (transcript)"
     },
     {
+      "id": "mt-0005",
+      "channel": "transcript",
+      "received_at": "2027-09-07T10:00:00-05:00",
+      "path": "mt-0005.vtt",
+      "title": "Okapi / referral triage discovery sync (transcript)"
+    },
+    {
+      "id": "ch-0009",
+      "channel": "chat",
+      "received_at": "2027-09-07T10:09:00-05:00",
+      "path": "ch-0009.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "em-0008",
+      "channel": "email",
+      "received_at": "2027-09-07T11:23:00-05:00",
+      "path": "em-0008.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "em-0009",
+      "channel": "email",
+      "received_at": "2027-09-07T11:26:00-05:00",
+      "path": "em-0009.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "em-0010",
+      "channel": "email",
+      "received_at": "2027-09-07T13:58:00-05:00",
+      "path": "em-0010.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "mt-0006",
+      "channel": "transcript",
+      "received_at": "2027-09-07T14:00:00-05:00",
+      "path": "mt-0006.vtt",
+      "title": "Office hours with Bisi (transcript)"
+    },
+    {
+      "id": "ca-0001",
+      "channel": "calendar",
+      "received_at": "2027-09-07T14:25:00-05:00",
+      "path": "ca-0001.ics",
+      "title": "Invite: Funding model options review"
+    },
+    {
+      "id": "ca-0002",
+      "channel": "calendar",
+      "received_at": "2027-09-07T15:08:00-05:00",
+      "path": "ca-0002.ics",
+      "title": "Invite: Referral triage discovery working session"
+    },
+    {
+      "id": "em-0011",
+      "channel": "email",
+      "received_at": "2027-09-07T15:40:00-05:00",
+      "path": "em-0011.eml",
+      "title": "Current referral triage process map"
+    },
+    {
+      "id": "ch-0010",
+      "channel": "chat",
+      "received_at": "2027-09-07T16:18:00-05:00",
+      "path": "ch-0010.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
       "id": "ch-0011",
       "channel": "chat",
-      "received_at": "2027-09-07T10:12:00-05:00",
+      "received_at": "2027-09-07T18:32:00-05:00",
       "path": "ch-0011.json",
-      "title": "#random"
-    },
-    {
-      "id": "em-0014",
-      "channel": "email",
-      "received_at": "2027-09-07T12:10:00-05:00",
-      "path": "em-0014.eml",
-      "title": "[REQ-34482] Request resolved"
-    },
-    {
-      "id": "em-0015",
-      "channel": "email",
-      "received_at": "2027-09-07T12:34:00-05:00",
-      "path": "em-0015.eml",
-      "title": "[REQ-39303] Request resolved"
+      "title": "#okapi-core"
     },
     {
       "id": "ch-0012",
       "channel": "chat",
-      "received_at": "2027-09-07T13:31:00-05:00",
+      "received_at": "2027-09-07T20:49:00-05:00",
       "path": "ch-0012.json",
-      "title": "#bed-management-discovery-core"
+      "title": "DM: Alasdair Kaya / Dina Laurent"
     },
     {
-      "id": "mn-0002",
-      "channel": "meeting_notes",
-      "received_at": "2027-09-07T13:45:00-05:00",
-      "path": "mn-0002.md",
-      "title": "Recap: Office hours with Dina"
+      "id": "nt-0002",
+      "channel": "note",
+      "received_at": "2027-09-07T21:01:00-05:00",
+      "path": "nt-0002.md",
+      "title": "Tue notes"
     },
     {
-      "id": "em-0016",
+      "id": "em-0012",
       "channel": "email",
-      "received_at": "2027-09-07T14:38:00-05:00",
-      "path": "em-0016.eml",
-      "title": "[Investigating] Intermittent sign-in delays"
-    },
-    {
-      "id": "ch-0013",
-      "channel": "chat",
-      "received_at": "2027-09-07T14:57:00-05:00",
-      "path": "ch-0013.json",
-      "title": "#coffee"
-    },
-    {
-      "id": "ch-0014",
-      "channel": "chat",
-      "received_at": "2027-09-07T15:56:00-05:00",
-      "path": "ch-0014.json",
-      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
-    },
-    {
-      "id": "em-0017",
-      "channel": "email",
-      "received_at": "2027-09-07T16:10:00-05:00",
-      "path": "em-0017.eml",
-      "title": "Fwd: Kasis deep-dive materials"
-    },
-    {
-      "id": "em-0018",
-      "channel": "email",
-      "received_at": "2027-09-07T16:34:00-05:00",
-      "path": "em-0018.eml",
-      "title": "Parking lot resurfacing"
-    },
-    {
-      "id": "ch-0015",
-      "channel": "chat",
-      "received_at": "2027-09-07T16:39:00-05:00",
-      "path": "ch-0015.json",
-      "title": "DM: Kwame Hoffmann / Alasdair Kaya"
-    },
-    {
-      "id": "ch-0016",
-      "channel": "chat",
-      "received_at": "2027-09-07T17:20:00-05:00",
-      "path": "ch-0016.json",
-      "title": "DM: Guadalupe Lombardi / Alasdair Kaya"
+      "received_at": "2027-09-07T21:27:00-05:00",
+      "path": "em-0012.eml",
+      "title": "Two customer references from Rosix"
     }
   ]
 }

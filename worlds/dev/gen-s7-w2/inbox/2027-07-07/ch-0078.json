@@ -1,0 +1,29 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-hiba-zawadi",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Zawadi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-07T12:41:00-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "I'm going to park the Corrie usability test script (superseded by a decision)."
+  },
+  {
+   "ts": "2027-07-07T12:42:50-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-07-07T12:43:48-08:00",
+   "user": "Zawadi",
+   "handle": "@zawadi",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

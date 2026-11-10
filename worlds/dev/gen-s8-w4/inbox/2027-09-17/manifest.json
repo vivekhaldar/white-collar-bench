@@ -1,0 +1,132 @@
+{
+  "date": "2027-09-17",
+  "artifacts": [
+    {
+      "id": "em-0101",
+      "channel": "email",
+      "received_at": "2027-09-17T07:12:00-06:00",
+      "path": "em-0101.eml",
+      "title": "[REQ-27077] Request resolved"
+    },
+    {
+      "id": "em-0102",
+      "channel": "email",
+      "received_at": "2027-09-17T08:13:00-06:00",
+      "path": "em-0102.eml",
+      "title": "[INC-85360] Ticket updated"
+    },
+    {
+      "id": "ca-0010",
+      "channel": "calendar",
+      "received_at": "2027-09-17T09:15:00-06:00",
+      "path": "ca-0010.ics",
+      "title": "Accepted: AI-use follow-up"
+    },
+    {
+      "id": "mt-0019",
+      "channel": "transcript",
+      "received_at": "2027-09-17T10:00:00-06:00",
+      "path": "mt-0019.vtt",
+      "title": "Fulmar standup (transcript)"
+    },
+    {
+      "id": "ch-0087",
+      "channel": "chat",
+      "received_at": "2027-09-17T10:40:00-06:00",
+      "path": "ch-0087.json",
+      "title": "DM: Adwoa Kocak / Amira Baek"
+    },
+    {
+      "id": "em-0103",
+      "channel": "email",
+      "received_at": "2027-09-17T11:42:00-06:00",
+      "path": "em-0103.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "ch-0088",
+      "channel": "chat",
+      "received_at": "2027-09-17T12:05:00-06:00",
+      "path": "ch-0088.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0104",
+      "channel": "email",
+      "received_at": "2027-09-17T12:28:00-06:00",
+      "path": "em-0104.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "ch-0089",
+      "channel": "chat",
+      "received_at": "2027-09-17T13:22:00-06:00",
+      "path": "ch-0089.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0105",
+      "channel": "email",
+      "received_at": "2027-09-17T14:43:00-06:00",
+      "path": "em-0105.eml",
+      "title": "Fwd: Fulmar accessibility review"
+    },
+    {
+      "id": "em-0106",
+      "channel": "email",
+      "received_at": "2027-09-17T15:01:00-06:00",
+      "path": "em-0106.eml",
+      "title": "Fwd: AI-use comms plan"
+    },
+    {
+      "id": "em-0107",
+      "channel": "email",
+      "received_at": "2027-09-17T15:53:00-06:00",
+      "path": "em-0107.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "dc-0007",
+      "channel": "document",
+      "received_at": "2027-09-17T17:03:00-06:00",
+      "path": "dc-0007.docx",
+      "title": "Fulmar action log v1",
+      "parent": "em-0108"
+    },
+    {
+      "id": "em-0108",
+      "channel": "email",
+      "received_at": "2027-09-17T17:03:00-06:00",
+      "path": "em-0108.eml",
+      "title": "Status note: w/e 17 September"
+    },
+    {
+      "id": "em-0109",
+      "channel": "email",
+      "received_at": "2027-09-17T17:11:00-06:00",
+      "path": "em-0109.eml",
+      "title": "Early-bird registration ends today"
+    },
+    {
+      "id": "em-0110",
+      "channel": "email",
+      "received_at": "2027-09-17T17:47:00-06:00",
+      "path": "em-0110.eml",
+      "title": "Call for proposals closes Wednesday 22 September"
+    },
+    {
+      "id": "ca-0011",
+      "channel": "calendar",
+      "received_at": "2027-09-17T18:20:00-06:00",
+      "path": "ca-0011.ics",
+      "title": "Invite: Rosia intro call"
+    },
+    {
+      "id": "em-0111",
+      "channel": "email",
+      "received_at": "2027-09-17T22:21:00-06:00",
+      "path": "em-0111.eml",
+      "title": "Draft: Fulmar access request"
+    }
+  ]
+}

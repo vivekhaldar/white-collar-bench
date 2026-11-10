@@ -3,15 +3,15 @@
  "channel": "#coffee",
  "kind": "channel",
  "participants": [
-  "Bogdan Byrne",
-  "Kayode Papadopoulos",
-  "Bilal Blackwood",
+  "Bogdan Quinlan",
+  "Kayode Whitfield",
+  "Bilal Kahananui",
   "Thibault Sahin"
  ],
  "messages": [
   {
    "ts": "2027-02-26T15:20:31-07:00",
-   "user": "Bogdan Byrne",
+   "user": "Bogdan Quinlan",
    "handle": "@bogdan",
    "text": "does anyone have a spare laptop charger (usb-c)?",
    "reactions": [
@@ -26,13 +26,13 @@
   },
   {
    "ts": "2027-02-26T15:23:50-07:00",
-   "user": "Kayode Papadopoulos",
+   "user": "Kayode Whitfield",
    "handle": "@kayode",
    "text": "I have one, desk by the window"
   },
   {
    "ts": "2027-02-26T15:30:08-07:00",
-   "user": "Bilal Blackwood",
+   "user": "Bilal Kahananui",
    "handle": "@bilal",
    "text": "check the supply cupboard",
    "thread_of": 0

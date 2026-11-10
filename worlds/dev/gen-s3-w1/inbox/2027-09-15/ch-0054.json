@@ -1,23 +1,31 @@
 {
  "workspace": "birchmere",
- "channel": "#coffee",
+ "channel": "#general",
  "kind": "channel",
  "participants": [
-  "Katrin Watanabe",
-  "Bisi Chatterjee"
+  "Nurlan Jansen",
+  "Deniz Feng"
  ],
  "messages": [
   {
-   "ts": "2027-09-15T11:49:00-05:00",
-   "user": "Katrin Watanabe",
-   "handle": "@katrin",
-   "text": "who left a lunchbox in the fridge since last week?"
+   "ts": "2027-09-15T13:13:47-05:00",
+   "user": "Nurlan Jansen",
+   "handle": "@nurlan",
+   "text": "the elevator on the east side is out again",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@deniz"
+     ]
+    }
+   ]
   },
   {
-   "ts": "2027-09-15T11:54:47-05:00",
-   "user": "Bisi Chatterjee",
-   "handle": "@bisi",
-   "text": "not me!"
+   "ts": "2027-09-15T13:20:09-05:00",
+   "user": "Deniz Feng",
+   "handle": "@deniz",
+   "text": "stairs it is"
   }
  ]
 }

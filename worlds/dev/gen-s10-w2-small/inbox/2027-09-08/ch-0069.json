@@ -1,0 +1,35 @@
+{
+ "workspace": "reddale",
+ "channel": "dm-aoife-sigrid",
+ "kind": "dm",
+ "participants": [
+  "Aoife Everett",
+  "Sigrid Asante"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T10:05:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "i sent you the translation help selection risk register earlier today"
+  },
+  {
+   "ts": "2027-09-08T10:05:20+01:00",
+   "user": "Sigrid Asante",
+   "handle": "@sigrid",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-09-08T10:09:35+01:00",
+   "user": "Sigrid Asante",
+   "handle": "@sigrid",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-09-08T10:12:29+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "only the first half"
+  }
+ ]
+}

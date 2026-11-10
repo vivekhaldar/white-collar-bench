@@ -1,0 +1,23 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-amira-oksana",
+ "kind": "dm",
+ "participants": [
+  "Oksana Hoffmann",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-23T17:20:00-06:00",
+   "user": "Oksana Hoffmann",
+   "handle": "@oksana",
+   "text": "Would you be able to review my Wagtail action log by September 24?"
+  },
+  {
+   "ts": "2027-09-23T17:20:38-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "will do"
+  }
+ ]
+}

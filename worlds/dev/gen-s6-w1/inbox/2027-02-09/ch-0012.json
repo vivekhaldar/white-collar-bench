@@ -1,0 +1,31 @@
+{
+ "workspace": "lanhurst",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Liisa Babic",
+  "Aiko Venkataraman",
+  "Andres Erdem"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-09T16:22:40-08:00",
+   "user": "Liisa Babic",
+   "handle": "@liisa",
+   "text": "does anyone have a spare laptop charger (usb-c)?"
+  },
+  {
+   "ts": "2027-02-09T16:24:18-08:00",
+   "user": "Aiko Venkataraman",
+   "handle": "@aiko",
+   "text": "I have one, desk by the window"
+  },
+  {
+   "ts": "2027-02-09T16:30:30-08:00",
+   "user": "Andres Erdem",
+   "handle": "@andres",
+   "text": "check the supply cupboard",
+   "thread_of": 0
+  }
+ ]
+}

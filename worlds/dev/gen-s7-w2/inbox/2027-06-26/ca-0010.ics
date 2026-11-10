@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Corrstead//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:cd60393744e64335@corrstead.example
+DTSTAMP:20270626T214500Z
+DTSTART:20270630T230000Z
+DTEND:20270630T233000Z
+SUMMARY:Working session: Garnet single sign-on role mapping
+ORGANIZER;CN=Ewan Laine:mailto:ewan.laine@crandale.corrstead.example
+ATTENDEE;CN=Hiba Jimenez;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.jimenez@corrstead.example
+SEQUENCE:0
+DESCRIPTION:Agenda: Set up the Garnet single sign-on role mapping.\nJoin video meeting: https://meet.corrstead.example/j/1399036246?pwd=QWB3FMMe\nPasscode: 749256
+LOCATION:https://meet.corrstead.example/j/1399036246?pwd=QWB3FMMe
+END:VEVENT
+END:VCALENDAR

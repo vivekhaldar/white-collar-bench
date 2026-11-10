@@ -1,0 +1,2103 @@
+plan_version: 1
+world_id: gen-s7-w2
+generator:
+  kind: wcb-gen
+  version: 1
+  seed: 7
+  size: standard
+  weeks: 2
+setting:
+  key: university
+  label: public university system
+  timezone: -08:00
+  vocab:
+    sites: courses
+    site: course
+    users: faculty
+    end_users: students
+    council: Council of Provosts
+    data: student data
+    agreement: data-sharing agreement
+    platform: shared AI platform
+    unit_word: campus
+  nouns:
+  - risk register
+  - rollout checklist
+  - test plan
+  - decision memo
+  - status slide
+  - comms plan
+  - training outline
+  - budget justification
+  - vendor comparison
+  - architecture diagram
+  - integration spec
+  - access request
+  - pilot charter
+  - evaluation rubric
+  - data dictionary
+  - stakeholder map
+  - dependency list
+  - requirements matrix
+  - lessons-learned note
+  - timeline
+  - RACI chart
+  - cutover plan
+  - acceptance criteria
+  - metrics definition
+  - service blueprint
+  - support model
+  - retention schedule
+  - change request
+  - accessibility review
+  - help-desk script
+  - course roster export
+  - LMS integration notes
+  - accessibility audit
+  - faculty survey
+  umbrella: o-corrstead-university-system
+  central: o-systemwide-learning-innovation-office
+  video_domain: meet.corrstead.example
+  chat_workspace: corrstead
+  volume:
+  - 15
+  - 20
+  loops_per_day: 5.8
+calendar:
+  start: '2027-07-05'
+  seed:
+    start: '2027-06-21'
+    end: '2027-07-03'
+    days:
+    - '2027-06-21'
+    - '2027-06-22'
+    - '2027-06-23'
+    - '2027-06-24'
+    - '2027-06-25'
+    - '2027-06-26'
+    - '2027-06-28'
+    - '2027-06-29'
+    - '2027-06-30'
+    - '2027-07-01'
+    - '2027-07-02'
+    - '2027-07-03'
+  episode:
+    days:
+    - '2027-07-05'
+    - '2027-07-06'
+    - '2027-07-07'
+    - '2027-07-08'
+    - '2027-07-09'
+    - '2027-07-10'
+    - '2027-07-12'
+    - '2027-07-13'
+    - '2027-07-14'
+    - '2027-07-15'
+    - '2027-07-16'
+    - '2027-07-17'
+    weeks:
+    - - '2027-07-05'
+      - '2027-07-06'
+      - '2027-07-07'
+      - '2027-07-08'
+      - '2027-07-09'
+      - '2027-07-10'
+    - - '2027-07-12'
+      - '2027-07-13'
+      - '2027-07-14'
+      - '2027-07-15'
+      - '2027-07-16'
+      - '2027-07-17'
+  checkpoints:
+  - id: cp1
+    date: '2027-07-06'
+    label: end of Tuesday (week 1)
+  - id: cp2
+    date: '2027-07-08'
+    label: end of Thursday (week 1)
+  - id: cp3
+    date: '2027-07-10'
+    label: end of week (week 1)
+  - id: cp4
+    date: '2027-07-13'
+    label: end of Tuesday (week 2)
+  - id: cp5
+    date: '2027-07-15'
+    label: end of Thursday (week 2)
+  - id: cp6
+    date: '2027-07-17'
+    label: end of week (week 2)
+worker: p-hiba-jimenez
+orgs:
+- id: o-corrstead-university-system
+  name: Corrstead University System
+  short: Corrstead
+  kind: internal
+  role: umbrella
+  domain: corrstead.example
+  slug: corrstead
+  surface_forms:
+  - Corrstead
+  - CUS
+  - corrstead.example
+  receptiveness: null
+- id: o-systemwide-learning-innovation-office
+  name: Systemwide Learning Innovation Office
+  short: SLIO
+  kind: internal
+  role: central
+  domain: corrstead.example
+  slug: slio
+  surface_forms:
+  - SLIO
+  - central
+  - the SLIO team
+  - corrstead.example
+  receptiveness: null
+- id: o-crandale-university
+  name: Crandale University
+  short: Crandale
+  kind: internal
+  role: unit
+  domain: crandale.corrstead.example
+  slug: crandale
+  surface_forms:
+  - Crandale
+  - CU
+  - crandale.corrstead.example
+  receptiveness: high
+- id: o-iselbury-state-college
+  name: Iselbury State College
+  short: Iselbury
+  kind: internal
+  role: unit
+  domain: iselbury.corrstead.example
+  slug: iselbury
+  surface_forms:
+  - Iselbury
+  - ISC
+  - iselbury.corrstead.example
+  receptiveness: medium
+- id: o-university-of-elmwick
+  name: University of Elmwick
+  short: Elmwick
+  kind: internal
+  role: unit
+  domain: elmwick.corrstead.example
+  slug: elmwick
+  surface_forms:
+  - Elmwick
+  - UE
+  - elmwick.corrstead.example
+  receptiveness: low
+- id: o-aldervale-university
+  name: Aldervale University
+  short: Aldervale
+  kind: internal
+  role: unit
+  domain: aldervale.corrstead.example
+  slug: aldervale
+  surface_forms:
+  - Aldervale
+  - AU
+  - aldervale.corrstead.example
+  receptiveness: low
+- id: o-merol-labs
+  name: Merol Labs
+  short: Merol
+  kind: vendor
+  role: vendor
+  domain: merol.example
+  slug: merol
+  surface_forms:
+  - Merol
+  - merol.example
+  receptiveness: null
+- id: o-torane-software
+  name: Torane Software
+  short: Torane
+  kind: vendor
+  role: vendor
+  domain: torane.example
+  slug: torane
+  surface_forms:
+  - Torane
+  - torane.example
+  receptiveness: null
+- id: o-holmarsh-institute-for-learning-research
+  name: Holmarsh Institute for Learning Research
+  short: Holmarsh
+  kind: partner
+  role: partner
+  domain: holmarsh-research.example
+  slug: holmarsh
+  surface_forms:
+  - Holmarsh
+  - HILR
+  - holmarsh-research.example
+  receptiveness: null
+people:
+- id: p-hiba-jimenez
+  name: Hiba Jimenez
+  first: Hiba
+  last: Jimenez
+  nickname: null
+  org: o-systemwide-learning-innovation-office
+  role: Lead Solutions Architect, Teaching Technology
+  role_phrase: null
+  email: hiba.jimenez@corrstead.example
+  handle: '@hiba'
+  relationship: null
+  group: central
+  tier: core
+  weight: 0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Hiba
+  - H. Jimenez
+  - hiba.jimenez@corrstead.example
+  - '@hiba'
+- id: p-anastasia-mizrahi
+  name: Anastasia Mizrahi
+  first: Anastasia
+  last: Mizrahi
+  nickname: Nastya
+  org: o-systemwide-learning-innovation-office
+  role: Associate Provost for Academic Technology
+  role_phrase: the associate provost
+  email: anastasia.mizrahi@corrstead.example
+  handle: '@anastasia'
+  relationship: manager
+  group: central
+  tier: core
+  weight: 2.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Anastasia
+  - Nastya
+  - A. Mizrahi
+  - anastasia.mizrahi@corrstead.example
+  - '@anastasia'
+  - the associate provost
+- id: p-bolat-oyelami
+  name: Bolat Oyelami
+  first: Bolat
+  last: Oyelami
+  nickname: null
+  org: o-systemwide-learning-innovation-office
+  role: Head of Learning Services
+  role_phrase: our learning services head
+  email: bolat.oyelami@corrstead.example
+  handle: '@bolat'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 7.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Bolat
+  - B. Oyelami
+  - bolat.oyelami@corrstead.example
+  - '@bolat'
+  - our learning services head
+- id: p-desmond-visser
+  name: Desmond Visser
+  first: Desmond
+  last: Visser
+  nickname: Dez
+  org: o-systemwide-learning-innovation-office
+  role: Lead, Cloud Platforms
+  role_phrase: the platform lead
+  email: desmond.visser@corrstead.example
+  handle: '@desmond'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 3.2
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Desmond
+  - Dez
+  - D. Visser
+  - desmond.visser@corrstead.example
+  - '@desmond'
+  - the platform lead
+- id: p-emre-khumalo
+  name: Emre Khumalo
+  first: Emre
+  last: Khumalo
+  nickname: null
+  org: o-systemwide-learning-innovation-office
+  role: Platform Engineer
+  role_phrase: the platform engineer
+  email: emre.khumalo@corrstead.example
+  handle: '@emre'
+  relationship: stakeholder
+  group: central
+  tier: core
+  weight: 1.2
+  appears: null
+  voice: formal
+  surface_forms:
+  - Emre
+  - E. Khumalo
+  - emre.khumalo@corrstead.example
+  - '@emre'
+  - the platform engineer
+- id: p-andrei-laurent
+  name: Andrei Laurent
+  first: Andrei
+  last: Laurent
+  nickname: null
+  org: o-systemwide-learning-innovation-office
+  role: Information Security Manager
+  role_phrase: the security manager
+  email: andrei.laurent@corrstead.example
+  handle: '@andrei'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 2.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Andrei
+  - A. Laurent
+  - andrei.laurent@corrstead.example
+  - '@andrei'
+  - the security manager
+- id: p-adaeze-fifita
+  name: Adaeze Fifita
+  first: Adaeze
+  last: Fifita
+  nickname: null
+  org: o-systemwide-learning-innovation-office
+  role: Product Owner, Student Systems
+  role_phrase: the product owner
+  email: adaeze.fifita@corrstead.example
+  handle: '@adaeze'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 1.2
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Adaeze
+  - A. Fifita
+  - adaeze.fifita@corrstead.example
+  - '@adaeze'
+  - the product owner
+- id: p-rodrigo-gurung
+  name: Rodrigo Gurung
+  first: Rodrigo
+  last: Gurung
+  nickname: null
+  org: o-systemwide-learning-innovation-office
+  role: Executive Assistant to the Associate Provost
+  role_phrase: the provost's EA
+  email: rodrigo.gurung@corrstead.example
+  handle: '@rodrigo'
+  relationship: assistant
+  group: central
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: formal
+  surface_forms:
+  - Rodrigo
+  - R. Gurung
+  - rodrigo.gurung@corrstead.example
+  - '@rodrigo'
+  - the provost's EA
+- id: p-kirsten-andersen
+  name: Kirsten Andersen
+  first: Kirsten
+  last: Andersen
+  nickname: null
+  org: o-systemwide-learning-innovation-office
+  role: Senior Data Analyst
+  role_phrase: our data analyst
+  email: kirsten.andersen@corrstead.example
+  handle: '@kirsten'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Kirsten
+  - K. Andersen
+  - kirsten.andersen@corrstead.example
+  - '@kirsten'
+  - our data analyst
+- id: p-slio-shared-inbox
+  name: SLIO Shared Inbox
+  first: SLIO Team
+  last: Mailbox
+  nickname: null
+  org: o-systemwide-learning-innovation-office
+  role: Shared team mailbox
+  role_phrase: the SLIO inbox
+  email: slio-team@corrstead.example
+  handle: '@slio-team'
+  relationship: other
+  group: mailbox
+  tier: core
+  weight: 0.3
+  appears: null
+  voice: formal
+  surface_forms:
+  - SLIO Team
+  - the SLIO inbox
+  - slio-team@corrstead.example
+- id: p-hyejin-liu
+  name: Hyejin Liu
+  first: Hyejin
+  last: Liu
+  nickname: null
+  org: o-corrstead-university-system
+  role: Procurement Officer, System Procurement
+  role_phrase: the procurement officer
+  email: hyejin.liu@corrstead.example
+  handle: '@hyejin'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: terse
+  surface_forms:
+  - Hyejin
+  - H. Liu
+  - hyejin.liu@corrstead.example
+  - '@hyejin'
+  - the procurement officer
+- id: p-segun-nikolic
+  name: Segun Nikolic
+  first: Segun
+  last: Nikolic
+  nickname: null
+  org: o-corrstead-university-system
+  role: Associate Counsel, System Legal
+  role_phrase: system counsel
+  email: segun.nikolic@corrstead.example
+  handle: '@segun'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Segun
+  - S. Nikolic
+  - segun.nikolic@corrstead.example
+  - '@segun'
+  - system counsel
+- id: p-rahul-sargsyan
+  name: Rahul Sargsyan
+  first: Rahul
+  last: Sargsyan
+  nickname: null
+  org: o-corrstead-university-system
+  role: Director, System Budget Office
+  role_phrase: the budget director
+  email: rahul.sargsyan@corrstead.example
+  handle: '@rahul'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Rahul
+  - R. Sargsyan
+  - rahul.sargsyan@corrstead.example
+  - '@rahul'
+  - the budget director
+- id: p-ciaran-pereira
+  name: Ciaran Pereira
+  first: Ciaran
+  last: Pereira
+  nickname: null
+  org: o-corrstead-university-system
+  role: Talent Partner, System HR
+  role_phrase: our talent partner
+  email: ciaran.pereira@corrstead.example
+  handle: '@ciaran'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Ciaran
+  - C. Pereira
+  - ciaran.pereira@corrstead.example
+  - '@ciaran'
+  - our talent partner
+- id: p-tyrone-duarte
+  name: Tyrone Duarte
+  first: Tyrone
+  last: Duarte
+  nickname: null
+  org: o-corrstead-university-system
+  role: Chief Privacy Officer
+  role_phrase: the privacy officer
+  email: tyrone.duarte@corrstead.example
+  handle: '@tyrone'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Tyrone
+  - T. Duarte
+  - tyrone.duarte@corrstead.example
+  - '@tyrone'
+  - the privacy officer
+- id: p-eun-ji-valdez
+  name: Eun-ji Valdez
+  first: Eun-ji
+  last: Valdez
+  nickname: null
+  org: o-crandale-university
+  role: Chief Information Officer
+  role_phrase: Crandale's CIO
+  email: eunji.valdez@crandale.corrstead.example
+  handle: '@eunji'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: terse
+  surface_forms:
+  - Eun-ji
+  - E. Valdez
+  - eunji.valdez@crandale.corrstead.example
+  - '@eunji'
+  - Crandale's CIO
+- id: p-ewan-laine
+  name: Ewan Laine
+  first: Ewan
+  last: Laine
+  nickname: null
+  org: o-crandale-university
+  role: Registrar
+  role_phrase: the Crandale lead
+  email: ewan.laine@crandale.corrstead.example
+  handle: '@ewan'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 2.4
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Ewan
+  - E. Laine
+  - ewan.laine@crandale.corrstead.example
+  - '@ewan'
+  - the Crandale lead
+- id: p-madeline-chikwanha
+  name: Madeline Chikwanha
+  first: Madeline
+  last: Chikwanha
+  nickname: Maddie
+  org: o-crandale-university
+  role: Site Reliability Engineer
+  role_phrase: null
+  email: madeline.chikwanha@crandale.corrstead.example
+  handle: '@madeline'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Madeline
+  - Maddie
+  - M. Chikwanha
+  - madeline.chikwanha@crandale.corrstead.example
+  - '@madeline'
+- id: p-meera-thornbury
+  name: Meera Thornbury
+  first: Meera
+  last: Thornbury
+  nickname: null
+  org: o-iselbury-state-college
+  role: Chief Information Officer
+  role_phrase: Iselbury's CIO
+  email: meera.thornbury@iselbury.corrstead.example
+  handle: '@meera'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: terse
+  surface_forms:
+  - Meera
+  - M. Thornbury
+  - meera.thornbury@iselbury.corrstead.example
+  - '@meera'
+  - Iselbury's CIO
+- id: p-zawadi-grigoryan
+  name: Zawadi Grigoryan
+  first: Zawadi
+  last: Grigoryan
+  nickname: null
+  org: o-iselbury-state-college
+  role: Director of Institutional Research
+  role_phrase: the Iselbury lead
+  email: zawadi.grigoryan@iselbury.corrstead.example
+  handle: '@zawadi'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: formal
+  surface_forms:
+  - Zawadi
+  - Z. Grigoryan
+  - zawadi.grigoryan@iselbury.corrstead.example
+  - '@zawadi'
+  - the Iselbury lead
+- id: p-kristen-ochieng
+  name: Kristen Ochieng
+  first: Kristen
+  last: Ochieng
+  nickname: null
+  org: o-iselbury-state-college
+  role: Software Engineer
+  role_phrase: null
+  email: kristen.ochieng@iselbury.corrstead.example
+  handle: '@kristen'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Kristen
+  - K. Ochieng
+  - kristen.ochieng@iselbury.corrstead.example
+  - '@kristen'
+- id: p-nurlan-kavanagh
+  name: Nurlan Kavanagh
+  first: Nurlan
+  last: Kavanagh
+  nickname: null
+  org: o-university-of-elmwick
+  role: Chief Information Officer
+  role_phrase: Elmwick's CIO
+  email: nurlan.kavanagh@elmwick.corrstead.example
+  handle: '@nurlan'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: formal
+  surface_forms:
+  - Nurlan
+  - N. Kavanagh
+  - nurlan.kavanagh@elmwick.corrstead.example
+  - '@nurlan'
+  - Elmwick's CIO
+- id: p-mere-hidayat
+  name: Mere Hidayat
+  first: Mere
+  last: Hidayat
+  nickname: null
+  org: o-university-of-elmwick
+  role: Director, Teaching & Learning Technology
+  role_phrase: the Elmwick lead
+  email: mere.hidayat@elmwick.corrstead.example
+  handle: '@mere'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Mere
+  - M. Hidayat
+  - mere.hidayat@elmwick.corrstead.example
+  - '@mere'
+  - the Elmwick lead
+- id: p-deborah-nurlanov
+  name: Deborah Nurlanov
+  first: Deborah
+  last: Nurlanov
+  nickname: null
+  org: o-university-of-elmwick
+  role: Instructional Designer
+  role_phrase: null
+  email: deborah.nurlanov@elmwick.corrstead.example
+  handle: '@deborah'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Deborah
+  - D. Nurlanov
+  - deborah.nurlanov@elmwick.corrstead.example
+  - '@deborah'
+- id: p-benedikt-fenwick
+  name: Benedikt Fenwick
+  first: Benedikt
+  last: Fenwick
+  nickname: Bene
+  org: o-aldervale-university
+  role: Chief Information Officer
+  role_phrase: Aldervale's CIO
+  email: benedikt.fenwick@aldervale.corrstead.example
+  handle: '@benedikt'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Benedikt
+  - Bene
+  - B. Fenwick
+  - benedikt.fenwick@aldervale.corrstead.example
+  - '@benedikt'
+  - Aldervale's CIO
+- id: p-tane-wisniewska
+  name: Tane Wisniewska
+  first: Tane
+  last: Wisniewska
+  nickname: null
+  org: o-aldervale-university
+  role: Dean of Libraries
+  role_phrase: the Aldervale lead
+  email: tane.wisniewska@aldervale.corrstead.example
+  handle: '@tane'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Tane
+  - T. Wisniewska
+  - tane.wisniewska@aldervale.corrstead.example
+  - '@tane'
+  - the Aldervale lead
+- id: p-funmilayo-ogunleye
+  name: Funmilayo Ogunleye
+  first: Funmilayo
+  last: Ogunleye
+  nickname: Funmi
+  org: o-aldervale-university
+  role: Service Desk Lead
+  role_phrase: null
+  email: funmilayo.ogunleye@aldervale.corrstead.example
+  handle: '@funmilayo'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - Funmilayo
+  - Funmi
+  - F. Ogunleye
+  - funmilayo.ogunleye@aldervale.corrstead.example
+  - '@funmilayo'
+- id: p-bolat-farah
+  name: Bolat Farah
+  first: Bolat
+  last: Farah
+  nickname: null
+  org: o-merol-labs
+  role: Account Executive
+  role_phrase: null
+  email: bolat.farah@merol.example
+  handle: '@bolatf'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: formal
+  surface_forms:
+  - Bolat
+  - B. Farah
+  - bolat.farah@merol.example
+  - '@bolatf'
+- id: p-mariana-bishara
+  name: Mariana Bishara
+  first: Mariana
+  last: Bishara
+  nickname: null
+  org: o-merol-labs
+  role: Solutions Engineer
+  role_phrase: null
+  email: mariana.bishara@merol.example
+  handle: '@mariana'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: terse
+  surface_forms:
+  - Mariana
+  - M. Bishara
+  - mariana.bishara@merol.example
+  - '@mariana'
+- id: p-catalina-achterhof
+  name: Catalina Achterhof
+  first: Catalina
+  last: Achterhof
+  nickname: null
+  org: o-torane-software
+  role: Account Executive
+  role_phrase: null
+  email: catalina.achterhof@torane.example
+  handle: '@catalina'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Catalina
+  - C. Achterhof
+  - catalina.achterhof@torane.example
+  - '@catalina'
+- id: p-zawadi-quinlan
+  name: Zawadi Quinlan
+  first: Zawadi
+  last: Quinlan
+  nickname: null
+  org: o-torane-software
+  role: Solutions Engineer
+  role_phrase: null
+  email: zawadi.quinlan@torane.example
+  handle: '@zawadiq'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Zawadi
+  - Z. Quinlan
+  - zawadi.quinlan@torane.example
+  - '@zawadiq'
+- id: p-rania-dlamini
+  name: Rania Dlamini
+  first: Rania
+  last: Dlamini
+  nickname: null
+  org: o-holmarsh-institute-for-learning-research
+  role: Senior Research Scientist
+  role_phrase: null
+  email: rania.dlamini@holmarsh-research.example
+  handle: '@rania'
+  relationship: partner
+  group: partner
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Rania
+  - R. Dlamini
+  - rania.dlamini@holmarsh-research.example
+  - '@rania'
+- id: p-nandini-mensah
+  name: Nandini Mensah
+  first: Nandini
+  last: Mensah
+  nickname: null
+  org: null
+  role: Candidate
+  role_phrase: null
+  email: nandini.mensah@post.example
+  handle: '@nandini'
+  relationship: candidate
+  group: candidate
+  tier: core
+  weight: 0.6
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Nandini
+  - N. Mensah
+  - nandini.mensah@post.example
+  - '@nandini'
+- id: p-dong-hyun-colombo
+  name: Dong-hyun Colombo
+  first: Dong-hyun
+  last: Colombo
+  nickname: null
+  org: o-crandale-university
+  role: Privacy Officer
+  role_phrase: the new privacy officer
+  email: donghyun.colombo@crandale.corrstead.example
+  handle: '@donghyun'
+  relationship: stakeholder
+  group: newcomer
+  tier: core
+  weight: 1.4
+  appears: '2027-07-07'
+  voice: chatty
+  surface_forms:
+  - Dong-hyun
+  - D. Colombo
+  - donghyun.colombo@crandale.corrstead.example
+  - '@donghyun'
+  - the new privacy officer
+- id: p-abigail-kuznetsova
+  name: Abigail Kuznetsova
+  first: Abigail
+  last: Kuznetsova
+  nickname: Abby
+  org: o-merol-labs
+  role: Senior Account Executive
+  role_phrase: null
+  email: abigail.kuznetsova@merol.example
+  handle: '@abigail'
+  relationship: vendor
+  group: newcomer
+  tier: core
+  weight: 1.4
+  appears: '2027-07-14'
+  voice: lowercase
+  surface_forms:
+  - Abigail
+  - Abby
+  - A. Kuznetsova
+  - abigail.kuznetsova@merol.example
+  - '@abigail'
+- id: p-stanley-agyeman
+  name: Stanley Agyeman
+  first: Stanley
+  last: Agyeman
+  nickname: null
+  org: null
+  role: Editor, The Quad Ledger
+  role_phrase: null
+  email: stanley.agyeman@newsletters.example
+  handle: '@stanley'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - stanley.agyeman@newsletters.example
+  minor_kind: newsletter
+- id: p-corrstead-it-service-desk
+  name: Corrstead IT Service Desk
+  first: Corrstead IT Service Desk
+  last: ''
+  nickname: null
+  org: null
+  role: Corrstead IT Service Desk
+  role_phrase: null
+  email: servicedesk-noreply@corrstead.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - servicedesk-noreply@corrstead.example
+  minor_kind: service_desk
+- id: p-platform-status-page
+  name: Platform Status Page
+  first: Platform Status Page
+  last: ''
+  nickname: null
+  org: null
+  role: Platform Status Page
+  role_phrase: null
+  email: status-noreply@corrstead.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - status-noreply@corrstead.example
+  minor_kind: status
+- id: p-corrstead-internal-communications
+  name: Corrstead Internal Communications
+  first: Corrstead Internal Communications
+  last: ''
+  nickname: null
+  org: null
+  role: Corrstead Internal Communications
+  role_phrase: null
+  email: news@corrstead.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - news@corrstead.example
+  minor_kind: comms
+- id: p-thao-mendoza
+  name: Thao Mendoza
+  first: Thao
+  last: Mendoza
+  nickname: null
+  org: null
+  role: Events Coordinator
+  role_phrase: null
+  email: thao.mendoza@corrstead.example
+  handle: '@thao'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - thao.mendoza@corrstead.example
+  minor_kind: events
+- id: p-elif-salazar
+  name: Elif Salazar
+  first: Elif
+  last: Salazar
+  nickname: null
+  org: null
+  role: Conference Organizer
+  role_phrase: null
+  email: elif.salazar@conference.example
+  handle: '@elif'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - elif.salazar@conference.example
+  minor_kind: conference
+- id: p-benefits-enrollment-notices
+  name: Benefits Enrollment Notices
+  first: Benefits Enrollment Notices
+  last: ''
+  nickname: null
+  org: null
+  role: Benefits Enrollment Notices
+  role_phrase: null
+  email: benefits-noreply@corrstead.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - benefits-noreply@corrstead.example
+  minor_kind: benefits
+projects:
+- id: pr-garnet
+  name: Garnet
+  short: Garnet
+  kw: garnet
+  code: Garnet
+  surface_forms:
+  - Project Garnet
+  - the early alert pilot
+  - the Crandale pilot
+  - GARP
+  archetype: flagship_pilot
+  size: flagship
+  topic: early alert
+  topic_a: an AI early-alert assistant
+  pivot: lab equipment booking
+  role: ''
+  unit: o-crandale-university
+  vendors:
+  - o-torane-software
+  - o-merol-labs
+  partner: o-holmarsh-institute-for-learning-research
+  owner: p-ewan-laine
+  sponsor: p-anastasia-mizrahi
+  members:
+  - p-hiba-jimenez
+  - p-ewan-laine
+  - p-bolat-oyelami
+  - p-madeline-chikwanha
+  - p-desmond-visser
+  - p-andrei-laurent
+  - p-emre-khumalo
+  - p-adaeze-fifita
+  - p-eun-ji-valdez
+  orgs:
+  - o-crandale-university
+  status: active
+  phase: scoping
+  target_date: '2027-07-26'
+  n: 3
+  cast:
+    owner: p-ewan-laine
+    sponsor: p-anastasia-mizrahi
+    lead: p-ewan-laine
+    unit:
+    - p-madeline-chikwanha
+    - p-ewan-laine
+    ae:
+    - p-catalina-achterhof
+    - p-bolat-farah
+    se:
+    - p-zawadi-quinlan
+    - p-mariana-bishara
+    eng: p-desmond-visser
+    sec: p-andrei-laurent
+    privacy: p-tyrone-duarte
+    legal: p-segun-nikolic
+    proc: p-hyejin-liu
+    fin: p-rahul-sargsyan
+    hr: p-ciaran-pereira
+    ea: p-rodrigo-gurung
+    collab: p-bolat-oyelami
+    partner: p-rania-dlamini
+    cand: p-nandini-mensah
+  weight: 27.08
+  start: '2027-06-21'
+- id: pr-siskin
+  name: Siskin
+  short: Siskin
+  kw: siskin
+  code: Siskin
+  surface_forms:
+  - the platform
+  - the common platform
+  - Siskin platform
+  - the shared AI platform
+  archetype: platform_hub
+  size: hub
+  topic: shared platform
+  topic_a: ''
+  pivot: prerequisite mapping
+  role: ''
+  unit: o-crandale-university
+  vendors:
+  - o-torane-software
+  - o-merol-labs
+  partner: o-holmarsh-institute-for-learning-research
+  owner: p-desmond-visser
+  sponsor: p-anastasia-mizrahi
+  members:
+  - p-hiba-jimenez
+  - p-desmond-visser
+  - p-bolat-oyelami
+  - p-ewan-laine
+  - p-madeline-chikwanha
+  - p-emre-khumalo
+  - p-andrei-laurent
+  orgs: []
+  status: active
+  phase: onboarding tenants
+  target_date: null
+  n: 2
+  cast:
+    owner: p-desmond-visser
+    sponsor: p-anastasia-mizrahi
+    lead: p-ewan-laine
+    unit:
+    - p-madeline-chikwanha
+    - p-ewan-laine
+    ae:
+    - p-catalina-achterhof
+    - p-bolat-farah
+    se:
+    - p-zawadi-quinlan
+    - p-mariana-bishara
+    eng: p-emre-khumalo
+    sec: p-andrei-laurent
+    privacy: p-tyrone-duarte
+    legal: p-segun-nikolic
+    proc: p-hyejin-liu
+    fin: p-rahul-sargsyan
+    hr: p-ciaran-pereira
+    ea: p-rodrigo-gurung
+    collab: p-bolat-oyelami
+    partner: p-rania-dlamini
+    cand: p-nandini-mensah
+  weight: 13.71
+  start: '2027-06-21'
+- id: pr-admissions-triage-tool-selection
+  name: Admissions Triage Tool Selection
+  short: admissions triage selection
+  kw: admissions triage selection
+  code: null
+  surface_forms:
+  - the admissions triage bake-off
+  - the Torane/Merol evaluation
+  - ATTS selection
+  archetype: vendor_pair_evaluation
+  size: mid
+  topic: admissions triage
+  topic_a: an AI admissions document triage tool
+  pivot: prerequisite mapping
+  role: ''
+  unit: o-crandale-university
+  vendors:
+  - o-torane-software
+  - o-merol-labs
+  partner: o-holmarsh-institute-for-learning-research
+  owner: p-hiba-jimenez
+  sponsor: p-anastasia-mizrahi
+  members:
+  - p-hiba-jimenez
+  - p-hiba-jimenez
+  - p-bolat-oyelami
+  - p-ewan-laine
+  - p-madeline-chikwanha
+  - p-catalina-achterhof
+  orgs:
+  - o-crandale-university
+  - o-torane-software
+  - o-merol-labs
+  status: active
+  phase: questionnaires
+  target_date: '2027-08-02'
+  n: 2
+  cast:
+    owner: p-hiba-jimenez
+    sponsor: p-anastasia-mizrahi
+    lead: p-ewan-laine
+    unit:
+    - p-madeline-chikwanha
+    - p-ewan-laine
+    ae:
+    - p-catalina-achterhof
+    - p-bolat-farah
+    se:
+    - p-zawadi-quinlan
+    - p-mariana-bishara
+    eng: p-desmond-visser
+    sec: p-andrei-laurent
+    privacy: p-tyrone-duarte
+    legal: p-segun-nikolic
+    proc: p-hyejin-liu
+    fin: p-rahul-sargsyan
+    hr: p-ciaran-pereira
+    ea: p-rodrigo-gurung
+    collab: p-bolat-oyelami
+    partner: p-rania-dlamini
+    cand: p-nandini-mensah
+  weight: 8.14
+  start: '2027-06-21'
+- id: pr-elmwick-alumni-outreach-discovery
+  name: Elmwick Alumni Outreach Discovery
+  short: alumni outreach discovery
+  kw: alumni outreach discovery
+  code: null
+  surface_forms:
+  - the Elmwick discovery
+  - the alumni outreach work
+  - EAOD discovery
+  archetype: pivoting_discovery
+  size: mid
+  topic: alumni outreach
+  topic_a: an AI alumni outreach assistant
+  pivot: waitlist management
+  role: ''
+  unit: o-university-of-elmwick
+  vendors:
+  - o-torane-software
+  - o-merol-labs
+  partner: o-holmarsh-institute-for-learning-research
+  owner: p-mere-hidayat
+  sponsor: p-nurlan-kavanagh
+  members:
+  - p-hiba-jimenez
+  - p-mere-hidayat
+  - p-bolat-oyelami
+  - p-deborah-nurlanov
+  orgs:
+  - o-university-of-elmwick
+  status: active
+  phase: site visit
+  target_date: '2027-08-03'
+  n: 2
+  cast:
+    owner: p-mere-hidayat
+    sponsor: p-nurlan-kavanagh
+    lead: p-mere-hidayat
+    unit:
+    - p-deborah-nurlanov
+    - p-mere-hidayat
+    ae:
+    - p-catalina-achterhof
+    - p-bolat-farah
+    se:
+    - p-zawadi-quinlan
+    - p-mariana-bishara
+    eng: p-desmond-visser
+    sec: p-andrei-laurent
+    privacy: p-tyrone-duarte
+    legal: p-segun-nikolic
+    proc: p-hyejin-liu
+    fin: p-rahul-sargsyan
+    hr: p-ciaran-pereira
+    ea: p-rodrigo-gurung
+    collab: p-bolat-oyelami
+    partner: p-rania-dlamini
+    cand: p-nandini-mensah
+  weight: 6.16
+  start: '2027-06-21'
+- id: pr-assessment-design-workshop
+  name: Assessment Design Workshop
+  short: assessment design workshop
+  kw: assessment design workshop
+  code: null
+  surface_forms:
+  - the workshop
+  - the Aldervale workshop
+  - the assessment design session
+  archetype: event_preparation
+  size: mid
+  topic: assessment design
+  topic_a: ''
+  pivot: waitlist management
+  role: ''
+  unit: o-aldervale-university
+  vendors:
+  - o-torane-software
+  - o-merol-labs
+  partner: o-holmarsh-institute-for-learning-research
+  owner: p-bolat-oyelami
+  sponsor: p-anastasia-mizrahi
+  members:
+  - p-hiba-jimenez
+  - p-bolat-oyelami
+  - p-tane-wisniewska
+  - p-funmilayo-ogunleye
+  orgs:
+  - o-aldervale-university
+  status: active
+  phase: planning
+  target_date: '2027-08-16'
+  n: 2
+  cast:
+    owner: p-bolat-oyelami
+    sponsor: p-anastasia-mizrahi
+    lead: p-tane-wisniewska
+    unit:
+    - p-funmilayo-ogunleye
+    - p-tane-wisniewska
+    ae:
+    - p-catalina-achterhof
+    - p-bolat-farah
+    se:
+    - p-zawadi-quinlan
+    - p-mariana-bishara
+    eng: p-desmond-visser
+    sec: p-andrei-laurent
+    privacy: p-tyrone-duarte
+    legal: p-segun-nikolic
+    proc: p-hyejin-liu
+    fin: p-rahul-sargsyan
+    hr: p-ciaran-pereira
+    ea: p-rodrigo-gurung
+    collab: p-bolat-oyelami
+    partner: p-rania-dlamini
+    cand: p-nandini-mensah
+  weight: 8.2
+  start: '2027-06-21'
+- id: pr-corrie
+  name: Corrie
+  short: Corrie
+  kw: corrie
+  code: Corrie
+  surface_forms:
+  - Project Corrie
+  - the course assistant prototype
+  archetype: internal_incubation
+  size: mid
+  topic: course assistant
+  topic_a: an AI course assistant
+  pivot: waitlist management
+  role: ''
+  unit: o-iselbury-state-college
+  vendors:
+  - o-merol-labs
+  - o-torane-software
+  partner: o-holmarsh-institute-for-learning-research
+  owner: p-hiba-jimenez
+  sponsor: p-anastasia-mizrahi
+  members:
+  - p-hiba-jimenez
+  - p-hiba-jimenez
+  - p-bolat-oyelami
+  - p-zawadi-grigoryan
+  - p-kristen-ochieng
+  orgs:
+  - o-iselbury-state-college
+  status: active
+  phase: prototype
+  target_date: '2027-08-02'
+  n: 2
+  cast:
+    owner: p-hiba-jimenez
+    sponsor: p-anastasia-mizrahi
+    lead: p-zawadi-grigoryan
+    unit:
+    - p-kristen-ochieng
+    - p-zawadi-grigoryan
+    ae:
+    - p-bolat-farah
+    - p-catalina-achterhof
+    se:
+    - p-mariana-bishara
+    - p-zawadi-quinlan
+    eng: p-desmond-visser
+    sec: p-andrei-laurent
+    privacy: p-tyrone-duarte
+    legal: p-segun-nikolic
+    proc: p-hyejin-liu
+    fin: p-rahul-sargsyan
+    hr: p-ciaran-pereira
+    ea: p-rodrigo-gurung
+    collab: p-bolat-oyelami
+    partner: p-rania-dlamini
+    cand: p-nandini-mensah
+  weight: 8.57
+  start: '2027-06-21'
+- id: pr-holmarsh-partnership
+  name: Holmarsh Partnership
+  short: Holmarsh partnership
+  kw: holmarsh partnership
+  code: null
+  surface_forms:
+  - the Holmarsh relationship
+  - Holmarsh
+  archetype: relationship_thread
+  size: small
+  topic: partnership
+  topic_a: ''
+  pivot: prerequisite mapping
+  role: ''
+  unit: o-crandale-university
+  vendors:
+  - o-torane-software
+  - o-merol-labs
+  partner: o-holmarsh-institute-for-learning-research
+  owner: p-hiba-jimenez
+  sponsor: p-anastasia-mizrahi
+  members:
+  - p-hiba-jimenez
+  - p-hiba-jimenez
+  - p-bolat-oyelami
+  - p-ewan-laine
+  orgs:
+  - o-crandale-university
+  - o-holmarsh-institute-for-learning-research
+  status: active
+  phase: ongoing
+  target_date: null
+  n: 2
+  cast:
+    owner: p-hiba-jimenez
+    sponsor: p-anastasia-mizrahi
+    lead: p-ewan-laine
+    unit:
+    - p-madeline-chikwanha
+    - p-ewan-laine
+    ae:
+    - p-catalina-achterhof
+    - p-bolat-farah
+    se:
+    - p-zawadi-quinlan
+    - p-mariana-bishara
+    eng: p-desmond-visser
+    sec: p-andrei-laurent
+    privacy: p-tyrone-duarte
+    legal: p-segun-nikolic
+    proc: p-hyejin-liu
+    fin: p-rahul-sargsyan
+    hr: p-ciaran-pereira
+    ea: p-rodrigo-gurung
+    collab: p-bolat-oyelami
+    partner: p-rania-dlamini
+    cand: p-nandini-mensah
+  weight: 2.83
+  start: '2027-06-21'
+- id: pr-siskin-operating-model-review
+  name: Siskin Operating Model Review
+  short: Siskin operating model
+  kw: operating model
+  code: null
+  surface_forms:
+  - the operating model review
+  - the ops model draft
+  - the Siskin operating model
+  archetype: peer_review
+  size: small
+  topic: platform
+  topic_a: ''
+  pivot: transcript intake
+  role: ''
+  unit: o-crandale-university
+  vendors:
+  - o-merol-labs
+  - o-torane-software
+  partner: o-holmarsh-institute-for-learning-research
+  owner: p-desmond-visser
+  sponsor: p-anastasia-mizrahi
+  members:
+  - p-hiba-jimenez
+  - p-desmond-visser
+  - p-bolat-oyelami
+  - p-ewan-laine
+  orgs:
+  - o-crandale-university
+  status: active
+  phase: review requested
+  target_date: null
+  n: 2
+  cast:
+    owner: p-desmond-visser
+    sponsor: p-anastasia-mizrahi
+    lead: p-ewan-laine
+    unit:
+    - p-madeline-chikwanha
+    - p-ewan-laine
+    ae:
+    - p-bolat-farah
+    - p-catalina-achterhof
+    se:
+    - p-mariana-bishara
+    - p-zawadi-quinlan
+    eng: p-desmond-visser
+    sec: p-andrei-laurent
+    privacy: p-tyrone-duarte
+    legal: p-segun-nikolic
+    proc: p-hyejin-liu
+    fin: p-rahul-sargsyan
+    hr: p-ciaran-pereira
+    ea: p-rodrigo-gurung
+    collab: p-bolat-oyelami
+    partner: p-rania-dlamini
+    cand: p-nandini-mensah
+  weight: 2.75
+  start: '2027-06-21'
+- id: pr-iselbury-thesis-formatting-idea
+  name: Iselbury Thesis Formatting Idea
+  short: thesis formatting
+  kw: thesis formatting
+  code: null
+  surface_forms:
+  - Zawadi's thesis formatting idea
+  - the thesis formatting placeholder
+  archetype: placeholder
+  size: placeholder
+  topic: thesis formatting
+  topic_a: an AI thesis formatting checker
+  pivot: transcript intake
+  role: ''
+  unit: o-iselbury-state-college
+  vendors:
+  - o-torane-software
+  - o-merol-labs
+  partner: o-holmarsh-institute-for-learning-research
+  owner: p-zawadi-grigoryan
+  sponsor: p-anastasia-mizrahi
+  members:
+  - p-hiba-jimenez
+  - p-zawadi-grigoryan
+  - p-bolat-oyelami
+  orgs:
+  - o-iselbury-state-college
+  status: active
+  phase: placeholder
+  target_date: null
+  n: 2
+  cast:
+    owner: p-zawadi-grigoryan
+    sponsor: p-anastasia-mizrahi
+    lead: p-zawadi-grigoryan
+    unit:
+    - p-kristen-ochieng
+    - p-zawadi-grigoryan
+    ae:
+    - p-catalina-achterhof
+    - p-bolat-farah
+    se:
+    - p-zawadi-quinlan
+    - p-mariana-bishara
+    eng: p-desmond-visser
+    sec: p-andrei-laurent
+    privacy: p-tyrone-duarte
+    legal: p-segun-nikolic
+    proc: p-hyejin-liu
+    fin: p-rahul-sargsyan
+    hr: p-ciaran-pereira
+    ea: p-rodrigo-gurung
+    collab: p-bolat-oyelami
+    partner: p-rania-dlamini
+    cand: p-nandini-mensah
+  weight: 0.12
+  start: '2027-06-21'
+- id: pr-merol-captioning-diligence
+  name: Merol Captioning Diligence
+  short: Merol diligence
+  kw: merol diligence
+  code: null
+  surface_forms:
+  - the Merol deep dive
+  - the captioning diligence
+  archetype: stalled_discovery
+  size: dormant
+  topic: captioning
+  topic_a: an AI captioning service
+  pivot: transcript intake
+  role: ''
+  unit: o-crandale-university
+  vendors:
+  - o-merol-labs
+  - o-torane-software
+  partner: o-holmarsh-institute-for-learning-research
+  owner: p-hiba-jimenez
+  sponsor: p-anastasia-mizrahi
+  members:
+  - p-hiba-jimenez
+  - p-hiba-jimenez
+  - p-bolat-oyelami
+  orgs:
+  - o-crandale-university
+  - o-merol-labs
+  - o-torane-software
+  status: dormant
+  phase: stalled
+  target_date: null
+  n: 2
+  cast:
+    owner: p-hiba-jimenez
+    sponsor: p-anastasia-mizrahi
+    lead: p-ewan-laine
+    unit:
+    - p-madeline-chikwanha
+    - p-ewan-laine
+    ae:
+    - p-bolat-farah
+    - p-catalina-achterhof
+    se:
+    - p-mariana-bishara
+    - p-zawadi-quinlan
+    eng: p-desmond-visser
+    sec: p-andrei-laurent
+    privacy: p-tyrone-duarte
+    legal: p-segun-nikolic
+    proc: p-hyejin-liu
+    fin: p-rahul-sargsyan
+    hr: p-ciaran-pereira
+    ea: p-rodrigo-gurung
+    collab: p-bolat-oyelami
+    partner: p-rania-dlamini
+    cand: p-nandini-mensah
+  weight: 0.52
+  start: '2027-06-21'
+- id: pr-syllabus-review-learning-series
+  name: Syllabus Review Learning Series
+  short: syllabus review series
+  kw: syllabus review series
+  code: null
+  surface_forms:
+  - the learning series
+  - the syllabus review talks
+  archetype: education_programme
+  size: dormant
+  topic: syllabus review
+  topic_a: an AI syllabus review tool
+  pivot: lab equipment booking
+  role: ''
+  unit: o-university-of-elmwick
+  vendors:
+  - o-merol-labs
+  - o-torane-software
+  partner: o-holmarsh-institute-for-learning-research
+  owner: p-bolat-oyelami
+  sponsor: p-anastasia-mizrahi
+  members:
+  - p-hiba-jimenez
+  - p-bolat-oyelami
+  - p-mere-hidayat
+  orgs:
+  - o-university-of-elmwick
+  - o-holmarsh-institute-for-learning-research
+  status: active
+  phase: dormant
+  target_date: null
+  n: 2
+  cast:
+    owner: p-bolat-oyelami
+    sponsor: p-anastasia-mizrahi
+    lead: p-mere-hidayat
+    unit:
+    - p-deborah-nurlanov
+    - p-mere-hidayat
+    ae:
+    - p-bolat-farah
+    - p-catalina-achterhof
+    se:
+    - p-mariana-bishara
+    - p-zawadi-quinlan
+    eng: p-desmond-visser
+    sec: p-andrei-laurent
+    privacy: p-tyrone-duarte
+    legal: p-segun-nikolic
+    proc: p-hyejin-liu
+    fin: p-rahul-sargsyan
+    hr: p-ciaran-pereira
+    ea: p-rodrigo-gurung
+    collab: p-bolat-oyelami
+    partner: p-rania-dlamini
+    cand: p-nandini-mensah
+  weight: 0.69
+  start: '2027-06-21'
+collisions:
+  first_names:
+  - - p-bolat-oyelami
+    - p-bolat-farah
+  - - p-zawadi-grigoryan
+    - p-zawadi-quinlan
+  homophones:
+  - p-kirsten-andersen
+  - p-kristen-ochieng
+cadences:
+- key: standup
+  title: Garnet standup
+  kind: meeting
+  project: pr-garnet
+  weekdays:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  every: 1
+  time: 09:30
+  minutes: 25
+  organizer: p-ewan-laine
+  attendees:
+  - p-hiba-jimenez
+  - p-ewan-laine
+  - p-bolat-oyelami
+  - p-madeline-chikwanha
+  - p-desmond-visser
+  - p-andrei-laurent
+  - p-emre-khumalo
+  - p-adaeze-fifita
+- key: leads
+  title: SLIO leads call
+  kind: meeting
+  project: null
+  weekdays:
+  - 0
+  every: 1
+  time: '11:00'
+  minutes: 45
+  organizer: p-anastasia-mizrahi
+  attendees:
+  - p-hiba-jimenez
+  - p-bolat-oyelami
+  - p-desmond-visser
+  - p-andrei-laurent
+  - p-adaeze-fifita
+  - p-anastasia-mizrahi
+- key: hub_sync
+  title: Siskin platform sync
+  kind: meeting
+  project: pr-siskin
+  weekdays:
+  - 2
+  every: 1
+  time: '14:00'
+  minutes: 30
+  organizer: p-desmond-visser
+  attendees:
+  - p-hiba-jimenez
+  - p-desmond-visser
+  - p-bolat-oyelami
+  - p-ewan-laine
+  - p-madeline-chikwanha
+  - p-emre-khumalo
+- key: one_on_one
+  title: 1:1 Hiba / Bolat
+  kind: meeting
+  project: null
+  weekdays:
+  - 1
+  every: 2
+  time: '15:00'
+  minutes: 30
+  organizer: p-bolat-oyelami
+  attendees:
+  - p-hiba-jimenez
+  - p-bolat-oyelami
+- key: forum
+  title: Cross-campus AI forum
+  kind: meeting
+  project: null
+  weekdays:
+  - 3
+  every: 2
+  time: '13:00'
+  minutes: 60
+  organizer: p-bolat-oyelami
+  attendees:
+  - p-hiba-jimenez
+  - p-bolat-oyelami
+  - p-ewan-laine
+  - p-zawadi-grigoryan
+  - p-mere-hidayat
+  - p-tane-wisniewska
+- key: weekly_update
+  title: Weekly update
+  kind: obligation
+  project: null
+  weekdays:
+  - 0
+  - 4
+  every: 1
+  organizer: p-slio-shared-inbox
+  attendees:
+  - p-hiba-jimenez
+  - p-anastasia-mizrahi
+challenges:
+- week: 1
+  tag: worker_directive
+  day: '2027-07-05'
+  project: pr-elmwick-alumni-outreach-discovery
+- week: 1
+  tag: noise
+  day: '2027-07-05'
+- week: 1
+  tag: implied_commitment
+  day: '2027-07-05'
+  project: pr-garnet
+- week: 1
+  tag: duplicate_signal
+  day: '2027-07-05'
+  project: pr-garnet
+- week: 1
+  tag: privacy
+  day: '2027-07-05'
+- week: 1
+  tag: alias
+  day: '2027-07-07'
+- week: 1
+  tag: name_collision
+  day: '2027-07-08'
+- week: 1
+  tag: new_entity
+  day: '2027-07-07'
+  person: p-dong-hyun-colombo
+  project: pr-garnet
+- week: 1
+  tag: supersession
+  day: '2027-07-06'
+  project: pr-garnet
+- week: 1
+  tag: unobservable
+  day: '2027-07-06'
+  project: pr-garnet
+  attribute: budget
+- week: 1
+  tag: draft_vs_sent
+  day: '2027-07-06'
+  setup: '2027-07-05'
+- week: 1
+  tag: batch_catchup
+  day: '2027-07-06'
+- week: 1
+  tag: transfer
+  day: '2027-07-07'
+- week: 1
+  tag: correction
+  day: '2027-07-07'
+  setup: '2027-07-06'
+- week: 1
+  tag: weak_evidence
+  day: '2027-07-08'
+  setup: '2027-07-05'
+- week: 1
+  tag: acceptance_vs_occurrence
+  day: '2027-07-09'
+- week: 1
+  tag: restructuring
+  day: '2027-07-08'
+  mode: split
+  project: pr-elmwick-alumni-outreach-discovery
+- week: 1
+  tag: version_mismatch
+  day: '2027-07-08'
+  setup: '2027-07-05'
+- week: 1
+  tag: silent_closure
+  day: '2027-07-09'
+  setup: '2027-07-05'
+- week: 1
+  tag: reversal
+  day: '2027-07-08'
+  setup: '2027-07-01'
+  project: pr-garnet
+- week: 1
+  tag: endorsement
+  day: '2027-07-10'
+  setup: '2027-07-05'
+- week: 1
+  tag: scattered_evidence
+  day: '2027-07-08'
+  setup: '2027-07-05'
+  steps:
+  - '2027-07-06'
+  - '2027-07-07'
+  - '2027-07-08'
+- week: 2
+  tag: worker_directive
+  day: '2027-07-12'
+  project: pr-assessment-design-workshop
+- week: 2
+  tag: noise
+  day: '2027-07-12'
+- week: 2
+  tag: implied_commitment
+  day: '2027-07-13'
+  project: pr-garnet
+- week: 2
+  tag: duplicate_signal
+  day: '2027-07-12'
+  project: pr-garnet
+- week: 2
+  tag: privacy
+  day: '2027-07-13'
+- week: 2
+  tag: alias
+  day: '2027-07-14'
+- week: 2
+  tag: name_collision
+  day: '2027-07-14'
+- week: 2
+  tag: new_entity
+  day: '2027-07-14'
+  person: p-abigail-kuznetsova
+  project: pr-assessment-design-workshop
+- week: 2
+  tag: supersession
+  day: '2027-07-13'
+  project: pr-corrie
+- week: 2
+  tag: unobservable
+  day: '2027-07-13'
+  project: pr-admissions-triage-tool-selection
+  attribute: budget_ceiling
+- week: 2
+  tag: draft_vs_sent
+  day: '2027-07-16'
+  setup: '2027-07-12'
+- week: 2
+  tag: batch_catchup
+  day: '2027-07-13'
+- week: 2
+  tag: transfer
+  day: '2027-07-14'
+- week: 2
+  tag: correction
+  day: '2027-07-15'
+  setup: '2027-07-13'
+- week: 2
+  tag: weak_evidence
+  day: '2027-07-14'
+  setup: '2027-07-12'
+- week: 2
+  tag: acceptance_vs_occurrence
+  day: '2027-07-16'
+- week: 2
+  tag: restructuring
+  day: '2027-07-16'
+  mode: merge
+  project: pr-iselbury-thesis-formatting-idea
+  into: pr-corrie
+- week: 2
+  tag: version_mismatch
+  day: '2027-07-15'
+  setup: '2027-07-12'
+- week: 2
+  tag: silent_closure
+  day: '2027-07-16'
+  setup: '2027-07-12'
+- week: 2
+  tag: reversal
+  day: '2027-07-16'
+  setup: '2027-07-05'
+  project: pr-corrie
+- week: 2
+  tag: endorsement
+  day: '2027-07-16'
+  setup: '2027-07-13'
+- week: 2
+  tag: scattered_evidence
+  day: '2027-07-15'
+  setup: '2027-07-12'
+  steps:
+  - '2027-07-13'
+  - '2027-07-14'
+  - '2027-07-15'
+audit:
+  unrevealed:
+    e-0020: never appears
+    e-0021: never appears
+    e-0023: never appears
+    e-0028: never appears
+    e-0034: never appears
+    e-0042: never appears
+    e-0173: unobservable
+    e-0218: 'weak evidence: the walkthrough left no trace'
+    e-0261: unobservable
+    e-0282: 'weak evidence: the walkthrough left no trace'
+  instruction_injection: em-0077
+  attachments:
+  - dc-0001
+  - dc-0002
+  - dc-0003
+  - dc-0004
+  - dc-0005
+  - dc-0006

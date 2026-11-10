@@ -1,0 +1,45 @@
+{
+ "workspace": "iselmoor",
+ "channel": "#fulmar-core",
+ "kind": "channel",
+ "participants": [
+  "Amira Baek",
+  "Ottavio Bakker",
+  "Adwoa",
+  "Giorgi Wisniewska",
+  "Oksana Hoffmann",
+  "Marcelo Meijer",
+  "Batbayar Galbraith",
+  "Thibault Kowalski",
+  "Kamau Greco",
+  "Shirin Oyelami"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-07T10:18:00-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "@marcelo just updated the Fulmar data dictionary v2 after your comments."
+  },
+  {
+   "ts": "2027-10-07T10:18:41-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "from the sync earlier, marcelo will send ottavio the fulmar status slide v2"
+  },
+  {
+   "ts": "2027-10-07T10:19:18-06:00",
+   "user": "Shirin Oyelami",
+   "handle": "@shirin",
+   "text": "good to know :)",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-10-07T10:25:25-06:00",
+   "user": "Ottavio Bakker",
+   "handle": "@ottavio",
+   "text": "good to know",
+   "thread_of": 1
+  }
+ ]
+}

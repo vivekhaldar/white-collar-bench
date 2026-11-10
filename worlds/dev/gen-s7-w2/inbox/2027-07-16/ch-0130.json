@@ -1,0 +1,43 @@
+{
+ "workspace": "corrstead",
+ "channel": "dm-bolat-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Jimenez",
+  "Bolat Oyelami"
+ ],
+ "messages": [
+  {
+   "ts": "2027-07-16T11:50:41-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-07-16T11:52:05-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "sure, what's up?"
+  },
+  {
+   "ts": "2027-07-16T11:52:54-08:00",
+   "user": "Hiba Jimenez",
+   "handle": "@hiba",
+   "text": "Logged in fine, so the Garnet API credentials is sorted. Starting the walkthrough tomorrow.",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@bolat"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-07-16T11:53:54-08:00",
+   "user": "Bolat Oyelami",
+   "handle": "@bolat",
+   "text": "ok"
+  }
+ ]
+}

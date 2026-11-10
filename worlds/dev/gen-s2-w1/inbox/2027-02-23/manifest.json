@@ -27,21 +27,21 @@
       "channel": "chat",
       "received_at": "2027-02-23T11:19:00-07:00",
       "path": "ch-0004.json",
-      "title": "DM: Siti Ibarra / Dina Zimmermann"
+      "title": "DM: Siti Montoya / Dina Ricci"
     },
     {
       "id": "ch-0005",
       "channel": "chat",
       "received_at": "2027-02-23T11:44:00-07:00",
       "path": "ch-0005.json",
-      "title": "DM: Dina Zimmermann / Nathaniel Langley"
+      "title": "DM: Dina Ricci / Nathaniel Fenwick"
     },
     {
       "id": "ch-0006",
       "channel": "chat",
       "received_at": "2027-02-23T12:11:00-07:00",
       "path": "ch-0006.json",
-      "title": "DM: Dina Zimmermann / Nathaniel Langley"
+      "title": "DM: Dina Ricci / Nathaniel Fenwick"
     },
     {
       "id": "ch-0007",
@@ -55,7 +55,7 @@
       "channel": "chat",
       "received_at": "2027-02-23T13:30:00-07:00",
       "path": "ch-0008.json",
-      "title": "DM: Nomvula Moreira / Dina Zimmermann"
+      "title": "DM: Nomvula Jansen / Dina Ricci"
     },
     {
       "id": "ch-0009",
@@ -76,7 +76,7 @@
       "channel": "chat",
       "received_at": "2027-02-23T14:36:00-07:00",
       "path": "ch-0011.json",
-      "title": "DM: Bilal Blackwood / Dina Zimmermann"
+      "title": "DM: Bilal Kahananui / Dina Ricci"
     },
     {
       "id": "em-0015",
@@ -90,14 +90,14 @@
       "channel": "chat",
       "received_at": "2027-02-23T15:36:00-07:00",
       "path": "ch-0012.json",
-      "title": "DM: Yael Yardley / Dina Zimmermann"
+      "title": "DM: Yael Ellery / Dina Ricci"
     },
     {
       "id": "ch-0013",
       "channel": "chat",
       "received_at": "2027-02-23T15:44:00-07:00",
       "path": "ch-0013.json",
-      "title": "DM: Dina Zimmermann / Imani Chaiyaporn"
+      "title": "DM: Dina Ricci / Imani Navarro"
     },
     {
       "id": "em-0016",
@@ -111,21 +111,21 @@
       "channel": "chat",
       "received_at": "2027-02-23T16:25:00-07:00",
       "path": "ch-0014.json",
-      "title": "DM: Catrin Petrov / Dina Zimmermann"
+      "title": "DM: Catrin Kuznetsova / Dina Ricci"
     },
     {
       "id": "ch-0015",
       "channel": "chat",
       "received_at": "2027-02-23T17:02:00-07:00",
       "path": "ch-0015.json",
-      "title": "DM: Cassandra Yilmaz / Dina Zimmermann"
+      "title": "DM: Cassandra Yilmaz / Dina Ricci"
     },
     {
       "id": "ch-0016",
       "channel": "chat",
       "received_at": "2027-02-23T17:14:00-07:00",
       "path": "ch-0016.json",
-      "title": "DM: Thibault Sahin / Dina Zimmermann"
+      "title": "DM: Thibault Sahin / Dina Ricci"
     },
     {
       "id": "ch-0017",
@@ -139,7 +139,7 @@
       "channel": "chat",
       "received_at": "2027-02-23T18:34:00-07:00",
       "path": "ch-0018.json",
-      "title": "DM: Imani Chaiyaporn / Dina Zimmermann"
+      "title": "DM: Imani Navarro / Dina Ricci"
     }
   ]
 }

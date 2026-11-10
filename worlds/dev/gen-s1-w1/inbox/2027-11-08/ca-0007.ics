@@ -8,8 +8,8 @@ DTSTAMP:20271108T232900Z
 DTSTART:20271110T210000Z
 DTEND:20271110T213000Z
 SUMMARY:Walkthrough: Plain language workshop speaker brief
-ORGANIZER;CN=Camila Quimby:mailto:camila.quimby@holcrest.example
-ATTENDEE;CN=Jalen Hendriks;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:jalen.hendriks@holcrest.example
+ORGANIZER;CN=Camila Abernathy:mailto:camila.abernathy@holcrest.example
+ATTENDEE;CN=Jalen Sandberg;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:jalen.sandberg@holcrest.example
 SEQUENCE:0
 DESCRIPTION:Join video meeting: https://meet.holcrest.example/j/0011987764?pwd=nrQXpJE2\nPasscode: 290975
 LOCATION:https://meet.holcrest.example/j/0011987764?pwd=nrQXpJE2

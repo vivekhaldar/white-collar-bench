@@ -1,0 +1,145 @@
+{
+  "date": "2027-02-16",
+  "artifacts": [
+    {
+      "id": "em-0044",
+      "channel": "email",
+      "received_at": "2027-02-16T08:31:00-08:00",
+      "path": "em-0044.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "ch-0040",
+      "channel": "chat",
+      "received_at": "2027-02-16T08:34:00-08:00",
+      "path": "ch-0040.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0041",
+      "channel": "chat",
+      "received_at": "2027-02-16T08:44:00-08:00",
+      "path": "ch-0041.json",
+      "title": "DM: Wei Rossi / Despina Pereira"
+    },
+    {
+      "id": "mn-0007",
+      "channel": "meeting_notes",
+      "received_at": "2027-02-16T09:55:00-08:00",
+      "path": "mn-0007.md",
+      "title": "Recap: Axolotl standup"
+    },
+    {
+      "id": "nt-0006",
+      "channel": "note",
+      "received_at": "2027-02-16T10:00:00-08:00",
+      "path": "nt-0006.md",
+      "title": "Voice debrief: Catch-up: Despina / Liisa"
+    },
+    {
+      "id": "ch-0042",
+      "channel": "chat",
+      "received_at": "2027-02-16T10:11:00-08:00",
+      "path": "ch-0042.json",
+      "title": "#axolotl-core"
+    },
+    {
+      "id": "em-0045",
+      "channel": "email",
+      "received_at": "2027-02-16T10:48:00-08:00",
+      "path": "em-0045.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "ch-0043",
+      "channel": "chat",
+      "received_at": "2027-02-16T11:19:00-08:00",
+      "path": "ch-0043.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ca-0008",
+      "channel": "calendar",
+      "received_at": "2027-02-16T11:56:00-08:00",
+      "path": "ca-0008.ics",
+      "title": "Invite: Working session: Axolotl change request"
+    },
+    {
+      "id": "em-0046",
+      "channel": "email",
+      "received_at": "2027-02-16T12:26:00-08:00",
+      "path": "em-0046.eml",
+      "title": "Re: Axolotl cutover plan"
+    },
+    {
+      "id": "ca-0009",
+      "channel": "calendar",
+      "received_at": "2027-02-16T13:35:00-08:00",
+      "path": "ca-0009.ics",
+      "title": "Invite: Axolotl scoping call"
+    },
+    {
+      "id": "nt-0007",
+      "channel": "note",
+      "received_at": "2027-02-16T15:14:00-08:00",
+      "path": "nt-0007.md",
+      "title": "Tue voice memo"
+    },
+    {
+      "id": "ch-0044",
+      "channel": "chat",
+      "received_at": "2027-02-16T15:47:00-08:00",
+      "path": "ch-0044.json",
+      "title": "#axolotl-core"
+    },
+    {
+      "id": "em-0047",
+      "channel": "email",
+      "received_at": "2027-02-16T16:05:00-08:00",
+      "path": "em-0047.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "ch-0045",
+      "channel": "chat",
+      "received_at": "2027-02-16T16:06:00-08:00",
+      "path": "ch-0045.json",
+      "title": "#axolotl-core"
+    },
+    {
+      "id": "em-0048",
+      "channel": "email",
+      "received_at": "2027-02-16T16:11:00-08:00",
+      "path": "em-0048.eml",
+      "title": "FYI: Axolotl cutover plan"
+    },
+    {
+      "id": "em-0049",
+      "channel": "email",
+      "received_at": "2027-02-16T16:33:00-08:00",
+      "path": "em-0049.eml",
+      "title": "FYI: Fennel integration spec after Andres's comments"
+    },
+    {
+      "id": "ch-0046",
+      "channel": "chat",
+      "received_at": "2027-02-16T16:54:00-08:00",
+      "path": "ch-0046.json",
+      "title": "DM: Despina Pereira / Carys Laurent"
+    },
+    {
+      "id": "ch-0047",
+      "channel": "chat",
+      "received_at": "2027-02-16T18:12:00-08:00",
+      "path": "ch-0047.json",
+      "title": "DM: Andres Erdem / Despina Pereira"
+    },
+    {
+      "id": "em-0050",
+      "channel": "email",
+      "received_at": "2027-02-16T18:46:00-08:00",
+      "path": "em-0050.eml",
+      "title": "Campus Systems Weekly: issue 7"
+    }
+  ]
+}

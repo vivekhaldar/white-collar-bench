@@ -1,0 +1,49 @@
+{
+ "workspace": "iselmoor",
+ "channel": "dm-adwoa-amira",
+ "kind": "dm",
+ "participants": [
+  "Adwoa Kocak",
+  "Amira Baek"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-31T13:52:40-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-08-31T13:55:00-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "Tane will send you the current safety reporting process map, as discussed.",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@amira"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-08-31T13:55:27-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "appreciate it"
+  },
+  {
+   "ts": "2027-08-31T13:57:23-06:00",
+   "user": "Adwoa Kocak",
+   "handle": "@adwoa",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-08-31T13:59:40-06:00",
+   "user": "Amira Baek",
+   "handle": "@amira",
+   "text": "later!"
+  }
+ ]
+}

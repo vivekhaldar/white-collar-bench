@@ -1,0 +1,52 @@
+{
+ "workspace": "reddale",
+ "channel": "#nettle-core",
+ "kind": "channel",
+ "participants": [
+  "Aoife Everett",
+  "Gaurav Laine",
+  "Akosua",
+  "Douglas Grigoryan",
+  "Bisi Volkov",
+  "Sigrid Asante",
+  "Sipho Papadopoulos",
+  "Adaeze Morimoto",
+  "Bruna Thapa",
+  "Marko Chaiyaporn"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-10T17:02:00+01:00",
+   "user": "Aoife Everett",
+   "handle": "@aoife",
+   "text": "now that i have the nettle staging access sorted, i can start the dry run"
+  },
+  {
+   "ts": "2027-09-10T17:03:08+01:00",
+   "user": "Marko Chaiyaporn",
+   "handle": "@marko",
+   "text": "noted"
+  },
+  {
+   "ts": "2027-09-10T17:10:06+01:00",
+   "user": "Sipho Papadopoulos",
+   "handle": "@sipho",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-10T17:16:15+01:00",
+   "user": "Marko Chaiyaporn",
+   "handle": "@marko",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-10T17:23:03+01:00",
+   "user": "Gaurav Laine",
+   "handle": "@gaurav",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

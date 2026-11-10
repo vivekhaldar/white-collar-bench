@@ -2,152 +2,143 @@
   "date": "2027-09-14",
   "artifacts": [
     {
-      "id": "em-0052",
-      "channel": "email",
-      "received_at": "2027-09-14T07:15:00-05:00",
-      "path": "em-0052.eml",
-      "title": "[Resolved] Elevated latency on file storage"
+      "id": "ca-0007",
+      "channel": "calendar",
+      "received_at": "2027-09-14T07:21:00-05:00",
+      "path": "ca-0007.ics",
+      "title": "Invite: Notes from the intake forms session"
     },
     {
-      "id": "em-0053",
+      "id": "em-0042",
       "channel": "email",
-      "received_at": "2027-09-14T07:24:00-05:00",
-      "path": "em-0053.eml",
-      "title": "Re: Bed management discovery process map"
+      "received_at": "2027-09-14T07:44:00-05:00",
+      "path": "em-0042.eml",
+      "title": "[REQ-32211] Request resolved"
     },
     {
-      "id": "em-0054",
+      "id": "em-0043",
       "channel": "email",
-      "received_at": "2027-09-14T07:26:00-05:00",
-      "path": "em-0054.eml",
-      "title": "[REQ-16486] Request resolved"
+      "received_at": "2027-09-14T08:24:00-05:00",
+      "path": "em-0043.eml",
+      "title": "The Ward Round Digest: issue 37"
     },
     {
-      "id": "dc-0001",
-      "channel": "document",
-      "received_at": "2027-09-14T09:02:00-05:00",
-      "path": "dc-0001.pdf",
-      "title": "Okapi API contract v1 v2",
-      "parent": "em-0055"
+      "id": "ch-0042",
+      "channel": "chat",
+      "received_at": "2027-09-14T09:23:00-05:00",
+      "path": "ch-0042.json",
+      "title": "DM: Eleni Fontaine / Alasdair Kaya"
     },
     {
-      "id": "em-0055",
-      "channel": "email",
-      "received_at": "2027-09-14T09:02:00-05:00",
-      "path": "em-0055.eml",
-      "title": "Okapi API contract v1"
+      "id": "ch-0043",
+      "channel": "chat",
+      "received_at": "2027-09-14T09:27:00-05:00",
+      "path": "ch-0043.json",
+      "title": "#coffee"
     },
     {
-      "id": "em-0056",
-      "channel": "email",
-      "received_at": "2027-09-14T09:04:00-05:00",
-      "path": "em-0056.eml",
-      "title": "[REQ-16362] Request resolved"
+      "id": "mn-0004",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-14T10:00:00-05:00",
+      "path": "mn-0004.md",
+      "title": "Recap: Ketford relationship check-in"
     },
     {
       "id": "ch-0044",
       "channel": "chat",
-      "received_at": "2027-09-14T09:28:00-05:00",
+      "received_at": "2027-09-14T10:46:00-05:00",
       "path": "ch-0044.json",
-      "title": "#bittern-core"
+      "title": "DM: Sneha Thornbury / Alasdair Kaya"
+    },
+    {
+      "id": "em-0044",
+      "channel": "email",
+      "received_at": "2027-09-14T12:10:00-05:00",
+      "path": "em-0044.eml",
+      "title": "Fwd: Two customer references from Rosix"
     },
     {
       "id": "ch-0045",
       "channel": "chat",
-      "received_at": "2027-09-14T09:33:00-05:00",
+      "received_at": "2027-09-14T12:40:00-05:00",
       "path": "ch-0045.json",
-      "title": "DM: Dina Mancini / Alasdair Kaya"
+      "title": "#bed-management-discovery-core"
     },
     {
-      "id": "mn-0005",
-      "channel": "meeting_notes",
-      "received_at": "2027-09-14T12:15:00-05:00",
-      "path": "mn-0005.md",
-      "title": "Recap: Sirocco platform sync"
-    },
-    {
-      "id": "mt-0007",
-      "channel": "transcript",
-      "received_at": "2027-09-14T12:15:00-05:00",
-      "path": "mt-0007.vtt",
-      "title": "Sirocco platform sync (transcript)"
-    },
-    {
-      "id": "em-0057",
+      "id": "em-0045",
       "channel": "email",
-      "received_at": "2027-09-14T12:47:00-05:00",
-      "path": "em-0057.eml",
-      "title": "Clinical IT Briefing: issue 37"
+      "received_at": "2027-09-14T13:41:00-05:00",
+      "path": "em-0045.eml",
+      "title": "Re: Two customer references from Rosix"
     },
     {
       "id": "ch-0046",
       "channel": "chat",
-      "received_at": "2027-09-14T13:12:00-05:00",
+      "received_at": "2027-09-14T13:58:00-05:00",
       "path": "ch-0046.json",
-      "title": "#general"
+      "title": "DM: Guadalupe Moreau / Alasdair Kaya"
+    },
+    {
+      "id": "em-0046",
+      "channel": "email",
+      "received_at": "2027-09-14T15:10:00-05:00",
+      "path": "em-0046.eml",
+      "title": "Re: Sirocco Operating Model Review: moving to revision"
     },
     {
       "id": "ch-0047",
       "channel": "chat",
-      "received_at": "2027-09-14T15:01:00-05:00",
+      "received_at": "2027-09-14T15:14:00-05:00",
       "path": "ch-0047.json",
-      "title": "#coffee"
+      "title": "DM: Somchai Thapa / Alasdair Kaya"
+    },
+    {
+      "id": "em-0047",
+      "channel": "email",
+      "received_at": "2027-09-14T15:40:00-05:00",
+      "path": "em-0047.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "em-0048",
+      "channel": "email",
+      "received_at": "2027-09-14T17:02:00-05:00",
+      "path": "em-0048.eml",
+      "title": "Catering menu for next month"
     },
     {
       "id": "ch-0048",
       "channel": "chat",
-      "received_at": "2027-09-14T16:03:00-05:00",
+      "received_at": "2027-09-14T18:02:00-05:00",
       "path": "ch-0048.json",
-      "title": "DM: Alasdair Kaya / Katarzyna Feng"
+      "title": "#sirocco-core"
     },
     {
-      "id": "dc-0002",
-      "channel": "document",
-      "received_at": "2027-09-14T16:19:00-05:00",
-      "path": "dc-0002.md",
-      "title": "Clinical data engineer sourcing plan (draft)",
-      "parent": "em-0058"
-    },
-    {
-      "id": "em-0058",
+      "id": "em-0049",
       "channel": "email",
-      "received_at": "2027-09-14T16:19:00-05:00",
-      "path": "em-0058.eml",
-      "title": "Re: Clinical data engineer sourcing plan"
-    },
-    {
-      "id": "mt-0008",
-      "channel": "transcript",
-      "received_at": "2027-09-14T16:30:00-05:00",
-      "path": "mt-0008.vtt",
-      "title": "Okapi scoping call (transcript)"
-    },
-    {
-      "id": "em-0059",
-      "channel": "email",
-      "received_at": "2027-09-14T16:41:00-05:00",
-      "path": "em-0059.eml",
-      "title": "Scheduled maintenance this weekend"
-    },
-    {
-      "id": "em-0060",
-      "channel": "email",
-      "received_at": "2027-09-14T17:32:00-05:00",
-      "path": "em-0060.eml",
-      "title": "FYI: Okapi help-desk script"
-    },
-    {
-      "id": "em-0061",
-      "channel": "email",
-      "received_at": "2027-09-14T17:43:00-05:00",
-      "path": "em-0061.eml",
-      "title": "Re: Notes from the denials analytics session"
+      "received_at": "2027-09-14T18:02:00-05:00",
+      "path": "em-0049.eml",
+      "title": "[REQ-12807] Request resolved"
     },
     {
       "id": "ch-0049",
       "channel": "chat",
-      "received_at": "2027-09-14T18:40:00-05:00",
+      "received_at": "2027-09-14T18:35:00-05:00",
       "path": "ch-0049.json",
+      "title": "DM: Adebayo Kalua / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0050",
+      "channel": "chat",
+      "received_at": "2027-09-14T18:39:00-05:00",
+      "path": "ch-0050.json",
+      "title": "DM: Adebayo Kalua / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0051",
+      "channel": "chat",
+      "received_at": "2027-09-14T18:49:00-05:00",
+      "path": "ch-0051.json",
       "title": "DM: Bisi Chatterjee / Alasdair Kaya"
     }
   ]

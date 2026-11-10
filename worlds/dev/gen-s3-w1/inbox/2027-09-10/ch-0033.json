@@ -1,37 +1,42 @@
 {
  "workspace": "birchmere",
- "channel": "dm-alasdair-shira",
- "kind": "dm",
+ "channel": "#general",
+ "kind": "channel",
  "participants": [
-  "Alasdair Kaya",
-  "Shira Colombo"
+  "Penelope Romano",
+  "Eun-ji Chen",
+  "Nurlan Jansen",
+  "Dina Laurent"
  ],
  "messages": [
   {
-   "ts": "2027-09-10T09:17:00-05:00",
-   "user": "Alasdair Kaya",
-   "handle": "@alasdair",
-   "text": "done, i sent you my phone screen notes on matthias",
-   "edited": true,
-   "original": "done, i sent you my phoen screen notes on matthias"
+   "ts": "2027-09-10T15:50:23-05:00",
+   "user": "Penelope Romano",
+   "handle": "@penelope",
+   "text": "the elevator on the east side is out again",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@eunji",
+      "@nurlan"
+     ]
+    }
+   ]
   },
   {
-   "ts": "2027-09-10T09:17:25-05:00",
-   "user": "Shira Colombo",
-   "handle": "@shira",
-   "text": "great, thanks"
+   "ts": "2027-09-10T15:51:30-05:00",
+   "user": "Eun-ji Chen",
+   "handle": "@eunji",
+   "text": "stairs it is",
+   "thread_of": 0
   },
   {
-   "ts": "2027-09-10T09:20:05-05:00",
-   "user": "Alasdair Kaya",
-   "handle": "@alasdair",
-   "text": "thanks again for earlier"
-  },
-  {
-   "ts": "2027-09-10T09:20:49-05:00",
-   "user": "Shira Colombo",
-   "handle": "@shira",
-   "text": "anytime"
+   "ts": "2027-09-10T15:56:34-05:00",
+   "user": "Nurlan Jansen",
+   "handle": "@nurlan",
+   "text": "classic",
+   "thread_of": 0
   }
  ]
 }

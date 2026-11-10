@@ -1,0 +1,35 @@
+{
+ "workspace": "kirkmarsh",
+ "channel": "#clelera-enterprise-core",
+ "kind": "channel",
+ "participants": [
+  "Anh",
+  "Aroha Mendoza",
+  "Kenji Faure",
+  "Ronit Kusuma",
+  "Isabela Mensah",
+  "Mpho Sengupta"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-18T17:17:00-05:00",
+   "user": "Anh",
+   "handle": "@anh",
+   "text": "Aroha would like Winifred to send Aroha the Clelera volume tiers, not agreed yet!"
+  },
+  {
+   "ts": "2027-10-18T17:17:17-05:00",
+   "user": "Kenji Faure",
+   "handle": "@kenji",
+   "text": "noted",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-10-18T17:21:11-05:00",
+   "user": "Aroha Mendoza",
+   "handle": "@aroha",
+   "text": "+1",
+   "thread_of": 0
+  }
+ ]
+}

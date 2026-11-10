@@ -127,7 +127,7 @@ calendar:
   - id: cp6
     date: '2027-09-18'
     label: end of week (week 2)
-worker: p-ottavio-monteiro
+worker: p-ottavio-moreira
 orgs:
 - id: o-drayhurst-university-system
   name: Drayhurst University System
@@ -237,15 +237,15 @@ orgs:
   - frostwick-research.example
   receptiveness: null
 people:
-- id: p-ottavio-monteiro
-  name: Ottavio Monteiro
+- id: p-ottavio-moreira
+  name: Ottavio Moreira
   first: Ottavio
-  last: Monteiro
+  last: Moreira
   nickname: Tavo
   org: o-systemwide-learning-innovation-office
   role: Lead Solutions Architect, Teaching Technology
   role_phrase: null
-  email: ottavio.monteiro@drayhurst.example
+  email: ottavio.moreira@drayhurst.example
   handle: '@ottavio'
   relationship: null
   group: central
@@ -256,18 +256,18 @@ people:
   surface_forms:
   - Ottavio
   - Tavo
-  - O. Monteiro
-  - ottavio.monteiro@drayhurst.example
+  - O. Moreira
+  - ottavio.moreira@drayhurst.example
   - '@ottavio'
-- id: p-tariq-popescu
-  name: Tariq Popescu
+- id: p-tariq-ivanova
+  name: Tariq Ivanova
   first: Tariq
-  last: Popescu
+  last: Ivanova
   nickname: null
   org: o-systemwide-learning-innovation-office
   role: Associate Provost for Academic Technology
   role_phrase: the associate provost
-  email: tariq.popescu@drayhurst.example
+  email: tariq.ivanova@drayhurst.example
   handle: '@tariq'
   relationship: manager
   group: central
@@ -277,19 +277,19 @@ people:
   voice: lowercase
   surface_forms:
   - Tariq
-  - T. Popescu
-  - tariq.popescu@drayhurst.example
+  - T. Ivanova
+  - tariq.ivanova@drayhurst.example
   - '@tariq'
   - the associate provost
-- id: p-meera-ivanova
-  name: Meera Ivanova
+- id: p-meera-bondarenko
+  name: Meera Bondarenko
   first: Meera
-  last: Ivanova
+  last: Bondarenko
   nickname: null
   org: o-systemwide-learning-innovation-office
   role: Head of Learning Services
   role_phrase: our learning services head
-  email: meera.ivanova@drayhurst.example
+  email: meera.bondarenko@drayhurst.example
   handle: '@meera'
   relationship: peer
   group: central
@@ -299,19 +299,19 @@ people:
   voice: formal
   surface_forms:
   - Meera
-  - M. Ivanova
-  - meera.ivanova@drayhurst.example
+  - M. Bondarenko
+  - meera.bondarenko@drayhurst.example
   - '@meera'
   - our learning services head
-- id: p-theresa-nagy
-  name: Theresa Nagy
+- id: p-theresa-petrov
+  name: Theresa Petrov
   first: Theresa
-  last: Nagy
+  last: Petrov
   nickname: Resi
   org: o-systemwide-learning-innovation-office
   role: Lead, Cloud Platforms
   role_phrase: the platform lead
-  email: theresa.nagy@drayhurst.example
+  email: theresa.petrov@drayhurst.example
   handle: '@theresa'
   relationship: peer
   group: central
@@ -322,19 +322,19 @@ people:
   surface_forms:
   - Theresa
   - Resi
-  - T. Nagy
-  - theresa.nagy@drayhurst.example
+  - T. Petrov
+  - theresa.petrov@drayhurst.example
   - '@theresa'
   - the platform lead
-- id: p-bruna-sinclair
-  name: Bruna Sinclair
+- id: p-bruna-vaughan
+  name: Bruna Vaughan
   first: Bruna
-  last: Sinclair
+  last: Vaughan
   nickname: null
   org: o-systemwide-learning-innovation-office
   role: Platform Engineer
   role_phrase: the platform engineer
-  email: bruna.sinclair@drayhurst.example
+  email: bruna.vaughan@drayhurst.example
   handle: '@bruna'
   relationship: stakeholder
   group: central
@@ -344,8 +344,8 @@ people:
   voice: formal
   surface_forms:
   - Bruna
-  - B. Sinclair
-  - bruna.sinclair@drayhurst.example
+  - B. Vaughan
+  - bruna.vaughan@drayhurst.example
   - '@bruna'
   - the platform engineer
 - id: p-nomvula-ndlovu
@@ -370,15 +370,15 @@ people:
   - nomvula.ndlovu@drayhurst.example
   - '@nomvula'
   - the security manager
-- id: p-esperanza-rao
-  name: Esperanza Rao
+- id: p-esperanza-venkataraman
+  name: Esperanza Venkataraman
   first: Esperanza
-  last: Rao
+  last: Venkataraman
   nickname: Espe
   org: o-systemwide-learning-innovation-office
   role: Product Owner, Student Systems
   role_phrase: the product owner
-  email: esperanza.rao@drayhurst.example
+  email: esperanza.venkataraman@drayhurst.example
   handle: '@esperanza'
   relationship: peer
   group: central
@@ -389,19 +389,19 @@ people:
   surface_forms:
   - Esperanza
   - Espe
-  - E. Rao
-  - esperanza.rao@drayhurst.example
+  - E. Venkataraman
+  - esperanza.venkataraman@drayhurst.example
   - '@esperanza'
   - the product owner
-- id: p-tobias-kovacs
-  name: Tobias Kovacs
+- id: p-tobias-dumitru
+  name: Tobias Dumitru
   first: Tobias
-  last: Kovacs
+  last: Dumitru
   nickname: null
   org: o-systemwide-learning-innovation-office
   role: Executive Assistant to the Associate Provost
   role_phrase: the provost's EA
-  email: tobias.kovacs@drayhurst.example
+  email: tobias.dumitru@drayhurst.example
   handle: '@tobias'
   relationship: assistant
   group: central
@@ -411,19 +411,19 @@ people:
   voice: lowercase
   surface_forms:
   - Tobias
-  - T. Kovacs
-  - tobias.kovacs@drayhurst.example
+  - T. Dumitru
+  - tobias.dumitru@drayhurst.example
   - '@tobias'
   - the provost's EA
-- id: p-teagan-penhallow
-  name: Teagan Penhallow
+- id: p-teagan-alexiou
+  name: Teagan Alexiou
   first: Teagan
-  last: Penhallow
+  last: Alexiou
   nickname: null
   org: o-systemwide-learning-innovation-office
   role: Senior Data Analyst
   role_phrase: our data analyst
-  email: teagan.penhallow@drayhurst.example
+  email: teagan.alexiou@drayhurst.example
   handle: '@teagan'
   relationship: peer
   group: central
@@ -433,8 +433,8 @@ people:
   voice: lowercase
   surface_forms:
   - Teagan
-  - T. Penhallow
-  - teagan.penhallow@drayhurst.example
+  - T. Alexiou
+  - teagan.alexiou@drayhurst.example
   - '@teagan'
   - our data analyst
 - id: p-slio-shared-inbox
@@ -457,15 +457,15 @@ people:
   - SLIO Team
   - the SLIO inbox
   - slio-team@drayhurst.example
-- id: p-ewan-shrestha
-  name: Ewan Shrestha
+- id: p-ewan-naidu
+  name: Ewan Naidu
   first: Ewan
-  last: Shrestha
+  last: Naidu
   nickname: null
   org: o-drayhurst-university-system
   role: Procurement Officer, System Procurement
   role_phrase: the procurement officer
-  email: ewan.shrestha@drayhurst.example
+  email: ewan.naidu@drayhurst.example
   handle: '@ewan'
   relationship: stakeholder
   group: functional
@@ -475,19 +475,19 @@ people:
   voice: chatty
   surface_forms:
   - Ewan
-  - E. Shrestha
-  - ewan.shrestha@drayhurst.example
+  - E. Naidu
+  - ewan.naidu@drayhurst.example
   - '@ewan'
   - the procurement officer
-- id: p-achieng-ibarra
-  name: Achieng Ibarra
+- id: p-achieng-montoya
+  name: Achieng Montoya
   first: Achieng
-  last: Ibarra
+  last: Montoya
   nickname: null
   org: o-drayhurst-university-system
   role: Associate Counsel, System Legal
   role_phrase: system counsel
-  email: achieng.ibarra@drayhurst.example
+  email: achieng.montoya@drayhurst.example
   handle: '@achieng'
   relationship: stakeholder
   group: functional
@@ -497,19 +497,19 @@ people:
   voice: terse
   surface_forms:
   - Achieng
-  - A. Ibarra
-  - achieng.ibarra@drayhurst.example
+  - A. Montoya
+  - achieng.montoya@drayhurst.example
   - '@achieng'
   - system counsel
-- id: p-magdalena-barbosa
-  name: Magdalena Barbosa
+- id: p-magdalena-monteiro
+  name: Magdalena Monteiro
   first: Magdalena
-  last: Barbosa
+  last: Monteiro
   nickname: Magda
   org: o-drayhurst-university-system
   role: Director, System Budget Office
   role_phrase: the budget director
-  email: magdalena.barbosa@drayhurst.example
+  email: magdalena.monteiro@drayhurst.example
   handle: '@magdalena'
   relationship: stakeholder
   group: functional
@@ -520,19 +520,19 @@ people:
   surface_forms:
   - Magdalena
   - Magda
-  - M. Barbosa
-  - magdalena.barbosa@drayhurst.example
+  - M. Monteiro
+  - magdalena.monteiro@drayhurst.example
   - '@magdalena'
   - the budget director
-- id: p-siobhan-munro
-  name: Siobhan Munro
+- id: p-siobhan-rees
+  name: Siobhan Rees
   first: Siobhan
-  last: Munro
+  last: Rees
   nickname: null
   org: o-drayhurst-university-system
   role: Talent Partner, System HR
   role_phrase: our talent partner
-  email: siobhan.munro@drayhurst.example
+  email: siobhan.rees@drayhurst.example
   handle: '@siobhan'
   relationship: stakeholder
   group: functional
@@ -542,8 +542,8 @@ people:
   voice: chatty
   surface_forms:
   - Siobhan
-  - S. Munro
-  - siobhan.munro@drayhurst.example
+  - S. Rees
+  - siobhan.rees@drayhurst.example
   - '@siobhan'
   - our talent partner
 - id: p-mei-wekesa
@@ -590,15 +590,15 @@ people:
   - yaroslav.moyo@holfield.drayhurst.example
   - '@yaroslav'
   - Holfield's CIO
-- id: p-darius-sherwood
-  name: Darius Sherwood
+- id: p-darius-bramwell
+  name: Darius Bramwell
   first: Darius
-  last: Sherwood
+  last: Bramwell
   nickname: null
   org: o-holfield-state-college
   role: Dean of Libraries
   role_phrase: the Holfield lead
-  email: darius.sherwood@holfield.drayhurst.example
+  email: darius.bramwell@holfield.drayhurst.example
   handle: '@darius'
   relationship: stakeholder
   group: unit
@@ -608,19 +608,19 @@ people:
   voice: chatty
   surface_forms:
   - Darius
-  - D. Sherwood
-  - darius.sherwood@holfield.drayhurst.example
+  - D. Bramwell
+  - darius.bramwell@holfield.drayhurst.example
   - '@darius'
   - the Holfield lead
-- id: p-ratna-bondarenko
-  name: Ratna Bondarenko
+- id: p-ratna-nikolic
+  name: Ratna Nikolic
   first: Ratna
-  last: Bondarenko
+  last: Nikolic
   nickname: null
   org: o-holfield-state-college
   role: Service Desk Lead
   role_phrase: null
-  email: ratna.bondarenko@holfield.drayhurst.example
+  email: ratna.nikolic@holfield.drayhurst.example
   handle: '@ratna'
   relationship: stakeholder
   group: unit
@@ -630,8 +630,8 @@ people:
   voice: terse
   surface_forms:
   - Ratna
-  - R. Bondarenko
-  - ratna.bondarenko@holfield.drayhurst.example
+  - R. Nikolic
+  - ratna.nikolic@holfield.drayhurst.example
   - '@ratna'
 - id: p-solene-yassin
   name: Solene Yassin
@@ -698,15 +698,15 @@ people:
   - T. Ogunleye
   - tegan.ogunleye@heathridge.drayhurst.example
   - '@tegan'
-- id: p-nadia-krause
-  name: Nadia Krause
+- id: p-nadia-vogel
+  name: Nadia Vogel
   first: Nadia
-  last: Krause
+  last: Vogel
   nickname: null
   org: o-heathridge-university
   role: Instructional Designer
   role_phrase: null
-  email: nadia.krause@heathridge.drayhurst.example
+  email: nadia.vogel@heathridge.drayhurst.example
   handle: '@nadia'
   relationship: stakeholder
   group: unit
@@ -716,18 +716,18 @@ people:
   voice: chatty
   surface_forms:
   - Nadia
-  - N. Krause
-  - nadia.krause@heathridge.drayhurst.example
+  - N. Vogel
+  - nadia.vogel@heathridge.drayhurst.example
   - '@nadia'
-- id: p-ngozi-zielinski
-  name: Ngozi Zielinski
+- id: p-ngozi-horvath
+  name: Ngozi Horvath
   first: Ngozi
-  last: Zielinski
+  last: Horvath
   nickname: null
   org: o-university-of-kirkley
   role: Chief Information Officer
   role_phrase: Kirkley's CIO
-  email: ngozi.zielinski@kirkley.drayhurst.example
+  email: ngozi.horvath@kirkley.drayhurst.example
   handle: '@ngozi'
   relationship: executive
   group: unit
@@ -737,19 +737,19 @@ people:
   voice: formal
   surface_forms:
   - Ngozi
-  - N. Zielinski
-  - ngozi.zielinski@kirkley.drayhurst.example
+  - N. Horvath
+  - ngozi.horvath@kirkley.drayhurst.example
   - '@ngozi'
   - Kirkley's CIO
-- id: p-ishaan-smit
-  name: Ishaan Smit
+- id: p-ishaan-bergstrom
+  name: Ishaan Bergstrom
   first: Ishaan
-  last: Smit
+  last: Bergstrom
   nickname: Ish
   org: o-university-of-kirkley
   role: Director of Advising
   role_phrase: the Kirkley lead
-  email: ishaan.smit@kirkley.drayhurst.example
+  email: ishaan.bergstrom@kirkley.drayhurst.example
   handle: '@ishaan'
   relationship: stakeholder
   group: unit
@@ -760,19 +760,19 @@ people:
   surface_forms:
   - Ishaan
   - Ish
-  - I. Smit
-  - ishaan.smit@kirkley.drayhurst.example
+  - I. Bergstrom
+  - ishaan.bergstrom@kirkley.drayhurst.example
   - '@ishaan'
   - the Kirkley lead
-- id: p-margaux-choi
-  name: Margaux Choi
+- id: p-margaux-kang
+  name: Margaux Kang
   first: Margaux
-  last: Choi
+  last: Kang
   nickname: null
   org: o-university-of-kirkley
   role: Service Desk Lead
   role_phrase: null
-  email: margaux.choi@kirkley.drayhurst.example
+  email: margaux.kang@kirkley.drayhurst.example
   handle: '@margaux'
   relationship: stakeholder
   group: unit
@@ -782,18 +782,18 @@ people:
   voice: terse
   surface_forms:
   - Margaux
-  - M. Choi
-  - margaux.choi@kirkley.drayhurst.example
+  - M. Kang
+  - margaux.kang@kirkley.drayhurst.example
   - '@margaux'
-- id: p-sakura-carmichael
-  name: Sakura Carmichael
+- id: p-sakura-kingsley
+  name: Sakura Kingsley
   first: Sakura
-  last: Carmichael
+  last: Kingsley
   nickname: null
   org: o-university-of-kirkley
   role: Enterprise Architect
   role_phrase: null
-  email: sakura.carmichael@kirkley.drayhurst.example
+  email: sakura.kingsley@kirkley.drayhurst.example
   handle: '@sakura'
   relationship: stakeholder
   group: unit
@@ -803,8 +803,8 @@ people:
   voice: chatty
   surface_forms:
   - Sakura
-  - S. Carmichael
-  - sakura.carmichael@kirkley.drayhurst.example
+  - S. Kingsley
+  - sakura.kingsley@kirkley.drayhurst.example
   - '@sakura'
 - id: p-meera-kariuki
   name: Meera Kariuki
@@ -827,15 +827,15 @@ people:
   - M. Kariuki
   - meera.kariuki@ithic.example
   - '@meerak'
-- id: p-jurgen-sargsyan
-  name: Jurgen Sargsyan
+- id: p-jurgen-batbold
+  name: Jurgen Batbold
   first: Jurgen
-  last: Sargsyan
+  last: Batbold
   nickname: null
   org: o-ithic-learning
   role: Solutions Engineer
   role_phrase: null
-  email: jurgen.sargsyan@ithic.example
+  email: jurgen.batbold@ithic.example
   handle: '@jurgen'
   relationship: vendor
   group: vendor
@@ -845,8 +845,8 @@ people:
   voice: lowercase
   surface_forms:
   - Jurgen
-  - J. Sargsyan
-  - jurgen.sargsyan@ithic.example
+  - J. Batbold
+  - jurgen.batbold@ithic.example
   - '@jurgen'
 - id: p-isabela-haidari
   name: Isabela Haidari
@@ -869,16 +869,16 @@ people:
   - I. Haidari
   - isabela.haidari@toria.example
   - '@isabela'
-- id: p-roya-mancini
-  name: Roya Mancini
+- id: p-roya-laurent
+  name: Roya Laurent
   first: Roya
-  last: Mancini
+  last: Laurent
   nickname: null
   org: o-toria-analytics
   role: Solutions Engineer
   role_phrase: null
-  email: roya.mancini@toria.example
-  handle: '@royam'
+  email: roya.laurent@toria.example
+  handle: '@royal'
   relationship: vendor
   group: vendor
   tier: core
@@ -887,18 +887,18 @@ people:
   voice: chatty
   surface_forms:
   - Roya
-  - R. Mancini
-  - roya.mancini@toria.example
-  - '@royam'
-- id: p-mikkel-nowak
-  name: Mikkel Nowak
+  - R. Laurent
+  - roya.laurent@toria.example
+  - '@royal'
+- id: p-mikkel-dvorak
+  name: Mikkel Dvorak
   first: Mikkel
-  last: Nowak
+  last: Dvorak
   nickname: null
   org: o-falcombe-center-for-digital-pedagogy
   role: Senior Research Scientist
   role_phrase: null
-  email: mikkel.nowak@falcombe-research.example
+  email: mikkel.dvorak@falcombe-research.example
   handle: '@mikkel'
   relationship: partner
   group: partner
@@ -908,18 +908,18 @@ people:
   voice: terse
   surface_forms:
   - Mikkel
-  - M. Nowak
-  - mikkel.nowak@falcombe-research.example
+  - M. Dvorak
+  - mikkel.dvorak@falcombe-research.example
   - '@mikkel'
-- id: p-cedric-okada
-  name: Cedric Okada
+- id: p-cedric-yoon
+  name: Cedric Yoon
   first: Cedric
-  last: Okada
+  last: Yoon
   nickname: null
   org: o-frostwick-center-for-digital-pedagogy
   role: Senior Research Scientist
   role_phrase: null
-  email: cedric.okada@frostwick-research.example
+  email: cedric.yoon@frostwick-research.example
   handle: '@cedric'
   relationship: partner
   group: partner
@@ -929,18 +929,18 @@ people:
   voice: terse
   surface_forms:
   - Cedric
-  - C. Okada
-  - cedric.okada@frostwick-research.example
+  - C. Yoon
+  - cedric.yoon@frostwick-research.example
   - '@cedric'
-- id: p-deepa-wickramasinghe
-  name: Deepa Wickramasinghe
+- id: p-deepa-thapa
+  name: Deepa Thapa
   first: Deepa
-  last: Wickramasinghe
+  last: Thapa
   nickname: null
   org: null
   role: Candidate
   role_phrase: null
-  email: deepa.wickramasinghe@post.example
+  email: deepa.thapa@post.example
   handle: '@deepa'
   relationship: candidate
   group: candidate
@@ -950,18 +950,18 @@ people:
   voice: formal
   surface_forms:
   - Deepa
-  - D. Wickramasinghe
-  - deepa.wickramasinghe@post.example
+  - D. Thapa
+  - deepa.thapa@post.example
   - '@deepa'
-- id: p-celine-wisniewska
-  name: Celine Wisniewska
+- id: p-celine-novotny
+  name: Celine Novotny
   first: Celine
-  last: Wisniewska
+  last: Novotny
   nickname: null
   org: o-holfield-state-college
   role: Privacy Officer
   role_phrase: the new privacy officer
-  email: celine.wisniewska@holfield.drayhurst.example
+  email: celine.novotny@holfield.drayhurst.example
   handle: '@celine'
   relationship: stakeholder
   group: newcomer
@@ -971,19 +971,19 @@ people:
   voice: formal
   surface_forms:
   - Celine
-  - C. Wisniewska
-  - celine.wisniewska@holfield.drayhurst.example
+  - C. Novotny
+  - celine.novotny@holfield.drayhurst.example
   - '@celine'
   - the new privacy officer
-- id: p-henrik-mendoza
-  name: Henrik Mendoza
+- id: p-henrik-santoso
+  name: Henrik Santoso
   first: Henrik
-  last: Mendoza
+  last: Santoso
   nickname: null
   org: o-ithic-learning
   role: Senior Account Executive
   role_phrase: null
-  email: henrik.mendoza@ithic.example
+  email: henrik.santoso@ithic.example
   handle: '@henrik'
   relationship: vendor
   group: newcomer
@@ -993,8 +993,8 @@ people:
   voice: chatty
   surface_forms:
   - Henrik
-  - H. Mendoza
-  - henrik.mendoza@ithic.example
+  - H. Santoso
+  - henrik.santoso@ithic.example
   - '@henrik'
 - id: p-funmilayo-danjuma
   name: Funmilayo Danjuma
@@ -1072,15 +1072,15 @@ people:
   surface_forms:
   - news@drayhurst.example
   minor_kind: comms
-- id: p-yael-ribeiro
-  name: Yael Ribeiro
+- id: p-yael-costa
+  name: Yael Costa
   first: Yael
-  last: Ribeiro
+  last: Costa
   nickname: null
   org: null
   role: Events Coordinator
   role_phrase: null
-  email: yael.ribeiro@drayhurst.example
+  email: yael.costa@drayhurst.example
   handle: '@yael'
   relationship: null
   group: minor
@@ -1089,17 +1089,17 @@ people:
   appears: null
   voice: lowercase
   surface_forms:
-  - yael.ribeiro@drayhurst.example
+  - yael.costa@drayhurst.example
   minor_kind: events
-- id: p-freja-abernathy
-  name: Freja Abernathy
+- id: p-freja-kealoha
+  name: Freja Kealoha
   first: Freja
-  last: Abernathy
+  last: Kealoha
   nickname: null
   org: null
   role: Conference Organizer
   role_phrase: null
-  email: freja.abernathy@conference.example
+  email: freja.kealoha@conference.example
   handle: '@freja'
   relationship: null
   group: minor
@@ -1108,7 +1108,7 @@ people:
   appears: null
   voice: formal
   surface_forms:
-  - freja.abernathy@conference.example
+  - freja.kealoha@conference.example
   minor_kind: conference
 - id: p-benefits-enrollment-notices
   name: Benefits Enrollment Notices
@@ -1151,17 +1151,17 @@ projects:
   - o-ithic-learning
   - o-toria-analytics
   partner: o-falcombe-center-for-digital-pedagogy
-  owner: p-darius-sherwood
-  sponsor: p-tariq-popescu
+  owner: p-darius-bramwell
+  sponsor: p-tariq-ivanova
   members:
-  - p-ottavio-monteiro
-  - p-darius-sherwood
-  - p-meera-ivanova
-  - p-ratna-bondarenko
-  - p-theresa-nagy
+  - p-ottavio-moreira
+  - p-darius-bramwell
+  - p-meera-bondarenko
+  - p-ratna-nikolic
+  - p-theresa-petrov
   - p-nomvula-ndlovu
-  - p-bruna-sinclair
-  - p-esperanza-rao
+  - p-bruna-vaughan
+  - p-esperanza-venkataraman
   - p-yaroslav-moyo
   orgs:
   - o-holfield-state-college
@@ -1170,29 +1170,29 @@ projects:
   target_date: '2027-10-14'
   n: 5
   cast:
-    owner: p-darius-sherwood
-    sponsor: p-tariq-popescu
-    lead: p-darius-sherwood
+    owner: p-darius-bramwell
+    sponsor: p-tariq-ivanova
+    lead: p-darius-bramwell
     unit:
-    - p-ratna-bondarenko
-    - p-darius-sherwood
+    - p-ratna-nikolic
+    - p-darius-bramwell
     ae:
     - p-meera-kariuki
     - p-isabela-haidari
     se:
-    - p-jurgen-sargsyan
-    - p-roya-mancini
-    eng: p-theresa-nagy
+    - p-jurgen-batbold
+    - p-roya-laurent
+    eng: p-theresa-petrov
     sec: p-nomvula-ndlovu
     privacy: p-mei-wekesa
-    legal: p-achieng-ibarra
-    proc: p-ewan-shrestha
-    fin: p-magdalena-barbosa
-    hr: p-siobhan-munro
-    ea: p-tobias-kovacs
-    collab: p-meera-ivanova
-    partner: p-mikkel-nowak
-    cand: p-deepa-wickramasinghe
+    legal: p-achieng-montoya
+    proc: p-ewan-naidu
+    fin: p-magdalena-monteiro
+    hr: p-siobhan-rees
+    ea: p-tobias-dumitru
+    collab: p-meera-bondarenko
+    partner: p-mikkel-dvorak
+    cand: p-deepa-thapa
   weight: 35.91
   start: '2027-08-23'
 - id: pr-cairn
@@ -1216,15 +1216,15 @@ projects:
   - o-toria-analytics
   - o-ithic-learning
   partner: o-falcombe-center-for-digital-pedagogy
-  owner: p-theresa-nagy
-  sponsor: p-tariq-popescu
+  owner: p-theresa-petrov
+  sponsor: p-tariq-ivanova
   members:
-  - p-ottavio-monteiro
-  - p-theresa-nagy
-  - p-meera-ivanova
-  - p-darius-sherwood
-  - p-ratna-bondarenko
-  - p-bruna-sinclair
+  - p-ottavio-moreira
+  - p-theresa-petrov
+  - p-meera-bondarenko
+  - p-darius-bramwell
+  - p-ratna-nikolic
+  - p-bruna-vaughan
   - p-nomvula-ndlovu
   orgs: []
   status: active
@@ -1232,29 +1232,29 @@ projects:
   target_date: null
   n: 2
   cast:
-    owner: p-theresa-nagy
-    sponsor: p-tariq-popescu
-    lead: p-darius-sherwood
+    owner: p-theresa-petrov
+    sponsor: p-tariq-ivanova
+    lead: p-darius-bramwell
     unit:
-    - p-ratna-bondarenko
-    - p-darius-sherwood
+    - p-ratna-nikolic
+    - p-darius-bramwell
     ae:
     - p-isabela-haidari
     - p-meera-kariuki
     se:
-    - p-roya-mancini
-    - p-jurgen-sargsyan
-    eng: p-bruna-sinclair
+    - p-roya-laurent
+    - p-jurgen-batbold
+    eng: p-bruna-vaughan
     sec: p-nomvula-ndlovu
     privacy: p-mei-wekesa
-    legal: p-achieng-ibarra
-    proc: p-ewan-shrestha
-    fin: p-magdalena-barbosa
-    hr: p-siobhan-munro
-    ea: p-tobias-kovacs
-    collab: p-meera-ivanova
-    partner: p-mikkel-nowak
-    cand: p-deepa-wickramasinghe
+    legal: p-achieng-montoya
+    proc: p-ewan-naidu
+    fin: p-magdalena-monteiro
+    hr: p-siobhan-rees
+    ea: p-tobias-dumitru
+    collab: p-meera-bondarenko
+    partner: p-mikkel-dvorak
+    cand: p-deepa-thapa
   weight: 12.83
   start: '2027-08-23'
 - id: pr-room-booking-tool-selection
@@ -1280,11 +1280,11 @@ projects:
   owner: p-roya-chatterjee
   sponsor: p-solene-yassin
   members:
-  - p-ottavio-monteiro
+  - p-ottavio-moreira
   - p-roya-chatterjee
-  - p-meera-ivanova
+  - p-meera-bondarenko
   - p-tegan-ogunleye
-  - p-nadia-krause
+  - p-nadia-vogel
   - p-isabela-haidari
   orgs:
   - o-heathridge-university
@@ -1300,25 +1300,25 @@ projects:
     lead: p-roya-chatterjee
     unit:
     - p-tegan-ogunleye
-    - p-nadia-krause
+    - p-nadia-vogel
     - p-roya-chatterjee
     ae:
     - p-isabela-haidari
     - p-meera-kariuki
     se:
-    - p-roya-mancini
-    - p-jurgen-sargsyan
-    eng: p-theresa-nagy
+    - p-roya-laurent
+    - p-jurgen-batbold
+    eng: p-theresa-petrov
     sec: p-nomvula-ndlovu
     privacy: p-mei-wekesa
-    legal: p-achieng-ibarra
-    proc: p-ewan-shrestha
-    fin: p-magdalena-barbosa
-    hr: p-siobhan-munro
-    ea: p-tobias-kovacs
-    collab: p-meera-ivanova
-    partner: p-mikkel-nowak
-    cand: p-deepa-wickramasinghe
+    legal: p-achieng-montoya
+    proc: p-ewan-naidu
+    fin: p-magdalena-monteiro
+    hr: p-siobhan-rees
+    ea: p-tobias-dumitru
+    collab: p-meera-bondarenko
+    partner: p-mikkel-dvorak
+    cand: p-deepa-thapa
   weight: 7.96
   start: '2027-08-23'
 - id: pr-holfield-syllabus-review-discovery
@@ -1341,13 +1341,13 @@ projects:
   - o-ithic-learning
   - o-toria-analytics
   partner: o-falcombe-center-for-digital-pedagogy
-  owner: p-darius-sherwood
-  sponsor: p-tariq-popescu
+  owner: p-darius-bramwell
+  sponsor: p-tariq-ivanova
   members:
-  - p-ottavio-monteiro
-  - p-darius-sherwood
-  - p-meera-ivanova
-  - p-ratna-bondarenko
+  - p-ottavio-moreira
+  - p-darius-bramwell
+  - p-meera-bondarenko
+  - p-ratna-nikolic
   orgs:
   - o-holfield-state-college
   status: active
@@ -1355,29 +1355,29 @@ projects:
   target_date: '2027-10-11'
   n: 2
   cast:
-    owner: p-darius-sherwood
-    sponsor: p-tariq-popescu
-    lead: p-darius-sherwood
+    owner: p-darius-bramwell
+    sponsor: p-tariq-ivanova
+    lead: p-darius-bramwell
     unit:
-    - p-ratna-bondarenko
-    - p-darius-sherwood
+    - p-ratna-nikolic
+    - p-darius-bramwell
     ae:
     - p-meera-kariuki
     - p-isabela-haidari
     se:
-    - p-jurgen-sargsyan
-    - p-roya-mancini
-    eng: p-theresa-nagy
+    - p-jurgen-batbold
+    - p-roya-laurent
+    eng: p-theresa-petrov
     sec: p-nomvula-ndlovu
     privacy: p-mei-wekesa
-    legal: p-achieng-ibarra
-    proc: p-ewan-shrestha
-    fin: p-magdalena-barbosa
-    hr: p-siobhan-munro
-    ea: p-tobias-kovacs
-    collab: p-meera-ivanova
-    partner: p-mikkel-nowak
-    cand: p-deepa-wickramasinghe
+    legal: p-achieng-montoya
+    proc: p-ewan-naidu
+    fin: p-magdalena-monteiro
+    hr: p-siobhan-rees
+    ea: p-tobias-dumitru
+    collab: p-meera-bondarenko
+    partner: p-mikkel-dvorak
+    cand: p-deepa-thapa
   weight: 6.14
   start: '2027-08-23'
 - id: pr-heathridge-course-assistant-discovery
@@ -1403,11 +1403,11 @@ projects:
   owner: p-roya-chatterjee
   sponsor: p-solene-yassin
   members:
-  - p-ottavio-monteiro
+  - p-ottavio-moreira
   - p-roya-chatterjee
-  - p-meera-ivanova
+  - p-meera-bondarenko
   - p-tegan-ogunleye
-  - p-nadia-krause
+  - p-nadia-vogel
   orgs:
   - o-heathridge-university
   status: active
@@ -1420,25 +1420,25 @@ projects:
     lead: p-roya-chatterjee
     unit:
     - p-tegan-ogunleye
-    - p-nadia-krause
+    - p-nadia-vogel
     - p-roya-chatterjee
     ae:
     - p-isabela-haidari
     - p-meera-kariuki
     se:
-    - p-roya-mancini
-    - p-jurgen-sargsyan
-    eng: p-theresa-nagy
+    - p-roya-laurent
+    - p-jurgen-batbold
+    eng: p-theresa-petrov
     sec: p-nomvula-ndlovu
     privacy: p-mei-wekesa
-    legal: p-achieng-ibarra
-    proc: p-ewan-shrestha
-    fin: p-magdalena-barbosa
-    hr: p-siobhan-munro
-    ea: p-tobias-kovacs
-    collab: p-meera-ivanova
-    partner: p-mikkel-nowak
-    cand: p-deepa-wickramasinghe
+    legal: p-achieng-montoya
+    proc: p-ewan-naidu
+    fin: p-magdalena-monteiro
+    hr: p-siobhan-rees
+    ea: p-tobias-dumitru
+    collab: p-meera-bondarenko
+    partner: p-mikkel-dvorak
+    cand: p-deepa-thapa
   weight: 5.89
   start: '2027-08-23'
 - id: pr-open-courseware-workshop
@@ -1461,14 +1461,14 @@ projects:
   - o-ithic-learning
   - o-toria-analytics
   partner: o-falcombe-center-for-digital-pedagogy
-  owner: p-meera-ivanova
-  sponsor: p-tariq-popescu
+  owner: p-meera-bondarenko
+  sponsor: p-tariq-ivanova
   members:
-  - p-ottavio-monteiro
-  - p-meera-ivanova
+  - p-ottavio-moreira
+  - p-meera-bondarenko
   - p-roya-chatterjee
   - p-tegan-ogunleye
-  - p-nadia-krause
+  - p-nadia-vogel
   orgs:
   - o-heathridge-university
   status: active
@@ -1476,30 +1476,30 @@ projects:
   target_date: '2027-09-27'
   n: 2
   cast:
-    owner: p-meera-ivanova
-    sponsor: p-tariq-popescu
+    owner: p-meera-bondarenko
+    sponsor: p-tariq-ivanova
     lead: p-roya-chatterjee
     unit:
     - p-tegan-ogunleye
-    - p-nadia-krause
+    - p-nadia-vogel
     - p-roya-chatterjee
     ae:
     - p-meera-kariuki
     - p-isabela-haidari
     se:
-    - p-jurgen-sargsyan
-    - p-roya-mancini
-    eng: p-theresa-nagy
+    - p-jurgen-batbold
+    - p-roya-laurent
+    eng: p-theresa-petrov
     sec: p-nomvula-ndlovu
     privacy: p-mei-wekesa
-    legal: p-achieng-ibarra
-    proc: p-ewan-shrestha
-    fin: p-magdalena-barbosa
-    hr: p-siobhan-munro
-    ea: p-tobias-kovacs
-    collab: p-meera-ivanova
-    partner: p-mikkel-nowak
-    cand: p-deepa-wickramasinghe
+    legal: p-achieng-montoya
+    proc: p-ewan-naidu
+    fin: p-magdalena-monteiro
+    hr: p-siobhan-rees
+    ea: p-tobias-dumitru
+    collab: p-meera-bondarenko
+    partner: p-mikkel-dvorak
+    cand: p-deepa-thapa
   weight: 5.54
   start: '2027-08-23'
 - id: pr-thesis-formatting-input-round
@@ -1521,13 +1521,13 @@ projects:
   - o-toria-analytics
   - o-ithic-learning
   partner: o-falcombe-center-for-digital-pedagogy
-  owner: p-ottavio-monteiro
-  sponsor: p-tariq-popescu
+  owner: p-ottavio-moreira
+  sponsor: p-tariq-ivanova
   members:
-  - p-ottavio-monteiro
-  - p-ottavio-monteiro
-  - p-meera-ivanova
-  - p-darius-sherwood
+  - p-ottavio-moreira
+  - p-ottavio-moreira
+  - p-meera-bondarenko
+  - p-darius-bramwell
   orgs:
   - o-holfield-state-college
   status: active
@@ -1535,29 +1535,29 @@ projects:
   target_date: null
   n: 2
   cast:
-    owner: p-ottavio-monteiro
-    sponsor: p-tariq-popescu
-    lead: p-darius-sherwood
+    owner: p-ottavio-moreira
+    sponsor: p-tariq-ivanova
+    lead: p-darius-bramwell
     unit:
-    - p-ratna-bondarenko
-    - p-darius-sherwood
+    - p-ratna-nikolic
+    - p-darius-bramwell
     ae:
     - p-isabela-haidari
     - p-meera-kariuki
     se:
-    - p-roya-mancini
-    - p-jurgen-sargsyan
-    eng: p-theresa-nagy
+    - p-roya-laurent
+    - p-jurgen-batbold
+    eng: p-theresa-petrov
     sec: p-nomvula-ndlovu
     privacy: p-mei-wekesa
-    legal: p-achieng-ibarra
-    proc: p-ewan-shrestha
-    fin: p-magdalena-barbosa
-    hr: p-siobhan-munro
-    ea: p-tobias-kovacs
-    collab: p-meera-ivanova
-    partner: p-mikkel-nowak
-    cand: p-deepa-wickramasinghe
+    legal: p-achieng-montoya
+    proc: p-ewan-naidu
+    fin: p-magdalena-monteiro
+    hr: p-siobhan-rees
+    ea: p-tobias-dumitru
+    collab: p-meera-bondarenko
+    partner: p-mikkel-dvorak
+    cand: p-deepa-thapa
   weight: 2.77
   start: '2027-08-23'
 - id: pr-early-alert-advisory
@@ -1579,13 +1579,13 @@ projects:
   - o-toria-analytics
   - o-ithic-learning
   partner: o-falcombe-center-for-digital-pedagogy
-  owner: p-ishaan-smit
-  sponsor: p-tariq-popescu
+  owner: p-ishaan-bergstrom
+  sponsor: p-tariq-ivanova
   members:
-  - p-ottavio-monteiro
-  - p-ishaan-smit
-  - p-meera-ivanova
-  - p-margaux-choi
+  - p-ottavio-moreira
+  - p-ishaan-bergstrom
+  - p-meera-bondarenko
+  - p-margaux-kang
   orgs:
   - o-university-of-kirkley
   status: active
@@ -1593,30 +1593,30 @@ projects:
   target_date: null
   n: 2
   cast:
-    owner: p-ishaan-smit
-    sponsor: p-tariq-popescu
-    lead: p-ishaan-smit
+    owner: p-ishaan-bergstrom
+    sponsor: p-tariq-ivanova
+    lead: p-ishaan-bergstrom
     unit:
-    - p-margaux-choi
-    - p-sakura-carmichael
-    - p-ishaan-smit
+    - p-margaux-kang
+    - p-sakura-kingsley
+    - p-ishaan-bergstrom
     ae:
     - p-isabela-haidari
     - p-meera-kariuki
     se:
-    - p-roya-mancini
-    - p-jurgen-sargsyan
-    eng: p-theresa-nagy
+    - p-roya-laurent
+    - p-jurgen-batbold
+    eng: p-theresa-petrov
     sec: p-nomvula-ndlovu
     privacy: p-mei-wekesa
-    legal: p-achieng-ibarra
-    proc: p-ewan-shrestha
-    fin: p-magdalena-barbosa
-    hr: p-siobhan-munro
-    ea: p-tobias-kovacs
-    collab: p-meera-ivanova
-    partner: p-mikkel-nowak
-    cand: p-deepa-wickramasinghe
+    legal: p-achieng-montoya
+    proc: p-ewan-naidu
+    fin: p-magdalena-monteiro
+    hr: p-siobhan-rees
+    ea: p-tobias-dumitru
+    collab: p-meera-bondarenko
+    partner: p-mikkel-dvorak
+    cand: p-deepa-thapa
   weight: 2.69
   start: '2027-08-23'
 - id: pr-heathridge-lab-safety-training-idea
@@ -1639,11 +1639,11 @@ projects:
   - o-toria-analytics
   partner: o-falcombe-center-for-digital-pedagogy
   owner: p-roya-chatterjee
-  sponsor: p-tariq-popescu
+  sponsor: p-tariq-ivanova
   members:
-  - p-ottavio-monteiro
+  - p-ottavio-moreira
   - p-roya-chatterjee
-  - p-meera-ivanova
+  - p-meera-bondarenko
   orgs:
   - o-heathridge-university
   status: active
@@ -1652,29 +1652,29 @@ projects:
   n: 2
   cast:
     owner: p-roya-chatterjee
-    sponsor: p-tariq-popescu
+    sponsor: p-tariq-ivanova
     lead: p-roya-chatterjee
     unit:
     - p-tegan-ogunleye
-    - p-nadia-krause
+    - p-nadia-vogel
     - p-roya-chatterjee
     ae:
     - p-meera-kariuki
     - p-isabela-haidari
     se:
-    - p-jurgen-sargsyan
-    - p-roya-mancini
-    eng: p-theresa-nagy
+    - p-jurgen-batbold
+    - p-roya-laurent
+    eng: p-theresa-petrov
     sec: p-nomvula-ndlovu
     privacy: p-mei-wekesa
-    legal: p-achieng-ibarra
-    proc: p-ewan-shrestha
-    fin: p-magdalena-barbosa
-    hr: p-siobhan-munro
-    ea: p-tobias-kovacs
-    collab: p-meera-ivanova
-    partner: p-mikkel-nowak
-    cand: p-deepa-wickramasinghe
+    legal: p-achieng-montoya
+    proc: p-ewan-naidu
+    fin: p-magdalena-monteiro
+    hr: p-siobhan-rees
+    ea: p-tobias-dumitru
+    collab: p-meera-bondarenko
+    partner: p-mikkel-dvorak
+    cand: p-deepa-thapa
   weight: 0.17
   start: '2027-08-23'
 - id: pr-ithic-course-scheduling-diligence
@@ -1696,12 +1696,12 @@ projects:
   - o-ithic-learning
   - o-toria-analytics
   partner: o-falcombe-center-for-digital-pedagogy
-  owner: p-ottavio-monteiro
-  sponsor: p-tariq-popescu
+  owner: p-ottavio-moreira
+  sponsor: p-tariq-ivanova
   members:
-  - p-ottavio-monteiro
-  - p-ottavio-monteiro
-  - p-meera-ivanova
+  - p-ottavio-moreira
+  - p-ottavio-moreira
+  - p-meera-bondarenko
   orgs:
   - o-heathridge-university
   - o-ithic-learning
@@ -1711,30 +1711,30 @@ projects:
   target_date: null
   n: 2
   cast:
-    owner: p-ottavio-monteiro
-    sponsor: p-tariq-popescu
+    owner: p-ottavio-moreira
+    sponsor: p-tariq-ivanova
     lead: p-roya-chatterjee
     unit:
     - p-tegan-ogunleye
-    - p-nadia-krause
+    - p-nadia-vogel
     - p-roya-chatterjee
     ae:
     - p-meera-kariuki
     - p-isabela-haidari
     se:
-    - p-jurgen-sargsyan
-    - p-roya-mancini
-    eng: p-theresa-nagy
+    - p-jurgen-batbold
+    - p-roya-laurent
+    eng: p-theresa-petrov
     sec: p-nomvula-ndlovu
     privacy: p-mei-wekesa
-    legal: p-achieng-ibarra
-    proc: p-ewan-shrestha
-    fin: p-magdalena-barbosa
-    hr: p-siobhan-munro
-    ea: p-tobias-kovacs
-    collab: p-meera-ivanova
-    partner: p-mikkel-nowak
-    cand: p-deepa-wickramasinghe
+    legal: p-achieng-montoya
+    proc: p-ewan-naidu
+    fin: p-magdalena-monteiro
+    hr: p-siobhan-rees
+    ea: p-tobias-dumitru
+    collab: p-meera-bondarenko
+    partner: p-mikkel-dvorak
+    cand: p-deepa-thapa
   weight: 0.56
   start: '2027-08-23'
 - id: pr-research-computing-learning-series
@@ -1756,11 +1756,11 @@ projects:
   - o-ithic-learning
   - o-toria-analytics
   partner: o-falcombe-center-for-digital-pedagogy
-  owner: p-meera-ivanova
-  sponsor: p-tariq-popescu
+  owner: p-meera-bondarenko
+  sponsor: p-tariq-ivanova
   members:
-  - p-ottavio-monteiro
-  - p-meera-ivanova
+  - p-ottavio-moreira
+  - p-meera-bondarenko
   - p-roya-chatterjee
   orgs:
   - o-heathridge-university
@@ -1770,40 +1770,40 @@ projects:
   target_date: null
   n: 2
   cast:
-    owner: p-meera-ivanova
-    sponsor: p-tariq-popescu
+    owner: p-meera-bondarenko
+    sponsor: p-tariq-ivanova
     lead: p-roya-chatterjee
     unit:
     - p-tegan-ogunleye
-    - p-nadia-krause
+    - p-nadia-vogel
     - p-roya-chatterjee
     ae:
     - p-meera-kariuki
     - p-isabela-haidari
     se:
-    - p-jurgen-sargsyan
-    - p-roya-mancini
-    eng: p-theresa-nagy
+    - p-jurgen-batbold
+    - p-roya-laurent
+    eng: p-theresa-petrov
     sec: p-nomvula-ndlovu
     privacy: p-mei-wekesa
-    legal: p-achieng-ibarra
-    proc: p-ewan-shrestha
-    fin: p-magdalena-barbosa
-    hr: p-siobhan-munro
-    ea: p-tobias-kovacs
-    collab: p-meera-ivanova
-    partner: p-mikkel-nowak
-    cand: p-deepa-wickramasinghe
+    legal: p-achieng-montoya
+    proc: p-ewan-naidu
+    fin: p-magdalena-monteiro
+    hr: p-siobhan-rees
+    ea: p-tobias-dumitru
+    collab: p-meera-bondarenko
+    partner: p-mikkel-dvorak
+    cand: p-deepa-thapa
   weight: 0.65
   start: '2027-08-23'
 collisions:
   first_names:
-  - - p-meera-ivanova
+  - - p-meera-bondarenko
     - p-meera-kariuki
   - - p-roya-chatterjee
-    - p-roya-mancini
+    - p-roya-laurent
   homophones:
-  - p-teagan-penhallow
+  - p-teagan-alexiou
   - p-tegan-ogunleye
 cadences:
 - key: standup
@@ -1819,16 +1819,16 @@ cadences:
   every: 1
   time: 09:30
   minutes: 25
-  organizer: p-darius-sherwood
+  organizer: p-darius-bramwell
   attendees:
-  - p-ottavio-monteiro
-  - p-darius-sherwood
-  - p-meera-ivanova
-  - p-ratna-bondarenko
-  - p-theresa-nagy
+  - p-ottavio-moreira
+  - p-darius-bramwell
+  - p-meera-bondarenko
+  - p-ratna-nikolic
+  - p-theresa-petrov
   - p-nomvula-ndlovu
-  - p-bruna-sinclair
-  - p-esperanza-rao
+  - p-bruna-vaughan
+  - p-esperanza-venkataraman
 - key: leads
   title: SLIO leads call
   kind: meeting
@@ -1838,14 +1838,14 @@ cadences:
   every: 1
   time: '11:00'
   minutes: 45
-  organizer: p-tariq-popescu
+  organizer: p-tariq-ivanova
   attendees:
-  - p-ottavio-monteiro
-  - p-meera-ivanova
-  - p-theresa-nagy
+  - p-ottavio-moreira
+  - p-meera-bondarenko
+  - p-theresa-petrov
   - p-nomvula-ndlovu
-  - p-esperanza-rao
-  - p-tariq-popescu
+  - p-esperanza-venkataraman
+  - p-tariq-ivanova
 - key: hub_sync
   title: Cairn platform sync
   kind: meeting
@@ -1855,14 +1855,14 @@ cadences:
   every: 1
   time: '14:00'
   minutes: 30
-  organizer: p-theresa-nagy
+  organizer: p-theresa-petrov
   attendees:
-  - p-ottavio-monteiro
-  - p-theresa-nagy
-  - p-meera-ivanova
-  - p-darius-sherwood
-  - p-ratna-bondarenko
-  - p-bruna-sinclair
+  - p-ottavio-moreira
+  - p-theresa-petrov
+  - p-meera-bondarenko
+  - p-darius-bramwell
+  - p-ratna-nikolic
+  - p-bruna-vaughan
 - key: one_on_one
   title: 1:1 Ottavio / Meera
   kind: meeting
@@ -1872,10 +1872,10 @@ cadences:
   every: 2
   time: '15:00'
   minutes: 30
-  organizer: p-meera-ivanova
+  organizer: p-meera-bondarenko
   attendees:
-  - p-ottavio-monteiro
-  - p-meera-ivanova
+  - p-ottavio-moreira
+  - p-meera-bondarenko
 - key: forum
   title: Cross-campus AI forum
   kind: meeting
@@ -1885,13 +1885,13 @@ cadences:
   every: 2
   time: '13:00'
   minutes: 60
-  organizer: p-meera-ivanova
+  organizer: p-meera-bondarenko
   attendees:
-  - p-ottavio-monteiro
-  - p-meera-ivanova
-  - p-darius-sherwood
+  - p-ottavio-moreira
+  - p-meera-bondarenko
+  - p-darius-bramwell
   - p-roya-chatterjee
-  - p-ishaan-smit
+  - p-ishaan-bergstrom
 - key: weekly_update
   title: Weekly update
   kind: obligation
@@ -1902,8 +1902,8 @@ cadences:
   every: 1
   organizer: p-slio-shared-inbox
   attendees:
-  - p-ottavio-monteiro
-  - p-tariq-popescu
+  - p-ottavio-moreira
+  - p-tariq-ivanova
 challenges:
 - week: 1
   tag: worker_directive
@@ -1932,7 +1932,7 @@ challenges:
 - week: 1
   tag: new_entity
   day: '2027-09-07'
-  person: p-celine-wisniewska
+  person: p-celine-novotny
   project: pr-fjord
 - week: 1
   tag: supersession
@@ -2021,7 +2021,7 @@ challenges:
 - week: 2
   tag: new_entity
   day: '2027-09-14'
-  person: p-henrik-mendoza
+  person: p-henrik-santoso
   project: pr-open-courseware-workshop
 - week: 2
   tag: supersession
