@@ -553,6 +553,8 @@ TECH_TERMS = _words(
     backlinks kanban scrum sprint epic story
     openid idp idps authenticator gpus wcag vpat stem x-request-id request-id mfa totp
     helvetica arial unsubscribe simplenamespace alliance elevated tech nope ward
+    accept-encoding akia fifo fireworks firstname lastname ollama pyyaml qwen servicenow toolerror
+    toolresult
 
     vcalendar vevent vtimezone valarm vtodo vjournal vfreebusy dtstart dtend dtstamp prodid uid
     rrule exdate rdate tzid tzname tzoffsetfrom tzoffsetto partstat cutype mailto attendee
