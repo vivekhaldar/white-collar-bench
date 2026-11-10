@@ -306,7 +306,7 @@ Agent-visible. Generated from `artifact.emit` events.
 | status, brief | `{"rubric": [...], "facts": {...}}` (§3.3) |
 | change | `{"items": [{"event", "summary", "date", "type", "keywords", "support"}]}` |
 | temporal | `{"date": "YYYY-MM-DD", "event": "e-..."}` |
-| priority | `{"must_include": [list items], "worker_active": ["c-..."], "k": 10}` |
+| priority | `{"must_include": [list items], "worker_active": [list items], "distractors": [list items], "k": 10}`. `must_include`: worker-owned active accepted loops due by the next business day. `worker_active`: all worker-owned active accepted loops. `distractors`: knowable loops that are closed or owed by someone else. |
 | any unanswerable | `{}` with `answerable: false` |
 
 `support` lists the artifact IDs that carry the evidence for the gold answer. Citations are checked against it.
