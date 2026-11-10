@@ -86,3 +86,22 @@ def test_rubric_items_and_extra_items():
     assert [r["id"] for r in number_items([a, b])] == ["r1", "r2"]
     with pytest.raises(ValueError):
         normalize_extra_item({"keywords": ["x"]})
+
+
+def test_loop_keyword_group_drops_keywords_that_only_name_the_context():
+    from types import SimpleNamespace
+
+    from wcb.questions.rubric import loop_keyword_group
+
+    state = {"entities": {
+        "pr-f": {"name": "Fulmar", "surface_forms": ["the Fulmar pilot"]},
+        "pr-d": {"name": "Dorcliff Transcript Intake Discovery", "surface_forms": []},
+        "p-a": {"name": "Amira Baek", "surface_forms": ["Amira"]},
+    }}
+    world = SimpleNamespace(entity_events=lambda: {})
+    loop = {"keywords": ["api contract v2", "Fulmar"], "project": "pr-f", "debtor": "p-a"}
+    assert loop_keyword_group(world, state, loop) == ["api contract v2"]
+    loop = {"keywords": ["two-week sprint", "transcript intake"], "project": "pr-d"}
+    assert loop_keyword_group(world, state, loop) == ["two-week sprint"]
+    loop = {"keywords": ["Fulmar"], "project": "pr-f"}  # nothing else: keep it
+    assert loop_keyword_group(world, state, loop) == ["fulmar"]

@@ -42,6 +42,7 @@ from wcb.questions.rubric import (
     is_date,
     is_entity,
     is_number,
+    loop_keyword_group,
     number_items,
     previous_value,
     rubric_item,
@@ -573,7 +574,7 @@ def event_groups(
     t = ev["type"]
     if t.startswith("commitment."):
         loop = state["loops"].get(raw.get("commitment"), {})
-        out = [group(loop.get("keywords") or [])]
+        out = [loop_keyword_group(world, state, loop)]
         changes = (
             {"status": raw.get("status", "done")}
             if t == "commitment.resolve"
@@ -783,7 +784,7 @@ def project_status_rubric(world: World, state: dict, project: str) -> list[dict[
         items.append(
             rubric_item(
                 f"{loop['what']} (owner: {entity_name(world, state, loop['debtor'])})",
-                [loop.get("keywords") or []],
+                [loop_keyword_group(world, state, loop)],
                 support=list(loop.get("evidence") or []),
                 aspect="loop",
             )
@@ -929,7 +930,7 @@ def person_brief_rubric(world: World, state: dict, person: str) -> list[dict[str
         items.append(
             rubric_item(
                 f"I owe {name}: {loop['what']}{due}",
-                [loop.get("keywords") or []],
+                [loop_keyword_group(world, state, loop)],
                 critical=True,
                 support=list(loop.get("evidence") or []),
                 aspect="i_owe",
@@ -941,7 +942,7 @@ def person_brief_rubric(world: World, state: dict, person: str) -> list[dict[str
         items.append(
             rubric_item(
                 f"{name} owes me: {loop['what']}{due}",
-                [loop.get("keywords") or []],
+                [loop_keyword_group(world, state, loop)],
                 critical=True,
                 support=list(loop.get("evidence") or []),
                 aspect="owed_to_me",

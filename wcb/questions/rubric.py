@@ -120,6 +120,24 @@ def entity_forms(world: World, state: dict, eid: str) -> list[str]:
     return group([ent.get("name"), *(ent.get("surface_forms") or [])])
 
 
+def loop_keyword_group(world: World, state: dict, loop: dict) -> list[str]:
+    """A loop's keywords as one rubric group, without keywords that only name its context.
+
+    Generated and hand-written loops carry keywords such as ``["api contract v2", "Fulmar"]``.
+    As alternatives in one group, the project's name would cover every loop of the project in
+    any answer that mentions it, so keywords made only of words from the names of the loop's
+    project, debtor, creditor or others are dropped (unless nothing else is left).
+    """
+    kws = [k for k in loop.get("keywords") or [] if isinstance(k, str) and k.strip()]
+    context: set[str] = set()
+    for eid in (loop.get("project"), loop.get("debtor"), loop.get("creditor"), *(loop.get("others") or [])):
+        if isinstance(eid, str) and eid:
+            for form in entity_forms(world, state, eid):
+                context |= set(tokens(form))
+    specific = [k for k in kws if not set(tokens(k)) <= context]
+    return group(specific or kws)
+
+
 def is_date(value: Any) -> bool:
     return isinstance(value, str) and bool(DATE_RE.match(value))
 
