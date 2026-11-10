@@ -4,7 +4,6 @@ type: person
 name: Ben Okoro
 aliases:
 - Ben
-- B. Okoro
 - ben.okoro@larchmont.example
 - '@ben'
 org: orgs/larchmont-freight
@@ -20,7 +19,6 @@ Finance systems lead at Larchmont Freight ([[orgs/larchmont-freight]]). Relation
 
 ## Threads
 
-- [[projects/quillon]]: Quillon (active)
 - [[projects/ledger-cleanup]]: Ledger cleanup (active)
 - [[loops/send-ada-the-january-reconciliation-report]]: Send Ada the January reconciliation report (open)
 

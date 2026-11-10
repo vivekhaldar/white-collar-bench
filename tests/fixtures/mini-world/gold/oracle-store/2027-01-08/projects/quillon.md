@@ -2,9 +2,7 @@
 id: projects/quillon
 type: project
 name: Quillon
-aliases:
-- Project Quillon
-- the analytics platform selection
+aliases: []
 status: active
 owner: people/me
 people:

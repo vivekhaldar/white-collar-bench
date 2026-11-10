@@ -5,13 +5,14 @@ See docs/formats.md §1. The world is hidden ground truth; agents never see it.
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
 from wcb.util.dates import date_of
 from wcb.util.io import read_jsonl, read_yaml
-from wcb.util.text import normalize
+from wcb.util.text import normalize, tokens
 
 EVENT_TYPES = {
     "entity.create",
@@ -83,6 +84,7 @@ class World:
     events: list[dict[str, Any]]  # every event, in world order (t, then file order)
     artifacts: dict[str, Artifact]
     by_id: dict[str, dict[str, Any]]
+    _cache: dict[str, Any] = field(default_factory=dict, repr=False, compare=False)
 
     # ------------------------------------------------------------ loading
     @classmethod
@@ -209,6 +211,53 @@ class World:
                 if key:
                     table.setdefault(key, set()).add(eid)
         return table
+
+    def form_first_seen(self) -> dict[str, dict[str, str]]:
+        """Entity ID -> {surface form -> date of the first artifact whose text uses it}.
+
+        Surface forms carry no reveal record of their own, so this is how a form's first use
+        in the inputs is found. A form is used when it occurs as whole words, case- and
+        accent-insensitively, with a leading "the" optional; an email address, domain or
+        `@handle` must occur literally. Text is read as `wcb world check` reads it (text
+        files and the XML of Office files). Forms that no artifact uses are absent. Computed
+        once per loaded world.
+        """
+        if "form_first_seen" in self._cache:
+            return self._cache["form_first_seen"]
+        from wcb.world.check import artifact_text  # check imports this module
+
+        pending = {
+            (eid, f)
+            for eid, e in self.entity_events().items()
+            for f in e.get("surface_forms") or []
+            if isinstance(f, str) and f.strip()
+        }
+        out: dict[str, dict[str, str]] = {}
+        for a in sorted(self.artifacts.values(), key=lambda a: (a.received_at, a.id)):
+            if not pending:
+                break
+            text = artifact_text(self.dir / a.path)
+            if not text:
+                continue
+            low = normalize(text)
+            words = f" {' '.join(tokens(text, drop_stopwords=False))} "
+            for eid, form in sorted(pending):
+                if _uses_form(low, words, form):
+                    out.setdefault(eid, {})[form] = a.date
+                    pending.discard((eid, form))
+        self._cache["form_first_seen"] = out
+        return out
+
+
+def _uses_form(low: str, words: str, form: str) -> bool:
+    """Whether normalized text `low` (with its word string `words`) uses a surface form."""
+    form = normalize(form)
+    if " " not in form and ("@" in form or "." in form):
+        return bool(re.search(rf"(?<![\w.-]){re.escape(form)}(?![\w-]|\.\w)", low))
+    phrase = " ".join(tokens(form, drop_stopwords=False))
+    if phrase.startswith("the "):
+        phrase = phrase[4:]
+    return bool(phrase) and f" {phrase} " in words
 
 
 def _tkey(e: dict[str, Any]) -> str:

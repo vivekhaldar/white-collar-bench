@@ -53,3 +53,10 @@ def test_evidence_and_secrets(mini_world_dir):
     assert mon["loops"]["c-004"]["evidence"] == ["mt-0001", "em-0004"]
     assert "514227" in mon["secrets"]
     assert "em-0005" not in mon["delivered"]
+
+
+def test_transfer_touches_both_debtors(mini_world_dir):
+    # e-0022 hands c-004 from Sam Reyes to Cora: both people are subjects of the hand-off.
+    w = World.load(mini_world_dir)
+    ev = next(e for e in state_at(w, "2027-01-11")["events"] if e["id"] == "e-0022")
+    assert ev["subjects"] == ["c-004", "p-cora-velez", "p-ada-quist", "p-sam-reyes"]

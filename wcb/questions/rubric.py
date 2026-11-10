@@ -55,7 +55,15 @@ REVERSAL_WORDS = [
 ]
 SPLIT_WORDS = ["split", "spun out", "spun off", "split out", "carved out", "separate"]
 MERGE_WORDS = ["merged", "folded into", "combined", "absorbed"]
-CLEARED_WORDS = ["cleared", "resolved", "removed", "no longer", "unblocked", "none"]
+# Words for an attribute set to null (a blocker cleared). Not "none": it turns up in almost
+# any status answer ("overdue items: none").
+CLEARED_WORDS = [
+    "cleared", "resolved", "removed", "no longer", "unblocked", "fixed", "lifted", "ended",
+    "is over", "no blocker", "no blockers",
+]
+# How answers, which address the worker, refer to the worker taking something over ("it's
+# yours now", "handed to you", "owner: me"). Accepted alongside the worker's names.
+WORKER_WORDS = ["me", "myself", "mine", "you", "yourself", "yours"]
 
 # Words too generic to identify anything in an answer.
 GENERIC_WORDS = frozenset(

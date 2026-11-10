@@ -132,7 +132,8 @@ def test_q010_focus_tomorrow(question):
 
 def test_q008_changes_since_friday(question):
     q = question("q-008")
-    assert q["text"] == "What changed on Quillon since Friday 8 January?"
+    # `since` is exclusive, and the default text says so.
+    assert q["text"] == "What changed on Quillon since the end of Friday 8 January?"
     events = [i["event"] for i in q["gold"]["items"]]
     assert events == ["e-0020", "e-0022", "e-0030", "e-0031", "e-0035", "e-0032"]
     assert all(i["date"] > "2027-01-08" for i in q["gold"]["items"])

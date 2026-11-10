@@ -4,7 +4,6 @@ type: project
 name: Ledger cleanup
 aliases:
 - Ledger
-- GL cleanup
 status: active
 owner: people/ben-okoro
 people:

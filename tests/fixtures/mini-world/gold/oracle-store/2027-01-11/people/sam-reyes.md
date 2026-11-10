@@ -9,7 +9,7 @@ role: Solutions engineer
 email: sam.reyes@tessellate.example
 relationship: vendor
 created: '2027-01-07'
-updated: '2027-01-07'
+updated: '2027-01-11'
 ---
 ## Context
 
@@ -23,3 +23,4 @@ No active threads.
 
 - 2027-01-07: Sam Reyes, Tessellate solutions engineer [src: mt-0001]
 - 2027-01-07: Sam Reyes will send Tessellate volume pricing [src: mt-0001]
+- 2027-01-11: Volume pricing handed from Sam Reyes to Cora [src: em-0004]

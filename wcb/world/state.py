@@ -129,6 +129,7 @@ def state_at(world: World, date: str) -> dict[str, Any]:
                     changes = {"status": e.get("status", "done")}
                 else:
                     changes = {k: v for k, v in (e.get("changes") or {}).items() if k in LOOP_FIELDS}
+                before = _loop_subjects(cid, loop)
                 for k, v in changes.items():
                     loop[k] = copy.deepcopy(v)
                 if "accepted" in changes:
@@ -137,7 +138,8 @@ def state_at(world: World, date: str) -> dict[str, Any]:
                 _add(loop["evidence"], ev_arts)
                 loop["history"].append(_hist(e, changes, ev_arts))
                 project = project or loop["project"]
-                subjects = _loop_subjects(cid, loop)
+                # A hand-off touches whoever gave the loop up as well as whoever took it.
+                subjects = _loop_subjects(cid, loop) + before
 
         elif etype == "decision.make":
             did = e["decision"]
@@ -183,11 +185,10 @@ def state_at(world: World, date: str) -> dict[str, Any]:
             for p in into:
                 if p in entities:
                     entities[p]["attrs"]["parent"] = src
+                    _add(entities[p]["evidence"], ev_arts)
             for cid, target in (e.get("moves") or {}).items():
                 if cid in loops:
-                    loops[cid]["project"] = target
-                    loops[cid]["updated"] = max(loops[cid]["updated"], edate)
-                    loops[cid]["history"].append(_hist(e, {"project": target}, ev_arts))
+                    _move_loop(loops[cid], target, e, edate, ev_arts)
                     subjects.append(cid)
 
         elif etype == "project.merge":
@@ -202,9 +203,7 @@ def state_at(world: World, date: str) -> dict[str, Any]:
                     _add(entities[p]["evidence"], ev_arts)
             for cid, loop in loops.items():
                 if loop["project"] in merged:
-                    loop["project"] = into
-                    loop["updated"] = max(loop["updated"], edate)
-                    loop["history"].append(_hist(e, {"project": into}, ev_arts))
+                    _move_loop(loop, into, e, edate, ev_arts)
                     subjects.append(cid)
         else:
             applied = False
@@ -266,6 +265,17 @@ def _hist(e: dict[str, Any], changes: dict[str, Any], arts: list[str]) -> dict[s
         "summary": e.get("summary", ""),
         "artifacts": list(arts),
     }
+
+
+def _move_loop(
+    loop: dict[str, Any], target: str, e: dict[str, Any], edate: str, arts: list[str]
+) -> None:
+    """Move a loop to another project (split or merge). The move is a change to the loop, so
+    its artifacts join the loop's evidence like any other update's."""
+    loop["project"] = target
+    loop["updated"] = max(loop["updated"], edate)
+    _add(loop["evidence"], arts)
+    loop["history"].append(_hist(e, {"project": target}, arts))
 
 
 def _loop_subjects(cid: str, loop: dict[str, Any] | None) -> list[str]:

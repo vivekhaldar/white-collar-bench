@@ -32,7 +32,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-from wcb.util.dates import DATE_RE, parse_dt, text_variants
+from wcb.util.dates import DATE_RE, parse_date, parse_dt, text_variants
 from wcb.util.io import read_jsonl, read_yaml
 from wcb.util.issues import Issue, error, warning
 from wcb.util.text import contains_phrase, normalize
@@ -954,6 +954,9 @@ def _check_questions(world: World, ix: _Index, issues: list[Issue]) -> None:
             problem = _param_problem(key, value, ix)
             if problem:
                 issues.append(error("question.param", problem, loc))
+        problem = _since_text_problem(q, params, world)
+        if problem:
+            issues.append(warning("question.since", problem, loc))
         for tag in q.get("challenges") or []:
             if tag not in CHALLENGE_TAGS:
                 issues.append(warning("question.challenge", f"unknown challenge tag {tag!r}", loc))
@@ -970,6 +973,46 @@ def _param_problem(key: str, value: Any, ix: _Index) -> str | None:
             return f"param event: {value!r} is not an existing world event"
     elif key == "since" and not _is_date(value):
         return f"param since: {value!r} must be YYYY-MM-DD"
+    return None
+
+
+WEEKDAY_NAMES = ("monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday")
+
+
+def _since_text_problem(q: dict[str, Any], params: dict[str, Any], world: World) -> str | None:
+    """A `project_changes` text that reads as including the `since` day, which gold excludes.
+
+    Gold lists changes dated after `since`, so "since Friday" with `since` on that Friday, or
+    "this week" with `since` inside the checkpoint's week, leaves out changes the text asks for.
+    """
+    text, since = q.get("text"), str(params.get("since") or "")
+    if q.get("template") != "project_changes" or not isinstance(text, str) or not _is_date(since):
+        return None
+    day = parse_date(since)
+    words = set(re.findall(r"[a-z]+", normalize(text)))
+    weekday = WEEKDAY_NAMES[day.weekday()]
+    if weekday in words:
+        return (
+            f"text names {weekday.capitalize()} but since {since} is that {weekday.capitalize()}, "
+            "whose changes gold leaves out (it lists changes after since); use the day before"
+        )
+    cp_date = next(
+        (
+            str(c.get("date"))
+            for c in world.meta.get("checkpoints") or []
+            if isinstance(c, dict) and str(c.get("id")) == str(q.get("checkpoint"))
+        ),
+        None,
+    )
+    if (
+        "this week" in normalize(text)
+        and _is_date(cp_date)
+        and day.isocalendar()[:2] == parse_date(str(cp_date)).isocalendar()[:2]
+    ):
+        return (
+            f"text says 'this week' but since {since} falls in the checkpoint's week, so gold "
+            "leaves out that week's changes up to and including it; use the Sunday before"
+        )
     return None
 
 

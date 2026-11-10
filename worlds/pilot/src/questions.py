@@ -28,7 +28,7 @@ q("cp1", "person_attr", {"person": HANA, "attribute": "role"}, text="What is Han
   challenges=["new_entity", "name_collision"])
 q("cp1", "i_owe", {"person": SADE}, text="What do I owe Sade?", name_form="Sade",
   challenges=["alias", "implied_commitment"])
-q("cp1", "project_changes", {"project": LAN, "since": "2027-02-26"}, text="What changed on Tinderbox since last Friday?",
+q("cp1", "project_changes", {"project": LAN, "since": "2027-02-25"}, text="What changed on Tinderbox since last Friday?",
   challenges=["supersession", "worker_directive", "transfer"])
 
 # ======================================================================= cp2: end of Thursday 4 March

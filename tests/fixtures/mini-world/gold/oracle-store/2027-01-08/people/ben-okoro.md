@@ -4,9 +4,8 @@ type: person
 name: Ben Okoro
 aliases:
 - Ben
-- B. Okoro
-- ben.okoro@larchmont.example
 - '@ben'
+- ben.okoro@larchmont.example
 org: orgs/larchmont-freight
 role: Finance systems lead
 email: ben.okoro@larchmont.example

@@ -33,7 +33,9 @@ from wcb.questions.rubric import (
     MERGE_WORDS,
     REVERSAL_WORDS,
     SPLIT_WORDS,
+    WORKER_WORDS,
     date_group,
+    distinctive_tokens,
     entity_forms,
     flatten,
     group,
@@ -485,7 +487,8 @@ def is_project_change(world: World, ev: dict, project: str) -> bool:
 def project_change_events(
     world: World, state: dict, project: str, since: str | None = None
 ) -> list[dict]:
-    """Knowable state-changing events on a project dated after ``since``, in world order."""
+    """Knowable state-changing events on a project dated after ``since`` (``since`` itself
+    excluded), in world order."""
     return [
         ev
         for ev in state["events"]
@@ -493,8 +496,62 @@ def project_change_events(
     ]
 
 
+def on_suggested_loop(world: World, state: dict, ev: dict) -> bool:
+    """Whether ``ev`` is a commitment event on a loop that is not accepted at the state date."""
+    if not ev["type"].startswith("commitment."):
+        return False
+    loop = state["loops"].get(world.by_id.get(ev["id"], {}).get("commitment"))
+    return loop is not None and not loop.get("accepted")
+
+
+def status_change_events(world: World, state: dict, project: str) -> list[dict]:
+    """`project_change_events` for status golds: only accepted loops count there, so events
+    on suggested loops (a suggestion made, reworded or dropped) are skipped."""
+    return [
+        ev
+        for ev in project_change_events(world, state, project)
+        if not on_suggested_loop(world, state, ev)
+    ]
+
+
+def party_forms(world: World, state: dict, eid: str, *, worker_words: bool = True) -> list[str]:
+    """An entity's names; for the worker also ``me``, ``you`` and similar words
+    (`WORKER_WORDS`), since answers address the worker rather than name them."""
+    forms = entity_forms(world, state, eid)
+    return group([*forms, *WORKER_WORDS]) if worker_words and eid == world.worker else forms
+
+
+def cleared_groups(
+    world: World, state: dict, ev: dict, avoid: Iterable[str] = ()
+) -> list[list[str]]:
+    """Keyword groups for a ``fact.set`` to ``null``: "cleared" words, plus one group naming
+    what was cleared, so that a stray "resolved" elsewhere in an answer does not cover the
+    item. That group holds the words of the value it replaced and up to two distinctive words
+    of the event's summary (not "cleared" words), or else the attribute's name."""
+    raw = world.by_id.get(ev["id"], {})
+    attr = str(raw.get("attribute", ""))
+    ent = state["entities"].get(raw.get("subject")) or {}
+    hist = (ent.get("attr_history") or {}).get(attr) or []
+    idx = next((i for i, h in enumerate(hist) if h.get("event") == ev["id"]), len(hist))
+    prev = next((h["value"] for h in reversed(hist[:idx]) if h.get("value") is not None), None)
+    plain = set(avoid) | {t for w in CLEARED_WORDS for t in tokens(w, drop_stopwords=False)}
+    what = group(
+        [
+            *flatten(value_groups(world, state, attr, prev, avoid=avoid)),
+            *distinctive_tokens(str(ev.get("summary") or ""), avoid=plain),
+        ]
+    )
+    return [g for g in (group(CLEARED_WORDS), what or group([attr.replace("_", " ")])) if g]
+
+
 def event_groups(
-    world: World, state: dict, ev: dict, project: str | None = None, avoid: Iterable[str] = ()
+    world: World,
+    state: dict,
+    ev: dict,
+    project: str | None = None,
+    avoid: Iterable[str] = (),
+    *,
+    worker_words: bool = True,
 ) -> list[list[str]]:
     """Keyword groups that describe what an event changed (for latest-change rubric items).
 
@@ -504,9 +561,13 @@ def event_groups(
     - commitment events: the loop's keywords; plus the new status words for a resolution or a
       status change, the new due date's variants, and the new debtor's names on a transfer;
     - decisions: the decision's keywords, plus reversal words for ``decision.reverse``;
-    - ``fact.set``: groups for the new value (`value_groups`), or "cleared" words for ``null``;
+    - ``fact.set``: groups for the new value (`value_groups`); for ``null``, "cleared" words
+      and words of the value that was cleared (`cleared_groups`);
     - splits and merges: the names of the other projects involved, plus split or merge words;
     - ``entity.create`` of the project: distinctive words of its summary.
+
+    When the new debtor or the new entity value is the worker, its group also accepts
+    `WORKER_WORDS` (``you``, ``yours``, ``me``...) unless ``worker_words`` is false.
     """
     raw = world.by_id.get(ev["id"], {})
     t = ev["type"]
@@ -524,7 +585,7 @@ def event_groups(
             if is_date(changes.get("due")):
                 out.append(date_group(changes["due"]))
             if isinstance(changes.get("debtor"), str):
-                out.append(entity_forms(world, state, changes["debtor"]))
+                out.append(party_forms(world, state, changes["debtor"], worker_words=worker_words))
         return [g for g in out if g]
     if t.startswith("decision."):
         dec = state["decisions"].get(raw.get("decision"), {})
@@ -533,9 +594,12 @@ def event_groups(
             out.append(group(REVERSAL_WORDS))
         return [g for g in out if g]
     if t == "fact.set":
-        if raw.get("value") is None:
-            return [group(CLEARED_WORDS)]
-        return value_groups(world, state, str(raw.get("attribute")), raw.get("value"), avoid=avoid)
+        value = raw.get("value")
+        if value is None:
+            return cleared_groups(world, state, ev, avoid=avoid)
+        if isinstance(value, str) and value == world.worker:
+            return [party_forms(world, state, value, worker_words=worker_words)]
+        return value_groups(world, state, str(raw.get("attribute")), value, avoid=avoid)
     if t in ("project.split", "project.merge"):
         if t == "project.split":
             parties, words = [raw.get("project"), *(raw.get("into") or [])], SPLIT_WORDS
@@ -556,7 +620,8 @@ def change_keywords(world: World, state: dict, ev: dict, project: str) -> list[s
     if t.startswith("decision."):
         return group(state["decisions"].get(raw.get("decision"), {}).get("keywords") or [])
     avoid = name_tokens(world, state, project)
-    kws = flatten(event_groups(world, state, ev, project=project, avoid=avoid))
+    groups = event_groups(world, state, ev, project=project, avoid=avoid, worker_words=False)
+    kws = flatten(groups)
     if t == "fact.set":
         return group([str(raw.get("attribute", "")).replace("_", " "), *kws])
     return kws
@@ -576,7 +641,7 @@ def change_item(world: World, state: dict, ev: dict, project: str) -> dict[str, 
 
 def _project_changes_text(params: dict, world: World, state: dict) -> str:
     project = display_name(world, state, params["project"], params)
-    return f"What changed on {project} since {since_text(str(params['since']))}?"
+    return f"What changed on {project} since the end of {since_text(str(params['since']))}?"
 
 
 def _project_changes_gold(params: dict, world: World, state: dict) -> Gold:
@@ -631,7 +696,8 @@ def project_status_rubric(world: World, state: dict, project: str) -> list[dict[
 
     1. current status (critical), with the previous status as stale;
     2. phase, if set, with the previous phase as stale;
-    3. the latest knowable state-changing event (critical);
+    3. the latest knowable state-changing event (critical), skipping events on suggested
+       loops (`status_change_events`);
     4. blocker, if set (critical);
     5. target date, if set (critical), with the previous target date as stale;
     6. up to six accepted active loops, worker-owned first, then earliest due;
@@ -679,7 +745,7 @@ def project_status_rubric(world: World, state: dict, project: str) -> list[dict[
         )
     attr_item("phase", "Current phase: {v}", critical=False, aspect="phase")
 
-    changes = project_change_events(world, state, project)
+    changes = status_change_events(world, state, project)
     if changes:
         latest = changes[-1]
         items.append(
@@ -753,7 +819,7 @@ def project_status_facts(world: World, state: dict, project: str) -> dict[str, A
             if d.get("project") == project
         ],
         "recent_events": [
-            event_fact(ev) for ev in project_change_events(world, state, project)[-5:]
+            event_fact(ev) for ev in status_change_events(world, state, project)[-5:]
         ],
     }
 

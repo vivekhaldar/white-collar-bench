@@ -4,7 +4,6 @@ type: person
 name: Ben Okoro
 aliases:
 - Ben
-- B. Okoro
 - ben.okoro@larchmont.example
 - '@ben'
 org: orgs/larchmont-freight

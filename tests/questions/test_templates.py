@@ -7,6 +7,7 @@ from pathlib import Path
 
 import pytest
 
+from wcb.grade.judge import heuristic_rubric
 from wcb.questions.build import build_question, build_questions
 from wcb.questions.templates import (
     QTYPES,
@@ -282,3 +283,179 @@ def test_missing_questions_file(world_copy):
     w = world_copy.load()
     docs = build_questions(w, {})
     assert {cp: d["questions"] for cp, d in docs.items()} == {"cp1": [], "cp2": []}
+
+
+# ---------------------------------------------------------------- gold edge cases
+def _emit(aid: str, t: str, reveals: list[str], channel: str = "email") -> dict:
+    ext = {"email": "eml", "note": "md"}[channel]
+    return {
+        "id": f"e-9{aid[-3:]}", "t": t, "type": "artifact.emit", "artifact": aid,
+        "channel": channel, "path": f"inbox/{t[:10]}/{aid}.{ext}", "received_at": t,
+        "reveals": reveals, "noise": False, "challenges": [], "secrets": [], "title": aid,
+        "parent": None,
+    }  # fmt: skip
+
+
+def test_since_is_exclusive_and_the_default_text_says_so(mini_world):
+    q = build_one(
+        mini_world,
+        "2027-01-12",
+        "project_changes",
+        {"project": "pr-quillon", "since": "2027-01-11"},
+    )
+    assert q["text"] == "What changed on Quillon since the end of Monday 11 January?"
+    # e-0020 and e-0022 happened on Monday 11 January itself, so they are not listed.
+    assert [i["event"] for i in q["gold"]["items"]] == ["e-0030", "e-0031", "e-0035", "e-0032"]
+
+
+def test_suggested_loops_do_not_drive_status_golds(world_copy):
+    # A suggestion on Quillon after the last real change; accepted only on the next day.
+    world_copy.add_events(
+        [
+            {
+                "id": "e-0060", "t": "2027-01-12T16:30:00-08:00", "type": "commitment.create",
+                "summary": "Cora suggested I brief the CFO on Quillon pricing (not agreed)",
+                "commitment": "c-010", "kind": "ask", "what": "Brief the CFO on Quillon pricing",
+                "debtor": "p-ada-quist", "creditor": "p-cora-velez", "project": "pr-quillon",
+                "status": "open", "due": None, "accepted": False, "basis": "received",
+                "keywords": ["cfo", "pricing brief"],
+            },
+            _emit("em-0060", "2027-01-12T16:35:00-08:00", ["e-0060"]),
+        ]
+    )  # fmt: skip
+    w = world_copy.load()
+    status = build_one(w, "2027-01-12", "project_status", {"project": "pr-quillon"})
+    (latest,) = [r for r in status["gold"]["rubric"] if r["aspect"] == "latest_change"]
+    assert latest["text"] == "I sent Cora the completed security questionnaire"
+    recent = [e["event"] for e in status["gold"]["facts"]["recent_events"]]
+    assert "e-0060" not in recent and recent[-1] == "e-0032"
+    # A change question still lists the suggestion: it is a knowable event on the project.
+    changes = build_one(
+        w, "2027-01-12", "project_changes", {"project": "pr-quillon", "since": "2027-01-11"}
+    )
+    assert changes["gold"]["items"][-1]["event"] == "e-0060"
+
+
+def test_accepting_a_suggestion_is_a_status_change(world_copy):
+    world_copy.add_events(
+        [
+            {
+                "id": "e-0060", "t": "2027-01-12T16:30:00-08:00", "type": "commitment.create",
+                "summary": "Cora suggested I brief the CFO on Quillon pricing (not agreed)",
+                "commitment": "c-010", "kind": "ask", "what": "Brief the CFO on Quillon pricing",
+                "debtor": "p-ada-quist", "creditor": "p-cora-velez", "project": "pr-quillon",
+                "status": "open", "due": None, "accepted": False, "basis": "received",
+                "keywords": ["cfo", "pricing brief"],
+            },
+            {
+                "id": "e-0061", "t": "2027-01-12T16:40:00-08:00", "type": "commitment.update",
+                "summary": "I agreed to brief the CFO on Quillon pricing", "commitment": "c-010",
+                "changes": {"accepted": True},
+            },
+            _emit("em-0060", "2027-01-12T16:45:00-08:00", ["e-0060", "e-0061"]),
+        ]
+    )  # fmt: skip
+    status = build_one(world_copy.load(), "2027-01-12", "project_status", {"project": "pr-quillon"})
+    (latest,) = [r for r in status["gold"]["rubric"] if r["aspect"] == "latest_change"]
+    assert latest["text"] == "I agreed to brief the CFO on Quillon pricing"
+
+
+def test_split_and_merge_moves_are_loop_evidence(world_copy):
+    # c-004 is split out of Quillon and Ledger cleanup is merged into Quillon; em-0051 and
+    # em-0052 reveal only the restructuring, which is the evidence of the loops' new project.
+    world_copy.add_events(
+        [
+            {
+                "id": "e-0050", "t": "2027-01-12T09:00:00-08:00", "type": "entity.create",
+                "summary": "Quillon pricing workstream started", "entity": "pr-qpricing",
+                "kind": "project", "name": "Quillon pricing", "surface_forms": [],
+                "attrs": {"status": "active", "owner": "p-ada-quist"},
+            },
+            _emit("em-0050", "2027-01-12T09:05:00-08:00", ["e-0050"]),
+            {
+                "id": "e-0051", "t": "2027-01-12T09:10:00-08:00", "type": "project.split",
+                "summary": "Volume pricing split out of Quillon", "project": "pr-quillon",
+                "into": ["pr-qpricing"], "moves": {"c-004": "pr-qpricing"},
+            },
+            _emit("em-0051", "2027-01-12T09:15:00-08:00", ["e-0051"]),
+            {
+                "id": "e-0052", "t": "2027-01-12T09:20:00-08:00", "type": "project.merge",
+                "summary": "Ledger cleanup folded into Quillon", "projects": ["pr-ledger"],
+                "into": "pr-quillon",
+            },
+            _emit("em-0052", "2027-01-12T09:25:00-08:00", ["e-0052"]),
+        ]
+    )  # fmt: skip
+    w = world_copy.load()
+    state = state_at(w, "2027-01-12")
+    assert state["loops"]["c-004"]["evidence"] == ["mt-0001", "em-0004", "em-0051"]
+    assert state["loops"]["c-002"]["evidence"] == ["ch-0001", "em-0052"]
+    assert state["entities"]["pr-qpricing"]["evidence"] == ["em-0050", "em-0051"]
+    split = build_one(w, "2027-01-12", "project_loops", {"project": "pr-qpricing"})
+    assert split["gold"]["items"][0]["support"] == ["mt-0001", "em-0004", "em-0051"]
+    assert split["support"] == ["mt-0001", "em-0004", "em-0051"]
+    merged = build_one(w, "2027-01-12", "project_loops", {"project": "pr-quillon"})
+    (c002,) = [i for i in merged["gold"]["items"] if i["loop"] == "c-002"]
+    assert c002["support"] == ["ch-0001", "em-0052"]
+
+
+def test_worker_taking_over_accepts_second_person_words(world_copy):
+    world_copy.add_events(
+        [
+            {
+                "id": "e-0060", "t": "2027-01-12T16:30:00-08:00", "type": "commitment.update",
+                "summary": "Cora handed the volume pricing to me", "commitment": "c-004",
+                "changes": {"debtor": "p-ada-quist"},
+            },
+            {
+                "id": "e-0061", "t": "2027-01-12T16:30:00-08:00", "type": "fact.set",
+                "summary": "I took over Ledger cleanup from Ben", "subject": "pr-ledger",
+                "attribute": "owner", "value": "p-ada-quist",
+            },
+            _emit("em-0060", "2027-01-12T16:35:00-08:00", ["e-0060", "e-0061"]),
+        ]
+    )  # fmt: skip
+    w = world_copy.load()
+    status = build_one(w, "2027-01-12", "project_status", {"project": "pr-quillon"})
+    (latest,) = [r for r in status["gold"]["rubric"] if r["aspect"] == "latest_change"]
+    assert latest["keywords"][0] == ["volume pricing", "pricing"]
+    assert {"ada quist", "ada", "you", "yours", "me"} <= set(latest["keywords"][1])
+    answer = "Cora handed the Tessellate volume pricing over to you, so it's yours now."
+    assert heuristic_rubric(answer, latest, status["gold"]["facts"]) == "covered"
+
+    ledger = build_one(w, "2027-01-12", "project_status", {"project": "pr-ledger"})
+    (latest,) = [r for r in ledger["gold"]["rubric"] if r["aspect"] == "latest_change"]
+    assert {"ada", "you", "me"} <= set(latest["keywords"][0])
+    # Flat change keywords match predicted items to gold: no pronouns there.
+    changes = build_one(
+        w, "2027-01-12", "project_changes", {"project": "pr-ledger", "since": "2027-01-11"}
+    )
+    assert "you" not in changes["gold"]["items"][-1]["keywords"]
+    assert "ada" in changes["gold"]["items"][-1]["keywords"]
+
+
+def test_cleared_value_names_what_was_cleared(world_copy):
+    world_copy.add_events(
+        [
+            {
+                "id": "e-0060", "t": "2027-01-11T16:00:00-08:00", "type": "fact.set",
+                "summary": "Ledger cleanup blocked by the GL vendor outage", "subject": "pr-ledger",
+                "attribute": "blocker", "value": "GL vendor outage",
+            },
+            _emit("em-0060", "2027-01-11T16:05:00-08:00", ["e-0060"]),
+            {
+                "id": "e-0061", "t": "2027-01-12T16:00:00-08:00", "type": "fact.set",
+                "summary": "GL vendor outage resolved", "subject": "pr-ledger",
+                "attribute": "blocker", "value": None,
+            },
+            _emit("em-0061", "2027-01-12T16:05:00-08:00", ["e-0061"]),
+        ]
+    )  # fmt: skip
+    status = build_one(world_copy.load(), "2027-01-12", "project_status", {"project": "pr-ledger"})
+    (latest,) = [r for r in status["gold"]["rubric"] if r["aspect"] == "latest_change"]
+    assert latest["critical"] and latest["keywords"][1] == ["vendor", "outage"]
+    assert "none" not in latest["keywords"][0]
+    facts = status["gold"]["facts"]
+    stale = "Ledger cleanup is active and still blocked by the GL vendor outage. Overdue: none."
+    assert heuristic_rubric(stale, latest, facts) != "covered"
+    assert heuristic_rubric("The GL vendor outage is fixed.", latest, facts) == "covered"

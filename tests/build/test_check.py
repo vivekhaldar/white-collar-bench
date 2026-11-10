@@ -181,3 +181,18 @@ def test_artifact_text_reads_office_xml_and_skips_binary_pdf(tmp_path):
     plain = tmp_path / "dc-0003.pdf"
     plain.write_text("plain text posing as a pdf", encoding="utf-8")
     assert "posing" in artifact_text(plain)
+
+
+def test_change_question_text_that_includes_the_since_day_warns(editor):
+    def since_warnings(text: str, since: str) -> list[str]:
+        spec = {"id": "q-1", "checkpoint": "cp2", "template": "project_changes", "text": text,
+                "params": {"project": "pr-quillon", "since": since}}  # fmt: skip
+        editor.save_questions([spec])
+        return [i.code for i in check_world(editor.root) if i.code == "question.since"]
+
+    # Gold lists changes after `since`: "since Friday" with since on that Friday drops Friday.
+    assert since_warnings("What changed on Quillon since Friday?", "2027-01-08")
+    assert not since_warnings("What changed on Quillon since Friday?", "2027-01-07")
+    # cp2 is Tuesday 12 January; "this week" needs since on or before Sunday 10 January.
+    assert since_warnings("What changed on Quillon this week?", "2027-01-11")
+    assert not since_warnings("What changed on Quillon this week?", "2027-01-10")

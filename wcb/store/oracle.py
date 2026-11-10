@@ -28,6 +28,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
+from wcb.questions.templates import shared_projects
 from wcb.util import frontmatter
 from wcb.util.io import write_text
 from wcb.util.text import normalize, slugify
@@ -61,26 +62,34 @@ def record_ids(world: World) -> dict[str, str]:
     - People, orgs and projects get the slug of their canonical name, e.g. `people/cora-velez`.
     - Commitments get the slug of the `what` in their *create* event (later rewording does not
       rename the record); decisions get the slug of their `what`. Both live in `loops/`.
-    - Collisions are disambiguated with `-2`, `-3`, ... in world event order. Minor entities
-      are numbered after all others so that they never push a real entity's slug.
+    - Collisions are disambiguated with `-2`, `-3`, ... in the order the objects become
+      knowable (the date their create event is first revealed, then world event order; never
+      revealed last), so a suffix never hints at an object that is not yet knowable. Minor
+      entities are numbered after all others so that they never push a real entity's slug.
     """
     worker = world.worker
     ids: dict[str, str] = {worker: WORKER_RECORD}
     taken: set[str] = {WORKER_RECORD}
-    creates = list(world.entity_events().values())
-    ordered = [e for e in creates if not _is_minor(e)] + [e for e in creates if _is_minor(e)]
-    for e in ordered:
+    known_on = world.known_on()
+    pos = {id(e): i for i, e in enumerate(world.events)}
+
+    def reveal_order(e: dict[str, Any]) -> tuple[str, int]:
+        return (known_on.get(str(e.get("id")), "~"), pos[id(e)])
+
+    creates = sorted(world.entity_events().values(), key=lambda e: (_is_minor(e), *reveal_order(e)))
+    for e in creates:
         eid, folder = e.get("entity"), FOLDER.get(e.get("kind", ""))
         if eid == worker or not eid or not folder:
             continue
         ids[eid] = _claim(f"{folder}/{slugify(e.get('name') or eid)}", taken)
-    for e in world.events:
-        if e.get("type") == "commitment.create" and e["commitment"] not in ids:
-            ids[e["commitment"]] = _claim(
-                f"loops/{slugify(e.get('what') or e['commitment'])}", taken
-            )
-        elif e.get("type") == "decision.make" and e["decision"] not in ids:
-            ids[e["decision"]] = _claim(f"loops/{slugify(e.get('what') or e['decision'])}", taken)
+    loop_creates = sorted(
+        (e for e in world.events if e.get("type") in ("commitment.create", "decision.make")),
+        key=reveal_order,
+    )
+    for e in loop_creates:
+        oid = e["commitment"] if e["type"] == "commitment.create" else e["decision"]
+        if oid not in ids:
+            ids[oid] = _claim(f"loops/{slugify(e.get('what') or oid)}", taken)
     return ids
 
 
@@ -140,7 +149,8 @@ class _Ctx:
     rendered: set[str]  # IDs that get a full record: knowable non-minor entities, loops, decisions
     delivered_rank: dict[str, int]  # artifact ID -> delivery order
     event_artifacts: dict[str, list[str]]  # knowable event ID -> revealing artifacts
-    ambiguous: set[str]  # normalized aliases shared by several entities
+    forms: dict[str, list[str]]  # knowable entity ID -> surface forms used in inputs so far
+    ambiguous: set[str]  # normalized forms shared by several knowable entities
     stubs: dict[str, str] = field(default_factory=dict)  # world ID -> stub record ID
     _people_cache: dict[str, list[str]] = field(default_factory=dict)
 
@@ -148,6 +158,7 @@ class _Ctx:
     def create(cls, world: World, state: dict[str, Any]) -> _Ctx:
         entities = state["entities"]
         rendered = {k for k, v in entities.items() if not v["attrs"].get("_minor")}
+        forms = _known_forms(world, state)
         return cls(
             world=world,
             state=state,
@@ -157,7 +168,8 @@ class _Ctx:
             rendered=rendered | set(state["loops"]) | set(state["decisions"]),
             delivered_rank={aid: i for i, aid in enumerate(state["delivered"])},
             event_artifacts={e["id"]: list(e["artifacts"]) for e in state["events"]},
-            ambiguous={k for k, v in world.alias_table().items() if len(v) > 1},
+            forms=forms,
+            ambiguous=_ambiguous_forms(state, forms),
         )
 
     @property
@@ -216,7 +228,7 @@ def _person(ctx: _Ctx, pid: str, ent: dict[str, Any]) -> str:
         "id": ctx.ids[pid],
         "type": "person",
         "name": ent["name"],
-        "aliases": _aliases(ctx, ent, extra=_as_list(attrs.get("email"))),
+        "aliases": _aliases(ctx, pid, ent, extra=_as_list(attrs.get("email"))),
     }
     if attrs.get("org"):
         org = ctx.ref(attrs["org"])
@@ -272,10 +284,16 @@ def _person_context(ctx: _Ctx, pid: str, ent: dict[str, Any], attrs: dict[str, A
 
 
 def _person_threads(ctx: _Ctx, pid: str) -> list[str]:
-    """Links to the projects the person is involved in and their active loops."""
+    """Links to the projects the person currently shares with the worker and their active loops.
+
+    Shared projects follow the `person_brief` gold (`shared_projects`): the person is the
+    owner, sponsor or a member of a project that is not done, cancelled or merged, or shares
+    an accepted active loop on it with the worker.
+    """
     lines = []
-    for prid, ent in ctx.entities.items():
-        if ent["kind"] == "project" and prid in ctx.rendered and pid in _project_people(ctx, prid):
+    for prid, _how in shared_projects(ctx.state, ctx.worker, pid):
+        if prid in ctx.rendered:
+            ent = ctx.entities[prid]
             status = _public(ent["attrs"]).get("status") or "active"
             lines.append(f"- [[{ctx.ids[prid]}]]: {ent['name']} ({status})")
     for cid, loop in ctx.state["loops"].items():
@@ -292,7 +310,7 @@ def _org(ctx: _Ctx, oid: str, ent: dict[str, Any]) -> str:
         "id": ctx.ids[oid],
         "type": "org",
         "name": ent["name"],
-        "aliases": _aliases(ctx, ent, extra=[attrs.get("domain")]),
+        "aliases": _aliases(ctx, oid, ent, extra=[attrs.get("domain")]),
     }
     for key in ("kind", "domain"):
         if attrs.get(key) is not None:
@@ -336,7 +354,7 @@ def _project(ctx: _Ctx, prid: str, ent: dict[str, Any]) -> str:
         "id": ctx.ids[prid],
         "type": "project",
         "name": ent["name"],
-        "aliases": _aliases(ctx, ent),
+        "aliases": _aliases(ctx, prid, ent),
         "status": attrs.get("status") or "active",
         "owner": ctx.ref(attrs.get("owner")) or ctx.ref(ctx.worker),
     }
@@ -421,11 +439,12 @@ def _knowledge(ctx: _Ctx, ent: dict[str, Any], attrs: dict[str, Any]) -> list[st
 
 
 def _project_people(ctx: _Ctx, prid: str) -> list[str]:
-    """Rendered people involved in a project: owner, members, and everyone on its loops."""
+    """Rendered people involved in a project: owner, sponsor, members, everyone on its loops
+    and its decision makers."""
     if prid in ctx._people_cache:
         return ctx._people_cache[prid]
     attrs = _public(ctx.entities[prid]["attrs"])
-    people = [attrs.get("owner"), *_as_list(attrs.get("members"))]
+    people = [attrs.get("owner"), attrs.get("sponsor"), *_as_list(attrs.get("members"))]
     for loop in ctx.state["loops"].values():
         if loop.get("project") == prid:
             people += _loop_people(loop)
@@ -592,16 +611,51 @@ def _public(attrs: dict[str, Any]) -> dict[str, Any]:
     return {k: v for k, v in attrs.items() if not k.startswith("_")}
 
 
-def _aliases(ctx: _Ctx, ent: dict[str, Any], extra: list[Any] | None = None) -> list[str]:
-    """Surface forms (plus email or domain) that belong unambiguously to this entity.
+def _known_forms(world: World, state: dict[str, Any]) -> dict[str, list[str]]:
+    """Knowable entity ID -> its surface forms that some delivered input has used.
 
-    Contract rule 2: an alias shared with another entity in the world, such as the first
-    name of two different people, is left out.
+    Contract rule 12: every recorded fact traces to an input, so a form (a nickname, a
+    transcript's misspelling) becomes an alias only once an artifact delivered by the state's
+    date uses it (`World.form_first_seen`).
+    """
+    first = world.form_first_seen()
+    date = state["date"]
+    return {
+        eid: [
+            f
+            for f in ent.get("surface_forms") or []
+            if isinstance(f, str) and first.get(eid, {}).get(f, "~") <= date
+        ]
+        for eid, ent in state["entities"].items()
+    }
+
+
+def _ambiguous_forms(state: dict[str, Any], forms: dict[str, list[str]]) -> set[str]:
+    """Normalized names, known surface forms and emails shared by several knowable entities.
+
+    Only entities knowable at the date count, so a homonym who appears later is not hinted at.
+    """
+    owners: dict[str, set[str]] = {}
+    for eid, ent in state["entities"].items():
+        email = (ent.get("attrs") or {}).get("email")
+        for f in [ent.get("name", ""), *forms.get(eid, []), *_as_list(email)]:
+            key = normalize(f).lstrip("@") if isinstance(f, str) else ""
+            if key:
+                owners.setdefault(key, set()).add(eid)
+    return {k for k, v in owners.items() if len(v) > 1}
+
+
+def _aliases(ctx: _Ctx, eid: str, ent: dict[str, Any], extra: list[Any] | None = None) -> list[str]:
+    """Known surface forms (plus email or domain) that belong unambiguously to this entity.
+
+    Only forms some delivered input has used count (`_known_forms`). Contract rule 2: an
+    alias shared with another knowable entity, such as the first name of two different
+    people, is left out.
     """
     name_key = normalize(ent["name"])
     out: list[str] = []
     seen = {name_key}
-    for form in [*ent.get("surface_forms", []), *(extra or [])]:
+    for form in [*ctx.forms.get(eid, []), *(extra or [])]:
         if not isinstance(form, str) or not form.strip():
             continue
         key = normalize(form)

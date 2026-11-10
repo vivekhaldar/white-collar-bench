@@ -11,7 +11,7 @@ from wcb.paths import contract_dir
 from wcb.store.oracle import oracle_records, record_ids, render_oracle_store
 from wcb.util import frontmatter
 from wcb.util.io import read_json
-from wcb.world.model import World
+from wcb.world.model import Artifact, World
 from wcb.world.state import state_at
 
 LINK_FIELDS = ("org", "owner", "counterparty", "project", "parent", "merged_into")
@@ -211,3 +211,126 @@ def test_store_passes_contract_validator(world, tmp_path, date):
         store, secrets=state["secrets"], delivered=set(state["delivered"])
     )
     assert [i.format() for i in issues if i.code != "contract.missing"] == []
+
+
+# ---------------------------------------------------------------- knowledge by date
+def test_form_first_seen(world):
+    seen = world.form_first_seen()
+    assert seen["p-sam-patel"]["Samir"] == "2027-01-06"
+    assert seen["p-ben-okoro"]["@ben"] == "2027-01-05"
+    assert seen["p-ben-okoro"]["ben.okoro@larchmont.example"] == "2027-01-11"
+    # No input uses these forms (the graders' alias table still accepts them).
+    assert "@samp" not in seen["p-sam-patel"] and "B. Okoro" not in seen["p-ben-okoro"]
+    assert "pr-quillon" not in seen
+
+
+def test_aliases_are_forms_the_inputs_have_used(world, tmp_path):
+    recs = _records(_store(world, "2027-01-08", tmp_path))
+    assert "B. Okoro" not in recs["people/ben-okoro"][0]["aliases"]
+    assert "@samp" not in recs["people/sam-patel"][0]["aliases"]
+    assert recs["projects/ledger-cleanup"][0]["aliases"] == ["Ledger"]
+    assert recs["projects/quillon"][0]["aliases"] == []
+
+
+def test_alias_first_used_on_an_episode_day(editor):
+    e = editor.get("e-0005")
+    editor.edit("e-0005", surface_forms=[*e["surface_forms"], "Cora V."])
+    note = editor.root / "inbox/2027-01-11/nt-0002.md"
+    note.write_text(note.read_text(encoding="utf-8") + "- ping Cora V. about pricing\n")
+    w = World.load(editor.root)
+
+    def aliases(date: str) -> list[str]:
+        meta, _ = frontmatter.parse(oracle_records(w, state_at(w, date))["people/cora-velez"])
+        return meta["aliases"]
+
+    assert "Cora V." not in aliases("2027-01-08")  # the seed store does not know it yet
+    assert "Cora V." in aliases("2027-01-11")
+
+
+def test_alias_ambiguity_counts_only_knowable_people(editor):
+    # A second Cora, first revealed on 2027-01-12.
+    events = editor.events()
+    events += [
+        {
+            "id": "e-0070", "t": "2027-01-12T09:00:00-08:00", "type": "entity.create",
+            "summary": "Cora Lund, freight broker", "entity": "p-cora-lund", "kind": "person",
+            "name": "Cora Lund", "surface_forms": ["Cora"], "attrs": {"role": "Freight broker"},
+        },
+        {
+            "id": "e-9070", "t": "2027-01-12T09:00:00-08:00", "type": "artifact.emit",
+            "artifact": "em-0070", "channel": "email", "path": "inbox/2027-01-12/em-0070.eml",
+            "received_at": "2027-01-12T09:00:00-08:00", "reveals": ["e-0070"], "noise": False,
+            "challenges": [], "secrets": [], "title": "Intro", "parent": None,
+        },
+    ]  # fmt: skip
+    editor.save(events)
+    w = World.load(editor.root)
+
+    def aliases(date: str) -> list[str]:
+        meta, _ = frontmatter.parse(oracle_records(w, state_at(w, date))["people/cora-velez"])
+        return meta["aliases"]
+
+    assert "Cora" in aliases("2027-01-11")  # Cora Lund is not knowable yet
+    assert "Cora" not in aliases("2027-01-12")
+
+
+def test_record_id_suffixes_follow_reveal_order(world):
+    # c-099 has the same `what` as c-001 and happens earlier, but is revealed only on the
+    # last day: it takes the suffix, so c-001's record never hints at it.
+    events = [dict(e) for e in world.events]
+    clone = next(
+        e for e in events if e.get("commitment") == "c-001" and e["type"] == "commitment.create"
+    )
+    events.insert(
+        0, {**clone, "id": "e-0999", "commitment": "c-099", "t": "2027-01-03T09:00:00-08:00"}
+    )
+    late = Artifact(
+        id="em-0099", channel="email", path="inbox/2027-01-12/em-0099.eml",
+        received_at="2027-01-12T17:00:00-08:00", reveals=["e-0999"],
+    )  # fmt: skip
+    w2 = World(
+        dir=world.dir,
+        meta=world.meta,
+        events=events,
+        artifacts={**world.artifacts, late.id: late},
+        by_id=world.by_id,
+    )
+    ids = record_ids(w2)
+    base = "loops/return-the-tessellate-security-questionnaire"
+    assert (ids["c-001"], ids["c-099"]) == (base, base + "-2")
+
+
+def test_sponsors_share_projects_and_closed_projects_leave_threads(editor):
+    events = editor.events()
+    events += [
+        {"id": "e-0070", "t": "2027-01-12T08:00:00-08:00", "type": "fact.set",
+         "summary": "Sam Patel sponsors Quillon", "subject": "pr-quillon", "attribute": "sponsor",
+         "value": "p-sam-patel"},
+        {"id": "e-0071", "t": "2027-01-12T08:00:00-08:00", "type": "fact.set",
+         "summary": "Sam Patel sponsors Ledger cleanup", "subject": "pr-ledger",
+         "attribute": "sponsor", "value": "p-sam-patel"},
+        {"id": "e-0072", "t": "2027-01-12T08:05:00-08:00", "type": "fact.set",
+         "summary": "Ledger cleanup is done", "subject": "pr-ledger", "attribute": "status",
+         "value": "done"},
+        {"id": "e-9070", "t": "2027-01-12T08:10:00-08:00", "type": "artifact.emit",
+         "artifact": "em-0070", "channel": "email", "path": "inbox/2027-01-12/em-0070.eml",
+         "received_at": "2027-01-12T08:10:00-08:00", "reveals": ["e-0070", "e-0071", "e-0072"],
+         "noise": False, "challenges": [], "secrets": [], "title": "Sponsors", "parent": None},
+    ]  # fmt: skip
+    editor.save(events)
+    w = World.load(editor.root)
+    recs = {
+        rid: frontmatter.parse(text)
+        for rid, text in oracle_records(w, state_at(w, "2027-01-12")).items()
+    }
+    threads = recs["people/sam-patel"][1].split("## Threads", 1)[1].split("## Log", 1)[0]
+    assert "[[projects/quillon]]" in threads  # sponsor of an active project
+    assert "[[projects/ledger-cleanup]]" not in threads  # the project is done
+    assert "people/sam-patel" in recs["projects/quillon"][0]["people"]
+    assert "people/sam-patel" in recs["projects/ledger-cleanup"][0]["people"]
+
+
+def test_hand_off_is_logged_for_the_previous_owner(world, tmp_path):
+    meta, body = _records(_store(world, "2027-01-11", tmp_path))["people/sam-reyes"]
+    assert meta["updated"] == "2027-01-11"
+    assert "- 2027-01-11: Volume pricing handed from Sam Reyes to Cora [src: em-0004]" in body

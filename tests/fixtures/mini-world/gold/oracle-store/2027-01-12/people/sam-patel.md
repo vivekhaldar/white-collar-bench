@@ -5,7 +5,6 @@ name: Sam Patel
 aliases:
 - Samir
 - sam.patel@larchmont.example
-- '@samp'
 org: orgs/larchmont-freight
 role: Data engineer
 email: sam.patel@larchmont.example
