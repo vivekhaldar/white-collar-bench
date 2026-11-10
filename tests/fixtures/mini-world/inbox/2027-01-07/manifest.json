@@ -1,0 +1,12 @@
+{
+  "date": "2027-01-07",
+  "artifacts": [
+    {
+      "id": "mt-0001",
+      "channel": "transcript",
+      "received_at": "2027-01-07T11:45:00-08:00",
+      "path": "mt-0001.vtt",
+      "title": "Quillon vendor call"
+    }
+  ]
+}

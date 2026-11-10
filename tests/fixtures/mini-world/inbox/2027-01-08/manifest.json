@@ -1,0 +1,12 @@
+{
+  "date": "2027-01-08",
+  "artifacts": [
+    {
+      "id": "em-0003",
+      "channel": "email",
+      "received_at": "2027-01-08T06:00:00-08:00",
+      "path": "em-0003.eml",
+      "title": "FreightWire weekly"
+    }
+  ]
+}

@@ -1,0 +1,652 @@
+{
+  "world": "mini",
+  "date": "2027-01-05",
+  "worker": "p-ada-quist",
+  "entities": {
+    "p-ada-quist": {
+      "kind": "person",
+      "name": "Ada Quist",
+      "surface_forms": [
+        "Ada",
+        "ada.quist@larchmont.example",
+        "@ada"
+      ],
+      "attrs": {
+        "org": "o-larchmont",
+        "role": "Director, Network Analytics",
+        "email": "ada.quist@larchmont.example"
+      },
+      "known_on": "2027-01-04",
+      "evidence": [],
+      "attr_history": {
+        "org": [
+          {
+            "value": "o-larchmont",
+            "t": "2027-01-04T08:00:00-08:00",
+            "event": "e-0001"
+          }
+        ],
+        "role": [
+          {
+            "value": "Director, Network Analytics",
+            "t": "2027-01-04T08:00:00-08:00",
+            "event": "e-0001"
+          }
+        ],
+        "email": [
+          {
+            "value": "ada.quist@larchmont.example",
+            "t": "2027-01-04T08:00:00-08:00",
+            "event": "e-0001"
+          }
+        ]
+      }
+    },
+    "o-larchmont": {
+      "kind": "org",
+      "name": "Larchmont Freight",
+      "surface_forms": [
+        "Larchmont",
+        "larchmont.example"
+      ],
+      "attrs": {
+        "kind": "internal",
+        "domain": "larchmont.example"
+      },
+      "known_on": "2027-01-04",
+      "evidence": [
+        "nt-0001"
+      ],
+      "attr_history": {
+        "kind": [
+          {
+            "value": "internal",
+            "t": "2027-01-04T08:00:00-08:00",
+            "event": "e-0002"
+          }
+        ],
+        "domain": [
+          {
+            "value": "larchmont.example",
+            "t": "2027-01-04T08:00:00-08:00",
+            "event": "e-0002"
+          }
+        ]
+      }
+    },
+    "pr-quillon": {
+      "kind": "project",
+      "name": "Quillon",
+      "surface_forms": [
+        "Project Quillon",
+        "the analytics platform selection"
+      ],
+      "attrs": {
+        "status": "active",
+        "owner": "p-ada-quist",
+        "phase": "vendor evaluation",
+        "target_date": "2027-01-29",
+        "summary": "Evaluating analytics platform vendors; Tessellate is the lead candidate. Decision targeted for 29 January.",
+        "members": [
+          "p-ada-quist",
+          "p-cora-velez"
+        ],
+        "orgs": [
+          "o-tessellate"
+        ],
+        "_archetype": "competitive_vendor_selection"
+      },
+      "known_on": "2027-01-04",
+      "evidence": [
+        "nt-0001"
+      ],
+      "attr_history": {
+        "status": [
+          {
+            "value": "active",
+            "t": "2027-01-04T08:30:00-08:00",
+            "event": "e-0008"
+          }
+        ],
+        "owner": [
+          {
+            "value": "p-ada-quist",
+            "t": "2027-01-04T08:30:00-08:00",
+            "event": "e-0008"
+          }
+        ],
+        "phase": [
+          {
+            "value": "vendor evaluation",
+            "t": "2027-01-04T08:30:00-08:00",
+            "event": "e-0008"
+          }
+        ],
+        "target_date": [
+          {
+            "value": "2027-01-29",
+            "t": "2027-01-04T08:30:00-08:00",
+            "event": "e-0008"
+          }
+        ],
+        "summary": [
+          {
+            "value": "Evaluating analytics platform vendors; Tessellate is the lead candidate. Decision targeted for 29 January.",
+            "t": "2027-01-04T08:30:00-08:00",
+            "event": "e-0008"
+          }
+        ],
+        "members": [
+          {
+            "value": [
+              "p-ada-quist",
+              "p-cora-velez"
+            ],
+            "t": "2027-01-04T08:30:00-08:00",
+            "event": "e-0008"
+          }
+        ],
+        "orgs": [
+          {
+            "value": [
+              "o-tessellate"
+            ],
+            "t": "2027-01-04T08:30:00-08:00",
+            "event": "e-0008"
+          }
+        ],
+        "_archetype": [
+          {
+            "value": "competitive_vendor_selection",
+            "t": "2027-01-04T08:30:00-08:00",
+            "event": "e-0008"
+          }
+        ]
+      }
+    },
+    "o-tessellate": {
+      "kind": "org",
+      "name": "Tessellate Analytics",
+      "surface_forms": [
+        "Tessellate",
+        "tessellate.example"
+      ],
+      "attrs": {
+        "kind": "vendor",
+        "domain": "tessellate.example"
+      },
+      "known_on": "2027-01-04",
+      "evidence": [
+        "em-0001"
+      ],
+      "attr_history": {
+        "kind": [
+          {
+            "value": "vendor",
+            "t": "2027-01-04T09:10:00-08:00",
+            "event": "e-0003"
+          }
+        ],
+        "domain": [
+          {
+            "value": "tessellate.example",
+            "t": "2027-01-04T09:10:00-08:00",
+            "event": "e-0003"
+          }
+        ]
+      }
+    },
+    "p-cora-velez": {
+      "kind": "person",
+      "name": "Cora Velez",
+      "surface_forms": [
+        "Cora",
+        "cora.velez@tessellate.example"
+      ],
+      "attrs": {
+        "org": "o-tessellate",
+        "role": "Account executive",
+        "email": "cora.velez@tessellate.example",
+        "relationship": "vendor"
+      },
+      "known_on": "2027-01-04",
+      "evidence": [
+        "em-0001"
+      ],
+      "attr_history": {
+        "org": [
+          {
+            "value": "o-tessellate",
+            "t": "2027-01-04T09:10:00-08:00",
+            "event": "e-0005"
+          }
+        ],
+        "role": [
+          {
+            "value": "Account executive",
+            "t": "2027-01-04T09:10:00-08:00",
+            "event": "e-0005"
+          }
+        ],
+        "email": [
+          {
+            "value": "cora.velez@tessellate.example",
+            "t": "2027-01-04T09:10:00-08:00",
+            "event": "e-0005"
+          }
+        ],
+        "relationship": [
+          {
+            "value": "vendor",
+            "t": "2027-01-04T09:10:00-08:00",
+            "event": "e-0005"
+          }
+        ]
+      }
+    },
+    "p-ben-okoro": {
+      "kind": "person",
+      "name": "Ben Okoro",
+      "surface_forms": [
+        "Ben",
+        "B. Okoro",
+        "ben.okoro@larchmont.example",
+        "@ben"
+      ],
+      "attrs": {
+        "org": "o-larchmont",
+        "role": "Finance systems lead",
+        "email": "ben.okoro@larchmont.example",
+        "relationship": "peer"
+      },
+      "known_on": "2027-01-05",
+      "evidence": [
+        "ch-0001"
+      ],
+      "attr_history": {
+        "org": [
+          {
+            "value": "o-larchmont",
+            "t": "2027-01-05T10:00:00-08:00",
+            "event": "e-0004"
+          }
+        ],
+        "role": [
+          {
+            "value": "Finance systems lead",
+            "t": "2027-01-05T10:00:00-08:00",
+            "event": "e-0004"
+          }
+        ],
+        "email": [
+          {
+            "value": "ben.okoro@larchmont.example",
+            "t": "2027-01-05T10:00:00-08:00",
+            "event": "e-0004"
+          }
+        ],
+        "relationship": [
+          {
+            "value": "peer",
+            "t": "2027-01-05T10:00:00-08:00",
+            "event": "e-0004"
+          }
+        ]
+      }
+    },
+    "pr-ledger": {
+      "kind": "project",
+      "name": "Ledger cleanup",
+      "surface_forms": [
+        "Ledger",
+        "GL cleanup"
+      ],
+      "attrs": {
+        "status": "active",
+        "owner": "p-ben-okoro",
+        "phase": "reconciliation",
+        "summary": "Ben is reconciling January general-ledger data before the sandbox migration.",
+        "members": [
+          "p-ben-okoro",
+          "p-ada-quist"
+        ]
+      },
+      "known_on": "2027-01-05",
+      "evidence": [
+        "ch-0001"
+      ],
+      "attr_history": {
+        "status": [
+          {
+            "value": "active",
+            "t": "2027-01-05T10:00:00-08:00",
+            "event": "e-0009"
+          }
+        ],
+        "owner": [
+          {
+            "value": "p-ben-okoro",
+            "t": "2027-01-05T10:00:00-08:00",
+            "event": "e-0009"
+          }
+        ],
+        "phase": [
+          {
+            "value": "reconciliation",
+            "t": "2027-01-05T10:00:00-08:00",
+            "event": "e-0009"
+          }
+        ],
+        "summary": [
+          {
+            "value": "Ben is reconciling January general-ledger data before the sandbox migration.",
+            "t": "2027-01-05T10:00:00-08:00",
+            "event": "e-0009"
+          }
+        ],
+        "members": [
+          {
+            "value": [
+              "p-ben-okoro",
+              "p-ada-quist"
+            ],
+            "t": "2027-01-05T10:00:00-08:00",
+            "event": "e-0009"
+          }
+        ]
+      }
+    }
+  },
+  "loops": {
+    "c-001": {
+      "kind": "ask",
+      "what": "Return the Tessellate security questionnaire",
+      "debtor": "p-ada-quist",
+      "creditor": "p-cora-velez",
+      "others": [],
+      "project": "pr-quillon",
+      "status": "open",
+      "due": "2027-01-12",
+      "accepted": true,
+      "basis": "received",
+      "keywords": [
+        "security questionnaire",
+        "questionnaire"
+      ],
+      "created": "2027-01-04",
+      "updated": "2027-01-04",
+      "known_on": "2027-01-04",
+      "evidence": [
+        "em-0001"
+      ],
+      "history": [
+        {
+          "event": "e-0011",
+          "t": "2027-01-04T09:10:00-08:00",
+          "date": "2027-01-04",
+          "type": "commitment.create",
+          "changes": {
+            "status": "open",
+            "debtor": "p-ada-quist",
+            "creditor": "p-cora-velez",
+            "due": "2027-01-12",
+            "accepted": true,
+            "project": "pr-quillon"
+          },
+          "summary": "Cora asked me to return the Tessellate security questionnaire by 12 Jan",
+          "artifacts": [
+            "em-0001"
+          ]
+        }
+      ]
+    },
+    "c-002": {
+      "kind": "task",
+      "what": "Send Ada the January reconciliation report",
+      "debtor": "p-ben-okoro",
+      "creditor": "p-ada-quist",
+      "others": [],
+      "project": "pr-ledger",
+      "status": "open",
+      "due": null,
+      "accepted": true,
+      "basis": "received",
+      "keywords": [
+        "reconciliation report",
+        "january"
+      ],
+      "created": "2027-01-05",
+      "updated": "2027-01-05",
+      "known_on": "2027-01-05",
+      "evidence": [
+        "ch-0001"
+      ],
+      "history": [
+        {
+          "event": "e-0012",
+          "t": "2027-01-05T10:00:00-08:00",
+          "date": "2027-01-05",
+          "type": "commitment.create",
+          "changes": {
+            "status": "open",
+            "debtor": "p-ben-okoro",
+            "creditor": "p-ada-quist",
+            "due": null,
+            "accepted": true,
+            "project": "pr-ledger"
+          },
+          "summary": "Ben promised the January reconciliation report",
+          "artifacts": [
+            "ch-0001"
+          ]
+        }
+      ]
+    },
+    "c-005": {
+      "kind": "ask",
+      "what": "Approve Ben's GL sandbox access request",
+      "debtor": "p-ada-quist",
+      "creditor": "p-ben-okoro",
+      "others": [],
+      "project": "pr-ledger",
+      "status": "open",
+      "due": null,
+      "accepted": true,
+      "basis": "received",
+      "keywords": [
+        "access request",
+        "sandbox"
+      ],
+      "created": "2027-01-05",
+      "updated": "2027-01-05",
+      "known_on": "2027-01-05",
+      "evidence": [
+        "ch-0001"
+      ],
+      "history": [
+        {
+          "event": "e-0017",
+          "t": "2027-01-05T10:05:00-08:00",
+          "date": "2027-01-05",
+          "type": "commitment.create",
+          "changes": {
+            "status": "open",
+            "debtor": "p-ada-quist",
+            "creditor": "p-ben-okoro",
+            "due": null,
+            "accepted": true,
+            "project": "pr-ledger"
+          },
+          "summary": "Ben asked me to approve his GL sandbox access request",
+          "artifacts": [
+            "ch-0001"
+          ]
+        }
+      ]
+    }
+  },
+  "decisions": {},
+  "events": [
+    {
+      "id": "e-0001",
+      "t": "2027-01-04T08:00:00-08:00",
+      "date": "2027-01-04",
+      "type": "entity.create",
+      "summary": "Ada Quist (the worker)",
+      "project": null,
+      "subjects": [
+        "p-ada-quist"
+      ],
+      "known_on": "2027-01-04",
+      "artifacts": []
+    },
+    {
+      "id": "e-0002",
+      "t": "2027-01-04T08:00:00-08:00",
+      "date": "2027-01-04",
+      "type": "entity.create",
+      "summary": "Larchmont Freight (our company)",
+      "project": null,
+      "subjects": [
+        "o-larchmont"
+      ],
+      "known_on": "2027-01-04",
+      "artifacts": [
+        "nt-0001"
+      ]
+    },
+    {
+      "id": "e-0008",
+      "t": "2027-01-04T08:30:00-08:00",
+      "date": "2027-01-04",
+      "type": "entity.create",
+      "summary": "Quillon: analytics platform selection kicked off",
+      "project": "pr-quillon",
+      "subjects": [
+        "pr-quillon"
+      ],
+      "known_on": "2027-01-04",
+      "artifacts": [
+        "nt-0001"
+      ]
+    },
+    {
+      "id": "e-0003",
+      "t": "2027-01-04T09:10:00-08:00",
+      "date": "2027-01-04",
+      "type": "entity.create",
+      "summary": "Tessellate Analytics, a vendor in the Quillon evaluation",
+      "project": null,
+      "subjects": [
+        "o-tessellate"
+      ],
+      "known_on": "2027-01-04",
+      "artifacts": [
+        "em-0001"
+      ]
+    },
+    {
+      "id": "e-0005",
+      "t": "2027-01-04T09:10:00-08:00",
+      "date": "2027-01-04",
+      "type": "entity.create",
+      "summary": "Cora Velez, Tessellate account executive",
+      "project": null,
+      "subjects": [
+        "p-cora-velez"
+      ],
+      "known_on": "2027-01-04",
+      "artifacts": [
+        "em-0001"
+      ]
+    },
+    {
+      "id": "e-0011",
+      "t": "2027-01-04T09:10:00-08:00",
+      "date": "2027-01-04",
+      "type": "commitment.create",
+      "summary": "Cora asked me to return the Tessellate security questionnaire by 12 Jan",
+      "project": "pr-quillon",
+      "subjects": [
+        "c-001",
+        "p-ada-quist",
+        "p-cora-velez"
+      ],
+      "known_on": "2027-01-04",
+      "artifacts": [
+        "em-0001"
+      ]
+    },
+    {
+      "id": "e-0004",
+      "t": "2027-01-05T10:00:00-08:00",
+      "date": "2027-01-05",
+      "type": "entity.create",
+      "summary": "Ben Okoro, finance systems lead",
+      "project": null,
+      "subjects": [
+        "p-ben-okoro"
+      ],
+      "known_on": "2027-01-05",
+      "artifacts": [
+        "ch-0001"
+      ]
+    },
+    {
+      "id": "e-0009",
+      "t": "2027-01-05T10:00:00-08:00",
+      "date": "2027-01-05",
+      "type": "entity.create",
+      "summary": "Ledger cleanup: general-ledger data cleanup led by Ben",
+      "project": "pr-ledger",
+      "subjects": [
+        "pr-ledger"
+      ],
+      "known_on": "2027-01-05",
+      "artifacts": [
+        "ch-0001"
+      ]
+    },
+    {
+      "id": "e-0012",
+      "t": "2027-01-05T10:00:00-08:00",
+      "date": "2027-01-05",
+      "type": "commitment.create",
+      "summary": "Ben promised the January reconciliation report",
+      "project": "pr-ledger",
+      "subjects": [
+        "c-002",
+        "p-ben-okoro",
+        "p-ada-quist"
+      ],
+      "known_on": "2027-01-05",
+      "artifacts": [
+        "ch-0001"
+      ]
+    },
+    {
+      "id": "e-0017",
+      "t": "2027-01-05T10:05:00-08:00",
+      "date": "2027-01-05",
+      "type": "commitment.create",
+      "summary": "Ben asked me to approve his GL sandbox access request",
+      "project": "pr-ledger",
+      "subjects": [
+        "c-005",
+        "p-ada-quist",
+        "p-ben-okoro"
+      ],
+      "known_on": "2027-01-05",
+      "artifacts": [
+        "ch-0001"
+      ]
+    }
+  ],
+  "unknowable": [],
+  "delivered": [
+    "nt-0001",
+    "em-0001",
+    "ch-0001"
+  ],
+  "secrets": []
+}

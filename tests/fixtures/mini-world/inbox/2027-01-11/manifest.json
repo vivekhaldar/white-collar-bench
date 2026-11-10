@@ -1,0 +1,33 @@
+{
+  "date": "2027-01-11",
+  "artifacts": [
+    {
+      "id": "nt-0002",
+      "channel": "note",
+      "received_at": "2027-01-11T07:45:00-08:00",
+      "path": "nt-0002.md",
+      "title": "Monday notes"
+    },
+    {
+      "id": "em-0004",
+      "channel": "email",
+      "received_at": "2027-01-11T09:30:00-08:00",
+      "path": "em-0004.eml",
+      "title": "Re: volume pricing"
+    },
+    {
+      "id": "ch-0002",
+      "channel": "chat",
+      "received_at": "2027-01-11T13:15:00-08:00",
+      "path": "ch-0002.json",
+      "title": "DM with Ben"
+    },
+    {
+      "id": "ca-0001",
+      "channel": "calendar",
+      "received_at": "2027-01-11T15:00:00-08:00",
+      "path": "ca-0001.ics",
+      "title": "Invite: Reconciliation review"
+    }
+  ]
+}
