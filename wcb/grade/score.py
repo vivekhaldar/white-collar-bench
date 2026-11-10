@@ -212,7 +212,31 @@ class WorldGold:
                     f"world {entry['id']!r}: no world.yaml at {entry.get('path')!r} (from run.json); "
                     "the world directory must be available to score the run"
                 ) from None
+        cls._check_gold(path, entry, notes)
         return cls(World.load(path), max_days, notes)
+
+    @staticmethod
+    def _check_gold(path: Path, entry: dict, notes: list[str]) -> None:
+        """Rebuild stale gold, and note when the gold differs from the gold the run was made
+        against (run.json records each world's gold/BUILD.json)."""
+        from wcb.world.build import BUILD_STAMP, ensure_built
+
+        wid = entry.get("id")
+        if (path / "world.jsonl").is_file():
+            res = ensure_built(path)
+            if res is not None:
+                notes.append(f"{wid}: gold was missing or stale; rebuilt it before scoring")
+        stamp = path / "gold" / BUILD_STAMP
+        then = entry.get("gold")
+        now = read_json(stamp) if stamp.is_file() else None
+        if then and now and then != now:
+            what = ("gold version " f"{then.get('gold_version')} -> {now.get('gold_version')}"
+                    if then.get("gold_version") != now.get("gold_version")
+                    else "the world's sources changed")
+            notes.append(
+                f"{wid}: the gold differs from the gold this run was made against ({what}); "
+                "answers are graded against the current gold"
+            )
 
     def day_index(self, date: str) -> int | None:
         """1-based position of `date` among the world's episode days."""

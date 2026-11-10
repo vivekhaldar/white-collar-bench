@@ -301,3 +301,16 @@ def test_cli_score(built_world, tmp_path, capsys):
     assert "WCB score (Track A)" in capsys.readouterr().out
     assert (tmp_path / "out" / "report.json").is_file()
     assert (tmp_path / "out" / "report.md").is_file()
+
+
+def test_scoring_notes_gold_that_changed_since_the_run(built_world, tmp_path):
+    run = fabricate_run(tmp_path / "run", built_world, ["perfect"])
+    meta = json.loads((run / "run.json").read_text("utf-8"))
+    stamp = json.loads((built_world.dir / "gold" / "BUILD.json").read_text("utf-8"))
+    meta["worlds"][0]["gold"] = stamp
+    (run / "run.json").write_text(json.dumps(meta))
+    assert not [n for n in score_run(run).data["notes"] if "gold differs" in n]
+    meta["worlds"][0]["gold"] = {**stamp, "sources_sha256": "0" * 64}
+    (run / "run.json").write_text(json.dumps(meta))
+    notes = score_run(run).data["notes"]
+    assert any("gold differs" in n and "sources changed" in n for n in notes), notes
