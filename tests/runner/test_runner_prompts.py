@@ -18,10 +18,15 @@ def _doc_prompts() -> list[str]:
     return [m.group(1).strip() for m in re.finditer(r"^> (.+)$", section, re.M)]
 
 
-def test_track_a_prompts_match_docs_verbatim():
-    ingest, query = _doc_prompts()
-    assert prompts.INGEST_A == ingest
-    assert prompts.QUERY_A == query
+def test_prompts_match_docs_verbatim():
+    # docs/scoring.md lists, in order: Track A ingestion and query, then Track B seed
+    # ingestion, ingestion and query.
+    ingest_a, query_a, seed_b, ingest_b, query_b = _doc_prompts()
+    assert prompts.INGEST_A == ingest_a
+    assert prompts.QUERY_A == query_a
+    assert prompts.SEED_B == seed_b
+    assert prompts.INGEST_B == ingest_b
+    assert prompts.QUERY_B == query_b
 
 
 def test_track_b_prompts_replace_contract_and_store():
