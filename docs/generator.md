@@ -13,6 +13,8 @@ In Python: `wcb.world.generate.generate_world(seed=7, weeks=1, size="standard", 
 
 Generation is deterministic: the same seed, parameters and generator version produce byte-identical output, including binary documents. The world ID defaults to `gen-s<seed>-w<weeks>` and, like the seed, feeds the simulator, so it changes the world; the output directory name does not. Optional LLM rewriting (`--llm`) is the one exception to determinism and is cached.
 
+Generation needs no model, API key or network. The planner, simulator, renderers and question generator are plain Python over seeded `random.Random` streams, phrase libraries and archetype tables; a standard one-week world takes about 3 seconds on a laptop. A model is used only if you ask for `--llm`, which rewrites prose for variety and verifies each rewrite against the gold. Every committed dev world was generated without it.
+
 ## Pipeline
 
 ```mermaid

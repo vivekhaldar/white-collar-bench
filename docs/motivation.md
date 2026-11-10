@@ -74,6 +74,21 @@ This group is closest to ingestion. MEMTRACK is the nearest overall: it uses mul
 
 **QMSum** [21] and **MeetingBank** [22] evaluate meeting summarization, with QMSum adding query-focused summaries. **DocRED** [23] evaluates document-level relation extraction. These tasks are useful components of ingestion: extracting decisions, actions and owners from a transcript, and resolving entity references. However, they are single-document tasks with no persistent target.
 
+### Simulated worlds and generated test sets
+
+The method behind white-collar-bench is established. A simulator keeps a hidden world state. The system under test sees only a partial text rendering of it, and gold is computed from the hidden state rather than labelled by hand.
+
+| Benchmark | What it shares with white-collar-bench |
+|---|---|
+| **bAbI** (Weston et al., 2015) [25] | The ancestor of the pattern: a small simulated world of people, places and objects is narrated as short stories, and answers come from the simulator's state. |
+| **TextWorld** (Côté et al., 2018) [26] | Text games generated from a seed. The game state is hidden; the agent sees text observations only. |
+| **ToMi** (Le et al., 2019) [27], **FANToM** (Kim et al., 2023) [28] | Stories and conversations written from a hidden record of who knows or believes what, so questions about information asymmetry have exact answers. |
+| **LoCoMo** (Maharana et al., 2024) [16] | Personas and temporal event graphs are planned first, then LLM agents write long conversations grounded on them. This is close to our log-first, prose-second generation. |
+| **HERB** [12], **MEMTRACK** [18] | Synthetic workplace artifacts generated from simulated workflows; the closest in domain. |
+| **Procgen** (Cobbe et al., 2020) [29], **DyVal** (Zhu et al., 2024) [30], **LiveBench** (White et al., 2024) [31] | Fresh test instances from seeds, generators or regular refreshes, so a test set cannot be memorized. |
+
+White-collar-bench uses the same method. What is new is what the method is applied to and what is graded; see [what is new in the method](#what-is-new-in-the-method).
+
 ### Aggregates
 
 **EGI-BENCH** [24] combines eight existing enterprise benchmarks, including CRMArena, HERB and PersonaBench, into one evaluation harness. Its scope suggests that individual-scale knowledge management is not yet a recognized category of its own.
@@ -88,6 +103,16 @@ This group is closest to ingestion. MEMTRACK is the nearest overall: it uses mul
 6. **Convention adherence.** Each store defines a schema, record boundaries and privacy rules. Following them is part of the task.
 7. **Mixed real-world inputs.** Email threads, chat messages, meeting transcripts, documents and the worker's own shorthand notes appear together, with realistic noise.
 8. **Synthetic by construction.** Every project, person and organization is generated, which avoids the confidentiality problem that prevents real knowledge stores from being shared.
+
+## What is new in the method
+
+A hidden world, a filtered text view of it and gold computed from the world are not new (see [simulated worlds](#simulated-worlds-and-generated-test-sets)). We know of no benchmark that combines the following:
+
+1. **The agent's own store is graded at every checkpoint, against what was knowable.** After each episode day the store is compared with the knowable gold state: what could be known from the inputs delivered so far, not the full hidden truth. Some events are never revealed on purpose (`plan.yaml` lists them under `audit`), and missing them costs nothing. The memory benchmarks above grade memory only through downstream questions. See [scoring](scoring.md).
+2. **Inputs disappear after each day.** Each episode day runs in a fresh process and the day's inputs are removed afterwards, so the store is the agent's only memory and its errors compound.
+3. **The hidden state is a ledger of work commitments.** Commitments have a debtor and a creditor, due dates that move, hand-offs, reopenings and decisions that are later reversed. bAbI tracks object locations, TextWorld tracks game state and LoCoMo tracks facts from conversation; none of them tracks who owes whom what.
+4. **One event log is rendered into many formats, and every file is checked against it.** Email (`.eml`), chat, meeting transcripts (`.vtt`), calendar invites (`.ics`), office attachments (`.xlsx`, `.docx`, `.pdf`) and the worker's shorthand notes all come from one log. A verifier re-reads every file and fails generation if any input contradicts the gold ([generator](generator.md)).
+5. **Test seeds are committed before scoring and revealed after.** Each release publishes salted hashes of its secret seeds and of the generated worlds before any submission is scored. Once the release is retired the seeds are published, and anyone can regenerate the worlds and check them ([leaderboard](leaderboard.md#preparing-a-release-maintainers)). Commit-reveal is a standard cryptographic technique. Other benchmarks keep test sets hidden or refresh them regularly; we know of none that commits to generation seeds.
 
 ## References
 
@@ -115,3 +140,10 @@ This group is closest to ingestion. MEMTRACK is the nearest overall: it uses mul
 22. Hu et al. *MeetingBank: A Benchmark Dataset for Meeting Summarization.* 2023. arXiv:2305.17529.
 23. Yao et al. *DocRED: A Large-Scale Document-Level Relation Extraction Dataset.* 2019. arXiv:1906.06127.
 24. *EGI-BENCH: An Enterprise General Intelligence Benchmark Suite.* 2026. arXiv:2610.27234.
+25. Weston et al. *Towards AI-Complete Question Answering: A Set of Prerequisite Toy Tasks.* 2015. arXiv:1502.05698.
+26. Côté et al. *TextWorld: A Learning Environment for Text-based Games.* 2018. arXiv:1806.11532.
+27. Le, Boureau and Nickel. *Revisiting the Evaluation of Theory of Mind through Question Answering.* EMNLP 2019.
+28. Kim et al. *FANToM: A Benchmark for Stress-testing Machine Theory of Mind in Interactions.* EMNLP 2023.
+29. Cobbe et al. *Leveraging Procedural Generation to Benchmark Reinforcement Learning.* ICML 2020. arXiv:1912.01588.
+30. Zhu et al. *DyVal: Dynamic Evaluation of Large Language Models for Reasoning Tasks.* ICLR 2024.
+31. White et al. *LiveBench: A Challenging, Contamination-Free LLM Benchmark.* 2024. arXiv:2406.19314.
