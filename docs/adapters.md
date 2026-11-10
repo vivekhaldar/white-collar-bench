@@ -407,8 +407,29 @@ Each turn resends the conversation, so input tokens grow roughly with the square
 
 ## 10. Example commands
 
+Start with `wcb doctor`. It checks the adapter file, looks for its commands on `PATH`, plays the two-day mini world (two ingestion and two query sessions, plus the seed session in Track B, no oracle sessions), validates every store and answers file, and scores the run. Each problem comes with a hint and the last lines of the session's `stderr.log`. It exits 0 when nothing failed.
+
 ```bash
-# Smoke test: one day, no oracle sessions
+wcb doctor --adapter my-agent.yaml                  # Track A on the mini world
+wcb doctor --adapter my-agent.yaml --track B
+wcb doctor --adapter my-agent.yaml --world pilot --out runs/doctor   # a bigger world, kept
+```
+
+```text
+  [ok]   adapter file is valid: /path/to/my-agent.yaml
+  [warn] env_passthrough: ANTHROPIC_API_KEY is not set here, so sessions will not get it
+         export ANTHROPIC_API_KEY=... before running, or remove it from env_passthrough
+  [ok]   ingest command found: my-agent
+  [FAIL] session 2027-01-11.ingest: failed (exit 1) in 2.3s
+         logs: runs/doctor/mini/r1/sessions/2027-01-11.ingest/stderr.log
+         last stderr lines:
+           KeyError: 'ANTHROPIC_API_KEY'
+```
+
+The null adapter scores 16.7 WCB on the mini world; anything that ingests correctly should beat it.
+
+```bash
+# Smoke test on the pilot: one day, no oracle sessions
 wcb run --adapter adapters/examples/simple-openai.yaml --world pilot --out runs/smoke --max-days 1 --no-oracle
 
 # Query side only, against oracle stores (cheap; measures synthesis)

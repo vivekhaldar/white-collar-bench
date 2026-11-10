@@ -31,6 +31,12 @@ wcb run --adapter adapters/examples/simple-openai.yaml    --world pilot --out ru
 wcb score runs/claude-code
 ```
 
+Before a full run, smoke-test any adapter in about a minute on the two-day mini world. `wcb doctor` validates the stores and answers it produces and explains each failure:
+
+```bash
+wcb doctor --adapter adapters/examples/claude-code.yaml
+```
+
 To plug in your own agent, copy [`adapters/examples/custom-script.yaml`](adapters/examples/custom-script.yaml) and [`custom_agent_template.py`](adapters/examples/custom_agent_template.py), or write an adapter that runs your CLI. See [adapters](docs/adapters.md).
 
 ## How it works
@@ -81,6 +87,7 @@ Gold (`worlds/*/gold/`) is public for `pilot` and `dev` so you can debug. Never 
 | Command | Purpose |
 |---|---|
 | `wcb run --adapter A --world W --out DIR` | Run an agent over worlds (`--split dev`, `--track B`, `--repeats N`, `--resume`, `--skip-ingest` for oracle-only runs) |
+| `wcb doctor --adapter A [--track B]` | Smoke-test an adapter on the mini world; checklist with hints |
 | `wcb score DIR [--judge llm --judge-model M]` | Grade a run and write `report.json` and `report.md` |
 | `wcb validate store DIR` | Check a store against the Track A contract |
 | `wcb validate answers FILE --questions Q` | Check an answers file |

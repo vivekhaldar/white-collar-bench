@@ -136,6 +136,14 @@ def cmd_score(a) -> int:
     return 0
 
 
+def cmd_doctor(a) -> int:
+    from wcb.runner.doctor import doctor, format_result
+
+    res = doctor(Path(a.adapter), world=a.world, track=a.track, out=Path(a.out) if a.out else None)
+    print(format_result(res))
+    return 0 if res.ok else 1
+
+
 # ---------------------------------------------------------------- privacy
 def cmd_privacy_scan(a) -> int:
     from wcb.privacy.scan import scan
@@ -221,6 +229,13 @@ def build_parser() -> argparse.ArgumentParser:
     r.add_argument("--skip-ingest", action="store_true",
                    help="only run oracle query sessions (measures synthesis alone)")
     r.set_defaults(fn=cmd_run)
+
+    dr = sub.add_parser("doctor", help="smoke-test an adapter on the mini world and explain failures")
+    dr.add_argument("--adapter", required=True)
+    dr.add_argument("--world", help="world to use (default: the two-day mini fixture world)")
+    dr.add_argument("--track", choices=["A", "B"], default="A")
+    dr.add_argument("--out", help="run directory (default: a new temporary directory)")
+    dr.set_defaults(fn=cmd_doctor)
 
     s = sub.add_parser("score", help="grade a run directory and write a report")
     s.add_argument("run_dir")
