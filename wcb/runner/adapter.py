@@ -29,6 +29,9 @@ Rules implemented here:
   variables. The directory of the Python interpreter running ``wcb`` is put first on ``PATH`` so
   that ``python`` in a command resolves to the interpreter that has ``wcb`` installed (this is what
   ``adapters/examples/null.yaml`` relies on). Set ``PATH`` in ``env`` to override.
+- A command that starts Python with ``-m`` or ``-c`` in the workspace without ``-I`` or ``-P``
+  draws a warning: Python then puts the working directory first on ``sys.path``, so a ``json.py``
+  or ``wcb/`` an agent leaves at the store root replaces the real module in every later session.
 """
 
 from __future__ import annotations
@@ -343,6 +346,18 @@ def load_adapter(path: Path) -> Adapter:
         if spec.cwd is not None:
             templates.append((f"{phase} cwd", spec.cwd))
     templates += [(f"env {k}", v) for k, v in env.items()]
+    unsafe = [
+        phase
+        for phase, spec in phases.items()
+        if spec.cwd is not None and "{workspace}" in spec.cwd and python_trusts_cwd(spec.cmd)
+    ]
+    if unsafe:
+        warnings.append(
+            f"{' and '.join(unsafe)} cmd: Python run with -m or -c puts its working directory, "
+            "the workspace, first on sys.path, so a file the agent leaves in the store (json.py, "
+            "a wcb/ directory) replaces the real module; add -I (python -I -m ...), or -P on "
+            "Python 3.11+"
+        )
     seen: set[tuple[str, str]] = set()
     for where, text in templates:
         for m in _PLACEHOLDER.finditer(text):
@@ -368,6 +383,44 @@ def load_adapter(path: Path) -> Adapter:
 
 
 # ---------------------------------------------------------------- helpers
+_PYTHON = re.compile(r"python[0-9.]*")
+
+
+def python_trusts_cwd(cmd: list[str] | str) -> bool:
+    """True if ``cmd`` starts a Python interpreter with ``-m`` or ``-c`` without ``-I``/``-P``.
+
+    Such an interpreter puts its working directory first on ``sys.path``. Only interpreter
+    options written before ``-m``/``-c`` count, as Python reads them.
+    """
+    if isinstance(cmd, str):
+        try:
+            tokens = shlex.split(cmd)
+        except ValueError:
+            return False
+    else:
+        tokens = list(cmd)
+    for i, tok in enumerate(tokens):
+        if not _PYTHON.fullmatch(os.path.basename(tok)):
+            continue
+        rest = iter(tokens[i + 1 :])
+        for opt in rest:
+            if opt in ("-W", "-X"):  # options that take the next argument
+                next(rest, None)
+                continue
+            if opt.startswith("--") or opt.startswith(("-W", "-X")):
+                continue
+            if not opt.startswith("-") or opt == "-":
+                break  # a script path or stdin: sys.path[0] is not the working directory
+            letters = opt[1:]
+            first = min((letters.find(c) for c in "mc" if c in letters), default=-1)
+            flags = letters if first < 0 else letters[:first]
+            if "I" in flags or "P" in flags:
+                break
+            if first >= 0:
+                return True
+    return False
+
+
 def _scalar(v: Any) -> str | None:
     if v is None or isinstance(v, (dict, list)):
         return None

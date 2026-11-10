@@ -22,6 +22,7 @@ model: anthropic/<model-id>
 description: Raw Anthropic model in the wcb.agents.simple tool loop
 cmd:
   - python
+  - -I
   - -m
   - wcb.agents.simple
   - --provider

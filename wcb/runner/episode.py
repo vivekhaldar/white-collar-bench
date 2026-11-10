@@ -6,9 +6,12 @@ For every world and repeat the runner plays one episode:
    (``gold/oracle-store/<seed_end>/``) plus ``CONTRACT.md``. Track B: an empty workspace plus
    ``GOALS.md``, then one *seed ingestion session* that receives every seed date's inbox at once.
 2. **Each episode day.** The day's inbox is placed at ``inbox/<date>/`` and the adapter's ingest
-   command runs in a fresh process. Afterwards ``inbox/`` and ``.wcb/`` are removed. If the session
-   failed (non-zero exit or timeout) the store is restored to its state before the session. The
-   store is then snapshotted to ``snapshots/<date>/`` and committed to the workspace's git history.
+   command runs in a fresh process. Afterwards every process the session started is killed,
+   permissions in the workspace are restored and special files deleted (``normalize_tree``), and
+   ``inbox/`` and ``.wcb/`` are removed. If the session failed (non-zero exit, timeout, or a store
+   the runner cannot copy) the store is restored to its state before the session. The store is
+   then snapshotted to ``snapshots/<date>/`` and committed to the workspace's git history. Before
+   the next session, a workspace that no longer matches that snapshot is reverted to it.
 3. **Checkpoints.** After a checkpoint day's ingestion, a query session runs on a throwaway,
    read-only copy of the store with ``.wcb/questions.json`` and ``.wcb/answer-schema.json``. The
    answers are kept; every change to the copy is discarded.
@@ -26,6 +29,7 @@ in docs/formats.md section 5. See docs/running.md for the competitor-facing guid
 from __future__ import annotations
 
 import contextlib
+import ctypes
 import json
 import os
 import shlex
@@ -56,9 +60,11 @@ from wcb.runner.workspace import (
     is_within,
     make_read_only,
     new_temp_dir,
+    normalize_tree,
     remove_tree,
     restore,
     snapshot,
+    tree_diff,
     tree_files,
 )
 from wcb.util.dates import DATE_RE
@@ -392,7 +398,12 @@ def _start_run_json(
             "worlds": list(merged.values()),
             "finished_at": None,
             "status": "running",
+            "options": _merge_options(old.get("options") or {}, _options(cfg)),
             "resumed_at": [*old.get("resumed_at", []), _now()],
+            "resumed_with": [
+                *old.get("resumed_with", []),
+                {"command_line": shlex.join(sys.argv), "options": _options(cfg)},
+            ],
         }
     else:
         if cfg.resume:
@@ -412,16 +423,40 @@ def _start_run_json(
             "finished_at": None,
             "status": "running",
             "command_line": shlex.join(sys.argv),
-            "options": {
-                "max_days": cfg.max_days,
-                "skip_ingest": cfg.skip_ingest,
-                "workspace_root": str(cfg.workspace_root) if cfg.workspace_root else None,
-                "meter": cfg.meter,
-            },
+            "options": _options(cfg),
         }
     out.mkdir(parents=True, exist_ok=True)
     write_json(run_file, meta)
     return meta
+
+
+def _options(cfg: RunConfig) -> dict[str, Any]:
+    """The ``options`` block of run.json for one invocation."""
+    return {
+        "max_days": cfg.max_days,
+        "skip_ingest": cfg.skip_ingest,
+        "workspace_root": str(cfg.workspace_root) if cfg.workspace_root else None,
+        "meter": cfg.meter,
+    }
+
+
+def _merge_options(old: dict[str, Any], new: dict[str, Any]) -> dict[str, Any]:
+    """The run-wide ``options`` after a resume: what every invocation together has covered.
+
+    The scorer reads ``max_days`` and ``skip_ingest`` to decide what to score, so a resume that
+    extends a run must extend them too: ``max_days`` is unlimited (``None``) if any invocation
+    was, otherwise the largest; ``skip_ingest`` stays true only if every invocation skipped
+    ingestion; ``meter`` is true if any invocation metered. Each invocation's own options are
+    kept in ``resumed_with``.
+    """
+    days = [old.get("max_days", None), new.get("max_days")]
+    return {
+        **old,
+        **new,
+        "max_days": None if None in days else max(int(d) for d in days),
+        "skip_ingest": bool(old.get("skip_ingest")) and bool(new.get("skip_ingest")),
+        "meter": bool(old.get("meter")) or bool(new.get("meter")),
+    }
 
 
 def _gold_stamp(world_dir: Path) -> dict[str, Any] | None:
@@ -571,19 +606,24 @@ class _Episode:
     def _finish(self) -> None:
         """Copy the final store to <run>/<world>/r<k>/workspace/ and delete the temp workspace."""
         final = self.dir / "workspace"
+        if self.current is not None and (self.ws is not None or not final.is_dir()):
+            snapshot(self.current, final)  # the final store is the last snapshot
         if self.ws is not None:
-            snapshot(self.ws, final)
-            remove_tree(self.ws)
+            try:
+                remove_tree(self.ws)
+            except OSError as e:
+                _warn(f"{self.tag} could not delete workspace {self.ws}: {e}")
             self.ws = None
-        elif not final.is_dir() and self.current is not None:
-            snapshot(self.current, final)
         self._save_state("done")
 
     # ------------------------------------------------------------ workspace
     def _new_workspace(self) -> None:
         old = self.state.get("workspace")
         if old and Path(old).is_dir() and Path(old).name.startswith(WORKSPACE_PREFIX):
-            remove_tree(Path(old))  # left over from an interrupted attempt
+            try:
+                remove_tree(Path(old))  # left over from an interrupted attempt
+            except OSError as e:
+                _warn(f"{self.tag} could not delete the old workspace {old}: {e}")
         self.ws = new_temp_dir(self.ctx.ws_root, WORKSPACE_PREFIX)
         self.git = Git(self.ws)
         self.git.init()
@@ -596,10 +636,16 @@ class _Episode:
         assert self.current is not None, "no snapshot to rebuild the workspace from"
         old = self.state.get("workspace")
         if old and Path(old).is_dir():
+            try:
+                normalize_tree(Path(old))
+                restore(Path(old), self.current)
+            except OSError as e:
+                _warn(f"{self.tag} cannot reuse workspace {old} ({e}); rebuilding it")
+                old = None
+        if old and Path(old).is_dir():
             self.ws = Path(old)
             self.git = Git(self.ws)
             self.git.init()
-            restore(self.ws, self.current)
             self._commit(f"wcb: resumed from snapshot {self.current.name}")
             _log(
                 f"{self.tag} resuming in workspace {self.ws} (store from snapshots/{self.current.name})"
@@ -618,8 +664,59 @@ class _Episode:
         snapshot(self.ws, self.snap(date))
         self.current = self.snap(date)
 
-    def _commit(self, message: str) -> None:
-        if self.git is None or self.git.commit(message) or not self.git.enabled:
+    def _reset_workspace(self, notes: list[str]) -> None:
+        """Put the current snapshot back into the workspace. If the workspace cannot be cleaned
+        (an agent left files the runner may not delete), continue in a new one."""
+        assert self.ws is not None and self.current is not None
+        try:
+            normalize_tree(self.ws)
+            restore(self.ws, self.current)
+            return
+        except OSError as e:
+            error = f"{type(e).__name__}: {e}"
+        old, self.ws = self.ws, new_temp_dir(self.ctx.ws_root, WORKSPACE_PREFIX)
+        msg = (
+            f"workspace {old} could not be cleaned ({error}); continuing in {self.ws}, rebuilt "
+            f"from snapshots/{self.current.name} (git history is not carried over; delete the "
+            "old directory by hand)"
+        )
+        notes.append(msg)
+        _warn(f"{self.tag} {msg}")
+        self.git = Git(self.ws)
+        self.git.init()
+        copy_tree(self.current, self.ws)
+        self._commit(f"wcb: rebuilt from snapshot {self.current.name}")
+        self._save_state("running")
+
+    def _check_drift(self, notes: list[str]) -> None:
+        """Before a session, make sure the workspace still holds the latest snapshot.
+
+        Nothing may change the store between sessions (docs/running.md section 11). If something
+        did, such as a process that escaped its session or an edit by hand, the change is
+        reverted and noted, so it is never credited to the next session.
+        """
+        assert self.ws is not None and self.current is not None
+        # inbox/ and .wcb/ are never in a snapshot and are removed after every session.
+        changed = tree_diff(self.ws, self.current, exclude=(".git",))
+        if not changed:
+            return
+        msg = (
+            f"the workspace changed after snapshots/{self.current.name} was taken "
+            f"({_some(changed)}); reverted before this session"
+        )
+        notes.append(msg)
+        _warn(f"{self.tag} {msg}")
+        self._reset_workspace(notes)
+
+    def _commit(self, message: str, notes: list[str] | None = None) -> None:
+        ok = self.git is None or self.git.commit(message) or not self.git.enabled
+        if self.git is not None and self.git.notes:
+            for n in self.git.notes:
+                _warn(f"{self.tag} git: {n}")
+                if notes is not None:
+                    notes.append(f"git: {n}")
+            self.git.notes.clear()
+        if ok:
             return
         if not self._git_warned:
             self._git_warned = True
@@ -663,9 +760,10 @@ class _Episode:
         seed: bool = False,
     ) -> None:
         assert self.ws is not None and self.current is not None
-        ws = self.ws
         sd = self._fresh_session_dir(name)
         notes: list[str] = []
+        self._check_drift(notes)
+        ws = self.ws
         for d in inbox_dates:
             dst = ws / "inbox" / d
             if self.plan.inbox(d).is_dir():
@@ -679,20 +777,31 @@ class _Episode:
         if not ws.is_dir():
             ws.mkdir(parents=True)
             notes.append("the agent deleted its workspace directory; it was recreated")
-        with contextlib.suppress(OSError):
-            os.chmod(ws, os.stat(ws).st_mode | 0o700)
+        _tidy(ws, notes)
         usage = _collect_usage(ws, sd, notes)
-        for n in ("inbox", ".wcb"):
-            remove_tree(ws / n)
-        if not result.ok:
-            restore(ws, self.current)
+        try:
+            for n in ("inbox", ".wcb"):
+                remove_tree(ws / n)
+            if not result.ok:
+                restore(ws, self.current)
+                notes.append(
+                    f"session {result.status}; store restored to snapshots/{self.current.name}"
+                )
+            self._snapshot(date)
+        except OSError as e:
+            # Something the session left behind cannot be read or deleted (e.g. files owned by
+            # another user). The session fails and the store goes back to the last snapshot.
+            result.store_error = f"{type(e).__name__}: {e}"
             notes.append(
-                f"session {result.status}; store restored to snapshots/{self.current.name}"
+                f"the runner could not clean up or snapshot the store after the session "
+                f"({result.store_error}); session failed; store restored to "
+                f"snapshots/{self.current.name}"
             )
-        self._snapshot(date)
+            self._reset_workspace(notes)
+            self._snapshot(date)
         what = "seed" if seed else date
         suffix = "" if result.ok else f" (session {result.status}; store restored)"
-        self._commit(f"wcb: after {what} ingest{suffix}")
+        self._commit(f"wcb: after {what} ingest{suffix}", notes)
 
         record = self._record(result, "ingest", date, None, "agent", usage, notes)
         self._add_metered(record)
@@ -716,6 +825,7 @@ class _Episode:
                 shutil.copyfile(contract_dir() / "CONTRACT.md", qws / "CONTRACT.md")
             else:
                 assert self.ws is not None
+                self._check_drift(notes)
                 copy_tree(self.ws, qws, exclude=("inbox", ".wcb"))  # keeps .git history
             wcb_dir = qws / ".wcb"
             wcb_dir.mkdir()
@@ -729,10 +839,14 @@ class _Episode:
             if not qws.is_dir():
                 qws.mkdir(parents=True)
                 notes.append("the agent deleted its workspace directory")
+            _tidy(qws, notes)
             usage = _collect_usage(qws, sd, notes)
             answers, answers_status = _read_answers(qws, sd, notes)
         finally:
-            remove_tree(qws)
+            try:
+                remove_tree(qws)
+            except OSError as e:
+                _warn(f"{self.tag} could not delete query workspace {qws}: {e}")
 
         write_json(sd / "answers.json", answers)
         write_json(self.answers_file(cp_id, oracle), answers)
@@ -834,9 +948,15 @@ def _read_session(sd: Path) -> dict[str, Any] | None:
 
 
 def _ingest_completed(sd: Path) -> bool:
-    """An ingest session counts as completed for --resume only if it exited 0 in time."""
+    """An ingest session counts as completed for --resume only if it exited 0 in time and its
+    store could be snapshotted (status ``ok``)."""
     s = _read_session(sd)
-    return bool(s) and s.get("exit_code") == 0 and not s.get("timed_out")
+    return (
+        bool(s)
+        and s.get("exit_code") == 0
+        and not s.get("timed_out")
+        and s.get("status", "ok") == "ok"
+    )
 
 
 def _session_finished(sd: Path) -> bool:
@@ -857,18 +977,37 @@ def _agent_file(workdir: Path, name: str) -> Path | None:
     return d / name
 
 
+def _tidy(workdir: Path, notes: list[str]) -> None:
+    """After a session: undo permission changes and delete special files (normalize_tree)."""
+    removed = normalize_tree(workdir)
+    if removed:
+        notes.append(
+            f"deleted special files (FIFOs, sockets, devices) in the workspace: {_some(removed)}"
+        )
+
+
+def _some(items: list[str], n: int = 5) -> str:
+    """'a, b, c' or 'a, b, c, d, e and 7 more'."""
+    more = f" and {len(items) - n} more" if len(items) > n else ""
+    return ", ".join(items[:n]) + more
+
+
 def _collect_usage(workdir: Path, sd: Path, notes: list[str]) -> dict[str, Any] | None:
     """Copy ``.wcb/usage.json`` to the session directory and return it parsed (or None)."""
-    f = _agent_file(workdir, "usage.json")
-    if f is None:
-        notes.append(".wcb/usage.json is a symbolic link; ignored")
+    try:
+        f = _agent_file(workdir, "usage.json")
+        if f is None:
+            notes.append(".wcb/usage.json is a symbolic link; ignored")
+            return None
+        if not f.is_file():
+            return None
+        if f.stat().st_size > MAX_USAGE_BYTES:
+            notes.append(f".wcb/usage.json is larger than {MAX_USAGE_BYTES} bytes; ignored")
+            return None
+        raw = f.read_bytes()
+    except OSError as e:
+        notes.append(f".wcb/usage.json could not be read ({type(e).__name__}: {e}); ignored")
         return None
-    if not f.is_file():
-        return None
-    if f.stat().st_size > MAX_USAGE_BYTES:
-        notes.append(f".wcb/usage.json is larger than {MAX_USAGE_BYTES} bytes; ignored")
-        return None
-    raw = f.read_bytes()
     (sd / "usage.json").write_bytes(raw)
     try:
         data = json.loads(raw.decode("utf-8"))
@@ -883,19 +1022,27 @@ def _collect_usage(workdir: Path, sd: Path, notes: list[str]) -> dict[str, Any] 
 
 def _read_answers(workdir: Path, sd: Path, notes: list[str]) -> tuple[dict[str, Any], str]:
     """Read ``.wcb/answers.json``. Missing or invalid answers become ``{}`` with a note."""
-    f = _agent_file(workdir, "answers.json")
-    if f is None:
-        notes.append(".wcb/answers.json is a symbolic link; recorded empty answers {}")
-        return {}, "invalid"
-    if not f.is_file():
-        notes.append(".wcb/answers.json was not written; recorded empty answers {}")
-        return {}, "missing"
-    if f.stat().st_size > MAX_ANSWERS_BYTES:
+    try:
+        f = _agent_file(workdir, "answers.json")
+        if f is None:
+            notes.append(".wcb/answers.json is a symbolic link; recorded empty answers {}")
+            return {}, "invalid"
+        if not f.is_file():
+            notes.append(".wcb/answers.json was not written; recorded empty answers {}")
+            return {}, "missing"
+        if f.stat().st_size > MAX_ANSWERS_BYTES:
+            notes.append(
+                f".wcb/answers.json is larger than {MAX_ANSWERS_BYTES} bytes; recorded empty "
+                "answers {}"
+            )
+            return {}, "too_large"
+        raw = f.read_bytes()
+    except OSError as e:
         notes.append(
-            f".wcb/answers.json is larger than {MAX_ANSWERS_BYTES} bytes; recorded empty answers {{}}"
+            f".wcb/answers.json could not be read ({type(e).__name__}: {e}); recorded empty "
+            "answers {}"
         )
-        return {}, "too_large"
-    raw = f.read_bytes()
+        return {}, "unreadable"
     try:
         data = json.loads(raw.decode("utf-8"))
     except (UnicodeDecodeError, ValueError) as e:
@@ -928,15 +1075,17 @@ class ProcessResult:
     error: str | None = None  # set when the command could not be started
     cmd: list[str] | str | None = None
     timeout_s: float | None = None
+    store_error: str | None = None  # set when the runner could not read or copy the store after
 
     @property
     def status(self) -> str:
-        """'ok', 'failed' (non-zero exit), 'timeout', or 'error' (could not start)."""
+        """'ok', 'failed' (non-zero exit, or a store the runner could not read), 'timeout', or
+        'error' (could not start)."""
         if self.error:
             return "error"
         if self.timed_out:
             return "timeout"
-        return "ok" if self.exit_code == 0 else "failed"
+        return "ok" if self.exit_code == 0 and not self.store_error else "failed"
 
     @property
     def ok(self) -> bool:
@@ -954,14 +1103,21 @@ def run_process(
     """Run one agent process in its own process group, with a wall-clock timeout.
 
     A string ``cmd`` runs with ``/bin/sh -c``. stdin is empty; stdout and stderr go to the given
-    files. On timeout the whole process group gets SIGTERM, then SIGKILL after
-    :data:`KILL_GRACE_S` seconds. When the main process exits, anything it left running in its
-    group is killed, so no agent process outlives its session.
+    files. On timeout every process of the session gets SIGTERM, then SIGKILL after
+    :data:`KILL_GRACE_S` seconds. When the main process exits, every process it left running is
+    killed, so no agent process outlives its session.
+
+    "Every process of the session" is the main process's process group plus, on Linux, every
+    descendant of the main process, including ones that left the group with ``setsid()`` or
+    were daemonized: the runner makes itself a *child subreaper* while the session runs, so
+    orphaned descendants are re-parented to the runner instead of to init and can be found.
+    Elsewhere only the process group is signalled (see docs/running.md section 5).
     """
     argv = ["/bin/sh", "-c", cmd] if isinstance(cmd, str) else list(cmd)
     started_at = _now()
     t0 = time.monotonic()
-    with open(stdout_path, "wb") as out, open(stderr_path, "wb") as err:
+    with open(stdout_path, "wb") as out, open(stderr_path, "wb") as err, _child_subreaper():
+        before = _child_pids()
         try:
             proc = subprocess.Popen(
                 argv,
@@ -983,24 +1139,134 @@ def run_process(
             proc.wait(timeout=timeout_s)
         except subprocess.TimeoutExpired:
             timed_out = True
-            _stop_group(proc, KILL_GRACE_S)
+            _stop_session(proc, before, KILL_GRACE_S)
         except BaseException:
-            _stop_group(proc, INTERRUPT_GRACE_S)
+            _stop_session(proc, before, INTERRUPT_GRACE_S)
             raise
         finally:
-            _signal_group(proc.pid, signal.SIGKILL)  # stragglers left in the group
+            _kill_session(proc, before)  # stragglers, including ones that left the group
     return ProcessResult(
         proc.returncode, timed_out, round(time.monotonic() - t0, 3), started_at, _now()
     )
 
 
-def _stop_group(proc: subprocess.Popen, grace: float) -> None:
-    _signal_group(proc.pid, signal.SIGTERM)
+def _stop_session(proc: subprocess.Popen, before: set[int], grace: float) -> None:
+    """SIGTERM every process of the session, then SIGKILL them if the main one is still running."""
+    _signal_session(proc, before, signal.SIGTERM)
     try:
         proc.wait(timeout=grace)
     except subprocess.TimeoutExpired:
-        _signal_group(proc.pid, signal.SIGKILL)
+        _kill_session(proc, before)
         proc.wait()
+
+
+def _kill_session(proc: subprocess.Popen, before: set[int]) -> None:
+    """SIGKILL every process of the session and reap the orphans re-parented to the runner.
+
+    Repeats until none is left, because a process may fork, or have its children re-parented
+    to the runner, while the others are being killed.
+    """
+    deadline = time.monotonic() + 5.0
+    while True:
+        pids = _signal_session(proc, before, signal.SIGKILL)
+        for pid in pids:
+            if pid != proc.pid:  # the main process is reaped by Popen
+                with contextlib.suppress(OSError):
+                    os.waitpid(pid, os.WNOHANG)
+        if not _session_pids(proc, before) or time.monotonic() > deadline:
+            return
+        time.sleep(0.02)
+
+
+def _signal_session(proc: subprocess.Popen, before: set[int], sig: int) -> list[int]:
+    """Send ``sig`` to the session's process group and every other process of the session."""
+    _signal_group(proc.pid, sig)
+    pids = _session_pids(proc, before)
+    for pid in pids:
+        with contextlib.suppress(ProcessLookupError, PermissionError):
+            os.kill(pid, sig)
+    return pids
+
+
+def _session_pids(proc: subprocess.Popen, before: set[int]) -> list[int]:
+    """Processes of the session that still need a signal or reaping (Linux; empty elsewhere).
+
+    These are the runner's children that are not in ``before`` (the children it had before the
+    session started), and all their descendants. Zombies are left out, except zombie children of
+    the runner other than the main process (which ``Popen`` reaps): those still need reaping.
+    """
+    tree = _process_tree()
+    stack = [(pid, state, True) for pid, state in tree.get(os.getpid(), []) if pid not in before]
+    out: list[int] = []
+    seen: set[int] = set()
+    while stack:
+        pid, state, direct = stack.pop()
+        if pid in seen:
+            continue
+        seen.add(pid)
+        stack.extend((child, st, False) for child, st in tree.get(pid, []))
+        if state not in ("Z", "X") or (direct and pid != proc.pid):
+            out.append(pid)
+    return out
+
+
+def _process_tree() -> dict[int, list[tuple[int, str]]]:
+    """parent pid -> [(child pid, state letter)] for every process, read from /proc (Linux)."""
+    try:
+        names = os.listdir("/proc")
+    except OSError:
+        return {}
+    tree: dict[int, list[tuple[int, str]]] = {}
+    for name in names:
+        if not name.isdigit():
+            continue
+        try:
+            with open(f"/proc/{name}/stat", "rb") as f:
+                data = f.read()
+            fields = data[data.rindex(b")") + 2 :].split()
+            state, ppid = fields[0].decode(), int(fields[1])
+        except (OSError, ValueError, IndexError):
+            continue
+        tree.setdefault(ppid, []).append((int(name), state))
+    return tree
+
+
+def _child_pids() -> set[int]:
+    """The runner's current child processes (empty where /proc is missing)."""
+    return {pid for pid, _ in _process_tree().get(os.getpid(), [])}
+
+
+PR_SET_CHILD_SUBREAPER = 36
+PR_GET_CHILD_SUBREAPER = 37
+
+
+@contextlib.contextmanager
+def _child_subreaper():
+    """On Linux, make the runner a child subreaper (prctl(2)) for the duration of a session.
+
+    Descendants orphaned during the session (a daemon, ``setsid cmd &``, Node's ``detached``)
+    are then re-parented to the runner, where :func:`_kill_session` finds them. Elsewhere, or if
+    prctl is unavailable, this does nothing.
+    """
+    prctl = _prctl()
+    previous = ctypes.c_int(0)
+    if prctl is None or prctl(PR_GET_CHILD_SUBREAPER, ctypes.byref(previous), 0, 0, 0) != 0:
+        yield
+        return
+    prctl(PR_SET_CHILD_SUBREAPER, ctypes.c_ulong(1), 0, 0, 0)
+    try:
+        yield
+    finally:
+        prctl(PR_SET_CHILD_SUBREAPER, ctypes.c_ulong(1 if previous.value else 0), 0, 0, 0)
+
+
+def _prctl():
+    if not sys.platform.startswith("linux"):
+        return None
+    try:
+        return ctypes.CDLL(None, use_errno=True).prctl
+    except (OSError, AttributeError):
+        return None
 
 
 def _signal_group(pgid: int, sig: int) -> None:
@@ -1021,9 +1287,18 @@ def _start_error(e: OSError, argv: list[str], cwd: Path | None, env: dict[str, s
     return f"cannot start the agent: {e}"
 
 
+INTERRUPT_SIGNALS = ("SIGTERM", "SIGHUP", "SIGQUIT")
+"""Signals treated like Ctrl-C (SIGINT) while a run is in progress."""
+
+
 @contextlib.contextmanager
 def _sigterm_as_interrupt():
-    """Treat SIGTERM like Ctrl-C while running, so agent processes are stopped and state saved."""
+    """Treat SIGTERM, SIGHUP and SIGQUIT like Ctrl-C while running.
+
+    Each raises KeyboardInterrupt, so the running session's processes are stopped, ``state.json``
+    and ``run.json`` are marked ``interrupted``, and the run can be resumed. SIGHUP matters when
+    the terminal or ssh connection that started ``wcb run`` goes away.
+    """
     if threading.current_thread() is not threading.main_thread():
         yield
         return
@@ -1031,11 +1306,16 @@ def _sigterm_as_interrupt():
     def handler(signum, frame):
         raise KeyboardInterrupt(f"received signal {signum}")
 
-    previous = signal.signal(signal.SIGTERM, handler)
+    previous = {}
+    for name in INTERRUPT_SIGNALS:
+        sig = getattr(signal, name, None)
+        if sig is not None:
+            previous[sig] = signal.signal(sig, handler)
     try:
         yield
     finally:
-        signal.signal(signal.SIGTERM, previous)
+        for sig, old in previous.items():
+            signal.signal(sig, old)
 
 
 # ====================================================================== output
@@ -1044,8 +1324,11 @@ def _now() -> str:
 
 
 def _log(msg: str) -> None:
-    print(msg, flush=True)
+    # A closed terminal (SIGHUP) must not turn an orderly interruption into a crash.
+    with contextlib.suppress(OSError):
+        print(msg, flush=True)
 
 
 def _warn(msg: str) -> None:
-    print(f"wcb run: warning: {msg}", file=sys.stderr, flush=True)
+    with contextlib.suppress(OSError):
+        print(f"wcb run: warning: {msg}", file=sys.stderr, flush=True)

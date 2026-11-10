@@ -22,6 +22,8 @@
 #   to match; it is what the report shows.
 # - `wcb.agents.wrap` passes Claude Code's stream-json output through to stdout.log and writes
 #   .wcb/usage.json (tokens, cost, tool calls) from its final `result` event.
+#   `python -I` keeps the workspace off the wrapper's sys.path, so files the agent leaves there
+#   (json.py, a wcb/ directory) cannot replace the modules it imports.
 #
 # Flags checked against `claude --help` for Claude Code 2.1.
 name: claude-code
@@ -30,6 +32,7 @@ model: anthropic/claude-code-default  # replace with anthropic/<model-id> you ra
 description: Claude Code in --print mode with the fixed benchmark prompt
 cmd:
   - python
+  - -I
   - -m
   - wcb.agents.wrap
   - --format

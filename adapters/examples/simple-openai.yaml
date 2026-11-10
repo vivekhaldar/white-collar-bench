@@ -24,6 +24,7 @@ model: openai/<model-id>
 description: Raw model (OpenAI-compatible API) in the wcb.agents.simple tool loop
 cmd:
   - python
+  - -I
   - -m
   - wcb.agents.simple
   - --provider

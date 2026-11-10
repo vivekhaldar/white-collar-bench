@@ -64,7 +64,7 @@ def test_example_loads_with_the_runner_without_warnings(name):
 
 def test_cli_adapters_use_the_documented_flags():
     claude = yaml.safe_load((EXAMPLES / "claude-code.yaml").read_text())["cmd"]
-    assert claude[:6] == ["python", "-m", "wcb.agents.wrap", "--format", "claude", "--"]
+    assert claude[:7] == ["python", "-I", "-m", "wcb.agents.wrap", "--format", "claude", "--"]
     for flag in ("--print", "--dangerously-skip-permissions", "--no-session-persistence"):
         assert flag in claude
     assert "{prompt_text}" in claude
@@ -77,7 +77,7 @@ def test_cli_adapters_use_the_documented_flags():
         ("simple-openai", "OPENAI_API_KEY"),
     ):
         data = yaml.safe_load((EXAMPLES / f"{name}.yaml").read_text())
-        assert data["cmd"][:3] == ["python", "-m", "wcb.agents.simple"]
+        assert data["cmd"][:4] == ["python", "-I", "-m", "wcb.agents.simple"]
         assert key in data["env_passthrough"]
 
 
@@ -86,7 +86,7 @@ def test_simple_adapter_cli_matches_the_harness_parser():
 
     for name in ("simple-anthropic", "simple-openai"):
         cmd = yaml.safe_load((EXAMPLES / f"{name}.yaml").read_text())["cmd"]
-        args = build_parser().parse_args(cmd[3:])
+        args = build_parser().parse_args(cmd[4:])
         assert args.provider in ("anthropic", "openai") and args.max_turns == 80
 
 

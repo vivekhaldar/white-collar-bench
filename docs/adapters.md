@@ -110,12 +110,15 @@ A session does not inherit your whole environment. It gets:
 
 stdin is empty (`/dev/null`). stdout and stderr are saved to `stdout.log` and `stderr.log` in the session directory.
 
+**Python entry points.** The default working directory is the workspace, which the agent controls. `python -m module` and `python -c` put the working directory first on `sys.path`, so a `json.py`, `typing.py` or `wcb/` the agent leaves at the store root would be imported instead of the real module, in that session and every later one. Start Python with `-I` (`python -I -m wcb.agents.wrap ...`), as the examples do, or with `-P` on Python 3.11+. `-I` also ignores `PYTHON*` variables and user site-packages, which does not matter when `wcb` is installed in a virtual environment. `wcb run` warns about an adapter that runs `python -m` or `-c` in the workspace without either flag. A script path (`python {adapter_dir}/agent.py`) is safe: Python puts the script's own directory on `sys.path`.
+
 ### Exit status and timeouts
 
 - Exit 0 when the session's work is done. Any other status fails the session.
 - A failed or timed-out **ingest** session leaves the store as it was before the session: all its changes are discarded.
 - A failed or timed-out **query** session counts as empty answers if `.wcb/answers.json` is missing or invalid. Write it early and keep it valid.
-- On timeout the runner sends SIGTERM to the session's whole process group, then SIGKILL 10 seconds later. Write usage on SIGTERM if you can (the simple harness and `wcb.agents.wrap` do).
+- On timeout the runner sends SIGTERM to every process of the session, then SIGKILL 10 seconds later. Write usage on SIGTERM if you can (the simple harness and `wcb.agents.wrap` do).
+- When the session's main process exits, every process it started is killed, including daemons and processes started with `setsid` or Node's `detached: true`. Nothing may keep running, or keep writing to the workspace, after a session ([running §5](running.md#5-run)).
 
 ## 3. What the agent sees
 
@@ -231,12 +234,12 @@ Any agent with a non-interactive mode can be run directly. The recipe:
 2. **Work in the workspace**: the default `cwd` is `{workspace}`; pass it explicitly too if the agent has a flag for its root directory.
 3. **No approvals**: stdin is empty, so a permission prompt hangs until the timeout. Grant file and command permissions up front, and confine the agent with its own sandbox or a container.
 4. **Fresh state**: turn off session persistence, resume, auto-memory and user-level config or instruction files.
-5. **Usage**: if the agent prints machine-readable usage, run it under `python -m wcb.agents.wrap --format <fmt> -- <command...>`, which copies the output to `stdout.log` and writes `.wcb/usage.json`. Formats: `claude` (Claude Code `--output-format stream-json` or `json`) and `codex` (Codex `exec --json`). It exits with the agent's status.
+5. **Usage**: if the agent prints machine-readable usage, run it under `python -I -m wcb.agents.wrap --format <fmt> -- <command...>`, which copies the output to `stdout.log` and writes `.wcb/usage.json`. Formats: `claude` (Claude Code `--output-format stream-json` or `json`) and `codex` (Codex `exec --json`). It exits with the agent's status.
 
 ### Claude Code: [`claude-code.yaml`](../adapters/examples/claude-code.yaml)
 
 ```yaml
-cmd: [python, -m, wcb.agents.wrap, --format, claude, --,
+cmd: [python, -I, -m, wcb.agents.wrap, --format, claude, --,
       claude, --print, "{prompt_text}", --bare, --dangerously-skip-permissions,
       --no-session-persistence, --output-format, stream-json, --verbose,
       --append-system-prompt, "You are running unattended ..."]
@@ -254,7 +257,7 @@ env_passthrough: [ANTHROPIC_API_KEY, ANTHROPIC_MODEL, ANTHROPIC_BASE_URL]
 
 ```yaml
 cmd: >-
-  python -m wcb.agents.wrap --format codex ${CODEX_MODEL:+--model "$CODEX_MODEL"} --
+  python -I -m wcb.agents.wrap --format codex ${CODEX_MODEL:+--model "$CODEX_MODEL"} --
   codex exec --cd {workspace} --sandbox workspace-write --skip-git-repo-check
   --ephemeral --ignore-user-config --json --color never
   ${CODEX_MODEL:+--model "$CODEX_MODEL"}
@@ -285,7 +288,7 @@ cmd: >-
   -e WCB_PROMPT_FILE=/session/prompt.md -e WCB_SESSION_DIR=/session
   -e ANTHROPIC_API_KEY
   my-agent-image:latest
-  python -m wcb.agents.wrap --format claude -- claude --print {prompt_text} --bare
+  python -I -m wcb.agents.wrap --format claude -- claude --print {prompt_text} --bare
   --dangerously-skip-permissions --no-session-persistence --output-format stream-json --verbose
 env_passthrough: [ANTHROPIC_API_KEY]
 ```
@@ -373,7 +376,7 @@ export OPENROUTER_API_KEY=...
 
 ```yaml
 model: openrouter/<vendor>/<model>
-cmd: [python, -m, wcb.agents.simple, --provider, openai, --model, "<vendor>/<model>",
+cmd: [python, -I, -m, wcb.agents.simple, --provider, openai, --model, "<vendor>/<model>",
       --api-key-env, OPENROUTER_API_KEY]
 env_passthrough: [OPENROUTER_API_KEY, OPENAI_BASE_URL]
 ```

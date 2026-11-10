@@ -11,6 +11,7 @@ from pathlib import Path
 
 import pytest
 
+from wcb.grade.score import RunPlan
 from wcb.runner import episode, prompts
 from wcb.runner.episode import RunConfig, run
 from wcb.runner.workspace import tree_files
@@ -251,6 +252,188 @@ def test_timeout_kills_process_group_and_restores(tmp_path, make_adapter, run_wo
     assert read_json(rdir / "sessions" / f"{D2}.ingest" / "session.json")["status"] == "ok"
 
 
+LINUX = pytest.mark.skipif(
+    not sys.platform.startswith("linux"), reason="needs /proc and PR_SET_CHILD_SUBREAPER"
+)
+
+
+@LINUX
+@pytest.mark.parametrize("hang", [False, True], ids=["agent-exits", "agent-times-out"])
+def test_processes_that_leave_the_session_are_killed(
+    tmp_path, make_adapter, run_world, monkeypatch, hang
+):
+    """A daemon started with setsid() must not outlive its session or edit the store later."""
+    monkeypatch.setattr(episode, "KILL_GRACE_S", 1.0)
+    env = {"FAKE_HANG": "1", "FAKE_LATE_S": "4"} if hang else {"FAKE_LATE_S": "1.5"}
+    adapter = make_adapter(mode="escape", fail_date=D1, ingest_timeout=2, env_extra=env)
+    assert run_world(adapter, oracle=False) == 0
+    rdir = r1(tmp_path)
+    sd = rdir / "sessions" / f"{D1}.ingest"
+    assert read_json(sd / "session.json")["status"] == ("timeout" if hang else "ok")
+    daemon = int((sd / "escaped.pid").read_text())
+    assert not _alive(daemon), "a process that left the session's process group survived it"
+    for snap in (D1, D2):
+        assert "notes/late.md" not in tree_files(rdir / "snapshots" / snap)
+    assert "notes/late.md" not in tree_files(rdir / "workspace")
+
+
+def test_store_changes_between_sessions_are_reverted(
+    tmp_path, make_adapter, run_world, agent_sessions, monkeypatch
+):
+    """Whatever edits the workspace after a snapshot (a stray process, a person) is undone and
+    noted before the next session, so it is never credited to the next day."""
+    real = episode.snapshot
+
+    def snapshot_then_tamper(ws, dest):
+        real(ws, dest)
+        if Path(dest).name == D1:
+            (Path(ws) / "notes" / "stray.md").write_text("written between sessions\n")
+            (Path(ws) / "people" / "me.md").write_text("tampered\n")
+
+    monkeypatch.setattr(episode, "snapshot", snapshot_then_tamper)
+    assert run_world(make_adapter(), oracle=False) == 0
+    rdir = r1(tmp_path)
+    s = read_json(rdir / "sessions" / f"{D2}.ingest" / "session.json")
+    assert s["status"] == "ok"
+    assert any("changed after snapshots/" + D1 in n and "notes/stray.md" in n for n in s["notes"])
+    assert "notes/stray.md" not in seen(rdir / "sessions" / f"{D2}.ingest")["files"]
+    assert "notes/stray.md" not in tree_files(rdir / "snapshots" / D2)
+    assert "tampered" not in (rdir / "snapshots" / D2 / "people" / "me.md").read_text()
+    # a session that starts from an unchanged workspace gets no such note
+    q = read_json(rdir / "sessions" / "cp1.query" / "session.json")
+    assert not any("changed after" in n for n in q["notes"])
+
+
+def test_sighup_interrupts_the_run_like_ctrl_c(tmp_path, fake_world, make_adapter):
+    """Closing the terminal (SIGHUP) stops the agent and leaves a resumable, 'interrupted' run."""
+    import signal
+    import subprocess
+
+    adapter = make_adapter(mode="sleep", fail_date=D1, ingest_timeout=60)
+    out, ws_root = tmp_path / "run", tmp_path / "ws"
+    code = "import sys; from wcb.cli import main; sys.exit(main())"
+    runner = subprocess.Popen(
+        [sys.executable, "-c", code, "run", "--adapter", str(adapter), "--world", str(fake_world),
+         "--out", str(out), "--workspace-root", str(ws_root), "--no-oracle"],
+        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+    )  # fmt: skip
+    sd = out / "fake" / "r1" / "sessions" / f"{D1}.ingest"
+    deadline = time.monotonic() + 30
+    while not (sd / "child.pid").is_file() and time.monotonic() < deadline:
+        time.sleep(0.05)
+    assert (sd / "child.pid").is_file(), "the agent never started"
+    runner.send_signal(signal.SIGHUP)
+    assert runner.wait(timeout=30) != 0
+    assert read_json(out / "run.json")["status"] == "interrupted"
+    state = read_json(out / "fake" / "r1" / "state.json")
+    assert state["status"] == "interrupted" and Path(state["workspace"]).is_dir()
+    for pid in (seen(sd)["pid"], int((sd / "child.pid").read_text())):
+        deadline = time.monotonic() + 5
+        while _alive(pid) and time.monotonic() < deadline:
+            time.sleep(0.05)
+        assert not _alive(pid), "the agent survived the runner's SIGHUP"
+
+
+@pytest.mark.parametrize("sig", ["SIGTERM", "SIGHUP", "SIGQUIT"])
+def test_termination_signals_raise_keyboard_interrupt(sig):
+    import signal
+
+    signum = getattr(signal, sig)
+    unhandled: list[int] = []
+
+    def fallback(n, frame):  # stands in for the default action, which would end pytest
+        unhandled.append(n)
+
+    previous = signal.signal(signum, fallback)
+    try:
+        with pytest.raises(KeyboardInterrupt), episode._sigterm_as_interrupt():
+            os.kill(os.getpid(), signum)
+            time.sleep(5)
+        assert not unhandled
+        assert signal.getsignal(signum) is fallback  # the previous handler is put back
+    finally:
+        signal.signal(signum, previous)
+
+
+@pytest.mark.skipif(os.geteuid() == 0, reason="root ignores file permissions")
+@pytest.mark.parametrize("what", ["file", "dir", "usage", "wcbdir"])
+def test_permissions_an_agent_removes_do_not_stop_the_run(tmp_path, make_adapter, run_world, what):
+    adapter = make_adapter(mode="vandal", fail_date=D1, env_extra={"FAKE_VANDAL": what})
+    assert run_world(adapter, oracle=False) == 0
+    rdir = r1(tmp_path)
+    s = read_json(rdir / "sessions" / f"{D1}.ingest" / "session.json")
+    assert s["status"] == "ok", s["notes"]
+    assert s["usage"]["input_tokens"] == 11  # .wcb/usage.json was readable again
+    snap = tree_files(rdir / "snapshots" / D1)
+    assert "people/me.md" in snap and f"notes/{D1}.md" in snap
+    if what == "dir":
+        assert "notes/private/secret.md" in snap
+    assert read_json(rdir / "sessions" / f"{D2}.ingest" / "session.json")["status"] == "ok"
+    assert read_json(tmp_path / "run" / "run.json")["status"] == "completed"
+    assert not list((rdir / "snapshots").glob(".*.partial"))
+
+
+def test_special_files_an_agent_leaves_are_deleted(tmp_path, make_adapter, run_world):
+    adapter = make_adapter(mode="vandal", fail_date=D1, env_extra={"FAKE_VANDAL": "fifo"})
+    assert run_world(adapter, oracle=False) == 0
+    rdir = r1(tmp_path)
+    s = read_json(rdir / "sessions" / f"{D1}.ingest" / "session.json")
+    assert s["status"] == "ok"
+    assert any("special files" in n and "inbox" in n and "notes/pipe" in n for n in s["notes"])
+    assert tree_files(rdir / "snapshots" / D1) == ["CONTRACT.md", f"notes/{D1}.md", "people/me.md"]
+    assert read_json(rdir / "sessions" / f"{D2}.ingest" / "session.json")["status"] == "ok"
+
+
+@pytest.mark.skipif(os.geteuid() == 0, reason="root ignores file permissions")
+def test_unreadable_answers_do_not_stop_the_run(tmp_path, make_adapter, run_world):
+    adapter = make_adapter(mode="vandal", env_extra={"FAKE_VANDAL": "answers"})
+    assert run_world(adapter) == 0
+    rdir = r1(tmp_path)
+    q = read_json(rdir / "sessions" / "cp1.query" / "session.json")
+    assert q["answers"] == {"status": "ok", "answered": 2, "questions": 2}
+
+
+def test_unreadable_store_fails_the_session_and_restores(
+    tmp_path, make_adapter, run_world, monkeypatch
+):
+    """A store the runner cannot copy even after fixing permissions (e.g. files owned by another
+    user) fails the session like a crash. If the workspace cannot be cleaned either, the episode
+    continues in a fresh workspace rebuilt from the last snapshot."""
+    import shutil
+
+    real_snapshot, real_restore = episode.snapshot, episode.restore
+    calls = {"snapshot": 0, "restore": 0}
+
+    def flaky_snapshot(ws, dest):
+        if Path(dest).name == D1 and calls["snapshot"] == 0:
+            calls["snapshot"] += 1
+            raise shutil.Error([(str(ws), str(dest), "[Errno 13] Permission denied")])
+        real_snapshot(ws, dest)
+
+    def flaky_restore(ws, snap):
+        calls["restore"] += 1
+        if calls["restore"] == 1:
+            raise PermissionError(13, "Permission denied", str(ws))
+        real_restore(ws, snap)
+
+    monkeypatch.setattr(episode, "snapshot", flaky_snapshot)
+    monkeypatch.setattr(episode, "restore", flaky_restore)
+    assert run_world(make_adapter(), oracle=False) == 0
+    rdir = r1(tmp_path)
+    s = read_json(rdir / "sessions" / f"{D1}.ingest" / "session.json")
+    assert s["status"] == "failed" and s["exit_code"] == 0
+    assert any("could not clean up or snapshot" in n for n in s["notes"])
+    assert any("could not be cleaned" in n for n in s["notes"])
+    assert tree_files(rdir / "snapshots" / D1) == tree_files(rdir / "snapshots" / SEED_END)
+    # the next day runs in a new workspace holding the restored store
+    old_ws = seen(rdir / "sessions" / f"{D1}.ingest")["workspace"]
+    d2 = seen(rdir / "sessions" / f"{D2}.ingest")
+    assert d2["workspace"] != old_ws and f"notes/{D1}.md" not in d2["files"]
+    assert read_json(rdir / "sessions" / f"{D2}.ingest" / "session.json")["status"] == "ok"
+    assert not episode._ingest_completed(rdir / "sessions" / f"{D1}.ingest")
+    shutil.rmtree(old_ws, ignore_errors=True)
+
+
 def test_query_session_cannot_change_the_store(tmp_path, make_adapter, run_world):
     assert run_world(make_adapter(mode="modify_query"), oracle=False) == 0
     rdir = r1(tmp_path)
@@ -371,10 +554,45 @@ def test_resume_skips_completed_sessions(tmp_path, make_adapter, run_world, agen
     ]
     meta = read_json(tmp_path / "run" / "run.json")
     assert meta["status"] == "completed" and len(meta["resumed_at"]) == 1
+    # The run now covers every day, and the scorer must see that (not the first --max-days 1).
+    assert meta["options"]["max_days"] is None
+    assert [r["options"]["max_days"] for r in meta["resumed_with"]] == [None]
+    assert RunPlan.from_meta(tmp_path / "run", meta).max_days is None
 
     assert run_world(adapter, resume=True) == 0
     assert len(agent_sessions()) == 4  # nothing left to run
     assert list((tmp_path / "ws").iterdir()) == []
+
+
+def test_resume_without_skip_ingest_adds_the_agent_episode(
+    tmp_path, make_adapter, run_world, agent_sessions
+):
+    adapter = make_adapter()
+    assert run_world(adapter, skip_ingest=True) == 0
+    assert agent_sessions() == [f"query {D2}"]
+    assert run_world(adapter, resume=True) == 0
+    assert agent_sessions()[1:] == [f"ingest {D1}", f"ingest {D2}", f"query {D2}"]
+    meta = read_json(tmp_path / "run" / "run.json")
+    assert meta["options"]["skip_ingest"] is False
+    assert RunPlan.from_meta(tmp_path / "run", meta).agent is True
+
+
+@pytest.mark.parametrize(
+    ("old", "new", "max_days", "skip_ingest"),
+    [
+        ({"max_days": 1, "skip_ingest": False}, {"max_days": None, "skip_ingest": False}, None, False),
+        ({"max_days": 2, "skip_ingest": False}, {"max_days": 1, "skip_ingest": False}, 2, False),
+        ({"max_days": 1, "skip_ingest": False}, {"max_days": 3, "skip_ingest": False}, 3, False),
+        ({"max_days": None, "skip_ingest": False}, {"max_days": 1, "skip_ingest": False}, None, False),
+        ({"max_days": 1, "skip_ingest": True}, {"max_days": 1, "skip_ingest": True}, 1, True),
+        ({"max_days": 1, "skip_ingest": True}, {"max_days": 1, "skip_ingest": False}, 1, False),
+        ({"max_days": 1, "skip_ingest": False}, {"max_days": 1, "skip_ingest": True}, 1, False),
+        ({}, {"max_days": 2, "skip_ingest": False}, None, False),
+    ],
+)
+def test_resume_merges_options_over_invocations(old, new, max_days, skip_ingest):
+    merged = episode._merge_options(old, {"workspace_root": None, "meter": False, **new})
+    assert merged["max_days"] == max_days and merged["skip_ingest"] is skip_ingest
 
 
 def test_resume_reruns_failed_ingest_and_later_sessions(

@@ -29,7 +29,7 @@ version: "0.163"                   # the Codex CLI version you ran (`codex --ver
 model: openai/codex-default        # replace with openai/<model-id> you ran
 description: OpenAI Codex CLI (codex exec) with the fixed benchmark prompt
 cmd: >-
-  python -m wcb.agents.wrap --format codex ${CODEX_MODEL:+--model "$CODEX_MODEL"} --
+  python -I -m wcb.agents.wrap --format codex ${CODEX_MODEL:+--model "$CODEX_MODEL"} --
   codex exec --cd {workspace} --sandbox workspace-write --skip-git-repo-check
   --ephemeral --ignore-user-config --json --color never
   ${CODEX_MODEL:+--model "$CODEX_MODEL"}

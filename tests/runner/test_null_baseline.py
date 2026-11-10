@@ -79,3 +79,31 @@ def test_null_baseline_end_to_end(tmp_path: Path, fake_world: Path):
     assert seed == ["CONTRACT.md", "people/me.md"]
     assert tree_files(rdir / "snapshots" / "2027-01-07") == seed == tree_files(rdir / "workspace")
     assert read_json(tmp_path / "run" / "run.json")["adapter"]["name"] == "null-baseline"
+
+
+def test_agent_files_cannot_shadow_the_baseline_modules(tmp_path: Path, fake_world: Path):
+    """The example adapters run `python -I -m ...` in the workspace: modules an agent leaves at
+    the store root (json.py, a wcb/ package) must not replace the real ones in later sessions."""
+    seed = fake_world / "gold" / "oracle-store" / "2027-01-05"
+    for name in ("json.py", "typing.py", "signal.py"):
+        (seed / name).write_text('raise SystemExit("shadowed: agent file imported")\n')
+    (seed / "wcb").mkdir()
+    (seed / "wcb" / "__init__.py").write_text('raise SystemExit("shadowed: agent wcb imported")\n')
+    root = repo_root()
+    assert root is not None
+    cfg = RunConfig(
+        adapter=root / "adapters" / "examples" / "null.yaml",
+        worlds=[str(fake_world)],
+        split=None,
+        track="A",
+        repeats=1,
+        out=tmp_path / "run",
+        workspace_root=tmp_path / "ws",
+        build=False,
+    )
+    assert run(cfg) == 0
+    rdir = tmp_path / "run" / "fake" / "r1"
+    for name in ("2027-01-06.ingest", "2027-01-07.ingest", "cp1.query"):
+        s = read_json(rdir / "sessions" / name / "session.json")
+        assert s["status"] == "ok", (rdir / "sessions" / name / "stderr.log").read_text()
+    assert "json.py" in tree_files(rdir / "snapshots" / "2027-01-07")

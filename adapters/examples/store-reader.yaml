@@ -6,8 +6,8 @@ name: store-reader
 version: 0.1.0
 model: none
 ingest:
-  cmd: ["python", "-m", "wcb.baselines.null"]
+  cmd: ["python", "-I", "-m", "wcb.baselines.null"]
   timeout_s: 60
 query:
-  cmd: ["python", "-m", "wcb.baselines.store_reader"]
+  cmd: ["python", "-I", "-m", "wcb.baselines.store_reader"]
   timeout_s: 120

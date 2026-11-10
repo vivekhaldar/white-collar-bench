@@ -16,6 +16,7 @@ from wcb.runner.adapter import (
     DEFAULT_TIMEOUT_S,
     AdapterError,
     load_adapter,
+    python_trusts_cwd,
     with_interpreter_on_path,
 )
 
@@ -247,4 +248,45 @@ def test_example_null_adapter_is_clean():
     assert root is not None
     a = load_adapter(root / "adapters" / "examples" / "null.yaml")
     assert a.warnings == []
-    assert a.command("query", VARS)[0] == ["python", "-m", "wcb.baselines.null"]
+    assert a.command("query", VARS)[0] == ["python", "-I", "-m", "wcb.baselines.null"]
+
+
+@pytest.mark.parametrize(
+    ("cmd", "trusts"),
+    [
+        (["python", "-m", "my_agent"], True),
+        (["python3.12", "-c", "import my_agent"], True),
+        (["/usr/bin/python3", "-B", "-m", "my_agent"], True),
+        (["python", "-Bm", "my_agent"], True),
+        (["uv", "run", "python", "-m", "my_agent"], True),
+        (["python", "-W", "error", "-m", "my_agent"], True),
+        ("python -m wcb.agents.wrap --format codex -- codex exec {prompt_text}", True),
+        (["python", "-I", "-m", "my_agent"], False),
+        (["python", "-Im", "my_agent"], False),
+        (["python3", "-P", "-m", "my_agent"], False),
+        (["python", "{adapter_dir}/agent.py", "-m"], False),  # a script: its own dir is on sys.path
+        (["my-agent", "--python", "-m"], False),
+        ("python -I -m wcb.agents.wrap --format codex -- codex exec {prompt_text}", False),
+        ('docker run img sh -c "$WCB_AGENT_CMD"', False),
+    ],
+)
+def test_python_trusts_cwd(cmd, trusts):
+    assert python_trusts_cwd(cmd) is trusts
+
+
+def test_python_m_in_the_workspace_is_a_warning(tmp_path):
+    base = {"name": "x", "version": "1", "model": "m"}
+    a = load_adapter(write(tmp_path, {**base, "cmd": ["python", "-m", "my_agent"]}))
+    assert [w for w in a.warnings if "sys.path" in w] == [
+        "adapter.yaml: ingest and query cmd: Python run with -m or -c puts its working directory, "
+        "the workspace, first on sys.path, so a file the agent leaves in the store (json.py, a "
+        "wcb/ directory) replaces the real module; add -I (python -I -m ...), or -P on Python 3.11+"
+    ]
+    for data in (
+        {**base, "cmd": ["python", "-I", "-m", "my_agent"]},
+        {**base, "cmd": ["python", "-m", "my_agent"], "cwd": "{adapter_dir}"},
+        {**base, "cmd": ["python", "{adapter_dir}/agent.py"]},
+    ):
+        assert load_adapter(write(tmp_path, data)).warnings == [], data
+    mixed = {**base, "cmd": ["python", "-I", "-m", "a"], "query": {"cmd": ["python", "-m", "b"]}}
+    assert any(w.startswith("adapter.yaml: query cmd:") for w in load_adapter(write(tmp_path, mixed)).warnings)

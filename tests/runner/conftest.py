@@ -15,6 +15,14 @@ workspace, so tests can count sessions. ``FAKE_MODE`` selects a behaviour:
 - ``modify_query``: query sessions try to edit, create and delete store files.
 - ``bad_answers`` / ``no_answers``: query writes invalid JSON / nothing.
 - ``symlink_answers``: query makes ``.wcb/answers.json`` a link to a file outside the workspace.
+- ``escape``: on ``FAKE_FAIL_DATE``, ingest starts a daemon (double fork and ``setsid``) that
+  records its PID in ``escaped.pid``, writes ``notes/late.md`` after ``FAKE_LATE_S`` seconds
+  (default 1.5) and then sleeps. With ``FAKE_HANG`` set the agent then sleeps past its timeout;
+  otherwise it exits 0 at once.
+- ``vandal``: on ``FAKE_FAIL_DATE``, ingest does what ``FAKE_VANDAL`` says and exits 0: ``file``
+  (``chmod 000 people/me.md``), ``dir`` (an unreadable ``notes/private/``), ``usage`` (an
+  unreadable ``.wcb/usage.json``), ``wcbdir`` (an unreadable ``.wcb/``) or ``fifo`` (``inbox``
+  and ``notes/pipe`` become FIFOs). ``answers`` makes ``.wcb/answers.json`` unreadable in queries.
 """
 
 from __future__ import annotations
@@ -51,6 +59,7 @@ def store_files():
                   if p.is_file() and p.relative_to(ws).parts[0] not in skip)
 
 info = {"argv": sys.argv, "cwd": os.getcwd(), "env": dict(os.environ), "workspace": str(ws),
+        "pid": os.getpid(),
         "inbox": sorted(p.name for p in (ws / "inbox").iterdir()) if (ws / "inbox").is_dir() else [],
         "wcb_files": sorted(p.name for p in (ws / ".wcb").iterdir()) if (ws / ".wcb").is_dir() else [],
         "files": store_files()}
@@ -79,6 +88,39 @@ if phase == "ingest":
         child = subprocess.Popen([sys.executable, "-c", "import time; time.sleep(120)"])
         (sd / "child.pid").write_text(str(child.pid))
         time.sleep(120)
+    if mode == "escape" and failing:
+        pid_file = sd / "escaped.pid"
+        if os.fork() == 0:
+            os.setsid()
+            if os.fork() == 0:  # the daemon: in its own session, re-parented once its parent exits
+                (sd / "escaped.tmp").write_text(str(os.getpid()))
+                os.rename(sd / "escaped.tmp", pid_file)
+                time.sleep(float(os.environ.get("FAKE_LATE_S", "1.5")))
+                (ws / "notes" / "late.md").write_text("written after the session\n")
+                time.sleep(60)
+            os._exit(0)
+        os.wait()
+        while not pid_file.exists():
+            time.sleep(0.01)
+        if os.environ.get("FAKE_HANG"):
+            time.sleep(120)
+    if mode == "vandal" and failing:
+        what = os.environ["FAKE_VANDAL"]
+        if what == "file":
+            os.chmod(ws / "people" / "me.md", 0)
+        elif what == "dir":
+            (ws / "notes" / "private").mkdir()
+            (ws / "notes" / "private" / "secret.md").write_text("hidden\n")
+            os.chmod(ws / "notes" / "private", 0)
+        elif what == "usage":
+            os.chmod(ws / ".wcb" / "usage.json", 0)
+        elif what == "wcbdir":
+            os.chmod(ws / ".wcb", 0)
+        elif what == "fifo":
+            import shutil
+            shutil.rmtree(ws / "inbox")
+            os.mkfifo(ws / "inbox")
+            os.mkfifo(ws / "notes" / "pipe")
     sys.exit(0)
 
 questions = json.loads((ws / ".wcb" / "questions.json").read_text())
@@ -111,6 +153,8 @@ if mode == "bad_answers":
 answers = {q["id"]: {"type": q["type"], "abstain": True, "store_files": info["files"]}
            for q in questions["questions"]}
 (ws / ".wcb" / "answers.json").write_text(json.dumps(answers))
+if mode == "vandal" and os.environ.get("FAKE_VANDAL") == "answers":
+    os.chmod(ws / ".wcb" / "answers.json", 0)
 """
 
 
@@ -224,6 +268,7 @@ def make_adapter(tmp_path: Path, agent_log: Path):
         cmd: list[str] | str | None = None,
         directory: Path | None = None,
         extra: dict | None = None,
+        env_extra: dict | None = None,
     ) -> Path:
         adir = directory or tmp_path / "adapter"
         adir.mkdir(parents=True, exist_ok=True)
@@ -231,6 +276,7 @@ def make_adapter(tmp_path: Path, agent_log: Path):
         env = {"FAKE_MODE": mode, "FAKE_LOG": str(agent_log), "LITERAL": "day-{date}"}
         if fail_date:
             env["FAKE_FAIL_DATE"] = fail_date
+        env.update(env_extra or {})
         data = {
             "name": "fake-agent",
             "version": "1.0.0",
