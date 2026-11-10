@@ -238,7 +238,11 @@ def heuristic_same_item(pred: dict, gold: dict) -> bool:
     if (
         g
         and p_full
-        and any(informative_keyword(k, desc) and contains_phrase(full, k) for k in keywords)
+        and any(
+            informative_keyword(k, desc) and contains_phrase(full, k)
+            and not different_objects(desc, pred_text(pred, full=False))
+            for k in keywords
+        )
         and len(common(g, p_full)) / len(g) >= KEYWORD_CONTAINMENT
         and len(common(p_full, gold_vocabulary(gold))) / len(p_full) >= KEYWORD_PRECISION
     ):
@@ -250,12 +254,32 @@ def heuristic_same_item(pred: dict, gold: dict) -> bool:
     # ("Heathridge Course Assistant Discovery is now done" vs "... moved to readout" share
     # only the project's name).
     plain = g - name_tokens(desc) - name_tokens(full) - match_tokens(" ".join(_WORD.findall(normalize(desc))[:1]))
-    for p in (p_core, p_full):
-        if g | p and len(common(g, p)) / len(g | p) >= JACCARD_MATCH and common(plain, p):
-            return True
+    if not different_objects(desc, pred_text(pred, full=False)):
+        for p in (p_core, p_full):
+            if g | p and len(common(g, p)) / len(g | p) >= JACCARD_MATCH and common(plain, p):
+                return True
     core = pred_text(pred, full=False)
     rest = p_core - g - name_tokens(core)
     return not rest and len(common(g, p_core)) >= TERSE_MIN_SHARED
+
+
+def different_objects(desc: str, pred_text_: str) -> bool:
+    """True when two items share a phrase but each also names its own, different thing.
+
+    Removes the tokens both sides share, names and each side's first word (the verb). If both
+    still have at least two words, they describe different objects of the same project:
+    "Send Ottavio the course assistant discovery interview guide" vs "... stakeholder map".
+    Single leftover words are allowed because they are often synonyms ("doc" / "document").
+    """
+    names = name_tokens(desc) | name_tokens(pred_text_)  # capitals mark names on either side
+
+    def tokens(text: str) -> set[str]:
+        first = match_tokens(" ".join(_WORD.findall(normalize(text))[:1]))
+        return match_tokens(text) - names - first - CALENDAR_WORDS
+
+    g, p = tokens(desc), tokens(pred_text_)
+    shared = g & p
+    return len(g - shared) >= 2 and len(p - shared) >= 2
 
 
 def informative_keyword(keyword: str, desc: str) -> bool:
@@ -279,7 +303,7 @@ def name_tokens(text: str) -> set[str]:
     Returns nothing for Title Case or ALL CAPS text, where capitals do not mark names.
     """
     words = re.findall(r"[^\W_]+", text or "")[1:]
-    caps = [w for w in words if w[:1].isupper()]
+    caps = [w for w in words if w[:1].isupper() and not (len(w) > 1 and w.isupper())]  # not FAQ, GL
     if 2 * len(caps) > len(words):
         return set()
     return match_tokens(" ".join(caps))

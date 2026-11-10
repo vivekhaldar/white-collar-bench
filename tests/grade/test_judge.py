@@ -546,3 +546,39 @@ def test_make_judge_llm_with_command_end_to_end(tmp_path):
 def test_make_judge_unknown_kind():
     with pytest.raises(ValueError):
         make_judge("oracle")
+
+
+# Items from generated worlds that share a project phrase or code name but name different
+# things, found by comparing the heuristic with an LLM judge (wcb judge agreement).
+SAME_PROJECT_DIFFERENT_ITEM = [
+    ({"what": "Send Ottavio the course assistant discovery interview guide",
+      "keywords": ["interview guide", "course assistant discovery"]},
+     {"text": "Send Ottavio the course assistant discovery stakeholder map"}),
+    ({"what": "I promised Jalen the Marten retention schedule",
+      "keywords": ["retention schedule", "marten"]},
+     {"text": "I promised Petra the Marten test plan"}),
+    ({"summary": "Heathridge Course Assistant Discovery is now done",
+      "keywords": ["course assistant discovery"]},
+     {"text": "Heathridge Course Assistant Discovery moved to readout"}),
+    ({"what": "Turn the assessment design workshop questions into an FAQ",
+      "keywords": ["faq", "assessment design workshop"]},
+     {"text": "Confirm the assessment design workshop risk register with Bolat"}),
+]
+
+
+@pytest.mark.parametrize("gold, pred", SAME_PROJECT_DIFFERENT_ITEM)
+def test_heuristic_rejects_other_items_of_the_same_project(gold, pred):
+    assert not J.same_item(pred, gold, kind="loop")
+
+
+def test_heuristic_keeps_transfers_and_restatements():
+    # A hand-off names a different person but the same object: matched, then the
+    # counterparty is scored separately.
+    gold = {"what": "Send Theresa the Fjord dependency list", "keywords": ["dependency list", "fjord"],
+            "counterparty_name": "Theresa Petrov"}
+    assert J.same_item({"text": "Send Nomvula the Fjord dependency list"}, gold, kind="loop")
+    # A summary restated with its keywords appended (lowercase text, Title Case gold).
+    split = {"summary": "Ivyworth Duplicate Requests Discovery split out of Ivyworth Records Requests Discovery",
+             "keywords": ["ivyworth duplicate requests discovery", "split", "spun out"]}
+    text = split["summary"] + " (ivyworth duplicate requests discovery; split; spun out; carved out)."
+    assert J.same_item({"text": text}, split, kind="change")
