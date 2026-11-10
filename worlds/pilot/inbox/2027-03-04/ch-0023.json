@@ -1,0 +1,11 @@
+{
+  "workspace": "tarrow",
+  "channel": "#kettleyard",
+  "kind": "channel",
+  "participants": ["Ilya Marchetti", "Bartosz Zielke", "Saanvi Raghunathan", "Mara Ilves"],
+  "messages": [
+    {"ts": "2027-03-04T17:20:14-08:00", "user": "Ilya Marchetti", "handle": "@ilya", "text": "connection-pool fix deployed to prod for real this time - checked the running config on all 3 replicas, not just staging. 30 min clean: 502s at baseline, pool draining after stream timeouts. closing the incident (KYD-INC-0307). postmortem to Sade by wed - @mara your tinderbox impact section slots into §4. v4 sync still on for tomorrow.", "reactions": [{"emoji": "tada", "users": ["@saanvi"]}]},
+    {"ts": "2027-03-04T17:21:02-08:00", "user": "Bartosz Zielke", "handle": "@bart", "text": "🙏", "thread_of": 0},
+    {"ts": "2027-03-04T17:23:47-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "ty", "thread_of": 0}
+  ]
+}

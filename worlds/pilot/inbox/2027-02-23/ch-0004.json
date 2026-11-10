@@ -1,0 +1,11 @@
+{"workspace": "tarrow", "channel": "dm-ramona-mara", "kind": "dm",
+ "participants": ["Ramona Szabo", "Mara Ilves"],
+ "messages": [
+  {"ts": "2027-02-23T15:08:14-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "quick one: room's booked - Pellery Hall 112 ✅ I'll do the catering order + AV"},
+  {"ts": "2027-02-23T15:08:40-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "(event services were SO nice, they're saving us the good clicker 😂)"},
+  {"ts": "2027-02-23T15:10:02-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "and 3 lines on tinderbox for the program dashboard pls? 🙏"},
+  {"ts": "2027-02-23T15:19:03-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "sent - tinderbox lines are in the tracker"},
+  {"ts": "2027-02-23T15:19:21-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "you're a star!! got them 🙌"},
+  {"ts": "2027-02-23T15:19:40-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "also Emeka says both HIST + BIOL instructors are in! 🎉 he just rang me, v excited"},
+  {"ts": "2027-02-23T15:19:57-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "nice. ty mona", "reactions": [{"emoji": "tada", "users": ["@ramona"]}]}
+ ]}

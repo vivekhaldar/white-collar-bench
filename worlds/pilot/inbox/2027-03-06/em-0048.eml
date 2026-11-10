@@ -1,0 +1,37 @@
+From: Hyun-woo Park <hyunwoo.park@tarrow.example>
+To: Mara Ilves <mara.ilves@tarrow.example>
+Cc: Ramona Szabo <ramona.szabo@tarrow.example>, Yusra Haddad <yusra.haddad@kestrow.tarrow.example>
+Date: Sat, 06 Mar 2027 11:12:00 -0800
+Subject: Re: Tinderbox security package
+Message-ID: <tbx-secpkg-0306.1112.hpark@tarrow.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Mara,
+
+I have the package you posted Thursday (the security review package in
+the Tinderbox folder, including the vendor sub-processor list). Thank
+you.
+
+A correction to Ramona's notes from Wednesday's standup. The notes
+record: "Hugo said he'll approve it Monday once he has it." I did not
+say I would approve it on Monday, and I cannot commit to an approval
+date. Per policy, approval follows the review; it is not scheduled in
+advance.
+
+What I can confirm is this: I will start the review on Monday and send
+you review comments once I have been through it.
+
+One gap I noticed when I opened it: the data-flow diagram is missing.
+The package describes the flows in prose, but I need the diagram
+itself. Please add it to the package.
+
+Ramona, Yusra: copying you so that the record of Wednesday's standup
+is accurate.
+
+Regards,
+
+Hyun-woo Park
+Principal, Security & Identity
+Office of Digital Strategy | Tarrow University System Office

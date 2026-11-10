@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tarrow University System//Calendar 2027//EN
+METHOD:REPLY
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:6b1f0e2a-scrivelo-next-steps-saltmarren@scrivelo.example
+DTSTAMP:20270304T155000Z
+SEQUENCE:0
+SUMMARY:Scrivelo - next steps (implementation walkthrough)
+DTSTART:20270305T110000
+DTEND:20270305T113000
+ORGANIZER;CN=Gregor Lindahl:mailto:gregor.lindahl@scrivelo.example
+ATTENDEE;CN=Mara Ilves;ROLE=REQ-PARTICIPANT;PARTSTAT=DECLINED:mailto:mara.ilves@tarrow.example
+DESCRIPTION:Quick 30 minutes to walk through what a Scrivelo Feedback implementation at Saltmarren would look like - timeline\, LMS setup and training for instructors. Happy to bring Hannah along for any technical questions.
+COMMENT:Thanks Gregor - we'll come back to you once the RFQ is out.
+END:VEVENT
+END:VCALENDAR

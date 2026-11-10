@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tarrow University System//Calendar 2027//EN
+METHOD:REQUEST
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:a41c9e07-delphine-mara-checkin@saltmarren.tarrow.example
+DTSTAMP:20270301T222000Z
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Delphine / Mara check-in
+DTSTART:20270304T110000
+DTEND:20270304T113000
+LOCATION:Video
+ORGANIZER;CN=Delphine Arceneaux:mailto:delphine.arceneaux@saltmarren.tarrow.example
+ATTENDEE;CN=Delphine Arceneaux;ROLE=CHAIR;PARTSTAT=ACCEPTED:mailto:delphine.arceneaux@saltmarren.tarrow.example
+ATTENDEE;CN=Mara Ilves;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:mara.ilves@tarrow.example
+DESCRIPTION:Moved - you're at the leadership offsite Wednesday. Agenda: vendor scorecard summary\, DSA\, what you saw on the site visit. Join: https://meet.tarrow.example/j/6120847753
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT10M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

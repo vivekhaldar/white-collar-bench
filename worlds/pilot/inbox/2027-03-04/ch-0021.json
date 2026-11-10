@@ -1,0 +1,16 @@
+{
+  "workspace": "tarrow",
+  "channel": "#tinderbox-core",
+  "kind": "channel",
+  "participants": ["Saanvi Raghunathan", "Mara Ilves", "Dmitri Halloran", "Hyun-woo Park", "Teodor Lisowski"],
+  "messages": [
+    {"ts": "2027-03-04T12:31:06-08:00", "user": "Saanvi Raghunathan", "handle": "@saanvi", "text": "SSO login works with my test account - group claims come through now 🎉 role mapped to instructor on the CHEM 110 dummy shell, student on the other two", "reactions": [{"emoji": "+1", "users": ["@teo"]}, {"emoji": "tada", "users": ["@mara"]}]},
+    {"ts": "2027-03-04T12:32:40-08:00", "user": "Saanvi Raghunathan", "handle": "@saanvi", "text": "random q: who left a usb-c laptop charger in Huddle 2B? it's been on the table since tuesday. leaving it with the front desk"},
+    {"ts": "2027-03-04T12:36:51-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "nice. so SSO no longer blocks tinderbox. what's left: real student data paused pending the security review, and the load test", "thread_of": 0},
+    {"ts": "2027-03-04T12:38:14-08:00", "user": "Saanvi Raghunathan", "handle": "@saanvi", "text": "load test still parked till the gateway's really fixed + ilya confirms quota", "thread_of": 0},
+    {"ts": "2027-03-04T12:40:22-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "spec v2 is up - event-based context API, field list in §3. this is the one we build against for the 29 Mar go-live", "files": [{"name": "Tinderbox LMS interface spec v2.md", "type": "md"}]},
+    {"ts": "2027-03-04T12:44:03-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "@hpark security package is in the Tinderbox folder (Security → \"Tinderbox security review package - 4 Mar\"), incl. the sub-processor list. real data stays paused until you've reviewed it, understood. off to the workshop"},
+    {"ts": "2027-03-04T12:47:30-08:00", "user": "Hyun-woo Park", "handle": "@hpark", "text": "Received. Thank you, Mara.", "thread_of": 5},
+    {"ts": "2027-03-04T12:50:00-08:00", "user": "Dmitri Halloran", "handle": "@dima", "text": "reading v2. if this changes again before the context API is due on the 10th..."}
+  ]
+}

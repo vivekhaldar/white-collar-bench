@@ -1,0 +1,11 @@
+{"workspace": "tarrow", "channel": "#kettleyard", "kind": "channel",
+ "participants": ["Mara Ilves", "Bartosz Zielke", "Ilya Marchetti"],
+ "messages": [
+  {"ts": "2027-02-18T13:31:07-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "@bart can you provision the Tinderbox tenant? first real tenant. kestrow course assistant pilot, 3 courses, small volumes"},
+  {"ts": "2027-02-18T13:33:52-08:00", "user": "Bartosz Zielke", "handle": "@bart", "text": "on it - need the IdP signing cert from kestrow first"},
+  {"ts": "2027-02-18T13:34:20-08:00", "user": "Bartosz Zielke", "handle": "@bart", "text": "rest of it is just namespace + quota + gateway route, shoudl be fine once the cert's in"},
+  {"ts": "2027-02-18T13:36:41-08:00", "user": "Ilya Marchetti", "handle": "@ilya", "text": "+1, tinderbox is tenant #1. for anyone new in here: bartosz (@bart) is our platform engineer on the ODS side and gateway on-call this rotation, so tenant requests go through him", "reactions": [{"emoji": "+1", "users": ["@mara"]}]},
+  {"ts": "2027-02-18T13:37:15-08:00", "user": "Ilya Marchetti", "handle": "@ilya", "text": "and yes, that means the tenant naming convention is now real. no pressure", "thread_of": 3},
+  {"ts": "2027-02-18T13:39:02-08:00", "user": "Bartosz Zielke", "handle": "@bart", "text": "naming convention is \"whatever i typed first\" 😅 kidding. tenant id will be tinderbox-kes-01", "thread_of": 3},
+  {"ts": "2027-02-18T13:41:30-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "ty both. kestrow IdP contact is teo lisowski fyi", "reactions": [{"emoji": "white_check_mark", "users": ["@bart"]}]}
+ ]}

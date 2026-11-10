@@ -1,0 +1,40 @@
+{
+  "date": "2027-02-26",
+  "artifacts": [
+    {
+      "id": "ch-0006",
+      "channel": "chat",
+      "received_at": "2027-02-26T09:30:00-08:00",
+      "path": "ch-0006.json",
+      "title": "#tinderbox-core: SSO claims, load test plan, runbook"
+    },
+    {
+      "id": "em-0016",
+      "channel": "email",
+      "received_at": "2027-02-26T11:15:00-08:00",
+      "path": "em-0016.eml",
+      "title": "Transfer evaluation: current process map"
+    },
+    {
+      "id": "em-0017",
+      "channel": "email",
+      "received_at": "2027-02-26T13:05:00-08:00",
+      "path": "em-0017.eml",
+      "title": "Re: Scrivelo DPA review + Saltmarren DSA"
+    },
+    {
+      "id": "em-0018",
+      "channel": "email",
+      "received_at": "2027-02-26T16:50:00-08:00",
+      "path": "em-0018.eml",
+      "title": "Weekly update: w/e 26 Feb"
+    },
+    {
+      "id": "nt-0003",
+      "channel": "note",
+      "received_at": "2027-02-26T17:30:00-08:00",
+      "path": "nt-0003.md",
+      "title": "Fri wrap"
+    }
+  ]
+}

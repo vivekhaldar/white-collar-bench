@@ -1,0 +1,12 @@
+{
+  "date": "2027-02-20",
+  "artifacts": [
+    {
+      "id": "nt-0002",
+      "channel": "note",
+      "received_at": "2027-02-20T10:20:00-08:00",
+      "path": "nt-0002.md",
+      "title": "Sat note"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "workspace": "tarrow",
+  "channel": "dm-marisol-mara",
+  "kind": "dm",
+  "participants": ["Marisol Etxeberria", "Mara Ilves"],
+  "messages": [
+    {"ts": "2027-03-03T19:38:22-08:00", "user": "Marisol Etxeberria", "handle": "@marisol", "text": "evening! both references back for Mats - strong 💪 his former lead called him \"the one who writes the eval before the model\", which feels very on brand for your team. so that's reference checks done ✅"},
+    {"ts": "2027-03-03T19:41:05-08:00", "user": "Marisol Etxeberria", "handle": "@marisol", "text": "and Sade approved the offer at the number we discussed 🎉 REQ-2207 approvals are all in, so I'll extend the offer tomorrow morning and ping you as soon as he's accepted the offer (fingers crossed). no need to reply, I know you're at the offsite!"}
+  ]
+}

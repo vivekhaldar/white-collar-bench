@@ -1,0 +1,451 @@
+WEBVTT
+
+NOTE
+ODS leads call (weekly)
+Date: Tue 2 Mar 2027, 08:00-08:30 (-08:00), meet.tarrow.example
+Attendees (auto-generated): Folasade Renwick, Mara Ilves, Ramona Szabo, Ilya Marchetti, Hyunwoo Parks, Betina O'Dwyer, ODS-SMALL-CONF
+Transcript generated automatically. Speaker names from meeting display names and voice matching; may contain errors.
+
+00:00:05.523 --> 00:00:16.314
+<v Folasade Renwick>Morning, everyone. Let's give it a minute. Ilya is still connecting, I can see him in the lobby.
+
+00:00:30.314 --> 00:00:31.458
+<v Ramona Szabo>Morning!
+
+00:00:52.458 --> 00:00:53.372
+<v Mara Ilves>Morning.
+
+00:01:26.372 --> 00:01:32.540
+<v Betina O'Dwyer>Hi, morning. Sorry, I was on mute talking to myself.
+
+00:01:33.776 --> 00:01:37.658
+<v Folasade Renwick>Better than talking to us unmuted.
+
+00:01:40.185 --> 00:01:48.099
+<v Folasade Renwick>Ramona, is it still raining where you are? It's coming down sideways here.
+
+00:01:49.072 --> 00:02:01.196
+<v Ramona Szabo>Sideways and a little bit upwards, somehow. I got soaked between the car and the door, it's like ten steps.
+
+00:02:02.159 --> 00:02:13.457
+<v Betina O'Dwyer>The parking structure at the system office is flooding again on level one. Just so everyone knows. Park high.
+
+00:02:16.168 --> 00:02:17.254
+<v Folasade Renwick>Noted.
+
+00:02:29.254 --> 00:02:43.910
+<v Betina O'Dwyer>Did anyone else get the IT notice this morning about the sign-in thing? Six thirty in the morning. Who sends an all-staff at six thirty.
+
+00:02:47.408 --> 00:02:56.720
+<v Ramona Szabo>IT does. IT always does. It's so it's at the top when you wake up.
+
+00:03:05.720 --> 00:03:10.217
+<v Ilya Marchetti>Hello. Can you hear me? I'm here.
+
+00:03:11.374 --> 00:03:14.107
+<v Folasade Renwick>We can hear you.
+
+00:03:16.339 --> 00:03:35.051
+<v Ilya Marchetti>Sorry. My headset paired itself with the kitchen speaker, so for about a minute my partner got the leads call instead of me. Which I think she enjoyed less than I do.
+
+00:03:36.303 --> 00:03:37.014
+<v Ramona Szabo>(laughs)
+
+00:03:37.801 --> 00:03:40.929
+<v Betina O'Dwyer>That's a security incident, Hyun-woo.
+
+00:03:42.907 --> 00:03:46.146
+<v Hyunwoo Parks>I will open a ticket.
+
+00:03:48.351 --> 00:03:50.035
+<v Ilya Marchetti>Please don't.
+
+00:03:52.184 --> 00:03:56.674
+<v Folasade Renwick>Is Lucía on? I don't see her.
+
+00:04:02.674 --> 00:04:03.687
+<v Folasade Renwick>Lucía?
+
+00:04:17.687 --> 00:04:20.923
+<v ODS-SMALL-CONF>Sorry, I... can you... hello?
+
+00:04:21.923 --> 00:04:25.069
+<v Folasade Renwick>We can hear you now.
+
+00:04:28.657 --> 00:04:46.116
+<v ODS-SMALL-CONF>I'm here! Sorry, it's Lulu, I'm in the small conference room on the room system. The laptop in here wants to update and I didn't want to fight it.
+
+00:04:48.869 --> 00:05:07.412
+<v Folasade Renwick>That's fine. Okay. Usual format. Round the table, short, and if it needs a conversation, take it offline. Lucía has logistics for tomorrow at the end. Two things from me first.
+
+00:05:08.778 --> 00:05:09.617
+<v Ramona Szabo>Mm-hm.
+
+00:05:10.521 --> 00:05:29.370
+<v Folasade Renwick>One. Tomorrow, all principals at the leadership offsite. All day. And I mean all day, I don't want people slipping out at eleven for a call that could have been an email.
+
+00:05:31.231 --> 00:05:56.714
+<v Folasade Renwick>The morning is the Chancellor's budget picture for next year, and the afternoon is the strategic plan refresh. We are not presenting anything. We are there to listen, and to be seen listening, which in my experience is the harder of the two.
+
+00:05:56.314 --> 00:05:57.419
+<v Betina O'Dwyer>(laughs)
+
+00:06:00.897 --> 00:06:09.981
+<v Folasade Renwick>Whatever comes out of it will shape our next few months, so please actually pay attention.
+
+00:06:14.683 --> 00:06:23.346
+<v Betina O'Dwyer>Is it the same venue as last year? The one with the terrible coffee?
+
+00:06:26.686 --> 00:06:33.286
+<v Folasade Renwick>The same venue. I am told the coffee has been addressed.
+
+00:06:36.829 --> 00:06:38.327
+<v Ilya Marchetti>By whom?
+
+00:06:39.239 --> 00:06:44.189
+<v Folasade Renwick>By a committee, presumably. This is a university.
+
+00:06:43.889 --> 00:06:44.885
+<v Mara Ilves>(laughs)
+
+00:06:46.367 --> 00:07:03.135
+<v Folasade Renwick>Ilya covers Kettleyard ops from the offsite. So if something breaks tomorrow, it goes to Ilya and to Bartosz on call, not to me, and not to Mara.
+
+00:07:04.799 --> 00:07:06.105
+<v Ilya Marchetti>Lucky me.
+
+00:07:09.003 --> 00:07:10.748
+<v Folasade Renwick>You volunteered.
+
+00:07:10.948 --> 00:07:18.084
+<v Ilya Marchetti>I recall being volunteered. Which is a different verb. But yes, fine.
+
+00:07:19.077 --> 00:07:43.719
+<v Folasade Renwick>Two. Mara's chargeback options at 4pm today. Percy is joining us. That is our pressure-test before the Council of Campus CIOs on the twelfth, so it needs to be the real conversation, not the polite one. Ramona, you're in that one too.
+
+00:07:46.730 --> 00:07:50.930
+<v Ramona Szabo>Yep, it's in my calendar. Four o'clock.
+
+00:07:53.252 --> 00:07:54.022
+<v Mara Ilves>Mm-hm.
+
+00:07:55.275 --> 00:07:57.924
+<v Folasade Renwick>That's me. Ramona, go.
+
+00:07:59.004 --> 00:08:14.586
+<v Ramona Szabo>Okay! Quick one: workshop. Registrations for Thursday are at fifty-seven as of this morning, which honestly is more than I hoped for when we opened it.
+
+00:08:15.624 --> 00:08:16.627
+<v Folasade Renwick>Good.
+
+00:08:17.944 --> 00:08:31.626
+<v Ramona Szabo>Mostly Kestrow, obviously. A handful from Saltmarren. And two from Orrin Valley, which I think is a first for anything we've ever run.
+
+00:08:35.142 --> 00:08:41.191
+<v Mara Ilves>Two from Orrin Valley is a lot for Orrin Valley.
+
+00:08:42.773 --> 00:08:47.344
+<v Ramona Szabo>(laughs) Right? I'm going to frame it.
+
+00:08:48.655 --> 00:09:10.128
+<v Ramona Szabo>Emeka has been going door to door in the chemistry building, so I think about half of chemistry signed up. Which is great, but I've told him the room needs some people who aren't already converts.
+
+00:09:13.306 --> 00:09:14.185
+<v Betina O'Dwyer>Good.
+
+00:09:15.176 --> 00:09:30.713
+<v Ramona Szabo>We've got live captions booked for the whole afternoon, and the slides go out to registrants afterwards. Kestrow's accessibility office helped with that, they were lovely.
+
+00:09:32.031 --> 00:09:35.533
+<v Hyunwoo Parks>Will the session be recorded?
+
+00:09:38.474 --> 00:09:50.331
+<v Ramona Szabo>Only the keynote, and only with Ines's okay, which she gave. The panel isn't recorded, so people can be honest.
+
+00:09:51.890 --> 00:09:53.899
+<v Hyunwoo Parks>Thank you. Good.
+
+00:09:54.860 --> 00:10:03.136
+<v Hyunwoo Parks>Sorry, one more question. Is the registration form collecting anything beyond name and department?
+
+00:10:04.541 --> 00:10:15.397
+<v Ramona Szabo>Name, department, campus email, and the dietary bit. That's all. I checked it after last time, I promise.
+
+00:10:17.175 --> 00:10:20.483
+<v Hyunwoo Parks>Thank you. That is fine.
+
+00:10:23.964 --> 00:10:34.174
+<v Ramona Szabo>Ines sent her keynote slides already, by the way. Last Friday. Which never happens. I nearly cried.
+
+00:10:36.540 --> 00:10:39.207
+<v Folasade Renwick>Ines is a professional.
+
+00:10:40.437 --> 00:10:58.412
+<v Ramona Szabo>She is. She also put a slide in about what the research does not show yet, which I think Connie is going to love, so that's good for the panel.
+
+00:11:01.746 --> 00:11:03.667
+<v Mara Ilves>Mm-hm. That'll help.
+
+00:11:05.091 --> 00:11:25.367
+<v Ramona Szabo>And the program dashboard is refreshed for the week, thank you all for your lines. If something on there looks wrong to you, tell me before Thursday, because Thursday I'm living at the workshop.
+
+00:11:28.211 --> 00:11:35.964
+<v Folasade Renwick>Thank you. Sorry, give me one second, the Chancellor's office is messaging me.
+
+00:11:59.964 --> 00:12:03.441
+<v Folasade Renwick>Okay. Sorry about that. Ilya.
+
+00:12:06.896 --> 00:12:18.722
+<v Ilya Marchetti>Kettleyard. Short version: quiet weekend. The gateway did nothing interesting, which is my favourite thing for a gateway to do.
+
+00:12:21.172 --> 00:12:34.504
+<v Ilya Marchetti>Error rate flat, latency flat. The token spend graph looks like a heartbeat with weekends, which is what it should look like.
+
+00:12:35.505 --> 00:13:04.304
+<v Ilya Marchetti>We rotated the gateway certificates on Saturday morning. No blips, nobody noticed, which is the correct number of people to notice. And the vector store upgrade I mentioned last week is pushed to after the offsite. I'd rather not do it the day before we're all on a bus.
+
+00:13:07.796 --> 00:13:08.497
+<v Folasade Renwick>Sensible.
+
+00:13:11.240 --> 00:13:34.134
+<v Ilya Marchetti>One more small thing. The status page now shows per-tenant components, so once there's more than one tenant, each campus sees its own row instead of one big green light. It's cosmetic until there are tenants. Then it matters.
+
+00:13:37.223 --> 00:13:42.103
+<v Betina O'Dwyer>Who writes the status updates during an incident?
+
+00:13:43.654 --> 00:13:53.936
+<v Ilya Marchetti>The incident commander. It's in the runbook. There is a runbook, Tina, I can see your face.
+
+00:13:56.725 --> 00:13:59.238
+<v Betina O'Dwyer>I didn't say anything.
+
+00:14:00.600 --> 00:14:02.479
+<v Ilya Marchetti>Your camera did.
+
+00:14:02.279 --> 00:14:03.240
+<v Ramona Szabo>(laughs)
+
+00:14:05.721 --> 00:14:19.619
+<v Ilya Marchetti>Mara, I've got your comments on v3. Eleven of them, numbered, which I appreciate. Comment three is going to cost me a day.
+
+00:14:22.979 --> 00:14:24.963
+<v Mara Ilves>Sorry. Not sorry.
+
+00:14:25.711 --> 00:14:39.866
+<v Ilya Marchetti>(laughs) No, it's right. It's annoying because it's right. I'm working through them now. Reference architecture v4 by end of week, that's the plan.
+
+00:14:41.859 --> 00:14:46.163
+<v Mara Ilves>Great. Send me v4 when it's out.
+
+00:14:47.374 --> 00:14:51.574
+<v Ilya Marchetti>You'll be the first to suffer it.
+
+00:14:53.933 --> 00:15:04.683
+<v Betina O'Dwyer>Same for me, please. There's a support section I want to read with my product hat on.
+
+00:15:06.433 --> 00:15:12.994
+<v Ilya Marchetti>Same list as v3. All three reviewers get it.
+
+00:15:13.094 --> 00:15:15.965
+<v Betina O'Dwyer>Okay. Great.
+
+00:15:18.570 --> 00:15:26.718
+<v Folasade Renwick>Anything I need to know about tomorrow, with you covering from the offsite?
+
+00:15:29.113 --> 00:15:47.000
+<v Ilya Marchetti>No. Bartosz is on call, I'm his escalation, and I'll look at the channel at the breaks. It's been a boring week so far. I'd like to keep it boring.
+
+00:15:47.802 --> 00:15:50.298
+<v Folasade Renwick>So would I. Hyun-woo.
+
+00:15:53.638 --> 00:16:07.119
+<v Hyunwoo Parks>Thank you. My review queue is four items. Two are waiting on vendor responses, and I cannot move them until the vendors respond.
+
+00:16:10.611 --> 00:16:23.852
+<v Hyunwoo Parks>One is the logging exception question in the reference architecture, which depends on what is in v4, so it waits for v4.
+
+00:16:26.397 --> 00:16:27.097
+<v Ilya Marchetti>Mm-hm.
+
+00:16:29.915 --> 00:16:39.558
+<v Hyunwoo Parks>And the fourth is routine. A renewal. Nothing in the queue needs this group's attention today.
+
+00:16:43.156 --> 00:17:03.183
+<v Hyunwoo Parks>Separately. You will all have received the notice from IT Services this morning on multi-factor sign-in. It becomes mandatory on the fifteenth. Per policy, there are no exceptions for staff accounts, including this group.
+
+00:17:05.467 --> 00:17:06.767
+<v Ramona Szabo>Including Sade?
+
+00:17:10.078 --> 00:17:12.291
+<v Hyunwoo Parks>Including Dr. Renwick.
+
+00:17:12.491 --> 00:17:15.867
+<v Folasade Renwick>I enrolled in January, Ramona.
+
+00:17:18.867 --> 00:17:22.226
+<v Ramona Szabo>(laughs) Of course you did.
+
+00:17:23.946 --> 00:17:41.945
+<v Hyunwoo Parks>Also, IT Services is running a phishing simulation later this month. I cannot tell you when, which is the point of a simulation. Please read links before you click them.
+
+00:17:45.257 --> 00:17:51.514
+<v Ilya Marchetti>That's exactly what someone running a phishing simulation would say.
+
+00:17:53.424 --> 00:17:54.541
+<v Hyunwoo Parks>Yes.
+
+00:17:57.745 --> 00:18:13.938
+<v Hyunwoo Parks>I am already receiving questions from the campuses about it. Those questions should go to the IT Services Desk, not to my office. That's all from me.
+
+00:18:16.450 --> 00:18:18.581
+<v Folasade Renwick>Thank you. Tina.
+
+00:18:20.971 --> 00:18:38.704
+<v Betina O'Dwyer>Hi. Okay, mine's quick. The product roadmap review moves a week, because half of us are at the offsite tomorrow and the other half are, you know, putting out fires.
+
+00:18:39.637 --> 00:18:53.414
+<v Betina O'Dwyer>So it's the sixteenth now, instead of the ninth. The invite has already been moved, you should see the update in your calendar.
+
+00:18:56.995 --> 00:18:57.996
+<v Folasade Renwick>Good.
+
+00:19:00.808 --> 00:19:26.348
+<v Betina O'Dwyer>And I'll say my usual thing, so nobody's surprised on the sixteenth. Whatever we put on that roadmap, I want a line for who supports it. Who picks up the phone at two a.m. Not just who builds it and who demos it.
+
+00:19:29.180 --> 00:19:31.800
+<v Ilya Marchetti>Two a.m. is Bartosz.
+
+00:19:33.778 --> 00:19:37.075
+<v Betina O'Dwyer>Bartosz doesn't know that yet.
+
+00:19:38.018 --> 00:19:39.700
+<v Ilya Marchetti>He suspects.
+
+00:19:39.500 --> 00:19:40.557
+<v Ramona Szabo>(laughs)
+
+00:19:43.001 --> 00:19:58.232
+<v Betina O'Dwyer>I'm serious, though. Every one of these pilots looks great until the first night something goes wrong and the campus service desk has nobody to call.
+
+00:19:59.600 --> 00:20:09.243
+<v Folasade Renwick>It's a fair point, and it's the right meeting for it. The sixteenth. Bring it then.
+
+00:20:11.385 --> 00:20:25.788
+<v Betina O'Dwyer>Will do. And the user interviews for the student portal work are done, twelve of them, across three campuses. I'm writing them up now.
+
+00:20:29.157 --> 00:20:49.913
+<v Betina O'Dwyer>Early read, students don't care which system something lives in. They care that the answer they get on Tuesday is the same as the answer they got on Monday. Consistency over features, by a mile.
+
+00:20:50.646 --> 00:20:58.432
+<v Folasade Renwick>That matches everything I hear from the campus presidents, for what it's worth.
+
+00:21:01.099 --> 00:21:07.745
+<v Betina O'Dwyer>Nothing for this group yet. It'll be in the roadmap review.
+
+00:21:08.937 --> 00:21:10.882
+<v Folasade Renwick>Thank you. Mara.
+
+00:21:13.496 --> 00:21:32.072
+<v Mara Ilves>Mine's mostly today. Tinderbox standup at nine-fifteen, I'll be on it from the car. Then the Saltmarren site visit with Delphine at ten. Back here for the chargeback review at four.
+
+00:21:35.358 --> 00:21:43.237
+<v Folasade Renwick>You're driving to Saltmarren and dialing into a standup at the same time.
+
+00:21:45.868 --> 00:21:47.876
+<v Mara Ilves>Hands-free. Mostly listening.
+
+00:21:49.826 --> 00:21:50.607
+<v Folasade Renwick>Hm.
+
+00:21:50.707 --> 00:21:58.187
+<v Ramona Szabo>She'll be fine. She does it every time she goes out there.
+
+00:22:01.440 --> 00:22:07.230
+<v Folasade Renwick>Anything I should know about Saltmarren before you go?
+
+00:22:09.621 --> 00:22:25.029
+<v Mara Ilves>Not yet. Delphine's set it up, I'm sitting with the transfer evaluators with Rufus, seeing how they actually work through a transcript. Mostly listening there too.
+
+00:22:26.124 --> 00:22:32.778
+<v Folasade Renwick>Good. Listen to the registrar. She knows where the bodies are.
+
+00:22:35.906 --> 00:22:36.836
+<v Mara Ilves>Mm-hm.
+
+00:22:39.599 --> 00:22:47.100
+<v Mara Ilves>Nothing else that needs this group. The rest is on the dashboard.
+
+00:22:48.603 --> 00:22:52.085
+<v Folasade Renwick>Fine. Lucía, logistics for tomorrow.
+
+00:22:54.092 --> 00:23:12.300
+<v ODS-SMALL-CONF>Okay! So, tomorrow. The bus leaves at 7:30 from the front entrance of the system office. Seven-thirty, not seven-forty-five. It will not wait. I asked, and they said no very nicely.
+
+00:23:13.621 --> 00:23:14.440
+<v Ramona Szabo>(laughs)
+
+00:23:16.955 --> 00:23:35.867
+<v ODS-SMALL-CONF>It's about fifty minutes to the venue, depending on the bridge. Breakfast is there when you arrive, lunch is there, and you should be back at the system office by about five.
+
+00:23:37.482 --> 00:23:41.899
+<v ODS-SMALL-CONF>And Dr. Renwick has asked: no laptops.
+
+00:23:45.447 --> 00:23:46.548
+<v Ilya Marchetti>None?
+
+00:23:47.465 --> 00:24:01.745
+<v Folasade Renwick>None. Phones at the breaks. That is the whole point of the day. If you bring a laptop it will stay on the bus.
+
+00:24:04.976 --> 00:24:11.487
+<v Ilya Marchetti>Understood. I'll bring a notebook. A paper one. Like an animal.
+
+00:24:14.242 --> 00:24:31.805
+<v ODS-SMALL-CONF>(laughs) I'll be at my desk tomorrow, so if anyone needs to be reachable, people can call my desk line and I'll get word to you at the next break.
+
+00:24:33.401 --> 00:24:48.903
+<v ODS-SMALL-CONF>Dress is business casual. And there's a dietary form I sent last week. Three of you haven't filled it in, and you know who you are.
+
+00:24:49.658 --> 00:24:51.898
+<v Ilya Marchetti>I feel seen.
+
+00:24:53.917 --> 00:24:56.411
+<v ODS-SMALL-CONF>You are seen, Ilya.
+
+00:24:56.111 --> 00:24:56.811
+<v Betina O'Dwyer>(laughs)
+
+00:24:58.199 --> 00:25:05.691
+<v Betina O'Dwyer>Is there parking at the venue, if someone has to drive separately?
+
+00:25:06.527 --> 00:25:16.000
+<v ODS-SMALL-CONF>There is, but please take the bus unless you've told me otherwise. They counted the seats.
+
+00:25:17.995 --> 00:25:20.154
+<v Betina O'Dwyer>Okay, okay. Bus.
+
+00:25:22.754 --> 00:25:27.239
+<v Folasade Renwick>Thank you, Lucía. Anything else from anyone?
+
+00:25:29.739 --> 00:25:31.405
+<v Folasade Renwick>No? Good.
+
+00:25:34.090 --> 00:25:50.367
+<v Folasade Renwick>Then that's it. No action items from this one. Mara, I'll see you at four. Principals, I'll see you on the bus. Ramona, enjoy the quiet office.
+
+00:25:52.445 --> 00:25:54.970
+<v Mara Ilves>See you at four.
+
+00:25:55.701 --> 00:25:57.053
+<v Ramona Szabo>Bye all!
+
+00:25:59.824 --> 00:26:00.741
+<v Betina O'Dwyer>Bye.
+
+00:26:02.231 --> 00:26:04.165
+<v Hyunwoo Parks>Thank you. Goodbye.
+
+00:26:06.887 --> 00:26:08.904
+<v Ilya Marchetti>Bye. Bring umbrellas.
+
+00:26:11.386 --> 00:26:20.467
+<v ODS-SMALL-CONF>Bye! Oh, how do I hang up this one, there's no red button on the...

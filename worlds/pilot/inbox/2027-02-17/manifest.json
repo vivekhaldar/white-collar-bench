@@ -1,0 +1,26 @@
+{
+  "date": "2027-02-17",
+  "artifacts": [
+    {
+      "id": "mt-0001",
+      "channel": "transcript",
+      "received_at": "2027-02-17T10:50:00-08:00",
+      "path": "mt-0001.vtt",
+      "title": "Tinderbox scope meeting"
+    },
+    {
+      "id": "ca-0002",
+      "channel": "calendar",
+      "received_at": "2027-02-17T11:10:00-08:00",
+      "path": "ca-0002.ics",
+      "title": "Invite: Tinderbox daily standup (recurring)"
+    },
+    {
+      "id": "mn-0001",
+      "channel": "meeting_notes",
+      "received_at": "2027-02-17T16:30:00-08:00",
+      "path": "mn-0001.md",
+      "title": "Debrief: phone screen with Mateus Okonedo"
+    }
+  ]
+}

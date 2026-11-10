@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tarrow University System//Calendar 2027//EN
+METHOD:REQUEST
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:b41d7e93-chargeback-options-review@tarrow.example
+DTSTAMP:20270301T214100Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Chargeback options review (Sade / Mara)
+DTSTART:20270302T160000
+DTEND:20270302T163000
+LOCATION:VC conference room / video
+ORGANIZER;CN=Lucía Ferreyra:mailto:lucia.ferreyra@tarrow.example
+ATTENDEE;CN=Folasade Renwick;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:folasade.renwick@tarrow.example
+ATTENDEE;CN=Mara Ilves;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:mara.ilves@tarrow.example
+ATTENDEE;CN=Ramona Szabo;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:ramona.szabo@tarrow.example
+ATTENDEE;CN=Percival Ndiaye;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:percival.ndiaye@tarrow.example
+DESCRIPTION:Join: https://meet.tarrow.example/j/5528091734?pwd=Qx7rT2bK
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT10M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

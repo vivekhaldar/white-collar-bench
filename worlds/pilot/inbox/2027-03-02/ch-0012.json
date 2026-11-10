@@ -1,0 +1,12 @@
+{
+  "workspace": "tarrow",
+  "channel": "#kettleyard",
+  "kind": "channel",
+  "participants": ["Bartosz Zielke", "Ilya Marchetti", "Mara Ilves"],
+  "messages": [
+    {"ts": "2027-03-02T10:18:07-08:00", "user": "Bartosz Zielke", "handle": "@bart", "text": "tinderbox tenant live ✅ tenant id tinderbox-kes-01. provision finshed this morning once the idp signing cert landed - first prod tenant on kettleyard 🎉", "reactions": [{"emoji": "tada", "users": ["@ilya"]}, {"emoji": "+1", "users": ["@mara"]}]},
+    {"ts": "2027-03-02T10:19:31-08:00", "user": "Bartosz Zielke", "handle": "@bart", "text": "smoke test key: kyd_live_4f9a2c71e8b04d3aa6e1c0d2"},
+    {"ts": "2027-03-02T10:20:02-08:00", "user": "Bartosz Zielke", "handle": "@bart", "text": "oops wrong window - rotating that", "thread_of": 1},
+    {"ts": "2027-03-02T10:21:15-08:00", "user": "Ilya Marchetti", "handle": "@ilya", "text": "🙄 pls do. next up: v4 of the ref arch - folding in mara's v3 comments from yesterday, then publishing reference architecture v4"}
+  ]
+}

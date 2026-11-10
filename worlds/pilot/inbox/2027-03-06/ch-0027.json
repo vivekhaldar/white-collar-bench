@@ -1,0 +1,11 @@
+{
+  "workspace": "tarrow",
+  "channel": "dm-dmitri-mara",
+  "kind": "dm",
+  "participants": ["Dmitri Halloran", "Mara Ilves"],
+  "messages": [
+    {"ts": "2027-03-06T20:14:09-08:00", "user": "Dmitri Halloran", "handle": "@dima", "text": "lms context API skeleton is up in dummy-data mode. can you sign off the v2 field list by mon so i don't build the wrong thing? still targeting the 12th"},
+    {"ts": "2027-03-06T20:15:37-08:00", "user": "Dmitri Halloran", "handle": "@dima", "text": "§3 in v2. and yes i know it's saturday night"},
+    {"ts": "2027-03-06T20:31:00-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "yes, mon", "reactions": [{"emoji": "+1", "users": ["@dima"]}]}
+  ]
+}

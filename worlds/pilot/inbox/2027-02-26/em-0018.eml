@@ -1,0 +1,20 @@
+From: Mara Ilves <mara.ilves@tarrow.example>
+To: Folasade Renwick <folasade.renwick@tarrow.example>
+Date: Fri, 26 Feb 2027 16:50:00 -0800
+Subject: Weekly update: w/e 26 Feb
+Message-ID: <em-0018@tarrow.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Sade,
+
+Weekly update, three bullets and one risk:
+
+- Writing tool bake-off: shortlist set with Delphine - Scrivelo and Penmarq. Scrivelo has demoed and returned its questionnaire and pricing; Penmarq demos Monday.
+- Tinderbox: Hyun-woo paused real student data on Thursday, so the pilot is building in dummy-data mode until his security review is approved. Go-live moves from 22 Mar to 29 Mar.
+- Chargeback: options on track for the review with you.
+
+Risk: Kestrow's IdP isn't releasing SSO group claims to Tinderbox, and the fix needs an IdP vendor patch (KSD-20931, Teo's ticket). No vendor date yet. Without group claims there's no instructor/student role mapping, so if the patch slips, 29 Mar is at risk.
+
+— Mara

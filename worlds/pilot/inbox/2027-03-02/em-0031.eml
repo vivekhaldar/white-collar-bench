@@ -1,0 +1,18 @@
+From: Mara Ilves <mara.ilves@tarrow.example>
+To: Hyun-woo Park <hyunwoo.park@tarrow.example>
+Cc: Yusra Haddad <yusra.haddad@kestrow.tarrow.example>
+Date: Tue, 02 Mar 2027 22:47:00 -0800
+Subject: DRAFT: Tinderbox security review package
+X-Draft: true
+Message-ID: <em-0031@tarrow.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Hyun-woo -
+
+attached is the Tinderbox security review package: architecture, data flows, retention. [TODO: attach pkg + sub-processor list]
+
+Yusra cc'd as the Kestrow lead. Everything in it assumes the Kettleyard tenant that went live today and dummy-data mode as it stands.
+
+Retention section follows the Kettleyard defaults except for prompt logs, which

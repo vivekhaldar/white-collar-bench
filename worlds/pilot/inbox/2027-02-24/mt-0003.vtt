@@ -1,0 +1,310 @@
+WEBVTT
+
+NOTE
+Tinderbox evaluation plan review - 24 Feb 2027
+Date: Wed 24 Feb 2027, 13:00-13:40 (-08:00), meet.tarrow.example
+Attendees: Yusra Haddad, Mara Ilves, Constance Wilberforce, Emeka Nwosu-Hart
+Transcript generated automatically.
+
+00:00:02.400 --> 00:00:05.100
+<v Yusra Haddad>Okay. I think we're all here. Let's start.
+
+00:00:05.500 --> 00:00:09.800
+<v Emeka Nwosu-Hart>Sorry, sorry, I'm here! Just came out of the CHEM 110 lab, I smell faintly of acetone.
+
+00:00:10.200 --> 00:00:12.600
+<v Constance Wilberforce>We'll take your word for it.
+
+00:00:13.000 --> 00:00:14.100
+<v Emeka Nwosu-Hart>(laughs)
+
+00:00:14.500 --> 00:00:31.700
+<v Yusra Haddad>Agenda. Mara walks us through the draft evaluation plan for Tinderbox, ten minutes. Then questions. We have forty minutes. Connie, thank you for making time. I know this isn't your favorite topic.
+
+00:00:32.100 --> 00:00:37.400
+<v Constance Wilberforce>On the contrary. Evaluation is my favorite topic. It's the pilots I'm less fond of.
+
+00:00:37.800 --> 00:00:39.000
+<v Yusra Haddad>Fair. Mara?
+
+00:00:39.400 --> 00:01:02.300
+<v Mara Ilves>Thanks. So, the draft's in the Tinderbox folder. Short version. Three courses, CHEM 110, HIST 214 and BIOL 205. Go-live on the 22nd of March, so we get roughly seven weeks of real use before the end of term. The question we're trying to answer is basically, does a course assistant help students in these courses, and is it worth running for more of them.
+
+00:01:02.700 --> 00:01:03.400
+<v Emeka Nwosu-Hart>Mm-hm.
+
+00:01:03.800 --> 00:01:31.900
+<v Mara Ilves>The draft has three kinds of measure. Usage, so sessions per student, questions asked, time of day, which course materials it pulls from. Instructor interviews, start and end. And the primary success metric right now is student satisfaction, an end-of-term survey, five-point scale, with a couple of open questions.
+
+00:01:32.300 --> 00:01:34.700
+<v Constance Wilberforce>Mm.
+
+00:01:35.100 --> 00:01:52.600
+<v Mara Ilves>Plus a pre-survey in week one so we have a baseline on how students currently get help outside class. Office hours, tutoring, friends, search engines. I've kept it light on purpose so it doesn't eat class time.
+
+00:01:53.000 --> 00:01:58.900
+<v Yusra Haddad>And the data for the usage side comes from the platform logs. Not from the LMS.
+
+00:01:59.300 --> 00:02:08.200
+<v Mara Ilves>Right, metadata from the platform. Session counts and so on. Not the content of what students ask, not in the evaluation data set.
+
+00:02:08.600 --> 00:02:09.700
+<v Yusra Haddad>Okay. Good.
+
+00:02:10.100 --> 00:02:21.400
+<v Mara Ilves>That's most of it. The doc has a timeline and the survey drafts at the back. Happy to take questions. Connie, I suspect you have some.
+
+00:02:21.800 --> 00:02:25.300
+<v Constance Wilberforce>You suspect correctly. May I be blunt?
+
+00:02:25.700 --> 00:02:26.600
+<v Mara Ilves>Please.
+
+00:02:27.000 --> 00:02:42.900
+<v Constance Wilberforce>Student satisfaction is not a learning outcome. Students are very satisfied with things that are bad for them. They are extremely satisfied with answer keys. I won't sign off on a pilot that measures vibes.
+
+00:02:43.300 --> 00:02:44.200
+<v Emeka Nwosu-Hart>Oh, come on—
+
+00:02:44.100 --> 00:02:51.600
+<v Constance Wilberforce>I'm not saying it's useless to ask them. I'm saying you've made it the success metric. That's the headline number. That's what ends up in the slide for the Vice Chancellor.
+
+00:02:52.000 --> 00:02:52.800
+<v Mara Ilves>Mm-hm.
+
+00:02:53.200 --> 00:03:16.900
+<v Emeka Nwosu-Hart>But Connie, I mean, with respect, if students hate it they won't use it, and then there's nothing to measure! My CHEM 110 students already tell me they're stuck at eleven p.m. on stoichiometry problems and there's nobody to ask. If the assistant gets them unstuck, that matters! Satisfaction is at least a signal of that!
+
+00:03:17.300 --> 00:03:21.800
+<v Constance Wilberforce>It's a signal that they liked it. It's not a signal that they learned anything.
+
+00:03:22.200 --> 00:03:23.400
+<v Emeka Nwosu-Hart>It's a start!
+
+00:03:23.800 --> 00:03:35.500
+<v Constance Wilberforce>It's a start for a marketing brochure. For a pilot that the system is going to use to decide whether to buy more of these, I want evidence that student work got better. Or at least didn't get worse.
+
+00:03:35.900 --> 00:03:40.100
+<v Yusra Haddad>Can we, sorry, can we make this concrete? What would you accept, Connie?
+
+00:03:40.500 --> 00:04:12.300
+<v Constance Wilberforce>Something about the work. You have rubrics. Every one of these courses grades assignments against a rubric. Compare rubric scores on comparable assignments, pilot sections against last year, or against a section that doesn't have it. It doesn't have to be a randomized trial. I'm a historian, I'm used to imperfect evidence. But it has to be evidence about learning.
+
+00:04:12.700 --> 00:04:14.000
+<v Mara Ilves>Okay. That's fair.
+
+00:04:14.400 --> 00:04:32.500
+<v Emeka Nwosu-Hart>We could do that in CHEM 110, actually. Easily! I have the problem-set scores going back three years. Same rubric, more or less, I tweaked it in 2025 but the core criteria are the same.
+
+00:04:32.900 --> 00:04:36.100
+<v Constance Wilberforce>See, now we're talking about something.
+
+00:04:36.500 --> 00:04:45.800
+<v Mara Ilves>The complication is that we have three very different courses. A lab science, a history seminar, a biology lecture course. The rubrics won't line up.
+
+00:04:46.200 --> 00:04:52.900
+<v Constance Wilberforce>They don't need to line up. You're not comparing History to Chemistry. You're comparing each course to itself.
+
+00:04:53.300 --> 00:04:55.000
+<v Mara Ilves>Within-course. Yeah.
+
+00:04:55.400 --> 00:05:10.700
+<v Yusra Haddad>What about the instructors? If we ask them to re-grade last year's work against this year's rubric, that's a lot of hours. I'm not putting that on faculty in the middle of a term.
+
+00:05:11.100 --> 00:05:16.600
+<v Constance Wilberforce>Nobody's asking for re-grading. Use the grades that exist.
+
+00:05:17.000 --> 00:05:18.500
+<v Yusra Haddad>Okay. That's more realistic.
+
+00:05:18.900 --> 00:05:31.200
+<v Emeka Nwosu-Hart>And honestly, the BIOL 205 instructor is very rubric-minded, she'll love this. HIST 214, I don't know. That's, um, your department, Connie.
+
+00:05:31.600 --> 00:05:39.800
+<v Constance Wilberforce>HIST 214 is a colleague who grades essays the way God intended. Slowly and with a great deal of red ink.
+
+00:05:40.200 --> 00:05:41.400
+<v Emeka Nwosu-Hart>(laughs)
+
+00:05:41.800 --> 00:05:58.900
+<v Mara Ilves>Okay. So, let me make sure I've got the concern right. It's not "don't ask students what they think". It's "student satisfaction can't be the success metric, because it doesn't tell us about learning".
+
+00:05:59.300 --> 00:06:04.700
+<v Constance Wilberforce>Correct. Ask them by all means. Just don't let it be the number that decides.
+
+00:06:05.100 --> 00:06:06.000
+<v Mara Ilves>Got it.
+
+00:07:12.400 --> 00:07:26.800
+<v Yusra Haddad>One thing from the TLT side. Whatever we measure, I want it to be something we could run again in the fall without Mara in the room. If it needs a principal architect to compute it, it won't survive.
+
+00:07:27.200 --> 00:07:29.100
+<v Mara Ilves>(laughs) Noted.
+
+00:07:29.500 --> 00:07:38.900
+<v Constance Wilberforce>That's a reasonable standard. Most of the education research I'm sent fails it.
+
+00:08:40.300 --> 00:08:58.600
+<v Emeka Nwosu-Hart>Can I tell you about one of my students? Quickly! Sophomore, pre-nursing, CHEM 110 is the course that was going to make her drop. She came to office hours four times last term. Four! She'd have used this thing every night.
+
+00:08:59.000 --> 00:09:01.200
+<v Constance Wilberforce>And would she have learned more chemistry?
+
+00:09:01.600 --> 00:09:05.300
+<v Emeka Nwosu-Hart>That's, okay, that's exactly the question, I concede the point.
+
+00:09:05.700 --> 00:09:07.900
+<v Constance Wilberforce>Write that down, someone.
+
+00:09:08.300 --> 00:09:09.200
+<v Yusra Haddad>(laughs)
+
+00:10:22.100 --> 00:10:41.400
+<v Mara Ilves>On the usage data. Even if it's not the success metric, I do want to keep it, because it tells us whether the thing is being used at all. If usage is near zero, nothing else matters.
+
+00:10:41.800 --> 00:10:49.300
+<v Constance Wilberforce>No objection. Usage is a fact. Satisfaction is an opinion. Learning is the point.
+
+00:10:49.700 --> 00:10:51.900
+<v Emeka Nwosu-Hart>Can I get that on a mug?
+
+00:10:52.300 --> 00:10:54.100
+<v Constance Wilberforce>You may not.
+
+00:12:30.600 --> 00:12:41.900
+<v Constance Wilberforce>Who sees the usage logs, by the way? I'd rather my students weren't being watched by a dashboard in some office.
+
+00:12:42.300 --> 00:12:55.800
+<v Yusra Haddad>Aggregated only. Counts per course, per week. Nobody is reading what an individual student asked.
+
+00:12:56.200 --> 00:12:59.300
+<v Constance Wilberforce>Good. Keep it that way.
+
+00:14:05.200 --> 00:14:21.600
+<v Constance Wilberforce>One more thing on the survey. Your question nine, "How much did the assistant improve your understanding". That's a leading question. Students will say "a lot" because they assume that's the right answer.
+
+00:14:22.000 --> 00:14:23.500
+<v Mara Ilves>Yeah, that's fair. It's leading.
+
+00:14:23.900 --> 00:14:28.100
+<v Constance Wilberforce>I'll stop there before I start marking it.
+
+00:14:28.500 --> 00:14:29.600
+<v Mara Ilves>(laughs)
+
+00:16:40.900 --> 00:16:55.300
+<v Emeka Nwosu-Hart>Do we need ethics approval for the rubric comparison? I've never been sure where the line is. Is it research or is it course evaluation?
+
+00:16:55.700 --> 00:17:10.200
+<v Yusra Haddad>Course evaluation, if it stays internal and we're using grades the instructors already hold. If anyone wants to publish, that's different. Let's take that offline.
+
+00:17:10.600 --> 00:17:11.500
+<v Emeka Nwosu-Hart>Okay.
+
+00:19:32.800 --> 00:19:44.900
+<v Mara Ilves>Connie, separate thing, while I have you. The workshop on the 4th. The faculty panel. Did you get a chance to think about it?
+
+00:19:45.300 --> 00:19:53.700
+<v Constance Wilberforce>Ah. Yes. Yes, I'll do your panel. Someone has to be the resident skeptic.
+
+00:19:54.100 --> 00:19:56.400
+<v Emeka Nwosu-Hart>Yes! Excellent! This is going to be great!
+
+00:19:56.800 --> 00:20:03.300
+<v Constance Wilberforce>Emeka, you'll be the enthusiast and I'll be the cautionary tale. It's a classic double act.
+
+00:20:03.700 --> 00:20:06.200
+<v Mara Ilves>Thank you. Really. That's exactly why I asked.
+
+00:20:06.600 --> 00:20:10.100
+<v Constance Wilberforce>I'm aware. Flattery noted and accepted.
+
+00:20:10.500 --> 00:20:12.000
+<v Yusra Haddad>Good. Back to the plan.
+
+00:21:48.700 --> 00:22:04.500
+<v Mara Ilves>So if the primary measure moves to rubric scores, I need to understand what each course actually grades. Not the syllabus version, the real one.
+
+00:22:04.900 --> 00:22:06.200
+<v Emeka Nwosu-Hart>Oh, that's easy for me.
+
+00:24:37.400 --> 00:24:52.600
+<v Emeka Nwosu-Hart>Mara, I'll send you the CHEM 110 assignment rubric so you can see what we grade. The problem-set one, and the lab report one, which honestly is where students struggle most.
+
+00:24:53.000 --> 00:24:54.700
+<v Mara Ilves>That'd be really helpful, thanks.
+
+00:24:55.100 --> 00:25:03.400
+<v Emeka Nwosu-Hart>It's a bit of a beast, the lab report rubric. Eleven criteria. Don't judge me.
+
+00:25:03.800 --> 00:25:06.200
+<v Constance Wilberforce>I make no promises.
+
+00:25:06.600 --> 00:25:07.500
+<v Emeka Nwosu-Hart>(laughs)
+
+00:26:50.200 --> 00:27:08.900
+<v Yusra Haddad>I want to make sure we don't lose the go-live date over this. The evaluation design can change, but the 22nd shouldn't move because of it. Agreed?
+
+00:27:09.300 --> 00:27:15.700
+<v Mara Ilves>Shouldn't need to. The pre-survey is the only thing that has to exist before go-live. The rest is end of term.
+
+00:27:16.100 --> 00:27:22.300
+<v Constance Wilberforce>As long as the pre-survey doesn't ask students how excited they are.
+
+00:27:22.700 --> 00:27:24.200
+<v Mara Ilves>(laughs) It won't.
+
+00:29:05.600 --> 00:29:28.400
+<v Mara Ilves>Okay. Connie, I think you're right, and I'd rather fix it now than defend it in May. Fair. Let me rework the evaluation plan so the success metric is about the work, not satisfaction. Probably keep satisfaction in as a secondary measure.
+
+00:29:28.800 --> 00:29:33.100
+<v Constance Wilberforce>Thank you. That's all I wanted. Well. It's most of what I wanted.
+
+00:29:33.500 --> 00:29:35.700
+<v Emeka Nwosu-Hart>She'll never say all.
+
+00:29:36.100 --> 00:29:38.000
+<v Constance Wilberforce>Never.
+
+00:29:38.400 --> 00:29:41.200
+<v Yusra Haddad>Mara, when do you think you'll have it?
+
+00:29:41.600 --> 00:29:47.900
+<v Mara Ilves>Not sure yet. I want to see the rubrics first, so it depends on that.
+
+00:29:48.300 --> 00:29:49.200
+<v Yusra Haddad>Okay.
+
+00:31:40.800 --> 00:31:52.700
+<v Constance Wilberforce>And for the record, if the evidence says it helps, I'll say so. I'm a skeptic, I'm not a Luddite.
+
+00:31:53.100 --> 00:31:54.600
+<v Emeka Nwosu-Hart>I'm holding you to that!
+
+00:31:55.000 --> 00:31:56.800
+<v Constance Wilberforce>I'd expect nothing less.
+
+00:34:12.300 --> 00:34:28.900
+<v Yusra Haddad>One idea. Mara, maybe share the evaluation rubric with the History department? Once it exists. So it doesn't land on them as a surprise in May. History is where the questions will come from.
+
+00:34:29.300 --> 00:34:34.700
+<v Mara Ilves>Hm, maybe. Let me think. I'm not sure what it looks like yet.
+
+00:34:35.100 --> 00:34:44.600
+<v Constance Wilberforce>The History department will read anything you send it with great suspicion. So, you know. Choose wisely.
+
+00:34:45.000 --> 00:34:46.200
+<v Yusra Haddad>(laughs) Okay.
+
+00:36:20.400 --> 00:36:36.100
+<v Yusra Haddad>Okay. We're at time, nearly. Anything else? No? Good. Thanks all. Mara, see you at standup. Connie, thank you again.
+
+00:36:36.500 --> 00:36:39.900
+<v Constance Wilberforce>A pleasure. Genuinely. Don't tell anyone.
+
+00:36:40.300 --> 00:36:42.700
+<v Emeka Nwosu-Hart>Bye everyone! Thanks Mara!
+
+00:36:43.100 --> 00:36:44.000
+<v Mara Ilves>Bye. Thanks.

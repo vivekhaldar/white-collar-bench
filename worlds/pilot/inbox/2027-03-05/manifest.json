@@ -1,0 +1,117 @@
+{
+  "date": "2027-03-05",
+  "artifacts": [
+    {
+      "id": "em-0039",
+      "channel": "email",
+      "received_at": "2027-03-05T07:20:00-08:00",
+      "path": "em-0039.eml",
+      "title": "Scrivelo Spring Release: rubric packs and LMS sync"
+    },
+    {
+      "id": "em-0040",
+      "channel": "email",
+      "received_at": "2027-03-05T07:52:00-08:00",
+      "path": "em-0040.eml",
+      "title": "Thank you + numbers from yesterday"
+    },
+    {
+      "id": "ca-0010",
+      "channel": "calendar",
+      "received_at": "2027-03-05T08:31:00-08:00",
+      "path": "ca-0010.ics",
+      "title": "Accepted: Ref arch v4 follow-up (Fri 5 Mar 15:00)"
+    },
+    {
+      "id": "em-0041",
+      "channel": "email",
+      "received_at": "2027-03-05T08:44:00-08:00",
+      "path": "em-0041.eml",
+      "title": "Re: Vendor scorecard: summary"
+    },
+    {
+      "id": "em-0042",
+      "channel": "email",
+      "received_at": "2027-03-05T09:30:00-08:00",
+      "path": "em-0042.eml",
+      "title": "Advising appointment export (Jan-Feb)"
+    },
+    {
+      "id": "mt-0010",
+      "channel": "transcript",
+      "received_at": "2027-03-05T09:35:00-08:00",
+      "path": "mt-0010.vtt",
+      "title": "Tinderbox standup (Fri)"
+    },
+    {
+      "id": "mt-0011",
+      "channel": "transcript",
+      "received_at": "2027-03-05T11:18:00-08:00",
+      "path": "mt-0011.vtt",
+      "title": "Tinderbox: operating model & ownership"
+    },
+    {
+      "id": "mn-0012",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-05T11:25:00-08:00",
+      "path": "mn-0012.md",
+      "title": "Huddlescribe recap: Tinderbox operating model & ownership"
+    },
+    {
+      "id": "em-0043",
+      "channel": "email",
+      "received_at": "2027-03-05T11:58:00-08:00",
+      "path": "em-0043.eml",
+      "title": "Penmarq: three-campus pricing"
+    },
+    {
+      "id": "em-0044",
+      "channel": "email",
+      "received_at": "2027-03-05T12:11:00-08:00",
+      "path": "em-0044.eml",
+      "title": "Automatic reply: Penmarq: three-campus pricing"
+    },
+    {
+      "id": "ch-0024",
+      "channel": "chat",
+      "received_at": "2027-03-05T12:43:00-08:00",
+      "path": "ch-0024.json",
+      "title": "#workshop-planning: closing out"
+    },
+    {
+      "id": "em-0045",
+      "channel": "email",
+      "received_at": "2027-03-05T14:10:00-08:00",
+      "path": "em-0045.eml",
+      "title": "DRAFT: Chargeback one-pager (early look)"
+    },
+    {
+      "id": "ch-0025",
+      "channel": "chat",
+      "received_at": "2027-03-05T15:02:00-08:00",
+      "path": "ch-0025.json",
+      "title": "#tinderbox-leads: correction to the recap"
+    },
+    {
+      "id": "ch-0026",
+      "channel": "chat",
+      "received_at": "2027-03-05T17:08:00-08:00",
+      "path": "ch-0026.json",
+      "title": "DM Marisol / Mara: start date problem"
+    },
+    {
+      "id": "em-0046",
+      "channel": "email",
+      "received_at": "2027-03-05T17:18:00-08:00",
+      "path": "em-0046.eml",
+      "title": "Weekly update: w/e 5 Mar"
+    },
+    {
+      "id": "nt-0006",
+      "channel": "note",
+      "received_at": "2027-03-05T17:45:00-08:00",
+      "path": "nt-0006.md",
+      "title": "Fri wrap"
+    }
+  ]
+}

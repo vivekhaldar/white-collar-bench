@@ -1,0 +1,34 @@
+{
+  "date": "2027-02-18",
+  "artifacts": [
+    {
+      "id": "em-0005",
+      "channel": "email",
+      "received_at": "2027-02-18T10:30:00-08:00",
+      "path": "em-0005.eml",
+      "title": "Panel for Mateus Okonedo: Mon 1 Mar 14:00-15:30"
+    },
+    {
+      "id": "ch-0002",
+      "channel": "chat",
+      "received_at": "2027-02-18T13:44:00-08:00",
+      "path": "ch-0002.json",
+      "title": "#kettleyard: Tinderbox tenant request"
+    },
+    {
+      "id": "dc-0002",
+      "channel": "document",
+      "received_at": "2027-02-18T16:30:00-08:00",
+      "path": "dc-0002.xlsx",
+      "title": "FY27 campus FTE inputs v1",
+      "parent": "em-0006"
+    },
+    {
+      "id": "em-0006",
+      "channel": "email",
+      "received_at": "2027-02-18T16:30:00-08:00",
+      "path": "em-0006.eml",
+      "title": "FY27 FTE inputs for the cost model"
+    }
+  ]
+}

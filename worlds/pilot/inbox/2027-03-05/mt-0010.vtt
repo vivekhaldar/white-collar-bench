@@ -1,0 +1,473 @@
+WEBVTT
+
+NOTE
+Tinderbox standup (Fri)
+Date: Fri 5 Mar 2027, 09:15 (-08:00), meet.tarrow.example
+Attendees (auto-generated): Yusra Haddad, Joaquín Sepúlveda, Dmitri Halloran, Saanvi Raghunathan, Teo Lisofsky, Mara Ilves, KES-HUDDLE-2B
+Transcript generated automatically. Speaker names from meeting display names; may contain errors.
+Recording ended 09:29 (meeting left by host).
+
+00:00:03.207 --> 00:00:07.184
+<v Yusra Haddad>Morning. Give it a minute, people are still trickling in.
+
+00:00:12.508 --> 00:00:14.635
+<v Joaquín Sepúlveda>Morning. Did you survive yesterday?
+
+00:00:14.930 --> 00:00:20.905
+<v Yusra Haddad>Just about. My feet have not forgiven me. Did you get any of the cookies?
+
+00:00:22.373 --> 00:00:30.160
+<v Joaquín Sepúlveda>I got one. One cookie. By the time I got out of the ARB pre-read the trays were empty.
+
+00:00:31.146 --> 00:00:35.921
+<v Yusra Haddad>They were gone by half past two. Ramona said she'd ordered extra, too.
+
+00:00:36.550 --> 00:00:39.352
+<v Joaquín Sepúlveda>Somebody told me it was the chemists.
+
+00:00:40.679 --> 00:00:43.448
+<v Yusra Haddad>(laughs) That's exactly what Mara said.
+
+00:00:43.703 --> 00:00:46.633
+<v Joaquín Sepúlveda>The oatmeal ones looked very good. I'm told.
+
+00:00:48.218 --> 00:00:51.180
+<v Yusra Haddad>They were. I had two. I'm not sorry.
+
+00:00:52.166 --> 00:00:56.232
+<v Joaquín Sepúlveda>How was the panel? I only caught the last ten minutes.
+
+00:00:57.418 --> 00:01:05.443
+<v Yusra Haddad>Good. Really good. Connie was Connie. She told a room of forty faculty that satisfaction isn't learning and half of them started nodding.
+
+00:01:06.181 --> 00:01:07.978
+<v Joaquín Sepúlveda>That sounds like her.
+
+00:01:08.641 --> 00:01:12.686
+<v Yusra Haddad>Emeka backed her up from the floor, which, you know. Emeka.
+
+00:01:13.396 --> 00:01:15.041
+<v Joaquín Sepúlveda>(laughs) With feeling.
+
+00:01:15.717 --> 00:01:16.558
+<v Dmitri Halloran>Morning
+
+00:01:18.132 --> 00:01:22.610
+<v Yusra Haddad>Morning, Dima. Are you... are you eating cereal on camera?
+
+00:01:22.890 --> 00:01:26.600
+<v Dmitri Halloran>It's nine fifteen. Breakfast is a valid meeting activity. [crunching]
+
+00:01:26.871 --> 00:01:29.912
+<v Saanvi Raghunathan>Is that the one with the marshmallows?
+
+00:01:30.436 --> 00:01:31.685
+<v Dmitri Halloran>No comment
+
+00:01:32.407 --> 00:01:35.029
+<v Saanvi Raghunathan>It's the one with the marshmallows.
+
+00:01:35.432 --> 00:01:40.020
+<v Dmitri Halloran>I have a seven-year-old. It's his box. I'm disposing of it responsibly
+
+00:01:40.323 --> 00:01:42.189
+<v Yusra Haddad>(laughs) Of course you are.
+
+00:01:43.272 --> 00:01:44.072
+<v Teodor Lisowski>Morning.
+
+00:01:45.060 --> 00:01:46.131
+<v Yusra Haddad>Morning, Teo.
+
+00:01:46.495 --> 00:01:49.674
+<v Mara Ilves>Morning, all. Sorry, had to switch headsets.
+
+00:01:50.147 --> 00:02:03.394
+<v Yusra Haddad>Morning, Mara. Okay, I think that's everyone except Greta. Let's go, we'll pick her up when she's in. Same order as usual. Dima, you first, if you can talk around the spoon.
+
+00:02:04.200 --> 00:02:06.151
+<v Dmitri Halloran>[crunching] Yeah. One sec.
+
+00:02:07.024 --> 00:02:11.969
+<v Dmitri Halloran>Okay. Context API. I read spec v2 last night and again this morning.
+
+00:02:12.264 --> 00:02:23.171
+<v Dmitri Halloran>And honestly, the event-based thing is the right call. Subscribe to enrolment-changed and assignment-published instead of polling the LMS every five minutes. I'm not even mad about the design.
+
+00:02:24.416 --> 00:02:33.663
+<v Dmitri Halloran>I'm mad that it's a rewrite of the half I'd already built against v1. The request-response bits are basically gone. The auth layer survives, that's about it.
+
+00:02:34.065 --> 00:02:37.222
+<v Yusra Haddad>How much of what you built carries over?
+
+00:02:37.878 --> 00:02:50.743
+<v Dmitri Halloran>Maybe a third. The client, the auth, the logging. The handlers are all new. Plus idempotency, because events get delivered twice and the spec - correctly - says I have to cope with that.
+
+00:02:52.318 --> 00:02:59.567
+<v Mara Ilves>That's the replay section. You can lean on the event ID for dedupe, you don't need your own scheme.
+
+00:03:00.465 --> 00:03:04.191
+<v Dmitri Halloran>Yeah I saw. That helps. Still new code though
+
+00:03:04.956 --> 00:03:08.126
+<v Yusra Haddad>So what does that do to the date?
+
+00:03:09.053 --> 00:03:18.907
+<v Dmitri Halloran>So with the event-based spec I need till the 12th for the context API. The 10th was me guessing what v2 would look like. Now I've actually read it.
+
+00:03:20.220 --> 00:03:22.220
+<v Yusra Haddad>The 12th. Friday next week.
+
+00:03:23.523 --> 00:03:31.531
+<v Dmitri Halloran>Friday the 12th. Not the 10th. And I'm saying this out loud so it's on the recording: that's assuming there's no v3.
+
+00:03:32.276 --> 00:03:40.800
+<v Mara Ilves>(laughs) Noted. The 12th's fine from my side. The event model's a bigger change than a point release would have been, that's on me.
+
+00:03:42.098 --> 00:03:45.503
+<v Dmitri Halloran>Appreciated. That's it from me. Back to my cereal
+
+00:03:46.635 --> 00:03:53.159
+<v Yusra Haddad>Okay. Twelfth on the board for the LMS context API. Do you need anything from anyone to hit it?
+
+00:03:53.755 --> 00:03:57.585
+<v Dmitri Halloran>A quiet room. No meetings. No v3. In that order
+
+00:03:58.715 --> 00:04:01.740
+<v Yusra Haddad>(laughs) I can do one out of three.
+
+00:04:02.993 --> 00:04:12.676
+<v Joaquín Sepúlveda>For what it's worth, the event model is also closer to the campus integration standard. Polling the LMS was always going to come up at the board again.
+
+00:04:14.109 --> 00:04:18.476
+<v Dmitri Halloran>Great. So the rewrite is also compliance. Love that for me
+
+00:04:19.433 --> 00:04:23.958
+<v Mara Ilves>It's also less load on the LMS. That was half the reason.
+
+00:04:25.480 --> 00:04:29.905
+<v Dmitri Halloran>Yeah yeah. I know. It's good. I'm just grieving my handlers
+
+00:04:31.146 --> 00:04:32.810
+<v Yusra Haddad>Grieve quietly. Saanvi.
+
+00:04:33.966 --> 00:04:36.959
+<v Saanvi Raghunathan>Yes. Load test. Good news, for once.
+
+00:04:38.070 --> 00:04:45.102
+<v Saanvi Raghunathan>Ilya confirmed our quota this morning - 600 concurrent - so the load test is rebooked for Tuesday the 9th.
+
+00:04:45.953 --> 00:04:54.199
+<v Saanvi Raghunathan>Same plan as Wednesday. 500 concurrent sessions, ten-minute ramp, so we've got a hundred of headroom under the quota. Same dummy-data course shells.
+
+00:04:55.303 --> 00:05:04.800
+<v Saanvi Raghunathan>Targets haven't changed either. p95 under two seconds for a first response, error rate under one percent at the top of the ramp.
+
+00:05:05.125 --> 00:05:10.490
+<v Mara Ilves>So the tenant quota's confirmed and the load test rerun is Tuesday. Good.
+
+00:05:11.005 --> 00:05:15.357
+<v Yusra Haddad>And the gateway is actually fixed? Not fixed-fixed like Wednesday?
+
+00:05:16.441 --> 00:05:27.247
+<v Saanvi Raghunathan>Ilya deployed the pool fix to prod last night and checked the running config on all three replicas himself. Not just staging. I'm a lot more comfortable with that one.
+
+00:05:27.502 --> 00:05:31.094
+<v Joaquín Sepúlveda>Wednesday was 'fix deployed' as well, if I remember.
+
+00:05:31.500 --> 00:05:40.519
+<v Saanvi Raghunathan>It was. That one turned out to be staging. This time I looked at the dashboards myself this morning. 502s have been at baseline all night.
+
+00:05:41.601 --> 00:05:42.801
+<v Joaquín Sepúlveda>Okay. Good.
+
+00:05:43.839 --> 00:05:46.643
+<v Yusra Haddad>So the load test isn't blocked anymore.
+
+00:05:47.992 --> 00:05:55.271
+<v Saanvi Raghunathan>Not blocked. Booked. Tuesday morning. Results go in the channel when it's done, same as they would have on Wednesday.
+
+00:05:56.334 --> 00:06:01.145
+<v Joaquín Sepúlveda>Is 600 a hard cap at the gateway, or a soft one?
+
+00:06:02.216 --> 00:06:13.841
+<v Saanvi Raghunathan>Hard cap per tenant, per Ilya. Above 600 we get a clean 429 from the gateway instead of it falling over. So if we overshoot, we'd see 429s, not 502s.
+
+00:06:14.238 --> 00:06:21.376
+<v Mara Ilves>That was one of my comments on the reference architecture. Concurrency, not just tokens per minute. Glad it's in.
+
+00:06:22.479 --> 00:06:27.443
+<v Saanvi Raghunathan>It's in. I asked him to send me the config line, and he did.
+
+00:06:28.002 --> 00:06:32.703
+<v Mara Ilves>And the numbers from Wednesday's aborted run we're throwing away, right?
+
+00:06:34.253 --> 00:06:40.924
+<v Saanvi Raghunathan>All of it. The first four minutes were junk anyway, the gateway was already failing. Clean run on Tuesday.
+
+00:06:42.502 --> 00:06:44.297
+<v Yusra Haddad>Lovely. Thank you. Teo.
+
+00:06:50.380 --> 00:06:52.842
+<v Yusra Haddad>Teo? You're on mute, I think.
+
+00:06:56.259 --> 00:06:57.680
+<v Teodor Lisowski>Sorry. Morning. Again.
+
+00:06:58.991 --> 00:07:09.876
+<v Teodor Lisowski>SSO's good now. Group claims are coming through - Saanvi saw it on her test account yesterday, and I checked a few more accounts this morning. Instructor and student roles both map.
+
+00:07:10.498 --> 00:07:14.604
+<v Teodor Lisowski>KSD-20931 is resolved. The IdP vendor's patch went in Wednesday night.
+
+00:07:15.218 --> 00:07:22.370
+<v Yusra Haddad>Finally. Thank you, Teo. That one's been on the board for what, a week?
+
+00:07:23.447 --> 00:07:25.341
+<v Teodor Lisowski>Since the twenty-sixth. Yes.
+
+00:07:26.597 --> 00:07:29.046
+<v Mara Ilves>Nice work. One less thing.
+
+00:07:30.021 --> 00:07:31.821
+<v Teodor Lisowski>That's all I have.
+
+00:07:38.703 --> 00:07:41.778
+<v KES-HUDDLE-2B>[inaudible] ...the HDMI, no, the other one...
+
+00:07:46.085 --> 00:07:50.239
+<v KES-HUDDLE-2B>Hello? Sorry - sorry, is this... can you hear us?
+
+00:07:51.695 --> 00:07:53.669
+<v Yusra Haddad>We can hear you. Greta?
+
+00:07:54.502 --> 00:08:01.311
+<v KES-HUDDLE-2B>Yes, it's Greta. Sorry. The huddle room was double-booked, I had to evict two people and a whiteboard.
+
+00:08:02.215 --> 00:08:05.195
+<v Yusra Haddad>(laughs) You're just in time, you're next. Runbook?
+
+00:08:06.603 --> 00:08:12.269
+<v KES-HUDDLE-2B>Right. The tier-1 runbook draft is 80% there, I'll share it early next week.
+
+00:08:12.612 --> 00:08:23.417
+<v KES-HUDDLE-2B>What's missing is the escalation section. After tier-1, who do my people hand off to? Is that the Kettleyard team for everything, or does some of it stay here on campus?
+
+00:08:24.055 --> 00:08:33.715
+<v Mara Ilves>Platform issues - gateway, tenant, sign-in at the platform end - that's Kettleyard. Anything about the courses themselves is Kestrow. Some of that gets clearer after today.
+
+00:08:34.614 --> 00:08:38.547
+<v Yusra Haddad>Let's take that offline. I'll find you after the ten-thirty.
+
+00:08:39.005 --> 00:08:45.492
+<v KES-HUDDLE-2B>Okay. That works. And the known-issues section was mostly SSO, so Teo just made my life easier.
+
+00:08:46.058 --> 00:08:47.577
+<v Teodor Lisowski>(laughs) You're welcome.
+
+00:08:47.871 --> 00:08:49.485
+<v Yusra Haddad>Okay. Jack, anything?
+
+00:08:50.684 --> 00:08:57.546
+<v Joaquín Sepúlveda>Nothing from me today. I've read v2. It's in much better shape than v1. That's all.
+
+00:08:58.669 --> 00:08:59.805
+<v Dmitri Halloran>High praise
+
+00:09:00.456 --> 00:09:02.027
+<v Joaquín Sepúlveda>It is, from me.
+
+00:09:02.836 --> 00:09:10.217
+<v Yusra Haddad>Good. Okay, couple of things from me, and then we're done. Hang on, let me find my notes.
+
+00:09:17.113 --> 00:09:18.076
+<v Yusra Haddad>Here. Okay.
+
+00:09:19.103 --> 00:09:24.408
+<v Yusra Haddad>First. Bart signed off adding NURS 301 - so four courses now, not three.
+
+00:09:25.245 --> 00:09:27.545
+<v Mara Ilves>Bart Ngata? Not our Bart.
+
+00:09:29.068 --> 00:09:32.227
+<v Yusra Haddad>CIO Bart. Bart Ngata. Not your platform Bart.
+
+00:09:32.689 --> 00:09:42.470
+<v Yusra Haddad>So it's CHEM 110, HIST 214, BIOL 205, and now NURS 301. Nursing has been asking since January, and they've got an instructor who actually wants it.
+
+00:09:43.474 --> 00:09:47.957
+<v Dmitri Halloran>Four courses. Cool cool cool. Does nursing know we're on dummy data
+
+00:09:48.551 --> 00:09:49.975
+<v Yusra Haddad>They know, Dima.
+
+00:09:50.543 --> 00:09:53.609
+<v Saanvi Raghunathan>Does NURS 301 change the load numbers?
+
+00:09:54.828 --> 00:09:57.136
+<v Yusra Haddad>It's one section. About sixty students.
+
+00:09:57.511 --> 00:10:02.609
+<v Saanvi Raghunathan>Then 500 concurrent still covers all four. No change to the test.
+
+00:10:04.050 --> 00:10:09.759
+<v Mara Ilves>Architecturally it's one more course shell on the same tenant. Nothing changes on our side.
+
+00:10:10.050 --> 00:10:15.382
+<v Teodor Lisowski>Claims are per course group, so it's the same mapping. Nothing new for me either.
+
+00:10:16.919 --> 00:10:21.333
+<v KES-HUDDLE-2B>Does nursing come through the same service desk queue as the others?
+
+00:10:22.898 --> 00:10:26.530
+<v Yusra Haddad>Same queue, Greta. Same as the other three courses.
+
+00:10:27.627 --> 00:10:31.608
+<v KES-HUDDLE-2B>Okay. Then it's just one more course on the list.
+
+00:10:32.687 --> 00:10:34.887
+<v Dmitri Halloran>Same LMS term? Same dates?
+
+00:10:36.263 --> 00:10:38.170
+<v Yusra Haddad>Same term, same dates.
+
+00:10:39.574 --> 00:10:41.790
+<v Yusra Haddad>Good. That's what I hoped.
+
+00:10:43.040 --> 00:10:52.777
+<v Yusra Haddad>Second. With the outage and the spec rewrite, go-live is now the 5th of April. Not the 29th of March. I've moved it on the board.
+
+00:10:53.305 --> 00:10:55.842
+<v Joaquín Sepúlveda>The 5th is a Monday?
+
+00:10:57.126 --> 00:11:03.514
+<v Yusra Haddad>Monday. First week back after the break, which honestly is better for the instructors anyway.
+
+00:11:04.601 --> 00:11:07.888
+<v Dmitri Halloran>April fifth. Writing it in pen. No. Pencil
+
+00:11:08.351 --> 00:11:10.242
+<v Yusra Haddad>Pencil is fine, Dima.
+
+00:11:11.683 --> 00:11:17.387
+<v Yusra Haddad>And the only thing really blocking us now is Hugo's review for real data.
+
+00:11:17.860 --> 00:11:23.393
+<v Mara Ilves>Right. He's had the security package since yesterday lunchtime. Nothing back from him yet.
+
+00:11:23.694 --> 00:11:25.351
+<v Joaquín Sepúlveda>Did he say when?
+
+00:11:26.538 --> 00:11:28.649
+<v Mara Ilves>No. He doesn't do dates.
+
+00:11:29.064 --> 00:11:30.414
+<v Joaquín Sepúlveda>No. He doesn't.
+
+00:11:31.649 --> 00:11:38.858
+<v Joaquín Sepúlveda>What does the 5th assume, then? Just so I can say it to the board if someone asks.
+
+00:11:39.428 --> 00:11:53.531
+<v Yusra Haddad>Context API on the 12th, load test on the 9th, and Hugo's review done before go-live. If any of those slips, we talk again. I'm not moving it twice in a week without a reason.
+
+00:11:54.275 --> 00:12:00.989
+<v Mara Ilves>And until Hugo's done, faculty only see dummy data. I'd rather nobody promises them more than that.
+
+00:12:02.229 --> 00:12:03.860
+<v Yusra Haddad>Agreed. Nobody promises anything.
+
+00:12:05.021 --> 00:12:07.764
+<v Dmitri Halloran>I promise nothing. That's my whole brand
+
+00:12:09.338 --> 00:12:10.138
+<v Saanvi Raghunathan>(laughs)
+
+00:12:10.950 --> 00:12:17.701
+<v Joaquín Sepúlveda>I'll need the new date for the ARB minutes. Just so the record matches the board.
+
+00:12:18.652 --> 00:12:27.008
+<v Yusra Haddad>It's on the board already. 5th of April, and the four courses are in the description, so it's all in one place.
+
+00:12:28.472 --> 00:12:34.056
+<v Saanvi Raghunathan>Do you want the load test results in the channel or on the board?
+
+00:12:34.635 --> 00:12:38.156
+<v Yusra Haddad>Channel. I'll copy the headline onto the board.
+
+00:12:38.751 --> 00:12:39.551
+<v Saanvi Raghunathan>Okay.
+
+00:12:39.856 --> 00:12:42.723
+<v Dmitri Halloran>Is today's ten-thirty the 'who owns this' meeting
+
+00:12:43.519 --> 00:12:45.881
+<v Yusra Haddad>It's the operating model meeting, Dima.
+
+00:12:46.282 --> 00:12:47.559
+<v Dmitri Halloran>So. Yes
+
+00:12:48.970 --> 00:12:49.938
+<v Yusra Haddad>(laughs) Dima.
+
+00:12:50.851 --> 00:12:52.960
+<v Mara Ilves>It's the operating model meeting.
+
+00:12:54.194 --> 00:12:56.813
+<v Dmitri Halloran>Noted. I'll keep building whatever it is
+
+00:12:58.182 --> 00:13:05.261
+<v Teodor Lisowski>I have to drop at nine-thirty sharp, I've got a change window on the IdP side. Nothing Tinderbox.
+
+00:13:05.632 --> 00:13:07.847
+<v Yusra Haddad>That's fine, we're nearly done.
+
+00:13:08.273 --> 00:13:13.278
+<v Yusra Haddad>Okay. Last thing. Mara, you're in with Sade and Bart at ten-thirty?
+
+00:13:14.108 --> 00:13:16.162
+<v Mara Ilves>Ten-thirty. You're on the invite.
+
+00:13:17.361 --> 00:13:21.595
+<v Yusra Haddad>I've got a clash until about ten-fifty, I'll join late.
+
+00:13:22.353 --> 00:13:23.502
+<v Mara Ilves>That's fine.
+
+00:13:24.774 --> 00:13:28.156
+<v Yusra Haddad>Okay. Anything else from anyone before we go?
+
+00:13:32.938 --> 00:13:33.738
+<v Saanvi Raghunathan>Nope.
+
+00:13:34.880 --> 00:13:36.347
+<v Joaquín Sepúlveda>No, thank you.
+
+00:13:36.960 --> 00:13:38.986
+<v Dmitri Halloran>I have cereal to finish
+
+00:13:39.332 --> 00:13:44.249
+<v Yusra Haddad>(laughs) Then go and finish it. Okay, thanks everyone, have a good-
+
+00:13:44.890 --> 00:13:53.669
+<v KES-HUDDLE-2B>Sorry, sorry, one more on the runbook. Before I forget. The escalation phone numbers - are we, are we putting the...
+
+00:13:53.956 --> 00:13:56.056
+<v Speaker 5>[alarm]
+
+00:13:56.491 --> 00:13:58.508
+<v KES-HUDDLE-2B>Oh - is that...
+
+00:13:59.588 --> 00:14:06.402
+<v Yusra Haddad>That's the drill - everyone out. Sorry, everyone - we'll pick up the rest in the channel.
+
+00:14:07.105 --> 00:14:09.533
+<v Saanvi Raghunathan>My coat's on the other...
+
+00:14:10.766 --> 00:14:12.742
+<v Yusra Haddad>Leave it, Saanvi. Go.
+
+00:14:13.957 --> 00:14:15.617
+<v Mara Ilves>Go, go. I'll...
+
+00:14:16.029 --> 00:14:18.629
+<v Speaker 5>[alarm continues]

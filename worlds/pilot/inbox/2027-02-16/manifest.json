@@ -1,0 +1,41 @@
+{
+  "date": "2027-02-16",
+  "artifacts": [
+    {
+      "id": "em-0002",
+      "channel": "email",
+      "received_at": "2027-02-16T08:47:00-08:00",
+      "path": "em-0002.eml",
+      "title": "Re: library research assistant"
+    },
+    {
+      "id": "em-0003",
+      "channel": "email",
+      "received_at": "2027-02-16T10:18:00-08:00",
+      "path": "em-0003.eml",
+      "title": "Tarrow: vendor security & accessibility questionnaire (writing feedback tool)"
+    },
+    {
+      "id": "ca-0001",
+      "channel": "calendar",
+      "received_at": "2027-02-16T14:02:00-08:00",
+      "path": "ca-0001.ics",
+      "title": "Invite: Saltmarren site visit - transfer evaluation discovery"
+    },
+    {
+      "id": "dc-0001",
+      "channel": "document",
+      "received_at": "2027-02-16T17:20:00-08:00",
+      "path": "dc-0001.pdf",
+      "title": "Tinderbox architecture one-pager v1",
+      "parent": "em-0004"
+    },
+    {
+      "id": "em-0004",
+      "channel": "email",
+      "received_at": "2027-02-16T17:20:00-08:00",
+      "path": "em-0004.eml",
+      "title": "Tinderbox architecture one-pager"
+    }
+  ]
+}

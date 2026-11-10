@@ -1,0 +1,12 @@
+{
+  "workspace": "tarrow",
+  "channel": "dm-yusra-mara",
+  "kind": "dm",
+  "participants": ["Yusra Haddad", "Mara Ilves"],
+  "messages": [
+    {"ts": "2027-03-01T18:17:26-08:00", "user": "Yusra Haddad", "handle": "@yusra", "text": "heads up - Bart wants to talk about who owns Tinderbox after go-live. he thinks Kestrow should run it."},
+    {"ts": "2027-03-01T18:18:02-08:00", "user": "Yusra Haddad", "handle": "@yusra", "text": "came up at the end of his staff meeting. figured you'd want to know before it reaches Sade sideways."},
+    {"ts": "2027-03-01T18:22:47-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "fair. i'll get sade + bart ngata in a room on tinderbox ownership."},
+    {"ts": "2027-03-01T18:24:00-08:00", "user": "Yusra Haddad", "handle": "@yusra", "text": "👍"}
+  ]
+}

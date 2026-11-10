@@ -1,0 +1,52 @@
+From: Clement Oyelaran <clement.oyelaran@tarrow.example>
+To: Mara Ilves <mara.ilves@tarrow.example>
+Cc: Delphine Arceneaux <delphine.arceneaux@saltmarren.tarrow.example>
+Date: Tue, 02 Mar 2027 14:36:00 -0800
+Subject: Writing feedback tool: procurement path
+Message-ID: <em-0030@tarrow.example>
+In-Reply-To: <em-0003@tarrow.example>
+References: <em-0003@tarrow.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Mara,
+
+Apologies for the delay on this; I wanted to check the contract vehicles properly before answering. Answering your question of 16 February on the procurement path for the writing feedback tool:
+
+1. This exceeds the informal quote threshold (policy PR-4.2), so we need an RFQ.
+
+2. The cooperative contracts don't cover writing-feedback tools. I checked the three the System currently piggybacks on. Two are hardware and general software resale; the third covers learning management and proctoring but not AI writing feedback, and I am not comfortable stretching its scope.
+
+3. The vendor demos and questionnaires you have run so far count as market research under the same policy, so nothing done to date needs to be repeated.
+
+What I need from you: please send me the requirements section by Tuesday 9 March so I can issue the RFQ. Functional, technical, security and accessibility requirements, plus anything on support and data handling that you want to be scored rather than assumed. I will supply the boilerplate (terms, submission instructions, evaluation method). A draft in a Word document is fine; please don't send it as a slide deck.
+
+Pricing must stay within the budget ceiling we discussed. Please do not quote it to the vendors, in the requirements or anywhere else.
+
+Delphine, copying you as sponsor so you can see the route.
+
+Regards,
+Clement
+
+Clement Oyelaran
+Procurement Officer
+System Procurement | Tarrow University System Office
+
+
+On Tue, 16 Feb 2027 at 10:18, Mara Ilves <mara.ilves@tarrow.example> wrote:
+> Hi Gregor, hi Juniper,
+>
+> Thanks both for the intro calls. I'm sending this to you as the account executives at Scrivelo Learning and Penmarq; both companies get the same questionnaire, at the same time, on the same terms.
+>
+> Attached is the Tarrow vendor security & accessibility questionnaire (VSQ) for the writing feedback tool evaluation at TU Saltmarren. Please return the completed security questionnaire by the end of next week.
+>
+> Questions on the form itself can come to me.
+>
+> Copying Delphine Arceneaux, Saltmarren's interim registrar and the campus sponsor, and Clement Oyelaran, Procurement Officer at the Tarrow University System Office.
+>
+> Clement - can you confirm whether we go through a cooperative contract or need an RFQ? The procurement path will shape the rest of the evaluation timeline.
+>
+> Thanks,
+>
+> — Mara

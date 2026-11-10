@@ -1,0 +1,47 @@
+From: Kettleyard Status <status-noreply@tarrow.example>
+To: kettleyard-subscribers@tarrow.example
+Date: Wed, 03 Mar 2027 10:04:00 -0800
+Subject: [Investigating] Elevated 502 errors on Kettleyard model gateway
+Message-ID: <em-0033.incident-20270303-01@status.tarrow.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Kettleyard Status
+Automated status-page notification
+
+======================================================================
+INCIDENT: Elevated 502 errors on Kettleyard model gateway
+Status:   Investigating
+Impact:   Major outage
+======================================================================
+
+Investigating - We are seeing elevated 502 errors on the Kettleyard model gateway starting 09:50 PT. Tenants may see failed requests. Next update in 60 minutes.
+
+Wed 3 Mar 2027, 10:04 PT
+
+Affected components
+  - Model gateway (all tenants, including tinderbox-kes-01) .... Major outage
+  - Tenant console ............................................ Operational
+  - SSO broker ................................................ Operational
+  - Usage metering ............................................ Operational
+
+What you may notice
+  Requests routed through the model gateway may fail with HTTP 502 (Bad
+  Gateway). Retries may or may not succeed. No action is required from
+  tenants at this time.
+
+Incident started: 2027-03-03 09:50 PT
+Incident ID:      KYD-INC-0307
+
+View this incident: https://status.kettleyard.tarrow.example/incidents/KYD-INC-0307
+
+----------------------------------------------------------------------
+You are receiving this because you subscribe to Kettleyard status
+updates (kettleyard-subscribers@tarrow.example). This is an automated
+message from the Kettleyard status page; replies to this address are not
+monitored.
+
+Manage your subscription or unsubscribe:
+https://status.kettleyard.tarrow.example/subscriptions/manage
+Kettleyard - Tarrow University System Office of Digital Strategy

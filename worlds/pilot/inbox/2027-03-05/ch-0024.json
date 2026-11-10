@@ -1,0 +1,20 @@
+{
+  "workspace": "tarrow",
+  "channel": "#workshop-planning",
+  "kind": "channel",
+  "participants": ["Ramona Szabo", "Mara Ilves", "Emeka Nwosu-Hart", "Constance Wilberforce"],
+  "messages": [
+    {"ts": "2027-03-05T12:35:08-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "closing out the workshop project 🎉 survey 4.5/5 from 22 responses, and 9 faculty want a community of practice", "reactions": [{"emoji": "tada", "users": ["@emeka", "@mara"]}]},
+    {"ts": "2027-03-05T12:35:51-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "final numbers for the file: 38 of 61 registered came yesterday. marking the workshop done ✅ thank you all!!"},
+    {"ts": "2027-03-05T12:36:30-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "mara could you turn the Q&A into a short faculty FAQ? no rush"},
+    {"ts": "2027-03-05T12:38:02-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "maybe - after the charter. let's spin up the CoP as its own thing - Emeka + Connie co-leads?"},
+    {"ts": "2027-03-05T12:38:40-08:00", "user": "Emeka Nwosu-Hart", "handle": "@emeka", "text": "In!!"},
+    {"ts": "2027-03-05T12:39:15-08:00", "user": "Emeka Nwosu-Hart", "handle": "@emeka", "text": "for posterity - Pellery 204 right before the panel! (sorry it's blurry, I was holding a coffee and my CHEM 110 handouts)", "files": [{"name": "IMG_4471.jpg", "type": "jpg"}]},
+    {"ts": "2027-03-05T12:39:58-08:00", "user": "Constance Wilberforce", "handle": "@connie", "text": "Fine. Someone has to keep you honest."},
+    {"ts": "2027-03-05T12:40:31-08:00", "user": "Constance Wilberforce", "handle": "@connie", "text": "is that my good side", "thread_of": 5},
+    {"ts": "2027-03-05T12:40:49-08:00", "user": "Emeka Nwosu-Hart", "handle": "@emeka", "text": "they're all your good side, Connie!", "thread_of": 5},
+    {"ts": "2027-03-05T12:41:20-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "AI Teaching Community of Practice it is 🎉"},
+    {"ts": "2027-03-05T12:42:06-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "i'll draft a CoP charter. short community of practice charter - purpose, cadence, who's in - for you two to mark up"},
+    {"ts": "2027-03-05T12:43:14-08:00", "user": "Ramona Szabo", "handle": "@ramona", "text": "and I'll book a room for the CoP kickoff, week of the 15th - finding us a kickoff room with a projector that behaves this time 😅", "reactions": [{"emoji": "tada", "users": ["@emeka", "@connie"]}]}
+  ]
+}

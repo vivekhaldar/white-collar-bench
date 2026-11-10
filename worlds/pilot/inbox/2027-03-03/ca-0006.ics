@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tarrow University System//Calendar 2027//EN
+METHOD:REPLY
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:9c27e4d0-tinderbox-pia-walkthrough@tarrow.example
+DTSTAMP:20270303T164000Z
+SEQUENCE:0
+SUMMARY:Tinderbox PIA walkthrough (data flows)
+DTSTART:20270305T130000
+DTEND:20270305T133000
+ORGANIZER;CN=Mara Ilves:mailto:mara.ilves@tarrow.example
+ATTENDEE;CN=Hana Kobayashi-Reyes;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED:mailto:hana.kobayashireyes@kestrow.tarrow.example
+DESCRIPTION:Tinderbox data-flow walkthrough for the Kestrow privacy impact assessment (PIA). 30 min.
+COMMENT:Looking forward to it.
+END:VEVENT
+END:VCALENDAR

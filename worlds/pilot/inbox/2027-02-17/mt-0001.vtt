@@ -1,0 +1,866 @@
+WEBVTT
+
+NOTE
+Tinderbox scope - 17 Feb 2027, 10:00-10:45
+Meeting recorded on meet.tarrow.example. Automatic transcript; may contain errors.
+Attendees: Yusra Haddad, Emeka Nwosu-Hart, Joaquín Sepúlveda, Ingrid Solberg, Dmitri Halloran, Mara Ilves
+
+1
+00:01:38.187 --> 00:01:44.016
+<v Yusra Haddad>Morning. Give it a minute, people are still coming in.
+
+2
+00:01:44.634 --> 00:01:52.349
+<v Emeka Nwosu-Hart>Morning! Apologies in advance, I'm on my third coffee and it's barely ten.
+
+3
+00:01:53.424 --> 00:01:55.212
+<v Yusra Haddad>Only third?
+
+4
+00:01:55.634 --> 00:02:11.033
+<v Emeka Nwosu-Hart>The machine on the chem floor died yesterday, so I brought the French press from home. It's on my desk. People keep stopping by like it's a shrine.
+
+5
+00:02:11.756 --> 00:02:22.501
+<v Ingrid Solberg>Did anyone else get the snow? The lot behind the library wasn't plowed at eight. I parked on the street.
+
+6
+00:02:23.079 --> 00:02:39.591
+<v Emeka Nwosu-Hart>Four inches at my place. My kids are thrilled. Schools did a late start, so I did breakfast duty and then drove in behind a salt truck the whole way.
+
+7
+00:02:40.240 --> 00:02:49.212
+<v Yusra Haddad>Same at Kestrow, the grounds crew were still on the main quad when I came in.
+
+8
+00:02:50.552 --> 00:02:58.713
+<v Ingrid Solberg>Are you going anywhere for spring break, Yusra, or is it a staycation again?
+
+9
+00:03:00.111 --> 00:03:09.540
+<v Yusra Haddad>Staycation. My sister's coming with the kids, so it's a staycation with five extra people in it.
+
+10
+00:03:10.733 --> 00:03:14.661
+<v Ingrid Solberg>That's not a staycation, that's a conference.
+
+11
+00:03:15.127 --> 00:03:21.729
+<v Yusra Haddad>Ha. Pretty much. Name badges and a schedule on the fridge.
+
+12
+00:03:22.644 --> 00:03:38.601
+<v Emeka Nwosu-Hart>We're doing the coast if the weather holds. If it doesn't, it's grading on the couch. Which is the same as every other week, but with a better view.
+
+13
+00:03:39.132 --> 00:03:43.685
+<v Mara Ilves>Sorry, I was on mute. Morning everyone.
+
+14
+00:03:44.956 --> 00:03:50.271
+<v Yusra Haddad>Morning Mara. We're just waiting on Dima and Jack.
+
+15
+00:03:56.911 --> 00:04:00.189
+<v Yusra Haddad>Okay. Dmitri's joining. Hi Dima.
+
+16
+00:04:01.523 --> 00:04:05.991
+<v Dmitri Halloran>Hey. Sorry, was finishing a deploy. I'm here.
+
+17
+00:04:07.387 --> 00:04:09.498
+<v Yusra Haddad>Jack, you're on?
+
+18
+00:04:10.691 --> 00:04:14.674
+<v Joaquín Sepúlveda>I'm here. Camera's off, I'm eating, apologies.
+
+19
+00:04:15.986 --> 00:04:42.019
+<v Yusra Haddad>No problem. So, goal for today is simple. We settle the scope for the pilot so that Mara and Dmitri can actually start building. I'd like to leave this call with a course list and with who's doing what. Ramona from ODS couldn't make it, she sends apologies.
+
+20
+00:04:42.728 --> 00:04:55.046
+<v Yusra Haddad>Quick introductions, because not everybody has met Mara. Mara Ilves is from the system office, ODS. She's the architecture lead for the pilot.
+
+21
+00:04:56.173 --> 00:05:01.146
+<v Mara Ilves>Hi all. Thanks for having me on campus. Virtually.
+
+22
+00:05:02.502 --> 00:05:14.529
+<v Yusra Haddad>Ingrid Solberg is our senior instructional designer here at Kestrow. She'll run the faculty side of this. Onboarding, materials, all of that.
+
+23
+00:05:15.681 --> 00:05:21.406
+<v Ingrid Solberg>Hello. Nice to put a face to the name, Mara.
+
+24
+00:05:21.969 --> 00:05:33.829
+<v Yusra Haddad>And Emeka Nwosu-Hart, associate professor of chemistry here at Kestrow. He's our faculty champion, which you'll notice in about thirty seconds.
+
+25
+00:05:35.182 --> 00:05:53.667
+<v Emeka Nwosu-Hart>Guilty! Hi Mara. I've been asking for something like this since my CHEM 110 students started pasting their lab questions into random chatbots at two in the morning and getting confidently wrong answers back.
+
+26
+00:05:54.363 --> 00:05:55.458
+<v Mara Ilves>Mm-hm.
+
+27
+00:05:56.623 --> 00:06:08.063
+<v Yusra Haddad>Jack you know already. Joaquín, our enterprise architect, chairs ARB. And Dmitri, Dima, is the engineer who'll build the LMS side.
+
+28
+00:06:09.027 --> 00:06:17.783
+<v Yusra Haddad>So this is basically the core group for the pilot. Everybody on this call plus Ramona.
+
+29
+00:06:18.692 --> 00:06:44.017
+<v Joaquín Sepúlveda>Before we get to courses. I read the one-pager last night, thanks Mara. ARB prep is tomorrow and that's the document they'll see. My main point is that both hosting options need to stay on the table for ARB. Not one real option and a straw man.
+
+30
+00:06:45.042 --> 00:07:11.122
+<v Mara Ilves>Agreed. That's why it's written as two options. I lean toward the Kettleyard tenant, option two, mostly because of the gateway and identity pieces we'd otherwise rebuild here. But the page doesn't decide anything. Can I share it for a second so we're all looking at the same thing?
+
+31
+00:07:11.773 --> 00:07:13.667
+<v Yusra Haddad>Go ahead.
+
+32
+00:07:14.967 --> 00:07:23.294
+<v Mara Ilves>Okay. Can you see it? Section two is the options, section three the data flow.
+
+33
+00:07:23.894 --> 00:07:25.025
+<v Emeka Nwosu-Hart>Yep.
+
+34
+00:07:26.154 --> 00:07:28.466
+<v Ingrid Solberg>Mm-hm, we see it.
+
+35
+00:08:31.280 --> 00:08:47.513
+<v Joaquín Sepúlveda>Right. For the record, the board will ask about the data flows before they ask about anything else. Where the course content goes, where the logs live, what leaves campus.
+
+36
+00:08:48.509 --> 00:09:16.268
+<v Mara Ilves>So, section three. Course materials come out of the LMS through a Kestrow context API, go to the app on the tenant, then through the gateway to the model. Responses come back the same way. Logs stay in the tenant. Nothing gets used for training, that's a hard line in both options.
+
+37
+00:09:16.909 --> 00:09:20.251
+<v Joaquín Sepúlveda>And identity is Kestrow's IdP.
+
+38
+00:09:21.636 --> 00:09:31.889
+<v Mara Ilves>Kestrow IdP only. No separate accounts, nobody creates a new password. I sent Teo the client details last night.
+
+39
+00:09:32.212 --> 00:09:40.943
+<v Joaquín Sepúlveda>Which model, while we're at it? ARB will ask whether we're tied to one vendor.
+
+40
+00:09:41.998 --> 00:10:07.330
+<v Mara Ilves>We're not, and that's one of the reasons for the gateway. The app talks to the gateway, the gateway talks to whichever model is approved. If we have to switch models mid-term, the course side doesn't notice. In option one we'd have to build that switching ourselves.
+
+41
+00:10:08.435 --> 00:10:17.864
+<v Joaquín Sepúlveda>Mm. Okay. That's a fair point for option two. The vendor lock-in question comes up every time.
+
+42
+00:10:18.813 --> 00:10:24.948
+<v Mara Ilves>It's implied under option two, shared controls. Not spelled out.
+
+43
+00:10:25.463 --> 00:10:32.253
+<v Joaquín Sepúlveda>Leave it. It'll come up in the room anyway, it always does.
+
+44
+00:10:32.719 --> 00:10:37.306
+<v Dmitri Halloran>The context API box is mine, I assume.
+
+45
+00:10:37.839 --> 00:10:51.801
+<v Mara Ilves>It's yours. It sits on Kestrow's side in both options. That's partly the point, the LMS integration stays a campus thing whichever way the hosting goes.
+
+46
+00:10:52.692 --> 00:11:00.323
+<v Dmitri Halloran>Okay. That's fine. As long as I'm not also running the model side.
+
+47
+00:11:01.635 --> 00:11:03.451
+<v Mara Ilves>You're not.
+
+48
+00:11:03.806 --> 00:11:17.731
+<v Dmitri Halloran>And rate limits. If three hundred kids hit it the night before a problem set is due, is that my API falling over or yours?
+
+49
+00:11:18.133 --> 00:11:33.192
+<v Mara Ilves>Both, potentially. The context API should cache course materials rather than fetching on every question. That's a design point for the spec, not something to solve today.
+
+50
+00:11:34.415 --> 00:11:41.997
+<v Dmitri Halloran>Fine. Noted. Caching. Writing it on a sticky note so I don't forget.
+
+51
+00:11:42.741 --> 00:11:59.190
+<v Joaquín Sepúlveda>Option one. If it's a dedicated Kestrow deployment, who runs it day to day? Because my team doesn't have someone sitting around waiting for a GPU box to fall over.
+
+52
+00:11:59.584 --> 00:12:21.415
+<v Mara Ilves>In option one Kestrow runs it. That's the honest cost of it. In option two the hub team runs the shared pieces, and Kestrow runs the context API and the course side. The one-pager says that, but not loudly enough maybe.
+
+53
+00:12:21.981 --> 00:12:37.364
+<v Joaquín Sepúlveda>Okay. I'll have questions on the shared tenant, quotas, noisy neighbours, what happens when another campus spikes during finals. But that's an ARB conversation, not a scope one.
+
+54
+00:12:37.955 --> 00:12:41.160
+<v Yusra Haddad>Let's take that offline, Jack.
+
+55
+00:12:41.784 --> 00:12:42.684
+<v Joaquín Sepúlveda>Fine.
+
+56
+00:12:43.520 --> 00:12:45.806
+<v Mara Ilves>I'll stop sharing.
+
+57
+00:12:46.641 --> 00:13:05.537
+<v Yusra Haddad>Before courses, one thing I want us all to agree on, because faculty will ask. What is this thing for and what is it not for. Ingrid, you've had more of those conversations than anyone.
+
+58
+00:13:06.405 --> 00:13:30.677
+<v Ingrid Solberg>The questions I get are always the same three. Will it do my students' homework for them. Will it make things up. And will it replace my TAs. Faculty want a straight answer to each, and they want the same answer from all of us.
+
+59
+00:13:32.041 --> 00:14:00.447
+<v Mara Ilves>From the architecture side the honest answers are: it answers from the course's own materials, it points students back to the source, and it can be told not to give worked solutions to graded problems. It can still be wrong. It doesn't replace anybody, it takes the repetitive questions off the TAs' plate.
+
+60
+00:14:00.999 --> 00:14:28.041
+<v Emeka Nwosu-Hart>That's exactly how I'd put it to my colleagues. In CHEM 110 the TAs spend half their office hours on the same five questions. Where's the rubric, how many sig figs, is the lab write-up due Friday or Monday. If the assistant takes those, the TAs get to actually teach.
+
+61
+00:14:28.549 --> 00:14:48.971
+<v Ingrid Solberg>And accessibility. It has to work with a screen reader from day one, not as a fix later. We had a tool two years ago that didn't, and it took a semester to undo the damage with students.
+
+62
+00:14:49.303 --> 00:14:53.968
+<v Mara Ilves>Agreed. It's a requirement, not a phase two.
+
+63
+00:14:54.893 --> 00:15:11.930
+<v Yusra Haddad>Good. So guardrails are the course materials, citations back to the source, instructor control over what it does with graded work, accessibility from day one. That's the story we tell faculty.
+
+64
+00:15:13.212 --> 00:15:15.814
+<v Emeka Nwosu-Hart>Mm-hm. I like that.
+
+65
+00:15:16.750 --> 00:15:37.706
+<v Yusra Haddad>Courses. We've had a list floating around since December and it keeps growing every time someone hears about this. I want to be honest about capacity before we pick anything. Ingrid, what can your team realistically support before go-live?
+
+66
+00:15:38.618 --> 00:16:02.100
+<v Ingrid Solberg>Realistically, three instructors, done properly. Each one needs an onboarding session, then a second session once they've seen it working in their own course shell, and then someone checking in during the first two weeks. Plus whoever teaches with them, TAs, lab coordinators.
+
+67
+00:16:02.805 --> 00:16:22.908
+<v Ingrid Solberg>With what I have in February and March, three is the number. Four if nothing else happens on campus. And something always happens on campus. Midterms, accreditation visits, someone's LMS shell breaks the night before a deadline.
+
+68
+00:16:24.038 --> 00:16:25.463
+<v Yusra Haddad>Right.
+
+69
+00:16:26.154 --> 00:16:51.303
+<v Emeka Nwosu-Hart>Can I make the case for more? Because I have colleagues who are genuinely keen, and keen faculty are not exactly a renewable resource. MATH 120, the first-year writing seminar, PSYC 101, two sections of physics. If we only do three we're leaving enthusiasm on the table!
+
+70
+00:16:52.174 --> 00:17:14.367
+<v Joaquín Sepúlveda>From the ARB side, a smaller first footprint is easier to approve. Fewer course shells, fewer integrations, smaller blast radius if something goes wrong with content. I'd rather approve three things that work than six things we have to roll back.
+
+71
+00:17:14.878 --> 00:17:42.287
+<v Dmitri Halloran>And from the LMS side every course is its own shell config. Different module structure, different file naming, half of them have pages that are just embedded PDFs of PDFs. Five courses is five mappings and five sets of weird edge cases. Three is already plenty for the build we've got.
+
+72
+00:17:43.361 --> 00:17:46.595
+<v Emeka Nwosu-Hart>Fair. Fair. I hear you.
+
+73
+00:17:47.390 --> 00:17:56.020
+<v Emeka Nwosu-Hart>Sorry, one second, there's a student at my door. Two minutes. Keep going without me.
+
+74
+00:17:56.875 --> 00:17:57.913
+<v Yusra Haddad>Sure.
+
+75
+00:17:58.735 --> 00:18:14.574
+<v Ingrid Solberg>While Emeka's away, Yusra, do we know if the PSYC people have heard about this yet? Because if they have, I'd rather they hear the first-wave list from us.
+
+76
+00:18:15.164 --> 00:18:22.214
+<v Yusra Haddad>I don't think so. Not yet, anyway. Word travels fast in that building.
+
+77
+00:18:32.423 --> 00:18:39.104
+<v Joaquín Sepúlveda>Sorry, you cut out there for me. Did I miss anything?
+
+78
+00:18:40.231 --> 00:18:44.443
+<v Yusra Haddad>Nothing yet, Jack. Just waiting for Emeka.
+
+79
+00:19:09.037 --> 00:19:14.648
+<v Emeka Nwosu-Hart>Back. Sorry. Lab safety quiz panic. Resolved. Where were we?
+
+80
+00:19:15.717 --> 00:19:21.542
+<v Yusra Haddad>You were making the case for five courses and losing.
+
+81
+00:19:22.361 --> 00:19:25.212
+<v Emeka Nwosu-Hart>Ha! Story of my life.
+
+82
+00:19:26.186 --> 00:19:53.862
+<v Mara Ilves>What I'd want for the evaluation, whenever we get to it, is spread rather than volume. One big STEM intro course where the questions are well defined. One humanities course, where the assistant has to deal with argument and interpretation rather than answers. And something in between, a lab science maybe.
+
+83
+00:19:54.270 --> 00:19:55.692
+<v Yusra Haddad>Mm-hm.
+
+84
+00:19:56.913 --> 00:20:12.486
+<v Mara Ilves>If we can only have three, I'd rather have three different kinds of course than three chemistry-shaped ones. Otherwise all we learn is that it works for chemistry.
+
+85
+00:20:13.376 --> 00:20:15.173
+<v Emeka Nwosu-Hart>Which it will!
+
+86
+00:20:15.718 --> 00:20:22.765
+<v Mara Ilves>Probably. Which is why it's the least interesting thing to find out.
+
+87
+00:20:24.001 --> 00:20:26.234
+<v Emeka Nwosu-Hart>Ha. Okay, okay.
+
+88
+00:20:27.005 --> 00:20:39.866
+<v Mara Ilves>So CHEM 110 is the obvious anchor. It's big, it has a structured syllabus, the questions are well defined, and Emeka's teaching it.
+
+89
+00:20:40.759 --> 00:21:12.579
+<v Emeka Nwosu-Hart>CHEM 110 is about three hundred and eighty students this term across two lectures. The office-hours queue on a problem-set night is, honestly, a little heartbreaking. We have four TAs and they're drowning by week five. Stoichiometry, unit conversions, how do I format the lab report, what's on the midterm. Lab report formatting questions alone would keep an assistant busy.
+
+90
+00:21:13.471 --> 00:21:23.803
+<v Ingrid Solberg>And the CHEM 110 shell is in good shape. We redid the module structure with Emeka in the fall.
+
+91
+00:21:24.485 --> 00:21:40.137
+<v Emeka Nwosu-Hart>And for the record, I want my TAs involved. They know where students get stuck better than I do. Week three is always moles, week six is always equilibrium.
+
+92
+00:21:41.338 --> 00:21:46.656
+<v Yusra Haddad>That's helpful for the evaluation later. Keep that thought.
+
+93
+00:21:47.402 --> 00:21:54.600
+<v Yusra Haddad>Okay. CHEM 110 is in. That one was never really in doubt.
+
+94
+00:21:55.726 --> 00:22:04.878
+<v Yusra Haddad>Humanities. The list had HIST 214 and an English course. Emeka, you know the HIST 214 instructor?
+
+95
+00:22:06.012 --> 00:22:38.554
+<v Emeka Nwosu-Hart>I do. HIST 214, the modern world survey. The instructor is curious about this. Cautious, but curious. And it's a good test, because the questions are about readings and interpretation, not getting a number right. If the assistant can help a student find the right primary source in the reading list without writing their essay for them, that's a real result.
+
+96
+00:22:38.891 --> 00:22:53.883
+<v Ingrid Solberg>The HIST 214 course shell is also well organised. They rebuilt it last summer with us, weekly modules, every reading tagged. That makes onboarding a lot easier.
+
+97
+00:22:54.496 --> 00:22:58.892
+<v Dmitri Halloran>Well organised is music to my ears.
+
+98
+00:22:59.560 --> 00:23:03.143
+<v Mara Ilves>Ha. Okay, that helps a lot.
+
+99
+00:23:03.711 --> 00:23:20.603
+<v Emeka Nwosu-Hart>The one thing the HIST 214 instructor will push on is academic integrity. Their written assignments are the whole grade. They'll want to know it won't draft a paragraph on request.
+
+100
+00:23:21.215 --> 00:23:39.656
+<v Mara Ilves>That's the instructor-control piece. In a history course I'd expect the default to be: explain, point to the reading, don't write. That should be a setting per course, not a promise in an email.
+
+101
+00:23:40.231 --> 00:23:46.307
+<v Ingrid Solberg>Instructors like settings. Settings they can see. Promises they've heard before.
+
+102
+00:23:46.949 --> 00:23:51.836
+<v Yusra Haddad>And the English course? The first-year writing one?
+
+103
+00:23:52.538 --> 00:24:20.773
+<v Ingrid Solberg>That's a harder one. Writing courses have their own conversation going on about AI right now. There's a working group in the English department, there are strong feelings in both directions, and there's the separate writing tool work going on at Saltmarren. I wouldn't put a first-year writing course into the first wave.
+
+104
+00:24:22.156 --> 00:24:38.295
+<v Mara Ilves>I'd agree. I'd rather the pilot didn't read as the system office taking a position on AI in writing courses. History gets us the humanities angle without walking into that.
+
+105
+00:24:38.762 --> 00:24:48.460
+<v Emeka Nwosu-Hart>That's fair. The English folks would rather run their own process anyway. They've told me so. Loudly.
+
+106
+00:24:49.240 --> 00:24:50.172
+<v Yusra Haddad>Right.
+
+107
+00:24:50.899 --> 00:24:55.153
+<v Yusra Haddad>PSYC 101 was on Emeka's list too.
+
+108
+00:24:56.289 --> 00:25:12.119
+<v Ingrid Solberg>PSYC 101 is six hundred students and a TA team of twelve. Onboarding twelve TAs properly is the problem, not the instructor. That's a second-wave course if it's anything.
+
+109
+00:25:13.034 --> 00:25:18.605
+<v Emeka Nwosu-Hart>Yes, okay, PSYC is greedy of me. I admit it.
+
+110
+00:25:19.493 --> 00:25:26.124
+<v Yusra Haddad>So the third slot. BIOL 205 or MATH 120. Emeka mentioned MATH.
+
+111
+00:25:27.308 --> 00:25:55.624
+<v Dmitri Halloran>Math is going to be painful. Half their materials are scanned PDFs with handwritten equations, and the equation rendering in the LMS is its own thing. The assistant would be quoting garbled LaTeX back at students. I'd have to special-case a lot of it. Not impossible. Just not for a build this short.
+
+112
+00:25:56.977 --> 00:26:10.951
+<v Mara Ilves>And if it gets the maths wrong, it gets the maths wrong in a way that's very visible. That's not where I'd want to start.
+
+113
+00:26:11.930 --> 00:26:39.257
+<v Emeka Nwosu-Hart>BIOL 205 is genetics. Big course, about two hundred and forty students, lots of terminology, a lab component, and the instructors there have been asking me about this since the fall. Every time I see them in the faculty lounge. I can't promise they'll say yes, but I think they will.
+
+114
+00:26:40.340 --> 00:26:50.131
+<v Ingrid Solberg>BIOL 205 uses the same template as CHEM 110 in the LMS. Same college, same course design pattern.
+
+115
+00:26:50.901 --> 00:27:07.435
+<v Emeka Nwosu-Hart>And the BIOL labs are on the same rotation as ours, so the questions will even arrive at the same time of the week. Tuesday nights. It's always Tuesday nights.
+
+116
+00:27:08.569 --> 00:27:13.731
+<v Dmitri Halloran>Oh, then that's basically free for me. Same mapping.
+
+117
+00:27:14.910 --> 00:27:16.162
+<v Yusra Haddad>Okay.
+
+118
+00:27:16.729 --> 00:27:37.131
+<v Joaquín Sepúlveda>From the ARB side I'm neutral on which three. What I care about is that the set doesn't drift once it's approved. If it changes, it comes back to us. That's not me being difficult, that's the process.
+
+119
+00:27:37.641 --> 00:27:38.543
+<v Yusra Haddad>Understood.
+
+120
+00:27:38.977 --> 00:27:52.866
+<v Emeka Nwosu-Hart>And MATH 120 can be the first thing we add if this goes well. I'm going to keep a list. I'm a chemist, I keep lists.
+
+121
+00:27:53.640 --> 00:27:54.711
+<v Mara Ilves>Mm-hm.
+
+122
+00:27:55.427 --> 00:28:08.882
+<v Yusra Haddad>Let's not promise MATH 120 anything today, Emeka. If the pilot goes well we talk about the next wave in the summer. Not before.
+
+123
+00:28:10.206 --> 00:28:14.735
+<v Emeka Nwosu-Hart>Understood. I'm writing it on my list anyway.
+
+124
+00:28:15.409 --> 00:28:24.081
+<v Yusra Haddad>Ingrid, does three courses work with the way you'd sequence onboarding? CHEM first, then the others?
+
+125
+00:28:24.735 --> 00:28:44.943
+<v Ingrid Solberg>CHEM 110 and BIOL 205 together, since they share a template. HIST 214 on its own, because the questions it'll get are different and the instructor will want time to think about the reading list. That works.
+
+126
+00:28:46.061 --> 00:28:52.199
+<v Yusra Haddad>Mara, do you want to say what we're landing on?
+
+127
+00:28:53.448 --> 00:29:01.233
+<v Mara Ilves>Sure. So three courses - CHEM 110, HIST 214, BIOL 205 - everyone ok?
+
+128
+00:29:02.098 --> 00:29:03.469
+<v Yusra Haddad>Works.
+
+129
+00:29:03.884 --> 00:29:04.784
+<v Emeka Nwosu-Hart>Yes!
+
+130
+00:29:04.384 --> 00:29:06.735
+<v Dmitri Halloran>Yep. Three's good.
+
+131
+00:29:07.755 --> 00:29:12.261
+<v Joaquín Sepúlveda>No objection. That's the list ARB sees.
+
+132
+00:29:13.434 --> 00:29:18.386
+<v Ingrid Solberg>Fine by me. Three I can do properly.
+
+133
+00:29:18.920 --> 00:29:26.128
+<v Yusra Haddad>Good. Three courses, CHEM 110, HIST 214 and BIOL 205. That's the pilot.
+
+134
+00:29:29.852 --> 00:29:35.922
+<v Yusra Haddad>Next thing. Dima, you've been asking what you're building. Go.
+
+135
+00:29:36.519 --> 00:30:09.130
+<v Dmitri Halloran>Yeah. So right now I have a box on a diagram that says context API. That's it. I need to know which fields from the LMS, what the payload looks like, how often the app pulls, whether it's push or pull, how auth works between the app and our side, what happens when an instructor hides a module halfway through term.
+
+136
+00:30:09.875 --> 00:30:19.077
+<v Dmitri Halloran>I can't start writing the context API off a box. I need an actual LMS interface spec.
+
+137
+00:30:19.601 --> 00:30:20.964
+<v Mara Ilves>Fair.
+
+138
+00:30:21.302 --> 00:30:37.513
+<v Dmitri Halloran>And I mean an actual one. Versioned. Because I've been on projects where the spec changes every week and I end up rewriting the same endpoint four times. No offence.
+
+139
+00:30:37.879 --> 00:30:39.530
+<v Mara Ilves>None taken.
+
+140
+00:30:40.371 --> 00:31:00.517
+<v Mara Ilves>I'll write up the interface spec this week, Dmitri. Call it interface spec v1. Fields, payloads, auth, and the push or pull question. If something changes after that, it's a v2 and it goes past you first.
+
+141
+00:31:01.102 --> 00:31:07.388
+<v Dmitri Halloran>Okay, v1 this week. I'll hold you to the versioning part.
+
+142
+00:31:08.670 --> 00:31:10.135
+<v Mara Ilves>You should.
+
+143
+00:31:11.262 --> 00:31:22.121
+<v Joaquín Sepúlveda>Just so you know, Mara, ARB reviews interface specs as a matter of course. Anything touching student data especially.
+
+144
+00:31:22.649 --> 00:31:30.893
+<v Mara Ilves>Understood. It only reads course materials and roster role. Not grades, nothing from the SIS.
+
+145
+00:31:32.157 --> 00:31:35.769
+<v Joaquín Sepúlveda>Then it's a short conversation. Usually.
+
+146
+00:31:36.321 --> 00:31:45.603
+<v Dmitri Halloran>What about the hidden module thing. Does the assistant see stuff the instructor hasn't released yet?
+
+147
+00:31:46.320 --> 00:31:59.069
+<v Mara Ilves>It shouldn't. Visibility follows what the student can see in the LMS. That goes in the spec as a rule, not a nice-to-have.
+
+148
+00:31:59.586 --> 00:32:07.474
+<v Ingrid Solberg>Instructors will ask exactly that question in onboarding, so I'm glad it's a rule.
+
+149
+00:32:08.634 --> 00:32:13.550
+<v Dmitri Halloran>Okay. Good. That one would have bitten us.
+
+150
+00:32:14.382 --> 00:32:32.082
+<v Dmitri Halloran>File types too. Half the course materials are PDFs, some are slides, some are LMS pages, and the HIST people link out to the library databases. I'm not scraping the library databases.
+
+151
+00:32:33.093 --> 00:32:53.076
+<v Mara Ilves>No. I'd keep anything behind a library login out of the pilot. If a reading is only in the databases, the assistant points to the citation and the student goes and gets it the normal way.
+
+152
+00:32:54.342 --> 00:32:59.371
+<v Ingrid Solberg>That's actually the behaviour the librarians would want anyway.
+
+153
+00:32:59.921 --> 00:33:06.448
+<v Dmitri Halloran>Okay. PDFs, slides, pages. No databases. I can live with that.
+
+154
+00:33:07.283 --> 00:33:16.185
+<v Dmitri Halloran>Roles. The LMS has student, TA, instructor, designer, observer. Which ones does the app care about?
+
+155
+00:33:17.247 --> 00:33:34.359
+<v Mara Ilves>Student, TA, instructor. Designer and observer get nothing in the pilot. TAs need to see what the instructor sees, more or less, so they can answer when it gets something wrong.
+
+156
+00:33:35.706 --> 00:33:44.494
+<v Ingrid Solberg>That matches how the TAs actually work in CHEM 110. They're basically co-instructors on the shell.
+
+157
+00:33:45.738 --> 00:33:52.904
+<v Emeka Nwosu-Hart>They are. They know the course better than I do some weeks.
+
+158
+00:33:53.725 --> 00:34:03.217
+<v Joaquín Sepúlveda>And retention. How long are conversations kept? Because that's the second question ARB asks after data flows.
+
+159
+00:34:04.593 --> 00:34:20.340
+<v Mara Ilves>It's in the open questions on the one-pager, deliberately. That's for Kestrow's security and privacy people to set, not for me. The architecture can do whatever retention they decide.
+
+160
+00:34:21.696 --> 00:34:28.022
+<v Joaquín Sepúlveda>Fine. As long as it's listed as open rather than assumed.
+
+161
+00:34:28.356 --> 00:34:30.790
+<v Mara Ilves>It's listed as open.
+
+162
+00:34:31.308 --> 00:34:44.997
+<v Yusra Haddad>Okay. People. Emeka, you've got CHEM 110 yourself. Can you get the HIST and BIOL instructors on board? You know them better than I do.
+
+163
+00:34:45.336 --> 00:35:06.242
+<v Emeka Nwosu-Hart>Leave it with me. I'll talk to the HIST 214 instructor, and I'll catch the BIOL 205 instructors at the college meeting. They'll all want to see it working before they say yes, I know them. Mara, I'll tell you the minute they're in.
+
+164
+00:35:07.028 --> 00:35:14.157
+<v Ingrid Solberg>That's usually how it goes with faculty. Nobody signs up for a diagram.
+
+165
+00:35:14.783 --> 00:35:16.097
+<v Emeka Nwosu-Hart>Perfect! Exactly.
+
+166
+00:35:16.683 --> 00:35:25.732
+<v Yusra Haddad>And Ingrid, can you schedule onboarding sessions? For all three instructors. Whatever format you think works.
+
+167
+00:35:26.449 --> 00:35:47.919
+<v Ingrid Solberg>Yes, I'll find slots. Faculty onboarding the way I described, one session up front and one once they've seen their own course. Probably in the TLT studio, it has the big screen. I'll check room availability and their teaching schedules.
+
+168
+00:35:48.839 --> 00:35:50.276
+<v Yusra Haddad>Thank you.
+
+169
+00:35:50.610 --> 00:36:05.564
+<v Emeka Nwosu-Hart>Can the onboarding sessions be after three o'clock? Lab sections run until two forty-five most days and nobody in my building will come to anything before that.
+
+170
+00:36:06.453 --> 00:36:08.081
+<v Ingrid Solberg>Noted. Afternoons.
+
+171
+00:36:09.155 --> 00:36:31.051
+<v Ingrid Solberg>One more thing on onboarding. The first thing instructors ask for is a paragraph for the syllabus that tells students what the assistant is and isn't. We had exactly the same conversation with lecture capture.
+
+172
+00:36:32.028 --> 00:36:39.789
+<v Emeka Nwosu-Hart>Oh, good point. My students read the syllabus. Some of them. In week ten.
+
+173
+00:36:41.136 --> 00:36:55.124
+<v Yusra Haddad>Okay, dates. We're still targeting go-live on the twenty-second of March. That's the Monday after spring break, so students come back to it switched on.
+
+174
+00:36:55.542 --> 00:36:56.806
+<v Mara Ilves>Right.
+
+175
+00:36:57.633 --> 00:37:07.567
+<v Dmitri Halloran>Twenty-second of March is tight if the spec slips. Just saying it out loud so nobody's surprised later.
+
+176
+00:37:08.701 --> 00:37:19.658
+<v Yusra Haddad>Noted. 22 March stays the target for now. If it moves, it moves at this table, not in a hallway.
+
+177
+00:37:21.034 --> 00:37:41.053
+<v Emeka Nwosu-Hart>And from the teaching side, the week after spring break is when midterm two lands in CHEM 110. That's actually a good time for students to have it. It's also a stressful time for it to break.
+
+178
+00:37:42.242 --> 00:37:57.184
+<v Mara Ilves>Which is an argument for launching quietly in all three courses on the same day and watching it closely for the first week, rather than a big announcement.
+
+179
+00:37:58.055 --> 00:38:07.281
+<v Ingrid Solberg>Quiet launch is easier for onboarding too. Instructors can tell students in class, in their own words.
+
+180
+00:38:08.002 --> 00:38:15.675
+<v Yusra Haddad>Let's come back to the launch plan nearer the time. Not deciding that today.
+
+181
+00:38:17.029 --> 00:38:37.131
+<v Yusra Haddad>One more thing so it's not a surprise. Saanvi on the SRE side will look at load testing later. Not now. Once there's something to load. I just don't want anyone to think we forgot about it.
+
+182
+00:38:37.862 --> 00:38:42.301
+<v Joaquín Sepúlveda>ARB will ask about that too. Concurrency numbers.
+
+183
+00:38:43.418 --> 00:38:46.326
+<v Yusra Haddad>Later, Jack. Later. I know.
+
+184
+00:38:46.843 --> 00:38:48.196
+<v Joaquín Sepúlveda>Ha. Okay.
+
+185
+00:38:48.548 --> 00:39:08.262
+<v Emeka Nwosu-Hart>Can I ask, for the students, what will they actually see? Is it a tab in the course? A chat bubble? Because if it's buried three menus deep my CHEM 110 kids will never find it.
+
+186
+00:39:08.857 --> 00:39:26.518
+<v Mara Ilves>A link in the course navigation that opens the assistant in a panel. Same login as the LMS. Exact placement is something Ingrid and the instructors should decide per course, not me.
+
+187
+00:39:26.935 --> 00:39:36.253
+<v Ingrid Solberg>We'll want it in the same place in all three courses. Otherwise the support questions multiply.
+
+188
+00:39:37.077 --> 00:39:38.397
+<v Emeka Nwosu-Hart>Agreed. Agreed!
+
+189
+00:39:39.406 --> 00:39:52.980
+<v Dmitri Halloran>Is the panel ours or the app's? Because if it's an LTI launch that's one thing, if it's an iframe we embed it's a different
+
+190
+00:39:51.780 --> 00:39:54.297
+<v Emeka Nwosu-Hart>Sorry, go ahead -
+
+191
+00:39:53.497 --> 00:39:59.718
+<v Dmitri Halloran>- different conversation, and it changes what goes in the spec.
+
+192
+00:40:00.115 --> 00:40:06.116
+<v Mara Ilves>LTI launch is my assumption. It'll be explicit in the spec.
+
+193
+00:40:06.924 --> 00:40:08.179
+<v Dmitri Halloran>Okay, good.
+
+194
+00:40:09.069 --> 00:40:20.409
+<v Yusra Haddad>Okay. I think that's what we needed. Let me read it back. Three courses, CHEM 110, HIST 214, BIOL 205.
+
+195
+00:40:21.214 --> 00:40:26.903
+<v Yusra Haddad>Mara writes the interface spec, v1, for Dima, this week.
+
+196
+00:40:28.161 --> 00:40:37.844
+<v Yusra Haddad>Emeka gets the HIST 214 and BIOL 205 instructors on board. Ingrid schedules the faculty onboarding sessions.
+
+197
+00:40:38.855 --> 00:40:43.858
+<v Yusra Haddad>Go-live target 22 March. Load testing later, with Saanvi.
+
+198
+00:40:45.180 --> 00:40:47.693
+<v Yusra Haddad>Did I miss anything?
+
+199
+00:40:48.642 --> 00:40:55.139
+<v Joaquín Sepúlveda>Only that ARB sees the three courses tomorrow alongside the one-pager.
+
+200
+00:40:56.277 --> 00:41:01.154
+<v Yusra Haddad>They're on the one-pager already, aren't they, Mara?
+
+201
+00:41:01.808 --> 00:41:06.795
+<v Mara Ilves>As proposed courses, yes. It's what we just agreed.
+
+202
+00:41:07.264 --> 00:41:08.544
+<v Joaquín Sepúlveda>Good enough.
+
+203
+00:41:09.473 --> 00:41:26.112
+<v Emeka Nwosu-Hart>Can I just say, I'm really excited. My CHEM 110 students are going to be the first in the system to use this. I want to tell them on Friday.
+
+204
+00:41:26.737 --> 00:41:32.867
+<v Yusra Haddad>Maybe tell them in March, Emeka. Let's get it built first.
+
+205
+00:41:33.260 --> 00:41:35.333
+<v Emeka Nwosu-Hart>Ha! Fine. March.
+
+206
+00:41:36.052 --> 00:41:43.665
+<v Yusra Haddad>Okay. We have the slot until quarter to. Anything else for this group?
+
+207
+00:41:44.531 --> 00:41:45.431
+<v Dmitri Halloran>Nope.
+
+208
+00:41:46.570 --> 00:41:52.323
+<v Ingrid Solberg>Nothing from me. Drive carefully, everybody, it's slick out there.
+
+209
+00:41:52.885 --> 00:42:00.111
+<v Emeka Nwosu-Hart>And if anyone wants coffee, the shrine is open. Third floor, Kester Hall.
+
+210
+00:42:00.857 --> 00:42:02.461
+<v Mara Ilves>Thanks all.
+
+211
+00:42:03.570 --> 00:42:05.439
+<v Yusra Haddad>Thanks everyone. Bye.
+
+212
+00:42:06.653 --> 00:42:17.986
+<v Emeka Nwosu-Hart>Bye! Ingrid, are you in the studio this afternoon? I wanted to ask you about the lab video thing, unrelated.
+
+213
+00:42:18.804 --> 00:42:21.569
+<v Ingrid Solberg>After two. Come by.
+
+214
+00:42:22.102 --> 00:42:25.486
+<v Emeka Nwosu-Hart>Wonderful. Is this still recording?
+
+215
+00:42:26.012 --> 00:42:27.860
+<v Yusra Haddad>Stopping it now.

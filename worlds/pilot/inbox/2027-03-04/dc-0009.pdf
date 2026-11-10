@@ -1,0 +1,389 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 15 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 3358 >>
+stream
+BT
+/F1 10 Tf
+72 760 Td
+0 -15 Td /F1 11 Tf () Tj
+0 -15 Td /F1 16 Tf (Kettleyard Reference Architecture v4 \(draft for review\)) Tj
+0 -20 Td /F1 10 Tf (Owner: Ilya Marchetti, Principal Architect, Data Platform, Office of Digital Strategy \(ODS\)) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Date: 3 March 2027) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Status: Draft v4 for peer review. Supersedes v3 \(22 February 2027\). Not for distribution) Tj
+0 -14 Td /F1 10 Tf (outside ODS.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Reviewers: Mara Ilves \(AI & Data\), Bettina Oduya \(Product\), Hyun-woo Park \(Security & Identity\)) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Platform engineering: Bartosz Zielke \(tenant provisioning, gateway on-call\)) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (What changed in v4: responses to the v3 review comments from Mara Ilves \(1 March 2027\). See the) Tj
+0 -14 Td /F1 10 Tf (change log at the end for the status of each comment.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (0. Purpose and scope) Tj
+0 -17 Td /F1 10 Tf (Kettleyard is the shared AI platform hub for the Tarrow University System. It gives campuses) Tj
+0 -14 Td /F1 10 Tf (and system-office programs a common way to reach hosted models without each campus standing up) Tj
+0 -14 Td /F1 10 Tf (its own identity integration, gateway, secrets handling and logging. This document describes) Tj
+0 -14 Td /F1 10 Tf (the reference architecture that every tenant is onboarded against.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (The architecture has four core building blocks:) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (• Tenants - an isolated slice of the platform per campus program \(namespace, quotas, gateway) Tj
+0 -14 Td /F1 10 Tf (  route, secrets path\).) Tj
+0 -14 Td /F1 10 Tf (• Identity broker - federates each campus identity provider \(IdP\) into Kettleyard.) Tj
+0 -14 Td /F1 10 Tf (• Model gateway - the single path from tenants to upstream model providers.) Tj
+0 -14 Td /F1 10 Tf (• Secrets vault - holds tenant API keys, client secrets and provider credentials.) Tj
+0 -14 Td /F1 10 Tf (Supporting concerns: logging and redaction \(section 5\), onboarding \(section 6\), January) Tj
+0 -14 Td /F1 10 Tf (run-rate \(section 7\), open questions \(section 8\).) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Out of scope for this document: cost allocation between campuses \(covered by the separate) Tj
+0 -14 Td /F1 10 Tf (cost-sharing model\), model selection and evaluation, and campus-run deployments.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (1. Tenancy model) Tj
+0 -17 Td /F1 10 Tf (A tenant is the unit of isolation, quota and accountability. Each tenant belongs to exactly one) Tj
+0 -14 Td /F1 10 Tf (campus or system-office program and has a named campus contact.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Each tenant gets:) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (• a namespace on the shared cluster \(network policies deny cross-namespace traffic by) Tj
+0 -14 Td /F1 10 Tf (  default\);) Tj
+0 -14 Td /F1 10 Tf (• three limits at the gateway: requests per minute, tokens per minute and concurrent requests) Tj
+0 -14 Td /F1 10 Tf (  in flight;) Tj
+0 -14 Td /F1 10 Tf (• a gateway route \(tenant-scoped base path and API key\);) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 15 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 4220 >>
+stream
+BT
+/F1 10 Tf
+72 760 Td
+0 -14 Td /F1 10 Tf (• a secrets path in the vault \(section 4\);) Tj
+0 -14 Td /F1 10 Tf (• a log stream tagged with the tenant ID \(section 5\).) Tj
+0 -14 Td /F1 10 Tf (Quota enforcement. Quotas are enforced at the gateway. A tenant that exceeds any of its three) Tj
+0 -14 Td /F1 10 Tf (limits receives HTTP 429 with a Retry-After header.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Concurrency limit \(new in v4\). Rate limits alone do not protect a tenant whose load arrives all) Tj
+0 -14 Td /F1 10 Tf (at once \(a class of 200 opening the course assistant in the five minutes before a lab is due\).) Tj
+0 -14 Td /F1 10 Tf (Each tenant now also has a concurrent-request limit. Requests over the limit receive a 429) Tj
+0 -14 Td /F1 10 Tf (immediately rather than queuing behind other tenants. The limit is set at onboarding from the) Tj
+0 -14 Td /F1 10 Tf (expected-volume figure in the tenant request \(s.6, step 1\) and can be changed on request.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Naming. Tenant IDs follow kyd-campus-program, lower case, for example kyd-kestrow-tinderbox.) Tj
+0 -14 Td /F1 10 Tf (The gateway route name may differ from the tenant ID for historical reasons \(see the table\).) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Current tenants) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Tenant ID | Gateway route | Campus / program | State | Contact) Tj
+0 -14 Td /F1 10 Tf (kyd-ods-sandbox | ods-sandbox-01 | ODS internal sandbox | Active \(internal\) | Ilya Marchetti) Tj
+0 -14 Td /F1 10 Tf (kyd-ods-evals | ods-evals-01 | ODS evaluation harness | Active \(internal\) | Ilya Marchetti) Tj
+0 -14 Td /F1 10 Tf (kyd-kestrow-tinderbox | tinderbox-kes-01 | Kestrow, Tinderbox course assistant pilot | Live) Tj
+0 -14 Td /F1 10 Tf (since 2 March 2027 \(first real tenant\) | Mara Ilves / Yusra Haddad) Tj
+0 -14 Td /F1 10 Tf (Tinderbox is the first tenant with real campus users. The tenant is running in dummy-data mode) Tj
+0 -14 Td /F1 10 Tf (until the Kestrow security and privacy reviews are complete; nothing in this document changes) Tj
+0 -14 Td /F1 10 Tf (that.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (2. Identity broker) Tj
+0 -17 Td /F1 10 Tf (The identity broker federates campus IdPs into Kettleyard so that tenant applications see one) Tj
+0 -14 Td /F1 10 Tf (consistent token format regardless of campus.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (• Protocols: SAML 2.0 and OpenID Connect inbound from campus IdPs; OIDC outbound to tenant) Tj
+0 -14 Td /F1 10 Tf (  applications.) Tj
+0 -14 Td /F1 10 Tf (• Trust: one trust relationship per campus IdP, established by exchanging signing) Tj
+0 -14 Td /F1 10 Tf (  certificates. Certificates are pinned per tenant.) Tj
+0 -14 Td /F1 10 Tf (• Group-to-role mapping: each tenant maps campus IdP groups to Kettleyard roles \(for example,) Tj
+0 -14 Td /F1 10 Tf (  a course-section group to the role "student" or "instructor"\). The mapping is tenant-owned) Tj
+0 -14 Td /F1 10 Tf (  configuration, so a campus can change who has access without a ticket to ODS.) Tj
+0 -14 Td /F1 10 Tf (• Missing groups \(new in v4\): if a user's token does not carry any group that the tenant maps) Tj
+0 -14 Td /F1 10 Tf (  to a role, the broker denies access with a clear error \("no Kettleyard role for this) Tj
+0 -14 Td /F1 10 Tf (  tenant"\). There is no default or fallback role. A missing claim is treated as a) Tj
+0 -14 Td /F1 10 Tf (  configuration problem to be fixed at the campus IdP, not something the broker papers over.) Tj
+0 -14 Td /F1 10 Tf (• Service-to-service: OAuth 2.0 client-credentials tokens, scoped per tenant. Client secrets) Tj
+0 -14 Td /F1 10 Tf (  live in the vault.) Tj
+0 -14 Td /F1 10 Tf (• Session lifetime: 8 hours for interactive users, 60 minutes for service tokens.) Tj
+0 -14 Td /F1 10 Tf (• What the broker does not do: it does not store passwords, and it does not provision) Tj
+0 -14 Td /F1 10 Tf (  accounts. Account lifecycle stays with each campus IdP.) Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (3. Model gateway) Tj
+0 -17 Td /F1 10 Tf (All tenant traffic to upstream model providers passes through the model gateway. Tenants never) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 15 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 3798 >>
+stream
+BT
+/F1 10 Tf
+72 760 Td
+0 -14 Td /F1 10 Tf (hold provider credentials.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Responsibilities) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (• authenticate the tenant \(gateway API key plus broker token for user-attributed calls\);) Tj
+0 -14 Td /F1 10 Tf (• route to the configured upstream provider and model for that tenant;) Tj
+0 -14 Td /F1 10 Tf (• enforce quotas, rate limits and the concurrency limit;) Tj
+0 -14 Td /F1 10 Tf (• apply the logging and redaction policy \(section 5\);) Tj
+0 -14 Td /F1 10 Tf (• meter usage per tenant for the run-rate report \(section 7\).) Tj
+0 -14 Td /F1 10 Tf (Connection pooling. The gateway keeps one shared connection pool per upstream provider on each) Tj
+0 -14 Td /F1 10 Tf (replica. Each pool holds 64 persistent connections per replica \(clarified in v4\). Tenants) Tj
+0 -14 Td /F1 10 Tf (receive a share of each pool in proportion to their quota, with a floor of 4 connections per) Tj
+0 -14 Td /F1 10 Tf (active tenant. A request is assigned a free connection from the tenant's share or, if the share) Tj
+0 -14 Td /F1 10 Tf (is full, from unused capacity in the pool. When no connection is free the gateway currently) Tj
+0 -14 Td /F1 10 Tf (returns HTTP 502 to the caller; see the note on back-pressure below.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Effective capacity \(new in v4\).) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Replicas in service | Connections per provider | Notes) Tj
+0 -14 Td /F1 10 Tf (3 of 3 | 192 | normal operation) Tj
+0 -14 Td /F1 10 Tf (2 of 3 | 128 | during a rolling update or the loss of one replica) Tj
+0 -14 Td /F1 10 Tf (1 of 3 | 64 | degraded; page the on-call) Tj
+0 -14 Td /F1 10 Tf (Capacity planning for tenants should assume 2 of 3, since a rolling update takes one replica) Tj
+0 -14 Td /F1 10 Tf (out at a time.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Back-pressure. Not changed in v4. A bounded wait queue, 503 with Retry-After in place of 502,) Tj
+0 -14 Td /F1 10 Tf (and a cap on how much unused capacity one tenant can borrow are deferred to v5 \(review comment) Tj
+0 -14 Td /F1 10 Tf (3\). The gateway incident of 3 March 2027 \(KYD-INC-0307\) bears directly on this section; its) Tj
+0 -14 Td /F1 10 Tf (findings will be taken into v5 alongside the postmortem.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Rate limits. Per tenant, per minute: requests and tokens \(input plus output\). Defaults for a) Tj
+0 -14 Td /F1 10 Tf (new tenant are 600 requests per minute and 400,000 tokens per minute, adjustable on request.) Tj
+0 -14 Td /F1 10 Tf (Limits are evaluated on a sliding 60-second window.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Timeouts and retries. Upstream timeout 60 seconds for streaming responses, 30 seconds) Tj
+0 -14 Td /F1 10 Tf (otherwise. One automatic retry on connection reset, with jitter. No retries on 4xx. Retries) Tj
+0 -14 Td /F1 10 Tf (count against the tenant's own share and concurrency limit \(new in v4\), so a retried stream) Tj
+0 -14 Td /F1 10 Tf (cannot borrow a second connection from another tenant's share.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Health. Each upstream has an active health check every 15 seconds. Unhealthy upstreams are) Tj
+0 -14 Td /F1 10 Tf (taken out of rotation after three consecutive failures.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Deployment. Three gateway replicas behind the internal load balancer, rolling updates, one) Tj
+0 -14 Td /F1 10 Tf (replica at a time.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (4. Secrets vault) Tj
+0 -17 Td /F1 10 Tf (• Layout: one path per tenant \(kv/tenants/tenant-id/...\) plus a platform path for provider) Tj
+0 -14 Td /F1 10 Tf (  credentials that only the gateway can read.) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 15 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 4095 >>
+stream
+BT
+/F1 10 Tf
+72 760 Td
+0 -14 Td /F1 10 Tf (• API keys: issued per tenant, not per application. A tenant with several applications shares) Tj
+0 -14 Td /F1 10 Tf (  one gateway key and distinguishes callers through broker tokens.) Tj
+0 -14 Td /F1 10 Tf (• Access policy: tenant administrators can read and write their own path; platform engineers) Tj
+0 -14 Td /F1 10 Tf (  can write but not read tenant secrets; the gateway service account reads provider) Tj
+0 -14 Td /F1 10 Tf (  credentials only.) Tj
+0 -14 Td /F1 10 Tf (• Audit: every read and write is logged with the caller identity and kept for 400 days.) Tj
+0 -14 Td /F1 10 Tf (• Rotation: the vault supports rotation through its API; a rotated key is accepted alongside) Tj
+0 -14 Td /F1 10 Tf (  the previous key for 24 hours so that tenants can roll over without downtime. A rotation) Tj
+0 -14 Td /F1 10 Tf (  cadence, who triggers it, and the procedure for a key suspected of being leaked are deferred) Tj
+0 -14 Td /F1 10 Tf (  to v5 \(review comment 9\), to be written with Security & Identity.) Tj
+0 -14 Td /F1 10 Tf (• Break-glass: two-person rule, logged and reviewed by Security & Identity.) Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (5. Logging and redaction) Tj
+0 -17 Td /F1 10 Tf (• Default: prompt and response bodies are not logged. Metadata is logged for every call:) Tj
+0 -14 Td /F1 10 Tf (  tenant ID, request ID, model, token counts, latency, status code.) Tj
+0 -14 Td /F1 10 Tf (• Body logging \(changed in v4\): for tenants that hold student data, body logging is not) Tj
+0 -14 Td /F1 10 Tf (  available as a routine debugging option. It can be enabled only under the break-glass) Tj
+0 -14 Td /F1 10 Tf (  procedure \(s.4\), for the shortest time needed, and is reviewed by Security & Identity) Tj
+0 -14 Td /F1 10 Tf (  afterwards. For other tenants, debug body logging remains available for up to 72 hours at a) Tj
+0 -14 Td /F1 10 Tf (  time with Security & Identity approval.) Tj
+0 -14 Td /F1 10 Tf (• Redaction: the redaction filter runs before the log sink. The filter removes email) Tj
+0 -14 Td /F1 10 Tf (  addresses, phone numbers, student ID patterns for all four campuses and payment card) Tj
+0 -14 Td /F1 10 Tf (  numbers.) Tj
+0 -14 Td /F1 10 Tf (• Retention: metadata 13 months; debug bodies 7 days.) Tj
+0 -14 Td /F1 10 Tf (• Access: tenant administrators see their own tenant's logs; platform engineers see all) Tj
+0 -14 Td /F1 10 Tf (  metadata, and bodies only under the break-glass procedure.) Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (6. Onboarding) Tj
+0 -17 Td /F1 10 Tf (1. Campus program lead requests a tenant in the #kettleyard channel \(program, contact, expected) Tj
+0 -14 Td /F1 10 Tf (volume, expected peak concurrency\).) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (2. Platform engineering creates the namespace, quotas, concurrency limit and gateway route.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (3. Campus identity team supplies the IdP signing certificate; the broker trust is configured.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (4. Campus identity team registers the tenant application in the campus IdP and confirms which) Tj
+0 -14 Td /F1 10 Tf (groups are released as claims. Check \(new in v4\): platform engineering requests a test token) Tj
+0 -14 Td /F1 10 Tf (for a test user in each mapped group and confirms the group claims actually arrive. If they do) Tj
+0 -14 Td /F1 10 Tf (not, onboarding stops here until the campus IdP is fixed.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (5. Tenant administrator configures group-to-role mapping \(section 2\).) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (6. Platform engineering issues the tenant API key into the vault path \(section 4\). Keys are) Tj
+0 -14 Td /F1 10 Tf (never posted in channels or tickets.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (7. Smoke test: one authenticated call per configured model; check metering and log tagging.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (8. Tenant goes live; contact details recorded in the tenant register.) Tj
+0 -14 Td /F1 10 Tf () Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 15 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 3516 >>
+stream
+BT
+/F1 10 Tf
+72 760 Td
+0 -14 Td /F1 10 Tf (9. Support handoff \(new in v4\): before go-live is announced to users, the tenant record names) Tj
+0 -14 Td /F1 10 Tf (the tier-2 support owner after go-live \(campus team or ODS, by name, not by default\), and) Tj
+0 -14 Td /F1 10 Tf (Product publishes the tenant's service catalog entry. The catalog template changes with v4 to) Tj
+0 -14 Td /F1 10 Tf (carry the tier-2 owner and the status-page link.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Typical elapsed time is five working days, most of it waiting on steps 3 and 4.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (7. January run-rate) Tj
+0 -17 Td /F1 10 Tf (Platform metering for January 2027, by component. These are metered or invoiced platform costs) Tj
+0 -14 Td /F1 10 Tf (for the month, not finance actuals; System Budget & Finance actuals after the January close) Tj
+0 -14 Td /F1 10 Tf (will replace these figures.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (January traffic is internal tenants only \(kyd-ods-sandbox and kyd-ods-evals\). Do not use these) Tj
+0 -14 Td /F1 10 Tf (figures as a per-tenant baseline for campus tenants.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Component | Basis | January 2027 \(USD\)) Tj
+0 -14 Td /F1 10 Tf (Model inference \(upstream providers, pass-through\) | metered tokens, all tenants | 18,940) Tj
+0 -14 Td /F1 10 Tf (Gateway and identity broker compute | 3 gateway + 2 broker nodes | 6,210) Tj
+0 -14 Td /F1 10 Tf (Secrets vault \(managed\) | flat monthly | 1,150) Tj
+0 -14 Td /F1 10 Tf (Logging and metrics storage | ingest + 13-month retention | 2,380) Tj
+0 -14 Td /F1 10 Tf (Object storage \(tenant data\) | GB-month | 640) Tj
+0 -14 Td /F1 10 Tf (Network egress to upstream providers \(new in v4\) | provider invoices | not yet metered -) Tj
+0 -14 Td /F1 10 Tf (estimate to follow) Tj
+0 -14 Td /F1 10 Tf (Usage driver for inference: approximately 1.9 billion tokens in January across kyd-ods-sandbox) Tj
+0 -14 Td /F1 10 Tf (and kyd-ods-evals.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Egress was not metered separately in January. It is small with internal tenants only but scales) Tj
+0 -14 Td /F1 10 Tf (with traffic. The line is included so that it is not forgotten; a figure will be added once the) Tj
+0 -14 Td /F1 10 Tf (provider invoices for February are in.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Budget totals and campus shares are deliberately not in this document.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (8. Open questions) Tj
+0 -17 Td /F1 10 Tf (1. Dedicated deployments: do we ever support a campus-run deployment of the gateway, and if so) Tj
+0 -14 Td /F1 10 Tf (what does the reference architecture require of it?) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (2. Model provider data processing terms: one system-wide agreement per provider, or per campus?) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (3. Data residency: confirm all upstream providers process in-region for tenants that hold) Tj
+0 -14 Td /F1 10 Tf (student data. Must be closed before any tenant holds real student data.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (4. Disaster recovery: target recovery time for the gateway \(current assumption: 4 hours\).) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (5. Tenant offboarding: how long do we keep a tenant's metadata after it leaves?) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (Closed in v4:) Tj
+0 -14 Td /F1 10 Tf () Tj
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 15 0 R >> >> /Contents 14 0 R >>
+endobj
+14 0 obj
+<< /Length 2960 >>
+stream
+BT
+/F1 10 Tf
+72 760 Td
+0 -14 Td /F1 10 Tf (• Former question 6, status communication: closed. The Kettleyard status page is the source of) Tj
+0 -14 Td /F1 10 Tf (  truth during an incident; the #kettleyard-incident channel is for working chatter. Campus) Tj
+0 -14 Td /F1 10 Tf (  service desks are pointed at the status page.) Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (Change log) Tj
+0 -17 Td /F1 10 Tf (Version | Date | Changes) Tj
+0 -14 Td /F1 10 Tf (v1 | 9 Nov 2026 | First draft: gateway and broker only.) Tj
+0 -14 Td /F1 10 Tf (v2 | 18 Jan 2027 | Added tenancy model, secrets vault, logging. Per-tenant connection pools. 14) Tj
+0 -14 Td /F1 10 Tf (open questions.) Tj
+0 -14 Td /F1 10 Tf (v3 | 22 Feb 2027 | Quotas enforced at the gateway; per-tenant group-to-role mapping; shared) Tj
+0 -14 Td /F1 10 Tf (connection pool per upstream provider with per-tenant shares; per-tenant vault paths and API) Tj
+0 -14 Td /F1 10 Tf (keys; redaction before the log sink; onboarding rewritten around Tinderbox; new section 7; open) Tj
+0 -14 Td /F1 10 Tf (questions trimmed from 14 to 6.) Tj
+0 -14 Td /F1 10 Tf (v4 | 3 Mar 2027 | Responses to the v3 review \(Mara Ilves, 1 March 2027\), per comment below.) Tj
+0 -14 Td /F1 10 Tf (Tinderbox tenant shown as live.) Tj
+0 -14 Td /F1 10 Tf (v3 review comments \(Mara Ilves, 1 March 2027\) - status in v4) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 10 Tf (# | Section | Comment \(short\) | Status in v4 | Where) Tj
+0 -14 Td /F1 10 Tf (1 | s.1 | Add a per-tenant concurrent-request limit | Addressed | s.1, s.3) Tj
+0 -14 Td /F1 10 Tf (2 | s.2, s.6 | Check that group claims arrive; deny on missing group | Addressed | s.2, s.6) Tj
+0 -14 Td /F1 10 Tf (step 4) Tj
+0 -14 Td /F1 10 Tf (3 | s.3 | Back-pressure: bounded queue, 503 + Retry-After, borrowing cap | Deferred to v5 | s.3) Tj
+0 -14 Td /F1 10 Tf (\(note\)) Tj
+0 -14 Td /F1 10 Tf (4 | s.3 | Retry budget; retries count against the tenant's share | Addressed | s.3) Tj
+0 -14 Td /F1 10 Tf (5 | s.3 | Pool per replica or across replicas; capacity with 2 of 3 up | Addressed | s.3) Tj
+0 -14 Td /F1 10 Tf (6 | s.5 | Body logging for student-data tenants: break-glass only | Addressed | s.5) Tj
+0 -14 Td /F1 10 Tf (7 | s.7 | Add network egress to the run-rate | Partially addressed \(line added, figure pending\)) Tj
+0 -14 Td /F1 10 Tf (| s.7) Tj
+0 -14 Td /F1 10 Tf (8 | s.7 | Label January as internal tenants only | Addressed | s.7) Tj
+0 -14 Td /F1 10 Tf (9 | s.4 | Rotation cadence and leaked-key procedure | Deferred to v5 | s.4 \(note\)) Tj
+0 -14 Td /F1 10 Tf (10 | s.6 | Tier-2 support owner and service catalog entry at onboarding | Addressed | s.6 step) Tj
+0 -14 Td /F1 10 Tf (9) Tj
+0 -14 Td /F1 10 Tf (11 | s.8 | Close open question 6; flag question 3 | Addressed | s.8) Tj
+0 -14 Td /F1 10 Tf (Next revision \(v5\) will take up comments 3 and 9 and any changes that come out of the gateway) Tj
+0 -14 Td /F1 10 Tf (incident postmortem.) Tj
+0 -14 Td /F1 10 Tf () Tj
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+16 0 obj
+<< /Title (Kettleyard Reference Architecture v4) /Producer (wcb) >>
+endobj
+xref
+0 17
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000147 00000 n 
+0000000274 00000 n 
+0000003684 00000 n 
+0000003811 00000 n 
+0000008083 00000 n 
+0000008210 00000 n 
+0000012060 00000 n 
+0000012188 00000 n 
+0000016336 00000 n 
+0000016465 00000 n 
+0000020034 00000 n 
+0000020163 00000 n 
+0000023176 00000 n 
+0000023274 00000 n 
+trailer
+<< /Size 17 /Root 1 0 R /Info 16 0 R >>
+startxref
+23358
+%%EOF

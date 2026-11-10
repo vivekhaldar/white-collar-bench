@@ -1,0 +1,20 @@
+From: Mara Ilves <mara.ilves@tarrow.example>
+To: Folasade Renwick <folasade.renwick@tarrow.example>
+Date: Fri, 05 Mar 2027 17:18:00 -0800
+Subject: Weekly update: w/e 5 Mar
+Message-ID: <em-0046@tarrow.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Sade,
+
+Weekly update for the week of 1 March (w/e 5 March), three bullets and one risk:
+
+- Tinderbox: ownership moved to Yusra at this morning's meeting; I stay architect of record. Go-live is now 5 Apr.
+- Kettleyard: the gateway outage is fixed - Ilya's connection-pool fix reached prod Thursday evening and has held since. Ilya's postmortem to you Wed (10 Mar).
+- Writing tool bake-off: scorecard corrected - my Thursday email had the v1 totals; the v2 sheet is right, and Penmarq is ahead (76 vs 71) with data terms at 30%. Clement has the corrected numbers for the RFQ.
+
+Risk: the MLE hire. Mateus accepted Thursday but has now asked to start 10 May; REQ-2207 funding needs a start by 30 April. Sol is checking whether the date can move, but the start date may slip past the funding window.
+
+— Mara

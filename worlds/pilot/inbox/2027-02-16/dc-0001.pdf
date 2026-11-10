@@ -1,0 +1,86 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 3420 >>
+stream
+BT
+/F1 10 Tf
+72 760 Td
+0 -15 Td /F1 11 Tf () Tj
+0 -15 Td /F1 16 Tf (Tinderbox - architecture one-pager \(v1, 18 Feb\)) Tj
+0 -20 Td /F1 10 Tf (Prepared for Kestrow ARB prep, Thu 18 Feb 2027. Author: Mara Ilves, Principal Architect, AI &) Tj
+0 -14 Td /F1 10 Tf (Data \(ODS\). Draft v1, circulated 16 Feb.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (1. Purpose) Tj
+0 -17 Td /F1 10 Tf (AI course assistant for Kestrow courses: answers course-logistics and concept questions) Tj
+0 -14 Td /F1 10 Tf (grounded in the course's own LMS materials, with instructor controls. Proposed pilot courses) Tj
+0 -14 Td /F1 10 Tf (\(scope to be confirmed with Kestrow TLT\): CHEM 110, HIST 214, BIOL 205.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (2. Hosting options) Tj
+0 -17 Td /F1 10 Tf (• Option 1 - dedicated Kestrow deployment. Separate stack in Kestrow's environment; Kestrow) Tj
+0 -14 Td /F1 10 Tf (  runs ops. Pros: full campus control. Cons: duplicates gateway, identity and secrets work) Tj
+0 -14 Td /F1 10 Tf (  already being built centrally; longer lead time.) Tj
+0 -14 Td /F1 10 Tf (• Option 2 - Kettleyard shared tenant. Tinderbox as a tenant on the hub \(model gateway,) Tj
+0 -14 Td /F1 10 Tf (  identity broker, secrets vault\). Pros: reuses shared controls, fastest path. Cons: depends) Tj
+0 -14 Td /F1 10 Tf (  on Kettleyard tenant onboarding; quotas shared.) Tj
+0 -14 Td /F1 10 Tf (• Author's lean: option 2, mainly to avoid rebuilding gateway and identity. Final choice after) Tj
+0 -14 Td /F1 10 Tf (  ARB input.) Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (3. Data flows) Tj
+0 -17 Td /F1 10 Tf (LMS \(course shell\) -> Kestrow context API \(course materials, roster role\) -> Tinderbox app on) Tj
+0 -14 Td /F1 10 Tf (tenant -> Kettleyard model gateway -> model. Responses return the same path. Logs stay in the) Tj
+0 -14 Td /F1 10 Tf (tenant; no model training on course or student content.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (4. Identity / SSO client details) Tj
+0 -17 Td /F1 10 Tf (• IdP: Kestrow IdP \(SAML 2.0 / OIDC\). Users sign in with Kestrow credentials only.) Tj
+0 -14 Td /F1 10 Tf (• App name: Tinderbox \(pilot\). Redirect URI:) Tj
+0 -14 Td /F1 10 Tf (  https://tinderbox.kyd.tarrow.example/auth/callback) Tj
+0 -14 Td /F1 10 Tf (• Requested attributes: email, display name, affiliation \(student/faculty/staff\), course group) Tj
+0 -14 Td /F1 10 Tf (  membership \(group claims, needed for role mapping\).) Tj
+0 -14 Td /F1 10 Tf (• Roles: student, instructor, TA mapped from course groups.) Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (5. Data classes) Tj
+0 -17 Td /F1 10 Tf (• Class D \(dummy/synthetic\): seeded course content and fake users for build and test.) Tj
+0 -14 Td /F1 10 Tf (• Class R \(real\): live course materials and student interactions, production only, subject to) Tj
+0 -14 Td /F1 10 Tf (  Kestrow security and privacy review.) Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (6. Open questions) Tj
+0 -17 Td /F1 10 Tf (• Hosting option for ARB recommendation \(1 vs 2\).) Tj
+0 -14 Td /F1 10 Tf (• On-campus GPU hosting: being assessed separately.) Tj
+0 -14 Td /F1 10 Tf (• Context API contract: fields, events, auth \(to be specified\).) Tj
+0 -14 Td /F1 10 Tf (• Retention period for interaction logs.) Tj
+0 -14 Td /F1 10 Tf (• Load test target and timing, with Kestrow SRE.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Title (Tinderbox - architecture one-pager \(v1, 18 Feb\)) /Producer (wcb) >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000003713 00000 n 
+0000003810 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R /Info 6 0 R >>
+startxref
+3906
+%%EOF

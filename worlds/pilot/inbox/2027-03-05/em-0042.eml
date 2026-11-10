@@ -1,0 +1,41 @@
+From: Ottilie Brandvold <ottilie.brandvold@saltmarren.tarrow.example>
+To: Mara Ilves <mara.ilves@tarrow.example>
+Cc: Delphine Arceneaux <delphine.arceneaux@saltmarren.tarrow.example>
+Date: Fri, 05 Mar 2027 09:30:00 -0800
+Subject: Advising appointment export (Jan-Feb)
+Message-ID: <adv-export-0305.2291@saltmarren.tarrow.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Hi Mara!
+
+Here's the Jan-Feb appointment export you asked for - it's in the shared
+drive under Advising > appt-export-jan-feb.xlsx: every booking, request
+date and first-available date. That's the data for the wait-time look you
+offered on Tuesday, so it's all yours.
+
+A few notes so you're not guessing:
+
+- It covers 4 Jan - 26 Feb, all advising appointment types (walk-ins
+  aren't in there - we don't book those).
+- One row per booking. "Request date" is when the student asked;
+  "first-available" is the first open slot the system offered them, so
+  the gap between the two is the wait.
+- There's a student-type column (first-year / continuing / transfer) -
+  I figured you'd want to split out the transfer students first.
+- No names or student IDs - just row numbers.
+
+No-show rates to follow next week - I need to pull those from a separate
+report and it's a bit fiddly, since a no-show and a same-day cancellation
+end up in the same status code.
+
+Honestly so glad someone is looking at this with real numbers!
+
+Tillie
+
+--
+Ottilie Brandvold
+Advising Operations Lead
+TU Saltmarren
+ottilie.brandvold@saltmarren.tarrow.example

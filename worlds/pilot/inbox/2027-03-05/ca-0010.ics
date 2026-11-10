@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tarrow University System//Calendar 2027//EN
+METHOD:REPLY
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:4d81c3b7-ref-arch-v4-follow-up@tarrow.example
+DTSTAMP:20270305T163100Z
+SEQUENCE:0
+SUMMARY:Accepted: Ref arch v4 follow-up
+DTSTART:20270305T150000
+DTEND:20270305T154500
+ORGANIZER;CN=Mara Ilves:mailto:mara.ilves@tarrow.example
+ATTENDEE;CN=Ilya Marchetti;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED:mailto:ilya.marchetti@tarrow.example
+COMMENT:Works for me. Follow-up sync it is - I'll bring my list of the deferred comments.
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,11 @@
+{
+  "workspace": "tarrow",
+  "channel": "dm-emeka-mara",
+  "kind": "dm",
+  "participants": ["Emeka Nwosu-Hart", "Mara Ilves"],
+  "messages": [
+    {"ts": "2027-03-03T16:10:44-08:00", "user": "Emeka Nwosu-Hart", "handle": "@emeka", "text": "Hi Mara! Before things get busy - could you send me the faculty onboarding guide and set up a Tinderbox sandbox login for my TA? 🙏 My TA for the CHEM 110 lab sections is dying to poke at it!"},
+    {"ts": "2027-03-04T09:41:27-08:00", "user": "Mara Ilves", "handle": "@mara", "text": "onboarding guide attached. I'll set up your TA's sandbox login after the workshop - send me their name? also still need that CHEM 110 assignment rubric for the eval plan", "files": [{"name": "Tinderbox - faculty onboarding guide.pdf", "type": "pdf"}]},
+    {"ts": "2027-03-04T09:58:06-08:00", "user": "Emeka Nwosu-Hart", "handle": "@emeka", "text": "attached!! sorry, it's been sitting in my drafts since last week 🤦 both of them - the problem-set rubric and the lab report one. TA name to follow! see you at 1!", "files": [{"name": "CHEM 110 - assignment rubrics (problem sets + lab report).docx", "type": "docx"}], "reactions": [{"emoji": "pray", "users": ["@mara"]}]}
+  ]
+}

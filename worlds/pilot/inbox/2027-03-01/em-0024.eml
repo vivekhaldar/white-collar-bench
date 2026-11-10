@@ -1,0 +1,34 @@
+From: Percival Ndiaye <percival.ndiaye@tarrow.example>
+To: Mara Ilves <mara.ilves@tarrow.example>
+Cc: Ramona Szabo <ramona.szabo@tarrow.example>
+Date: Mon, 01 Mar 2027 19:06:00 -0800
+Subject: Rebased FTE inputs (v2): Orrin Valley double-counted
+Message-ID: <em-0024@tarrow.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Mara,
+
+Use v2 attached, not v1. Orrin Valley was double-counted (graduate FTE
+included twice). Total drops about 2,900 FTE.
+
+- Orrin Valley student FTE: 9,400 (v1: 12,300)
+- Student FTE, four campuses: 46,770 (v1: 49,670)
+- Faculty FTE: 2,835, unchanged
+- Kestrow is now 46% of student FTE (v1: 43%)
+
+Other three campuses unchanged. The Orrin Valley census file was reconciled
+today; that is where it showed up. The "changes" tab has the delta.
+
+Anything built on v1 has to be re-run on these numbers before the options
+paper goes to Sade for the review Lucía set up. Council of Campus CIOs
+meets 12 March.
+
+Percy
+
+Percival Ndiaye
+Director, System Budget & Finance
+Tarrow University System Office
+
+Attachment: FY27_campus_FTE_inputs_v2.xlsx

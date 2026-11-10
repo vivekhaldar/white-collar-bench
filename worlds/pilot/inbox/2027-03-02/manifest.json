@@ -1,0 +1,139 @@
+{
+  "date": "2027-03-02",
+  "artifacts": [
+    {
+      "id": "em-0025",
+      "channel": "email",
+      "received_at": "2027-03-02T06:30:00-08:00",
+      "path": "em-0025.eml",
+      "title": "[All Staff] Multi-factor sign-in becomes mandatory on 15 March"
+    },
+    {
+      "id": "em-0026",
+      "channel": "email",
+      "received_at": "2027-03-02T07:00:00-08:00",
+      "path": "em-0026.eml",
+      "title": "Reminder: interview feedback for Mateus Okonedo is pending"
+    },
+    {
+      "id": "ch-0010",
+      "channel": "chat",
+      "received_at": "2027-03-02T07:45:00-08:00",
+      "path": "ch-0010.json",
+      "title": "DM Delphine / Mara: parking"
+    },
+    {
+      "id": "em-0027",
+      "channel": "email",
+      "received_at": "2027-03-02T08:05:00-08:00",
+      "path": "em-0027.eml",
+      "title": "Introduction: Tinderbox privacy review (PIA)"
+    },
+    {
+      "id": "mt-0006",
+      "channel": "transcript",
+      "received_at": "2027-03-02T08:32:00-08:00",
+      "path": "mt-0006.vtt",
+      "title": "ODS leads call (weekly)"
+    },
+    {
+      "id": "ch-0011",
+      "channel": "chat",
+      "received_at": "2027-03-02T08:33:00-08:00",
+      "path": "ch-0011.json",
+      "title": "DM Mara / Lucía: Sade + Bart Ngata"
+    },
+    {
+      "id": "mt-0007",
+      "channel": "transcript",
+      "received_at": "2027-03-02T09:35:00-08:00",
+      "path": "mt-0007.vtt",
+      "title": "Tinderbox standup (Tue)"
+    },
+    {
+      "id": "mn-0006",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-02T09:48:00-08:00",
+      "path": "mn-0006.md",
+      "title": "Huddlescribe recap: Tinderbox standup"
+    },
+    {
+      "id": "em-0028",
+      "channel": "email",
+      "received_at": "2027-03-02T10:45:00-08:00",
+      "path": "em-0028.eml",
+      "title": "Circling back: next steps for Saltmarren + our ACR"
+    },
+    {
+      "id": "ch-0012",
+      "channel": "chat",
+      "received_at": "2027-03-02T12:40:00-08:00",
+      "path": "ch-0012.json",
+      "title": "#kettleyard: Tinderbox tenant live"
+    },
+    {
+      "id": "mn-0007",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-02T12:45:00-08:00",
+      "path": "mn-0007.md",
+      "title": "Debrief: Saltmarren site visit"
+    },
+    {
+      "id": "ch-0013",
+      "channel": "chat",
+      "received_at": "2027-03-02T12:55:00-08:00",
+      "path": "ch-0013.json",
+      "title": "DM Dmitri / Mara: spec churn"
+    },
+    {
+      "id": "em-0029",
+      "channel": "email",
+      "received_at": "2027-03-02T14:02:00-08:00",
+      "path": "em-0029.eml",
+      "title": "Re: Huddlescribe recap: Pen Mark demo"
+    },
+    {
+      "id": "em-0030",
+      "channel": "email",
+      "received_at": "2027-03-02T14:36:00-08:00",
+      "path": "em-0030.eml",
+      "title": "Writing feedback tool: procurement path"
+    },
+    {
+      "id": "ch-0014",
+      "channel": "chat",
+      "received_at": "2027-03-02T15:31:00-08:00",
+      "path": "ch-0014.json",
+      "title": "DM Mara / Sade: options paper"
+    },
+    {
+      "id": "dc-0007",
+      "channel": "document",
+      "received_at": "2027-03-02T15:31:00-08:00",
+      "path": "dc-0007.docx",
+      "title": "Kettleyard cost-sharing options v1",
+      "parent": "ch-0014"
+    },
+    {
+      "id": "mt-0008",
+      "channel": "transcript",
+      "received_at": "2027-03-02T16:40:00-08:00",
+      "path": "mt-0008.vtt",
+      "title": "Chargeback options review"
+    },
+    {
+      "id": "nt-0005",
+      "channel": "note",
+      "received_at": "2027-03-02T17:52:00-08:00",
+      "path": "nt-0005.md",
+      "title": "Tue eve"
+    },
+    {
+      "id": "em-0031",
+      "channel": "email",
+      "received_at": "2027-03-02T22:47:00-08:00",
+      "path": "em-0031.eml",
+      "title": "DRAFT: Tinderbox security review package"
+    }
+  ]
+}

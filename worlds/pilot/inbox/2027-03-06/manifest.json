@@ -1,0 +1,33 @@
+{
+  "date": "2027-03-06",
+  "artifacts": [
+    {
+      "id": "em-0047",
+      "channel": "email",
+      "received_at": "2027-03-06T07:00:00-08:00",
+      "path": "em-0047.eml",
+      "title": "Campus Futures Forum: early-bird closes Monday"
+    },
+    {
+      "id": "nt-0007",
+      "channel": "note",
+      "received_at": "2027-03-06T09:40:00-08:00",
+      "path": "nt-0007.md",
+      "title": "Voice memo: weekend brain dump"
+    },
+    {
+      "id": "em-0048",
+      "channel": "email",
+      "received_at": "2027-03-06T11:12:00-08:00",
+      "path": "em-0048.eml",
+      "title": "Re: Tinderbox security package"
+    },
+    {
+      "id": "ch-0027",
+      "channel": "chat",
+      "received_at": "2027-03-06T20:31:00-08:00",
+      "path": "ch-0027.json",
+      "title": "DM Dmitri / Mara: field list sign-off"
+    }
+  ]
+}

@@ -1,0 +1,361 @@
+WEBVTT
+
+NOTE
+Chargeback options review
+Date: Tue 2 Mar 2027, 16:00-16:30 (-08:00), VC conference room (4B) + meet.tarrow.example
+Attendees (auto-generated): Folasade Renwick, Mara Ilves, Ramona Szabo, Percival Ndiaye, ODS-CONF-4B
+Recording started at 16:12. Transcript generated automatically. Speaker names from meeting display names and voice matching; may contain errors.
+
+00:00:00.385 --> 00:00:17.405
+<v Mara Ilves>...so that's why the hybrid. The base fee covers the platform whether or not anyone's using it, and the usage line grows with the tenants. It's the only one of the three that works at one tenant and at four.
+
+00:00:19.351 --> 00:00:20.151
+<v Folasade Renwick>Mm-hm.
+
+00:00:20.818 --> 00:00:32.584
+<v Mara Ilves>If you go to the table, section five. Under B, as of today, Kestrow pays the whole thing. There's one live tenant. Everybody else is at zero.
+
+00:00:34.096 --> 00:00:40.596
+<v Percival Ndiaye>Which isn't a cost model. That's an invoice to Kestrow with a cover page.
+
+00:00:43.148 --> 00:00:44.301
+<v Ramona Szabo>(laughs)
+
+00:00:44.782 --> 00:00:54.085
+<v Mara Ilves>Right. And under A it flips. Brackwater pays the same as Kestrow, for a platform they don't have a tenant on yet.
+
+00:00:55.725 --> 00:00:59.533
+<v Folasade Renwick>And Brackwater stops coming to the Council.
+
+00:01:01.544 --> 00:01:03.120
+<v Mara Ilves>Probably, yes.
+
+00:01:04.298 --> 00:01:08.681
+<v Percival Ndiaye>Before you go on. These are on the v2 FTEs?
+
+00:01:09.632 --> 00:01:17.223
+<v Mara Ilves>v2, yes. Orrin Valley at nine thousand four hundred. Everything got re-run last night after your email.
+
+00:01:17.977 --> 00:01:27.378
+<v Percival Ndiaye>Good. Because v1 had Orrin Valley paying for graduate students twice, and Niall would have found that in about four seconds.
+
+00:01:30.249 --> 00:01:43.397
+<v Mara Ilves>The FTE share is in the table as a reference row. Kestrow's just under half of student FTE now. It went up a bit from v1 because the total came down.
+
+00:01:44.840 --> 00:01:46.638
+<v Percival Ndiaye>Forty-six, roughly. Yes.
+
+00:01:47.245 --> 00:01:50.305
+<v Folasade Renwick>And faculty FTE isn't used anywhere?
+
+00:01:52.426 --> 00:02:03.814
+<v Mara Ilves>Not in any of the three. I looked at it. It moves the shares by a rounding error and it's one more number to argue about.
+
+00:02:04.890 --> 00:02:07.387
+<v Folasade Renwick>Fine. Leave it out.
+
+00:02:08.039 --> 00:02:15.971
+<v Folasade Renwick>Okay. Go back to C. The forty-sixty split between base and usage. Where does that come from?
+
+00:02:18.439 --> 00:02:34.846
+<v Mara Ilves>It's illustrative. I picked it to show the shape. The real split should come off the cost components, section two, the fixed stuff versus the tokens through the gateway. I don't want anyone reading forty-sixty as a proposal.
+
+00:02:37.901 --> 00:02:42.746
+<v Folasade Renwick>Then don't put it in front of anyone as forty-sixty.
+
+00:02:43.745 --> 00:02:47.483
+<v Percival Ndiaye>The usage shares are modelled as well?
+
+00:02:49.394 --> 00:02:58.632
+<v Mara Ilves>Modelled. Scenario U1. Kestrow carrying most of the traffic, Saltmarren some pilot traffic, the other two light. It's labelled as an assumption.
+
+00:03:00.877 --> 00:03:05.845
+<v Percival Ndiaye>Fine for today. I wouldn't take it to a CFO.
+
+00:03:06.863 --> 00:03:07.950
+<v Mara Ilves>No, agreed.
+
+00:03:08.517 --> 00:03:11.292
+<v Ramona Szabo>Can I ask a dumb one?
+
+00:03:13.156 --> 00:03:14.592
+<v Folasade Renwick>Go ahead.
+
+00:03:15.745 --> 00:03:26.498
+<v Ramona Szabo>On C, a campus with no tenant still pays the base fee. Right? So Orrin Valley pays something even if they never touch it.
+
+00:03:28.021 --> 00:03:39.556
+<v Mara Ilves>They pay towards the platform being there. Same logic as the network backbone. They can stand up a tenant any time without eating the fixed cost first.
+
+00:03:41.012 --> 00:03:47.003
+<v Ramona Szabo>Okay. I just know how that sentence lands in a room full of CIOs.
+
+00:03:48.612 --> 00:03:51.575
+<v Percival Ndiaye>It lands as a tax.
+
+00:03:52.413 --> 00:04:02.061
+<v Mara Ilves>It lands as a tax if we call it a fee. If it's framed as capacity they can draw on, then it's a—
+
+00:04:04.944 --> 00:04:09.956
+<v Folasade Renwick>Framing is a Council problem. Let's not solve it here.
+
+00:04:13.012 --> 00:04:28.691
+<v Mara Ilves>Agreed. The other thing on C, just so it's on the record. Onboarding's one-off. Standing up a tenant, identity, a first load test. I've kept that out of the base fee. Whoever onboards pays it once.
+
+00:04:31.701 --> 00:04:35.037
+<v Percival Ndiaye>Pays it once in which year?
+
+00:04:37.511 --> 00:04:43.231
+<v Mara Ilves>The year they onboard. It's small next to run cost, but it's lumpy.
+
+00:04:46.157 --> 00:04:56.994
+<v Percival Ndiaye>Lumpy I can live with if it's predictable. What I can't do is a number that moves every quarter with no ceiling on it.
+
+00:05:00.132 --> 00:05:10.211
+<v Mara Ilves>That's B's problem more than C's. Under C the base is fixed for the year, rebased on the census. Only the usage line moves.
+
+00:05:12.190 --> 00:05:14.441
+<v Percival Ndiaye>And usage is metered where?
+
+00:05:15.211 --> 00:05:26.715
+<v Mara Ilves>At the gateway, per tenant. It already counts tokens per tenant. Ilya's team built that in from day one, so we're not inventing a metering system.
+
+00:05:28.818 --> 00:05:30.518
+<v Percival Ndiaye>Billed how often?
+
+00:05:31.026 --> 00:05:35.530
+<v Mara Ilves>I've put quarterly in arrears as a suggestion. Section six.
+
+00:05:38.299 --> 00:05:43.247
+<v Percival Ndiaye>Quarterly works with how campuses close their books. Monthly wouldn't.
+
+00:05:45.397 --> 00:05:50.820
+<v Folasade Renwick>Okay. That's detail for later. I don't want us designing invoices today.
+
+00:05:51.697 --> 00:05:53.482
+<v Mara Ilves>No. Fair.
+
+00:05:54.134 --> 00:06:08.939
+<v Ramona Szabo>Can I just check I've got the three straight, for my own notes? A is everyone pays the same. B is pay by the token. C is a base by size plus tokens on top.
+
+00:06:11.048 --> 00:06:12.496
+<v Mara Ilves>That's it.
+
+00:06:13.230 --> 00:06:16.779
+<v Ramona Szabo>Okay. That I can say out loud.
+
+00:06:18.520 --> 00:06:20.963
+<v Folasade Renwick>Sorry. That's my phone.
+
+00:06:21.876 --> 00:06:24.120
+<v Folasade Renwick>Ignore it. Keep going.
+
+00:06:24.873 --> 00:06:39.787
+<v Mara Ilves>So, risks. The big one is no actuals. Every usage number in there is modelled, so B and C can be picked apart line by line until we have real run-rate data off the gateway.
+
+00:06:42.216 --> 00:06:43.534
+<v Percival Ndiaye>Mm.
+
+00:06:44.093 --> 00:06:54.618
+<v Mara Ilves>Second is Kestrow concentration. Under both B and C, Kestrow carries the biggest share, and Bart Ngata's going to have a view on that.
+
+00:06:55.567 --> 00:07:07.268
+<v Mara Ilves>Third, smaller. The base-usage split. Whatever number we pick will be the most argued-over thing in the model, so it needs a documented basis, not my judgement.
+
+00:07:08.127 --> 00:07:09.036
+<v Folasade Renwick>Yes.
+
+00:07:09.418 --> 00:07:12.611
+<v Percival Ndiaye>Nobody can set that number without actuals.
+
+00:07:15.850 --> 00:07:16.650
+<v Mara Ilves>Understood.
+
+00:07:17.449 --> 00:07:25.526
+<v Folasade Renwick>Bart's view is the reason we're doing this in this order. Okay. Let me say where I am.
+
+00:07:26.479 --> 00:07:35.167
+<v Folasade Renwick>I've read it. It's clear, and thank you for getting it to me before the meeting and not during.
+
+00:07:36.648 --> 00:07:37.756
+<v Mara Ilves>Sure.
+
+00:07:38.189 --> 00:07:55.368
+<v Folasade Renwick>I lean toward option B. Pay for what you use is the easiest principle to defend in front of four CFOs. But I'm not deciding the model today. Not B, not C. I want to see what the actuals do first.
+
+00:07:57.099 --> 00:08:00.615
+<v Mara Ilves>Understood. For the record, I'd still argue C.
+
+00:08:03.450 --> 00:08:08.883
+<v Folasade Renwick>I know you would. It's in writing, it's fine. Keep arguing it.
+
+00:08:09.620 --> 00:08:17.654
+<v Folasade Renwick>Here's what I am deciding. No expansion of Tinderbox beyond Kestrow until the campuses sign up to chargeback.
+
+00:08:18.916 --> 00:08:20.701
+<v Ramona Szabo>Beyond Kestrow meaning...
+
+00:08:21.695 --> 00:08:33.383
+<v Folasade Renwick>Meaning Saltmarren, Orrin Valley, Brackwater. Any of them. If a campus wants a Tinderbox, it comes with agreeing to pay into Kettleyard on whatever model we land on.
+
+00:08:35.847 --> 00:08:40.934
+<v Mara Ilves>So expansion is conditional on chargeback. Not on which option.
+
+00:08:43.376 --> 00:08:51.877
+<v Folasade Renwick>Conditional on the campuses agreeing to chargeback. Yes. The model we can argue about later. The principle is that one.
+
+00:08:53.067 --> 00:08:54.770
+<v Percival Ndiaye>That helps me.
+
+00:08:55.184 --> 00:09:01.500
+<v Folasade Renwick>This is about the other three campuses. Not about how Tinderbox runs at Kestrow.
+
+00:09:04.151 --> 00:09:10.707
+<v Ramona Szabo>Okay. Because people at the other campuses have been asking when they get their own.
+
+00:09:12.367 --> 00:09:20.854
+<v Folasade Renwick>They'll know what the answer depends on once we've told them. Which brings me to the second thing.
+
+00:09:23.523 --> 00:09:36.891
+<v Folasade Renwick>Nothing on these options goes to the campuses in writing before the Council. Not the paper, not the table, not a summary in an email. Conversations with campus CFOs stay verbal.
+
+00:09:38.856 --> 00:09:40.978
+<v Ramona Szabo>Verbal, got it.
+
+00:09:41.477 --> 00:09:51.072
+<v Folasade Renwick>I mean it. The minute a share is in somebody's inbox, it's the number, and we spend the Council defending a draft.
+
+00:09:52.737 --> 00:09:56.116
+<v Mara Ilves>That's fine. The paper's marked internal anyway.
+
+00:09:57.761 --> 00:10:02.920
+<v Folasade Renwick>Marked internal is not the same as not sent. Not sent.
+
+00:10:05.684 --> 00:10:06.803
+<v Mara Ilves>Understood.
+
+00:10:07.407 --> 00:10:13.546
+<v Percival Ndiaye>Can I put the money side on the table before we go further?
+
+00:10:14.719 --> 00:10:15.738
+<v Folasade Renwick>Please.
+
+00:10:16.869 --> 00:10:36.717
+<v Percival Ndiaye>There's no FY28 money for Kettleyard unless someone owns the cost. I'm building the FY28 submission now. If there isn't a named owner and a funding line behind it, it doesn't go in. It's not a judgement on the platform. That's just how the submission works.
+
+00:10:39.022 --> 00:10:42.689
+<v Folasade Renwick>Someone meaning a campus or meaning us?
+
+00:10:45.027 --> 00:10:54.539
+<v Percival Ndiaye>Either. But someone. Shared by everyone means owned by no one, and owned by no one means not in the budget.
+
+00:10:56.827 --> 00:11:00.098
+<v Mara Ilves>Which is an argument for C, honestly.
+
+00:11:02.735 --> 00:11:09.397
+<v Percival Ndiaye>It's an argument for any model that someone signs. I'm agnostic on the letter.
+
+00:11:10.709 --> 00:11:13.301
+<v Folasade Renwick>Noted. That's useful, Percy.
+
+00:11:13.903 --> 00:11:21.127
+<v Ramona Szabo>Okay. So we'll loop in the campus CFOs before the Council. Verbally. So nobody walks in—
+
+00:11:23.134 --> 00:11:23.934
+<v Folasade Renwick>Verbally.
+
+00:11:24.791 --> 00:11:26.674
+<v Ramona Szabo>—cold. Yes. Verbally.
+
+00:11:27.020 --> 00:11:31.040
+<v Folasade Renwick>Sorry, phone again. It's Lucía, it can wait.
+
+00:11:32.840 --> 00:11:40.804
+<v Folasade Renwick>One more thing and then I'll let you go. You know the target I'm holding us to.
+
+00:11:42.363 --> 00:11:44.063
+<v Mara Ilves>I do.
+
+00:11:44.484 --> 00:11:54.887
+<v Folasade Renwick>Whatever we bring to the Council has to be visibly heading there. I don't need it solved on the twelfth. I need it credible.
+
+00:11:55.680 --> 00:12:02.079
+<v Percival Ndiaye>And I'd rather it wasn't restated in every document. It's a target, not a slogan.
+
+00:12:05.248 --> 00:12:08.114
+<v Folasade Renwick>Agreed. It stays in this room.
+
+00:12:09.880 --> 00:12:18.224
+<v Ramona Szabo>Speaking of things staying in this room, Percy, did the vending machine on four give you your dollar back?
+
+00:12:19.084 --> 00:12:20.444
+<v Percival Ndiaye>[crosstalk] —don't.
+
+00:12:20.991 --> 00:12:23.186
+<v Ramona Szabo>It's a fair question.
+
+00:12:24.310 --> 00:12:30.813
+<v Percival Ndiaye>It did not. It took two. I'm considering a formal budget review of that machine.
+
+00:12:32.371 --> 00:12:35.564
+<v Ramona Szabo>You could put it on chargeback.
+
+00:12:37.476 --> 00:12:40.426
+<v Percival Ndiaye>Consumption-based. It consumes, I pay.
+
+00:12:41.545 --> 00:12:43.106
+<v Folasade Renwick>(laughs) Okay. Okay.
+
+00:12:44.293 --> 00:12:52.180
+<v Folasade Renwick>Mara. One page for the Council of Campus CIOs. Three bullets and one risk. To me, by Wednesday next week.
+
+00:12:54.916 --> 00:12:57.402
+<v Mara Ilves>Will do. One-pager to you Wednesday.
+
+00:13:04.183 --> 00:13:09.680
+<v Ramona Szabo>So two days before the Council. The Council's Friday the twelfth.
+
+00:13:12.177 --> 00:13:17.561
+<v Folasade Renwick>Two days before. That gives me time to mark it up.
+
+00:13:18.629 --> 00:13:24.761
+<v Folasade Renwick>It comes to me. It does not go to the campuses. Same rule.
+
+00:13:27.237 --> 00:13:29.180
+<v Mara Ilves>Same rule. Yes.
+
+00:13:29.924 --> 00:13:42.490
+<v Folasade Renwick>Use what's in the paper, but lead with the conditional. That's the thing they need to hear first: no Tinderbox at your campus without chargeback. The options come second.
+
+00:13:44.240 --> 00:13:48.471
+<v Mara Ilves>Lead with the conditional, options second. Got it.
+
+00:13:49.097 --> 00:13:54.890
+<v Folasade Renwick>And the risk is the actuals. Unless something worse turns up before then.
+
+00:13:56.683 --> 00:14:01.218
+<v Ramona Szabo>Short is good. Nobody at the Council reads page two.
+
+00:14:03.444 --> 00:14:09.301
+<v Folasade Renwick>Nobody at the Council reads page one. They read the first bullet.
+
+00:14:10.746 --> 00:14:13.178
+<v Folasade Renwick>Good. Anything else? Percy?
+
+00:14:13.608 --> 00:14:17.005
+<v Percival Ndiaye>No. That was what I needed.
+
+00:14:18.892 --> 00:14:20.282
+<v Folasade Renwick>Ramona?
+
+00:14:21.158 --> 00:14:22.866
+<v Ramona Szabo>Nope. I'm good.
+
+00:14:24.051 --> 00:14:29.727
+<v Folasade Renwick>Then thank you all. Mara, good paper. Percy, sorry about your two dollars.
+
+00:14:32.424 --> 00:14:34.397
+<v Ramona Szabo>(laughs) Bye, all.
+
+00:14:34.791 --> 00:14:36.099
+<v Mara Ilves>Thanks, bye.

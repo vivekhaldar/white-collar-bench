@@ -1,0 +1,24 @@
+From: Mara Ilves <mara.ilves@tarrow.example>
+To: Dmitri Halloran <dmitri.halloran@kestrow.tarrow.example>, Joaquín Sepúlveda <joaquin.sepulveda@kestrow.tarrow.example>
+Cc: Yusra Haddad <yusra.haddad@kestrow.tarrow.example>
+Date: Mon, 22 Feb 2027 10:05:00 -0800
+Subject: Tinderbox interface spec v1
+Message-ID: <em-0010@tarrow.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Dima, Jack,
+
+Spec v1 attached - request/response context API between the LMS and the
+assistant. Two endpoints (GET /courses/{id}/context, POST /sessions), field
+list in section 4, auth via Kestrow IdP tokens.
+
+Jack, it goes to ARB next week. Open questions are in section 7 if you want
+to flag anything before then.
+
+Dima, shout if the field list doesn't match what the LMS actually exposes.
+
+Attachment: tinderbox-lms-interface-spec-v1.md
+
+— Mara

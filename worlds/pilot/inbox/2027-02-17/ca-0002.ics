@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tarrow University System//Calendar 2027//EN
+METHOD:REQUEST
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:3f9a0b61-tinderbox-daily-standup@kestrow.tarrow.example
+DTSTAMP:20270217T191000Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Tinderbox daily standup
+DTSTART:20270222T091500
+DTEND:20270222T093000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR;UNTIL=20270402T235959
+LOCATION:KES Huddle Room 2B / video
+ORGANIZER;CN=Yusra Haddad:mailto:yusra.haddad@kestrow.tarrow.example
+ATTENDEE;CN=Mara Ilves;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:mara.ilves@tarrow.example
+ATTENDEE;CN=Joaquín Sepúlveda;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:joaquin.sepulveda@kestrow.tarrow.example
+ATTENDEE;CN=Dmitri Halloran;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:dmitri.halloran@kestrow.tarrow.example
+ATTENDEE;CN=Ingrid Solberg;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:ingrid.solberg@kestrow.tarrow.example
+ATTENDEE;CN=Ramona Szabo;ROLE=OPT-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:ramona.szabo@tarrow.example
+DESCRIPTION:Daily 15 min for the Tinderbox build team. Join: https://meet.tarrow.example/j/2207519364
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT5M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
