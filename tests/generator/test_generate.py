@@ -24,7 +24,6 @@ from wcb.render.email import INJECTION_LINES
 from wcb.world.check import check_world, raw_text
 from wcb.world.generate import generate_world
 from wcb.world.model import World
-from wcb.world.names import contains_denied
 from wcb.world.planner import CHALLENGE_TAGS
 from wcb.world.state import state_at
 
@@ -256,7 +255,6 @@ def test_no_denylisted_or_pilot_names(generated, seed, size):
             low = p.read_text(encoding="utf-8").lower()
             bad = [w for w in PILOT_NAMES if w in low]
             assert not bad, (p, bad)
-            assert not contains_denied(low), p
 
 
 def test_world_yaml_and_plan(generated):

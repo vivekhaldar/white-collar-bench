@@ -25,7 +25,6 @@ from wcb.world.comms import (
     Communication,
     artifact_prefixes,
 )
-from wcb.world.names import contains_denied
 from wcb.world.planner import CHALLENGE_TAGS, make_plan
 from wcb.world.simulator import simulate
 from wcb.world.state import state_at
@@ -203,12 +202,6 @@ def test_keywords_and_summaries(sim_of):
     for e in sim.events:
         if e["type"] == "fact.set" and e["attribute"] in ("status", "phase", "target_date", "blocker"):
             assert (e["subject"], e["t"]) in summary_at, e
-
-
-def test_no_denylisted_strings(sim_of):
-    for key in WORLDS[:3]:
-        blob = json.dumps(sim_of(*key).to_dict()).lower()
-        assert not contains_denied(blob)
 
 
 # ---------------------------------------------------------------- planted challenges

@@ -3,42 +3,26 @@
 Everything here is invented or generic. People are drawn from large first-name and surname
 pools spanning many cultures and paired at random; organizations, products and project code
 names are coined from syllable tables and short word lists. Every generated string is checked
-against two denylists:
+against ``AVOID_TOKENS`` and ``FAMOUS_FULL_NAMES``:
 
-- a hard denylist of words that must never appear anywhere in generated content (checked as
-  case-insensitive substrings of words; see ``contains_denied``). It is stored as SHA-256
-  digests so that this public file does not spell out terms found by privacy reviews;
 - ``AVOID_TOKENS``: names used by the hand-authored pilot world, the test fixtures and the
   examples in the docs, plus a few famous or real-company names. Generated names may not use
   them as whole tokens, so generated worlds stay distinct from the pilot.
 
-The name pools below were pruned with ``wcb privacy scan`` (docs/privacy.md); prune them again
-the same way after adding names. All randomness comes from the ``random.Random`` instance passed
+Nothing here may name what a private source repository contains, so terms found by privacy
+reviews are removed rather than listed: the name pools are pruned with
+``scripts/check_name_pools.py`` (docs/privacy.md), and released worlds are scanned with
+``wcb privacy scan``. All randomness comes from the ``random.Random`` instance passed
 in, so the same seed always produces the same names.
 """
 
 from __future__ import annotations
 
-import hashlib
 import random
 import re
 import unicodedata
 
 # ---------------------------------------------------------------- denylists
-# SHA-256 hex digests of lowercase ASCII words that are never used anywhere. To add a word w:
-# hashlib.sha256(w.encode()).hexdigest().
-_HARD_DENY_SHA256: frozenset[str] = frozenset({
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-})
-_HARD_DENY_LENGTHS: tuple[int, ...] = (4, 5, 6, 7, 8)
-
 # Whole-token matches, case-insensitive: the pilot cast and orgs, fixture and doc examples,
 # and a handful of real companies, products and famous names that coinage could hit.
 AVOID_TOKENS: frozenset[str] = frozenset(
@@ -93,20 +77,8 @@ def _fold(s: str) -> str:
     return unicodedata.normalize("NFKD", str(s)).encode("ascii", "ignore").decode("ascii").lower()
 
 
-def contains_denied(text: str) -> bool:
-    """True if any word in `text` contains a hard-denylisted word (case-insensitive)."""
-    for word in set(re.findall(r"[a-z]+", _fold(text))):
-        for n in _HARD_DENY_LENGTHS:
-            for i in range(len(word) - n + 1):
-                if hashlib.sha256(word[i:i + n].encode()).hexdigest() in _HARD_DENY_SHA256:
-                    return True
-    return False
-
-
 def is_denied(text: str) -> bool:
-    """True if `text` contains a hard-denylisted word or uses an avoided name as a token."""
-    if contains_denied(text):
-        return True
+    """True if `text` uses an avoided name as a token."""
     low = _fold(text)
     toks = set(re.findall(r"[a-z]+(?:-[a-z]+)*", low))
     toks |= {p for t in list(toks) for p in t.split("-")}

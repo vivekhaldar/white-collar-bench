@@ -149,7 +149,7 @@ Every release, and every pull request that adds or regenerates worlds or documen
    - distinctive real numbers, dates or places;
    - real meeting links, phone numbers or credentials.
 
-3. **Name pools.** If the generator's name pools changed, run `python scripts/check_name_pools.py --private-repo <path>`. It writes every pool name into a line of prose, scans it, and prints only counts; `--fix` removes flagged names from `wcb/world/names.py`. Then regenerate the committed dev worlds. Terms that must never be generated go in the hard denylist in `names.py`, which stores SHA-256 digests rather than the words, so the public source does not list what a review found.
+3. **Name pools.** If the generator's name pools changed, run `python scripts/check_name_pools.py --private-repo <path>`. It writes every pool name into a line of prose, scans it, and prints only counts; `--fix` removes flagged names from `wcb/world/names.py`. Then regenerate the committed dev worlds. Never record what a review found in the repository (not even as hashes, which a dictionary reverses): remove the term at its source instead.
 
 Prose rewritten by an LLM (`wcb generate --llm`) gets the same treatment. If a leak is found after release, remove it, regenerate the affected worlds, scan again and publish a new release.
 
