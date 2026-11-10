@@ -101,9 +101,10 @@
   checkpoint: cp1
   template: event_date
   params:
-    event: e-0171
-  text: When was "Confirm the bed management discovery process map with Oluwaseun" completed?
-  challenges: []
+    event: e-0166
+  text: When was "Send Tunde the Friday status note for w/e 17 September" completed?
+  challenges:
+  - duplicate_signal
 - id: q-014
   checkpoint: cp1
   template: project_attr
@@ -215,8 +216,8 @@
   checkpoint: cp2
   template: event_date
   params:
-    event: e-0209
-  text: When was "Publish the Sirocco tenant onboarding guide" completed?
+    event: e-0207
+  text: When was "Send Bisi the Okapi order set review" completed?
   challenges:
   - batch_catchup
 - id: q-027
@@ -326,9 +327,10 @@
   checkpoint: cp3
   template: event_date
   params:
-    event: e-0195
-  text: When was "Write a reference note for Dina's prior authorization fellowship application" completed?
-  challenges: []
+    event: e-0186
+  text: When was "Run a sensitivity analysis on the funding model" completed?
+  challenges:
+  - duplicate_signal
 - id: q-040
   checkpoint: cp3
   template: loop_due

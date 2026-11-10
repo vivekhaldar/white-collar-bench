@@ -981,9 +981,11 @@
   checkpoint: cp8
   template: event_date
   params:
-    event: e-0326
-  text: When was "Review Oksana's Wagtail action log" completed?
-  challenges: []
+    event: e-0332
+  text: When was Sandfield Changeover Planning Idea folded into Iselmoor Responsible AI Use Framework?
+  challenges:
+  - restructuring
+  - worker_directive
 - id: q-112
   checkpoint: cp8
   template: loop_owner
@@ -1281,11 +1283,9 @@
   checkpoint: cp10
   template: event_date
   params:
-    event: e-0377
-  text: When was "Send Thibault the AI-use principles draft v2" completed?
-  challenges:
-  - duplicate_signal
-  - scattered_evidence
+    event: e-0385
+  text: When was "Review Oksana's Fulmar dependency list v2" completed?
+  challenges: []
 - id: q-146
   checkpoint: cp10
   template: project_attr
@@ -1307,10 +1307,9 @@
   checkpoint: cp10
   template: event_date
   params:
-    event: e-0100
-  text: When was "Update the Fulmar lessons-learned note after Adwoa's comments" completed?
-  challenges:
-  - duplicate_signal
+    event: e-0102
+  text: When was "Send Marcelo the Fulmar data-flow diagram" completed?
+  challenges: []
 - id: q-149
   checkpoint: cp10
   template: project_attr

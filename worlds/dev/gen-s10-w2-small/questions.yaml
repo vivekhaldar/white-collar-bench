@@ -432,9 +432,10 @@
   checkpoint: cp5
   template: event_date
   params:
-    event: e-0190
-  text: When was "Set up Noris sandbox access for Aoife" completed?
-  challenges: []
+    event: e-0205
+  text: When was "Update the Nettle budget justification after Adaeze's comments" completed?
+  challenges:
+  - batch_catchup
 - id: q-052
   checkpoint: cp5
   template: loop_owner

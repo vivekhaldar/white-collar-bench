@@ -53,8 +53,9 @@
   checkpoint: cp1
   template: loop_owner
   params:
-    commitment: c-033
-  challenges: []
+    commitment: c-026
+  challenges:
+  - transfer
 - id: q-007
   checkpoint: cp1
   template: loop_due
@@ -103,10 +104,9 @@
   checkpoint: cp1
   template: event_date
   params:
-    event: e-0105
-  text: When was "Send Anastasia the Friday status note for w/e 25 June" completed?
-  challenges:
-  - duplicate_signal
+    event: e-0109
+  text: When was "Draft the Garnet load test plan" completed?
+  challenges: []
 - id: q-014
   checkpoint: cp1
   template: project_attr
@@ -215,9 +215,10 @@
   checkpoint: cp2
   template: event_date
   params:
-    event: e-0203
-  text: When was "Send Funmilayo the assessment design workshop action log" completed?
-  challenges: []
+    event: e-0200
+  text: When was "Share the Garnet requirements matrix with Hiba" handed over to Bolat Oyelami?
+  challenges:
+  - transfer
 - id: q-026
   checkpoint: cp2
   template: loop_owner
@@ -332,8 +333,8 @@
   checkpoint: cp3
   template: event_date
   params:
-    event: e-0197
-  text: When was "Send Hiba the Garnet test plan" completed?
+    event: e-0183
+  text: When was "Assemble the Garnet security review package" completed?
   challenges: []
 - id: q-040
   checkpoint: cp3
@@ -455,10 +456,10 @@
   checkpoint: cp4
   template: event_date
   params:
-    event: e-0213
-  text: When did we reverse the decision to limit the Garnet pilot to three courses?
+    event: e-0209
+  text: When was "Send Bolat the Siskin faculty survey" completed?
   challenges:
-  - reversal
+  - duplicate_signal
 - id: q-054
   checkpoint: cp4
   template: loop_due
@@ -483,8 +484,8 @@
   checkpoint: cp4
   template: event_date
   params:
-    event: e-0155
-  text: When was "Set up Torane sandbox access for Hiba" completed?
+    event: e-0132
+  text: When was "Return the Merol security questionnaire again" completed?
   challenges:
   - duplicate_signal
 - id: q-058
@@ -580,10 +581,9 @@
   checkpoint: cp5
   template: event_date
   params:
-    event: e-0251
-  text: When was "Set up the Garnet single sign-on role mapping" completed?
-  challenges:
-  - batch_catchup
+    event: e-0248
+  text: When was "Share the assessment design workshop session outline with Hiba" completed?
+  challenges: []
 - id: q-069
   checkpoint: cp5
   template: loop_owner
@@ -708,11 +708,9 @@
   checkpoint: cp6
   template: event_date
   params:
-    event: e-0208
-  text: When was "Send Andrei the Siskin one-page summary" completed?
-  challenges:
-  - duplicate_signal
-  - scattered_evidence
+    event: e-0206
+  text: When was "Generate a synthetic student data set for Garnet" completed?
+  challenges: []
 - id: q-084
   checkpoint: cp6
   template: loop_due

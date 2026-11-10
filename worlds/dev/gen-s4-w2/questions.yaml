@@ -211,10 +211,9 @@
   checkpoint: cp2
   template: event_date
   params:
-    event: e-0068
-  text: When was "Update the course assistant discovery accessibility review after Meera's comments" completed?
-  challenges:
-  - duplicate_signal
+    event: e-0070
+  text: When was "Send Ottavio the notes from the thesis formatting session" completed?
+  challenges: []
 - id: q-027
   checkpoint: cp2
   template: loop_owner
@@ -444,9 +443,10 @@
   checkpoint: cp4
   template: event_date
   params:
-    event: e-0096
-  text: When was "Review Meera's syllabus review discovery opportunity list" completed?
-  challenges: []
+    event: e-0095
+  text: When was "Send Tariq the Friday status note for w/e 27 August" completed?
+  challenges:
+  - duplicate_signal
 - id: q-054
   checkpoint: cp4
   template: loop_due
@@ -758,9 +758,10 @@
   checkpoint: cp6
   template: event_date
   params:
-    event: e-0154
-  text: When was "Send Ottavio the course assistant discovery pain-point list" completed?
-  challenges: []
+    event: e-0164
+  text: When was "Write the Fjord support playbook" completed?
+  challenges:
+  - duplicate_signal
 - id: q-088
   checkpoint: cp6
   template: project_attr

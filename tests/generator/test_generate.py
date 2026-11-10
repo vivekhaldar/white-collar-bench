@@ -518,3 +518,32 @@ def test_texture_and_calibration_extras(generated, seed, size):
     loops = stats["loops"]
     assert loops["kind"]["shares"].get("decision", 0) <= 0.1
     assert loops["lifetime_business_days"]["median"] <= 2.5
+
+
+@pytest.mark.parametrize("seed,size", WORLDS)
+def test_perfect_answers_score_full_marks(generated, seed, size):
+    """Gold must be gradable: answers built from it score about 1.0 on every question, which
+    also catches two gold items that read the same and cannot be told apart."""
+    from wcb.baselines.gold_answers import perfect_answers
+    from wcb.grade.answers import ScoreContext, score_answers
+    from wcb.grade.judge import HeuristicJudge
+    from wcb.store.oracle import record_ids
+
+    world_dir, _ = generated[(seed, size)]
+    w = World.load(world_dir)
+    low = []
+    for f in sorted((world_dir / "gold" / "questions").glob("*.json")):
+        doc = json.loads(f.read_text())
+        state = json.loads((world_dir / "gold" / "state" / f"{doc['date']}.json").read_text())
+        ctx = ScoreContext.from_state(w, state, store_root=world_dir / "gold" / "oracle-store" / doc["date"])
+        answers = perfect_answers(doc, store_ids=record_ids(w))
+        low += [(doc["checkpoint"], s.id, s.score) for s in score_answers(doc, answers, HeuristicJudge(), ctx)
+                if s.score < 0.95]
+    assert not low, low
+
+
+def test_repeated_loops_read_differently(generated):
+    for world_dir, _ in generated.values():
+        rows = [json.loads(x) for x in (world_dir / "world.jsonl").read_text().splitlines() if x.strip()]
+        whats = [e["what"] for e in rows if e["type"] == "commitment.create"]
+        assert len(whats) == len(set(whats)), [w for w in whats if whats.count(w) > 1][:3]

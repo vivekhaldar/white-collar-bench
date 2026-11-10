@@ -250,6 +250,8 @@ class _Sim:
         self.sc: dict[tuple, dict] = {}
         self.seq = 0
         self.n_loops = 0
+        self._summary_loops: dict[tuple[str, str], list[str]] = {}  # (type, summary) -> loops
+        self._what_counts: dict[str, int] = {}  # loop description -> loops created with it
         self.n_dec = 0
         self.n_comm = 0
         self.n_thread = 0
@@ -366,6 +368,14 @@ class _Sim:
     # ============================================================ events
     def _ev(self, etype: str, t: str, summary: str, **fields: Any) -> dict:
         self.seq += 1
+        cid = fields.get("commitment")
+        if etype.startswith("commitment.") and cid:
+            # Two loops whose events read the same ("I introduced Kiran to Adwoa ...") cannot be
+            # told apart by anyone grading a change list, so a repeat says it is one.
+            loops = self._summary_loops.setdefault((etype, summary.lower()), [])
+            if cid not in loops:
+                loops.append(cid)
+            summary = summary + _repeat_suffix(loops.index(cid))
         e: dict[str, Any] = {"id": f"x{self.seq}", "t": t, "type": etype, "summary": summary}
         e.update(fields)
         e["_seq"] = self.seq
@@ -1011,6 +1021,10 @@ class _Sim:
                 keywords: list[str]) -> _Loop:
         self.n_loops += 1
         cid = f"c-x{self.n_loops:04d}"
+        # A repeat of an earlier loop must read differently ("... again", "... a third time").
+        n = self._what_counts.get(what.lower(), 0)
+        self._what_counts[what.lower()] = n + 1
+        what = what + _repeat_suffix(n)
         kws = _clean_keywords(keywords, what)
         e = self._ev("commitment.create", t, summary, commitment=cid, kind=kind, what=what, debtor=debtor,
                      creditor=creditor, others=list(others), project=project, status=status, due=due,
@@ -2833,6 +2847,16 @@ PHASE_PHRASES = {
 def phase_phrase(phase: str) -> str:
     """A readable phrase for a project phase ('scoring' -> 'Scoring the vendors')."""
     return PHASE_PHRASES.get(phase) or f"Currently in {phase}"
+
+
+def _repeat_suffix(n: int) -> str:
+    """'' for the first loop with a description, then ' again', ' a third time', ..."""
+    if n <= 0:
+        return ""
+    if n == 1:
+        return " again"
+    ordinals = ["third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth"]
+    return f" a {ordinals[n - 2]} time" if n - 2 < len(ordinals) else f" (repeat {n + 1})"
 
 
 def _clean_keywords(keywords: list[str], what: str) -> list[str]:
