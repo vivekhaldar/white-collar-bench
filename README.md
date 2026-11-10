@@ -106,6 +106,8 @@ Gold (`worlds/*/gold/`) is public for `pilot` and `dev` so you can debug. It is 
 | Raw retrieval | `raw-retrieval.yaml` | Archives inputs without curation and answers by search with an LLM |
 | Reference agents | `claude-code.yaml`, `codex.yaml`, `simple-*.yaml` | CLI agents and raw models |
 
+Measured results so far (null 12.7 WCB; store reader 81.6 Synthesis on oracle stores, 48.6 on the pilot) and what remains to be done are in [status](docs/status.md).
+
 ## Repository layout
 
 ```text
@@ -119,6 +121,7 @@ tests/          unit and end-to-end tests (pytest)
 
 ## Documents
 
+- [Status: milestones, measured baselines, open items](docs/status.md)
 - [Motivation and related work](docs/motivation.md)
 - [Benchmark design](docs/design.md)
 - [Construction plan](docs/plan.md)
