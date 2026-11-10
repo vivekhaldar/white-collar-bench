@@ -74,7 +74,7 @@ Inputs are hard in the ways real work is hard:
 | `dev/*` | Generated worlds with public gold, for development. See [generator](docs/generator.md). |
 | `test/*` | Held-out worlds, used for leaderboard runs only. |
 
-Gold (`worlds/*/gold/`) is public for `pilot` and `dev` so you can debug. Never let your agent read it: the runner creates workspaces outside the repository, and leaderboard runs use containers.
+Gold (`worlds/*/gold/`) is public for `pilot` and `dev` so you can debug. Never let your agent read it: the runner creates workspaces outside the repository, and [`docker.yaml`](adapters/examples/docker.yaml) runs each session in a container that sees only its workspace, as leaderboard runs do.
 
 ## Commands
 
@@ -123,6 +123,7 @@ tests/          unit and end-to-end tests (pytest)
 - [Judges](docs/judge.md)
 - [World generator](docs/generator.md) and [calibration targets](docs/calibration.md)
 - [Privacy policy and leak scanner](docs/privacy.md)
+- [Submissions and the leaderboard](docs/leaderboard.md)
 
 ## Development
 
