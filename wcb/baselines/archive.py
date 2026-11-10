@@ -52,7 +52,9 @@ def archive_inbox(workspace: Path, date: str) -> list[dict]:
         if not f.is_file():
             continue
         if f.suffix.lower() in TEXT_SUFFIXES:
-            (dest / f.name).write_text(redact(f.read_text(encoding="utf-8", errors="replace")), encoding="utf-8")
+            (dest / f.name).write_text(
+                redact(f.read_text(encoding="utf-8", errors="replace")), encoding="utf-8"
+            )
         else:
             shutil.copy2(f, dest / f.name)
     return entries
@@ -63,7 +65,9 @@ def write_daily_log(workspace: Path, date: str, entries: list[dict]) -> None:
     log.parent.mkdir(parents=True, exist_ok=True)
     lines = [f"---\nid: logs/{date}\ntype: log\ndate: {date}\n---\n"]
     for e in entries:
-        lines.append(f"- {e['id']} ({e.get('channel', '?')}): archived to sources/{date}/{e.get('path', '')}; {e.get('title', '')}")
+        lines.append(
+            f"- {e['id']} ({e.get('channel', '?')}): archived to sources/{date}/{e.get('path', '')}; {e.get('title', '')}"
+        )
     log.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -71,10 +75,15 @@ def main() -> int:
     phase = os.environ.get("WCB_PHASE", "ingest")
     workspace = Path(os.environ.get("WCB_WORKSPACE", "."))
     if phase != "ingest":
-        print("wcb.baselines.archive only handles ingestion; use a query agent for questions", file=sys.stderr)
+        print(
+            "wcb.baselines.archive only handles ingestion; use a query agent for questions",
+            file=sys.stderr,
+        )
         return 2
     inbox_root = workspace / "inbox"
-    dates = sorted(p.name for p in inbox_root.iterdir() if p.is_dir()) if inbox_root.is_dir() else []
+    dates = (
+        sorted(p.name for p in inbox_root.iterdir() if p.is_dir()) if inbox_root.is_dir() else []
+    )
     for date in dates:
         write_daily_log(workspace, date, archive_inbox(workspace, date))
     print(f"archived {len(dates)} inbox date(s)")
