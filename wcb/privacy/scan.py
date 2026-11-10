@@ -482,6 +482,17 @@ class _Terms:
     tokens: list[tuple[int, int, str, bool]] = field(default_factory=list)
 
 
+CODE_SUFFIXES = frozenset({".py", ".js", ".ts", ".tsx", ".jsx", ".mjs", ".cjs"})
+
+
+def _is_code(path: Path) -> bool:
+    """Source code shares idioms with any other code base, so phrase matching skips it.
+
+    Names, emails, domains and hosts in code are still compared.
+    """
+    return Path(path).suffix.lower() in CODE_SUFFIXES
+
+
 def _analyze(text: str, vocab: _Vocab, *, phrases: bool = True) -> _Terms:
     t = _Terms()
     for m in _URL.finditer(text):
@@ -1206,7 +1217,7 @@ def scan(
         if text is None:
             continue
         words_of_path = _path_words(rel)
-        index.add(_analyze(text + "\n\n" + words_of_path, vocab))
+        index.add(_analyze(text + "\n\n" + words_of_path, vocab, phrases=not _is_code(path)))
         scanned.append((display, path, words_of_path))
     if not scanned:
         raise ValueError(
@@ -1227,7 +1238,7 @@ def scan(
             skipped += 1
             continue
         rel = path.relative_to(private_repo) if private_repo.is_dir() else Path(path.name)
-        private.add(_analyze(text + "\n\n" + _path_words(rel), vocab))
+        private.add(_analyze(text + "\n\n" + _path_words(rel), vocab, phrases=not _is_code(path)))
         vocab.forget_scratch()  # keep nothing from this file except corpus-term counts
     if private.files == 0:
         raise ValueError(
@@ -1260,7 +1271,7 @@ def scan(
         text = _read_text(path, max_bytes=MAX_CORPUS_FILE_BYTES, documents=True)
         if text is None:  # pragma: no cover - file changed between passes
             continue
-        t = _analyze(text + "\n\n" + words_of_path, vocab)
+        t = _analyze(text + "\n\n" + words_of_path, vocab, phrases=not _is_code(path))
         for key, surface in t.emails.items():
             if private.emails[key]:
                 hit("email", key, surface, private.emails[key], display)

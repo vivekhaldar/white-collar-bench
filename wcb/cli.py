@@ -139,11 +139,20 @@ def cmd_score(a) -> int:
 def cmd_privacy_scan(a) -> int:
     from wcb.privacy.scan import scan
 
-    findings = scan(Path(a.private_repo), [Path(p) for p in a.paths], min_len=a.min_len)
-    for f in findings:
+    stats: dict = {}
+    findings = scan(Path(a.private_repo), [Path(p) for p in a.paths], min_len=a.min_len, stats=stats)
+    rank = {"low": 0, "medium": 1, "high": 2}
+    shown = [f for f in findings if rank.get(f.severity, 0) >= rank[a.min_severity]]
+    for f in shown:
         print(f.format())
-    print(f"{len(findings)} potential leak(s)")
-    return 1 if findings else 0
+    if stats:
+        print(
+            f"scanned {stats.get('corpus_files', '?')} corpus file(s) and "
+            f"{stats.get('private_files', '?')} private file(s)",
+            file=sys.stderr,
+        )
+    print(f"{len(shown)} potential leak(s) at severity >= {a.min_severity} ({len(findings)} total)")
+    return 1 if shown else 0
 
 
 # ---------------------------------------------------------------- parser
@@ -221,6 +230,8 @@ def build_parser() -> argparse.ArgumentParser:
     ps = pv.add_parser("scan", help="check benchmark content for terms from a private repository")
     ps.add_argument("--private-repo", required=True)
     ps.add_argument("--min-len", type=int, default=4)
+    ps.add_argument("--min-severity", choices=["low", "medium", "high"], default="low",
+                    help="only report (and fail on) findings at or above this severity")
     ps.add_argument("paths", nargs="+")
     ps.set_defaults(fn=cmd_privacy_scan)
     return p

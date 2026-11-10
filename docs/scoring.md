@@ -93,12 +93,12 @@ In Track B, `CONTRACT.md` is replaced by a one-paragraph goal statement.
     "abstain": false,
     "items": [
       {
-        "text": "Send Dana the revised vendor scorecard",
+        "text": "Send Marisol the revised vendor scorecard",
         "counterparty": "Marisol Teague",
         "direction": "i_owe",
         "status": "open",
         "due": "2027-03-05",
-        "cites": ["em-0193", "loops/send-dana-vendor-scorecard.md"]
+        "cites": ["em-0193", "loops/send-marisol-vendor-scorecard.md"]
       }
     ]
   },
@@ -241,7 +241,7 @@ SIS is computed for every **episode day** that has a snapshot (`<run>/<world>/r<
 
 - Gold is every knowable person, org and project at the date, except minor entities (`attrs._minor`). The worker counts as a person.
 - A record's *forms* are its `name`, `aliases`, `email` (people; a string or a list) and `domain` (orgs). An entity's forms are its `name`, `surface_forms`, `attrs.email` and `attrs.domain`.
-- Forms are compared as whole normalized phrases: lowercase ASCII words joined by spaces, so case, accents, punctuation and a leading `@` do not matter, and a leading "the" is optional. `Dana.Teague@brenwick.example` is the phrase `dana teague brenwick example`. Forms are only compared with entities of the record's own kind (`people/` with persons, `orgs/` with orgs, `projects/` with projects). The record's file name is not used.
+- Forms are compared as whole normalized phrases: lowercase ASCII words joined by spaces, so case, accents, punctuation and a leading `@` do not matter, and a leading "the" is optional. `Marisol.Teague@brenwick.example` is the phrase `marisol teague brenwick example`. Forms are only compared with entities of the record's own kind (`people/` with persons, `orgs/` with orgs, `projects/` with projects). The record's file name is not used.
 - A form that names several knowable entities of that kind (a first name two people share) is *ambiguous* and names no one. Ambiguity is decided among entities knowable at the date, so "Sam" identifies Sam Patel until a second Sam becomes knowable.
 - `people/me` always maps to the worker.
 - One entity named by the record's unambiguous forms: **mapped**. Several: **wrong merge**. The record maps to the entity its `name` names, else to the one named by the most forms (ties: lowest entity ID), and *absorbs* the others. Only ambiguous forms: **unresolved**. No matching form: **unmatched**. Only minor entities: **minor**, which is ignored on both sides.

@@ -136,14 +136,14 @@ def write_record(record_id: str, meta: dict, body: str) -> Path:
     Values are written in JSON syntax, which is valid YAML, so no YAML library is needed.
     Example of a loop record (see CONTRACT.md section 2.4)::
 
-        write_record("loops/send-dana-vendor-scorecard", {
-            "id": "loops/send-dana-vendor-scorecard", "type": "loop", "kind": "task",
-            "title": "Send Dana the revised vendor scorecard",
+        write_record("loops/send-marisol-vendor-scorecard", {
+            "id": "loops/send-marisol-vendor-scorecard", "type": "loop", "kind": "task",
+            "title": "Send Marisol the revised vendor scorecard",
             "owner": "people/me", "counterparty": "people/marisol-teague",
             "status": "open", "accepted": True, "due": "2027-03-05",
             "evidence": [{"source": "em-0193", "basis": "received", "date": "2027-03-01"}],
             "created": "2027-03-01", "updated": "2027-03-01",
-        }, "Dana asked for the revised scorecard. [src: em-0193]\\n\\n## Log\\n\\n"
+        }, "Marisol asked for the revised scorecard. [src: em-0193]\\n\\n## Log\\n\\n"
            "- 2027-03-01: created [src: em-0193]\\n")
     """
     lines = ["---"] + [f"{k}: {json.dumps(v, ensure_ascii=False)}" for k, v in meta.items()]

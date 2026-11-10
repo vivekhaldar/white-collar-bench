@@ -55,7 +55,7 @@ def _pdf(content: bytes, *, flate: bool = False) -> bytes:
 
 PDF_CONTENT = (
     b"BT /F1 12 Tf 72 720 Td (Quarterly review \\(draft\\)) Tj 0 -14 Td "
-    b"[(Budget) -300 (approved) 20 (!)] TJ T* (Owner: Dana) Tj "
+    b"[(Budget) -300 (approved) 20 (!)] TJ T* (Owner: Marisol) Tj "
     b"0 -14 Td <48656C6C6F> Tj (caf\\351) ' ET"
 )
 
@@ -66,7 +66,7 @@ def test_pdf_text_operators(flate):
     lines = text.splitlines()
     assert lines[0] == "Quarterly review (draft)"
     assert "Budget approved!" in lines
-    assert "Owner: Dana" in lines
+    assert "Owner: Marisol" in lines
     assert "Hello" in lines
     assert "café" in lines  # octal escape decoded as WinAnsi
 

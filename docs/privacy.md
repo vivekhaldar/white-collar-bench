@@ -127,7 +127,6 @@ To suppress a reviewed false positive, add it to a file named `.privacy-allow.tx
 # .privacy-allow.txt: reviewed false positives. Keep reasons generic.
 Michael              # very common first name
 Telemetry            # ordinary word missing from the built-in list
-Apache License       # public license name
 toolvendor.example   # public vendor site (illustrative; real domains work the same way)
 ```
 

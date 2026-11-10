@@ -126,8 +126,8 @@ def store_integrity(store_root: Path, state: dict, world: World, judge: Any) -> 
 def alias_key(form: Any) -> str:
     """A form as a normalized phrase: lowercase ASCII words joined by single spaces.
 
-    `"Marisol Teague"`, `"dana  teague"` and `"@Dana-Teague"` all give `"dana teague"`; an email
-    `"marisol.teague@brenwick.example"` gives `"dana teague brenwick example"`.
+    `"Marisol Teague"`, `"marisol  teague"` and `"@Marisol-Teague"` all give `"marisol teague"`; an email
+    `"marisol.teague@brenwick.example"` gives `"marisol teague brenwick example"`.
     """
     return " ".join(_WORD.findall(normalize(str(form))))
 

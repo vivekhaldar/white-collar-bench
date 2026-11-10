@@ -187,7 +187,7 @@ OPENAI_REPLY = {
                     {
                         "id": "call_a",
                         "type": "function",
-                        "function": {"name": "search", "arguments": '{"pattern": "Dana"}'},
+                        "function": {"name": "search", "arguments": '{"pattern": "Marisol"}'},
                     },
                     {
                         "id": "call_b",
@@ -247,7 +247,7 @@ def test_openai_request_shape(http, monkeypatch):
     assert msgs[6] == {"role": "user", "content": "Keep going."}
 
     assert reply.stop_reason == "tool_use" and reply.model == "gpt-test-2"
-    assert reply.tool_calls[0] == ToolCall("call_a", "search", {"pattern": "Dana"})
+    assert reply.tool_calls[0] == ToolCall("call_a", "search", {"pattern": "Marisol"})
     assert (
         reply.tool_calls[1].arguments_error
         and "not valid JSON" in reply.tool_calls[1].arguments_error

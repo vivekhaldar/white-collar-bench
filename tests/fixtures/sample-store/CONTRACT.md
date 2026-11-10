@@ -32,7 +32,7 @@ Every file in `people/`, `orgs/`, `projects/`, `loops/` and `logs/` is a **recor
 id: people/marisol-teague
 type: person
 name: Marisol Teague
-aliases: [Dana, M. Teague, marisol.teague@brenwick.example]
+aliases: [Marisol, M. Teague, marisol.teague@brenwick.example]
 updated: 2027-03-02
 ---
 Body in Markdown.
@@ -111,7 +111,7 @@ A **loop** is anything still to be done or decided, or already done or decided, 
 |---|---|---|
 | `id`, `type: loop` | yes | |
 | `kind` | yes | `task`, `ask` or `decision` |
-| `title` | yes | Short imperative description, for example "Send Dana the revised vendor scorecard" |
+| `title` | yes | Short imperative description, for example "Send Marisol the revised vendor scorecard" |
 | `owner` | yes | Person ID of who must act. For a decision, who decides. |
 | `counterparty` | yes | Person ID of who the loop is owed to or who asked for it. `null` is allowed only for decisions. |
 | `status` | yes | See below |
@@ -141,7 +141,7 @@ Decisions use `open` (pending), `done` (decided; set `outcome` and `decided_on`)
 ```yaml
 evidence:
   - {source: em-0193, basis: received, date: 2027-03-01}
-  - {source: mt-0057, basis: reported, date: 2027-03-03, note: "Dana confirmed receipt"}
+  - {source: mt-0057, basis: reported, date: 2027-03-03, note: "Marisol confirmed receipt"}
 ```
 
 `basis` is one of:

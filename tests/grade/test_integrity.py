@@ -259,7 +259,7 @@ def person(text_meta: str, rid: str = "people/x"):
 
 
 def test_alias_key_normalizes_forms():
-    assert alias_key("Dana  Teague") == alias_key("@marisol-teague") == "dana teague"
+    assert alias_key("Marisol  Teague") == alias_key("@marisol-teague") == "marisol teague"
     assert alias_key("Ada.Quist@Larchmont.example") == "ada quist larchmont example"
 
 

@@ -70,7 +70,7 @@ QUESTIONS = {
     "date": "2027-03-02",
     "questions": [
         {"id": "q-001", "type": "point", "text": "Who owns Thistledown?"},
-        {"id": "q-002", "type": "list", "text": "What do I owe Dana?"},
+        {"id": "q-002", "type": "list", "text": "What do I owe Marisol?"},
     ],
 }
 

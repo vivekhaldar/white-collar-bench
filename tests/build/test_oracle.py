@@ -99,11 +99,11 @@ def test_last_day_store_records(world, tmp_path):
     )
     assert d2["others"] == ["people/ben-okoro"]
     # Project: superseded target date replaced; budget never revealed.
-    beacon_meta, beacon_body = recs["projects/quillon"]
-    assert beacon_meta["target_date"] == "2027-02-05"
-    assert "people/ben-okoro" in beacon_meta["people"]
-    assert re.search(r"## Current state\n\nAs of 2027-01-12: Pilot scope widened", beacon_body)
-    assert "Phase: pilot planning." in beacon_body
+    quillon_meta, quillon_body = recs["projects/quillon"]
+    assert quillon_meta["target_date"] == "2027-02-05"
+    assert "people/ben-okoro" in quillon_meta["people"]
+    assert re.search(r"## Current state\n\nAs of 2027-01-12: Pilot scope widened", quillon_body)
+    assert "Phase: pilot planning." in quillon_body
 
 
 def test_minor_people_and_hidden_attrs_are_not_rendered(world, tmp_path):
