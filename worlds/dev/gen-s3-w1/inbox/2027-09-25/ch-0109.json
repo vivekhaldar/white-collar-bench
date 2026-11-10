@@ -1,0 +1,40 @@
+{
+ "workspace": "birchmere",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Kwame Hoffmann",
+  "Katrin Watanabe",
+  "Dina Mancini"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-25T12:16:23-05:00",
+   "user": "Kwame Hoffmann",
+   "handle": "@kwame",
+   "text": "is it just me or is it freezing on 3 today?",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@katrin",
+      "@dina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-25T12:21:29-05:00",
+   "user": "Katrin Watanabe",
+   "handle": "@katrin",
+   "text": "not just you"
+  },
+  {
+   "ts": "2027-09-25T12:26:45-05:00",
+   "user": "Dina Mancini",
+   "handle": "@dina",
+   "text": "bring a jumper",
+   "thread_of": 0
+  }
+ ]
+}

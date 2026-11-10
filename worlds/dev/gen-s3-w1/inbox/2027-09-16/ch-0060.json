@@ -1,0 +1,26 @@
+{
+ "workspace": "birchmere",
+ "channel": "#ai-use-core",
+ "kind": "channel",
+ "participants": [
+  "Bisi",
+  "Alasdair Kaya",
+  "Somchai Wickramasinghe",
+  "Catrin Kiprono"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-16T08:24:00-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "From the sync earlier, Somchai Wickramasinghe will send Alasdair the AI-use principles draft."
+  },
+  {
+   "ts": "2027-09-16T08:25:19-05:00",
+   "user": "Catrin Kiprono",
+   "handle": "@catrin",
+   "text": "ok",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-ama-hiba",
+ "kind": "dm",
+ "participants": [
+  "Ama Forsythe",
+  "Hiba Xu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-30T07:57:00-05:00",
+   "user": "Ama Forsythe",
+   "handle": "@ama",
+   "text": "Would you be able to write up the Grion demo notes by tomorrow?",
+   "edited": true,
+   "original": "Woudl you be able to write up the Grion demo notes by tomorrow?"
+  },
+  {
+   "ts": "2027-03-30T07:57:52-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "no problem"
+  },
+  {
+   "ts": "2027-03-30T08:00:45-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-03-30T08:02:48-05:00",
+   "user": "Ama Forsythe",
+   "handle": "@ama",
+   "text": "only the first half"
+  }
+ ]
+}

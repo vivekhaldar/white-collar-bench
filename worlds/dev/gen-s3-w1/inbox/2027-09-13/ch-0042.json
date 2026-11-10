@@ -1,0 +1,41 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-bisi",
+ "kind": "dm",
+ "participants": [
+  "Bisi Chatterjee",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-13T15:03:01-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-13T15:05:00-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "I'll send you the Okapi training outline!"
+  },
+  {
+   "ts": "2027-09-13T15:06:22-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "great, thank you"
+  },
+  {
+   "ts": "2027-09-13T15:11:01-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-09-13T15:11:42-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "yep, all good"
+  }
+ ]
+}

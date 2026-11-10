@@ -1,0 +1,32 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Tariq Popescu",
+  "Nomvula Ndlovu",
+  "Bruna Sinclair",
+  "Theresa Nagy"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-26T16:39:00-08:00",
+   "user": "Tariq Popescu",
+   "handle": "@tariq",
+   "text": "the elevator on the east side is out again"
+  },
+  {
+   "ts": "2027-08-26T16:42:05-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "stairs it is"
+  },
+  {
+   "ts": "2027-08-26T16:43:10-08:00",
+   "user": "Bruna Sinclair",
+   "handle": "@bruna",
+   "text": "classic",
+   "thread_of": 0
+  }
+ ]
+}

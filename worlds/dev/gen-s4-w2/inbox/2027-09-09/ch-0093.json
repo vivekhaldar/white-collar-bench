@@ -1,0 +1,50 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#cairn-core",
+ "kind": "channel",
+ "participants": [
+  "Meera Ivanova",
+  "Ottavio Monteiro",
+  "Theresa Nagy",
+  "Darius Sherwood",
+  "Ratna Bondarenko",
+  "Bruna Sinclair",
+  "Nomvula Ndlovu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-09T10:46:00-08:00",
+   "user": "Meera Ivanova",
+   "handle": "@meera",
+   "text": "Heads up: Ottavio will send Bruna the Cairn requirements matrix."
+  },
+  {
+   "ts": "2027-09-09T10:46:19-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "thanks for the heads up",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T10:55:34-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T10:56:43-08:00",
+   "user": "Ratna Bondarenko",
+   "handle": "@ratna",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T10:58:33-08:00",
+   "user": "Theresa Nagy",
+   "handle": "@theresa",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

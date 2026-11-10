@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Drayhurst//Calendar//EN
+METHOD:REPLY
+BEGIN:VEVENT
+UID:0ad4fb17b55f7ced@drayhurst.example
+DTSTAMP:20270910T193000Z
+DTSTART:20270914T000000Z
+DTEND:20270914T003000Z
+SUMMARY:Accepted: Early alert advisory follow-up
+ORGANIZER;CN=Meera Ivanova:mailto:meera.ivanova@drayhurst.example
+ATTENDEE;CN=Ottavio Monteiro;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED:mailto:ottavio.monteiro@drayhurst.example
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR

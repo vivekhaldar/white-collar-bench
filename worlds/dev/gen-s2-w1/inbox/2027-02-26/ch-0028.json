@@ -1,0 +1,43 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-imani",
+ "kind": "dm",
+ "participants": [
+  "Imani",
+  "Dina Zimmermann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-26T08:11:00-07:00",
+   "user": "Imani",
+   "handle": "@imani",
+   "text": "Tendai Vu asked if you could send them the AI in public service workshop room plan.",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@dina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-26T08:12:09-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "let me check and get back to you"
+  },
+  {
+   "ts": "2027-02-26T08:14:35-07:00",
+   "user": "Imani",
+   "handle": "@imani",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-02-26T08:15:58-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "yep, all good"
+  }
+ ]
+}

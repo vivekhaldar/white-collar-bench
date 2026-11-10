@@ -1,0 +1,31 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-jalen",
+ "kind": "dm",
+ "participants": [
+  "Jalen Hendriks",
+  "Camila Quimby"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-04T16:04:00-07:00",
+   "user": "Jalen Hendriks",
+   "handle": "@jalen",
+   "text": "Would you be able to demo the Tarn prototype to me?",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@camila"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-04T16:04:40-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "yep, on it"
+  }
+ ]
+}

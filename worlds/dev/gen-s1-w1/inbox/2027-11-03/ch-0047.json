@@ -1,0 +1,41 @@
+{
+ "workspace": "holcrest",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Kirsten Yardley",
+  "Yasmin Mokoena",
+  "Fernanda Olawale"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-03T11:10:05-07:00",
+   "user": "Kirsten Yardley",
+   "handle": "@kirsten",
+   "text": "who left a lunchbox in the fridge since last week?",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@yasmin",
+      "@fernanda"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-03T11:11:16-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "not me!",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-03T11:12:37-07:00",
+   "user": "Fernanda Olawale",
+   "handle": "@fernanda",
+   "text": "it's been there a while",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#cairn-core",
+ "kind": "channel",
+ "participants": [
+  "Ottavio Monteiro",
+  "Theresa Nagy",
+  "Meera",
+  "Darius Sherwood",
+  "Ratna Bondarenko",
+  "Bruna Sinclair",
+  "Nomvula Ndlovu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-17T18:15:00-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "Just checking in on the Cairn vault secrets, I'm waiting on this from Bruna.",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@theresa",
+      "@darius",
+      "@meera"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-17T18:24:42-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "+1",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-17T18:26:34-08:00",
+   "user": "Bruna Sinclair",
+   "handle": "@bruna",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-17T18:31:58-08:00",
+   "user": "Meera",
+   "handle": "@meera",
+   "text": "+1",
+   "thread_of": 0
+  }
+ ]
+}

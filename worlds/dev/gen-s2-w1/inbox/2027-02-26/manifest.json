@@ -1,0 +1,103 @@
+{
+  "date": "2027-02-26",
+  "artifacts": [
+    {
+      "id": "ch-0028",
+      "channel": "chat",
+      "received_at": "2027-02-26T08:40:00-07:00",
+      "path": "ch-0028.json",
+      "title": "DM: Imani Chaiyaporn / Dina Zimmermann"
+    },
+    {
+      "id": "em-0033",
+      "channel": "email",
+      "received_at": "2027-02-26T09:17:00-07:00",
+      "path": "em-0033.eml",
+      "title": "[REQ-10363] Request resolved"
+    },
+    {
+      "id": "em-0034",
+      "channel": "email",
+      "received_at": "2027-02-26T09:18:00-07:00",
+      "path": "em-0034.eml",
+      "title": "Re: AI in public service workshop post-event survey"
+    },
+    {
+      "id": "ch-0029",
+      "channel": "chat",
+      "received_at": "2027-02-26T09:19:00-07:00",
+      "path": "ch-0029.json",
+      "title": "#mistral-core"
+    },
+    {
+      "id": "em-0035",
+      "channel": "email",
+      "received_at": "2027-02-26T09:45:00-07:00",
+      "path": "em-0035.eml",
+      "title": "Re: FYI: Fennel model allow-list"
+    },
+    {
+      "id": "mt-0005",
+      "channel": "transcript",
+      "received_at": "2027-02-26T09:55:00-07:00",
+      "path": "mt-0005.vtt",
+      "title": "Mistral standup (transcript)"
+    },
+    {
+      "id": "ca-0004",
+      "channel": "calendar",
+      "received_at": "2027-02-26T10:05:00-07:00",
+      "path": "ca-0004.ics",
+      "title": "Invite: Mistral scoping call"
+    },
+    {
+      "id": "em-0036",
+      "channel": "email",
+      "received_at": "2027-02-26T10:56:00-07:00",
+      "path": "em-0036.eml",
+      "title": "[INC-83509] Ticket updated"
+    },
+    {
+      "id": "ch-0030",
+      "channel": "chat",
+      "received_at": "2027-02-26T11:02:00-07:00",
+      "path": "ch-0030.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0031",
+      "channel": "chat",
+      "received_at": "2027-02-26T14:05:00-07:00",
+      "path": "ch-0031.json",
+      "title": "DM: Dina Zimmermann / Catrin Petrov"
+    },
+    {
+      "id": "ch-0032",
+      "channel": "chat",
+      "received_at": "2027-02-26T15:56:00-07:00",
+      "path": "ch-0032.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "em-0037",
+      "channel": "email",
+      "received_at": "2027-02-26T17:04:00-07:00",
+      "path": "em-0037.eml",
+      "title": "Status note: w/e 26 February"
+    },
+    {
+      "id": "ch-0033",
+      "channel": "chat",
+      "received_at": "2027-02-26T17:17:00-07:00",
+      "path": "ch-0033.json",
+      "title": "#fennel-core"
+    },
+    {
+      "id": "em-0038",
+      "channel": "email",
+      "received_at": "2027-02-26T17:21:00-07:00",
+      "path": "em-0038.eml",
+      "title": "Room booking confirmation"
+    }
+  ]
+}

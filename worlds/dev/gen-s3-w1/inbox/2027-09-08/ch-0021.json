@@ -1,0 +1,42 @@
+{
+ "workspace": "birchmere",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Kwame Hoffmann",
+  "Nurlan Moreira",
+  "Tunde Kapanadze",
+  "Deniz Zhou"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T13:09:10-05:00",
+   "user": "Kwame Hoffmann",
+   "handle": "@kwame",
+   "text": "the elevator on the east side is out again",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@nurlan",
+      "@tunde"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-08T13:14:23-05:00",
+   "user": "Nurlan Moreira",
+   "handle": "@nurlan",
+   "text": "stairs it is",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-08T13:17:47-05:00",
+   "user": "Tunde Kapanadze",
+   "handle": "@tunde",
+   "text": "classic",
+   "thread_of": 0
+  }
+ ]
+}

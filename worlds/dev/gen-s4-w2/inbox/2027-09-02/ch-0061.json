@@ -1,0 +1,39 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Bruna Sinclair",
+  "Teagan Penhallow",
+  "Ewan Shrestha"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-02T16:42:41-08:00",
+   "user": "Bruna Sinclair",
+   "handle": "@bruna",
+   "text": "who left a lunchbox in the fridge since last week?",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@teagan",
+      "@ewan"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-02T16:47:52-08:00",
+   "user": "Teagan Penhallow",
+   "handle": "@teagan",
+   "text": "not me!"
+  },
+  {
+   "ts": "2027-09-02T16:54:01-08:00",
+   "user": "Ewan Shrestha",
+   "handle": "@ewan",
+   "text": "it's been there a while"
+  }
+ ]
+}

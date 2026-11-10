@@ -1,0 +1,159 @@
+{
+  "date": "2027-11-01",
+  "artifacts": [
+    {
+      "id": "em-0038",
+      "channel": "email",
+      "received_at": "2027-11-01T06:45:00-07:00",
+      "path": "em-0038.eml",
+      "title": "[INC-87727] Ticket updated"
+    },
+    {
+      "id": "em-0039",
+      "channel": "email",
+      "received_at": "2027-11-01T06:57:00-07:00",
+      "path": "em-0039.eml",
+      "title": "Reminder: Friday status note due Friday 5 November"
+    },
+    {
+      "id": "em-0040",
+      "channel": "email",
+      "received_at": "2027-11-01T07:20:00-07:00",
+      "path": "em-0040.eml",
+      "title": "[INC-61860] Ticket updated"
+    },
+    {
+      "id": "em-0041",
+      "channel": "email",
+      "received_at": "2027-11-01T08:49:00-07:00",
+      "path": "em-0041.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0035",
+      "channel": "chat",
+      "received_at": "2027-11-01T09:59:00-07:00",
+      "path": "ch-0035.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0042",
+      "channel": "email",
+      "received_at": "2027-11-01T12:15:00-07:00",
+      "path": "em-0042.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "em-0043",
+      "channel": "email",
+      "received_at": "2027-11-01T12:50:00-07:00",
+      "path": "em-0043.eml",
+      "title": "Petra's notice translation discovery interview guide"
+    },
+    {
+      "id": "ch-0036",
+      "channel": "chat",
+      "received_at": "2027-11-01T13:21:00-07:00",
+      "path": "ch-0036.json",
+      "title": "DM: Aarav Ortega / Camila Quimby"
+    },
+    {
+      "id": "ca-0003",
+      "channel": "calendar",
+      "received_at": "2027-11-01T13:24:00-07:00",
+      "path": "ca-0003.ics",
+      "title": "Invite: Panel: Carys"
+    },
+    {
+      "id": "ch-0037",
+      "channel": "chat",
+      "received_at": "2027-11-01T13:24:00-07:00",
+      "path": "ch-0037.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0044",
+      "channel": "email",
+      "received_at": "2027-11-01T13:34:00-07:00",
+      "path": "em-0044.eml",
+      "title": "[REQ-11338] Request resolved"
+    },
+    {
+      "id": "ch-0038",
+      "channel": "chat",
+      "received_at": "2027-11-01T13:50:00-07:00",
+      "path": "ch-0038.json",
+      "title": "DM: Yasmin Mokoena / Camila Quimby"
+    },
+    {
+      "id": "em-0045",
+      "channel": "email",
+      "received_at": "2027-11-01T14:11:00-07:00",
+      "path": "em-0045.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "em-0046",
+      "channel": "email",
+      "received_at": "2027-11-01T14:41:00-07:00",
+      "path": "em-0046.eml",
+      "title": "Marten rollout checklist"
+    },
+    {
+      "id": "em-0047",
+      "channel": "email",
+      "received_at": "2027-11-01T14:53:00-07:00",
+      "path": "em-0047.eml",
+      "title": "[INC-76989] Ticket updated"
+    },
+    {
+      "id": "em-0048",
+      "channel": "email",
+      "received_at": "2027-11-01T15:17:00-07:00",
+      "path": "em-0048.eml",
+      "title": "Fwd: Tarn risk register"
+    },
+    {
+      "id": "em-0049",
+      "channel": "email",
+      "received_at": "2027-11-01T16:26:00-07:00",
+      "path": "em-0049.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0050",
+      "channel": "email",
+      "received_at": "2027-11-01T16:28:00-07:00",
+      "path": "em-0050.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "em-0051",
+      "channel": "email",
+      "received_at": "2027-11-01T17:03:00-07:00",
+      "path": "em-0051.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "em-0052",
+      "channel": "email",
+      "received_at": "2027-11-01T17:05:00-07:00",
+      "path": "em-0052.eml",
+      "title": "[INC-70308] Ticket updated"
+    },
+    {
+      "id": "em-0053",
+      "channel": "email",
+      "received_at": "2027-11-01T17:15:00-07:00",
+      "path": "em-0053.eml",
+      "title": "Reading list on pothole reporting"
+    },
+    {
+      "id": "em-0054",
+      "channel": "email",
+      "received_at": "2027-11-01T18:04:00-07:00",
+      "path": "em-0054.eml",
+      "title": "Re: Parking analytics selection requirements list"
+    }
+  ]
+}

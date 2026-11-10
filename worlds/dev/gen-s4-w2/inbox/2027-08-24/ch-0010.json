@@ -1,0 +1,41 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-ottavio-theresa",
+ "kind": "dm",
+ "participants": [
+  "Resi",
+  "Ottavio Monteiro"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-24T09:40:41-08:00",
+   "user": "Resi",
+   "handle": "@theresa",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-08-24T09:41:00-08:00",
+   "user": "Resi",
+   "handle": "@theresa",
+   "text": "When you get a chance, could you review the Cairn model allow-list?"
+  },
+  {
+   "ts": "2027-08-24T09:41:12-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "can i come back to you on this?"
+  },
+  {
+   "ts": "2027-08-24T09:45:30-08:00",
+   "user": "Resi",
+   "handle": "@theresa",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-08-24T09:46:11-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "yep, all good"
+  }
+ ]
+}

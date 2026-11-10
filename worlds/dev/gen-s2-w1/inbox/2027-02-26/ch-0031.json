@@ -1,0 +1,25 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-catrin-dina",
+ "kind": "dm",
+ "participants": [
+  "Dina Zimmermann",
+  "Catrin Petrov"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-26T13:27:00-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "Let's make it official: you'll send me the inspection scheduling advisory options note.",
+   "edited": true,
+   "original": "Let's make it official: you'll send me the inspection scheduling advsiory options note."
+  },
+  {
+   "ts": "2027-02-26T13:28:04-07:00",
+   "user": "Catrin Petrov",
+   "handle": "@catrin",
+   "text": "noted :)"
+  }
+ ]
+}

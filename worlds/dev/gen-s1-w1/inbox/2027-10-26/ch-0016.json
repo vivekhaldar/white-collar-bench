@@ -1,0 +1,43 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-fernanda",
+ "kind": "dm",
+ "participants": [
+  "Camila Quimby",
+  "Fernanda Olawale"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-26T13:31:48-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-10-26T13:34:00-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "I proposed a final name for Tarn.",
+   "edited": true,
+   "original": "I proposed a fianl name for Tarn."
+  },
+  {
+   "ts": "2027-10-26T13:34:41-07:00",
+   "user": "Fernanda Olawale",
+   "handle": "@fernanda",
+   "text": "thank you!"
+  },
+  {
+   "ts": "2027-10-26T13:35:16-07:00",
+   "user": "Fernanda Olawale",
+   "handle": "@fernanda",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-10-26T13:35:57-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "remote, but online all day"
+  }
+ ]
+}

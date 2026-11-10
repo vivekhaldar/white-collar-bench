@@ -1,0 +1,97 @@
+{
+  "date": "2027-03-26",
+  "artifacts": [
+    {
+      "id": "em-0049",
+      "channel": "email",
+      "received_at": "2027-03-26T09:16:00-05:00",
+      "path": "em-0049.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0050",
+      "channel": "email",
+      "received_at": "2027-03-26T09:22:00-05:00",
+      "path": "em-0050.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "mt-0010",
+      "channel": "transcript",
+      "received_at": "2027-03-26T09:55:00-05:00",
+      "path": "mt-0010.vtt",
+      "title": "Wagtail standup (transcript)"
+    },
+    {
+      "id": "ca-0004",
+      "channel": "calendar",
+      "received_at": "2027-03-26T10:10:00-05:00",
+      "path": "ca-0004.ics",
+      "title": "Invite: Grion demo"
+    },
+    {
+      "id": "ca-0005",
+      "channel": "calendar",
+      "received_at": "2027-03-26T10:17:00-05:00",
+      "path": "ca-0005.ics",
+      "title": "Invite: Okapi hardening review"
+    },
+    {
+      "id": "dc-0003",
+      "channel": "document",
+      "received_at": "2027-03-26T12:25:00-05:00",
+      "path": "dc-0003.docx",
+      "title": "Wagtail test plan v2",
+      "parent": "em-0051"
+    },
+    {
+      "id": "em-0051",
+      "channel": "email",
+      "received_at": "2027-03-26T12:25:00-05:00",
+      "path": "em-0051.eml",
+      "title": "Wagtail test plan"
+    },
+    {
+      "id": "em-0052",
+      "channel": "email",
+      "received_at": "2027-03-26T12:57:00-05:00",
+      "path": "em-0052.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ca-0006",
+      "channel": "calendar",
+      "received_at": "2027-03-26T15:24:00-05:00",
+      "path": "ca-0006.ics",
+      "title": "Invite: Grion demo"
+    },
+    {
+      "id": "ch-0039",
+      "channel": "chat",
+      "received_at": "2027-03-26T15:43:00-05:00",
+      "path": "ch-0039.json",
+      "title": "DM: Anahit Upton / Hiba Xu"
+    },
+    {
+      "id": "em-0053",
+      "channel": "email",
+      "received_at": "2027-03-26T15:52:00-05:00",
+      "path": "em-0053.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0054",
+      "channel": "email",
+      "received_at": "2027-03-26T16:26:00-05:00",
+      "path": "em-0054.eml",
+      "title": "Status note: w/e 26 March"
+    },
+    {
+      "id": "ch-0040",
+      "channel": "chat",
+      "received_at": "2027-03-26T17:09:00-05:00",
+      "path": "ch-0040.json",
+      "title": "#okapi-operating-model-core"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-bisi",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Bisi Chatterjee"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-24T14:01:59-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-09-24T14:06:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "I reviewed your AI safety rounds workshop room plan earlier today."
+  },
+  {
+   "ts": "2027-09-24T14:06:06-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-09-24T14:08:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-09-24T14:08:22-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "no worries"
+  }
+ ]
+}

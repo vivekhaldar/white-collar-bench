@@ -1,0 +1,39 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Nomvula Ndlovu",
+  "Bruna Sinclair",
+  "Esperanza Rao"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-02T09:50:48-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "does anyone have a spare laptop charger (usb-c)?",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@bruna",
+      "@esperanza"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-02T09:57:02-08:00",
+   "user": "Bruna Sinclair",
+   "handle": "@bruna",
+   "text": "I have one, desk by the window"
+  },
+  {
+   "ts": "2027-09-02T09:59:31-08:00",
+   "user": "Esperanza Rao",
+   "handle": "@esperanza",
+   "text": "check the supply cupboard"
+  }
+ ]
+}

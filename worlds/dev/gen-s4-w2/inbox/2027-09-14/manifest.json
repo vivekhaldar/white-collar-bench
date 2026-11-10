@@ -1,0 +1,166 @@
+{
+  "date": "2027-09-14",
+  "artifacts": [
+    {
+      "id": "em-0155",
+      "channel": "email",
+      "received_at": "2027-09-14T06:44:00-08:00",
+      "path": "em-0155.eml",
+      "title": "Programme now live"
+    },
+    {
+      "id": "em-0156",
+      "channel": "email",
+      "received_at": "2027-09-14T06:54:00-08:00",
+      "path": "em-0156.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0157",
+      "channel": "email",
+      "received_at": "2027-09-14T07:24:00-08:00",
+      "path": "em-0157.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "ch-0111",
+      "channel": "chat",
+      "received_at": "2027-09-14T09:10:00-08:00",
+      "path": "ch-0111.json",
+      "title": "DM: Nadia Krause / Ottavio Monteiro"
+    },
+    {
+      "id": "em-0158",
+      "channel": "email",
+      "received_at": "2027-09-14T09:24:00-08:00",
+      "path": "em-0158.eml",
+      "title": "Introduction: room booking selection"
+    },
+    {
+      "id": "ch-0112",
+      "channel": "chat",
+      "received_at": "2027-09-14T10:07:00-08:00",
+      "path": "ch-0112.json",
+      "title": "DM: Meera Ivanova / Ottavio Monteiro"
+    },
+    {
+      "id": "em-0159",
+      "channel": "email",
+      "received_at": "2027-09-14T10:30:00-08:00",
+      "path": "em-0159.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0160",
+      "channel": "email",
+      "received_at": "2027-09-14T10:32:00-08:00",
+      "path": "em-0160.eml",
+      "title": "The Quad Ledger: issue 37"
+    },
+    {
+      "id": "em-0161",
+      "channel": "email",
+      "received_at": "2027-09-14T10:34:00-08:00",
+      "path": "em-0161.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "ch-0113",
+      "channel": "chat",
+      "received_at": "2027-09-14T12:50:00-08:00",
+      "path": "ch-0113.json",
+      "title": "DM: Magdalena Barbosa / Ottavio Monteiro"
+    },
+    {
+      "id": "ch-0114",
+      "channel": "chat",
+      "received_at": "2027-09-14T12:55:00-08:00",
+      "path": "ch-0114.json",
+      "title": "DM: Ottavio Monteiro / Theresa Nagy"
+    },
+    {
+      "id": "ch-0115",
+      "channel": "chat",
+      "received_at": "2027-09-14T13:01:00-08:00",
+      "path": "ch-0115.json",
+      "title": "DM: Meera Ivanova / Ottavio Monteiro"
+    },
+    {
+      "id": "ca-0013",
+      "channel": "calendar",
+      "received_at": "2027-09-14T14:04:00-08:00",
+      "path": "ca-0013.ics",
+      "title": "Invite: Fjord review"
+    },
+    {
+      "id": "em-0162",
+      "channel": "email",
+      "received_at": "2027-09-14T14:34:00-08:00",
+      "path": "em-0162.eml",
+      "title": "Re: Fjord accessibility review"
+    },
+    {
+      "id": "em-0163",
+      "channel": "email",
+      "received_at": "2027-09-14T15:17:00-08:00",
+      "path": "em-0163.eml",
+      "title": "Re: Fjord architecture diagram"
+    },
+    {
+      "id": "ch-0116",
+      "channel": "chat",
+      "received_at": "2027-09-14T15:59:00-08:00",
+      "path": "ch-0116.json",
+      "title": "DM: Meera Kariuki / Ottavio Monteiro"
+    },
+    {
+      "id": "em-0164",
+      "channel": "email",
+      "received_at": "2027-09-14T16:25:00-08:00",
+      "path": "em-0164.eml",
+      "title": "Toria sandbox credentials"
+    },
+    {
+      "id": "em-0165",
+      "channel": "email",
+      "received_at": "2027-09-14T16:33:00-08:00",
+      "path": "em-0165.eml",
+      "title": "Waitlist management discovery missing roster sync"
+    },
+    {
+      "id": "ch-0117",
+      "channel": "chat",
+      "received_at": "2027-09-14T18:31:00-08:00",
+      "path": "ch-0117.json",
+      "title": "#fjord-core"
+    },
+    {
+      "id": "ch-0118",
+      "channel": "chat",
+      "received_at": "2027-09-14T18:45:00-08:00",
+      "path": "ch-0118.json",
+      "title": "DM: Theresa Nagy / Ottavio Monteiro"
+    },
+    {
+      "id": "ch-0119",
+      "channel": "chat",
+      "received_at": "2027-09-14T19:04:00-08:00",
+      "path": "ch-0119.json",
+      "title": "DM: Theresa Nagy / Ottavio Monteiro"
+    },
+    {
+      "id": "nt-0012",
+      "channel": "note",
+      "received_at": "2027-09-14T20:40:00-08:00",
+      "path": "nt-0012.md",
+      "title": "Tue notes"
+    },
+    {
+      "id": "em-0166",
+      "channel": "email",
+      "received_at": "2027-09-14T21:53:00-08:00",
+      "path": "em-0166.eml",
+      "title": "Draft: Fjord dependency list"
+    }
+  ]
+}

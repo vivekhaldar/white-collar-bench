@@ -1,0 +1,57 @@
+{
+ "workspace": "holcrest",
+ "channel": "#marten-core",
+ "kind": "channel",
+ "participants": [
+  "Petra Korkmaz",
+  "Camila Quimby",
+  "Jalen",
+  "Sipho Sengupta",
+  "Dina Winslow",
+  "Yasmin Mokoena",
+  "Nadia Volkov",
+  "Thandiwe Bonnet",
+  "Joselito Moradi",
+  "Imran Sato"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-09T10:55:08-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "catching people up since a few of us are out today"
+  },
+  {
+   "ts": "2027-11-09T10:56:00-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "For info, Camila will confirm the Marten RACI chart with Yasmin."
+  },
+  {
+   "ts": "2027-11-09T10:56:16-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "sure, can do",
+   "thread_of": 1
+  },
+  {
+   "ts": "2027-11-09T10:57:01-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "For info, Camila assembled the Marten security review package."
+  },
+  {
+   "ts": "2027-11-09T10:58:15-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-11-09T10:59:55-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "thanks for flagging",
+   "thread_of": 3
+  }
+ ]
+}

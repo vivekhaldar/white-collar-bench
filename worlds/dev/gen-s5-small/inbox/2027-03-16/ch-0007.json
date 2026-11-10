@@ -1,0 +1,31 @@
+{
+ "workspace": "iselvale",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Jisoo Makinen",
+  "Aylin Venkataraman",
+  "Maricel Herrera"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-16T13:24:49-05:00",
+   "user": "Jisoo Makinen",
+   "handle": "@jisoo",
+   "text": "anyone up for coffee at 3?"
+  },
+  {
+   "ts": "2027-03-16T13:29:20-05:00",
+   "user": "Aylin Venkataraman",
+   "handle": "@aylin",
+   "text": "me! :)"
+  },
+  {
+   "ts": "2027-03-16T13:34:05-05:00",
+   "user": "Maricel Herrera",
+   "handle": "@maricel",
+   "text": "can't today, back to back :)",
+   "thread_of": 0
+  }
+ ]
+}

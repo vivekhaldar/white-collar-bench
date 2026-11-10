@@ -1,0 +1,75 @@
+{
+  "date": "2027-03-17",
+  "artifacts": [
+    {
+      "id": "em-0010",
+      "channel": "email",
+      "received_at": "2027-03-17T07:19:00-05:00",
+      "path": "em-0010.eml",
+      "title": "Re: Wagtail API contract v2"
+    },
+    {
+      "id": "em-0011",
+      "channel": "email",
+      "received_at": "2027-03-17T07:47:00-05:00",
+      "path": "em-0011.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "ca-0001",
+      "channel": "calendar",
+      "received_at": "2027-03-17T08:07:00-05:00",
+      "path": "ca-0001.ics",
+      "title": "Invite: Wagtail build sync"
+    },
+    {
+      "id": "ch-0009",
+      "channel": "chat",
+      "received_at": "2027-03-17T09:05:00-05:00",
+      "path": "ch-0009.json",
+      "title": "DM: Jisoo Makinen / Hiba Xu"
+    },
+    {
+      "id": "mt-0003",
+      "channel": "transcript",
+      "received_at": "2027-03-17T09:55:00-05:00",
+      "path": "mt-0003.vtt",
+      "title": "Wagtail standup (transcript)"
+    },
+    {
+      "id": "em-0012",
+      "channel": "email",
+      "received_at": "2027-03-17T13:01:00-05:00",
+      "path": "em-0012.eml",
+      "title": "[INC-77668] Ticket updated"
+    },
+    {
+      "id": "mt-0004",
+      "channel": "transcript",
+      "received_at": "2027-03-17T14:45:00-05:00",
+      "path": "mt-0004.vtt",
+      "title": "Wagtail build sync (transcript)"
+    },
+    {
+      "id": "em-0013",
+      "channel": "email",
+      "received_at": "2027-03-17T15:02:00-05:00",
+      "path": "em-0013.eml",
+      "title": "Clinical IT Briefing: issue 11"
+    },
+    {
+      "id": "em-0014",
+      "channel": "email",
+      "received_at": "2027-03-17T17:13:00-05:00",
+      "path": "em-0014.eml",
+      "title": "Referral backlog wait-time export"
+    },
+    {
+      "id": "ch-0010",
+      "channel": "chat",
+      "received_at": "2027-03-17T18:46:00-05:00",
+      "path": "ch-0010.json",
+      "title": "DM: Mateo Pritchard / Hiba Xu"
+    }
+  ]
+}

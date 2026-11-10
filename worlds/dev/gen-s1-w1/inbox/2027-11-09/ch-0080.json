@@ -1,0 +1,52 @@
+{
+ "workspace": "holcrest",
+ "channel": "#marten-core",
+ "kind": "channel",
+ "participants": [
+  "Camila Quimby",
+  "Petra Korkmaz",
+  "Jalen Hendriks",
+  "Sipho Sengupta",
+  "Dina Winslow",
+  "Yasmin Mokoena",
+  "Nadia Volkov",
+  "Thandi",
+  "Joselito Moradi",
+  "Imran Sato"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-09T10:53:00-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "@yasmin i'll confirm the Marten RACI chart with you, with Thandi."
+  },
+  {
+   "ts": "2027-11-09T10:54:22-07:00",
+   "user": "Jalen Hendriks",
+   "handle": "@jalen",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-11-09T10:58:57-07:00",
+   "user": "Imran Sato",
+   "handle": "@imran",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-09T11:04:51-07:00",
+   "user": "Dina Winslow",
+   "handle": "@dina",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-09T18:15:00-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "@yasmin that's the Marten RACI chart done, by the way.",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-yael",
+ "kind": "dm",
+ "participants": [
+  "Yael Yardley",
+  "Dina Zimmermann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-01T08:29:26-07:00",
+   "user": "Yael Yardley",
+   "handle": "@yael",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-03-01T08:30:18-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-03-01T08:33:37-07:00",
+   "user": "Yael Yardley",
+   "handle": "@yael",
+   "text": "For the record, you sent Bilal the Mistral solution brief on 22 February."
+  },
+  {
+   "ts": "2027-03-01T08:34:03-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "thanks for the heads up"
+  }
+ ]
+}

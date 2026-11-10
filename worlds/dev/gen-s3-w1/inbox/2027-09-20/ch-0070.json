@@ -1,0 +1,54 @@
+{
+ "workspace": "birchmere",
+ "channel": "#okapi-core",
+ "kind": "channel",
+ "participants": [
+  "Dina Mancini",
+  "Alasdair Kaya",
+  "Katarzyna Feng",
+  "Bisi",
+  "Eleni Laurent",
+  "Penelope Lehmann",
+  "Nurlan Moreira",
+  "Giorgi Ngo",
+  "Victoria Nikolic"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-20T08:18:00-05:00",
+   "user": "Dina Mancini",
+   "handle": "@dina",
+   "text": "@alasdair when you get a chance, could you send me the Okapi budget justification? :)",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@katarzyna",
+      "@alasdair",
+      "@bisi"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-20T08:19:13-05:00",
+   "user": "Victoria Nikolic",
+   "handle": "@victoria",
+   "text": "ok"
+  },
+  {
+   "ts": "2027-09-20T08:25:19-05:00",
+   "user": "Victoria Nikolic",
+   "handle": "@victoria",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-20T08:34:44-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "good to know :)",
+   "thread_of": 0
+  }
+ ]
+}

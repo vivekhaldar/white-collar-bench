@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Birchmere//Calendar//EN
+METHOD:CANCEL
+BEGIN:VEVENT
+UID:033161850147644b@birchmere.example
+DTSTAMP:20270921T140900Z
+DTSTART:20270921T143000Z
+DTEND:20270921T145500Z
+SUMMARY:Cancelled: Okapi standup
+ORGANIZER;CN=Katarzyna Feng:mailto:katarzyna.feng@ketford.birchmere.example
+ATTENDEE;CN=Alasdair Kaya;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:alasdair.kaya@birchmere.example
+ATTENDEE;CN=Bisi Chatterjee;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bisi.chatterjee@birchmere.example
+ATTENDEE;CN=Eleni Laurent;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:eleni.laurent@ketford.birchmere.example
+ATTENDEE;CN=Dina Mancini;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.mancini@birchmere.example
+ATTENDEE;CN=Penelope Lehmann;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:penelope.lehmann@birchmere.example
+ATTENDEE;CN=Nurlan Moreira;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:nurlan.moreira@birchmere.example
+ATTENDEE;CN=Giorgi Ngo;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:giorgi.ngo@birchmere.example
+RECURRENCE-ID:20270921T143000Z
+SEQUENCE:1
+STATUS:CANCELLED
+DESCRIPTION:Cancelling\, a few people are out.
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,72 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#fjord-core",
+ "kind": "channel",
+ "participants": [
+  "Darius Sherwood",
+  "Ottavio Monteiro",
+  "Meera",
+  "Ratna Bondarenko",
+  "Theresa Nagy",
+  "Nomvula Ndlovu",
+  "Bruna Sinclair",
+  "Esperanza Rao",
+  "Yaroslav Moyo",
+  "Celine Wisniewska"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-09T09:20:00-08:00",
+   "user": "Darius Sherwood",
+   "handle": "@darius",
+   "text": "Fjord is moving into security review!"
+  },
+  {
+   "ts": "2027-09-09T09:21:23-08:00",
+   "user": "Bruna Sinclair",
+   "handle": "@bruna",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T09:28:00-08:00",
+   "user": "Celine Wisniewska",
+   "handle": "@celine",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T09:34:14-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T09:35:31-08:00",
+   "user": "Ratna Bondarenko",
+   "handle": "@ratna",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T09:36:10-08:00",
+   "user": "Darius Sherwood",
+   "handle": "@darius",
+   "text": "Blocker on Fjord: real student data paused pending the security review. :)"
+  },
+  {
+   "ts": "2027-09-09T09:36:19-08:00",
+   "user": "Yaroslav Moyo",
+   "handle": "@yaroslav",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-09-09T09:41:43-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "good to know",
+   "thread_of": 5
+  }
+ ]
+}

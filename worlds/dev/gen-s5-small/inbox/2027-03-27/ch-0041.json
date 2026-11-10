@@ -1,0 +1,41 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-ama-hiba",
+ "kind": "dm",
+ "participants": [
+  "Ama Forsythe",
+  "Hiba Xu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-27T12:58:12-05:00",
+   "user": "Ama Forsythe",
+   "handle": "@ama",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-03-27T12:59:01-05:00",
+   "user": "Ama Forsythe",
+   "handle": "@ama",
+   "text": "Anahit is expecting you to review their clinical documentation discovery pilot charter."
+  },
+  {
+   "ts": "2027-03-27T12:59:35-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "can I come back to you on this?"
+  },
+  {
+   "ts": "2027-03-27T13:04:22-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-03-27T13:05:59-05:00",
+   "user": "Ama Forsythe",
+   "handle": "@ama",
+   "text": "yep, all good"
+  }
+ ]
+}

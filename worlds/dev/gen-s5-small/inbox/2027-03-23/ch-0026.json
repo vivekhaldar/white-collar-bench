@@ -1,0 +1,55 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-ciaran-hiba",
+ "kind": "dm",
+ "participants": [
+  "Ciaran Rocha",
+  "Hiba Xu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-23T15:10:00-05:00",
+   "user": "Ciaran Rocha",
+   "handle": "@ciaran",
+   "text": "grion referral triage diligence is moving into stalled",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-23T15:11:19-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-03-23T15:11:57-05:00",
+   "user": "Ciaran Rocha",
+   "handle": "@ciaran",
+   "text": "grion referral triage diligence has gone quiet, treat it as dormant for now"
+  },
+  {
+   "ts": "2027-03-23T15:13:20-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "noted"
+  },
+  {
+   "ts": "2027-03-23T15:13:57-05:00",
+   "user": "Ciaran Rocha",
+   "handle": "@ciaran",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-03-23T15:14:34-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

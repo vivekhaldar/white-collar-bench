@@ -1,0 +1,110 @@
+{
+  "date": "2027-10-27",
+  "artifacts": [
+    {
+      "id": "em-0015",
+      "channel": "email",
+      "received_at": "2027-10-27T10:43:00-07:00",
+      "path": "em-0015.eml",
+      "title": "Re: Panel feedback"
+    },
+    {
+      "id": "ch-0018",
+      "channel": "chat",
+      "received_at": "2027-10-27T11:06:00-07:00",
+      "path": "ch-0018.json",
+      "title": "#marten-core"
+    },
+    {
+      "id": "em-0016",
+      "channel": "email",
+      "received_at": "2027-10-27T11:23:00-07:00",
+      "path": "em-0016.eml",
+      "title": "Re: Marten: moving to security review"
+    },
+    {
+      "id": "em-0017",
+      "channel": "email",
+      "received_at": "2027-10-27T11:34:00-07:00",
+      "path": "em-0017.eml",
+      "title": "Fwd: Benefits screening baseline data from Ulworth"
+    },
+    {
+      "id": "em-0018",
+      "channel": "email",
+      "received_at": "2027-10-27T13:05:00-07:00",
+      "path": "em-0018.eml",
+      "title": "Parking lot resurfacing"
+    },
+    {
+      "id": "mt-0002",
+      "channel": "transcript",
+      "received_at": "2027-10-27T13:45:00-07:00",
+      "path": "mt-0002.vtt",
+      "title": "Birchcrest relationship check-in (transcript)"
+    },
+    {
+      "id": "em-0019",
+      "channel": "email",
+      "received_at": "2027-10-27T13:53:00-07:00",
+      "path": "em-0019.eml",
+      "title": "Catering menu for next month"
+    },
+    {
+      "id": "em-0020",
+      "channel": "email",
+      "received_at": "2027-10-27T14:04:00-07:00",
+      "path": "em-0020.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "mn-0003",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-27T14:30:00-07:00",
+      "path": "mn-0003.md",
+      "title": "Notes: Obsidian platform sync"
+    },
+    {
+      "id": "em-0021",
+      "channel": "email",
+      "received_at": "2027-10-27T15:18:00-07:00",
+      "path": "em-0021.eml",
+      "title": "Plain language workshop slides v2"
+    },
+    {
+      "id": "ch-0019",
+      "channel": "chat",
+      "received_at": "2027-10-27T16:39:00-07:00",
+      "path": "ch-0019.json",
+      "title": "#parking-analytics-core"
+    },
+    {
+      "id": "ch-0020",
+      "channel": "chat",
+      "received_at": "2027-10-27T17:07:00-07:00",
+      "path": "ch-0020.json",
+      "title": "DM: Petra Korkmaz / Camila Quimby"
+    },
+    {
+      "id": "em-0022",
+      "channel": "email",
+      "received_at": "2027-10-27T17:10:00-07:00",
+      "path": "em-0022.eml",
+      "title": "Wellness credit deadline"
+    },
+    {
+      "id": "ch-0021",
+      "channel": "chat",
+      "received_at": "2027-10-27T17:40:00-07:00",
+      "path": "ch-0021.json",
+      "title": "DM: Jalen Hendriks / Camila Quimby"
+    },
+    {
+      "id": "em-0023",
+      "channel": "email",
+      "received_at": "2027-10-27T18:10:00-07:00",
+      "path": "em-0023.eml",
+      "title": "[INC-74633] Ticket updated"
+    }
+  ]
+}

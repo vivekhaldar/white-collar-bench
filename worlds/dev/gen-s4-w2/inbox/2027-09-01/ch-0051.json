@@ -1,0 +1,43 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-ottavio-ratna",
+ "kind": "dm",
+ "participants": [
+  "Ratna Bondarenko",
+  "Ottavio Monteiro"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-01T09:34:00-08:00",
+   "user": "Ratna Bondarenko",
+   "handle": "@ratna",
+   "text": "Meera Ivanova and I will set up the Fjord single sign-on role mapping.",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@ottavio"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-01T09:35:18-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-09-01T09:36:39-08:00",
+   "user": "Ratna Bondarenko",
+   "handle": "@ratna",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-09-01T09:40:18-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "anytime"
+  }
+ ]
+}

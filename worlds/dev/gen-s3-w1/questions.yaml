@@ -1,0 +1,394 @@
+- id: q-001
+  checkpoint: cp1
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - scattered_evidence
+  - worker_directive
+- id: q-002
+  checkpoint: cp1
+  template: project_status
+  params:
+    project: pr-okapi
+    name_form: the Ketford pilot
+  challenges:
+  - alias
+  - duplicate_signal
+  - scattered_evidence
+- id: q-003
+  checkpoint: cp1
+  template: project_changes
+  params:
+    project: pr-bittern
+    since: '2027-09-17'
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - worker_directive
+- id: q-004
+  checkpoint: cp1
+  template: i_owe
+  params:
+    person: p-guadalupe-lombardi
+    name_form: Guadalupe
+  challenges:
+  - alias
+  - duplicate_signal
+- id: q-005
+  checkpoint: cp1
+  template: owed_to_me
+  params:
+    person: p-nurlan-moreira
+  challenges:
+  - duplicate_signal
+- id: q-006
+  checkpoint: cp1
+  template: loop_owner
+  params:
+    commitment: c-003
+  challenges:
+  - duplicate_signal
+- id: q-007
+  checkpoint: cp1
+  template: loop_due
+  params:
+    commitment: c-054
+  challenges:
+  - scattered_evidence
+- id: q-008
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-talwick-partnership
+    attribute: owner
+  challenges: []
+- id: q-009
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-giorgi-ngo
+    attribute: relationship
+    name_form: Giorgi
+  challenges:
+  - alias
+- id: q-010
+  checkpoint: cp1
+  template: project_loops
+  params:
+    project: pr-sirocco
+  challenges:
+  - duplicate_signal
+  - endorsement
+- id: q-011
+  checkpoint: cp1
+  template: person_brief
+  params:
+    person: p-dina-mancini
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - scattered_evidence
+- id: q-012
+  checkpoint: cp1
+  template: decision_date
+  params:
+    decision: d-002
+  challenges: []
+- id: q-013
+  checkpoint: cp1
+  template: event_date
+  params:
+    event: e-0126
+  text: When was "Send Alasdair the notes from the denials analytics session" completed?
+  challenges:
+  - silent_closure
+- id: q-014
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-bittern
+    attribute: budget
+  text: What is the budget for Bittern?
+  challenges:
+  - unobservable
+- id: q-015
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-vitoria-oduro
+    attribute: phone
+    name_form: Vitoria
+  challenges:
+  - alias
+  - unobservable
+- id: q-016
+  checkpoint: cp2
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - correction
+  - duplicate_signal
+  - endorsement
+  - new_entity
+  - supersession
+  - worker_directive
+- id: q-017
+  checkpoint: cp2
+  template: project_status
+  params:
+    project: pr-okapi
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - new_entity
+  - reversal
+  - supersession
+- id: q-018
+  checkpoint: cp2
+  template: project_changes
+  params:
+    project: pr-lanmoor-outpatient-no-shows-discovery
+    since: '2027-09-21'
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-019
+  checkpoint: cp2
+  template: i_owe
+  params:
+    person: p-bisi-chatterjee
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - name_collision
+  - worker_directive
+- id: q-020
+  checkpoint: cp2
+  template: owed_to_me
+  params:
+    person: p-dalisay-sandberg
+  challenges:
+  - duplicate_signal
+- id: q-021
+  checkpoint: cp2
+  template: loop_due
+  params:
+    commitment: c-061
+  challenges:
+  - correction
+  - supersession
+- id: q-022
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-okapi
+    attribute: owner
+    name_form: the Ketford pilot
+  challenges:
+  - alias
+- id: q-023
+  checkpoint: cp2
+  template: person_attr
+  params:
+    person: p-margaux-monteiro
+    attribute: org
+  challenges:
+  - new_entity
+- id: q-024
+  checkpoint: cp2
+  template: project_loops
+  params:
+    project: pr-lanmoor-outpatient-no-shows-discovery
+  challenges:
+  - duplicate_signal
+- id: q-025
+  checkpoint: cp2
+  template: person_brief
+  params:
+    person: p-katarzyna-feng
+  challenges:
+  - correction
+  - duplicate_signal
+  - supersession
+- id: q-026
+  checkpoint: cp2
+  template: event_date
+  params:
+    event: e-0180
+  text: When was "Confirm the Okapi metrics definition with Penelope" completed?
+  challenges: []
+- id: q-027
+  checkpoint: cp2
+  template: loop_owner
+  params:
+    commitment: c-040
+  challenges:
+  - transfer
+- id: q-028
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-intake-forms-tool-selection
+    attribute: owner
+  challenges: []
+- id: q-029
+  checkpoint: cp2
+  template: project_loops
+  params:
+    project: pr-okapi
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - new_entity
+- id: q-030
+  checkpoint: cp2
+  template: event_date
+  params:
+    event: e-0226
+  text: When was "Walk Penelope through the Sirocco requirements matrix" completed?
+  challenges:
+  - unobservable
+  - weak_evidence
+- id: q-031
+  checkpoint: cp3
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - correction
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - supersession
+  - worker_directive
+- id: q-032
+  checkpoint: cp3
+  template: project_status
+  params:
+    project: pr-okapi
+    name_form: OKAP
+  challenges:
+  - alias
+  - batch_catchup
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - supersession
+  - worker_directive
+- id: q-033
+  checkpoint: cp3
+  template: project_changes
+  params:
+    project: pr-okapi
+    since: '2027-09-23'
+  challenges:
+  - endorsement
+  - worker_directive
+- id: q-034
+  checkpoint: cp3
+  template: i_owe
+  params:
+    person: p-dina-mancini
+  challenges:
+  - batch_catchup
+- id: q-035
+  checkpoint: cp3
+  template: owed_to_me
+  params:
+    person: p-bisi-chatterjee
+  challenges:
+  - batch_catchup
+  - endorsement
+  - name_collision
+- id: q-036
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-ai-safety-rounds-workshop
+    attribute: target_date
+    name_form: the Emberbury workshop
+  challenges:
+  - alias
+- id: q-037
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-bittern
+  challenges:
+  - batch_catchup
+  - correction
+  - supersession
+- id: q-038
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-bisi-chatterjee
+    name_form: our programs director
+  challenges:
+  - alias
+  - batch_catchup
+  - duplicate_signal
+  - endorsement
+  - name_collision
+  - new_entity
+  - restructuring
+  - worker_directive
+- id: q-039
+  checkpoint: cp3
+  template: event_date
+  params:
+    event: e-0116
+  text: When was "Send Guadalupe the bed management discovery process map" completed?
+  challenges: []
+- id: q-040
+  checkpoint: cp3
+  template: loop_due
+  params:
+    commitment: c-067
+  challenges:
+  - endorsement
+  - worker_directive
+- id: q-041
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-lanmoor-bed-management-discovery
+    attribute: owner
+  challenges: []
+- id: q-042
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-clinical-data-engineer-hire
+  challenges:
+  - duplicate_signal
+- id: q-043
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-catrin-kiprono
+  challenges:
+  - transfer
+- id: q-044
+  checkpoint: cp3
+  template: person_attr
+  params:
+    person: p-katrin-watanabe
+    attribute: office
+  challenges:
+  - unobservable
+- id: q-045
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-clinical-data-engineer-hire
+    attribute: budget
+    name_form: REQ-3709
+  challenges:
+  - alias
+  - unobservable

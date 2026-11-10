@@ -1,0 +1,49 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-dalisay",
+ "kind": "dm",
+ "participants": [
+  "Dalisay Nyberg",
+  "Camila Quimby"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-25T10:06:00-07:00",
+   "user": "Dalisay Nyberg",
+   "handle": "@dalisay",
+   "text": "we're now in panel on data engineer hire",
+   "edited": true,
+   "original": "we're now in panel on data enigneer hire"
+  },
+  {
+   "ts": "2027-10-25T10:06:25-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-10-25T10:07:12-07:00",
+   "user": "Dalisay Nyberg",
+   "handle": "@dalisay",
+   "text": "(this involves sandstead permitting office.)"
+  },
+  {
+   "ts": "2027-10-25T10:08:42-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-10-25T10:12:09-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-10-25T10:13:36-07:00",
+   "user": "Dalisay Nyberg",
+   "handle": "@dalisay",
+   "text": "later!"
+  }
+ ]
+}

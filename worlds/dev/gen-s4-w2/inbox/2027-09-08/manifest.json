@@ -1,0 +1,131 @@
+{
+  "date": "2027-09-08",
+  "artifacts": [
+    {
+      "id": "ch-0079",
+      "channel": "chat",
+      "received_at": "2027-09-08T09:07:00-08:00",
+      "path": "ch-0079.json",
+      "title": "#early-alert-advisory-core"
+    },
+    {
+      "id": "ch-0080",
+      "channel": "chat",
+      "received_at": "2027-09-08T09:16:00-08:00",
+      "path": "ch-0080.json",
+      "title": "DM: Meera Kariuki / Ottavio Monteiro"
+    },
+    {
+      "id": "ch-0081",
+      "channel": "chat",
+      "received_at": "2027-09-08T09:38:00-08:00",
+      "path": "ch-0081.json",
+      "title": "DM: Ottavio Monteiro / Esperanza Rao"
+    },
+    {
+      "id": "ca-0009",
+      "channel": "calendar",
+      "received_at": "2027-09-08T10:01:00-08:00",
+      "path": "ca-0009.ics",
+      "title": "Invite: Cairn review"
+    },
+    {
+      "id": "em-0114",
+      "channel": "email",
+      "received_at": "2027-09-08T10:05:00-08:00",
+      "path": "em-0114.eml",
+      "title": "Call for proposals closes Sunday 12 September"
+    },
+    {
+      "id": "ch-0082",
+      "channel": "chat",
+      "received_at": "2027-09-08T10:12:00-08:00",
+      "path": "ch-0082.json",
+      "title": "DM: Ottavio Monteiro / Ewan Shrestha"
+    },
+    {
+      "id": "em-0115",
+      "channel": "email",
+      "received_at": "2027-09-08T11:25:00-08:00",
+      "path": "em-0115.eml",
+      "title": "Ithic sandbox credentials"
+    },
+    {
+      "id": "mn-0012",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-08T11:30:00-08:00",
+      "path": "mn-0012.md",
+      "title": "Recap: Fjord build sync"
+    },
+    {
+      "id": "ch-0083",
+      "channel": "chat",
+      "received_at": "2027-09-08T12:02:00-08:00",
+      "path": "ch-0083.json",
+      "title": "#fjord-core"
+    },
+    {
+      "id": "em-0116",
+      "channel": "email",
+      "received_at": "2027-09-08T13:59:00-08:00",
+      "path": "em-0116.eml",
+      "title": "Course assistant discovery stakeholder map"
+    },
+    {
+      "id": "em-0117",
+      "channel": "email",
+      "received_at": "2027-09-08T14:07:00-08:00",
+      "path": "em-0117.eml",
+      "title": "Fjord acceptance criteria"
+    },
+    {
+      "id": "mt-0012",
+      "channel": "transcript",
+      "received_at": "2027-09-08T14:35:00-08:00",
+      "path": "mt-0012.vtt",
+      "title": "Cairn platform sync (transcript)"
+    },
+    {
+      "id": "em-0118",
+      "channel": "email",
+      "received_at": "2027-09-08T15:54:00-08:00",
+      "path": "em-0118.eml",
+      "title": "Re: Heathridge Course Assistant Discovery: numbers"
+    },
+    {
+      "id": "ch-0084",
+      "channel": "chat",
+      "received_at": "2027-09-08T16:52:00-08:00",
+      "path": "ch-0084.json",
+      "title": "#course-assistant-discovery-core"
+    },
+    {
+      "id": "ch-0085",
+      "channel": "chat",
+      "received_at": "2027-09-08T17:16:00-08:00",
+      "path": "ch-0085.json",
+      "title": "DM: Ottavio Monteiro / Magdalena Barbosa"
+    },
+    {
+      "id": "ch-0086",
+      "channel": "chat",
+      "received_at": "2027-09-08T18:21:00-08:00",
+      "path": "ch-0086.json",
+      "title": "DM: Darius Sherwood / Ottavio Monteiro"
+    },
+    {
+      "id": "ch-0087",
+      "channel": "chat",
+      "received_at": "2027-09-08T18:25:00-08:00",
+      "path": "ch-0087.json",
+      "title": "DM: Ottavio Monteiro / Ratna Bondarenko"
+    },
+    {
+      "id": "ch-0088",
+      "channel": "chat",
+      "received_at": "2027-09-08T18:28:00-08:00",
+      "path": "ch-0088.json",
+      "title": "DM: Ottavio Monteiro / Meera Ivanova"
+    }
+  ]
+}

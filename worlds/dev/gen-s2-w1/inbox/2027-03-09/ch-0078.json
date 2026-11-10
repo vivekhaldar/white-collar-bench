@@ -1,0 +1,46 @@
+{
+ "workspace": "vercliff",
+ "channel": "#mistral-core",
+ "kind": "channel",
+ "participants": [
+  "Imani Chaiyaporn",
+  "Dina Zimmermann",
+  "Yael Yardley",
+  "Rudo Alexiou",
+  "Naoko Maldonado",
+  "Cassandra Yilmaz",
+  "Bilal Blackwood",
+  "Thibault Sahin",
+  "Mei Obi",
+  "Ling"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-09T07:54:00-07:00",
+   "user": "Imani Chaiyaporn",
+   "handle": "@imani",
+   "text": "fyi yael needs the mistral retention schedule by thursday 11 march"
+  },
+  {
+   "ts": "2027-03-09T07:54:49-07:00",
+   "user": "Mei Obi",
+   "handle": "@mei",
+   "text": "good to know :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-09T08:03:46-07:00",
+   "user": "Mei Obi",
+   "handle": "@mei",
+   "text": "thanks for the update :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-09T08:06:42-07:00",
+   "user": "Cassandra Yilmaz",
+   "handle": "@cassandra",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

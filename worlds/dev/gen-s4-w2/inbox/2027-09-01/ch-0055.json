@@ -1,0 +1,33 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Nomvula Ndlovu",
+  "Theresa Nagy",
+  "Esperanza Rao",
+  "Tariq Popescu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-01T17:18:47-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "does anyone have a spare laptop charger (usb-c)?"
+  },
+  {
+   "ts": "2027-09-01T17:21:57-08:00",
+   "user": "Theresa Nagy",
+   "handle": "@theresa",
+   "text": "I have one, desk by the window",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-01T17:27:21-08:00",
+   "user": "Esperanza Rao",
+   "handle": "@esperanza",
+   "text": "check the supply cupboard",
+   "thread_of": 0
+  }
+ ]
+}

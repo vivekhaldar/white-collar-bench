@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Vercliff//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:6c1e1e7279fca0fc@vercliff.example
+DTSTAMP:20270223T011400Z
+DTSTART:20270223T210000Z
+DTEND:20270223T213000Z
+SUMMARY:Working session: Fennel tenant onboarding guide
+ORGANIZER;CN=Cassandra Yilmaz:mailto:cassandra.yilmaz@vercliff.example
+ATTENDEE;CN=Dina Zimmermann;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.zimmermann@vercliff.example
+SEQUENCE:0
+DESCRIPTION:Agenda: Publish the Fennel tenant onboarding guide.\nJoin video meeting: https://meet.vercliff.example/j/5214210375?pwd=zdHwccgp\nPasscode: 999854
+LOCATION:https://meet.vercliff.example/j/5214210375?pwd=zdHwccgp
+END:VEVENT
+END:VCALENDAR

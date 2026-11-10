@@ -1,0 +1,31 @@
+{
+ "workspace": "iselvale",
+ "channel": "#wagtail-core",
+ "kind": "channel",
+ "participants": [
+  "Hiba Xu",
+  "Ama Forsythe",
+  "Anahit",
+  "Mateo Pritchard",
+  "Lakshmi Zamora",
+  "Friederike Malhotra",
+  "Jisoo Makinen",
+  "Maricel Herrera",
+  "Isla Mercier"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-25T13:02:00-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "@lakshmi just confirmed the wagtail change request with you"
+  },
+  {
+   "ts": "2027-03-25T13:02:51-05:00",
+   "user": "Friederike Malhotra",
+   "handle": "@friederike",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

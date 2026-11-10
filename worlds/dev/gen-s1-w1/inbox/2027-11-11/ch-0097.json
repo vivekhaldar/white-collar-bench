@@ -1,0 +1,35 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-jalen",
+ "kind": "dm",
+ "participants": [
+  "Jalen",
+  "Camila Quimby"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-11T10:21:03-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-11-11T10:22:19-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-11-11T10:23:00-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "Correction to what I said earlier: the plain language workshop slow page loads isn't done after all. The change was rolled back, so it's open again."
+  },
+  {
+   "ts": "2027-11-11T10:23:31-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "got it"
+  }
+ ]
+}

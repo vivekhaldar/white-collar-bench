@@ -1,0 +1,41 @@
+{
+ "workspace": "holcrest",
+ "channel": "#notice-translation-core",
+ "kind": "channel",
+ "participants": [
+  "Camila Quimby",
+  "Jalen",
+  "Petra Korkmaz",
+  "Sipho Sengupta",
+  "Dina Winslow"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-12T08:07:00-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "@jalen leave it with me, i'll send you the notice translation discovery stakeholder map"
+  },
+  {
+   "ts": "2027-11-12T08:07:32-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "appreciate it",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-12T08:14:24-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-12T08:23:55-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

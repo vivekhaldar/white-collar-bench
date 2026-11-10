@@ -1,0 +1,35 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-yasmin",
+ "kind": "dm",
+ "participants": [
+  "Yasmin Mokoena",
+  "Camila Quimby"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-11T13:15:50-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-11-11T13:16:11-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-11-11T13:16:35-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "On it, I'll share the Marten data dictionary with you."
+  },
+  {
+   "ts": "2027-11-11T13:17:29-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "that'd be great"
+  }
+ ]
+}

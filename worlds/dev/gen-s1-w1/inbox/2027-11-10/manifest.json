@@ -1,0 +1,175 @@
+{
+  "date": "2027-11-10",
+  "artifacts": [
+    {
+      "id": "ch-0082",
+      "channel": "chat",
+      "received_at": "2027-11-10T07:38:00-07:00",
+      "path": "ch-0082.json",
+      "title": "#marten-core (catch-up)"
+    },
+    {
+      "id": "mt-0012",
+      "channel": "transcript",
+      "received_at": "2027-11-10T07:39:00-07:00",
+      "path": "mt-0012.vtt",
+      "title": "Obsidian sync (transcript)"
+    },
+    {
+      "id": "em-0103",
+      "channel": "email",
+      "received_at": "2027-11-10T07:40:00-07:00",
+      "path": "em-0103.eml",
+      "title": "While you were out: plain language workshop"
+    },
+    {
+      "id": "ch-0083",
+      "channel": "chat",
+      "received_at": "2027-11-10T07:41:00-07:00",
+      "path": "ch-0083.json",
+      "title": "DM: Petra Korkmaz / Camila Quimby"
+    },
+    {
+      "id": "dc-0005",
+      "channel": "document",
+      "received_at": "2027-11-10T07:52:00-07:00",
+      "path": "dc-0005.pdf",
+      "title": "Marten test plan v2",
+      "parent": "em-0104"
+    },
+    {
+      "id": "em-0104",
+      "channel": "email",
+      "received_at": "2027-11-10T07:52:00-07:00",
+      "path": "em-0104.eml",
+      "title": "Re: Marten test plan"
+    },
+    {
+      "id": "ch-0084",
+      "channel": "chat",
+      "received_at": "2027-11-10T08:43:00-07:00",
+      "path": "ch-0084.json",
+      "title": "#benefits-screening-core"
+    },
+    {
+      "id": "ch-0085",
+      "channel": "chat",
+      "received_at": "2027-11-10T08:44:00-07:00",
+      "path": "ch-0085.json",
+      "title": "DM: Camila Quimby / Thandiwe Bonnet"
+    },
+    {
+      "id": "mn-0011",
+      "channel": "meeting_notes",
+      "received_at": "2027-11-10T09:55:00-07:00",
+      "path": "mn-0011.md",
+      "title": "Recap: Marten standup"
+    },
+    {
+      "id": "em-0105",
+      "channel": "email",
+      "received_at": "2027-11-10T10:26:00-07:00",
+      "path": "em-0105.eml",
+      "title": "Introduction: Marten"
+    },
+    {
+      "id": "ch-0086",
+      "channel": "chat",
+      "received_at": "2027-11-10T10:57:00-07:00",
+      "path": "ch-0086.json",
+      "title": "#benefits-screening-core"
+    },
+    {
+      "id": "dc-0006",
+      "channel": "document",
+      "received_at": "2027-11-10T10:59:00-07:00",
+      "path": "dc-0006.xlsx",
+      "title": "Parking analytics selection vendor comparison v2",
+      "parent": "em-0106"
+    },
+    {
+      "id": "em-0106",
+      "channel": "email",
+      "received_at": "2027-11-10T10:59:00-07:00",
+      "path": "em-0106.eml",
+      "title": "Re: Parking analytics selection vendor comparison"
+    },
+    {
+      "id": "em-0107",
+      "channel": "email",
+      "received_at": "2027-11-10T12:33:00-07:00",
+      "path": "em-0107.eml",
+      "title": "Re: Offer"
+    },
+    {
+      "id": "ch-0087",
+      "channel": "chat",
+      "received_at": "2027-11-10T12:51:00-07:00",
+      "path": "ch-0087.json",
+      "title": "DM: Camila Quimby / Jalen Hendriks"
+    },
+    {
+      "id": "ch-0088",
+      "channel": "chat",
+      "received_at": "2027-11-10T13:52:00-07:00",
+      "path": "ch-0088.json",
+      "title": "DM: Yasmin Mokoena / Camila Quimby"
+    },
+    {
+      "id": "ch-0089",
+      "channel": "chat",
+      "received_at": "2027-11-10T15:49:00-07:00",
+      "path": "ch-0089.json",
+      "title": "DM: Camila Quimby / Yasmin Mokoena"
+    },
+    {
+      "id": "ch-0090",
+      "channel": "chat",
+      "received_at": "2027-11-10T15:52:00-07:00",
+      "path": "ch-0090.json",
+      "title": "DM: Yiannis Cabrera / Camila Quimby"
+    },
+    {
+      "id": "mt-0013",
+      "channel": "transcript",
+      "received_at": "2027-11-10T16:00:00-07:00",
+      "path": "mt-0013.vtt",
+      "title": "Nantgate partnership sync (transcript)"
+    },
+    {
+      "id": "em-0108",
+      "channel": "email",
+      "received_at": "2027-11-10T17:00:00-07:00",
+      "path": "em-0108.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0091",
+      "channel": "chat",
+      "received_at": "2027-11-10T17:21:00-07:00",
+      "path": "ch-0091.json",
+      "title": "#plain-language-workshop-core"
+    },
+    {
+      "id": "nt-0010",
+      "channel": "note",
+      "received_at": "2027-11-10T17:25:00-07:00",
+      "path": "nt-0010.md",
+      "title": "Wed notes"
+    },
+    {
+      "id": "ch-0092",
+      "channel": "chat",
+      "received_at": "2027-11-10T18:02:00-07:00",
+      "path": "ch-0092.json",
+      "title": "DM: Camila Quimby / Jalen Hendriks"
+    },
+    {
+      "id": "ch-0093",
+      "channel": "chat",
+      "received_at": "2027-11-10T18:38:00-07:00",
+      "path": "ch-0093.json",
+      "title": "DM: Camila Quimby / Andrei Abenova"
+    }
+  ]
+}

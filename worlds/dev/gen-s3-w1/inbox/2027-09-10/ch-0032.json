@@ -1,0 +1,33 @@
+{
+ "workspace": "birchmere",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Deniz Zhou",
+  "Shira Colombo",
+  "Kwame Hoffmann",
+  "Bisi Chatterjee"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-10T08:59:46-05:00",
+   "user": "Deniz Zhou",
+   "handle": "@deniz",
+   "text": "the elevator on the east side is out again"
+  },
+  {
+   "ts": "2027-09-10T09:04:47-05:00",
+   "user": "Shira Colombo",
+   "handle": "@shira",
+   "text": "stairs it is",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-10T09:09:30-05:00",
+   "user": "Kwame Hoffmann",
+   "handle": "@kwame",
+   "text": "classic",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-guadalupe",
+ "kind": "dm",
+ "participants": [
+  "Lupe",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-10T10:01:00-05:00",
+   "user": "Lupe",
+   "handle": "@guadalupe",
+   "text": "Oluwaseun will send me the bed management discovery process map."
+  },
+  {
+   "ts": "2027-09-10T10:01:08-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "noted"
+  }
+ ]
+}

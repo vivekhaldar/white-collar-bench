@@ -1,0 +1,49 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-guadalupe",
+ "kind": "dm",
+ "participants": [
+  "Guadalupe Lombardi",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T08:21:19-05:00",
+   "user": "Guadalupe Lombardi",
+   "handle": "@guadalupe",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-09-08T08:24:46-05:00",
+   "user": "Guadalupe Lombardi",
+   "handle": "@guadalupe",
+   "text": "for the record, i countersigned the lanmoor data-use agreement yesterday",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@alasdair"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-08T08:25:12-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-09-08T08:25:57-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-09-08T08:28:43-05:00",
+   "user": "Guadalupe Lombardi",
+   "handle": "@guadalupe",
+   "text": "remote, but online all day"
+  }
+ ]
+}

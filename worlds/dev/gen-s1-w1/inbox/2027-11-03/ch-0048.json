@@ -1,0 +1,39 @@
+{
+ "workspace": "holcrest",
+ "channel": "#nantgate-partnership-core",
+ "kind": "channel",
+ "participants": [
+  "Jalen Hendriks",
+  "Camila Quimby",
+  "Petra Korkmaz"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-03T13:47:00-07:00",
+   "user": "Jalen Hendriks",
+   "handle": "@jalen",
+   "text": "katerina would like camila to set up a nantgate catch-up with katerina sinclair (senior research scientist at nantgate), not agreed yet",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@petra"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-03T13:48:25-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "maybe, need to see how the week goes"
+  },
+  {
+   "ts": "2027-11-03T13:52:50-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

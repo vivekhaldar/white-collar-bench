@@ -1,0 +1,35 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-nomvula-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Nomvula Ndlovu",
+  "Ottavio Monteiro"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-28T17:27:29-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "just to recap, on tuesday the platform lead raised whether you could review the cairn model allow-list. not agreed yet"
+  },
+  {
+   "ts": "2027-08-28T17:27:42-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "can I come back to you on this?"
+  },
+  {
+   "ts": "2027-08-28T17:29:08-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-08-28T17:29:31-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "remote, but online all day"
+  }
+ ]
+}

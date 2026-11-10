@@ -1,0 +1,124 @@
+{
+  "date": "2027-09-20",
+  "artifacts": [
+    {
+      "id": "em-0083",
+      "channel": "email",
+      "received_at": "2027-09-20T06:50:00-05:00",
+      "path": "em-0083.eml",
+      "title": "Reminder: Friday status note due Friday 24 September"
+    },
+    {
+      "id": "em-0084",
+      "channel": "email",
+      "received_at": "2027-09-20T07:46:00-05:00",
+      "path": "em-0084.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "nt-0004",
+      "channel": "note",
+      "received_at": "2027-09-20T07:56:00-05:00",
+      "path": "nt-0004.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "ch-0070",
+      "channel": "chat",
+      "received_at": "2027-09-20T08:53:00-05:00",
+      "path": "ch-0070.json",
+      "title": "#okapi-core"
+    },
+    {
+      "id": "nt-0005",
+      "channel": "note",
+      "received_at": "2027-09-20T10:00:00-05:00",
+      "path": "nt-0005.md",
+      "title": "Voice debrief: Okapi standup"
+    },
+    {
+      "id": "ch-0071",
+      "channel": "chat",
+      "received_at": "2027-09-20T10:09:00-05:00",
+      "path": "ch-0071.json",
+      "title": "DM: Alasdair Kaya / Bisi Chatterjee"
+    },
+    {
+      "id": "mn-0008",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-20T11:50:00-05:00",
+      "path": "mn-0008.md",
+      "title": "Recap: CDS leads call"
+    },
+    {
+      "id": "em-0085",
+      "channel": "email",
+      "received_at": "2027-09-20T13:09:00-05:00",
+      "path": "em-0085.eml",
+      "title": "Okapi metrics definition"
+    },
+    {
+      "id": "ch-0072",
+      "channel": "chat",
+      "received_at": "2027-09-20T13:21:00-05:00",
+      "path": "ch-0072.json",
+      "title": "DM: Alasdair Kaya / Penelope Lehmann"
+    },
+    {
+      "id": "em-0086",
+      "channel": "email",
+      "received_at": "2027-09-20T13:25:00-05:00",
+      "path": "em-0086.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "mn-0009",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-20T13:45:00-05:00",
+      "path": "mn-0009.md",
+      "title": "Recap: Team planning"
+    },
+    {
+      "id": "mt-0012",
+      "channel": "transcript",
+      "received_at": "2027-09-20T13:45:00-05:00",
+      "path": "mt-0012.vtt",
+      "title": "Team planning (transcript)"
+    },
+    {
+      "id": "em-0087",
+      "channel": "email",
+      "received_at": "2027-09-20T14:21:00-05:00",
+      "path": "em-0087.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "ca-0004",
+      "channel": "calendar",
+      "received_at": "2027-09-20T15:04:00-05:00",
+      "path": "ca-0004.ics",
+      "title": "Invite: Working session: Katarzyna's Okapi lessons-learned note"
+    },
+    {
+      "id": "em-0088",
+      "channel": "email",
+      "received_at": "2027-09-20T15:35:00-05:00",
+      "path": "em-0088.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0089",
+      "channel": "email",
+      "received_at": "2027-09-20T15:55:00-05:00",
+      "path": "em-0089.eml",
+      "title": "Re: Katarzyna's Okapi lessons-learned note"
+    },
+    {
+      "id": "ca-0005",
+      "channel": "calendar",
+      "received_at": "2027-09-20T17:10:00-05:00",
+      "path": "ca-0005.ics",
+      "title": "Invite: Walkthrough: Sirocco requirements matrix"
+    }
+  ]
+}

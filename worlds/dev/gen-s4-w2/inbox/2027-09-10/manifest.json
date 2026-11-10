@@ -1,0 +1,139 @@
+{
+  "date": "2027-09-10",
+  "artifacts": [
+    {
+      "id": "em-0127",
+      "channel": "email",
+      "received_at": "2027-09-10T06:53:00-08:00",
+      "path": "em-0127.eml",
+      "title": "[INC-50556] Ticket updated"
+    },
+    {
+      "id": "em-0128",
+      "channel": "email",
+      "received_at": "2027-09-10T08:08:00-08:00",
+      "path": "em-0128.eml",
+      "title": "Re: Fjord privacy impact assessment"
+    },
+    {
+      "id": "ch-0098",
+      "channel": "chat",
+      "received_at": "2027-09-10T10:54:00-08:00",
+      "path": "ch-0098.json",
+      "title": "DM: Ottavio Monteiro / Mei Wekesa"
+    },
+    {
+      "id": "em-0129",
+      "channel": "email",
+      "received_at": "2027-09-10T11:02:00-08:00",
+      "path": "em-0129.eml",
+      "title": "Re: Splitting out waitlist management discovery"
+    },
+    {
+      "id": "ca-0011",
+      "channel": "calendar",
+      "received_at": "2027-09-10T11:30:00-08:00",
+      "path": "ca-0011.ics",
+      "title": "Accepted: Early alert advisory follow-up"
+    },
+    {
+      "id": "em-0130",
+      "channel": "email",
+      "received_at": "2027-09-10T11:43:00-08:00",
+      "path": "em-0130.eml",
+      "title": "[INC-63689] Ticket updated"
+    },
+    {
+      "id": "ch-0099",
+      "channel": "chat",
+      "received_at": "2027-09-10T13:23:00-08:00",
+      "path": "ch-0099.json",
+      "title": "DM: Ottavio Monteiro / Meera Ivanova"
+    },
+    {
+      "id": "em-0131",
+      "channel": "email",
+      "received_at": "2027-09-10T14:15:00-08:00",
+      "path": "em-0131.eml",
+      "title": "Early-bird registration ends today"
+    },
+    {
+      "id": "ch-0100",
+      "channel": "chat",
+      "received_at": "2027-09-10T14:37:00-08:00",
+      "path": "ch-0100.json",
+      "title": "DM: Theresa Nagy / Ottavio Monteiro"
+    },
+    {
+      "id": "dc-0005",
+      "channel": "document",
+      "received_at": "2027-09-10T15:35:00-08:00",
+      "path": "dc-0005.docx",
+      "title": "Fjord faculty survey v1",
+      "parent": "em-0132"
+    },
+    {
+      "id": "em-0132",
+      "channel": "email",
+      "received_at": "2027-09-10T15:35:00-08:00",
+      "path": "em-0132.eml",
+      "title": "Status note: w/e 10 September"
+    },
+    {
+      "id": "ch-0101",
+      "channel": "chat",
+      "received_at": "2027-09-10T15:44:00-08:00",
+      "path": "ch-0101.json",
+      "title": "DM: Meera Ivanova / Ottavio Monteiro"
+    },
+    {
+      "id": "ch-0102",
+      "channel": "chat",
+      "received_at": "2027-09-10T15:44:00-08:00",
+      "path": "ch-0102.json",
+      "title": "DM: Ottavio Monteiro / Theresa Nagy"
+    },
+    {
+      "id": "em-0133",
+      "channel": "email",
+      "received_at": "2027-09-10T15:56:00-08:00",
+      "path": "em-0133.eml",
+      "title": "Re: Research Computing Learning Series: moving to scheduling"
+    },
+    {
+      "id": "em-0134",
+      "channel": "email",
+      "received_at": "2027-09-10T16:43:00-08:00",
+      "path": "em-0134.eml",
+      "title": "Re: Change of plan: Fjord"
+    },
+    {
+      "id": "em-0135",
+      "channel": "email",
+      "received_at": "2027-09-10T17:58:00-08:00",
+      "path": "em-0135.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0136",
+      "channel": "email",
+      "received_at": "2027-09-10T18:04:00-08:00",
+      "path": "em-0136.eml",
+      "title": "Re: Toria and Ithic for room booking selection"
+    },
+    {
+      "id": "nt-0010",
+      "channel": "note",
+      "received_at": "2027-09-10T18:13:00-08:00",
+      "path": "nt-0010.md",
+      "title": "Fri notes"
+    },
+    {
+      "id": "em-0137",
+      "channel": "email",
+      "received_at": "2027-09-10T22:21:00-08:00",
+      "path": "em-0137.eml",
+      "title": "Draft: Fjord data dictionary"
+    }
+  ]
+}

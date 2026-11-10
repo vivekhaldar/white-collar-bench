@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Vercliff//Calendar//EN
+METHOD:CANCEL
+BEGIN:VEVENT
+UID:5cf83a7b37c28b52@vercliff.example
+DTSTAMP:20270301T160700Z
+DTSTART:20270301T163000Z
+DTEND:20270301T165500Z
+SUMMARY:Cancelled: Mistral standup
+ORGANIZER;CN=Yael Yardley:mailto:yael.yardley@nordale.vercliff.example
+ATTENDEE;CN=Dina Zimmermann;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.zimmermann@vercliff.example
+ATTENDEE;CN=Imani Chaiyaporn;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:imani.chaiyaporn@vercliff.example
+ATTENDEE;CN=Rudo Alexiou;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:rudo.alexiou@nordale.vercliff.example
+ATTENDEE;CN=Naoko Maldonado;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:naoko.maldonado@nordale.vercliff.example
+ATTENDEE;CN=Cassandra Yilmaz;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:cassandra.yilmaz@vercliff.example
+ATTENDEE;CN=Bilal Blackwood;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:bilal.blackwood@vercliff.example
+ATTENDEE;CN=Thibault Sahin;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:thibault.sahin@vercliff.example
+RECURRENCE-ID:20270301T163000Z
+SEQUENCE:1
+STATUS:CANCELLED
+DESCRIPTION:Skipping today\, back to normal next time.
+END:VEVENT
+END:VCALENDAR

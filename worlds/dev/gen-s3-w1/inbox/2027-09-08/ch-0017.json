@@ -1,0 +1,29 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-tunde",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Tunde Kapanadze"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T07:30:46-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-09-08T07:31:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "bisi chatterjee and i will propose a final name for bittern"
+  },
+  {
+   "ts": "2027-09-08T07:31:26-05:00",
+   "user": "Tunde Kapanadze",
+   "handle": "@tunde",
+   "text": "that'd be great"
+  }
+ ]
+}

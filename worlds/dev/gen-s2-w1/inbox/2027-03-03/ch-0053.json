@@ -1,0 +1,37 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-kayode",
+ "kind": "dm",
+ "participants": [
+  "Kayode Papadopoulos",
+  "Dina Zimmermann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-03T11:42:55-07:00",
+   "user": "Kayode Papadopoulos",
+   "handle": "@kayode",
+   "text": "Just to recap, on Monday you said you'd send me the Friday status note for w/e 5 March. :)",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@dina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-03T11:44:00-07:00",
+   "user": "Kayode Papadopoulos",
+   "handle": "@kayode",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-03-03T11:47:46-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

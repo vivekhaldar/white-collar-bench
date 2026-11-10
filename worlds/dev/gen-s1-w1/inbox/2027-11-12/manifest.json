@@ -1,0 +1,117 @@
+{
+  "date": "2027-11-12",
+  "artifacts": [
+    {
+      "id": "ch-0106",
+      "channel": "chat",
+      "received_at": "2027-11-12T08:36:00-07:00",
+      "path": "ch-0106.json",
+      "title": "#notice-translation-core"
+    },
+    {
+      "id": "mn-0012",
+      "channel": "meeting_notes",
+      "received_at": "2027-11-12T09:55:00-07:00",
+      "path": "mn-0012.md",
+      "title": "Recap: Marten standup"
+    },
+    {
+      "id": "em-0118",
+      "channel": "email",
+      "received_at": "2027-11-12T10:13:00-07:00",
+      "path": "em-0118.eml",
+      "title": "Re: Splitting out duplicate requests discovery"
+    },
+    {
+      "id": "em-0119",
+      "channel": "email",
+      "received_at": "2027-11-12T10:42:00-07:00",
+      "path": "em-0119.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0107",
+      "channel": "chat",
+      "received_at": "2027-11-12T11:01:00-07:00",
+      "path": "ch-0107.json",
+      "title": "DM: Camila Quimby / Petra Korkmaz"
+    },
+    {
+      "id": "mn-0013",
+      "channel": "meeting_notes",
+      "received_at": "2027-11-12T11:45:00-07:00",
+      "path": "mn-0013.md",
+      "title": "Notes: Obsidian / Marten sync"
+    },
+    {
+      "id": "mn-0014",
+      "channel": "meeting_notes",
+      "received_at": "2027-11-12T13:00:00-07:00",
+      "path": "mn-0014.md",
+      "title": "Recap: Office hours with Guadalupe"
+    },
+    {
+      "id": "em-0120",
+      "channel": "email",
+      "received_at": "2027-11-12T14:06:00-07:00",
+      "path": "em-0120.eml",
+      "title": "Re: Benefits screening discovery stakeholder map after Jalen's comments"
+    },
+    {
+      "id": "ch-0108",
+      "channel": "chat",
+      "received_at": "2027-11-12T14:23:00-07:00",
+      "path": "ch-0108.json",
+      "title": "DM: Camila Quimby / Hiba Forsythe"
+    },
+    {
+      "id": "em-0121",
+      "channel": "email",
+      "received_at": "2027-11-12T14:41:00-07:00",
+      "path": "em-0121.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0109",
+      "channel": "chat",
+      "received_at": "2027-11-12T15:44:00-07:00",
+      "path": "ch-0109.json",
+      "title": "DM: Yasmin Mokoena / Camila Quimby"
+    },
+    {
+      "id": "em-0122",
+      "channel": "email",
+      "received_at": "2027-11-12T16:11:00-07:00",
+      "path": "em-0122.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "em-0123",
+      "channel": "email",
+      "received_at": "2027-11-12T16:24:00-07:00",
+      "path": "em-0123.eml",
+      "title": "Status note: w/e 12 November"
+    },
+    {
+      "id": "nt-0011",
+      "channel": "note",
+      "received_at": "2027-11-12T18:14:00-07:00",
+      "path": "nt-0011.md",
+      "title": "Fri notes"
+    },
+    {
+      "id": "ch-0110",
+      "channel": "chat",
+      "received_at": "2027-11-12T18:30:00-07:00",
+      "path": "ch-0110.json",
+      "title": "DM: Camila Quimby / Fernanda Olawale"
+    },
+    {
+      "id": "ch-0111",
+      "channel": "chat",
+      "received_at": "2027-11-12T20:42:00-07:00",
+      "path": "ch-0111.json",
+      "title": "#marten-core"
+    }
+  ]
+}

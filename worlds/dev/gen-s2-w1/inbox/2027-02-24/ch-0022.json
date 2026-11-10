@@ -1,0 +1,43 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-imani",
+ "kind": "dm",
+ "participants": [
+  "Imani",
+  "Dina Zimmermann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-24T18:23:00-07:00",
+   "user": "Imani",
+   "handle": "@imani",
+   "text": "We're now in delivery on AI in Public Service Workshop.",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@dina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-24T18:23:48-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-02-24T18:28:37-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-02-24T18:31:15-07:00",
+   "user": "Imani",
+   "handle": "@imani",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

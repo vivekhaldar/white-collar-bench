@@ -1,0 +1,31 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-anahitt-hiba",
+ "kind": "dm",
+ "participants": [
+  "Anahit",
+  "Hiba Xu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-04-01T16:43:00-05:00",
+   "user": "Anahit",
+   "handle": "@anahitt",
+   "text": "i'll send you the notes from the discharge summary session",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-04-01T16:43:43-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "thanks!"
+  }
+ ]
+}

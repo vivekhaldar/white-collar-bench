@@ -1,0 +1,41 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#fjord-core",
+ "kind": "channel",
+ "participants": [
+  "Ottavio Monteiro",
+  "Darius Sherwood",
+  "Meera",
+  "Ratna Bondarenko",
+  "Theresa Nagy",
+  "Nomvula Ndlovu",
+  "Bruna Sinclair",
+  "Espe",
+  "Yaroslav Moyo",
+  "Celine Wisniewska"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-14T17:58:00-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "@theresa done, i sent you the fjord accessibility review",
+   "edited": true,
+   "original": "@theresa done, i sent you the fjord accessibility reviwe"
+  },
+  {
+   "ts": "2027-09-14T17:59:31-08:00",
+   "user": "Espe",
+   "handle": "@esperanza",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-14T18:03:13-08:00",
+   "user": "Bruna Sinclair",
+   "handle": "@bruna",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

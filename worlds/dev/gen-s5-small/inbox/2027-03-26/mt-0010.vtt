@@ -1,0 +1,115 @@
+WEBVTT
+
+NOTE
+Meeting: Wagtail standup
+Date: Friday 26 March 2027, 9:30am to 9:55am
+Attendees: Ama Forsythe (Falbury Community Clinics), Hiba Xu, Anahit Upton, Mateo Pritchard (Falbury Community Clinics), Lakshmi Zamora, Friederike Malhotra, Jisoo Makinen, Maricel Herrera
+Transcript generated automatically. Speaker names and spellings may be inaccurate.
+
+1
+00:00:04.267 --> 00:00:05.267
+<v Maricel Herrera>Busy week?
+
+2
+00:00:05.840 --> 00:00:06.994
+<v Mateo Pritchard>Aren't they all.
+
+3
+00:02:31.518 --> 00:02:34.980
+<v Ama Forsythe>Let's get going, we've got a lot to cover.
+
+4
+00:02:35.519 --> 00:02:37.057
+<v Ama Forsythe>Mostly Wagtail updates today.
+
+5
+00:05:36.226 --> 00:05:40.072
+<v Mateo Pritchard>Unrelated, but is anyone going to the all-hands on Thursday?
+
+6
+00:05:40.929 --> 00:05:41.929
+<v Jisoo Makinen>No idea.
+
+7
+00:08:53.226 --> 00:08:54.765
+<v Friederike Malhotra>Wait, is that the—
+
+8
+00:08:54.973 --> 00:08:56.127
+<v Hiba Xu>No, you go.
+
+9
+00:08:56.998 --> 00:09:01.613
+<v Friederike Malhotra>I sent Hiba the notes from the denials analytics session earlier today.
+
+10
+00:09:02.261 --> 00:09:03.261
+<v Anahit Upton>Yeah.
+
+11
+00:09:03.793 --> 00:09:04.793
+<v Jisoo Makinen>Mm, okay.
+
+12
+00:09:05.300 --> 00:09:09.530
+<v Hiba Xu>Is that the same as what we talked about last time?
+
+13
+00:09:10.628 --> 00:09:12.166
+<v Friederike Malhotra>More or less, yeah.
+
+14
+00:09:12.934 --> 00:09:16.011
+<v Mateo Pritchard>Last time this took longer than we thought.
+
+15
+00:09:16.824 --> 00:09:17.824
+<v Ama Forsythe>Yeah, true.
+
+16
+00:13:07.891 --> 00:13:11.353
+<v Jisoo Makinen>I can share the Wagtail test plan with Hiba.
+
+17
+00:13:11.851 --> 00:13:13.389
+<v Hiba Xu>That'd be great, thanks.
+
+18
+00:13:13.657 --> 00:13:14.657
+<v Ama Forsythe>Fair.
+
+19
+00:13:15.124 --> 00:13:16.124
+<v Maricel Herrera>I see.
+
+20
+00:13:17.495 --> 00:13:18.495
+<v Hiba Xu>Mm-hmm.
+
+21
+00:13:18.970 --> 00:13:21.278
+<v Mateo Pritchard>Did we hear back on that?
+
+22
+00:13:21.865 --> 00:13:23.404
+<v Hiba Xu>Not that I've seen.
+
+23
+00:13:23.807 --> 00:13:27.268
+<v Ama Forsythe>The feedback from the last session was pretty mixed.
+
+24
+00:13:28.289 --> 00:13:29.289
+<v Anahit Upton>Okay.
+
+25
+00:13:29.905 --> 00:13:30.905
+<v Jisoo Makinen>Makes sense.
+
+26
+00:17:17.091 --> 00:17:18.630
+<v Ama Forsythe>Thanks all, talk soon.
+
+27
+00:17:19.171 --> 00:17:20.171
+<v Maricel Herrera>Bye.

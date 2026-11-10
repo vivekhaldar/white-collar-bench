@@ -1,0 +1,26 @@
+{
+ "workspace": "birchmere",
+ "channel": "#bed-management-discovery-core",
+ "kind": "channel",
+ "participants": [
+  "Lupe",
+  "Alasdair Kaya",
+  "Bisi Chatterjee",
+  "Vitoria Oduro",
+  "Oluwaseun Friedman"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T11:28:43-05:00",
+   "user": "Lupe",
+   "handle": "@guadalupe",
+   "text": "@alasdair recap from yesterday: i countersigned the lanmoor data-use agreement"
+  },
+  {
+   "ts": "2027-09-08T11:29:08-05:00",
+   "user": "Oluwaseun Friedman",
+   "handle": "@oluwaseun",
+   "text": "noted"
+  }
+ ]
+}

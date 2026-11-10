@@ -1,0 +1,35 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-oluwaseun",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Oluwaseun Friedman"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-15T07:59:15-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-15T08:00:10-05:00",
+   "user": "Oluwaseun Friedman",
+   "handle": "@oluwaseun",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-09-15T08:01:05-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "You mentioned you'd share the bed management discovery problem framing note with me, that works for me."
+  },
+  {
+   "ts": "2027-09-15T08:02:03-05:00",
+   "user": "Oluwaseun Friedman",
+   "handle": "@oluwaseun",
+   "text": "will do"
+  }
+ ]
+}

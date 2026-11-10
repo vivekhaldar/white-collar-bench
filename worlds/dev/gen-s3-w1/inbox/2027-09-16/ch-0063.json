@@ -1,0 +1,41 @@
+{
+ "workspace": "birchmere",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Katrin Watanabe",
+  "Shira Colombo",
+  "Tunde Kapanadze"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-16T14:00:49-05:00",
+   "user": "Katrin Watanabe",
+   "handle": "@katrin",
+   "text": "who left a lunchbox in the fridge since last week?",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@shira",
+      "@tunde"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-16T14:02:57-05:00",
+   "user": "Shira Colombo",
+   "handle": "@shira",
+   "text": "not me!",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-16T14:07:01-05:00",
+   "user": "Tunde Kapanadze",
+   "handle": "@tunde",
+   "text": "it's been there a while",
+   "thread_of": 0
+  }
+ ]
+}

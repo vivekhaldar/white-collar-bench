@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Holcrest//Calendar//EN
+METHOD:CANCEL
+BEGIN:VEVENT
+UID:5c46d0b0f827ac14@holcrest.example
+DTSTAMP:20271102T154400Z
+DTSTART:20271102T163000Z
+DTEND:20271102T165500Z
+SUMMARY:Cancelled: Marten standup
+ORGANIZER;CN=Petra Korkmaz:mailto:petra.korkmaz@birchcrest.holcrest.example
+ATTENDEE;CN=Camila Quimby;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:camila.quimby@holcrest.example
+ATTENDEE;CN=Jalen Hendriks;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:jalen.hendriks@holcrest.example
+ATTENDEE;CN=Sipho Sengupta;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:sipho.sengupta@birchcrest.holcrest.example
+ATTENDEE;CN=Dina Winslow;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.winslow@birchcrest.holcrest.example
+ATTENDEE;CN=Yasmin Mokoena;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:yasmin.mokoena@holcrest.example
+ATTENDEE;CN=Nadia Volkov;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:nadia.volkov@holcrest.example
+ATTENDEE;CN=Thandiwe Bonnet;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:thandiwe.bonnet@holcrest.example
+RECURRENCE-ID:20271102T163000Z
+SEQUENCE:1
+STATUS:CANCELLED
+DESCRIPTION:Not needed this time\, covered in the leads call.
+END:VEVENT
+END:VCALENDAR

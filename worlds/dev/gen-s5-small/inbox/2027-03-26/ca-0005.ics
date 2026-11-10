@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iselvale//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:1189873c2dd660a2@iselvale.example
+DTSTAMP:20270326T151700Z
+DTSTART:20270329T183000Z
+DTEND:20270329T190000Z
+SUMMARY:Okapi hardening review
+ORGANIZER;CN=Lakshmi Zamora:mailto:lakshmi.zamora@iselvale.example
+ATTENDEE;CN=Ama Forsythe;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ama.forsythe@falbury.iselvale.example
+ATTENDEE;CN=Friederike Malhotra;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:friederike.malhotra@iselvale.example
+ATTENDEE;CN=Anahit Upton;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:anahit.upton@iselvale.example
+ATTENDEE;CN=Hiba Xu;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.xu@iselvale.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.iselvale.example/j/1318935433?pwd=qsQkXNtN\nPasscode: 778876
+LOCATION:https://meet.iselvale.example/j/1318935433?pwd=qsQkXNtN
+END:VEVENT
+END:VCALENDAR

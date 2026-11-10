@@ -1,0 +1,31 @@
+{
+ "workspace": "vercliff",
+ "channel": "#fennel-core",
+ "kind": "channel",
+ "participants": [
+  "Rudo Alexiou",
+  "Dina Zimmermann",
+  "Cassandra Yilmaz",
+  "Imani Chaiyaporn",
+  "Yael Yardley",
+  "Naoko Maldonado",
+  "Thibault Sahin"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-25T09:32:00-07:00",
+   "user": "Rudo Alexiou",
+   "handle": "@rudo",
+   "text": "For info, the Fennel tenant onboarding guide has moved from the platform lead to Imani Chaiyaporn.",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@imani",
+      "@cassandra"
+     ]
+    }
+   ]
+  }
+ ]
+}

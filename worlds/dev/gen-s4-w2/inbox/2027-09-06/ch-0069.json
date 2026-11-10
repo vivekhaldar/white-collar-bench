@@ -1,0 +1,23 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-ottavio-theresa",
+ "kind": "dm",
+ "participants": [
+  "Ottavio Monteiro",
+  "Resi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-06T11:19:00-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "when you get a chance, could you set up syllabus review discovery sandbox access for me?"
+  },
+  {
+   "ts": "2027-09-06T11:20:21-08:00",
+   "user": "Resi",
+   "handle": "@theresa",
+   "text": "no problem"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-nikolai",
+ "kind": "dm",
+ "participants": [
+  "Nikolai Carvalho",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-21T18:07:22-05:00",
+   "user": "Nikolai Carvalho",
+   "handle": "@nikolai",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-09-21T18:10:00-05:00",
+   "user": "Nikolai Carvalho",
+   "handle": "@nikolai",
+   "text": "I sent you the Talwick working paper earlier today!",
+   "edited": true,
+   "original": "I sent you the Talwick working paper eariler today!"
+  },
+  {
+   "ts": "2027-09-21T18:11:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "great, thanks"
+  }
+ ]
+}

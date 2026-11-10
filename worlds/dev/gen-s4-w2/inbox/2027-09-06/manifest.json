@@ -1,0 +1,159 @@
+{
+  "date": "2027-09-06",
+  "artifacts": [
+    {
+      "id": "em-0093",
+      "channel": "email",
+      "received_at": "2027-09-06T06:55:00-08:00",
+      "path": "em-0093.eml",
+      "title": "Reminder: Friday status note due Friday 10 September"
+    },
+    {
+      "id": "em-0094",
+      "channel": "email",
+      "received_at": "2027-09-06T06:58:00-08:00",
+      "path": "em-0094.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "em-0095",
+      "channel": "email",
+      "received_at": "2027-09-06T07:29:00-08:00",
+      "path": "em-0095.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "nt-0006",
+      "channel": "note",
+      "received_at": "2027-09-06T07:49:00-08:00",
+      "path": "nt-0006.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "nt-0007",
+      "channel": "note",
+      "received_at": "2027-09-06T08:46:00-08:00",
+      "path": "nt-0007.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "em-0096",
+      "channel": "email",
+      "received_at": "2027-09-06T08:50:00-08:00",
+      "path": "em-0096.eml",
+      "title": "Course assistant discovery process map"
+    },
+    {
+      "id": "ch-0068",
+      "channel": "chat",
+      "received_at": "2027-09-06T08:58:00-08:00",
+      "path": "ch-0068.json",
+      "title": "#random"
+    },
+    {
+      "id": "nt-0008",
+      "channel": "note",
+      "received_at": "2027-09-06T09:00:00-08:00",
+      "path": "nt-0008.md",
+      "title": "Voice debrief: Catch-up: Ottavio / Meera"
+    },
+    {
+      "id": "em-0097",
+      "channel": "email",
+      "received_at": "2027-09-06T09:46:00-08:00",
+      "path": "em-0097.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "mt-0009",
+      "channel": "transcript",
+      "received_at": "2027-09-06T09:55:00-08:00",
+      "path": "mt-0009.vtt",
+      "title": "Fjord standup (transcript)"
+    },
+    {
+      "id": "em-0098",
+      "channel": "email",
+      "received_at": "2027-09-06T10:06:00-08:00",
+      "path": "em-0098.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0099",
+      "channel": "email",
+      "received_at": "2027-09-06T10:47:00-08:00",
+      "path": "em-0099.eml",
+      "title": "[INC-65476] Ticket updated"
+    },
+    {
+      "id": "ch-0069",
+      "channel": "chat",
+      "received_at": "2027-09-06T11:42:00-08:00",
+      "path": "ch-0069.json",
+      "title": "DM: Ottavio Monteiro / Theresa Nagy"
+    },
+    {
+      "id": "em-0100",
+      "channel": "email",
+      "received_at": "2027-09-06T14:33:00-08:00",
+      "path": "em-0100.eml",
+      "title": "Re: Fjord support playbook"
+    },
+    {
+      "id": "ch-0070",
+      "channel": "chat",
+      "received_at": "2027-09-06T15:09:00-08:00",
+      "path": "ch-0070.json",
+      "title": "DM: Ottavio Monteiro / Ratna Bondarenko"
+    },
+    {
+      "id": "em-0101",
+      "channel": "email",
+      "received_at": "2027-09-06T15:57:00-08:00",
+      "path": "em-0101.eml",
+      "title": "Re: FYI: Fjord load test plan"
+    },
+    {
+      "id": "ca-0008",
+      "channel": "calendar",
+      "received_at": "2027-09-06T16:02:00-08:00",
+      "path": "ca-0008.ics",
+      "title": "Invite: Walkthrough: Course assistant discovery process map"
+    },
+    {
+      "id": "em-0102",
+      "channel": "email",
+      "received_at": "2027-09-06T16:25:00-08:00",
+      "path": "em-0102.eml",
+      "title": "FYI: Fjord timeout errors"
+    },
+    {
+      "id": "mt-0010",
+      "channel": "transcript",
+      "received_at": "2027-09-06T16:30:00-08:00",
+      "path": "mt-0010.vtt",
+      "title": "Course assistant discovery / Cairn sync (transcript)"
+    },
+    {
+      "id": "ch-0071",
+      "channel": "chat",
+      "received_at": "2027-09-06T18:16:00-08:00",
+      "path": "ch-0071.json",
+      "title": "DM: Darius Sherwood / Ottavio Monteiro"
+    },
+    {
+      "id": "em-0103",
+      "channel": "email",
+      "received_at": "2027-09-06T18:25:00-08:00",
+      "path": "em-0103.eml",
+      "title": "[INC-42757] Ticket updated"
+    },
+    {
+      "id": "em-0104",
+      "channel": "email",
+      "received_at": "2027-09-06T18:49:00-08:00",
+      "path": "em-0104.eml",
+      "title": "Open enrollment reminder"
+    }
+  ]
+}

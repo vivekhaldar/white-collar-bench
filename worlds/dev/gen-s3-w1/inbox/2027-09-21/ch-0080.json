@@ -1,0 +1,26 @@
+{
+ "workspace": "birchmere",
+ "channel": "#bittern-core",
+ "kind": "channel",
+ "participants": [
+  "Katarzyna Feng",
+  "Alasdair Kaya",
+  "Bisi",
+  "Eleni Laurent"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-21T12:00:00-05:00",
+   "user": "Katarzyna Feng",
+   "handle": "@katarzyna",
+   "text": "@alasdair could you send me the bittern decision memo?"
+  },
+  {
+   "ts": "2027-09-21T12:06:48-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  }
+ ]
+}

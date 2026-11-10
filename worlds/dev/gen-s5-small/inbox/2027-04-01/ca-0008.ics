@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iselvale//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:561ff6472af6f26f@iselvale.example
+DTSTAMP:20270401T154200Z
+DTSTART:20270402T200000Z
+DTEND:20270402T204500Z
+SUMMARY:Wagtail review
+ORGANIZER;CN=Ama Forsythe:mailto:ama.forsythe@falbury.iselvale.example
+ATTENDEE;CN=Hiba Xu;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.xu@iselvale.example
+ATTENDEE;CN=Anahit Upton;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:anahit.upton@iselvale.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.iselvale.example/j/6905054482?pwd=v3PWB3Ee\nPasscode: 695136
+LOCATION:https://meet.iselvale.example/j/6905054482?pwd=v3PWB3Ee
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,111 @@
+{
+  "date": "2027-03-23",
+  "artifacts": [
+    {
+      "id": "dc-0002",
+      "channel": "document",
+      "received_at": "2027-03-23T09:27:00-05:00",
+      "path": "dc-0002.xlsx",
+      "title": "Wagtail bed census extract (draft)",
+      "parent": "em-0033"
+    },
+    {
+      "id": "em-0033",
+      "channel": "email",
+      "received_at": "2027-03-23T09:27:00-05:00",
+      "path": "em-0033.eml",
+      "title": "Re: FYI: Wagtail bed census extract"
+    },
+    {
+      "id": "em-0034",
+      "channel": "email",
+      "received_at": "2027-03-23T09:37:00-05:00",
+      "path": "em-0034.eml",
+      "title": "Re: Two-week sprint on referral backlog"
+    },
+    {
+      "id": "em-0035",
+      "channel": "email",
+      "received_at": "2027-03-23T10:38:00-05:00",
+      "path": "em-0035.eml",
+      "title": "[REQ-34222] Request resolved"
+    },
+    {
+      "id": "ch-0024",
+      "channel": "chat",
+      "received_at": "2027-03-23T11:02:00-05:00",
+      "path": "ch-0024.json",
+      "title": "DM: Hiba Xu / Friederike Malhotra"
+    },
+    {
+      "id": "em-0036",
+      "channel": "email",
+      "received_at": "2027-03-23T14:19:00-05:00",
+      "path": "em-0036.eml",
+      "title": "[REQ-17701] Request resolved"
+    },
+    {
+      "id": "ch-0025",
+      "channel": "chat",
+      "received_at": "2027-03-23T15:36:00-05:00",
+      "path": "ch-0025.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0026",
+      "channel": "chat",
+      "received_at": "2027-03-23T15:39:00-05:00",
+      "path": "ch-0026.json",
+      "title": "DM: Ciaran Rocha / Hiba Xu"
+    },
+    {
+      "id": "mn-0006",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-23T16:00:00-05:00",
+      "path": "mn-0006.md",
+      "title": "Notes: Wagtail / clinical documentation discovery sync"
+    },
+    {
+      "id": "ch-0027",
+      "channel": "chat",
+      "received_at": "2027-03-23T16:32:00-05:00",
+      "path": "ch-0027.json",
+      "title": "DM: Hiba Xu / Anahit Upton"
+    },
+    {
+      "id": "ch-0028",
+      "channel": "chat",
+      "received_at": "2027-03-23T16:51:00-05:00",
+      "path": "ch-0028.json",
+      "title": "#clinical-documentation-core"
+    },
+    {
+      "id": "em-0037",
+      "channel": "email",
+      "received_at": "2027-03-23T17:31:00-05:00",
+      "path": "em-0037.eml",
+      "title": "Re: FYI: Clinical documentation discovery findings summary"
+    },
+    {
+      "id": "em-0038",
+      "channel": "email",
+      "received_at": "2027-03-23T17:48:00-05:00",
+      "path": "em-0038.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0039",
+      "channel": "email",
+      "received_at": "2027-03-23T18:01:00-05:00",
+      "path": "em-0039.eml",
+      "title": "Re: Wagtail RACI chart"
+    },
+    {
+      "id": "em-0040",
+      "channel": "email",
+      "received_at": "2027-03-23T18:05:00-05:00",
+      "path": "em-0040.eml",
+      "title": "Re: Marys volume pricing"
+    }
+  ]
+}

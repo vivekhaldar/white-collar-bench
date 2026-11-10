@@ -1,0 +1,47 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-dina",
+ "kind": "dm",
+ "participants": [
+  "Dina Mancini",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-09T16:33:43-05:00",
+   "user": "Dina Mancini",
+   "handle": "@dina",
+   "text": "got a sec? :)"
+  },
+  {
+   "ts": "2027-09-09T16:35:04-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-09-09T16:36:00-05:00",
+   "user": "Dina Mancini",
+   "handle": "@dina",
+   "text": "Sirocco Operating Model Review is moving into revision."
+  },
+  {
+   "ts": "2027-09-09T16:36:52-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-09-09T16:38:05-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-09-09T16:40:02-05:00",
+   "user": "Dina Mancini",
+   "handle": "@dina",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

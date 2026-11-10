@@ -1,0 +1,41 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-giorgi",
+ "kind": "dm",
+ "participants": [
+  "Giorgi Ngo",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-13T12:32:05-05:00",
+   "user": "Giorgi Ngo",
+   "handle": "@giorgi",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-13T12:32:45-05:00",
+   "user": "Giorgi Ngo",
+   "handle": "@giorgi",
+   "text": "For the record, you wrote a reference note for Bisi Delacroix's nurse scheduling fellowship application on Thursday!"
+  },
+  {
+   "ts": "2027-09-13T12:33:57-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-09-13T12:36:49-05:00",
+   "user": "Giorgi Ngo",
+   "handle": "@giorgi",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-09-13T12:38:42-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "only the first half"
+  }
+ ]
+}

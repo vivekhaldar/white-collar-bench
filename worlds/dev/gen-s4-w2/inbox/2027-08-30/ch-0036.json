@@ -1,0 +1,42 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#cairn-core",
+ "kind": "channel",
+ "participants": [
+  "Ratna Bondarenko",
+  "Ottavio Monteiro",
+  "Resi",
+  "Meera Ivanova",
+  "Darius Sherwood",
+  "Bruna Sinclair",
+  "Nomvula Ndlovu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-30T12:26:00-08:00",
+   "user": "Ratna Bondarenko",
+   "handle": "@ratna",
+   "text": "looks like bruna configured the cairn sso broker for holfield"
+  },
+  {
+   "ts": "2027-08-30T12:26:43-08:00",
+   "user": "Darius Sherwood",
+   "handle": "@darius",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-08-30T12:33:46-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-08-30T12:36:42-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

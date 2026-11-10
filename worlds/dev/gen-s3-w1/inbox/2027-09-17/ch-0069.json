@@ -1,0 +1,25 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-tunde",
+ "kind": "dm",
+ "participants": [
+  "Tunde Kapanadze",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-17T17:30:00-05:00",
+   "user": "Tunde Kapanadze",
+   "handle": "@tunde",
+   "text": "received the friday status note for w/e 17 september, thank you!",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@alasdair"
+     ]
+    }
+   ]
+  }
+ ]
+}

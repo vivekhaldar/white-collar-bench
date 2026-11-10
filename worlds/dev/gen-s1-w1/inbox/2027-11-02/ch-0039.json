@@ -1,0 +1,52 @@
+{
+ "workspace": "holcrest",
+ "channel": "#marten-core",
+ "kind": "channel",
+ "participants": [
+  "Yasmin Mokoena",
+  "Camila Quimby",
+  "Petra Korkmaz",
+  "Jalen",
+  "Sipho Sengupta",
+  "Dina Winslow",
+  "Nadia Volkov",
+  "Thandi",
+  "Lito",
+  "Imran Sato"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-02T13:47:26-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "Just to recap, on Saturday Jalen said they'd share the Marten architecture diagram with Camila."
+  },
+  {
+   "ts": "2027-11-02T13:47:35-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-11-02T13:54:24-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-02T14:03:38-07:00",
+   "user": "Dina Winslow",
+   "handle": "@dina",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-02T14:12:30-07:00",
+   "user": "Lito",
+   "handle": "@joselito",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

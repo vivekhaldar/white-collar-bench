@@ -1,0 +1,35 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-anahit-hiba",
+ "kind": "dm",
+ "participants": [
+  "Anahit Upton",
+  "Hiba Xu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-04-01T13:46:00-05:00",
+   "user": "Anahit Upton",
+   "handle": "@anahit",
+   "text": "Petra will send you Grion volume pricing, as discussed!"
+  },
+  {
+   "ts": "2027-04-01T13:46:35-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "appreciate it"
+  },
+  {
+   "ts": "2027-04-01T13:47:15-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-04-01T13:49:26-05:00",
+   "user": "Anahit Upton",
+   "handle": "@anahit",
+   "text": "yep, all good"
+  }
+ ]
+}

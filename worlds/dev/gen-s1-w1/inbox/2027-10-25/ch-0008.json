@@ -1,0 +1,35 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-yasmin",
+ "kind": "dm",
+ "participants": [
+  "Yasmin Mokoena",
+  "Camila Quimby"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-25T09:38:27-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-10-25T09:42:00-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "Jalen is expecting you to turn around the Marten API contract v2."
+  },
+  {
+   "ts": "2027-10-25T09:43:00-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-10-25T09:46:14-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "later!"
+  }
+ ]
+}

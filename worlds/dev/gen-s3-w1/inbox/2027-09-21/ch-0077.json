@@ -1,0 +1,23 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-bisi",
+ "kind": "dm",
+ "participants": [
+  "Bisi Chatterjee",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-21T12:14:00-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "FYI Dina needs the Okapi metrics definition by 23 September!"
+  },
+  {
+   "ts": "2027-09-21T12:14:53-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "noted"
+  }
+ ]
+}

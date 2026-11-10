@@ -1,0 +1,41 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-bisi",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Bisi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-17T10:24:41-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "morning!"
+  },
+  {
+   "ts": "2027-09-17T10:25:39-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "i sent you the sirocco operating model comparison table"
+  },
+  {
+   "ts": "2027-09-17T10:26:34-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-09-17T10:27:15-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-09-17T10:29:35-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "remote, but online all day"
+  }
+ ]
+}

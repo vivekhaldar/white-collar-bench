@@ -1,0 +1,40 @@
+{
+ "workspace": "holcrest",
+ "channel": "#marten-core",
+ "kind": "channel",
+ "participants": [
+  "Petra Korkmaz",
+  "Camila Quimby",
+  "Jalen",
+  "Sipho Sengupta",
+  "Dina Winslow",
+  "Yasmin Mokoena",
+  "Nadia Volkov",
+  "Thandi",
+  "Joselito Moradi",
+  "Imran Sato"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-28T16:09:48-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "Just to recap, yesterday Nadia raised whether Camila could send Nadia the Marten data-flow diagram. Not agreed yet.",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@jalen"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-28T16:10:45-07:00",
+   "user": "Imran Sato",
+   "handle": "@imran",
+   "text": "got it",
+   "thread_of": 0
+  }
+ ]
+}

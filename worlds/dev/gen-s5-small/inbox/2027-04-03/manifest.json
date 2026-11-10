@@ -1,0 +1,40 @@
+{
+  "date": "2027-04-03",
+  "artifacts": [
+    {
+      "id": "em-0088",
+      "channel": "email",
+      "received_at": "2027-04-03T10:25:00-05:00",
+      "path": "em-0088.eml",
+      "title": "[INC-50994] Ticket updated"
+    },
+    {
+      "id": "em-0089",
+      "channel": "email",
+      "received_at": "2027-04-03T11:07:00-05:00",
+      "path": "em-0089.eml",
+      "title": "[INC-43046] Ticket updated"
+    },
+    {
+      "id": "em-0090",
+      "channel": "email",
+      "received_at": "2027-04-03T11:56:00-05:00",
+      "path": "em-0090.eml",
+      "title": "[REQ-14003] Request resolved"
+    },
+    {
+      "id": "em-0091",
+      "channel": "email",
+      "received_at": "2027-04-03T12:23:00-05:00",
+      "path": "em-0091.eml",
+      "title": "Re: Wagtail acceptance criteria"
+    },
+    {
+      "id": "ch-0070",
+      "channel": "chat",
+      "received_at": "2027-04-03T15:23:00-05:00",
+      "path": "ch-0070.json",
+      "title": "#clinical-documentation-core"
+    }
+  ]
+}

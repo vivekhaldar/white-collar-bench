@@ -1,0 +1,35 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-darius-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Darius Sherwood",
+  "Ottavio Monteiro"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T17:46:00-08:00",
+   "user": "Darius Sherwood",
+   "handle": "@darius",
+   "text": "The Fjord target date is moving to 30 November (was 15 November). :)"
+  },
+  {
+   "ts": "2027-09-08T17:46:34-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-09-08T17:48:02-08:00",
+   "user": "Darius Sherwood",
+   "handle": "@darius",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-09-08T17:48:28-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "no worries"
+  }
+ ]
+}

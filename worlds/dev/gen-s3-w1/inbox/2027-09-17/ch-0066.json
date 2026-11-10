@@ -1,0 +1,31 @@
+{
+ "workspace": "birchmere",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Dina Mancini",
+  "Bisi Chatterjee"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-17T10:43:54-05:00",
+   "user": "Dina Mancini",
+   "handle": "@dina",
+   "text": "any lunch recommendations near the office?",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@bisi"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-17T10:47:38-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "the noodle place on the corner"
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-tunde",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Tunde Kapanadze"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-09T16:48:31-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-09-09T16:49:11-05:00",
+   "user": "Tunde Kapanadze",
+   "handle": "@tunde",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-09T16:51:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "i wrote the bittern product brief earlier today",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@tunde"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-09T16:52:15-05:00",
+   "user": "Tunde Kapanadze",
+   "handle": "@tunde",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-09-09T16:57:07-05:00",
+   "user": "Tunde Kapanadze",
+   "handle": "@tunde",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-09-09T16:59:36-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "later!"
+  }
+ ]
+}

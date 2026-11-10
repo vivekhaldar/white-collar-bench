@@ -1,0 +1,24 @@
+{
+ "workspace": "birchmere",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Tunde Kapanadze",
+  "Bisi Chatterjee"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-16T10:03:00-05:00",
+   "user": "Tunde Kapanadze",
+   "handle": "@tunde",
+   "text": "who's going to the all-hands later?"
+  },
+  {
+   "ts": "2027-09-16T10:03:56-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "I'll dial in :)",
+   "thread_of": 0
+  }
+ ]
+}

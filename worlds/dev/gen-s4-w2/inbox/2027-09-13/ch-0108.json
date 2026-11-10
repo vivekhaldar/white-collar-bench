@@ -1,0 +1,54 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#fjord-core",
+ "kind": "channel",
+ "participants": [
+  "Meera Ivanova",
+  "Ottavio Monteiro",
+  "Darius Sherwood",
+  "Ratna Bondarenko",
+  "Resi",
+  "Nomvula Ndlovu",
+  "Bruna Sinclair",
+  "Esperanza Rao",
+  "Yaroslav Moyo",
+  "Celine Wisniewska"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-13T12:02:22-08:00",
+   "user": "Meera Ivanova",
+   "handle": "@meera",
+   "text": "@ottavio for the record, you sent me the Fjord faculty survey on Tuesday.",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@ottavio"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-13T12:03:37-08:00",
+   "user": "Ratna Bondarenko",
+   "handle": "@ratna",
+   "text": "thanks for the heads up",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-13T12:10:14-08:00",
+   "user": "Darius Sherwood",
+   "handle": "@darius",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-13T12:15:23-08:00",
+   "user": "Bruna Sinclair",
+   "handle": "@bruna",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

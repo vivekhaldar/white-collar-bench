@@ -1,0 +1,117 @@
+{
+  "date": "2027-03-29",
+  "artifacts": [
+    {
+      "id": "em-0058",
+      "channel": "email",
+      "received_at": "2027-03-29T06:55:00-05:00",
+      "path": "em-0058.eml",
+      "title": "Reminder: Friday status note due Friday 2 April"
+    },
+    {
+      "id": "nt-0005",
+      "channel": "note",
+      "received_at": "2027-03-29T08:06:00-05:00",
+      "path": "nt-0005.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "ch-0043",
+      "channel": "chat",
+      "received_at": "2027-03-29T09:12:00-05:00",
+      "path": "ch-0043.json",
+      "title": "DM: Hiba Xu / Anahit Upton"
+    },
+    {
+      "id": "em-0059",
+      "channel": "email",
+      "received_at": "2027-03-29T11:14:00-05:00",
+      "path": "em-0059.eml",
+      "title": "Re: Wagtail training outline"
+    },
+    {
+      "id": "mn-0007",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-29T11:45:00-05:00",
+      "path": "mn-0007.md",
+      "title": "Notes: CDS leads call"
+    },
+    {
+      "id": "ch-0044",
+      "channel": "chat",
+      "received_at": "2027-03-29T12:14:00-05:00",
+      "path": "ch-0044.json",
+      "title": "#okapi-core"
+    },
+    {
+      "id": "em-0060",
+      "channel": "email",
+      "received_at": "2027-03-29T12:25:00-05:00",
+      "path": "em-0060.eml",
+      "title": "Re: Wagtail action log"
+    },
+    {
+      "id": "em-0061",
+      "channel": "email",
+      "received_at": "2027-03-29T13:25:00-05:00",
+      "path": "em-0061.eml",
+      "title": "Re: Clinical documentation discovery pain-point list"
+    },
+    {
+      "id": "em-0062",
+      "channel": "email",
+      "received_at": "2027-03-29T14:44:00-05:00",
+      "path": "em-0062.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "em-0063",
+      "channel": "email",
+      "received_at": "2027-03-29T14:55:00-05:00",
+      "path": "em-0063.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0045",
+      "channel": "chat",
+      "received_at": "2027-03-29T15:53:00-05:00",
+      "path": "ch-0045.json",
+      "title": "#wagtail-core"
+    },
+    {
+      "id": "ch-0046",
+      "channel": "chat",
+      "received_at": "2027-03-29T15:54:00-05:00",
+      "path": "ch-0046.json",
+      "title": "#clinical-documentation-core"
+    },
+    {
+      "id": "em-0064",
+      "channel": "email",
+      "received_at": "2027-03-29T16:16:00-05:00",
+      "path": "em-0064.eml",
+      "title": "Re: Maricel's Wagtail access request"
+    },
+    {
+      "id": "ch-0047",
+      "channel": "chat",
+      "received_at": "2027-03-29T16:46:00-05:00",
+      "path": "ch-0047.json",
+      "title": "DM: Hiba Xu / Anahit Upton"
+    },
+    {
+      "id": "em-0065",
+      "channel": "email",
+      "received_at": "2027-03-29T18:01:00-05:00",
+      "path": "em-0065.eml",
+      "title": "Re: Clinical documentation discovery API credentials"
+    },
+    {
+      "id": "ca-0007",
+      "channel": "calendar",
+      "received_at": "2027-03-29T18:27:00-05:00",
+      "path": "ca-0007.ics",
+      "title": "Invite: Walkthrough: Wagtail access request"
+    }
+  ]
+}

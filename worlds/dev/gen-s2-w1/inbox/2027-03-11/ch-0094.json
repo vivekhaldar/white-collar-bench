@@ -1,0 +1,28 @@
+{
+ "workspace": "vercliff",
+ "channel": "#funding-model-core",
+ "kind": "channel",
+ "participants": [
+  "Yael Yardley",
+  "Dina Zimmermann",
+  "Imani",
+  "Rudo Alexiou",
+  "Naoko Maldonado"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-11T13:15:00-07:00",
+   "user": "Yael Yardley",
+   "handle": "@yael",
+   "text": "Dina would like Imani to share the funding model assumptions log with Dina, not agreed yet.",
+   "edited": true,
+   "original": "Dina would like Imani to share the funding model assumptoins log with Dina, not agreed yet."
+  },
+  {
+   "ts": "2027-03-11T13:15:11-07:00",
+   "user": "Rudo Alexiou",
+   "handle": "@rudo",
+   "text": "got it"
+  }
+ ]
+}

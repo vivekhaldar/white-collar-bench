@@ -1,0 +1,103 @@
+{
+  "date": "2027-03-30",
+  "artifacts": [
+    {
+      "id": "em-0066",
+      "channel": "email",
+      "received_at": "2027-03-30T07:02:00-05:00",
+      "path": "em-0066.eml",
+      "title": "[INC-49034] Ticket updated"
+    },
+    {
+      "id": "ch-0048",
+      "channel": "chat",
+      "received_at": "2027-03-30T08:26:00-05:00",
+      "path": "ch-0048.json",
+      "title": "DM: Ama Forsythe / Hiba Xu"
+    },
+    {
+      "id": "ch-0049",
+      "channel": "chat",
+      "received_at": "2027-03-30T09:02:00-05:00",
+      "path": "ch-0049.json",
+      "title": "#wagtail-core"
+    },
+    {
+      "id": "em-0067",
+      "channel": "email",
+      "received_at": "2027-03-30T09:22:00-05:00",
+      "path": "em-0067.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "mn-0008",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-30T09:55:00-05:00",
+      "path": "mn-0008.md",
+      "title": "Recap: Wagtail standup"
+    },
+    {
+      "id": "ch-0050",
+      "channel": "chat",
+      "received_at": "2027-03-30T11:58:00-05:00",
+      "path": "ch-0050.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0068",
+      "channel": "email",
+      "received_at": "2027-03-30T14:24:00-05:00",
+      "path": "em-0068.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "ch-0051",
+      "channel": "chat",
+      "received_at": "2027-03-30T14:55:00-05:00",
+      "path": "ch-0051.json",
+      "title": "DM: Ama Forsythe / Hiba Xu"
+    },
+    {
+      "id": "nt-0006",
+      "channel": "note",
+      "received_at": "2027-03-30T15:30:00-05:00",
+      "path": "nt-0006.md",
+      "title": "Voice debrief: 1:1 Hiba / Anahit"
+    },
+    {
+      "id": "em-0069",
+      "channel": "email",
+      "received_at": "2027-03-30T15:34:00-05:00",
+      "path": "em-0069.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0070",
+      "channel": "email",
+      "received_at": "2027-03-30T16:57:00-05:00",
+      "path": "em-0070.eml",
+      "title": "Wagtail support model"
+    },
+    {
+      "id": "ch-0052",
+      "channel": "chat",
+      "received_at": "2027-03-30T17:22:00-05:00",
+      "path": "ch-0052.json",
+      "title": "DM: Anahit Upton / Hiba Xu"
+    },
+    {
+      "id": "ch-0053",
+      "channel": "chat",
+      "received_at": "2027-03-30T18:03:00-05:00",
+      "path": "ch-0053.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0071",
+      "channel": "email",
+      "received_at": "2027-03-30T18:18:00-05:00",
+      "path": "em-0071.eml",
+      "title": "Clinical IT Briefing: issue 13"
+    }
+  ]
+}

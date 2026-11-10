@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Birchmere//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:e40d3a4d3007df5c@birchmere.example
+DTSTAMP:20270909T194200Z
+DTSTART:20270914T160000Z
+DTEND:20270914T164500Z
+SUMMARY:Sirocco platform sync
+ORGANIZER;CN=Dina Mancini:mailto:dina.mancini@birchmere.example
+ATTENDEE;CN=Penelope Lehmann;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:penelope.lehmann@birchmere.example
+ATTENDEE;CN=Alasdair Kaya;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:alasdair.kaya@birchmere.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.birchmere.example/j/6959720348?pwd=K4ZKMFQt\nPasscode: 635078
+LOCATION:https://meet.birchmere.example/j/6959720348?pwd=K4ZKMFQt
+END:VEVENT
+END:VCALENDAR

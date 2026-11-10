@@ -1,0 +1,54 @@
+{
+  "date": "2027-09-18",
+  "artifacts": [
+    {
+      "id": "em-0197",
+      "channel": "email",
+      "received_at": "2027-09-18T10:04:00-08:00",
+      "path": "em-0197.eml",
+      "title": "[INC-68807] Ticket updated"
+    },
+    {
+      "id": "em-0198",
+      "channel": "email",
+      "received_at": "2027-09-18T10:24:00-08:00",
+      "path": "em-0198.eml",
+      "title": "[INC-64428] Ticket updated"
+    },
+    {
+      "id": "ch-0135",
+      "channel": "chat",
+      "received_at": "2027-09-18T11:44:00-08:00",
+      "path": "ch-0135.json",
+      "title": "#cairn-core"
+    },
+    {
+      "id": "em-0199",
+      "channel": "email",
+      "received_at": "2027-09-18T12:22:00-08:00",
+      "path": "em-0199.eml",
+      "title": "[REQ-33839] Request resolved"
+    },
+    {
+      "id": "em-0200",
+      "channel": "email",
+      "received_at": "2027-09-18T14:09:00-08:00",
+      "path": "em-0200.eml",
+      "title": "Fwd: Waitlist management wait-time export"
+    },
+    {
+      "id": "ch-0136",
+      "channel": "chat",
+      "received_at": "2027-09-18T15:36:00-08:00",
+      "path": "ch-0136.json",
+      "title": "DM: Meera Ivanova / Ottavio Monteiro"
+    },
+    {
+      "id": "nt-0016",
+      "channel": "note",
+      "received_at": "2027-09-18T17:38:00-08:00",
+      "path": "nt-0016.md",
+      "title": "Sat voice memo"
+    }
+  ]
+}

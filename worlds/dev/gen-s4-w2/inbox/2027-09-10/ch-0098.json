@@ -1,0 +1,17 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-mei-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Ottavio Monteiro",
+  "Mei Wekesa"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-10T10:36:00-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "I completed the Fjord privacy impact assessment earlier today."
+  }
+ ]
+}

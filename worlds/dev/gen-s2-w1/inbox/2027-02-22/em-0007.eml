@@ -1,0 +1,15 @@
+From: Platform Status Page <status-noreply@vercliff.example>
+To: Dina Zimmermann <dina.zimmermann@vercliff.example>
+Date: Mon, 22 Feb 2027 09:48:00 -0700
+Subject: [Investigating] Intermittent sign-in delays
+Message-ID: <em-0007.2@vercliff.example>
+Auto-Submitted: auto-generated
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+We are investigating reports of degraded performance. Updates will follow every 30 minutes until resolved.
+
+Affected: file storage, single sign-on, video meetings (partial)
+
+You are receiving this because you subscribed to platform status updates.

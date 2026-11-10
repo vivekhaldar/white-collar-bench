@@ -1,0 +1,38 @@
+{
+ "workspace": "iselvale",
+ "channel": "#wagtail-core",
+ "kind": "channel",
+ "participants": [
+  "Hiba Xu",
+  "Ama Forsythe",
+  "Anahit",
+  "Mateo Pritchard",
+  "Lakshmi Zamora",
+  "Friederike Malhotra",
+  "Jisoo Makinen",
+  "Maricel Herrera",
+  "Isla Mercier"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-29T15:26:00-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "@friederike the wagtail help-desk script is blocked, waiting on an unsigned agreement"
+  },
+  {
+   "ts": "2027-03-29T15:26:34-05:00",
+   "user": "Friederike Malhotra",
+   "handle": "@friederike",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-29T15:30:21-05:00",
+   "user": "Jisoo Makinen",
+   "handle": "@jisoo",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

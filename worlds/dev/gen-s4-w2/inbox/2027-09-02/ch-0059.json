@@ -1,0 +1,40 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Ewan Shrestha",
+  "Tariq Popescu",
+  "Theresa Nagy"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-02T13:40:59-08:00",
+   "user": "Ewan Shrestha",
+   "handle": "@ewan",
+   "text": "lost a blue umbrella, might be in the big meeting room",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@tariq",
+      "@theresa"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-02T13:45:23-08:00",
+   "user": "Tariq Popescu",
+   "handle": "@tariq",
+   "text": "will keep an eye out"
+  },
+  {
+   "ts": "2027-09-02T13:49:44-08:00",
+   "user": "Theresa Nagy",
+   "handle": "@theresa",
+   "text": "there's one at reception",
+   "thread_of": 0
+  }
+ ]
+}

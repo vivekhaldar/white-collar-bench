@@ -1,0 +1,35 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-lindiwe",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Lindiwe Ahmadi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-15T17:42:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "i introduced you to bisi for the talwick working group earlier today"
+  },
+  {
+   "ts": "2027-09-15T17:42:11-05:00",
+   "user": "Lindiwe Ahmadi",
+   "handle": "@lindiwe",
+   "text": "got it, thanks"
+  },
+  {
+   "ts": "2027-09-15T17:46:19-05:00",
+   "user": "Lindiwe Ahmadi",
+   "handle": "@lindiwe",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-09-15T17:49:30-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

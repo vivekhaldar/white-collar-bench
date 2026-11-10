@@ -1,0 +1,27 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-kayode",
+ "kind": "dm",
+ "participants": [
+  "Kayode Papadopoulos",
+  "Dina Zimmermann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-04T14:49:00-07:00",
+   "user": "Kayode Papadopoulos",
+   "handle": "@kayode",
+   "text": "Can we move the funding model funding options memo to Tuesday 16 March (was 9 March)?",
+   "edited": true,
+   "original": "Can we move the funding model funding options memo to Monday 15 March (was 9 March)?",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@dina"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-meera-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Meera Ivanova",
+  "Ottavio Monteiro"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-02T11:57:00-08:00",
+   "user": "Meera Ivanova",
+   "handle": "@meera",
+   "text": "Open Courseware Workshop has moved to the delivery phase."
+  },
+  {
+   "ts": "2027-09-02T11:57:22-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "noted"
+  },
+  {
+   "ts": "2027-09-02T11:59:04-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-09-02T12:03:01-08:00",
+   "user": "Meera Ivanova",
+   "handle": "@meera",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

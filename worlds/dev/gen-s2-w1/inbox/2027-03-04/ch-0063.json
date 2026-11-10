@@ -1,0 +1,23 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-tendai",
+ "kind": "dm",
+ "participants": [
+  "Tendai Vu",
+  "Dina Zimmermann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-04T14:23:24-07:00",
+   "user": "Tendai Vu",
+   "handle": "@tendai",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-03-04T14:24:00-07:00",
+   "user": "Tendai Vu",
+   "handle": "@tendai",
+   "text": "catrin might send you the ai in public service workshop registration list, nothing confirmed yet"
+  }
+ ]
+}

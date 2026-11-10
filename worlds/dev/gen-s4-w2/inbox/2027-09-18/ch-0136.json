@@ -1,0 +1,29 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-meera-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Meera",
+  "Ottavio Monteiro"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-18T15:05:00-08:00",
+   "user": "Meera",
+   "handle": "@meera",
+   "text": "Done, I shared the Cairn change request with you."
+  },
+  {
+   "ts": "2027-09-18T15:09:33-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-09-18T15:10:53-08:00",
+   "user": "Meera",
+   "handle": "@meera",
+   "text": "only the first half"
+  }
+ ]
+}

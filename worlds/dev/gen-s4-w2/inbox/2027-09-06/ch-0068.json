@@ -1,0 +1,40 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Teagan Penhallow",
+  "Tariq Popescu",
+  "Meera Ivanova",
+  "Ewan Shrestha"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-06T08:15:43-08:00",
+   "user": "Teagan Penhallow",
+   "handle": "@teagan",
+   "text": "does anyone have a spare laptop charger (usb-c)?",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@tariq",
+      "@meera"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-06T08:20:32-08:00",
+   "user": "Tariq Popescu",
+   "handle": "@tariq",
+   "text": "i have one, desk by the window"
+  },
+  {
+   "ts": "2027-09-06T08:23:25-08:00",
+   "user": "Meera Ivanova",
+   "handle": "@meera",
+   "text": "check the supply cupboard"
+  }
+ ]
+}

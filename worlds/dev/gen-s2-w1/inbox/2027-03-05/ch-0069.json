@@ -1,0 +1,23 @@
+{
+ "workspace": "vercliff",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Bilal Blackwood",
+  "Imani Chaiyaporn"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-05T15:24:25-07:00",
+   "user": "Bilal Blackwood",
+   "handle": "@bilal",
+   "text": "lost a blue umbrella, might be in the big meeting room"
+  },
+  {
+   "ts": "2027-03-05T15:25:33-07:00",
+   "user": "Imani Chaiyaporn",
+   "handle": "@imani",
+   "text": "will keep an eye out"
+  }
+ ]
+}

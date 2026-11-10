@@ -1,0 +1,29 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-hiba-lakshmi",
+ "kind": "dm",
+ "participants": [
+  "Lakshmi Zamora",
+  "Hiba Xu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-24T17:06:03-05:00",
+   "user": "Lakshmi Zamora",
+   "handle": "@lakshmi",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-03-24T17:06:44-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-03-24T17:08:00-05:00",
+   "user": "Lakshmi Zamora",
+   "handle": "@lakshmi",
+   "text": "will send you the wagtail lessons-learned note"
+  }
+ ]
+}

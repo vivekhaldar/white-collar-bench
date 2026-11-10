@@ -1,0 +1,60 @@
+{
+ "workspace": "holcrest",
+ "channel": "#plain-language-workshop-core",
+ "kind": "channel",
+ "participants": [
+  "Jalen Hendriks",
+  "Camila Quimby",
+  "Petra Korkmaz",
+  "Sipho Sengupta",
+  "Dina Winslow"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-10T16:40:00-07:00",
+   "user": "Jalen Hendriks",
+   "handle": "@jalen",
+   "text": "plain language workshop is complete, thanks all"
+  },
+  {
+   "ts": "2027-11-10T16:41:00-07:00",
+   "user": "Sipho Sengupta",
+   "handle": "@sipho",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-11-10T16:44:58-07:00",
+   "user": "Sipho Sengupta",
+   "handle": "@sipho",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-10T16:48:40-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-10T16:56:05-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-10T16:56:48-07:00",
+   "user": "Jalen Hendriks",
+   "handle": "@jalen",
+   "text": "We're spinning up Plain language Peer Network as a follow-on to Plain Language Workshop. Keeping the relationship with Nantgate warm: introductions, catch-ups and favours. Ongoing.",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-10T16:57:06-07:00",
+   "user": "Dina Winslow",
+   "handle": "@dina",
+   "text": "thanks for the heads up"
+  }
+ ]
+}

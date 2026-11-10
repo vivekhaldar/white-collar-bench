@@ -1,0 +1,23 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-hiba-mateo",
+ "kind": "dm",
+ "participants": [
+  "Mateo Pritchard",
+  "Hiba Xu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-17T18:18:00-05:00",
+   "user": "Mateo Pritchard",
+   "handle": "@mateo",
+   "text": "i sent you the referral backlog wait-time export"
+  },
+  {
+   "ts": "2027-03-17T18:18:12-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "great, thanks"
+  }
+ ]
+}

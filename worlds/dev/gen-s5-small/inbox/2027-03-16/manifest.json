@@ -1,0 +1,75 @@
+{
+  "date": "2027-03-16",
+  "artifacts": [
+    {
+      "id": "ch-0003",
+      "channel": "chat",
+      "received_at": "2027-03-16T08:33:00-05:00",
+      "path": "ch-0003.json",
+      "title": "DM: Anahit Upton / Hiba Xu"
+    },
+    {
+      "id": "em-0007",
+      "channel": "email",
+      "received_at": "2027-03-16T10:11:00-05:00",
+      "path": "em-0007.eml",
+      "title": "Catering menu for next month"
+    },
+    {
+      "id": "em-0008",
+      "channel": "email",
+      "received_at": "2027-03-16T11:00:00-05:00",
+      "path": "em-0008.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0009",
+      "channel": "email",
+      "received_at": "2027-03-16T11:54:00-05:00",
+      "path": "em-0009.eml",
+      "title": "Event space survey"
+    },
+    {
+      "id": "ch-0004",
+      "channel": "chat",
+      "received_at": "2027-03-16T12:12:00-05:00",
+      "path": "ch-0004.json",
+      "title": "DM: Hiba Xu / Kwame Ortega"
+    },
+    {
+      "id": "ch-0005",
+      "channel": "chat",
+      "received_at": "2027-03-16T12:48:00-05:00",
+      "path": "ch-0005.json",
+      "title": "#okapi-core"
+    },
+    {
+      "id": "ch-0006",
+      "channel": "chat",
+      "received_at": "2027-03-16T13:08:00-05:00",
+      "path": "ch-0006.json",
+      "title": "DM: Ama Forsythe / Hiba Xu"
+    },
+    {
+      "id": "ch-0007",
+      "channel": "chat",
+      "received_at": "2027-03-16T14:09:00-05:00",
+      "path": "ch-0007.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0008",
+      "channel": "chat",
+      "received_at": "2027-03-16T15:08:00-05:00",
+      "path": "ch-0008.json",
+      "title": "#general"
+    },
+    {
+      "id": "mt-0002",
+      "channel": "transcript",
+      "received_at": "2027-03-16T15:30:00-05:00",
+      "path": "mt-0002.vtt",
+      "title": "Quarterly priorities (transcript)"
+    }
+  ]
+}

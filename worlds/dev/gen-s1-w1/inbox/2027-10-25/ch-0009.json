@@ -1,0 +1,63 @@
+{
+ "workspace": "holcrest",
+ "channel": "#marten-core",
+ "kind": "channel",
+ "participants": [
+  "Imran Sato",
+  "Camila Quimby",
+  "Petra Korkmaz",
+  "Jalen",
+  "Sipho Sengupta",
+  "Dina Winslow",
+  "Yasmin Mokoena",
+  "Nadia Volkov",
+  "Thandiwe Bonnet",
+  "Lito"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-25T16:43:00-07:00",
+   "user": "Imran Sato",
+   "handle": "@imran",
+   "text": "@camila could you update the Marten evaluation rubric after my comments?",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@petra",
+      "@jalen",
+      "@camila"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-25T16:43:18-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "on it",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-10-25T16:52:21-07:00",
+   "user": "Thandiwe Bonnet",
+   "handle": "@thandiwe",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-10-25T16:59:53-07:00",
+   "user": "Sipho Sengupta",
+   "handle": "@sipho",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-10-25T17:01:28-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

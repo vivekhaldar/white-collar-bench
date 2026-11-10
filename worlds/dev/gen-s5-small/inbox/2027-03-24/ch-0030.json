@@ -1,0 +1,23 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-anahit-hiba",
+ "kind": "dm",
+ "participants": [
+  "Anahit Upton",
+  "Hiba Xu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-24T13:24:00-05:00",
+   "user": "Anahit Upton",
+   "handle": "@anahit",
+   "text": "Got what I needed, the Wagtail one-page summary is moving again!"
+  },
+  {
+   "ts": "2027-03-24T13:25:02-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "thanks for the heads up"
+  }
+ ]
+}

@@ -1,0 +1,175 @@
+{
+  "date": "2027-11-11",
+  "artifacts": [
+    {
+      "id": "em-0109",
+      "channel": "email",
+      "received_at": "2027-11-11T06:37:00-07:00",
+      "path": "em-0109.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "dc-0007",
+      "channel": "document",
+      "received_at": "2027-11-11T08:29:00-07:00",
+      "path": "dc-0007.xlsx",
+      "title": "Marten decision memo v4",
+      "parent": "em-0110"
+    },
+    {
+      "id": "em-0110",
+      "channel": "email",
+      "received_at": "2027-11-11T08:29:00-07:00",
+      "path": "em-0110.eml",
+      "title": "Marten decision memo"
+    },
+    {
+      "id": "em-0111",
+      "channel": "email",
+      "received_at": "2027-11-11T08:56:00-07:00",
+      "path": "em-0111.eml",
+      "title": "Re: Synthetic resident data set for Marten"
+    },
+    {
+      "id": "ca-0009",
+      "channel": "calendar",
+      "received_at": "2027-11-11T09:17:00-07:00",
+      "path": "ca-0009.ics",
+      "title": "Accepted: Nantgate partnership follow-up"
+    },
+    {
+      "id": "ch-0094",
+      "channel": "chat",
+      "received_at": "2027-11-11T09:27:00-07:00",
+      "path": "ch-0094.json",
+      "title": "DM: Camila Quimby / Thandiwe Bonnet"
+    },
+    {
+      "id": "ch-0095",
+      "channel": "chat",
+      "received_at": "2027-11-11T10:06:00-07:00",
+      "path": "ch-0095.json",
+      "title": "#benefits-screening-core"
+    },
+    {
+      "id": "ch-0096",
+      "channel": "chat",
+      "received_at": "2027-11-11T10:50:00-07:00",
+      "path": "ch-0096.json",
+      "title": "DM: Jalen Hendriks / Camila Quimby"
+    },
+    {
+      "id": "ch-0097",
+      "channel": "chat",
+      "received_at": "2027-11-11T10:53:00-07:00",
+      "path": "ch-0097.json",
+      "title": "DM: Jalen Hendriks / Camila Quimby"
+    },
+    {
+      "id": "em-0112",
+      "channel": "email",
+      "received_at": "2027-11-11T12:46:00-07:00",
+      "path": "em-0112.eml",
+      "title": "Notice translation discovery stakeholder map"
+    },
+    {
+      "id": "ch-0098",
+      "channel": "chat",
+      "received_at": "2027-11-11T13:36:00-07:00",
+      "path": "ch-0098.json",
+      "title": "DM: Yasmin Mokoena / Camila Quimby"
+    },
+    {
+      "id": "ch-0099",
+      "channel": "chat",
+      "received_at": "2027-11-11T14:02:00-07:00",
+      "path": "ch-0099.json",
+      "title": "DM: Fernanda Olawale / Camila Quimby"
+    },
+    {
+      "id": "em-0113",
+      "channel": "email",
+      "received_at": "2027-11-11T14:19:00-07:00",
+      "path": "em-0113.eml",
+      "title": "Coffee with Nadia about pothole reporting"
+    },
+    {
+      "id": "ch-0100",
+      "channel": "chat",
+      "received_at": "2027-11-11T14:44:00-07:00",
+      "path": "ch-0100.json",
+      "title": "DM: Jalen Hendriks / Camila Quimby"
+    },
+    {
+      "id": "ch-0101",
+      "channel": "chat",
+      "received_at": "2027-11-11T15:06:00-07:00",
+      "path": "ch-0101.json",
+      "title": "DM: Jalen Hendriks / Camila Quimby"
+    },
+    {
+      "id": "ch-0102",
+      "channel": "chat",
+      "received_at": "2027-11-11T16:01:00-07:00",
+      "path": "ch-0102.json",
+      "title": "DM: Camila Quimby / Jalen Hendriks"
+    },
+    {
+      "id": "ch-0103",
+      "channel": "chat",
+      "received_at": "2027-11-11T16:01:00-07:00",
+      "path": "ch-0103.json",
+      "title": "#notice-translation-core"
+    },
+    {
+      "id": "em-0114",
+      "channel": "email",
+      "received_at": "2027-11-11T16:43:00-07:00",
+      "path": "em-0114.eml",
+      "title": "Re: Marten privacy review form"
+    },
+    {
+      "id": "ch-0104",
+      "channel": "chat",
+      "received_at": "2027-11-11T17:43:00-07:00",
+      "path": "ch-0104.json",
+      "title": "DM: Jalen Rao / Camila Quimby"
+    },
+    {
+      "id": "em-0115",
+      "channel": "email",
+      "received_at": "2027-11-11T18:03:00-07:00",
+      "path": "em-0115.eml",
+      "title": "Re: Corinne's benefits screening discovery opportunity list"
+    },
+    {
+      "id": "ch-0105",
+      "channel": "chat",
+      "received_at": "2027-11-11T18:07:00-07:00",
+      "path": "ch-0105.json",
+      "title": "DM: Camila Quimby / Sipho Sengupta"
+    },
+    {
+      "id": "em-0116",
+      "channel": "email",
+      "received_at": "2027-11-11T18:20:00-07:00",
+      "path": "em-0116.eml",
+      "title": "Re: Notice translation discovery observation notes"
+    },
+    {
+      "id": "dc-0008",
+      "channel": "document",
+      "received_at": "2027-11-11T18:23:00-07:00",
+      "path": "dc-0008.xlsx",
+      "title": "Marten data dictionary v3",
+      "parent": "em-0117"
+    },
+    {
+      "id": "em-0117",
+      "channel": "email",
+      "received_at": "2027-11-11T18:23:00-07:00",
+      "path": "em-0117.eml",
+      "title": "Marten data dictionary"
+    }
+  ]
+}

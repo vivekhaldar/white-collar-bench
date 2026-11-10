@@ -1,0 +1,38 @@
+{
+ "workspace": "birchmere",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Tunde Kapanadze",
+  "Penelope Lehmann",
+  "Bisi Chatterjee",
+  "Giorgi Ngo"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T08:12:59-05:00",
+   "user": "Tunde Kapanadze",
+   "handle": "@tunde",
+   "text": "anyone up for coffee at 3?"
+  },
+  {
+   "ts": "2027-09-07T08:18:28-05:00",
+   "user": "Penelope Lehmann",
+   "handle": "@penelope",
+   "text": "me!"
+  },
+  {
+   "ts": "2027-09-07T08:22:27-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "can't today, back to back",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-07T08:24:25-05:00",
+   "user": "Giorgi Ngo",
+   "handle": "@giorgi",
+   "text": "yes please"
+  }
+ ]
+}

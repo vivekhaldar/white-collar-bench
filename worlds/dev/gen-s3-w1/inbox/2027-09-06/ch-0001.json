@@ -1,0 +1,35 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-katarzyna",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Kasia"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-06T08:33:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "when you get a chance, could you send me the list of pilot wards for okapi?"
+  },
+  {
+   "ts": "2027-09-06T08:33:15-05:00",
+   "user": "Kasia",
+   "handle": "@katarzyna",
+   "text": "on it"
+  },
+  {
+   "ts": "2027-09-06T08:38:10-05:00",
+   "user": "Kasia",
+   "handle": "@katarzyna",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-09-06T08:38:48-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "only the first half"
+  }
+ ]
+}

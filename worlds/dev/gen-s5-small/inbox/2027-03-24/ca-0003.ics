@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iselvale//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:23822d2469b672c3@iselvale.example
+DTSTAMP:20270324T232800Z
+DTSTART:20270329T190000Z
+DTEND:20270329T200000Z
+SUMMARY:Okapi operating model review session
+ORGANIZER;CN=Lakshmi Zamora:mailto:lakshmi.zamora@iselvale.example
+ATTENDEE;CN=Hiba Xu;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.xu@iselvale.example
+SEQUENCE:0
+DESCRIPTION:Agenda: Book a Okapi operating model review session.\nJoin video meeting: https://meet.iselvale.example/j/7918506074?pwd=dHcymhw7\nPasscode: 843925
+LOCATION:https://meet.iselvale.example/j/7918506074?pwd=dHcymhw7
+END:VEVENT
+END:VCALENDAR

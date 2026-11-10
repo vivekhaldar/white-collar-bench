@@ -1,0 +1,132 @@
+{
+  "date": "2027-09-17",
+  "artifacts": [
+    {
+      "id": "em-0188",
+      "channel": "email",
+      "received_at": "2027-09-17T07:09:00-08:00",
+      "path": "em-0188.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ca-0014",
+      "channel": "calendar",
+      "received_at": "2027-09-17T08:24:00-08:00",
+      "path": "ca-0014.ics",
+      "title": "Accepted: Fjord follow-up"
+    },
+    {
+      "id": "em-0189",
+      "channel": "email",
+      "received_at": "2027-09-17T09:19:00-08:00",
+      "path": "em-0189.eml",
+      "title": "[INC-71534] Ticket updated"
+    },
+    {
+      "id": "nt-0014",
+      "channel": "note",
+      "received_at": "2027-09-17T10:30:00-08:00",
+      "path": "nt-0014.md",
+      "title": "Voice debrief: Fjord / syllabus review discovery sync"
+    },
+    {
+      "id": "em-0190",
+      "channel": "email",
+      "received_at": "2027-09-17T10:52:00-08:00",
+      "path": "em-0190.eml",
+      "title": "Fjord accessibility audit"
+    },
+    {
+      "id": "em-0191",
+      "channel": "email",
+      "received_at": "2027-09-17T10:53:00-08:00",
+      "path": "em-0191.eml",
+      "title": "Re: Cairn cutover plan"
+    },
+    {
+      "id": "em-0192",
+      "channel": "email",
+      "received_at": "2027-09-17T11:27:00-08:00",
+      "path": "em-0192.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0130",
+      "channel": "chat",
+      "received_at": "2027-09-17T12:19:00-08:00",
+      "path": "ch-0130.json",
+      "title": "#room-booking-selection-core"
+    },
+    {
+      "id": "em-0193",
+      "channel": "email",
+      "received_at": "2027-09-17T13:00:00-08:00",
+      "path": "em-0193.eml",
+      "title": "Re: Cairn on-call rota"
+    },
+    {
+      "id": "ch-0131",
+      "channel": "chat",
+      "received_at": "2027-09-17T14:59:00-08:00",
+      "path": "ch-0131.json",
+      "title": "DM: Meera Ivanova / Ottavio Monteiro"
+    },
+    {
+      "id": "em-0194",
+      "channel": "email",
+      "received_at": "2027-09-17T15:14:00-08:00",
+      "path": "em-0194.eml",
+      "title": "Re: Fjord service blueprint"
+    },
+    {
+      "id": "em-0195",
+      "channel": "email",
+      "received_at": "2027-09-17T15:25:00-08:00",
+      "path": "em-0195.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "dc-0007",
+      "channel": "document",
+      "received_at": "2027-09-17T16:38:00-08:00",
+      "path": "dc-0007.docx",
+      "title": "Room booking selection renewal questionnaire v2",
+      "parent": "em-0196"
+    },
+    {
+      "id": "em-0196",
+      "channel": "email",
+      "received_at": "2027-09-17T16:38:00-08:00",
+      "path": "em-0196.eml",
+      "title": "Status note: w/e 17 September"
+    },
+    {
+      "id": "ch-0132",
+      "channel": "chat",
+      "received_at": "2027-09-17T16:45:00-08:00",
+      "path": "ch-0132.json",
+      "title": "DM: Theresa Nagy / Ottavio Monteiro"
+    },
+    {
+      "id": "ch-0133",
+      "channel": "chat",
+      "received_at": "2027-09-17T16:54:00-08:00",
+      "path": "ch-0133.json",
+      "title": "DM: Solene Yassin / Ottavio Monteiro"
+    },
+    {
+      "id": "nt-0015",
+      "channel": "note",
+      "received_at": "2027-09-17T17:59:00-08:00",
+      "path": "nt-0015.md",
+      "title": "Fri notes"
+    },
+    {
+      "id": "ch-0134",
+      "channel": "chat",
+      "received_at": "2027-09-17T18:50:00-08:00",
+      "path": "ch-0134.json",
+      "title": "#cairn-core"
+    }
+  ]
+}

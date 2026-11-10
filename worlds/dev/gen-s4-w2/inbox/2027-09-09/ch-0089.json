@@ -1,0 +1,38 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#fjord-core",
+ "kind": "channel",
+ "participants": [
+  "Darius Sherwood",
+  "Ottavio Monteiro",
+  "Meera",
+  "Ratna Bondarenko",
+  "Resi",
+  "Nomvula Ndlovu",
+  "Bruna Sinclair",
+  "Esperanza Rao",
+  "Yaroslav Moyo",
+  "Celine Wisniewska"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T10:08:54-08:00",
+   "user": "Darius Sherwood",
+   "handle": "@darius",
+   "text": "catching people up since a few of us are out today"
+  },
+  {
+   "ts": "2027-09-08T10:09:00-08:00",
+   "user": "Darius Sherwood",
+   "handle": "@darius",
+   "text": "FYI Ottavio will confirm the Fjord acceptance criteria with Meera!"
+  },
+  {
+   "ts": "2027-09-08T10:09:55-08:00",
+   "user": "Celine Wisniewska",
+   "handle": "@celine",
+   "text": "nice",
+   "thread_of": 1
+  }
+ ]
+}

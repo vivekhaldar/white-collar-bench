@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Drayhurst//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:3c2de4b0cb487e75@drayhurst.example
+DTSTAMP:20270907T000200Z
+DTSTART:20270908T220000Z
+DTEND:20270908T223000Z
+SUMMARY:Walkthrough: Course assistant discovery process map
+ORGANIZER;CN=Ottavio Monteiro:mailto:ottavio.monteiro@drayhurst.example
+ATTENDEE;CN=Meera Ivanova;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:meera.ivanova@drayhurst.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.drayhurst.example/j/2341162081?pwd=gfabdCya\nPasscode: 740826
+LOCATION:https://meet.drayhurst.example/j/2341162081?pwd=gfabdCya
+END:VEVENT
+END:VCALENDAR

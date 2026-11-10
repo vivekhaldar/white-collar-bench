@@ -1,0 +1,46 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#fjord-core",
+ "kind": "channel",
+ "participants": [
+  "Ottavio Monteiro",
+  "Darius Sherwood",
+  "Meera Ivanova",
+  "Ratna Bondarenko",
+  "Theresa Nagy",
+  "Nomvula Ndlovu",
+  "Bruna Sinclair",
+  "Esperanza Rao",
+  "Yaroslav Moyo",
+  "Celine Wisniewska"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T11:37:00-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "@meera done, i sent you the fjord help-desk script"
+  },
+  {
+   "ts": "2027-09-08T11:38:05-08:00",
+   "user": "Celine Wisniewska",
+   "handle": "@celine",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-08T11:39:05-08:00",
+   "user": "Celine Wisniewska",
+   "handle": "@celine",
+   "text": "following",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-08T11:42:31-08:00",
+   "user": "Yaroslav Moyo",
+   "handle": "@yaroslav",
+   "text": "+1",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "workspace": "holcrest",
+ "channel": "#notice-translation-core",
+ "kind": "channel",
+ "participants": [
+  "Camila Quimby",
+  "Jalen",
+  "Petra Korkmaz",
+  "Sipho Sengupta",
+  "Dina Winslow"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-11T15:27:00-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "@sipho let's drop the notice translation baseline data from birchcrest, superseded by a decision"
+  },
+  {
+   "ts": "2027-11-11T15:27:28-07:00",
+   "user": "Sipho Sengupta",
+   "handle": "@sipho",
+   "text": "thanks for the heads up",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-11T15:28:55-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "+1",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-11T15:29:32-07:00",
+   "user": "Dina Winslow",
+   "handle": "@dina",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-11T15:37:44-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "+1",
+   "thread_of": 0
+  }
+ ]
+}

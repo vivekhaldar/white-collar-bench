@@ -1,0 +1,110 @@
+{
+  "date": "2027-09-10",
+  "artifacts": [
+    {
+      "id": "em-0034",
+      "channel": "email",
+      "received_at": "2027-09-10T07:21:00-05:00",
+      "path": "em-0034.eml",
+      "title": "Wellbeing week activities"
+    },
+    {
+      "id": "em-0035",
+      "channel": "email",
+      "received_at": "2027-09-10T07:45:00-05:00",
+      "path": "em-0035.eml",
+      "title": "Re: FYI: Two customer references from Kasis"
+    },
+    {
+      "id": "em-0036",
+      "channel": "email",
+      "received_at": "2027-09-10T09:02:00-05:00",
+      "path": "em-0036.eml",
+      "title": "[INC-64928] Ticket updated"
+    },
+    {
+      "id": "ch-0032",
+      "channel": "chat",
+      "received_at": "2027-09-10T09:19:00-05:00",
+      "path": "ch-0032.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0033",
+      "channel": "chat",
+      "received_at": "2027-09-10T09:40:00-05:00",
+      "path": "ch-0033.json",
+      "title": "DM: Alasdair Kaya / Shira Colombo"
+    },
+    {
+      "id": "ch-0034",
+      "channel": "chat",
+      "received_at": "2027-09-10T10:25:00-05:00",
+      "path": "ch-0034.json",
+      "title": "DM: Alasdair Kaya / Nurlan Moreira"
+    },
+    {
+      "id": "em-0037",
+      "channel": "email",
+      "received_at": "2027-09-10T10:34:00-05:00",
+      "path": "em-0037.eml",
+      "title": "[INC-64362] Ticket updated"
+    },
+    {
+      "id": "ch-0035",
+      "channel": "chat",
+      "received_at": "2027-09-10T10:45:00-05:00",
+      "path": "ch-0035.json",
+      "title": "DM: Guadalupe Lombardi / Alasdair Kaya"
+    },
+    {
+      "id": "em-0038",
+      "channel": "email",
+      "received_at": "2027-09-10T12:18:00-05:00",
+      "path": "em-0038.eml",
+      "title": "Re: Sirocco tenant onboarding guide"
+    },
+    {
+      "id": "ch-0036",
+      "channel": "chat",
+      "received_at": "2027-09-10T14:19:00-05:00",
+      "path": "ch-0036.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0039",
+      "channel": "email",
+      "received_at": "2027-09-10T14:32:00-05:00",
+      "path": "em-0039.eml",
+      "title": "FYI: Okapi solution brief"
+    },
+    {
+      "id": "ch-0037",
+      "channel": "chat",
+      "received_at": "2027-09-10T15:14:00-05:00",
+      "path": "ch-0037.json",
+      "title": "#okapi-core"
+    },
+    {
+      "id": "em-0040",
+      "channel": "email",
+      "received_at": "2027-09-10T15:54:00-05:00",
+      "path": "em-0040.eml",
+      "title": "[REQ-12704] Request resolved"
+    },
+    {
+      "id": "ch-0038",
+      "channel": "chat",
+      "received_at": "2027-09-10T16:31:00-05:00",
+      "path": "ch-0038.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "em-0041",
+      "channel": "email",
+      "received_at": "2027-09-10T17:26:00-05:00",
+      "path": "em-0041.eml",
+      "title": "Status note: w/e 10 September"
+    }
+  ]
+}

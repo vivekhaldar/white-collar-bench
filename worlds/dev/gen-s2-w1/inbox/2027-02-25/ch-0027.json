@@ -1,0 +1,51 @@
+{
+ "workspace": "vercliff",
+ "channel": "#ai-in-public-service-core",
+ "kind": "channel",
+ "participants": [
+  "Dina Zimmermann",
+  "Imani Chaiyaporn",
+  "Tendai",
+  "Catrin Petrov",
+  "Nomvula Moreira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-25T18:05:00-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "@imani you mentioned you'd send the ai in public service workshop post-event survey, that works for me",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@catrin",
+      "@imani",
+      "@tendai"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-25T18:05:10-07:00",
+   "user": "Tendai",
+   "handle": "@tendai",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-25T18:14:05-07:00",
+   "user": "Catrin Petrov",
+   "handle": "@catrin",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-25T18:22:28-07:00",
+   "user": "Nomvula Moreira",
+   "handle": "@nomvula",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

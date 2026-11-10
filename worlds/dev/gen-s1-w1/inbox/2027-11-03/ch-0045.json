@@ -1,0 +1,24 @@
+{
+ "workspace": "holcrest",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Nadia Volkov",
+  "Kirsten Yardley"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-03T09:24:38-07:00",
+   "user": "Nadia Volkov",
+   "handle": "@nadia",
+   "text": "is it just me or is it freezing on 3 today?"
+  },
+  {
+   "ts": "2027-11-03T09:26:40-07:00",
+   "user": "Kirsten Yardley",
+   "handle": "@kirsten",
+   "text": "not just you",
+   "thread_of": 0
+  }
+ ]
+}

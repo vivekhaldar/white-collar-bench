@@ -1,0 +1,124 @@
+{
+  "date": "2027-09-02",
+  "artifacts": [
+    {
+      "id": "em-0070",
+      "channel": "email",
+      "received_at": "2027-09-02T07:45:00-08:00",
+      "path": "em-0070.eml",
+      "title": "Re: Heathridge Course Assistant Discovery: moving to analysis"
+    },
+    {
+      "id": "mn-0008",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-02T09:55:00-08:00",
+      "path": "mn-0008.md",
+      "title": "Notes: Fjord standup"
+    },
+    {
+      "id": "ch-0056",
+      "channel": "chat",
+      "received_at": "2027-09-02T10:15:00-08:00",
+      "path": "ch-0056.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0071",
+      "channel": "email",
+      "received_at": "2027-09-02T10:41:00-08:00",
+      "path": "em-0071.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0057",
+      "channel": "chat",
+      "received_at": "2027-09-02T12:31:00-08:00",
+      "path": "ch-0057.json",
+      "title": "DM: Meera Ivanova / Ottavio Monteiro"
+    },
+    {
+      "id": "ch-0058",
+      "channel": "chat",
+      "received_at": "2027-09-02T13:46:00-08:00",
+      "path": "ch-0058.json",
+      "title": "#cairn-core"
+    },
+    {
+      "id": "ch-0059",
+      "channel": "chat",
+      "received_at": "2027-09-02T14:25:00-08:00",
+      "path": "ch-0059.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "em-0072",
+      "channel": "email",
+      "received_at": "2027-09-02T15:12:00-08:00",
+      "path": "em-0072.eml",
+      "title": "Fwd: Course assistant discovery interview guide"
+    },
+    {
+      "id": "ch-0060",
+      "channel": "chat",
+      "received_at": "2027-09-02T15:19:00-08:00",
+      "path": "ch-0060.json",
+      "title": "#room-booking-selection-core"
+    },
+    {
+      "id": "em-0073",
+      "channel": "email",
+      "received_at": "2027-09-02T15:31:00-08:00",
+      "path": "em-0073.eml",
+      "title": "[INC-81449] Ticket updated"
+    },
+    {
+      "id": "mt-0008",
+      "channel": "transcript",
+      "received_at": "2027-09-02T16:30:00-08:00",
+      "path": "mt-0008.vtt",
+      "title": "Fjord scoping call (transcript)"
+    },
+    {
+      "id": "em-0074",
+      "channel": "email",
+      "received_at": "2027-09-02T16:51:00-08:00",
+      "path": "em-0074.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0061",
+      "channel": "chat",
+      "received_at": "2027-09-02T17:27:00-08:00",
+      "path": "ch-0061.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0075",
+      "channel": "email",
+      "received_at": "2027-09-02T17:35:00-08:00",
+      "path": "em-0075.eml",
+      "title": "[REQ-31167] Request resolved"
+    },
+    {
+      "id": "ch-0062",
+      "channel": "chat",
+      "received_at": "2027-09-02T18:08:00-08:00",
+      "path": "ch-0062.json",
+      "title": "#cairn-core"
+    },
+    {
+      "id": "ch-0063",
+      "channel": "chat",
+      "received_at": "2027-09-02T18:21:00-08:00",
+      "path": "ch-0063.json",
+      "title": "#fjord-core"
+    },
+    {
+      "id": "em-0076",
+      "channel": "email",
+      "received_at": "2027-09-02T18:24:00-08:00",
+      "path": "em-0076.eml",
+      "title": "Re: Fjord load test plan"
+    }
+  ]
+}

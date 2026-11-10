@@ -1,0 +1,54 @@
+{
+  "date": "2027-09-25",
+  "artifacts": [
+    {
+      "id": "ch-0106",
+      "channel": "chat",
+      "received_at": "2027-09-25T10:01:00-05:00",
+      "path": "ch-0106.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0107",
+      "channel": "chat",
+      "received_at": "2027-09-25T10:20:00-05:00",
+      "path": "ch-0107.json",
+      "title": "#okapi-core"
+    },
+    {
+      "id": "ch-0108",
+      "channel": "chat",
+      "received_at": "2027-09-25T10:38:00-05:00",
+      "path": "ch-0108.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0122",
+      "channel": "email",
+      "received_at": "2027-09-25T11:06:00-05:00",
+      "path": "em-0122.eml",
+      "title": "[REQ-38367] Request resolved"
+    },
+    {
+      "id": "em-0123",
+      "channel": "email",
+      "received_at": "2027-09-25T11:30:00-05:00",
+      "path": "em-0123.eml",
+      "title": "[REQ-14024] Request resolved"
+    },
+    {
+      "id": "em-0124",
+      "channel": "email",
+      "received_at": "2027-09-25T12:16:00-05:00",
+      "path": "em-0124.eml",
+      "title": "Programme now live"
+    },
+    {
+      "id": "ch-0109",
+      "channel": "chat",
+      "received_at": "2027-09-25T12:58:00-05:00",
+      "path": "ch-0109.json",
+      "title": "#general"
+    }
+  ]
+}

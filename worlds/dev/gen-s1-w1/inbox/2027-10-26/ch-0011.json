@@ -1,0 +1,33 @@
+{
+ "workspace": "holcrest",
+ "channel": "#benefits-screening-core",
+ "kind": "channel",
+ "participants": [
+  "Jalen",
+  "Camila Quimby",
+  "Andrei Abenova",
+  "Ifeoma Girard",
+  "Corinne Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-26T07:58:40-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "@camila just to recap, yesterday you said you'd send me the benefits screening discovery process map"
+  },
+  {
+   "ts": "2027-10-26T07:59:26-07:00",
+   "user": "Ifeoma Girard",
+   "handle": "@ifeoma",
+   "text": "noted"
+  },
+  {
+   "ts": "2027-10-26T08:06:29-07:00",
+   "user": "Andrei Abenova",
+   "handle": "@andrei",
+   "text": "+1",
+   "thread_of": 0
+  }
+ ]
+}

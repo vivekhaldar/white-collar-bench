@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iselvale//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:b1a2994755fb0b6f@iselvale.example
+DTSTAMP:20270326T202400Z
+DTSTART:20270331T140000Z
+DTEND:20270331T143000Z
+SUMMARY:Grion demo
+ORGANIZER;CN=Ama Forsythe:mailto:ama.forsythe@falbury.iselvale.example
+ATTENDEE;CN=Petra Greco;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:petra.greco@grion.example
+ATTENDEE;CN=Anahit Upton;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:anahit.upton@iselvale.example
+ATTENDEE;CN=Hiba Xu;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:hiba.xu@iselvale.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.iselvale.example/j/0686034610?pwd=3L3GGy3n\nPasscode: 418183
+LOCATION:https://meet.iselvale.example/j/0686034610?pwd=3L3GGy3n
+END:VEVENT
+END:VCALENDAR

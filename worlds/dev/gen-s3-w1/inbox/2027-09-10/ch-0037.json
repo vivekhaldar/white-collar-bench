@@ -1,0 +1,32 @@
+{
+ "workspace": "birchmere",
+ "channel": "#okapi-core",
+ "kind": "channel",
+ "participants": [
+  "Bisi Chatterjee",
+  "Alasdair Kaya",
+  "Katarzyna Feng",
+  "Lena",
+  "Dina Mancini",
+  "Penny",
+  "Nurlan Moreira",
+  "Giorgi Ngo",
+  "Tori"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-10T14:34:00-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "Alasdair would like Dina to provision the Okapi tenant on Sirocco, not agreed yet.",
+   "edited": true,
+   "original": "Alasdair would like Dina to provisino the Okapi tenant on Sirocco, not agreed yet."
+  },
+  {
+   "ts": "2027-09-10T14:34:46-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "great, thank you"
+  }
+ ]
+}

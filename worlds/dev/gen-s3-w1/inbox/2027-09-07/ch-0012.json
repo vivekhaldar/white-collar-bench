@@ -1,0 +1,48 @@
+{
+ "workspace": "birchmere",
+ "channel": "#bed-management-discovery-core",
+ "kind": "channel",
+ "participants": [
+  "Bisi",
+  "Alasdair Kaya",
+  "Guadalupe Lombardi",
+  "Vitoria Oduro",
+  "Oluwaseun Friedman"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T13:10:00-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "Heads up: Vitoria will pull the bed management baseline data from Lanmoor. :)"
+  },
+  {
+   "ts": "2027-09-07T13:11:12-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "great, thank you",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-07T13:18:26-05:00",
+   "user": "Oluwaseun Friedman",
+   "handle": "@oluwaseun",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-07T13:24:01-05:00",
+   "user": "Vitoria Oduro",
+   "handle": "@vitoria",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-07T13:31:00-05:00",
+   "user": "Guadalupe Lombardi",
+   "handle": "@guadalupe",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

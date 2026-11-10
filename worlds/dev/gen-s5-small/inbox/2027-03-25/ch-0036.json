@@ -1,0 +1,41 @@
+{
+ "workspace": "iselvale",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Aylin Venkataraman",
+  "Maricel Herrera",
+  "Kwame Ortega",
+  "Tahmina Lozano"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-25T10:40:51-05:00",
+   "user": "Aylin Venkataraman",
+   "handle": "@aylin",
+   "text": "any lunch recommendations near the office?",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@maricel",
+      "@kwame"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-25T10:41:37-05:00",
+   "user": "Maricel Herrera",
+   "handle": "@maricel",
+   "text": "the noodle place on the corner"
+  },
+  {
+   "ts": "2027-03-25T10:46:01-05:00",
+   "user": "Kwame Ortega",
+   "handle": "@kwame",
+   "text": "the salad bar is decent",
+   "thread_of": 0
+  }
+ ]
+}

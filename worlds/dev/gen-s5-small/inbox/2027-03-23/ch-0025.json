@@ -1,0 +1,30 @@
+{
+ "workspace": "iselvale",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Lakshmi Zamora",
+  "Anahit Upton",
+  "Kwame Ortega"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-23T14:59:52-05:00",
+   "user": "Lakshmi Zamora",
+   "handle": "@lakshmi",
+   "text": "is the wifi on the second floor down for anyone else?"
+  },
+  {
+   "ts": "2027-03-23T15:06:00-05:00",
+   "user": "Anahit Upton",
+   "handle": "@anahit",
+   "text": "yep, same here :)"
+  },
+  {
+   "ts": "2027-03-23T15:08:49-05:00",
+   "user": "Kwame Ortega",
+   "handle": "@kwame",
+   "text": "works for me"
+  }
+ ]
+}

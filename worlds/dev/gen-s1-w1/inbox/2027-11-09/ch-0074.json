@@ -1,0 +1,37 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-jalen",
+ "kind": "dm",
+ "participants": [
+  "Jalen Hendriks",
+  "Camila Quimby"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-09T11:42:00-07:00",
+   "user": "Jalen Hendriks",
+   "handle": "@jalen",
+   "text": "can you send me the ranked benefits screening discovery use cases by wed 10 nov?",
+   "edited": true,
+   "original": "can you send me the ranked benefits screening discovery use cases by tue 9 nov?"
+  },
+  {
+   "ts": "2027-11-09T11:42:32-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "will do"
+  },
+  {
+   "ts": "2027-11-09T11:43:29-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-11-09T11:46:34-07:00",
+   "user": "Jalen Hendriks",
+   "handle": "@jalen",
+   "text": "anytime"
+  }
+ ]
+}

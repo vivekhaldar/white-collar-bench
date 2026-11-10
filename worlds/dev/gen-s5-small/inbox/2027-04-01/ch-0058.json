@@ -1,0 +1,37 @@
+{
+ "workspace": "iselvale",
+ "channel": "#wagtail-core",
+ "kind": "channel",
+ "participants": [
+  "Isla Mercier",
+  "Hiba Xu",
+  "Ama Forsythe",
+  "Anahit",
+  "Mateo Pritchard",
+  "Lakshmi Zamora",
+  "Friederike Malhotra",
+  "Jisoo Makinen",
+  "Maricel Herrera",
+  "Giorgi Morimoto"
+ ],
+ "messages": [
+  {
+   "ts": "2027-04-01T09:17:00-05:00",
+   "user": "Isla Mercier",
+   "handle": "@isla",
+   "text": "@hiba would you be able to review my Wagtail evaluation rubric by Friday 2 April?",
+   "edited": true,
+   "original": "@hiba would you be able to review my Wagtail evaluation rubric by Fridya 2 April?",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@anahit",
+      "@ama",
+      "@hiba"
+     ]
+    }
+   ]
+  }
+ ]
+}

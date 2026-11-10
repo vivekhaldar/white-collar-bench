@@ -1,0 +1,47 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-siti",
+ "kind": "dm",
+ "participants": [
+  "Siti Ibarra",
+  "Dina Zimmermann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-23T10:59:26-07:00",
+   "user": "Siti Ibarra",
+   "handle": "@siti",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-02-23T11:00:03-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-02-23T11:01:00-07:00",
+   "user": "Siti Ibarra",
+   "handle": "@siti",
+   "text": "Imani asked if you could write a reference note for their inspection scheduling fellowship application."
+  },
+  {
+   "ts": "2027-02-23T11:02:09-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "yep, on it"
+  },
+  {
+   "ts": "2027-02-23T11:04:36-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-02-23T11:05:58-07:00",
+   "user": "Siti Ibarra",
+   "handle": "@siti",
+   "text": "remote, but online all day"
+  }
+ ]
+}

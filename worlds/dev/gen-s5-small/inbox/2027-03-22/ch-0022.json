@@ -1,0 +1,39 @@
+{
+ "workspace": "iselvale",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Lakshmi Zamora",
+  "Maricel Herrera",
+  "Tahmina Lozano"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-22T13:16:34-05:00",
+   "user": "Lakshmi Zamora",
+   "handle": "@lakshmi",
+   "text": "the elevator on the east side is out again",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@maricel",
+      "@tahmina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-22T13:17:05-05:00",
+   "user": "Maricel Herrera",
+   "handle": "@maricel",
+   "text": "stairs it is"
+  },
+  {
+   "ts": "2027-03-22T13:21:41-05:00",
+   "user": "Tahmina Lozano",
+   "handle": "@tahmina",
+   "text": "classic"
+  }
+ ]
+}

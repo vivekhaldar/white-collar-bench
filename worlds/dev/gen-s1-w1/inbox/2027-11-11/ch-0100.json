@@ -1,0 +1,23 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-jalen",
+ "kind": "dm",
+ "participants": [
+  "Jalen",
+  "Camila Quimby"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-11T14:11:00-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "Leave it with me, I'll send you the Marten training outline."
+  },
+  {
+   "ts": "2027-11-11T14:12:07-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "appreciate it"
+  }
+ ]
+}

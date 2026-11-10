@@ -1,0 +1,62 @@
+{
+  "date": "2027-11-06",
+  "artifacts": [
+    {
+      "id": "em-0085",
+      "channel": "email",
+      "received_at": "2027-11-06T10:40:00-07:00",
+      "path": "em-0085.eml",
+      "title": "[INC-69801] Ticket updated"
+    },
+    {
+      "id": "ch-0065",
+      "channel": "chat",
+      "received_at": "2027-11-06T11:26:00-07:00",
+      "path": "ch-0065.json",
+      "title": "DM: Jalen Hendriks / Camila Quimby"
+    },
+    {
+      "id": "dc-0004",
+      "channel": "document",
+      "received_at": "2027-11-06T12:08:00-07:00",
+      "path": "dc-0004.docx",
+      "title": "Notice translation discovery process map v1",
+      "parent": "em-0086"
+    },
+    {
+      "id": "em-0086",
+      "channel": "email",
+      "received_at": "2027-11-06T12:08:00-07:00",
+      "path": "em-0086.eml",
+      "title": "Re: Notice translation discovery process map"
+    },
+    {
+      "id": "em-0087",
+      "channel": "email",
+      "received_at": "2027-11-06T12:09:00-07:00",
+      "path": "em-0087.eml",
+      "title": "[REQ-19125] Request resolved"
+    },
+    {
+      "id": "em-0088",
+      "channel": "email",
+      "received_at": "2027-11-06T12:36:00-07:00",
+      "path": "em-0088.eml",
+      "title": "[REQ-12076] Request resolved"
+    },
+    {
+      "id": "ch-0066",
+      "channel": "chat",
+      "received_at": "2027-11-06T14:04:00-07:00",
+      "path": "ch-0066.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0067",
+      "channel": "chat",
+      "received_at": "2027-11-06T17:05:00-07:00",
+      "path": "ch-0067.json",
+      "title": "DM: Joselito Moradi / Camila Quimby"
+    }
+  ]
+}

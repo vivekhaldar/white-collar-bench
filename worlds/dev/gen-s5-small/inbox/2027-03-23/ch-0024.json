@@ -1,0 +1,47 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-friederike-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Xu",
+  "Rike"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-23T10:39:31-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-03-23T10:40:16-05:00",
+   "user": "Rike",
+   "handle": "@friederike",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-03-23T10:42:00-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "i'll send you the wagtail help-desk script"
+  },
+  {
+   "ts": "2027-03-23T10:43:28-05:00",
+   "user": "Rike",
+   "handle": "@friederike",
+   "text": "that'd be great"
+  },
+  {
+   "ts": "2027-03-23T10:45:12-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-03-23T10:46:15-05:00",
+   "user": "Rike",
+   "handle": "@friederike",
+   "text": "anytime"
+  }
+ ]
+}

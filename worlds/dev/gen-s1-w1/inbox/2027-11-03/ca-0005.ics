@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Holcrest//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:47cac4894935ee8b@holcrest.example
+DTSTAMP:20271103T151200Z
+DTSTART:20271104T220000Z
+DTEND:20271104T223000Z
+SUMMARY:Obsidian hardening review
+ORGANIZER;CN=Yasmin Mokoena:mailto:yasmin.mokoena@holcrest.example
+ATTENDEE;CN=Jalen Hendriks;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:jalen.hendriks@holcrest.example
+ATTENDEE;CN=Camila Quimby;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:camila.quimby@holcrest.example
+SEQUENCE:0
+DESCRIPTION:Placeholder\, agenda to follow.\nJoin video meeting: https://meet.holcrest.example/j/6159346297?pwd=bPFM8prV\nPasscode: 469288
+LOCATION:https://meet.holcrest.example/j/6159346297?pwd=bPFM8prV
+END:VEVENT
+END:VCALENDAR

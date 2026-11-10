@@ -1,0 +1,37 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Esperanza Rao",
+  "Tariq Popescu",
+  "Theresa Nagy",
+  "Nomvula Ndlovu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-24T10:14:31-08:00",
+   "user": "Esperanza Rao",
+   "handle": "@esperanza",
+   "text": "is the wifi on the second floor down for anyone else?"
+  },
+  {
+   "ts": "2027-08-24T10:17:13-08:00",
+   "user": "Tariq Popescu",
+   "handle": "@tariq",
+   "text": "yep, same here"
+  },
+  {
+   "ts": "2027-08-24T10:19:13-08:00",
+   "user": "Theresa Nagy",
+   "handle": "@theresa",
+   "text": "works for me"
+  },
+  {
+   "ts": "2027-08-24T10:25:20-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "it's been flaky all morning"
+  }
+ ]
+}

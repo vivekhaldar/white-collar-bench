@@ -1,0 +1,138 @@
+{
+  "date": "2027-02-22",
+  "artifacts": [
+    {
+      "id": "em-0001",
+      "channel": "email",
+      "received_at": "2027-02-22T07:02:00-07:00",
+      "path": "em-0001.eml",
+      "title": "Reminder: Friday status note due Friday 26 February"
+    },
+    {
+      "id": "em-0002",
+      "channel": "email",
+      "received_at": "2027-02-22T07:16:00-07:00",
+      "path": "em-0002.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0003",
+      "channel": "email",
+      "received_at": "2027-02-22T07:20:00-07:00",
+      "path": "em-0003.eml",
+      "title": "[INC-71022] Ticket updated"
+    },
+    {
+      "id": "em-0004",
+      "channel": "email",
+      "received_at": "2027-02-22T07:44:00-07:00",
+      "path": "em-0004.eml",
+      "title": "Re: Mistral solution brief"
+    },
+    {
+      "id": "nt-0001",
+      "channel": "note",
+      "received_at": "2027-02-22T08:05:00-07:00",
+      "path": "nt-0001.md",
+      "title": "Portfolio map"
+    },
+    {
+      "id": "ch-0001",
+      "channel": "chat",
+      "received_at": "2027-02-22T08:26:00-07:00",
+      "path": "ch-0001.json",
+      "title": "DM: Nomvula Moreira / Dina Zimmermann"
+    },
+    {
+      "id": "em-0005",
+      "channel": "email",
+      "received_at": "2027-02-22T08:39:00-07:00",
+      "path": "em-0005.eml",
+      "title": "Re: Mistral solution brief"
+    },
+    {
+      "id": "em-0006",
+      "channel": "email",
+      "received_at": "2027-02-22T09:08:00-07:00",
+      "path": "em-0006.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "ch-0002",
+      "channel": "chat",
+      "received_at": "2027-02-22T09:19:00-07:00",
+      "path": "ch-0002.json",
+      "title": "DM: Dina Zimmermann / Nomvula Moreira"
+    },
+    {
+      "id": "ch-0003",
+      "channel": "chat",
+      "received_at": "2027-02-22T09:21:00-07:00",
+      "path": "ch-0003.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0007",
+      "channel": "email",
+      "received_at": "2027-02-22T09:48:00-07:00",
+      "path": "em-0007.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "mt-0001",
+      "channel": "transcript",
+      "received_at": "2027-02-22T09:55:00-07:00",
+      "path": "mt-0001.vtt",
+      "title": "Mistral standup (transcript)"
+    },
+    {
+      "id": "em-0008",
+      "channel": "email",
+      "received_at": "2027-02-22T11:51:00-07:00",
+      "path": "em-0008.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "em-0009",
+      "channel": "email",
+      "received_at": "2027-02-22T13:04:00-07:00",
+      "path": "em-0009.eml",
+      "title": "All-staff: building access changes"
+    },
+    {
+      "id": "em-0010",
+      "channel": "email",
+      "received_at": "2027-02-22T13:43:00-07:00",
+      "path": "em-0010.eml",
+      "title": "Re: Mistral API contract v1"
+    },
+    {
+      "id": "em-0011",
+      "channel": "email",
+      "received_at": "2027-02-22T17:33:00-07:00",
+      "path": "em-0011.eml",
+      "title": "Wellness credit deadline"
+    },
+    {
+      "id": "nt-0002",
+      "channel": "note",
+      "received_at": "2027-02-22T17:39:00-07:00",
+      "path": "nt-0002.md",
+      "title": "Mon notes"
+    },
+    {
+      "id": "ca-0001",
+      "channel": "calendar",
+      "received_at": "2027-02-22T18:14:00-07:00",
+      "path": "ca-0001.ics",
+      "title": "Invite: Working session: Fennel tenant onboarding guide"
+    },
+    {
+      "id": "em-0012",
+      "channel": "email",
+      "received_at": "2027-02-22T18:34:00-07:00",
+      "path": "em-0012.eml",
+      "title": "Scheduled maintenance this weekend"
+    }
+  ]
+}

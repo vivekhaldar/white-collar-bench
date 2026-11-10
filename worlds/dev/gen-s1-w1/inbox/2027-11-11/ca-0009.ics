@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Holcrest//Calendar//EN
+METHOD:REPLY
+BEGIN:VEVENT
+UID:2c35fe5cd2ebb911@holcrest.example
+DTSTAMP:20271111T161700Z
+DTSTART:20271112T230000Z
+DTEND:20271112T233000Z
+SUMMARY:Accepted: Nantgate partnership follow-up
+ORGANIZER;CN=Sipho Sengupta:mailto:sipho.sengupta@birchcrest.holcrest.example
+ATTENDEE;CN=Camila Quimby;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED:mailto:camila.quimby@holcrest.example
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR

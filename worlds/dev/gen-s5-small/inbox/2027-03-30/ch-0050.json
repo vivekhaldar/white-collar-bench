@@ -1,0 +1,47 @@
+{
+ "workspace": "iselvale",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Anahit Upton",
+  "Lakshmi Zamora",
+  "Kwame Ortega",
+  "Friederike Malhotra"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-30T11:18:29-05:00",
+   "user": "Anahit Upton",
+   "handle": "@anahit",
+   "text": "there's leftover cake in the kitchen on 4",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@lakshmi",
+      "@kwame"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-30T11:21:43-05:00",
+   "user": "Lakshmi Zamora",
+   "handle": "@lakshmi",
+   "text": "on my way",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-30T11:23:31-05:00",
+   "user": "Kwame Ortega",
+   "handle": "@kwame",
+   "text": "what kind?"
+  },
+  {
+   "ts": "2027-03-30T11:26:00-05:00",
+   "user": "Friederike Malhotra",
+   "handle": "@friederike",
+   "text": "the lemon one is gone already"
+  }
+ ]
+}

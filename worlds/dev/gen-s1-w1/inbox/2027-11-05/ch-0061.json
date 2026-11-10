@@ -1,0 +1,35 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-petra",
+ "kind": "dm",
+ "participants": [
+  "Petra Korkmaz",
+  "Camila Quimby"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-05T15:45:31-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-11-05T15:46:06-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-11-05T15:46:43-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "Tarn is moving into user testing."
+  },
+  {
+   "ts": "2027-11-05T15:47:17-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "good to know"
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "workspace": "iselvale",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Jisoo Makinen",
+  "Aylin Venkataraman",
+  "Tahmina Lozano"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-30T17:14:58-05:00",
+   "user": "Jisoo Makinen",
+   "handle": "@jisoo",
+   "text": "lost a blue umbrella, might be in the big meeting room",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@aylin",
+      "@tahmina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-30T17:19:17-05:00",
+   "user": "Aylin Venkataraman",
+   "handle": "@aylin",
+   "text": "will keep an eye out :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-30T17:23:37-05:00",
+   "user": "Tahmina Lozano",
+   "handle": "@tahmina",
+   "text": "there's one at reception"
+  }
+ ]
+}

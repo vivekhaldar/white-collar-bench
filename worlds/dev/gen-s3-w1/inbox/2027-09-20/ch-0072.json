@@ -1,0 +1,43 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-penelope",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Penny"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-20T12:43:47-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-20T12:47:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "i'll walk you through the sirocco requirements matrix by thursday 23 september",
+   "edited": true,
+   "original": "i'll walk you through the sirocco requirements matrix by wednesday 22 september"
+  },
+  {
+   "ts": "2027-09-20T12:47:15-05:00",
+   "user": "Penny",
+   "handle": "@penelope",
+   "text": "appreciate it"
+  },
+  {
+   "ts": "2027-09-20T12:48:10-05:00",
+   "user": "Penny",
+   "handle": "@penelope",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-09-20T12:49:50-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "anytime"
+  }
+ ]
+}

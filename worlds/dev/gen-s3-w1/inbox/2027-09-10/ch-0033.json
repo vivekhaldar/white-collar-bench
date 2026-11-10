@@ -1,0 +1,37 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-shira",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Shira Colombo"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-10T09:17:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "done, i sent you my phone screen notes on matthias",
+   "edited": true,
+   "original": "done, i sent you my phoen screen notes on matthias"
+  },
+  {
+   "ts": "2027-09-10T09:17:25-05:00",
+   "user": "Shira Colombo",
+   "handle": "@shira",
+   "text": "great, thanks"
+  },
+  {
+   "ts": "2027-09-10T09:20:05-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-09-10T09:20:49-05:00",
+   "user": "Shira Colombo",
+   "handle": "@shira",
+   "text": "anytime"
+  }
+ ]
+}

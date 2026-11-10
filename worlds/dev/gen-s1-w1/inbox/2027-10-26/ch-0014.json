@@ -1,0 +1,52 @@
+{
+ "workspace": "holcrest",
+ "channel": "#obsidian-core",
+ "kind": "channel",
+ "participants": [
+  "Yasmin Mokoena",
+  "Camila Quimby",
+  "Jalen Hendriks",
+  "Petra Korkmaz",
+  "Sipho Sengupta",
+  "Dina Winslow",
+  "Thandiwe Bonnet"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-26T12:34:00-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "Decision: route all Obsidian tenants through one model gateway.",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@camila",
+      "@jalen"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-10-26T12:34:53-07:00",
+   "user": "Sipho Sengupta",
+   "handle": "@sipho",
+   "text": "sounds good",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-10-26T12:44:26-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-10-26T12:48:06-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

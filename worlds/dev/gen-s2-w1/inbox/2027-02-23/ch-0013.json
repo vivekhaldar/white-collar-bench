@@ -1,0 +1,35 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-imani",
+ "kind": "dm",
+ "participants": [
+  "Dina Zimmermann",
+  "Imani"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-23T15:16:00-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "i wrote a reference note for your inspection scheduling fellowship application earlier today"
+  },
+  {
+   "ts": "2027-02-23T15:17:22-07:00",
+   "user": "Imani",
+   "handle": "@imani",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-02-23T15:19:25-07:00",
+   "user": "Imani",
+   "handle": "@imani",
+   "text": "sorry, was in back-to-backs"
+  },
+  {
+   "ts": "2027-02-23T15:21:18-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "no worries"
+  }
+ ]
+}

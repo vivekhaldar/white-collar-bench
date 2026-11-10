@@ -1,0 +1,40 @@
+{
+  "date": "2027-09-04",
+  "artifacts": [
+    {
+      "id": "em-0089",
+      "channel": "email",
+      "received_at": "2027-09-04T10:23:00-08:00",
+      "path": "em-0089.eml",
+      "title": "[REQ-27072] Request resolved"
+    },
+    {
+      "id": "em-0090",
+      "channel": "email",
+      "received_at": "2027-09-04T12:07:00-08:00",
+      "path": "em-0090.eml",
+      "title": "[REQ-26515] Request resolved"
+    },
+    {
+      "id": "em-0091",
+      "channel": "email",
+      "received_at": "2027-09-04T12:21:00-08:00",
+      "path": "em-0091.eml",
+      "title": "Fwd: Fjord support playbook"
+    },
+    {
+      "id": "em-0092",
+      "channel": "email",
+      "received_at": "2027-09-04T17:28:00-08:00",
+      "path": "em-0092.eml",
+      "title": "To Nomvula for the course assistant work"
+    },
+    {
+      "id": "ch-0067",
+      "channel": "chat",
+      "received_at": "2027-09-04T17:57:00-08:00",
+      "path": "ch-0067.json",
+      "title": "#fjord-core"
+    }
+  ]
+}

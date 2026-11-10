@@ -1,0 +1,35 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-esperanza-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Ottavio Monteiro",
+  "Espe"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-30T18:04:00-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "i sent you the fjord lessons-learned note"
+  },
+  {
+   "ts": "2027-08-30T18:04:05-08:00",
+   "user": "Espe",
+   "handle": "@esperanza",
+   "text": "great, thanks"
+  },
+  {
+   "ts": "2027-08-30T18:08:31-08:00",
+   "user": "Espe",
+   "handle": "@esperanza",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-08-30T18:11:05-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

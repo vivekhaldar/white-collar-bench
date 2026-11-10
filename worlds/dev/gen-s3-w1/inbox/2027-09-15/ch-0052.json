@@ -1,0 +1,23 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-lindiwe",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Lindiwe Ahmadi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-15T10:56:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "nikolai and i will introduce you to bisi for the talwick working group"
+  },
+  {
+   "ts": "2027-09-15T10:56:23-05:00",
+   "user": "Lindiwe Ahmadi",
+   "handle": "@lindiwe",
+   "text": "appreciate it"
+  }
+ ]
+}

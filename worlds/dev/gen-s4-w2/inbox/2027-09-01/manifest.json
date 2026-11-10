@@ -1,0 +1,145 @@
+{
+  "date": "2027-09-01",
+  "artifacts": [
+    {
+      "id": "ch-0048",
+      "channel": "chat",
+      "received_at": "2027-09-01T09:26:00-08:00",
+      "path": "ch-0048.json",
+      "title": "#course-assistant-discovery-core"
+    },
+    {
+      "id": "mn-0006",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-01T09:55:00-08:00",
+      "path": "mn-0006.md",
+      "title": "Recap: Fjord standup"
+    },
+    {
+      "id": "mn-0007",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-01T10:00:00-08:00",
+      "path": "mn-0007.md",
+      "title": "Recap: Fjord scoping call"
+    },
+    {
+      "id": "ch-0049",
+      "channel": "chat",
+      "received_at": "2027-09-01T10:15:00-08:00",
+      "path": "ch-0049.json",
+      "title": "#fjord-core"
+    },
+    {
+      "id": "em-0061",
+      "channel": "email",
+      "received_at": "2027-09-01T10:15:00-08:00",
+      "path": "em-0061.eml",
+      "title": "Fjord metrics definition after Bruna's comments"
+    },
+    {
+      "id": "ch-0050",
+      "channel": "chat",
+      "received_at": "2027-09-01T10:51:00-08:00",
+      "path": "ch-0050.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ch-0051",
+      "channel": "chat",
+      "received_at": "2027-09-01T11:04:00-08:00",
+      "path": "ch-0051.json",
+      "title": "DM: Ratna Bondarenko / Ottavio Monteiro"
+    },
+    {
+      "id": "em-0062",
+      "channel": "email",
+      "received_at": "2027-09-01T11:19:00-08:00",
+      "path": "em-0062.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0063",
+      "channel": "email",
+      "received_at": "2027-09-01T12:40:00-08:00",
+      "path": "em-0063.eml",
+      "title": "[REQ-31550] Request resolved"
+    },
+    {
+      "id": "em-0064",
+      "channel": "email",
+      "received_at": "2027-09-01T12:42:00-08:00",
+      "path": "em-0064.eml",
+      "title": "[INC-69808] Ticket updated"
+    },
+    {
+      "id": "em-0065",
+      "channel": "email",
+      "received_at": "2027-09-01T12:42:00-08:00",
+      "path": "em-0065.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0052",
+      "channel": "chat",
+      "received_at": "2027-09-01T14:25:00-08:00",
+      "path": "ch-0052.json",
+      "title": "DM: Ottavio Monteiro / Ratna Bondarenko"
+    },
+    {
+      "id": "em-0066",
+      "channel": "email",
+      "received_at": "2027-09-01T14:37:00-08:00",
+      "path": "em-0066.eml",
+      "title": "[INC-82548] Ticket updated"
+    },
+    {
+      "id": "em-0067",
+      "channel": "email",
+      "received_at": "2027-09-01T16:24:00-08:00",
+      "path": "em-0067.eml",
+      "title": "The Quad Ledger: issue 35"
+    },
+    {
+      "id": "em-0068",
+      "channel": "email",
+      "received_at": "2027-09-01T16:37:00-08:00",
+      "path": "em-0068.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "em-0069",
+      "channel": "email",
+      "received_at": "2027-09-01T17:02:00-08:00",
+      "path": "em-0069.eml",
+      "title": "[INC-72479] Ticket updated"
+    },
+    {
+      "id": "ch-0053",
+      "channel": "chat",
+      "received_at": "2027-09-01T17:51:00-08:00",
+      "path": "ch-0053.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0054",
+      "channel": "chat",
+      "received_at": "2027-09-01T17:58:00-08:00",
+      "path": "ch-0054.json",
+      "title": "DM: Ottavio Monteiro / Nomvula Ndlovu"
+    },
+    {
+      "id": "ch-0055",
+      "channel": "chat",
+      "received_at": "2027-09-01T18:01:00-08:00",
+      "path": "ch-0055.json",
+      "title": "#random"
+    },
+    {
+      "id": "nt-0005",
+      "channel": "note",
+      "received_at": "2027-09-01T19:37:00-08:00",
+      "path": "nt-0005.md",
+      "title": "Wed voice memo"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-petra",
+ "kind": "dm",
+ "participants": [
+  "Camila Quimby",
+  "Petra Korkmaz"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-02T16:53:28-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-11-02T16:54:00-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "I confirmed the notice translation discovery findings summary with you earlier today.",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@petra"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-02T16:55:19-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "perfect"
+  }
+ ]
+}

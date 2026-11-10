@@ -1,0 +1,146 @@
+{
+  "date": "2027-09-16",
+  "artifacts": [
+    {
+      "id": "em-0177",
+      "channel": "email",
+      "received_at": "2027-09-16T06:38:00-08:00",
+      "path": "em-0177.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0125",
+      "channel": "chat",
+      "received_at": "2027-09-16T07:38:00-08:00",
+      "path": "ch-0125.json",
+      "title": "#fjord-core (catch-up)"
+    },
+    {
+      "id": "mt-0016",
+      "channel": "transcript",
+      "received_at": "2027-09-16T07:39:00-08:00",
+      "path": "mt-0016.vtt",
+      "title": "Cairn sync (transcript)"
+    },
+    {
+      "id": "em-0178",
+      "channel": "email",
+      "received_at": "2027-09-16T07:40:00-08:00",
+      "path": "em-0178.eml",
+      "title": "While you were out: room booking selection"
+    },
+    {
+      "id": "em-0179",
+      "channel": "email",
+      "received_at": "2027-09-16T08:25:00-08:00",
+      "path": "em-0179.eml",
+      "title": "Fjord status slide"
+    },
+    {
+      "id": "em-0180",
+      "channel": "email",
+      "received_at": "2027-09-16T09:03:00-08:00",
+      "path": "em-0180.eml",
+      "title": "Re: Fjord dependency list"
+    },
+    {
+      "id": "em-0181",
+      "channel": "email",
+      "received_at": "2027-09-16T09:34:00-08:00",
+      "path": "em-0181.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "mn-0017",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-16T09:55:00-08:00",
+      "path": "mn-0017.md",
+      "title": "Recap: Fjord standup"
+    },
+    {
+      "id": "ch-0126",
+      "channel": "chat",
+      "received_at": "2027-09-16T11:45:00-08:00",
+      "path": "ch-0126.json",
+      "title": "#fjord-core"
+    },
+    {
+      "id": "ch-0127",
+      "channel": "chat",
+      "received_at": "2027-09-16T12:00:00-08:00",
+      "path": "ch-0127.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0182",
+      "channel": "email",
+      "received_at": "2027-09-16T12:09:00-08:00",
+      "path": "em-0182.eml",
+      "title": "[REQ-36238] Request resolved"
+    },
+    {
+      "id": "ch-0128",
+      "channel": "chat",
+      "received_at": "2027-09-16T13:10:00-08:00",
+      "path": "ch-0128.json",
+      "title": "DM: Ottavio Monteiro / Meera Ivanova"
+    },
+    {
+      "id": "em-0183",
+      "channel": "email",
+      "received_at": "2027-09-16T14:06:00-08:00",
+      "path": "em-0183.eml",
+      "title": "[REQ-31138] Request resolved"
+    },
+    {
+      "id": "em-0184",
+      "channel": "email",
+      "received_at": "2027-09-16T14:22:00-08:00",
+      "path": "em-0184.eml",
+      "title": "[INC-43117] Ticket updated"
+    },
+    {
+      "id": "em-0185",
+      "channel": "email",
+      "received_at": "2027-09-16T15:37:00-08:00",
+      "path": "em-0185.eml",
+      "title": "Re: Cairn: numbers"
+    },
+    {
+      "id": "ch-0129",
+      "channel": "chat",
+      "received_at": "2027-09-16T17:36:00-08:00",
+      "path": "ch-0129.json",
+      "title": "DM: Siobhan Munro / Ottavio Monteiro"
+    },
+    {
+      "id": "dc-0006",
+      "channel": "document",
+      "received_at": "2027-09-16T17:49:00-08:00",
+      "path": "dc-0006.docx",
+      "title": "Fjord action log v3",
+      "parent": "em-0186"
+    },
+    {
+      "id": "em-0186",
+      "channel": "email",
+      "received_at": "2027-09-16T17:49:00-08:00",
+      "path": "em-0186.eml",
+      "title": "Fjord action log"
+    },
+    {
+      "id": "em-0187",
+      "channel": "email",
+      "received_at": "2027-09-16T18:05:00-08:00",
+      "path": "em-0187.eml",
+      "title": "[REQ-29695] Request resolved"
+    },
+    {
+      "id": "nt-0013",
+      "channel": "note",
+      "received_at": "2027-09-16T18:14:00-08:00",
+      "path": "nt-0013.md",
+      "title": "Thu notes"
+    }
+  ]
+}

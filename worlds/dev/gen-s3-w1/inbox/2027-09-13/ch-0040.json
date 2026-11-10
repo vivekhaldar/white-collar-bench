@@ -1,0 +1,40 @@
+{
+ "workspace": "birchmere",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Kwame Hoffmann",
+  "Nurlan Moreira",
+  "Dina Mancini",
+  "Deniz Zhou"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-13T09:03:59-05:00",
+   "user": "Kwame Hoffmann",
+   "handle": "@kwame",
+   "text": "good morning all :)",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@nurlan",
+      "@dina"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-13T09:05:23-05:00",
+   "user": "Nurlan Moreira",
+   "handle": "@nurlan",
+   "text": "morning!"
+  },
+  {
+   "ts": "2027-09-13T09:08:56-05:00",
+   "user": "Dina Mancini",
+   "handle": "@dina",
+   "text": "morning"
+  }
+ ]
+}

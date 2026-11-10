@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Vercliff//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:45e3cd0083bf213d@vercliff.example
+DTSTAMP:20270301T145500Z
+DTSTART:20270303T213000Z
+DTEND:20270303T223000Z
+SUMMARY:Funding model options review
+ORGANIZER;CN=Imani Chaiyaporn:mailto:imani.chaiyaporn@vercliff.example
+ATTENDEE;CN=Dina Zimmermann;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.zimmermann@vercliff.example
+ATTENDEE;CN=Yael Yardley;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:yael.yardley@nordale.vercliff.example
+ATTENDEE;CN=Rudo Alexiou;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:rudo.alexiou@nordale.vercliff.example
+SEQUENCE:0
+DESCRIPTION:Quick sync\, 30 minutes.\nJoin video meeting: https://meet.vercliff.example/j/8344779077?pwd=NjyxTXya\nPasscode: 995415
+LOCATION:https://meet.vercliff.example/j/8344779077?pwd=NjyxTXya
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,41 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-yasmin",
+ "kind": "dm",
+ "participants": [
+  "Yasmin Mokoena",
+  "Camila Quimby"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-01T13:36:26-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-11-01T13:37:10-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "From the sync earlier, Thandi will configure the Obsidian SSO broker for Birchcrest."
+  },
+  {
+   "ts": "2027-11-01T13:38:30-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "perfect, thanks"
+  },
+  {
+   "ts": "2027-11-01T13:39:40-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-11-01T13:40:08-07:00",
+   "user": "Yasmin Mokoena",
+   "handle": "@yasmin",
+   "text": "only the first half"
+  }
+ ]
+}

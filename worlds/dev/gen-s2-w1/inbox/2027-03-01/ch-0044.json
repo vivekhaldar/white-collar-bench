@@ -1,0 +1,32 @@
+{
+ "workspace": "vercliff",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Mei Obi",
+  "Bogdan Byrne",
+  "Imani Chaiyaporn",
+  "Kayode Papadopoulos"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-01T17:23:43-07:00",
+   "user": "Mei Obi",
+   "handle": "@mei",
+   "text": "the elevator on the east side is out again :)"
+  },
+  {
+   "ts": "2027-03-01T17:26:23-07:00",
+   "user": "Bogdan Byrne",
+   "handle": "@bogdan",
+   "text": "stairs it is",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-01T17:29:05-07:00",
+   "user": "Imani Chaiyaporn",
+   "handle": "@imani",
+   "text": "classic"
+  }
+ ]
+}

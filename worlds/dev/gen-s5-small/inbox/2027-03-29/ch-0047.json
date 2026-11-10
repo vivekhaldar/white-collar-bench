@@ -1,0 +1,29 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-anahit-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Xu",
+  "Anahit Upton"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-29T16:00:08-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-03-29T16:01:13-05:00",
+   "user": "Anahit Upton",
+   "handle": "@anahit",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-03-29T16:02:00-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "I sent you the clinical documentation discovery pain-point list earlier today."
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-darius-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Darius Sherwood",
+  "Ottavio Monteiro"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T15:13:48-08:00",
+   "user": "Darius Sherwood",
+   "handle": "@darius",
+   "text": "catching people up since a few of us are out today :)"
+  },
+  {
+   "ts": "2027-09-08T15:14:34-08:00",
+   "user": "Darius Sherwood",
+   "handle": "@darius",
+   "text": "Heads up: Ratna will deliver the Fjord integration endpoint by Wednesday 22 September. :)",
+   "edited": true,
+   "original": "Heads up: Ratna will deliver the Fjord integration endpoint by Friday 24 September. :)",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@ottavio"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-08T15:15:12-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "appreciate it"
+  },
+  {
+   "ts": "2027-09-08T15:15:45-08:00",
+   "user": "Darius Sherwood",
+   "handle": "@darius",
+   "text": "Looks like Ratna booked faculty onboarding sessions for Fjord! :)"
+  },
+  {
+   "ts": "2027-09-08T15:16:58-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-09-08T15:17:28-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-09-08T15:19:58-08:00",
+   "user": "Darius Sherwood",
+   "handle": "@darius",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

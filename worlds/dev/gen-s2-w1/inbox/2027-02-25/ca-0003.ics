@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Vercliff//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:3532b045ae5f007b@vercliff.example
+DTSTAMP:20270225T195000Z
+DTSTART:20270303T160000Z
+DTEND:20270303T170000Z
+SUMMARY:Catch-up: Dina / Siti
+ORGANIZER;CN=Siti Ibarra:mailto:siti.ibarra@marmara.example
+ATTENDEE;CN=Dina Zimmermann;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.zimmermann@vercliff.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.vercliff.example/j/5291626245?pwd=RBjPtVHh\nPasscode: 868086
+LOCATION:https://meet.vercliff.example/j/5291626245?pwd=RBjPtVHh
+END:VEVENT
+END:VCALENDAR

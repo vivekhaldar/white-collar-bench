@@ -1,0 +1,23 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-bilal-dina",
+ "kind": "dm",
+ "participants": [
+  "Dina Zimmermann",
+  "Bilal Blackwood"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-25T15:21:00-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "I joined your panel on benefits screening earlier today."
+  },
+  {
+   "ts": "2027-02-25T15:21:17-07:00",
+   "user": "Bilal Blackwood",
+   "handle": "@bilal",
+   "text": "thanks!"
+  }
+ ]
+}

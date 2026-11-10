@@ -1,0 +1,124 @@
+{
+  "date": "2027-10-28",
+  "artifacts": [
+    {
+      "id": "em-0024",
+      "channel": "email",
+      "received_at": "2027-10-28T07:09:00-07:00",
+      "path": "em-0024.eml",
+      "title": "[INC-73670] Ticket updated"
+    },
+    {
+      "id": "em-0025",
+      "channel": "email",
+      "received_at": "2027-10-28T07:45:00-07:00",
+      "path": "em-0025.eml",
+      "title": "FYI: Marten data-flow diagram"
+    },
+    {
+      "id": "nt-0002",
+      "channel": "note",
+      "received_at": "2027-10-28T09:55:00-07:00",
+      "path": "nt-0002.md",
+      "title": "Voice debrief: Marten standup"
+    },
+    {
+      "id": "em-0026",
+      "channel": "email",
+      "received_at": "2027-10-28T10:51:00-07:00",
+      "path": "em-0026.eml",
+      "title": "Civic Tech Bulletin: issue 43"
+    },
+    {
+      "id": "ch-0022",
+      "channel": "chat",
+      "received_at": "2027-10-28T11:24:00-07:00",
+      "path": "ch-0022.json",
+      "title": "DM: Yasmin Mokoena / Camila Quimby"
+    },
+    {
+      "id": "em-0027",
+      "channel": "email",
+      "received_at": "2027-10-28T11:58:00-07:00",
+      "path": "em-0027.eml",
+      "title": "[INC-82076] Ticket updated"
+    },
+    {
+      "id": "em-0028",
+      "channel": "email",
+      "received_at": "2027-10-28T12:19:00-07:00",
+      "path": "em-0028.eml",
+      "title": "FYI: Marten data-flow diagram"
+    },
+    {
+      "id": "mn-0004",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-28T12:30:00-07:00",
+      "path": "mn-0004.md",
+      "title": "Recap: Catch-up: Camila / Sipho"
+    },
+    {
+      "id": "ca-0002",
+      "channel": "calendar",
+      "received_at": "2027-10-28T12:38:00-07:00",
+      "path": "ca-0002.ics",
+      "title": "Invite: Marten security review"
+    },
+    {
+      "id": "ch-0023",
+      "channel": "chat",
+      "received_at": "2027-10-28T14:01:00-07:00",
+      "path": "ch-0023.json",
+      "title": "DM: Aarav Ortega / Camila Quimby"
+    },
+    {
+      "id": "em-0029",
+      "channel": "email",
+      "received_at": "2027-10-28T14:21:00-07:00",
+      "path": "em-0029.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "mt-0003",
+      "channel": "transcript",
+      "received_at": "2027-10-28T14:30:00-07:00",
+      "path": "mt-0003.vtt",
+      "title": "Obsidian / Marten sync (transcript)"
+    },
+    {
+      "id": "em-0030",
+      "channel": "email",
+      "received_at": "2027-10-28T15:47:00-07:00",
+      "path": "em-0030.eml",
+      "title": "Re: Marten security review package"
+    },
+    {
+      "id": "ch-0024",
+      "channel": "chat",
+      "received_at": "2027-10-28T16:12:00-07:00",
+      "path": "ch-0024.json",
+      "title": "DM: Fernanda Olawale / Camila Quimby"
+    },
+    {
+      "id": "ch-0025",
+      "channel": "chat",
+      "received_at": "2027-10-28T16:38:00-07:00",
+      "path": "ch-0025.json",
+      "title": "#marten-core"
+    },
+    {
+      "id": "ch-0026",
+      "channel": "chat",
+      "received_at": "2027-10-28T17:19:00-07:00",
+      "path": "ch-0026.json",
+      "title": "DM: Camila Quimby / Yasmin Mokoena"
+    },
+    {
+      "id": "ch-0027",
+      "channel": "chat",
+      "received_at": "2027-10-28T17:51:00-07:00",
+      "path": "ch-0027.json",
+      "title": "DM: Yasmin Mokoena / Camila Quimby"
+    }
+  ]
+}

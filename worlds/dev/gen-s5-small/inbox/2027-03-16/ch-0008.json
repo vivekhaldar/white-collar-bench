@@ -1,0 +1,48 @@
+{
+ "workspace": "iselvale",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Maricel Herrera",
+  "Friederike Malhotra",
+  "Aylin Venkataraman",
+  "Anahit Upton"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-16T14:27:43-05:00",
+   "user": "Maricel Herrera",
+   "handle": "@maricel",
+   "text": "is the wifi on the second floor down for anyone else?",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@friederike",
+      "@aylin"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-16T14:31:16-05:00",
+   "user": "Friederike Malhotra",
+   "handle": "@friederike",
+   "text": "yep, same here",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-16T14:36:40-05:00",
+   "user": "Aylin Venkataraman",
+   "handle": "@aylin",
+   "text": "works for me",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-16T14:39:20-05:00",
+   "user": "Anahit Upton",
+   "handle": "@anahit",
+   "text": "it's been flaky all morning"
+  }
+ ]
+}

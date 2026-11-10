@@ -1,0 +1,2246 @@
+plan_version: 1
+world_id: gen-s3-w1
+generator:
+  kind: wcb-gen
+  version: 1
+  seed: 3
+  size: standard
+  weeks: 1
+setting:
+  key: health
+  label: regional health network
+  timezone: -05:00
+  vocab:
+    sites: wards
+    site: ward
+    users: nurses
+    end_users: patients
+    council: Clinical Operations Council
+    data: patient data
+    agreement: data-use agreement
+    platform: shared AI platform
+    unit_word: hospital
+  nouns:
+  - risk register
+  - rollout checklist
+  - test plan
+  - decision memo
+  - status slide
+  - comms plan
+  - training outline
+  - budget justification
+  - vendor comparison
+  - architecture diagram
+  - integration spec
+  - access request
+  - pilot charter
+  - evaluation rubric
+  - data dictionary
+  - stakeholder map
+  - dependency list
+  - requirements matrix
+  - lessons-learned note
+  - timeline
+  - RACI chart
+  - cutover plan
+  - acceptance criteria
+  - metrics definition
+  - service blueprint
+  - support model
+  - retention schedule
+  - change request
+  - accessibility review
+  - help-desk script
+  - bed census extract
+  - order set review
+  - downtime procedure
+  - clinical safety case
+  umbrella: o-birchmere-health-partners
+  central: o-clinical-digital-services
+  video_domain: meet.birchmere.example
+  chat_workspace: birchmere
+  volume:
+  - 15
+  - 20
+  loops_per_day: 5.8
+calendar:
+  start: '2027-09-20'
+  seed:
+    start: '2027-09-06'
+    end: '2027-09-17'
+    days:
+    - '2027-09-06'
+    - '2027-09-07'
+    - '2027-09-08'
+    - '2027-09-09'
+    - '2027-09-10'
+    - '2027-09-13'
+    - '2027-09-14'
+    - '2027-09-15'
+    - '2027-09-16'
+    - '2027-09-17'
+  episode:
+    days:
+    - '2027-09-20'
+    - '2027-09-21'
+    - '2027-09-22'
+    - '2027-09-23'
+    - '2027-09-24'
+    - '2027-09-25'
+    weeks:
+    - - '2027-09-20'
+      - '2027-09-21'
+      - '2027-09-22'
+      - '2027-09-23'
+      - '2027-09-24'
+      - '2027-09-25'
+  checkpoints:
+  - id: cp1
+    date: '2027-09-21'
+    label: end of Tuesday
+  - id: cp2
+    date: '2027-09-23'
+    label: end of Thursday
+  - id: cp3
+    date: '2027-09-25'
+    label: end of week
+worker: p-alasdair-kaya
+orgs:
+- id: o-birchmere-health-partners
+  name: Birchmere Health Partners
+  short: Birchmere
+  kind: internal
+  role: umbrella
+  domain: birchmere.example
+  slug: birchmere
+  surface_forms:
+  - Birchmere
+  - BHP
+  - birchmere.example
+  receptiveness: null
+- id: o-clinical-digital-services
+  name: Clinical Digital Services
+  short: CDS
+  kind: internal
+  role: central
+  domain: birchmere.example
+  slug: cds
+  surface_forms:
+  - CDS
+  - central
+  - the CDS team
+  - birchmere.example
+  receptiveness: null
+- id: o-ketford-general-hospital
+  name: Ketford General Hospital
+  short: Ketford
+  kind: internal
+  role: unit
+  domain: ketford.birchmere.example
+  slug: ketford
+  surface_forms:
+  - Ketford
+  - KGH
+  - ketford.birchmere.example
+  receptiveness: high
+- id: o-emberbury-rehabilitation-center
+  name: Emberbury Rehabilitation Center
+  short: Emberbury
+  kind: internal
+  role: unit
+  domain: emberbury.birchmere.example
+  slug: emberbury
+  surface_forms:
+  - Emberbury
+  - ERC
+  - emberbury.birchmere.example
+  receptiveness: medium
+- id: o-draywick-community-clinics
+  name: Draywick Community Clinics
+  short: Draywick
+  kind: internal
+  role: unit
+  domain: draywick.birchmere.example
+  slug: draywick
+  surface_forms:
+  - Draywick
+  - DCC
+  - draywick.birchmere.example
+  receptiveness: low
+- id: o-ostport-childrens-hospital
+  name: Ostport Children's Hospital
+  short: Ostport
+  kind: internal
+  role: unit
+  domain: ostport.birchmere.example
+  slug: ostport
+  surface_forms:
+  - Ostport
+  - OCH
+  - ostport.birchmere.example
+  receptiveness: low
+- id: o-lanmoor-medical-center
+  name: Lanmoor Medical Center
+  short: Lanmoor
+  kind: internal
+  role: unit
+  domain: lanmoor.birchmere.example
+  slug: lanmoor
+  surface_forms:
+  - Lanmoor
+  - LMC
+  - lanmoor.birchmere.example
+  receptiveness: medium
+- id: o-rosix-labs
+  name: Rosix Labs
+  short: Rosix
+  kind: vendor
+  role: vendor
+  domain: rosix.example
+  slug: rosix
+  surface_forms:
+  - Rosix
+  - rosix.example
+  receptiveness: null
+- id: o-kasis-health
+  name: Kasis Health
+  short: Kasis
+  kind: vendor
+  role: vendor
+  domain: kasis.example
+  slug: kasis
+  surface_forms:
+  - Kasis
+  - kasis.example
+  receptiveness: null
+- id: o-dalett-clinical
+  name: Dalett Clinical
+  short: Dalett
+  kind: vendor
+  role: vendor
+  domain: dalett.example
+  slug: dalett
+  surface_forms:
+  - Dalett
+  - dalett.example
+  receptiveness: null
+- id: o-talwick-nursing-research-collaborative
+  name: Talwick Nursing Research Collaborative
+  short: Talwick
+  kind: partner
+  role: partner
+  domain: talwick-research.example
+  slug: talwick
+  surface_forms:
+  - Talwick
+  - TNRC
+  - talwick-research.example
+  receptiveness: null
+people:
+- id: p-alasdair-kaya
+  name: Alasdair Kaya
+  first: Alasdair
+  last: Kaya
+  nickname: null
+  org: o-clinical-digital-services
+  role: Principal Architect, Clinical AI
+  role_phrase: null
+  email: alasdair.kaya@birchmere.example
+  handle: '@alasdair'
+  relationship: null
+  group: central
+  tier: core
+  weight: 0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Alasdair
+  - A. Kaya
+  - alasdair.kaya@birchmere.example
+  - '@alasdair'
+- id: p-tunde-kapanadze
+  name: Tunde Kapanadze
+  first: Tunde
+  last: Kapanadze
+  nickname: null
+  org: o-clinical-digital-services
+  role: Chief Digital Officer
+  role_phrase: the CDO
+  email: tunde.kapanadze@birchmere.example
+  handle: '@tunde'
+  relationship: manager
+  group: central
+  tier: core
+  weight: 2.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Tunde
+  - T. Kapanadze
+  - tunde.kapanadze@birchmere.example
+  - '@tunde'
+  - the CDO
+- id: p-bisi-chatterjee
+  name: Bisi Chatterjee
+  first: Bisi
+  last: Chatterjee
+  nickname: null
+  org: o-clinical-digital-services
+  role: Director of Digital Programs
+  role_phrase: our programs director
+  email: bisi.chatterjee@birchmere.example
+  handle: '@bisi'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 7.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Bisi
+  - B. Chatterjee
+  - bisi.chatterjee@birchmere.example
+  - '@bisi'
+  - our programs director
+- id: p-dina-mancini
+  name: Dina Mancini
+  first: Dina
+  last: Mancini
+  nickname: null
+  org: o-clinical-digital-services
+  role: Principal, Integration Platform
+  role_phrase: the platform lead
+  email: dina.mancini@birchmere.example
+  handle: '@dina'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 3.2
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Dina
+  - D. Mancini
+  - dina.mancini@birchmere.example
+  - '@dina'
+  - the platform lead
+- id: p-nurlan-moreira
+  name: Nurlan Moreira
+  first: Nurlan
+  last: Moreira
+  nickname: null
+  org: o-clinical-digital-services
+  role: Integration Engineer
+  role_phrase: the integration engineer
+  email: nurlan.moreira@birchmere.example
+  handle: '@nurlan'
+  relationship: stakeholder
+  group: central
+  tier: core
+  weight: 1.2
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Nurlan
+  - N. Moreira
+  - nurlan.moreira@birchmere.example
+  - '@nurlan'
+  - the integration engineer
+- id: p-penelope-lehmann
+  name: Penelope Lehmann
+  first: Penelope
+  last: Lehmann
+  nickname: Penny
+  org: o-clinical-digital-services
+  role: Principal, Information Security
+  role_phrase: the security principal
+  email: penelope.lehmann@birchmere.example
+  handle: '@penelope'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 2.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Penelope
+  - Penny
+  - P. Lehmann
+  - penelope.lehmann@birchmere.example
+  - '@penelope'
+  - the security principal
+- id: p-giorgi-ngo
+  name: Giorgi Ngo
+  first: Giorgi
+  last: Ngo
+  nickname: null
+  org: o-clinical-digital-services
+  role: Product Lead, Clinical Apps
+  role_phrase: the product lead
+  email: giorgi.ngo@birchmere.example
+  handle: '@giorgi'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 1.2
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Giorgi
+  - G. Ngo
+  - giorgi.ngo@birchmere.example
+  - '@giorgi'
+  - the product lead
+- id: p-adebayo-kealoha
+  name: Adebayo Kealoha
+  first: Adebayo
+  last: Kealoha
+  nickname: Bayo
+  org: o-clinical-digital-services
+  role: Executive Assistant to the CDO
+  role_phrase: the CDO's EA
+  email: adebayo.kealoha@birchmere.example
+  handle: '@adebayo'
+  relationship: assistant
+  group: central
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Adebayo
+  - Bayo
+  - A. Kealoha
+  - adebayo.kealoha@birchmere.example
+  - '@adebayo'
+  - the CDO's EA
+- id: p-katrin-watanabe
+  name: Katrin Watanabe
+  first: Katrin
+  last: Watanabe
+  nickname: null
+  org: o-clinical-digital-services
+  role: Clinical Data Analyst
+  role_phrase: our clinical analyst
+  email: katrin.watanabe@birchmere.example
+  handle: '@katrin'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - Katrin
+  - K. Watanabe
+  - katrin.watanabe@birchmere.example
+  - '@katrin'
+  - our clinical analyst
+- id: p-cds-shared-inbox
+  name: CDS Shared Inbox
+  first: CDS Team
+  last: Mailbox
+  nickname: null
+  org: o-clinical-digital-services
+  role: Shared team mailbox
+  role_phrase: the CDS inbox
+  email: cds-team@birchmere.example
+  handle: '@cds-team'
+  relationship: other
+  group: mailbox
+  tier: core
+  weight: 0.3
+  appears: null
+  voice: formal
+  surface_forms:
+  - CDS Team
+  - the CDS inbox
+  - cds-team@birchmere.example
+- id: p-eun-ji-baek
+  name: Eun-ji Baek
+  first: Eun-ji
+  last: Baek
+  nickname: null
+  org: o-birchmere-health-partners
+  role: Supply Chain Contracts Manager
+  role_phrase: the contracts manager
+  email: eunji.baek@birchmere.example
+  handle: '@eunji'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: terse
+  surface_forms:
+  - Eun-ji
+  - E. Baek
+  - eunji.baek@birchmere.example
+  - '@eunji'
+  - the contracts manager
+- id: p-kwame-hoffmann
+  name: Kwame Hoffmann
+  first: Kwame
+  last: Hoffmann
+  nickname: null
+  org: o-birchmere-health-partners
+  role: Associate General Counsel
+  role_phrase: network counsel
+  email: kwame.hoffmann@birchmere.example
+  handle: '@kwame'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Kwame
+  - K. Hoffmann
+  - kwame.hoffmann@birchmere.example
+  - '@kwame'
+  - network counsel
+- id: p-deniz-zhou
+  name: Deniz Zhou
+  first: Deniz
+  last: Zhou
+  nickname: null
+  org: o-birchmere-health-partners
+  role: Director, Finance Shared Services
+  role_phrase: the finance director
+  email: deniz.zhou@birchmere.example
+  handle: '@deniz'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Deniz
+  - D. Zhou
+  - deniz.zhou@birchmere.example
+  - '@deniz'
+  - the finance director
+- id: p-shira-colombo
+  name: Shira Colombo
+  first: Shira
+  last: Colombo
+  nickname: null
+  org: o-birchmere-health-partners
+  role: Talent Acquisition Partner
+  role_phrase: our talent partner
+  email: shira.colombo@birchmere.example
+  handle: '@shira'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Shira
+  - S. Colombo
+  - shira.colombo@birchmere.example
+  - '@shira'
+  - our talent partner
+- id: p-ayesha-dempsey
+  name: Ayesha Dempsey
+  first: Ayesha
+  last: Dempsey
+  nickname: null
+  org: o-birchmere-health-partners
+  role: Network Privacy Officer
+  role_phrase: the privacy officer
+  email: ayesha.dempsey@birchmere.example
+  handle: '@ayesha'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Ayesha
+  - A. Dempsey
+  - ayesha.dempsey@birchmere.example
+  - '@ayesha'
+  - the privacy officer
+- id: p-victoria-nikolic
+  name: Victoria Nikolic
+  first: Victoria
+  last: Nikolic
+  nickname: Tori
+  org: o-ketford-general-hospital
+  role: Chief Medical Information Officer
+  role_phrase: Ketford's CMIO
+  email: victoria.nikolic@ketford.birchmere.example
+  handle: '@victoria'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Victoria
+  - Tori
+  - V. Nikolic
+  - victoria.nikolic@ketford.birchmere.example
+  - '@victoria'
+  - Ketford's CMIO
+- id: p-katarzyna-feng
+  name: Katarzyna Feng
+  first: Katarzyna
+  last: Feng
+  nickname: Kasia
+  org: o-ketford-general-hospital
+  role: Director of Pharmacy
+  role_phrase: the Ketford lead
+  email: katarzyna.feng@ketford.birchmere.example
+  handle: '@katarzyna'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 2.4
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Katarzyna
+  - Kasia
+  - K. Feng
+  - katarzyna.feng@ketford.birchmere.example
+  - '@katarzyna'
+  - the Ketford lead
+- id: p-eleni-laurent
+  name: Eleni Laurent
+  first: Eleni
+  last: Laurent
+  nickname: Lena
+  org: o-ketford-general-hospital
+  role: Revenue Cycle Analyst
+  role_phrase: null
+  email: eleni.laurent@ketford.birchmere.example
+  handle: '@eleni'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Eleni
+  - Lena
+  - E. Laurent
+  - eleni.laurent@ketford.birchmere.example
+  - '@eleni'
+- id: p-njeri-choi
+  name: Njeri Choi
+  first: Njeri
+  last: Choi
+  nickname: null
+  org: o-emberbury-rehabilitation-center
+  role: Chief Medical Information Officer
+  role_phrase: Emberbury's CMIO
+  email: njeri.choi@emberbury.birchmere.example
+  handle: '@njeri'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: terse
+  surface_forms:
+  - Njeri
+  - N. Choi
+  - njeri.choi@emberbury.birchmere.example
+  - '@njeri'
+  - Emberbury's CMIO
+- id: p-somchai-wickramasinghe
+  name: Somchai Wickramasinghe
+  first: Somchai
+  last: Wickramasinghe
+  nickname: null
+  org: o-emberbury-rehabilitation-center
+  role: Director of Patient Access
+  role_phrase: the Emberbury lead
+  email: somchai.wickramasinghe@emberbury.birchmere.example
+  handle: '@somchai'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: formal
+  surface_forms:
+  - Somchai
+  - S. Wickramasinghe
+  - somchai.wickramasinghe@emberbury.birchmere.example
+  - '@somchai'
+  - the Emberbury lead
+- id: p-catrin-kiprono
+  name: Catrin Kiprono
+  first: Catrin
+  last: Kiprono
+  nickname: null
+  org: o-emberbury-rehabilitation-center
+  role: Nurse Informaticist
+  role_phrase: null
+  email: catrin.kiprono@emberbury.birchmere.example
+  handle: '@catrin'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Catrin
+  - C. Kiprono
+  - catrin.kiprono@emberbury.birchmere.example
+  - '@catrin'
+- id: p-faris-sokolov
+  name: Faris Sokolov
+  first: Faris
+  last: Sokolov
+  nickname: null
+  org: o-draywick-community-clinics
+  role: Chief Medical Information Officer
+  role_phrase: Draywick's CMIO
+  email: faris.sokolov@draywick.birchmere.example
+  handle: '@faris'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: formal
+  surface_forms:
+  - Faris
+  - F. Sokolov
+  - faris.sokolov@draywick.birchmere.example
+  - '@faris'
+  - Draywick's CMIO
+- id: p-nikolai-carvalho
+  name: Nikolai Carvalho
+  first: Nikolai
+  last: Carvalho
+  nickname: Kolya
+  org: o-draywick-community-clinics
+  role: Operations Director
+  role_phrase: the Draywick lead
+  email: nikolai.carvalho@draywick.birchmere.example
+  handle: '@nikolai'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Nikolai
+  - Kolya
+  - N. Carvalho
+  - nikolai.carvalho@draywick.birchmere.example
+  - '@nikolai'
+  - the Draywick lead
+- id: p-minji-ozturk
+  name: Minji Ozturk
+  first: Minji
+  last: Ozturk
+  nickname: null
+  org: o-draywick-community-clinics
+  role: Charge Nurse
+  role_phrase: null
+  email: minji.ozturk@draywick.birchmere.example
+  handle: '@minji'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Minji
+  - M. Ozturk
+  - minji.ozturk@draywick.birchmere.example
+  - '@minji'
+- id: p-yuki-horomona
+  name: Yuki Horomona
+  first: Yuki
+  last: Horomona
+  nickname: null
+  org: o-ostport-childrens-hospital
+  role: Chief Medical Information Officer
+  role_phrase: Ostport's CMIO
+  email: yuki.horomona@ostport.birchmere.example
+  handle: '@yuki'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Yuki
+  - Y. Horomona
+  - yuki.horomona@ostport.birchmere.example
+  - '@yuki'
+  - Ostport's CMIO
+- id: p-stanley-chen
+  name: Stanley Chen
+  first: Stanley
+  last: Chen
+  nickname: null
+  org: o-ostport-childrens-hospital
+  role: Clinical Informatics Lead
+  role_phrase: the Ostport lead
+  email: stanley.chen@ostport.birchmere.example
+  handle: '@stanley'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: terse
+  surface_forms:
+  - Stanley
+  - S. Chen
+  - stanley.chen@ostport.birchmere.example
+  - '@stanley'
+  - the Ostport lead
+- id: p-francesca-rostami
+  name: Francesca Rostami
+  first: Francesca
+  last: Rostami
+  nickname: null
+  org: o-ostport-childrens-hospital
+  role: Service Desk Lead
+  role_phrase: null
+  email: francesca.rostami@ostport.birchmere.example
+  handle: '@francesca'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Francesca
+  - F. Rostami
+  - francesca.rostami@ostport.birchmere.example
+  - '@francesca'
+- id: p-rania-rattanakorn
+  name: Rania Rattanakorn
+  first: Rania
+  last: Rattanakorn
+  nickname: null
+  org: o-lanmoor-medical-center
+  role: Chief Medical Information Officer
+  role_phrase: Lanmoor's CMIO
+  email: rania.rattanakorn@lanmoor.birchmere.example
+  handle: '@rania'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: terse
+  surface_forms:
+  - Rania
+  - R. Rattanakorn
+  - rania.rattanakorn@lanmoor.birchmere.example
+  - '@rania'
+  - Lanmoor's CMIO
+- id: p-guadalupe-lombardi
+  name: Guadalupe Lombardi
+  first: Guadalupe
+  last: Lombardi
+  nickname: Lupe
+  org: o-lanmoor-medical-center
+  role: Chief Nursing Officer
+  role_phrase: the Lanmoor lead
+  email: guadalupe.lombardi@lanmoor.birchmere.example
+  handle: '@guadalupe'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: terse
+  surface_forms:
+  - Guadalupe
+  - Lupe
+  - G. Lombardi
+  - guadalupe.lombardi@lanmoor.birchmere.example
+  - '@guadalupe'
+  - the Lanmoor lead
+- id: p-vitoria-oduro
+  name: Vitoria Oduro
+  first: Vitoria
+  last: Oduro
+  nickname: null
+  org: o-lanmoor-medical-center
+  role: Revenue Cycle Analyst
+  role_phrase: null
+  email: vitoria.oduro@lanmoor.birchmere.example
+  handle: '@vitoria'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Vitoria
+  - V. Oduro
+  - vitoria.oduro@lanmoor.birchmere.example
+  - '@vitoria'
+- id: p-oluwaseun-friedman
+  name: Oluwaseun Friedman
+  first: Oluwaseun
+  last: Friedman
+  nickname: Seun
+  org: o-lanmoor-medical-center
+  role: Application Analyst
+  role_phrase: null
+  email: oluwaseun.friedman@lanmoor.birchmere.example
+  handle: '@oluwaseun'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Oluwaseun
+  - Seun
+  - O. Friedman
+  - oluwaseun.friedman@lanmoor.birchmere.example
+  - '@oluwaseun'
+- id: p-bisi-delacroix
+  name: Bisi Delacroix
+  first: Bisi
+  last: Delacroix
+  nickname: null
+  org: o-rosix-labs
+  role: Account Executive
+  role_phrase: null
+  email: bisi.delacroix@rosix.example
+  handle: '@bisid'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: terse
+  surface_forms:
+  - Bisi
+  - B. Delacroix
+  - bisi.delacroix@rosix.example
+  - '@bisid'
+- id: p-sigrid-ekwueme
+  name: Sigrid Ekwueme
+  first: Sigrid
+  last: Ekwueme
+  nickname: null
+  org: o-rosix-labs
+  role: Solutions Engineer
+  role_phrase: null
+  email: sigrid.ekwueme@rosix.example
+  handle: '@sigrid'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Sigrid
+  - S. Ekwueme
+  - sigrid.ekwueme@rosix.example
+  - '@sigrid'
+- id: p-dalisay-sandberg
+  name: Dalisay Sandberg
+  first: Dalisay
+  last: Sandberg
+  nickname: null
+  org: o-kasis-health
+  role: Account Executive
+  role_phrase: null
+  email: dalisay.sandberg@kasis.example
+  handle: '@dalisay'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: terse
+  surface_forms:
+  - Dalisay
+  - D. Sandberg
+  - dalisay.sandberg@kasis.example
+  - '@dalisay'
+- id: p-somchai-banerjee
+  name: Somchai Banerjee
+  first: Somchai
+  last: Banerjee
+  nickname: null
+  org: o-kasis-health
+  role: Solutions Engineer
+  role_phrase: null
+  email: somchai.banerjee@kasis.example
+  handle: '@somchaib'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Somchai
+  - S. Banerjee
+  - somchai.banerjee@kasis.example
+  - '@somchaib'
+- id: p-catalina-korkmaz
+  name: Catalina Korkmaz
+  first: Catalina
+  last: Korkmaz
+  nickname: null
+  org: o-dalett-clinical
+  role: Account Executive
+  role_phrase: null
+  email: catalina.korkmaz@dalett.example
+  handle: '@catalina'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Catalina
+  - C. Korkmaz
+  - catalina.korkmaz@dalett.example
+  - '@catalina'
+- id: p-friederike-haidari
+  name: Friederike Haidari
+  first: Friederike
+  last: Haidari
+  nickname: null
+  org: o-dalett-clinical
+  role: Solutions Engineer
+  role_phrase: null
+  email: friederike.haidari@dalett.example
+  handle: '@friederike'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Friederike
+  - F. Haidari
+  - friederike.haidari@dalett.example
+  - '@friederike'
+- id: p-lindiwe-ahmadi
+  name: Lindiwe Ahmadi
+  first: Lindiwe
+  last: Ahmadi
+  nickname: null
+  org: o-talwick-nursing-research-collaborative
+  role: Senior Research Scientist
+  role_phrase: null
+  email: lindiwe.ahmadi@talwick-research.example
+  handle: '@lindiwe'
+  relationship: partner
+  group: partner
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: formal
+  surface_forms:
+  - Lindiwe
+  - L. Ahmadi
+  - lindiwe.ahmadi@talwick-research.example
+  - '@lindiwe'
+- id: p-matthias-villanueva
+  name: Matthias Villanueva
+  first: Matthias
+  last: Villanueva
+  nickname: null
+  org: null
+  role: Candidate
+  role_phrase: null
+  email: matthias.villanueva@post.example
+  handle: '@matthias'
+  relationship: candidate
+  group: candidate
+  tier: core
+  weight: 0.6
+  appears: null
+  voice: formal
+  surface_forms:
+  - Matthias
+  - M. Villanueva
+  - matthias.villanueva@post.example
+  - '@matthias'
+- id: p-margaux-monteiro
+  name: Margaux Monteiro
+  first: Margaux
+  last: Monteiro
+  nickname: null
+  org: o-ketford-general-hospital
+  role: Privacy Officer
+  role_phrase: the new privacy officer
+  email: margaux.monteiro@ketford.birchmere.example
+  handle: '@margaux'
+  relationship: stakeholder
+  group: newcomer
+  tier: core
+  weight: 1.4
+  appears: '2027-09-22'
+  voice: lowercase
+  surface_forms:
+  - Margaux
+  - M. Monteiro
+  - margaux.monteiro@ketford.birchmere.example
+  - '@margaux'
+  - the new privacy officer
+- id: p-lilit-lockhart
+  name: Lilit Lockhart
+  first: Lilit
+  last: Lockhart
+  nickname: null
+  org: null
+  role: Editor, Clinical IT Briefing
+  role_phrase: null
+  email: lilit.lockhart@newsletters.example
+  handle: '@lilit'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - lilit.lockhart@newsletters.example
+  minor_kind: newsletter
+- id: p-birchmere-it-service-desk
+  name: Birchmere IT Service Desk
+  first: Birchmere IT Service Desk
+  last: ''
+  nickname: null
+  org: null
+  role: Birchmere IT Service Desk
+  role_phrase: null
+  email: servicedesk-noreply@birchmere.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - servicedesk-noreply@birchmere.example
+  minor_kind: service_desk
+- id: p-platform-status-page
+  name: Platform Status Page
+  first: Platform Status Page
+  last: ''
+  nickname: null
+  org: null
+  role: Platform Status Page
+  role_phrase: null
+  email: status-noreply@birchmere.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - status-noreply@birchmere.example
+  minor_kind: status
+- id: p-birchmere-internal-communications
+  name: Birchmere Internal Communications
+  first: Birchmere Internal Communications
+  last: ''
+  nickname: null
+  org: null
+  role: Birchmere Internal Communications
+  role_phrase: null
+  email: news@birchmere.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - news@birchmere.example
+  minor_kind: comms
+- id: p-goran-kusuma
+  name: Goran Kusuma
+  first: Goran
+  last: Kusuma
+  nickname: null
+  org: null
+  role: Events Coordinator
+  role_phrase: null
+  email: goran.kusuma@birchmere.example
+  handle: '@goran'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - goran.kusuma@birchmere.example
+  minor_kind: events
+- id: p-femke-afolabi
+  name: Femke Afolabi
+  first: Femke
+  last: Afolabi
+  nickname: null
+  org: null
+  role: Conference Organizer
+  role_phrase: null
+  email: femke.afolabi@conference.example
+  handle: '@femke'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - femke.afolabi@conference.example
+  minor_kind: conference
+- id: p-benefits-enrollment-notices
+  name: Benefits Enrollment Notices
+  first: Benefits Enrollment Notices
+  last: ''
+  nickname: null
+  org: null
+  role: Benefits Enrollment Notices
+  role_phrase: null
+  email: benefits-noreply@birchmere.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - benefits-noreply@birchmere.example
+  minor_kind: benefits
+projects:
+- id: pr-okapi
+  name: Okapi
+  short: Okapi
+  kw: okapi
+  code: Okapi
+  surface_forms:
+  - Project Okapi
+  - the portal message routing pilot
+  - the Ketford pilot
+  - OKAP
+  archetype: flagship_pilot
+  size: flagship
+  topic: portal message routing
+  topic_a: an AI patient-portal message router
+  pivot: medication reconciliation
+  role: ''
+  unit: o-ketford-general-hospital
+  vendors:
+  - o-dalett-clinical
+  - o-rosix-labs
+  partner: o-talwick-nursing-research-collaborative
+  owner: p-katarzyna-feng
+  sponsor: p-victoria-nikolic
+  members:
+  - p-alasdair-kaya
+  - p-katarzyna-feng
+  - p-bisi-chatterjee
+  - p-eleni-laurent
+  - p-dina-mancini
+  - p-penelope-lehmann
+  - p-nurlan-moreira
+  - p-giorgi-ngo
+  - p-victoria-nikolic
+  orgs:
+  - o-ketford-general-hospital
+  status: active
+  phase: scoping
+  target_date: '2027-10-18'
+  n: 4
+  cast:
+    owner: p-katarzyna-feng
+    sponsor: p-victoria-nikolic
+    lead: p-katarzyna-feng
+    unit:
+    - p-eleni-laurent
+    - p-katarzyna-feng
+    ae:
+    - p-catalina-korkmaz
+    - p-bisi-delacroix
+    se:
+    - p-friederike-haidari
+    - p-sigrid-ekwueme
+    eng: p-dina-mancini
+    sec: p-penelope-lehmann
+    privacy: p-ayesha-dempsey
+    legal: p-kwame-hoffmann
+    proc: p-eun-ji-baek
+    fin: p-deniz-zhou
+    hr: p-shira-colombo
+    ea: p-adebayo-kealoha
+    collab: p-bisi-chatterjee
+    partner: p-lindiwe-ahmadi
+    cand: p-matthias-villanueva
+  weight: 30.71
+  start: '2027-09-06'
+- id: pr-sirocco
+  name: Sirocco
+  short: Sirocco
+  kw: sirocco
+  code: Sirocco
+  surface_forms:
+  - the platform
+  - the common platform
+  - Sirocco platform
+  - the shared AI platform
+  archetype: platform_hub
+  size: hub
+  topic: shared platform
+  topic_a: ''
+  pivot: outpatient no-shows
+  role: ''
+  unit: o-ketford-general-hospital
+  vendors:
+  - o-rosix-labs
+  - o-dalett-clinical
+  partner: o-talwick-nursing-research-collaborative
+  owner: p-dina-mancini
+  sponsor: p-tunde-kapanadze
+  members:
+  - p-alasdair-kaya
+  - p-dina-mancini
+  - p-bisi-chatterjee
+  - p-katarzyna-feng
+  - p-eleni-laurent
+  - p-nurlan-moreira
+  - p-penelope-lehmann
+  orgs: []
+  status: active
+  phase: onboarding tenants
+  target_date: null
+  n: 2
+  cast:
+    owner: p-dina-mancini
+    sponsor: p-tunde-kapanadze
+    lead: p-katarzyna-feng
+    unit:
+    - p-eleni-laurent
+    - p-katarzyna-feng
+    ae:
+    - p-bisi-delacroix
+    - p-catalina-korkmaz
+    se:
+    - p-sigrid-ekwueme
+    - p-friederike-haidari
+    eng: p-nurlan-moreira
+    sec: p-penelope-lehmann
+    privacy: p-ayesha-dempsey
+    legal: p-kwame-hoffmann
+    proc: p-eun-ji-baek
+    fin: p-deniz-zhou
+    hr: p-shira-colombo
+    ea: p-adebayo-kealoha
+    collab: p-bisi-chatterjee
+    partner: p-lindiwe-ahmadi
+    cand: p-matthias-villanueva
+  weight: 9.49
+  start: '2027-09-06'
+- id: pr-intake-forms-tool-selection
+  name: Intake Forms Tool Selection
+  short: intake forms selection
+  kw: intake forms selection
+  code: null
+  surface_forms:
+  - the intake forms bake-off
+  - the Kasis/Rosix evaluation
+  - IFTS selection
+  archetype: vendor_pair_evaluation
+  size: mid
+  topic: intake forms
+  topic_a: an AI intake forms reader
+  pivot: referral backlog
+  role: ''
+  unit: o-emberbury-rehabilitation-center
+  vendors:
+  - o-kasis-health
+  - o-rosix-labs
+  partner: o-talwick-nursing-research-collaborative
+  owner: p-alasdair-kaya
+  sponsor: p-tunde-kapanadze
+  members:
+  - p-alasdair-kaya
+  - p-alasdair-kaya
+  - p-bisi-chatterjee
+  - p-somchai-wickramasinghe
+  - p-catrin-kiprono
+  - p-dalisay-sandberg
+  orgs:
+  - o-emberbury-rehabilitation-center
+  - o-kasis-health
+  - o-rosix-labs
+  status: active
+  phase: demos
+  target_date: '2027-10-06'
+  n: 2
+  cast:
+    owner: p-alasdair-kaya
+    sponsor: p-tunde-kapanadze
+    lead: p-somchai-wickramasinghe
+    unit:
+    - p-catrin-kiprono
+    - p-somchai-wickramasinghe
+    ae:
+    - p-dalisay-sandberg
+    - p-bisi-delacroix
+    se:
+    - p-somchai-banerjee
+    - p-sigrid-ekwueme
+    eng: p-dina-mancini
+    sec: p-penelope-lehmann
+    privacy: p-ayesha-dempsey
+    legal: p-kwame-hoffmann
+    proc: p-eun-ji-baek
+    fin: p-deniz-zhou
+    hr: p-shira-colombo
+    ea: p-adebayo-kealoha
+    collab: p-bisi-chatterjee
+    partner: p-lindiwe-ahmadi
+    cand: p-matthias-villanueva
+  weight: 8.34
+  start: '2027-09-06'
+- id: pr-lanmoor-bed-management-discovery
+  name: Lanmoor Bed Management Discovery
+  short: bed management discovery
+  kw: bed management discovery
+  code: null
+  surface_forms:
+  - the Lanmoor discovery
+  - the bed management work
+  - LBMD discovery
+  archetype: pivoting_discovery
+  size: mid
+  topic: bed management
+  topic_a: an AI bed management dashboard
+  pivot: outpatient no-shows
+  role: ''
+  unit: o-lanmoor-medical-center
+  vendors:
+  - o-dalett-clinical
+  - o-kasis-health
+  partner: o-talwick-nursing-research-collaborative
+  owner: p-guadalupe-lombardi
+  sponsor: p-tunde-kapanadze
+  members:
+  - p-alasdair-kaya
+  - p-guadalupe-lombardi
+  - p-bisi-chatterjee
+  - p-vitoria-oduro
+  - p-oluwaseun-friedman
+  orgs:
+  - o-lanmoor-medical-center
+  status: active
+  phase: site visit
+  target_date: '2027-10-01'
+  n: 2
+  cast:
+    owner: p-guadalupe-lombardi
+    sponsor: p-tunde-kapanadze
+    lead: p-guadalupe-lombardi
+    unit:
+    - p-vitoria-oduro
+    - p-oluwaseun-friedman
+    - p-guadalupe-lombardi
+    ae:
+    - p-catalina-korkmaz
+    - p-dalisay-sandberg
+    se:
+    - p-friederike-haidari
+    - p-somchai-banerjee
+    eng: p-dina-mancini
+    sec: p-penelope-lehmann
+    privacy: p-ayesha-dempsey
+    legal: p-kwame-hoffmann
+    proc: p-eun-ji-baek
+    fin: p-deniz-zhou
+    hr: p-shira-colombo
+    ea: p-adebayo-kealoha
+    collab: p-bisi-chatterjee
+    partner: p-lindiwe-ahmadi
+    cand: p-matthias-villanueva
+  weight: 7.06
+  start: '2027-09-06'
+- id: pr-ai-safety-rounds-workshop
+  name: AI Safety Rounds Workshop
+  short: AI safety rounds workshop
+  kw: ai safety rounds workshop
+  code: null
+  surface_forms:
+  - the workshop
+  - the Emberbury workshop
+  - the AI safety rounds session
+  archetype: event_preparation
+  size: mid
+  topic: AI safety rounds
+  topic_a: ''
+  pivot: outpatient no-shows
+  role: ''
+  unit: o-emberbury-rehabilitation-center
+  vendors:
+  - o-dalett-clinical
+  - o-rosix-labs
+  partner: o-talwick-nursing-research-collaborative
+  owner: p-bisi-chatterjee
+  sponsor: p-tunde-kapanadze
+  members:
+  - p-alasdair-kaya
+  - p-bisi-chatterjee
+  - p-somchai-wickramasinghe
+  - p-catrin-kiprono
+  orgs:
+  - o-emberbury-rehabilitation-center
+  status: active
+  phase: planning
+  target_date: '2027-10-25'
+  n: 2
+  cast:
+    owner: p-bisi-chatterjee
+    sponsor: p-tunde-kapanadze
+    lead: p-somchai-wickramasinghe
+    unit:
+    - p-catrin-kiprono
+    - p-somchai-wickramasinghe
+    ae:
+    - p-catalina-korkmaz
+    - p-bisi-delacroix
+    se:
+    - p-friederike-haidari
+    - p-sigrid-ekwueme
+    eng: p-dina-mancini
+    sec: p-penelope-lehmann
+    privacy: p-ayesha-dempsey
+    legal: p-kwame-hoffmann
+    proc: p-eun-ji-baek
+    fin: p-deniz-zhou
+    hr: p-shira-colombo
+    ea: p-adebayo-kealoha
+    collab: p-bisi-chatterjee
+    partner: p-lindiwe-ahmadi
+    cand: p-matthias-villanueva
+  weight: 7.55
+  start: '2027-09-06'
+- id: pr-birchmere-responsible-ai-use-framework
+  name: Birchmere Responsible AI Use Framework
+  short: AI-use
+  kw: ai-use
+  code: null
+  surface_forms:
+  - the AI framework
+  - the framework
+  - the responsible-use framework
+  archetype: strategic_framework
+  size: mid
+  topic: responsible AI use
+  topic_a: ''
+  pivot: referral backlog
+  role: ''
+  unit: o-emberbury-rehabilitation-center
+  vendors:
+  - o-rosix-labs
+  - o-kasis-health
+  partner: o-talwick-nursing-research-collaborative
+  owner: p-alasdair-kaya
+  sponsor: p-tunde-kapanadze
+  members:
+  - p-alasdair-kaya
+  - p-alasdair-kaya
+  - p-bisi-chatterjee
+  - p-somchai-wickramasinghe
+  - p-catrin-kiprono
+  orgs: []
+  status: active
+  phase: consultation
+  target_date: '2027-10-25'
+  n: 2
+  cast:
+    owner: p-alasdair-kaya
+    sponsor: p-tunde-kapanadze
+    lead: p-somchai-wickramasinghe
+    unit:
+    - p-catrin-kiprono
+    - p-somchai-wickramasinghe
+    ae:
+    - p-bisi-delacroix
+    - p-dalisay-sandberg
+    se:
+    - p-sigrid-ekwueme
+    - p-somchai-banerjee
+    eng: p-dina-mancini
+    sec: p-penelope-lehmann
+    privacy: p-ayesha-dempsey
+    legal: p-kwame-hoffmann
+    proc: p-eun-ji-baek
+    fin: p-deniz-zhou
+    hr: p-shira-colombo
+    ea: p-adebayo-kealoha
+    collab: p-bisi-chatterjee
+    partner: p-lindiwe-ahmadi
+    cand: p-matthias-villanueva
+  weight: 7.58
+  start: '2027-09-06'
+- id: pr-bittern
+  name: Bittern
+  short: Bittern
+  kw: bittern
+  code: Bittern
+  surface_forms:
+  - Project Bittern
+  - the referral triage prototype
+  archetype: internal_incubation
+  size: mid
+  topic: referral triage
+  topic_a: an AI referral triage tool
+  pivot: outpatient no-shows
+  role: ''
+  unit: o-ketford-general-hospital
+  vendors:
+  - o-dalett-clinical
+  - o-rosix-labs
+  partner: o-talwick-nursing-research-collaborative
+  owner: p-alasdair-kaya
+  sponsor: p-tunde-kapanadze
+  members:
+  - p-alasdair-kaya
+  - p-alasdair-kaya
+  - p-bisi-chatterjee
+  - p-katarzyna-feng
+  - p-eleni-laurent
+  orgs:
+  - o-ketford-general-hospital
+  status: active
+  phase: concept
+  target_date: '2027-10-11'
+  n: 2
+  cast:
+    owner: p-alasdair-kaya
+    sponsor: p-tunde-kapanadze
+    lead: p-katarzyna-feng
+    unit:
+    - p-eleni-laurent
+    - p-katarzyna-feng
+    ae:
+    - p-catalina-korkmaz
+    - p-bisi-delacroix
+    se:
+    - p-friederike-haidari
+    - p-sigrid-ekwueme
+    eng: p-dina-mancini
+    sec: p-penelope-lehmann
+    privacy: p-ayesha-dempsey
+    legal: p-kwame-hoffmann
+    proc: p-eun-ji-baek
+    fin: p-deniz-zhou
+    hr: p-shira-colombo
+    ea: p-adebayo-kealoha
+    collab: p-bisi-chatterjee
+    partner: p-lindiwe-ahmadi
+    cand: p-matthias-villanueva
+  weight: 8.49
+  start: '2027-09-06'
+- id: pr-clinical-data-engineer-hire
+  name: Clinical Data Engineer Hire
+  short: clinical data engineer
+  kw: clinical data engineer
+  code: null
+  surface_forms:
+  - the clinical data engineer search
+  - REQ-3709
+  - the CDE hire
+  archetype: hiring_pipeline
+  size: mid
+  topic: clinical data engineer
+  topic_a: ''
+  pivot: referral backlog
+  role: clinical data engineer
+  unit: o-ketford-general-hospital
+  vendors:
+  - o-rosix-labs
+  - o-kasis-health
+  partner: o-talwick-nursing-research-collaborative
+  owner: p-alasdair-kaya
+  sponsor: p-tunde-kapanadze
+  members:
+  - p-alasdair-kaya
+  - p-alasdair-kaya
+  - p-shira-colombo
+  - p-dina-mancini
+  orgs: []
+  status: active
+  phase: screens
+  target_date: null
+  n: 2
+  cast:
+    owner: p-alasdair-kaya
+    sponsor: p-tunde-kapanadze
+    lead: p-katarzyna-feng
+    unit:
+    - p-eleni-laurent
+    - p-katarzyna-feng
+    ae:
+    - p-bisi-delacroix
+    - p-dalisay-sandberg
+    se:
+    - p-sigrid-ekwueme
+    - p-somchai-banerjee
+    eng: p-dina-mancini
+    sec: p-penelope-lehmann
+    privacy: p-ayesha-dempsey
+    legal: p-kwame-hoffmann
+    proc: p-eun-ji-baek
+    fin: p-deniz-zhou
+    hr: p-shira-colombo
+    ea: p-adebayo-kealoha
+    collab: p-bisi-chatterjee
+    partner: p-lindiwe-ahmadi
+    cand: p-matthias-villanueva
+  weight: 7.5
+  start: '2027-09-06'
+- id: pr-sirocco-operating-model-review
+  name: Sirocco Operating Model Review
+  short: Sirocco operating model
+  kw: operating model
+  code: null
+  surface_forms:
+  - the operating model review
+  - the ops model draft
+  - the Sirocco operating model
+  archetype: peer_review
+  size: small
+  topic: platform
+  topic_a: ''
+  pivot: medication reconciliation
+  role: ''
+  unit: o-ostport-childrens-hospital
+  vendors:
+  - o-dalett-clinical
+  - o-kasis-health
+  partner: o-talwick-nursing-research-collaborative
+  owner: p-dina-mancini
+  sponsor: p-tunde-kapanadze
+  members:
+  - p-alasdair-kaya
+  - p-dina-mancini
+  - p-bisi-chatterjee
+  - p-stanley-chen
+  orgs:
+  - o-ostport-childrens-hospital
+  status: active
+  phase: review requested
+  target_date: null
+  n: 2
+  cast:
+    owner: p-dina-mancini
+    sponsor: p-tunde-kapanadze
+    lead: p-stanley-chen
+    unit:
+    - p-francesca-rostami
+    - p-stanley-chen
+    ae:
+    - p-catalina-korkmaz
+    - p-dalisay-sandberg
+    se:
+    - p-friederike-haidari
+    - p-somchai-banerjee
+    eng: p-dina-mancini
+    sec: p-penelope-lehmann
+    privacy: p-ayesha-dempsey
+    legal: p-kwame-hoffmann
+    proc: p-eun-ji-baek
+    fin: p-deniz-zhou
+    hr: p-shira-colombo
+    ea: p-adebayo-kealoha
+    collab: p-bisi-chatterjee
+    partner: p-lindiwe-ahmadi
+    cand: p-matthias-villanueva
+  weight: 1.95
+  start: '2027-09-06'
+- id: pr-talwick-partnership
+  name: Talwick Partnership
+  short: Talwick partnership
+  kw: talwick partnership
+  code: null
+  surface_forms:
+  - the Talwick relationship
+  - Talwick
+  archetype: relationship_thread
+  size: small
+  topic: partnership
+  topic_a: ''
+  pivot: medication reconciliation
+  role: ''
+  unit: o-draywick-community-clinics
+  vendors:
+  - o-rosix-labs
+  - o-kasis-health
+  partner: o-talwick-nursing-research-collaborative
+  owner: p-alasdair-kaya
+  sponsor: p-tunde-kapanadze
+  members:
+  - p-alasdair-kaya
+  - p-alasdair-kaya
+  - p-bisi-chatterjee
+  - p-nikolai-carvalho
+  orgs:
+  - o-draywick-community-clinics
+  - o-talwick-nursing-research-collaborative
+  status: active
+  phase: ongoing
+  target_date: null
+  n: 2
+  cast:
+    owner: p-alasdair-kaya
+    sponsor: p-tunde-kapanadze
+    lead: p-nikolai-carvalho
+    unit:
+    - p-minji-ozturk
+    - p-nikolai-carvalho
+    ae:
+    - p-bisi-delacroix
+    - p-dalisay-sandberg
+    se:
+    - p-sigrid-ekwueme
+    - p-somchai-banerjee
+    eng: p-dina-mancini
+    sec: p-penelope-lehmann
+    privacy: p-ayesha-dempsey
+    legal: p-kwame-hoffmann
+    proc: p-eun-ji-baek
+    fin: p-deniz-zhou
+    hr: p-shira-colombo
+    ea: p-adebayo-kealoha
+    collab: p-bisi-chatterjee
+    partner: p-lindiwe-ahmadi
+    cand: p-matthias-villanueva
+  weight: 2.48
+  start: '2027-09-06'
+- id: pr-supply-par-levels-input-round
+  name: Supply Par Levels Input Round
+  short: supply par levels input round
+  kw: supply par levels input round
+  code: null
+  surface_forms:
+  - the supply par levels input
+  - the supply par levels round
+  archetype: delegated_asks
+  size: small
+  topic: supply par levels
+  topic_a: an AI supply par-level forecaster
+  pivot: medication reconciliation
+  role: ''
+  unit: o-ostport-childrens-hospital
+  vendors:
+  - o-rosix-labs
+  - o-kasis-health
+  partner: o-talwick-nursing-research-collaborative
+  owner: p-alasdair-kaya
+  sponsor: p-tunde-kapanadze
+  members:
+  - p-alasdair-kaya
+  - p-alasdair-kaya
+  - p-bisi-chatterjee
+  - p-stanley-chen
+  orgs:
+  - o-ostport-childrens-hospital
+  status: active
+  phase: asking
+  target_date: null
+  n: 2
+  cast:
+    owner: p-alasdair-kaya
+    sponsor: p-tunde-kapanadze
+    lead: p-stanley-chen
+    unit:
+    - p-francesca-rostami
+    - p-stanley-chen
+    ae:
+    - p-bisi-delacroix
+    - p-dalisay-sandberg
+    se:
+    - p-sigrid-ekwueme
+    - p-somchai-banerjee
+    eng: p-dina-mancini
+    sec: p-penelope-lehmann
+    privacy: p-ayesha-dempsey
+    legal: p-kwame-hoffmann
+    proc: p-eun-ji-baek
+    fin: p-deniz-zhou
+    hr: p-shira-colombo
+    ea: p-adebayo-kealoha
+    collab: p-bisi-chatterjee
+    partner: p-lindiwe-ahmadi
+    cand: p-matthias-villanueva
+  weight: 2.58
+  start: '2027-09-06'
+- id: pr-lanmoor-radiology-follow-up-idea
+  name: Lanmoor Radiology Follow-up Idea
+  short: radiology follow-up
+  kw: radiology follow-up
+  code: null
+  surface_forms:
+  - Guadalupe's radiology follow-up idea
+  - the radiology follow-up placeholder
+  archetype: placeholder
+  size: placeholder
+  topic: radiology follow-up
+  topic_a: an AI radiology follow-up tracker
+  pivot: referral backlog
+  role: ''
+  unit: o-lanmoor-medical-center
+  vendors:
+  - o-rosix-labs
+  - o-dalett-clinical
+  partner: o-talwick-nursing-research-collaborative
+  owner: p-guadalupe-lombardi
+  sponsor: p-tunde-kapanadze
+  members:
+  - p-alasdair-kaya
+  - p-guadalupe-lombardi
+  - p-bisi-chatterjee
+  orgs:
+  - o-lanmoor-medical-center
+  status: active
+  phase: placeholder
+  target_date: null
+  n: 2
+  cast:
+    owner: p-guadalupe-lombardi
+    sponsor: p-tunde-kapanadze
+    lead: p-guadalupe-lombardi
+    unit:
+    - p-vitoria-oduro
+    - p-oluwaseun-friedman
+    - p-guadalupe-lombardi
+    ae:
+    - p-bisi-delacroix
+    - p-catalina-korkmaz
+    se:
+    - p-sigrid-ekwueme
+    - p-friederike-haidari
+    eng: p-dina-mancini
+    sec: p-penelope-lehmann
+    privacy: p-ayesha-dempsey
+    legal: p-kwame-hoffmann
+    proc: p-eun-ji-baek
+    fin: p-deniz-zhou
+    hr: p-shira-colombo
+    ea: p-adebayo-kealoha
+    collab: p-bisi-chatterjee
+    partner: p-lindiwe-ahmadi
+    cand: p-matthias-villanueva
+  weight: 0.17
+  start: '2027-09-06'
+- id: pr-dalett-denials-analytics-diligence
+  name: Dalett Denials Analytics Diligence
+  short: Dalett diligence
+  kw: dalett diligence
+  code: null
+  surface_forms:
+  - the Dalett deep dive
+  - the denials analytics diligence
+  archetype: stalled_discovery
+  size: dormant
+  topic: denials analytics
+  topic_a: an AI claims-denial analyzer
+  pivot: referral backlog
+  role: ''
+  unit: o-ketford-general-hospital
+  vendors:
+  - o-dalett-clinical
+  - o-kasis-health
+  partner: o-talwick-nursing-research-collaborative
+  owner: p-alasdair-kaya
+  sponsor: p-tunde-kapanadze
+  members:
+  - p-alasdair-kaya
+  - p-alasdair-kaya
+  - p-bisi-chatterjee
+  orgs:
+  - o-ketford-general-hospital
+  - o-dalett-clinical
+  - o-kasis-health
+  status: active
+  phase: diligence
+  target_date: null
+  n: 2
+  cast:
+    owner: p-alasdair-kaya
+    sponsor: p-tunde-kapanadze
+    lead: p-katarzyna-feng
+    unit:
+    - p-eleni-laurent
+    - p-katarzyna-feng
+    ae:
+    - p-catalina-korkmaz
+    - p-dalisay-sandberg
+    se:
+    - p-friederike-haidari
+    - p-somchai-banerjee
+    eng: p-dina-mancini
+    sec: p-penelope-lehmann
+    privacy: p-ayesha-dempsey
+    legal: p-kwame-hoffmann
+    proc: p-eun-ji-baek
+    fin: p-deniz-zhou
+    hr: p-shira-colombo
+    ea: p-adebayo-kealoha
+    collab: p-bisi-chatterjee
+    partner: p-lindiwe-ahmadi
+    cand: p-matthias-villanueva
+  weight: 0.58
+  start: '2027-09-06'
+collisions:
+  first_names:
+  - - p-bisi-chatterjee
+    - p-bisi-delacroix
+  - - p-somchai-wickramasinghe
+    - p-somchai-banerjee
+  homophones:
+  - p-katrin-watanabe
+  - p-catrin-kiprono
+cadences:
+- key: standup
+  title: Okapi standup
+  kind: meeting
+  project: pr-okapi
+  weekdays:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  every: 1
+  time: 09:30
+  minutes: 25
+  organizer: p-katarzyna-feng
+  attendees:
+  - p-alasdair-kaya
+  - p-katarzyna-feng
+  - p-bisi-chatterjee
+  - p-eleni-laurent
+  - p-dina-mancini
+  - p-penelope-lehmann
+  - p-nurlan-moreira
+  - p-giorgi-ngo
+- key: leads
+  title: CDS leads call
+  kind: meeting
+  project: null
+  weekdays:
+  - 0
+  every: 1
+  time: '11:00'
+  minutes: 45
+  organizer: p-tunde-kapanadze
+  attendees:
+  - p-alasdair-kaya
+  - p-bisi-chatterjee
+  - p-dina-mancini
+  - p-penelope-lehmann
+  - p-giorgi-ngo
+  - p-tunde-kapanadze
+- key: hub_sync
+  title: Sirocco platform sync
+  kind: meeting
+  project: pr-sirocco
+  weekdays:
+  - 2
+  every: 1
+  time: '14:00'
+  minutes: 30
+  organizer: p-dina-mancini
+  attendees:
+  - p-alasdair-kaya
+  - p-dina-mancini
+  - p-bisi-chatterjee
+  - p-katarzyna-feng
+  - p-eleni-laurent
+  - p-nurlan-moreira
+- key: one_on_one
+  title: 1:1 Alasdair / Bisi
+  kind: meeting
+  project: null
+  weekdays:
+  - 1
+  every: 2
+  time: '15:00'
+  minutes: 30
+  organizer: p-bisi-chatterjee
+  attendees:
+  - p-alasdair-kaya
+  - p-bisi-chatterjee
+- key: forum
+  title: Cross-hospital AI forum
+  kind: meeting
+  project: null
+  weekdays:
+  - 3
+  every: 2
+  time: '13:00'
+  minutes: 60
+  organizer: p-bisi-chatterjee
+  attendees:
+  - p-alasdair-kaya
+  - p-bisi-chatterjee
+  - p-katarzyna-feng
+  - p-somchai-wickramasinghe
+  - p-nikolai-carvalho
+  - p-stanley-chen
+  - p-guadalupe-lombardi
+- key: weekly_update
+  title: Weekly update
+  kind: obligation
+  project: null
+  weekdays:
+  - 0
+  - 4
+  every: 1
+  organizer: p-cds-shared-inbox
+  attendees:
+  - p-alasdair-kaya
+  - p-tunde-kapanadze
+challenges:
+- week: 1
+  tag: worker_directive
+  day: '2027-09-20'
+  project: pr-clinical-data-engineer-hire
+- week: 1
+  tag: noise
+  day: '2027-09-20'
+- week: 1
+  tag: implied_commitment
+  day: '2027-09-21'
+  project: pr-okapi
+- week: 1
+  tag: duplicate_signal
+  day: '2027-09-21'
+  project: pr-bittern
+- week: 1
+  tag: privacy
+  day: '2027-09-21'
+- week: 1
+  tag: alias
+  day: '2027-09-21'
+- week: 1
+  tag: name_collision
+  day: '2027-09-22'
+- week: 1
+  tag: new_entity
+  day: '2027-09-22'
+  person: p-margaux-monteiro
+  project: pr-okapi
+- week: 1
+  tag: supersession
+  day: '2027-09-22'
+  project: pr-okapi
+- week: 1
+  tag: unobservable
+  day: '2027-09-22'
+  project: pr-bittern
+  attribute: budget
+- week: 1
+  tag: draft_vs_sent
+  day: '2027-09-24'
+  setup: '2027-09-20'
+- week: 1
+  tag: batch_catchup
+  day: '2027-09-22'
+- week: 1
+  tag: transfer
+  day: '2027-09-22'
+- week: 1
+  tag: correction
+  day: '2027-09-22'
+  setup: '2027-09-21'
+- week: 1
+  tag: weak_evidence
+  day: '2027-09-23'
+  setup: '2027-09-20'
+- week: 1
+  tag: acceptance_vs_occurrence
+  day: '2027-09-23'
+- week: 1
+  tag: restructuring
+  day: '2027-09-23'
+  mode: split
+  project: pr-lanmoor-bed-management-discovery
+- week: 1
+  tag: version_mismatch
+  day: '2027-09-23'
+  setup: '2027-09-20'
+- week: 1
+  tag: silent_closure
+  day: '2027-09-24'
+  setup: '2027-09-21'
+- week: 1
+  tag: reversal
+  day: '2027-09-23'
+  setup: '2027-09-17'
+  project: pr-okapi
+- week: 1
+  tag: endorsement
+  day: '2027-09-24'
+  setup: '2027-09-21'
+- week: 1
+  tag: scattered_evidence
+  day: '2027-09-23'
+  setup: '2027-09-20'
+  steps:
+  - '2027-09-21'
+  - '2027-09-22'
+  - '2027-09-23'
+audit:
+  unrevealed:
+    e-0019: never appears
+    e-0033: never appears
+    e-0036: never appears
+    e-0038: never appears
+    e-0039: never appears
+    e-0047: never appears
+    e-0048: never appears
+    e-0050: never appears
+    e-0189: 'status lag: never announced'
+    e-0190: 'status lag: never announced'
+    e-0191: 'status lag: never announced'
+    e-0193: unobservable
+    e-0226: 'weak evidence: the walkthrough left no trace'
+  instruction_injection: em-0088
+  attachments:
+  - dc-0001
+  - dc-0002
+  - dc-0003
+  - dc-0004
+  - dc-0005
+  - dc-0006

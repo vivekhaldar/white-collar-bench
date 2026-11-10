@@ -1,0 +1,27 @@
+{
+ "workspace": "holcrest",
+ "channel": "#benefits-screening-core",
+ "kind": "channel",
+ "participants": [
+  "Andrei Abenova",
+  "Camila Quimby",
+  "Jalen Hendriks",
+  "Ifeoma Girard",
+  "Corinne Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-10T08:26:00-07:00",
+   "user": "Andrei Abenova",
+   "handle": "@andrei",
+   "text": "@camila can you finish the benefits screening baseline analysis?"
+  },
+  {
+   "ts": "2027-11-10T08:26:08-07:00",
+   "user": "Ifeoma Girard",
+   "handle": "@ifeoma",
+   "text": "got it",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "workspace": "birchmere",
+ "channel": "#bittern-core",
+ "kind": "channel",
+ "participants": [
+  "Alasdair Kaya",
+  "Bisi Chatterjee",
+  "Katarzyna Feng",
+  "Lena"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-14T08:47:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "@bisi done, i confirmed the bittern roadmap slide with you"
+  },
+  {
+   "ts": "2027-09-14T08:47:36-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "great, thanks",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-14T08:52:43-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-14T09:02:26-05:00",
+   "user": "Katarzyna Feng",
+   "handle": "@katarzyna",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-14T09:12:08-05:00",
+   "user": "Lena",
+   "handle": "@eleni",
+   "text": "thanks for the update",
+   "thread_of": 0
+  }
+ ]
+}

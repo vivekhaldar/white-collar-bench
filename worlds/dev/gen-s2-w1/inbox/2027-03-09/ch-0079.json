@@ -1,0 +1,27 @@
+{
+ "workspace": "vercliff",
+ "channel": "#ai-in-public-service-core",
+ "kind": "channel",
+ "participants": [
+  "Nomvula Moreira",
+  "Dina Zimmermann",
+  "Imani Chaiyaporn",
+  "Tendai",
+  "Catrin Petrov"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-09T09:13:00-07:00",
+   "user": "Nomvula Moreira",
+   "handle": "@nomvula",
+   "text": "@dina picking the AI in public service workshop feedback form back up now."
+  },
+  {
+   "ts": "2027-03-09T09:13:31-07:00",
+   "user": "Tendai",
+   "handle": "@tendai",
+   "text": "got it",
+   "thread_of": 0
+  }
+ ]
+}

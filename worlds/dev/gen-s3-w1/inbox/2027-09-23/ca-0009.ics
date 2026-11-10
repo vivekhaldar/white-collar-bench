@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Birchmere//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:6f24a1480d580c1a@birchmere.example
+DTSTAMP:20270923T171100Z
+DTSTART:20270924T193000Z
+DTEND:20270924T203000Z
+SUMMARY:Working session: Bittern dependency list with Bisi
+ORGANIZER;CN=Bisi Chatterjee:mailto:bisi.chatterjee@birchmere.example
+ATTENDEE;CN=Alasdair Kaya;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:alasdair.kaya@birchmere.example
+SEQUENCE:0
+DESCRIPTION:Agenda: Confirm the Bittern dependency list with Bisi.\nJoin video meeting: https://meet.birchmere.example/j/0761234028?pwd=4rQXhcvf\nPasscode: 341063
+LOCATION:https://meet.birchmere.example/j/0761234028?pwd=4rQXhcvf
+END:VEVENT
+END:VCALENDAR

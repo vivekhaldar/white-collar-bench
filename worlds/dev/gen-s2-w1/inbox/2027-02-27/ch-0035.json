@@ -1,0 +1,35 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-penelope",
+ "kind": "dm",
+ "participants": [
+  "Penelope Herrera",
+  "Dina Zimmermann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-27T17:35:00-07:00",
+   "user": "Penelope Herrera",
+   "handle": "@penelope",
+   "text": "Will send you the Talton working paper."
+  },
+  {
+   "ts": "2027-02-27T17:35:39-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "that'd be great"
+  },
+  {
+   "ts": "2027-02-27T17:36:46-07:00",
+   "user": "Penelope Herrera",
+   "handle": "@penelope",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-02-27T17:38:06-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "remote, but online all day"
+  }
+ ]
+}

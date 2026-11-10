@@ -1,0 +1,145 @@
+{
+  "date": "2027-08-30",
+  "artifacts": [
+    {
+      "id": "em-0044",
+      "channel": "email",
+      "received_at": "2027-08-30T07:00:00-08:00",
+      "path": "em-0044.eml",
+      "title": "Reminder: Friday status note due Friday 3 September"
+    },
+    {
+      "id": "em-0045",
+      "channel": "email",
+      "received_at": "2027-08-30T07:50:00-08:00",
+      "path": "em-0045.eml",
+      "title": "Re: Cairn SSO broker for Holfield"
+    },
+    {
+      "id": "em-0046",
+      "channel": "email",
+      "received_at": "2027-08-30T08:35:00-08:00",
+      "path": "em-0046.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "em-0047",
+      "channel": "email",
+      "received_at": "2027-08-30T08:53:00-08:00",
+      "path": "em-0047.eml",
+      "title": "Re: Fjord budget justification"
+    },
+    {
+      "id": "em-0048",
+      "channel": "email",
+      "received_at": "2027-08-30T10:05:00-08:00",
+      "path": "em-0048.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0049",
+      "channel": "email",
+      "received_at": "2027-08-30T10:55:00-08:00",
+      "path": "em-0049.eml",
+      "title": "Re: Fjord course roster export"
+    },
+    {
+      "id": "mn-0004",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-30T11:00:00-08:00",
+      "path": "mn-0004.md",
+      "title": "Notes: Fjord scoping call"
+    },
+    {
+      "id": "ch-0035",
+      "channel": "chat",
+      "received_at": "2027-08-30T11:36:00-08:00",
+      "path": "ch-0035.json",
+      "title": "DM: Ottavio Monteiro / Meera Ivanova"
+    },
+    {
+      "id": "mn-0005",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-30T11:45:00-08:00",
+      "path": "mn-0005.md",
+      "title": "Recap: SLIO leads call"
+    },
+    {
+      "id": "em-0050",
+      "channel": "email",
+      "received_at": "2027-08-30T12:34:00-08:00",
+      "path": "em-0050.eml",
+      "title": "Call for proposals closes Sunday 12 September"
+    },
+    {
+      "id": "ch-0036",
+      "channel": "chat",
+      "received_at": "2027-08-30T13:02:00-08:00",
+      "path": "ch-0036.json",
+      "title": "#cairn-core"
+    },
+    {
+      "id": "em-0051",
+      "channel": "email",
+      "received_at": "2027-08-30T13:53:00-08:00",
+      "path": "em-0051.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "ch-0037",
+      "channel": "chat",
+      "received_at": "2027-08-30T15:48:00-08:00",
+      "path": "ch-0037.json",
+      "title": "DM: Theresa Nagy / Ottavio Monteiro"
+    },
+    {
+      "id": "em-0052",
+      "channel": "email",
+      "received_at": "2027-08-30T16:16:00-08:00",
+      "path": "em-0052.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "ch-0038",
+      "channel": "chat",
+      "received_at": "2027-08-30T16:20:00-08:00",
+      "path": "ch-0038.json",
+      "title": "DM: Ottavio Monteiro / Meera Kariuki"
+    },
+    {
+      "id": "em-0053",
+      "channel": "email",
+      "received_at": "2027-08-30T16:59:00-08:00",
+      "path": "em-0053.eml",
+      "title": "Re: List of pilot courses for Fjord"
+    },
+    {
+      "id": "em-0054",
+      "channel": "email",
+      "received_at": "2027-08-30T16:59:00-08:00",
+      "path": "em-0054.eml",
+      "title": "Re: Fjord lessons-learned note"
+    },
+    {
+      "id": "em-0055",
+      "channel": "email",
+      "received_at": "2027-08-30T17:10:00-08:00",
+      "path": "em-0055.eml",
+      "title": "[REQ-22352] Request resolved"
+    },
+    {
+      "id": "em-0056",
+      "channel": "email",
+      "received_at": "2027-08-30T17:47:00-08:00",
+      "path": "em-0056.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "ch-0039",
+      "channel": "chat",
+      "received_at": "2027-08-30T18:27:00-08:00",
+      "path": "ch-0039.json",
+      "title": "DM: Ottavio Monteiro / Esperanza Rao"
+    }
+  ]
+}

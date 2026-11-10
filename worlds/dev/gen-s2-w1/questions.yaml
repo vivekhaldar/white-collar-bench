@@ -1,0 +1,379 @@
+- id: q-001
+  checkpoint: cp1
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+  - scattered_evidence
+- id: q-002
+  checkpoint: cp1
+  template: project_status
+  params:
+    project: pr-mistral
+  challenges:
+  - scattered_evidence
+- id: q-003
+  checkpoint: cp1
+  template: project_changes
+  params:
+    project: pr-mistral
+    since: '2027-03-06'
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - scattered_evidence
+  - silent_closure
+- id: q-004
+  checkpoint: cp1
+  template: i_owe
+  params:
+    person: p-yael-yardley
+  challenges:
+  - scattered_evidence
+- id: q-005
+  checkpoint: cp1
+  template: owed_to_me
+  params:
+    person: p-tendai-vu
+    name_form: the Selfell lead
+  challenges:
+  - alias
+  - duplicate_signal
+  - name_collision
+- id: q-006
+  checkpoint: cp1
+  template: loop_owner
+  params:
+    commitment: c-008
+  challenges:
+  - duplicate_signal
+  - transfer
+- id: q-007
+  checkpoint: cp1
+  template: loop_due
+  params:
+    commitment: c-035
+  challenges:
+  - supersession
+- id: q-008
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-pothole-reporting-tool-selection
+    attribute: phase
+  challenges: []
+- id: q-009
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-tendai-vu
+    attribute: relationship
+  challenges:
+  - name_collision
+- id: q-010
+  checkpoint: cp1
+  template: project_loops
+  params:
+    project: pr-ai-in-public-service-workshop
+    name_form: the workshop
+  challenges:
+  - alias
+  - duplicate_signal
+- id: q-011
+  checkpoint: cp1
+  template: person_brief
+  params:
+    person: p-kayode-papadopoulos
+  challenges:
+  - new_entity
+- id: q-012
+  checkpoint: cp1
+  template: decision_date
+  params:
+    decision: d-001
+  challenges: []
+- id: q-013
+  checkpoint: cp1
+  template: event_date
+  params:
+    event: e-0176
+  text: When was "Send Imani the Mistral change request" completed?
+  challenges: []
+- id: q-014
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-fennel-funding-model
+    attribute: budget
+  text: What is the budget for Fennel Funding Model?
+  challenges:
+  - unobservable
+- id: q-015
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-marmara-code-enforcement-diligence
+    attribute: budget
+    name_form: the code enforcement diligence
+  challenges:
+  - alias
+  - unobservable
+- id: q-016
+  checkpoint: cp2
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - new_entity
+  - supersession
+  - worker_directive
+- id: q-017
+  checkpoint: cp2
+  template: project_status
+  params:
+    project: pr-mistral
+  challenges:
+  - new_entity
+  - reversal
+  - supersession
+- id: q-018
+  checkpoint: cp2
+  template: project_changes
+  params:
+    project: pr-fennel
+    since: '2027-03-09'
+  challenges:
+  - batch_catchup
+  - correction
+  - transfer
+- id: q-019
+  checkpoint: cp2
+  template: i_owe
+  params:
+    person: p-imani-chaiyaporn
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - name_collision
+  - worker_directive
+- id: q-020
+  checkpoint: cp2
+  template: owed_to_me
+  params:
+    person: p-anh-wisniewska
+  challenges: []
+- id: q-021
+  checkpoint: cp2
+  template: loop_due
+  params:
+    commitment: c-083
+  challenges:
+  - supersession
+- id: q-022
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-ai-in-public-service-workshop
+    attribute: sponsor
+    name_form: the AI in public service session
+  challenges:
+  - alias
+- id: q-023
+  checkpoint: cp2
+  template: person_attr
+  params:
+    person: p-venkatesh-santos
+    attribute: org
+    name_form: Venkatesh
+  challenges:
+  - alias
+  - new_entity
+- id: q-024
+  checkpoint: cp2
+  template: project_loops
+  params:
+    project: pr-pothole-reporting-tool-selection
+  challenges:
+  - duplicate_signal
+- id: q-025
+  checkpoint: cp2
+  template: person_brief
+  params:
+    person: p-rudo-alexiou
+    name_form: Rudo
+  challenges:
+  - alias
+  - endorsement
+- id: q-026
+  checkpoint: cp2
+  template: event_date
+  params:
+    event: e-0225
+  text: When was "Update the Mistral access request after Bilal's comments" completed?
+  challenges: []
+- id: q-027
+  checkpoint: cp2
+  template: loop_owner
+  params:
+    commitment: c-044
+  challenges:
+  - transfer
+- id: q-028
+  checkpoint: cp2
+  template: loop_due
+  params:
+    commitment: c-064
+  challenges:
+  - scattered_evidence
+- id: q-029
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-mistral
+    attribute: target_date
+  challenges:
+  - supersession
+- id: q-030
+  checkpoint: cp2
+  template: person_attr
+  params:
+    person: p-anh-wisniewska
+    attribute: phone
+  challenges:
+  - unobservable
+- id: q-031
+  checkpoint: cp3
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - batch_catchup
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - worker_directive
+- id: q-032
+  checkpoint: cp3
+  template: project_status
+  params:
+    project: pr-mistral
+  challenges:
+  - endorsement
+  - implied_commitment
+  - supersession
+  - worker_directive
+- id: q-033
+  checkpoint: cp3
+  template: project_changes
+  params:
+    project: pr-ivyworth-records-requests-discovery
+    since: '2027-03-11'
+    name_form: the Ivyworth discovery
+  challenges:
+  - alias
+  - new_entity
+  - restructuring
+- id: q-034
+  checkpoint: cp3
+  template: i_owe
+  params:
+    person: p-cassandra-yilmaz
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+- id: q-035
+  checkpoint: cp3
+  template: owed_to_me
+  params:
+    person: p-naoko-maldonado
+  challenges:
+  - duplicate_signal
+- id: q-036
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-mistral
+    attribute: sponsor
+  challenges: []
+- id: q-037
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-fennel-funding-model
+  challenges:
+  - batch_catchup
+- id: q-038
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-imani-chaiyaporn
+    name_form: our delivery director
+  challenges:
+  - alias
+  - batch_catchup
+  - duplicate_signal
+  - endorsement
+  - name_collision
+  - new_entity
+  - restructuring
+  - worker_directive
+- id: q-039
+  checkpoint: cp3
+  template: event_date
+  params:
+    event: e-0077
+  text: When was "Send Nomvula the pothole reporting selection requirements list" completed?
+  challenges:
+  - duplicate_signal
+- id: q-040
+  checkpoint: cp3
+  template: loop_due
+  params:
+    commitment: c-081
+  challenges:
+  - endorsement
+  - worker_directive
+- id: q-041
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-selfell-parking-analytics-idea
+    attribute: sponsor
+    name_form: the parking analytics placeholder
+  challenges:
+  - alias
+- id: q-042
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-talton-partnership
+  challenges: []
+- id: q-043
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-thibault-sahin
+  challenges:
+  - batch_catchup
+- id: q-044
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-inspection-scheduling-advisory
+    attribute: budget
+  challenges:
+  - unobservable
+- id: q-045
+  checkpoint: cp3
+  template: event_date
+  params:
+    event: e-0240
+  text: When was "Walk Cassandra through the Mistral equity impact review" completed?
+  challenges:
+  - unobservable
+  - weak_evidence

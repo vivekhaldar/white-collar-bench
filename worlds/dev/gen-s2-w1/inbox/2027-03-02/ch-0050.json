@@ -1,0 +1,35 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-yael",
+ "kind": "dm",
+ "participants": [
+  "Yael Yardley",
+  "Dina Zimmermann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-02T14:41:02-07:00",
+   "user": "Yael Yardley",
+   "handle": "@yael",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-03-02T14:42:18-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-03-02T14:43:00-07:00",
+   "user": "Yael Yardley",
+   "handle": "@yael",
+   "text": "Thibault will set gateway rate limits for Fennel tenants, as discussed."
+  },
+  {
+   "ts": "2027-03-02T14:43:10-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "that'd be great"
+  }
+ ]
+}

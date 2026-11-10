@@ -1,0 +1,145 @@
+{
+  "date": "2027-09-13",
+  "artifacts": [
+    {
+      "id": "em-0042",
+      "channel": "email",
+      "received_at": "2027-09-13T06:54:00-05:00",
+      "path": "em-0042.eml",
+      "title": "Reminder: Friday status note due Friday 17 September"
+    },
+    {
+      "id": "ch-0039",
+      "channel": "chat",
+      "received_at": "2027-09-13T08:25:00-05:00",
+      "path": "ch-0039.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0040",
+      "channel": "chat",
+      "received_at": "2027-09-13T09:42:00-05:00",
+      "path": "ch-0040.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "mt-0006",
+      "channel": "transcript",
+      "received_at": "2027-09-13T09:55:00-05:00",
+      "path": "mt-0006.vtt",
+      "title": "Okapi standup (transcript)"
+    },
+    {
+      "id": "em-0043",
+      "channel": "email",
+      "received_at": "2027-09-13T10:14:00-05:00",
+      "path": "em-0043.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0044",
+      "channel": "email",
+      "received_at": "2027-09-13T11:09:00-05:00",
+      "path": "em-0044.eml",
+      "title": "Re: Notes from the interpreter booking session"
+    },
+    {
+      "id": "em-0045",
+      "channel": "email",
+      "received_at": "2027-09-13T11:20:00-05:00",
+      "path": "em-0045.eml",
+      "title": "[INC-81515] Ticket updated"
+    },
+    {
+      "id": "em-0046",
+      "channel": "email",
+      "received_at": "2027-09-13T11:22:00-05:00",
+      "path": "em-0046.eml",
+      "title": "Open enrollment reminder"
+    },
+    {
+      "id": "ch-0041",
+      "channel": "chat",
+      "received_at": "2027-09-13T12:58:00-05:00",
+      "path": "ch-0041.json",
+      "title": "DM: Giorgi Ngo / Alasdair Kaya"
+    },
+    {
+      "id": "em-0047",
+      "channel": "email",
+      "received_at": "2027-09-13T14:01:00-05:00",
+      "path": "em-0047.eml",
+      "title": "Re: Bed management baseline data from Lanmoor"
+    },
+    {
+      "id": "em-0048",
+      "channel": "email",
+      "received_at": "2027-09-13T14:11:00-05:00",
+      "path": "em-0048.eml",
+      "title": "Speaker spotlight"
+    },
+    {
+      "id": "em-0049",
+      "channel": "email",
+      "received_at": "2027-09-13T14:54:00-05:00",
+      "path": "em-0049.eml",
+      "title": "Reminder: all-staff meeting Thursday"
+    },
+    {
+      "id": "ch-0042",
+      "channel": "chat",
+      "received_at": "2027-09-13T15:20:00-05:00",
+      "path": "ch-0042.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "ca-0002",
+      "channel": "calendar",
+      "received_at": "2027-09-13T16:20:00-05:00",
+      "path": "ca-0002.ics",
+      "title": "Invite: Intake forms selection scoring session"
+    },
+    {
+      "id": "mn-0004",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-13T16:30:00-05:00",
+      "path": "mn-0004.md",
+      "title": "Recap: AI safety rounds workshop / Okapi sync"
+    },
+    {
+      "id": "em-0050",
+      "channel": "email",
+      "received_at": "2027-09-13T16:39:00-05:00",
+      "path": "em-0050.eml",
+      "title": "AI Safety Rounds Workshop: moving to logistics"
+    },
+    {
+      "id": "ch-0043",
+      "channel": "chat",
+      "received_at": "2027-09-13T17:11:00-05:00",
+      "path": "ch-0043.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "ca-0003",
+      "channel": "calendar",
+      "received_at": "2027-09-13T18:09:00-05:00",
+      "path": "ca-0003.ics",
+      "title": "Updated: Sirocco platform sync"
+    },
+    {
+      "id": "em-0051",
+      "channel": "email",
+      "received_at": "2027-09-13T18:24:00-05:00",
+      "path": "em-0051.eml",
+      "title": "[Scheduled] Network maintenance window"
+    },
+    {
+      "id": "nt-0002",
+      "channel": "note",
+      "received_at": "2027-09-13T18:51:00-05:00",
+      "path": "nt-0002.md",
+      "title": "Mon notes"
+    }
+  ]
+}

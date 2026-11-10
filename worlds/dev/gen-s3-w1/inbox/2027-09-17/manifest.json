@@ -1,0 +1,118 @@
+{
+  "date": "2027-09-17",
+  "artifacts": [
+    {
+      "id": "em-0075",
+      "channel": "email",
+      "received_at": "2027-09-17T07:24:00-05:00",
+      "path": "em-0075.eml",
+      "title": "[INC-57559] Ticket updated"
+    },
+    {
+      "id": "em-0076",
+      "channel": "email",
+      "received_at": "2027-09-17T07:46:00-05:00",
+      "path": "em-0076.eml",
+      "title": "[INC-42422] Ticket updated"
+    },
+    {
+      "id": "em-0077",
+      "channel": "email",
+      "received_at": "2027-09-17T08:25:00-05:00",
+      "path": "em-0077.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0078",
+      "channel": "email",
+      "received_at": "2027-09-17T09:35:00-05:00",
+      "path": "em-0078.eml",
+      "title": "Fwd: Bed management discovery opportunity list"
+    },
+    {
+      "id": "mn-0007",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-17T10:00:00-05:00",
+      "path": "mn-0007.md",
+      "title": "Recap: Okapi standup"
+    },
+    {
+      "id": "mt-0011",
+      "channel": "transcript",
+      "received_at": "2027-09-17T10:00:00-05:00",
+      "path": "mt-0011.vtt",
+      "title": "Okapi standup (transcript)"
+    },
+    {
+      "id": "em-0079",
+      "channel": "email",
+      "received_at": "2027-09-17T10:10:00-05:00",
+      "path": "em-0079.eml",
+      "title": "Re: FYI: Okapi cutover plan"
+    },
+    {
+      "id": "ch-0065",
+      "channel": "chat",
+      "received_at": "2027-09-17T10:44:00-05:00",
+      "path": "ch-0065.json",
+      "title": "DM: Alasdair Kaya / Bisi Chatterjee"
+    },
+    {
+      "id": "ch-0066",
+      "channel": "chat",
+      "received_at": "2027-09-17T11:22:00-05:00",
+      "path": "ch-0066.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0080",
+      "channel": "email",
+      "received_at": "2027-09-17T13:53:00-05:00",
+      "path": "em-0080.eml",
+      "title": "[INC-69833] Ticket updated"
+    },
+    {
+      "id": "ch-0067",
+      "channel": "chat",
+      "received_at": "2027-09-17T14:10:00-05:00",
+      "path": "ch-0067.json",
+      "title": "DM: Penelope Lehmann / Alasdair Kaya"
+    },
+    {
+      "id": "em-0081",
+      "channel": "email",
+      "received_at": "2027-09-17T16:32:00-05:00",
+      "path": "em-0081.eml",
+      "title": "[REQ-33815] Request resolved"
+    },
+    {
+      "id": "ch-0068",
+      "channel": "chat",
+      "received_at": "2027-09-17T16:41:00-05:00",
+      "path": "ch-0068.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "dc-0003",
+      "channel": "document",
+      "received_at": "2027-09-17T17:30:00-05:00",
+      "path": "dc-0003.xlsx",
+      "title": "Reading list on radiology follow-up v2",
+      "parent": "em-0082"
+    },
+    {
+      "id": "em-0082",
+      "channel": "email",
+      "received_at": "2027-09-17T17:30:00-05:00",
+      "path": "em-0082.eml",
+      "title": "Status note: w/e 17 September"
+    },
+    {
+      "id": "ch-0069",
+      "channel": "chat",
+      "received_at": "2027-09-17T18:08:00-05:00",
+      "path": "ch-0069.json",
+      "title": "DM: Tunde Kapanadze / Alasdair Kaya"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+ "workspace": "iselvale",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Tahmina Lozano",
+  "Kwame Ortega",
+  "Lindiwe Valdez"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-19T16:55:47-05:00",
+   "user": "Tahmina Lozano",
+   "handle": "@tahmina",
+   "text": "the elevator on the east side is out again"
+  },
+  {
+   "ts": "2027-03-19T16:57:28-05:00",
+   "user": "Kwame Ortega",
+   "handle": "@kwame",
+   "text": "stairs it is"
+  },
+  {
+   "ts": "2027-03-19T16:58:04-05:00",
+   "user": "Lindiwe Valdez",
+   "handle": "@lindiwe",
+   "text": "classic"
+  }
+ ]
+}

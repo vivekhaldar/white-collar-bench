@@ -1,0 +1,43 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-anahit-hiba",
+ "kind": "dm",
+ "participants": [
+  "Anahit",
+  "Hiba Xu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-30T16:52:23-05:00",
+   "user": "Anahit",
+   "handle": "@anahit",
+   "text": "hey :)"
+  },
+  {
+   "ts": "2027-03-30T16:54:00-05:00",
+   "user": "Anahit",
+   "handle": "@anahit",
+   "text": "FYI Maricel needs the Wagtail architecture diagram by Thursday 1 April!",
+   "edited": true,
+   "original": "FYI Maricel needs the Wagtail architecture diagram by Wednesday 31 March!"
+  },
+  {
+   "ts": "2027-03-30T16:54:57-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-03-30T16:59:51-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-03-30T17:01:59-05:00",
+   "user": "Anahit",
+   "handle": "@anahit",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

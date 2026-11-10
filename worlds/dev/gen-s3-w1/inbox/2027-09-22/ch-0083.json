@@ -1,0 +1,40 @@
+{
+ "workspace": "birchmere",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Tunde Kapanadze",
+  "Shira Colombo",
+  "Kwame Hoffmann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-22T14:02:14-05:00",
+   "user": "Tunde Kapanadze",
+   "handle": "@tunde",
+   "text": "who left a lunchbox in the fridge since last week?",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@shira",
+      "@kwame"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-22T14:04:25-05:00",
+   "user": "Shira Colombo",
+   "handle": "@shira",
+   "text": "not me!",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-22T14:06:23-05:00",
+   "user": "Kwame Hoffmann",
+   "handle": "@kwame",
+   "text": "it's been there a while"
+  }
+ ]
+}

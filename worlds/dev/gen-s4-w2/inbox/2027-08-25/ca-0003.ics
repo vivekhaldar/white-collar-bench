@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Drayhurst//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:3fd22271e7362f30@drayhurst.example
+DTSTAMP:20270826T002500Z
+DTSTART:20270827T180000Z
+DTEND:20270827T183000Z
+SUMMARY:Fjord scoping call
+ORGANIZER;CN=Darius Sherwood:mailto:darius.sherwood@holfield.drayhurst.example
+ATTENDEE;CN=Meera Ivanova;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:meera.ivanova@drayhurst.example
+ATTENDEE;CN=Ottavio Monteiro;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:ottavio.monteiro@drayhurst.example
+SEQUENCE:0
+DESCRIPTION:Placeholder\, agenda to follow.\nJoin video meeting: https://meet.drayhurst.example/j/7484262042?pwd=39MFpjkQ\nPasscode: 280018
+LOCATION:https://meet.drayhurst.example/j/7484262042?pwd=39MFpjkQ
+END:VEVENT
+END:VCALENDAR

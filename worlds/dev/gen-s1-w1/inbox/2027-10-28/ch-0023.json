@@ -1,0 +1,23 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-aarav-camila",
+ "kind": "dm",
+ "participants": [
+  "Aarav Ortega",
+  "Camila Quimby"
+ ],
+ "messages": [
+  {
+   "ts": "2027-10-28T13:40:00-07:00",
+   "user": "Aarav Ortega",
+   "handle": "@aarav",
+   "text": "Would you be able to complete the Marten privacy impact assessment?"
+  },
+  {
+   "ts": "2027-10-28T13:40:58-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "on it"
+  }
+ ]
+}

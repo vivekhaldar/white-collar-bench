@@ -1,0 +1,25 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-jalen",
+ "kind": "dm",
+ "participants": [
+  "Jalen",
+  "Camila Quimby"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-09T15:14:00-07:00",
+   "user": "Jalen",
+   "handle": "@jalen",
+   "text": "FYI Thandiwe needs the notice translation discovery stakeholder map by November 11.",
+   "edited": true,
+   "original": "FYI Thandiwe needs the notice translation discovery stakeholder map by November 12."
+  },
+  {
+   "ts": "2027-11-09T15:14:32-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "noted"
+  }
+ ]
+}

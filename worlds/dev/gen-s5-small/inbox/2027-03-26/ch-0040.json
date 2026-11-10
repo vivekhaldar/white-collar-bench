@@ -1,0 +1,34 @@
+{
+ "workspace": "iselvale",
+ "channel": "#okapi-operating-model-core",
+ "kind": "channel",
+ "participants": [
+  "Lakshmi Zamora",
+  "Hiba Xu",
+  "Anahit",
+  "Ciaran Rocha"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-26T16:30:00-05:00",
+   "user": "Lakshmi Zamora",
+   "handle": "@lakshmi",
+   "text": "@hiba got what i needed, a okapi operating model review session is moving again",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-26T16:30:11-05:00",
+   "user": "Anahit",
+   "handle": "@anahit",
+   "text": "good to know :)",
+   "thread_of": 0
+  }
+ ]
+}

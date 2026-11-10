@@ -1,0 +1,48 @@
+{
+ "workspace": "iselvale",
+ "channel": "#wagtail-core",
+ "kind": "channel",
+ "participants": [
+  "Friederike Malhotra",
+  "Hiba Xu",
+  "Ama Forsythe",
+  "Anahit",
+  "Mateo Pritchard",
+  "Lakshmi Zamora",
+  "Jisoo Makinen",
+  "Maricel Herrera",
+  "Isla Mercier"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-18T15:38:00-05:00",
+   "user": "Friederike Malhotra",
+   "handle": "@friederike",
+   "text": "@hiba when you get a chance, could you assemble the wagtail security review package?",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@ama",
+      "@anahit",
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-18T15:38:40-05:00",
+   "user": "Jisoo Makinen",
+   "handle": "@jisoo",
+   "text": "got it",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-18T15:45:19-05:00",
+   "user": "Mateo Pritchard",
+   "handle": "@mateo",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#course-assistant-discovery-core",
+ "kind": "channel",
+ "participants": [
+  "Roya",
+  "Ottavio Monteiro",
+  "Meera",
+  "Tegan Ogunleye",
+  "Nadia Krause"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T16:37:00-08:00",
+   "user": "Roya",
+   "handle": "@roya",
+   "text": "We're now in readout on Heathridge Course Assistant Discovery.",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@tegan",
+      "@meera",
+      "@ottavio"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-08T16:41:04-08:00",
+   "user": "Nadia Krause",
+   "handle": "@nadia",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+  "date": "2027-03-20",
+  "artifacts": [
+    {
+      "id": "ch-0016",
+      "channel": "chat",
+      "received_at": "2027-03-20T08:56:00-05:00",
+      "path": "ch-0016.json",
+      "title": "#nurse-scheduling-selection-core"
+    },
+    {
+      "id": "em-0025",
+      "channel": "email",
+      "received_at": "2027-03-20T10:08:00-05:00",
+      "path": "em-0025.eml",
+      "title": "[INC-83675] Ticket updated"
+    },
+    {
+      "id": "em-0026",
+      "channel": "email",
+      "received_at": "2027-03-20T12:48:00-05:00",
+      "path": "em-0026.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "ch-0017",
+      "channel": "chat",
+      "received_at": "2027-03-20T16:48:00-05:00",
+      "path": "ch-0017.json",
+      "title": "DM: Anahit Upton / Hiba Xu"
+    }
+  ]
+}

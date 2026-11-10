@@ -1,0 +1,47 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-thibault",
+ "kind": "dm",
+ "participants": [
+  "Thibault Sahin",
+  "Dina Zimmermann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-23T16:26:15-07:00",
+   "user": "Thibault Sahin",
+   "handle": "@thibault",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-02-23T16:26:40-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-02-23T16:27:17-07:00",
+   "user": "Thibault Sahin",
+   "handle": "@thibault",
+   "text": "Recap from yesterday: you sent Bilal the Mistral solution brief!"
+  },
+  {
+   "ts": "2027-02-23T16:27:55-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-02-23T16:32:43-07:00",
+   "user": "Thibault Sahin",
+   "handle": "@thibault",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-02-23T16:35:46-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "remote, but online all day"
+  }
+ ]
+}

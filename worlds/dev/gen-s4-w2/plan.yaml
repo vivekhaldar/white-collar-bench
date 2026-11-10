@@ -1,0 +1,2106 @@
+plan_version: 1
+world_id: gen-s4-w2
+generator:
+  kind: wcb-gen
+  version: 1
+  seed: 4
+  size: standard
+  weeks: 2
+setting:
+  key: university
+  label: public university system
+  timezone: -08:00
+  vocab:
+    sites: courses
+    site: course
+    users: faculty
+    end_users: students
+    council: Council of Provosts
+    data: student data
+    agreement: data-sharing agreement
+    platform: shared AI platform
+    unit_word: campus
+  nouns:
+  - risk register
+  - rollout checklist
+  - test plan
+  - decision memo
+  - status slide
+  - comms plan
+  - training outline
+  - budget justification
+  - vendor comparison
+  - architecture diagram
+  - integration spec
+  - access request
+  - pilot charter
+  - evaluation rubric
+  - data dictionary
+  - stakeholder map
+  - dependency list
+  - requirements matrix
+  - lessons-learned note
+  - timeline
+  - RACI chart
+  - cutover plan
+  - acceptance criteria
+  - metrics definition
+  - service blueprint
+  - support model
+  - retention schedule
+  - change request
+  - accessibility review
+  - help-desk script
+  - course roster export
+  - LMS integration notes
+  - accessibility audit
+  - faculty survey
+  umbrella: o-drayhurst-university-system
+  central: o-systemwide-learning-innovation-office
+  video_domain: meet.drayhurst.example
+  chat_workspace: drayhurst
+  volume:
+  - 15
+  - 20
+  loops_per_day: 5.8
+calendar:
+  start: '2027-09-06'
+  seed:
+    start: '2027-08-23'
+    end: '2027-09-04'
+    days:
+    - '2027-08-23'
+    - '2027-08-24'
+    - '2027-08-25'
+    - '2027-08-26'
+    - '2027-08-27'
+    - '2027-08-28'
+    - '2027-08-30'
+    - '2027-08-31'
+    - '2027-09-01'
+    - '2027-09-02'
+    - '2027-09-03'
+    - '2027-09-04'
+  episode:
+    days:
+    - '2027-09-06'
+    - '2027-09-07'
+    - '2027-09-08'
+    - '2027-09-09'
+    - '2027-09-10'
+    - '2027-09-11'
+    - '2027-09-13'
+    - '2027-09-14'
+    - '2027-09-15'
+    - '2027-09-16'
+    - '2027-09-17'
+    - '2027-09-18'
+    weeks:
+    - - '2027-09-06'
+      - '2027-09-07'
+      - '2027-09-08'
+      - '2027-09-09'
+      - '2027-09-10'
+      - '2027-09-11'
+    - - '2027-09-13'
+      - '2027-09-14'
+      - '2027-09-15'
+      - '2027-09-16'
+      - '2027-09-17'
+      - '2027-09-18'
+  checkpoints:
+  - id: cp1
+    date: '2027-09-07'
+    label: end of Tuesday (week 1)
+  - id: cp2
+    date: '2027-09-09'
+    label: end of Thursday (week 1)
+  - id: cp3
+    date: '2027-09-11'
+    label: end of week (week 1)
+  - id: cp4
+    date: '2027-09-14'
+    label: end of Tuesday (week 2)
+  - id: cp5
+    date: '2027-09-16'
+    label: end of Thursday (week 2)
+  - id: cp6
+    date: '2027-09-18'
+    label: end of week (week 2)
+worker: p-ottavio-monteiro
+orgs:
+- id: o-drayhurst-university-system
+  name: Drayhurst University System
+  short: Drayhurst
+  kind: internal
+  role: umbrella
+  domain: drayhurst.example
+  slug: drayhurst
+  surface_forms:
+  - Drayhurst
+  - DUS
+  - drayhurst.example
+  receptiveness: null
+- id: o-systemwide-learning-innovation-office
+  name: Systemwide Learning Innovation Office
+  short: SLIO
+  kind: internal
+  role: central
+  domain: drayhurst.example
+  slug: slio
+  surface_forms:
+  - SLIO
+  - central
+  - the SLIO team
+  - drayhurst.example
+  receptiveness: null
+- id: o-holfield-state-college
+  name: Holfield State College
+  short: Holfield
+  kind: internal
+  role: unit
+  domain: holfield.drayhurst.example
+  slug: holfield
+  surface_forms:
+  - Holfield
+  - HSC
+  - holfield.drayhurst.example
+  receptiveness: high
+- id: o-heathridge-university
+  name: Heathridge University
+  short: Heathridge
+  kind: internal
+  role: unit
+  domain: heathridge.drayhurst.example
+  slug: heathridge
+  surface_forms:
+  - Heathridge
+  - HU
+  - heathridge.drayhurst.example
+  receptiveness: medium
+- id: o-university-of-kirkley
+  name: University of Kirkley
+  short: Kirkley
+  kind: internal
+  role: unit
+  domain: kirkley.drayhurst.example
+  slug: kirkley
+  surface_forms:
+  - Kirkley
+  - UK
+  - kirkley.drayhurst.example
+  receptiveness: low
+- id: o-ithic-learning
+  name: Ithic Learning
+  short: Ithic
+  kind: vendor
+  role: vendor
+  domain: ithic.example
+  slug: ithic
+  surface_forms:
+  - Ithic
+  - ithic.example
+  receptiveness: null
+- id: o-toria-analytics
+  name: Toria Analytics
+  short: Toria
+  kind: vendor
+  role: vendor
+  domain: toria.example
+  slug: toria
+  surface_forms:
+  - Toria
+  - toria.example
+  receptiveness: null
+- id: o-falcombe-center-for-digital-pedagogy
+  name: Falcombe Center for Digital Pedagogy
+  short: Falcombe
+  kind: partner
+  role: partner
+  domain: falcombe-research.example
+  slug: falcombe
+  surface_forms:
+  - Falcombe
+  - FCDP
+  - falcombe-research.example
+  receptiveness: null
+- id: o-frostwick-center-for-digital-pedagogy
+  name: Frostwick Center for Digital Pedagogy
+  short: Frostwick
+  kind: partner
+  role: partner
+  domain: frostwick-research.example
+  slug: frostwick
+  surface_forms:
+  - Frostwick
+  - FCDP
+  - frostwick-research.example
+  receptiveness: null
+people:
+- id: p-ottavio-monteiro
+  name: Ottavio Monteiro
+  first: Ottavio
+  last: Monteiro
+  nickname: Tavo
+  org: o-systemwide-learning-innovation-office
+  role: Lead Solutions Architect, Teaching Technology
+  role_phrase: null
+  email: ottavio.monteiro@drayhurst.example
+  handle: '@ottavio'
+  relationship: null
+  group: central
+  tier: core
+  weight: 0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Ottavio
+  - Tavo
+  - O. Monteiro
+  - ottavio.monteiro@drayhurst.example
+  - '@ottavio'
+- id: p-tariq-popescu
+  name: Tariq Popescu
+  first: Tariq
+  last: Popescu
+  nickname: null
+  org: o-systemwide-learning-innovation-office
+  role: Associate Provost for Academic Technology
+  role_phrase: the associate provost
+  email: tariq.popescu@drayhurst.example
+  handle: '@tariq'
+  relationship: manager
+  group: central
+  tier: core
+  weight: 2.0
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Tariq
+  - T. Popescu
+  - tariq.popescu@drayhurst.example
+  - '@tariq'
+  - the associate provost
+- id: p-meera-ivanova
+  name: Meera Ivanova
+  first: Meera
+  last: Ivanova
+  nickname: null
+  org: o-systemwide-learning-innovation-office
+  role: Head of Learning Services
+  role_phrase: our learning services head
+  email: meera.ivanova@drayhurst.example
+  handle: '@meera'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 7.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - Meera
+  - M. Ivanova
+  - meera.ivanova@drayhurst.example
+  - '@meera'
+  - our learning services head
+- id: p-theresa-nagy
+  name: Theresa Nagy
+  first: Theresa
+  last: Nagy
+  nickname: Resi
+  org: o-systemwide-learning-innovation-office
+  role: Lead, Cloud Platforms
+  role_phrase: the platform lead
+  email: theresa.nagy@drayhurst.example
+  handle: '@theresa'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 3.2
+  appears: null
+  voice: formal
+  surface_forms:
+  - Theresa
+  - Resi
+  - T. Nagy
+  - theresa.nagy@drayhurst.example
+  - '@theresa'
+  - the platform lead
+- id: p-bruna-sinclair
+  name: Bruna Sinclair
+  first: Bruna
+  last: Sinclair
+  nickname: null
+  org: o-systemwide-learning-innovation-office
+  role: Platform Engineer
+  role_phrase: the platform engineer
+  email: bruna.sinclair@drayhurst.example
+  handle: '@bruna'
+  relationship: stakeholder
+  group: central
+  tier: core
+  weight: 1.2
+  appears: null
+  voice: formal
+  surface_forms:
+  - Bruna
+  - B. Sinclair
+  - bruna.sinclair@drayhurst.example
+  - '@bruna'
+  - the platform engineer
+- id: p-nomvula-ndlovu
+  name: Nomvula Ndlovu
+  first: Nomvula
+  last: Ndlovu
+  nickname: null
+  org: o-systemwide-learning-innovation-office
+  role: Information Security Manager
+  role_phrase: the security manager
+  email: nomvula.ndlovu@drayhurst.example
+  handle: '@nomvula'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 2.9
+  appears: null
+  voice: terse
+  surface_forms:
+  - Nomvula
+  - N. Ndlovu
+  - nomvula.ndlovu@drayhurst.example
+  - '@nomvula'
+  - the security manager
+- id: p-esperanza-rao
+  name: Esperanza Rao
+  first: Esperanza
+  last: Rao
+  nickname: Espe
+  org: o-systemwide-learning-innovation-office
+  role: Product Owner, Student Systems
+  role_phrase: the product owner
+  email: esperanza.rao@drayhurst.example
+  handle: '@esperanza'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 1.2
+  appears: null
+  voice: terse
+  surface_forms:
+  - Esperanza
+  - Espe
+  - E. Rao
+  - esperanza.rao@drayhurst.example
+  - '@esperanza'
+  - the product owner
+- id: p-tobias-kovacs
+  name: Tobias Kovacs
+  first: Tobias
+  last: Kovacs
+  nickname: null
+  org: o-systemwide-learning-innovation-office
+  role: Executive Assistant to the Associate Provost
+  role_phrase: the provost's EA
+  email: tobias.kovacs@drayhurst.example
+  handle: '@tobias'
+  relationship: assistant
+  group: central
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Tobias
+  - T. Kovacs
+  - tobias.kovacs@drayhurst.example
+  - '@tobias'
+  - the provost's EA
+- id: p-teagan-penhallow
+  name: Teagan Penhallow
+  first: Teagan
+  last: Penhallow
+  nickname: null
+  org: o-systemwide-learning-innovation-office
+  role: Senior Data Analyst
+  role_phrase: our data analyst
+  email: teagan.penhallow@drayhurst.example
+  handle: '@teagan'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Teagan
+  - T. Penhallow
+  - teagan.penhallow@drayhurst.example
+  - '@teagan'
+  - our data analyst
+- id: p-slio-shared-inbox
+  name: SLIO Shared Inbox
+  first: SLIO Team
+  last: Mailbox
+  nickname: null
+  org: o-systemwide-learning-innovation-office
+  role: Shared team mailbox
+  role_phrase: the SLIO inbox
+  email: slio-team@drayhurst.example
+  handle: '@slio-team'
+  relationship: other
+  group: mailbox
+  tier: core
+  weight: 0.3
+  appears: null
+  voice: formal
+  surface_forms:
+  - SLIO Team
+  - the SLIO inbox
+  - slio-team@drayhurst.example
+- id: p-ewan-shrestha
+  name: Ewan Shrestha
+  first: Ewan
+  last: Shrestha
+  nickname: null
+  org: o-drayhurst-university-system
+  role: Procurement Officer, System Procurement
+  role_phrase: the procurement officer
+  email: ewan.shrestha@drayhurst.example
+  handle: '@ewan'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Ewan
+  - E. Shrestha
+  - ewan.shrestha@drayhurst.example
+  - '@ewan'
+  - the procurement officer
+- id: p-achieng-ibarra
+  name: Achieng Ibarra
+  first: Achieng
+  last: Ibarra
+  nickname: null
+  org: o-drayhurst-university-system
+  role: Associate Counsel, System Legal
+  role_phrase: system counsel
+  email: achieng.ibarra@drayhurst.example
+  handle: '@achieng'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: terse
+  surface_forms:
+  - Achieng
+  - A. Ibarra
+  - achieng.ibarra@drayhurst.example
+  - '@achieng'
+  - system counsel
+- id: p-magdalena-barbosa
+  name: Magdalena Barbosa
+  first: Magdalena
+  last: Barbosa
+  nickname: Magda
+  org: o-drayhurst-university-system
+  role: Director, System Budget Office
+  role_phrase: the budget director
+  email: magdalena.barbosa@drayhurst.example
+  handle: '@magdalena'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Magdalena
+  - Magda
+  - M. Barbosa
+  - magdalena.barbosa@drayhurst.example
+  - '@magdalena'
+  - the budget director
+- id: p-siobhan-munro
+  name: Siobhan Munro
+  first: Siobhan
+  last: Munro
+  nickname: null
+  org: o-drayhurst-university-system
+  role: Talent Partner, System HR
+  role_phrase: our talent partner
+  email: siobhan.munro@drayhurst.example
+  handle: '@siobhan'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Siobhan
+  - S. Munro
+  - siobhan.munro@drayhurst.example
+  - '@siobhan'
+  - our talent partner
+- id: p-mei-wekesa
+  name: Mei Wekesa
+  first: Mei
+  last: Wekesa
+  nickname: null
+  org: o-drayhurst-university-system
+  role: Chief Privacy Officer
+  role_phrase: the privacy officer
+  email: mei.wekesa@drayhurst.example
+  handle: '@mei'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: terse
+  surface_forms:
+  - Mei
+  - M. Wekesa
+  - mei.wekesa@drayhurst.example
+  - '@mei'
+  - the privacy officer
+- id: p-yaroslav-moyo
+  name: Yaroslav Moyo
+  first: Yaroslav
+  last: Moyo
+  nickname: null
+  org: o-holfield-state-college
+  role: Chief Information Officer
+  role_phrase: Holfield's CIO
+  email: yaroslav.moyo@holfield.drayhurst.example
+  handle: '@yaroslav'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: terse
+  surface_forms:
+  - Yaroslav
+  - Y. Moyo
+  - yaroslav.moyo@holfield.drayhurst.example
+  - '@yaroslav'
+  - Holfield's CIO
+- id: p-darius-sherwood
+  name: Darius Sherwood
+  first: Darius
+  last: Sherwood
+  nickname: null
+  org: o-holfield-state-college
+  role: Dean of Libraries
+  role_phrase: the Holfield lead
+  email: darius.sherwood@holfield.drayhurst.example
+  handle: '@darius'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 2.4
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Darius
+  - D. Sherwood
+  - darius.sherwood@holfield.drayhurst.example
+  - '@darius'
+  - the Holfield lead
+- id: p-ratna-bondarenko
+  name: Ratna Bondarenko
+  first: Ratna
+  last: Bondarenko
+  nickname: null
+  org: o-holfield-state-college
+  role: Service Desk Lead
+  role_phrase: null
+  email: ratna.bondarenko@holfield.drayhurst.example
+  handle: '@ratna'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Ratna
+  - R. Bondarenko
+  - ratna.bondarenko@holfield.drayhurst.example
+  - '@ratna'
+- id: p-solene-yassin
+  name: Solene Yassin
+  first: Solene
+  last: Yassin
+  nickname: null
+  org: o-heathridge-university
+  role: Chief Information Officer
+  role_phrase: Heathridge's CIO
+  email: solene.yassin@heathridge.drayhurst.example
+  handle: '@solene'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: terse
+  surface_forms:
+  - Solene
+  - S. Yassin
+  - solene.yassin@heathridge.drayhurst.example
+  - '@solene'
+  - Heathridge's CIO
+- id: p-roya-chatterjee
+  name: Roya Chatterjee
+  first: Roya
+  last: Chatterjee
+  nickname: null
+  org: o-heathridge-university
+  role: Director, Teaching & Learning Technology
+  role_phrase: the Heathridge lead
+  email: roya.chatterjee@heathridge.drayhurst.example
+  handle: '@roya'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: terse
+  surface_forms:
+  - Roya
+  - R. Chatterjee
+  - roya.chatterjee@heathridge.drayhurst.example
+  - '@roya'
+  - the Heathridge lead
+- id: p-tegan-ogunleye
+  name: Tegan Ogunleye
+  first: Tegan
+  last: Ogunleye
+  nickname: null
+  org: o-heathridge-university
+  role: Site Reliability Engineer
+  role_phrase: null
+  email: tegan.ogunleye@heathridge.drayhurst.example
+  handle: '@tegan'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Tegan
+  - T. Ogunleye
+  - tegan.ogunleye@heathridge.drayhurst.example
+  - '@tegan'
+- id: p-nadia-krause
+  name: Nadia Krause
+  first: Nadia
+  last: Krause
+  nickname: null
+  org: o-heathridge-university
+  role: Instructional Designer
+  role_phrase: null
+  email: nadia.krause@heathridge.drayhurst.example
+  handle: '@nadia'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Nadia
+  - N. Krause
+  - nadia.krause@heathridge.drayhurst.example
+  - '@nadia'
+- id: p-ngozi-zielinski
+  name: Ngozi Zielinski
+  first: Ngozi
+  last: Zielinski
+  nickname: null
+  org: o-university-of-kirkley
+  role: Chief Information Officer
+  role_phrase: Kirkley's CIO
+  email: ngozi.zielinski@kirkley.drayhurst.example
+  handle: '@ngozi'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: formal
+  surface_forms:
+  - Ngozi
+  - N. Zielinski
+  - ngozi.zielinski@kirkley.drayhurst.example
+  - '@ngozi'
+  - Kirkley's CIO
+- id: p-ishaan-smit
+  name: Ishaan Smit
+  first: Ishaan
+  last: Smit
+  nickname: Ish
+  org: o-university-of-kirkley
+  role: Director of Advising
+  role_phrase: the Kirkley lead
+  email: ishaan.smit@kirkley.drayhurst.example
+  handle: '@ishaan'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Ishaan
+  - Ish
+  - I. Smit
+  - ishaan.smit@kirkley.drayhurst.example
+  - '@ishaan'
+  - the Kirkley lead
+- id: p-margaux-choi
+  name: Margaux Choi
+  first: Margaux
+  last: Choi
+  nickname: null
+  org: o-university-of-kirkley
+  role: Service Desk Lead
+  role_phrase: null
+  email: margaux.choi@kirkley.drayhurst.example
+  handle: '@margaux'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Margaux
+  - M. Choi
+  - margaux.choi@kirkley.drayhurst.example
+  - '@margaux'
+- id: p-sakura-carmichael
+  name: Sakura Carmichael
+  first: Sakura
+  last: Carmichael
+  nickname: null
+  org: o-university-of-kirkley
+  role: Enterprise Architect
+  role_phrase: null
+  email: sakura.carmichael@kirkley.drayhurst.example
+  handle: '@sakura'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Sakura
+  - S. Carmichael
+  - sakura.carmichael@kirkley.drayhurst.example
+  - '@sakura'
+- id: p-meera-kariuki
+  name: Meera Kariuki
+  first: Meera
+  last: Kariuki
+  nickname: null
+  org: o-ithic-learning
+  role: Account Executive
+  role_phrase: null
+  email: meera.kariuki@ithic.example
+  handle: '@meerak'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Meera
+  - M. Kariuki
+  - meera.kariuki@ithic.example
+  - '@meerak'
+- id: p-jurgen-sargsyan
+  name: Jurgen Sargsyan
+  first: Jurgen
+  last: Sargsyan
+  nickname: null
+  org: o-ithic-learning
+  role: Solutions Engineer
+  role_phrase: null
+  email: jurgen.sargsyan@ithic.example
+  handle: '@jurgen'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Jurgen
+  - J. Sargsyan
+  - jurgen.sargsyan@ithic.example
+  - '@jurgen'
+- id: p-isabela-haidari
+  name: Isabela Haidari
+  first: Isabela
+  last: Haidari
+  nickname: null
+  org: o-toria-analytics
+  role: Account Executive
+  role_phrase: null
+  email: isabela.haidari@toria.example
+  handle: '@isabela'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Isabela
+  - I. Haidari
+  - isabela.haidari@toria.example
+  - '@isabela'
+- id: p-roya-mancini
+  name: Roya Mancini
+  first: Roya
+  last: Mancini
+  nickname: null
+  org: o-toria-analytics
+  role: Solutions Engineer
+  role_phrase: null
+  email: roya.mancini@toria.example
+  handle: '@royam'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Roya
+  - R. Mancini
+  - roya.mancini@toria.example
+  - '@royam'
+- id: p-mikkel-nowak
+  name: Mikkel Nowak
+  first: Mikkel
+  last: Nowak
+  nickname: null
+  org: o-falcombe-center-for-digital-pedagogy
+  role: Senior Research Scientist
+  role_phrase: null
+  email: mikkel.nowak@falcombe-research.example
+  handle: '@mikkel'
+  relationship: partner
+  group: partner
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: terse
+  surface_forms:
+  - Mikkel
+  - M. Nowak
+  - mikkel.nowak@falcombe-research.example
+  - '@mikkel'
+- id: p-cedric-okada
+  name: Cedric Okada
+  first: Cedric
+  last: Okada
+  nickname: null
+  org: o-frostwick-center-for-digital-pedagogy
+  role: Senior Research Scientist
+  role_phrase: null
+  email: cedric.okada@frostwick-research.example
+  handle: '@cedric'
+  relationship: partner
+  group: partner
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: terse
+  surface_forms:
+  - Cedric
+  - C. Okada
+  - cedric.okada@frostwick-research.example
+  - '@cedric'
+- id: p-deepa-wickramasinghe
+  name: Deepa Wickramasinghe
+  first: Deepa
+  last: Wickramasinghe
+  nickname: null
+  org: null
+  role: Candidate
+  role_phrase: null
+  email: deepa.wickramasinghe@post.example
+  handle: '@deepa'
+  relationship: candidate
+  group: candidate
+  tier: core
+  weight: 0.6
+  appears: null
+  voice: formal
+  surface_forms:
+  - Deepa
+  - D. Wickramasinghe
+  - deepa.wickramasinghe@post.example
+  - '@deepa'
+- id: p-celine-wisniewska
+  name: Celine Wisniewska
+  first: Celine
+  last: Wisniewska
+  nickname: null
+  org: o-holfield-state-college
+  role: Privacy Officer
+  role_phrase: the new privacy officer
+  email: celine.wisniewska@holfield.drayhurst.example
+  handle: '@celine'
+  relationship: stakeholder
+  group: newcomer
+  tier: core
+  weight: 1.4
+  appears: '2027-09-07'
+  voice: formal
+  surface_forms:
+  - Celine
+  - C. Wisniewska
+  - celine.wisniewska@holfield.drayhurst.example
+  - '@celine'
+  - the new privacy officer
+- id: p-henrik-mendoza
+  name: Henrik Mendoza
+  first: Henrik
+  last: Mendoza
+  nickname: null
+  org: o-ithic-learning
+  role: Senior Account Executive
+  role_phrase: null
+  email: henrik.mendoza@ithic.example
+  handle: '@henrik'
+  relationship: vendor
+  group: newcomer
+  tier: core
+  weight: 1.4
+  appears: '2027-09-14'
+  voice: chatty
+  surface_forms:
+  - Henrik
+  - H. Mendoza
+  - henrik.mendoza@ithic.example
+  - '@henrik'
+- id: p-funmilayo-danjuma
+  name: Funmilayo Danjuma
+  first: Funmilayo
+  last: Danjuma
+  nickname: null
+  org: null
+  role: Editor, The Quad Ledger
+  role_phrase: null
+  email: funmilayo.danjuma@newsletters.example
+  handle: '@funmilayo'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - funmilayo.danjuma@newsletters.example
+  minor_kind: newsletter
+- id: p-drayhurst-it-service-desk
+  name: Drayhurst IT Service Desk
+  first: Drayhurst IT Service Desk
+  last: ''
+  nickname: null
+  org: null
+  role: Drayhurst IT Service Desk
+  role_phrase: null
+  email: servicedesk-noreply@drayhurst.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - servicedesk-noreply@drayhurst.example
+  minor_kind: service_desk
+- id: p-platform-status-page
+  name: Platform Status Page
+  first: Platform Status Page
+  last: ''
+  nickname: null
+  org: null
+  role: Platform Status Page
+  role_phrase: null
+  email: status-noreply@drayhurst.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - status-noreply@drayhurst.example
+  minor_kind: status
+- id: p-drayhurst-internal-communications
+  name: Drayhurst Internal Communications
+  first: Drayhurst Internal Communications
+  last: ''
+  nickname: null
+  org: null
+  role: Drayhurst Internal Communications
+  role_phrase: null
+  email: news@drayhurst.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - news@drayhurst.example
+  minor_kind: comms
+- id: p-yael-ribeiro
+  name: Yael Ribeiro
+  first: Yael
+  last: Ribeiro
+  nickname: null
+  org: null
+  role: Events Coordinator
+  role_phrase: null
+  email: yael.ribeiro@drayhurst.example
+  handle: '@yael'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - yael.ribeiro@drayhurst.example
+  minor_kind: events
+- id: p-freja-abernathy
+  name: Freja Abernathy
+  first: Freja
+  last: Abernathy
+  nickname: null
+  org: null
+  role: Conference Organizer
+  role_phrase: null
+  email: freja.abernathy@conference.example
+  handle: '@freja'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - freja.abernathy@conference.example
+  minor_kind: conference
+- id: p-benefits-enrollment-notices
+  name: Benefits Enrollment Notices
+  first: Benefits Enrollment Notices
+  last: ''
+  nickname: null
+  org: null
+  role: Benefits Enrollment Notices
+  role_phrase: null
+  email: benefits-noreply@drayhurst.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - benefits-noreply@drayhurst.example
+  minor_kind: benefits
+projects:
+- id: pr-fjord
+  name: Fjord
+  short: Fjord
+  kw: fjord
+  code: Fjord
+  surface_forms:
+  - Project Fjord
+  - the alumni outreach pilot
+  - the Holfield pilot
+  - FJOP
+  archetype: flagship_pilot
+  size: flagship
+  topic: alumni outreach
+  topic_a: an AI alumni outreach assistant
+  pivot: prerequisite mapping
+  role: ''
+  unit: o-holfield-state-college
+  vendors:
+  - o-ithic-learning
+  - o-toria-analytics
+  partner: o-falcombe-center-for-digital-pedagogy
+  owner: p-darius-sherwood
+  sponsor: p-tariq-popescu
+  members:
+  - p-ottavio-monteiro
+  - p-darius-sherwood
+  - p-meera-ivanova
+  - p-ratna-bondarenko
+  - p-theresa-nagy
+  - p-nomvula-ndlovu
+  - p-bruna-sinclair
+  - p-esperanza-rao
+  - p-yaroslav-moyo
+  orgs:
+  - o-holfield-state-college
+  status: active
+  phase: scoping
+  target_date: '2027-10-14'
+  n: 5
+  cast:
+    owner: p-darius-sherwood
+    sponsor: p-tariq-popescu
+    lead: p-darius-sherwood
+    unit:
+    - p-ratna-bondarenko
+    - p-darius-sherwood
+    ae:
+    - p-meera-kariuki
+    - p-isabela-haidari
+    se:
+    - p-jurgen-sargsyan
+    - p-roya-mancini
+    eng: p-theresa-nagy
+    sec: p-nomvula-ndlovu
+    privacy: p-mei-wekesa
+    legal: p-achieng-ibarra
+    proc: p-ewan-shrestha
+    fin: p-magdalena-barbosa
+    hr: p-siobhan-munro
+    ea: p-tobias-kovacs
+    collab: p-meera-ivanova
+    partner: p-mikkel-nowak
+    cand: p-deepa-wickramasinghe
+  weight: 35.91
+  start: '2027-08-23'
+- id: pr-cairn
+  name: Cairn
+  short: Cairn
+  kw: cairn
+  code: Cairn
+  surface_forms:
+  - the platform
+  - the common platform
+  - Cairn platform
+  - the shared AI platform
+  archetype: platform_hub
+  size: hub
+  topic: shared platform
+  topic_a: ''
+  pivot: lab equipment booking
+  role: ''
+  unit: o-holfield-state-college
+  vendors:
+  - o-toria-analytics
+  - o-ithic-learning
+  partner: o-falcombe-center-for-digital-pedagogy
+  owner: p-theresa-nagy
+  sponsor: p-tariq-popescu
+  members:
+  - p-ottavio-monteiro
+  - p-theresa-nagy
+  - p-meera-ivanova
+  - p-darius-sherwood
+  - p-ratna-bondarenko
+  - p-bruna-sinclair
+  - p-nomvula-ndlovu
+  orgs: []
+  status: active
+  phase: onboarding tenants
+  target_date: null
+  n: 2
+  cast:
+    owner: p-theresa-nagy
+    sponsor: p-tariq-popescu
+    lead: p-darius-sherwood
+    unit:
+    - p-ratna-bondarenko
+    - p-darius-sherwood
+    ae:
+    - p-isabela-haidari
+    - p-meera-kariuki
+    se:
+    - p-roya-mancini
+    - p-jurgen-sargsyan
+    eng: p-bruna-sinclair
+    sec: p-nomvula-ndlovu
+    privacy: p-mei-wekesa
+    legal: p-achieng-ibarra
+    proc: p-ewan-shrestha
+    fin: p-magdalena-barbosa
+    hr: p-siobhan-munro
+    ea: p-tobias-kovacs
+    collab: p-meera-ivanova
+    partner: p-mikkel-nowak
+    cand: p-deepa-wickramasinghe
+  weight: 12.83
+  start: '2027-08-23'
+- id: pr-room-booking-tool-selection
+  name: Room Booking Tool Selection
+  short: room booking selection
+  kw: room booking selection
+  code: null
+  surface_forms:
+  - the room booking bake-off
+  - the Toria/Ithic evaluation
+  - RBTS selection
+  archetype: vendor_pair_evaluation
+  size: mid
+  topic: room booking
+  topic_a: an AI room booking assistant
+  pivot: lab equipment booking
+  role: ''
+  unit: o-heathridge-university
+  vendors:
+  - o-toria-analytics
+  - o-ithic-learning
+  partner: o-falcombe-center-for-digital-pedagogy
+  owner: p-roya-chatterjee
+  sponsor: p-solene-yassin
+  members:
+  - p-ottavio-monteiro
+  - p-roya-chatterjee
+  - p-meera-ivanova
+  - p-tegan-ogunleye
+  - p-nadia-krause
+  - p-isabela-haidari
+  orgs:
+  - o-heathridge-university
+  - o-toria-analytics
+  - o-ithic-learning
+  status: active
+  phase: demos
+  target_date: '2027-09-30'
+  n: 2
+  cast:
+    owner: p-roya-chatterjee
+    sponsor: p-solene-yassin
+    lead: p-roya-chatterjee
+    unit:
+    - p-tegan-ogunleye
+    - p-nadia-krause
+    - p-roya-chatterjee
+    ae:
+    - p-isabela-haidari
+    - p-meera-kariuki
+    se:
+    - p-roya-mancini
+    - p-jurgen-sargsyan
+    eng: p-theresa-nagy
+    sec: p-nomvula-ndlovu
+    privacy: p-mei-wekesa
+    legal: p-achieng-ibarra
+    proc: p-ewan-shrestha
+    fin: p-magdalena-barbosa
+    hr: p-siobhan-munro
+    ea: p-tobias-kovacs
+    collab: p-meera-ivanova
+    partner: p-mikkel-nowak
+    cand: p-deepa-wickramasinghe
+  weight: 7.96
+  start: '2027-08-23'
+- id: pr-holfield-syllabus-review-discovery
+  name: Holfield Syllabus Review Discovery
+  short: syllabus review discovery
+  kw: syllabus review discovery
+  code: null
+  surface_forms:
+  - the Holfield discovery
+  - the syllabus review work
+  - HSRD discovery
+  archetype: pivoting_discovery
+  size: mid
+  topic: syllabus review
+  topic_a: an AI syllabus review tool
+  pivot: waitlist management
+  role: ''
+  unit: o-holfield-state-college
+  vendors:
+  - o-ithic-learning
+  - o-toria-analytics
+  partner: o-falcombe-center-for-digital-pedagogy
+  owner: p-darius-sherwood
+  sponsor: p-tariq-popescu
+  members:
+  - p-ottavio-monteiro
+  - p-darius-sherwood
+  - p-meera-ivanova
+  - p-ratna-bondarenko
+  orgs:
+  - o-holfield-state-college
+  status: active
+  phase: site visit
+  target_date: '2027-10-11'
+  n: 2
+  cast:
+    owner: p-darius-sherwood
+    sponsor: p-tariq-popescu
+    lead: p-darius-sherwood
+    unit:
+    - p-ratna-bondarenko
+    - p-darius-sherwood
+    ae:
+    - p-meera-kariuki
+    - p-isabela-haidari
+    se:
+    - p-jurgen-sargsyan
+    - p-roya-mancini
+    eng: p-theresa-nagy
+    sec: p-nomvula-ndlovu
+    privacy: p-mei-wekesa
+    legal: p-achieng-ibarra
+    proc: p-ewan-shrestha
+    fin: p-magdalena-barbosa
+    hr: p-siobhan-munro
+    ea: p-tobias-kovacs
+    collab: p-meera-ivanova
+    partner: p-mikkel-nowak
+    cand: p-deepa-wickramasinghe
+  weight: 6.14
+  start: '2027-08-23'
+- id: pr-heathridge-course-assistant-discovery
+  name: Heathridge Course Assistant Discovery
+  short: course assistant discovery
+  kw: course assistant discovery
+  code: null
+  surface_forms:
+  - the Heathridge discovery
+  - the course assistant work
+  - HCAD discovery
+  archetype: unit_discovery
+  size: mid
+  topic: course assistant
+  topic_a: an AI course assistant
+  pivot: prerequisite mapping
+  role: ''
+  unit: o-heathridge-university
+  vendors:
+  - o-toria-analytics
+  - o-ithic-learning
+  partner: o-falcombe-center-for-digital-pedagogy
+  owner: p-roya-chatterjee
+  sponsor: p-solene-yassin
+  members:
+  - p-ottavio-monteiro
+  - p-roya-chatterjee
+  - p-meera-ivanova
+  - p-tegan-ogunleye
+  - p-nadia-krause
+  orgs:
+  - o-heathridge-university
+  status: active
+  phase: site visit
+  target_date: '2027-09-27'
+  n: 2
+  cast:
+    owner: p-roya-chatterjee
+    sponsor: p-solene-yassin
+    lead: p-roya-chatterjee
+    unit:
+    - p-tegan-ogunleye
+    - p-nadia-krause
+    - p-roya-chatterjee
+    ae:
+    - p-isabela-haidari
+    - p-meera-kariuki
+    se:
+    - p-roya-mancini
+    - p-jurgen-sargsyan
+    eng: p-theresa-nagy
+    sec: p-nomvula-ndlovu
+    privacy: p-mei-wekesa
+    legal: p-achieng-ibarra
+    proc: p-ewan-shrestha
+    fin: p-magdalena-barbosa
+    hr: p-siobhan-munro
+    ea: p-tobias-kovacs
+    collab: p-meera-ivanova
+    partner: p-mikkel-nowak
+    cand: p-deepa-wickramasinghe
+  weight: 5.89
+  start: '2027-08-23'
+- id: pr-open-courseware-workshop
+  name: Open Courseware Workshop
+  short: open courseware workshop
+  kw: open courseware workshop
+  code: null
+  surface_forms:
+  - the workshop
+  - the Heathridge workshop
+  - the open courseware session
+  archetype: event_preparation
+  size: mid
+  topic: open courseware
+  topic_a: ''
+  pivot: lab equipment booking
+  role: ''
+  unit: o-heathridge-university
+  vendors:
+  - o-ithic-learning
+  - o-toria-analytics
+  partner: o-falcombe-center-for-digital-pedagogy
+  owner: p-meera-ivanova
+  sponsor: p-tariq-popescu
+  members:
+  - p-ottavio-monteiro
+  - p-meera-ivanova
+  - p-roya-chatterjee
+  - p-tegan-ogunleye
+  - p-nadia-krause
+  orgs:
+  - o-heathridge-university
+  status: active
+  phase: logistics
+  target_date: '2027-09-27'
+  n: 2
+  cast:
+    owner: p-meera-ivanova
+    sponsor: p-tariq-popescu
+    lead: p-roya-chatterjee
+    unit:
+    - p-tegan-ogunleye
+    - p-nadia-krause
+    - p-roya-chatterjee
+    ae:
+    - p-meera-kariuki
+    - p-isabela-haidari
+    se:
+    - p-jurgen-sargsyan
+    - p-roya-mancini
+    eng: p-theresa-nagy
+    sec: p-nomvula-ndlovu
+    privacy: p-mei-wekesa
+    legal: p-achieng-ibarra
+    proc: p-ewan-shrestha
+    fin: p-magdalena-barbosa
+    hr: p-siobhan-munro
+    ea: p-tobias-kovacs
+    collab: p-meera-ivanova
+    partner: p-mikkel-nowak
+    cand: p-deepa-wickramasinghe
+  weight: 5.54
+  start: '2027-08-23'
+- id: pr-thesis-formatting-input-round
+  name: Thesis Formatting Input Round
+  short: thesis formatting input round
+  kw: thesis formatting input round
+  code: null
+  surface_forms:
+  - the thesis formatting input
+  - the thesis formatting round
+  archetype: delegated_asks
+  size: small
+  topic: thesis formatting
+  topic_a: an AI thesis formatting checker
+  pivot: prerequisite mapping
+  role: ''
+  unit: o-holfield-state-college
+  vendors:
+  - o-toria-analytics
+  - o-ithic-learning
+  partner: o-falcombe-center-for-digital-pedagogy
+  owner: p-ottavio-monteiro
+  sponsor: p-tariq-popescu
+  members:
+  - p-ottavio-monteiro
+  - p-ottavio-monteiro
+  - p-meera-ivanova
+  - p-darius-sherwood
+  orgs:
+  - o-holfield-state-college
+  status: active
+  phase: asking
+  target_date: null
+  n: 2
+  cast:
+    owner: p-ottavio-monteiro
+    sponsor: p-tariq-popescu
+    lead: p-darius-sherwood
+    unit:
+    - p-ratna-bondarenko
+    - p-darius-sherwood
+    ae:
+    - p-isabela-haidari
+    - p-meera-kariuki
+    se:
+    - p-roya-mancini
+    - p-jurgen-sargsyan
+    eng: p-theresa-nagy
+    sec: p-nomvula-ndlovu
+    privacy: p-mei-wekesa
+    legal: p-achieng-ibarra
+    proc: p-ewan-shrestha
+    fin: p-magdalena-barbosa
+    hr: p-siobhan-munro
+    ea: p-tobias-kovacs
+    collab: p-meera-ivanova
+    partner: p-mikkel-nowak
+    cand: p-deepa-wickramasinghe
+  weight: 2.77
+  start: '2027-08-23'
+- id: pr-early-alert-advisory
+  name: Early Alert Advisory
+  short: early alert advisory
+  kw: early alert advisory
+  code: null
+  surface_forms:
+  - the early alert advice
+  - Kirkley early alert advisory
+  archetype: background_advisory
+  size: small
+  topic: early alert
+  topic_a: an AI early-alert assistant
+  pivot: prerequisite mapping
+  role: ''
+  unit: o-university-of-kirkley
+  vendors:
+  - o-toria-analytics
+  - o-ithic-learning
+  partner: o-falcombe-center-for-digital-pedagogy
+  owner: p-ishaan-smit
+  sponsor: p-tariq-popescu
+  members:
+  - p-ottavio-monteiro
+  - p-ishaan-smit
+  - p-meera-ivanova
+  - p-margaux-choi
+  orgs:
+  - o-university-of-kirkley
+  status: active
+  phase: advising
+  target_date: null
+  n: 2
+  cast:
+    owner: p-ishaan-smit
+    sponsor: p-tariq-popescu
+    lead: p-ishaan-smit
+    unit:
+    - p-margaux-choi
+    - p-sakura-carmichael
+    - p-ishaan-smit
+    ae:
+    - p-isabela-haidari
+    - p-meera-kariuki
+    se:
+    - p-roya-mancini
+    - p-jurgen-sargsyan
+    eng: p-theresa-nagy
+    sec: p-nomvula-ndlovu
+    privacy: p-mei-wekesa
+    legal: p-achieng-ibarra
+    proc: p-ewan-shrestha
+    fin: p-magdalena-barbosa
+    hr: p-siobhan-munro
+    ea: p-tobias-kovacs
+    collab: p-meera-ivanova
+    partner: p-mikkel-nowak
+    cand: p-deepa-wickramasinghe
+  weight: 2.69
+  start: '2027-08-23'
+- id: pr-heathridge-lab-safety-training-idea
+  name: Heathridge Lab Safety Training Idea
+  short: lab safety training
+  kw: lab safety training
+  code: null
+  surface_forms:
+  - Roya's lab safety training idea
+  - the lab safety training placeholder
+  archetype: placeholder
+  size: placeholder
+  topic: lab safety training
+  topic_a: an AI lab safety tutor
+  pivot: lab equipment booking
+  role: ''
+  unit: o-heathridge-university
+  vendors:
+  - o-ithic-learning
+  - o-toria-analytics
+  partner: o-falcombe-center-for-digital-pedagogy
+  owner: p-roya-chatterjee
+  sponsor: p-tariq-popescu
+  members:
+  - p-ottavio-monteiro
+  - p-roya-chatterjee
+  - p-meera-ivanova
+  orgs:
+  - o-heathridge-university
+  status: active
+  phase: placeholder
+  target_date: null
+  n: 2
+  cast:
+    owner: p-roya-chatterjee
+    sponsor: p-tariq-popescu
+    lead: p-roya-chatterjee
+    unit:
+    - p-tegan-ogunleye
+    - p-nadia-krause
+    - p-roya-chatterjee
+    ae:
+    - p-meera-kariuki
+    - p-isabela-haidari
+    se:
+    - p-jurgen-sargsyan
+    - p-roya-mancini
+    eng: p-theresa-nagy
+    sec: p-nomvula-ndlovu
+    privacy: p-mei-wekesa
+    legal: p-achieng-ibarra
+    proc: p-ewan-shrestha
+    fin: p-magdalena-barbosa
+    hr: p-siobhan-munro
+    ea: p-tobias-kovacs
+    collab: p-meera-ivanova
+    partner: p-mikkel-nowak
+    cand: p-deepa-wickramasinghe
+  weight: 0.17
+  start: '2027-08-23'
+- id: pr-ithic-course-scheduling-diligence
+  name: Ithic Course Scheduling Diligence
+  short: Ithic diligence
+  kw: ithic diligence
+  code: null
+  surface_forms:
+  - the Ithic deep dive
+  - the course scheduling diligence
+  archetype: stalled_discovery
+  size: dormant
+  topic: course scheduling
+  topic_a: an AI course scheduling optimizer
+  pivot: waitlist management
+  role: ''
+  unit: o-heathridge-university
+  vendors:
+  - o-ithic-learning
+  - o-toria-analytics
+  partner: o-falcombe-center-for-digital-pedagogy
+  owner: p-ottavio-monteiro
+  sponsor: p-tariq-popescu
+  members:
+  - p-ottavio-monteiro
+  - p-ottavio-monteiro
+  - p-meera-ivanova
+  orgs:
+  - o-heathridge-university
+  - o-ithic-learning
+  - o-toria-analytics
+  status: dormant
+  phase: stalled
+  target_date: null
+  n: 2
+  cast:
+    owner: p-ottavio-monteiro
+    sponsor: p-tariq-popescu
+    lead: p-roya-chatterjee
+    unit:
+    - p-tegan-ogunleye
+    - p-nadia-krause
+    - p-roya-chatterjee
+    ae:
+    - p-meera-kariuki
+    - p-isabela-haidari
+    se:
+    - p-jurgen-sargsyan
+    - p-roya-mancini
+    eng: p-theresa-nagy
+    sec: p-nomvula-ndlovu
+    privacy: p-mei-wekesa
+    legal: p-achieng-ibarra
+    proc: p-ewan-shrestha
+    fin: p-magdalena-barbosa
+    hr: p-siobhan-munro
+    ea: p-tobias-kovacs
+    collab: p-meera-ivanova
+    partner: p-mikkel-nowak
+    cand: p-deepa-wickramasinghe
+  weight: 0.56
+  start: '2027-08-23'
+- id: pr-research-computing-learning-series
+  name: Research Computing Learning Series
+  short: research computing series
+  kw: research computing series
+  code: null
+  surface_forms:
+  - the learning series
+  - the research computing talks
+  archetype: education_programme
+  size: dormant
+  topic: research computing
+  topic_a: an AI research computing broker
+  pivot: transcript intake
+  role: ''
+  unit: o-heathridge-university
+  vendors:
+  - o-ithic-learning
+  - o-toria-analytics
+  partner: o-falcombe-center-for-digital-pedagogy
+  owner: p-meera-ivanova
+  sponsor: p-tariq-popescu
+  members:
+  - p-ottavio-monteiro
+  - p-meera-ivanova
+  - p-roya-chatterjee
+  orgs:
+  - o-heathridge-university
+  - o-falcombe-center-for-digital-pedagogy
+  status: active
+  phase: dormant
+  target_date: null
+  n: 2
+  cast:
+    owner: p-meera-ivanova
+    sponsor: p-tariq-popescu
+    lead: p-roya-chatterjee
+    unit:
+    - p-tegan-ogunleye
+    - p-nadia-krause
+    - p-roya-chatterjee
+    ae:
+    - p-meera-kariuki
+    - p-isabela-haidari
+    se:
+    - p-jurgen-sargsyan
+    - p-roya-mancini
+    eng: p-theresa-nagy
+    sec: p-nomvula-ndlovu
+    privacy: p-mei-wekesa
+    legal: p-achieng-ibarra
+    proc: p-ewan-shrestha
+    fin: p-magdalena-barbosa
+    hr: p-siobhan-munro
+    ea: p-tobias-kovacs
+    collab: p-meera-ivanova
+    partner: p-mikkel-nowak
+    cand: p-deepa-wickramasinghe
+  weight: 0.65
+  start: '2027-08-23'
+collisions:
+  first_names:
+  - - p-meera-ivanova
+    - p-meera-kariuki
+  - - p-roya-chatterjee
+    - p-roya-mancini
+  homophones:
+  - p-teagan-penhallow
+  - p-tegan-ogunleye
+cadences:
+- key: standup
+  title: Fjord standup
+  kind: meeting
+  project: pr-fjord
+  weekdays:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  every: 1
+  time: 09:30
+  minutes: 25
+  organizer: p-darius-sherwood
+  attendees:
+  - p-ottavio-monteiro
+  - p-darius-sherwood
+  - p-meera-ivanova
+  - p-ratna-bondarenko
+  - p-theresa-nagy
+  - p-nomvula-ndlovu
+  - p-bruna-sinclair
+  - p-esperanza-rao
+- key: leads
+  title: SLIO leads call
+  kind: meeting
+  project: null
+  weekdays:
+  - 0
+  every: 1
+  time: '11:00'
+  minutes: 45
+  organizer: p-tariq-popescu
+  attendees:
+  - p-ottavio-monteiro
+  - p-meera-ivanova
+  - p-theresa-nagy
+  - p-nomvula-ndlovu
+  - p-esperanza-rao
+  - p-tariq-popescu
+- key: hub_sync
+  title: Cairn platform sync
+  kind: meeting
+  project: pr-cairn
+  weekdays:
+  - 2
+  every: 1
+  time: '14:00'
+  minutes: 30
+  organizer: p-theresa-nagy
+  attendees:
+  - p-ottavio-monteiro
+  - p-theresa-nagy
+  - p-meera-ivanova
+  - p-darius-sherwood
+  - p-ratna-bondarenko
+  - p-bruna-sinclair
+- key: one_on_one
+  title: 1:1 Ottavio / Meera
+  kind: meeting
+  project: null
+  weekdays:
+  - 1
+  every: 2
+  time: '15:00'
+  minutes: 30
+  organizer: p-meera-ivanova
+  attendees:
+  - p-ottavio-monteiro
+  - p-meera-ivanova
+- key: forum
+  title: Cross-campus AI forum
+  kind: meeting
+  project: null
+  weekdays:
+  - 3
+  every: 2
+  time: '13:00'
+  minutes: 60
+  organizer: p-meera-ivanova
+  attendees:
+  - p-ottavio-monteiro
+  - p-meera-ivanova
+  - p-darius-sherwood
+  - p-roya-chatterjee
+  - p-ishaan-smit
+- key: weekly_update
+  title: Weekly update
+  kind: obligation
+  project: null
+  weekdays:
+  - 0
+  - 4
+  every: 1
+  organizer: p-slio-shared-inbox
+  attendees:
+  - p-ottavio-monteiro
+  - p-tariq-popescu
+challenges:
+- week: 1
+  tag: worker_directive
+  day: '2027-09-06'
+  project: pr-holfield-syllabus-review-discovery
+- week: 1
+  tag: noise
+  day: '2027-09-06'
+- week: 1
+  tag: implied_commitment
+  day: '2027-09-06'
+  project: pr-fjord
+- week: 1
+  tag: duplicate_signal
+  day: '2027-09-07'
+  project: pr-fjord
+- week: 1
+  tag: privacy
+  day: '2027-09-08'
+- week: 1
+  tag: alias
+  day: '2027-09-08'
+- week: 1
+  tag: name_collision
+  day: '2027-09-07'
+- week: 1
+  tag: new_entity
+  day: '2027-09-07'
+  person: p-celine-wisniewska
+  project: pr-fjord
+- week: 1
+  tag: supersession
+  day: '2027-09-07'
+  project: pr-fjord
+- week: 1
+  tag: unobservable
+  day: '2027-09-08'
+  project: pr-open-courseware-workshop
+  attribute: budget
+- week: 1
+  tag: draft_vs_sent
+  day: '2027-09-10'
+  setup: '2027-09-06'
+- week: 1
+  tag: batch_catchup
+  day: '2027-09-08'
+- week: 1
+  tag: transfer
+  day: '2027-09-08'
+- week: 1
+  tag: correction
+  day: '2027-09-08'
+  setup: '2027-09-07'
+- week: 1
+  tag: weak_evidence
+  day: '2027-09-08'
+  setup: '2027-09-06'
+- week: 1
+  tag: acceptance_vs_occurrence
+  day: '2027-09-10'
+- week: 1
+  tag: restructuring
+  day: '2027-09-10'
+  mode: split
+  project: pr-holfield-syllabus-review-discovery
+- week: 1
+  tag: version_mismatch
+  day: '2027-09-09'
+  setup: '2027-09-06'
+- week: 1
+  tag: silent_closure
+  day: '2027-09-10'
+  setup: '2027-09-06'
+- week: 1
+  tag: reversal
+  day: '2027-09-10'
+  setup: '2027-08-31'
+  project: pr-fjord
+- week: 1
+  tag: endorsement
+  day: '2027-09-10'
+  setup: '2027-09-07'
+- week: 1
+  tag: scattered_evidence
+  day: '2027-09-09'
+  setup: '2027-09-06'
+  steps:
+  - '2027-09-07'
+  - '2027-09-08'
+  - '2027-09-09'
+- week: 2
+  tag: worker_directive
+  day: '2027-09-13'
+  project: pr-heathridge-course-assistant-discovery
+- week: 2
+  tag: noise
+  day: '2027-09-13'
+- week: 2
+  tag: implied_commitment
+  day: '2027-09-13'
+  project: pr-fjord
+- week: 2
+  tag: duplicate_signal
+  day: '2027-09-14'
+  project: pr-fjord
+- week: 2
+  tag: privacy
+  day: '2027-09-14'
+- week: 2
+  tag: alias
+  day: '2027-09-14'
+- week: 2
+  tag: name_collision
+  day: '2027-09-14'
+- week: 2
+  tag: new_entity
+  day: '2027-09-14'
+  person: p-henrik-mendoza
+  project: pr-open-courseware-workshop
+- week: 2
+  tag: supersession
+  day: '2027-09-15'
+  project: pr-fjord
+- week: 2
+  tag: unobservable
+  day: '2027-09-16'
+  project: pr-open-courseware-workshop
+  attribute: budget_ceiling
+- week: 2
+  tag: draft_vs_sent
+  day: '2027-09-14'
+  setup: '2027-09-13'
+- week: 2
+  tag: batch_catchup
+  day: '2027-09-15'
+- week: 2
+  tag: transfer
+  day: '2027-09-16'
+- week: 2
+  tag: correction
+  day: '2027-09-15'
+  setup: '2027-09-14'
+- week: 2
+  tag: weak_evidence
+  day: '2027-09-15'
+  setup: '2027-09-13'
+- week: 2
+  tag: acceptance_vs_occurrence
+  day: '2027-09-17'
+- week: 2
+  tag: restructuring
+  day: '2027-09-17'
+  mode: merge
+  project: pr-heathridge-lab-safety-training-idea
+  into: pr-room-booking-tool-selection
+- week: 2
+  tag: version_mismatch
+  day: '2027-09-16'
+  setup: '2027-09-13'
+- week: 2
+  tag: silent_closure
+  day: '2027-09-16'
+  setup: '2027-09-14'
+- week: 2
+  tag: reversal
+  day: '2027-09-17'
+  setup: '2027-09-10'
+  project: pr-open-courseware-workshop
+- week: 2
+  tag: endorsement
+  day: '2027-09-18'
+  setup: '2027-09-13'
+- week: 2
+  tag: scattered_evidence
+  day: '2027-09-16'
+  setup: '2027-09-13'
+  steps:
+  - '2027-09-14'
+  - '2027-09-15'
+  - '2027-09-16'
+audit:
+  unrevealed:
+    e-0017: never appears
+    e-0032: never appears
+    e-0035: never appears
+    e-0040: never appears
+    e-0042: never appears
+    e-0195: unobservable
+    e-0200: 'weak evidence: the walkthrough left no trace'
+    e-0294: 'weak evidence: the walkthrough left no trace'
+    e-0308: unobservable
+  instruction_injection: em-0097
+  attachments:
+  - dc-0001
+  - dc-0002
+  - dc-0003
+  - dc-0004
+  - dc-0005
+  - dc-0006
+  - dc-0007

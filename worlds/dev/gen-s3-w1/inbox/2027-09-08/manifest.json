@@ -1,0 +1,117 @@
+{
+  "date": "2027-09-08",
+  "artifacts": [
+    {
+      "id": "ch-0017",
+      "channel": "chat",
+      "received_at": "2027-09-08T07:54:00-05:00",
+      "path": "ch-0017.json",
+      "title": "DM: Alasdair Kaya / Tunde Kapanadze"
+    },
+    {
+      "id": "ch-0018",
+      "channel": "chat",
+      "received_at": "2027-09-08T09:17:00-05:00",
+      "path": "ch-0018.json",
+      "title": "DM: Guadalupe Lombardi / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0019",
+      "channel": "chat",
+      "received_at": "2027-09-08T09:26:00-05:00",
+      "path": "ch-0019.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0019",
+      "channel": "email",
+      "received_at": "2027-09-08T09:36:00-05:00",
+      "path": "em-0019.eml",
+      "title": "Final name for Bittern"
+    },
+    {
+      "id": "em-0020",
+      "channel": "email",
+      "received_at": "2027-09-08T09:37:00-05:00",
+      "path": "em-0020.eml",
+      "title": "Clinical IT Briefing: issue 36"
+    },
+    {
+      "id": "em-0021",
+      "channel": "email",
+      "received_at": "2027-09-08T09:43:00-05:00",
+      "path": "em-0021.eml",
+      "title": "Re: AI-use endorsement paper"
+    },
+    {
+      "id": "em-0022",
+      "channel": "email",
+      "received_at": "2027-09-08T11:29:00-05:00",
+      "path": "em-0022.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0020",
+      "channel": "chat",
+      "received_at": "2027-09-08T12:12:00-05:00",
+      "path": "ch-0020.json",
+      "title": "#bed-management-discovery-core"
+    },
+    {
+      "id": "ch-0021",
+      "channel": "chat",
+      "received_at": "2027-09-08T13:34:00-05:00",
+      "path": "ch-0021.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0022",
+      "channel": "chat",
+      "received_at": "2027-09-08T13:36:00-05:00",
+      "path": "ch-0022.json",
+      "title": "DM: Tunde Kapanadze / Alasdair Kaya"
+    },
+    {
+      "id": "em-0023",
+      "channel": "email",
+      "received_at": "2027-09-08T14:06:00-05:00",
+      "path": "em-0023.eml",
+      "title": "Birchmere Responsible AI Use Framework: moving to endorsement"
+    },
+    {
+      "id": "ch-0023",
+      "channel": "chat",
+      "received_at": "2027-09-08T14:12:00-05:00",
+      "path": "ch-0023.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "mt-0005",
+      "channel": "transcript",
+      "received_at": "2027-09-08T15:00:00-05:00",
+      "path": "mt-0005.vtt",
+      "title": "Intake forms selection scoring session (transcript)"
+    },
+    {
+      "id": "em-0024",
+      "channel": "email",
+      "received_at": "2027-09-08T16:20:00-05:00",
+      "path": "em-0024.eml",
+      "title": "Catering menu for next month"
+    },
+    {
+      "id": "ch-0024",
+      "channel": "chat",
+      "received_at": "2027-09-08T17:53:00-05:00",
+      "path": "ch-0024.json",
+      "title": "#general"
+    },
+    {
+      "id": "em-0025",
+      "channel": "email",
+      "received_at": "2027-09-08T18:12:00-05:00",
+      "path": "em-0025.eml",
+      "title": "Speaker spotlight"
+    }
+  ]
+}

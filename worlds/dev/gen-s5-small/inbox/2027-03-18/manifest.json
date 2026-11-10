@@ -1,0 +1,82 @@
+{
+  "date": "2027-03-18",
+  "artifacts": [
+    {
+      "id": "ch-0011",
+      "channel": "chat",
+      "received_at": "2027-03-18T08:05:00-05:00",
+      "path": "ch-0011.json",
+      "title": "#wagtail-core"
+    },
+    {
+      "id": "mn-0001",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-18T09:55:00-05:00",
+      "path": "mn-0001.md",
+      "title": "Recap: Wagtail standup"
+    },
+    {
+      "id": "em-0015",
+      "channel": "email",
+      "received_at": "2027-03-18T12:09:00-05:00",
+      "path": "em-0015.eml",
+      "title": "[INC-51847] Ticket updated"
+    },
+    {
+      "id": "em-0016",
+      "channel": "email",
+      "received_at": "2027-03-18T13:18:00-05:00",
+      "path": "em-0016.eml",
+      "title": "Okapi: moving to hardening"
+    },
+    {
+      "id": "mn-0002",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-18T14:00:00-05:00",
+      "path": "mn-0002.md",
+      "title": "Recap: Cross-hospital AI forum"
+    },
+    {
+      "id": "ch-0012",
+      "channel": "chat",
+      "received_at": "2027-03-18T14:39:00-05:00",
+      "path": "ch-0012.json",
+      "title": "DM: Aylin Venkataraman / Hiba Xu"
+    },
+    {
+      "id": "mn-0003",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-18T16:00:00-05:00",
+      "path": "mn-0003.md",
+      "title": "Notes: Wagtail build sync"
+    },
+    {
+      "id": "ch-0013",
+      "channel": "chat",
+      "received_at": "2027-03-18T16:21:00-05:00",
+      "path": "ch-0013.json",
+      "title": "#wagtail-core"
+    },
+    {
+      "id": "mt-0005",
+      "channel": "transcript",
+      "received_at": "2027-03-18T16:30:00-05:00",
+      "path": "mt-0005.vtt",
+      "title": "Catch-up: Hiba / Mateo (transcript)"
+    },
+    {
+      "id": "ch-0014",
+      "channel": "chat",
+      "received_at": "2027-03-18T16:54:00-05:00",
+      "path": "ch-0014.json",
+      "title": "DM: Hiba Xu / Friederike Malhotra"
+    },
+    {
+      "id": "em-0017",
+      "channel": "email",
+      "received_at": "2027-03-18T18:15:00-05:00",
+      "path": "em-0017.eml",
+      "title": "Room booking confirmation"
+    }
+  ]
+}

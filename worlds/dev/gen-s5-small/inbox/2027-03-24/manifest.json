@@ -1,0 +1,96 @@
+{
+  "date": "2027-03-24",
+  "artifacts": [
+    {
+      "id": "em-0041",
+      "channel": "email",
+      "received_at": "2027-03-24T09:01:00-05:00",
+      "path": "em-0041.eml",
+      "title": "Clinical IT Briefing: issue 12"
+    },
+    {
+      "id": "mt-0007",
+      "channel": "transcript",
+      "received_at": "2027-03-24T10:00:00-05:00",
+      "path": "mt-0007.vtt",
+      "title": "Wagtail standup (transcript)"
+    },
+    {
+      "id": "em-0042",
+      "channel": "email",
+      "received_at": "2027-03-24T12:38:00-05:00",
+      "path": "em-0042.eml",
+      "title": "[Investigating] Intermittent sign-in delays"
+    },
+    {
+      "id": "mt-0008",
+      "channel": "transcript",
+      "received_at": "2027-03-24T13:00:00-05:00",
+      "path": "mt-0008.vtt",
+      "title": "Office hours with Lakshmi (transcript)"
+    },
+    {
+      "id": "ch-0029",
+      "channel": "chat",
+      "received_at": "2027-03-24T13:10:00-05:00",
+      "path": "ch-0029.json",
+      "title": "DM: Hiba Xu / Friederike Malhotra"
+    },
+    {
+      "id": "ch-0030",
+      "channel": "chat",
+      "received_at": "2027-03-24T13:58:00-05:00",
+      "path": "ch-0030.json",
+      "title": "DM: Anahit Upton / Hiba Xu"
+    },
+    {
+      "id": "ch-0031",
+      "channel": "chat",
+      "received_at": "2027-03-24T14:04:00-05:00",
+      "path": "ch-0031.json",
+      "title": "DM: Anahit Tanaka / Hiba Xu"
+    },
+    {
+      "id": "mt-0009",
+      "channel": "transcript",
+      "received_at": "2027-03-24T14:30:00-05:00",
+      "path": "mt-0009.vtt",
+      "title": "Okapi platform sync (transcript)"
+    },
+    {
+      "id": "em-0043",
+      "channel": "email",
+      "received_at": "2027-03-24T15:18:00-05:00",
+      "path": "em-0043.eml",
+      "title": "Wagtail help-desk script"
+    },
+    {
+      "id": "ch-0032",
+      "channel": "chat",
+      "received_at": "2027-03-24T15:40:00-05:00",
+      "path": "ch-0032.json",
+      "title": "DM: Lakshmi Zamora / Hiba Xu"
+    },
+    {
+      "id": "nt-0003",
+      "channel": "note",
+      "received_at": "2027-03-24T16:46:00-05:00",
+      "path": "nt-0003.md",
+      "title": "Wed notes"
+    },
+    {
+      "id": "ch-0033",
+      "channel": "chat",
+      "received_at": "2027-03-24T17:37:00-05:00",
+      "path": "ch-0033.json",
+      "title": "DM: Lakshmi Zamora / Hiba Xu"
+    },
+    {
+      "id": "ca-0003",
+      "channel": "calendar",
+      "received_at": "2027-03-24T18:28:00-05:00",
+      "path": "ca-0003.ics",
+      "title": "Invite: Okapi operating model review session"
+    }
+  ]
+}

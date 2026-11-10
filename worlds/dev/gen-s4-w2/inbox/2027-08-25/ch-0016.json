@@ -1,0 +1,39 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Theresa Nagy",
+  "Esperanza Rao",
+  "Nomvula Ndlovu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-25T11:38:33-08:00",
+   "user": "Theresa Nagy",
+   "handle": "@theresa",
+   "text": "is it just me or is it freezing on 3 today?",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@esperanza",
+      "@nomvula"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-08-25T11:40:16-08:00",
+   "user": "Esperanza Rao",
+   "handle": "@esperanza",
+   "text": "not just you"
+  },
+  {
+   "ts": "2027-08-25T11:45:56-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "bring a jumper"
+  }
+ ]
+}

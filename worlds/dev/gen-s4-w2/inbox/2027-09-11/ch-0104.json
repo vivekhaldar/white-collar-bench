@@ -1,0 +1,41 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Magdalena Barbosa",
+  "Teagan Penhallow",
+  "Mei Wekesa",
+  "Bruna Sinclair"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-11T15:18:17-08:00",
+   "user": "Magdalena Barbosa",
+   "handle": "@magdalena",
+   "text": "lost a blue umbrella, might be in the big meeting room",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@teagan",
+      "@mei"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-11T15:19:49-08:00",
+   "user": "Teagan Penhallow",
+   "handle": "@teagan",
+   "text": "will keep an eye out"
+  },
+  {
+   "ts": "2027-09-11T15:21:19-08:00",
+   "user": "Mei Wekesa",
+   "handle": "@mei",
+   "text": "there's one at reception",
+   "thread_of": 0
+  }
+ ]
+}

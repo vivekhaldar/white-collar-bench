@@ -1,0 +1,32 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Bruna Sinclair",
+  "Meera Ivanova"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-25T10:14:02-08:00",
+   "user": "Bruna Sinclair",
+   "handle": "@bruna",
+   "text": "is it just me or is it freezing on 3 today?",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@meera"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-08-25T10:15:27-08:00",
+   "user": "Meera Ivanova",
+   "handle": "@meera",
+   "text": "not just you",
+   "thread_of": 0
+  }
+ ]
+}

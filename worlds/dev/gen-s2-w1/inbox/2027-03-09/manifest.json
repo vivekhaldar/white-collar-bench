@@ -1,0 +1,152 @@
+{
+  "date": "2027-03-09",
+  "artifacts": [
+    {
+      "id": "em-0092",
+      "channel": "email",
+      "received_at": "2027-03-09T07:12:00-07:00",
+      "path": "em-0092.eml",
+      "title": "Re: Gateway rate limits for Fennel tenants"
+    },
+    {
+      "id": "ch-0078",
+      "channel": "chat",
+      "received_at": "2027-03-09T08:39:00-07:00",
+      "path": "ch-0078.json",
+      "title": "#mistral-core"
+    },
+    {
+      "id": "em-0093",
+      "channel": "email",
+      "received_at": "2027-03-09T09:06:00-07:00",
+      "path": "em-0093.eml",
+      "title": "Civic Tech Bulletin: issue 10"
+    },
+    {
+      "id": "ch-0079",
+      "channel": "chat",
+      "received_at": "2027-03-09T09:31:00-07:00",
+      "path": "ch-0079.json",
+      "title": "#ai-in-public-service-core"
+    },
+    {
+      "id": "ch-0080",
+      "channel": "chat",
+      "received_at": "2027-03-09T09:41:00-07:00",
+      "path": "ch-0080.json",
+      "title": "#mistral-core"
+    },
+    {
+      "id": "mt-0019",
+      "channel": "transcript",
+      "received_at": "2027-03-09T09:55:00-07:00",
+      "path": "mt-0019.vtt",
+      "title": "Mistral standup (transcript)"
+    },
+    {
+      "id": "em-0094",
+      "channel": "email",
+      "received_at": "2027-03-09T13:56:00-07:00",
+      "path": "em-0094.eml",
+      "title": "Re: Mistral access request after Bilal's comments"
+    },
+    {
+      "id": "ch-0081",
+      "channel": "chat",
+      "received_at": "2027-03-09T14:15:00-07:00",
+      "path": "ch-0081.json",
+      "title": "DM: Imani Quaye / Dina Zimmermann"
+    },
+    {
+      "id": "ch-0082",
+      "channel": "chat",
+      "received_at": "2027-03-09T14:23:00-07:00",
+      "path": "ch-0082.json",
+      "title": "DM: Magdalena Parata / Dina Zimmermann"
+    },
+    {
+      "id": "em-0095",
+      "channel": "email",
+      "received_at": "2027-03-09T14:41:00-07:00",
+      "path": "em-0095.eml",
+      "title": "Records requests discovery findings summary"
+    },
+    {
+      "id": "em-0096",
+      "channel": "email",
+      "received_at": "2027-03-09T14:49:00-07:00",
+      "path": "em-0096.eml",
+      "title": "Funding model funding options memo"
+    },
+    {
+      "id": "mn-0004",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-09T15:30:00-07:00",
+      "path": "mn-0004.md",
+      "title": "Recap: 1:1 Dina / Imani"
+    },
+    {
+      "id": "nt-0010",
+      "channel": "note",
+      "received_at": "2027-03-09T15:34:00-07:00",
+      "path": "nt-0010.md",
+      "title": "Tue notes"
+    },
+    {
+      "id": "mn-0005",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-09T15:45:00-07:00",
+      "path": "mn-0005.md",
+      "title": "Recap: Mistral review"
+    },
+    {
+      "id": "em-0097",
+      "channel": "email",
+      "received_at": "2027-03-09T15:48:00-07:00",
+      "path": "em-0097.eml",
+      "title": "Re: Funding model cost model"
+    },
+    {
+      "id": "em-0098",
+      "channel": "email",
+      "received_at": "2027-03-09T16:20:00-07:00",
+      "path": "em-0098.eml",
+      "title": "Records requests discovery process map"
+    },
+    {
+      "id": "ch-0083",
+      "channel": "chat",
+      "received_at": "2027-03-09T16:51:00-07:00",
+      "path": "ch-0083.json",
+      "title": "DM: Dina Zimmermann / Cassandra Yilmaz"
+    },
+    {
+      "id": "em-0099",
+      "channel": "email",
+      "received_at": "2027-03-09T17:14:00-07:00",
+      "path": "em-0099.eml",
+      "title": "Re: Fennel timeout errors"
+    },
+    {
+      "id": "em-0100",
+      "channel": "email",
+      "received_at": "2027-03-09T17:49:00-07:00",
+      "path": "em-0100.eml",
+      "title": "Re: Imani's Fennel metrics definition"
+    },
+    {
+      "id": "ch-0084",
+      "channel": "chat",
+      "received_at": "2027-03-09T18:54:00-07:00",
+      "path": "ch-0084.json",
+      "title": "DM: Imani Chaiyaporn / Dina Zimmermann"
+    },
+    {
+      "id": "ch-0085",
+      "channel": "chat",
+      "received_at": "2027-03-09T19:50:00-07:00",
+      "path": "ch-0085.json",
+      "title": "DM: Thibault Sahin / Dina Zimmermann"
+    }
+  ]
+}

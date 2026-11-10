@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Birchmere//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:1a686c3fab1e1282@birchmere.example
+DTSTAMP:20270921T161900Z
+DTSTART:20270922T200000Z
+DTEND:20270922T204500Z
+SUMMARY:Clinical data engineer review
+ORGANIZER;CN=Bisi Chatterjee:mailto:bisi.chatterjee@birchmere.example
+ATTENDEE;CN=Alasdair Kaya;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:alasdair.kaya@birchmere.example
+ATTENDEE;CN=Shira Colombo;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:shira.colombo@birchmere.example
+ATTENDEE;CN=Dina Mancini;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.mancini@birchmere.example
+SEQUENCE:0
+DESCRIPTION:Join video meeting: https://meet.birchmere.example/j/7624094136?pwd=mtSfAtZR\nPasscode: 557468
+LOCATION:https://meet.birchmere.example/j/7624094136?pwd=mtSfAtZR
+END:VEVENT
+END:VCALENDAR

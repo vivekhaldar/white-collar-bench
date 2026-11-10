@@ -1,0 +1,29 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-thandiwe",
+ "kind": "dm",
+ "participants": [
+  "Camila Quimby",
+  "Thandi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-11T09:10:00-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "Logged in fine, so the Marten test tenant login is sorted. Starting the walkthrough tomorrow."
+  },
+  {
+   "ts": "2027-11-11T09:10:59-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-11-11T09:13:51-07:00",
+   "user": "Thandi",
+   "handle": "@thandiwe",
+   "text": "remote, but online all day"
+  }
+ ]
+}

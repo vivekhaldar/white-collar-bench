@@ -1,0 +1,40 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Tariq Popescu",
+  "Bruna Sinclair",
+  "Theresa Nagy"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-28T10:38:27-08:00",
+   "user": "Tariq Popescu",
+   "handle": "@tariq",
+   "text": "is it just me or is it freezing on 3 today?",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@bruna",
+      "@theresa"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-08-28T10:43:26-08:00",
+   "user": "Bruna Sinclair",
+   "handle": "@bruna",
+   "text": "not just you",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-08-28T10:46:31-08:00",
+   "user": "Theresa Nagy",
+   "handle": "@theresa",
+   "text": "bring a jumper"
+  }
+ ]
+}

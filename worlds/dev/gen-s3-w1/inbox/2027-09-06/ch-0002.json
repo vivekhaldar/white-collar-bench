@@ -1,0 +1,23 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-dalisay",
+ "kind": "dm",
+ "participants": [
+  "Dalisay Sandberg",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-06T07:00:00-05:00",
+   "user": "Dalisay Sandberg",
+   "handle": "@dalisay",
+   "text": "I can send you the Kasis deep-dive materials."
+  },
+  {
+   "ts": "2027-09-06T07:00:46-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "perfect, thanks"
+  }
+ ]
+}

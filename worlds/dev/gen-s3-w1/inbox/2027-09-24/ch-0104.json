@@ -1,0 +1,61 @@
+{
+ "workspace": "birchmere",
+ "channel": "#okapi-core",
+ "kind": "channel",
+ "participants": [
+  "Alasdair Kaya",
+  "Katarzyna Feng",
+  "Bisi",
+  "Eleni Laurent",
+  "Dina Mancini",
+  "Penelope Lehmann",
+  "Nurlan Moreira",
+  "Giorgi Ngo",
+  "Victoria Nikolic",
+  "Margaux Monteiro"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-24T16:15:00-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "@penelope no need for the okapi security review package any more, superseded by a decision",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@eleni"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-24T16:15:57-05:00",
+   "user": "Giorgi Ngo",
+   "handle": "@giorgi",
+   "text": "noted",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-24T16:21:38-05:00",
+   "user": "Giorgi Ngo",
+   "handle": "@giorgi",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-24T16:29:36-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "thanks for flagging :)",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-24T16:30:00-05:00",
+   "user": "Katarzyna Feng",
+   "handle": "@katarzyna",
+   "text": "nice",
+   "thread_of": 0
+  }
+ ]
+}

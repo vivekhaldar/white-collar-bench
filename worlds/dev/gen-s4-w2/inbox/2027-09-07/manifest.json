@@ -1,0 +1,138 @@
+{
+  "date": "2027-09-07",
+  "artifacts": [
+    {
+      "id": "em-0105",
+      "channel": "email",
+      "received_at": "2027-09-07T09:35:00-08:00",
+      "path": "em-0105.eml",
+      "title": "Introduction: Fjord"
+    },
+    {
+      "id": "mn-0010",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-07T09:55:00-08:00",
+      "path": "mn-0010.md",
+      "title": "Recap: Fjord standup"
+    },
+    {
+      "id": "mt-0011",
+      "channel": "transcript",
+      "received_at": "2027-09-07T09:55:00-08:00",
+      "path": "mt-0011.vtt",
+      "title": "Fjord standup (transcript)"
+    },
+    {
+      "id": "em-0106",
+      "channel": "email",
+      "received_at": "2027-09-07T10:26:00-08:00",
+      "path": "em-0106.eml",
+      "title": "[Resolved] Elevated latency on file storage"
+    },
+    {
+      "id": "em-0107",
+      "channel": "email",
+      "received_at": "2027-09-07T10:34:00-08:00",
+      "path": "em-0107.eml",
+      "title": "Re: Room booking selection sourcing requirements"
+    },
+    {
+      "id": "ch-0072",
+      "channel": "chat",
+      "received_at": "2027-09-07T10:49:00-08:00",
+      "path": "ch-0072.json",
+      "title": "DM: Meera Ivanova / Ottavio Monteiro"
+    },
+    {
+      "id": "ch-0073",
+      "channel": "chat",
+      "received_at": "2027-09-07T11:31:00-08:00",
+      "path": "ch-0073.json",
+      "title": "DM: Nomvula Ndlovu / Ottavio Monteiro"
+    },
+    {
+      "id": "ch-0074",
+      "channel": "chat",
+      "received_at": "2027-09-07T12:05:00-08:00",
+      "path": "ch-0074.json",
+      "title": "DM: Meera Kariuki / Ottavio Monteiro"
+    },
+    {
+      "id": "em-0108",
+      "channel": "email",
+      "received_at": "2027-09-07T12:38:00-08:00",
+      "path": "em-0108.eml",
+      "title": "Fjord single sign-on role mapping"
+    },
+    {
+      "id": "em-0109",
+      "channel": "email",
+      "received_at": "2027-09-07T12:52:00-08:00",
+      "path": "em-0109.eml",
+      "title": "The Quad Ledger: issue 36"
+    },
+    {
+      "id": "em-0110",
+      "channel": "email",
+      "received_at": "2027-09-07T12:59:00-08:00",
+      "path": "em-0110.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0111",
+      "channel": "email",
+      "received_at": "2027-09-07T13:24:00-08:00",
+      "path": "em-0111.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0112",
+      "channel": "email",
+      "received_at": "2027-09-07T13:31:00-08:00",
+      "path": "em-0112.eml",
+      "title": "Re: Darius's syllabus review discovery interview guide"
+    },
+    {
+      "id": "em-0113",
+      "channel": "email",
+      "received_at": "2027-09-07T13:40:00-08:00",
+      "path": "em-0113.eml",
+      "title": "Re: Fjord change request"
+    },
+    {
+      "id": "ch-0075",
+      "channel": "chat",
+      "received_at": "2027-09-07T13:46:00-08:00",
+      "path": "ch-0075.json",
+      "title": "DM: Meera Kariuki / Ottavio Monteiro"
+    },
+    {
+      "id": "ch-0076",
+      "channel": "chat",
+      "received_at": "2027-09-07T15:29:00-08:00",
+      "path": "ch-0076.json",
+      "title": "DM: Bruna Sinclair / Ottavio Monteiro"
+    },
+    {
+      "id": "mn-0011",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-07T15:30:00-08:00",
+      "path": "mn-0011.md",
+      "title": "Notes: 1:1 Ottavio / Meera"
+    },
+    {
+      "id": "ch-0077",
+      "channel": "chat",
+      "received_at": "2027-09-07T15:35:00-08:00",
+      "path": "ch-0077.json",
+      "title": "DM: Ottavio Monteiro / Achieng Ibarra"
+    },
+    {
+      "id": "ch-0078",
+      "channel": "chat",
+      "received_at": "2027-09-07T18:37:00-08:00",
+      "path": "ch-0078.json",
+      "title": "#cairn-core"
+    }
+  ]
+}

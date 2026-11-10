@@ -1,0 +1,41 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-penelope",
+ "kind": "dm",
+ "participants": [
+  "Alasdair Kaya",
+  "Penny"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-21T13:37:39-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-21T13:38:14-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "just confirmed the okapi metrics definition with you"
+  },
+  {
+   "ts": "2027-09-21T13:39:12-05:00",
+   "user": "Penny",
+   "handle": "@penelope",
+   "text": "got it, thanks"
+  },
+  {
+   "ts": "2027-09-21T13:41:24-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-09-21T13:43:23-05:00",
+   "user": "Penny",
+   "handle": "@penelope",
+   "text": "later!"
+  }
+ ]
+}

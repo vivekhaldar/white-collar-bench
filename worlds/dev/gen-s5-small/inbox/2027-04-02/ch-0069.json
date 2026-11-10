@@ -1,0 +1,41 @@
+{
+ "workspace": "iselvale",
+ "channel": "#wagtail-core",
+ "kind": "channel",
+ "participants": [
+  "Hiba Xu",
+  "Ama Forsythe",
+  "Anahit Upton",
+  "Mateo Pritchard",
+  "Lakshmi Zamora",
+  "Friederike Malhotra",
+  "Jisoo Makinen",
+  "Maricel Herrera",
+  "Isla Mercier",
+  "Giorgi Morimoto"
+ ],
+ "messages": [
+  {
+   "ts": "2027-04-02T16:50:00-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "@jisoo just sent you the Wagtail clinical safety case.",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@ama",
+      "@anahit"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-04-02T16:51:41-05:00",
+   "user": "Lakshmi Zamora",
+   "handle": "@lakshmi",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  }
+ ]
+}

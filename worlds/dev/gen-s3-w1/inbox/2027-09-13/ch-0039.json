@@ -1,0 +1,47 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-bisi",
+ "kind": "dm",
+ "participants": [
+  "Bisi",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-13T07:44:42-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-09-13T07:45:18-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-09-13T07:53:46-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "Recap from Friday: Oluwaseun agreed to send Lupe the bed management discovery process map."
+  },
+  {
+   "ts": "2027-09-13T07:54:26-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "got it"
+  },
+  {
+   "ts": "2027-09-13T07:58:48-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "are you in the office tomorrow?"
+  },
+  {
+   "ts": "2027-09-13T08:00:05-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "remote, but online all day"
+  }
+ ]
+}

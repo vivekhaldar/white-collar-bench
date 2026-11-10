@@ -1,0 +1,23 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-friederike-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Xu",
+  "Friederike Malhotra"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-24T12:28:00-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "Just sent you the Wagtail data-flow diagram."
+  },
+  {
+   "ts": "2027-03-24T12:28:59-05:00",
+   "user": "Friederike Malhotra",
+   "handle": "@friederike",
+   "text": "thank you!"
+  }
+ ]
+}

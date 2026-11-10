@@ -1,0 +1,62 @@
+{
+ "workspace": "vercliff",
+ "channel": "#mistral-core",
+ "kind": "channel",
+ "participants": [
+  "Cassandra Yilmaz",
+  "Dina Zimmermann",
+  "Yael Yardley",
+  "Imani",
+  "Rudo Alexiou",
+  "Naoko Maldonado",
+  "Bilal Blackwood",
+  "Thibault Sahin",
+  "Mei Obi",
+  "Ling"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-23T17:18:00-07:00",
+   "user": "Cassandra Yilmaz",
+   "handle": "@cassandra",
+   "text": "@dina on it, I'll provision the Mistral tenant on Fennel.",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@yael",
+      "@imani"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-02-23T17:18:17-07:00",
+   "user": "Ling",
+   "handle": "@xiaoling",
+   "text": "noted",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-23T17:20:35-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "nice",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-23T17:22:31-07:00",
+   "user": "Bilal Blackwood",
+   "handle": "@bilal",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-02-23T17:29:35-07:00",
+   "user": "Mei Obi",
+   "handle": "@mei",
+   "text": "good to know :)",
+   "thread_of": 0
+  }
+ ]
+}

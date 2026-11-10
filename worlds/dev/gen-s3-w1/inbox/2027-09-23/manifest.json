@@ -1,0 +1,154 @@
+{
+  "date": "2027-09-23",
+  "artifacts": [
+    {
+      "id": "ch-0090",
+      "channel": "chat",
+      "received_at": "2027-09-23T07:38:00-05:00",
+      "path": "ch-0090.json",
+      "title": "#okapi-core (catch-up)"
+    },
+    {
+      "id": "mt-0014",
+      "channel": "transcript",
+      "received_at": "2027-09-23T07:39:00-05:00",
+      "path": "mt-0014.vtt",
+      "title": "Sirocco sync (transcript)"
+    },
+    {
+      "id": "em-0108",
+      "channel": "email",
+      "received_at": "2027-09-23T07:40:00-05:00",
+      "path": "em-0108.eml",
+      "title": "While you were out: Bittern"
+    },
+    {
+      "id": "ch-0091",
+      "channel": "chat",
+      "received_at": "2027-09-23T07:41:00-05:00",
+      "path": "ch-0091.json",
+      "title": "DM: Katarzyna Feng / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0092",
+      "channel": "chat",
+      "received_at": "2027-09-23T09:51:00-05:00",
+      "path": "ch-0092.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "ca-0008",
+      "channel": "calendar",
+      "received_at": "2027-09-23T09:58:00-05:00",
+      "path": "ca-0008.ics",
+      "title": "Accepted: Clinical data engineer follow-up"
+    },
+    {
+      "id": "em-0109",
+      "channel": "email",
+      "received_at": "2027-09-23T10:10:00-05:00",
+      "path": "em-0109.eml",
+      "title": "Re: Okapi metrics definition"
+    },
+    {
+      "id": "ch-0093",
+      "channel": "chat",
+      "received_at": "2027-09-23T10:44:00-05:00",
+      "path": "ch-0093.json",
+      "title": "DM: Katarzyna Feng / Alasdair Kaya"
+    },
+    {
+      "id": "em-0110",
+      "channel": "email",
+      "received_at": "2027-09-23T11:24:00-05:00",
+      "path": "em-0110.eml",
+      "title": "Re: Okapi security review package"
+    },
+    {
+      "id": "ca-0009",
+      "channel": "calendar",
+      "received_at": "2027-09-23T12:11:00-05:00",
+      "path": "ca-0009.ics",
+      "title": "Invite: Working session: Bittern dependency list with Bisi"
+    },
+    {
+      "id": "dc-0005",
+      "channel": "document",
+      "received_at": "2027-09-23T12:11:00-05:00",
+      "path": "dc-0005.docx",
+      "title": "Intake forms selection risk register v3",
+      "parent": "em-0111"
+    },
+    {
+      "id": "em-0111",
+      "channel": "email",
+      "received_at": "2027-09-23T12:11:00-05:00",
+      "path": "em-0111.eml",
+      "title": "Intake forms selection risk register"
+    },
+    {
+      "id": "ch-0094",
+      "channel": "chat",
+      "received_at": "2027-09-23T12:53:00-05:00",
+      "path": "ch-0094.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "mt-0015",
+      "channel": "transcript",
+      "received_at": "2027-09-23T13:30:00-05:00",
+      "path": "mt-0015.vtt",
+      "title": "Intake forms selection / Sirocco sync (transcript)"
+    },
+    {
+      "id": "dc-0006",
+      "channel": "document",
+      "received_at": "2027-09-23T13:32:00-05:00",
+      "path": "dc-0006.docx",
+      "title": "Bittern stakeholder map v2",
+      "parent": "em-0112"
+    },
+    {
+      "id": "em-0112",
+      "channel": "email",
+      "received_at": "2027-09-23T13:32:00-05:00",
+      "path": "em-0112.eml",
+      "title": "Re: Bittern stakeholder map"
+    },
+    {
+      "id": "mn-0014",
+      "channel": "meeting_notes",
+      "received_at": "2027-09-23T14:00:00-05:00",
+      "path": "mn-0014.md",
+      "title": "Notes: Cross-hospital AI forum"
+    },
+    {
+      "id": "em-0113",
+      "channel": "email",
+      "received_at": "2027-09-23T14:04:00-05:00",
+      "path": "em-0113.eml",
+      "title": "Re: Clinical Data Engineer Hire: moving to panel"
+    },
+    {
+      "id": "em-0114",
+      "channel": "email",
+      "received_at": "2027-09-23T14:18:00-05:00",
+      "path": "em-0114.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0115",
+      "channel": "email",
+      "received_at": "2027-09-23T15:31:00-05:00",
+      "path": "em-0115.eml",
+      "title": "Re: Splitting out outpatient no-shows discovery"
+    },
+    {
+      "id": "ch-0095",
+      "channel": "chat",
+      "received_at": "2027-09-23T16:31:00-05:00",
+      "path": "ch-0095.json",
+      "title": "DM: Victoria Nikolic / Alasdair Kaya"
+    }
+  ]
+}

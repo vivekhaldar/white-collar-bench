@@ -1,0 +1,35 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-eunji",
+ "kind": "dm",
+ "participants": [
+  "Eun-ji Baek",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-24T09:57:00-05:00",
+   "user": "Eun-ji Baek",
+   "handle": "@eunji",
+   "text": "when you get a chance, could you send me the intake forms selection sourcing requirements by fri 1 oct?"
+  },
+  {
+   "ts": "2027-09-24T09:58:19-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "on it"
+  },
+  {
+   "ts": "2027-09-24T10:02:16-05:00",
+   "user": "Eun-ji Baek",
+   "handle": "@eunji",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-09-24T10:05:40-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "later!"
+  }
+ ]
+}

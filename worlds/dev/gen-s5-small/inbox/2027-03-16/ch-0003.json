@@ -1,0 +1,55 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-anahit-hiba",
+ "kind": "dm",
+ "participants": [
+  "Anahit Upton",
+  "Hiba Xu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-16T07:39:33-05:00",
+   "user": "Anahit Upton",
+   "handle": "@anahit",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-03-16T07:40:34-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-03-16T07:49:00-05:00",
+   "user": "Anahit Upton",
+   "handle": "@anahit",
+   "text": "Mateo asked if you could update the nurse scheduling selection risk register after their comments!"
+  },
+  {
+   "ts": "2027-03-16T07:49:24-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "sure, can do"
+  },
+  {
+   "ts": "2027-03-16T07:50:15-05:00",
+   "user": "Anahit Upton",
+   "handle": "@anahit",
+   "text": "Could you turn around the Wagtail API contract v2?",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-16T07:51:04-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "yep, on it"
+  }
+ ]
+}

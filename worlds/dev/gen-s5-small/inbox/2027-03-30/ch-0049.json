@@ -1,0 +1,24 @@
+{
+ "workspace": "iselvale",
+ "channel": "#wagtail-core",
+ "kind": "channel",
+ "participants": [
+  "Lakshmi Zamora",
+  "Hiba Xu",
+  "Ama Forsythe",
+  "Anahit Upton",
+  "Mateo Pritchard",
+  "Rike",
+  "Jisoo Makinen",
+  "Maricel Herrera",
+  "Isla Mercier"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-30T08:27:00-05:00",
+   "user": "Lakshmi Zamora",
+   "handle": "@lakshmi",
+   "text": "@hiba when you get a chance, could you send me the wagtail decision memo?"
+  }
+ ]
+}

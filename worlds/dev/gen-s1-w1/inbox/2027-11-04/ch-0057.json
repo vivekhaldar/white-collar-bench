@@ -1,0 +1,35 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-petra",
+ "kind": "dm",
+ "participants": [
+  "Camila Quimby",
+  "Petra Korkmaz"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-04T18:16:00-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "I'll send you the plain language workshop room plan."
+  },
+  {
+   "ts": "2027-11-04T18:17:03-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "that'd be great"
+  },
+  {
+   "ts": "2027-11-04T18:19:51-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-11-04T18:21:34-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "yep, all good"
+  }
+ ]
+}

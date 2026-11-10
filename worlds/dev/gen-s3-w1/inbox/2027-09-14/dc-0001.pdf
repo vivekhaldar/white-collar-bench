@@ -1,0 +1,63 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1275 >>
+stream
+BT
+/F1 10 Tf
+72 760 Td
+0 -15 Td /F1 11 Tf () Tj
+0 -15 Td /F1 16 Tf (Okapi API contract v1) Tj
+0 -20 Td /F1 10 Tf (Version: v2 | Project: Okapi | Prepared by: Alasdair Kaya | Date: 14 September 2027) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (Purpose) Tj
+0 -17 Td /F1 10 Tf (This Okapi API contract v1 describes the detail behind Okapi.) Tj
+0 -14 Td /F1 10 Tf () Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (Summary) Tj
+0 -17 Td /F1 10 Tf (• Comments are tracked in the margin; resolved ones have been removed.) Tj
+0 -14 Td /F1 10 Tf (• Feedback from the last review has been incorporated where possible.) Tj
+0 -14 Td /F1 10 Tf (• Assumptions are listed in the appendix and should be checked before sign-off.) Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (Details) Tj
+0 -17 Td /F1 10 Tf (Area | Notes) Tj
+0 -14 Td /F1 10 Tf (Scope | aligned with the shared glossary) Tj
+0 -14 Td /F1 10 Tf (Support | needs input from the unit) Tj
+0 -14 Td /F1 10 Tf (Integration | to be confirmed) Tj
+0 -14 Td /F1 10 Tf (Communications | covers the pilot group only) Tj
+0 -14 Td /F1 11 Tf () Tj
+0 -15 Td /F1 13 Tf (Open questions) Tj
+0 -17 Td /F1 10 Tf (• Are the usage assumptions realistic?) Tj
+0 -14 Td /F1 10 Tf (• Who signs off the final version?) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Title (Okapi API contract v1 v2) /Producer (wcb) >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001568 00000 n 
+0000001665 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R /Info 6 0 R >>
+startxref
+1736
+%%EOF

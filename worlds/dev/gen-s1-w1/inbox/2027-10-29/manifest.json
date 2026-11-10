@@ -1,0 +1,96 @@
+{
+  "date": "2027-10-29",
+  "artifacts": [
+    {
+      "id": "em-0031",
+      "channel": "email",
+      "received_at": "2027-10-29T08:00:00-07:00",
+      "path": "em-0031.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0028",
+      "channel": "chat",
+      "received_at": "2027-10-29T09:00:00-07:00",
+      "path": "ch-0028.json",
+      "title": "#marten-core"
+    },
+    {
+      "id": "nt-0003",
+      "channel": "note",
+      "received_at": "2027-10-29T10:00:00-07:00",
+      "path": "nt-0003.md",
+      "title": "Voice debrief: Marten standup"
+    },
+    {
+      "id": "mn-0005",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-29T10:15:00-07:00",
+      "path": "mn-0005.md",
+      "title": "Recap: Catch-up: Camila / Kirsten"
+    },
+    {
+      "id": "ch-0029",
+      "channel": "chat",
+      "received_at": "2027-10-29T12:52:00-07:00",
+      "path": "ch-0029.json",
+      "title": "#tarn-core"
+    },
+    {
+      "id": "mn-0006",
+      "channel": "meeting_notes",
+      "received_at": "2027-10-29T13:30:00-07:00",
+      "path": "mn-0006.md",
+      "title": "Recap: Marten security review"
+    },
+    {
+      "id": "em-0032",
+      "channel": "email",
+      "received_at": "2027-10-29T13:45:00-07:00",
+      "path": "em-0032.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0033",
+      "channel": "email",
+      "received_at": "2027-10-29T16:02:00-07:00",
+      "path": "em-0033.eml",
+      "title": "All-staff: building access changes"
+    },
+    {
+      "id": "em-0034",
+      "channel": "email",
+      "received_at": "2027-10-29T16:32:00-07:00",
+      "path": "em-0034.eml",
+      "title": "Status note: w/e 29 October"
+    },
+    {
+      "id": "ch-0030",
+      "channel": "chat",
+      "received_at": "2027-10-29T17:59:00-07:00",
+      "path": "ch-0030.json",
+      "title": "DM: Jalen Hendriks / Camila Quimby"
+    },
+    {
+      "id": "ch-0031",
+      "channel": "chat",
+      "received_at": "2027-10-29T18:35:00-07:00",
+      "path": "ch-0031.json",
+      "title": "DM: Camila Quimby / Yasmin Mokoena"
+    },
+    {
+      "id": "ch-0032",
+      "channel": "chat",
+      "received_at": "2027-10-29T18:39:00-07:00",
+      "path": "ch-0032.json",
+      "title": "DM: Camila Quimby / Aarav Ortega"
+    },
+    {
+      "id": "ch-0033",
+      "channel": "chat",
+      "received_at": "2027-10-29T18:42:00-07:00",
+      "path": "ch-0033.json",
+      "title": "#benefits-screening-core"
+    }
+  ]
+}

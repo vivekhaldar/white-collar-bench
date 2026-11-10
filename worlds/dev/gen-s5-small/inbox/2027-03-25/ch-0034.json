@@ -1,0 +1,41 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-ama-hiba",
+ "kind": "dm",
+ "participants": [
+  "Ama Forsythe",
+  "Hiba Xu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-25T09:11:05-05:00",
+   "user": "Ama Forsythe",
+   "handle": "@ama",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-03-25T09:17:00-05:00",
+   "user": "Ama Forsythe",
+   "handle": "@ama",
+   "text": "I've asked Rike to send me the Wagtail training outline."
+  },
+  {
+   "ts": "2027-03-25T09:17:23-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "noted"
+  },
+  {
+   "ts": "2027-03-25T09:19:37-05:00",
+   "user": "Ama Forsythe",
+   "handle": "@ama",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-03-25T09:22:29-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

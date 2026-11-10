@@ -1,0 +1,29 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-ottavio-theresa",
+ "kind": "dm",
+ "participants": [
+  "Theresa Nagy",
+  "Ottavio Monteiro"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-30T15:01:34-08:00",
+   "user": "Theresa Nagy",
+   "handle": "@theresa",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-08-30T15:05:00-08:00",
+   "user": "Theresa Nagy",
+   "handle": "@theresa",
+   "text": "Bruna asked if you could review their Cairn data dictionary."
+  },
+  {
+   "ts": "2027-08-30T15:06:19-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "can I come back to you on this?"
+  }
+ ]
+}

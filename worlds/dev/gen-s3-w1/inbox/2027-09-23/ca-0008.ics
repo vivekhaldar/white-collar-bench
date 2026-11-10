@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Birchmere//Calendar//EN
+METHOD:REPLY
+BEGIN:VEVENT
+UID:fa400d81c11ccc47@birchmere.example
+DTSTAMP:20270923T145800Z
+DTSTART:20270924T210000Z
+DTEND:20270924T213000Z
+SUMMARY:Accepted: Clinical data engineer follow-up
+ORGANIZER;CN=Bisi Chatterjee:mailto:bisi.chatterjee@birchmere.example
+ATTENDEE;CN=Alasdair Kaya;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED:mailto:alasdair.kaya@birchmere.example
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Holcrest//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:66d92fd930c9eb34@holcrest.example
+DTSTAMP:20271108T215200Z
+DTSTART:20271109T220000Z
+DTEND:20271109T224500Z
+SUMMARY:Obsidian review
+ORGANIZER;CN=Yasmin Mokoena:mailto:yasmin.mokoena@holcrest.example
+ATTENDEE;CN=Camila Quimby;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:camila.quimby@holcrest.example
+ATTENDEE;CN=Jalen Hendriks;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:jalen.hendriks@holcrest.example
+SEQUENCE:0
+DESCRIPTION:Catch-up.\nJoin video meeting: https://meet.holcrest.example/j/7803116927?pwd=je8pnuQt\nPasscode: 371333
+LOCATION:https://meet.holcrest.example/j/7803116927?pwd=je8pnuQt
+END:VEVENT
+END:VCALENDAR

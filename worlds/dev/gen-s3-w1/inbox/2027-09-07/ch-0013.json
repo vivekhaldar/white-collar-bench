@@ -1,0 +1,40 @@
+{
+ "workspace": "birchmere",
+ "channel": "#coffee",
+ "kind": "channel",
+ "participants": [
+  "Nurlan Moreira",
+  "Penelope Lehmann",
+  "Giorgi Ngo",
+  "Bisi Chatterjee"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T14:37:01-05:00",
+   "user": "Nurlan Moreira",
+   "handle": "@nurlan",
+   "text": "does anyone have a spare laptop charger (usb-c)?",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@penelope",
+      "@giorgi"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-07T14:38:34-05:00",
+   "user": "Penelope Lehmann",
+   "handle": "@penelope",
+   "text": "I have one, desk by the window"
+  },
+  {
+   "ts": "2027-09-07T14:42:14-05:00",
+   "user": "Giorgi Ngo",
+   "handle": "@giorgi",
+   "text": "check the supply cupboard"
+  }
+ ]
+}

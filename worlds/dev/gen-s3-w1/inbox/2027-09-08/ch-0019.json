@@ -1,0 +1,33 @@
+{
+ "workspace": "birchmere",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Shira Colombo",
+  "Tunde Kapanadze",
+  "Kwame Hoffmann",
+  "Penelope Lehmann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T09:00:57-05:00",
+   "user": "Shira Colombo",
+   "handle": "@shira",
+   "text": "is it just me or is it freezing on 3 today?"
+  },
+  {
+   "ts": "2027-09-08T09:05:20-05:00",
+   "user": "Tunde Kapanadze",
+   "handle": "@tunde",
+   "text": "not just you",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-08T09:07:42-05:00",
+   "user": "Kwame Hoffmann",
+   "handle": "@kwame",
+   "text": "bring a jumper :)",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-bisi",
+ "kind": "dm",
+ "participants": [
+  "Bisi",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-08T13:33:55-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-09-08T13:35:11-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-09-08T13:35:58-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "For the record, Guadalupe countersigned the Lanmoor data-use agreement yesterday."
+  },
+  {
+   "ts": "2027-09-08T13:36:04-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "got it, thanks"
+  },
+  {
+   "ts": "2027-09-08T13:37:26-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "did you catch the all-hands? :)"
+  },
+  {
+   "ts": "2027-09-08T13:41:25-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "only the first half"
+  }
+ ]
+}

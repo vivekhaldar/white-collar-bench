@@ -1,0 +1,35 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-imani",
+ "kind": "dm",
+ "participants": [
+  "Imani",
+  "Dina Zimmermann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-10T14:08:00-07:00",
+   "user": "Imani",
+   "handle": "@imani",
+   "text": "thanks for the records requests discovery findings summary, got it"
+  },
+  {
+   "ts": "2027-03-10T14:09:25-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-03-10T14:13:00-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-03-10T14:13:37-07:00",
+   "user": "Imani",
+   "handle": "@imani",
+   "text": "later!"
+  }
+ ]
+}

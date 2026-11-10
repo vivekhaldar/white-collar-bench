@@ -1,0 +1,34 @@
+{
+ "workspace": "vercliff",
+ "channel": "#mistral-core",
+ "kind": "channel",
+ "participants": [
+  "Dina Zimmermann",
+  "Yael Yardley",
+  "Imani Chaiyaporn",
+  "Rudo Alexiou",
+  "Naoko Maldonado",
+  "Cassandra Yilmaz",
+  "Bilal Blackwood",
+  "Thibault Sahin",
+  "Mei Obi",
+  "Xiaoling Winslow"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-09T09:15:00-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "@imani i sent you the Mistral architecture diagram.",
+   "reactions": [
+    {
+     "emoji": "+1",
+     "users": [
+      "@rudo",
+      "@imani"
+     ]
+    }
+   ]
+  }
+ ]
+}

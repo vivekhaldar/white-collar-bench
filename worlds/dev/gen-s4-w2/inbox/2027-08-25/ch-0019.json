@@ -1,0 +1,18 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#lab-safety-training-core",
+ "kind": "channel",
+ "participants": [
+  "Roya",
+  "Ottavio Monteiro",
+  "Meera Ivanova"
+ ],
+ "messages": [
+  {
+   "ts": "2027-08-25T15:54:08-08:00",
+   "user": "Roya",
+   "handle": "@roya",
+   "text": "@ottavio just to recap, on Monday I said I'd send you the lab safety training problem statement."
+  }
+ ]
+}

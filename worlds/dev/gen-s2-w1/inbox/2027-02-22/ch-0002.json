@@ -1,0 +1,41 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-nomvula",
+ "kind": "dm",
+ "participants": [
+  "Dina Zimmermann",
+  "Nomvula Moreira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-22T08:59:56-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-02-22T09:02:00-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "I sent you the pothole reporting selection requirements list earlier today."
+  },
+  {
+   "ts": "2027-02-22T09:03:10-07:00",
+   "user": "Nomvula Moreira",
+   "handle": "@nomvula",
+   "text": "got it, thanks"
+  },
+  {
+   "ts": "2027-02-22T09:05:08-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "thanks again for earlier"
+  },
+  {
+   "ts": "2027-02-22T09:08:41-07:00",
+   "user": "Nomvula Moreira",
+   "handle": "@nomvula",
+   "text": "anytime"
+  }
+ ]
+}

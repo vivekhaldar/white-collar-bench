@@ -1,0 +1,26 @@
+{
+ "workspace": "vercliff",
+ "channel": "#pothole-reporting-core",
+ "kind": "channel",
+ "participants": [
+  "Imani Chaiyaporn",
+  "Dina Zimmermann",
+  "Tendai Vu",
+  "Catrin Petrov",
+  "Nomvula Moreira"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-12T13:28:00-07:00",
+   "user": "Imani Chaiyaporn",
+   "handle": "@imani",
+   "text": "@dina when you get a chance, could you update the pothole reporting selection dependency list after my comments?"
+  },
+  {
+   "ts": "2027-03-12T13:28:30-07:00",
+   "user": "Nomvula Moreira",
+   "handle": "@nomvula",
+   "text": "thanks for the heads up"
+  }
+ ]
+}

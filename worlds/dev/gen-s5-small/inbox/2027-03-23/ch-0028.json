@@ -1,0 +1,50 @@
+{
+ "workspace": "iselvale",
+ "channel": "#clinical-documentation-core",
+ "kind": "channel",
+ "participants": [
+  "Anahit Upton",
+  "Hiba Xu",
+  "Ama Forsythe",
+  "Mateo Pritchard"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-23T16:07:00-05:00",
+   "user": "Anahit Upton",
+   "handle": "@anahit",
+   "text": "@hiba i'll send you the clinical documentation discovery findings summary, with Ama!",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@hiba",
+      "@mateo",
+      "@ama"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-23T16:07:10-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "perfect, thanks",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-23T16:08:27-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "good to know",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-23T16:18:10-05:00",
+   "user": "Ama Forsythe",
+   "handle": "@ama",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  }
+ ]
+}

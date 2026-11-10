@@ -1,0 +1,43 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-ama-hiba",
+ "kind": "dm",
+ "participants": [
+  "Ama Forsythe",
+  "Hiba Xu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-30T07:57:00-05:00",
+   "user": "Ama Forsythe",
+   "handle": "@ama",
+   "text": "Could you write up the Grion demo notes by Wednesday?",
+   "reactions": [
+    {
+     "emoji": "white_check_mark",
+     "users": [
+      "@hiba"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-30T07:58:26-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "on it"
+  },
+  {
+   "ts": "2027-03-30T08:01:42-05:00",
+   "user": "Ama Forsythe",
+   "handle": "@ama",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-03-30T08:03:30-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "yep, all good"
+  }
+ ]
+}

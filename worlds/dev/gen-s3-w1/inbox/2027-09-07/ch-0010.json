@@ -1,0 +1,31 @@
+{
+ "workspace": "birchmere",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Penelope Lehmann",
+  "Bisi Chatterjee"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T08:47:32-05:00",
+   "user": "Penelope Lehmann",
+   "handle": "@penelope",
+   "text": "does anyone have a spare laptop charger (usb-c)?",
+   "reactions": [
+    {
+     "emoji": "tada",
+     "users": [
+      "@bisi"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-07T08:49:04-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "I have one, desk by the window"
+  }
+ ]
+}

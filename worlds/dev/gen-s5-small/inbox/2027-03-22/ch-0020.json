@@ -1,0 +1,44 @@
+{
+ "workspace": "iselvale",
+ "channel": "#wagtail-core",
+ "kind": "channel",
+ "participants": [
+  "Lakshmi Zamora",
+  "Hiba Xu",
+  "Ama Forsythe",
+  "Anahit Upton",
+  "Mateo Pritchard",
+  "Friederike Malhotra",
+  "Jisoo Makinen",
+  "Maricel Herrera",
+  "Isla Mercier"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-22T08:34:00-05:00",
+   "user": "Lakshmi Zamora",
+   "handle": "@lakshmi",
+   "text": "maricel would like hiba to send maricel the wagtail integration spec, not agreed yet"
+  },
+  {
+   "ts": "2027-03-22T08:35:13-05:00",
+   "user": "Friederike Malhotra",
+   "handle": "@friederike",
+   "text": "thanks for the heads up"
+  },
+  {
+   "ts": "2027-03-22T08:42:42-05:00",
+   "user": "Isla Mercier",
+   "handle": "@isla",
+   "text": "+1",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-03-22T08:48:10-05:00",
+   "user": "Jisoo Makinen",
+   "handle": "@jisoo",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

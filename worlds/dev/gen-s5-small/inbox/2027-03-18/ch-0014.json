@@ -1,0 +1,49 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-friederike-hiba",
+ "kind": "dm",
+ "participants": [
+  "Hiba Xu",
+  "Friederike Malhotra"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-18T16:22:53-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "got a sec?"
+  },
+  {
+   "ts": "2027-03-18T16:25:00-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "done, i assembled the wagtail security review package",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@friederike"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-18T16:25:44-05:00",
+   "user": "Friederike Malhotra",
+   "handle": "@friederike",
+   "text": "perfect"
+  },
+  {
+   "ts": "2027-03-18T16:28:03-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-03-18T16:29:48-05:00",
+   "user": "Friederike Malhotra",
+   "handle": "@friederike",
+   "text": "only the first half"
+  }
+ ]
+}

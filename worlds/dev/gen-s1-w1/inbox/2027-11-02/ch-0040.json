@@ -1,0 +1,42 @@
+{
+ "workspace": "holcrest",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Joselito Moradi",
+  "Aarav Ortega",
+  "Kirsten Yardley",
+  "Fernanda Olawale"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-02T14:35:23-07:00",
+   "user": "Joselito Moradi",
+   "handle": "@joselito",
+   "text": "the elevator on the east side is out again",
+   "reactions": [
+    {
+     "emoji": "thumbsup",
+     "users": [
+      "@aarav",
+      "@kirsten"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-11-02T14:36:23-07:00",
+   "user": "Aarav Ortega",
+   "handle": "@aarav",
+   "text": "stairs it is",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-11-02T14:37:07-07:00",
+   "user": "Kirsten Yardley",
+   "handle": "@kirsten",
+   "text": "classic",
+   "thread_of": 0
+  }
+ ]
+}

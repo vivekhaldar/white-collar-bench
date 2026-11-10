@@ -1,0 +1,35 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-achieng-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Ottavio Monteiro",
+  "Achieng Ibarra"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T15:11:00-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "Thanks for offering to review the Toria data processing agreement, that would be great."
+  },
+  {
+   "ts": "2027-09-07T15:11:23-08:00",
+   "user": "Achieng Ibarra",
+   "handle": "@achieng",
+   "text": "no problem"
+  },
+  {
+   "ts": "2027-09-07T15:16:02-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-09-07T15:18:31-08:00",
+   "user": "Achieng Ibarra",
+   "handle": "@achieng",
+   "text": "yep, all good"
+  }
+ ]
+}

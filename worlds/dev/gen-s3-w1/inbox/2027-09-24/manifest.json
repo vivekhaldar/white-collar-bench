@@ -1,0 +1,124 @@
+{
+  "date": "2027-09-24",
+  "artifacts": [
+    {
+      "id": "ch-0096",
+      "channel": "chat",
+      "received_at": "2027-09-24T07:34:00-05:00",
+      "path": "ch-0096.json",
+      "title": "DM: Somchai Wickramasinghe / Alasdair Kaya"
+    },
+    {
+      "id": "em-0116",
+      "channel": "email",
+      "received_at": "2027-09-24T07:48:00-05:00",
+      "path": "em-0116.eml",
+      "title": "Re: Talwick partnership meeting notes"
+    },
+    {
+      "id": "ch-0097",
+      "channel": "chat",
+      "received_at": "2027-09-24T08:03:00-05:00",
+      "path": "ch-0097.json",
+      "title": "DM: Alasdair Kaya / Bisi Chatterjee"
+    },
+    {
+      "id": "ch-0098",
+      "channel": "chat",
+      "received_at": "2027-09-24T10:13:00-05:00",
+      "path": "ch-0098.json",
+      "title": "DM: Eun-ji Baek / Alasdair Kaya"
+    },
+    {
+      "id": "em-0117",
+      "channel": "email",
+      "received_at": "2027-09-24T11:57:00-05:00",
+      "path": "em-0117.eml",
+      "title": "Early-bird registration ends today"
+    },
+    {
+      "id": "ch-0099",
+      "channel": "chat",
+      "received_at": "2027-09-24T12:32:00-05:00",
+      "path": "ch-0099.json",
+      "title": "DM: Katarzyna Feng / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0100",
+      "channel": "chat",
+      "received_at": "2027-09-24T12:45:00-05:00",
+      "path": "ch-0100.json",
+      "title": "DM: Alasdair Kaya / Bisi Chatterjee"
+    },
+    {
+      "id": "ch-0101",
+      "channel": "chat",
+      "received_at": "2027-09-24T13:21:00-05:00",
+      "path": "ch-0101.json",
+      "title": "DM: Eleni Laurent / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0102",
+      "channel": "chat",
+      "received_at": "2027-09-24T13:33:00-05:00",
+      "path": "ch-0102.json",
+      "title": "#bed-management-discovery-core"
+    },
+    {
+      "id": "em-0118",
+      "channel": "email",
+      "received_at": "2027-09-24T14:07:00-05:00",
+      "path": "em-0118.eml",
+      "title": "Re: Okapi evaluation rubric"
+    },
+    {
+      "id": "ch-0103",
+      "channel": "chat",
+      "received_at": "2027-09-24T14:49:00-05:00",
+      "path": "ch-0103.json",
+      "title": "DM: Alasdair Kaya / Bisi Chatterjee"
+    },
+    {
+      "id": "em-0119",
+      "channel": "email",
+      "received_at": "2027-09-24T16:27:00-05:00",
+      "path": "em-0119.eml",
+      "title": "Fwd: Okapi data-flow diagram"
+    },
+    {
+      "id": "ch-0104",
+      "channel": "chat",
+      "received_at": "2027-09-24T16:30:00-05:00",
+      "path": "ch-0104.json",
+      "title": "#okapi-core"
+    },
+    {
+      "id": "nt-0007",
+      "channel": "note",
+      "received_at": "2027-09-24T16:47:00-05:00",
+      "path": "nt-0007.md",
+      "title": "Fri notes"
+    },
+    {
+      "id": "em-0120",
+      "channel": "email",
+      "received_at": "2027-09-24T16:54:00-05:00",
+      "path": "em-0120.eml",
+      "title": "Status note: w/e 24 September"
+    },
+    {
+      "id": "ch-0105",
+      "channel": "chat",
+      "received_at": "2027-09-24T18:05:00-05:00",
+      "path": "ch-0105.json",
+      "title": "DM: Bisi Chatterjee / Alasdair Kaya"
+    },
+    {
+      "id": "em-0121",
+      "channel": "email",
+      "received_at": "2027-09-24T21:46:00-05:00",
+      "path": "em-0121.eml",
+      "title": "Draft: Clinical data engineer question bank"
+    }
+  ]
+}

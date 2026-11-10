@@ -1,0 +1,47 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-katarzyna",
+ "kind": "dm",
+ "participants": [
+  "Katarzyna Feng",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-22T15:20:24-05:00",
+   "user": "Katarzyna Feng",
+   "handle": "@katarzyna",
+   "text": "catching people up since a few of us are out today"
+  },
+  {
+   "ts": "2027-09-22T15:24:00-05:00",
+   "user": "Katarzyna Feng",
+   "handle": "@katarzyna",
+   "text": "dina asked if you could update the okapi change request after their comments"
+  },
+  {
+   "ts": "2027-09-22T15:24:09-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "sure, can do"
+  },
+  {
+   "ts": "2027-09-22T15:25:04-05:00",
+   "user": "Katarzyna Feng",
+   "handle": "@katarzyna",
+   "text": "done, i sent you the list of pilot wards for okapi"
+  },
+  {
+   "ts": "2027-09-22T15:26:05-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "did the link work for you?"
+  },
+  {
+   "ts": "2027-09-22T15:28:09-05:00",
+   "user": "Katarzyna Feng",
+   "handle": "@katarzyna",
+   "text": "yep, all good"
+  }
+ ]
+}

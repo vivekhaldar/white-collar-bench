@@ -1,0 +1,37 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-bisi",
+ "kind": "dm",
+ "participants": [
+  "Bisi Chatterjee",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-23T12:31:00-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "Heads up: Dalisay will collect two customer references from Kasis!",
+   "edited": true,
+   "original": "Heads up: Dalisay will collect two customer referecnes from Kasis!"
+  },
+  {
+   "ts": "2027-09-23T12:32:20-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "perfect, thanks"
+  },
+  {
+   "ts": "2027-09-23T12:36:18-05:00",
+   "user": "Bisi Chatterjee",
+   "handle": "@bisi",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-09-23T12:39:45-05:00",
+   "user": "Alasdair Kaya",
+   "handle": "@alasdair",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

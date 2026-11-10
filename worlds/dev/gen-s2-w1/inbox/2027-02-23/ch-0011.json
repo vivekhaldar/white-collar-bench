@@ -1,0 +1,49 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-bilal-dina",
+ "kind": "dm",
+ "participants": [
+  "Bilal Blackwood",
+  "Dina Zimmermann"
+ ],
+ "messages": [
+  {
+   "ts": "2027-02-23T13:56:22-07:00",
+   "user": "Bilal Blackwood",
+   "handle": "@bilal",
+   "text": "quick q"
+  },
+  {
+   "ts": "2027-02-23T13:56:59-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "yep, go ahead"
+  },
+  {
+   "ts": "2027-02-23T13:57:00-07:00",
+   "user": "Bilal Blackwood",
+   "handle": "@bilal",
+   "text": "Could you join my panel on benefits screening?",
+   "edited": true,
+   "original": "Coudl you join my panel on benefits screening?"
+  },
+  {
+   "ts": "2027-02-23T13:57:34-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "will do"
+  },
+  {
+   "ts": "2027-02-23T13:59:10-07:00",
+   "user": "Bilal Blackwood",
+   "handle": "@bilal",
+   "text": "did you catch the all-hands?"
+  },
+  {
+   "ts": "2027-02-23T14:01:58-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "only the first half"
+  }
+ ]
+}

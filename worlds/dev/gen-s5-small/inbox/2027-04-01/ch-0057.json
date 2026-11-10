@@ -1,0 +1,47 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-hiba-lakshmi",
+ "kind": "dm",
+ "participants": [
+  "Hiba Xu",
+  "Lakshmi Zamora"
+ ],
+ "messages": [
+  {
+   "ts": "2027-04-01T08:35:30-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-04-01T08:36:48-05:00",
+   "user": "Lakshmi Zamora",
+   "handle": "@lakshmi",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-04-01T08:37:00-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "Done, I sent you the Okapi access request."
+  },
+  {
+   "ts": "2027-04-01T08:37:45-05:00",
+   "user": "Lakshmi Zamora",
+   "handle": "@lakshmi",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-04-01T08:38:35-05:00",
+   "user": "Lakshmi Zamora",
+   "handle": "@lakshmi",
+   "text": "how's your week going?"
+  },
+  {
+   "ts": "2027-04-01T08:40:02-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "busy, but fine. you?"
+  }
+ ]
+}

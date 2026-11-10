@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Drayhurst//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:cef2b039c9d6eb23@drayhurst.example
+DTSTAMP:20270914T015000Z
+DTSTART:20270915T220000Z
+DTEND:20270915T223000Z
+SUMMARY:Walkthrough: Syllabus review discovery process map
+ORGANIZER;CN=Ottavio Monteiro:mailto:ottavio.monteiro@drayhurst.example
+ATTENDEE;CN=Meera Ivanova;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:meera.ivanova@drayhurst.example
+SEQUENCE:0
+DESCRIPTION:Quick sync\, 30 minutes.\nJoin video meeting: https://meet.drayhurst.example/j/3964195551?pwd=TEzq9uVt\nPasscode: 113375
+LOCATION:https://meet.drayhurst.example/j/3964195551?pwd=TEzq9uVt
+END:VEVENT
+END:VCALENDAR

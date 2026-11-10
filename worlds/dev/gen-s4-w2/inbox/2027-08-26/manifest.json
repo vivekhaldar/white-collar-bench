@@ -1,0 +1,117 @@
+{
+  "date": "2027-08-26",
+  "artifacts": [
+    {
+      "id": "em-0028",
+      "channel": "email",
+      "received_at": "2027-08-26T08:56:00-08:00",
+      "path": "em-0028.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0029",
+      "channel": "email",
+      "received_at": "2027-08-26T09:21:00-08:00",
+      "path": "em-0029.eml",
+      "title": "Re: Fjord API contract v1"
+    },
+    {
+      "id": "mn-0001",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-26T09:55:00-08:00",
+      "path": "mn-0001.md",
+      "title": "Notes: Fjord standup"
+    },
+    {
+      "id": "ch-0020",
+      "channel": "chat",
+      "received_at": "2027-08-26T10:00:00-08:00",
+      "path": "ch-0020.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0030",
+      "channel": "email",
+      "received_at": "2027-08-26T10:15:00-08:00",
+      "path": "em-0030.eml",
+      "title": "[REQ-28263] Request resolved"
+    },
+    {
+      "id": "ch-0021",
+      "channel": "chat",
+      "received_at": "2027-08-26T10:43:00-08:00",
+      "path": "ch-0021.json",
+      "title": "#fjord-core"
+    },
+    {
+      "id": "em-0031",
+      "channel": "email",
+      "received_at": "2027-08-26T13:21:00-08:00",
+      "path": "em-0031.eml",
+      "title": "Re: Coffee with Nadia about admissions triage"
+    },
+    {
+      "id": "mn-0002",
+      "channel": "meeting_notes",
+      "received_at": "2027-08-26T13:30:00-08:00",
+      "path": "mn-0002.md",
+      "title": "Notes: Team retro"
+    },
+    {
+      "id": "ch-0022",
+      "channel": "chat",
+      "received_at": "2027-08-26T15:20:00-08:00",
+      "path": "ch-0022.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0023",
+      "channel": "chat",
+      "received_at": "2027-08-26T15:43:00-08:00",
+      "path": "ch-0023.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0032",
+      "channel": "email",
+      "received_at": "2027-08-26T16:05:00-08:00",
+      "path": "em-0032.eml",
+      "title": "FYI: List of pilot courses for Fjord"
+    },
+    {
+      "id": "ch-0024",
+      "channel": "chat",
+      "received_at": "2027-08-26T16:58:00-08:00",
+      "path": "ch-0024.json",
+      "title": "#random"
+    },
+    {
+      "id": "em-0033",
+      "channel": "email",
+      "received_at": "2027-08-26T17:09:00-08:00",
+      "path": "em-0033.eml",
+      "title": "Scheduled maintenance this weekend"
+    },
+    {
+      "id": "ca-0004",
+      "channel": "calendar",
+      "received_at": "2027-08-26T17:11:00-08:00",
+      "path": "ca-0004.ics",
+      "title": "Invite: Cairn platform sync"
+    },
+    {
+      "id": "ch-0025",
+      "channel": "chat",
+      "received_at": "2027-08-26T17:35:00-08:00",
+      "path": "ch-0025.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "nt-0003",
+      "channel": "note",
+      "received_at": "2027-08-26T19:06:00-08:00",
+      "path": "nt-0003.md",
+      "title": "Thu notes"
+    }
+  ]
+}

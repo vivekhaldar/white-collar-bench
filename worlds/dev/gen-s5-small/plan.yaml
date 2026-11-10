@@ -1,0 +1,1620 @@
+plan_version: 1
+world_id: gen-s5-small
+generator:
+  kind: wcb-gen
+  version: 1
+  seed: 5
+  size: small
+  weeks: 1
+setting:
+  key: health
+  label: regional health network
+  timezone: -05:00
+  vocab:
+    sites: wards
+    site: ward
+    users: nurses
+    end_users: patients
+    council: Clinical Operations Council
+    data: patient data
+    agreement: data-use agreement
+    platform: shared AI platform
+    unit_word: hospital
+  nouns:
+  - risk register
+  - rollout checklist
+  - test plan
+  - decision memo
+  - status slide
+  - comms plan
+  - training outline
+  - budget justification
+  - vendor comparison
+  - architecture diagram
+  - integration spec
+  - access request
+  - pilot charter
+  - evaluation rubric
+  - data dictionary
+  - stakeholder map
+  - dependency list
+  - requirements matrix
+  - lessons-learned note
+  - timeline
+  - RACI chart
+  - cutover plan
+  - acceptance criteria
+  - metrics definition
+  - service blueprint
+  - support model
+  - retention schedule
+  - change request
+  - accessibility review
+  - help-desk script
+  - bed census extract
+  - order set review
+  - downtime procedure
+  - clinical safety case
+  umbrella: o-iselvale-health-partners
+  central: o-clinical-digital-services
+  video_domain: meet.iselvale.example
+  chat_workspace: iselvale
+  volume:
+  - 10
+  - 14
+  loops_per_day: 4.2
+calendar:
+  start: '2027-03-29'
+  seed:
+    start: '2027-03-15'
+    end: '2027-03-27'
+    days:
+    - '2027-03-15'
+    - '2027-03-16'
+    - '2027-03-17'
+    - '2027-03-18'
+    - '2027-03-19'
+    - '2027-03-20'
+    - '2027-03-22'
+    - '2027-03-23'
+    - '2027-03-24'
+    - '2027-03-25'
+    - '2027-03-26'
+    - '2027-03-27'
+  episode:
+    days:
+    - '2027-03-29'
+    - '2027-03-30'
+    - '2027-03-31'
+    - '2027-04-01'
+    - '2027-04-02'
+    - '2027-04-03'
+    weeks:
+    - - '2027-03-29'
+      - '2027-03-30'
+      - '2027-03-31'
+      - '2027-04-01'
+      - '2027-04-02'
+      - '2027-04-03'
+  checkpoints:
+  - id: cp1
+    date: '2027-03-30'
+    label: end of Tuesday
+  - id: cp2
+    date: '2027-04-01'
+    label: end of Thursday
+  - id: cp3
+    date: '2027-04-03'
+    label: end of week
+worker: p-hiba-xu
+orgs:
+- id: o-iselvale-health-partners
+  name: Iselvale Health Partners
+  short: Iselvale
+  kind: internal
+  role: umbrella
+  domain: iselvale.example
+  slug: iselvale
+  surface_forms:
+  - Iselvale
+  - IHP
+  - iselvale.example
+  receptiveness: null
+- id: o-clinical-digital-services
+  name: Clinical Digital Services
+  short: CDS
+  kind: internal
+  role: central
+  domain: iselvale.example
+  slug: cds
+  surface_forms:
+  - CDS
+  - central
+  - the CDS team
+  - iselvale.example
+  receptiveness: null
+- id: o-falbury-community-clinics
+  name: Falbury Community Clinics
+  short: Falbury
+  kind: internal
+  role: unit
+  domain: falbury.iselvale.example
+  slug: falbury
+  surface_forms:
+  - Falbury
+  - FCC
+  - falbury.iselvale.example
+  receptiveness: high
+- id: o-talton-rehabilitation-center
+  name: Talton Rehabilitation Center
+  short: Talton
+  kind: internal
+  role: unit
+  domain: talton.iselvale.example
+  slug: talton
+  surface_forms:
+  - Talton
+  - TRC
+  - talton.iselvale.example
+  receptiveness: medium
+- id: o-garfield-general-hospital
+  name: Garfield General Hospital
+  short: Garfield
+  kind: internal
+  role: unit
+  domain: garfield.iselvale.example
+  slug: garfield
+  surface_forms:
+  - Garfield
+  - GGH
+  - garfield.iselvale.example
+  receptiveness: low
+- id: o-marys-health
+  name: Marys Health
+  short: Marys
+  kind: vendor
+  role: vendor
+  domain: marys.example
+  slug: marys
+  surface_forms:
+  - Marys
+  - marys.example
+  receptiveness: null
+- id: o-grion-systems
+  name: Grion Systems
+  short: Grion
+  kind: vendor
+  role: vendor
+  domain: grion.example
+  slug: grion
+  surface_forms:
+  - Grion
+  - grion.example
+  receptiveness: null
+- id: o-vervale-institute-for-health-services-research
+  name: Vervale Institute for Health Services Research
+  short: Vervale
+  kind: partner
+  role: partner
+  domain: vervale-research.example
+  slug: vervale
+  surface_forms:
+  - Vervale
+  - VIHSR
+  - vervale-research.example
+  receptiveness: null
+people:
+- id: p-hiba-xu
+  name: Hiba Xu
+  first: Hiba
+  last: Xu
+  nickname: null
+  org: o-clinical-digital-services
+  role: Lead Solutions Architect, Shared Services
+  role_phrase: null
+  email: hiba.xu@iselvale.example
+  handle: '@hiba'
+  relationship: null
+  group: central
+  tier: core
+  weight: 0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Hiba
+  - H. Xu
+  - hiba.xu@iselvale.example
+  - '@hiba'
+- id: p-lindiwe-valdez
+  name: Lindiwe Valdez
+  first: Lindiwe
+  last: Valdez
+  nickname: null
+  org: o-clinical-digital-services
+  role: Chief Digital Officer
+  role_phrase: the CDO
+  email: lindiwe.valdez@iselvale.example
+  handle: '@lindiwe'
+  relationship: manager
+  group: central
+  tier: core
+  weight: 2.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Lindiwe
+  - L. Valdez
+  - lindiwe.valdez@iselvale.example
+  - '@lindiwe'
+  - the CDO
+- id: p-anahit-upton
+  name: Anahit Upton
+  first: Anahit
+  last: Upton
+  nickname: null
+  org: o-clinical-digital-services
+  role: Director of Digital Programs
+  role_phrase: our programs director
+  email: anahit.upton@iselvale.example
+  handle: '@anahit'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 7.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Anahit
+  - A. Upton
+  - anahit.upton@iselvale.example
+  - '@anahit'
+  - our programs director
+- id: p-lakshmi-zamora
+  name: Lakshmi Zamora
+  first: Lakshmi
+  last: Zamora
+  nickname: null
+  org: o-clinical-digital-services
+  role: Principal, Integration Platform
+  role_phrase: the platform lead
+  email: lakshmi.zamora@iselvale.example
+  handle: '@lakshmi'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 3.2
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Lakshmi
+  - L. Zamora
+  - lakshmi.zamora@iselvale.example
+  - '@lakshmi'
+  - the platform lead
+- id: p-jisoo-makinen
+  name: Jisoo Makinen
+  first: Jisoo
+  last: Makinen
+  nickname: null
+  org: o-clinical-digital-services
+  role: Integration Engineer
+  role_phrase: the integration engineer
+  email: jisoo.makinen@iselvale.example
+  handle: '@jisoo'
+  relationship: stakeholder
+  group: central
+  tier: core
+  weight: 1.2
+  appears: null
+  voice: formal
+  surface_forms:
+  - Jisoo
+  - J. Makinen
+  - jisoo.makinen@iselvale.example
+  - '@jisoo'
+  - the integration engineer
+- id: p-friederike-malhotra
+  name: Friederike Malhotra
+  first: Friederike
+  last: Malhotra
+  nickname: Rike
+  org: o-clinical-digital-services
+  role: Principal, Information Security
+  role_phrase: the security principal
+  email: friederike.malhotra@iselvale.example
+  handle: '@friederike'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 2.9
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Friederike
+  - Rike
+  - F. Malhotra
+  - friederike.malhotra@iselvale.example
+  - '@friederike'
+  - the security principal
+- id: p-maricel-herrera
+  name: Maricel Herrera
+  first: Maricel
+  last: Herrera
+  nickname: null
+  org: o-clinical-digital-services
+  role: Product Lead, Clinical Apps
+  role_phrase: the product lead
+  email: maricel.herrera@iselvale.example
+  handle: '@maricel'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 1.2
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Maricel
+  - M. Herrera
+  - maricel.herrera@iselvale.example
+  - '@maricel'
+  - the product lead
+- id: p-kwame-ortega
+  name: Kwame Ortega
+  first: Kwame
+  last: Ortega
+  nickname: null
+  org: o-clinical-digital-services
+  role: Executive Assistant to the CDO
+  role_phrase: the CDO's EA
+  email: kwame.ortega@iselvale.example
+  handle: '@kwame'
+  relationship: assistant
+  group: central
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Kwame
+  - K. Ortega
+  - kwame.ortega@iselvale.example
+  - '@kwame'
+  - the CDO's EA
+- id: p-cds-shared-inbox
+  name: CDS Shared Inbox
+  first: CDS Team
+  last: Mailbox
+  nickname: null
+  org: o-clinical-digital-services
+  role: Shared team mailbox
+  role_phrase: the CDS inbox
+  email: cds-team@iselvale.example
+  handle: '@cds-team'
+  relationship: other
+  group: mailbox
+  tier: core
+  weight: 0.3
+  appears: null
+  voice: formal
+  surface_forms:
+  - CDS Team
+  - the CDS inbox
+  - cds-team@iselvale.example
+- id: p-tahmina-lozano
+  name: Tahmina Lozano
+  first: Tahmina
+  last: Lozano
+  nickname: null
+  org: o-iselvale-health-partners
+  role: Supply Chain Contracts Manager
+  role_phrase: the contracts manager
+  email: tahmina.lozano@iselvale.example
+  handle: '@tahmina'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: terse
+  surface_forms:
+  - Tahmina
+  - T. Lozano
+  - tahmina.lozano@iselvale.example
+  - '@tahmina'
+  - the contracts manager
+- id: p-dragan-siregar
+  name: Dragan Siregar
+  first: Dragan
+  last: Siregar
+  nickname: null
+  org: o-iselvale-health-partners
+  role: Associate General Counsel
+  role_phrase: network counsel
+  email: dragan.siregar@iselvale.example
+  handle: '@dragan'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Dragan
+  - D. Siregar
+  - dragan.siregar@iselvale.example
+  - '@dragan'
+  - network counsel
+- id: p-declan-byrne
+  name: Declan Byrne
+  first: Declan
+  last: Byrne
+  nickname: null
+  org: o-iselvale-health-partners
+  role: Director, Finance Shared Services
+  role_phrase: the finance director
+  email: declan.byrne@iselvale.example
+  handle: '@declan'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: terse
+  surface_forms:
+  - Declan
+  - D. Byrne
+  - declan.byrne@iselvale.example
+  - '@declan'
+  - the finance director
+- id: p-nikhil-sahin
+  name: Nikhil Sahin
+  first: Nikhil
+  last: Sahin
+  nickname: Nik
+  org: o-iselvale-health-partners
+  role: Talent Acquisition Partner
+  role_phrase: our talent partner
+  email: nikhil.sahin@iselvale.example
+  handle: '@nikhil'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: formal
+  surface_forms:
+  - Nikhil
+  - Nik
+  - N. Sahin
+  - nikhil.sahin@iselvale.example
+  - '@nikhil'
+  - our talent partner
+- id: p-aylin-venkataraman
+  name: Aylin Venkataraman
+  first: Aylin
+  last: Venkataraman
+  nickname: null
+  org: o-iselvale-health-partners
+  role: Network Privacy Officer
+  role_phrase: the privacy officer
+  email: aylin.venkataraman@iselvale.example
+  handle: '@aylin'
+  relationship: stakeholder
+  group: functional
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Aylin
+  - A. Venkataraman
+  - aylin.venkataraman@iselvale.example
+  - '@aylin'
+  - the privacy officer
+- id: p-isla-mercier
+  name: Isla Mercier
+  first: Isla
+  last: Mercier
+  nickname: null
+  org: o-falbury-community-clinics
+  role: Chief Medical Information Officer
+  role_phrase: Falbury's CMIO
+  email: isla.mercier@falbury.iselvale.example
+  handle: '@isla'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Isla
+  - I. Mercier
+  - isla.mercier@falbury.iselvale.example
+  - '@isla'
+  - Falbury's CMIO
+- id: p-ama-forsythe
+  name: Ama Forsythe
+  first: Ama
+  last: Forsythe
+  nickname: null
+  org: o-falbury-community-clinics
+  role: Director of Pharmacy
+  role_phrase: the Falbury lead
+  email: ama.forsythe@falbury.iselvale.example
+  handle: '@ama'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 2.4
+  appears: null
+  voice: formal
+  surface_forms:
+  - Ama
+  - A. Forsythe
+  - ama.forsythe@falbury.iselvale.example
+  - '@ama'
+  - the Falbury lead
+- id: p-mateo-pritchard
+  name: Mateo Pritchard
+  first: Mateo
+  last: Pritchard
+  nickname: null
+  org: o-falbury-community-clinics
+  role: Nurse Informaticist
+  role_phrase: null
+  email: mateo.pritchard@falbury.iselvale.example
+  handle: '@mateo'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - Mateo
+  - M. Pritchard
+  - mateo.pritchard@falbury.iselvale.example
+  - '@mateo'
+- id: p-idris-el-amin
+  name: Idris El-Amin
+  first: Idris
+  last: El-Amin
+  nickname: null
+  org: o-talton-rehabilitation-center
+  role: Chief Medical Information Officer
+  role_phrase: Talton's CMIO
+  email: idris.elamin@talton.iselvale.example
+  handle: '@idris'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Idris
+  - I. El-Amin
+  - idris.elamin@talton.iselvale.example
+  - '@idris'
+  - Talton's CMIO
+- id: p-burak-jaber
+  name: Burak Jaber
+  first: Burak
+  last: Jaber
+  nickname: null
+  org: o-talton-rehabilitation-center
+  role: Operations Director
+  role_phrase: the Talton lead
+  email: burak.jaber@talton.iselvale.example
+  handle: '@burak'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: terse
+  surface_forms:
+  - Burak
+  - B. Jaber
+  - burak.jaber@talton.iselvale.example
+  - '@burak'
+  - the Talton lead
+- id: p-eileen-jovanovic
+  name: Eileen Jovanovic
+  first: Eileen
+  last: Jovanovic
+  nickname: null
+  org: o-talton-rehabilitation-center
+  role: Service Desk Lead
+  role_phrase: null
+  email: eileen.jovanovic@talton.iselvale.example
+  handle: '@eileen'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - Eileen
+  - E. Jovanovic
+  - eileen.jovanovic@talton.iselvale.example
+  - '@eileen'
+- id: p-cem-haidari
+  name: Cem Haidari
+  first: Cem
+  last: Haidari
+  nickname: null
+  org: o-garfield-general-hospital
+  role: Chief Medical Information Officer
+  role_phrase: Garfield's CMIO
+  email: cem.haidari@garfield.iselvale.example
+  handle: '@cem'
+  relationship: executive
+  group: unit
+  tier: core
+  weight: 0.7
+  appears: null
+  voice: formal
+  surface_forms:
+  - Cem
+  - C. Haidari
+  - cem.haidari@garfield.iselvale.example
+  - '@cem'
+  - Garfield's CMIO
+- id: p-ciaran-rocha
+  name: Ciaran Rocha
+  first: Ciaran
+  last: Rocha
+  nickname: null
+  org: o-garfield-general-hospital
+  role: Chief Nursing Officer
+  role_phrase: the Garfield lead
+  email: ciaran.rocha@garfield.iselvale.example
+  handle: '@ciaran'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.3
+  appears: null
+  voice: terse
+  surface_forms:
+  - Ciaran
+  - C. Rocha
+  - ciaran.rocha@garfield.iselvale.example
+  - '@ciaran'
+  - the Garfield lead
+- id: p-mei-asante
+  name: Mei Asante
+  first: Mei
+  last: Asante
+  nickname: null
+  org: o-garfield-general-hospital
+  role: Revenue Cycle Analyst
+  role_phrase: null
+  email: mei.asante@garfield.iselvale.example
+  handle: '@mei'
+  relationship: stakeholder
+  group: unit
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Mei
+  - M. Asante
+  - mei.asante@garfield.iselvale.example
+  - '@mei'
+- id: p-anahit-tanaka
+  name: Anahit Tanaka
+  first: Anahit
+  last: Tanaka
+  nickname: null
+  org: o-marys-health
+  role: Account Executive
+  role_phrase: null
+  email: anahit.tanaka@marys.example
+  handle: '@anahitt'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Anahit
+  - A. Tanaka
+  - anahit.tanaka@marys.example
+  - '@anahitt'
+- id: p-baraka-krishnan
+  name: Baraka Krishnan
+  first: Baraka
+  last: Krishnan
+  nickname: null
+  org: o-marys-health
+  role: Solutions Engineer
+  role_phrase: null
+  email: baraka.krishnan@marys.example
+  handle: '@baraka'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Baraka
+  - B. Krishnan
+  - baraka.krishnan@marys.example
+  - '@baraka'
+- id: p-petra-greco
+  name: Petra Greco
+  first: Petra
+  last: Greco
+  nickname: null
+  org: o-grion-systems
+  role: Account Executive
+  role_phrase: null
+  email: petra.greco@grion.example
+  handle: '@petra'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 1.1
+  appears: null
+  voice: formal
+  surface_forms:
+  - Petra
+  - P. Greco
+  - petra.greco@grion.example
+  - '@petra'
+- id: p-burak-kuznetsova
+  name: Burak Kuznetsova
+  first: Burak
+  last: Kuznetsova
+  nickname: null
+  org: o-grion-systems
+  role: Solutions Engineer
+  role_phrase: null
+  email: burak.kuznetsova@grion.example
+  handle: '@burakk'
+  relationship: vendor
+  group: vendor
+  tier: core
+  weight: 0.9
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Burak
+  - B. Kuznetsova
+  - burak.kuznetsova@grion.example
+  - '@burakk'
+- id: p-aileen-hossain
+  name: Aileen Hossain
+  first: Aileen
+  last: Hossain
+  nickname: null
+  org: o-clinical-digital-services
+  role: Clinical Data Analyst
+  role_phrase: our clinical analyst
+  email: aileen.hossain@iselvale.example
+  handle: '@aileen'
+  relationship: peer
+  group: central
+  tier: core
+  weight: 1.0
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Aileen
+  - A. Hossain
+  - aileen.hossain@iselvale.example
+  - '@aileen'
+  - our clinical analyst
+- id: p-elena-bhatt
+  name: Elena Bhatt
+  first: Elena
+  last: Bhatt
+  nickname: null
+  org: o-vervale-institute-for-health-services-research
+  role: Senior Research Scientist
+  role_phrase: null
+  email: elena.bhatt@vervale-research.example
+  handle: '@elena'
+  relationship: partner
+  group: partner
+  tier: core
+  weight: 0.8
+  appears: null
+  voice: lowercase
+  surface_forms:
+  - Elena
+  - E. Bhatt
+  - elena.bhatt@vervale-research.example
+  - '@elena'
+- id: p-tyrone-fraser
+  name: Tyrone Fraser
+  first: Tyrone
+  last: Fraser
+  nickname: null
+  org: null
+  role: Candidate
+  role_phrase: null
+  email: tyrone.fraser@post.example
+  handle: '@tyrone'
+  relationship: candidate
+  group: candidate
+  tier: core
+  weight: 0.6
+  appears: null
+  voice: chatty
+  surface_forms:
+  - Tyrone
+  - T. Fraser
+  - tyrone.fraser@post.example
+  - '@tyrone'
+- id: p-giorgi-morimoto
+  name: Giorgi Morimoto
+  first: Giorgi
+  last: Morimoto
+  nickname: null
+  org: o-falbury-community-clinics
+  role: Privacy Officer
+  role_phrase: the new privacy officer
+  email: giorgi.morimoto@falbury.iselvale.example
+  handle: '@giorgi'
+  relationship: stakeholder
+  group: newcomer
+  tier: core
+  weight: 1.4
+  appears: '2027-03-31'
+  voice: formal
+  surface_forms:
+  - Giorgi
+  - G. Morimoto
+  - giorgi.morimoto@falbury.iselvale.example
+  - '@giorgi'
+  - the new privacy officer
+- id: p-bruna-smit
+  name: Bruna Smit
+  first: Bruna
+  last: Smit
+  nickname: null
+  org: null
+  role: Editor, Clinical IT Briefing
+  role_phrase: null
+  email: bruna.smit@newsletters.example
+  handle: '@bruna'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: terse
+  surface_forms:
+  - bruna.smit@newsletters.example
+  minor_kind: newsletter
+- id: p-iselvale-it-service-desk
+  name: Iselvale IT Service Desk
+  first: Iselvale IT Service Desk
+  last: ''
+  nickname: null
+  org: null
+  role: Iselvale IT Service Desk
+  role_phrase: null
+  email: servicedesk-noreply@iselvale.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - servicedesk-noreply@iselvale.example
+  minor_kind: service_desk
+- id: p-platform-status-page
+  name: Platform Status Page
+  first: Platform Status Page
+  last: ''
+  nickname: null
+  org: null
+  role: Platform Status Page
+  role_phrase: null
+  email: status-noreply@iselvale.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - status-noreply@iselvale.example
+  minor_kind: status
+- id: p-iselvale-internal-communications
+  name: Iselvale Internal Communications
+  first: Iselvale Internal Communications
+  last: ''
+  nickname: null
+  org: null
+  role: Iselvale Internal Communications
+  role_phrase: null
+  email: news@iselvale.example
+  handle: null
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: formal
+  surface_forms:
+  - news@iselvale.example
+  minor_kind: comms
+- id: p-kofi-conti
+  name: Kofi Conti
+  first: Kofi
+  last: Conti
+  nickname: null
+  org: null
+  role: Events Coordinator
+  role_phrase: null
+  email: kofi.conti@iselvale.example
+  handle: '@kofi'
+  relationship: null
+  group: minor
+  tier: minor
+  weight: 0.0
+  appears: null
+  voice: chatty
+  surface_forms:
+  - kofi.conti@iselvale.example
+  minor_kind: events
+projects:
+- id: pr-wagtail
+  name: Wagtail
+  short: Wagtail
+  kw: wagtail
+  code: Wagtail
+  surface_forms:
+  - Project Wagtail
+  - the prior authorization pilot
+  - the Falbury pilot
+  - WAGP
+  archetype: flagship_pilot
+  size: flagship
+  topic: prior authorization
+  topic_a: an AI prior-authorization triage tool
+  pivot: outpatient no-shows
+  role: ''
+  unit: o-falbury-community-clinics
+  vendors:
+  - o-grion-systems
+  - o-marys-health
+  partner: o-vervale-institute-for-health-services-research
+  owner: p-ama-forsythe
+  sponsor: p-lindiwe-valdez
+  members:
+  - p-hiba-xu
+  - p-ama-forsythe
+  - p-anahit-upton
+  - p-mateo-pritchard
+  - p-lakshmi-zamora
+  - p-friederike-malhotra
+  - p-jisoo-makinen
+  - p-maricel-herrera
+  - p-isla-mercier
+  orgs:
+  - o-falbury-community-clinics
+  status: active
+  phase: build
+  target_date: '2027-04-21'
+  n: 4
+  cast:
+    owner: p-ama-forsythe
+    sponsor: p-lindiwe-valdez
+    lead: p-ama-forsythe
+    unit:
+    - p-mateo-pritchard
+    - p-ama-forsythe
+    ae:
+    - p-petra-greco
+    - p-anahit-tanaka
+    se:
+    - p-burak-kuznetsova
+    - p-baraka-krishnan
+    eng: p-lakshmi-zamora
+    sec: p-friederike-malhotra
+    privacy: p-aylin-venkataraman
+    legal: p-dragan-siregar
+    proc: p-tahmina-lozano
+    fin: p-declan-byrne
+    hr: p-nikhil-sahin
+    ea: p-kwame-ortega
+    collab: p-anahit-upton
+    partner: p-elena-bhatt
+    cand: p-tyrone-fraser
+  weight: 31.22
+  start: '2027-03-15'
+- id: pr-okapi
+  name: Okapi
+  short: Okapi
+  kw: okapi
+  code: Okapi
+  surface_forms:
+  - the platform
+  - the common platform
+  - Okapi platform
+  - the shared AI platform
+  archetype: platform_hub
+  size: hub
+  topic: shared platform
+  topic_a: ''
+  pivot: discharge delays
+  role: ''
+  unit: o-falbury-community-clinics
+  vendors:
+  - o-marys-health
+  - o-grion-systems
+  partner: o-vervale-institute-for-health-services-research
+  owner: p-lakshmi-zamora
+  sponsor: p-lindiwe-valdez
+  members:
+  - p-hiba-xu
+  - p-lakshmi-zamora
+  - p-anahit-upton
+  - p-ama-forsythe
+  - p-mateo-pritchard
+  - p-jisoo-makinen
+  - p-friederike-malhotra
+  orgs: []
+  status: active
+  phase: onboarding tenants
+  target_date: null
+  n: 2
+  cast:
+    owner: p-lakshmi-zamora
+    sponsor: p-lindiwe-valdez
+    lead: p-ama-forsythe
+    unit:
+    - p-mateo-pritchard
+    - p-ama-forsythe
+    ae:
+    - p-anahit-tanaka
+    - p-petra-greco
+    se:
+    - p-baraka-krishnan
+    - p-burak-kuznetsova
+    eng: p-jisoo-makinen
+    sec: p-friederike-malhotra
+    privacy: p-aylin-venkataraman
+    legal: p-dragan-siregar
+    proc: p-tahmina-lozano
+    fin: p-declan-byrne
+    hr: p-nikhil-sahin
+    ea: p-kwame-ortega
+    collab: p-anahit-upton
+    partner: p-elena-bhatt
+    cand: p-tyrone-fraser
+  weight: 12.86
+  start: '2027-03-15'
+- id: pr-nurse-scheduling-tool-selection
+  name: Nurse Scheduling Tool Selection
+  short: nurse scheduling selection
+  kw: nurse scheduling selection
+  code: null
+  surface_forms:
+  - the nurse scheduling bake-off
+  - the Grion/Marys evaluation
+  - NSTS selection
+  archetype: vendor_pair_evaluation
+  size: mid
+  topic: nurse scheduling
+  topic_a: an AI nurse scheduling assistant
+  pivot: outpatient no-shows
+  role: ''
+  unit: o-falbury-community-clinics
+  vendors:
+  - o-grion-systems
+  - o-marys-health
+  partner: o-vervale-institute-for-health-services-research
+  owner: p-ama-forsythe
+  sponsor: p-lindiwe-valdez
+  members:
+  - p-hiba-xu
+  - p-ama-forsythe
+  - p-anahit-upton
+  - p-mateo-pritchard
+  - p-petra-greco
+  - p-tahmina-lozano
+  orgs:
+  - o-falbury-community-clinics
+  - o-grion-systems
+  - o-marys-health
+  status: active
+  phase: questionnaires
+  target_date: '2027-04-09'
+  n: 2
+  cast:
+    owner: p-ama-forsythe
+    sponsor: p-lindiwe-valdez
+    lead: p-ama-forsythe
+    unit:
+    - p-mateo-pritchard
+    - p-ama-forsythe
+    ae:
+    - p-petra-greco
+    - p-anahit-tanaka
+    se:
+    - p-burak-kuznetsova
+    - p-baraka-krishnan
+    eng: p-lakshmi-zamora
+    sec: p-friederike-malhotra
+    privacy: p-aylin-venkataraman
+    legal: p-dragan-siregar
+    proc: p-tahmina-lozano
+    fin: p-declan-byrne
+    hr: p-nikhil-sahin
+    ea: p-kwame-ortega
+    collab: p-anahit-upton
+    partner: p-elena-bhatt
+    cand: p-tyrone-fraser
+  weight: 8.12
+  start: '2027-03-15'
+- id: pr-falbury-clinical-documentation-discovery
+  name: Falbury Clinical Documentation Discovery
+  short: clinical documentation discovery
+  kw: clinical documentation discovery
+  code: null
+  surface_forms:
+  - the Falbury discovery
+  - the clinical documentation work
+  - FCDD discovery
+  archetype: pivoting_discovery
+  size: mid
+  topic: clinical documentation
+  topic_a: an AI clinical documentation assistant
+  pivot: referral backlog
+  role: ''
+  unit: o-falbury-community-clinics
+  vendors:
+  - o-marys-health
+  - o-grion-systems
+  partner: o-vervale-institute-for-health-services-research
+  owner: p-hiba-xu
+  sponsor: p-lindiwe-valdez
+  members:
+  - p-hiba-xu
+  - p-hiba-xu
+  - p-anahit-upton
+  - p-ama-forsythe
+  - p-mateo-pritchard
+  orgs:
+  - o-falbury-community-clinics
+  status: active
+  phase: site visit
+  target_date: '2027-05-05'
+  n: 2
+  cast:
+    owner: p-hiba-xu
+    sponsor: p-lindiwe-valdez
+    lead: p-ama-forsythe
+    unit:
+    - p-mateo-pritchard
+    - p-ama-forsythe
+    ae:
+    - p-anahit-tanaka
+    - p-petra-greco
+    se:
+    - p-baraka-krishnan
+    - p-burak-kuznetsova
+    eng: p-lakshmi-zamora
+    sec: p-friederike-malhotra
+    privacy: p-aylin-venkataraman
+    legal: p-dragan-siregar
+    proc: p-tahmina-lozano
+    fin: p-declan-byrne
+    hr: p-nikhil-sahin
+    ea: p-kwame-ortega
+    collab: p-anahit-upton
+    partner: p-elena-bhatt
+    cand: p-tyrone-fraser
+  weight: 8.19
+  start: '2027-03-15'
+- id: pr-okapi-operating-model-review
+  name: Okapi Operating Model Review
+  short: Okapi operating model
+  kw: operating model
+  code: null
+  surface_forms:
+  - the operating model review
+  - the ops model draft
+  - the Okapi operating model
+  archetype: peer_review
+  size: small
+  topic: platform
+  topic_a: ''
+  pivot: outpatient no-shows
+  role: ''
+  unit: o-garfield-general-hospital
+  vendors:
+  - o-marys-health
+  - o-grion-systems
+  partner: o-vervale-institute-for-health-services-research
+  owner: p-lakshmi-zamora
+  sponsor: p-lindiwe-valdez
+  members:
+  - p-hiba-xu
+  - p-lakshmi-zamora
+  - p-anahit-upton
+  - p-ciaran-rocha
+  orgs:
+  - o-garfield-general-hospital
+  status: active
+  phase: review requested
+  target_date: null
+  n: 2
+  cast:
+    owner: p-lakshmi-zamora
+    sponsor: p-lindiwe-valdez
+    lead: p-ciaran-rocha
+    unit:
+    - p-mei-asante
+    - p-ciaran-rocha
+    ae:
+    - p-anahit-tanaka
+    - p-petra-greco
+    se:
+    - p-baraka-krishnan
+    - p-burak-kuznetsova
+    eng: p-lakshmi-zamora
+    sec: p-friederike-malhotra
+    privacy: p-aylin-venkataraman
+    legal: p-dragan-siregar
+    proc: p-tahmina-lozano
+    fin: p-declan-byrne
+    hr: p-nikhil-sahin
+    ea: p-kwame-ortega
+    collab: p-anahit-upton
+    partner: p-elena-bhatt
+    cand: p-tyrone-fraser
+  weight: 2.03
+  start: '2027-03-15'
+- id: pr-garfield-supply-par-levels-idea
+  name: Garfield Supply Par Levels Idea
+  short: supply par levels
+  kw: supply par levels
+  code: null
+  surface_forms:
+  - Ciaran's supply par levels idea
+  - the supply par levels placeholder
+  archetype: placeholder
+  size: placeholder
+  topic: supply par levels
+  topic_a: an AI supply par-level forecaster
+  pivot: referral backlog
+  role: ''
+  unit: o-garfield-general-hospital
+  vendors:
+  - o-grion-systems
+  - o-marys-health
+  partner: o-vervale-institute-for-health-services-research
+  owner: p-ciaran-rocha
+  sponsor: p-lindiwe-valdez
+  members:
+  - p-hiba-xu
+  - p-ciaran-rocha
+  - p-anahit-upton
+  orgs:
+  - o-garfield-general-hospital
+  status: active
+  phase: placeholder
+  target_date: null
+  n: 2
+  cast:
+    owner: p-ciaran-rocha
+    sponsor: p-lindiwe-valdez
+    lead: p-ciaran-rocha
+    unit:
+    - p-mei-asante
+    - p-ciaran-rocha
+    ae:
+    - p-petra-greco
+    - p-anahit-tanaka
+    se:
+    - p-burak-kuznetsova
+    - p-baraka-krishnan
+    eng: p-lakshmi-zamora
+    sec: p-friederike-malhotra
+    privacy: p-aylin-venkataraman
+    legal: p-dragan-siregar
+    proc: p-tahmina-lozano
+    fin: p-declan-byrne
+    hr: p-nikhil-sahin
+    ea: p-kwame-ortega
+    collab: p-anahit-upton
+    partner: p-elena-bhatt
+    cand: p-tyrone-fraser
+  weight: 0.13
+  start: '2027-03-15'
+- id: pr-grion-referral-triage-diligence
+  name: Grion Referral Triage Diligence
+  short: Grion diligence
+  kw: grion diligence
+  code: null
+  surface_forms:
+  - the Grion deep dive
+  - the referral triage diligence
+  archetype: stalled_discovery
+  size: dormant
+  topic: referral triage
+  topic_a: an AI referral triage tool
+  pivot: outpatient no-shows
+  role: ''
+  unit: o-garfield-general-hospital
+  vendors:
+  - o-grion-systems
+  - o-marys-health
+  partner: o-vervale-institute-for-health-services-research
+  owner: p-hiba-xu
+  sponsor: p-lindiwe-valdez
+  members:
+  - p-hiba-xu
+  - p-hiba-xu
+  - p-anahit-upton
+  orgs:
+  - o-garfield-general-hospital
+  - o-grion-systems
+  - o-marys-health
+  status: active
+  phase: diligence
+  target_date: null
+  n: 2
+  cast:
+    owner: p-hiba-xu
+    sponsor: p-lindiwe-valdez
+    lead: p-ciaran-rocha
+    unit:
+    - p-mei-asante
+    - p-ciaran-rocha
+    ae:
+    - p-petra-greco
+    - p-anahit-tanaka
+    se:
+    - p-burak-kuznetsova
+    - p-baraka-krishnan
+    eng: p-lakshmi-zamora
+    sec: p-friederike-malhotra
+    privacy: p-aylin-venkataraman
+    legal: p-dragan-siregar
+    proc: p-tahmina-lozano
+    fin: p-declan-byrne
+    hr: p-nikhil-sahin
+    ea: p-kwame-ortega
+    collab: p-anahit-upton
+    partner: p-elena-bhatt
+    cand: p-tyrone-fraser
+  weight: 0.74
+  start: '2027-03-15'
+collisions:
+  first_names:
+  - - p-anahit-upton
+    - p-anahit-tanaka
+  - - p-burak-jaber
+    - p-burak-kuznetsova
+  homophones:
+  - p-aileen-hossain
+  - p-eileen-jovanovic
+cadences:
+- key: standup
+  title: Wagtail standup
+  kind: meeting
+  project: pr-wagtail
+  weekdays:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  every: 1
+  time: 09:30
+  minutes: 25
+  organizer: p-ama-forsythe
+  attendees:
+  - p-hiba-xu
+  - p-ama-forsythe
+  - p-anahit-upton
+  - p-mateo-pritchard
+  - p-lakshmi-zamora
+  - p-friederike-malhotra
+  - p-jisoo-makinen
+  - p-maricel-herrera
+- key: leads
+  title: CDS leads call
+  kind: meeting
+  project: null
+  weekdays:
+  - 0
+  every: 1
+  time: '11:00'
+  minutes: 45
+  organizer: p-lindiwe-valdez
+  attendees:
+  - p-hiba-xu
+  - p-anahit-upton
+  - p-lakshmi-zamora
+  - p-friederike-malhotra
+  - p-maricel-herrera
+  - p-lindiwe-valdez
+- key: hub_sync
+  title: Okapi platform sync
+  kind: meeting
+  project: pr-okapi
+  weekdays:
+  - 2
+  every: 1
+  time: '14:00'
+  minutes: 30
+  organizer: p-lakshmi-zamora
+  attendees:
+  - p-hiba-xu
+  - p-lakshmi-zamora
+  - p-anahit-upton
+  - p-ama-forsythe
+  - p-mateo-pritchard
+  - p-jisoo-makinen
+- key: one_on_one
+  title: 1:1 Hiba / Anahit
+  kind: meeting
+  project: null
+  weekdays:
+  - 1
+  every: 2
+  time: '15:00'
+  minutes: 30
+  organizer: p-anahit-upton
+  attendees:
+  - p-hiba-xu
+  - p-anahit-upton
+- key: forum
+  title: Cross-hospital AI forum
+  kind: meeting
+  project: null
+  weekdays:
+  - 3
+  every: 2
+  time: '13:00'
+  minutes: 60
+  organizer: p-anahit-upton
+  attendees:
+  - p-hiba-xu
+  - p-anahit-upton
+  - p-ama-forsythe
+  - p-burak-jaber
+  - p-ciaran-rocha
+- key: weekly_update
+  title: Weekly update
+  kind: obligation
+  project: null
+  weekdays:
+  - 0
+  - 4
+  every: 1
+  organizer: p-cds-shared-inbox
+  attendees:
+  - p-hiba-xu
+  - p-lindiwe-valdez
+challenges:
+- week: 1
+  tag: worker_directive
+  day: '2027-03-29'
+  project: pr-nurse-scheduling-tool-selection
+- week: 1
+  tag: noise
+  day: '2027-03-29'
+- week: 1
+  tag: implied_commitment
+  day: '2027-03-30'
+  project: pr-wagtail
+- week: 1
+  tag: duplicate_signal
+  day: '2027-03-29'
+  project: pr-falbury-clinical-documentation-discovery
+- week: 1
+  tag: privacy
+  day: '2027-04-01'
+- week: 1
+  tag: alias
+  day: '2027-03-31'
+- week: 1
+  tag: name_collision
+  day: '2027-04-01'
+- week: 1
+  tag: new_entity
+  day: '2027-03-31'
+  person: p-giorgi-morimoto
+  project: pr-wagtail
+- week: 1
+  tag: supersession
+  day: '2027-03-31'
+  project: pr-wagtail
+- week: 1
+  tag: unobservable
+  day: '2027-03-31'
+  project: pr-wagtail
+  attribute: budget
+- week: 1
+  tag: draft_vs_sent
+  day: '2027-04-02'
+  setup: '2027-03-29'
+- week: 1
+  tag: batch_catchup
+  day: '2027-03-31'
+- week: 1
+  tag: transfer
+  day: '2027-04-01'
+- week: 1
+  tag: correction
+  day: '2027-04-01'
+  setup: '2027-03-30'
+- week: 1
+  tag: weak_evidence
+  day: '2027-04-01'
+  setup: '2027-03-29'
+- week: 1
+  tag: acceptance_vs_occurrence
+  day: '2027-04-02'
+- week: 1
+  tag: restructuring
+  day: '2027-04-01'
+  mode: split
+  project: pr-falbury-clinical-documentation-discovery
+- week: 1
+  tag: version_mismatch
+  day: '2027-04-01'
+  setup: '2027-03-29'
+- week: 1
+  tag: silent_closure
+  day: '2027-04-01'
+  setup: '2027-03-29'
+- week: 1
+  tag: reversal
+  day: '2027-04-02'
+  setup: '2027-03-24'
+  project: pr-wagtail
+- week: 1
+  tag: endorsement
+  day: '2027-04-02'
+  setup: '2027-03-29'
+- week: 1
+  tag: scattered_evidence
+  day: '2027-04-01'
+  setup: '2027-03-29'
+  steps:
+  - '2027-03-30'
+  - '2027-03-31'
+  - '2027-04-01'
+audit:
+  unrevealed:
+    e-0009: never appears
+    e-0019: never appears
+    e-0021: never appears
+    e-0026: never appears
+    e-0028: never appears
+    e-0029: never appears
+    e-0031: never appears
+    e-0035: never appears
+    e-0036: never appears
+    e-0037: never appears
+    e-0038: never appears
+    e-0154: unobservable
+    e-0179: 'weak evidence: the walkthrough left no trace'
+    e-0185: unreported closure
+  instruction_injection: em-0062
+  attachments:
+  - dc-0001
+  - dc-0002
+  - dc-0003
+  - dc-0004
+  - dc-0005

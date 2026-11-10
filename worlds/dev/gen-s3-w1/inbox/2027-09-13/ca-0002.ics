@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Birchmere//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:ef9c2a3c9eb48a7c@birchmere.example
+DTSTAMP:20270913T212000Z
+DTSTART:20270914T180000Z
+DTEND:20270914T190000Z
+SUMMARY:Intake forms selection scoring session
+ORGANIZER;CN=Bisi Chatterjee:mailto:bisi.chatterjee@birchmere.example
+ATTENDEE;CN=Alasdair Kaya;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:alasdair.kaya@birchmere.example
+ATTENDEE;CN=Somchai Wickramasinghe;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:somchai.wickramasinghe@emberbury.birchmere.example
+SEQUENCE:0
+DESCRIPTION:Quick sync\, 30 minutes.\nJoin video meeting: https://meet.birchmere.example/j/0128658317?pwd=xYaNT2B3\nPasscode: 171529
+LOCATION:https://meet.birchmere.example/j/0128658317?pwd=xYaNT2B3
+END:VEVENT
+END:VCALENDAR

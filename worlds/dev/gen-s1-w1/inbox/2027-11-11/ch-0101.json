@@ -1,0 +1,23 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-jalen",
+ "kind": "dm",
+ "participants": [
+  "Jalen Hendriks",
+  "Camila Quimby"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-11T14:24:00-07:00",
+   "user": "Jalen Hendriks",
+   "handle": "@jalen",
+   "text": "i shared the marten lessons-learned note with you earlier today"
+  },
+  {
+   "ts": "2027-11-11T14:24:05-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "got it, thanks"
+  }
+ ]
+}

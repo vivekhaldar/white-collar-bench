@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Vercliff//Calendar//EN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:de2a14d71f441203@vercliff.example
+DTSTAMP:20270308T215200Z
+DTSTART:20270309T220000Z
+DTEND:20270309T224500Z
+SUMMARY:Mistral review
+ORGANIZER;CN=Yael Yardley:mailto:yael.yardley@nordale.vercliff.example
+ATTENDEE;CN=Dina Zimmermann;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:dina.zimmermann@vercliff.example
+ATTENDEE;CN=Imani Chaiyaporn;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION:mailto:imani.chaiyaporn@vercliff.example
+SEQUENCE:0
+DESCRIPTION:Quick sync\, 30 minutes.\nJoin video meeting: https://meet.vercliff.example/j/7663772587?pwd=kAHZ4WxE\nPasscode: 383021
+LOCATION:https://meet.vercliff.example/j/7663772587?pwd=kAHZ4WxE
+END:VEVENT
+END:VCALENDAR

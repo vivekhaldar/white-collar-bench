@@ -1,0 +1,43 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-ottavio-theresa",
+ "kind": "dm",
+ "participants": [
+  "Theresa Nagy",
+  "Ottavio Monteiro"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-17T16:11:35-08:00",
+   "user": "Theresa Nagy",
+   "handle": "@theresa",
+   "text": "hi!"
+  },
+  {
+   "ts": "2027-09-17T16:12:57-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "hey"
+  },
+  {
+   "ts": "2027-09-17T16:17:00-08:00",
+   "user": "Theresa Nagy",
+   "handle": "@theresa",
+   "text": "Just fixed the waitlist management discovery missing roster sync.",
+   "reactions": [
+    {
+     "emoji": "raised_hands",
+     "users": [
+      "@ottavio"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-17T16:17:46-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "thanks!"
+  }
+ ]
+}

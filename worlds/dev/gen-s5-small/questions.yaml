@@ -1,0 +1,280 @@
+- id: q-001
+  checkpoint: cp1
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - duplicate_signal
+  - implied_commitment
+  - scattered_evidence
+- id: q-002
+  checkpoint: cp1
+  template: project_status
+  params:
+    project: pr-wagtail
+    name_form: the Falbury pilot
+  challenges:
+  - alias
+  - implied_commitment
+  - scattered_evidence
+- id: q-003
+  checkpoint: cp1
+  template: project_changes
+  params:
+    project: pr-wagtail
+    since: '2027-03-27'
+    name_form: Project Wagtail
+  challenges:
+  - alias
+  - endorsement
+  - implied_commitment
+  - scattered_evidence
+- id: q-004
+  checkpoint: cp1
+  template: i_owe
+  params:
+    person: p-anahit-upton
+    name_form: our programs director
+  challenges:
+  - alias
+  - implied_commitment
+  - name_collision
+- id: q-005
+  checkpoint: cp1
+  template: owed_to_me
+  params:
+    person: p-anahit-upton
+    name_form: our programs director
+  challenges:
+  - alias
+  - duplicate_signal
+  - name_collision
+- id: q-006
+  checkpoint: cp1
+  template: loop_owner
+  params:
+    commitment: c-041
+  challenges: []
+- id: q-007
+  checkpoint: cp1
+  template: loop_due
+  params:
+    commitment: c-042
+  challenges:
+  - scattered_evidence
+- id: q-008
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-wagtail
+    attribute: blocker
+  challenges: []
+- id: q-009
+  checkpoint: cp1
+  template: person_attr
+  params:
+    person: p-maricel-herrera
+    attribute: relationship
+  challenges: []
+- id: q-010
+  checkpoint: cp1
+  template: project_loops
+  params:
+    project: pr-falbury-clinical-documentation-discovery
+  challenges:
+  - duplicate_signal
+- id: q-011
+  checkpoint: cp1
+  template: project_attr
+  params:
+    project: pr-garfield-supply-par-levels-idea
+    attribute: budget
+  challenges:
+  - unobservable
+- id: q-012
+  checkpoint: cp2
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - correction
+  - implied_commitment
+  - supersession
+- id: q-013
+  checkpoint: cp2
+  template: project_status
+  params:
+    project: pr-wagtail
+  challenges:
+  - implied_commitment
+  - supersession
+- id: q-014
+  checkpoint: cp2
+  template: project_changes
+  params:
+    project: pr-falbury-clinical-documentation-discovery
+    since: '2027-03-30'
+    name_form: the clinical documentation work
+  challenges:
+  - alias
+  - batch_catchup
+  - new_entity
+  - restructuring
+  - silent_closure
+  - transfer
+- id: q-015
+  checkpoint: cp2
+  template: i_owe
+  params:
+    person: p-friederike-malhotra
+  challenges: []
+- id: q-016
+  checkpoint: cp2
+  template: owed_to_me
+  params:
+    person: p-jisoo-makinen
+  challenges: []
+- id: q-017
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-falbury-clinical-documentation-discovery
+    attribute: next_step
+    name_form: the clinical documentation work
+  challenges:
+  - alias
+- id: q-018
+  checkpoint: cp2
+  template: person_attr
+  params:
+    person: p-giorgi-morimoto
+    attribute: org
+  challenges:
+  - new_entity
+- id: q-019
+  checkpoint: cp2
+  template: project_loops
+  params:
+    project: pr-falbury-referral-backlog-discovery
+  challenges:
+  - transfer
+- id: q-020
+  checkpoint: cp2
+  template: person_brief
+  params:
+    person: p-lindiwe-valdez
+  challenges:
+  - new_entity
+  - restructuring
+- id: q-021
+  checkpoint: cp2
+  template: decision_date
+  params:
+    decision: d-002
+  challenges:
+  - duplicate_signal
+  - worker_directive
+- id: q-022
+  checkpoint: cp2
+  template: project_attr
+  params:
+    project: pr-falbury-clinical-documentation-discovery
+    attribute: budget
+  challenges:
+  - unobservable
+- id: q-023
+  checkpoint: cp3
+  template: focus_tomorrow
+  params: {}
+  challenges:
+  - correction
+  - endorsement
+  - implied_commitment
+  - supersession
+  - worker_directive
+- id: q-024
+  checkpoint: cp3
+  template: project_status
+  params:
+    project: pr-wagtail
+  challenges:
+  - duplicate_signal
+  - endorsement
+  - implied_commitment
+  - supersession
+  - worker_directive
+- id: q-025
+  checkpoint: cp3
+  template: project_changes
+  params:
+    project: pr-wagtail
+    since: '2027-04-01'
+    name_form: the Falbury pilot
+  challenges:
+  - alias
+  - endorsement
+  - reversal
+  - worker_directive
+- id: q-026
+  checkpoint: cp3
+  template: i_owe
+  params:
+    person: p-ama-forsythe
+  challenges:
+  - correction
+  - implied_commitment
+  - supersession
+- id: q-027
+  checkpoint: cp3
+  template: owed_to_me
+  params:
+    person: p-ama-forsythe
+    name_form: Ama
+  challenges:
+  - alias
+  - transfer
+- id: q-028
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-okapi
+    attribute: phase
+  challenges: []
+- id: q-029
+  checkpoint: cp3
+  template: project_loops
+  params:
+    project: pr-nurse-scheduling-tool-selection
+  challenges:
+  - correction
+  - implied_commitment
+  - supersession
+- id: q-030
+  checkpoint: cp3
+  template: person_brief
+  params:
+    person: p-anahit-tanaka
+  challenges:
+  - name_collision
+- id: q-031
+  checkpoint: cp3
+  template: decision_date
+  params:
+    decision: d-001
+  challenges:
+  - worker_directive
+- id: q-032
+  checkpoint: cp3
+  template: event_date
+  params:
+    event: e-0158
+  text: When was "Review Mateo's Okapi test plan" completed?
+  challenges:
+  - batch_catchup
+- id: q-033
+  checkpoint: cp3
+  template: project_attr
+  params:
+    project: pr-wagtail
+    attribute: budget
+  text: What is the budget for Wagtail?
+  challenges:
+  - unobservable

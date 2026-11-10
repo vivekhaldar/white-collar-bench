@@ -1,0 +1,40 @@
+{
+ "workspace": "birchmere",
+ "channel": "#general",
+ "kind": "channel",
+ "participants": [
+  "Kwame Hoffmann",
+  "Tunde Kapanadze",
+  "Nurlan Moreira",
+  "Giorgi Ngo"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-16T07:54:41-05:00",
+   "user": "Kwame Hoffmann",
+   "handle": "@kwame",
+   "text": "good morning all",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@tunde",
+      "@nurlan"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-16T08:00:55-05:00",
+   "user": "Tunde Kapanadze",
+   "handle": "@tunde",
+   "text": "morning!"
+  },
+  {
+   "ts": "2027-09-16T08:05:42-05:00",
+   "user": "Nurlan Moreira",
+   "handle": "@nurlan",
+   "text": "morning"
+  }
+ ]
+}

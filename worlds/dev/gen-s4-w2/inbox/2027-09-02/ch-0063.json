@@ -1,0 +1,45 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#fjord-core",
+ "kind": "channel",
+ "participants": [
+  "Ratna Bondarenko",
+  "Ottavio Monteiro",
+  "Darius Sherwood",
+  "Meera Ivanova",
+  "Theresa Nagy",
+  "Nomvula Ndlovu",
+  "Bruna Sinclair",
+  "Esperanza Rao",
+  "Yaroslav Moyo"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-02T17:48:00-08:00",
+   "user": "Ratna Bondarenko",
+   "handle": "@ratna",
+   "text": "@ottavio i can draft the Fjord load test plan.",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@darius"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-02T17:48:21-08:00",
+   "user": "Darius Sherwood",
+   "handle": "@darius",
+   "text": "thanks for the heads up :)"
+  },
+  {
+   "ts": "2027-09-02T17:51:16-08:00",
+   "user": "Theresa Nagy",
+   "handle": "@theresa",
+   "text": "following",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-anahit-hiba",
+ "kind": "dm",
+ "participants": [
+  "Anahit",
+  "Hiba Xu"
+ ],
+ "messages": [
+  {
+   "ts": "2027-04-01T13:09:05-05:00",
+   "user": "Anahit",
+   "handle": "@anahit",
+   "text": "got a sec? :)"
+  },
+  {
+   "ts": "2027-04-01T13:10:25-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "hi"
+  },
+  {
+   "ts": "2027-04-01T13:12:00-05:00",
+   "user": "Anahit",
+   "handle": "@anahit",
+   "text": "Leave it with me, I'll send you the Wagtail comms plan!"
+  },
+  {
+   "ts": "2027-04-01T13:13:27-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "great, thank you"
+  }
+ ]
+}

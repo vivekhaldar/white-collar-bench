@@ -1,0 +1,31 @@
+{
+ "workspace": "vercliff",
+ "channel": "#mistral-core",
+ "kind": "channel",
+ "participants": [
+  "Dina Zimmermann",
+  "Yael Yardley",
+  "Imani Chaiyaporn",
+  "Rudo Alexiou",
+  "Naoko Maldonado",
+  "Cassandra Yilmaz",
+  "Bilal Blackwood",
+  "Thibault Sahin",
+  "Mei Obi",
+  "Xiaoling Winslow"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-10T08:50:00-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "@yael done, i sent you the mistral retention schedule"
+  },
+  {
+   "ts": "2027-03-10T08:50:24-07:00",
+   "user": "Thibault Sahin",
+   "handle": "@thibault",
+   "text": "thanks for the heads up"
+  }
+ ]
+}

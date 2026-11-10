@@ -1,0 +1,34 @@
+{
+ "workspace": "iselvale",
+ "channel": "#clinical-documentation-core",
+ "kind": "channel",
+ "participants": [
+  "Anahit",
+  "Hiba Xu",
+  "Ama Forsythe",
+  "Mateo Pritchard"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-29T13:25:00-05:00",
+   "user": "Anahit",
+   "handle": "@anahit",
+   "text": "@hiba could you send me the clinical documentation discovery pain-point list?",
+   "reactions": [
+    {
+     "emoji": "heavy_check_mark",
+     "users": [
+      "@mateo"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-29T13:31:59-05:00",
+   "user": "Ama Forsythe",
+   "handle": "@ama",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  }
+ ]
+}

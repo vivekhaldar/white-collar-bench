@@ -1,0 +1,46 @@
+{
+ "workspace": "drayhurst",
+ "channel": "#early-alert-advisory-core",
+ "kind": "channel",
+ "participants": [
+  "Ishaan Smit",
+  "Ottavio Monteiro",
+  "Meera Ivanova",
+  "Margaux Choi"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-09T14:38:00-08:00",
+   "user": "Ishaan Smit",
+   "handle": "@ishaan",
+   "text": "@ottavio done, I sent you the early alert advisory reading list."
+  },
+  {
+   "ts": "2027-09-09T14:39:02-08:00",
+   "user": "Margaux Choi",
+   "handle": "@margaux",
+   "text": "good to know"
+  },
+  {
+   "ts": "2027-09-09T14:48:16-08:00",
+   "user": "Margaux Choi",
+   "handle": "@margaux",
+   "text": "thanks for the update",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T14:53:13-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "thanks for flagging",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-09-09T14:56:00-08:00",
+   "user": "Meera Ivanova",
+   "handle": "@meera",
+   "text": "+1",
+   "thread_of": 0
+  }
+ ]
+}

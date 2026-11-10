@@ -1,0 +1,97 @@
+{
+  "date": "2027-03-31",
+  "artifacts": [
+    {
+      "id": "em-0072",
+      "channel": "email",
+      "received_at": "2027-03-31T06:35:00-05:00",
+      "path": "em-0072.eml",
+      "title": "[INC-63687] Ticket updated"
+    },
+    {
+      "id": "em-0073",
+      "channel": "email",
+      "received_at": "2027-03-31T09:00:00-05:00",
+      "path": "em-0073.eml",
+      "title": "Introduction: Wagtail"
+    },
+    {
+      "id": "mn-0009",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-31T09:30:00-05:00",
+      "path": "mn-0009.md",
+      "title": "Recap: Grion demo"
+    },
+    {
+      "id": "mn-0010",
+      "channel": "meeting_notes",
+      "received_at": "2027-03-31T09:55:00-05:00",
+      "path": "mn-0010.md",
+      "title": "Notes: Wagtail standup"
+    },
+    {
+      "id": "em-0074",
+      "channel": "email",
+      "received_at": "2027-03-31T10:26:00-05:00",
+      "path": "em-0074.eml",
+      "title": "[INC-72565] Ticket updated"
+    },
+    {
+      "id": "ch-0054",
+      "channel": "chat",
+      "received_at": "2027-03-31T12:35:00-05:00",
+      "path": "ch-0054.json",
+      "title": "DM: Hiba Xu / Maricel Herrera"
+    },
+    {
+      "id": "ch-0055",
+      "channel": "chat",
+      "received_at": "2027-03-31T12:57:00-05:00",
+      "path": "ch-0055.json",
+      "title": "#okapi-core"
+    },
+    {
+      "id": "em-0075",
+      "channel": "email",
+      "received_at": "2027-03-31T13:23:00-05:00",
+      "path": "em-0075.eml",
+      "title": "Re: Wagtail: numbers"
+    },
+    {
+      "id": "mt-0011",
+      "channel": "transcript",
+      "received_at": "2027-03-31T13:30:00-05:00",
+      "path": "mt-0011.vtt",
+      "title": "Grion demo (transcript)"
+    },
+    {
+      "id": "dc-0004",
+      "channel": "document",
+      "received_at": "2027-03-31T14:21:00-05:00",
+      "path": "dc-0004.xlsx",
+      "title": "Clinical documentation discovery opportunity list v2",
+      "parent": "em-0076"
+    },
+    {
+      "id": "em-0076",
+      "channel": "email",
+      "received_at": "2027-03-31T14:21:00-05:00",
+      "path": "em-0076.eml",
+      "title": "Re: Clinical documentation discovery opportunity list"
+    },
+    {
+      "id": "nt-0007",
+      "channel": "note",
+      "received_at": "2027-03-31T16:57:00-05:00",
+      "path": "nt-0007.md",
+      "title": "Wed notes"
+    },
+    {
+      "id": "em-0077",
+      "channel": "email",
+      "received_at": "2027-03-31T17:30:00-05:00",
+      "path": "em-0077.eml",
+      "title": "Re: Wagtail cutover plan"
+    }
+  ]
+}

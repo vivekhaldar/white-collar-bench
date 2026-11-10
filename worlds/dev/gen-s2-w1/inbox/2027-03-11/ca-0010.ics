@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Vercliff//Calendar//EN
+METHOD:REPLY
+BEGIN:VEVENT
+UID:deb923a1e1dd8e2b@vercliff.example
+DTSTAMP:20270311T155800Z
+DTSTART:20270312T230000Z
+DTEND:20270312T233000Z
+SUMMARY:Accepted: Mistral follow-up
+ORGANIZER;CN=Thibault Sahin:mailto:thibault.sahin@vercliff.example
+ATTENDEE;CN=Dina Zimmermann;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED:mailto:dina.zimmermann@vercliff.example
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR

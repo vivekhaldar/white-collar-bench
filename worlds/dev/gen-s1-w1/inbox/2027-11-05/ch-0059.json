@@ -1,0 +1,37 @@
+{
+ "workspace": "holcrest",
+ "channel": "dm-camila-petra",
+ "kind": "dm",
+ "participants": [
+  "Camila Quimby",
+  "Petra Korkmaz"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-05T11:02:00-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "I pulled together the Tarn risk register with Jalen Hendriks.",
+   "edited": true,
+   "original": "I pulled together the Tarn risk rgeister with Jalen Hendriks."
+  },
+  {
+   "ts": "2027-11-05T11:02:44-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "thanks!"
+  },
+  {
+   "ts": "2027-11-05T11:07:06-07:00",
+   "user": "Camila Quimby",
+   "handle": "@camila",
+   "text": "is the shared drive slow for you too?"
+  },
+  {
+   "ts": "2027-11-05T11:08:56-07:00",
+   "user": "Petra Korkmaz",
+   "handle": "@petra",
+   "text": "yeah, it's been crawling all morning"
+  }
+ ]
+}

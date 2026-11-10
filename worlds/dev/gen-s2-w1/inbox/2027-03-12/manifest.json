@@ -1,0 +1,139 @@
+{
+  "date": "2027-03-12",
+  "artifacts": [
+    {
+      "id": "em-0122",
+      "channel": "email",
+      "received_at": "2027-03-12T07:08:00-07:00",
+      "path": "em-0122.eml",
+      "title": "[INC-47172] Ticket updated"
+    },
+    {
+      "id": "ch-0097",
+      "channel": "chat",
+      "received_at": "2027-03-12T07:44:00-07:00",
+      "path": "ch-0097.json",
+      "title": "#fennel-core"
+    },
+    {
+      "id": "em-0123",
+      "channel": "email",
+      "received_at": "2027-03-12T08:01:00-07:00",
+      "path": "em-0123.eml",
+      "title": "[REQ-28760] Request resolved"
+    },
+    {
+      "id": "ch-0098",
+      "channel": "chat",
+      "received_at": "2027-03-12T09:47:00-07:00",
+      "path": "ch-0098.json",
+      "title": "DM: Dina Zimmermann / Imani Chaiyaporn"
+    },
+    {
+      "id": "mt-0022",
+      "channel": "transcript",
+      "received_at": "2027-03-12T10:00:00-07:00",
+      "path": "mt-0022.vtt",
+      "title": "Mistral standup (transcript)"
+    },
+    {
+      "id": "em-0124",
+      "channel": "email",
+      "received_at": "2027-03-12T11:30:00-07:00",
+      "path": "em-0124.eml",
+      "title": "Splitting out duplicate requests discovery"
+    },
+    {
+      "id": "em-0125",
+      "channel": "email",
+      "received_at": "2027-03-12T11:49:00-07:00",
+      "path": "em-0125.eml",
+      "title": "[INC-70382] Ticket updated"
+    },
+    {
+      "id": "ch-0099",
+      "channel": "chat",
+      "received_at": "2027-03-12T13:21:00-07:00",
+      "path": "ch-0099.json",
+      "title": "DM: Dina Zimmermann / Venkatesh Santos"
+    },
+    {
+      "id": "ch-0100",
+      "channel": "chat",
+      "received_at": "2027-03-12T13:42:00-07:00",
+      "path": "ch-0100.json",
+      "title": "DM: Naoko Maldonado / Dina Zimmermann"
+    },
+    {
+      "id": "ch-0101",
+      "channel": "chat",
+      "received_at": "2027-03-12T13:49:00-07:00",
+      "path": "ch-0101.json",
+      "title": "DM: Dina Zimmermann / Cassandra Yilmaz"
+    },
+    {
+      "id": "ch-0102",
+      "channel": "chat",
+      "received_at": "2027-03-12T14:09:00-07:00",
+      "path": "ch-0102.json",
+      "title": "#pothole-reporting-core"
+    },
+    {
+      "id": "mt-0023",
+      "channel": "transcript",
+      "received_at": "2027-03-12T14:15:00-07:00",
+      "path": "mt-0023.vtt",
+      "title": "Office hours with Jisoo (transcript)"
+    },
+    {
+      "id": "dc-0007",
+      "channel": "document",
+      "received_at": "2027-03-12T15:21:00-07:00",
+      "path": "dc-0007.docx",
+      "title": "Mistral council memo (final)",
+      "parent": "em-0126"
+    },
+    {
+      "id": "em-0126",
+      "channel": "email",
+      "received_at": "2027-03-12T15:21:00-07:00",
+      "path": "em-0126.eml",
+      "title": "Re: Mistral council memo"
+    },
+    {
+      "id": "nt-0012",
+      "channel": "note",
+      "received_at": "2027-03-12T16:11:00-07:00",
+      "path": "nt-0012.md",
+      "title": "Fri notes"
+    },
+    {
+      "id": "em-0127",
+      "channel": "email",
+      "received_at": "2027-03-12T16:21:00-07:00",
+      "path": "em-0127.eml",
+      "title": "Status note: w/e 12 March"
+    },
+    {
+      "id": "nt-0013",
+      "channel": "note",
+      "received_at": "2027-03-12T17:48:00-07:00",
+      "path": "nt-0013.md",
+      "title": "Fri notes"
+    },
+    {
+      "id": "ch-0103",
+      "channel": "chat",
+      "received_at": "2027-03-12T19:09:00-07:00",
+      "path": "ch-0103.json",
+      "title": "DM: Dina Zimmermann / Rahul Almeida"
+    },
+    {
+      "id": "em-0128",
+      "channel": "email",
+      "received_at": "2027-03-12T22:42:00-07:00",
+      "path": "em-0128.eml",
+      "title": "Draft: Mistral vendor comparison"
+    }
+  ]
+}

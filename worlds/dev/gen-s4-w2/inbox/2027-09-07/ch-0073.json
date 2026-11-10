@@ -1,0 +1,45 @@
+{
+ "workspace": "drayhurst",
+ "channel": "dm-nomvula-ottavio",
+ "kind": "dm",
+ "participants": [
+  "Nomvula Ndlovu",
+  "Ottavio Monteiro"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-07T10:55:00-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "hello"
+  },
+  {
+   "ts": "2027-09-07T10:55:37-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "fyi meera ivanova needs the fjord help-desk script by thu 9 sep",
+   "edited": true,
+   "original": "fyi meera ivanova needs the fjord help-desk script by fri 10 sep",
+   "reactions": [
+    {
+     "emoji": "pray",
+     "users": [
+      "@ottavio"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-09-07T10:56:59-08:00",
+   "user": "Nomvula Ndlovu",
+   "handle": "@nomvula",
+   "text": "ok, talk later"
+  },
+  {
+   "ts": "2027-09-07T10:57:58-08:00",
+   "user": "Ottavio Monteiro",
+   "handle": "@ottavio",
+   "text": "later!"
+  }
+ ]
+}

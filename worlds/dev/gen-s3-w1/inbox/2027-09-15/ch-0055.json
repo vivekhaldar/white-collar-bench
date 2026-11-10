@@ -1,0 +1,37 @@
+{
+ "workspace": "birchmere",
+ "channel": "#okapi-core",
+ "kind": "channel",
+ "participants": [
+  "Bisi",
+  "Alasdair Kaya",
+  "Kasia",
+  "Eleni Laurent",
+  "Dina Mancini",
+  "Penny",
+  "Nurlan Moreira",
+  "Giorgi Ngo",
+  "Tori"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-15T13:22:00-05:00",
+   "user": "Bisi",
+   "handle": "@bisi",
+   "text": "Heads up: Kasia will send Alasdair the Okapi stakeholder map. :)"
+  },
+  {
+   "ts": "2027-09-15T13:22:30-05:00",
+   "user": "Dina Mancini",
+   "handle": "@dina",
+   "text": "good to know :)"
+  },
+  {
+   "ts": "2027-09-15T13:25:42-05:00",
+   "user": "Giorgi Ngo",
+   "handle": "@giorgi",
+   "text": "+1 :)",
+   "thread_of": 0
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "workspace": "vercliff",
+ "channel": "#random",
+ "kind": "channel",
+ "participants": [
+  "Bogdan Byrne",
+  "Cassandra Yilmaz"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-03T16:12:36-07:00",
+   "user": "Bogdan Byrne",
+   "handle": "@bogdan",
+   "text": "does anyone have a spare laptop charger (usb-c)?",
+   "reactions": [
+    {
+     "emoji": "eyes",
+     "users": [
+      "@cassandra"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": "2027-03-03T16:14:17-07:00",
+   "user": "Cassandra Yilmaz",
+   "handle": "@cassandra",
+   "text": "I have one, desk by the window",
+   "thread_of": 0
+  }
+ ]
+}

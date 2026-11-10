@@ -1,0 +1,23 @@
+{
+ "workspace": "birchmere",
+ "channel": "dm-alasdair-dina",
+ "kind": "dm",
+ "participants": [
+  "Dina Mancini",
+  "Alasdair Kaya"
+ ],
+ "messages": [
+  {
+   "ts": "2027-09-14T09:02:26-05:00",
+   "user": "Dina Mancini",
+   "handle": "@dina",
+   "text": "morning! :)"
+  },
+  {
+   "ts": "2027-09-14T09:03:15-05:00",
+   "user": "Dina Mancini",
+   "handle": "@dina",
+   "text": "Tunde asked if you could set up a coffee with them about radiology follow-up."
+  }
+ ]
+}

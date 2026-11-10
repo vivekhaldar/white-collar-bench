@@ -1,0 +1,110 @@
+{
+  "date": "2027-09-16",
+  "artifacts": [
+    {
+      "id": "em-0068",
+      "channel": "email",
+      "received_at": "2027-09-16T07:58:00-05:00",
+      "path": "em-0068.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "ch-0058",
+      "channel": "chat",
+      "received_at": "2027-09-16T08:13:00-05:00",
+      "path": "ch-0058.json",
+      "title": "DM: Tunde Kapanadze / Alasdair Kaya"
+    },
+    {
+      "id": "ch-0059",
+      "channel": "chat",
+      "received_at": "2027-09-16T08:23:00-05:00",
+      "path": "ch-0059.json",
+      "title": "#general"
+    },
+    {
+      "id": "ch-0060",
+      "channel": "chat",
+      "received_at": "2027-09-16T09:04:00-05:00",
+      "path": "ch-0060.json",
+      "title": "#ai-use-core"
+    },
+    {
+      "id": "em-0069",
+      "channel": "email",
+      "received_at": "2027-09-16T09:11:00-05:00",
+      "path": "em-0069.eml",
+      "title": "Re: Bed management discovery problem framing note"
+    },
+    {
+      "id": "mt-0010",
+      "channel": "transcript",
+      "received_at": "2027-09-16T09:55:00-05:00",
+      "path": "mt-0010.vtt",
+      "title": "Okapi standup (transcript)"
+    },
+    {
+      "id": "em-0070",
+      "channel": "email",
+      "received_at": "2027-09-16T10:32:00-05:00",
+      "path": "em-0070.eml",
+      "title": "Call for proposals closes Thursday 30 September"
+    },
+    {
+      "id": "ch-0061",
+      "channel": "chat",
+      "received_at": "2027-09-16T10:34:00-05:00",
+      "path": "ch-0061.json",
+      "title": "#coffee"
+    },
+    {
+      "id": "em-0071",
+      "channel": "email",
+      "received_at": "2027-09-16T11:42:00-05:00",
+      "path": "em-0071.eml",
+      "title": "Room booking confirmation"
+    },
+    {
+      "id": "em-0072",
+      "channel": "email",
+      "received_at": "2027-09-16T12:55:00-05:00",
+      "path": "em-0072.eml",
+      "title": "Re: FYI: Bed management baseline data from Lanmoor"
+    },
+    {
+      "id": "ch-0062",
+      "channel": "chat",
+      "received_at": "2027-09-16T13:08:00-05:00",
+      "path": "ch-0062.json",
+      "title": "DM: Alasdair Kaya / Bisi Chatterjee"
+    },
+    {
+      "id": "ch-0063",
+      "channel": "chat",
+      "received_at": "2027-09-16T14:51:00-05:00",
+      "path": "ch-0063.json",
+      "title": "#random"
+    },
+    {
+      "id": "ch-0064",
+      "channel": "chat",
+      "received_at": "2027-09-16T16:18:00-05:00",
+      "path": "ch-0064.json",
+      "title": "DM: Alasdair Kaya / Giorgi Ngo"
+    },
+    {
+      "id": "em-0073",
+      "channel": "email",
+      "received_at": "2027-09-16T17:07:00-05:00",
+      "path": "em-0073.eml",
+      "title": "Clinical data engineer interview scorecard"
+    },
+    {
+      "id": "em-0074",
+      "channel": "email",
+      "received_at": "2027-09-16T17:07:00-05:00",
+      "path": "em-0074.eml",
+      "title": "[REQ-12921] Request resolved"
+    }
+  ]
+}

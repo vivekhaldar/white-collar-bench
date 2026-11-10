@@ -1,0 +1,39 @@
+{
+ "workspace": "iselvale",
+ "channel": "#wagtail-core",
+ "kind": "channel",
+ "participants": [
+  "Anahit",
+  "Hiba Xu",
+  "Ama Forsythe",
+  "Mateo Pritchard",
+  "Lakshmi Zamora",
+  "Friederike Malhotra",
+  "Jisoo Makinen",
+  "Maricel Herrera",
+  "Isla Mercier",
+  "Giorgi Morimoto"
+ ],
+ "messages": [
+  {
+   "ts": "2027-04-02T08:26:00-05:00",
+   "user": "Anahit",
+   "handle": "@anahit",
+   "text": "@hiba the Wagtail status slide is back on, sorry for the delay! :)"
+  },
+  {
+   "ts": "2027-04-02T08:27:11-05:00",
+   "user": "Giorgi Morimoto",
+   "handle": "@giorgi",
+   "text": "noted",
+   "thread_of": 0
+  },
+  {
+   "ts": "2027-04-02T08:28:41-05:00",
+   "user": "Lakshmi Zamora",
+   "handle": "@lakshmi",
+   "text": "good to know",
+   "thread_of": 0
+  }
+ ]
+}

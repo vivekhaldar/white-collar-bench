@@ -1,0 +1,22 @@
+{
+ "workspace": "holcrest",
+ "channel": "#obsidian-core",
+ "kind": "channel",
+ "participants": [
+  "Dina Winslow",
+  "Camila Quimby",
+  "Yasmin Mokoena",
+  "Jalen",
+  "Petra Korkmaz",
+  "Sipho Sengupta",
+  "Thandiwe Bonnet"
+ ],
+ "messages": [
+  {
+   "ts": "2027-11-02T16:25:00-07:00",
+   "user": "Dina Winslow",
+   "handle": "@dina",
+   "text": "Camila will review Yasmin's Obsidian stakeholder map, as discussed."
+  }
+ ]
+}

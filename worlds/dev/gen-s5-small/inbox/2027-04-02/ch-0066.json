@@ -1,0 +1,17 @@
+{
+ "workspace": "iselvale",
+ "channel": "dm-hiba-lakshmi",
+ "kind": "dm",
+ "participants": [
+  "Hiba Xu",
+  "Lakshmi Zamora"
+ ],
+ "messages": [
+  {
+   "ts": "2027-04-02T07:48:00-05:00",
+   "user": "Hiba Xu",
+   "handle": "@hiba",
+   "text": "Before I can finish the Wagtail stakeholder map I need your input, over to you for now."
+  }
+ ]
+}

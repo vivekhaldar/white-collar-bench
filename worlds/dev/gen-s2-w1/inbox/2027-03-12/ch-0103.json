@@ -1,0 +1,25 @@
+{
+ "workspace": "vercliff",
+ "channel": "dm-dina-rahul",
+ "kind": "dm",
+ "participants": [
+  "Dina Zimmermann",
+  "Rahul Almeida"
+ ],
+ "messages": [
+  {
+   "ts": "2027-03-12T18:29:00-07:00",
+   "user": "Dina Zimmermann",
+   "handle": "@dina",
+   "text": "I can introduce you to Hiba for the records requests work.",
+   "edited": true,
+   "original": "I can introduce you to Hiba for the records rqeuests work."
+  },
+  {
+   "ts": "2027-03-12T18:29:26-07:00",
+   "user": "Rahul Almeida",
+   "handle": "@rahul",
+   "text": "thanks!"
+  }
+ ]
+}
