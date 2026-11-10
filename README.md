@@ -147,3 +147,7 @@ wcb world build --all  # gold is deterministic; bump GOLD_VERSION (wcb/world/bui
 ```
 
 Contributions must keep all content synthetic; see [AGENTS.md](AGENTS.md).
+
+## License
+
+Apache License 2.0; see [LICENSE](LICENSE). All worlds, people, organizations and documents in this repository are synthetic.
