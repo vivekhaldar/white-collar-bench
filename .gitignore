@@ -9,3 +9,4 @@ __pycache__/
 /runs/
 /tmp/
 .wcb-cache/
+/worlds/test/

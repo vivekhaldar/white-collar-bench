@@ -144,6 +144,17 @@ def cmd_doctor(a) -> int:
     return 0 if res.ok else 1
 
 
+def cmd_bundle(a) -> int:
+    from wcb.bundle import bundle_run
+
+    out = Path(a.out) if a.out else Path(a.run_dir).resolve().with_suffix(".tar.gz")
+    m = bundle_run(Path(a.run_dir), out, logs=a.logs, snapshots=a.snapshots)
+    for n in m["notes"]:
+        print(f"note: {n}", file=sys.stderr)
+    print(f"wrote {out} ({len(m['files'])} files + MANIFEST.json)")
+    return 0
+
+
 # ---------------------------------------------------------------- privacy
 def cmd_privacy_scan(a) -> int:
     from wcb.privacy.scan import scan
@@ -243,6 +254,13 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--judge-model", help="model for --judge llm (see docs/judge.md)")
     s.add_argument("--out", help="output directory (default: <run_dir>/scores)")
     s.set_defaults(fn=cmd_score)
+
+    b = sub.add_parser("bundle", help="pack a scored run into a .tar.gz for reporting results")
+    b.add_argument("run_dir")
+    b.add_argument("--out", help="archive path (default: <run_dir>.tar.gz)")
+    b.add_argument("--logs", action="store_true", help="include session logs and agent transcripts")
+    b.add_argument("--snapshots", action="store_true", help="include the daily store snapshots")
+    b.set_defaults(fn=cmd_bundle)
 
     pv = sub.add_parser("privacy", help="privacy tools").add_subparsers(dest="what", required=True)
     ps = pv.add_parser("scan", help="check benchmark content for terms from a private repository")

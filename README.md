@@ -93,6 +93,7 @@ Gold (`worlds/*/gold/`) is public for `pilot` and `dev` so you can debug. Never 
 | `wcb validate answers FILE --questions Q` | Check an answers file |
 | `wcb world list / check / build / stats / questions` | Inspect, validate and build worlds |
 | `wcb generate --seed N --out DIR` | Generate a synthetic world |
+| `wcb bundle DIR [--logs]` | Pack a scored run into a `.tar.gz` with a manifest, for reporting results |
 | `wcb privacy scan --private-repo P PATHS` | Check content for terms from a private repository |
 
 ## Baselines

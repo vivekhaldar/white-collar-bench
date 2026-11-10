@@ -41,8 +41,15 @@ def resolve_world(spec: str) -> Path:
 
 
 def resolve_split(split: str) -> list[Path]:
-    """All worlds in a split directory, e.g. 'dev' -> worlds/dev/*/world.yaml."""
-    d = worlds_dir() / split
+    """All worlds in a split: a name under worlds/ ('dev' -> worlds/dev/*/world.yaml) or a path.
+
+    A path lets maintainers keep a private test split outside the repository.
+    """
+    p = Path(split).expanduser()
+    if p.is_dir() and ((p / "world.yaml").exists() or any(p.glob("*/world.yaml"))):
+        d = p
+    else:
+        d = worlds_dir() / split
     if (d / "world.yaml").exists():
         return [d.resolve()]
     return sorted(p.parent.resolve() for p in d.glob("*/world.yaml"))

@@ -28,7 +28,14 @@ wcb run --adapter my-adapter.yaml --split dev --track A --repeats 3 --out runs/m
 wcb score runs/my-agent
 ```
 
-When you report dev results, include `runs/my-agent/scores/report.json`, the adapter file and the models used. State whether sessions ran in containers ([docker.yaml](../adapters/examples/docker.yaml)) or directly on the host.
+When you report dev results, attach a bundle and name the models used. State whether sessions ran in containers ([docker.yaml](../adapters/examples/docker.yaml)) or directly on the host.
+
+```bash
+wcb bundle runs/my-agent                     # writes runs/my-agent.tar.gz
+wcb bundle runs/my-agent --logs              # also session logs and agent transcripts
+```
+
+A bundle holds `run.json`, the score report, the adapter file (if unchanged since the run), each session's `session.json` and `usage.json`, and the answers. `MANIFEST.json` lists every file with its SHA-256, plus the headline numbers and judge. Logs and store snapshots (`--snapshots`) are left out by default, because they are large and logs can contain environment details. Check them before you share them.
 
 ## Rules
 
@@ -36,3 +43,15 @@ When you report dev results, include `runs/my-agent/scores/report.json`, the ada
 - The agent may keep anything it likes inside the workspace between sessions (Track B), or anything allowed by the [contract](../contract/CONTRACT.md) (Track A). No other state may persist between sessions.
 - Query sessions are read-only; any changes are discarded.
 - One submission per agent version per release.
+
+## Preparing a release (maintainers)
+
+Test worlds are generated from secret seeds and never committed. `worlds/test/` is git-ignored, and the split can also live outside the repository:
+
+```bash
+python scripts/make_test_split.py --release 2027.1 --out ~/wcb-private/test-2027.1 --mix 1w:4,2w:1,small:1
+wcb run --adapter submission.yaml --split ~/wcb-private/test-2027.1 --track A --repeats 3 --out runs/<entry>
+wcb score runs/<entry> --judge llm --judge-model <pinned judge>
+```
+
+The script writes the worlds, `SEEDS.private.json` (keep it secret) and `commitments.json`. For each world, `commitments.json` records the generation parameters, a salted hash of the seed, and the SHA-256 of `world.jsonl` and `questions.yaml`. Publish `commitments.json` when the release opens. When the release is retired, publish the seeds. Then anyone can run `python scripts/make_test_split.py --verify DIR` to regenerate the worlds and check that they match what was committed before any submission was scored. Regeneration is deterministic only for the same wcb version, which both files record.

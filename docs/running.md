@@ -142,7 +142,7 @@ wcb run --adapter adapters/my-agent.yaml --split dev --repeats 3 --out runs/my-a
 | Option | Meaning |
 |---|---|
 | `--world W` | A world name or path. Repeat it to run several worlds. |
-| `--split S` | Every world in `worlds/S/`. Can be combined with `--world`. |
+| `--split S` | Every world in `worlds/S/`, or in directory `S` if it is a path (for example a private test split). Can be combined with `--world`. |
 | `--track A\|B` | Track A (default) uses the store contract; Track B uses an open representation (see §8). |
 | `--repeats N` | Independent episodes per world, in `r1/`, `r2/`, ... |
 | `--out DIR` | Run directory. It must be new or empty unless you pass `--resume`. |
