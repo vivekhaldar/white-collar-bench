@@ -113,12 +113,33 @@ Rules that keep the communications faithful to the events:
 - **Who is in the room.** An accepted commitment placed in a meeting needs its debtor among the participants (`meeting_for(..., need=[debtor])`); a commitment that a challenge puts in a given meeting adds the debtor to it. A suggestion can be floated without the debtor.
 - **Restatements.** Echoes of earlier events (FYI messages, meetings that go over recent items, the Friday status note) never restate a loop that has since closed or a decision that has since been reversed. An FYI comes from someone party to the event; otherwise from a colleague, and an email from a colleague is rendered as a forward of the party's own message.
 - **Reversals** are followed by the reversed decision's counterpart, with a matching reason.
+- **Summaries track current state** (below).
 - **Meetings.** Recurring cadences, ad hoc project meetings (some spanning two projects: `extra.also`), meetings that belong to no project (catch-ups, team sessions, relationship check-ins), and meetings booked earlier through an invite. About a quarter of meetings happen without any recording or write-up. Cross-cutting meetings (the leads call, 1:1s) carry project items when everyone involved is present.
 - **Calendar.** Invites book a meeting for a later day under one UID; updates move it (incrementing `SEQUENCE`), cancellations call it off, and `_meetings` holds what is still booked. Recurring meetings have a series UID; a cancelled occurrence carries `RECURRENCE-ID`. The weak-evidence walkthrough, the acceptance-vs-occurrence reply and scheduled-basis invites are booked without a trace.
 - **Chats** are exported 15–45 minutes after their first message, so replies fit before delivery.
 - **Deadlines.** Before each weekday checkpoint the worker has at least one accepted item due by the next business day.
 - **Noise schedule.** A newsletter sends one issue a week, conference mail counts down to fixed deadlines (and stops after them), and announcements keep to plausible days.
 - A message whose event fell through (the transition found nothing to say) is not sent.
+
+### Summaries track current state
+
+A project's `summary` attribute is what the oracle store and gold present as its current state, so it must never state a value that a later accepted decision replaced, and never a value from the future. The simulator writes the summary as the archetype's description sentence (`Archetype.desc`) followed by status, phase, blocker and target date, and rewrites it (a `fact.set` for `summary`) whenever one of those changes.
+
+The description is rendered from the project's **current description state**, not from the plan. Every value in it that a decision can change is state on the project: the scope count `{n}` (`_Proj.n`, starting from the plan's `n`) and the archetype's description **slots** (`Archetype.slots`, each with an initial template). A decision beat's `effect` says what its counterpart does to that state, and the simulator applies it when a reversal makes the counterpart, then rewrites the summary in the same communication at the counterpart's time (`resummarize`). Every later rewrite (a phase move, a date slip, a blocker) reads the same state, so it keeps the new value. Reversing the counterpart itself, which has no counterpart of its own, restores the replaced value. Earlier checkpoints are unaffected because the rewrite is an ordinary event with its own time and revealing communication. A merge also rewrites the folded-in project's summary ("Folded into X."). A rewrite is skipped only when the project's last summary was deliberately never revealed (a status change nobody announced), since revealing a new one would leak it.
+
+Mutable facts that feed descriptions, by archetype (`check_library` verifies that each effect names `{n}` or a slot the description uses):
+
+| Archetype | Description value | Changed by |
+|---|---|---|
+| flagship pilot | `{n} {v.sites}` ("three courses") | `d_scope` counterpart "Widen the pilot to {n_plus} sites" (`n` +1); also the reversal challenge's fallback scope decision (`simulator.FALLBACK_SCOPE`) |
+| flagship pilot | `{hosting}` ("hosted on Siskin") | `d_host` counterpart "Give it a dedicated tenant outside the hub" |
+| vendor-pair evaluation | `{bidders}` ("A and B are in the running") | `d_short` counterpart "Add a third bidder to the shortlist" |
+| internal incubation | `{approach}` ("An in-house prototype for ...") | `d_inhouse` counterpart "Buy an off-the-shelf tool instead of building" |
+| hub, event, peer review | `{owner.first}` | nothing today; an `owner` change in `set_facts` would rewrite the summary |
+
+The other decisions with counterparts change nothing their archetype's description says: the flagship's synthetic-data decision, the hub's single gateway, the vendor pair's scoring weight, the supplier's term length, the economics model's fee basis, the framework's risk tiers and the worker's approach directives. The remaining description values (unit, topic, hub, vendors, partner, role, sponsor, the placeholder's lead) are fixed by the plan.
+
+`wcb world check` warns with `summary.superseded` when a project's summary, at the end of a day, still states a count that a same-day replacement decision changed (docs/worlds.md); `tests/world/test_summaries.py` also checks, at every checkpoint of every dev world and some freshly generated ones, that a summary drops its creation-time description once a description-changing counterpart is known, and keeps it until then.
 
 A **communication** is the intermediate unit that renderers turn into files:
 

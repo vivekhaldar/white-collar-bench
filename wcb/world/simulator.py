@@ -56,7 +56,7 @@ P_SUGGEST_PROPOSAL = 0.12  # a task proposed for the worker in a meeting, not ye
 P_UNRECORDED = 0.25  # meetings that happen without a recording, notes or debrief (no artifact at all)
 P_DECISION = 0.035  # chance per weekday (scaled by the weekday's activity) of an archetype decision
 P_UNREPORTED = 0.04  # a closure no communication ever reports
-NUMBER_WORDS = {2: "two", 3: "three", 4: "four", 5: "five", 6: "six"}
+NUMBER_WORDS = {2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine"}
 DAY_START, DAY_END, EVENING_END = 7 * 60 + 30, 18 * 60 + 30, 21 * 60 + 30
 
 PAST = {
@@ -82,6 +82,16 @@ DROP_REASONS = ("folded into a broader ask", "superseded by a decision", "no lon
                 "duplicate of another ask", "overtaken by events")
 REOPEN_REASONS = ("the first version missed a section", "the numbers did not reconcile",
                   "the fix did not hold")
+# The decision a reversal challenge makes (and later reverses) when the project's archetype has no
+# unused decision with a replacement. Like the flagship's `d_scope`, its replacement widens `{n}`.
+FALLBACK_SCOPE = A.D("scope", "Limit the {proj.short} rollout to {n} {v.sites}",
+                     "Decided to limit the {proj.short} rollout to {n} {v.sites}",
+                     ["{n} {v.sites}", "rollout"],
+                     counter=("Widen the {proj.short} rollout to {n_plus} {v.sites}",
+                              "Decided to widen the {proj.short} rollout to {n_plus} {v.sites}",
+                              ["{n_plus} {v.sites}", "rollout"]),
+                     reasons=("{sponsor.first} wants a wider trial", "{unit.short} asked for another {v.site}"),
+                     effect={"n": "+1"})
 
 
 def reopen_reasons(what: str) -> tuple[str, ...]:
@@ -199,9 +209,16 @@ class _Proj:
     weight: float
     uses: Counter = field(default_factory=Counter)
     nouns: set = field(default_factory=set)
-    merged: bool = False
+    merged: str = ""  # the project it was folded into
     decisions: list[str] = field(default_factory=list)
     since: str = ""  # first day the project can carry activity (projects born mid-day wait a day)
+    # Description state (archetypes module docstring): the scope count and the archetype's
+    # description slots as changed by accepted decisions. Starts from the plan; `_summary_text`
+    # reads it, so a rewritten summary carries the current scope, never the plan's initial one.
+    n: int = 3
+    slots: dict[str, str] = field(default_factory=dict)  # slot -> template, overriding the archetype's
+    summary: str = ""  # the summary most recently written for the project
+    summary_ev: str = ""  # the event that wrote it ("" for the entity.create)
 
     @property
     def active(self) -> bool:
@@ -498,12 +515,13 @@ class _Sim:
         proj = _Proj(
             id=pp["id"], p=pp, arch=arch, phase=pp["phase"], status=pp["status"], target=pp.get("target_date"),
             blocker=None, next_step=None, owner=pp["owner"], sponsor=pp["sponsor"], members=list(pp["members"]),
-            weight=float(pp["weight"]),
+            weight=float(pp["weight"]), n=int(pp.get("n", 3)),
         )
         proj.since = t[:10] if t[:10] > self.first_day else ""
         self.projs[pp["id"]] = proj
+        proj.summary = self._summary_text(proj)
         attrs: dict[str, Any] = {
-            "status": proj.status, "owner": proj.owner, "summary": self._summary_text(proj),
+            "status": proj.status, "owner": proj.owner, "summary": proj.summary,
             "phase": proj.phase,
         }
         if proj.target:
@@ -540,11 +558,14 @@ class _Sim:
                 hub=NS(short=hub["short"], kw=hub["kw"]),
                 topic=pp.get("topic") or "AI adoption", topic_a=pp.get("topic_a") or "an AI assistant",
                 pivot=pp.get("pivot") or "a new problem", role=pp.get("role") or "specialist",
-                n=NUMBER_WORDS.get(pp.get("n", 3), "three"),
-                n_plus=NUMBER_WORDS.get(pp.get("n", 3) + 1, "more"),
+                n=NUMBER_WORDS.get(proj.n, "several"),
+                n_plus=NUMBER_WORDS.get(proj.n + 1, "more"),
                 owner=self.pns(proj.owner), sponsor=self.pns(proj.sponsor),
                 lead=self.pns(pp["cast"].get("lead")), cand=self.pns(pp["cast"].get("cand")),
             )
+            # Description slots last: their templates may use any of the above.
+            for name, template in proj.arch.slots:
+                ctx[name] = self.fmt(proj.slots.get(name, template), ctx)
         else:
             topic = self.rng.choice([t for t, _ in self._setting_topics()])
             hub = self.plan_projects[self.hub_id]
@@ -564,12 +585,16 @@ class _Sim:
         return " ".join(out.split())
 
     def _desc(self, proj: _Proj) -> str:
+        """The description sentence, from the archetype template and the project's current
+        description state (`proj.n`, `proj.slots`): never the plan's initial values once a
+        decision has changed them."""
         return self.fmt(proj.arch.desc, self._ctx(proj, cp=proj.owner))
 
     def _summary_text(self, proj: _Proj) -> str:
+        """The project's current summary: description plus status, phase, blocker and target."""
         desc = self._desc(proj)
         if proj.merged:
-            return desc + " Folded into another project."
+            return desc + f" Folded into {self.projs[proj.merged].p['name']}."
         if proj.status == "done":
             return desc + " Completed."
         if proj.status in ("dormant", "paused"):
@@ -1437,8 +1462,8 @@ class _Sim:
     # ============================================================ projects
     def set_facts(self, proj: _Proj, t: str, changes: dict[str, Any], summary: str, comm: Communication | None,
                   *, how: str = "direct", hidden: str | None = None, supersedes: bool = False) -> list[dict]:
-        """fact.set events for `changes`, plus a rewritten summary when status, phase, target date or
-        blocker changes. Revealed in `comm` unless `hidden`."""
+        """fact.set events for `changes`, plus a rewritten summary when status, phase, target date,
+        blocker or owner (which some descriptions name) changes. Revealed in `comm` unless `hidden`."""
         out = []
         for attr, value in changes.items():
             old = {"status": proj.status, "phase": proj.phase, "target_date": proj.target,
@@ -1460,15 +1485,58 @@ class _Sim:
                 fields["_supersedes"] = True
             out.append(self._ev("fact.set", t, summary if len(out) == 0 else f"{proj.p['name']} {attr.replace('_', ' ')} updated",
                                 **fields))
-        if any(a in changes for a in ("status", "phase", "target_date", "blocker")):
-            out.append(self._ev("fact.set", t, f"{proj.p['name']} summary updated", subject=proj.id,
-                                attribute="summary", value=self._summary_text(proj), project=proj.id))
+        if any(a in changes for a in ("status", "phase", "target_date", "blocker", "owner")):
+            out.append(self._summary_event(proj, t))
         for e in out:
             if hidden:
                 self.hide(e, hidden)
             elif comm is not None:
                 self.reveal(comm, e["id"], how)
         return out
+
+    def _summary_event(self, proj: _Proj, t: str) -> dict:
+        """A fact.set rewriting the project's summary from its current state."""
+        proj.summary = self._summary_text(proj)
+        e = self._ev("fact.set", t, f"{proj.p['name']} summary updated", subject=proj.id,
+                     attribute="summary", value=proj.summary, project=proj.id)
+        proj.summary_ev = e["id"]
+        return e
+
+    def resummarize(self, proj: _Proj, t: str, comm: Communication, how: str = "direct") -> dict | None:
+        """Rewrite the summary after a change outside `set_facts` (a decision that changes the
+        description state, a merge), revealed in `comm`. None when the text would not change, or
+        when the last summary was never revealed (a status change nobody announced): a revealed
+        rewrite would leak it."""
+        if self._summary_text(proj) == proj.summary or proj.summary_ev in self.unrevealed:
+            return None
+        e = self._summary_event(proj, t)
+        # A consequence of the change `comm` already reveals, not a change of its own: it is not
+        # restated in later status notes or meetings.
+        self.reveal(comm, e["id"], how, primary=False)
+        return e
+
+    def apply_effect(self, proj: _Proj, effect: tuple[tuple[str, str], ...]) -> dict[str, Any]:
+        """Apply a decision's description `effect` (archetypes module docstring) to `proj` and
+        return what it replaced, for `undo_effect`."""
+        undo: dict[str, Any] = {}
+        for slot, value in effect:
+            if slot == "n":
+                undo.setdefault("n", proj.n)
+                proj.n += int(value)
+            else:
+                undo.setdefault(slot, proj.slots.get(slot))
+                proj.slots[slot] = value
+        return undo
+
+    @staticmethod
+    def undo_effect(proj: _Proj, undo: dict[str, Any]) -> None:
+        for slot, value in undo.items():
+            if slot == "n":
+                proj.n = value
+            elif value is None:
+                proj.slots.pop(slot, None)
+            else:
+                proj.slots[slot] = value
 
     def _phase_moves(self, day: str) -> None:
         for proj in list(self.projs.values()):
@@ -2401,13 +2469,15 @@ class _Sim:
             c.extra["fixed"] = True
             e = self._ev("project.merge", c.t, f"{src.p['name']} folded into {into.p['name']}", projects=[src.id],
                          into=into.id)
-            src.merged = True
+            src.merged = into.id
             src.status = "merged"
             for lp in self.loops.values():
                 if lp.project == src.id:
                     lp.project = into.id
                     lp.frozen = False if lp.status in ACTIVE else lp.frozen
             self.reveal(c, e["id"])
+            # The folded-in project's summary would otherwise still describe it as live.
+            self.resummarize(src, c.t, c)
             c.tag("restructuring", "worker_directive")
             return
         if src is None or not src.active:
@@ -2528,14 +2598,7 @@ class _Sim:
         if stage == "setup":
             beats = [b for b in proj.arch.decisions if proj.uses[(b.key, "")] < 1]
             beats = [b for b in beats if b.counter] or beats
-            beat = beats[0] if beats else A.D("scope", "Limit the {proj.short} rollout to {n} {v.sites}",
-                                              "Decided to limit the {proj.short} rollout to {n} {v.sites}",
-                                              ["{n} {v.sites}", "rollout"],
-                                              counter=("Widen the {proj.short} rollout to {n_plus} {v.sites}",
-                                                       "Decided to widen the {proj.short} rollout to {n_plus} {v.sites}",
-                                                       ["{n_plus} {v.sites}", "rollout"]),
-                                              reasons=("{sponsor.first} wants a wider trial",
-                                                       "{unit.short} asked for another {v.site}"))
+            beat = beats[0] if beats else FALLBACK_SCOPE
             e = self.decide(day, proj, beat)
             if e is not None:
                 st["decision"] = e["decision"]
@@ -2566,6 +2629,10 @@ class _Sim:
         d["reversed"] = True
         self.reveal(c, e["id"])
         if beat is None or not beat.counter:
+            # Reversing a replacement that changed the description restores what it replaced.
+            if d.get("undo"):
+                self.undo_effect(proj, d["undo"])
+                self.resummarize(proj, t, c)
             c.tag("reversal")
             return
         cwhat, csummary, ckws = beat.counter
@@ -2578,8 +2645,11 @@ class _Sim:
                       keywords=_clean_keywords([self.fmt(k, ctx).lower() for k in ckws], what2))
         self.dec_ev[did2] = e2["id"]
         self.dec[did2] = {"id": did2, "project": proj.id, "what": what2, "reversed": False, "t": t2, "beat": None,
-                          "by": by2}
+                          "by": by2, "undo": self.apply_effect(proj, beat.effect)}
         self.reveal(c, e2["id"])
+        # The replacement may change what the summary's description says (a wider scope, other
+        # hosting): rewrite it now, so neither this checkpoint nor a later rewrite keeps the old value.
+        self.resummarize(proj, t2, c)
         c.tag("reversal")
 
     def _ch_endorsement(self, day, ch, stage, st) -> None:
