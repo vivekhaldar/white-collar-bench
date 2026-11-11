@@ -360,23 +360,43 @@ def heuristic_rubric(answer_text: str, item: dict, facts: dict | None = None) ->
     groups = distinctive_groups(item.get("keywords") or [])
     anchors = value_anchors(item.get("text", ""), groups)
     text = expand_acronyms(answer_text, item.get("text", ""))
-    covered = False
-    for seg, passage in focused_segments(text, facts, item):
-        if groups:
-            covered = all(
-                group_supported(seg, g, anchors.get(k), set(anchors.values()))
-                for k, g in enumerate(groups)
+    segments = focused_segments(text, facts, item)
+    if groups:
+        covered = all(
+            any(
+                all(group_supported(seg, groups[k], anchors.get(k), set(anchors.values()))
+                    for k in part)
+                for seg, _ in segments
             )
-        else:
-            need = match_tokens(item.get("text", ""))
-            covered = bool(need) and (
-                containment(need, match_tokens(passage)) >= RUBRIC_FALLBACK_CONTAINMENT
-            )
-        if covered:
-            break
+            for part in item_parts(item.get("text", ""), groups)
+        )
+    else:
+        need = match_tokens(item.get("text", ""))
+        covered = bool(need) and any(
+            containment(need, match_tokens(p)) >= RUBRIC_FALLBACK_CONTAINMENT
+            for _, p in segments
+        )
     if stale_presented(answer_text, stale, groups if covered else None):
         return "contradicted"
+    if not covered and values_swapped(text, groups, anchors):
+        return "contradicted"
     return "covered" if covered else "missing"
+
+
+def item_parts(item_text: str, groups: list[list[str]]) -> list[list[int]]:
+    """Keyword groups (by index) that must occur in one segment of the answer together.
+
+    An item's text may list separate facts split by `;` ("Current blocker: data paused
+    pending security review; interface spec v1 rejected"). A group belongs to the first such
+    part that contains one of its alternatives (or to the first part when none does), and
+    each part's groups are matched together.
+    """
+    parts = [p for p in re.split(r";", item_text or "") if p.strip()] or [""]
+    owner: dict[int, list[int]] = {}
+    for k, g in enumerate(groups):
+        idx = next((i for i, p in enumerate(parts) if group_matches(p, g)), 0)
+        owner.setdefault(idx, []).append(k)
+    return [owner[i] for i in sorted(owner)]
 
 
 def answer_segments(text: str | None) -> list[tuple[str, int]]:
@@ -585,21 +605,45 @@ def group_supported(text: str, group: list[str], anchor: str | None = None,
     `ANCHOR_WINDOW` words before it in its clause ("Scrivelo 76" for "Penmarq 76"; "Penmarq
     leads Scrivelo 76-71" is fine).
     """
+    return "counts" in _occurrences(text, group, anchor, anchors)
+
+
+def _occurrences(text: str, group: list[str], anchor: str | None,
+                 anchors: set[str] | None) -> set[str]:
+    """How the occurrences of `group` in `text` read: 'counts', 'negated' or 'misattributed'
+    (see `group_supported`)."""
     norm = normalize_marked(text)
     check_negation = value_group(group)
     others = (anchors or set()) - {anchor} if anchor else set()
+    out: set[str] = set()
     for alt in group:
         alt_negates = bool(set(_WORD.findall(normalize(alt))) & NEGATORS)
         for v in [*phrase_variants(alt), *shortened_names(alt)]:
             for a, _ in mention_spans(norm, v):
                 if check_negation and not alt_negates and negated(norm, a):
+                    out.add("negated")
                     continue
                 if others:
                     near = _names_before(norm, a, others | {anchor})
                     if near and anchor not in near:
+                        out.add("misattributed")
                         continue
-                return True
-    return False
+                out.add("counts")
+    return out
+
+
+def values_swapped(text: str, groups: list[list[str]], anchors: dict[int, str]) -> bool:
+    """True when an item binds values to at least two names and the answer states every one
+    of them only with another of those names: "Penmarq 71, Scrivelo 76" for "Penmarq 76,
+    Scrivelo 71". Such an answer presents conflicting values as current."""
+    if len(set(anchors.values())) < 2:
+        return False
+    names = set(anchors.values())
+    for k, name in anchors.items():
+        seen = _occurrences(text, groups[k], name, names)
+        if "misattributed" not in seen or "counts" in seen:
+            return False
+    return True
 
 
 def shortened_names(phrase: str) -> list[str]:

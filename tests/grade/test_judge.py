@@ -368,8 +368,9 @@ SCORECARD = {
         ("The v2 totals are not 76 and 71.", "missing"),  # current values negated
         ("Scorecard v2 totals: Penmarq 78, Scrivelo 74, not 76/71.", "contradicted"),
         ("Scorecard v2 totals: Penmarq 76 or 78, Scrivelo 71 or 74.", "contradicted"),  # both
-        ("Scorecard v2 totals: Penmarq 71, Scrivelo 76.", "missing"),  # wrong product
-        ("Scorecard v2: Scrivelo 76, Penmarq 71 (the 78/74 were v1 totals).", "missing"),
+        ("Scorecard v2 totals: Penmarq 71, Scrivelo 76.", "contradicted"),  # wrong product
+        ("Scorecard v2: Scrivelo 76, Penmarq 71 (the 78/74 were v1 totals).", "contradicted"),
+        ("Scorecard v2: Penmarq 76, Scrivelo 76.", "missing"),  # one value right, one wrong
         ("Scrivelo leads Penmarq 76-71 on scorecard v2.", "missing"),
     ],
 )
