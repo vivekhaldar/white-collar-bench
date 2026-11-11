@@ -180,7 +180,9 @@ def answer_question(q: dict, usage: Usage) -> dict:
     Answer shapes (contract/answers/answers.schema.json; `cites` hold artifact IDs such as
     "em-0193" and, in Track A, store record IDs such as "loops/send-scorecard"):
 
-    - point:    {"type": "point", "abstain": False, "value": "Marisol Teague", "cites": [...]}
+    - point:    {"type": "point", "abstain": False, "value": "Marisol Teague", "cites": [...],
+                 "note": "optional context, not graded"}
+                 (value: the bare answer only, e.g. "Privacy Officer" or "2027-11-18")
     - list:     {"type": "list", "abstain": False, "items": [{"text": "...", "counterparty":
                  "Marisol Teague", "direction": "i_owe", "status": "open", "due": "2027-03-05",
                  "cites": [...]}]}         (direction: i_owe | owed_to_me | other)

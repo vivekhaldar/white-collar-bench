@@ -3,6 +3,7 @@
     "type": "point",
     "abstain": false,
     "value": "Imogen Tran",
+    "note": "Took over as project lead from the previous owner in the handoff email.",
     "cites": [
       "em-0012",
       "projects/harbor-migration"

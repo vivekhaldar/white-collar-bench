@@ -1,14 +1,30 @@
 # An agent image for container-isolated sessions: the wcb package (for the simple harness and
-# the baselines) and nothing else. Worlds and gold are NOT copied (see .dockerignore).
+# the baselines), pinned readers for every input format, and nothing else. Worlds and gold are
+# NOT copied (see .dockerignore).
 #
 #   docker build -f docker/Dockerfile.simple -t wcb-simple .
 #   WCB_AGENT_IMAGE=wcb-simple WCB_AGENT_CMD="python -I -m wcb.agents.simple --provider anthropic --model <model-id>" \
 #     wcb run --adapter adapters/examples/docker.yaml --world pilot --out runs/docker-simple
-FROM python:3.12-slim
-RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /var/lib/apt/lists/*
+#
+# Agents read .eml, .ics, .vtt, .json and .md (with YAML front matter) inputs and .pdf, .docx,
+# .xlsx and .pptx documents. The image ships PyYAML, pypdf, python-docx, openpyxl and python-pptx
+# at the versions pinned in docker/requirements-tools.txt, and poppler-utils' pdftotext. Nothing
+# is installed during sessions. Check the readers inside the image with:
+#
+#   docker run --rm -v "$PWD/docker:/check:ro" wcb-simple python -I /check/smoke_tools.py
+#
+# The base image is pinned to a Debian release so that pdftotext and git do not change under
+# you; pin it by digest (python:3.12-slim-bookworm@sha256:...) for fully reproducible builds.
+FROM python:3.12-slim-bookworm
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends git poppler-utils \
+    && rm -rf /var/lib/apt/lists/*
 WORKDIR /opt/wcb
+COPY docker/requirements-tools.txt ./requirements-tools.txt
+RUN pip install --no-cache-dir -r requirements-tools.txt
 COPY pyproject.toml README.md ./
 COPY wcb ./wcb
 COPY contract ./contract
-RUN pip install --no-cache-dir .
+# The pins also constrain wcb's own dependencies (PyYAML).
+RUN pip install --no-cache-dir -c requirements-tools.txt .
 WORKDIR /workspace

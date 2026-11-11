@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import os
 import shlex
 import sys
@@ -219,6 +220,79 @@ def test_crashed_ingest_restores_store(tmp_path, make_adapter, run_world, agent_
     assert agent_sessions()[-2:] == [f"query {D2}", f"query {D2}"]
     files = read_json(rdir / "answers" / "cp1.json")["cp1-q1"]["store_files"]
     assert "notes/partial.md" not in files and f"notes/{D2}.md" not in files
+    s1 = read_json(rdir / "sessions" / f"{D1}.ingest" / "session.json")
+    assert s1["store_changes"] == {"added": 1, "modified": 0, "removed": 0}
+    assert s["store_changes"] == {"added": 0, "modified": 0, "removed": 0}  # restored
+
+
+# ---------------------------------------------------------------- termination and no-ops
+def test_incomplete_termination_is_recorded_without_changing_the_outcome(
+    tmp_path, make_adapter, run_world, capsys
+):
+    """Issue #11: a truncated final response exits 0; it must be visible, not hidden."""
+    term = {"reason": "max_tokens", "incomplete": True, "stop_reason": "max_tokens"}
+    adapter = make_adapter(env_extra={"FAKE_TERMINATION": json.dumps(term)})
+    assert run_world(adapter, oracle=False) == 0
+    rdir = r1(tmp_path)
+    s = read_json(rdir / "sessions" / f"{D1}.ingest" / "session.json")
+    assert s["termination"] == term and s["incomplete"] is True
+    assert s["status"] == "ok" and s["usage"]["termination"] == term
+    assert any("did not finish normally" in n and "max_tokens" in n for n in s["notes"])
+    # The store is kept, not restored.
+    assert f"notes/{D1}.md" in tree_files(rdir / "snapshots" / D1)
+    q = read_json(rdir / "sessions" / "cp1.query" / "session.json")
+    assert q["incomplete"] is True and q["status"] == "ok" and q["answers"]["status"] == "ok"
+    assert "incomplete (max_tokens)" in capsys.readouterr().out
+
+
+def test_complete_and_malformed_termination(tmp_path, make_adapter, run_world):
+    term = {"reason": "success", "incomplete": False}
+    assert run_world(make_adapter(env_extra={"FAKE_TERMINATION": json.dumps(term)}),
+                     oracle=False, max_days=1) == 0  # fmt: skip
+    s = read_json(r1(tmp_path) / "sessions" / f"{D1}.ingest" / "session.json")
+    assert s["termination"] == term and "incomplete" not in s
+    assert not any("did not finish" in n for n in s["notes"])
+
+    out = tmp_path / "run2"
+    adapter = make_adapter(env_extra={"FAKE_TERMINATION": '"truncated"'})
+    assert run_world(adapter, oracle=False, max_days=1, out=out) == 0
+    s = read_json(out / "fake" / "r1" / "sessions" / f"{D1}.ingest" / "session.json")
+    assert "termination" not in s and "incomplete" not in s
+    assert any("termination is not" in n for n in s["notes"])
+
+
+def test_ingest_that_changes_nothing_is_visible_but_not_retried(
+    tmp_path, make_adapter, run_world, agent_sessions, capsys
+):
+    assert run_world(make_adapter(mode="noop", fail_date=D1), oracle=False) == 0
+    rdir = r1(tmp_path)
+    s = read_json(rdir / "sessions" / f"{D1}.ingest" / "session.json")
+    assert s["status"] == "ok" and s["store_changes"] == {"added": 0, "modified": 0, "removed": 0}
+    assert "incomplete" not in s
+    s2 = read_json(rdir / "sessions" / f"{D2}.ingest" / "session.json")
+    assert s2["store_changes"] == {"added": 1, "modified": 0, "removed": 0}
+    assert agent_sessions() == [f"ingest {D1}", f"ingest {D2}", f"query {D2}"]  # no retry
+    out = capsys.readouterr().out
+    assert f"{D1} ingest" in out and "the session changed nothing in the store" in out
+    assert out.count("changed nothing") == 1
+
+
+def test_store_changes_count_added_modified_and_removed(tmp_path):
+    from wcb.runner.workspace import tree_changes
+
+    old, new = tmp_path / "old", tmp_path / "new"
+    for d in (old, new):
+        (d / "notes").mkdir(parents=True)
+        (d / ".git").mkdir()
+        (d / "notes" / "same.md").write_text("same\n")
+    (old / "notes" / "edit.md").write_text("one\n")
+    (new / "notes" / "edit.md").write_text("two\n")
+    (old / "notes" / "gone.md").write_text("x\n")
+    (new / "notes" / "new.md").write_text("x\n")
+    (new / "notes" / "sub").mkdir()  # directories are not counted
+    (new / ".git" / "HEAD").write_text("ref\n")  # nor is .git
+    assert tree_changes(old, new) == {"added": 1, "modified": 1, "removed": 1}
+    assert tree_changes(old, old) == {"added": 0, "modified": 0, "removed": 0}
 
 
 def _alive(pid: int) -> bool:
@@ -516,6 +590,8 @@ def test_track_b_seed_session_gets_all_seed_inboxes(
     assert all(f"`inbox/{d}/`" in prompt for d in SEED_DATES) and f"Today is {SEED_END}." in prompt
     s = read_json(sd / "session.json")
     assert s["seed_dates"] == SEED_DATES and s["phase"] == "ingest" and s["date"] == SEED_END
+    # Compared with the GOALS.md-only store, though the seed snapshot replaces it in place.
+    assert s["store_changes"] == {"added": 1, "modified": 0, "removed": 0}
 
     assert (
         (rdir / "sessions" / f"{D1}.ingest" / "prompt.md")

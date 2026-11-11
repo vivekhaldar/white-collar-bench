@@ -137,3 +137,107 @@ def test_wrapper_reports_missing_command(tmp_path):
     )  # fmt: skip
     assert r.returncode == 127 and "not found on PATH" in r.stderr
     assert json.loads((ws / ".wcb" / "usage.json").read_text())["input_tokens"] == 0
+    t = json.loads((ws / ".wcb" / "usage.json").read_text())["termination"]
+    assert t == {"reason": "not_started", "incomplete": True}
+
+
+# ---------------------------------------------------------------- termination
+def _assistant(mid, stop_reason, block="text"):
+    return {
+        "type": "assistant",
+        "message": {
+            "id": mid,
+            "model": "claude-x",
+            "content": [{"type": block}],
+            "stop_reason": stop_reason,
+            "usage": {"input_tokens": 1, "output_tokens": 1},
+        },
+    }
+
+
+def _claude_termination(events):
+    p = UsageParser("claude")
+    for e in events:
+        p.feed_line(json.dumps(e))
+    return p.record("claude-code")["termination"]
+
+
+def test_claude_termination_normal_completion_after_tool_calls():
+    t = _claude_termination(
+        [
+            _assistant("m1", "tool_use", "tool_use"),
+            _assistant("m2", None),
+            _assistant("m2", "end_turn"),
+            {"type": "result", "subtype": "success", "is_error": False},
+        ]
+    )
+    assert t == {
+        "reason": "success", "incomplete": False,
+        "result_subtype": "success", "is_error": False, "stop_reason": "end_turn",
+    }  # fmt: skip
+    assert _claude_termination(CLAUDE_STREAM)["incomplete"] is False
+
+
+def test_claude_termination_truncated_final_response_is_incomplete():
+    # The final message hit the output cap; Claude Code still reports success and exits 0.
+    t = _claude_termination(
+        [
+            _assistant("m1", "tool_use", "tool_use"),
+            _assistant("m2", None, "thinking"),
+            _assistant("m2", "max_tokens"),
+            {"type": "result", "subtype": "success", "is_error": False},
+        ]
+    )
+    assert t["reason"] == "max_tokens" and t["incomplete"] is True
+    # A later block of the same message with stop_reason null does not hide it.
+    t = _claude_termination([_assistant("m2", "max_tokens"), _assistant("m2", None)])
+    assert t["reason"] == "max_tokens"
+    # An earlier truncated message followed by a normal one is not the final response.
+    ok = {"type": "result", "subtype": "success", "is_error": False}
+    t = _claude_termination([_assistant("m1", "max_tokens"), _assistant("m2", "end_turn"), ok])
+    assert t["incomplete"] is False
+
+
+def test_claude_termination_errors_and_missing_result():
+    t = _claude_termination([{"type": "result", "subtype": "error_max_turns", "is_error": True}])
+    assert t["reason"] == "error_max_turns" and t["incomplete"] is True
+    t = _claude_termination([{"type": "result", "subtype": "success", "is_error": True}])
+    assert t["reason"] == "success" and t["incomplete"] is True  # e.g. an API error
+    t = _claude_termination([_assistant("m1", "tool_use", "tool_use")])
+    assert t["reason"] == "no_result" and t["incomplete"] is True
+
+
+def _codex_termination(events):
+    p = UsageParser("codex")
+    for e in events:
+        p.feed_line(json.dumps(e))
+    return p.record("codex")["termination"]
+
+
+def test_codex_termination():
+    done = {"type": "turn.completed", "usage": {"input_tokens": 1, "output_tokens": 1}}
+    t = _codex_termination([{"type": "turn.started"}, done])
+    assert t == {"reason": "completed", "incomplete": False, "errors": []}
+    failed = {"type": "turn.failed", "error": {"message": "context too long"}}
+    t = _codex_termination([{"type": "turn.started"}, failed])
+    assert t == {"reason": "turn_failed", "incomplete": True, "errors": ["context too long"]}
+    # An error the agent recovered from (a reconnect) is kept but does not make it incomplete.
+    t = _codex_termination([{"type": "error", "message": "stream reconnecting"}, done])
+    assert t["incomplete"] is False and t["errors"] == ["stream reconnecting"]
+    t = _codex_termination([done, {"type": "error", "message": "boom"}])
+    assert t["reason"] == "error" and t["incomplete"] is True
+    assert _codex_termination([{"type": "turn.started"}])["reason"] == "no_turn_completed"
+    # The older event format.
+    t = _codex_termination([{"id": "1", "msg": {"type": "error", "message": "bad"}}])
+    assert t["reason"] == "error" and t["errors"] == ["bad"]
+    assert _codex_termination([{"id": "1", "msg": {"type": "task_complete"}}])["incomplete"] is False
+
+
+def test_wrapper_records_truncation_and_keeps_exit_code_zero(tmp_path):
+    events = [_assistant("m1", "max_tokens"), {"type": "result", "subtype": "success"}]
+    script = f"import json\nfor e in {events!r}: print(json.dumps(e))\n"
+    r, ws = _run_wrap(tmp_path, "claude", script)
+    assert r.returncode == 0
+    usage = json.loads((ws / ".wcb" / "usage.json").read_text())
+    assert usage["termination"]["reason"] == "max_tokens"
+    assert usage["termination"]["incomplete"] is True

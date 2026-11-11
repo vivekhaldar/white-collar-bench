@@ -9,6 +9,7 @@ The fake agent (``agent.py`` next to the adapter file) records what it saw in
 workspace, so tests can count sessions. ``FAKE_MODE`` selects a behaviour:
 
 - ``normal``: ingest writes ``notes/<date>.md``; query answers every question.
+- ``noop``: on ``FAKE_FAIL_DATE``, ingest writes nothing and exits 0.
 - ``crash``: on ``FAKE_FAIL_DATE``, ingest writes ``notes/partial.md`` then exits 3.
 - ``sleep``: on ``FAKE_FAIL_DATE``, ingest writes ``notes/partial.md``, starts a child process and
   sleeps past the timeout.
@@ -23,6 +24,8 @@ workspace, so tests can count sessions. ``FAKE_MODE`` selects a behaviour:
   (``chmod 000 people/me.md``), ``dir`` (an unreadable ``notes/private/``), ``usage`` (an
   unreadable ``.wcb/usage.json``), ``wcbdir`` (an unreadable ``.wcb/``) or ``fifo`` (``inbox``
   and ``notes/pipe`` become FIFOs). ``answers`` makes ``.wcb/answers.json`` unreadable in queries.
+
+``FAKE_TERMINATION``, a JSON object, is written as ``termination`` in every ``.wcb/usage.json``.
 """
 
 from __future__ import annotations
@@ -74,10 +77,14 @@ def save():
 
 save()
 (ws / ".wcb").mkdir(exist_ok=True)
-(ws / ".wcb" / "usage.json").write_text(json.dumps(
-    {"input_tokens": 11, "output_tokens": 7, "cost_usd": 0.01, "tool_calls": 3, "model": "fake"}))
+usage = {"input_tokens": 11, "output_tokens": 7, "cost_usd": 0.01, "tool_calls": 3, "model": "fake"}
+if os.environ.get("FAKE_TERMINATION"):
+    usage["termination"] = json.loads(os.environ["FAKE_TERMINATION"])
+(ws / ".wcb" / "usage.json").write_text(json.dumps(usage))
 
 if phase == "ingest":
+    if mode == "noop" and failing:
+        sys.exit(0)
     (ws / "notes").mkdir(exist_ok=True)
     (ws / "notes" / f"{date}.md").write_text("inbox: " + ", ".join(info["inbox"]) + "\n")
     if mode == "crash" and failing:

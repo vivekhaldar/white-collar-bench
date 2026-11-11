@@ -27,7 +27,8 @@ wcb score runs/simple
 3. Put API keys in `env_passthrough`; sessions get nothing else from your environment.
 4. Keep prompts and system prompts generic: no knowledge of any world, its people or its questions.
 5. Make every session a fresh process with no memory outside the workspace, and write `.wcb/usage.json`.
-6. Try it with `--max-days 1`, then read `runs/<name>/<world>/r1/sessions/*/stdout.log`.
+6. Give the agent's runtime pinned readers for YAML, PDF, DOCX, XLSX and PPTX inputs, installed before the run, and smoke-test them inside its sandbox ([docs/adapters.md §8a](../docs/adapters.md#8a-tools-your-agents-runtime-needs), [`docker/smoke_tools.py`](../docker/smoke_tools.py)).
+7. Try it with `--max-days 1`, then read `runs/<name>/<world>/r1/sessions/*/stdout.log`.
 
 Reusable pieces in `wcb.agents`:
 

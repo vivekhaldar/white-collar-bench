@@ -129,11 +129,11 @@ stdin is empty (`/dev/null`). An agent that waits for interactive input or appro
 
 > Today is 2027-03-01. New inputs are in `inbox/2027-03-01/` (see `manifest.json`). Incorporate them into the store following `CONTRACT.md`. Inputs will not be available after this session.
 
-**Query session.** The workspace is a throwaway copy of the store, with its git history, plus `.wcb/questions.json` and `.wcb/answer-schema.json`. Store files are read-only. The agent writes `.wcb/answers.json`. Check the format with `wcb validate answers answers.json --questions questions.json`.
+**Query session.** The workspace is a throwaway copy of the store, with its git history, plus `.wcb/questions.json` and `.wcb/answer-schema.json`. Store files are read-only. The agent writes `.wcb/answers.json`. A point answer's `value` holds only the answer (a role, a date, a name); any explanation goes in its optional `note`, which is not graded ([formats §4](formats.md#4-answers-wcbanswersjson)). Check the format with `wcb validate answers answers.json --questions questions.json`.
 
 **Usage.** In any session the agent may write `.wcb/usage.json` with `input_tokens`, `output_tokens`, `cost_usd`, `tool_calls` and `model`. The runner copies it into the session's log directory and `session.json`. The runner removes `.wcb/` and `inbox/` after every session.
 
-Prompts are fixed benchmark text, listed in [scoring](scoring.md#standard-prompts) and `wcb/runner/prompts.py`. Your adapter may wrap them in its own system prompt, but must not add knowledge about any world.
+Prompts are fixed benchmark text, listed in [adapters](adapters.md#standard-prompts) and `wcb/runner/prompts.py`. Your adapter may wrap them in its own system prompt, but must not add knowledge about any world.
 
 ## 5. Run
 
@@ -160,11 +160,13 @@ wcb run --adapter adapters/my-agent.yaml --split dev --repeats 3 --out runs/my-a
 An episode runs like this:
 
 1. **Start.** Track A: the workspace becomes a copy of the world's seed store (`gold/oracle-store/<seed end>/`) plus `CONTRACT.md`, and is committed to git. Like every oracle store it holds only what the inputs delivered by then show: aliases an input has used, and no hint of people or loops revealed later ([worlds](worlds.md#oracle-stores)).
-2. **Each day.** The runner copies `inbox/<date>/` into the workspace, writes the prompt and runs the ingest command in a fresh process. Afterwards it removes `inbox/` and `.wcb/`, snapshots the store to `snapshots/<date>/` and commits (`wcb: after <date> ingest`).
+2. **Each day.** The runner copies `inbox/<date>/` into the workspace, writes the prompt and runs the ingest command in a fresh process. Afterwards it removes `inbox/` and `.wcb/`, snapshots the store to `snapshots/<date>/` and commits (`wcb: after <date> ingest`). The runner's git commands ignore your global and system git config, replace the workspace's `.git/config` with the runner's own, and never start automatic `gc` or `maintenance`, so no background repack is still changing `.git` when the store is copied for a query session.
 3. **Checkpoint days.** After that day's ingestion, the runner runs a query session on a read-only copy of the store, saves the answers and discards the copy.
 4. **Oracle sessions.** Track A only: after the episode, each checkpoint's questions are asked again against `gold/oracle-store/<checkpoint date>/` plus `CONTRACT.md`, in a separate session with the same adapter. The scores measure synthesis alone.
 
 **Failed sessions.** A non-zero exit or a timeout fails the session. A failed ingest session leaves the store as it was before the session: the runner restores it from the previous snapshot, and the day's snapshot equals the previous day's. A failed query session counts as empty answers. The run carries on either way, and `wcb run` exits 0 when the run completes, whatever the sessions' outcomes.
+
+**Incomplete and no-op sessions.** An agent that stops early, or whose final response is cut off by an output-token limit, still exits 0; that is the agent's outcome and the session is not failed, restored or retried. If the agent reports it in `.wcb/usage.json` (`termination`, which `wcb.agents.wrap` writes for Claude Code and Codex), `session.json` gets `"incomplete": true` and a note, and the run log marks the session `incomplete (<reason>)`. Every ingest session's `session.json` also counts the files it added, modified and removed (`store_changes`), and the run log says when a successful ingest session changed nothing in the store. A day with nothing worth recording can legitimately change nothing, so such sessions are neither retried nor penalized ([formats §6](formats.md#6-run-directory)).
 
 **Session processes.** On timeout the runner sends SIGTERM to every process of the session, then SIGKILL after 10 seconds. When the agent's main process exits, any process it leaves running is killed too, including processes that left its process group: daemons, `setsid cmd &`, Node's `detached: true`. On Linux the runner makes itself a child subreaper (`prctl(PR_SET_CHILD_SUBREAPER)`) during each session, so such orphans are re-parented to it rather than to init, and it kills them. Elsewhere, macOS included, only the session's process group is signalled; run the agent in a container (`docker run --rm --init`, [isolation](#container-isolation)) so that all its processes stop with the container. A process started by another service is not the session's and is not found either (for example `docker run -d`, `systemd-run`, `at`).
 
@@ -292,7 +294,7 @@ A run is only meaningful if the agent works the way it would for a real person, 
 [`adapters/examples/docker.yaml`](../adapters/examples/docker.yaml) runs every session of any agent in a fresh container that mounts only the workspace and the prompt file. Without it, an agent with shell access could read `worlds/*/gold/` from your checkout. Verified leaderboard runs use this setup ([leaderboard](leaderboard.md)).
 
 ```bash
-docker build -f docker/Dockerfile.simple -t wcb-simple .        # an image with the wcb harness, no worlds
+docker build -f docker/Dockerfile.simple -t wcb-simple .        # the wcb harness and pinned document readers, no worlds
 WCB_AGENT_IMAGE=wcb-simple WCB_AGENT_CMD="python -I -m wcb.baselines.null" \
   wcb run --adapter adapters/examples/docker.yaml --world pilot --out runs/null-docker
 ```
