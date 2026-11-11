@@ -166,6 +166,8 @@ List and change items are matched to gold in two steps:
 
 The final one-to-one assignment maximizes confirmed matches. Judge prompts, model, version and temperature are fixed per release: temperature 0 for a single sample, and 1.0 when voting over 3 samples. The default `wcb score` judge is the deterministic heuristic judge; `--judge llm` selects a pinned model. See [judges](judge.md) for prompts, thresholds and model pinning.
 
+An item that describes two gold events at once (a decision reversed and its replacement; a phase and a status change) matches one of them: one-to-one assignment credits it once, and listing each change earns both. The heuristic judge's matching was reviewed against the labelled calibration set ([judges](judge.md#calibration)); it under-credits paraphrased and verbose change items, and a change that would fix them added more wrong matches than it removed, so it was left unchanged.
+
 ### Aggregation
 
 ```text
@@ -324,7 +326,7 @@ Each gold item carries `what`, `keywords`, `support` (the loop's evidence artifa
 
 **Prioritization.** The top `k` items are matched one-to-one against the worker's loops (must-include and other worker-active ones); a repeated item cannot match. An item is a distractor only when the judge confirms it against some distractor and against none of the worker's loops; each such item counts, duplicates included. The factor is 1 − distractor items / *loop items*, where loop items are the top items the judge confirms against some gold loop (worker's or distractor). An item that describes no loop ("Catch up on email") counts neither way, so filler neither dilutes the penalty nor costs anything.
 
-**Status and brief.** The judge sees the `summary` followed by each claim's `text`. The heuristic judge's rules are in [judges](judge.md#rubric): a superseded value presented as current contradicts its item even when the current value is there too ("29 Jan or 5 Feb", "vendor evaluation or pilot planning"), and an answer whose content words and dates are mostly not in the question's gold `facts` covers nothing, so a generic list of every status, date, role and loop scores 0.
+**Status and brief.** The judge sees the `summary` followed by each claim's `text`. The heuristic judge's rules are in [judges](judge.md#rubric). A superseded value presented as current contradicts its item even when the current value is there too ("29 Jan or 5 Feb", "vendor evaluation or pilot planning"), unless the answer labels it as history before or after it ("moved from 29 Jan", "the 78/74 in the 4 March email were v1 totals", "1 Nov -> 12 Nov -> 7 Dec"); values stated next to the wrong name ("Penmarq 71, Scrivelo 76") contradict too, and negated values ("not 76") cover nothing. Coverage is item-local: an item's keywords must sit in one sentence or list line whose surroundings are mostly about the question's gold `facts`, and the more of the whole answer is about other things, the more on topic those surroundings must be. So a generic list of every status, date, role and loop covers nothing, while a focused sentence of a chatty answer still counts. Off-topic content is meant to cost a separate, bounded penalty (`padding_penalty`, up to 0.25 of the question), which `grade_rubric` does not apply yet. The rules were calibrated on a labelled set of real and adversarial answers ([judges](judge.md#calibration)).
 
 **Citations.**
 
@@ -398,4 +400,4 @@ For each group the report gives the session count, `ok` / `timeouts` / `failures
 - priority: the must-include loops, then the other worker-owned active loops;
 - unanswerable: abstain.
 
-Every answer cites its gold `support`. With `store_ids` (`wcb.store.oracle.record_ids`), items also cite their loop records. The tests use it to check that correct answers score at least 0.95 on every question and about 100 end to end.
+Every answer cites its gold `support`. With `store_ids` (`wcb.store.oracle.record_ids`), items also cite their loop records. The tests use it to check that correct answers score exactly 1 on every question of the pilot and of every dev world (`tests/grade/test_perfect_answers.py`), and about 100 end to end.

@@ -37,11 +37,19 @@ STATUS_SYNONYMS: dict[str, list[str]] = {
     "merged": ["merged", "folded into"],
 }
 
-# Words an answer uses when a loop changes status (latest-change rubric items).
+# Words an answer uses when a loop changes status (latest-change rubric items). "done" also
+# lists the past-tense verbs that resolved loops use ("Yasmin shared the data dictionary",
+# "I reviewed the allow-list"), but not ones whose base form names the open task too ("set
+# up", "agreed").
 LOOP_STATUS_WORDS: dict[str, list[str]] = {
     "done": [
         "done", "complete", "completed", "finished", "closed", "resolved",
         "sent", "delivered", "returned", "submitted", "received",
+        "shared", "reviewed", "updated", "confirmed", "fixed", "wrote", "written", "booked",
+        "drafted", "introduced", "assembled", "published", "configured", "collected",
+        "generated", "countersigned", "signed", "posted", "held", "ran", "scheduled",
+        "registered", "circulated", "approved", "finalized", "answered", "provided",
+        "reported", "walked", "looked into", "turned around", "pulled together",
     ],
     "dropped": ["dropped", "cancelled", "canceled", "abandoned", "no longer", "scrapped"],
     "waiting": ["waiting", "pending", "awaiting", "on hold"],

@@ -175,7 +175,7 @@ The text of the latest-change item is the event's `summary`. The text of a loop 
 | Event | Keyword groups |
 |---|---|
 | commitment create | the loop's keywords |
-| commitment update, resolve | the loop's keywords; plus words for a new status (done: done, completed, sent, returned...); the new due date's variants; the new debtor's names on a transfer (for a transfer to the worker, also `me`, `myself`, `mine`, `you`, `yourself`, `yours`) |
+| commitment update, resolve | the loop's keywords; plus words for a new status (done: done, completed, sent, returned... and the past-tense verbs resolutions use, such as shared, reviewed, confirmed, fixed, booked; not ones whose base form also names the open task, such as set up); the new due date's variants; the new debtor's names on a transfer (for a transfer to the worker, also `me`, `myself`, `mine`, `you`, `yourself`, `yours`) |
 | `decision.make` | the decision's keywords |
 | `decision.reverse` | the decision's keywords, and reversal words (reversed, overturned, scrapped, no longer...) |
 | `fact.set` | the new value: status synonyms, date variants, an entity's names (plus the worker words above when the value is the worker), or distinctive words. For `null`, two groups: "cleared" words (cleared, resolved, removed, no longer, unblocked, fixed, lifted, ended, is over, no blocker(s); not "none", which most status answers contain), and one group naming what was cleared: the cleared value's distinctive words plus up to two distinctive words of the event's summary (the attribute's name if there are none) |
