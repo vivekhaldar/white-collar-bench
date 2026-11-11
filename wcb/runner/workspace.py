@@ -315,6 +315,16 @@ def tree_files(root: Path, exclude: Iterable[str] = SNAPSHOT_EXCLUDE) -> list[st
 
 
 # ---------------------------------------------------------------- git
+#: Settings that stop git from starting automatic housekeeping (``git gc --auto`` or
+#: ``git maintenance run --auto``, which recent git versions detach into the background) after
+#: a runner commit. A detached repack could still be rewriting ``.git`` while the runner copies
+#: the workspace for a query session. They are passed with ``-c`` on every runner git command
+#: and also written to ``.git/config``.
+_GIT_NO_AUTO_MAINTENANCE = (
+    ("gc.auto", "0"),
+    ("gc.autoDetach", "false"),
+    ("maintenance.auto", "false"),
+)
 #: The only `.git/config` the runner's git commands ever read.
 _GIT_CONFIG = f"""[core]
 \trepositoryformatversion = 0
@@ -324,11 +334,21 @@ _GIT_CONFIG = f"""[core]
 [user]
 \tname = {GIT_USER_NAME}
 \temail = {GIT_USER_EMAIL}
+[gc]
+\tauto = 0
+\tautoDetach = false
+[maintenance]
+\tauto = false
 """
 #: What `git init` writes, so replacing it right after init is not reported as a change.
 _GIT_CONFIG_BARE_INIT = (
     "[core]\n\trepositoryformatversion = 0\n\tfilemode = true\n\tbare = false\n"
     "\tlogallrefupdates = true"
+)
+#: Configs earlier runner versions wrote, so a workspace kept for ``--resume`` across an upgrade
+#: is not reported as changed by the agent.
+_GIT_CONFIG_EARLIER = (
+    f"{_GIT_CONFIG_BARE_INIT}\n[user]\n\tname = {GIT_USER_NAME}\n\temail = {GIT_USER_EMAIL}",
 )
 #: Files in `.git` that make git read or write elsewhere, or apply attributes (filters).
 _GIT_DROP = (
@@ -352,7 +372,8 @@ class Git:
     replaces ``.git/config`` with the runner's own (dropping filters, ``core.worktree``,
     includes and anything else an agent added), removes files that point git elsewhere
     (alternates, ``commondir``, ``info/attributes``), and starts a new repository if ``.git``
-    is a link, a file or contains links. Commands also run with hooks and fsmonitor disabled,
+    is a link, a file or contains links. Commands also run with hooks, fsmonitor and automatic
+    gc/maintenance disabled (so no background repack is left running after a commit),
     without the user's global or system config, and with ``GIT_DIR`` and ``GIT_WORK_TREE``
     fixed to the workspace. Content an agent writes into ``.git/`` therefore cannot make the
     runner execute code or touch files outside the workspace. What was removed is recorded in
@@ -385,6 +406,7 @@ class Git:
             "-c", "core.attributesFile=" + os.devnull,
             "-c", "commit.gpgsign=false",
             "-c", "init.defaultBranch=main",
+            *(x for k, v in _GIT_NO_AUTO_MAINTENANCE for x in ("-c", f"{k}={v}")),
             *args,
         ]  # fmt: skip
         try:
@@ -429,7 +451,10 @@ class Git:
         except OSError:
             old = None
         if old != _GIT_CONFIG:
-            if old is not None and old.strip() != _GIT_CONFIG_BARE_INIT:
+            if old is not None and old.strip() not in (
+                _GIT_CONFIG_BARE_INIT,
+                *_GIT_CONFIG_EARLIER,
+            ):
                 self.notes.append(".git/config was changed; replaced it with the runner's")
             config.unlink(missing_ok=True)
             config.write_text(_GIT_CONFIG, encoding="utf-8")

@@ -160,7 +160,7 @@ wcb run --adapter adapters/my-agent.yaml --split dev --repeats 3 --out runs/my-a
 An episode runs like this:
 
 1. **Start.** Track A: the workspace becomes a copy of the world's seed store (`gold/oracle-store/<seed end>/`) plus `CONTRACT.md`, and is committed to git. Like every oracle store it holds only what the inputs delivered by then show: aliases an input has used, and no hint of people or loops revealed later ([worlds](worlds.md#oracle-stores)).
-2. **Each day.** The runner copies `inbox/<date>/` into the workspace, writes the prompt and runs the ingest command in a fresh process. Afterwards it removes `inbox/` and `.wcb/`, snapshots the store to `snapshots/<date>/` and commits (`wcb: after <date> ingest`).
+2. **Each day.** The runner copies `inbox/<date>/` into the workspace, writes the prompt and runs the ingest command in a fresh process. Afterwards it removes `inbox/` and `.wcb/`, snapshots the store to `snapshots/<date>/` and commits (`wcb: after <date> ingest`). The runner's git commands ignore your global and system git config, replace the workspace's `.git/config` with the runner's own, and never start automatic `gc` or `maintenance`, so no background repack is still changing `.git` when the store is copied for a query session.
 3. **Checkpoint days.** After that day's ingestion, the runner runs a query session on a read-only copy of the store, saves the answers and discards the copy.
 4. **Oracle sessions.** Track A only: after the episode, each checkpoint's questions are asked again against `gold/oracle-store/<checkpoint date>/` plus `CONTRACT.md`, in a separate session with the same adapter. The scores measure synthesis alone.
 

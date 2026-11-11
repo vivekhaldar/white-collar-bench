@@ -6,6 +6,7 @@ import os
 import shutil
 import socket
 import stat
+import subprocess
 from pathlib import Path
 
 import pytest
@@ -228,3 +229,78 @@ def test_git_init_on_a_fresh_workspace_reports_nothing(tmp_path):
     g = workspace.Git(ws)
     assert g.init() and g.commit("seed") and g.commit("again")
     assert g.notes == []
+
+
+def _traced(monkeypatch, trace: Path) -> None:
+    """Make the runner's git commands write GIT_TRACE output (Git._run drops GIT_* variables)."""
+    real = subprocess.run
+
+    def run(cmd, *args, env=None, **kwargs):
+        return real(cmd, *args, env={**(env or os.environ), "GIT_TRACE": str(trace)}, **kwargs)
+
+    monkeypatch.setattr(workspace.subprocess, "run", run)
+
+
+def _plain_git_env(**extra: str) -> dict[str, str]:
+    base = {k: v for k, v in os.environ.items() if not k.startswith("GIT_")}
+    return {**base, "GIT_CONFIG_NOSYSTEM": "1", "GIT_CONFIG_GLOBAL": os.devnull, **extra}
+
+
+@needs_git
+def test_git_commits_do_not_start_automatic_maintenance(tmp_path, monkeypatch):
+    """Issue #6: `git commit` runs `git maintenance run --auto` (detached in recent git), which
+    can repack .git while the runner copies the workspace for a query session."""
+    # Control: plain git with no settings does start it, so this test is not vacuous.
+    plain, trace0 = tmp_path / "plain", tmp_path / "plain.trace"
+    plain.mkdir()
+    env = _plain_git_env(GIT_TRACE=str(trace0))
+    ident = ["-c", "user.name=t", "-c", "user.email=t@t.example"]
+    for args in (["init", "-q"], ["commit", "-q", "--allow-empty", "-m", "x"]):
+        subprocess.run(["git", *ident, *args], cwd=plain, env=env, check=True)
+    control = trace0.read_text()
+    if "maintenance run --auto" not in control and "gc --auto" not in control:
+        pytest.skip("this git does not run automatic maintenance after a commit")
+
+    ws, trace = tmp_path / "ws", tmp_path / "runner.trace"
+    ws.mkdir()
+    _traced(monkeypatch, trace)
+    g = workspace.Git(ws)
+    (ws / "note.md").write_text("hello\n")
+    assert g.init() and g.commit("seed") and g.commit("again"), g.error
+    text = trace.read_text()
+    assert "built-in: git commit" in text  # tracing worked
+    assert "maintenance" not in text and "gc --auto" not in text
+    assert g.notes == []
+
+
+@needs_git
+def test_git_config_disables_automatic_maintenance_even_after_an_agent_edit(tmp_path):
+    ws = tmp_path / "ws"
+    ws.mkdir()
+    g = workspace.Git(ws)
+    assert g.init() and g.commit("seed")
+    with (ws / ".git" / "config").open("a") as f:
+        f.write("[maintenance]\n\tauto = true\n[gc]\n\tauto = 1\n")
+    assert g.commit("day 1"), g.error
+    assert any("config was changed" in n for n in g.notes)
+
+    def get(key: str) -> str:
+        cmd = ["git", "--git-dir", str(ws / ".git"), "config", "--get", key]
+        p = subprocess.run(cmd, env=_plain_git_env(), capture_output=True, text=True, check=True)
+        return p.stdout.strip()
+
+    got = [get("maintenance.auto"), get("gc.auto"), get("gc.autoDetach")]
+    assert got == ["false", "0", "false"]
+
+
+@needs_git
+def test_git_config_from_an_earlier_runner_is_not_reported(tmp_path):
+    """A workspace kept for --resume across a runner upgrade has the earlier runner config."""
+    ws = tmp_path / "ws"
+    ws.mkdir()
+    g = workspace.Git(ws)
+    assert g.init()
+    (ws / ".git" / "config").write_text(workspace._GIT_CONFIG_EARLIER[0] + "\n")
+    assert g.commit("seed"), g.error
+    assert g.notes == []
+    assert (ws / ".git" / "config").read_text() == workspace._GIT_CONFIG
