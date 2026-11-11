@@ -122,6 +122,65 @@ def test_tree_diff_reports_changed_added_and_removed_entries(tmp_path):
     ]  # fmt: skip
 
 
+def _rewrite_keeping_times(path: Path, data: bytes) -> None:
+    st = path.stat()
+    path.write_bytes(data)
+    os.utime(path, ns=(st.st_atime_ns, st.st_mtime_ns))
+
+
+def test_tree_diff_sees_a_same_size_change_with_restored_mtime(tmp_path):
+    """Issue #5: filecmp cached deep comparisons by stat signature and missed this change."""
+    a, b = tmp_path / "a", tmp_path / "b"
+    a.mkdir()
+    b.mkdir()
+    x, y = a / "x.md", b / "x.md"
+    x.write_bytes(b"aaa")
+    y.write_bytes(b"aaa")
+    assert tree_diff(a, b) == []  # an equal comparison first
+    _rewrite_keeping_times(y, b"bbb")
+    assert x.read_bytes() != y.read_bytes() and x.stat().st_size == y.stat().st_size
+    assert tree_diff(a, b) == ["x.md"]
+    # A stale inequality is not kept either: change it back, then again, keeping the times.
+    _rewrite_keeping_times(y, b"aaa")
+    assert tree_diff(a, b) == []
+    _rewrite_keeping_times(y, b"ccc")
+    assert tree_diff(a, b) == ["x.md"]
+
+
+def test_tree_diff_ignores_modes_and_times_and_compares_large_files(tmp_path):
+    a, b = tmp_path / "a", tmp_path / "b"
+    a.mkdir()
+    b.mkdir()
+    big = os.urandom(200_000)
+    (a / "big.bin").write_bytes(big)
+    (b / "big.bin").write_bytes(big)
+    os.chmod(b / "big.bin", 0o600)
+    os.utime(b / "big.bin", (0, 0))
+    assert tree_diff(a, b) == []
+    (b / "big.bin").write_bytes(big[:-1] + bytes([big[-1] ^ 1]))  # last byte, last chunk
+    assert tree_diff(a, b) == ["big.bin"]
+
+
+def test_tree_diff_skips_special_files_and_never_follows_links(tmp_path):
+    a, b = tmp_path / "a", tmp_path / "b"
+    a.mkdir()
+    b.mkdir()
+    os.mkfifo(b / "pipe")  # special files are not store data
+    (tmp_path / "t1").write_text("one\n")
+    (tmp_path / "t2").write_text("two\n")
+    (a / "l").symlink_to(tmp_path / "t1")
+    (b / "l").symlink_to(tmp_path / "t1")
+    assert tree_diff(a, b) == []
+    (tmp_path / "t1").write_text("ONE\n")  # the link target's content is not compared
+    assert tree_diff(a, b) == []
+    (b / "l").unlink()
+    (b / "l").symlink_to(tmp_path / "t2")
+    assert tree_diff(a, b) == ["l"]
+    (b / "l").unlink()
+    (b / "l").write_text("one\n")  # a file where there was a link
+    assert tree_diff(a, b) == ["l"]
+
+
 # ---------------------------------------------------------------- git safety
 needs_git = pytest.mark.skipif(shutil.which("git") is None, reason="git is not installed")
 

@@ -20,7 +20,6 @@ deleting the store.
 from __future__ import annotations
 
 import contextlib
-import filecmp
 import os
 import shutil
 import stat
@@ -237,14 +236,44 @@ def tree_diff(a: Path, b: Path, exclude: Iterable[str] = SNAPSHOT_EXCLUDE) -> li
     for rel in set(ea) & set(eb):
         if ea[rel] != eb[rel]:
             out.add(rel)
-        elif ea[rel][0] == "file":
-            try:
-                same = filecmp.cmp(Path(a) / rel, Path(b) / rel, shallow=False)
-            except OSError:
-                same = False
-            if not same:
-                out.add(rel)
+        elif ea[rel][0] == "file" and not _same_bytes(Path(a) / rel, Path(b) / rel):
+            out.add(rel)
     return sorted(out)
+
+
+_CHUNK = 1 << 16
+
+
+def _same_bytes(p: Path, q: Path) -> bool:
+    """True if the regular files ``p`` and ``q`` hold the same bytes right now.
+
+    Reads both files on every call. Unlike :func:`filecmp.cmp`, nothing is cached, so a change
+    that keeps the size and modification time is still seen. Links are not followed and only
+    regular files are read (a file swapped for a link or FIFO since it was listed counts as
+    different); any error counts as different.
+    """
+    flags = os.O_RDONLY | getattr(os, "O_NOFOLLOW", 0) | getattr(os, "O_NONBLOCK", 0)
+    try:
+        fa = os.open(p, flags)
+    except OSError:
+        return False
+    try:
+        fb = os.open(q, flags)
+    except OSError:
+        os.close(fa)
+        return False
+    try:
+        with os.fdopen(fa, "rb") as x, os.fdopen(fb, "rb") as y:
+            if not (stat.S_ISREG(os.fstat(fa).st_mode) and stat.S_ISREG(os.fstat(fb).st_mode)):
+                return False
+            while True:
+                ca, cb = x.read(_CHUNK), y.read(_CHUNK)
+                if ca != cb:
+                    return False
+                if not ca:
+                    return True
+    except OSError:
+        return False
 
 
 def _entries(root: Path, exclude: Iterable[str]) -> dict[str, tuple]:
