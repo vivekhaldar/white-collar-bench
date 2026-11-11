@@ -149,7 +149,7 @@ Each question scores between 0 and 1.
 
 ### Citations
 
-Each claim or item cites artifact IDs and, in Track A, store paths. Citation precision `c` is the fraction of citations that exist and support the claim. Supporting artifact IDs come from the world model; store paths are judged against the record's content. The final question score is:
+Each claim or item cites artifact IDs and, in Track A, store paths. Citation precision `c` is the fraction of citations that exist and support what they are attached to: in list and change answers, the item; otherwise the answer as a whole. Supporting artifact IDs come from the world model; store paths are judged against the record's content. The final question score is:
 
 ```text
 q_final = q × (0.75 + 0.25 × c)
@@ -322,12 +322,16 @@ Each gold item carries `what`, `keywords`, `support` (the loop's evidence artifa
 
 **Citations.**
 
-- `c` = valid citations / distinct citations. A source cited twice in one answer counts once; `loops/x` and `./loops/x.md` are the same record.
-- An artifact ID is valid when it is in the question's `support`.
-- A store path (Track A) is valid when the record exists in the store the answers came from and its text names an artifact of the question's `support`: in its `evidence`, a `[src: ...]` note or a log line. This is how "judged against the record's content" is implemented. A record that cites none of them is invalid (`record_unsupported`).
+- Cites are grouped into *units*, and `c` = valid cites / cites counted over all units. A source cited twice in one unit counts once; `loops/x` and `./loops/x.md` are the same record.
+- **List and change answers** are checked per item. Each predicted item is a unit, checked against the `support` of the gold item it was matched to (Matching above), or against the question's `support` when it matched none (an extra or repeated item). Top-level `cites` (and any `claims`) form one more unit, checked against the question's `support`. A source cited on several items counts once per item and must support each of them, so global deduplication cannot hide a misattached citation. A cite that supports another gold item of the question but not its own is `wrong_item`.
+- **Point, status, brief, temporal and priority answers** are checked against the question as a whole: all cites (top-level, items, claims) form one unit checked against the question's `support`. Their claims are not item-structured; whether each prose claim is supported by its own cites is not checked.
+- An artifact ID is valid when it is in the unit's support. Support is widened at build time to every delivered artifact about the same commitment, decision or attribute ([formats §3.2](formats.md#32-goldquestionscpjson-hidden)), so an artifact that reports a later update to a loop is valid evidence for that loop. An artifact that does not exist or is not yet delivered (`not_delivered`), or that is delivered but about something else (`not_in_support`), is invalid.
+- A store path (Track A) is valid when the record exists in the store the answers came from and its text names an artifact of the unit's support: in its `evidence`, a `[src: ...]` note or a log line. This is how "judged against the record's content" is implemented. A record that cites none of them is invalid (`record_unsupported`, or `wrong_item` when it names only another item's support); a missing record is `no_such_record`.
 - `people/me` is never valid (`worker_record`). Every answer relates to the worker, so citing it is not specific evidence.
 - When the question's `support` is empty, `citation` is `null` and the score is the base score. This covers answerable empty lists, change questions with no changes, and priority questions with no worker loops.
-- Citations are checked against the question as a whole, not against each item or claim.
+- `details.citations` gives `scope` (`item` or `question`), `total`, `valid` and `invalid` (`{cite, why}`, plus `item`, the predicted item's index, for item units).
+
+Example: two gold loops, A supported by `em-1` and B by `mt-2`. An answer lists both, correctly, with A citing `mt-2` and B citing `mt-2`. Units: A {`mt-2`} (wrong item), B {`mt-2`} (valid), so `c` = 1/2 and the score is `q x 0.875`. Citing `em-1` on A gives `c` = 1. If one artifact genuinely reveals both loops, it is in both items' support and citing it on both is 2/2.
 
 **Grader errors.** If an answer passes validation but a grader raises a value error on it, the question scores 0, `details.grader_error` says why, and a line is added to `notes`. Errors raised by the judge itself, such as an unreachable model, still stop `wcb score`.
 

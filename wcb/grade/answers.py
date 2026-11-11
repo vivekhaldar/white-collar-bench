@@ -18,12 +18,16 @@ returns a `QuestionScore`. The steps are the same for every type:
    | temporal | 1 exact date, 0.5 within one business day, else 0 |
    | priority | must-include recall in the top k x (1 - share of top loop items that are distractors) |
 
-5. **Citations.** `c` = valid cites / distinct cites (0 when there are none). A cite is valid
-   if it is an artifact ID in the question's `support`, or (Track A) names an existing record
-   other than `people/me` in the store the answers were produced from whose text cites one
-   of those artifacts. Final
-   score = `q x (0.75 + 0.25 x c)`. When the question's `support` is empty (an answerable
-   empty list, nothing due tomorrow) there is nothing to cite: `c` is None and the score is `q`.
+5. **Citations.** `c` = valid cites / counted cites (0 when there are none). For list and
+   change answers each predicted item's cites are checked against the support of the gold
+   item it matched (the question's support when it matched none) and counted once per item;
+   top-level cites are checked against the question's support. Other types pool all cites,
+   count each source once and check it against the question's support. A cite is valid if it
+   is an artifact ID in that support, or (Track A) names an existing record other than
+   `people/me` in the store the answers were produced from whose text cites one of those
+   artifacts (`citation_precision`). Final score = `q x (0.75 + 0.25 x c)`. When the
+   question's `support` is empty (an answerable empty list, nothing due tomorrow) there is
+   nothing to cite: `c` is None and the score is `q`.
 
 A valid answer that makes a grader raise a value error scores 0 with a `grader_error` detail
 instead of stopping the run; errors raised by the judge itself still propagate.
@@ -374,7 +378,9 @@ def score_question(q: dict, answer: dict | None, judge: Judge, ctx: ScoreContext
     watched = _WatchedJudge(judge)
     try:
         base, details = GRADERS[qtype](q, answer, watched, ctx)
-        c, cite_details = citation_precision(answer, q.get("support") or [], ctx)
+        c, cite_details = citation_precision(
+            answer, q.get("support") or [], ctx, item_support=matched_item_support(q, details)
+        )
     except GRADER_ERRORS as e:
         if watched.raised:
             raise
@@ -912,14 +918,27 @@ GRADERS = {
 
 
 # ---------------------------------------------------------------- citations
+#: Question types whose items are checked against the support of the gold item they matched,
+#: with the gold item key `grade_list` and `grade_change` report in `details["matches"]`.
+ITEM_SCOPED = {"list": "loop", "change": "event"}
+
+
+def cite_groups(answer: dict) -> list[tuple[str, list[str]]]:
+    """Cites by where they appear: `("cites", ...)` for the top-level list, then
+    `("items[i]", ...)` and `("claims[i]", ...)`, in answer order. Non-strings are dropped."""
+    out = [("cites", [c for c in answer.get("cites") or [] if isinstance(c, str)])]
+    for key in ("items", "claims"):
+        for i, part in enumerate(answer.get(key) or []):
+            if isinstance(part, dict):
+                out.append(
+                    (f"{key}[{i}]", [c for c in part.get("cites") or [] if isinstance(c, str)])
+                )
+    return out
+
+
 def collect_cites(answer: dict) -> list[str]:
     """Every cite in an answer: top-level `cites`, then `items[].cites`, then `claims[].cites`."""
-    out = [c for c in answer.get("cites") or [] if isinstance(c, str)]
-    for key in ("items", "claims"):
-        for part in answer.get(key) or []:
-            if isinstance(part, dict):
-                out += [c for c in part.get("cites") or [] if isinstance(c, str)]
-    return out
+    return [c for _, cites in cite_groups(answer) for c in cites]
 
 
 def store_record_id(cite: str) -> str | None:
@@ -943,17 +962,12 @@ def store_record_id(cite: str) -> str | None:
     return s
 
 
-def cite_status(cite: str, support: set[str], ctx: ScoreContext) -> str:
-    """'valid', or why not: 'not_in_support', 'not_delivered', 'no_such_record',
-    'worker_record', 'record_unsupported' or 'unrecognized'.
+def cite_key(cite: str) -> str:
+    """What makes two cites the same source: the artifact ID, or the normalized record ID."""
+    return cite if ARTIFACT_RE.match(cite) else (store_record_id(cite) or cite)
 
-    An artifact ID is valid when it is in the question's support. A store path (Track A) is
-    valid when the record exists in the store the answers were produced from and its text
-    cites at least one artifact of that support (in its evidence, a `[src: ...]` note or a
-    log line), so the record carries evidence for the answer; an unrelated record is
-    'record_unsupported'. The worker's own record, `people/me`, is never valid: every answer
-    relates to the worker, so it is not specific evidence for any one of them.
-    """
+
+def _support_status(cite: str, support: set[str], ctx: ScoreContext) -> str:
     if ARTIFACT_RE.match(cite):
         if cite in support:
             return "valid"
@@ -969,29 +983,108 @@ def cite_status(cite: str, support: set[str], ctx: ScoreContext) -> str:
     return "valid" if refs & support else "record_unsupported"
 
 
-def citation_precision(
-    answer: dict, support: list[str], ctx: ScoreContext
-) -> tuple[float | None, dict]:
-    """c = valid cites / distinct cites, 0 when there are none; plus per-cite diagnostics.
+def cite_status(
+    cite: str, support: set[str], ctx: ScoreContext, *, question: set[str] | None = None
+) -> str:
+    """'valid', or why not: 'not_in_support', 'not_delivered', 'no_such_record',
+    'worker_record', 'record_unsupported', 'wrong_item' or 'unrecognized'.
 
-    A source cited more than once in an answer counts once (`loops/x` and `./loops/x.md` are
-    the same record). With an empty `support` there is nothing a citation could point to, so
-    `c` is None (not applicable) and the question score is its base score.
+    `support` is the scope the cite is checked against: the support of the gold item a
+    predicted item matched, or the question's support. An artifact ID is valid when it is in
+    it. A store path (Track A) is valid when the record exists in the store the answers were
+    produced from and its text cites at least one artifact of that support (in its evidence,
+    a `[src: ...]` note or a log line), so the record carries evidence for the item; an
+    unrelated record is 'record_unsupported'. The worker's own record, `people/me`, is never
+    valid: every answer relates to the worker, so it is not specific evidence for any one of
+    them. With `question` (the question's support, when `support` is an item's), a cite that
+    fails the item but would pass the question is 'wrong_item': evidence for another item.
     """
-    distinct: dict[str, str] = {}
-    for cite in collect_cites(answer):
-        key = cite if ARTIFACT_RE.match(cite) else (store_record_id(cite) or cite)
-        distinct.setdefault(key, cite)
-    cites = list(distinct.values())
+    status = _support_status(cite, support, ctx)
+    if (
+        question is not None
+        and status in ("not_in_support", "record_unsupported")
+        and _support_status(cite, question, ctx) == "valid"
+    ):
+        return "wrong_item"
+    return status
+
+
+def matched_item_support(q: dict, details: dict) -> dict[int, list[str]] | None:
+    """For list and change questions, predicted item index -> support of the gold item it was
+    matched to (from the grader's `details["matches"]`); None for other types, whose
+    citations are checked against the question's support. A gold item without support (older
+    gold files) is left out, so its match is checked against the question's support."""
+    key = ITEM_SCOPED.get(q.get("type", ""))
+    if key is None:
+        return None
+    gold = list((q.get("gold") or {}).get("items") or [])
+    by_id = {g.get(key, j): g for j, g in enumerate(gold) if isinstance(g, dict)}
+    out: dict[int, list[str]] = {}
+    for m in details.get("matches") or []:
+        sup = (by_id.get(m.get("gold")) or {}).get("support")
+        if sup:
+            out[int(m["pred"])] = list(sup)
+    return out
+
+
+def citation_precision(
+    answer: dict,
+    support: list[str],
+    ctx: ScoreContext,
+    *,
+    item_support: dict[int, list[str]] | None = None,
+) -> tuple[float | None, dict]:
+    """c = valid cites / counted cites, 0 when there are none; plus per-cite diagnostics.
+
+    Without `item_support` (point, status, brief, temporal and priority questions) all of an
+    answer's cites are pooled and checked against the question's `support`; a source cited
+    more than once counts once (`loops/x` and `./loops/x.md` are the same record).
+
+    With `item_support` (list and change questions; see `matched_item_support`) each
+    predicted item is its own unit: its distinct cites are checked against the support of the
+    gold item it matched, or against the question's support when it matched none. Top-level
+    and claim cites form one more unit, checked against the question's support. A source
+    counts once per unit, so one cited on two items counts twice and must support both.
+
+    With an empty `support` there is nothing a citation could point to, so `c` is None (not
+    applicable) and the question score is its base score.
+    """
     sup = set(support)
-    statuses = [(c, cite_status(c, sup, ctx)) for c in cites]
-    valid = sum(1 for _, s in statuses if s == "valid")
+    units: list[tuple[int | None, set[str], list[str]]] = []
+    if item_support is None:
+        units.append((None, sup, collect_cites(answer)))
+    else:
+        loose: list[str] = []
+        for where, cites in cite_groups(answer):
+            if where.startswith("items["):
+                i = int(where[6:-1])
+                units.append((i, set(item_support[i]) if i in item_support else sup, cites))
+            else:
+                loose += cites
+        units.insert(0, (None, sup, loose))
+    total = valid = 0
+    invalid: list[dict[str, Any]] = []
+    for item, scope, cites in units:
+        distinct: dict[str, str] = {}
+        for cite in cites:
+            distinct.setdefault(cite_key(cite), cite)
+        wider = sup if scope is not sup else None
+        for cite in distinct.values():
+            total += 1
+            why = cite_status(cite, scope, ctx, question=wider)
+            if why == "valid":
+                valid += 1
+            else:
+                invalid.append(
+                    {"cite": cite, "why": why, **({} if item is None else {"item": item})}
+                )
     details: dict[str, Any] = {
-        "total": len(cites),
+        "scope": "question" if item_support is None else "item",
+        "total": total,
         "valid": valid,
-        "invalid": [{"cite": c_, "why": s} for c_, s in statuses if s != "valid"],
+        "invalid": invalid,
     }
     if not sup:
         details["note"] = "no supporting artifacts: citations not scored"
         return None, details
-    return (valid / len(cites) if cites else 0.0), details
+    return (valid / total if total else 0.0), details
