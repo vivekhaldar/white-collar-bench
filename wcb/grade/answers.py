@@ -48,7 +48,7 @@ from pathlib import Path
 from typing import Any
 
 from wcb.contract.answers import check_answer
-from wcb.grade.judge import VERDICTS, Judge, match_tokens
+from wcb.grade.judge import VERDICTS, Judge, match_tokens, padding_penalty
 from wcb.grade.matching import assign, confirmed_edges, distinct_edges, match_items
 from wcb.questions.rubric import STATUS_SYNONYMS
 from wcb.util.dates import (
@@ -946,7 +946,10 @@ def answer_text(answer: dict) -> str:
 
 
 def grade_rubric(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tuple[float, dict]:
-    """max(0, (sum w*covered - sum w*contradicted) / sum w) over the checklist."""
+    """max(0, (sum w*covered - sum w*contradicted) / sum w - padding) over the checklist.
+
+    `padding` is `judge.padding_penalty`: up to 0.25 for an answer that is mostly not about
+    the question's facts, so stuffing a status or brief with everything costs something."""
     gold = q.get("gold") or {}
     items, facts = gold.get("rubric") or [], gold.get("facts") or {}
     text = answer_text(answer)
@@ -958,8 +961,9 @@ def grade_rubric(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tupl
         total += w
         net += w if v == "covered" else (-w if v == "contradicted" else 0.0)
         verdicts.append({"item": item.get("id"), "weight": w, "verdict": v})
-    score = 1.0 if total == 0 else max(0.0, net / total)
-    return score, {"verdicts": verdicts}
+    penalty = padding_penalty(text, facts) if total else 0.0
+    score = 1.0 if total == 0 else max(0.0, net / total - penalty)
+    return score, {"verdicts": verdicts, "padding_penalty": penalty}
 
 
 # ---------------------------------------------------------------- change
