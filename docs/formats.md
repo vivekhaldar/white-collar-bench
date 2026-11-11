@@ -313,7 +313,15 @@ The full rules for each template are in [questions](questions.md). Optional spec
 | priority | `{"must_include": [list items], "worker_active": [list items], "distractors": [list items], "k": 10}`. `must_include`: worker-owned active accepted loops due by the next business day. `worker_active`: all worker-owned active accepted loops. `distractors`: knowable loops that are closed or owed by someone else. `tomorrow`: the next business day. |
 | any unanswerable | `{}` with `answerable: false` |
 
-`support` lists the artifact IDs that carry the evidence for the gold answer. Citations are checked against it.
+`support` lists the delivered artifact IDs that carry the evidence for the gold answer; question-level support is in delivery order. List, priority and change items have their own `support`; status and brief rubric items do too (§3.3). After the template derives them, the builder widens them along the world's event threads (`wcb/questions/support.py`): every artifact delivered by the checkpoint that reveals an event about the same commitment, decision or attribute counts as evidence for it.
+
+- A list or priority item (`loop`) covers every event on its commitment: creation and all later updates.
+- A change item (`event`) covers its event and every later event on the same commitment, decision or attribute (`subject`, `attribute`). Entity creations, splits and merges cover only themselves.
+- A list or change question's `support` is the union of its items' support; a priority question's is the union of its `worker_active` (and `must_include`) items', never the distractors'.
+- A status or brief question's `support` is the union of its rubric items' support plus everything about the objects in its `facts`: the subject's attributes and their history, loops and decisions (whole thread), recent events (from the event on) and, for briefs, the attribute that makes each shared project shared. Rubric item support is not widened.
+- Point and temporal questions keep the template's support: the evidence for the one value asked.
+
+Citations are checked against `support`: for list and change answers, each predicted item against the support of the gold item it matched ([scoring](scoring.md#per-question-grading)).
 
 ### 3.3 Rubrics
 
@@ -357,7 +365,7 @@ A JSON object mapping question IDs to answers; see [`contract/answers/answers.sc
 
 A point `value` is the bare answer only: a role (`"Privacy Officer"`), a date (`"2027-11-18"`), a name, a phase or a number, with no explanation. The point grader allows only a few words beyond the answer, so put any context in the optional `note`, which is free text and never graded.
 
-`direction` is `i_owe`, `owed_to_me` or `other`. Grading reads only the fields listed here (except `note`); matching items to gold uses `text`, `counterparty` and `cites`, and extra fields are ignored. `cites` holds artifact IDs and, in Track A, store record IDs such as `loops/send-capacity-model`. A store record counts as a valid citation only when its text cites one of the question's supporting artifacts, and `people/me` never does ([scoring](scoring.md#per-question-grading)). Answers that fail validation score 0, and so does a temporal `date` that fits the pattern but is not a calendar date (`2027-02-30`).
+`direction` is `i_owe`, `owed_to_me` or `other`. Grading reads only the fields listed here (except `note`); matching items to gold uses `text`, `counterparty` and `cites`, and extra fields are ignored. `cites` holds artifact IDs and, in Track A, store record IDs such as `loops/send-capacity-model`. A store record counts as a valid citation only when its text cites one of the supporting artifacts of what it is attached to (for list and change answers, the matched gold item; otherwise the question), and `people/me` never does ([scoring](scoring.md#per-question-grading)). Answers that fail validation score 0, and so does a temporal `date` that fits the pattern but is not a calendar date (`2027-02-30`).
 
 ## 5. Adapter: `adapter.yaml`
 
