@@ -198,6 +198,8 @@ At the end of any session the agent may write `.wcb/usage.json` in the workspace
 
 Extra fields are kept as-is. The examples add `cache_read_input_tokens`, `cache_creation_input_tokens`, `turns`, `provider`, `harness` and, for the simple harness, `stop` and `tool_counts`. Write the file even when the session fails, so failed sessions are costed too.
 
+**Why the agent stopped.** Add `"termination": {"reason": "...", "incomplete": true|false}` when your agent knows. `reason` is the agent's or provider's own stop reason (for example `success`, `max_tokens`, `error_max_turns`); `incomplete` is true when the agent did not finish normally, in particular when its final response was cut off by an output-token limit, even if it exited 0. The runner copies it into `session.json` and flags incomplete sessions there ([formats §6](formats.md#6-run-directory)); it does not change the session's status or restore the store, so truncation stays the agent's outcome, but it is visible. `wcb.agents.wrap` fills it in for Claude Code and Codex.
+
 ## 6. Wrapping an API-based agent (your own code)
 
 If your agent is a program that calls a model API, run it as a script. Start from the template:
@@ -234,7 +236,7 @@ Any agent with a non-interactive mode can be run directly. The recipe:
 2. **Work in the workspace**: the default `cwd` is `{workspace}`; pass it explicitly too if the agent has a flag for its root directory.
 3. **No approvals**: stdin is empty, so a permission prompt hangs until the timeout. Grant file and command permissions up front, and confine the agent with its own sandbox or a container.
 4. **Fresh state**: turn off session persistence, resume, auto-memory and user-level config or instruction files.
-5. **Usage**: if the agent prints machine-readable usage, run it under `python -I -m wcb.agents.wrap --format <fmt> -- <command...>`, which copies the output to `stdout.log` and writes `.wcb/usage.json`. Formats: `claude` (Claude Code `--output-format stream-json` or `json`) and `codex` (Codex `exec --json`). It exits with the agent's status.
+5. **Usage**: if the agent prints machine-readable usage, run it under `python -I -m wcb.agents.wrap --format <fmt> -- <command...>`, which copies the output to `stdout.log` and writes `.wcb/usage.json`. Formats: `claude` (Claude Code `--output-format stream-json` or `json`) and `codex` (Codex `exec --json`). It exits with the agent's status, and records why the agent stopped in `termination`: for Claude Code the `result` event's `subtype` and `is_error` and the last assistant message's `stop_reason` (`max_tokens` means the final response was truncated); for Codex any `turn.failed` or `error` events.
 
 ### Claude Code: [`claude-code.yaml`](../adapters/examples/claude-code.yaml)
 

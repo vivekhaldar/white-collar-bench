@@ -19,6 +19,22 @@ Formats:
 The wrapper exits with the agent's exit status (127 if the agent is not installed). Usage is
 written even if the agent fails or the session is stopped by SIGTERM; fields it cannot find are
 0 or ``null``. ``input_tokens`` includes cached input tokens.
+
+The record also says why the agent stopped, in ``termination``: ``{"reason": ..., "incomplete":
+true|false}`` plus the raw fields it was derived from. ``incomplete`` is true when the agent's own
+output shows it did not finish normally, even if it exited 0:
+
+- ``claude``: the last assistant message's ``stop_reason`` is ``max_tokens`` (reason
+  ``max_tokens``: the final response was truncated); the ``result`` event has ``is_error`` or a
+  ``subtype`` other than ``success`` (reason: the subtype, e.g. ``error_max_turns``); or there is
+  no ``result`` event (reason ``no_result``, e.g. the agent was killed). Otherwise the reason is
+  the subtype (``success``).
+- ``codex``: the last outcome is a ``turn.failed`` (reason ``turn_failed``) or an ``error`` event
+  not followed by a ``turn.completed`` (reason ``error``), or no turn completed at all (reason
+  ``no_turn_completed``). Otherwise the reason is ``completed``. Error messages are kept in
+  ``errors``.
+
+The exit status is never changed; the runner records ``termination`` in ``session.json``.
 """
 
 from __future__ import annotations
@@ -54,6 +70,13 @@ class UsageParser:
         self._claude_messages: dict[str, dict] = {}  # message id -> usage, for runs without result
         self._have_result = False
         self._codex_cumulative: dict[str, int] | None = None
+        # termination
+        self._result_subtype: str | None = None
+        self._result_is_error: bool | None = None
+        self._stop_reason: str | None = None
+        self._last_message_id: str | None = None
+        self._codex_outcome: str | None = None  # "completed" | "turn_failed" | "error"
+        self._errors: list[str] = []
 
     # ---------------------------------------------------------------- input
     def feed_line(self, line: str) -> None:
@@ -89,6 +112,14 @@ class UsageParser:
             msg = e.get("message") or {}
             if not str(msg.get("model") or "<").startswith("<"):  # skip "<synthetic>" messages
                 self.model = self.model or msg.get("model")
+            # stream-json repeats a message per content block, possibly with stop_reason null
+            # until the last one: keep the latest non-null stop_reason of the latest message.
+            mid = msg.get("id")
+            if mid is None or mid != self._last_message_id:
+                self._last_message_id = mid
+                self._stop_reason = msg.get("stop_reason")
+            elif msg.get("stop_reason") is not None:
+                self._stop_reason = msg.get("stop_reason")
             for block in msg.get("content") or []:
                 if isinstance(block, dict) and block.get("type") == "tool_use":
                     self.tool_calls += 1
@@ -100,6 +131,10 @@ class UsageParser:
                 self._claude_totals_from_messages()
         elif kind == "result":
             self._have_result = True
+            if e.get("subtype") is not None:
+                self._result_subtype = str(e["subtype"])
+            if e.get("is_error") is not None:
+                self._result_is_error = bool(e["is_error"])
             if e.get("total_cost_usd") is not None:
                 self.cost_usd = float(e["total_cost_usd"])
             if e.get("num_turns") is not None:
@@ -155,13 +190,26 @@ class UsageParser:
             self.output_tokens += int(u.get("output_tokens") or 0)
             self.cache_read_input_tokens += int(u.get("cached_input_tokens") or 0)
             self.turns = (self.turns or 0) + 1
+        if kind == "turn.completed":
+            self._codex_outcome = "completed"
+        elif kind == "turn.failed":
+            self._codex_outcome = "turn_failed"
+            self._error(e.get("error"))
+        elif kind == "error":
+            self._codex_outcome = "error"
+            self._error(e)
         elif kind == "item.completed":
             item = e.get("item") or {}
             if item.get("type") in CODEX_TOOL_ITEMS:
                 self.tool_calls += 1
         elif isinstance(e.get("msg"), dict):  # older Codex event format
             msg = e["msg"]
-            if msg.get("type") == "token_count":
+            if msg.get("type") == "task_complete":
+                self._codex_outcome = "completed"
+            elif msg.get("type") == "error":
+                self._codex_outcome = "error"
+                self._error(msg)
+            elif msg.get("type") == "token_count":
                 total = (msg.get("info") or {}).get("total_token_usage") or msg
                 self.input_tokens = int(total.get("input_tokens") or 0)
                 self.output_tokens = int(total.get("output_tokens") or 0)
@@ -173,7 +221,32 @@ class UsageParser:
             ):
                 self.tool_calls += 1
 
+    def _error(self, err: Any) -> None:
+        message = err.get("message") if isinstance(err, dict) else err
+        if message and len(self._errors) < 10:
+            self._errors.append(str(message)[:500])
+
     # ---------------------------------------------------------------- output
+    def termination(self) -> dict[str, Any]:
+        """Why the agent stopped: ``{"reason", "incomplete", ...raw fields}``."""
+        if self.fmt == "claude":
+            raw = {
+                "result_subtype": self._result_subtype,
+                "is_error": self._result_is_error,
+                "stop_reason": self._stop_reason,
+            }
+            if self._stop_reason == "max_tokens":
+                reason, incomplete = "max_tokens", True
+            elif not self._have_result:
+                reason, incomplete = "no_result", True
+            elif self._result_is_error or (self._result_subtype or "success") != "success":
+                reason, incomplete = self._result_subtype or "error", True
+            else:
+                reason, incomplete = self._result_subtype or "success", False
+            return {"reason": reason, "incomplete": incomplete, **raw}
+        outcome = self._codex_outcome or "no_turn_completed"
+        return {"reason": outcome, "incomplete": outcome != "completed", "errors": self._errors}
+
     def record(self, provider: str) -> dict[str, Any]:
         """The ``.wcb/usage.json`` content."""
         return {
@@ -187,6 +260,7 @@ class UsageParser:
             "model": self.model,
             "provider": provider,
             "harness": f"wcb.agents.wrap:{self.fmt}",
+            "termination": self.termination(),
         }
 
 
@@ -227,7 +301,9 @@ def main(argv: list[str] | None = None) -> int:
             "first).",
             file=sys.stderr,
         )
-        write_usage(workspace, parser.record(provider))
+        record = parser.record(provider)
+        record["termination"] = {"reason": "not_started", "incomplete": True}
+        write_usage(workspace, record)
         return 127
 
     def forward(signum, _frame):
