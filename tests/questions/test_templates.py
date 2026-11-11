@@ -12,8 +12,10 @@ from wcb.questions.build import build_question, build_questions
 from wcb.questions.templates import (
     QTYPES,
     TEMPLATES,
+    event_groups,
     lower_first,
     since_text,
+    status_change_events,
 )
 from wcb.world.state import state_at
 
@@ -326,7 +328,7 @@ def test_suggested_loops_do_not_drive_status_golds(world_copy):
     w = world_copy.load()
     status = build_one(w, "2027-01-12", "project_status", {"project": "pr-quillon"})
     (latest,) = [r for r in status["gold"]["rubric"] if r["aspect"] == "latest_change"]
-    assert latest["text"] == "I sent Cora the completed security questionnaire"
+    assert latest["text"] == "Quillon phase is now pilot planning"  # project-level only
     recent = [e["event"] for e in status["gold"]["facts"]["recent_events"]]
     assert "e-0060" not in recent and recent[-1] == "e-0032"
     # A change question still lists the suggestion: it is a knowable event on the project.
@@ -356,8 +358,12 @@ def test_accepting_a_suggestion_is_a_status_change(world_copy):
         ]
     )  # fmt: skip
     status = build_one(world_copy.load(), "2027-01-12", "project_status", {"project": "pr-quillon"})
+    # The acceptance is a knowable status change (the judge's facts list it), but the
+    # latest-change rubric item is project-level only, so it does not drive that item.
+    recent = [e["event"] for e in status["gold"]["facts"]["recent_events"]]
+    assert recent[-1] == "e-0061"
     (latest,) = [r for r in status["gold"]["rubric"] if r["aspect"] == "latest_change"]
-    assert latest["text"] == "I agreed to brief the CFO on Quillon pricing"
+    assert latest["text"] == "Quillon phase is now pilot planning"
 
 
 def test_split_and_merge_moves_are_loop_evidence(world_copy):
@@ -416,12 +422,15 @@ def test_worker_taking_over_accepts_second_person_words(world_copy):
         ]
     )  # fmt: skip
     w = world_copy.load()
+    state = state_at(w, "2027-01-12")
     status = build_one(w, "2027-01-12", "project_status", {"project": "pr-quillon"})
-    (latest,) = [r for r in status["gold"]["rubric"] if r["aspect"] == "latest_change"]
-    assert latest["keywords"][0] == ["volume pricing", "pricing"]
-    assert {"ada quist", "ada", "you", "yours", "me"} <= set(latest["keywords"][1])
+    (ev,) = [e for e in status_change_events(w, state, "pr-quillon") if e["id"] == "e-0060"]
+    groups = event_groups(w, state, ev, project="pr-quillon")
+    assert groups[0] == ["volume pricing", "pricing"]
+    assert {"ada quist", "ada", "you", "yours", "me"} <= set(groups[1])
+    item = {"text": ev["summary"], "keywords": groups, "stale": []}
     answer = "Cora handed the Tessellate volume pricing over to you, so it's yours now."
-    assert heuristic_rubric(answer, latest, status["gold"]["facts"]) == "covered"
+    assert heuristic_rubric(answer, item, status["gold"]["facts"]) == "covered"
 
     ledger = build_one(w, "2027-01-12", "project_status", {"project": "pr-ledger"})
     (latest,) = [r for r in ledger["gold"]["rubric"] if r["aspect"] == "latest_change"]

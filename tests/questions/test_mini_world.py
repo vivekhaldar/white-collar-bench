@@ -164,10 +164,12 @@ def test_q006_status_rubric(question):
     assert phase["stale"] == [["vendor"], ["evaluation"]]
     assert not phase["critical"] and phase["weight"] == 1
 
+    # The latest project-level change; loop events (the questionnaire sent later that day)
+    # are left to the loop items. Giving the old phase contradicts it, as it does r2.
     (latest,) = rubric_by_aspect(q, "latest_change")
-    assert latest["text"] == "I sent Cora the completed security questionnaire"
-    assert latest["keywords"][0] == ["security questionnaire", "questionnaire"]
-    assert "sent" in latest["keywords"][1] and latest["support"] == ["em-0005"]
+    assert latest["text"] == "Quillon phase is now pilot planning"
+    assert latest["keywords"] == [["pilot"], ["planning"]]
+    assert latest["stale"] == [["vendor"], ["evaluation"]] and latest["support"] == ["mn-0001"]
 
     (target,) = rubric_by_aspect(q, "target_date")
     assert target["critical"] and target["keywords"] == [sorted(text_variants("2027-02-05"))]
