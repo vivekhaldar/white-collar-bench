@@ -64,6 +64,7 @@ from wcb.runner.workspace import (
     remove_tree,
     restore,
     snapshot,
+    tree_changes,
     tree_diff,
     tree_files,
 )
@@ -779,6 +780,7 @@ class _Episode:
             notes.append("the agent deleted its workspace directory; it was recreated")
         _tidy(ws, notes)
         usage = _collect_usage(ws, sd, notes)
+        termination = _termination(usage, notes, "ingest")
         try:
             for n in ("inbox", ".wcb"):
                 remove_tree(ws / n)
@@ -787,6 +789,8 @@ class _Episode:
                 notes.append(
                     f"session {result.status}; store restored to snapshots/{self.current.name}"
                 )
+            # Before the snapshot: in a Track B seed session it replaces the current one.
+            changes = tree_changes(self.current, ws)
             self._snapshot(date)
         except OSError as e:
             # Something the session left behind cannot be read or deleted (e.g. files owned by
@@ -798,17 +802,22 @@ class _Episode:
                 f"snapshots/{self.current.name}"
             )
             self._reset_workspace(notes)
+            changes = tree_changes(self.current, self.ws)
             self._snapshot(date)
         what = "seed" if seed else date
         suffix = "" if result.ok else f" (session {result.status}; store restored)"
         self._commit(f"wcb: after {what} ingest{suffix}", notes)
 
         record = self._record(result, "ingest", date, None, "agent", usage, notes)
+        _add_termination(record, termination)
+        record["store_changes"] = changes
         self._add_metered(record)
         if seed:
             record["seed_dates"] = list(inbox_dates)
         write_json(sd / "session.json", record)
-        self._report(label, result)
+        self._report(label, result, _incomplete_tag(termination))
+        if result.ok and not any(changes.values()):
+            _log(f"{self.tag} {label}: the session changed nothing in the store")
 
     def _query(self, cp: dict[str, Any], *, oracle: bool) -> None:
         cp_id, date = cp["id"], cp["date"]
@@ -841,6 +850,7 @@ class _Episode:
                 notes.append("the agent deleted its workspace directory")
             _tidy(qws, notes)
             usage = _collect_usage(qws, sd, notes)
+            termination = _termination(usage, notes, "query")
             answers, answers_status = _read_answers(qws, sd, notes)
         finally:
             try:
@@ -856,11 +866,13 @@ class _Episode:
             result, "query", date, cp_id, "oracle" if oracle else "agent", usage, notes
         )
         record["answers"] = {"status": answers_status, "answered": answered, "questions": len(ids)}
+        _add_termination(record, termination)
         self._add_metered(record)
         write_json(sd / "session.json", record)
         extra = f"  answers {answered}/{len(ids)}"
         if answers_status != "ok":
             extra += f" ({answers_status})"
+        extra += _incomplete_tag(termination)
         self._report(f"{cp_id} {'query-oracle' if oracle else 'query'} ({date})", result, extra)
 
     def _execute(
@@ -1018,6 +1030,43 @@ def _collect_usage(workdir: Path, sd: Path, notes: list[str]) -> dict[str, Any] 
         notes.append(".wcb/usage.json is not a JSON object; copied as-is")
         return None
     return data
+
+
+def _termination(
+    usage: dict[str, Any] | None, notes: list[str], phase: str
+) -> dict[str, Any] | None:
+    """The ``termination`` object an agent reported in ``.wcb/usage.json``, or None.
+
+    When it says the agent did not finish normally (``incomplete: true``, e.g. its final
+    response was cut off by an output-token limit), a note says so. Nothing else changes: the
+    session's status, the store and the answers stay as the agent left them.
+    """
+    if not isinstance(usage, dict) or "termination" not in usage:
+        return None
+    t = usage["termination"]
+    if not isinstance(t, dict) or not isinstance(t.get("incomplete", False), bool):
+        notes.append(".wcb/usage.json termination is not a {reason, incomplete} object; ignored")
+        return None
+    if t.get("incomplete"):
+        kept = "its store changes are kept" if phase == "ingest" else "its answers are scored"
+        notes.append(
+            f"the agent reported that it did not finish normally (termination reason "
+            f"{t.get('reason')!r}); {kept} as written"
+        )
+    return t
+
+
+def _add_termination(record: dict[str, Any], termination: dict[str, Any] | None) -> None:
+    if termination is not None:
+        record["termination"] = termination
+        if termination.get("incomplete"):
+            record["incomplete"] = True
+
+
+def _incomplete_tag(termination: dict[str, Any] | None) -> str:
+    if termination is None or not termination.get("incomplete"):
+        return ""
+    return f"  incomplete ({termination.get('reason')})"
 
 
 def _read_answers(workdir: Path, sd: Path, notes: list[str]) -> tuple[dict[str, Any], str]:

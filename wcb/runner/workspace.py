@@ -244,6 +244,29 @@ def tree_diff(a: Path, b: Path, exclude: Iterable[str] = SNAPSHOT_EXCLUDE) -> li
 _CHUNK = 1 << 16
 
 
+def tree_changes(
+    old: Path, new: Path, exclude: Iterable[str] = SNAPSHOT_EXCLUDE
+) -> dict[str, int]:
+    """Count the files and links ``added``, ``modified`` and ``removed`` from ``old`` to ``new``.
+
+    Directories are not counted; a path that changes between file and link counts as modified.
+    Contents are compared as in :func:`tree_diff`.
+    """
+    eo = {k: v for k, v in _entries(Path(old), exclude).items() if v != ("dir",)}
+    en = {k: v for k, v in _entries(Path(new), exclude).items() if v != ("dir",)}
+    modified = sum(
+        1
+        for rel in eo.keys() & en.keys()
+        if eo[rel] != en[rel]
+        or (eo[rel][0] == "file" and not _same_bytes(Path(old) / rel, Path(new) / rel))
+    )
+    return {
+        "added": len(en.keys() - eo.keys()),
+        "modified": modified,
+        "removed": len(eo.keys() - en.keys()),
+    }
+
+
 def _same_bytes(p: Path, q: Path) -> bool:
     """True if the regular files ``p`` and ``q`` hold the same bytes right now.
 
