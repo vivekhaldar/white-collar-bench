@@ -9,18 +9,21 @@ import pytest
 
 from wcb.grade.judge import (
     DEFAULT_LLM_JUDGE,
-    RUBRIC_MIN_FOCUS,
+    PADDING_FOCUS,
+    PADDING_MAX,
     RUBRIC_PROMPT,
     SAME_ITEM_PROMPT,
     SYSTEM_PROMPT,
     HeuristicJudge,
     LLMJudge,
     answer_focus,
+    focused_passages,
     load_cache,
     majority,
     make_judge,
     match_tokens,
     name_tokens,
+    padding_penalty,
     parse_verdict,
     parse_yes_no,
     rubric_prompt,
@@ -281,7 +284,8 @@ def test_rubric_focus_on_topic_answers_are_judged():
         "Quillon is active and in pilot planning; target 5 Feb.",
         "Quillon is on track: Cora still owes Ada the Tessellate volume pricing.",
     ):
-        assert answer_focus(text, QUILLON_FACTS) >= RUBRIC_MIN_FOCUS
+        assert answer_focus(text, QUILLON_FACTS) >= PADDING_FOCUS
+        assert padding_penalty(text, QUILLON_FACTS) == 0
         assert J.rubric(text, STATUS_ITEM, QUILLON_FACTS) == "covered"
 
 
@@ -291,18 +295,144 @@ def test_rubric_focus_generic_lists_cover_nothing():
         "Roles: finance, sales, product, engineering, operations, manager. "
         "Items: ingestion design doc, reconciliation report, sandbox access request."
     )
-    assert answer_focus(stuffed, QUILLON_FACTS) < RUBRIC_MIN_FOCUS
+    assert answer_focus(stuffed, QUILLON_FACTS) < PADDING_FOCUS
+    assert padding_penalty(stuffed, QUILLON_FACTS) == PADDING_MAX
     assert J.rubric(stuffed, STATUS_ITEM, QUILLON_FACTS) == "missing"
     dates = " ".join(f"2027-01-{d:02d}" for d in range(1, 32))
     target = {"text": "Target 2027-02-05", "keywords": [["2027-02-05"]]}
     assert J.rubric(f"Quillon target: {dates} 2027-02-05", target, QUILLON_FACTS) == "missing"
     assert J.rubric("Quillon target: 2027-02-05", target, QUILLON_FACTS) == "covered"
+    # One word per sentence does not escape: a short segment is judged with its neighbours.
+    one_each = "Active. Paused. Done. Cancelled. Dormant. On hold. Blocked. Delivered. Shelved."
+    assert J.rubric(one_each, STATUS_ITEM, QUILLON_FACTS) == "missing"
+
+
+def test_rubric_focus_is_local():
+    # An on-topic passage covers its items even when the rest of the answer is padding, which
+    # the bounded padding penalty charges for instead.
+    honest = "Quillon is active and in pilot planning; Cora still owes Ada the volume pricing."
+    padding = (
+        " Elsewhere: the Ledger close, the GL sandbox, Ben's holiday, the ingestion design doc,"
+        " the reconciliation report, the headcount plan, the forecast and the offsite agenda."
+    )
+    text = honest + padding
+    assert answer_focus(text, QUILLON_FACTS) < PADDING_FOCUS
+    assert J.rubric(text, STATUS_ITEM, QUILLON_FACTS) == "covered"
+    assert 0 < padding_penalty(text, QUILLON_FACTS) <= PADDING_MAX
+    assert len(focused_passages(text, QUILLON_FACTS)) == 1
 
 
 def test_rubric_focus_needs_facts():
     assert answer_focus("anything at all", {}) is None
     assert answer_focus("", QUILLON_FACTS) is None
+    assert padding_penalty("anything at all", {}) == 0
     assert J.rubric("Status: active, paused, done", STATUS_ITEM, {}) == "covered"
+
+
+def test_rubric_lists_are_judged_as_a_whole():
+    # One loop title per line: the list is about the question only if most of it is.
+    item = {"text": "Send Ada Tessellate volume pricing", "keywords": [["volume pricing"]]}
+    honest = "Quillon is active.\n- Cora owes Ada the Tessellate volume pricing\n- Pilot planning"
+    assert J.rubric(honest, item, QUILLON_FACTS) == "covered"
+    dump = "\n".join(
+        ["Approve Ben's GL sandbox access request", "Review Sam Patel's ingestion design doc",
+         "Send Ada the January reconciliation report", "Send Ada Tessellate volume pricing",
+         "Book the offsite venue", "Renew the analytics licence", "Hire a data engineer",
+         "Draft the headcount plan", "Close the December books"]
+    )
+    assert J.rubric(dump, item, QUILLON_FACTS) == "missing"
+
+
+# ---------------------------------------------------------------- issue #9: labelled history
+SCORECARD = {
+    "text": "Scorecard v2 totals: Penmarq 76, Scrivelo 71 (the 78/74 in the 4 March email were v1 totals)",
+    "keywords": [["76"], ["71"]],
+    "stale": [["78"], ["74"]],
+}
+
+
+@pytest.mark.parametrize(
+    "text, verdict",
+    [
+        # The gold text itself, and the same facts told in other orders and words.
+        (SCORECARD["text"], "covered"),
+        ("The 78/74 in the 4 March email were v1 totals; v2 totals are Penmarq 76, Scrivelo 71.",
+         "covered"),
+        ("v1 totals were 78/74. Scorecard v2: Penmarq 76, Scrivelo 71.", "covered"),
+        ("Penmarq 76, Scrivelo 71 on v2 (78 and 74 are superseded v1 totals).", "covered"),
+        ("Penmarq leads Scrivelo 76-71 on scorecard v2.", "covered"),
+        ("Totals moved Scrivelo 78 -> 71 and Penmarq 74 -> 76.", "covered"),
+        ("v2: Penmarq 76, Scrivelo 71. Email totals 78/74 (old v1 weighting).", "covered"),
+        # Negative controls from the issue.
+        ("Scorecard v2 totals: Scrivelo 78, Penmarq 74.", "contradicted"),  # old as current
+        ("The v2 totals are not 76 and 71.", "missing"),  # current values negated
+        ("Scorecard v2 totals: Penmarq 78, Scrivelo 74, not 76/71.", "contradicted"),
+        ("Scorecard v2 totals: Penmarq 76 or 78, Scrivelo 71 or 74.", "contradicted"),  # both
+        ("Scorecard v2 totals: Penmarq 71, Scrivelo 76.", "missing"),  # wrong product
+        ("Scorecard v2: Scrivelo 76, Penmarq 71 (the 78/74 were v1 totals).", "missing"),
+        ("Scrivelo leads Penmarq 76-71 on scorecard v2.", "missing"),
+    ],
+)
+def test_rubric_labelled_history_and_its_controls(text, verdict):
+    assert J.rubric(text, SCORECARD, {}) == verdict
+
+
+@pytest.mark.parametrize(
+    "text, verdict",
+    [
+        ("Target 5 Feb; 29 Jan was the original date.", "covered"),
+        ("Target 22 Jan -> 29 Jan -> 5 Feb.", "covered"),
+        ("Target slipped from 22 Jan to 29 Jan, then 5 Feb.", "covered"),
+        ("Target 5 Feb, replacing the previous 29 Jan date.", "covered"),
+        ("Target 5 Feb. 29 Jan (original) no longer holds.", "covered"),
+        ("Target 29 Jan (moved to 5 Feb).", "covered"),
+        # Not history: the old date stated as the plan, or as the source of a move to it.
+        ("Target 29 Jan, then 5 Feb if the vendor slips.", "contradicted"),
+        ("Target 29 Jan (moved from 5 Feb).", "contradicted"),
+        ("Target 29 Jan and the kickoff was last week; 5 Feb is a fallback.", "contradicted"),
+    ],
+)
+def test_rubric_history_labels_after_the_old_value(text, verdict):
+    assert J.rubric(text, TARGET, {}) == verdict
+
+
+def test_rubric_negated_values_do_not_cover():
+    assert J.rubric("Quillon is not active.", STATUS_ITEM, {}) == "missing"
+    assert J.rubric("Quillon is no longer paused; it is active again.", STATUS_ITEM, {}) == (
+        "covered"
+    )
+    assert J.rubric("Target is not 5 Feb.", TARGET, {}) == "missing"
+    # Only values are negated: an open loop is often described by what has not happened.
+    loop = {"text": "Nadia owes me the synthetic data set", "keywords": [["synthetic data"]]}
+    assert J.rubric("No synthetic data set from Nadia yet.", loop, {}) == "covered"
+
+
+def test_rubric_acronyms_and_shortened_names():
+    role = {
+        "text": "Nadia Jovanovic is Chief Information Security Officer at Office of Civic Technology",
+        "keywords": [["information"], ["security"]],
+    }
+    assert J.rubric("Mostly security work with Nadia (CISO).", role, {}) == "covered"
+    assert J.rubric("Nadia (CIO) owns the platform.", role, {}) == "missing"
+    project = {
+        "text": "Shared project: Work Instructions Tool Selection",
+        "keywords": [["work instructions tool selection", "wits selection"]],
+    }
+    assert J.rubric("On work instructions selection, Kamau reversed the shortlist.", project, {}) == (
+        "covered"
+    )
+    assert J.rubric("On work instructions, Kamau reversed the shortlist.", project, {}) == "missing"
+
+
+def test_rubric_multi_group_items_need_one_sentence():
+    dropped = {
+        "text": "Dropped the Penmarq sandbox trial",
+        "keywords": [["sandbox trial"], ["dropped", "cancelled"]],
+    }
+    assert J.rubric("The Penmarq sandbox trial was dropped.", dropped, {}) == "covered"
+    assert J.rubric(
+        "The Penmarq sandbox trial is still on. Scrivelo dropped its LMS fee.", dropped, {}
+    ) == "missing"
 
 
 def test_rubric_whole_words_and_accents():

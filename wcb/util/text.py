@@ -120,6 +120,110 @@ def framing(norm: str, start: int, end: int | None = None, *, finished: bool = F
     return ""
 
 
+# ---------------------------------------------------------------- superseded values
+# Rubric grading asks a narrower question about a superseded value: is this mention of it
+# labelled as history anywhere around it, not only by the word before it? Answers write
+# "the 78/74 in the 4 March email were v1 totals", "1 Nov -> 12 Nov -> 7 Dec",
+# "29 Jan (original date)" or "moved from 1 Nov to 12 Nov, then 24 Nov, then 7 Dec".
+
+#: Before a superseded value, in its clause, these words label it as history too
+#: ("the original 29 Jan date", "replacing 29 Jan"), besides `HISTORY_MARKERS`.
+HISTORY_LABELS = frozenset(
+    """previous prior original initial initially outdated stale superseded superseding
+    replaced replacing obsolete""".split()
+)
+#: After a superseded value, the first of these in its clause decides: a past-tense verb
+#: makes it history ("78/74 in the email were v1 totals"), a present one does not
+#: ("78/74 are the totals").
+PAST_VERBS = frozenset("was were had".split())
+PRESENT_VERBS = frozenset("is are remains remain stays stay will has have now".split())
+#: Words that end the reach of a verb after a value ("Target 29 Jan and the kickoff was ...").
+COORDINATORS = frozenset(
+    "and but or while whereas because although though so if when until unless".split()
+)
+#: A parenthesis right after a value that opens with one of these labels it as history:
+#: "29 Jan (original date)", "78/74 (superseded)", "29 Jan (now 5 Feb)".
+PAREN_HISTORY_LABELS = HISTORY_LABELS | frozenset(
+    "old earlier former now since".split()
+)
+#: Verbs of a move. "Moved from 1 Nov to 12 Nov, then 24 Nov, then 7 Dec": in a sentence
+#: with one, a value followed by "then" was replaced by what follows.
+MOVE_WORDS = frozenset(
+    """moved move moves slipped slip slips pushed push changed change shifted shift
+    rescheduled postponed delayed went revised""".split()
+)
+#: "29 Jan (moved to 5 Feb)": these, followed by `to`, inside a parenthesis right after a value.
+MOVE_TO_WORDS = MOVE_WORDS | frozenset("replaced updated corrected".split())
+_SENTENCE_BREAKS = frozenset(".!?")
+
+
+def stale_history(norm: str, start: int, end: int) -> bool:
+    """True when the mention `norm[start:end]` of a superseded value is labelled as history.
+
+    Any of these holds (`norm` comes from `normalize_marked`):
+
+    * `framing(..., finished=True)` says 'history': a `HISTORY_MARKERS` word before it in its
+      clause, or a `FINISHED_MARKERS` word within `FINISHED_WINDOW` words after it;
+    * a `HISTORY_LABELS` word comes before it in its clause, with no `CURRENT_MARKERS` word
+      between them ("the original 29 Jan date");
+    * after it, in its clause and before any `COORDINATORS` word, the first verb is a past one
+      (`PAST_VERBS`, not `PRESENT_VERBS`): "the 78/74 in the 4 March email were v1 totals";
+    * an arrow follows it: "1 Nov -> 12 Nov -> 7 Dec";
+    * a parenthesis follows it and opens with a `PAREN_HISTORY_LABELS` word, or with a
+      `MOVE_TO_WORDS` word and then `to`: "29 Jan (original)", "29 Jan (moved to 5 Feb)";
+    * `then` follows it (after an optional comma) in a sentence with a `MOVE_WORDS` word
+      before it: "moved from 1 Nov to 12 Nov, then 24 Nov, then 7 Dec".
+    """
+    if framing(norm, start, end, finished=True) == "history":
+        return True
+    before = marked_tokens(norm[:start])
+    for tok, _, _ in reversed(before):
+        if tok in CLAUSE_BREAKS or tok in CURRENT_MARKERS:
+            break
+        if tok in HISTORY_LABELS:
+            return True
+    after = [t for t, _, _ in marked_tokens(norm[end:])]
+    if after and after[0] in ("->", "=>"):
+        return True
+    if after and after[0] == "(":
+        inside = after[1:4]
+        if inside and inside[0] in PAREN_HISTORY_LABELS:
+            return True
+        if len(inside) >= 2 and inside[0] in MOVE_TO_WORDS and inside[1] == "to":
+            return True
+    for tok in after:
+        if tok in CLAUSE_BREAKS or tok in COORDINATORS:
+            break
+        if tok in PAST_VERBS:
+            return True
+        if tok in PRESENT_VERBS or tok in CURRENT_MARKERS:
+            break
+    rest = after[1:] if after[:1] == [","] else after
+    if rest[:1] == ["then"]:
+        for tok, _, _ in reversed(before):
+            if tok in _SENTENCE_BREAKS:
+                break
+            if tok in MOVE_WORDS:
+                return True
+    return False
+
+
+#: A value after one of these words in its clause is negated ("not 76", "no longer active").
+NEGATORS = frozenset("not no never nor neither isn aren wasn weren without".split())
+
+
+def negated(norm: str, start: int) -> bool:
+    """True when a `NEGATORS` word comes before `norm[start:]` in its clause, with no
+    `CURRENT_MARKERS` word between them: "the totals are not 76 and 71", "not active".
+    `norm` comes from `normalize_marked`."""
+    for tok, _, _ in reversed(marked_tokens(norm[:start])):
+        if tok in CLAUSE_BREAKS or tok in CURRENT_MARKERS:
+            return False
+        if tok in NEGATORS:
+            return True
+    return False
+
+
 def phrase_spans(norm: str, phrase: str) -> list[tuple[int, int]]:
     """Character spans of whole-word occurrences of `phrase` in normalized text `norm`.
 

@@ -29,16 +29,20 @@ from collections import Counter
 from pathlib import Path
 from typing import Any, Protocol
 
-from wcb.questions.rubric import GENERIC_WORDS
+from wcb.questions.rubric import GENERIC_WORDS, STATUS_SYNONYMS
 from wcb.util.dates import DATE_RE, MONTHS, date_mentions, text_variants
 from wcb.util.text import (
+    CLAUSE_BREAKS,
+    NEGATORS,
     STOPWORDS,
     containment,
     contains_phrase,
-    framing,
+    marked_tokens,
+    negated,
     normalize,
     normalize_marked,
     phrase_spans,
+    stale_history,
 )
 
 VERDICTS = ("covered", "missing", "contradicted")
@@ -73,9 +77,29 @@ TERSE_MIN_SHARED = 3
 #: Rubric items without keyword groups count as covered when this share of the item's own
 #: tokens appear in the answer.
 RUBRIC_FALLBACK_CONTAINMENT = 0.6
-#: Rubric focus: an answer covers nothing unless at least this share of its content words and
-#: dates occur in the question's gold `facts` (see `answer_focus`).
-RUBRIC_MIN_FOCUS = 0.5
+#: Rubric locality: an item is covered only inside one passage of the answer
+#: (`focused_passages`): a segment grown with its neighbours to at least this many content
+#: words and dates ...
+RUBRIC_PASSAGE_UNITS = 8
+#: ... of which at least this share occur in the question's gold `facts`, ...
+RUBRIC_PASSAGE_FOCUS = 0.5
+#: ... or more when less than this share of the whole answer does (`passage_focus_needed`).
+RUBRIC_ANSWER_FOCUS = 0.4
+#: Acronyms of names in an item's text ("CISO", "ODS") count as the name when this long
+#: (`expand_acronyms`).
+ACRONYM_MIN = 3
+#: A keyword alternative of at least this many words (not stopwords) also matches with one
+#: inner word left out (`shortened_names`).
+SHORT_NAME_MIN = 4
+#: Padding penalty (`padding_penalty`): an answer whose content words and dates are mostly
+#: not in the question's facts (`answer_focus`) loses up to `PADDING_MAX` of its rubric score:
+#: nothing at `PADDING_FOCUS` or above, rising linearly to `PADDING_MAX` at `PADDING_FLOOR`.
+PADDING_FOCUS = 0.5
+PADDING_FLOOR = 0.2
+PADDING_MAX = 0.25
+#: Rubric attribution: a number or date the item binds to a name ("Penmarq 76") may follow
+#: that name by at most this many words (`value_anchors`, `group_supported`).
+ANCHOR_WINDOW = 3
 #: Words that say what kind of fact a sentence gives rather than which one ("target date",
 #: "owes", "shared project", "he"). They count neither way in `answer_focus`.
 FOCUS_NEUTRAL_WORDS = GENERIC_WORDS | frozenset(
@@ -181,22 +205,29 @@ class HeuristicJudge:
     `rubric` decides, in this order:
 
     * *contradicted* when every stale group has an occurrence presented as current
-      (`stale_presented`). An occurrence is not presented as current when it is framed as
-      history (`wcb.util.text.framing`): after "from", "was", "previously", "no longer",
-      "not" and similar words in its clause, or followed within three words by "finished",
-      "done", "over" and similar words ("moved from 29 Jan", "vendor evaluation is
-      finished"). This holds even when the current value is there too: anywhere for a
-      superseded date ("29 Jan or 5 Feb"), and in the sentence that states the current value
-      for superseded words ("vendor evaluation or pilot planning");
-    * *covered* when every keyword group has at least one alternative in the answer (ISO dates
-      also match their prose forms; alternatives made only of month or weekday names are
-      ignored) and the answer is focused: at least `RUBRIC_MIN_FOCUS` (50%) of its content
-      words and dates occur in the question's `facts` (`answer_focus`), so a generic list of
-      every status, date, role and loop covers nothing;
+      (`stale_presented`). An occurrence is not presented as current when it is labelled as
+      history (`wcb.util.text.stale_history`): after "from", "was", "previously", "original",
+      "not" and similar words in its clause; before a past-tense verb ("the 78/74 in the
+      email were v1 totals"), an arrow ("12 Nov -> 24 Nov -> 7 Dec") or "finished", "done",
+      "superseded" and similar words; or labelled by a parenthesis ("29 Jan (original)").
+      This holds even when the current value is there too: anywhere for a superseded date
+      ("29 Jan or 5 Feb"), and in the sentence that states the current value for superseded
+      words ("vendor evaluation or pilot planning");
+    * *covered* when one segment of the answer (a sentence, or a line of a list;
+      `answer_segments`) has every keyword group (ISO dates also match their prose forms;
+      alternatives made only of month or weekday names are ignored; a long name may drop one
+      inner word; acronyms of names in the item's text count as the name) and that segment's
+      passage is focused (`focused_segments`): enough of its content words and dates occur
+      in the question's `facts`, so a generic list of every status, date, role and loop
+      covers nothing while an on-topic sentence of a chatty answer still counts. A negated
+      value ("not 76", "no longer active") does not count, and neither does a number or date
+      the item binds to one name stated after another of its names ("Scrivelo 76" for
+      "Penmarq 76, Scrivelo 71");
     * *missing* otherwise.
 
     An item without keyword groups is covered when `RUBRIC_FALLBACK_CONTAINMENT` (60%) of its
-    own text's tokens are present (and the answer is focused).
+    own text's tokens are in a focused passage. The answer-wide share of off-topic content is
+    charged separately by `padding_penalty`, which does not depend on the judge.
     """
 
     name = "heuristic"
@@ -327,24 +358,271 @@ def heuristic_rubric(answer_text: str, item: dict, facts: dict | None = None) ->
     """The heuristic rubric rule (see `HeuristicJudge`)."""
     stale = distinctive_groups(item.get("stale") or [])
     groups = distinctive_groups(item.get("keywords") or [])
-    if groups:
-        covered = all(group_matches(answer_text, g) for g in groups)
-    else:
-        need = match_tokens(item.get("text", ""))
-        covered = (
-            bool(need)
-            and containment(need, match_tokens(answer_text)) >= RUBRIC_FALLBACK_CONTAINMENT
-        )
+    anchors = value_anchors(item.get("text", ""), groups)
+    text = expand_acronyms(answer_text, item.get("text", ""))
+    covered = False
+    for seg, passage in focused_segments(text, facts, item):
+        if groups:
+            covered = all(
+                group_supported(seg, g, anchors.get(k), set(anchors.values()))
+                for k, g in enumerate(groups)
+            )
+        else:
+            need = match_tokens(item.get("text", ""))
+            covered = bool(need) and (
+                containment(need, match_tokens(passage)) >= RUBRIC_FALLBACK_CONTAINMENT
+            )
+        if covered:
+            break
     if stale_presented(answer_text, stale, groups if covered else None):
         return "contradicted"
-    if covered:
-        focus = answer_focus(answer_text, facts)
-        if focus is None or focus >= RUBRIC_MIN_FOCUS:
-            return "covered"
-    return "missing"
+    return "covered" if covered else "missing"
+
+
+def answer_segments(text: str | None) -> list[tuple[str, int]]:
+    """An answer as (segment, block) pairs.
+
+    Segments are sentences of prose lines and single lines of lists. A list line starts with a
+    bullet (`-`, `*`, `•`, `1.`) or does not end with `.`, `!` or `?`; consecutive list lines
+    share one block, and every prose sentence is a block of its own. Blocks are what
+    `focused_segments` judges for focus: a list is about the question only as a whole.
+    """
+    out: list[tuple[str, int]] = []
+    block, in_list = -1, False
+    for line in (x.strip() for x in (text or "").splitlines()):
+        if not line:
+            in_list = False
+            continue
+        listed = bool(_BULLET.match(line)) or line[-1] not in ".!?"
+        if listed:
+            if not in_list:
+                block += 1
+            out.append((line, block))
+        else:
+            for sent in (x.strip() for x in _SENTENCE_END.split(line)):
+                if sent:
+                    block += 1
+                    out.append((sent, block))
+        in_list = listed
+    return out
+
+
+def focused_segments(
+    answer_text: str | None, facts: dict | None, item: dict | None = None
+) -> list[tuple[str, str]]:
+    """The segments of an answer that may cover a rubric item, each with its passage.
+
+    A segment's passage is its block (`answer_segments`), grown with neighbouring blocks
+    (next, then previous, alternately) until it holds at least `RUBRIC_PASSAGE_UNITS` content
+    words and dates (`focus_units`) or the answer ends. A segment is kept when the share of
+    its passage's units found in the question's `facts` and the item's own words (its text,
+    keywords and stale values) is at least `passage_focus_needed` (0.5 for an answer that is
+    mostly about the question, more for one that is mostly not), or when that share cannot be
+    measured (no facts, or no units). Returns (segment, passage) pairs in answer order.
+    """
+    segs = answer_segments(answer_text)
+    if not segs:
+        return []
+    ref = fact_units(facts)
+    if ref is not None and item:
+        extra = [item.get("text", "")] + [a for g in [*(item.get("keywords") or []),
+                                                     *(item.get("stale") or [])]
+                                          for a in ([g] if isinstance(g, str) else g)]
+        for s in extra:
+            w, d = focus_units(str(s))
+            ref = (ref[0] | w, ref[1] | d)
+    n_blocks = segs[-1][1] + 1
+    texts = ["\n".join(t for t, b in segs if b == k) for k in range(n_blocks)]
+    units = [focus_units(t) for t in texts]
+
+    def share(words: set[str], days: set[tuple[int, int]]) -> float | None:
+        total = len(words) + len(days)
+        if ref is None or not total:
+            return None
+        return (len(words & ref[0]) + len(days & ref[1])) / total
+
+    all_words = set().union(*(u[0] for u in units))
+    all_days = set().union(*(u[1] for u in units))
+    need = passage_focus_needed(share(all_words, all_days))
+    passages: list[str | None] = []
+    for b in range(n_blocks):
+        lo = hi = b
+        words, days = set(units[b][0]), set(units[b][1])
+        forward = True
+        while len(words) + len(days) < RUBRIC_PASSAGE_UNITS and (lo > 0 or hi < n_blocks - 1):
+            if (forward and hi < n_blocks - 1) or lo == 0:
+                hi += 1
+                words |= units[hi][0]
+                days |= units[hi][1]
+            else:
+                lo -= 1
+                words |= units[lo][0]
+                days |= units[lo][1]
+            forward = not forward
+        f = share(words, days)
+        passages.append("\n".join(texts[lo : hi + 1]) if f is None or f >= need else None)
+    return [(t, passages[b]) for t, b in segs if passages[b] is not None]
+
+
+def focused_passages(answer_text: str | None, facts: dict | None) -> list[str]:
+    """The distinct passages of `focused_segments` (for tests and diagnostics)."""
+    out: list[str] = []
+    for _, p in focused_segments(answer_text, facts):
+        if p not in out:
+            out.append(p)
+    return out
+
+
+def expand_acronyms(answer_text: str, item_text: str) -> str:
+    """The answer with acronyms of names in the item's text spelled out after them.
+
+    A name is a run of at least two capitalized words in `item_text`, possibly joined by
+    `of`, `and`, `for`, `the` or `&` ("Office of Digital Strategy", "Chief Information Security
+    Officer"); its acronym is the initials of the capitalized words (`ODS`, `CISO`), used when
+    it has at least `ACRONYM_MIN` letters. "Nadia (CISO)" becomes "Nadia (CISO Chief Information
+    Security Officer)".
+    """
+    names: dict[str, str] = {}
+    for m in _NAME_RUN.finditer(item_text or ""):
+        words = re.findall(r"[^\W\d_][\w'-]*", m.group(0))
+        caps = [w for w in words if w[:1].isupper()]
+        acro = "".join(w[0] for w in caps).lower()
+        if len(caps) >= 2 and len(acro) >= ACRONYM_MIN:
+            names.setdefault(acro, m.group(0))
+    if not names:
+        return answer_text
+
+    def spell(m: re.Match) -> str:
+        full = names.get(m.group(0).lower())
+        return f"{m.group(0)} {full}" if full else m.group(0)
+
+    return re.sub(rf"\b[A-Za-z]{{{ACRONYM_MIN},}}\b", spell, answer_text or "")
+
+
+def passage_focus_needed(focus: float | None) -> float:
+    """The focus a passage needs to cover rubric items, given the whole answer's focus.
+
+    `RUBRIC_PASSAGE_FOCUS` (0.5) when the answer's focus (`answer_focus`) is at least
+    `RUBRIC_ANSWER_FOCUS` (0.4) or cannot be measured, rising linearly to 1 as the answer's
+    focus falls to 0. A list of everything in the store names the question's own loops and
+    people too, in passages that look on topic; in an answer that is mostly about other things
+    such a passage must be nearly all on topic to count. There is no cliff: a focused passage
+    of a chatty answer still counts.
+    """
+    if focus is None or focus >= RUBRIC_ANSWER_FOCUS:
+        return RUBRIC_PASSAGE_FOCUS
+    return RUBRIC_PASSAGE_FOCUS + (1 - RUBRIC_PASSAGE_FOCUS) * (
+        (RUBRIC_ANSWER_FOCUS - focus) / RUBRIC_ANSWER_FOCUS
+    )
+
+
+def fact_units(facts: dict | None) -> tuple[set[str], set[tuple[int, int]]] | None:
+    """The content words and dates of every value in `facts` (`focus_units`); None when
+    there are none."""
+    words: set[str] = set()
+    days: set[tuple[int, int]] = set()
+    for s in _fact_strings(facts or {}):
+        w, d = focus_units(s)
+        words |= w
+        days |= d
+    return (words, days) if words or days else None
+
+
+def value_group(group: list[str]) -> bool:
+    """A keyword group for a value that can be negated: a date, a number or a project status."""
+    alts = [a for a in group if isinstance(a, str)]
+    return (
+        is_date_group(alts)
+        or all(_NUMBER.match(a.strip()) for a in alts)
+        or any(normalize(a) in STATUS_WORDS for a in alts)
+    )
+
+
+def value_anchors(item_text: str, groups: list[list[str]]) -> dict[int, str]:
+    """For number and date groups, the name an item's text binds the value to.
+
+    "Scorecard v2 totals: Penmarq 76, Scrivelo 71" binds 76 to Penmarq and 71 to Scrivelo: a
+    name (`name_tokens`, without month and weekday names) at most `ANCHOR_WINDOW` words before
+    the value in its clause, the nearest one. Returns {group index: name token}.
+    """
+    names = name_tokens(item_text) - CALENDAR_WORDS
+    if not names:
+        return {}
+    norm = normalize_marked(item_text)
+    out: dict[int, str] = {}
+    for k, group in enumerate(groups):
+        if not (is_date_group(group) or all(_NUMBER.match(a.strip()) for a in group)):
+            continue
+        for alt in group:
+            for v in phrase_variants(alt):
+                for a, _ in mention_spans(norm, v):
+                    near = _names_before(norm, a, names)
+                    if near:
+                        out.setdefault(k, near[0])
+    return out
+
+
+def _names_before(norm: str, start: int, names: set[str]) -> list[str]:
+    """Which of `names` occur among the `ANCHOR_WINDOW` words before `start` in its clause,
+    nearest first."""
+    out = []
+    for tok, _, _ in list(reversed(marked_tokens(norm[:start])))[:ANCHOR_WINDOW]:
+        if tok in CLAUSE_BREAKS:
+            break
+        if tok in names:
+            out.append(tok)
+    return out
+
+
+def group_supported(text: str, group: list[str], anchor: str | None = None,
+                    anchors: set[str] | None = None) -> bool:
+    """True if some alternative of `group` occurs in `text` and that occurrence counts.
+
+    An occurrence of a value (`value_group`: a date, a number or a project status) does not
+    count when it is negated ("not 76", "no longer active", `wcb.util.text.negated`). When the
+    item binds the value to a name (`anchor`, see `value_anchors`), an occurrence does not
+    count either when another of the item's names (`anchors`), and not `anchor`, is among the
+    `ANCHOR_WINDOW` words before it in its clause ("Scrivelo 76" for "Penmarq 76"; "Penmarq
+    leads Scrivelo 76-71" is fine).
+    """
+    norm = normalize_marked(text)
+    check_negation = value_group(group)
+    others = (anchors or set()) - {anchor} if anchor else set()
+    for alt in group:
+        alt_negates = bool(set(_WORD.findall(normalize(alt))) & NEGATORS)
+        for v in [*phrase_variants(alt), *shortened_names(alt)]:
+            for a, _ in mention_spans(norm, v):
+                if check_negation and not alt_negates and negated(norm, a):
+                    continue
+                if others:
+                    near = _names_before(norm, a, others | {anchor})
+                    if near and anchor not in near:
+                        continue
+                return True
+    return False
+
+
+def shortened_names(phrase: str) -> list[str]:
+    """A long name with one inner word left out: "work instructions selection" for "work
+    instructions tool selection". Only for phrases of at least `SHORT_NAME_MIN` words that
+    are not stopwords; the first and last word always stay."""
+    words = _WORD.findall(normalize(phrase))
+    content = [i for i, w in enumerate(words) if w not in STOPWORDS]
+    if len(content) < SHORT_NAME_MIN:
+        return []
+    inner = [i for i in content if content[0] < i < content[-1]]
+    return [" ".join(w for k, w in enumerate(words) if k != i) for i in inner]
 
 
 _SENTENCE_END = re.compile(r"(?<=[.!?])\s+|\n+")
+_BULLET = re.compile(r"^(?:[-*\u2022]|\d+[.)])\s")
+_NAME_RUN = re.compile(
+    r"[A-Z][\w'-]*(?:\s+(?:(?:of|and|for|the|&)\s+)?[A-Z][\w'-]*)+"
+)
+_SPAN_BREAKS = frozenset(".,;:()[]!?>")
+_NUMBER = re.compile(r"^[$€£]?-?\d[\d,]*(\.\d+)?%?$")
+#: Every project status word (`STATUS_SYNONYMS`); a group with one of them can be negated.
+STATUS_WORDS = frozenset(normalize(w) for ws in STATUS_SYNONYMS.values() for w in ws)
 
 
 def stale_presented(text: str, stale: list, current: list | None) -> bool:
@@ -382,11 +660,22 @@ def group_asserted(text: str, group: list[str] | str) -> bool:
     alts = [group] if isinstance(group, str) else list(group or [])
     norm = normalize_marked(text)
     return any(
-        framing(norm, a, b, finished=True) != "history"
+        not stale_history(norm, a, b)
         for alt in alts
         for v in phrase_variants(alt)
-        for a, b in phrase_spans(norm, v)
+        for a, b in mention_spans(norm, v)
     )
+
+
+def mention_spans(norm: str, phrase: str) -> list[tuple[int, int]]:
+    """`phrase_spans`, without matches that run across an arrow or clause punctuation the
+    phrase does not have: in "22 Mar -> 29 Mar" there is no "Mar 29"."""
+    own = set(phrase)
+    return [
+        (a, b)
+        for a, b in phrase_spans(norm, phrase)
+        if not any(c in _SPAN_BREAKS and c not in own for c in norm[a:b])
+    ]
 
 
 _ORDINAL = re.compile(r"^\d+(st|nd|rd|th)?$")
@@ -445,6 +734,22 @@ def answer_focus(answer_text: str, facts: dict | None) -> float | None:
     if not total:
         return None
     return (len(words & ref_words) + len(days & ref_days)) / total
+
+
+def padding_penalty(answer_text: str, facts: dict | None) -> float:
+    """What a status or brief answer loses for content that is not about the question.
+
+    Item coverage is local (`focused_passages`), so padding an answer with every status, loop
+    and date of the world covers nothing new, but it would cost nothing either. This bounded
+    penalty makes it cost: 0 when `answer_focus` is at least `PADDING_FOCUS` (or cannot be
+    measured), rising linearly to `PADDING_MAX` at `PADDING_FLOOR` and below. It is
+    subtracted from the rubric score (floored at 0) and does not depend on the judge.
+    """
+    focus = answer_focus(answer_text, facts)
+    if focus is None or focus >= PADDING_FOCUS:
+        return 0.0
+    share = min(1.0, (PADDING_FOCUS - focus) / (PADDING_FOCUS - PADDING_FLOOR))
+    return PADDING_MAX * share
 
 
 # ---------------------------------------------------------------- LLM judge
