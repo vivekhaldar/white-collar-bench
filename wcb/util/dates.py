@@ -5,7 +5,14 @@ from __future__ import annotations
 import datetime as dt
 import re
 
-from wcb.util.text import framing, normalize_marked
+from wcb.util.text import (
+    CLAUSE_BREAKS,
+    CURRENT_MARKERS,
+    HISTORY_MARKERS,
+    framing,
+    marked_tokens,
+    normalize_marked,
+)
 
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
@@ -197,29 +204,10 @@ def normalize_date_text(
     if s is None:
         return None
     norm = normalize_marked(str(s))
-    mentions = date_mentions(norm)
-    taken = [(a, b) for a, b, *_ in mentions]
-    lone = {
-        int(m[1])
-        for m in _LONE_YEAR.finditer(norm)
-        if not any(a <= m.start() < b for a, b in taken)
-    }
-    text_year = next(iter(lone)) if len(lone) == 1 else None
     current: list[str] = []
     marked: list[str] = []
-    prev_end = 0
-    for start, end, y, mo, d in mentions:
-        role = framing(norm[prev_end:end], start - prev_end)
-        prev_end = end
-        if y is None:
-            y = text_year or _year_for(mo, d, today=today, default_year=default_year)
-        if y is None:
-            continue
-        try:
-            iso = dt.date(y, mo, d).isoformat()
-        except ValueError:
-            continue
-        if role == "history":
+    for _, _, iso, role in _resolved_mentions(norm, today=today, default_year=default_year):
+        if iso is None or role == "history":
             continue
         current.append(iso)
         if role == "current":
@@ -229,3 +217,110 @@ def normalize_date_text(
     if len(set(marked)) == 1:
         return marked[0]
     return None
+
+
+def _resolved_mentions(
+    norm: str, *, today: str | None, default_year: int | None
+) -> list[tuple[int, int, str | None, str]]:
+    """`date_mentions` of normalized text as (start, end, ISO date or None, framing).
+
+    The year rules are those of `normalize_date_text`. The date is None when the mention has
+    no year available or is impossible. The framing is that of `wcb.util.text.framing`,
+    looked at from the end of the previous mention.
+    """
+    mentions = date_mentions(norm)
+    taken = [(a, b) for a, b, *_ in mentions]
+    lone = {
+        int(m[1])
+        for m in _LONE_YEAR.finditer(norm)
+        if not any(a <= m.start() < b for a, b in taken)
+    }
+    text_year = next(iter(lone)) if len(lone) == 1 else None
+    out: list[tuple[int, int, str | None, str]] = []
+    prev_end = 0
+    for start, end, y, mo, d in mentions:
+        role = framing(norm[prev_end:end], start - prev_end)
+        prev_end = end
+        if y is None:
+            y = text_year or _year_for(mo, d, today=today, default_year=default_year)
+        iso = None
+        if y is not None:
+            try:
+                iso = dt.date(y, mo, d).isoformat()
+            except ValueError:
+                iso = None
+        out.append((start, end, iso, role))
+    return out
+
+
+_WEEKDAYS = (
+    "monday tuesday wednesday thursday friday saturday sunday "
+    "mon tue tues wed weds thu thur thurs fri sat sun"
+).split()
+#: What may come before the date a value leads with: "by" or "due", then a weekday.
+_LEAD_PREFIX = re.compile(
+    rf"^\s*(?:(?:due|by)\s+)?(?:(?:{'|'.join(sorted(_WEEKDAYS, key=len, reverse=True))})"
+    r"\b\.?,?\s*)?$"
+)
+#: What may follow the date a value leads with: the end, or punctuation that sets off the rest
+#: ("2027-02-05 (moved from 29 Jan)", "Fri 5 Feb - Cora confirmed", "5 Feb; ...").
+_LEAD_END = re.compile(r"\s*(?:$|[(\[;:,.!?]|-(?!>))")
+#: Dashes that set off the rest of a value; `normalize` would drop them.
+_DASHES = ("—", "–", "―", "‒")
+#: Markers that restate a date as the current one, unlike a bare "to" ("sent it to Jalen on").
+_RESTATED_CURRENT = frozenset({"now", "currently", "new", "->", "=>"})
+
+
+def leading_date(
+    s: str | None, *, default_year: int | None = None, today: str | None = None
+) -> str | None:
+    """The date a free-text value leads with, as 'YYYY-MM-DD'; None if it leads with none.
+
+    A value leads with a date when it starts with one (in any form `date_mentions` knows,
+    optionally after "by" or "due" and a weekday: "2027-02-05", "Fri 5 Feb 2027", "By Tue 9
+    November") and the date is the whole value or is set off from the rest by punctuation
+    or a dash: "2027-02-05 (moved from 29 Jan on 12 Jan)". That date is the answer and the
+    rest is context, so other dates in the rest (an assignment or completion date, a
+    superseded target) do not make the value ambiguous. Year rules are those of
+    `normalize_date_text`.
+
+    There is no leading date, so the caller should read the whole text instead, when:
+
+    * the leading date is followed straight away by a different one, as in a list
+      ("Jan 29, Feb 5");
+    * the rest gives a different date as the current one with "now", "currently", "new" or
+      an arrow ("29 Jan (now 5 Feb)");
+    * the leading date is impossible or has no year available.
+
+    Hedge words are not checked here; see `wcb.grade.answers.grade_point`.
+    """
+    if s is None:
+        return None
+    text = str(s)
+    for dash in _DASHES:
+        text = text.replace(dash, " - ")
+    norm = normalize_marked(text)
+    mentions = _resolved_mentions(norm, today=today, default_year=default_year)
+    if not mentions:
+        return None
+    start, end, lead, _ = mentions[0]
+    if lead is None or not _LEAD_PREFIX.match(norm[:start]) or not _LEAD_END.match(norm, end):
+        return None
+    if len(mentions) > 1:
+        nxt_start, _, nxt, _ = mentions[1]
+        if nxt != lead and re.fullmatch(r"[\s(\[;:,.!?-]*", norm[end:nxt_start]):
+            return None  # "Jan 29, Feb 5": a list of dates
+    for m_start, _, iso, _ in mentions[1:]:
+        if iso not in (None, lead) and _restated_as_current(norm, m_start):
+            return None
+    return lead
+
+
+def _restated_as_current(norm: str, start: int) -> bool:
+    """True if the nearest marker before `start`, in its clause, is in `_RESTATED_CURRENT`."""
+    for tok, _, _ in reversed(marked_tokens(norm[:start])):
+        if tok in CLAUSE_BREAKS:
+            return False
+        if tok in HISTORY_MARKERS or tok in CURRENT_MARKERS:
+            return tok in _RESTATED_CURRENT
+    return False
