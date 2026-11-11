@@ -30,13 +30,13 @@ def _adapter_doc_prompts() -> dict[str, str]:
 
 def test_prompts_match_docs_verbatim():
     # docs/scoring.md lists, in order: Track A ingestion and query, then Track B seed
-    # ingestion, ingestion and query. Its query prompts predate the `value`/`note` sentence
-    # (docs/scoring.md is updated separately), so only its ingestion prompts are compared here;
-    # every prompt is compared with docs/adapters.md below.
-    ingest_a, _query_a, seed_b, ingest_b, _query_b = _doc_prompts()
+    # ingestion, ingestion and query.
+    ingest_a, query_a, seed_b, ingest_b, query_b = _doc_prompts()
     assert prompts.INGEST_A == ingest_a
+    assert prompts.QUERY_A == query_a
     assert prompts.SEED_B == seed_b
     assert prompts.INGEST_B == ingest_b
+    assert prompts.QUERY_B == query_b
 
 
 def test_prompts_match_adapter_docs_verbatim():

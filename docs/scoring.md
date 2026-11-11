@@ -81,7 +81,7 @@ Rules:
 
 **Query:**
 
-> Today is {date}. Answer every question in `.wcb/questions.json` using the store. Write `.wcb/answers.json` following `.wcb/answer-schema.json`. Cite sources. Abstain when the store does not support an answer. Do not modify the store.
+> Today is {date}. Answer every question in `.wcb/questions.json` using the store. Write `.wcb/answers.json` following `.wcb/answer-schema.json`. For point answers, put only the answer in `value` and any context in `note`. Cite sources. Abstain when the store does not support an answer. Do not modify the store.
 
 In Track B, `CONTRACT.md` is replaced by a one-paragraph goal statement, `GOALS.md` (from [`contract/GOALS-TRACK-B.md`](../contract/GOALS-TRACK-B.md)), and the prompts refer to "your files" instead of "the store":
 
@@ -95,7 +95,7 @@ In Track B, `CONTRACT.md` is replaced by a one-paragraph goal statement, `GOALS.
 
 **Track B query:**
 
-> Today is {date}. Answer every question in `.wcb/questions.json` using your files. Write `.wcb/answers.json` following `.wcb/answer-schema.json`. Cite sources. Abstain when your files do not support an answer. Do not modify your files.
+> Today is {date}. Answer every question in `.wcb/questions.json` using your files. Write `.wcb/answers.json` following `.wcb/answer-schema.json`. For point answers, put only the answer in `value` and any context in `note`. Cite sources. Abstain when your files do not support an answer. Do not modify your files.
 
 The texts live in [`wcb/runner/prompts.py`](../wcb/runner/prompts.py).
 
