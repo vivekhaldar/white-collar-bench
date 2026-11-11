@@ -129,11 +129,11 @@ stdin is empty (`/dev/null`). An agent that waits for interactive input or appro
 
 > Today is 2027-03-01. New inputs are in `inbox/2027-03-01/` (see `manifest.json`). Incorporate them into the store following `CONTRACT.md`. Inputs will not be available after this session.
 
-**Query session.** The workspace is a throwaway copy of the store, with its git history, plus `.wcb/questions.json` and `.wcb/answer-schema.json`. Store files are read-only. The agent writes `.wcb/answers.json`. Check the format with `wcb validate answers answers.json --questions questions.json`.
+**Query session.** The workspace is a throwaway copy of the store, with its git history, plus `.wcb/questions.json` and `.wcb/answer-schema.json`. Store files are read-only. The agent writes `.wcb/answers.json`. A point answer's `value` holds only the answer (a role, a date, a name); any explanation goes in its optional `note`, which is not graded ([formats §4](formats.md#4-answers-wcbanswersjson)). Check the format with `wcb validate answers answers.json --questions questions.json`.
 
 **Usage.** In any session the agent may write `.wcb/usage.json` with `input_tokens`, `output_tokens`, `cost_usd`, `tool_calls` and `model`. The runner copies it into the session's log directory and `session.json`. The runner removes `.wcb/` and `inbox/` after every session.
 
-Prompts are fixed benchmark text, listed in [scoring](scoring.md#standard-prompts) and `wcb/runner/prompts.py`. Your adapter may wrap them in its own system prompt, but must not add knowledge about any world.
+Prompts are fixed benchmark text, listed in [adapters](adapters.md#standard-prompts) and `wcb/runner/prompts.py`. Your adapter may wrap them in its own system prompt, but must not add knowledge about any world.
 
 ## 5. Run
 

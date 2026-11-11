@@ -1,4 +1,4 @@
-"""Standard session prompts (docs/scoring.md, "Standard prompts").
+"""Standard session prompts (docs/adapters.md and docs/scoring.md, "Standard prompts").
 
 The runner gives the agent exactly one of these texts per session, with the simulated date
 filled in. They are fixed benchmark text: they contain no knowledge about any particular world,
@@ -23,14 +23,16 @@ INGEST_A = (
     "Incorporate them into the store following `CONTRACT.md`. "
     "Inputs will not be available after this session."
 )
-"""Track A ingestion prompt, verbatim from docs/scoring.md."""
+"""Track A ingestion prompt, verbatim from docs/adapters.md and docs/scoring.md."""
 
 QUERY_A = (
     "Today is {date}. Answer every question in `.wcb/questions.json` using the store. "
-    "Write `.wcb/answers.json` following `.wcb/answer-schema.json`. Cite sources. "
+    "Write `.wcb/answers.json` following `.wcb/answer-schema.json`. "
+    "For point answers, put only the answer in `value` and any context in `note`. "
+    "Cite sources. "
     "Abstain when the store does not support an answer. Do not modify the store."
 )
-"""Track A query prompt, verbatim from docs/scoring.md. Also used for oracle-store sessions."""
+"""Track A query prompt, verbatim from docs/adapters.md. Also used for oracle-store sessions."""
 
 INGEST_B = (
     "Today is {date}. New inputs are in `inbox/{date}/` (see `manifest.json`). "
@@ -50,7 +52,9 @@ SEED_B = (
 
 QUERY_B = (
     "Today is {date}. Answer every question in `.wcb/questions.json` using your files. "
-    "Write `.wcb/answers.json` following `.wcb/answer-schema.json`. Cite sources. "
+    "Write `.wcb/answers.json` following `.wcb/answer-schema.json`. "
+    "For point answers, put only the answer in `value` and any context in `note`. "
+    "Cite sources. "
     "Abstain when your files do not support an answer. Do not modify your files."
 )
 """Track B query prompt: the Track A text with "your files" in place of "the store"."""

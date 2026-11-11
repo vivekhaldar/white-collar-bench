@@ -148,7 +148,7 @@ The workspace is a throwaway copy of the store (with its git history) plus:
 .wcb/answer-schema.json  the JSON Schema for answers
 ```
 
-Store files are read-only. The agent writes `.wcb/answers.json`, a JSON object mapping each question ID to an answer whose `type` equals the question's type ([formats §4](formats.md#4-answers-wcbanswersjson), [example](../contract/answers/example.answers.json)). Answers that fail the schema score 0. Abstain (`{"type": ..., "abstain": true}`) when the store does not support an answer. Check an answers file with:
+Store files are read-only. The agent writes `.wcb/answers.json`, a JSON object mapping each question ID to an answer whose `type` equals the question's type ([formats §4](formats.md#4-answers-wcbanswersjson), [example](../contract/answers/example.answers.json)). Answers that fail the schema score 0. A point answer's `value` is the bare answer only (`"Privacy Officer"`, `"2027-11-18"`); put any context in its optional `note`, which is not graded. Abstain (`{"type": ..., "abstain": true}`) when the store does not support an answer. Check an answers file with:
 
 ```bash
 wcb validate answers answers.json --questions questions.json
@@ -161,10 +161,10 @@ The prompt is fixed benchmark text, defined in [`wcb/runner/prompts.py`](../wcb/
 | Session | Prompt |
 |---|---|
 | Track A ingestion | Today is {date}. New inputs are in `inbox/{date}/` (see `manifest.json`). Incorporate them into the store following `CONTRACT.md`. Inputs will not be available after this session. |
-| Track A query (also oracle-store queries) | Today is {date}. Answer every question in `.wcb/questions.json` using the store. Write `.wcb/answers.json` following `.wcb/answer-schema.json`. Cite sources. Abstain when the store does not support an answer. Do not modify the store. |
+| Track A query (also oracle-store queries) | Today is {date}. Answer every question in `.wcb/questions.json` using the store. Write `.wcb/answers.json` following `.wcb/answer-schema.json`. For point answers, put only the answer in `value` and any context in `note`. Cite sources. Abstain when the store does not support an answer. Do not modify the store. |
 | Track B ingestion | Today is {date}. New inputs are in `inbox/{date}/` (see `manifest.json`). Incorporate them into your files following `GOALS.md`. Inputs will not be available after this session. |
 | Track B seed ingestion | Today is {date}. Your inputs so far, up to and including today, are in `inbox/<d1>/`, ... and `inbox/<dn>/`, one directory per date (each has a `manifest.json`). Incorporate them into your files following `GOALS.md`. Inputs will not be available after this session. |
-| Track B query | Today is {date}. Answer every question in `.wcb/questions.json` using your files. Write `.wcb/answers.json` following `.wcb/answer-schema.json`. Cite sources. Abstain when your files do not support an answer. Do not modify your files. |
+| Track B query | Today is {date}. Answer every question in `.wcb/questions.json` using your files. Write `.wcb/answers.json` following `.wcb/answer-schema.json`. For point answers, put only the answer in `value` and any context in `note`. Cite sources. Abstain when your files do not support an answer. Do not modify your files. |
 
 Pass the prompt to your agent unchanged, via `{prompt_text}`, `{prompt}` or `$WCB_PROMPT_FILE`. You may wrap it in your own **generic** system prompt.
 

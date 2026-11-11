@@ -348,14 +348,16 @@ A JSON object mapping question IDs to answers; see [`contract/answers/answers.sc
 
 | Type | Fields (besides `type`, `abstain`) |
 |---|---|
-| point | `value`, `cites` |
+| point | `value`, `note`, `cites` |
 | list | `items: [{text, counterparty, direction, status, due, cites}]` |
 | status, brief | `summary`, `claims: [{text, cites}]` |
 | change | `items: [{text, date, cites}]` |
 | temporal | `date`, `text`, `cites` |
 | priority | `items: [{text, due, why, cites}]`, most important first |
 
-`direction` is `i_owe`, `owed_to_me` or `other`. Grading reads only the fields listed here; matching items to gold uses `text`, `counterparty` and `cites`, and extra fields are ignored. `cites` holds artifact IDs and, in Track A, store record IDs such as `loops/send-capacity-model`. A store record counts as a valid citation only when its text cites one of the question's supporting artifacts, and `people/me` never does ([scoring](scoring.md#per-question-grading)). Answers that fail validation score 0, and so does a temporal `date` that fits the pattern but is not a calendar date (`2027-02-30`).
+A point `value` is the bare answer only: a role (`"Privacy Officer"`), a date (`"2027-11-18"`), a name, a phase or a number, with no explanation. The point grader allows only a few words beyond the answer, so put any context in the optional `note`, which is free text and never graded.
+
+`direction` is `i_owe`, `owed_to_me` or `other`. Grading reads only the fields listed here (except `note`); matching items to gold uses `text`, `counterparty` and `cites`, and extra fields are ignored. `cites` holds artifact IDs and, in Track A, store record IDs such as `loops/send-capacity-model`. A store record counts as a valid citation only when its text cites one of the question's supporting artifacts, and `people/me` never does ([scoring](scoring.md#per-question-grading)). Answers that fail validation score 0, and so does a temporal `date` that fits the pattern but is not a calendar date (`2027-02-30`).
 
 ## 5. Adapter: `adapter.yaml`
 
