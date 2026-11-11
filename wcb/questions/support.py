@@ -32,9 +32,10 @@ so the artifact that introduced a person also supports their role.
 - *point* and *temporal* questions are unchanged: their support is the evidence for the one
   value asked, and earlier or later values on the same thread are not that evidence.
 
-Every item keeps what the template gave it. A list, change or priority question's support is
-its old support plus the support of its items (for priority, the worker's loops: never the
-distractors). Supports stay in delivery order (`support_union`).
+Every item keeps what the template gave it, in its order, followed by the added artifacts in
+delivery order. A list, change or priority question's support is its old support plus the
+support of its items (for priority, the worker's loops: never the distractors), in delivery
+order (`support_union`).
 """
 
 from __future__ import annotations
@@ -150,7 +151,8 @@ def _widen_item(item: dict, idx: ThreadIndex) -> dict:
     if not isinstance(item, dict):
         return item
     extra = idx.loop(item.get("loop")) if item.get("loop") else idx.event_onward(item.get("event"))
-    return {**item, "support": support_union(idx.state, item.get("support") or [], extra)}
+    have = list(item.get("support") or [])
+    return {**item, "support": have + [a for a in extra if a not in have]}
 
 
 def _facts_support(facts: dict, idx: ThreadIndex) -> list[list[str]]:
