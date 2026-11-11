@@ -399,7 +399,7 @@
   template: project_attr
   params:
     project: pr-bed-management-tool-selection
-    attribute: owner
+    attribute: phase
   challenges: []
 - id: q-049
   checkpoint: cp3
@@ -431,7 +431,7 @@
   template: project_attr
   params:
     project: pr-redridge-referral-triage-discovery
-    attribute: phase
+    attribute: owner
     name_form: RRTD discovery
   challenges:
   - alias

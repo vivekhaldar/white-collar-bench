@@ -295,8 +295,8 @@
   checkpoint: cp3
   template: project_attr
   params:
-    project: pr-glencombe-partnership
-    attribute: owner
+    project: pr-fennel-operating-model-review
+    attribute: phase
   challenges: []
 - id: q-037
   checkpoint: cp3
@@ -324,7 +324,7 @@
   checkpoint: cp3
   template: event_date
   params:
-    event: e-0256
+    event: e-0257
   text: When was "Send Aiko the Friday status note for w/e 26 February" completed?
   challenges:
   - duplicate_signal

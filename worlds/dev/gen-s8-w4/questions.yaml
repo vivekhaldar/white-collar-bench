@@ -187,8 +187,8 @@
   checkpoint: cp2
   template: project_attr
   params:
-    project: pr-galix-scrap-analysis-diligence
-    attribute: owner
+    project: pr-fulmar
+    attribute: phase
   challenges: []
 - id: q-022
   checkpoint: cp2
@@ -242,8 +242,8 @@
   checkpoint: cp2
   template: project_attr
   params:
-    project: pr-wagtail-operating-model-review
-    attribute: owner
+    project: pr-wagtail
+    attribute: sponsor
   challenges: []
 - id: q-029
   checkpoint: cp2
@@ -521,7 +521,7 @@
   template: project_attr
   params:
     project: pr-wagtail
-    attribute: phase
+    attribute: blocker
     name_form: Wagtail platform
   challenges:
   - alias
@@ -646,7 +646,7 @@
   checkpoint: cp5
   template: event_date
   params:
-    event: e-0307
+    event: e-0308
   text: When was "Walk Ottavio through the Fulmar budget justification" completed?
   challenges:
   - unobservable
@@ -730,7 +730,7 @@
   checkpoint: cp6
   template: event_date
   params:
-    event: e-0321
+    event: e-0323
   text: When was "Send Adwoa the Fulmar sensor tag list" completed?
   challenges: []
 - id: q-084
@@ -746,7 +746,7 @@
   template: project_attr
   params:
     project: pr-operator-ai-basics-workshop
-    attribute: owner
+    attribute: sponsor
     name_form: the workshop
   challenges:
   - alias
@@ -771,7 +771,7 @@
   template: project_attr
   params:
     project: pr-sandfield-changeover-planning-idea
-    attribute: phase
+    attribute: sponsor
   challenges: []
 - id: q-089
   checkpoint: cp6
@@ -848,7 +848,7 @@
   checkpoint: cp7
   template: event_date
   params:
-    event: e-0245
+    event: e-0246
   text: When was "Review Ottavio's Fulmar vendor comparison" completed?
   challenges:
   - duplicate_signal
@@ -863,8 +863,8 @@
   checkpoint: cp7
   template: project_attr
   params:
-    project: pr-sandfield-changeover-planning-idea
-    attribute: sponsor
+    project: pr-wagtail
+    attribute: owner
   challenges: []
 - id: q-099
   checkpoint: cp7
@@ -981,7 +981,7 @@
   checkpoint: cp8
   template: event_date
   params:
-    event: e-0332
+    event: e-0334
   text: When was Sandfield Changeover Planning Idea folded into Iselmoor Responsible AI Use Framework?
   challenges:
   - restructuring
@@ -998,7 +998,7 @@
   template: project_attr
   params:
     project: pr-sandfield-changeover-planning-idea
-    attribute: owner
+    attribute: phase
   challenges: []
 - id: q-114
   checkpoint: cp8
@@ -1025,7 +1025,7 @@
   checkpoint: cp8
   template: event_date
   params:
-    event: e-0367
+    event: e-0370
   text: When was "Send Amira the Fulmar PLC export" completed?
   challenges:
   - batch_catchup
@@ -1041,14 +1041,14 @@
   template: project_attr
   params:
     project: pr-operator-ai-basics-peer-network
-    attribute: owner
+    attribute: sponsor
   challenges:
   - new_entity
 - id: q-120
   checkpoint: cp8
   template: event_date
   params:
-    event: e-0375
+    event: e-0378
   text: When was "Walk Tane through the safety reporting discovery RACI chart" completed?
   challenges:
   - unobservable
@@ -1120,9 +1120,9 @@
   checkpoint: cp9
   template: project_attr
   params:
-    project: pr-predictive-maintenance-input-round
-    attribute: sponsor
-    name_form: the predictive maintenance input
+    project: pr-production-scheduling-learning-series
+    attribute: phase
+    name_form: the learning series
   challenges:
   - alias
 - id: q-128
@@ -1143,7 +1143,7 @@
   checkpoint: cp9
   template: event_date
   params:
-    event: e-0304
+    event: e-0305
   text: When was "Send Amira the safety reporting discovery findings summary" completed?
   challenges:
   - duplicate_signal
@@ -1153,8 +1153,10 @@
   template: project_attr
   params:
     project: pr-morcliff-tooling-wear-discovery
-    attribute: phase
-  challenges: []
+    attribute: sponsor
+  challenges:
+  - new_entity
+  - restructuring
 - id: q-132
   checkpoint: cp9
   template: person_brief
@@ -1166,7 +1168,7 @@
   checkpoint: cp9
   template: event_date
   params:
-    event: e-0402
+    event: e-0405
   text: When was "Send Amira the Fulmar service blueprint" handed over to Marcelo Meijer?
   challenges:
   - transfer
@@ -1257,11 +1259,10 @@
   checkpoint: cp10
   template: project_attr
   params:
-    project: pr-morcliff-tooling-wear-discovery
-    attribute: sponsor
+    project: pr-operator-ai-basics-peer-network
+    attribute: owner
   challenges:
   - new_entity
-  - restructuring
 - id: q-143
   checkpoint: cp10
   template: person_attr
@@ -1283,15 +1284,15 @@
   checkpoint: cp10
   template: event_date
   params:
-    event: e-0385
+    event: e-0388
   text: When was "Review Oksana's Fulmar dependency list v2" completed?
   challenges: []
 - id: q-146
   checkpoint: cp10
   template: project_attr
   params:
-    project: pr-galix-scrap-analysis-diligence
-    attribute: phase
+    project: pr-iselmoor-responsible-ai-use-framework
+    attribute: owner
   challenges: []
 - id: q-147
   checkpoint: cp10
@@ -1385,10 +1386,11 @@
   template: project_attr
   params:
     project: pr-morcliff-safety-reporting-discovery
-    attribute: phase
+    attribute: target_date
     name_form: MSRD discovery
   challenges:
   - alias
+  - supersession
 - id: q-157
   checkpoint: cp11
   template: person_brief
@@ -1400,7 +1402,7 @@
   checkpoint: cp11
   template: event_date
   params:
-    event: e-0396
+    event: e-0399
   text: When did we reverse the decision to weight integration effort at 25% in the work instructions
     selection scoring?
   challenges:
@@ -1434,7 +1436,7 @@
   checkpoint: cp11
   template: event_date
   params:
-    event: e-0289
+    event: e-0290
   text: When was "Share the AI-use comms plan with Amira" completed?
   challenges:
   - batch_catchup
@@ -1442,8 +1444,8 @@
   checkpoint: cp11
   template: project_attr
   params:
-    project: pr-operator-ai-basics-workshop
-    attribute: target_date
+    project: pr-production-scheduling-learning-series
+    attribute: owner
   challenges: []
 - id: q-164
   checkpoint: cp11
@@ -1535,7 +1537,7 @@
   checkpoint: cp12
   template: event_date
   params:
-    event: e-0406
+    event: e-0409
   text: When was "Set up Fulmar staging access for Amira" completed?
   challenges:
   - silent_closure
@@ -1551,10 +1553,9 @@
   checkpoint: cp12
   template: project_attr
   params:
-    project: pr-iselmoor-responsible-ai-use-framework
-    attribute: target_date
-  challenges:
-  - supersession
+    project: pr-morcliff-safety-reporting-discovery
+    attribute: owner
+  challenges: []
 - id: q-176
   checkpoint: cp12
   template: person_brief
@@ -1569,7 +1570,7 @@
   checkpoint: cp12
   template: event_date
   params:
-    event: e-0442
+    event: e-0445
   text: When was "Look into the Fulmar duplicate notifications" completed?
   challenges: []
 - id: q-178
@@ -1577,8 +1578,9 @@
   template: project_attr
   params:
     project: pr-iselmoor-responsible-ai-use-framework
-    attribute: owner
-  challenges: []
+    attribute: target_date
+  challenges:
+  - supersession
 - id: q-179
   checkpoint: cp12
   template: person_brief
@@ -1591,7 +1593,7 @@
   checkpoint: cp12
   template: event_date
   params:
-    event: e-0488
+    event: e-0491
   text: When was "Walk Marcelo through the Fulmar lessons-learned note v2" completed?
   challenges:
   - unobservable
