@@ -313,7 +313,15 @@ The full rules for each template are in [questions](questions.md). Optional spec
 | priority | `{"must_include": [list items], "worker_active": [list items], "distractors": [list items], "k": 10}`. `must_include`: worker-owned active accepted loops due by the next business day. `worker_active`: all worker-owned active accepted loops. `distractors`: knowable loops that are closed or owed by someone else. `tomorrow`: the next business day. |
 | any unanswerable | `{}` with `answerable: false` |
 
-`support` lists the artifact IDs that carry the evidence for the gold answer. Citations are checked against it.
+`support` lists the delivered artifact IDs that carry the evidence for the gold answer, in delivery order. List, priority and change items have their own `support`; status and brief rubric items do too (§3.3). After the template derives them, the builder widens them along the world's event threads (`wcb/questions/support.py`): every artifact delivered by the checkpoint that reveals an event about the same commitment, decision or attribute counts as evidence for it.
+
+- A list or priority item (`loop`) covers every event on its commitment: creation and all later updates.
+- A change item (`event`) covers its event and every later event on the same commitment, decision or attribute (`subject`, `attribute`). Entity creations, splits and merges cover only themselves.
+- A list or change question's `support` is the union of its items' support; a priority question's is the union of its `worker_active` (and `must_include`) items', never the distractors'.
+- A status or brief question's `support` is the union of its rubric items' support plus everything about the objects in its `facts`: the subject's attributes and their history, loops and decisions (whole thread), recent events (from the event on) and, for briefs, the attribute that makes each shared project shared. Rubric item support is not widened.
+- Point and temporal questions keep the template's support: the evidence for the one value asked.
+
+Citations are checked against `support`: for list and change answers, each predicted item against the support of the gold item it matched ([scoring](scoring.md#per-question-grading)).
 
 ### 3.3 Rubrics
 
