@@ -70,7 +70,7 @@ Qwen3.8-27B in the Pi harness ran all 11 worlds on both tracks on 10–11 Novemb
 | #10 rubric calibration | Item-local coverage replaces the answer-wide focus cliff, plus a bounded padding penalty; status rubrics grade the latest project-level change and only dated loops when there are many. Human labels still pending. |
 | #11 runtime | Sessions record why the agent stopped (`termination`, `incomplete`) and how many store files changed; the reference Docker image ships pinned document readers. |
 
-Its scores have not been regraded: that needs the run's raw answers and stores, which are in archives outside the repository. `scripts/regrade_points.py` regrades the saved point answers in its evidence files: 22 of 75 zero-scored ones are now credited, each checked by hand.
+Its scores have not been regraded: that needs the run's raw answers and stores, which are in archives outside the repository. `scripts/regrade_points.py` regrades the 75 zero-scored point answers saved in its evidence files. Before the dev worlds were regenerated, 22 were credited, each checked by hand; on the regenerated worlds 6 of those questions changed, and 20 of the remaining 69 are credited.
 
 ## Judge agreement
 
