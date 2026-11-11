@@ -493,7 +493,7 @@
   template: project_attr
   params:
     project: pr-elmwick-alumni-outreach-discovery
-    attribute: sponsor
+    attribute: target_date
   challenges: []
 - id: q-059
   checkpoint: cp4
@@ -581,7 +581,7 @@
   checkpoint: cp5
   template: event_date
   params:
-    event: e-0248
+    event: e-0249
   text: When was "Share the assessment design workshop session outline with Hiba" completed?
   challenges: []
 - id: q-069
@@ -724,7 +724,7 @@
   template: project_attr
   params:
     project: pr-iselbury-thesis-formatting-idea
-    attribute: sponsor
+    attribute: phase
   challenges: []
 - id: q-086
   checkpoint: cp6
@@ -737,7 +737,7 @@
   checkpoint: cp6
   template: event_date
   params:
-    event: e-0223
+    event: e-0224
   text: When was "Send Hiba the Garnet data dictionary" completed?
   challenges:
   - duplicate_signal

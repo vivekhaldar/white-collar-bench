@@ -2093,8 +2093,8 @@ audit:
     e-0042: never appears
     e-0195: unobservable
     e-0200: 'weak evidence: the walkthrough left no trace'
-    e-0294: 'weak evidence: the walkthrough left no trace'
-    e-0308: unobservable
+    e-0295: 'weak evidence: the walkthrough left no trace'
+    e-0309: unobservable
   instruction_injection: em-0097
   attachments:
   - dc-0001

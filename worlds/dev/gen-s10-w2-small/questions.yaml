@@ -257,7 +257,7 @@
   checkpoint: cp3
   template: event_date
   params:
-    event: e-0161
+    event: e-0162
   text: When was "Set up Nettle test tenant login for Aoife" completed?
   challenges:
   - silent_closure
@@ -342,7 +342,7 @@
   checkpoint: cp4
   template: event_date
   params:
-    event: e-0198
+    event: e-0199
   text: When did the target date for Nettle move to 1 November?
   challenges:
   - supersession
@@ -432,7 +432,7 @@
   checkpoint: cp5
   template: event_date
   params:
-    event: e-0205
+    event: e-0206
   text: When was "Update the Nettle budget justification after Adaeze's comments" completed?
   challenges:
   - batch_catchup
@@ -462,7 +462,7 @@
   checkpoint: cp5
   template: event_date
   params:
-    event: e-0159
+    event: e-0160
   text: When was "Walk Douglas through the Pipit one-page summary" completed?
   challenges:
   - unobservable
@@ -531,7 +531,7 @@
   checkpoint: cp6
   template: event_date
   params:
-    event: e-0168
+    event: e-0169
   text: When was "Send Gaurav the Nettle status slide" completed?
   challenges:
   - duplicate_signal

@@ -245,9 +245,9 @@
   checkpoint: cp3
   template: project_attr
   params:
-    project: pr-nurse-scheduling-tool-selection
-    attribute: target_date
-    name_form: NSTS selection
+    project: pr-okapi
+    attribute: sponsor
+    name_form: the common platform
   challenges:
   - alias
 - id: q-029
@@ -255,9 +255,7 @@
   template: project_loops
   params:
     project: pr-nurse-scheduling-tool-selection
-    name_form: the nurse scheduling bake-off
-  challenges:
-  - alias
+  challenges: []
 - id: q-030
   checkpoint: cp3
   template: person_brief

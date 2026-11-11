@@ -301,7 +301,7 @@
   template: project_attr
   params:
     project: pr-sirocco-funding-model
-    attribute: target_date
+    attribute: sponsor
   challenges: []
 - id: q-037
   checkpoint: cp3
@@ -344,8 +344,9 @@
   template: project_attr
   params:
     project: pr-sirocco-funding-model
-    attribute: sponsor
-  challenges: []
+    attribute: phase
+  challenges:
+  - duplicate_signal
 - id: q-042
   checkpoint: cp3
   template: project_loops

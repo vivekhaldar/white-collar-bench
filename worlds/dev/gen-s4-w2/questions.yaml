@@ -297,9 +297,10 @@
   checkpoint: cp3
   template: project_attr
   params:
-    project: pr-early-alert-advisory
-    attribute: sponsor
-  challenges: []
+    project: pr-fjord
+    attribute: target_date
+  challenges:
+  - supersession
 - id: q-037
   checkpoint: cp3
   template: person_attr
@@ -346,7 +347,7 @@
   template: project_attr
   params:
     project: pr-open-courseware-peer-network
-    attribute: owner
+    attribute: sponsor
   challenges:
   - new_entity
 - id: q-043
@@ -458,11 +459,12 @@
   checkpoint: cp4
   template: project_attr
   params:
-    project: pr-fjord
-    attribute: sponsor
-    name_form: Project Fjord
+    project: pr-heathridge-course-assistant-discovery
+    attribute: phase
+    name_form: the Heathridge discovery
   challenges:
   - alias
+  - implied_commitment
 - id: q-056
   checkpoint: cp4
   template: person_brief
@@ -492,9 +494,8 @@
   template: project_attr
   params:
     project: pr-fjord
-    attribute: blocker
-  challenges:
-  - duplicate_signal
+    attribute: sponsor
+  challenges: []
 - id: q-059
   checkpoint: cp4
   template: person_brief
@@ -588,7 +589,7 @@
   checkpoint: cp5
   template: event_date
   params:
-    event: e-0286
+    event: e-0287
   text: When did the target date for Fjord move to 10 December?
   challenges:
   - supersession
@@ -605,10 +606,9 @@
   checkpoint: cp5
   template: project_attr
   params:
-    project: pr-open-courseware-peer-network
-    attribute: sponsor
-  challenges:
-  - new_entity
+    project: pr-open-courseware-workshop
+    attribute: owner
+  challenges: []
 - id: q-071
   checkpoint: cp5
   template: person_brief
@@ -741,12 +741,10 @@
   template: project_attr
   params:
     project: pr-fjord
-    attribute: target_date
+    attribute: owner
     name_form: the Holfield pilot
   challenges:
   - alias
-  - supersession
-  - transfer
 - id: q-086
   checkpoint: cp6
   template: person_brief

@@ -1730,10 +1730,10 @@ audit:
     e-0029: never appears
     e-0036: never appears
     e-0038: never appears
-    e-0156: unobservable
-    e-0159: 'weak evidence: the walkthrough left no trace'
-    e-0212: 'weak evidence: the walkthrough left no trace'
-    e-0218: unobservable
+    e-0157: unobservable
+    e-0160: 'weak evidence: the walkthrough left no trace'
+    e-0213: 'weak evidence: the walkthrough left no trace'
+    e-0219: unobservable
   instruction_injection: em-0055
   attachments:
   - dc-0001
