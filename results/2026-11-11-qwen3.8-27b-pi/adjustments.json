@@ -1,0 +1,49 @@
+{
+  "description": "Conservative manual semantic-credit counterfactuals; original scores, answers, citation penalties, and failures retained; not exhaustive semantic regrades",
+  "benchmark_commit": "b66134a773e94bf7e0b6394133e4b167fbc05b69",
+  "track_a": {
+    "original_wcb": 72.34215583646254,
+    "retest_only_wcb": 73.01817530755413,
+    "retest_plus_nine_verified_corrections": 73.78290970510103,
+    "retest_plus_nine_ci95": [
+      67.26209351282132,
+      78.6210848697769
+    ]
+  },
+  "track_b": {
+    "original_wcb": 54.996825163423516,
+    "corrected_wcb": 55.333525500123855,
+    "delta_points": 0.3367003367003366,
+    "corrections": [
+      {
+        "world": "gen-s1-w1",
+        "checkpoint": "cp3",
+        "question": "q-036",
+        "old_score": 0.0,
+        "new_score": 1.0,
+        "original_citation_precision": 1.0
+      },
+      {
+        "world": "gen-s1-w1",
+        "checkpoint": "cp3",
+        "question": "q-040",
+        "old_score": 0.0,
+        "new_score": 0.7916666666666666,
+        "original_citation_precision": 0.16666666666666666
+      },
+      {
+        "world": "gen-s1-w1",
+        "checkpoint": "cp3",
+        "question": "q-041",
+        "old_score": 0.0,
+        "new_score": 0.875,
+        "original_citation_precision": 0.5
+      }
+    ],
+    "point_questions_in_checkpoint": 3,
+    "buckets_in_checkpoint": 8,
+    "checkpoints_in_world": 3,
+    "worlds": 11,
+    "ci95_recomputed": false
+  }
+}

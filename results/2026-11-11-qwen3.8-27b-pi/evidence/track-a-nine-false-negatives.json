@@ -1,0 +1,258 @@
+{
+  "description": "Diagnostic manual override of nine confirmed agent-store false negatives; original answers, citations, oracle scores, and official report unchanged",
+  "original_wcb": 72.34215583646254,
+  "counterfactual_wcb": 73.10689023400944,
+  "delta_points": 0.7647343975469028,
+  "counterfactual_ci95_world_bootstrap": [
+    66.45455171544755,
+    78.14453679022074
+  ],
+  "n_overrides": 9,
+  "changes": [
+    {
+      "world": "pilot",
+      "checkpoint": "cp1",
+      "question": "q-012",
+      "original_answer": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.97,
+        "value": "Privacy Officer at Tarrow University Kestrow (Office of Privacy and Records)",
+        "cites": [
+          "people/hana-kobayashi-reyes",
+          "em-0027",
+          "projects/tinderbox"
+        ]
+      },
+      "gold_value": "Privacy Officer",
+      "citation": 1.0,
+      "old_score": 0.0,
+      "new_score": 1.0,
+      "old_checkpoint_score": 47.21875,
+      "new_checkpoint_score": 51.38541666666667
+    },
+    {
+      "world": "pilot",
+      "checkpoint": "cp3",
+      "question": "q-048",
+      "original_answer": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Advising Operations Lead at Tarrow University Saltmarren; she leads Saltmarren's side of the advising scheduling project.",
+        "cites": [
+          "people/tillie",
+          "mn-0007",
+          "em-0037",
+          "projects/saltmarren-advising-scheduling"
+        ]
+      },
+      "gold_value": "Advising Operations Lead",
+      "citation": 0.75,
+      "old_score": 0.0,
+      "new_score": 0.9375,
+      "old_checkpoint_score": 32.66059027777778,
+      "new_checkpoint_score": 35.59027777777778
+    },
+    {
+      "world": "gen-s4-w2",
+      "checkpoint": "cp2",
+      "question": "q-022",
+      "original_answer": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.98,
+        "value": "Information Security Manager at the Systemwide Learning Innovation Office",
+        "cites": [
+          "people/nomvula-ndlovu"
+        ]
+      },
+      "gold_value": "Information Security Manager",
+      "citation": 1.0,
+      "old_score": 0.0,
+      "new_score": 1.0,
+      "old_checkpoint_score": 58.83994708994709,
+      "new_checkpoint_score": 61.3399470899471
+    },
+    {
+      "world": "gen-s7-w2",
+      "checkpoint": "cp2",
+      "question": "q-027",
+      "original_answer": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Delivery (it moved into delivery on 2027-07-07; target date 16 August)",
+        "cites": [
+          "projects/assessment-design-workshop",
+          "mt-0013"
+        ]
+      },
+      "gold_value": "delivery",
+      "citation": 1.0,
+      "old_score": 0.0,
+      "new_score": 1.0,
+      "old_checkpoint_score": 71.7843647875817,
+      "new_checkpoint_score": 74.9093647875817
+    },
+    {
+      "world": "gen-s3-w1",
+      "checkpoint": "cp1",
+      "question": "q-009",
+      "original_answer": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Stakeholder. Lena is an alias of Eleni Fontaine, Revenue Cycle Analyst at Ketford General Hospital; her recorded relationship to me is 'stakeholder'.",
+        "cites": [
+          "people/eleni-fontaine",
+          "nt-0001"
+        ]
+      },
+      "gold_value": "stakeholder",
+      "citation": 1.0,
+      "old_score": 0.0,
+      "new_score": 1.0,
+      "old_checkpoint_score": 75.99303738009877,
+      "new_checkpoint_score": 79.11803738009877
+    },
+    {
+      "world": "gen-s5-small",
+      "checkpoint": "cp1",
+      "question": "q-009",
+      "original_answer": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Executive - Rodrigo Okada is the Chief Medical Information Officer at Falbury Community Clinics, and the store records my working relationship with him as 'executive'.",
+        "cites": [
+          "people/rodrigo-okada"
+        ]
+      },
+      "gold_value": "executive",
+      "citation": 1.0,
+      "old_score": 0.0,
+      "new_score": 1.0,
+      "old_checkpoint_score": 73.71349094095258,
+      "new_checkpoint_score": 77.88015760761925
+    },
+    {
+      "world": "gen-s6-w1",
+      "checkpoint": "cp2",
+      "question": "q-022",
+      "original_answer": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Privacy Officer at Dorcliff State College",
+        "cites": [
+          "people/ebun-petrovic",
+          "em-0100"
+        ]
+      },
+      "gold_value": "Privacy Officer",
+      "citation": 1.0,
+      "old_score": 0.0,
+      "new_score": 1.0,
+      "old_checkpoint_score": 74.91328983516483,
+      "new_checkpoint_score": 78.03828983516483
+    },
+    {
+      "world": "gen-s9-large",
+      "checkpoint": "cp1",
+      "question": "q-016",
+      "original_answer": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Peer \u2014 Mathieu Wijaya is Principal, Integration Platform at Network Digital Office, the same organization as me",
+        "cites": [
+          "people/mathieu-wijaya"
+        ]
+      },
+      "gold_value": "peer",
+      "citation": 1.0,
+      "old_score": 0.0,
+      "new_score": 1.0,
+      "old_checkpoint_score": 86.6931216931217,
+      "new_checkpoint_score": 88.47883597883597
+    },
+    {
+      "world": "gen-s9-large",
+      "checkpoint": "cp2",
+      "question": "q-025",
+      "original_answer": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Privacy Officer at Redridge Children's Hospital",
+        "cites": [
+          "people/cassandra-pham"
+        ]
+      },
+      "gold_value": "Privacy Officer",
+      "citation": 1.0,
+      "old_score": 0.0,
+      "new_score": 1.0,
+      "old_checkpoint_score": 75.93705563822752,
+      "new_checkpoint_score": 79.06205563822752
+    }
+  ],
+  "worlds": [
+    {
+      "id": "pilot",
+      "old": 42.39576781154708,
+      "new": 44.76121920043598
+    },
+    {
+      "id": "gen-s8-w4",
+      "old": 66.44310276532693,
+      "new": 66.44310276532693
+    },
+    {
+      "id": "gen-s4-w2",
+      "old": 71.27305959858043,
+      "new": 71.6897262652471
+    },
+    {
+      "id": "gen-s7-w2",
+      "old": 71.85896040774217,
+      "new": 72.3797937410755
+    },
+    {
+      "id": "gen-s10-w2-small",
+      "old": 72.96450366762868,
+      "new": 72.96450366762868
+    },
+    {
+      "id": "gen-s1-w1",
+      "old": 81.22695046862343,
+      "new": 81.22695046862343
+    },
+    {
+      "id": "gen-s3-w1",
+      "old": 78.18005204409855,
+      "new": 79.22171871076522
+    },
+    {
+      "id": "gen-s5-small",
+      "old": 76.45628087308047,
+      "new": 77.84516976196937
+    },
+    {
+      "id": "gen-s6-w1",
+      "old": 79.25039833348274,
+      "new": 80.2920650001494
+    },
+    {
+      "id": "gen-s9-large",
+      "old": 83.02404720568784,
+      "new": 84.6609519675926
+    },
+    {
+      "id": "gen-s2-w1",
+      "old": 72.69059102528972,
+      "new": 72.69059102528972
+    }
+  ]
+}

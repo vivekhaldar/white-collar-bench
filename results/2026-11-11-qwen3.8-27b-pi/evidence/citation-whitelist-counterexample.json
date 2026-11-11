@@ -1,0 +1,71 @@
+{
+  "question": {
+    "world": "gen-s8-w4",
+    "checkpoint": "cp3",
+    "id": "q-038",
+    "text": "What am I working on with Kian Ishikawa?",
+    "gold_support": [
+      "nt-0001"
+    ]
+  },
+  "actual_source": "worlds/dev/gen-s8-w4/inbox/2027-09-06/ch-0030.json",
+  "supported_claim": "I sent Kian the AI-use consultation plan (done 2027-09-06)",
+  "source_evidence": "Amira Baek: Done, I sent you the AI-use consultation plan. Kian Ishikawa: perfect",
+  "results": [
+    {
+      "variant": "actual_retest",
+      "valid": true,
+      "base": 1.0,
+      "citation": 0.5555555555555556,
+      "score": 0.8888888888888888,
+      "diagnostics": {
+        "total": 9,
+        "valid": 5,
+        "invalid": [
+          {
+            "cite": "loops/send-kian-the-ai-use-consultation-plan",
+            "why": "record_unsupported"
+          },
+          {
+            "cite": "loops/share-the-ai-use-timeline-with-amira",
+            "why": "record_unsupported"
+          },
+          {
+            "cite": "ch-0030",
+            "why": "not_in_support"
+          },
+          {
+            "cite": "em-0094",
+            "why": "not_in_support"
+          }
+        ]
+      }
+    },
+    {
+      "variant": "swap_valid_plan_source_for_question_whitelist_source",
+      "valid": true,
+      "base": 1.0,
+      "citation": 0.625,
+      "score": 0.90625,
+      "diagnostics": {
+        "total": 8,
+        "valid": 5,
+        "invalid": [
+          {
+            "cite": "loops/send-kian-the-ai-use-consultation-plan",
+            "why": "record_unsupported"
+          },
+          {
+            "cite": "loops/share-the-ai-use-timeline-with-amira",
+            "why": "record_unsupported"
+          },
+          {
+            "cite": "em-0094",
+            "why": "not_in_support"
+          }
+        ]
+      }
+    }
+  ],
+  "conclusion": "The actual source supports this supplemental claim but is not in the question-wide support set. Replacing just this citation with nt-0001 improves citation score without changing the answer text. No additional manual aggregate correction applied."
+}

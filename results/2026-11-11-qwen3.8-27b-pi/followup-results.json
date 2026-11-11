@@ -1,0 +1,238 @@
+{
+  "track_a_retest": {
+    "description": "Hybrid Track A result: replace missing cp3.query with a context-derived-budget retest",
+    "official_original_wcb": 72.34215583646254,
+    "uncapped_retest_checkpoint": 89.2345701840894,
+    "checkpoint_buckets": {
+      "point": 100.0,
+      "list": 81.25,
+      "status": 52.071005917159766,
+      "brief": 88.88888888888889,
+      "change": 100.0,
+      "temporal": 100.0,
+      "priority": 91.66666666666666,
+      "unanswerable": 100.0
+    },
+    "retest_questions": 15,
+    "valid": 15,
+    "full_credit": 10,
+    "partial_credit": 5,
+    "zero_credit": 0,
+    "retest_only_wcb": 73.01817530755413,
+    "retest_only_delta": 0.6760194710915925,
+    "retest_only_ci95": [
+      66.23034624124149,
+      77.82784378262751
+    ],
+    "retest_plus_nine_manual_corrections_wcb": 73.78290970510103,
+    "retest_plus_nine_manual_corrections_ci95": [
+      67.26209351282132,
+      78.6210848697769
+    ],
+    "original_synthesis_unchanged": 84.27042822950305,
+    "original_sis_unchanged": 98.41451928374657,
+    "original_files_unchanged": true,
+    "other_failures_unchanged": true,
+    "session_status": "ok",
+    "answers_status": "ok"
+  },
+  "track_b": {
+    "headline": {
+      "track": "B",
+      "wcb": 54.996825163423516,
+      "wcb_ci95": [
+        48.24449635029438,
+        61.34276989259306
+      ],
+      "synthesis": null,
+      "synthesis_ci95": null,
+      "ingestion_cost": null,
+      "sis": null,
+      "sis_final": null,
+      "n_worlds": 11,
+      "n_episodes": 11,
+      "n_questions": 745
+    },
+    "sessions": 162,
+    "phases": {
+      "ingest": 111,
+      "query": 51
+    },
+    "statuses": {
+      "ok": 161,
+      "failed": 1
+    },
+    "failures": [
+      {
+        "session": "gen-s8-w4/r1/sessions/seed.ingest",
+        "status": "failed",
+        "notes": [
+          "session failed; store restored to snapshots/2027-09-10"
+        ]
+      }
+    ],
+    "valid_answers": 745,
+    "full_credit": 150,
+    "partial_credit": 360,
+    "zero_credit": 235,
+    "api_calls": 9036,
+    "api_statuses": {
+      "400": 4518,
+      "200": 4518
+    },
+    "models": [
+      "Qwen/Qwen3.8-27B"
+    ],
+    "api_usage": {
+      "cache_read_input_tokens": 275352192,
+      "input_tokens": 32852495,
+      "output_tokens": 5709434
+    },
+    "provider_price_estimate_usd": 59.447143950000005,
+    "pi_price_estimate_usd": 59.44714394999999,
+    "response_stops": {
+      "toolUse": 4357,
+      "stop": 161
+    },
+    "final_stops": {
+      "stop": 161,
+      "toolUse": 1
+    },
+    "final_length_sessions": [],
+    "reasoning_tokens": 3027537,
+    "assistant_messages": 4518,
+    "requests_with_context_budget": 4518,
+    "largest_output_response": {
+      "session": "gen-s7-w2/r1/sessions/2027-07-06.ingest",
+      "stop": "stop",
+      "usage": {
+        "input": 7483,
+        "output": 140388,
+        "cacheRead": 23552,
+        "cacheWrite": 0,
+        "reasoning": 140388,
+        "totalTokens": 171423,
+        "cost": {
+          "input": 0.0033673500000000003,
+          "output": 0.42116400000000004,
+          "cacheRead": 0.0023552,
+          "cacheWrite": 0,
+          "total": 0.42688655000000003,
+          "totalFromProvider": false
+        }
+      }
+    },
+    "largest_context_response": {
+      "session": "pilot/r1/sessions/2027-03-05.ingest",
+      "stop": "stop",
+      "usage": {
+        "input": 1317,
+        "output": 1512,
+        "cacheRead": 301056,
+        "cacheWrite": 0,
+        "reasoning": 676,
+        "totalTokens": 303885,
+        "cost": {
+          "input": 0.00059265,
+          "output": 0.004536,
+          "cacheRead": 0.030105600000000003,
+          "cacheWrite": 0,
+          "total": 0.03523425,
+          "totalFromProvider": false
+        }
+      }
+    },
+    "unchanged_config_hashes": {
+      "adapter.yaml": "f89f8fdcd150155b1232e6c89af5b95730ab6211e5b4d74fed8710962981cd60",
+      "audit_track_b.py": "c3f0fada5c3874840f1f6f083431d9225a67c2b20ddfd0aeda8ed370c83b2be6",
+      "live-control.json": "eb06bf513400e9fcbd65adc6023e6163682a6bfd7aba167780ad06404547e839",
+      "no-output-cap.mjs": "ed8dad26a0b0f6da8fd6af33f6272293e9ba9513903848d2f4eafceebd5ea859",
+      "pi_nebius.py": "162e4152339e659959b79ec848c6b7b5346b3ff54300dba17107d8814007aec9",
+      "run_track_b.py": "9536b0646b573621034e7ae14f41a2c5e3219ceedc855572ebdc571ac1ddce20",
+      "wire-control.json": "267ac1f4f3585a4edd8c4c019936ed51d734ac4ad2e9058af740ff7d395d832e"
+    },
+    "credential_byte_matches": 0
+  },
+  "postflight": {
+    "generation_requests": 4518,
+    "expected_pre_generation_validation_http400": 4518,
+    "unexpected_http_errors": 0,
+    "provider_input_counts_match_generation_usage": true,
+    "budget_range": {
+      "min": 697627,
+      "max": 998109
+    },
+    "every_budget_plus_input_equals": 1000000,
+    "elapsed_s": 8284.0,
+    "question_type_zeros": {
+      "list": 53,
+      "brief": 35,
+      "point": 92,
+      "priority": 16,
+      "status": 13,
+      "change": 18,
+      "unanswerable": 5,
+      "temporal": 3
+    },
+    "original_preservation_check": {
+      "archive_sha256": "b4285e00538a017c14b4ee63332d31f065cd422b41321a10f18f7f57d612328d",
+      "original_measured_files_checked": 24188,
+      "different": [],
+      "bundle_only": [
+        "measured/MANIFEST.json",
+        "measured/adapter/adapter.yaml"
+      ]
+    }
+  },
+  "probe_costs": [
+    {
+      "directory": "runs/pi-qwen38-followup",
+      "status": "stopped configuration probe; only context-budget/retest is included in final Track A adjustment",
+      "metered_requests": 220,
+      "http_statuses": {
+        "200": 217,
+        "400": 3
+      },
+      "metered_tokens": {
+        "cache_read_input_tokens": 5372480,
+        "input_tokens": 701114,
+        "output_tokens": 205715
+      },
+      "estimated_metered_cost_usd": 1.4698943,
+      "assistant_stop_reasons": {
+        "toolUse": 200,
+        "length": 9,
+        "stop": 4
+      },
+      "billing_caveat": "Interrupted in-flight responses may not have reported usage; metering does not establish their final billed cost"
+    },
+    {
+      "directory": "runs/pi-qwen38-context-budget",
+      "status": "stopped configuration probe; only context-budget/retest is included in final Track A adjustment",
+      "metered_requests": 105,
+      "http_statuses": {
+        "200": 102,
+        "400": 3
+      },
+      "metered_tokens": {
+        "cache_read_input_tokens": 2351744,
+        "input_tokens": 250273,
+        "output_tokens": 56113
+      },
+      "estimated_metered_cost_usd": 0.51613625,
+      "assistant_stop_reasons": {
+        "toolUse": 96,
+        "error": 3,
+        "stop": 2
+      },
+      "billing_caveat": "Interrupted in-flight responses may not have reported usage; metering does not establish their final billed cost"
+    }
+  ],
+  "credentials_scan": {
+    "files": 3879,
+    "matches": 0
+  },
+  "manual_track_b_overrides_applied": false,
+  "tracked_repository_changes": false,
+  "estimated_followup_model_cost_usd": 61.43317450000001
+}

@@ -1,0 +1,3729 @@
+{
+  "zero_nonabstaining_points": [
+    {
+      "world": "pilot",
+      "checkpoint": "cp1",
+      "id": "q-010",
+      "question": "Who is setting up the Tinderbox ownership meeting with Sade and Bart Ngata?",
+      "gold": {
+        "kind": "entity",
+        "value": "Luc\u00eda Ferreyra",
+        "entity": "p-lucia-ferreyra",
+        "accept": [
+          "Luc\u00eda Ferreyra",
+          "Luc\u00eda",
+          "Lucia",
+          "Lulu",
+          "L. Ferreyra",
+          "Sade's EA",
+          "lucia.ferreyra@tarrow.example",
+          "@lucia"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Lulu (Luc\u00eda Ferreyra), Sade's Executive Assistant \u2014 she's looking at Thu 4 / Fri 5 Mar for the 45-min Sade + Bart Ngata room; 'Invite to follow!'",
+        "cites": [
+          "ch-0009",
+          "ch-0011",
+          "commitments.md",
+          "people.md"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Lulu (Luc\u00eda Ferreyra), Sade's Executive Assistant \u2014 she's looking at Thu 4 / Fri 5 Mar for the 45-min Sade + Bart Ngata room; 'Invite to follow!'",
+        "gold": "Luc\u00eda Ferreyra",
+        "resolved": [
+          "p-bart-ngata",
+          "p-folasade-renwick",
+          "p-lucia-ferreyra"
+        ],
+        "citations": {
+          "total": 4,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "ch-0009",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "commitments.md",
+              "why": "unrecognized"
+            },
+            {
+              "cite": "people.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "pilot",
+      "checkpoint": "cp1",
+      "id": "q-012",
+      "question": "What is Hana's role?",
+      "gold": {
+        "kind": "text",
+        "value": "Privacy Officer",
+        "entity": null,
+        "accept": [
+          "Privacy Officer"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Hana Kobayashi-Reyes is Kestrow's new Privacy Officer (Office of Privacy and Records, TU Kestrow; joined the week of 22 Feb). She runs the campus PIA process: any new Kestrow service that processes personal information about students or staff goes through a privacy impact assessment (structured questionnaire + review, outcome recorded in the campus register) before that processing begins \u2014 separate from, and in addition to, the system-office security review.",
+        "cites": [
+          "em-0027",
+          "people.md",
+          "INDEX.md"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Hana Kobayashi-Reyes is Kestrow's new Privacy Officer (Office of Privacy and Records, TU Kestrow; joined the week of 22 Feb). She runs the campus PIA process: any new Kestrow service that processes personal information about students or staff goes through a privacy impact assessment (structured questionnaire + review, outcome recorded in the campus register) before that processing begins \u2014 separate from, and in addition to, the system-office security review.",
+        "gold": "Privacy Officer",
+        "citations": {
+          "total": 3,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "people.md",
+              "why": "unrecognized"
+            },
+            {
+              "cite": "INDEX.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "pilot",
+      "checkpoint": "cp2",
+      "id": "q-022",
+      "question": "What is the current status of the library RA idea: active, paused, dormant, done or cancelled?",
+      "gold": {
+        "kind": "text",
+        "value": "active",
+        "entity": null,
+        "accept": [
+          "active"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "active \u2014 reactivated 4 Mar after the workshop: Ines Vardakis (Eskerfield Learning Research Institute) would evaluate a library research assistant with Brackwater; first conversation booked Tue 9 Mar 11:00\u201311:45 (video) with Ines + Ramona Iturbe + Mara. (It had been parked/dormant since January; the concept note is still owed to Ramona Iturbe.)",
+        "cites": [
+          "mn-0011",
+          "ca-0009",
+          "projects/library-research-assistant.md",
+          "decisions.md"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "active \u2014 reactivated 4 Mar after the workshop: Ines Vardakis (Eskerfield Learning Research Institute) would evaluate a library research assistant with Brackwater; first conversation booked Tue 9 Mar 11:00\u201311:45 (video) with Ines + Ramona Iturbe + Mara. (It had been parked/dormant since January; the concept note is still owed to Ramona Iturbe.)",
+        "gold": "active",
+        "statuses": [
+          "active",
+          "dormant"
+        ],
+        "citations": {
+          "total": 4,
+          "valid": 2,
+          "invalid": [
+            {
+              "cite": "ca-0009",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "decisions.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "pilot",
+      "checkpoint": "cp2",
+      "id": "q-027",
+      "question": "When is Delphine getting the DSA countersigned by?",
+      "gold": {
+        "kind": "date",
+        "value": "2027-03-09",
+        "entity": null,
+        "accept": [
+          "2027-03-09"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Tue 9 Mar 2027 \u2014 Delphine to get the countersigned DSA copy back by next Tuesday (9 Mar); Ezinne Marlowe-Abara (Saltmarren VP for Academic Affairs) is countersigning for Saltmarren and it's with her office as of 4 Mar; nothing changes until fully executed.",
+        "cites": [
+          "em-0037",
+          "projects/saltmarren-transfer-discovery.md",
+          "calendar.md",
+          "commitments.md"
+        ]
+      },
+      "details": {
+        "kind": "date",
+        "value": "Tue 9 Mar 2027 \u2014 Delphine to get the countersigned DSA copy back by next Tuesday (9 Mar); Ezinne Marlowe-Abara (Saltmarren VP for Academic Affairs) is countersigning for Saltmarren and it's with her office as of 4 Mar; nothing changes until fully executed.",
+        "gold": "2027-03-09",
+        "normalized": null,
+        "citations": {
+          "total": 4,
+          "valid": 2,
+          "invalid": [
+            {
+              "cite": "calendar.md",
+              "why": "unrecognized"
+            },
+            {
+              "cite": "commitments.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "pilot",
+      "checkpoint": "cp3",
+      "id": "q-033",
+      "question": "Who owns Tinderbox now?",
+      "gold": {
+        "kind": "entity",
+        "value": "Yusra Haddad",
+        "entity": "p-yusra-haddad",
+        "accept": [
+          "Yusra Haddad",
+          "Yusra",
+          "Y. Haddad",
+          "the TLT director",
+          "Kestrow TLT",
+          "yusra.haddad@kestrow.tarrow.example",
+          "@yusra"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.98,
+        "value": "Yusra Haddad (from 5 Mar 2027, Sade's decision at the 10:30 operating model meeting - Kestrow runs the service through Yusra's team, on Kettleyard; the platform stays central). Mara Ilves stays architect of record and hands over the runbooks.",
+        "cites": [
+          "mt-0011",
+          "mn-0012",
+          "ch-0025",
+          "decisions.md",
+          "projects/tinderbox.md"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Yusra Haddad (from 5 Mar 2027, Sade's decision at the 10:30 operating model meeting - Kestrow runs the service through Yusra's team, on Kettleyard; the platform stays central). Mara Ilves stays architect of record and hands over the runbooks.",
+        "gold": "Yusra Haddad",
+        "resolved": [
+          "p-folasade-renwick",
+          "p-mara-ilves",
+          "p-yusra-haddad"
+        ],
+        "citations": {
+          "total": 5,
+          "valid": 3,
+          "invalid": [
+            {
+              "cite": "ch-0025",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "decisions.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "pilot",
+      "checkpoint": "cp3",
+      "id": "q-034",
+      "question": "What's the go-live date for Tinderbox?",
+      "gold": {
+        "kind": "date",
+        "value": "2027-04-05",
+        "entity": null,
+        "accept": [
+          "2027-04-05"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.98,
+        "value": "2027-04-05 (Monday) - moved from 29 Mar at the 5 Mar standup and confirmed in the ownership meeting; assumes context API 12 Mar, load test 9 Mar, and Hugo's review done before go-live ('if any of those slips, we talk again').",
+        "cites": [
+          "mt-0010",
+          "mt-0011",
+          "decisions.md",
+          "projects/tinderbox.md"
+        ]
+      },
+      "details": {
+        "kind": "date",
+        "value": "2027-04-05 (Monday) - moved from 29 Mar at the 5 Mar standup and confirmed in the ownership meeting; assumes context API 12 Mar, load test 9 Mar, and Hugo's review done before go-live ('if any of those slips, we talk again').",
+        "gold": "2027-04-05",
+        "normalized": null,
+        "citations": {
+          "total": 4,
+          "valid": 2,
+          "invalid": [
+            {
+              "cite": "mt-0011",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "decisions.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "pilot",
+      "checkpoint": "cp3",
+      "id": "q-035",
+      "question": "When is the context API due?",
+      "gold": {
+        "kind": "date",
+        "value": "2027-03-12",
+        "entity": null,
+        "accept": [
+          "2027-03-12"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.98,
+        "value": "2027-03-12 (Friday) - Dima's event-based LMS context API, moved from 10 Mar at the 5 Mar standup ('assuming there's no v3'); skeleton up in dummy-data mode as of 6 Mar, still targeting the 12th.",
+        "cites": [
+          "mt-0010",
+          "ch-0027",
+          "decisions.md",
+          "projects/tinderbox.md"
+        ]
+      },
+      "details": {
+        "kind": "date",
+        "value": "2027-03-12 (Friday) - Dima's event-based LMS context API, moved from 10 Mar at the 5 Mar standup ('assuming there's no v3'); skeleton up in dummy-data mode as of 6 Mar, still targeting the 12th.",
+        "gold": "2027-03-12",
+        "normalized": null,
+        "citations": {
+          "total": 4,
+          "valid": 2,
+          "invalid": [
+            {
+              "cite": "ch-0027",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "decisions.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "pilot",
+      "checkpoint": "cp3",
+      "id": "q-048",
+      "question": "What does Tillie do at Saltmarren?",
+      "gold": {
+        "kind": "text",
+        "value": "Advising Operations Lead",
+        "entity": null,
+        "accept": [
+          "Advising Operations Lead"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.98,
+        "value": "Tillie (Ottilie Brandvold) is the Advising Operations Lead at TU Saltmarren; she leads Saltmarren's side of the advising-scheduling project (split out 4 Mar) and sent the Jan-Feb advising appointment export on 5 Mar.",
+        "cites": [
+          "em-0042",
+          "people.md",
+          "projects/advising-scheduling.md",
+          "INDEX.md"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Tillie (Ottilie Brandvold) is the Advising Operations Lead at TU Saltmarren; she leads Saltmarren's side of the advising-scheduling project (split out 4 Mar) and sent the Jan-Feb advising appointment export on 5 Mar.",
+        "gold": "Advising Operations Lead",
+        "citations": {
+          "total": 4,
+          "valid": 2,
+          "invalid": [
+            {
+              "cite": "people.md",
+              "why": "unrecognized"
+            },
+            {
+              "cite": "INDEX.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp2",
+      "id": "q-022",
+      "question": "What is my working relationship with Shirin?",
+      "gold": {
+        "kind": "text",
+        "value": "stakeholder",
+        "entity": null,
+        "accept": [
+          "stakeholder"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Shirin Oyelami is the new Privacy Officer at Ivycrest Distribution Center (just joined as of 15 Sep). Fulmar is one of the first things on her desk: she asked Amira for the Fulmar privacy review form by 24 Sep, and Amira sent v2 on 15 Sep, ahead of the request. Shirin appears in the #fulmar-core participant list from 16 Sep. The working relationship is therefore Amira supplying Fulmar privacy-review material to the Ivycrest Privacy Officer.",
+        "cites": [
+          "em-0092",
+          "em-0093",
+          "dc-0005",
+          "ch-0083"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Shirin Oyelami is the new Privacy Officer at Ivycrest Distribution Center (just joined as of 15 Sep). Fulmar is one of the first things on her desk: she asked Amira for the Fulmar privacy review form by 24 Sep, and Amira sent v2 on 15 Sep, ahead of the request. Shirin appears in the #fulmar-core participant list from 16 Sep. The working relationship is therefore Amira supplying Fulmar privacy-review material to the Ivycrest Privacy Officer.",
+        "gold": "stakeholder",
+        "citations": {
+          "total": 4,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "em-0093",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "dc-0005",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ch-0083",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp2",
+      "id": "q-027",
+      "question": "Who is responsible for \"Arrange refreshments for the operator AI basics workshop\"?",
+      "gold": {
+        "kind": "entity",
+        "value": "Wei Suwannarat",
+        "entity": "p-wei-suwannarat",
+        "accept": [
+          "Wei Suwannarat",
+          "Wei",
+          "W. Suwannarat",
+          "wei.suwannarat@sandfield.iselmoor.example",
+          "@wei"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Wei Suwannarat (Controls Engineer, Sandfield Distribution Center) - took over refreshments for the Operator AI basics workshop from Adwoa Kocak on 15 Sep; Adwoa had originally arranged them on 13 Sep.",
+        "cites": [
+          "em-0090",
+          "em-0086",
+          "ch-0063"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Wei Suwannarat (Controls Engineer, Sandfield Distribution Center) - took over refreshments for the Operator AI basics workshop from Adwoa Kocak on 15 Sep; Adwoa had originally arranged them on 13 Sep.",
+        "gold": "Wei Suwannarat",
+        "resolved": [
+          "p-wei-suwannarat"
+        ],
+        "citations": {
+          "total": 3,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "em-0086",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ch-0063",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp4",
+      "id": "q-051",
+      "question": "What is my working relationship with Despina Eriksen?",
+      "gold": {
+        "kind": "text",
+        "value": "vendor",
+        "entity": null,
+        "accept": [
+          "vendor"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Despina Eriksen is an external counterpart: Senior Account Executive at Galix Labs (just joined as of 21 Sep). The operator AI basics workshop is one of the first things on her desk; on 21 Sep she asked Amira to send her the workshop renewal questionnaire by Thu 30 Sep, and Amira sent it to her the same day (21 Sep). No other working relationship with her is recorded in the store.",
+        "cites": [
+          "em-0126",
+          "ch-0107"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Despina Eriksen is an external counterpart: Senior Account Executive at Galix Labs (just joined as of 21 Sep). The operator AI basics workshop is one of the first things on her desk; on 21 Sep she asked Amira to send her the workshop renewal questionnaire by Thu 30 Sep, and Amira sent it to her the same day (21 Sep). No other working relationship with her is recorded in the store.",
+        "gold": "vendor",
+        "citations": {
+          "total": 2,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "ch-0107",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp4",
+      "id": "q-056",
+      "question": "What is the next step on Morcliff Safety Reporting Discovery?",
+      "gold": {
+        "kind": "text",
+        "value": "Decide whether tooling wear becomes its own effort",
+        "entity": null,
+        "accept": [
+          "Decide whether tooling wear becomes its own effort"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.7,
+        "value": "Finish the safety reporting baseline analysis - Tane Haugen asked Amira to finish it (20 Sep, relayed via Adwoa's forward 'for visibility'); the project is 'now in analysis' (14 Sep). Other open loops: review Adwoa's stakeholder map and await Adwoa's findings summary.",
+        "cites": [
+          "em-0121",
+          "nt-0006",
+          "nt-0007",
+          "nt-0010"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Finish the safety reporting baseline analysis - Tane Haugen asked Amira to finish it (20 Sep, relayed via Adwoa's forward 'for visibility'); the project is 'now in analysis' (14 Sep). Other open loops: review Adwoa's stakeholder map and await Adwoa's findings summary.",
+        "gold": "Decide whether tooling wear becomes its own effort",
+        "citations": {
+          "total": 4,
+          "valid": 0,
+          "invalid": [
+            {
+              "cite": "em-0121",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "nt-0006",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "nt-0007",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "nt-0010",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp6",
+      "id": "q-085",
+      "question": "Who owns the workshop?",
+      "gold": {
+        "kind": "entity",
+        "value": "Adwoa Kocak",
+        "entity": "p-adwoa-kocak",
+        "accept": [
+          "Adwoa Kocak",
+          "Adwoa",
+          "A. Kocak",
+          "adwoa.kocak@iselmoor.example",
+          "@adwoa",
+          "our programs director"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.75,
+        "value": "Amira Baek (the worker herself) \u2014 she is organizing the Operator AI basics workshop (\"leave it with me, I'll walk you through the operator ai basics workshop room plan\").",
+        "cites": [
+          "ch-0064",
+          "ca-0009"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Amira Baek (the worker herself) \u2014 she is organizing the Operator AI basics workshop (\"leave it with me, I'll walk you through the operator ai basics workshop room plan\").",
+        "gold": "Adwoa Kocak",
+        "resolved": [
+          "p-amira-baek"
+        ],
+        "citations": {
+          "total": 2,
+          "valid": 0,
+          "invalid": [
+            {
+              "cite": "ch-0064",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ca-0009",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp6",
+      "id": "q-088",
+      "question": "What phase is Sandfield Changeover Planning Idea in?",
+      "gold": {
+        "kind": "text",
+        "value": "placeholder",
+        "entity": null,
+        "accept": [
+          "placeholder"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "No longer tracked separately \u2014 folded into the Iselmoor Responsible AI Use Framework on 24 Sep; its open items move across.",
+        "cites": [
+          "nt-0014"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "No longer tracked separately \u2014 folded into the Iselmoor Responsible AI Use Framework on 24 Sep; its open items move across.",
+        "gold": "placeholder",
+        "citations": {
+          "total": 1,
+          "valid": 0,
+          "invalid": [
+            {
+              "cite": "nt-0014",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp7",
+      "id": "q-099",
+      "question": "What is my working relationship with Yasmin?",
+      "gold": {
+        "kind": "text",
+        "value": "stakeholder",
+        "entity": null,
+        "accept": [
+          "stakeholder"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Yasmin Guo is a new Data Engineer (contract) in the Manufacturing Digital Office; Fulmar is one of the first things on her desk, and she asked Amira to send her the Fulmar control plan v2 by 5 October 2027.",
+        "cites": [
+          "em-0170"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Yasmin Guo is a new Data Engineer (contract) in the Manufacturing Digital Office; Fulmar is one of the first things on her desk, and she asked Amira to send her the Fulmar control plan v2 by 5 October 2027.",
+        "gold": "stakeholder",
+        "citations": {
+          "total": 1,
+          "valid": 1,
+          "invalid": []
+        }
+      }
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp8",
+      "id": "q-112",
+      "question": "Who is responsible for \"Send Amira the Fulmar service blueprint\"?",
+      "gold": {
+        "kind": "entity",
+        "value": "Marcelo Meijer",
+        "entity": "p-marcelo-meijer",
+        "accept": [
+          "Marcelo Meijer",
+          "Marcelo",
+          "M. Meijer",
+          "marcelo.meijer@iselmoor.example",
+          "@marcelo",
+          "the OT security lead"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.8,
+        "value": "Adwoa Kocak",
+        "cites": [
+          "em-0192"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Adwoa Kocak",
+        "gold": "Marcelo Meijer",
+        "resolved": [
+          "p-adwoa-kocak"
+        ],
+        "citations": {
+          "total": 1,
+          "valid": 1,
+          "invalid": []
+        }
+      }
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp8",
+      "id": "q-114",
+      "question": "What is my working relationship with Adwoa Kocak?",
+      "gold": {
+        "kind": "text",
+        "value": "peer",
+        "entity": null,
+        "accept": [
+          "peer"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Close colleague; Adwoa Kocak is Director of Digital Programs in the Manufacturing Digital Office (MDO). They work together across Fulmar, AI-use, Morcliff safety reporting discovery, work instructions selection and the Operator AI basics workshop, and both attend the MDO leads call.",
+        "cites": [
+          "em-0094",
+          "mt-0012"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Close colleague; Adwoa Kocak is Director of Digital Programs in the Manufacturing Digital Office (MDO). They work together across Fulmar, AI-use, Morcliff safety reporting discovery, work instructions selection and the Operator AI basics workshop, and both attend the MDO leads call.",
+        "gold": "peer",
+        "citations": {
+          "total": 2,
+          "valid": 0,
+          "invalid": [
+            {
+              "cite": "em-0094",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "mt-0012",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp8",
+      "id": "q-118",
+      "question": "Who is responsible for \"Send Amira the Fulmar retention schedule v2\"?",
+      "gold": {
+        "kind": "entity",
+        "value": "Adwoa Kocak",
+        "entity": "p-adwoa-kocak",
+        "accept": [
+          "Adwoa Kocak",
+          "Adwoa",
+          "A. Kocak",
+          "adwoa.kocak@iselmoor.example",
+          "@adwoa",
+          "our programs director"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.85,
+        "value": "Batbayar Galbraith",
+        "cites": [
+          "ch-0152",
+          "ch-0160"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Batbayar Galbraith",
+        "gold": "Adwoa Kocak",
+        "resolved": [
+          "p-batbayar-galbraith"
+        ],
+        "citations": {
+          "total": 2,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "ch-0152",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp10",
+      "id": "q-143",
+      "question": "What is Ilse's role?",
+      "gold": {
+        "kind": "text",
+        "value": "Operations Analyst",
+        "entity": null,
+        "accept": [
+          "Operations Analyst"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Operations Analyst, Sandfield Distribution Center (just joined, per her 5 Oct introduction email)",
+        "cites": [
+          "em-0221",
+          "memory/people.md"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Operations Analyst, Sandfield Distribution Center (just joined, per her 5 Oct introduction email)",
+        "gold": "Operations Analyst",
+        "citations": {
+          "total": 2,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "memory/people.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s4-w2",
+      "checkpoint": "cp1",
+      "id": "q-006",
+      "question": "Who is responsible for \"Set up the Fjord single sign-on role mapping\"?",
+      "gold": {
+        "kind": "entity",
+        "value": "Ratna Nikolic",
+        "entity": "p-ratna-nikolic",
+        "accept": [
+          "Ratna Nikolic",
+          "Ratna",
+          "R. Nikolic",
+          "ratna.nikolic@holfield.drayhurst.example",
+          "@ratna"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Ratna Nikolic (with Meera Bondarenko)",
+        "cites": [
+          "ch-0051",
+          "em-0108",
+          "ch-0067",
+          "mn-0006",
+          "memory/commitments.md"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Ratna Nikolic (with Meera Bondarenko)",
+        "gold": "Ratna Nikolic",
+        "resolved": [
+          "p-meera-bondarenko",
+          "p-ratna-nikolic"
+        ],
+        "citations": {
+          "total": 5,
+          "valid": 3,
+          "invalid": [
+            {
+              "cite": "em-0108",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "memory/commitments.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s4-w2",
+      "checkpoint": "cp1",
+      "id": "q-009",
+      "question": "What is my working relationship with Meera Bondarenko?",
+      "gold": {
+        "kind": "text",
+        "value": "peer",
+        "entity": null,
+        "accept": [
+          "peer"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.8,
+        "value": "Colleague in SLIO (she is Head of Learning Services); frequent collaborator across multiple projects - Fjord, Heathridge Course Assistant Discovery, Room Booking Tool Selection, Holfield Syllabus Review Discovery, Open Courseware Workshop (which she owns), and the Research Computing Learning Series.",
+        "cites": [
+          "nt-0001",
+          "memory/people.md",
+          "memory/projects/fjord.md",
+          "memory/projects/heathridge-course-assistant-discovery.md",
+          "memory/projects/room-booking-tool-selection.md",
+          "memory/projects/holfield-syllabus-review-discovery.md",
+          "memory/projects/open-courseware-workshop.md",
+          "memory/projects/research-computing-learning-series.md"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Colleague in SLIO (she is Head of Learning Services); frequent collaborator across multiple projects - Fjord, Heathridge Course Assistant Discovery, Room Booking Tool Selection, Holfield Syllabus Review Discovery, Open Courseware Workshop (which she owns), and the Research Computing Learning Series.",
+        "gold": "peer",
+        "citations": {
+          "total": 8,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "memory/people.md",
+              "why": "unrecognized"
+            },
+            {
+              "cite": "memory/projects/fjord.md",
+              "why": "unrecognized"
+            },
+            {
+              "cite": "memory/projects/heathridge-course-assistant-discovery.md",
+              "why": "unrecognized"
+            },
+            {
+              "cite": "memory/projects/room-booking-tool-selection.md",
+              "why": "unrecognized"
+            },
+            {
+              "cite": "memory/projects/holfield-syllabus-review-discovery.md",
+              "why": "unrecognized"
+            },
+            {
+              "cite": "memory/projects/open-courseware-workshop.md",
+              "why": "unrecognized"
+            },
+            {
+              "cite": "memory/projects/research-computing-learning-series.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s4-w2",
+      "checkpoint": "cp2",
+      "id": "q-022",
+      "question": "What is Nomvula Ndlovu's role?",
+      "gold": {
+        "kind": "text",
+        "value": "Information Security Manager",
+        "entity": null,
+        "accept": [
+          "Information Security Manager"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Information Security Manager, SLIO (Drayhurst University System)",
+        "cites": [
+          "nt-0001",
+          "mn-0009"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Information Security Manager, SLIO (Drayhurst University System)",
+        "gold": "Information Security Manager",
+        "citations": {
+          "total": 2,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "mn-0009",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s4-w2",
+      "checkpoint": "cp4",
+      "id": "q-058",
+      "question": "What is currently blocking Fjord?",
+      "gold": {
+        "kind": "text",
+        "value": "real student data paused pending the security review",
+        "entity": null,
+        "accept": [
+          "real student data paused pending the security review"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Real student data is paused pending the security review (blocker as of 9/9); workaround in flight - Theresa to generate a synthetic student data set.",
+        "cites": [
+          "ch-0091",
+          "em-0121",
+          "memory/projects/fjord.md"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Real student data is paused pending the security review (blocker as of 9/9); workaround in flight - Theresa to generate a synthetic student data set.",
+        "gold": "real student data paused pending the security review",
+        "citations": {
+          "total": 3,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "em-0121",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "memory/projects/fjord.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s4-w2",
+      "checkpoint": "cp6",
+      "id": "q-088",
+      "question": "What phase is the workshop in?",
+      "gold": {
+        "kind": "text",
+        "value": "closed",
+        "entity": null,
+        "accept": [
+          "closed"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.97,
+        "value": "complete (since 3 September 2027)",
+        "cites": [
+          "mn-0009"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "complete (since 3 September 2027)",
+        "gold": "closed",
+        "citations": {
+          "total": 1,
+          "valid": 1,
+          "invalid": []
+        }
+      }
+    },
+    {
+      "world": "gen-s7-w2",
+      "checkpoint": "cp1",
+      "id": "q-008",
+      "question": "What is the current target date for Garnet?",
+      "gold": {
+        "kind": "date",
+        "value": "2027-08-03",
+        "entity": null,
+        "accept": [
+          "2027-08-03"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "2027-07-26",
+        "cites": [
+          "nt-0001"
+        ]
+      },
+      "details": {
+        "kind": "date",
+        "value": "2027-07-26",
+        "gold": "2027-08-03",
+        "normalized": "2027-07-26",
+        "citations": {
+          "total": 1,
+          "valid": 0,
+          "invalid": [
+            {
+              "cite": "nt-0001",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s7-w2",
+      "checkpoint": "cp1",
+      "id": "q-009",
+      "question": "What is Bolat Oyelami's role?",
+      "gold": {
+        "kind": "text",
+        "value": "Head of Learning Services",
+        "entity": null,
+        "accept": [
+          "Head of Learning Services"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Head of Learning Services, SLIO (Corrstead University System)",
+        "cites": [
+          "nt-0001"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Head of Learning Services, SLIO (Corrstead University System)",
+        "gold": "Head of Learning Services",
+        "citations": {
+          "total": 1,
+          "valid": 1,
+          "invalid": []
+        }
+      }
+    },
+    {
+      "world": "gen-s7-w2",
+      "checkpoint": "cp2",
+      "id": "q-021",
+      "question": "What is currently blocking Elmwick Alumni Outreach Discovery?",
+      "gold": {
+        "kind": "text",
+        "value": "unsigned data-sharing agreement with Elmwick",
+        "entity": null,
+        "accept": [
+          "unsigned data-sharing agreement with Elmwick"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.65,
+        "value": "No explicit current blocker: the earlier blocker (unsigned data-sharing agreement, raised 2027-07-01) was resolved on 2027-07-05 when the approach A decision superseded the agreement. The work is now waiting on others for sandbox access (Desmond) and baseline data (Mere).",
+        "cites": [
+          "em-0058",
+          "nt-0006",
+          "em-0076",
+          "em-0044",
+          "memory/projects/elmwick-alumni-outreach-discovery.md"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "No explicit current blocker: the earlier blocker (unsigned data-sharing agreement, raised 2027-07-01) was resolved on 2027-07-05 when the approach A decision superseded the agreement. The work is now waiting on others for sandbox access (Desmond) and baseline data (Mere).",
+        "gold": "unsigned data-sharing agreement with Elmwick",
+        "citations": {
+          "total": 5,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "nt-0006",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "em-0076",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "em-0044",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "memory/projects/elmwick-alumni-outreach-discovery.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s7-w2",
+      "checkpoint": "cp2",
+      "id": "q-026",
+      "question": "Who is responsible for \"Share the Garnet requirements matrix with Hiba\"?",
+      "gold": {
+        "kind": "entity",
+        "value": "Bolat Oyelami",
+        "entity": "p-bolat-oyelami",
+        "accept": [
+          "Bolat Oyelami",
+          "Bolat",
+          "B. Oyelami",
+          "bolat.oyelami@corrstead.example",
+          "@bolat",
+          "our learning services head"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.6,
+        "value": "Bolat Oyelami \u2014 he took over the Garnet requirements matrix from Emre on 2027-07-07, so as current owner he is the one who would share it with Hiba.",
+        "cites": [
+          "em-0100",
+          "memory/decisions.md",
+          "memory/projects/garnet.md"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Bolat Oyelami \u2014 he took over the Garnet requirements matrix from Emre on 2027-07-07, so as current owner he is the one who would share it with Hiba.",
+        "gold": "Bolat Oyelami",
+        "resolved": [
+          "p-bolat-oyelami",
+          "p-hiba-jimenez"
+        ],
+        "citations": {
+          "total": 3,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "memory/decisions.md",
+              "why": "unrecognized"
+            },
+            {
+              "cite": "memory/projects/garnet.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s7-w2",
+      "checkpoint": "cp2",
+      "id": "q-027",
+      "question": "What phase is Assessment Design Workshop in?",
+      "gold": {
+        "kind": "text",
+        "value": "delivery",
+        "entity": null,
+        "accept": [
+          "delivery"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Delivery (moved from logistics on 2027-07-07)",
+        "cites": [
+          "mt-0013",
+          "em-0008",
+          "nt-0001",
+          "memory/projects/assessment-design-workshop.md"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Delivery (moved from logistics on 2027-07-07)",
+        "gold": "delivery",
+        "citations": {
+          "total": 4,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "em-0008",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "nt-0001",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "memory/projects/assessment-design-workshop.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s7-w2",
+      "checkpoint": "cp5",
+      "id": "q-069",
+      "question": "Who is responsible for \"Send Hiba the Garnet lessons-learned note\"?",
+      "gold": {
+        "kind": "entity",
+        "value": "Desmond Visser",
+        "entity": "p-desmond-visser",
+        "accept": [
+          "Desmond Visser",
+          "Desmond",
+          "Dez",
+          "D. Visser",
+          "desmond.visser@corrstead.example",
+          "@desmond",
+          "the platform lead"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.6,
+        "value": "Desmond Visser (the Garnet lessons-learned note was handed over from Bolat Oyelami to Desmond on 2027-07-14, 'Desmond will take it from here'; the working session with agenda 'Send Hiba the Garnet lessons-learned note' was organized by Bolat, and Desmond said 2027-07-15 the note is 'moving again')",
+        "cites": [
+          "em-0145",
+          "ca-0018",
+          "ch-0122",
+          "memory/projects/garnet.md",
+          "memory/open-questions.md"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Desmond Visser (the Garnet lessons-learned note was handed over from Bolat Oyelami to Desmond on 2027-07-14, 'Desmond will take it from here'; the working session with agenda 'Send Hiba the Garnet lessons-learned note' was organized by Bolat, and Desmond said 2027-07-15 the note is 'moving again')",
+        "gold": "Desmond Visser",
+        "resolved": [
+          "p-desmond-visser",
+          "p-hiba-jimenez"
+        ],
+        "citations": {
+          "total": 5,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "ca-0018",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ch-0122",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "memory/projects/garnet.md",
+              "why": "unrecognized"
+            },
+            {
+              "cite": "memory/open-questions.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s7-w2",
+      "checkpoint": "cp5",
+      "id": "q-070",
+      "question": "What phase is Syllabus Review Learning Series in?",
+      "gold": {
+        "kind": "text",
+        "value": "scheduling",
+        "entity": null,
+        "accept": [
+          "scheduling"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.85,
+        "value": "Scheduling (revived 2027-06-23, moved to scheduling 2027-06-24; no later phase change recorded)",
+        "cites": [
+          "nt-0003",
+          "ch-0020",
+          "em-0027",
+          "memory/projects/syllabus-review-learning-series.md"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Scheduling (revived 2027-06-23, moved to scheduling 2027-06-24; no later phase change recorded)",
+        "gold": "scheduling",
+        "citations": {
+          "total": 4,
+          "valid": 2,
+          "invalid": [
+            {
+              "cite": "nt-0003",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "memory/projects/syllabus-review-learning-series.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s7-w2",
+      "checkpoint": "cp5",
+      "id": "q-071",
+      "question": "What is Abigail's role?",
+      "gold": {
+        "kind": "text",
+        "value": "Senior Account Executive",
+        "entity": null,
+        "accept": [
+          "Senior Account Executive"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Senior Account Executive at Merol Labs (Abigail Kuznetsova; just joined as of 2027-07-14)",
+        "cites": [
+          "em-0144",
+          "memory/people.md"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Senior Account Executive at Merol Labs (Abigail Kuznetsova; just joined as of 2027-07-14)",
+        "gold": "Senior Account Executive",
+        "citations": {
+          "total": 2,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "memory/people.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s7-w2",
+      "checkpoint": "cp6",
+      "id": "q-088",
+      "question": "What is currently blocking Garnet?",
+      "gold": {
+        "kind": "text",
+        "value": "real student data paused pending the security review",
+        "entity": null,
+        "accept": [
+          "real student data paused pending the security review"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.7,
+        "value": "The Garnet rollout checklist \u2014 blocked, waiting on a vendor fix (Garnet review 2027-07-14); additionally, real student data is paused pending the security review, with the Garnet timeout errors 'still not right' as of the 2027-07-13 security review.",
+        "cites": [
+          "mn-0019",
+          "em-0049",
+          "mn-0012",
+          "mt-0019"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "The Garnet rollout checklist \u2014 blocked, waiting on a vendor fix (Garnet review 2027-07-14); additionally, real student data is paused pending the security review, with the Garnet timeout errors 'still not right' as of the 2027-07-13 security review.",
+        "gold": "real student data paused pending the security review",
+        "citations": {
+          "total": 4,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "mn-0019",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "em-0049",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "mt-0019",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "checkpoint": "cp1",
+      "id": "q-009",
+      "question": "What is my working relationship with our programs manager?",
+      "gold": {
+        "kind": "text",
+        "value": "peer",
+        "entity": null,
+        "accept": [
+          "peer"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.85,
+        "value": "Close collaborator with regular 1:1s (17 Aug, 26 Aug, 31 Aug) and a frequent counterpart on Nettle, HPID, THTS and Morgate items; Akosua Bergstrom is the FDO Programs Manager.",
+        "cites": [
+          "memory/people.md",
+          "mt-0001",
+          "mn-0012",
+          "mn-0017",
+          "nt-0001"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Close collaborator with regular 1:1s (17 Aug, 26 Aug, 31 Aug) and a frequent counterpart on Nettle, HPID, THTS and Morgate items; Akosua Bergstrom is the FDO Programs Manager.",
+        "gold": "peer",
+        "citations": {
+          "total": 5,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "memory/people.md",
+              "why": "unrecognized"
+            },
+            {
+              "cite": "mt-0001",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "mn-0012",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "mn-0017",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "checkpoint": "cp3",
+      "id": "q-028",
+      "question": "What phase is Translation Help Tool Selection in?",
+      "gold": {
+        "kind": "text",
+        "value": "questionnaires",
+        "entity": null,
+        "accept": [
+          "questionnaires"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Questionnaires phase (moved into questionnaires 20 Aug; still the open phase as of 3 Sep)",
+        "cites": [
+          "mt-0004"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Questionnaires phase (moved into questionnaires 20 Aug; still the open phase as of 3 Sep)",
+        "gold": "questionnaires",
+        "citations": {
+          "total": 1,
+          "valid": 1,
+          "invalid": []
+        }
+      }
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "checkpoint": "cp4",
+      "id": "q-043",
+      "question": "Who is the executive sponsor of the Ormton pilot?",
+      "gold": {
+        "kind": "entity",
+        "value": "Bruna Thapa",
+        "entity": "p-bruna-thapa",
+        "accept": [
+          "Bruna Thapa",
+          "Bruna",
+          "B. Thapa",
+          "bruna.thapa@ormton.reddale.example",
+          "@bruna",
+          "Ormton's ED"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Bruna Thapa (Executive Director, Ormton Housing Trust; Nettle sponsor)",
+        "cites": [
+          "nt-0001"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Bruna Thapa (Executive Director, Ormton Housing Trust; Nettle sponsor)",
+        "gold": "Bruna Thapa",
+        "resolved": [
+          "p-bruna-thapa",
+          "p-paula-dubois"
+        ],
+        "citations": {
+          "total": 1,
+          "valid": 1,
+          "invalid": []
+        }
+      }
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "checkpoint": "cp5",
+      "id": "q-052",
+      "question": "Who is responsible for \"Send Aoife the Noris deep-dive materials\"?",
+      "gold": {
+        "kind": "entity",
+        "value": "Jia Delacroix",
+        "entity": "p-jia-delacroix",
+        "accept": [
+          "Jia Delacroix",
+          "Jia",
+          "J. Delacroix",
+          "jia.delacroix@kelholm.reddale.example",
+          "@jia"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.8,
+        "value": "Akosua Carmichael",
+        "note": "Akosua Carmichael (Noris Cloud) committed on 17 Aug to send Aoife the Noris deep-dive materials. On 9 Sep she is passing the materials to Jia Delacroix (Kelholm), 'who's closer to it' - no longer Aoife's to receive.",
+        "cites": [
+          "em-0006",
+          "ch-0008",
+          "em-0101"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Akosua Carmichael",
+        "gold": "Jia Delacroix",
+        "resolved": [
+          "p-akosua-carmichael"
+        ],
+        "citations": {
+          "total": 3,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "em-0006",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ch-0008",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "checkpoint": "cp6",
+      "id": "q-065",
+      "question": "What is currently blocking Holworth Pantry Inventory Discovery?",
+      "gold": {
+        "kind": "text",
+        "value": "unsigned data-sharing agreement with Holworth",
+        "entity": null,
+        "accept": [
+          "unsigned data-sharing agreement with Holworth"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.85,
+        "value": "An unsigned data-sharing agreement with Holworth (reported by Amani Xu on 10 Sep); the HPID process map is additionally blocked on access approval",
+        "cites": [
+          "em-0108",
+          "mn-0027"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "An unsigned data-sharing agreement with Holworth (reported by Amani Xu on 10 Sep); the HPID process map is additionally blocked on access approval",
+        "gold": "unsigned data-sharing agreement with Holworth",
+        "citations": {
+          "total": 2,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "mn-0027",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s1-w1",
+      "checkpoint": "cp2",
+      "id": "q-028",
+      "question": "Who is responsible for \"Generate a synthetic resident data set for Marten\"?",
+      "gold": {
+        "kind": "entity",
+        "value": "Nadia Jovanovic",
+        "entity": "p-nadia-jovanovic",
+        "accept": [
+          "Nadia Jovanovic",
+          "Nadia",
+          "N. Jovanovic",
+          "nadia.jovanovic@holcrest.example",
+          "@nadia",
+          "the CISO"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.75,
+        "value": "Yasmin Mokoena (platform lead, OCT)",
+        "cites": [
+          "mn-0003",
+          "em-0111"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Yasmin Mokoena (platform lead, OCT)",
+        "gold": "Nadia Jovanovic",
+        "resolved": [
+          "p-yasmin-mokoena"
+        ],
+        "citations": {
+          "total": 2,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "mn-0003",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s1-w1",
+      "checkpoint": "cp3",
+      "id": "q-036",
+      "question": "What phase is the plain language session in?",
+      "gold": {
+        "kind": "text",
+        "value": "closed",
+        "entity": null,
+        "accept": [
+          "closed"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Complete \u2014 the Plain Language Workshop was completed 10 Nov ('plain language workshop is complete, thanks all'); the Plain Language Peer Network was spun up the same day as a follow-on and is ongoing.",
+        "cites": [
+          "ch-0091",
+          "projects/plain-language-workshop.md",
+          "projects/plain-language-peer-network.md"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Complete \u2014 the Plain Language Workshop was completed 10 Nov ('plain language workshop is complete, thanks all'); the Plain Language Peer Network was spun up the same day as a follow-on and is ongoing.",
+        "gold": "closed",
+        "citations": {
+          "total": 3,
+          "valid": 3,
+          "invalid": []
+        }
+      }
+    },
+    {
+      "world": "gen-s1-w1",
+      "checkpoint": "cp3",
+      "id": "q-040",
+      "question": "When is \"Send Jalen the Marten retention schedule\" due?",
+      "gold": {
+        "kind": "date",
+        "value": "2027-11-18",
+        "entity": null,
+        "accept": [
+          "2027-11-18"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "2027-11-18 (Thu 18 Nov \u2014 the deadline Camila set when she picked the retention schedule up on 12 Nov; she sent it to Jalen on 12 Nov, ahead of that deadline).",
+        "cites": [
+          "nt-0011",
+          "ch-0111",
+          "mn-0009",
+          "mn-0010",
+          "mn-0011",
+          "commitments.md"
+        ]
+      },
+      "details": {
+        "kind": "date",
+        "value": "2027-11-18 (Thu 18 Nov \u2014 the deadline Camila set when she picked the retention schedule up on 12 Nov; she sent it to Jalen on 12 Nov, ahead of that deadline).",
+        "gold": "2027-11-18",
+        "normalized": "2027-11-12",
+        "citations": {
+          "total": 6,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "ch-0111",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "mn-0009",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "mn-0010",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "mn-0011",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "commitments.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s1-w1",
+      "checkpoint": "cp3",
+      "id": "q-041",
+      "question": "What is the current target date for Marten?",
+      "gold": {
+        "kind": "date",
+        "value": "2027-12-31",
+        "entity": null,
+        "accept": [
+          "2027-12-31"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.98,
+        "value": "2027-12-31 (Fri 31 Dec; moved from 22 Dec on 9 Nov, which had replaced 15 Dec on 8 Nov).",
+        "cites": [
+          "ch-0073",
+          "em-0090",
+          "projects/marten.md",
+          "decisions.md"
+        ]
+      },
+      "details": {
+        "kind": "date",
+        "value": "2027-12-31 (Fri 31 Dec; moved from 22 Dec on 9 Nov, which had replaced 15 Dec on 8 Nov).",
+        "gold": "2027-12-31",
+        "normalized": null,
+        "citations": {
+          "total": 4,
+          "valid": 2,
+          "invalid": [
+            {
+              "cite": "em-0090",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "decisions.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s3-w1",
+      "checkpoint": "cp1",
+      "id": "q-009",
+      "question": "What is my working relationship with Lena?",
+      "gold": {
+        "kind": "text",
+        "value": "stakeholder",
+        "entity": null,
+        "accept": [
+          "stakeholder"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Lena is Eleni Fontaine, a Revenue Cycle Analyst at Ketford General Hospital and a counterpart on the Ketford Referral Triage Discovery project (with Katarzyna Dang and Bisi Chatterjee). She was sending the referral triage process map (no longer needed after the 20 Sep approach B decision), and Alasdair currently owes her the referral triage discovery interview guide by Wed 22 Sep.",
+        "cites": [
+          "em-0085",
+          "em-0011",
+          "ch-0014",
+          "ch-0025",
+          "nt-0006"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Lena is Eleni Fontaine, a Revenue Cycle Analyst at Ketford General Hospital and a counterpart on the Ketford Referral Triage Discovery project (with Katarzyna Dang and Bisi Chatterjee). She was sending the referral triage process map (no longer needed after the 20 Sep approach B decision), and Alasdair currently owes her the referral triage discovery interview guide by Wed 22 Sep.",
+        "gold": "stakeholder",
+        "citations": {
+          "total": 5,
+          "valid": 0,
+          "invalid": [
+            {
+              "cite": "em-0085",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "em-0011",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ch-0014",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ch-0025",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "nt-0006",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s3-w1",
+      "checkpoint": "cp2",
+      "id": "q-027",
+      "question": "Who is responsible for \"Pull the bed management baseline data from Lanmoor\"?",
+      "gold": {
+        "kind": "entity",
+        "value": "Vitoria Oduro",
+        "entity": "p-vitoria-oduro",
+        "accept": [
+          "Vitoria Oduro",
+          "Vitoria",
+          "V. Oduro",
+          "vitoria.oduro@lanmoor.birchmere.example",
+          "@vitoria"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Guadalupe Moreau",
+        "cites": [
+          "em-0030"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Guadalupe Moreau",
+        "gold": "Vitoria Oduro",
+        "resolved": [
+          "p-guadalupe-moreau"
+        ],
+        "citations": {
+          "total": 1,
+          "valid": 0,
+          "invalid": [
+            {
+              "cite": "em-0030",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s5-small",
+      "checkpoint": "cp1",
+      "id": "q-006",
+      "question": "Who is responsible for \"Set up Okapi test tenant login for Hiba\"?",
+      "gold": {
+        "kind": "entity",
+        "value": "Jisoo Nowak",
+        "entity": "p-jisoo-nowak",
+        "accept": [
+          "Jisoo Nowak",
+          "Jisoo",
+          "J. Nowak",
+          "jisoo.nowak@iselvale.example",
+          "@jisoo",
+          "the integration engineer"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Jisoo Nowak (Integration Engineer, CDS) \u2014 Hiba asked Jisoo to set up the Okapi test tenant login on 29 Mar; still open",
+        "cites": [
+          "nt-0006"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Jisoo Nowak (Integration Engineer, CDS) \u2014 Hiba asked Jisoo to set up the Okapi test tenant login on 29 Mar; still open",
+        "gold": "Jisoo Nowak",
+        "resolved": [
+          "p-hiba-deng",
+          "p-jisoo-nowak"
+        ],
+        "citations": {
+          "total": 1,
+          "valid": 1,
+          "invalid": []
+        }
+      }
+    },
+    {
+      "world": "gen-s5-small",
+      "checkpoint": "cp1",
+      "id": "q-007",
+      "question": "When is \"Send Friederike the Wagtail RACI chart\" due?",
+      "gold": {
+        "kind": "date",
+        "value": "2027-04-01",
+        "entity": null,
+        "accept": [
+          "2027-04-01"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "2027-04-01 (Thursday 1 April; deadline set 30 Mar, originally 'sometime next week')",
+        "cites": [
+          "mt-0013",
+          "ch-0054"
+        ]
+      },
+      "details": {
+        "kind": "date",
+        "value": "2027-04-01 (Thursday 1 April; deadline set 30 Mar, originally 'sometime next week')",
+        "gold": "2027-04-01",
+        "normalized": null,
+        "citations": {
+          "total": 2,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "mt-0013",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s5-small",
+      "checkpoint": "cp1",
+      "id": "q-008",
+      "question": "What is currently blocking Wagtail?",
+      "gold": {
+        "kind": "text",
+        "value": "real patient data paused pending the security review",
+        "entity": null,
+        "accept": [
+          "real patient data paused pending the security review"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.7,
+        "value": "The outstanding Wagtail change request from Friederike Bhatt (announced 19 Mar; Hiba still chasing as of 26 Mar). The earlier security-review block (18 Mar, real patient data paused) was cleared when the security review was held 24 Mar and Wagtail moved to readiness 25 Mar.",
+        "cites": [
+          "ch-0016",
+          "mt-0006",
+          "ch-0040",
+          "mn-0003",
+          "mt-0008",
+          "mt-0011"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "The outstanding Wagtail change request from Friederike Bhatt (announced 19 Mar; Hiba still chasing as of 26 Mar). The earlier security-review block (18 Mar, real patient data paused) was cleared when the security review was held 24 Mar and Wagtail moved to readiness 25 Mar.",
+        "gold": "real patient data paused pending the security review",
+        "citations": {
+          "total": 6,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "ch-0016",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "mt-0006",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ch-0040",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "mt-0008",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "mt-0011",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s5-small",
+      "checkpoint": "cp1",
+      "id": "q-009",
+      "question": "What is my working relationship with Rodrigo Okada?",
+      "gold": {
+        "kind": "text",
+        "value": "executive",
+        "entity": null,
+        "accept": [
+          "executive"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.85,
+        "value": "Rodrigo Okada is Falbury's Chief Medical Information Officer and a teammate on Project Wagtail; he attended the 17 Mar Wagtail build sync and flagged concern that 'we're overcommitting again'.",
+        "cites": [
+          "nt-0001",
+          "mt-0004"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Rodrigo Okada is Falbury's Chief Medical Information Officer and a teammate on Project Wagtail; he attended the 17 Mar Wagtail build sync and flagged concern that 'we're overcommitting again'.",
+        "gold": "executive",
+        "citations": {
+          "total": 2,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "mt-0004",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s5-small",
+      "checkpoint": "cp2",
+      "id": "q-019",
+      "question": "What is my working relationship with Giorgi?",
+      "gold": {
+        "kind": "text",
+        "value": "stakeholder",
+        "entity": null,
+        "accept": [
+          "stakeholder"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Giorgi Choi is the new Privacy Officer at Falbury (as of 31 Mar). He asked Hiba to send him the Wagtail privacy review form by Fri 2 Apr, and Hiba sent it on 1 Apr - so Hiba is his point of contact for Wagtail privacy review materials.",
+        "cites": [
+          "em-0068",
+          "mt-0017"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Giorgi Choi is the new Privacy Officer at Falbury (as of 31 Mar). He asked Hiba to send him the Wagtail privacy review form by Fri 2 Apr, and Hiba sent it on 1 Apr - so Hiba is his point of contact for Wagtail privacy review materials.",
+        "gold": "stakeholder",
+        "citations": {
+          "total": 2,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "mt-0017",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s6-w1",
+      "checkpoint": "cp1",
+      "id": "q-006",
+      "question": "Who is responsible for \"Send Despina the list of pilot courses for Axolotl\"?",
+      "gold": {
+        "kind": "entity",
+        "value": "Jurgen Dvorak",
+        "entity": "p-jurgen-dvorak",
+        "accept": [
+          "Jurgen Dvorak",
+          "Jurgen",
+          "J. Dvorak",
+          "jurgen.dvorak@dorcliff.lanhurst.example",
+          "@jurgen",
+          "Dorcliff's CIO"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.7,
+        "value": "Losa Moretti (originally responsible; handed to Jurgen Dvorak, who sent it 2027-02-15)",
+        "cites": [
+          "em-0020",
+          "mn-0003",
+          "ch-0028",
+          "em-0043"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Losa Moretti (originally responsible; handed to Jurgen Dvorak, who sent it 2027-02-15)",
+        "gold": "Jurgen Dvorak",
+        "resolved": [
+          "p-jurgen-dvorak",
+          "p-losa-moretti"
+        ],
+        "citations": {
+          "total": 4,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "em-0020",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "mn-0003",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "em-0043",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s6-w1",
+      "checkpoint": "cp2",
+      "id": "q-022",
+      "question": "What is Ebun Petrovic's role?",
+      "gold": {
+        "kind": "text",
+        "value": "Privacy Officer",
+        "entity": null,
+        "accept": [
+          "Privacy Officer"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Privacy Officer, Dorcliff State College (joined just before 2027-02-24; Axolotl is 'one of the first things on my desk')",
+        "cites": [
+          "em-0100"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Privacy Officer, Dorcliff State College (joined just before 2027-02-24; Axolotl is 'one of the first things on my desk')",
+        "gold": "Privacy Officer",
+        "citations": {
+          "total": 1,
+          "valid": 1,
+          "invalid": []
+        }
+      }
+    },
+    {
+      "world": "gen-s6-w1",
+      "checkpoint": "cp2",
+      "id": "q-028",
+      "question": "What is the current target date for Linel Enterprise Agreement?",
+      "gold": {
+        "kind": "date",
+        "value": "2027-03-10",
+        "entity": null,
+        "accept": [
+          "2027-03-10"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "No current target date - the Linel Enterprise Agreement is complete: signed 2027-02-16, ahead of the original target of 10 March",
+        "cites": [
+          "ch-0041",
+          "nt-0001",
+          "em-0079"
+        ]
+      },
+      "details": {
+        "kind": "date",
+        "value": "No current target date - the Linel Enterprise Agreement is complete: signed 2027-02-16, ahead of the original target of 10 March",
+        "gold": "2027-03-10",
+        "normalized": null,
+        "citations": {
+          "total": 3,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "ch-0041",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "em-0079",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s9-large",
+      "checkpoint": "cp1",
+      "id": "q-006",
+      "question": "Who is responsible for \"Draft the Cirrus load test plan\"?",
+      "gold": {
+        "kind": "entity",
+        "value": "Adebayo Kahananui",
+        "entity": "p-adebayo-kahananui",
+        "accept": [
+          "Adebayo Kahananui",
+          "Adebayo",
+          "A. Kahananui",
+          "adebayo.kahananui@redridge.kirkmarsh.example",
+          "@adebayo"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Adebayo Kahananui (took over the Cirrus load test plan from Stanley Valdez on 22 Oct; Stanley was originally assigned to draft it at the 21 Oct standup)",
+        "cites": [
+          "em-0044",
+          "mn-0007",
+          "projects/cirrus.md",
+          "people.md"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Adebayo Kahananui (took over the Cirrus load test plan from Stanley Valdez on 22 Oct; Stanley was originally assigned to draft it at the 21 Oct standup)",
+        "gold": "Adebayo Kahananui",
+        "resolved": [
+          "p-adebayo-kahananui",
+          "p-stanley-valdez"
+        ],
+        "citations": {
+          "total": 4,
+          "valid": 2,
+          "invalid": [
+            {
+              "cite": "mn-0007",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "people.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s9-large",
+      "checkpoint": "cp1",
+      "id": "q-009",
+      "question": "Which organization is Mikayla Babic with?",
+      "gold": {
+        "kind": "entity",
+        "value": "Network Digital Office",
+        "entity": "o-network-digital-office",
+        "accept": [
+          "Network Digital Office",
+          "NDO",
+          "central",
+          "the NDO team",
+          "kirkmarsh.example"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Network Digital Office (NDO), Kirkmarsh Health Partners (role not stated)",
+        "cites": [
+          "people.md"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Network Digital Office (NDO), Kirkmarsh Health Partners (role not stated)",
+        "gold": "Network Digital Office",
+        "resolved": [
+          "o-kirkmarsh-health-partners",
+          "o-network-digital-office"
+        ],
+        "citations": {
+          "total": 1,
+          "valid": 0,
+          "invalid": [
+            {
+              "cite": "people.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s9-large",
+      "checkpoint": "cp1",
+      "id": "q-014",
+      "question": "Who is responsible for \"Send Aroha the notes from the interpreter booking session\"?",
+      "gold": {
+        "kind": "entity",
+        "value": "Mathieu Wijaya",
+        "entity": "p-mathieu-wijaya",
+        "accept": [
+          "Mathieu Wijaya",
+          "Mathieu",
+          "M. Wijaya",
+          "mathieu.wijaya@kirkmarsh.example",
+          "@mathieu",
+          "the platform lead"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Mathieu Wijaya (Aroha originally asked Anh on 21 Oct; Anh handed it to Mathieu on 22 Oct; Mathieu sent the notes to Aroha on 28 Oct - done)",
+        "cites": [
+          "mt-0002",
+          "em-0039",
+          "ch-0077",
+          "em-0082",
+          "open-questions.md"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Mathieu Wijaya (Aroha originally asked Anh on 21 Oct; Anh handed it to Mathieu on 22 Oct; Mathieu sent the notes to Aroha on 28 Oct - done)",
+        "gold": "Mathieu Wijaya",
+        "resolved": [
+          "p-aroha-mendoza",
+          "p-mathieu-wijaya"
+        ],
+        "citations": {
+          "total": 5,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "mt-0002",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ch-0077",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "em-0082",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "open-questions.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s9-large",
+      "checkpoint": "cp1",
+      "id": "q-015",
+      "question": "What is currently blocking Cirrus?",
+      "gold": {
+        "kind": "text",
+        "value": "real patient data paused pending the security review",
+        "entity": null,
+        "accept": [
+          "real patient data paused pending the security review"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.85,
+        "value": "The security review - real patient data has been paused pending it since ~22 Oct. Additionally, SSO role mapping is blocked on an unsigned agreement (28 Oct) and the support playbook is blocked on a vendor fix (2 Nov).",
+        "cites": [
+          "nt-0003",
+          "mn-0011",
+          "mn-0012",
+          "projects/cirrus.md"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "The security review - real patient data has been paused pending it since ~22 Oct. Additionally, SSO role mapping is blocked on an unsigned agreement (28 Oct) and the support playbook is blocked on a vendor fix (2 Nov).",
+        "gold": "real patient data paused pending the security review",
+        "citations": {
+          "total": 4,
+          "valid": 2,
+          "invalid": [
+            {
+              "cite": "mn-0011",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "mn-0012",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s9-large",
+      "checkpoint": "cp1",
+      "id": "q-016",
+      "question": "What is my working relationship with Mathieu Wijaya?",
+      "gold": {
+        "kind": "text",
+        "value": "peer",
+        "entity": null,
+        "accept": [
+          "peer"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Mathieu Wijaya is Principal of the Integration Platform in the NDO (he runs the Kittiwake platform) and one of Aroha's day-to-day collaborators, alongside Anh Villanueva.",
+        "cites": [
+          "README.md",
+          "people.md"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Mathieu Wijaya is Principal of the Integration Platform in the NDO (he runs the Kittiwake platform) and one of Aroha's day-to-day collaborators, alongside Anh Villanueva.",
+        "gold": "peer",
+        "citations": {
+          "total": 2,
+          "valid": 0,
+          "invalid": [
+            {
+              "cite": "README.md",
+              "why": "unrecognized"
+            },
+            {
+              "cite": "people.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s9-large",
+      "checkpoint": "cp2",
+      "id": "q-024",
+      "question": "What phase is Frostmere Clinical Documentation Idea in?",
+      "gold": {
+        "kind": "text",
+        "value": "placeholder",
+        "entity": null,
+        "accept": [
+          "placeholder"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Waiting on a problem statement (from Achieng Colombo; promised 18 Oct, no evidence received by 29 Oct)",
+        "cites": [
+          "projects/frostmere-clinical-documentation.md",
+          "ch-0005",
+          "nt-0001"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Waiting on a problem statement (from Achieng Colombo; promised 18 Oct, no evidence received by 29 Oct)",
+        "gold": "placeholder",
+        "citations": {
+          "total": 3,
+          "valid": 2,
+          "invalid": [
+            {
+              "cite": "ch-0005",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s9-large",
+      "checkpoint": "cp2",
+      "id": "q-025",
+      "question": "What is Cass's role?",
+      "gold": {
+        "kind": "text",
+        "value": "Privacy Officer",
+        "entity": null,
+        "accept": [
+          "Privacy Officer"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Privacy Officer at Redridge (Children's Hospital) - Cassandra Pham, who just joined Redridge; Cirrus is one of the first things on her desk",
+        "cites": [
+          "people.md",
+          "em-0121"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Privacy Officer at Redridge (Children's Hospital) - Cassandra Pham, who just joined Redridge; Cirrus is one of the first things on her desk",
+        "gold": "Privacy Officer",
+        "citations": {
+          "total": 2,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "people.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s9-large",
+      "checkpoint": "cp2",
+      "id": "q-031",
+      "question": "What phase is Nurse Scheduling Learning Series in?",
+      "gold": {
+        "kind": "text",
+        "value": "scheduling",
+        "entity": null,
+        "accept": [
+          "scheduling"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Scheduling (moved into scheduling per the 1 Nov NDO leads call; the series was revived 26 Oct)",
+        "cites": [
+          "mt-0011",
+          "projects/nurse-scheduling-learning-series.md",
+          "decisions.md"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Scheduling (moved into scheduling per the 1 Nov NDO leads call; the series was revived 26 Oct)",
+        "gold": "scheduling",
+        "citations": {
+          "total": 3,
+          "valid": 2,
+          "invalid": [
+            {
+              "cite": "decisions.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s9-large",
+      "checkpoint": "cp3",
+      "id": "q-042",
+      "question": "What phase is Redridge Medication Reconciliation Discovery in?",
+      "gold": {
+        "kind": "text",
+        "value": "planning",
+        "entity": null,
+        "accept": [
+          "planning"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.6,
+        "value": "New project \u2014 created 4 Nov by splitting out of Redridge Referral Triage Discovery; the referral-triage discovery site visit agenda moved over with it (site-visit stage).",
+        "cites": [
+          "em-0133",
+          "projects/redridge-medication-reconciliation-discovery.md"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "New project \u2014 created 4 Nov by splitting out of Redridge Referral Triage Discovery; the referral-triage discovery site visit agenda moved over with it (site-visit stage).",
+        "gold": "planning",
+        "citations": {
+          "total": 2,
+          "valid": 2,
+          "invalid": []
+        }
+      }
+    },
+    {
+      "world": "gen-s9-large",
+      "checkpoint": "cp3",
+      "id": "q-043",
+      "question": "What is Anh Villanueva's role?",
+      "gold": {
+        "kind": "text",
+        "value": "Director of Digital Programs",
+        "entity": null,
+        "accept": [
+          "Director of Digital Programs"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Director of Digital Programs, Network Digital Office (NDO), Kirkmarsh Health Partners.",
+        "cites": [
+          "people.md",
+          "nt-0001"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Director of Digital Programs, Network Digital Office (NDO), Kirkmarsh Health Partners.",
+        "gold": "Director of Digital Programs",
+        "citations": {
+          "total": 2,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "people.md",
+              "why": "unrecognized"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s9-large",
+      "checkpoint": "cp3",
+      "id": "q-047",
+      "question": "When is \"Demo the Okapi prototype to Michaela\" due?",
+      "gold": {
+        "kind": "date",
+        "value": "2027-11-09",
+        "entity": null,
+        "accept": [
+          "2027-11-09"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.8,
+        "value": "By Tue 9 November (2027-11-09) per Aroha's 5 Nov note; it was actually demoed 5 Nov.",
+        "cites": [
+          "nt-0006",
+          "ch-0137",
+          "projects/okapi.md"
+        ]
+      },
+      "details": {
+        "kind": "date",
+        "value": "By Tue 9 November (2027-11-09) per Aroha's 5 Nov note; it was actually demoed 5 Nov.",
+        "gold": "2027-11-09",
+        "normalized": null,
+        "citations": {
+          "total": 3,
+          "valid": 2,
+          "invalid": [
+            {
+              "cite": "ch-0137",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s9-large",
+      "checkpoint": "cp3",
+      "id": "q-052",
+      "question": "What phase is RRTD discovery in?",
+      "gold": {
+        "kind": "text",
+        "value": "site visit",
+        "entity": null,
+        "accept": [
+          "site visit"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Site visits (moving into site visits as of 25 Oct; was 'planning' on 18 Oct).",
+        "cites": [
+          "mt-0006",
+          "projects/referral-triage-discovery.md"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Site visits (moving into site visits as of 25 Oct; was 'planning' on 18 Oct).",
+        "gold": "site visit",
+        "citations": {
+          "total": 2,
+          "valid": 2,
+          "invalid": []
+        }
+      }
+    },
+    {
+      "world": "gen-s2-w1",
+      "checkpoint": "cp1",
+      "id": "q-009",
+      "question": "What is my working relationship with Tendai Santos?",
+      "gold": {
+        "kind": "text",
+        "value": "stakeholder",
+        "entity": null,
+        "accept": [
+          "stakeholder"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.9,
+        "value": "Tendai Santos is the Customer Service Manager at Selfell Public Works and the owner of the Inspection Scheduling Advisory and the Selfell parking analytics idea. Dina provides light-touch advice on the advisory (no deliverables of Dina's team's own), is waiting on Tendai for the parking analytics problem statement and the Selfell use-case list, owes Tendai the AI workshop room plan (may be moot now the workshop is complete), and agreed to introduce Imani Navarro to Tendai for the permit intake work.",
+        "cites": [
+          "nt-0001",
+          "em-0017",
+          "ch-0034",
+          "ch-0028",
+          "ch-0038",
+          "em-0086"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Tendai Santos is the Customer Service Manager at Selfell Public Works and the owner of the Inspection Scheduling Advisory and the Selfell parking analytics idea. Dina provides light-touch advice on the advisory (no deliverables of Dina's team's own), is waiting on Tendai for the parking analytics problem statement and the Selfell use-case list, owes Tendai the AI workshop room plan (may be moot now the workshop is complete), and agreed to introduce Imani Navarro to Tendai for the permit intake work.",
+        "gold": "stakeholder",
+        "citations": {
+          "total": 6,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "em-0017",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ch-0034",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ch-0028",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ch-0038",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "em-0086",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s2-w1",
+      "checkpoint": "cp2",
+      "id": "q-027",
+      "question": "Who is responsible for \"Send Yael the Mistral decision memo\"?",
+      "gold": {
+        "kind": "entity",
+        "value": "Thibault Sahin",
+        "entity": "p-thibault-sahin",
+        "accept": [
+          "Thibault Sahin",
+          "Thibault",
+          "T. Sahin",
+          "thibault.sahin@vercliff.example",
+          "@thibault",
+          "the platform engineer"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.85,
+        "value": "Dina Ricci",
+        "cites": [
+          "mt-0009",
+          "em-0068",
+          "ch-0091"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Dina Ricci",
+        "gold": "Thibault Sahin",
+        "resolved": [
+          "p-dina-ricci"
+        ],
+        "citations": {
+          "total": 3,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "mt-0009",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ch-0091",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "rubric_answers_below_focus_threshold_with_matching_keywords": [
+    {
+      "world": "pilot",
+      "checkpoint": "cp1",
+      "id": "q-008",
+      "type": "brief",
+      "focus": 0.38271604938271603,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r5",
+        "r6",
+        "r9"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "pilot",
+      "checkpoint": "cp2",
+      "id": "q-015",
+      "type": "status",
+      "focus": 0.32558139534883723,
+      "keyword_covered_items": [
+        "r1",
+        "r4",
+        "r5",
+        "r6"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "pilot",
+      "checkpoint": "cp2",
+      "id": "q-029",
+      "type": "brief",
+      "focus": 0.3548387096774194,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "pilot",
+      "checkpoint": "cp3",
+      "id": "q-044",
+      "type": "brief",
+      "focus": 0.3191489361702128,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r3",
+        "r5",
+        "r6",
+        "r9",
+        "r10",
+        "r11"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp1",
+      "id": "q-002",
+      "type": "status",
+      "focus": 0.4146341463414634,
+      "keyword_covered_items": [
+        "r1",
+        "r4",
+        "r7"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp2",
+      "id": "q-017",
+      "type": "status",
+      "focus": 0.36792452830188677,
+      "keyword_covered_items": [
+        "r1",
+        "r3",
+        "r4",
+        "r7",
+        "r10"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp2",
+      "id": "q-024",
+      "type": "brief",
+      "focus": 0.35714285714285715,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r4",
+        "r5"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp4",
+      "id": "q-047",
+      "type": "status",
+      "focus": 0.38461538461538464,
+      "keyword_covered_items": [
+        "r1",
+        "r3",
+        "r4",
+        "r6",
+        "r7",
+        "r10"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp4",
+      "id": "q-053",
+      "type": "brief",
+      "focus": 0.49333333333333335,
+      "keyword_covered_items": [
+        "r1",
+        "r6",
+        "r16",
+        "r22",
+        "r23",
+        "r24"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp4",
+      "id": "q-057",
+      "type": "brief",
+      "focus": 0.47058823529411764,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp5",
+      "id": "q-067",
+      "type": "brief",
+      "focus": 0.19444444444444445,
+      "keyword_covered_items": [
+        "r1"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp5",
+      "id": "q-073",
+      "type": "brief",
+      "focus": 0.48484848484848486,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp6",
+      "id": "q-077",
+      "type": "status",
+      "focus": 0.49107142857142855,
+      "keyword_covered_items": [
+        "r1",
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r9"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp6",
+      "id": "q-081",
+      "type": "brief",
+      "focus": 0.4,
+      "keyword_covered_items": [
+        "r1",
+        "r2"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp6",
+      "id": "q-086",
+      "type": "brief",
+      "focus": 0.32,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r3"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp9",
+      "id": "q-129",
+      "type": "brief",
+      "focus": 0.34782608695652173,
+      "keyword_covered_items": [
+        "r1"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp10",
+      "id": "q-144",
+      "type": "brief",
+      "focus": 0.47058823529411764,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r3"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp12",
+      "id": "q-167",
+      "type": "status",
+      "focus": 0.44715447154471544,
+      "keyword_covered_items": [
+        "r1",
+        "r4",
+        "r5",
+        "r6",
+        "r7",
+        "r8",
+        "r10"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp12",
+      "id": "q-171",
+      "type": "brief",
+      "focus": 0.3469387755102041,
+      "keyword_covered_items": [
+        "r1"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "checkpoint": "cp12",
+      "id": "q-176",
+      "type": "brief",
+      "focus": 0.45454545454545453,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r3",
+        "r5",
+        "r6"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "checkpoint": "cp2",
+      "id": "q-024",
+      "type": "brief",
+      "focus": 0.3333333333333333,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r5"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "checkpoint": "cp4",
+      "id": "q-059",
+      "type": "brief",
+      "focus": 0.30434782608695654,
+      "keyword_covered_items": [
+        "r1",
+        "r5"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "checkpoint": "cp5",
+      "id": "q-067",
+      "type": "brief",
+      "focus": 0.3880597014925373,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r4",
+        "r6"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "checkpoint": "cp6",
+      "id": "q-081",
+      "type": "brief",
+      "focus": 0.34615384615384615,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r4",
+        "r5"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "checkpoint": "cp6",
+      "id": "q-086",
+      "type": "brief",
+      "focus": 0.38333333333333336,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s7-w2",
+      "checkpoint": "cp2",
+      "id": "q-029",
+      "type": "brief",
+      "focus": 0.4594594594594595,
+      "keyword_covered_items": [
+        "r2",
+        "r5",
+        "r7",
+        "r8"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s7-w2",
+      "checkpoint": "cp3",
+      "id": "q-038",
+      "type": "brief",
+      "focus": 0.32142857142857145,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s7-w2",
+      "checkpoint": "cp4",
+      "id": "q-052",
+      "type": "brief",
+      "focus": 0.3076923076923077,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r3"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s7-w2",
+      "checkpoint": "cp6",
+      "id": "q-081",
+      "type": "brief",
+      "focus": 0.42857142857142855,
+      "keyword_covered_items": [
+        "r1",
+        "r3",
+        "r7",
+        "r8",
+        "r11",
+        "r12"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s7-w2",
+      "checkpoint": "cp6",
+      "id": "q-086",
+      "type": "brief",
+      "focus": 0.4576271186440678,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s7-w2",
+      "checkpoint": "cp6",
+      "id": "q-089",
+      "type": "brief",
+      "focus": 0.3783783783783784,
+      "keyword_covered_items": [
+        "r1",
+        "r3"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "checkpoint": "cp3",
+      "id": "q-030",
+      "type": "brief",
+      "focus": 0.48484848484848486,
+      "keyword_covered_items": [
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "checkpoint": "cp5",
+      "id": "q-046",
+      "type": "status",
+      "focus": 0.47297297297297297,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r3",
+        "r5",
+        "r7"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "checkpoint": "cp5",
+      "id": "q-050",
+      "type": "brief",
+      "focus": 0.3382352941176471,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r3",
+        "r5",
+        "r6"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "checkpoint": "cp6",
+      "id": "q-057",
+      "type": "status",
+      "focus": 0.49206349206349204,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r5",
+        "r7"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "checkpoint": "cp6",
+      "id": "q-061",
+      "type": "brief",
+      "focus": 0.45454545454545453,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "checkpoint": "cp3",
+      "id": "q-038",
+      "type": "brief",
+      "focus": 0.48,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s3-w1",
+      "checkpoint": "cp1",
+      "id": "q-011",
+      "type": "brief",
+      "focus": 0.42592592592592593,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r5",
+        "r7"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s5-small",
+      "checkpoint": "cp3",
+      "id": "q-030",
+      "type": "brief",
+      "focus": 0.3333333333333333,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r4",
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s6-w1",
+      "checkpoint": "cp2",
+      "id": "q-017",
+      "type": "status",
+      "focus": 0.49107142857142855,
+      "keyword_covered_items": [
+        "r2",
+        "r4",
+        "r5",
+        "r6",
+        "r7",
+        "r8",
+        "r9",
+        "r10"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s9-large",
+      "checkpoint": "cp2",
+      "id": "q-020",
+      "type": "status",
+      "focus": 0.41904761904761906,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r4",
+        "r5",
+        "r6"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s9-large",
+      "checkpoint": "cp2",
+      "id": "q-027",
+      "type": "brief",
+      "focus": 0.46511627906976744,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s9-large",
+      "checkpoint": "cp3",
+      "id": "q-038",
+      "type": "status",
+      "focus": 0.47058823529411764,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r4",
+        "r5",
+        "r6",
+        "r7",
+        "r9",
+        "r10",
+        "r11"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s2-w1",
+      "checkpoint": "cp1",
+      "id": "q-011",
+      "type": "brief",
+      "focus": 0.3055555555555556,
+      "keyword_covered_items": [
+        "r1"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s2-w1",
+      "checkpoint": "cp2",
+      "id": "q-025",
+      "type": "brief",
+      "focus": 0.4878048780487805,
+      "keyword_covered_items": [
+        "r1",
+        "r2",
+        "r3"
+      ],
+      "base": 0.0,
+      "score": 0.0
+    }
+  ],
+  "note": "Diagnostic candidates, not independently adjudicated false negatives or corrected scores. Raw report failures contains only ten sampled failures."
+}

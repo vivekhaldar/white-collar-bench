@@ -1,0 +1,579 @@
+{
+  "world": "gen-s1-w1",
+  "checkpoint": "cp3",
+  "aggregate_score_changes_applied": false,
+  "examples": [
+    {
+      "id": "q-036",
+      "question": "What phase is the plain language session in?",
+      "actual_answer": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "Complete \u2014 the Plain Language Workshop was completed 10 Nov ('plain language workshop is complete, thanks all'); the Plain Language Peer Network was spun up the same day as a follow-on and is ongoing.",
+        "cites": [
+          "ch-0091",
+          "projects/plain-language-workshop.md",
+          "projects/plain-language-peer-network.md"
+        ]
+      },
+      "actual_score": {
+        "id": "q-036",
+        "type": "point",
+        "template": "project_attr",
+        "answerable": true,
+        "challenges": [
+          "alias",
+          "new_entity"
+        ],
+        "valid": true,
+        "abstained": false,
+        "base": 0.0,
+        "citation": 1.0,
+        "score": 0.0,
+        "details": {
+          "kind": "text",
+          "value": "Complete \u2014 the Plain Language Workshop was completed 10 Nov ('plain language workshop is complete, thanks all'); the Plain Language Peer Network was spun up the same day as a follow-on and is ongoing.",
+          "gold": "closed",
+          "citations": {
+            "total": 3,
+            "valid": 3,
+            "invalid": []
+          }
+        }
+      },
+      "canonical_value_only": "closed",
+      "diagnostic_score": {
+        "id": "q-036",
+        "type": "point",
+        "template": "project_attr",
+        "answerable": true,
+        "challenges": [
+          "alias",
+          "new_entity"
+        ],
+        "valid": true,
+        "abstained": false,
+        "base": 1.0,
+        "citation": 1.0,
+        "score": 1.0,
+        "details": {
+          "kind": "text",
+          "value": "closed",
+          "gold": "closed",
+          "citations": {
+            "total": 3,
+            "valid": 3,
+            "invalid": []
+          }
+        }
+      },
+      "source": "worlds/dev/gen-s1-w1/inbox/2027-11-10/ch-0091.json"
+    },
+    {
+      "id": "q-040",
+      "question": "When is \"Send Jalen the Marten retention schedule\" due?",
+      "actual_answer": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.95,
+        "value": "2027-11-18 (Thu 18 Nov \u2014 the deadline Camila set when she picked the retention schedule up on 12 Nov; she sent it to Jalen on 12 Nov, ahead of that deadline).",
+        "cites": [
+          "nt-0011",
+          "ch-0111",
+          "mn-0009",
+          "mn-0010",
+          "mn-0011",
+          "commitments.md"
+        ]
+      },
+      "actual_score": {
+        "id": "q-040",
+        "type": "point",
+        "template": "loop_due",
+        "answerable": true,
+        "challenges": [
+          "endorsement",
+          "worker_directive"
+        ],
+        "valid": true,
+        "abstained": false,
+        "base": 0.0,
+        "citation": 0.16666666666666666,
+        "score": 0.0,
+        "details": {
+          "kind": "date",
+          "value": "2027-11-18 (Thu 18 Nov \u2014 the deadline Camila set when she picked the retention schedule up on 12 Nov; she sent it to Jalen on 12 Nov, ahead of that deadline).",
+          "gold": "2027-11-18",
+          "normalized": "2027-11-12",
+          "citations": {
+            "total": 6,
+            "valid": 1,
+            "invalid": [
+              {
+                "cite": "ch-0111",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "mn-0009",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "mn-0010",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "mn-0011",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "commitments.md",
+                "why": "unrecognized"
+              }
+            ]
+          }
+        }
+      },
+      "canonical_value_only": "2027-11-18",
+      "diagnostic_score": {
+        "id": "q-040",
+        "type": "point",
+        "template": "loop_due",
+        "answerable": true,
+        "challenges": [
+          "endorsement",
+          "worker_directive"
+        ],
+        "valid": true,
+        "abstained": false,
+        "base": 1.0,
+        "citation": 0.16666666666666666,
+        "score": 0.7916666666666666,
+        "details": {
+          "kind": "date",
+          "value": "2027-11-18",
+          "gold": "2027-11-18",
+          "citations": {
+            "total": 6,
+            "valid": 1,
+            "invalid": [
+              {
+                "cite": "ch-0111",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "mn-0009",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "mn-0010",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "mn-0011",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "commitments.md",
+                "why": "unrecognized"
+              }
+            ]
+          }
+        }
+      },
+      "source": "worlds/dev/gen-s1-w1/inbox/2027-11-12/nt-0011.md"
+    },
+    {
+      "id": "q-041",
+      "question": "What is the current target date for Marten?",
+      "actual_answer": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.98,
+        "value": "2027-12-31 (Fri 31 Dec; moved from 22 Dec on 9 Nov, which had replaced 15 Dec on 8 Nov).",
+        "cites": [
+          "ch-0073",
+          "em-0090",
+          "projects/marten.md",
+          "decisions.md"
+        ]
+      },
+      "actual_score": {
+        "id": "q-041",
+        "type": "point",
+        "template": "project_attr",
+        "answerable": true,
+        "challenges": [
+          "supersession"
+        ],
+        "valid": true,
+        "abstained": false,
+        "base": 0.0,
+        "citation": 0.5,
+        "score": 0.0,
+        "details": {
+          "kind": "date",
+          "value": "2027-12-31 (Fri 31 Dec; moved from 22 Dec on 9 Nov, which had replaced 15 Dec on 8 Nov).",
+          "gold": "2027-12-31",
+          "normalized": null,
+          "citations": {
+            "total": 4,
+            "valid": 2,
+            "invalid": [
+              {
+                "cite": "em-0090",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "decisions.md",
+                "why": "unrecognized"
+              }
+            ]
+          }
+        }
+      },
+      "canonical_value_only": "2027-12-31",
+      "diagnostic_score": {
+        "id": "q-041",
+        "type": "point",
+        "template": "project_attr",
+        "answerable": true,
+        "challenges": [
+          "supersession"
+        ],
+        "valid": true,
+        "abstained": false,
+        "base": 1.0,
+        "citation": 0.5,
+        "score": 0.875,
+        "details": {
+          "kind": "date",
+          "value": "2027-12-31",
+          "gold": "2027-12-31",
+          "citations": {
+            "total": 4,
+            "valid": 2,
+            "invalid": [
+              {
+                "cite": "em-0090",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "decisions.md",
+                "why": "unrecognized"
+              }
+            ]
+          }
+        }
+      },
+      "source": "worlds/dev/gen-s1-w1/inbox/2027-11-09/ch-0073.json"
+    },
+    {
+      "id": "q-038",
+      "question": "What am I working on with Nadia?",
+      "actual_answer": {
+        "type": "brief",
+        "abstain": false,
+        "confidence": 0.9,
+        "summary": "Mostly Marten security work with Nadia (CISO): you and Dina assembled the Marten security review package by 9 Nov (delivery to Nadia unconfirmed); Nadia wants the Marten data-flow diagram from you and expects you to update the Marten timeline after her comments (both open); you are to look into the Marten timeout errors Nadia raised at the 8 Nov leads call, and to review Nadia's Marten integration spec. The joint Marten rollout checklist was dropped 8 Nov (superseded by the approach C decision) and the joint equity impact review was received by 8 Nov. Separately, Nadia asked you on 11 Nov to set up a coffee about pothole reporting (not set up yet).",
+        "claims": [
+          {
+            "text": "Marten security review package (with Dina, due 2 Nov) assembled by 9 Nov; delivery to Nadia unconfirmed.",
+            "cites": [
+              "em-0030",
+              "mt-0005",
+              "ch-0082",
+              "commitments.md"
+            ]
+          },
+          {
+            "text": "Nadia wants the Marten data-flow diagram from Camila \u2014 open, 'not agreed yet'.",
+            "cites": [
+              "ch-0018",
+              "em-0025",
+              "em-0028",
+              "ch-0025"
+            ]
+          },
+          {
+            "text": "Nadia expects Camila to update the Marten timeline after her comments \u2014 open.",
+            "cites": [
+              "em-0056",
+              "commitments.md"
+            ]
+          },
+          {
+            "text": "Nadia raised Marten timeout errors at the 8 Nov leads call; Camila to look into them \u2014 open.",
+            "cites": [
+              "mt-0010",
+              "commitments.md"
+            ]
+          },
+          {
+            "text": "Camila to review Nadia's Marten integration spec \u2014 open (noted 10 Nov).",
+            "cites": [
+              "nt-0010",
+              "commitments.md"
+            ]
+          },
+          {
+            "text": "Marten rollout checklist (with Jalen) dropped 8 Nov, superseded by the approach C decision.",
+            "cites": [
+              "nt-0007",
+              "em-0046",
+              "ch-0060"
+            ]
+          },
+          {
+            "text": "Marten equity impact review (with Jalen) received by 8 Nov; Camila is working from it.",
+            "cites": [
+              "ch-0064",
+              "ch-0071"
+            ]
+          },
+          {
+            "text": "Nadia asked Camila to set up a coffee about pothole reporting (11 Nov) \u2014 not set up yet.",
+            "cites": [
+              "em-0113",
+              "open-questions.md"
+            ]
+          }
+        ]
+      },
+      "focus": 0.48,
+      "actual_score": {
+        "id": "q-038",
+        "type": "brief",
+        "template": "person_brief",
+        "answerable": true,
+        "challenges": [
+          "alias",
+          "implied_commitment",
+          "transfer"
+        ],
+        "valid": true,
+        "abstained": false,
+        "base": 0.0,
+        "citation": 0.16666666666666666,
+        "score": 0.0,
+        "details": {
+          "verdicts": [
+            {
+              "item": "r1",
+              "weight": 1.0,
+              "verdict": "missing"
+            },
+            {
+              "item": "r2",
+              "weight": 2.0,
+              "verdict": "missing"
+            },
+            {
+              "item": "r3",
+              "weight": 2.0,
+              "verdict": "missing"
+            },
+            {
+              "item": "r4",
+              "weight": 2.0,
+              "verdict": "missing"
+            },
+            {
+              "item": "r5",
+              "weight": 2.0,
+              "verdict": "missing"
+            },
+            {
+              "item": "r6",
+              "weight": 1.0,
+              "verdict": "missing"
+            }
+          ],
+          "citations": {
+            "total": 18,
+            "valid": 3,
+            "invalid": [
+              {
+                "cite": "em-0030",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "mt-0005",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "ch-0082",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "commitments.md",
+                "why": "unrecognized"
+              },
+              {
+                "cite": "ch-0018",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "em-0025",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "em-0028",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "ch-0025",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "em-0056",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "nt-0007",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "em-0046",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "ch-0060",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "ch-0064",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "ch-0071",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "open-questions.md",
+                "why": "unrecognized"
+              }
+            ]
+          }
+        }
+      },
+      "diagnostic_focus_gate_disabled": {
+        "id": "q-038",
+        "type": "brief",
+        "template": "person_brief",
+        "answerable": true,
+        "challenges": [
+          "alias",
+          "implied_commitment",
+          "transfer"
+        ],
+        "valid": true,
+        "abstained": false,
+        "base": 0.7,
+        "citation": 0.16666666666666666,
+        "score": 0.5541666666666666,
+        "details": {
+          "verdicts": [
+            {
+              "item": "r1",
+              "weight": 1.0,
+              "verdict": "covered"
+            },
+            {
+              "item": "r2",
+              "weight": 2.0,
+              "verdict": "covered"
+            },
+            {
+              "item": "r3",
+              "weight": 2.0,
+              "verdict": "covered"
+            },
+            {
+              "item": "r4",
+              "weight": 2.0,
+              "verdict": "covered"
+            },
+            {
+              "item": "r5",
+              "weight": 2.0,
+              "verdict": "missing"
+            },
+            {
+              "item": "r6",
+              "weight": 1.0,
+              "verdict": "missing"
+            }
+          ],
+          "citations": {
+            "total": 18,
+            "valid": 3,
+            "invalid": [
+              {
+                "cite": "em-0030",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "mt-0005",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "ch-0082",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "commitments.md",
+                "why": "unrecognized"
+              },
+              {
+                "cite": "ch-0018",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "em-0025",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "em-0028",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "ch-0025",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "em-0056",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "nt-0007",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "em-0046",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "ch-0060",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "ch-0064",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "ch-0071",
+                "why": "not_in_support"
+              },
+              {
+                "cite": "open-questions.md",
+                "why": "unrecognized"
+              }
+            ]
+          }
+        }
+      },
+      "caveat": "Disabling focus is only a diagnostic of the all-or-nothing gate, not a validated alternate grader or a complete semantic adjudication"
+    }
+  ]
+}

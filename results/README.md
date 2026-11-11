@@ -1,0 +1,21 @@
+# Benchmark results
+
+Records of completed experiments, including configuration, unmodified-grader results,
+diagnostic corrections, costs, failures, and evidence. These are self-reported public-world
+evaluations, not verified private-test leaderboard submissions.
+
+| Run | Model / harness | Track A | Track B | Record |
+| --- | --- | ---: | ---: | --- |
+| 2026-11-10–11 | Qwen3.8-27B / Pi 1.5.2 | 72.3422 | 54.9968 | [Detailed report](2026-11-11-qwen3.8-27b-pi/README.md) |
+
+The table uses **original, unchanged-scorer results**. The report separately records the
+Track A missing-checkpoint retest and conservative semantic-credit adjustments. Do not
+substitute these hybrid/manual figures for a complete uniformly configured evaluation.
+
+For future entries, record the benchmark revision, worlds, track, repeats, model/provider,
+harness/runtime, prompts and budgets, scorer/judge version, original scores and uncertainty,
+cost, failures, and evidence provenance. Preserve original results when regrading. Mark
+manual adjudications, configuration probes, and partial reruns separately. Keep credentials,
+private data, dependency installations, and large raw run directories out of Git.
+
+All world content and example people/organizations in these reports are synthetic.

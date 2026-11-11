@@ -1,0 +1,44 @@
+[
+  {
+    "directory": "runs/pi-qwen38-followup",
+    "status": "stopped configuration probe; only context-budget/retest is included in final Track A adjustment",
+    "metered_requests": 220,
+    "http_statuses": {
+      "200": 217,
+      "400": 3
+    },
+    "metered_tokens": {
+      "cache_read_input_tokens": 5372480,
+      "input_tokens": 701114,
+      "output_tokens": 205715
+    },
+    "estimated_metered_cost_usd": 1.4698943,
+    "assistant_stop_reasons": {
+      "toolUse": 200,
+      "length": 9,
+      "stop": 4
+    },
+    "billing_caveat": "Interrupted in-flight responses may not have reported usage; metering does not establish their final billed cost"
+  },
+  {
+    "directory": "runs/pi-qwen38-context-budget",
+    "status": "stopped configuration probe; only context-budget/retest is included in final Track A adjustment",
+    "metered_requests": 105,
+    "http_statuses": {
+      "200": 102,
+      "400": 3
+    },
+    "metered_tokens": {
+      "cache_read_input_tokens": 2351744,
+      "input_tokens": 250273,
+      "output_tokens": 56113
+    },
+    "estimated_metered_cost_usd": 0.51613625,
+    "assistant_stop_reasons": {
+      "toolUse": 96,
+      "error": 3,
+      "stop": 2
+    },
+    "billing_caveat": "Interrupted in-flight responses may not have reported usage; metering does not establish their final billed cost"
+  }
+]
