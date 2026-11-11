@@ -329,3 +329,30 @@ Replace `WCB_AGENT_IMAGE` and `WCB_AGENT_CMD` with your own image and entry comm
 | `git: ...` warning | Git history is optional; snapshots are unaffected. Install git or check the workspace's `.git`. |
 | Leftover `/tmp/wcb-ws-*` directories | Workspaces kept after an interruption. Resume the run, or delete them. |
 | The adapter changed between a run and its resume | `wcb run --resume` warns. Sessions from then on use the new adapter. Start a new `--out` for a clean result. |
+
+## 14. Command reference
+
+| Command | Purpose |
+|---|---|
+| `wcb run --adapter A --world W --out DIR` | Run an agent over worlds (`--split dev`, `--track B`, `--repeats N`, `--resume`, `--skip-ingest` for oracle-only runs) |
+| `wcb doctor --adapter A [--track B]` | Smoke-test an adapter on the two-day mini world, with a checklist and hints |
+| `wcb score DIR [--judge llm --judge-model M]` | Grade a run and write `report.json` and `report.md` |
+| `wcb judge sample\|label\|run\|agreement` | Sample judge decisions from scored runs, label them by hand or with a judge, and report Cohen's κ ([judges](judge.md#measuring-judge-agreement)) |
+| `wcb validate store DIR` | Check a store against the Track A contract |
+| `wcb validate answers FILE --questions Q` | Check an answers file |
+| `wcb world list / check / build / stats / questions` | Inspect, validate and build worlds ([worlds](worlds.md)) |
+| `wcb generate --seed N --out DIR` | Generate a synthetic world ([generator](generator.md)) |
+| `wcb bundle DIR [--logs]` | Pack a scored run into a `.tar.gz` with a manifest, for reporting results |
+| `wcb privacy scan --private-repo P PATHS` | Check content for terms from a private repository ([privacy](privacy.md)) |
+
+Reference adapters in `adapters/examples/`:
+
+| Adapter | What it runs |
+|---|---|
+| `null.yaml` | Abstains on every question: the floor |
+| `store-reader.yaml` | Fixed rules over a contract store; with `--skip-ingest` it checks that oracle stores carry what the questions need |
+| `raw-retrieval.yaml` | Archives inputs without curation and answers by searching them with an LLM |
+| `claude-code.yaml`, `codex.yaml` | CLI coding agents |
+| `simple-anthropic.yaml`, `simple-openai.yaml` | A raw model in a minimal tool loop (OpenAI-compatible covers OpenRouter, vLLM, Ollama and others) |
+| `docker.yaml` | Any agent in a container that sees only its workspace, as leaderboard runs do |
+| `custom-script.yaml` | Template for your own script ([adapters](adapters.md)) |
