@@ -302,11 +302,10 @@
   template: project_attr
   params:
     project: pr-plain-language-workshop
-    attribute: phase
+    attribute: owner
     name_form: the plain language session
   challenges:
   - alias
-  - new_entity
 - id: q-037
   checkpoint: cp3
   template: project_loops
@@ -328,7 +327,7 @@
   checkpoint: cp3
   template: event_date
   params:
-    event: e-0268
+    event: e-0269
   text: When was "Send Camila the Marten training outline" completed?
   challenges:
   - silent_closure
@@ -345,9 +344,8 @@
   template: project_attr
   params:
     project: pr-marten
-    attribute: target_date
-  challenges:
-  - supersession
+    attribute: sponsor
+  challenges: []
 - id: q-042
   checkpoint: cp3
   template: project_loops

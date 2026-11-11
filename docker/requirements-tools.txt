@@ -1,0 +1,10 @@
+# Document and front-matter readers shipped in the reference agent image (Dockerfile.simple).
+# Agents must read .eml, .ics, .vtt, .json, .md (with YAML front matter), .pdf, .docx, .xlsx and
+# .pptx inputs; the standard library covers the first five, these cover the rest. Pinned so that
+# every session of every run sees the same tools; see docs/adapters.md, "Tools your agent's
+# runtime needs". Changing a pin changes the agent's runtime: record it with your results.
+PyYAML==6.0.3
+pypdf==7.0.1
+python-docx==1.2.0
+openpyxl==3.1.5
+python-pptx==1.0.2

@@ -17,6 +17,17 @@ Beat text uses slot templates that the simulator fills from a context:
 | `{unit.short}`, `{vendor.short}`, `{vendor2.short}` | organizations |
 | `{v.sites}`, `{v.site}`, `{v.users}`, `{v.end_users}`, `{v.council}`, `{v.data}`, `{v.agreement}`, `{v.platform}` | setting vocabulary |
 | `{noun}`, `{n}`, `{n2}`, `{ver}` | generic artifact noun, small numbers, a version label |
+| `{n_plus}` | one more than `{n}` |
+| `{hosting}`, `{bidders}`, `{approach}` | description slots of one archetype (`Archetype.slots`) |
+
+**Description state.** An archetype's `desc` is the first sentence of a project's summary, and
+the simulator rewrites the summary whenever the project changes. Every value in `desc` that a
+decision can change is project state, not a constant: `{n}` (the scope count) and the
+archetype's `slots`. A decision beat's `effect` says what its replacement (the `counter`
+decision that a reversal makes) does to that state: `("n", "+1")` widens the scope by one,
+`("hosting", template)` replaces a slot. The simulator applies the effect when the replacement
+is made and rewrites the summary then (docs/generator.md, "Summaries track current state");
+`check_library` verifies that every effect names `n` or a slot that `desc` uses.
 
 Every keyword template of a loop or decision beat is a substring of its `what` template, so a
 renderer that states the `what` always carries the keywords (`check_library` verifies this).
@@ -64,6 +75,9 @@ class Beat:
     # keywords) and the reasons that fit such a reversal.
     counter: tuple[str, str, tuple[str, ...]] | None = None
     reasons: tuple[str, ...] = ()
+    # Decision beats: what the replacement (`counter`) decision does to the project's
+    # description state, as (slot, value) pairs: ("n", "+k") or (slot name, template).
+    effect: tuple[tuple[str, str], ...] = ()
 
 
 @dataclass(frozen=True)
@@ -86,6 +100,9 @@ class Archetype:
     start: tuple[str, ...]  # phases a project can start the seed in
     reversal_reasons: tuple[str, ...] = ()
     decisions: tuple[Beat, ...] = field(default=())  # archetype-wide decision beats
+    # Description slots that a decision can change: (name, initial template). The template is
+    # filled from the same context as `desc`; a decision's `effect` replaces it.
+    slots: tuple[tuple[str, str], ...] = ()
 
     def phase(self, name: str) -> Phase:
         for p in self.phases:
@@ -111,11 +128,13 @@ def L(key, what, summary, kw, *, debtor="worker", creditor="cp", others=None, ki
                 due, ch, w, n, subject=subject)
 
 
-def D(key, what, summary, kw, *, by=("worker", "sponsor"), w=1.0, counter=None, reasons=()):
+def D(key, what, summary, kw, *, by=("worker", "sponsor"), w=1.0, counter=None, reasons=(), effect=None):
     """A decision beat. `counter` is (what, summary, keywords) of the decision that replaces it
-    when it is reversed; `reasons` are reversal reasons that fit it."""
+    when it is reversed; `reasons` are reversal reasons that fit it; `effect` (slot -> value) is
+    what that replacement does to the project's description state (see the module docstring)."""
     c = (counter[0], counter[1], tuple(counter[2])) if counter else None
-    return Beat(key, "decision", what, summary, tuple(kw), weight=w, by=tuple(by), counter=c, reasons=tuple(reasons))
+    return Beat(key, "decision", what, summary, tuple(kw), weight=w, by=tuple(by), counter=c, reasons=tuple(reasons),
+                effect=tuple((effect or {}).items()))
 
 
 def F(key, attr, value, summary, *, w=1.0):
@@ -172,7 +191,7 @@ UNATTACHED: tuple[Beat, ...] = (
 # ---------------------------------------------------------------- the library
 FLAGSHIP = Archetype(
     "flagship_pilot", "flagship pilot build with gates",
-    "Pilot of {topic_a} for {n} {v.sites} at {unit.short}, hosted on {hub.short}.",
+    "Pilot of {topic_a} for {n} {v.sites} at {unit.short}, {hosting}.",
     phases=(
         P("scoping", [
             L("brief", "Send {cp.first} the {proj.short} solution brief", "I promised {cp.first} the {proj.short} solution brief",
@@ -244,12 +263,14 @@ FLAGSHIP = Archetype(
           ["{n} {v.sites}", "{proj.kw}"],
           counter=("Widen the {proj.short} pilot to {n_plus} {v.sites}", "Decided to widen the {proj.short} pilot to {n_plus} {v.sites}",
                    ["{n_plus} {v.sites}", "{proj.kw}"]),
-          reasons=("{sponsor.first} wants a wider trial", "{unit.short} asked for another {v.site}")),
+          reasons=("{sponsor.first} wants a wider trial", "{unit.short} asked for another {v.site}"),
+          effect={"n": "+1"}),
         D("d_host", "Host {proj.short} on the shared {hub.short} tenant", "Decided to host {proj.short} on the shared {hub.short} tenant",
           ["shared {hub.short} tenant", "{proj.kw}"], by=("worker",),
           counter=("Give {proj.short} a dedicated tenant outside {hub.short}", "Decided to give {proj.short} a dedicated tenant outside {hub.short}",
                    ["dedicated tenant", "{proj.kw}"]),
-          reasons=("the security review requires a separate tenant", "{unit.short} wants its {v.data} kept apart")),
+          reasons=("the security review requires a separate tenant", "{unit.short} wants its {v.data} kept apart"),
+          effect={"hosting": "hosted on a dedicated tenant outside {hub.short}"}),
         D("d_synth", "Use synthetic {v.data} in {proj.short} until the security review closes",
           "Decided to use synthetic {v.data} in {proj.short} until the security review closes",
           ["synthetic {v.data}", "security review"], by=("sec", "worker"),
@@ -258,6 +279,7 @@ FLAGSHIP = Archetype(
                    ["de-identified {v.data}", "{proj.kw}"]),
           reasons=("synthetic records were not realistic enough to test with", "the security review signed off on de-identified extracts")),
     ),
+    slots=(("hosting", "hosted on {hub.short}"),),
 )
 
 HUB = Archetype(
@@ -299,7 +321,7 @@ HUB = Archetype(
 
 VENDOR_PAIR = Archetype(
     "vendor_pair_evaluation", "vendor-pair evaluation",
-    "Selecting a tool for {topic} at {unit.short}; {vendor.short} and {vendor2.short} are in the running.",
+    "Selecting a tool for {topic} at {unit.short}; {bidders}.",
     phases=(
         P("intake", [
             L("reqs", "Send {cp.first} the {proj.short} requirements list", "I promised {cp.first} the {proj.short} requirements list",
@@ -351,13 +373,15 @@ VENDOR_PAIR = Archetype(
           ["shortlist", "{vendor2.short}"], by=("worker", "lead"),
           counter=("Add a third bidder to the {proj.short} shortlist", "Decided to add a third bidder to the {proj.short} shortlist",
                    ["third bidder", "{proj.kw}"]),
-          reasons=("procurement requires a third bidder", "{vendor.short} could not meet the data terms")),
+          reasons=("procurement requires a third bidder", "{vendor.short} could not meet the data terms"),
+          effect={"bidders": "{vendor.short} and {vendor2.short} are shortlisted and a third bidder is being added"}),
         D("d_weight", "Weight integration effort at 25% in the {proj.short} scoring", "Decided to weight integration effort at 25% in the {proj.short} scoring",
           ["integration effort", "25%"], by=("lead", "worker"),
           counter=("Weight integration effort at 15% in the {proj.short} scoring", "Decided to weight integration effort at 15% in the {proj.short} scoring",
                    ["integration effort", "15%"]),
           reasons=("{unit.short} thinks integration effort is over-weighted", "the scoring should favour usability")),
     ),
+    slots=(("bidders", "{vendor.short} and {vendor2.short} are in the running"),),
 )
 
 UNIT_DISCOVERY = Archetype(
@@ -495,7 +519,7 @@ EVENT = Archetype(
 
 INCUBATION = Archetype(
     "internal_incubation", "internal product incubation",
-    "An in-house prototype for {topic}, incubated by the central team before any {v.unit_word} adopts it.",
+    "{approach} before any {v.unit_word} adopts it.",
     phases=(
         P("concept", [
             L("brief", "Write the {proj.short} product brief", "I'm writing the {proj.short} product brief",
@@ -526,7 +550,9 @@ INCUBATION = Archetype(
                  counter=("Buy an off-the-shelf tool instead of building {proj.short}",
                           "Decided to buy an off-the-shelf tool instead of building {proj.short}",
                           ["off-the-shelf tool", "{proj.kw}"]),
-                 reasons=("{sponsor.first} does not want to staff a build", "the team has no capacity for a build this year")),),
+                 reasons=("{sponsor.first} does not want to staff a build", "the team has no capacity for a build this year"),
+                 effect={"approach": "An off-the-shelf tool for {topic}, to be bought by the central team rather than built in-house,"}),),
+    slots=(("approach", "An in-house prototype for {topic}, incubated by the central team"),),
 )
 
 ECONOMICS = Archetype(
@@ -817,9 +843,31 @@ def check_library() -> list[str]:
                     problems.append(f"{arch.name}.{p.name}: bad transition {nxt!r} {prob}")
         for b in arch.beats():
             problems += _beat_problems(f"{arch.name}.{b.key}", b)
+        problems += _desc_state_problems(arch)
     for b in GENERIC + UNATTACHED:
         problems += _beat_problems(f"generic.{b.key}", b)
     return problems
+
+
+def _desc_state_problems(arch: Archetype) -> list[str]:
+    """Description slots must appear in `desc`; decision effects must change state that `desc`
+    shows, and only through a replacement decision (`counter`)."""
+    out: list[str] = []
+    used = {m.group(1) for m in _SLOT.finditer(arch.desc)}
+    slots = {name for name, _ in arch.slots}
+    for name in slots - used:
+        out.append(f"{arch.name}: slot {{{name}}} is not in desc {arch.desc!r}")
+    for b in arch.beats():
+        for slot, value in b.effect:
+            where = f"{arch.name}.{b.key}"
+            if b.type != "decision" or b.counter is None:
+                out.append(f"{where}: only a decision with a counter can have an effect")
+            if slot == "n":
+                if "n" not in used or not re.fullmatch(r"\+[1-9]", value):
+                    out.append(f"{where}: effect n={value!r} needs {{n}} in desc and a value like '+1'")
+            elif slot not in slots:
+                out.append(f"{where}: effect slot {slot!r} is not one of the archetype's slots")
+    return out
 
 
 def _beat_problems(where: str, b: Beat) -> list[str]:

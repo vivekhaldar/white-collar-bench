@@ -692,16 +692,40 @@ def event_fact(ev: dict) -> dict[str, Any]:
     }
 
 
+def _latest_change_stale(
+    world: World, state: dict, ent: dict, ev: dict, avoid: Iterable[str]
+) -> list[list[str]]:
+    """Stale groups for a latest-change item that sets a project attribute still current at
+    the checkpoint: the attribute's previous value, as for the attribute's own item. So an
+    answer that gives the old phase or target date contradicts the latest change too."""
+    raw = world.by_id.get(ev.get("id"), {})
+    if raw.get("type") != "fact.set":
+        return []
+    attr, value = raw.get("attribute"), raw.get("value")
+    if value in (None, "") or (ent.get("attrs") or {}).get(attr) != value:
+        return []
+    prev = previous_value(ent, attr)
+    if attr == "target_date":
+        return [date_group(prev)] if is_date(prev) else []
+    if attr == "status":
+        return [status_group(prev)] if prev and prev != value else []
+    return stale_value_groups(world, state, attr, prev, value, avoid=avoid)
+
+
 def project_status_rubric(world: World, state: dict, project: str) -> list[dict[str, Any]]:
     """Rubric items for ``project_status``, in this order (critical items weigh 2):
 
     1. current status (critical), with the previous status as stale;
     2. phase, if set, with the previous phase as stale;
-    3. the latest knowable state-changing event (critical), skipping events on suggested
-       loops (`status_change_events`);
+    3. the latest knowable project-level change (critical): the latest of
+       `status_change_events` that is not about a single loop (a decision, a fact or a
+       project event). Loop events are left to item 6; when there is no project-level
+       change there is no item;
     4. blocker, if set (critical);
     5. target date, if set (critical), with the previous target date as stale;
-    6. up to six accepted active loops, worker-owned first, then earliest due;
+    6. up to six accepted active loops, worker-owned first, then earliest due. When more
+       than six are active, only loops with a due date are eligible: which undated loops a
+       status report mentions is a matter of taste, so they are not graded;
     7. next step, if set.
     """
     ent = state["entities"][project]
@@ -746,7 +770,10 @@ def project_status_rubric(world: World, state: dict, project: str) -> list[dict[
         )
     attr_item("phase", "Current phase: {v}", critical=False, aspect="phase")
 
-    changes = status_change_events(world, state, project)
+    changes = [
+        ev for ev in status_change_events(world, state, project)
+        if not str(ev.get("type", "")).startswith("commitment.")
+    ]
     if changes:
         latest = changes[-1]
         items.append(
@@ -754,6 +781,7 @@ def project_status_rubric(world: World, state: dict, project: str) -> list[dict[
                 latest.get("summary") or latest["type"],
                 event_groups(world, state, latest, project=project, avoid=avoid),
                 critical=True,
+                stale=_latest_change_stale(world, state, ent, latest, avoid),
                 support=list(latest.get("artifacts") or []),
                 aspect="latest_change",
             )
@@ -776,10 +804,12 @@ def project_status_rubric(world: World, state: dict, project: str) -> list[dict[
         attr_item("target_date", "Current target date: {v}", critical=True, aspect="target_date")
 
     worker = world.worker
-    loops = sorted(
-        ((cid, state["loops"][cid]) for cid in active_on_project(state, project)),
-        key=lambda p: (p[1]["debtor"] != worker, *by_due(p)),
-    )[:MAX_STATUS_LOOPS]
+    active = [(cid, state["loops"][cid]) for cid in active_on_project(state, project)]
+    if len(active) > MAX_STATUS_LOOPS:
+        active = [p for p in active if is_date(p[1].get("due"))]
+    loops = sorted(active, key=lambda p: (p[1]["debtor"] != worker, *by_due(p)))[
+        :MAX_STATUS_LOOPS
+    ]
     for _cid, loop in loops:
         items.append(
             rubric_item(

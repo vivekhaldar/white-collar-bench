@@ -52,7 +52,12 @@
           "type": [
             "string",
             "number"
-          ]
+          ],
+          "description": "The bare answer only: a role (\"Privacy Officer\"), a date (\"2027-11-18\"), a name, a phase, a number. No explanation, qualifiers or alternatives; put context in `note`."
+        },
+        "note": {
+          "type": "string",
+          "description": "Optional free-text context for the answer (how it was found, related detail). Not graded."
         },
         "cites": {
           "type": "array",

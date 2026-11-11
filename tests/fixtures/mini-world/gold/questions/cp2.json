@@ -73,31 +73,27 @@
           {
             "id": "r3",
             "aspect": "latest_change",
-            "text": "I sent Cora the completed security questionnaire",
+            "text": "Quillon phase is now pilot planning",
             "weight": 2,
             "critical": true,
             "keywords": [
               [
-                "security questionnaire",
-                "questionnaire"
+                "pilot"
               ],
               [
-                "done",
-                "complete",
-                "completed",
-                "finished",
-                "closed",
-                "resolved",
-                "sent",
-                "delivered",
-                "returned",
-                "submitted",
-                "received"
+                "planning"
               ]
             ],
-            "stale": [],
+            "stale": [
+              [
+                "vendor"
+              ],
+              [
+                "evaluation"
+              ]
+            ],
             "support": [
-              "em-0005"
+              "mn-0001"
             ]
           },
           {
@@ -253,7 +249,9 @@
       "answerable": true,
       "challenges": [],
       "support": [
-        "ch-0001"
+        "ch-0001",
+        "ch-0002",
+        "mn-0001"
       ],
       "gold": {
         "rubric": [

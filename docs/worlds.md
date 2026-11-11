@@ -126,6 +126,7 @@ Attributes whose key starts with `_` are never rendered. A fact that is never re
 | `keyword.count` | warning | A commitment has fewer than two keywords. |
 | `keyword.absent` | warning | A commitment or decision keyword occurs in none of the artifacts that reveal it. Text is read from text files, and from the XML of `.docx`, `.xlsx` and `.pptx` files. |
 | `summary.stale` | warning | A project's date attribute changed but its `summary` still mentions the old date. |
+| `summary.superseded` | warning | A decision was reversed and replaced the same day by one that changes a count ("three courses" to "four courses"), but at the end of some later day the project's `summary` still states the old count and not the new one. Add a `fact.set` for `summary` when the replacement is made. |
 | `question.file`, `question.id`, `question.duplicate` | error | `questions.yaml` is not a list of mappings, or a question ID is missing or repeated. |
 | `question.checkpoint`, `question.template`, `question.param` | error | Unknown checkpoint or template, or a parameter names no existing person, project, org, commitment, decision or event (or `since` is not a date). |
 | `question.challenge` | warning | Unknown challenge tag on a question. |

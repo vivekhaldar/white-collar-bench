@@ -36,7 +36,7 @@ The agent sees only `id`, `type` and `text` ([formats §3.4](formats.md#34-agent
 - **Active** means status `open`, `waiting` or `blocked`. **Closed** means `done` or `dropped`.
 - **Accepted.** Only accepted loops count in list, brief, status and priority golds. A suggested loop (`accepted: false`, such as an ask nobody agreed to) becomes a commitment only when a later event accepts it. In a status gold this includes the latest change: events on loops still suggested at the checkpoint are skipped. Change golds list them (a suggestion is a knowable change on the project).
 - **Names in text.** Question text uses the entity's canonical `name`, or `params.name_form` when the spec sets one (an alias such as `Samir`, to exercise alias resolution). A spec's own `text` replaces the template text entirely.
-- **Support** is listed in delivery order. Question-level support is the union of the supports of the gold's items or rubric items.
+- **Support** is listed in delivery order. Question-level support is the union of the supports of the gold's items or rubric items. The builder then widens item and question support with the other delivered artifacts about the same commitment, decision or attribute ([formats §3.2](formats.md#32-goldquestionscpjson-hidden)); the template sections below give the template's own support.
 - **Keywords** are lowercase. A rubric item's `keywords` is a list of groups: the item is covered when every group has at least one match in the answer. List and change items carry a flat `keywords` list that graders use to match free-text items to gold. When a loop's keywords become a rubric group ("the loop's keywords" below), keywords made only of words from the names of the loop's project or people (`Fulmar`, `transcript intake` for the Dorcliff Transcript Intake Discovery) are left out, unless nothing else remains; otherwise any answer that mentions the project would cover every loop on it.
 
 ### Unanswerable questions
@@ -87,7 +87,7 @@ Gold: `{"kind", "value", "entity", "accept"}`.
 | `number` | value is numeric | the value | `null` | `[value]` |
 | `text` | anything else | the value | `null` | `[value]` |
 
-Graders resolve entity answers through the world's alias table and normalize dates and numbers ([scoring](scoring.md#query-scoring)). A project `status` is graded as a closed vocabulary: the answer must name exactly the gold status (or one of its [synonyms](#project_status)), so listing several statuses scores 0. Other text values must contain the value's words without hedging or much else, and must not also state the same attribute of another entity of that kind or an earlier value (for "What is Sam Reyes's role?", "Solutions engineer / Data engineer" scores 0 when Data engineer is Sam Patel's role); the names of people, orgs and projects in a value, such as the org in "Registrar, TU Saltmarren", are optional. The full rules are in the [scoring implementation notes](scoring.md#per-question-grading).
+Graders resolve entity answers through the world's alias table and normalize dates and numbers ([scoring](scoring.md#query-scoring)). A project `status` is graded as a closed vocabulary: the answer must name exactly the gold status (or one of its [synonyms](#project_status)), so listing several statuses scores 0. Other text values must contain the value's words without hedging or much unrelated text (context from the subject's own record, such as a person's organization or a project's dates, is allowed), and must not also state the same attribute of another entity of that kind or an earlier value (for "What is Sam Reyes's role?", "Solutions engineer / Data engineer" scores 0 when Data engineer is Sam Patel's role); the names of people, orgs and projects in a value, such as the org in "Registrar, TU Saltmarren", are optional. The full rules are in the [scoring implementation notes](scoring.md#per-question-grading).
 
 #### `project_attr`
 
@@ -151,10 +151,10 @@ Gold: `{"rubric": [...], "facts": {...}}`. Rubric items are derived in this orde
 |---|---|---|---|---|---|
 | 1 | `status` | always | yes | status synonyms (see below); for `merged`, also the target project's names | previous status's synonyms, if it changed |
 | 2 | `phase` | phase set | no | up to two distinctive words of the phase, one group each | distinctive words of the previous phase not in the current one |
-| 3 | `latest_change` | always | yes | derived from the latest change event, skipping events on loops that are still suggested (see below) | none |
+| 3 | `latest_change` | a project-level change exists | yes | derived from the latest change event that is not about a single loop (a `fact.set`, decision or project event; see below) | when the event set a project attribute that is still current, the attribute's previous value (as for that attribute's own item) |
 | 4 | `blocker` | blocker set | yes | up to two distinctive words, one group each | words of the previous blocker not in the current one |
 | 5 | `target_date` | target date set | yes | one group of date variants | date variants of the previous target date, if it moved |
-| 6 | `loop` | up to six accepted active loops on the project, worker-owned first, then earliest due | no | one group: the loop's keywords | none |
+| 6 | `loop` | up to six accepted active loops on the project, worker-owned first, then earliest due; when more than six are active, only loops with a due date (which undated loops a report mentions is a matter of taste) | no | one group: the loop's keywords | none |
 | 7 | `next_step` | next step set | no | distinctive words, plus date variants of any ISO date in it | words of the previous next step |
 
 The text of the latest-change item is the event's `summary`. The text of a loop item is `{what} (owner: {debtor name})`.
@@ -170,12 +170,12 @@ The text of the latest-change item is the event's `summary`. The text of a loop 
 | `cancelled` | cancelled, canceled, dropped, shelved |
 | `merged` | merged, folded into |
 
-**Change events.** An event is a state-changing event on project P when it concerns P (P is its `project` or one of its `subjects`) and it is one of: a `fact.set` of `status`, `phase`, `owner`, `target_date`, `blocker`, `sponsor` or `next_step`; a `commitment.create`, `commitment.update` or `commitment.resolve`; a `decision.make` or `decision.reverse`; a `project.split` or `project.merge`; or the `entity.create` of P itself. Changes to `summary`, `members` and other attributes are not counted. The latest such event gives rubric item 3, with keyword groups:
+**Change events.** An event is a state-changing event on project P when it concerns P (P is its `project` or one of its `subjects`) and it is one of: a `fact.set` of `status`, `phase`, `owner`, `target_date`, `blocker`, `sponsor` or `next_step`; a `commitment.create`, `commitment.update` or `commitment.resolve`; a `decision.make` or `decision.reverse`; a `project.split` or `project.merge`; or the `entity.create` of P itself. Changes to `summary`, `members` and other attributes are not counted. The latest such event that is not a `commitment.*` event gives rubric item 3; loop events are covered by the loop items instead. Change golds use all of them. Keyword groups:
 
 | Event | Keyword groups |
 |---|---|
 | commitment create | the loop's keywords |
-| commitment update, resolve | the loop's keywords; plus words for a new status (done: done, completed, sent, returned...); the new due date's variants; the new debtor's names on a transfer (for a transfer to the worker, also `me`, `myself`, `mine`, `you`, `yourself`, `yours`) |
+| commitment update, resolve | the loop's keywords; plus words for a new status (done: done, completed, sent, returned... and the past-tense verbs resolutions use, such as shared, reviewed, confirmed, fixed, booked; not ones whose base form also names the open task, such as set up); the new due date's variants; the new debtor's names on a transfer (for a transfer to the worker, also `me`, `myself`, `mine`, `you`, `yourself`, `yours`) |
 | `decision.make` | the decision's keywords |
 | `decision.reverse` | the decision's keywords, and reversal words (reversed, overturned, scrapped, no longer...) |
 | `fact.set` | the new value: status synonyms, date variants, an entity's names (plus the worker words above when the value is the worker), or distinctive words. For `null`, two groups: "cleared" words (cleared, resolved, removed, no longer, unblocked, fixed, lifted, ended, is over, no blocker(s); not "none", which most status answers contain), and one group naming what was cleared: the cleared value's distinctive words plus up to two distinctive words of the event's summary (the attribute's name if there are none) |
@@ -267,7 +267,7 @@ The fixture world `tests/fixtures/mini-world` exercises most templates. At `cp2`
 |---|---|---|---|---|
 | r1 | status | Quillon is active | active / in progress / ... | |
 | r2 | phase | Current phase: pilot planning | pilot; planning | vendor; evaluation |
-| r3 | latest_change | I sent Cora the completed security questionnaire | security questionnaire / questionnaire; done / sent / returned / ... | |
+| r3 | latest_change | Quillon phase is now pilot planning | pilot; planning | vendor; evaluation |
 | r4 | target_date | Current target date: 2027-02-05 (moved from 2027-01-29) | variants of 2027-02-05 | variants of 2027-01-29 |
 | r5 | loop | Send Ada Tessellate volume pricing (owner: Cora Velez) | volume pricing / pricing | |
 

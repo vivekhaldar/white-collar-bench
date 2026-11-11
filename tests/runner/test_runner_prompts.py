@@ -18,6 +18,16 @@ def _doc_prompts() -> list[str]:
     return [m.group(1).strip() for m in re.finditer(r"^> (.+)$", section, re.M)]
 
 
+def _adapter_doc_prompts() -> dict[str, str]:
+    """Session -> prompt, from the table in docs/adapters.md, "Standard prompts"."""
+    root = repo_root()
+    assert root is not None
+    text = (root / "docs" / "adapters.md").read_text(encoding="utf-8")
+    section = text.split("### Standard prompts", 1)[1].split("\n## ", 1)[0]
+    rows = re.findall(r"^\| (Track [AB][^|]*?) \| (.+) \|$", section, re.M)
+    return {k.strip(): v.strip() for k, v in rows}
+
+
 def test_prompts_match_docs_verbatim():
     # docs/scoring.md lists, in order: Track A ingestion and query, then Track B seed
     # ingestion, ingestion and query.
@@ -27,6 +37,21 @@ def test_prompts_match_docs_verbatim():
     assert prompts.SEED_B == seed_b
     assert prompts.INGEST_B == ingest_b
     assert prompts.QUERY_B == query_b
+
+
+def test_prompts_match_adapter_docs_verbatim():
+    table = _adapter_doc_prompts()
+    assert table["Track A ingestion"] == prompts.INGEST_A
+    assert table["Track A query (also oracle-store queries)"] == prompts.QUERY_A
+    assert table["Track B ingestion"] == prompts.INGEST_B
+    assert table["Track B query"] == prompts.QUERY_B
+    seed_dirs = "`inbox/<d1>/`, ... and `inbox/<dn>/`"
+    assert table["Track B seed ingestion"] == prompts.SEED_B.replace("{inbox_dirs}", seed_dirs)
+
+
+def test_query_prompts_ask_for_bare_point_values():
+    for t in (prompts.QUERY_A, prompts.QUERY_B):
+        assert "put only the answer in `value` and any context in `note`" in t
 
 
 def test_track_b_prompts_replace_contract_and_store():

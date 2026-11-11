@@ -6,6 +6,7 @@ import os
 import shutil
 import socket
 import stat
+import subprocess
 from pathlib import Path
 
 import pytest
@@ -122,6 +123,65 @@ def test_tree_diff_reports_changed_added_and_removed_entries(tmp_path):
     ]  # fmt: skip
 
 
+def _rewrite_keeping_times(path: Path, data: bytes) -> None:
+    st = path.stat()
+    path.write_bytes(data)
+    os.utime(path, ns=(st.st_atime_ns, st.st_mtime_ns))
+
+
+def test_tree_diff_sees_a_same_size_change_with_restored_mtime(tmp_path):
+    """Issue #5: filecmp cached deep comparisons by stat signature and missed this change."""
+    a, b = tmp_path / "a", tmp_path / "b"
+    a.mkdir()
+    b.mkdir()
+    x, y = a / "x.md", b / "x.md"
+    x.write_bytes(b"aaa")
+    y.write_bytes(b"aaa")
+    assert tree_diff(a, b) == []  # an equal comparison first
+    _rewrite_keeping_times(y, b"bbb")
+    assert x.read_bytes() != y.read_bytes() and x.stat().st_size == y.stat().st_size
+    assert tree_diff(a, b) == ["x.md"]
+    # A stale inequality is not kept either: change it back, then again, keeping the times.
+    _rewrite_keeping_times(y, b"aaa")
+    assert tree_diff(a, b) == []
+    _rewrite_keeping_times(y, b"ccc")
+    assert tree_diff(a, b) == ["x.md"]
+
+
+def test_tree_diff_ignores_modes_and_times_and_compares_large_files(tmp_path):
+    a, b = tmp_path / "a", tmp_path / "b"
+    a.mkdir()
+    b.mkdir()
+    big = os.urandom(200_000)
+    (a / "big.bin").write_bytes(big)
+    (b / "big.bin").write_bytes(big)
+    os.chmod(b / "big.bin", 0o600)
+    os.utime(b / "big.bin", (0, 0))
+    assert tree_diff(a, b) == []
+    (b / "big.bin").write_bytes(big[:-1] + bytes([big[-1] ^ 1]))  # last byte, last chunk
+    assert tree_diff(a, b) == ["big.bin"]
+
+
+def test_tree_diff_skips_special_files_and_never_follows_links(tmp_path):
+    a, b = tmp_path / "a", tmp_path / "b"
+    a.mkdir()
+    b.mkdir()
+    os.mkfifo(b / "pipe")  # special files are not store data
+    (tmp_path / "t1").write_text("one\n")
+    (tmp_path / "t2").write_text("two\n")
+    (a / "l").symlink_to(tmp_path / "t1")
+    (b / "l").symlink_to(tmp_path / "t1")
+    assert tree_diff(a, b) == []
+    (tmp_path / "t1").write_text("ONE\n")  # the link target's content is not compared
+    assert tree_diff(a, b) == []
+    (b / "l").unlink()
+    (b / "l").symlink_to(tmp_path / "t2")
+    assert tree_diff(a, b) == ["l"]
+    (b / "l").unlink()
+    (b / "l").write_text("one\n")  # a file where there was a link
+    assert tree_diff(a, b) == ["l"]
+
+
 # ---------------------------------------------------------------- git safety
 needs_git = pytest.mark.skipif(shutil.which("git") is None, reason="git is not installed")
 
@@ -169,3 +229,78 @@ def test_git_init_on_a_fresh_workspace_reports_nothing(tmp_path):
     g = workspace.Git(ws)
     assert g.init() and g.commit("seed") and g.commit("again")
     assert g.notes == []
+
+
+def _traced(monkeypatch, trace: Path) -> None:
+    """Make the runner's git commands write GIT_TRACE output (Git._run drops GIT_* variables)."""
+    real = subprocess.run
+
+    def run(cmd, *args, env=None, **kwargs):
+        return real(cmd, *args, env={**(env or os.environ), "GIT_TRACE": str(trace)}, **kwargs)
+
+    monkeypatch.setattr(workspace.subprocess, "run", run)
+
+
+def _plain_git_env(**extra: str) -> dict[str, str]:
+    base = {k: v for k, v in os.environ.items() if not k.startswith("GIT_")}
+    return {**base, "GIT_CONFIG_NOSYSTEM": "1", "GIT_CONFIG_GLOBAL": os.devnull, **extra}
+
+
+@needs_git
+def test_git_commits_do_not_start_automatic_maintenance(tmp_path, monkeypatch):
+    """Issue #6: `git commit` runs `git maintenance run --auto` (detached in recent git), which
+    can repack .git while the runner copies the workspace for a query session."""
+    # Control: plain git with no settings does start it, so this test is not vacuous.
+    plain, trace0 = tmp_path / "plain", tmp_path / "plain.trace"
+    plain.mkdir()
+    env = _plain_git_env(GIT_TRACE=str(trace0))
+    ident = ["-c", "user.name=t", "-c", "user.email=t@t.example"]
+    for args in (["init", "-q"], ["commit", "-q", "--allow-empty", "-m", "x"]):
+        subprocess.run(["git", *ident, *args], cwd=plain, env=env, check=True)
+    control = trace0.read_text()
+    if "maintenance run --auto" not in control and "gc --auto" not in control:
+        pytest.skip("this git does not run automatic maintenance after a commit")
+
+    ws, trace = tmp_path / "ws", tmp_path / "runner.trace"
+    ws.mkdir()
+    _traced(monkeypatch, trace)
+    g = workspace.Git(ws)
+    (ws / "note.md").write_text("hello\n")
+    assert g.init() and g.commit("seed") and g.commit("again"), g.error
+    text = trace.read_text()
+    assert "built-in: git commit" in text  # tracing worked
+    assert "maintenance" not in text and "gc --auto" not in text
+    assert g.notes == []
+
+
+@needs_git
+def test_git_config_disables_automatic_maintenance_even_after_an_agent_edit(tmp_path):
+    ws = tmp_path / "ws"
+    ws.mkdir()
+    g = workspace.Git(ws)
+    assert g.init() and g.commit("seed")
+    with (ws / ".git" / "config").open("a") as f:
+        f.write("[maintenance]\n\tauto = true\n[gc]\n\tauto = 1\n")
+    assert g.commit("day 1"), g.error
+    assert any("config was changed" in n for n in g.notes)
+
+    def get(key: str) -> str:
+        cmd = ["git", "--git-dir", str(ws / ".git"), "config", "--get", key]
+        p = subprocess.run(cmd, env=_plain_git_env(), capture_output=True, text=True, check=True)
+        return p.stdout.strip()
+
+    got = [get("maintenance.auto"), get("gc.auto"), get("gc.autoDetach")]
+    assert got == ["false", "0", "false"]
+
+
+@needs_git
+def test_git_config_from_an_earlier_runner_is_not_reported(tmp_path):
+    """A workspace kept for --resume across a runner upgrade has the earlier runner config."""
+    ws = tmp_path / "ws"
+    ws.mkdir()
+    g = workspace.Git(ws)
+    assert g.init()
+    (ws / ".git" / "config").write_text(workspace._GIT_CONFIG_EARLIER[0] + "\n")
+    assert g.commit("seed"), g.error
+    assert g.notes == []
+    assert (ws / ".git" / "config").read_text() == workspace._GIT_CONFIG

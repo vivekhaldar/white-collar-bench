@@ -7,7 +7,9 @@ in `world.yaml` it renders each question spec against the gold state at the chec
    own `text` replaces entirely when present;
 2. the template gives `(answerable, gold, support)`; an unanswerable question gets gold `{}`
    and support `[]`, so the correct answer is to abstain;
-3. a status or brief question may append hand-written rubric items with `extra_rubric`.
+3. a status or brief question may append hand-written rubric items with `extra_rubric`;
+4. `wcb.questions.support.widen_support` adds the other delivered artifacts about the same
+   commitments, decisions, facts and events to item and question support.
 
 `visible_questions` strips a gold document down to what the agent sees (§3.4).
 """
@@ -18,6 +20,7 @@ import datetime as dt
 from typing import Any
 
 from wcb.questions.rubric import normalize_extra_item, number_items
+from wcb.questions.support import widen_support
 from wcb.questions.templates import TEMPLATES, support_union
 from wcb.util.io import read_yaml
 from wcb.world.model import World
@@ -53,6 +56,8 @@ def build_question(spec: dict[str, Any], world: World, state: dict) -> dict[str,
     answerable, gold, support = template.gold(params, world, state)
     if answerable and spec.get("extra_rubric") and "rubric" in gold:
         gold, support = _with_extra_rubric(gold, spec["extra_rubric"], state, support)
+    if answerable:
+        gold, support = widen_support(template.qtype, gold, support, world, state)
     return {
         "id": qid,
         "type": template.qtype,

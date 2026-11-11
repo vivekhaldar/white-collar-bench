@@ -118,6 +118,7 @@ stdin is empty (`/dev/null`). stdout and stderr are saved to `stdout.log` and `s
 - A failed or timed-out **ingest** session leaves the store as it was before the session: all its changes are discarded.
 - A failed or timed-out **query** session counts as empty answers if `.wcb/answers.json` is missing or invalid. Write it early and keep it valid.
 - On timeout the runner sends SIGTERM to every process of the session, then SIGKILL 10 seconds later. Write usage on SIGTERM if you can (the simple harness and `wcb.agents.wrap` do).
+- The runner sets no time limit on individual tool calls: a command or model-written script that hangs is the agent's own failure, bounded by the session timeout, after which a failed ingest session's store is restored from the previous snapshot; bound tool calls in your agent if you want it to recover.
 - When the session's main process exits, every process it started is killed, including daemons and processes started with `setsid` or Node's `detached: true`. Nothing may keep running, or keep writing to the workspace, after a session ([running §5](running.md#5-run)).
 
 ## 3. What the agent sees
@@ -148,7 +149,7 @@ The workspace is a throwaway copy of the store (with its git history) plus:
 .wcb/answer-schema.json  the JSON Schema for answers
 ```
 
-Store files are read-only. The agent writes `.wcb/answers.json`, a JSON object mapping each question ID to an answer whose `type` equals the question's type ([formats §4](formats.md#4-answers-wcbanswersjson), [example](../contract/answers/example.answers.json)). Answers that fail the schema score 0. Abstain (`{"type": ..., "abstain": true}`) when the store does not support an answer. Check an answers file with:
+Store files are read-only. The agent writes `.wcb/answers.json`, a JSON object mapping each question ID to an answer whose `type` equals the question's type ([formats §4](formats.md#4-answers-wcbanswersjson), [example](../contract/answers/example.answers.json)). Answers that fail the schema score 0. A point answer's `value` is the bare answer only (`"Privacy Officer"`, `"2027-11-18"`); put any context in its optional `note`, which is not graded. Abstain (`{"type": ..., "abstain": true}`) when the store does not support an answer. Check an answers file with:
 
 ```bash
 wcb validate answers answers.json --questions questions.json
@@ -161,10 +162,10 @@ The prompt is fixed benchmark text, defined in [`wcb/runner/prompts.py`](../wcb/
 | Session | Prompt |
 |---|---|
 | Track A ingestion | Today is {date}. New inputs are in `inbox/{date}/` (see `manifest.json`). Incorporate them into the store following `CONTRACT.md`. Inputs will not be available after this session. |
-| Track A query (also oracle-store queries) | Today is {date}. Answer every question in `.wcb/questions.json` using the store. Write `.wcb/answers.json` following `.wcb/answer-schema.json`. Cite sources. Abstain when the store does not support an answer. Do not modify the store. |
+| Track A query (also oracle-store queries) | Today is {date}. Answer every question in `.wcb/questions.json` using the store. Write `.wcb/answers.json` following `.wcb/answer-schema.json`. For point answers, put only the answer in `value` and any context in `note`. Cite sources. Abstain when the store does not support an answer. Do not modify the store. |
 | Track B ingestion | Today is {date}. New inputs are in `inbox/{date}/` (see `manifest.json`). Incorporate them into your files following `GOALS.md`. Inputs will not be available after this session. |
 | Track B seed ingestion | Today is {date}. Your inputs so far, up to and including today, are in `inbox/<d1>/`, ... and `inbox/<dn>/`, one directory per date (each has a `manifest.json`). Incorporate them into your files following `GOALS.md`. Inputs will not be available after this session. |
-| Track B query | Today is {date}. Answer every question in `.wcb/questions.json` using your files. Write `.wcb/answers.json` following `.wcb/answer-schema.json`. Cite sources. Abstain when your files do not support an answer. Do not modify your files. |
+| Track B query | Today is {date}. Answer every question in `.wcb/questions.json` using your files. Write `.wcb/answers.json` following `.wcb/answer-schema.json`. For point answers, put only the answer in `value` and any context in `note`. Cite sources. Abstain when your files do not support an answer. Do not modify your files. |
 
 Pass the prompt to your agent unchanged, via `{prompt_text}`, `{prompt}` or `$WCB_PROMPT_FILE`. You may wrap it in your own **generic** system prompt.
 
@@ -197,6 +198,8 @@ At the end of any session the agent may write `.wcb/usage.json` in the workspace
 | `model` | The model used. |
 
 Extra fields are kept as-is. The examples add `cache_read_input_tokens`, `cache_creation_input_tokens`, `turns`, `provider`, `harness` and, for the simple harness, `stop` and `tool_counts`. Write the file even when the session fails, so failed sessions are costed too.
+
+**Why the agent stopped.** Add `"termination": {"reason": "...", "incomplete": true|false}` when your agent knows. `reason` is the agent's or provider's own stop reason (for example `success`, `max_tokens`, `error_max_turns`); `incomplete` is true when the agent did not finish normally, in particular when its final response was cut off by an output-token limit, even if it exited 0. The runner copies it into `session.json` and flags incomplete sessions there ([formats §6](formats.md#6-run-directory)); it does not change the session's status or restore the store, so truncation stays the agent's outcome, but it is visible. `wcb.agents.wrap` fills it in for Claude Code and Codex.
 
 ## 6. Wrapping an API-based agent (your own code)
 
@@ -234,7 +237,7 @@ Any agent with a non-interactive mode can be run directly. The recipe:
 2. **Work in the workspace**: the default `cwd` is `{workspace}`; pass it explicitly too if the agent has a flag for its root directory.
 3. **No approvals**: stdin is empty, so a permission prompt hangs until the timeout. Grant file and command permissions up front, and confine the agent with its own sandbox or a container.
 4. **Fresh state**: turn off session persistence, resume, auto-memory and user-level config or instruction files.
-5. **Usage**: if the agent prints machine-readable usage, run it under `python -I -m wcb.agents.wrap --format <fmt> -- <command...>`, which copies the output to `stdout.log` and writes `.wcb/usage.json`. Formats: `claude` (Claude Code `--output-format stream-json` or `json`) and `codex` (Codex `exec --json`). It exits with the agent's status.
+5. **Usage**: if the agent prints machine-readable usage, run it under `python -I -m wcb.agents.wrap --format <fmt> -- <command...>`, which copies the output to `stdout.log` and writes `.wcb/usage.json`. Formats: `claude` (Claude Code `--output-format stream-json` or `json`) and `codex` (Codex `exec --json`). It exits with the agent's status, and records why the agent stopped in `termination`: for Claude Code the `result` event's `subtype` and `is_error` and the last assistant message's `stop_reason` (`max_tokens` means the final response was truncated); for Codex any `turn.failed` or `error` events.
 
 ### Claude Code: [`claude-code.yaml`](../adapters/examples/claude-code.yaml)
 
@@ -297,6 +300,29 @@ env_passthrough: [ANTHROPIC_API_KEY]
 - `--init` makes the agent receive the runner's SIGTERM on timeout. If the runner has to SIGKILL the `docker` client, the container can outlive it: give containers a name (e.g. `--name wcb-{phase}-{date}`) and clean up leftovers.
 - `--user` keeps files written in the workspace owned by you, so the runner can snapshot and delete them. Claude Code also refuses `--dangerously-skip-permissions` as root.
 - Build the image with your agent (and `pip install white-collar-bench` if you use `wcb.agents.*` inside it).
+
+## 8a. Tools your agent's runtime needs
+
+Agents read every input format: `.eml` email, `.ics` calendar, `.vtt` transcript, `.json` chat export, `.md` notes and records with YAML front matter, and `.pdf`, `.docx`, `.xlsx` and `.pptx` documents ([formats §1.6](formats.md#16-artifact-file-formats)). The Python standard library covers the first five apart from YAML. For the rest, install readers in the environment where the agent's own commands run, which is often not the host virtualenv (a container, or a sandbox with its own system Python):
+
+| Need | Tool | Version in the reference image |
+|---|---|---|
+| YAML front matter | PyYAML | 6.0.3 |
+| PDF text | pypdf; optionally poppler-utils' `pdftotext` | 7.0.1; Debian bookworm's poppler |
+| Word documents | python-docx | 1.2.0 |
+| Spreadsheets | openpyxl | 3.1.5 |
+| Slide decks | python-pptx | 1.0.2 |
+
+The reference image, [`docker/Dockerfile.simple`](../docker/Dockerfile.simple), installs these at build time from [`docker/requirements-tools.txt`](../docker/requirements-tools.txt) (exact pins, which also pin `wcb`'s own PyYAML) and adds `pdftotext`. `wcb.agents.docs_text.extract_text` is a standard-library alternative for office documents and PDFs where `wcb` is installed.
+
+- **Pin them.** Every session of every run should see the same tools; record the versions with your results, and treat a change as a new adapter variant.
+- **Install before the run, never during it.** Sessions must not `pip install` or `apt-get` anything: it costs time against `timeout_s`, needs network access beyond the model endpoint, and makes runs differ.
+- **Smoke-test inside the agent's actual sandbox**, not on the host, before any paid run. [`docker/smoke_tools.py`](../docker/smoke_tools.py) checks each reader and, given directories, extracts text from every document in them; run it with the interpreter the agent's tools use, on public synthetic inputs:
+
+  ```bash
+  docker run --rm -v "$PWD/docker:/check:ro" -v "$PWD/worlds/dev/gen-s2-w1/inbox:/in:ro" \
+    wcb-simple python -I /check/smoke_tools.py /in
+  ```
 
 ## 9. The simple harness
 

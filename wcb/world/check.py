@@ -179,6 +179,7 @@ def check_world(world_dir: Path) -> list[Issue]:
     _check_inbox_files(world, issues)
     _check_keywords(world, ix, issues)
     _check_project_summaries(world, ix, issues)
+    _check_superseded_summaries(world, issues)
     _check_questions(world, ix, issues)
     return issues
 
@@ -889,6 +890,87 @@ def _check_project_summaries(world: World, ix: _Index, issues: list[Issue]) -> N
                     )
                 )
 
+
+_COUNT_WORD = r"\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve"
+_COUNT = re.compile(rf"\b({_COUNT_WORD})[ -]([a-z][a-z]*)\b")
+
+
+def superseded_counts(old_what: str, new_what: str) -> list[tuple[str, str]]:
+    """Counts that a replacement decision changes: (old phrase, new phrase) pairs such as
+    ("three courses", "four courses") for "Limit the pilot to three courses" replaced by
+    "Widen the pilot to four courses"."""
+    new = {m.group(2): m.group(0) for m in _COUNT.finditer(normalize(new_what))}
+    return [(m.group(0), new[m.group(2)]) for m in _COUNT.finditer(normalize(old_what))
+            if m.group(2) in new and new[m.group(2)] != m.group(0)]
+
+
+def stale_count_summaries(world: World) -> list[tuple[str, str, str, str]]:
+    """Projects whose summary, at the end of some day, still states a count that an accepted
+    replacement decision changed: (project, replacement decision, old phrase, date).
+
+    A reversal followed on the same day by a decision on the same project is a replacement;
+    the counts it changes come from `superseded_counts`. A summary that states both the old and
+    the new count ("widened from three courses to four courses") is history, not stale.
+    Reversing the replacement withdraws it. Replays events in world order, ignoring knowability.
+    """
+    made = {str(e["decision"]): e for e in world.events if e.get("type") == "decision.make"}
+    summary: dict[str, str] = {}
+    changed: dict[str, dict[str, list[tuple[str, str]]]] = {}  # project -> replacement -> pairs
+    pending: list[tuple[str, str, str]] = []  # (project, date, what) of reversed decisions
+    out: list[tuple[str, str, str, str]] = []
+    seen: set[tuple[str, str, str]] = set()
+
+    def end_of_day(day: str) -> None:
+        for pid, reps in changed.items():
+            text = normalize(summary.get(pid, ""))
+            for did, pairs in reps.items():
+                for old, new in pairs:
+                    if old in text and new not in text and (pid, did, old) not in seen:
+                        seen.add((pid, did, old))
+                        out.append((pid, did, old, day))
+
+    day = ""
+    for e in world.events:
+        etype, edate = e.get("type"), str(e.get("t", ""))[:10]
+        if day and edate != day:
+            end_of_day(day)
+        day = edate
+        if etype == "entity.create" and e.get("kind") == "project":
+            summary[str(e["entity"])] = str((e.get("attrs") or {}).get("summary") or "")
+        elif etype == "fact.set" and e.get("attribute") == "summary" and e.get("subject") in summary:
+            summary[str(e["subject"])] = str(e.get("value") or "")
+        elif etype == "decision.reverse" and str(e.get("decision")) in made:
+            for reps in changed.values():
+                reps.pop(str(e["decision"]), None)
+            d = made[str(e["decision"])]
+            pending.append((str(d.get("project")), edate, str(d.get("what", ""))))
+        elif etype == "decision.make":
+            pid = str(e.get("project"))
+            for item in [p for p in pending if p[0] == pid and p[1] == edate]:
+                pending.remove(item)
+                pairs = superseded_counts(item[2], str(e.get("what", "")))
+                if pairs:
+                    changed.setdefault(pid, {})[str(e["decision"])] = pairs
+    if day:
+        end_of_day(day)
+    return out
+
+
+def _check_superseded_summaries(world: World, issues: list[Issue]) -> None:
+    """Warn when a project's summary keeps a count that an accepted decision replaced.
+
+    The oracle store prints `summary` as the project's current state, so a summary that still
+    says "three courses" after the pilot was widened to four presents superseded scope as
+    current (docs/generator.md, "Summaries track current state")."""
+    for pid, did, old, day in stale_count_summaries(world):
+        issues.append(
+            warning(
+                "summary.superseded",
+                f"{pid} summary still says {old!r} at the end of {day}, but decision {did} replaced it; "
+                "add a fact.set for summary",
+                did,
+            )
+        )
 
 # ---------------------------------------------------------------- questions.yaml
 QUESTION_PARAM_KINDS = {
