@@ -94,7 +94,8 @@ PERSON_PRONOUNS = frozenset("he him his she her hers they them their".split())
 FIELD_LABELS = {
     "person": frozenset("role title organization org relationship project".split()),
     "project": frozenset(
-        "project phase stage target date owner owned sponsor sponsored organization org".split()
+        "project phase stage status target date owner owned sponsor sponsored blocker next step "
+        "organization org".split()
     ),
 }
 #: Project phases that mean the project is over; the `done` status synonyms also name them.
