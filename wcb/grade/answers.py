@@ -47,7 +47,13 @@ from wcb.contract.answers import check_answer
 from wcb.grade.judge import VERDICTS, Judge, match_tokens
 from wcb.grade.matching import assign, confirmed_edges, distinct_edges, match_items
 from wcb.questions.rubric import STATUS_SYNONYMS
-from wcb.util.dates import business_days_between, date_mentions, date_of, normalize_date_text
+from wcb.util.dates import (
+    business_days_between,
+    date_mentions,
+    date_of,
+    leading_date,
+    normalize_date_text,
+)
 from wcb.util.text import (
     CLAUSE_BREAKS,
     CURRENT_MARKERS,
@@ -75,8 +81,24 @@ WORKER_ALIASES = (*WORKER_PRONOUNS, "people/me")
 PREPOSITIONS = frozenset({"to", "from", "with", "by", "for", "of", "about", "over"})
 #: Words that make a free-text point answer a hedge, unless the gold value has them too.
 HEDGE_WORDS = frozenset("or either maybe perhaps possibly probably unclear unsure".split())
-#: A text point answer may add at most this many content words per word of the gold value.
+#: A text point answer may add at most this many unsupported content words per word of the
+#: gold value (see `text_matches`), and at least `TEXT_MIN_EXTRA` in all.
 TEXT_EXTRA_RATIO = 0.5
+TEXT_MIN_EXTRA = 1
+#: Words that say where a fact is kept rather than state one ("the store records her as ...").
+PROVENANCE_WORDS = frozenset("alias aliases aka record records recorded store stored listed".split())
+#: Pronouns that stand for a person subject.
+PERSON_PRONOUNS = frozenset("he him his she her hers they them their".split())
+#: Words naming the fields of a subject's record, by kind ("target date 16 August"), and the
+#: kinds of entity it links to ("she leads Saltmarren's side of the scheduling project").
+FIELD_LABELS = {
+    "person": frozenset("role title organization org relationship project".split()),
+    "project": frozenset(
+        "project phase stage target date owner owned sponsor sponsored organization org".split()
+    ),
+}
+#: Project phases that mean the project is over; the `done` status synonyms also name them.
+TERMINAL_PHASES = frozenset({"closed", "done"})
 #: Artifact-ID-like tokens in a store record's text.
 ARTIFACT_IN_TEXT = re.compile(r"(?<![A-Za-z0-9-])[a-z]{2}-[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*")
 #: Errors a grader may raise on an odd but valid answer; they score the question 0.
@@ -432,16 +454,20 @@ def grade_point(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tuple
       (`ScoreContext.names_exactly`). "Cora Velez (Tessellate)" and "Cora Velez (took it
       over from Sam Reyes)" are fine for a person; "Sam", "Cora or Ben", "Cora or Sam" are
       not.
-    * date: `normalize_date_text` (the one current date in the text; a year-less date takes
-      the year that puts it from three months before to nine months after the checkpoint)
-      equals the gold date.
+    * date: the value comes first. A value that leads with a date (`leading_date`:
+      "2027-02-05 (moved from 29 Jan on 12 Jan)") gives that date, unless it has a hedge
+      word; otherwise `normalize_date_text` (the one current date in the text). A year-less
+      date takes the year that puts it from three months before to nine months after the
+      checkpoint. The date must equal the gold date.
     * number: `parse_number` (the one current number; labels such as Q3 or FY2027 and values
       framed as history are skipped) equals the gold number.
     * text, project `status` (`project_attr` with `attribute: status`): the answer names
       exactly the gold status among the statuses' synonyms, not counting ones framed as
       history ("active, not paused"); hedge words fail.
     * other text: see `text_matches`; the answer must also not state a rival value of the
-      attribute (`stated_rival`: another entity's value, or the subject's earlier one).
+      attribute (`stated_rival`: another entity's value, or the subject's earlier one). A
+      project's phase that means it is over (`TERMINAL_PHASES`) also accepts the synonyms of
+      the `done` status ("complete", "finished") when the project's status is done.
 
     For every kind, normalized equality with the gold value or an `accept` string also counts,
     except that an accept string that is an alias of several entities (a shared first name)
@@ -455,6 +481,8 @@ def grade_point(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tuple
     details: dict[str, Any] = {"kind": kind, "value": raw, "gold": gold.get("value")}
     if kind == "entity":
         accept = [a for a in accept if len(ctx.alias_ids(a)) <= 1]
+    if kind == "text" and is_terminal_phase(q, ctx):
+        accept += [s for s in STATUS_SYNONYMS["done"] if s not in accept]
     ok = any(normalize(text) == normalize(a) for a in accept)
     if not ok and kind == "entity" and gold.get("entity"):
         want = gold["entity"]
@@ -463,8 +491,11 @@ def grade_point(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tuple
         details["resolved"] = sorted(resolved)
         ok = ctx.names_exactly(text, want)
     elif not ok and kind == "date":
-        got = normalize_date_text(text, today=ctx.date)
+        lead = None if hedge_words(text) else leading_date(text, today=ctx.date)
+        got = lead or normalize_date_text(text, today=ctx.date)
         details["normalized"] = got
+        if lead is not None:
+            details["leading"] = True
         ok = got is not None and got == date_of(str(gold.get("value")))
     elif not ok and kind == "number":
         got, want_n = parse_number(raw), parse_number(gold.get("value"))
@@ -479,8 +510,9 @@ def grade_point(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tuple
         details["statuses"] = sorted(named)
         ok = named == {normalize(str(gold.get("value")))} and not hedge_words(text)
     elif not ok and kind in ("text", "entity"):
-        ok = any(text_matches(text, a, q, ctx) for a in accept)
-        rival = stated_rival(text, accept, q, ctx) if ok and kind == "text" else None
+        support = point_support(q, ctx)
+        ok = any(text_matches(text, a, q, ctx, support=support) for a in accept)
+        rival = stated_rival(text, accept, q, ctx, support=support) if ok and kind == "text" else None
         if rival is not None:
             details["rival"] = rival
             ok = False
@@ -491,6 +523,20 @@ def is_status_question(q: dict) -> bool:
     """True for a `project_attr` question about the project's `status`."""
     params = q.get("params") or {}
     return q.get("template") == "project_attr" and params.get("attribute") == "status"
+
+
+def is_terminal_phase(q: dict, ctx: ScoreContext) -> bool:
+    """True for a project's phase that means it is over, when its status is `done`.
+
+    The phase label of a finished project depends on its kind ("closed" for an event, "done"
+    for a review), while the sources just say the work is complete.
+    """
+    params = q.get("params") or {}
+    if q.get("template") != "project_attr" or params.get("attribute") != "phase":
+        return False
+    value = normalize(str((q.get("gold") or {}).get("value") or ""))
+    attrs = (ctx.entities.get(str(params.get("project"))) or {}).get("attrs") or {}
+    return value in TERMINAL_PHASES and attrs.get("status") == "done"
 
 
 def statuses_named(text: str) -> set[str]:
@@ -509,18 +555,21 @@ def hedge_words(text: str, *, allowed: str = "") -> set[str]:
     return (set(_phrase(text)) & HEDGE_WORDS) - set(_phrase(allowed))
 
 
-def _content(text: str, ctx: ScoreContext, *, framed: bool) -> tuple[set[str], set[str]]:
+def _content(
+    text: str, ctx: ScoreContext, *, framed: bool, keep_names: bool = False
+) -> tuple[set[str], set[str]]:
     """(content tokens, entity IDs) of a text value, with entity names taken out.
 
-    Names (any alias, even an ambiguous one) are left out of the tokens; unambiguous ones are
-    returned as entity IDs. With `framed`, marker words and everything framed as history are
-    left out too.
+    Names (any alias, even an ambiguous one) are left out of the tokens, unless `keep_names`;
+    unambiguous ones are returned as entity IDs. With `framed`, marker words and everything
+    framed as history are left out too.
     """
     words, roles = framed_words(text)
     named: set[str] = set()
     skip: set[int] = set()
     for start, end, ids in ctx.mentions(words):
-        skip |= set(range(start, end))
+        if not keep_names:
+            skip |= set(range(start, end))
         if len(ids) == 1 and not (framed and roles[start] == "history"):
             named |= ids
     toks: set[str] = set()
@@ -533,8 +582,114 @@ def _content(text: str, ctx: ScoreContext, *, framed: bool) -> tuple[set[str], s
     return toks, named
 
 
-def text_matches(text: str, value: str, q: dict, ctx: ScoreContext) -> bool:
-    """Whether a free-text answer states the text `value` and nothing much else.
+@dataclass(frozen=True)
+class PointSupport:
+    """What a text point answer may mention besides the value without it being an extra.
+
+    Attributes:
+        tokens: content tokens (`match_tokens`) taken from the subject's record.
+        ids: entity IDs from the subject's record.
+        org_bound: the subject is a person with a recorded org, so naming another org (not
+            framed as history) is wrong, as with "Registrar at Kestrow".
+    """
+
+    tokens: frozenset[str] = frozenset()
+    ids: frozenset[str] = frozenset()
+    org_bound: bool = False
+
+
+def _org_family(org: Any, ctx: ScoreContext) -> set[str]:
+    """An org and the orgs with the same email domain ("SLIO" and "Drayhurst University")."""
+    ent = ctx.entities.get(org) if isinstance(org, str) else None
+    if ent is None:
+        return set()
+    domain = (ent.get("attrs") or {}).get("domain")
+    return {org} | {
+        eid
+        for eid, e in ctx.entities.items()
+        if domain and e.get("kind") == "org" and (e.get("attrs") or {}).get("domain") == domain
+    }
+
+
+def point_support(q: dict, ctx: ScoreContext) -> PointSupport:
+    """The subject's current record in gold state, as context a text answer may add.
+
+    For a `person_attr` or `project_attr` question (empty otherwise), the subject's names and
+    aliases plus, by the subject's kind:
+
+    * person: personal pronouns, role and relationship; their org, the orgs with its email
+      domain, and all their names; the worker (the other side of the relationship, as in
+      "her relationship to me"); the projects the person owns, sponsors or works on, and
+      their names;
+    * project: phase; owner, sponsor and the project's orgs, and their names.
+
+    The words of the record's field names ("role", "organization", "phase", "target date")
+    are included too. Entities named inside a role or phase ("Principal, Integration
+    Platform") count as the record's.
+    """
+    params = q.get("params") or {}
+    subject = params.get("person") or params.get("project")
+    if q.get("template") not in ("person_attr", "project_attr") or not isinstance(subject, str):
+        return PointSupport()
+    ent = ctx.entities.get(subject)
+    if not ent:
+        return PointSupport()
+    kind = ent.get("kind") or ctx.entity_kind(subject)
+    attrs = ent.get("attrs") or {}
+    tokens = set(FIELD_LABELS.get(kind, frozenset()))
+    ids = {subject}
+    values: list[Any] = []
+    org_bound = False
+    if kind == "person":
+        tokens |= PERSON_PRONOUNS
+        values += [attrs.get("role"), attrs.get("relationship")]
+        org_bound = bool(_org_family(attrs.get("org"), ctx))
+        ids |= _org_family(attrs.get("org"), ctx) | {ctx.worker}
+        for pid, p in ctx.entities.items():
+            pa = p.get("attrs") or {}
+            if p.get("kind") == "project" and (
+                subject in (pa.get("owner"), pa.get("sponsor")) or subject in (pa.get("members") or [])
+            ):
+                ids.add(pid)
+    elif kind == "project":
+        values.append(attrs.get("phase"))
+        ids |= {attrs.get(k) for k in ("owner", "sponsor") if isinstance(attrs.get(k), str)}
+        ids |= {o for o in attrs.get("orgs") or [] if isinstance(o, str)}
+    for value in values:
+        if isinstance(value, str):
+            tokens |= match_tokens(value)
+            ids |= _content(value, ctx, framed=False)[1]
+    for eid in ids:
+        e = ctx.entities.get(eid) or {}
+        for name in [e.get("name"), *(e.get("surface_forms") or [])]:
+            if isinstance(name, str):
+                tokens |= match_tokens(name)
+    tokens = {t for word in tokens for t in match_tokens(word)}
+    return PointSupport(frozenset(tokens), frozenset(ids), org_bound)
+
+
+_PROVENANCE_TOKENS = frozenset(match_tokens(" ".join(PROVENANCE_WORDS)))
+_YEAR_TOKEN = re.compile(r"(19|20)\d{2}")
+_WEEKDAY_TOKENS = frozenset(
+    match_tokens(
+        "monday tuesday wednesday thursday friday saturday sunday "
+        "mon tue tues wed weds thu thur thurs fri sat sun"
+    )
+)
+
+
+def _date_tokens(text: str) -> set[str]:
+    """Tokens of the dates in `text` (`date_mentions`), weekdays and years."""
+    norm = normalize_marked(text)
+    out = {t for a, b, *_ in date_mentions(norm) for t in match_tokens(norm[a:b])}
+    out |= {t for t in match_tokens(norm) if _YEAR_TOKEN.fullmatch(t)}
+    return out | _WEEKDAY_TOKENS
+
+
+def text_matches(
+    text: str, value: str, q: dict, ctx: ScoreContext, *, support: PointSupport | None = None
+) -> bool:
+    """Whether a free-text answer states the text `value` and little that is unsupported.
 
     Names of people, orgs and projects are compared as entities, not words, so "Registrar"
     and "Registrar at Saltmarren" both state "Registrar, TU Saltmarren". The answer must:
@@ -542,29 +697,38 @@ def text_matches(text: str, value: str, q: dict, ctx: ScoreContext) -> bool:
     * contain every content word of the value (`match_tokens`, names aside; when the value is
       only a name, such as an email address, its words);
     * not name, instead of an entity in the value, another entity of the same kind
-      ("Registrar at Kestrow");
-    * add at most `TEXT_EXTRA_RATIO` (0.5) other content words or entities per content word
-      of the value, not counting words and entities of the question text;
+      ("Registrar at Kestrow"); for a person subject with a recorded org, naming an org
+      outside the subject's record is wrong the same way ("Privacy Officer at Larchmont"
+      when she is at Kestrow);
+    * add at most `TEXT_EXTRA_RATIO` (0.5) unsupported content words or entities per content
+      word of the value, and at least `TEXT_MIN_EXTRA` (1);
     * contain no hedge word (`HEDGE_WORDS`: "or", "maybe", ...) the value lacks.
+
+    Supported words cost nothing: words and entities of the question text, of the subject's
+    current record (`point_support`: names, org, role, relationship, phase, owner, sponsor,
+    ...), dates, weekdays and years, and words saying where a fact is kept
+    (`PROVENANCE_WORDS`: "alias", "recorded", "store").
 
     Words framed as history ("not a solutions engineer", "previously deputy registrar") do not
     count either way, unless the value itself contains marker words.
     """
+    support = point_support(q, ctx) if support is None else support
     framed = not (set(_phrase(value)) & (HISTORY_MARKERS | CURRENT_MARKERS))
     want, want_ids = _content(value, ctx, framed=False)
     have, have_ids = _content(text, ctx, framed=framed)
     if not want:  # the value is all names
         want, want_ids = match_tokens(value), set()
-        have = match_tokens(text)
+        have, _ = _content(text, ctx, framed=framed, keep_names=True)
     if not want or hedge_words(text, allowed=value) or not want <= have:
         return False
     question = str(q.get("text") or "")
-    other_ids = have_ids - want_ids - ctx.resolve_entities(question)
-    want_kinds = {ctx.entity_kind(e) for e in want_ids}
-    if any(ctx.entity_kind(e) in want_kinds for e in other_ids):
+    other_ids = have_ids - want_ids - ctx.resolve_entities(question) - support.ids
+    anchor_kinds = {ctx.entity_kind(e) for e in want_ids} | ({"org"} if support.org_bound else set())
+    if any(ctx.entity_kind(e) in anchor_kinds for e in other_ids):
         return False  # "Registrar at Kestrow" for "Registrar, TU Saltmarren"
-    extra = len(have - want - match_tokens(question)) + len(other_ids)
-    return extra <= TEXT_EXTRA_RATIO * len(want)
+    free = match_tokens(question) | support.tokens | _PROVENANCE_TOKENS | _date_tokens(text)
+    extra = len(have - want - free) + len(other_ids)
+    return extra <= max(TEXT_MIN_EXTRA, TEXT_EXTRA_RATIO * len(want))
 
 
 def rival_values(q: dict, ctx: ScoreContext) -> list[str]:
@@ -593,17 +757,28 @@ def rival_values(q: dict, ctx: ScoreContext) -> list[str]:
     return out
 
 
-def stated_rival(text: str, accept: list[str], q: dict, ctx: ScoreContext) -> str | None:
+def stated_rival(
+    text: str,
+    accept: list[str],
+    q: dict,
+    ctx: ScoreContext,
+    *,
+    support: PointSupport | None = None,
+) -> str | None:
     """The first rival value (`rival_values`) a text answer also states, or None.
 
-    A rival is stated when every content word it does not share with the gold value or the
-    question occurs in the answer, not framed as history: "Solutions engineer / Data engineer"
-    states the rival "Data engineer"; "Solutions engineer, not a data engineer" does not.
+    A rival is stated when every content word it does not share with the gold value, the
+    question or the subject's record (`point_support`) occurs in the answer, not framed as
+    history: "Solutions engineer / Data engineer" states the rival "Data engineer";
+    "Solutions engineer, not a data engineer" does not, and neither does "Stakeholder; she
+    is the Account Manager at Galix" state the relationship "manager" when her role is
+    Account Manager.
     """
+    support = point_support(q, ctx) if support is None else support
     gold = {normalize(a) for a in accept}
     framed = not (set(_phrase(" ".join(accept))) & (HISTORY_MARKERS | CURRENT_MARKERS))
     have, _ = _content(text, ctx, framed=framed)
-    known = match_tokens(str(q.get("text") or ""))
+    known = match_tokens(str(q.get("text") or "")) | support.tokens
     for a in accept:
         known |= _content(a, ctx, framed=False)[0]
     for value in rival_values(q, ctx):
