@@ -294,7 +294,7 @@ A run is only meaningful if the agent works the way it would for a real person, 
 [`adapters/examples/docker.yaml`](../adapters/examples/docker.yaml) runs every session of any agent in a fresh container that mounts only the workspace and the prompt file. Without it, an agent with shell access could read `worlds/*/gold/` from your checkout. Verified leaderboard runs use this setup ([leaderboard](leaderboard.md)).
 
 ```bash
-docker build -f docker/Dockerfile.simple -t wcb-simple .        # an image with the wcb harness, no worlds
+docker build -f docker/Dockerfile.simple -t wcb-simple .        # the wcb harness and pinned document readers, no worlds
 WCB_AGENT_IMAGE=wcb-simple WCB_AGENT_CMD="python -I -m wcb.baselines.null" \
   wcb run --adapter adapters/examples/docker.yaml --world pilot --out runs/null-docker
 ```

@@ -118,6 +118,7 @@ stdin is empty (`/dev/null`). stdout and stderr are saved to `stdout.log` and `s
 - A failed or timed-out **ingest** session leaves the store as it was before the session: all its changes are discarded.
 - A failed or timed-out **query** session counts as empty answers if `.wcb/answers.json` is missing or invalid. Write it early and keep it valid.
 - On timeout the runner sends SIGTERM to every process of the session, then SIGKILL 10 seconds later. Write usage on SIGTERM if you can (the simple harness and `wcb.agents.wrap` do).
+- The runner sets no time limit on individual tool calls: a command or model-written script that hangs is the agent's own failure, bounded by the session timeout, after which a failed ingest session's store is restored from the previous snapshot; bound tool calls in your agent if you want it to recover.
 - When the session's main process exits, every process it started is killed, including daemons and processes started with `setsid` or Node's `detached: true`. Nothing may keep running, or keep writing to the workspace, after a session ([running §5](running.md#5-run)).
 
 ## 3. What the agent sees
@@ -299,6 +300,29 @@ env_passthrough: [ANTHROPIC_API_KEY]
 - `--init` makes the agent receive the runner's SIGTERM on timeout. If the runner has to SIGKILL the `docker` client, the container can outlive it: give containers a name (e.g. `--name wcb-{phase}-{date}`) and clean up leftovers.
 - `--user` keeps files written in the workspace owned by you, so the runner can snapshot and delete them. Claude Code also refuses `--dangerously-skip-permissions` as root.
 - Build the image with your agent (and `pip install white-collar-bench` if you use `wcb.agents.*` inside it).
+
+## 8a. Tools your agent's runtime needs
+
+Agents read every input format: `.eml` email, `.ics` calendar, `.vtt` transcript, `.json` chat export, `.md` notes and records with YAML front matter, and `.pdf`, `.docx`, `.xlsx` and `.pptx` documents ([formats §1.6](formats.md#16-artifact-file-formats)). The Python standard library covers the first five apart from YAML. For the rest, install readers in the environment where the agent's own commands run, which is often not the host virtualenv (a container, or a sandbox with its own system Python):
+
+| Need | Tool | Version in the reference image |
+|---|---|---|
+| YAML front matter | PyYAML | 6.0.3 |
+| PDF text | pypdf; optionally poppler-utils' `pdftotext` | 7.0.1; Debian bookworm's poppler |
+| Word documents | python-docx | 1.2.0 |
+| Spreadsheets | openpyxl | 3.1.5 |
+| Slide decks | python-pptx | 1.0.2 |
+
+The reference image, [`docker/Dockerfile.simple`](../docker/Dockerfile.simple), installs these at build time from [`docker/requirements-tools.txt`](../docker/requirements-tools.txt) (exact pins, which also pin `wcb`'s own PyYAML) and adds `pdftotext`. `wcb.agents.docs_text.extract_text` is a standard-library alternative for office documents and PDFs where `wcb` is installed.
+
+- **Pin them.** Every session of every run should see the same tools; record the versions with your results, and treat a change as a new adapter variant.
+- **Install before the run, never during it.** Sessions must not `pip install` or `apt-get` anything: it costs time against `timeout_s`, needs network access beyond the model endpoint, and makes runs differ.
+- **Smoke-test inside the agent's actual sandbox**, not on the host, before any paid run. [`docker/smoke_tools.py`](../docker/smoke_tools.py) checks each reader and, given directories, extracts text from every document in them; run it with the interpreter the agent's tools use, on public synthetic inputs:
+
+  ```bash
+  docker run --rm -v "$PWD/docker:/check:ro" -v "$PWD/worlds/dev/gen-s2-w1/inbox:/in:ro" \
+    wcb-simple python -I /check/smoke_tools.py /in
+  ```
 
 ## 9. The simple harness
 
