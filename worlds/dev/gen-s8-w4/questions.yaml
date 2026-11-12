@@ -15,10 +15,7 @@
     project: pr-fulmar
   challenges:
   - duplicate_signal
-  - endorsement
-  - implied_commitment
   - supersession
-  - worker_directive
 - id: q-003
   checkpoint: cp1
   template: project_changes
@@ -148,10 +145,8 @@
     project: pr-fulmar
   challenges:
   - duplicate_signal
-  - endorsement
-  - implied_commitment
+  - reversal
   - supersession
-  - worker_directive
 - id: q-018
   checkpoint: cp2
   template: project_changes
@@ -287,10 +282,8 @@
   challenges:
   - alias
   - duplicate_signal
-  - endorsement
-  - implied_commitment
+  - reversal
   - supersession
-  - worker_directive
 - id: q-033
   checkpoint: cp3
   template: project_changes
@@ -415,9 +408,9 @@
   challenges:
   - duplicate_signal
   - implied_commitment
+  - reversal
   - scattered_evidence
   - supersession
-  - unobservable
 - id: q-048
   checkpoint: cp4
   template: project_changes
@@ -559,7 +552,6 @@
   - duplicate_signal
   - implied_commitment
   - supersession
-  - unobservable
 - id: q-063
   checkpoint: cp5
   template: project_changes
@@ -814,7 +806,6 @@
   challenges:
   - alias
   - correction
-  - duplicate_signal
   - endorsement
   - implied_commitment
   - new_entity
@@ -944,12 +935,10 @@
     project: pr-fulmar
   challenges:
   - correction
-  - duplicate_signal
   - endorsement
   - implied_commitment
   - new_entity
   - supersession
-  - transfer
   - worker_directive
 - id: q-108
   checkpoint: cp8
@@ -1076,7 +1065,6 @@
   challenges:
   - alias
   - correction
-  - duplicate_signal
   - endorsement
   - implied_commitment
   - new_entity
@@ -1212,7 +1200,6 @@
     project: pr-fulmar
   challenges:
   - correction
-  - duplicate_signal
   - endorsement
   - implied_commitment
   - new_entity
@@ -1348,10 +1335,10 @@
     project: pr-fulmar
   challenges:
   - correction
-  - duplicate_signal
   - endorsement
   - implied_commitment
   - new_entity
+  - restructuring
   - supersession
   - worker_directive
 - id: q-153
@@ -1486,10 +1473,10 @@
     project: pr-fulmar
   challenges:
   - correction
-  - duplicate_signal
   - endorsement
   - implied_commitment
   - new_entity
+  - restructuring
   - supersession
   - worker_directive
 - id: q-168

@@ -264,6 +264,7 @@
   - alias
   - duplicate_signal
   - new_entity
+  - reversal
   - supersession
 - id: q-033
   checkpoint: cp3

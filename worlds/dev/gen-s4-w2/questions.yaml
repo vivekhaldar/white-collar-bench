@@ -13,7 +13,6 @@
   params:
     project: pr-fjord
   challenges:
-  - duplicate_signal
   - endorsement
   - implied_commitment
   - new_entity
@@ -140,7 +139,6 @@
     name_form: the alumni outreach pilot
   challenges:
   - alias
-  - duplicate_signal
   - new_entity
   - supersession
 - id: q-018
@@ -269,6 +267,7 @@
   - endorsement
   - implied_commitment
   - new_entity
+  - reversal
   - supersession
   - worker_directive
 - id: q-033
@@ -398,6 +397,7 @@
   - endorsement
   - implied_commitment
   - new_entity
+  - reversal
   - scattered_evidence
   - supersession
   - worker_directive
@@ -543,7 +543,6 @@
   - new_entity
   - supersession
   - transfer
-  - version_mismatch
   - worker_directive
 - id: q-063
   checkpoint: cp5

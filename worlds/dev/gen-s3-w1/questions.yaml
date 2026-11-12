@@ -14,7 +14,6 @@
     name_form: the Ketford pilot
   challenges:
   - alias
-  - duplicate_signal
   - scattered_evidence
   - supersession
 - id: q-003
@@ -138,11 +137,7 @@
   params:
     project: pr-okapi
   challenges:
-  - correction
-  - duplicate_signal
-  - implied_commitment
   - supersession
-  - transfer
 - id: q-018
   checkpoint: cp2
   template: project_changes
@@ -268,8 +263,6 @@
   params:
     project: pr-okapi
   challenges:
-  - duplicate_signal
-  - implied_commitment
   - reversal
   - supersession
 - id: q-033

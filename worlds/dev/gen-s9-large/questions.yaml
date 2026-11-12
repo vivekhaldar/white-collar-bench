@@ -14,9 +14,6 @@
   params:
     project: pr-cirrus
   challenges:
-  - duplicate_signal
-  - endorsement
-  - implied_commitment
   - supersession
 - id: q-003
   checkpoint: cp1
@@ -160,8 +157,6 @@
   params:
     project: pr-cirrus
   challenges:
-  - batch_catchup
-  - endorsement
   - new_entity
   - supersession
 - id: q-021
@@ -314,9 +309,8 @@
     name_form: Project Cirrus
   challenges:
   - alias
-  - batch_catchup
-  - endorsement
   - new_entity
+  - reversal
   - supersession
 - id: q-039
   checkpoint: cp3

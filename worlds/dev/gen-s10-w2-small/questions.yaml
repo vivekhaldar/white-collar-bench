@@ -14,8 +14,6 @@
   params:
     project: pr-nettle
   challenges:
-  - duplicate_signal
-  - endorsement
   - scattered_evidence
   - worker_directive
 - id: q-003
@@ -108,8 +106,8 @@
   params:
     project: pr-nettle
   challenges:
+  - reversal
   - supersession
-  - unobservable
 - id: q-014
   checkpoint: cp2
   template: project_changes
@@ -394,7 +392,6 @@
   - correction
   - implied_commitment
   - supersession
-  - unobservable
 - id: q-047
   checkpoint: cp5
   template: project_changes
@@ -487,9 +484,11 @@
     project: pr-nettle
   challenges:
   - correction
+  - duplicate_signal
   - implied_commitment
+  - restructuring
   - supersession
-  - unobservable
+  - worker_directive
 - id: q-058
   checkpoint: cp6
   template: project_changes

@@ -95,6 +95,21 @@ def test_generation_does_not_depend_on_hash_randomization(tmp_path):
         assert not diff, diff[:10]
 
 
+def test_committed_dev_worlds_match_generator():
+    """Generator changes must refresh the authored worlds shipped to benchmark users."""
+    import subprocess
+    import sys
+
+    root = Path(__file__).resolve().parents[2]
+    result = subprocess.run(
+        [sys.executable, "scripts/make_dev_worlds.py", "--check"],
+        cwd=root,
+        capture_output=True,
+        text=True,
+    )
+    assert result.returncode == 0, result.stdout + result.stderr
+
+
 def test_different_seeds_differ(generated):
     a, _ = generated[(0, "standard")]
     b, _ = generated[(1, "standard")]

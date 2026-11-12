@@ -16,7 +16,6 @@
     project: pr-marten
   challenges:
   - duplicate_signal
-  - implied_commitment
   - supersession
 - id: q-003
   checkpoint: cp1
@@ -145,8 +144,8 @@
     project: pr-marten
   challenges:
   - duplicate_signal
-  - implied_commitment
   - new_entity
+  - reversal
   - supersession
 - id: q-018
   checkpoint: cp2
@@ -267,8 +266,8 @@
     project: pr-marten
   challenges:
   - duplicate_signal
-  - implied_commitment
   - new_entity
+  - reversal
   - supersession
 - id: q-033
   checkpoint: cp3

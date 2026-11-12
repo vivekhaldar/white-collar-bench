@@ -15,7 +15,6 @@
     name_form: the Crandale pilot
   challenges:
   - alias
-  - duplicate_signal
   - implied_commitment
   - supersession
 - id: q-003
@@ -144,11 +143,8 @@
     name_form: Project Garnet
   challenges:
   - alias
-  - duplicate_signal
-  - endorsement
   - implied_commitment
   - supersession
-  - version_mismatch
 - id: q-018
   checkpoint: cp2
   template: project_changes
@@ -280,7 +276,6 @@
     project: pr-garnet
   challenges:
   - duplicate_signal
-  - endorsement
   - implied_commitment
   - supersession
 - id: q-033
@@ -410,7 +405,6 @@
     project: pr-garnet
   challenges:
   - duplicate_signal
-  - endorsement
   - implied_commitment
   - supersession
 - id: q-048
@@ -533,7 +527,6 @@
     project: pr-garnet
   challenges:
   - duplicate_signal
-  - endorsement
   - implied_commitment
   - supersession
 - id: q-063
@@ -666,9 +659,7 @@
     project: pr-garnet
   challenges:
   - duplicate_signal
-  - endorsement
   - implied_commitment
-  - silent_closure
   - supersession
 - id: q-078
   checkpoint: cp6

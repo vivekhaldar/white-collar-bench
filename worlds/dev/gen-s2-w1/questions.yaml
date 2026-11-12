@@ -264,10 +264,8 @@
   params:
     project: pr-mistral
   challenges:
-  - endorsement
-  - implied_commitment
+  - reversal
   - supersession
-  - worker_directive
 - id: q-033
   checkpoint: cp3
   template: project_changes

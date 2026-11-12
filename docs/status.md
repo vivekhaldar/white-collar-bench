@@ -1,6 +1,6 @@
 # Status
 
-Where the benchmark stands against the [construction plan](plan.md#5-milestones), with measured numbers. Updated 2026-11-11 for wcb 0.1.0, `GOLD_VERSION` 4.
+Where the benchmark stands against the [construction plan](plan.md#5-milestones), with measured numbers. Updated 2026-11-12 for wcb 0.1.0, `GOLD_VERSION` 5.
 
 ## Milestones
 
@@ -32,9 +32,11 @@ Where the benchmark stands against the [construction plan](plan.md#5-milestones)
 
 745 questions in all. Every world passes `wcb world check` with no issues and has no findings from the privacy scan against the private source repository (`wcb privacy scan`, [privacy](privacy.md)). Dev worlds regenerate identically from `scripts/make_dev_worlds.py`; they were regenerated on 2026-11-11 so that project summaries track decisions that change scope ([issue #8](https://github.com/vivekhaldar/white-collar-bench/issues/8)). Inputs did not change; 33 questions did.
 
+On 2026-11-12, the dev worlds were regenerated again to refresh 40 stale `challenges` annotations after the rubric changes ([issue #13](https://github.com/vivekhaldar/white-collar-bench/issues/13)). `GOLD_VERSION` 5 records this annotation-only refresh: inboxes, question IDs/parameters/text, expected answers and supporting evidence are unchanged from version 4. Only challenge-specific score groupings can change; no agent rerun is needed. The original Qwen and DeepSeek result records remain unchanged and have not been regraded as part of this refresh.
+
 ## Baselines
 
-All 11 worlds, one repeat, heuristic judge, `GOLD_VERSION` 4. Reproduce with:
+Measured on all 11 worlds, one repeat, heuristic judge, `GOLD_VERSION` 4. Version 5 changes only challenge annotations, so headline scores are unaffected. Reproduce with:
 
 ```bash
 wcb run --adapter adapters/examples/null.yaml --world pilot --split dev --out runs/null

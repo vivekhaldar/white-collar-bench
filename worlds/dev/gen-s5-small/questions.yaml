@@ -13,7 +13,6 @@
     name_form: the Falbury pilot
   challenges:
   - alias
-  - implied_commitment
   - scattered_evidence
 - id: q-003
   checkpoint: cp1
@@ -112,10 +111,7 @@
     project: pr-wagtail
   challenges:
   - correction
-  - duplicate_signal
-  - implied_commitment
   - supersession
-  - unobservable
 - id: q-014
   checkpoint: cp2
   template: project_changes
@@ -215,10 +211,8 @@
   challenges:
   - alias
   - correction
-  - duplicate_signal
-  - implied_commitment
+  - reversal
   - supersession
-  - unobservable
 - id: q-025
   checkpoint: cp3
   template: project_changes
