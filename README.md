@@ -13,7 +13,6 @@ Existing benchmarks cover parts of this work: workplace tool use, search over en
 - **Memory is a durable artifact.** The agent keeps its knowledge in files it reads and writes, the way a person keeps notes, not in a hidden context window.
 - **Errors compound.** Inputs arrive day by day and are gone afterwards. A missed handoff on Tuesday is a wrong answer on Friday, so the benchmark measures sustained reliability, not one-shot accuracy.
 - **Judgment counts, not just recall.** Questions such as "What is the status of the pilot?" or "What should I focus on tomorrow?" need current, complete, prioritized answers, with honest abstention when the record does not support one.
-- **The data can be shared.** Real work records are confidential, so nobody can publish a benchmark built from them. Every person, organization, project and message here is synthetic, but the patterns borrow from real projects: their complexity, their people and the ways they go wrong.
 
 More in [motivation and related work](docs/motivation.md).
 
