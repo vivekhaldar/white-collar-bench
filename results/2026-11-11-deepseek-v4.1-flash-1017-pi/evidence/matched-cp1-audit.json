@@ -1,0 +1,4560 @@
+{
+  "scope": "Completed gen-s10-w2-small cp1 only; diagnostic, not aggregate scores",
+  "date": "2027-08-31",
+  "tracks": {
+    "A": [
+      {
+        "question": {
+          "id": "q-001",
+          "type": "priority",
+          "template": "focus_tomorrow",
+          "params": {},
+          "text": "What should I focus on tomorrow?",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal",
+            "endorsement",
+            "implied_commitment",
+            "scattered_evidence",
+            "worker_directive"
+          ],
+          "support": [
+            "em-0007",
+            "ch-0009",
+            "ch-0015",
+            "ch-0016",
+            "nt-0003",
+            "mn-0005",
+            "ch-0018",
+            "mn-0008",
+            "ch-0021",
+            "mt-0006",
+            "mn-0009",
+            "mt-0007",
+            "mn-0010",
+            "em-0038",
+            "ch-0026",
+            "ch-0030",
+            "em-0054",
+            "ch-0035",
+            "em-0056",
+            "em-0057",
+            "mt-0011",
+            "mn-0015",
+            "mn-0016",
+            "ch-0037",
+            "mn-0017",
+            "ch-0043"
+          ],
+          "gold": {
+            "tomorrow": "2027-09-01",
+            "must_include": [
+              {
+                "loop": "c-040",
+                "what": "Confirm the Nettle architecture diagram with Bisi",
+                "counterparty": "p-bisi-volkov",
+                "direction": "i_owe",
+                "status": "open",
+                "due": "2027-09-01",
+                "keywords": [
+                  "architecture diagram",
+                  "nettle"
+                ],
+                "support": [
+                  "ch-0037"
+                ]
+              }
+            ],
+            "worker_active": [
+              {
+                "loop": "c-040",
+                "what": "Confirm the Nettle architecture diagram with Bisi",
+                "counterparty": "p-bisi-volkov",
+                "direction": "i_owe",
+                "status": "open",
+                "due": "2027-09-01",
+                "keywords": [
+                  "architecture diagram",
+                  "nettle"
+                ],
+                "support": [
+                  "ch-0037"
+                ]
+              },
+              {
+                "loop": "c-038",
+                "what": "Send Bisi the Nettle dependency list",
+                "counterparty": "p-bisi-volkov",
+                "direction": "i_owe",
+                "status": "open",
+                "due": "2027-09-02",
+                "keywords": [
+                  "dependency list",
+                  "nettle"
+                ],
+                "support": [
+                  "mt-0011",
+                  "ch-0043"
+                ]
+              },
+              {
+                "loop": "c-033",
+                "what": "Send Paula the Friday status note for w/e 3 September",
+                "counterparty": "p-paula-dubois",
+                "direction": "i_owe",
+                "status": "open",
+                "due": "2027-09-03",
+                "keywords": [
+                  "friday status note",
+                  "w/e 3 september"
+                ],
+                "support": [
+                  "em-0054"
+                ]
+              },
+              {
+                "loop": "c-005",
+                "what": "Send Sigrid the Nettle data-flow diagram",
+                "counterparty": "p-sigrid-asante",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "data-flow diagram",
+                  "nettle"
+                ],
+                "support": [
+                  "em-0007"
+                ]
+              },
+              {
+                "loop": "c-009",
+                "what": "Assemble the Nettle security review package",
+                "counterparty": "p-sigrid-asante",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "security review package",
+                  "nettle"
+                ],
+                "support": [
+                  "ch-0009",
+                  "ch-0015",
+                  "mn-0005",
+                  "ch-0018",
+                  "ch-0021",
+                  "mn-0009",
+                  "mt-0007",
+                  "ch-0026"
+                ]
+              },
+              {
+                "loop": "c-015",
+                "what": "Complete the Nettle privacy impact assessment",
+                "counterparty": "p-solene-zimmermann",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "privacy impact assessment",
+                  "nettle"
+                ],
+                "support": [
+                  "ch-0016",
+                  "nt-0003",
+                  "mn-0008"
+                ]
+              },
+              {
+                "loop": "c-019",
+                "what": "Update the Nettle budget justification after Adaeze's comments",
+                "counterparty": "p-adaeze-morimoto",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "budget justification",
+                  "nettle"
+                ],
+                "support": [
+                  "mt-0006"
+                ]
+              },
+              {
+                "loop": "c-023",
+                "what": "Update the Nettle board paper after Gaurav's comments",
+                "counterparty": "p-gaurav-laine",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "board paper",
+                  "nettle"
+                ],
+                "support": [
+                  "mn-0010"
+                ]
+              },
+              {
+                "loop": "c-025",
+                "what": "Confirm the Nettle data dictionary with Akosua",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "data dictionary",
+                  "nettle"
+                ],
+                "support": [
+                  "em-0038"
+                ]
+              },
+              {
+                "loop": "c-029",
+                "what": "Send Gaurav the Pipit rollout checklist",
+                "counterparty": "p-gaurav-laine",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "rollout checklist",
+                  "pipit"
+                ],
+                "support": [
+                  "ch-0030"
+                ]
+              },
+              {
+                "loop": "c-034",
+                "what": "Send Bisi the Nettle member survey",
+                "counterparty": "p-bisi-volkov",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "member survey",
+                  "nettle"
+                ],
+                "support": [
+                  "ch-0035"
+                ]
+              },
+              {
+                "loop": "c-036",
+                "what": "Send Akosua the pantry inventory discovery pain-point list",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "pain-point list",
+                  "pantry inventory discovery"
+                ],
+                "support": [
+                  "em-0056",
+                  "mn-0015",
+                  "mn-0017"
+                ]
+              },
+              {
+                "loop": "c-037",
+                "what": "Walk Douglas through the Pipit one-page summary",
+                "counterparty": "p-douglas-grigoryan",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "one-page summary",
+                  "pipit"
+                ],
+                "support": [
+                  "em-0057"
+                ]
+              },
+              {
+                "loop": "c-041",
+                "what": "Look into the Nettle duplicate notifications",
+                "counterparty": "p-bisi-volkov",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "duplicate notifications",
+                  "nettle"
+                ],
+                "support": [
+                  "mn-0016"
+                ]
+              }
+            ],
+            "distractors": [
+              {
+                "loop": "c-001",
+                "what": "Send Paula the Friday status note for w/e 20 August",
+                "counterparty": "p-paula-dubois",
+                "direction": "i_owe",
+                "status": "done",
+                "due": "2027-08-20",
+                "keywords": [
+                  "friday status note",
+                  "w/e 20 august"
+                ],
+                "support": [
+                  "em-0001",
+                  "em-0013",
+                  "em-0029"
+                ]
+              },
+              {
+                "loop": "c-002",
+                "what": "Send Aoife the referral matching problem statement",
+                "counterparty": "p-nare-dempsey",
+                "direction": "owed_to_me",
+                "status": "waiting",
+                "due": null,
+                "keywords": [
+                  "problem statement",
+                  "referral matching"
+                ],
+                "support": [
+                  "nt-0001",
+                  "ch-0019",
+                  "mn-0008"
+                ]
+              },
+              {
+                "loop": "c-003",
+                "what": "Send Aoife the Noris deep-dive materials",
+                "counterparty": "p-akosua-carmichael",
+                "direction": "owed_to_me",
+                "status": "waiting",
+                "due": null,
+                "keywords": [
+                  "deep-dive materials",
+                  "noris"
+                ],
+                "support": [
+                  "nt-0001",
+                  "em-0006",
+                  "ch-0008"
+                ]
+              },
+              {
+                "loop": "c-007",
+                "what": "Review Akosua's pantry inventory discovery findings summary",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "i_owe",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "findings summary",
+                  "pantry inventory discovery"
+                ],
+                "support": [
+                  "ch-0006",
+                  "ch-0014",
+                  "em-0029"
+                ]
+              },
+              {
+                "loop": "c-008",
+                "what": "Send Akosua the translation help selection requirements list",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "i_owe",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "requirements list",
+                  "translation help selection"
+                ],
+                "support": [
+                  "mt-0001",
+                  "mt-0002",
+                  "em-0026",
+                  "dc-0001",
+                  "em-0029"
+                ]
+              },
+              {
+                "loop": "c-010",
+                "what": "Send Aoife the Nettle metrics definition",
+                "counterparty": "p-sipho-papadopoulos",
+                "direction": "owed_to_me",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "metrics definition",
+                  "nettle"
+                ],
+                "support": [
+                  "mt-0002",
+                  "ch-0011",
+                  "em-0017"
+                ]
+              },
+              {
+                "loop": "c-011",
+                "what": "Generate a synthetic client data set for Nettle",
+                "counterparty": "p-bisi-volkov",
+                "direction": "owed_to_me",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "synthetic client data",
+                  "nettle"
+                ],
+                "support": [
+                  "ch-0010",
+                  "em-0015"
+                ]
+              },
+              {
+                "loop": "c-012",
+                "what": "Confirm the pantry inventory discovery observation notes with Akosua",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "i_owe",
+                "status": "dropped",
+                "due": null,
+                "keywords": [
+                  "observation notes",
+                  "pantry inventory discovery"
+                ],
+                "support": [
+                  "ch-0013",
+                  "mn-0007",
+                  "em-0025",
+                  "ch-0023"
+                ]
+              },
+              {
+                "loop": "c-013",
+                "what": "Send Douglas the Nettle action log",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "other",
+                "status": "dropped",
+                "due": null,
+                "keywords": [
+                  "action log",
+                  "nettle"
+                ],
+                "support": [
+                  "mt-0003",
+                  "em-0034",
+                  "em-0052"
+                ]
+              },
+              {
+                "loop": "c-016",
+                "what": "Send Paula the Friday status note for w/e 27 August",
+                "counterparty": "p-paula-dubois",
+                "direction": "i_owe",
+                "status": "done",
+                "due": "2027-08-27",
+                "keywords": [
+                  "friday status note",
+                  "w/e 27 august"
+                ],
+                "support": [
+                  "em-0030",
+                  "em-0052"
+                ]
+              },
+              {
+                "loop": "c-017",
+                "what": "Send Akosua the Nettle safeguarding checklist",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "i_owe",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "safeguarding checklist",
+                  "nettle"
+                ],
+                "support": [
+                  "mt-0005",
+                  "mt-0008",
+                  "em-0052",
+                  "mn-0017"
+                ]
+              },
+              {
+                "loop": "c-018",
+                "what": "Pull the pantry inventory baseline data from Holworth",
+                "counterparty": "p-catrin-dang",
+                "direction": "owed_to_me",
+                "status": "waiting",
+                "due": null,
+                "keywords": [
+                  "baseline data",
+                  "pantry inventory"
+                ],
+                "support": [
+                  "em-0032",
+                  "ch-0022",
+                  "mn-0014"
+                ]
+              },
+              {
+                "loop": "c-020",
+                "what": "Configure the Pipit SSO broker for Ormton",
+                "counterparty": "p-sipho-papadopoulos",
+                "direction": "owed_to_me",
+                "status": "waiting",
+                "due": null,
+                "keywords": [
+                  "sso broker",
+                  "pipit"
+                ],
+                "support": [
+                  "mt-0006"
+                ]
+              },
+              {
+                "loop": "c-021",
+                "what": "Send Aoife the Nettle training outline",
+                "counterparty": "p-gaurav-laine",
+                "direction": "owed_to_me",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "training outline",
+                  "nettle"
+                ],
+                "support": [
+                  "nt-0004",
+                  "ch-0027",
+                  "ch-0028"
+                ]
+              },
+              {
+                "loop": "c-022",
+                "what": "Countersign the Holworth data-sharing agreement",
+                "counterparty": "p-amani-xu",
+                "direction": "owed_to_me",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "data-sharing agreement",
+                  "holworth"
+                ],
+                "support": [
+                  "em-0036",
+                  "em-0041"
+                ]
+              },
+              {
+                "loop": "c-026",
+                "what": "Review Bisi's Nettle vendor comparison",
+                "counterparty": "p-bisi-volkov",
+                "direction": "i_owe",
+                "status": "dropped",
+                "due": null,
+                "keywords": [
+                  "vendor comparison",
+                  "nettle"
+                ],
+                "support": [
+                  "em-0040",
+                  "ch-0029",
+                  "ch-0033",
+                  "em-0052"
+                ]
+              },
+              {
+                "loop": "c-027",
+                "what": "Introduce Tahmina to Akosua for the Morgate working group",
+                "counterparty": "p-tahmina-ozturk",
+                "direction": "i_owe",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "introduce",
+                  "morgate working group"
+                ],
+                "support": [
+                  "em-0044",
+                  "em-0047"
+                ]
+              },
+              {
+                "loop": "c-030",
+                "what": "Review Sigrid's Nettle integration spec",
+                "counterparty": "p-sigrid-asante",
+                "direction": "i_owe",
+                "status": "dropped",
+                "due": null,
+                "keywords": [
+                  "integration spec",
+                  "nettle"
+                ],
+                "support": [
+                  "em-0048",
+                  "nt-0007"
+                ]
+              },
+              {
+                "loop": "c-031",
+                "what": "Send Akosua the pantry inventory discovery stakeholder map",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "i_owe",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "stakeholder map",
+                  "pantry inventory discovery"
+                ],
+                "support": [
+                  "ch-0034",
+                  "em-0053"
+                ]
+              },
+              {
+                "loop": "c-032",
+                "what": "Send Aoife the Morgate working paper",
+                "counterparty": "p-tahmina-ozturk",
+                "direction": "owed_to_me",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "working paper",
+                  "morgate"
+                ],
+                "support": [
+                  "nt-0005",
+                  "ch-0038"
+                ]
+              },
+              {
+                "loop": "c-035",
+                "what": "Send Aoife the Nettle member survey",
+                "counterparty": "p-douglas-grigoryan",
+                "direction": "owed_to_me",
+                "status": "waiting",
+                "due": null,
+                "keywords": [
+                  "member survey",
+                  "nettle"
+                ],
+                "support": [
+                  "mt-0010"
+                ]
+              },
+              {
+                "loop": "c-043",
+                "what": "Draft the Pipit on-call rota",
+                "counterparty": "p-bisi-volkov",
+                "direction": "owed_to_me",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "on-call rota",
+                  "pipit"
+                ],
+                "support": [
+                  "em-0062",
+                  "dc-0002"
+                ]
+              },
+              {
+                "loop": "c-044",
+                "what": "Set up Nettle test tenant login for Aoife",
+                "counterparty": "p-bisi-volkov",
+                "direction": "owed_to_me",
+                "status": "waiting",
+                "due": null,
+                "keywords": [
+                  "test tenant login",
+                  "nettle"
+                ],
+                "support": [
+                  "ch-0039"
+                ]
+              },
+              {
+                "loop": "c-046",
+                "what": "Fix the Pipit stale cache",
+                "counterparty": "p-sipho-papadopoulos",
+                "direction": "owed_to_me",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "stale cache",
+                  "pipit"
+                ],
+                "support": [
+                  "ch-0040",
+                  "ch-0042"
+                ]
+              },
+              {
+                "loop": "c-047",
+                "what": "Send the Noris accessibility conformance report",
+                "counterparty": "p-amani-xu",
+                "direction": "owed_to_me",
+                "status": "waiting",
+                "due": null,
+                "keywords": [
+                  "accessibility conformance report",
+                  "noris"
+                ],
+                "support": [
+                  "ch-0041"
+                ]
+              },
+              {
+                "loop": "c-048",
+                "what": "Send Aoife the notes from the grant reporting session",
+                "counterparty": "p-amani-katz",
+                "direction": "owed_to_me",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "notes from the grant reporting session",
+                  "grant reporting"
+                ],
+                "support": [
+                  "ch-0044"
+                ]
+              }
+            ],
+            "k": 10
+          }
+        },
+        "answer": {
+          "type": "priority",
+          "abstain": false,
+          "confidence": 0.78,
+          "items": [
+            {
+              "text": "Confirm the Nettle architecture diagram with Bisi",
+              "due": "2027-09-01",
+              "why": "Hard deadline tomorrow: Bisi asked for confirmation by Wednesday 1 September and I agreed.",
+              "cites": [
+                "loops/confirm-the-nettle-architecture-diagram-with-bisi",
+                "projects/nettle",
+                "ch-0037"
+              ]
+            },
+            {
+              "text": "Send Bisi the Nettle dependency list",
+              "due": "2027-09-02",
+              "why": "Akosua reported Bisi needs it by Thursday 2 September; the loop is still open and was only tentatively accepted.",
+              "cites": [
+                "loops/send-bisi-the-nettle-dependency-list",
+                "projects/nettle",
+                "ch-0043",
+                "mt-0011"
+              ]
+            },
+            {
+              "text": "Walk Douglas through the Pipit one-page summary",
+              "due": "2027-09-02",
+              "why": "The walkthrough is scheduled for Thursday 2 September.",
+              "cites": [
+                "loops/walk-douglas-through-the-pipit-one-page-summary",
+                "projects/pipit",
+                "ca-0002",
+                "em-0057"
+              ]
+            },
+            {
+              "text": "Send Paula the Friday status note for w/e 3 September",
+              "due": "2027-09-03",
+              "why": "Recurring Friday status note due Friday 3 September.",
+              "cites": [
+                "loops/send-paula-the-friday-status-note-for-w-e-3-september",
+                "em-0054"
+              ]
+            }
+          ]
+        },
+        "grade": {
+          "id": "q-001",
+          "type": "priority",
+          "template": "focus_tomorrow",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal",
+            "endorsement",
+            "implied_commitment",
+            "scattered_evidence",
+            "worker_directive"
+          ],
+          "valid": true,
+          "abstained": false,
+          "base": 1.0,
+          "citation": 0.9166666666666666,
+          "score": 0.9791666666666666,
+          "details": {
+            "k": 10,
+            "n_top": 4,
+            "n_loop_items": 4,
+            "recall": 1.0,
+            "penalty": 0.0,
+            "matches": [
+              {
+                "pred": 0,
+                "gold": "c-040",
+                "role": "must"
+              },
+              {
+                "pred": 1,
+                "gold": "c-038",
+                "role": "active"
+              },
+              {
+                "pred": 2,
+                "gold": "c-037",
+                "role": "active"
+              },
+              {
+                "pred": 3,
+                "gold": "c-033",
+                "role": "active"
+              }
+            ],
+            "missed_must": [],
+            "citations": {
+              "scope": "question",
+              "total": 12,
+              "valid": 11,
+              "invalid": [
+                {
+                  "cite": "ca-0002",
+                  "why": "not_in_support"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-002",
+          "type": "status",
+          "template": "project_status",
+          "params": {
+            "project": "pr-nettle"
+          },
+          "text": "What is the status of Nettle?",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal",
+            "endorsement",
+            "scattered_evidence",
+            "worker_directive"
+          ],
+          "support": [
+            "nt-0001",
+            "em-0007",
+            "nt-0002",
+            "ch-0009",
+            "ch-0015",
+            "ch-0016",
+            "nt-0003",
+            "mn-0005",
+            "ch-0018",
+            "mn-0008",
+            "ch-0021",
+            "mt-0006",
+            "mn-0009",
+            "mt-0007",
+            "ch-0024",
+            "mn-0010",
+            "em-0038",
+            "ch-0026",
+            "nt-0006",
+            "ch-0035",
+            "mt-0010",
+            "mt-0011",
+            "mn-0016",
+            "ch-0037",
+            "ch-0039",
+            "ch-0043"
+          ],
+          "gold": {
+            "rubric": [
+              {
+                "id": "r1",
+                "aspect": "status",
+                "text": "Nettle is active",
+                "weight": 2,
+                "critical": true,
+                "keywords": [
+                  [
+                    "active",
+                    "in progress",
+                    "underway",
+                    "on track",
+                    "ongoing",
+                    "moving"
+                  ]
+                ],
+                "stale": [],
+                "support": [
+                  "nt-0001"
+                ]
+              },
+              {
+                "id": "r2",
+                "aspect": "phase",
+                "text": "Current phase: security review",
+                "weight": 1,
+                "critical": false,
+                "keywords": [
+                  [
+                    "security"
+                  ],
+                  [
+                    "review"
+                  ]
+                ],
+                "stale": [
+                  [
+                    "build"
+                  ]
+                ],
+                "support": [
+                  "nt-0002"
+                ]
+              },
+              {
+                "id": "r3",
+                "aspect": "latest_change",
+                "text": "Decided to use approach A for the Nettle test plan",
+                "weight": 2,
+                "critical": true,
+                "keywords": [
+                  [
+                    "approach a",
+                    "test plan"
+                  ]
+                ],
+                "stale": [],
+                "support": [
+                  "nt-0006"
+                ]
+              },
+              {
+                "id": "r4",
+                "aspect": "blocker",
+                "text": "Current blocker: real client data paused pending the security review",
+                "weight": 2,
+                "critical": true,
+                "keywords": [
+                  [
+                    "client"
+                  ],
+                  [
+                    "security"
+                  ]
+                ],
+                "stale": [],
+                "support": [
+                  "nt-0002"
+                ]
+              },
+              {
+                "id": "r5",
+                "aspect": "target_date",
+                "text": "Current target date: 2027-10-11",
+                "weight": 2,
+                "critical": true,
+                "keywords": [
+                  [
+                    "10/11",
+                    "11 oct",
+                    "11 october",
+                    "11th oct",
+                    "11th october",
+                    "2027-10-11",
+                    "oct 11",
+                    "oct 11th",
+                    "october 11",
+                    "october 11th"
+                  ]
+                ],
+                "stale": [],
+                "support": [
+                  "nt-0001"
+                ]
+              },
+              {
+                "id": "r6",
+                "aspect": "loop",
+                "text": "Confirm the Nettle architecture diagram with Bisi (owner: Aoife Everett)",
+                "weight": 1,
+                "critical": false,
+                "keywords": [
+                  [
+                    "architecture diagram"
+                  ]
+                ],
+                "stale": [],
+                "support": [
+                  "ch-0037"
+                ]
+              },
+              {
+                "id": "r7",
+                "aspect": "loop",
+                "text": "Send Bisi the Nettle dependency list (owner: Aoife Everett)",
+                "weight": 1,
+                "critical": false,
+                "keywords": [
+                  [
+                    "dependency list"
+                  ]
+                ],
+                "stale": [],
+                "support": [
+                  "mt-0011",
+                  "ch-0043"
+                ]
+              }
+            ],
+            "facts": {
+              "project": "pr-nettle",
+              "name": "Nettle",
+              "as_of": "2027-08-31",
+              "attrs": {
+                "status": "active",
+                "owner": "Gaurav Laine",
+                "summary": "Pilot of an AI outcomes dashboard for four branches at Ormton, hosted on Pipit. Currently in security review; blocked on real client data paused pending the security review; target date 11 October.",
+                "phase": "security review",
+                "target_date": "2027-10-11",
+                "sponsor": "Bruna Thapa",
+                "members": [
+                  "Aoife Everett",
+                  "Gaurav Laine",
+                  "Akosua Bergstrom",
+                  "Douglas Grigoryan",
+                  "Bisi Volkov",
+                  "Sigrid Asante",
+                  "Sipho Papadopoulos",
+                  "Adaeze Morimoto",
+                  "Bruna Thapa"
+                ],
+                "orgs": [
+                  "Ormton Housing Trust"
+                ],
+                "blocker": "real client data paused pending the security review"
+              },
+              "superseded": {
+                "phase": "build"
+              },
+              "active_loops": [
+                {
+                  "loop": "c-005",
+                  "what": "Send Sigrid the Nettle data-flow diagram",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Sigrid Asante",
+                  "status": "open",
+                  "due": null
+                },
+                {
+                  "loop": "c-009",
+                  "what": "Assemble the Nettle security review package",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Sigrid Asante",
+                  "status": "open",
+                  "due": null
+                },
+                {
+                  "loop": "c-015",
+                  "what": "Complete the Nettle privacy impact assessment",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Solene Zimmermann",
+                  "status": "open",
+                  "due": null
+                },
+                {
+                  "loop": "c-019",
+                  "what": "Update the Nettle budget justification after Adaeze's comments",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Adaeze Morimoto",
+                  "status": "open",
+                  "due": null
+                },
+                {
+                  "loop": "c-023",
+                  "what": "Update the Nettle board paper after Gaurav's comments",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Gaurav Laine",
+                  "status": "open",
+                  "due": null
+                },
+                {
+                  "loop": "c-025",
+                  "what": "Confirm the Nettle data dictionary with Akosua",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Akosua Bergstrom",
+                  "status": "open",
+                  "due": null
+                },
+                {
+                  "loop": "c-034",
+                  "what": "Send Bisi the Nettle member survey",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Bisi Volkov",
+                  "status": "open",
+                  "due": null
+                },
+                {
+                  "loop": "c-035",
+                  "what": "Send Aoife the Nettle member survey",
+                  "owner": "Douglas Grigoryan",
+                  "counterparty": "Aoife Everett",
+                  "status": "waiting",
+                  "due": null
+                },
+                {
+                  "loop": "c-038",
+                  "what": "Send Bisi the Nettle dependency list",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Bisi Volkov",
+                  "status": "open",
+                  "due": "2027-09-02"
+                },
+                {
+                  "loop": "c-040",
+                  "what": "Confirm the Nettle architecture diagram with Bisi",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Bisi Volkov",
+                  "status": "open",
+                  "due": "2027-09-01"
+                },
+                {
+                  "loop": "c-041",
+                  "what": "Look into the Nettle duplicate notifications",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Bisi Volkov",
+                  "status": "open",
+                  "due": null
+                },
+                {
+                  "loop": "c-044",
+                  "what": "Set up Nettle test tenant login for Aoife",
+                  "owner": "Bisi Volkov",
+                  "counterparty": "Aoife Everett",
+                  "status": "waiting",
+                  "due": null
+                }
+              ],
+              "decisions": [
+                {
+                  "decision": "d-001",
+                  "what": "Limit the Nettle pilot to four branches",
+                  "status": "made",
+                  "made_on": "2027-08-25",
+                  "reversed_on": null
+                },
+                {
+                  "decision": "d-002",
+                  "what": "Use approach A for the Nettle test plan",
+                  "status": "made",
+                  "made_on": "2027-08-30",
+                  "reversed_on": null
+                }
+              ],
+              "recent_events": [
+                {
+                  "event": "e-0115",
+                  "date": "2027-08-30",
+                  "type": "commitment.create",
+                  "summary": "I said I could get Bisi the Nettle dependency list sometime next week"
+                },
+                {
+                  "event": "e-0118",
+                  "date": "2027-08-31",
+                  "type": "commitment.create",
+                  "summary": "I said I'd confirm the Nettle architecture diagram with Bisi"
+                },
+                {
+                  "event": "e-0119",
+                  "date": "2027-08-31",
+                  "type": "commitment.create",
+                  "summary": "I said I'd take a look at the Nettle duplicate notifications"
+                },
+                {
+                  "event": "e-0125",
+                  "date": "2027-08-31",
+                  "type": "commitment.create",
+                  "summary": "I asked Bisi to set up Nettle test tenant login for me"
+                },
+                {
+                  "event": "e-0133",
+                  "date": "2027-08-31",
+                  "type": "commitment.update",
+                  "summary": "Bisi needs the dependency list by Thursday 2 September"
+                }
+              ]
+            }
+          }
+        },
+        "answer": {
+          "type": "status",
+          "abstain": false,
+          "confidence": 0.95,
+          "summary": "Nettle is active in the security review phase, targeting 2027-10-11. The security review package remains open and documentation is still thin, so real client data remains paused pending the review. Latest changes: I offered to look into duplicate notifications; Bisi asked me to confirm the architecture diagram by 1 September and I agreed; Akosua reported Bisi needs the dependency list by 2 September; Bisi agreed to set up a test tenant login; and the safeguarding checklist is confirmed done. Next dated steps are the architecture diagram on 1 September and the dependency list by 2 September.",
+          "claims": [
+            {
+              "text": "Nettle is active in the security review phase with a target date of 2027-10-11.",
+              "cites": [
+                "projects/nettle"
+              ]
+            },
+            {
+              "text": "Real client data is paused pending the security review, and documentation remains thin.",
+              "cites": [
+                "projects/nettle",
+                "mt-0011"
+              ]
+            },
+            {
+              "text": "I offered to look into the Nettle duplicate notifications.",
+              "cites": [
+                "loops/look-into-the-nettle-duplicate-notifications",
+                "mn-0016"
+              ]
+            },
+            {
+              "text": "Bisi asked me to confirm the architecture diagram by Wednesday 1 September, and I agreed.",
+              "cites": [
+                "loops/confirm-the-nettle-architecture-diagram-with-bisi",
+                "ch-0037"
+              ]
+            },
+            {
+              "text": "Akosua reported that Bisi needs the Nettle dependency list by Thursday 2 September.",
+              "cites": [
+                "loops/send-bisi-the-nettle-dependency-list",
+                "ch-0043"
+              ]
+            },
+            {
+              "text": "Bisi agreed to set up the Nettle test tenant login for me.",
+              "cites": [
+                "loops/set-up-the-nettle-test-tenant-login-for-aoife",
+                "ch-0039"
+              ]
+            },
+            {
+              "text": "The Nettle safeguarding checklist is confirmed done.",
+              "cites": [
+                "loops/send-akosua-the-nettle-safeguarding-checklist",
+                "mn-0017"
+              ]
+            }
+          ]
+        },
+        "grade": {
+          "id": "q-002",
+          "type": "status",
+          "template": "project_status",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal",
+            "endorsement",
+            "scattered_evidence",
+            "worker_directive"
+          ],
+          "valid": true,
+          "abstained": false,
+          "base": 0.8181818181818182,
+          "citation": 0.8333333333333334,
+          "score": 0.7840909090909092,
+          "details": {
+            "verdicts": [
+              {
+                "item": "r1",
+                "weight": 2.0,
+                "verdict": "covered"
+              },
+              {
+                "item": "r2",
+                "weight": 1.0,
+                "verdict": "covered"
+              },
+              {
+                "item": "r3",
+                "weight": 2.0,
+                "verdict": "missing"
+              },
+              {
+                "item": "r4",
+                "weight": 2.0,
+                "verdict": "covered"
+              },
+              {
+                "item": "r5",
+                "weight": 2.0,
+                "verdict": "covered"
+              },
+              {
+                "item": "r6",
+                "weight": 1.0,
+                "verdict": "covered"
+              },
+              {
+                "item": "r7",
+                "weight": 1.0,
+                "verdict": "covered"
+              }
+            ],
+            "padding_penalty": 0.0,
+            "citations": {
+              "scope": "question",
+              "total": 12,
+              "valid": 10,
+              "invalid": [
+                {
+                  "cite": "loops/send-akosua-the-nettle-safeguarding-checklist",
+                  "why": "record_unsupported"
+                },
+                {
+                  "cite": "mn-0017",
+                  "why": "not_in_support"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-003",
+          "type": "change",
+          "template": "project_changes",
+          "params": {
+            "project": "pr-translation-help-tool-selection",
+            "since": "2027-08-27"
+          },
+          "text": "What changed on Translation Help Tool Selection since the end of Friday 27 August?",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal",
+            "endorsement",
+            "implied_commitment"
+          ],
+          "support": [
+            "mn-0015",
+            "ch-0041"
+          ],
+          "gold": {
+            "items": [
+              {
+                "event": "e-0116",
+                "summary": "Catrin asked me to review the translation help selection vendor comparison",
+                "date": "2027-08-30",
+                "type": "commitment.create",
+                "keywords": [
+                  "vendor comparison",
+                  "translation help selection"
+                ],
+                "support": [
+                  "mn-0015"
+                ]
+              },
+              {
+                "event": "e-0130",
+                "summary": "I asked Amani for the Noris accessibility conformance report",
+                "date": "2027-08-31",
+                "type": "commitment.create",
+                "keywords": [
+                  "accessibility conformance report",
+                  "noris"
+                ],
+                "support": [
+                  "ch-0041"
+                ]
+              }
+            ]
+          }
+        },
+        "answer": {
+          "type": "change",
+          "abstain": false,
+          "confidence": 0.9,
+          "items": [
+            {
+              "text": "Catrin's translation help selection vendor comparison was discussed at the Holworth site visit; a review was suggested with no owner agreed yet.",
+              "date": "2027-08-30",
+              "cites": [
+                "projects/translation-help-tool-selection",
+                "loops/review-catrin-s-translation-help-selection-vendor-comparison",
+                "logs/2027-08-30",
+                "mn-0015"
+              ]
+            },
+            {
+              "text": "Amani Xu said she would send me the Noris accessibility conformance report.",
+              "date": "2027-08-31",
+              "cites": [
+                "projects/translation-help-tool-selection",
+                "loops/send-aoife-the-noris-accessibility-conformance-report",
+                "logs/2027-08-31",
+                "ch-0041"
+              ]
+            }
+          ]
+        },
+        "grade": {
+          "id": "q-003",
+          "type": "change",
+          "template": "project_changes",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal",
+            "endorsement",
+            "implied_commitment"
+          ],
+          "valid": true,
+          "abstained": false,
+          "base": 1.0,
+          "citation": 1.0,
+          "score": 1.0,
+          "details": {
+            "n_pred": 2,
+            "n_gold": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "matches": [
+              {
+                "pred": 0,
+                "gold": "e-0116"
+              },
+              {
+                "pred": 1,
+                "gold": "e-0130"
+              }
+            ],
+            "unmatched_gold": [],
+            "citations": {
+              "scope": "item",
+              "total": 8,
+              "valid": 8,
+              "invalid": []
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-004",
+          "type": "list",
+          "template": "i_owe",
+          "params": {
+            "person": "p-akosua-bergstrom"
+          },
+          "text": "What do I currently owe Akosua Bergstrom?",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal",
+            "endorsement",
+            "implied_commitment",
+            "name_collision"
+          ],
+          "support": [
+            "em-0038",
+            "em-0056",
+            "mn-0015",
+            "mn-0017"
+          ],
+          "gold": {
+            "items": [
+              {
+                "loop": "c-025",
+                "what": "Confirm the Nettle data dictionary with Akosua",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "data dictionary",
+                  "nettle"
+                ],
+                "support": [
+                  "em-0038"
+                ]
+              },
+              {
+                "loop": "c-036",
+                "what": "Send Akosua the pantry inventory discovery pain-point list",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "pain-point list",
+                  "pantry inventory discovery"
+                ],
+                "support": [
+                  "em-0056",
+                  "mn-0015",
+                  "mn-0017"
+                ]
+              }
+            ]
+          }
+        },
+        "answer": {
+          "type": "list",
+          "abstain": false,
+          "confidence": 0.82,
+          "note": "The first two items are accepted commitments; the other two are open but only suggested/not yet accepted.",
+          "items": [
+            {
+              "text": "Confirm the Nettle data dictionary with Akosua",
+              "counterparty": "Akosua Bergstrom",
+              "direction": "i_owe",
+              "status": "open",
+              "due": null,
+              "cites": [
+                "loops/confirm-the-nettle-data-dictionary-with-akosua",
+                "em-0038"
+              ]
+            },
+            {
+              "text": "Send Akosua the pantry inventory discovery pain-point list",
+              "counterparty": "Akosua Bergstrom",
+              "direction": "i_owe",
+              "status": "open",
+              "due": null,
+              "cites": [
+                "loops/send-akosua-the-pantry-inventory-discovery-pain-point-list",
+                "em-0056",
+                "mn-0015",
+                "mn-0017"
+              ]
+            },
+            {
+              "text": "Review Akosua's pantry inventory discovery opportunity list (suggested, not yet accepted)",
+              "counterparty": "Akosua Bergstrom",
+              "direction": "i_owe",
+              "status": "open",
+              "due": null,
+              "cites": [
+                "loops/review-akosua-s-pantry-inventory-discovery-opportunity-list",
+                "mn-0004"
+              ]
+            },
+            {
+              "text": "Update the Nettle RACI chart after Akosua's comments (suggested, not yet accepted)",
+              "counterparty": "Akosua Bergstrom",
+              "direction": "i_owe",
+              "status": "open",
+              "due": null,
+              "cites": [
+                "loops/update-the-nettle-raci-chart-after-akosua-s-comments",
+                "mn-0012"
+              ]
+            }
+          ]
+        },
+        "grade": {
+          "id": "q-004",
+          "type": "list",
+          "template": "i_owe",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal",
+            "endorsement",
+            "implied_commitment",
+            "name_collision"
+          ],
+          "valid": true,
+          "abstained": false,
+          "base": 0.6666666666666666,
+          "citation": 0.6,
+          "score": 0.6,
+          "details": {
+            "n_pred": 4,
+            "n_gold": 2,
+            "precision": 0.5,
+            "recall": 1.0,
+            "matches": [
+              {
+                "pred": 0,
+                "gold": "c-025",
+                "credit": 1.0,
+                "status": 1.0,
+                "due": 1.0,
+                "counterparty": 1.0
+              },
+              {
+                "pred": 1,
+                "gold": "c-036",
+                "credit": 1.0,
+                "status": 1.0,
+                "due": 1.0,
+                "counterparty": 1.0
+              }
+            ],
+            "unmatched_pred": [
+              2,
+              3
+            ],
+            "unmatched_gold": [],
+            "citations": {
+              "scope": "item",
+              "total": 10,
+              "valid": 6,
+              "invalid": [
+                {
+                  "cite": "loops/review-akosua-s-pantry-inventory-discovery-opportunity-list",
+                  "why": "record_unsupported",
+                  "item": 2
+                },
+                {
+                  "cite": "mn-0004",
+                  "why": "not_in_support",
+                  "item": 2
+                },
+                {
+                  "cite": "loops/update-the-nettle-raci-chart-after-akosua-s-comments",
+                  "why": "record_unsupported",
+                  "item": 3
+                },
+                {
+                  "cite": "mn-0012",
+                  "why": "not_in_support",
+                  "item": 3
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-005",
+          "type": "list",
+          "template": "owed_to_me",
+          "params": {
+            "person": "p-douglas-grigoryan",
+            "name_form": "Douglas"
+          },
+          "text": "What does Douglas currently owe me?",
+          "answerable": true,
+          "challenges": [
+            "alias"
+          ],
+          "support": [
+            "mt-0010"
+          ],
+          "gold": {
+            "items": [
+              {
+                "loop": "c-035",
+                "what": "Send Aoife the Nettle member survey",
+                "counterparty": "p-douglas-grigoryan",
+                "direction": "owed_to_me",
+                "status": "waiting",
+                "due": null,
+                "keywords": [
+                  "member survey",
+                  "nettle"
+                ],
+                "support": [
+                  "mt-0010"
+                ]
+              }
+            ]
+          }
+        },
+        "answer": {
+          "type": "list",
+          "abstain": false,
+          "confidence": 0.96,
+          "items": [
+            {
+              "text": "Send Aoife the Nettle member survey",
+              "counterparty": "Douglas Grigoryan",
+              "direction": "owed_to_me",
+              "status": "waiting",
+              "due": null,
+              "cites": [
+                "loops/send-aoife-the-nettle-member-survey",
+                "people/douglas-grigoryan",
+                "mt-0010"
+              ]
+            }
+          ]
+        },
+        "grade": {
+          "id": "q-005",
+          "type": "list",
+          "template": "owed_to_me",
+          "answerable": true,
+          "challenges": [
+            "alias"
+          ],
+          "valid": true,
+          "abstained": false,
+          "base": 1.0,
+          "citation": 1.0,
+          "score": 1.0,
+          "details": {
+            "n_pred": 1,
+            "n_gold": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "matches": [
+              {
+                "pred": 0,
+                "gold": "c-035",
+                "credit": 1.0,
+                "status": 1.0,
+                "due": 1.0,
+                "counterparty": 1.0
+              }
+            ],
+            "unmatched_pred": [],
+            "unmatched_gold": [],
+            "citations": {
+              "scope": "item",
+              "total": 3,
+              "valid": 3,
+              "invalid": []
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-006",
+          "type": "point",
+          "template": "loop_owner",
+          "params": {
+            "commitment": "c-018"
+          },
+          "text": "Who is responsible for \"Pull the pantry inventory baseline data from Holworth\"?",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal"
+          ],
+          "support": [
+            "em-0032",
+            "ch-0022",
+            "mn-0014"
+          ],
+          "gold": {
+            "kind": "entity",
+            "value": "Catrin Dang",
+            "entity": "p-catrin-dang",
+            "accept": [
+              "Catrin Dang",
+              "Catrin",
+              "C. Dang",
+              "catrin.dang@holworth.reddale.example",
+              "@catrin"
+            ]
+          }
+        },
+        "answer": {
+          "type": "point",
+          "abstain": false,
+          "confidence": 0.98,
+          "value": "Catrin Dang",
+          "note": "Owner of loops/pull-the-pantry-inventory-baseline-data-from-holworth; this is a waiting ask from the worker to Catrin, under the Holworth Pantry Inventory Discovery project.",
+          "cites": [
+            "loops/pull-the-pantry-inventory-baseline-data-from-holworth",
+            "projects/holworth-pantry-inventory-discovery",
+            "people/catrin-dang",
+            "em-0032",
+            "ch-0022",
+            "mn-0014"
+          ]
+        },
+        "grade": {
+          "id": "q-006",
+          "type": "point",
+          "template": "loop_owner",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal"
+          ],
+          "valid": true,
+          "abstained": false,
+          "base": 1.0,
+          "citation": 1.0,
+          "score": 1.0,
+          "details": {
+            "kind": "entity",
+            "value": "Catrin Dang",
+            "gold": "Catrin Dang",
+            "citations": {
+              "scope": "question",
+              "total": 6,
+              "valid": 6,
+              "invalid": []
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-007",
+          "type": "point",
+          "template": "loop_due",
+          "params": {
+            "commitment": "c-038"
+          },
+          "text": "When is \"Send Bisi the Nettle dependency list\" due?",
+          "answerable": true,
+          "challenges": [
+            "scattered_evidence"
+          ],
+          "support": [
+            "ch-0043"
+          ],
+          "gold": {
+            "kind": "date",
+            "value": "2027-09-02",
+            "entity": null,
+            "accept": [
+              "2027-09-02"
+            ]
+          }
+        },
+        "answer": {
+          "type": "point",
+          "abstain": false,
+          "confidence": 0.97,
+          "value": "2027-09-02",
+          "note": "Thursday 2 September; Akosua reported that Bisi needs the Nettle dependency list by then. The loop remains open and was only tentatively accepted.",
+          "cites": [
+            "loops/send-bisi-the-nettle-dependency-list",
+            "projects/nettle",
+            "ch-0043",
+            "mt-0011"
+          ]
+        },
+        "grade": {
+          "id": "q-007",
+          "type": "point",
+          "template": "loop_due",
+          "answerable": true,
+          "challenges": [
+            "scattered_evidence"
+          ],
+          "valid": true,
+          "abstained": false,
+          "base": 1.0,
+          "citation": 0.75,
+          "score": 0.9375,
+          "details": {
+            "kind": "date",
+            "value": "2027-09-02",
+            "gold": "2027-09-02",
+            "citations": {
+              "scope": "question",
+              "total": 4,
+              "valid": 3,
+              "invalid": [
+                {
+                  "cite": "mt-0011",
+                  "why": "not_in_support"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-008",
+          "type": "point",
+          "template": "project_attr",
+          "params": {
+            "project": "pr-translation-help-tool-selection",
+            "attribute": "sponsor"
+          },
+          "text": "Who is the executive sponsor of Translation Help Tool Selection?",
+          "answerable": true,
+          "challenges": [],
+          "support": [
+            "nt-0001"
+          ],
+          "gold": {
+            "kind": "entity",
+            "value": "Lilit Yilmaz",
+            "entity": "p-lilit-yilmaz",
+            "accept": [
+              "Lilit Yilmaz",
+              "Lilit",
+              "L. Yilmaz",
+              "lilit.yilmaz@holworth.reddale.example",
+              "@lilit",
+              "Holworth's ED"
+            ]
+          }
+        },
+        "answer": {
+          "type": "point",
+          "abstain": false,
+          "confidence": 0.86,
+          "value": "Lilit Yilmaz",
+          "note": "Translation Help Tool Selection records Lilit Yilmaz as sponsor; she is Executive Director at Holworth Family Services with relationship 'executive'.",
+          "cites": [
+            "projects/translation-help-tool-selection",
+            "people/lilit-yilmaz",
+            "nt-0001"
+          ]
+        },
+        "grade": {
+          "id": "q-008",
+          "type": "point",
+          "template": "project_attr",
+          "answerable": true,
+          "challenges": [],
+          "valid": true,
+          "abstained": false,
+          "base": 1.0,
+          "citation": 1.0,
+          "score": 1.0,
+          "details": {
+            "kind": "entity",
+            "value": "Lilit Yilmaz",
+            "gold": "Lilit Yilmaz",
+            "citations": {
+              "scope": "question",
+              "total": 3,
+              "valid": 3,
+              "invalid": []
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-009",
+          "type": "point",
+          "template": "person_attr",
+          "params": {
+            "person": "p-akosua-bergstrom",
+            "attribute": "relationship",
+            "name_form": "our programs manager"
+          },
+          "text": "What is my working relationship with our programs manager?",
+          "answerable": true,
+          "challenges": [
+            "alias",
+            "name_collision"
+          ],
+          "support": [
+            "nt-0001"
+          ],
+          "gold": {
+            "kind": "text",
+            "value": "peer",
+            "entity": null,
+            "accept": [
+              "peer"
+            ]
+          }
+        },
+        "answer": {
+          "type": "point",
+          "abstain": false,
+          "confidence": 0.97,
+          "value": "peer",
+          "note": "The programs manager is Akosua Bergstrom (Programs Manager, alias 'our programs manager'); her recorded relationship to the worker is 'peer'.",
+          "cites": [
+            "people/akosua-bergstrom",
+            "people/me",
+            "nt-0001"
+          ]
+        },
+        "grade": {
+          "id": "q-009",
+          "type": "point",
+          "template": "person_attr",
+          "answerable": true,
+          "challenges": [
+            "alias",
+            "name_collision"
+          ],
+          "valid": true,
+          "abstained": false,
+          "base": 1.0,
+          "citation": 0.6666666666666666,
+          "score": 0.9166666666666666,
+          "details": {
+            "kind": "text",
+            "value": "peer",
+            "gold": "peer",
+            "citations": {
+              "scope": "question",
+              "total": 3,
+              "valid": 2,
+              "invalid": [
+                {
+                  "cite": "people/me",
+                  "why": "worker_record"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-010",
+          "type": "list",
+          "template": "project_loops",
+          "params": {
+            "project": "pr-pipit"
+          },
+          "text": "What loops are open on Pipit?",
+          "answerable": true,
+          "challenges": [],
+          "support": [
+            "mt-0006",
+            "ch-0030",
+            "em-0057"
+          ],
+          "gold": {
+            "items": [
+              {
+                "loop": "c-020",
+                "what": "Configure the Pipit SSO broker for Ormton",
+                "counterparty": "p-sipho-papadopoulos",
+                "direction": "owed_to_me",
+                "status": "waiting",
+                "due": null,
+                "keywords": [
+                  "sso broker",
+                  "pipit"
+                ],
+                "support": [
+                  "mt-0006"
+                ]
+              },
+              {
+                "loop": "c-029",
+                "what": "Send Gaurav the Pipit rollout checklist",
+                "counterparty": "p-gaurav-laine",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "rollout checklist",
+                  "pipit"
+                ],
+                "support": [
+                  "ch-0030"
+                ]
+              },
+              {
+                "loop": "c-037",
+                "what": "Walk Douglas through the Pipit one-page summary",
+                "counterparty": "p-douglas-grigoryan",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "one-page summary",
+                  "pipit"
+                ],
+                "support": [
+                  "em-0057"
+                ]
+              }
+            ]
+          }
+        },
+        "answer": {
+          "type": "list",
+          "abstain": false,
+          "confidence": 0.84,
+          "note": "Lists Pipit loops that are still open or waiting; completed Pipit loops (on-call rota, stale-cache fix) are excluded.",
+          "items": [
+            {
+              "text": "Review the Pipit model allow-list",
+              "counterparty": "Bisi Volkov",
+              "direction": "i_owe",
+              "status": "open",
+              "due": null,
+              "cites": [
+                "loops/review-the-pipit-model-allow-list",
+                "projects/pipit",
+                "mn-0002",
+                "em-0012"
+              ]
+            },
+            {
+              "text": "Send Gaurav the Pipit rollout checklist",
+              "counterparty": "Gaurav Laine",
+              "direction": "i_owe",
+              "status": "open",
+              "due": null,
+              "cites": [
+                "loops/send-gaurav-the-pipit-rollout-checklist",
+                "projects/pipit",
+                "ch-0030"
+              ]
+            },
+            {
+              "text": "Walk Douglas through the Pipit one-page summary",
+              "counterparty": "Douglas Grigoryan",
+              "direction": "i_owe",
+              "status": "open",
+              "due": null,
+              "cites": [
+                "loops/walk-douglas-through-the-pipit-one-page-summary",
+                "projects/pipit",
+                "em-0057",
+                "ca-0002"
+              ]
+            },
+            {
+              "text": "Configure the Pipit SSO broker for Ormton",
+              "counterparty": "Sipho Papadopoulos",
+              "direction": "owed_to_me",
+              "status": "waiting",
+              "due": null,
+              "cites": [
+                "loops/configure-the-pipit-sso-broker-for-ormton",
+                "projects/pipit",
+                "mt-0006"
+              ]
+            }
+          ]
+        },
+        "grade": {
+          "id": "q-010",
+          "type": "list",
+          "template": "project_loops",
+          "answerable": true,
+          "challenges": [],
+          "valid": true,
+          "abstained": false,
+          "base": 0.8571428571428571,
+          "citation": 0.7142857142857143,
+          "score": 0.7959183673469388,
+          "details": {
+            "n_pred": 4,
+            "n_gold": 3,
+            "precision": 0.75,
+            "recall": 1.0,
+            "matches": [
+              {
+                "pred": 1,
+                "gold": "c-029",
+                "credit": 1.0,
+                "status": 1.0,
+                "due": 1.0,
+                "counterparty": 1.0
+              },
+              {
+                "pred": 2,
+                "gold": "c-037",
+                "credit": 1.0,
+                "status": 1.0,
+                "due": 1.0,
+                "counterparty": 1.0
+              },
+              {
+                "pred": 3,
+                "gold": "c-020",
+                "credit": 1.0,
+                "status": 1.0,
+                "due": 1.0,
+                "counterparty": 1.0
+              }
+            ],
+            "unmatched_pred": [
+              0
+            ],
+            "unmatched_gold": [],
+            "citations": {
+              "scope": "item",
+              "total": 14,
+              "valid": 10,
+              "invalid": [
+                {
+                  "cite": "loops/review-the-pipit-model-allow-list",
+                  "why": "record_unsupported",
+                  "item": 0
+                },
+                {
+                  "cite": "mn-0002",
+                  "why": "not_in_support",
+                  "item": 0
+                },
+                {
+                  "cite": "em-0012",
+                  "why": "not_in_support",
+                  "item": 0
+                },
+                {
+                  "cite": "ca-0002",
+                  "why": "not_in_support",
+                  "item": 2
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-011",
+          "type": "point",
+          "template": "person_attr",
+          "params": {
+            "person": "p-amani-xu",
+            "attribute": "phone"
+          },
+          "text": "What is Amani Xu's direct phone number?",
+          "answerable": false,
+          "challenges": [
+            "name_collision",
+            "unobservable"
+          ],
+          "support": [],
+          "gold": {}
+        },
+        "answer": {
+          "type": "point",
+          "abstain": true
+        },
+        "grade": {
+          "id": "q-011",
+          "type": "point",
+          "template": "person_attr",
+          "answerable": false,
+          "challenges": [
+            "name_collision",
+            "unobservable"
+          ],
+          "valid": true,
+          "abstained": true,
+          "base": 1.0,
+          "citation": null,
+          "score": 1.0,
+          "details": {
+            "note": "correct abstention"
+          }
+        }
+      }
+    ],
+    "B": [
+      {
+        "question": {
+          "id": "q-001",
+          "type": "priority",
+          "template": "focus_tomorrow",
+          "params": {},
+          "text": "What should I focus on tomorrow?",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal",
+            "endorsement",
+            "implied_commitment",
+            "scattered_evidence",
+            "worker_directive"
+          ],
+          "support": [
+            "em-0007",
+            "ch-0009",
+            "ch-0015",
+            "ch-0016",
+            "nt-0003",
+            "mn-0005",
+            "ch-0018",
+            "mn-0008",
+            "ch-0021",
+            "mt-0006",
+            "mn-0009",
+            "mt-0007",
+            "mn-0010",
+            "em-0038",
+            "ch-0026",
+            "ch-0030",
+            "em-0054",
+            "ch-0035",
+            "em-0056",
+            "em-0057",
+            "mt-0011",
+            "mn-0015",
+            "mn-0016",
+            "ch-0037",
+            "mn-0017",
+            "ch-0043"
+          ],
+          "gold": {
+            "tomorrow": "2027-09-01",
+            "must_include": [
+              {
+                "loop": "c-040",
+                "what": "Confirm the Nettle architecture diagram with Bisi",
+                "counterparty": "p-bisi-volkov",
+                "direction": "i_owe",
+                "status": "open",
+                "due": "2027-09-01",
+                "keywords": [
+                  "architecture diagram",
+                  "nettle"
+                ],
+                "support": [
+                  "ch-0037"
+                ]
+              }
+            ],
+            "worker_active": [
+              {
+                "loop": "c-040",
+                "what": "Confirm the Nettle architecture diagram with Bisi",
+                "counterparty": "p-bisi-volkov",
+                "direction": "i_owe",
+                "status": "open",
+                "due": "2027-09-01",
+                "keywords": [
+                  "architecture diagram",
+                  "nettle"
+                ],
+                "support": [
+                  "ch-0037"
+                ]
+              },
+              {
+                "loop": "c-038",
+                "what": "Send Bisi the Nettle dependency list",
+                "counterparty": "p-bisi-volkov",
+                "direction": "i_owe",
+                "status": "open",
+                "due": "2027-09-02",
+                "keywords": [
+                  "dependency list",
+                  "nettle"
+                ],
+                "support": [
+                  "mt-0011",
+                  "ch-0043"
+                ]
+              },
+              {
+                "loop": "c-033",
+                "what": "Send Paula the Friday status note for w/e 3 September",
+                "counterparty": "p-paula-dubois",
+                "direction": "i_owe",
+                "status": "open",
+                "due": "2027-09-03",
+                "keywords": [
+                  "friday status note",
+                  "w/e 3 september"
+                ],
+                "support": [
+                  "em-0054"
+                ]
+              },
+              {
+                "loop": "c-005",
+                "what": "Send Sigrid the Nettle data-flow diagram",
+                "counterparty": "p-sigrid-asante",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "data-flow diagram",
+                  "nettle"
+                ],
+                "support": [
+                  "em-0007"
+                ]
+              },
+              {
+                "loop": "c-009",
+                "what": "Assemble the Nettle security review package",
+                "counterparty": "p-sigrid-asante",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "security review package",
+                  "nettle"
+                ],
+                "support": [
+                  "ch-0009",
+                  "ch-0015",
+                  "mn-0005",
+                  "ch-0018",
+                  "ch-0021",
+                  "mn-0009",
+                  "mt-0007",
+                  "ch-0026"
+                ]
+              },
+              {
+                "loop": "c-015",
+                "what": "Complete the Nettle privacy impact assessment",
+                "counterparty": "p-solene-zimmermann",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "privacy impact assessment",
+                  "nettle"
+                ],
+                "support": [
+                  "ch-0016",
+                  "nt-0003",
+                  "mn-0008"
+                ]
+              },
+              {
+                "loop": "c-019",
+                "what": "Update the Nettle budget justification after Adaeze's comments",
+                "counterparty": "p-adaeze-morimoto",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "budget justification",
+                  "nettle"
+                ],
+                "support": [
+                  "mt-0006"
+                ]
+              },
+              {
+                "loop": "c-023",
+                "what": "Update the Nettle board paper after Gaurav's comments",
+                "counterparty": "p-gaurav-laine",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "board paper",
+                  "nettle"
+                ],
+                "support": [
+                  "mn-0010"
+                ]
+              },
+              {
+                "loop": "c-025",
+                "what": "Confirm the Nettle data dictionary with Akosua",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "data dictionary",
+                  "nettle"
+                ],
+                "support": [
+                  "em-0038"
+                ]
+              },
+              {
+                "loop": "c-029",
+                "what": "Send Gaurav the Pipit rollout checklist",
+                "counterparty": "p-gaurav-laine",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "rollout checklist",
+                  "pipit"
+                ],
+                "support": [
+                  "ch-0030"
+                ]
+              },
+              {
+                "loop": "c-034",
+                "what": "Send Bisi the Nettle member survey",
+                "counterparty": "p-bisi-volkov",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "member survey",
+                  "nettle"
+                ],
+                "support": [
+                  "ch-0035"
+                ]
+              },
+              {
+                "loop": "c-036",
+                "what": "Send Akosua the pantry inventory discovery pain-point list",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "pain-point list",
+                  "pantry inventory discovery"
+                ],
+                "support": [
+                  "em-0056",
+                  "mn-0015",
+                  "mn-0017"
+                ]
+              },
+              {
+                "loop": "c-037",
+                "what": "Walk Douglas through the Pipit one-page summary",
+                "counterparty": "p-douglas-grigoryan",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "one-page summary",
+                  "pipit"
+                ],
+                "support": [
+                  "em-0057"
+                ]
+              },
+              {
+                "loop": "c-041",
+                "what": "Look into the Nettle duplicate notifications",
+                "counterparty": "p-bisi-volkov",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "duplicate notifications",
+                  "nettle"
+                ],
+                "support": [
+                  "mn-0016"
+                ]
+              }
+            ],
+            "distractors": [
+              {
+                "loop": "c-001",
+                "what": "Send Paula the Friday status note for w/e 20 August",
+                "counterparty": "p-paula-dubois",
+                "direction": "i_owe",
+                "status": "done",
+                "due": "2027-08-20",
+                "keywords": [
+                  "friday status note",
+                  "w/e 20 august"
+                ],
+                "support": [
+                  "em-0001",
+                  "em-0013",
+                  "em-0029"
+                ]
+              },
+              {
+                "loop": "c-002",
+                "what": "Send Aoife the referral matching problem statement",
+                "counterparty": "p-nare-dempsey",
+                "direction": "owed_to_me",
+                "status": "waiting",
+                "due": null,
+                "keywords": [
+                  "problem statement",
+                  "referral matching"
+                ],
+                "support": [
+                  "nt-0001",
+                  "ch-0019",
+                  "mn-0008"
+                ]
+              },
+              {
+                "loop": "c-003",
+                "what": "Send Aoife the Noris deep-dive materials",
+                "counterparty": "p-akosua-carmichael",
+                "direction": "owed_to_me",
+                "status": "waiting",
+                "due": null,
+                "keywords": [
+                  "deep-dive materials",
+                  "noris"
+                ],
+                "support": [
+                  "nt-0001",
+                  "em-0006",
+                  "ch-0008"
+                ]
+              },
+              {
+                "loop": "c-007",
+                "what": "Review Akosua's pantry inventory discovery findings summary",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "i_owe",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "findings summary",
+                  "pantry inventory discovery"
+                ],
+                "support": [
+                  "ch-0006",
+                  "ch-0014",
+                  "em-0029"
+                ]
+              },
+              {
+                "loop": "c-008",
+                "what": "Send Akosua the translation help selection requirements list",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "i_owe",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "requirements list",
+                  "translation help selection"
+                ],
+                "support": [
+                  "mt-0001",
+                  "mt-0002",
+                  "em-0026",
+                  "dc-0001",
+                  "em-0029"
+                ]
+              },
+              {
+                "loop": "c-010",
+                "what": "Send Aoife the Nettle metrics definition",
+                "counterparty": "p-sipho-papadopoulos",
+                "direction": "owed_to_me",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "metrics definition",
+                  "nettle"
+                ],
+                "support": [
+                  "mt-0002",
+                  "ch-0011",
+                  "em-0017"
+                ]
+              },
+              {
+                "loop": "c-011",
+                "what": "Generate a synthetic client data set for Nettle",
+                "counterparty": "p-bisi-volkov",
+                "direction": "owed_to_me",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "synthetic client data",
+                  "nettle"
+                ],
+                "support": [
+                  "ch-0010",
+                  "em-0015"
+                ]
+              },
+              {
+                "loop": "c-012",
+                "what": "Confirm the pantry inventory discovery observation notes with Akosua",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "i_owe",
+                "status": "dropped",
+                "due": null,
+                "keywords": [
+                  "observation notes",
+                  "pantry inventory discovery"
+                ],
+                "support": [
+                  "ch-0013",
+                  "mn-0007",
+                  "em-0025",
+                  "ch-0023"
+                ]
+              },
+              {
+                "loop": "c-013",
+                "what": "Send Douglas the Nettle action log",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "other",
+                "status": "dropped",
+                "due": null,
+                "keywords": [
+                  "action log",
+                  "nettle"
+                ],
+                "support": [
+                  "mt-0003",
+                  "em-0034",
+                  "em-0052"
+                ]
+              },
+              {
+                "loop": "c-016",
+                "what": "Send Paula the Friday status note for w/e 27 August",
+                "counterparty": "p-paula-dubois",
+                "direction": "i_owe",
+                "status": "done",
+                "due": "2027-08-27",
+                "keywords": [
+                  "friday status note",
+                  "w/e 27 august"
+                ],
+                "support": [
+                  "em-0030",
+                  "em-0052"
+                ]
+              },
+              {
+                "loop": "c-017",
+                "what": "Send Akosua the Nettle safeguarding checklist",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "i_owe",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "safeguarding checklist",
+                  "nettle"
+                ],
+                "support": [
+                  "mt-0005",
+                  "mt-0008",
+                  "em-0052",
+                  "mn-0017"
+                ]
+              },
+              {
+                "loop": "c-018",
+                "what": "Pull the pantry inventory baseline data from Holworth",
+                "counterparty": "p-catrin-dang",
+                "direction": "owed_to_me",
+                "status": "waiting",
+                "due": null,
+                "keywords": [
+                  "baseline data",
+                  "pantry inventory"
+                ],
+                "support": [
+                  "em-0032",
+                  "ch-0022",
+                  "mn-0014"
+                ]
+              },
+              {
+                "loop": "c-020",
+                "what": "Configure the Pipit SSO broker for Ormton",
+                "counterparty": "p-sipho-papadopoulos",
+                "direction": "owed_to_me",
+                "status": "waiting",
+                "due": null,
+                "keywords": [
+                  "sso broker",
+                  "pipit"
+                ],
+                "support": [
+                  "mt-0006"
+                ]
+              },
+              {
+                "loop": "c-021",
+                "what": "Send Aoife the Nettle training outline",
+                "counterparty": "p-gaurav-laine",
+                "direction": "owed_to_me",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "training outline",
+                  "nettle"
+                ],
+                "support": [
+                  "nt-0004",
+                  "ch-0027",
+                  "ch-0028"
+                ]
+              },
+              {
+                "loop": "c-022",
+                "what": "Countersign the Holworth data-sharing agreement",
+                "counterparty": "p-amani-xu",
+                "direction": "owed_to_me",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "data-sharing agreement",
+                  "holworth"
+                ],
+                "support": [
+                  "em-0036",
+                  "em-0041"
+                ]
+              },
+              {
+                "loop": "c-026",
+                "what": "Review Bisi's Nettle vendor comparison",
+                "counterparty": "p-bisi-volkov",
+                "direction": "i_owe",
+                "status": "dropped",
+                "due": null,
+                "keywords": [
+                  "vendor comparison",
+                  "nettle"
+                ],
+                "support": [
+                  "em-0040",
+                  "ch-0029",
+                  "ch-0033",
+                  "em-0052"
+                ]
+              },
+              {
+                "loop": "c-027",
+                "what": "Introduce Tahmina to Akosua for the Morgate working group",
+                "counterparty": "p-tahmina-ozturk",
+                "direction": "i_owe",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "introduce",
+                  "morgate working group"
+                ],
+                "support": [
+                  "em-0044",
+                  "em-0047"
+                ]
+              },
+              {
+                "loop": "c-030",
+                "what": "Review Sigrid's Nettle integration spec",
+                "counterparty": "p-sigrid-asante",
+                "direction": "i_owe",
+                "status": "dropped",
+                "due": null,
+                "keywords": [
+                  "integration spec",
+                  "nettle"
+                ],
+                "support": [
+                  "em-0048",
+                  "nt-0007"
+                ]
+              },
+              {
+                "loop": "c-031",
+                "what": "Send Akosua the pantry inventory discovery stakeholder map",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "i_owe",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "stakeholder map",
+                  "pantry inventory discovery"
+                ],
+                "support": [
+                  "ch-0034",
+                  "em-0053"
+                ]
+              },
+              {
+                "loop": "c-032",
+                "what": "Send Aoife the Morgate working paper",
+                "counterparty": "p-tahmina-ozturk",
+                "direction": "owed_to_me",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "working paper",
+                  "morgate"
+                ],
+                "support": [
+                  "nt-0005",
+                  "ch-0038"
+                ]
+              },
+              {
+                "loop": "c-035",
+                "what": "Send Aoife the Nettle member survey",
+                "counterparty": "p-douglas-grigoryan",
+                "direction": "owed_to_me",
+                "status": "waiting",
+                "due": null,
+                "keywords": [
+                  "member survey",
+                  "nettle"
+                ],
+                "support": [
+                  "mt-0010"
+                ]
+              },
+              {
+                "loop": "c-043",
+                "what": "Draft the Pipit on-call rota",
+                "counterparty": "p-bisi-volkov",
+                "direction": "owed_to_me",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "on-call rota",
+                  "pipit"
+                ],
+                "support": [
+                  "em-0062",
+                  "dc-0002"
+                ]
+              },
+              {
+                "loop": "c-044",
+                "what": "Set up Nettle test tenant login for Aoife",
+                "counterparty": "p-bisi-volkov",
+                "direction": "owed_to_me",
+                "status": "waiting",
+                "due": null,
+                "keywords": [
+                  "test tenant login",
+                  "nettle"
+                ],
+                "support": [
+                  "ch-0039"
+                ]
+              },
+              {
+                "loop": "c-046",
+                "what": "Fix the Pipit stale cache",
+                "counterparty": "p-sipho-papadopoulos",
+                "direction": "owed_to_me",
+                "status": "done",
+                "due": null,
+                "keywords": [
+                  "stale cache",
+                  "pipit"
+                ],
+                "support": [
+                  "ch-0040",
+                  "ch-0042"
+                ]
+              },
+              {
+                "loop": "c-047",
+                "what": "Send the Noris accessibility conformance report",
+                "counterparty": "p-amani-xu",
+                "direction": "owed_to_me",
+                "status": "waiting",
+                "due": null,
+                "keywords": [
+                  "accessibility conformance report",
+                  "noris"
+                ],
+                "support": [
+                  "ch-0041"
+                ]
+              },
+              {
+                "loop": "c-048",
+                "what": "Send Aoife the notes from the grant reporting session",
+                "counterparty": "p-amani-katz",
+                "direction": "owed_to_me",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "notes from the grant reporting session",
+                  "grant reporting"
+                ],
+                "support": [
+                  "ch-0044"
+                ]
+              }
+            ],
+            "k": 10
+          }
+        },
+        "answer": {
+          "type": "priority",
+          "abstain": false,
+          "confidence": 0.85,
+          "items": [
+            {
+              "text": "Confirm the Nettle architecture diagram with Bisi",
+              "due": "2027-09-01",
+              "why": "Directly accepted on 31 Aug (\"yep, on it\") and due tomorrow, Wednesday 1 September; no confirmation/send evidence yet.",
+              "cites": [
+                "ch-0037"
+              ]
+            },
+            {
+              "text": "Prepare/meet the Nettle dependency list request for Bisi",
+              "due": "2027-09-02",
+              "why": "Akosua stated Bisi needs it by Thursday 2 September; Aoife's offer on 30 Aug was only \"no promises\", so it needs a decision or an update tomorrow.",
+              "cites": [
+                "mt-0011",
+                "ch-0043"
+              ]
+            },
+            {
+              "text": "Prepare for the Pipit one-page summary walkthrough with Douglas Grigoryan",
+              "due": "2027-09-02",
+              "why": "Booked for Thursday 2 September, 14:00-14:30 local (13:00-13:30 UTC); Aoife is the organiser and presenter.",
+              "cites": [
+                "em-0057",
+                "ca-0002"
+              ]
+            },
+            {
+              "text": "Work on the weekly status note to Paula Dubois for w/e 3 September",
+              "due": "2027-09-03",
+              "why": "Recurring Friday note is due to Paula by end of day Friday 3 September.",
+              "cites": [
+                "em-0054",
+                "em-0052"
+              ]
+            },
+            {
+              "text": "Progress the Nettle security review package",
+              "due": null,
+              "why": "Long-standing open commitment accepted from Sigrid on 19 Aug; the security review gates real client data, and no completion evidence exists.",
+              "cites": [
+                "ch-0009",
+                "ch-0015",
+                "ch-0021",
+                "ch-0026",
+                "nt-0002"
+              ]
+            }
+          ]
+        },
+        "grade": {
+          "id": "q-001",
+          "type": "priority",
+          "template": "focus_tomorrow",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal",
+            "endorsement",
+            "implied_commitment",
+            "scattered_evidence",
+            "worker_directive"
+          ],
+          "valid": true,
+          "abstained": false,
+          "base": 1.0,
+          "citation": 0.75,
+          "score": 0.9375,
+          "details": {
+            "k": 10,
+            "n_top": 5,
+            "n_loop_items": 5,
+            "recall": 1.0,
+            "penalty": 0.0,
+            "matches": [
+              {
+                "pred": 0,
+                "gold": "c-040",
+                "role": "must"
+              },
+              {
+                "pred": 1,
+                "gold": "c-038",
+                "role": "active"
+              },
+              {
+                "pred": 2,
+                "gold": "c-037",
+                "role": "active"
+              },
+              {
+                "pred": 3,
+                "gold": "c-033",
+                "role": "active"
+              },
+              {
+                "pred": 4,
+                "gold": "c-009",
+                "role": "active"
+              }
+            ],
+            "missed_must": [],
+            "citations": {
+              "scope": "question",
+              "total": 12,
+              "valid": 9,
+              "invalid": [
+                {
+                  "cite": "ca-0002",
+                  "why": "not_in_support"
+                },
+                {
+                  "cite": "em-0052",
+                  "why": "not_in_support"
+                },
+                {
+                  "cite": "nt-0002",
+                  "why": "not_in_support"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-002",
+          "type": "status",
+          "template": "project_status",
+          "params": {
+            "project": "pr-nettle"
+          },
+          "text": "What is the status of Nettle?",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal",
+            "endorsement",
+            "scattered_evidence",
+            "worker_directive"
+          ],
+          "support": [
+            "nt-0001",
+            "em-0007",
+            "nt-0002",
+            "ch-0009",
+            "ch-0015",
+            "ch-0016",
+            "nt-0003",
+            "mn-0005",
+            "ch-0018",
+            "mn-0008",
+            "ch-0021",
+            "mt-0006",
+            "mn-0009",
+            "mt-0007",
+            "ch-0024",
+            "mn-0010",
+            "em-0038",
+            "ch-0026",
+            "nt-0006",
+            "ch-0035",
+            "mt-0010",
+            "mt-0011",
+            "mn-0016",
+            "ch-0037",
+            "ch-0039",
+            "ch-0043"
+          ],
+          "gold": {
+            "rubric": [
+              {
+                "id": "r1",
+                "aspect": "status",
+                "text": "Nettle is active",
+                "weight": 2,
+                "critical": true,
+                "keywords": [
+                  [
+                    "active",
+                    "in progress",
+                    "underway",
+                    "on track",
+                    "ongoing",
+                    "moving"
+                  ]
+                ],
+                "stale": [],
+                "support": [
+                  "nt-0001"
+                ]
+              },
+              {
+                "id": "r2",
+                "aspect": "phase",
+                "text": "Current phase: security review",
+                "weight": 1,
+                "critical": false,
+                "keywords": [
+                  [
+                    "security"
+                  ],
+                  [
+                    "review"
+                  ]
+                ],
+                "stale": [
+                  [
+                    "build"
+                  ]
+                ],
+                "support": [
+                  "nt-0002"
+                ]
+              },
+              {
+                "id": "r3",
+                "aspect": "latest_change",
+                "text": "Decided to use approach A for the Nettle test plan",
+                "weight": 2,
+                "critical": true,
+                "keywords": [
+                  [
+                    "approach a",
+                    "test plan"
+                  ]
+                ],
+                "stale": [],
+                "support": [
+                  "nt-0006"
+                ]
+              },
+              {
+                "id": "r4",
+                "aspect": "blocker",
+                "text": "Current blocker: real client data paused pending the security review",
+                "weight": 2,
+                "critical": true,
+                "keywords": [
+                  [
+                    "client"
+                  ],
+                  [
+                    "security"
+                  ]
+                ],
+                "stale": [],
+                "support": [
+                  "nt-0002"
+                ]
+              },
+              {
+                "id": "r5",
+                "aspect": "target_date",
+                "text": "Current target date: 2027-10-11",
+                "weight": 2,
+                "critical": true,
+                "keywords": [
+                  [
+                    "10/11",
+                    "11 oct",
+                    "11 october",
+                    "11th oct",
+                    "11th october",
+                    "2027-10-11",
+                    "oct 11",
+                    "oct 11th",
+                    "october 11",
+                    "october 11th"
+                  ]
+                ],
+                "stale": [],
+                "support": [
+                  "nt-0001"
+                ]
+              },
+              {
+                "id": "r6",
+                "aspect": "loop",
+                "text": "Confirm the Nettle architecture diagram with Bisi (owner: Aoife Everett)",
+                "weight": 1,
+                "critical": false,
+                "keywords": [
+                  [
+                    "architecture diagram"
+                  ]
+                ],
+                "stale": [],
+                "support": [
+                  "ch-0037"
+                ]
+              },
+              {
+                "id": "r7",
+                "aspect": "loop",
+                "text": "Send Bisi the Nettle dependency list (owner: Aoife Everett)",
+                "weight": 1,
+                "critical": false,
+                "keywords": [
+                  [
+                    "dependency list"
+                  ]
+                ],
+                "stale": [],
+                "support": [
+                  "mt-0011",
+                  "ch-0043"
+                ]
+              }
+            ],
+            "facts": {
+              "project": "pr-nettle",
+              "name": "Nettle",
+              "as_of": "2027-08-31",
+              "attrs": {
+                "status": "active",
+                "owner": "Gaurav Laine",
+                "summary": "Pilot of an AI outcomes dashboard for four branches at Ormton, hosted on Pipit. Currently in security review; blocked on real client data paused pending the security review; target date 11 October.",
+                "phase": "security review",
+                "target_date": "2027-10-11",
+                "sponsor": "Bruna Thapa",
+                "members": [
+                  "Aoife Everett",
+                  "Gaurav Laine",
+                  "Akosua Bergstrom",
+                  "Douglas Grigoryan",
+                  "Bisi Volkov",
+                  "Sigrid Asante",
+                  "Sipho Papadopoulos",
+                  "Adaeze Morimoto",
+                  "Bruna Thapa"
+                ],
+                "orgs": [
+                  "Ormton Housing Trust"
+                ],
+                "blocker": "real client data paused pending the security review"
+              },
+              "superseded": {
+                "phase": "build"
+              },
+              "active_loops": [
+                {
+                  "loop": "c-005",
+                  "what": "Send Sigrid the Nettle data-flow diagram",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Sigrid Asante",
+                  "status": "open",
+                  "due": null
+                },
+                {
+                  "loop": "c-009",
+                  "what": "Assemble the Nettle security review package",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Sigrid Asante",
+                  "status": "open",
+                  "due": null
+                },
+                {
+                  "loop": "c-015",
+                  "what": "Complete the Nettle privacy impact assessment",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Solene Zimmermann",
+                  "status": "open",
+                  "due": null
+                },
+                {
+                  "loop": "c-019",
+                  "what": "Update the Nettle budget justification after Adaeze's comments",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Adaeze Morimoto",
+                  "status": "open",
+                  "due": null
+                },
+                {
+                  "loop": "c-023",
+                  "what": "Update the Nettle board paper after Gaurav's comments",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Gaurav Laine",
+                  "status": "open",
+                  "due": null
+                },
+                {
+                  "loop": "c-025",
+                  "what": "Confirm the Nettle data dictionary with Akosua",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Akosua Bergstrom",
+                  "status": "open",
+                  "due": null
+                },
+                {
+                  "loop": "c-034",
+                  "what": "Send Bisi the Nettle member survey",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Bisi Volkov",
+                  "status": "open",
+                  "due": null
+                },
+                {
+                  "loop": "c-035",
+                  "what": "Send Aoife the Nettle member survey",
+                  "owner": "Douglas Grigoryan",
+                  "counterparty": "Aoife Everett",
+                  "status": "waiting",
+                  "due": null
+                },
+                {
+                  "loop": "c-038",
+                  "what": "Send Bisi the Nettle dependency list",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Bisi Volkov",
+                  "status": "open",
+                  "due": "2027-09-02"
+                },
+                {
+                  "loop": "c-040",
+                  "what": "Confirm the Nettle architecture diagram with Bisi",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Bisi Volkov",
+                  "status": "open",
+                  "due": "2027-09-01"
+                },
+                {
+                  "loop": "c-041",
+                  "what": "Look into the Nettle duplicate notifications",
+                  "owner": "Aoife Everett",
+                  "counterparty": "Bisi Volkov",
+                  "status": "open",
+                  "due": null
+                },
+                {
+                  "loop": "c-044",
+                  "what": "Set up Nettle test tenant login for Aoife",
+                  "owner": "Bisi Volkov",
+                  "counterparty": "Aoife Everett",
+                  "status": "waiting",
+                  "due": null
+                }
+              ],
+              "decisions": [
+                {
+                  "decision": "d-001",
+                  "what": "Limit the Nettle pilot to four branches",
+                  "status": "made",
+                  "made_on": "2027-08-25",
+                  "reversed_on": null
+                },
+                {
+                  "decision": "d-002",
+                  "what": "Use approach A for the Nettle test plan",
+                  "status": "made",
+                  "made_on": "2027-08-30",
+                  "reversed_on": null
+                }
+              ],
+              "recent_events": [
+                {
+                  "event": "e-0115",
+                  "date": "2027-08-30",
+                  "type": "commitment.create",
+                  "summary": "I said I could get Bisi the Nettle dependency list sometime next week"
+                },
+                {
+                  "event": "e-0118",
+                  "date": "2027-08-31",
+                  "type": "commitment.create",
+                  "summary": "I said I'd confirm the Nettle architecture diagram with Bisi"
+                },
+                {
+                  "event": "e-0119",
+                  "date": "2027-08-31",
+                  "type": "commitment.create",
+                  "summary": "I said I'd take a look at the Nettle duplicate notifications"
+                },
+                {
+                  "event": "e-0125",
+                  "date": "2027-08-31",
+                  "type": "commitment.create",
+                  "summary": "I asked Bisi to set up Nettle test tenant login for me"
+                },
+                {
+                  "event": "e-0133",
+                  "date": "2027-08-31",
+                  "type": "commitment.update",
+                  "summary": "Bisi needs the dependency list by Thursday 2 September"
+                }
+              ]
+            }
+          }
+        },
+        "answer": {
+          "type": "status",
+          "abstain": false,
+          "confidence": 0.85,
+          "summary": "Nettle (the Ormton outcomes dashboard pilot) is in security review, with real client data paused pending it. The pilot is limited to four Ormton branches and the target date remains 11 October 2027. Core deliverables remain open: the security review package, privacy impact assessment, data-flow diagram, board paper, budget justification, data dictionary confirmation, RACI update and API contract v2 (no agreed owner). As of 31 August, Aoife accepted confirming the Nettle architecture diagram with Bisi by Wednesday 1 September, Bisi agreed to set up a Nettle test tenant login, Akosua flagged that Bisi needs the Nettle dependency list by Thursday 2 September (Aoife's offer remained \"no promises\"), and an auto-recap says Aoife offered to handle Nettle duplicate notifications. No artifact records the security review finishing.",
+          "claims": [
+            {
+              "text": "Nettle moved into the security review phase on 17 August; real client data is paused pending the security review.",
+              "cites": [
+                "nt-0002",
+                "mt-0003",
+                "mn-0010"
+              ]
+            },
+            {
+              "text": "The pilot is limited to four Ormton branches, and the target date is 11 October 2027 (last explicitly stated 16 August).",
+              "cites": [
+                "ch-0024",
+                "nt-0001"
+              ]
+            },
+            {
+              "text": "The Nettle security review package was accepted by Aoife but is still open, with no completion evidence.",
+              "cites": [
+                "ch-0009",
+                "ch-0015",
+                "ch-0021",
+                "ch-0026"
+              ]
+            },
+            {
+              "text": "The Nettle privacy impact assessment was accepted by Aoife but is still open.",
+              "cites": [
+                "ch-0016",
+                "nt-0003",
+                "mn-0008"
+              ]
+            },
+            {
+              "text": "Aoife promised Sigrid the Nettle data-flow diagram on 17 August, with no later send/receipt evidence.",
+              "cites": [
+                "em-0007"
+              ]
+            },
+            {
+              "text": "The Nettle board paper and budget justification remain open.",
+              "cites": [
+                "mn-0010",
+                "mt-0006"
+              ]
+            },
+            {
+              "text": "The Nettle API contract v2 still had no agreed owner as of the last evidence on 25 August.",
+              "cites": [
+                "mn-0011",
+                "em-0010",
+                "mn-0003"
+              ]
+            },
+            {
+              "text": "The Nettle RACI update and Aoife's confirmation of the Nettle data dictionary remain open/unowned.",
+              "cites": [
+                "mn-0012",
+                "em-0038"
+              ]
+            },
+            {
+              "text": "On 31 August Aoife accepted confirming the Nettle architecture diagram with Bisi by Wednesday 1 September.",
+              "cites": [
+                "ch-0037"
+              ]
+            },
+            {
+              "text": "Bisi agreed to set up a Nettle test tenant login for Aoife; no setup confirmation is recorded.",
+              "cites": [
+                "ch-0039"
+              ]
+            },
+            {
+              "text": "Akosua Bergstrom stated on 31 August that Bisi needs the Nettle dependency list by Thursday 2 September; the message was edited from Saturday 4 September, and Aoife had only offered \"no promises\".",
+              "cites": [
+                "mt-0011",
+                "ch-0043"
+              ]
+            },
+            {
+              "text": "A 31 August auto-recap says Aoife offered to handle the Nettle duplicate notifications; there is no direct Aoife quote or detail.",
+              "cites": [
+                "mn-0016"
+              ]
+            },
+            {
+              "text": "No artifact records the Nettle security review finishing.",
+              "cites": [
+                "mt-0011",
+                "mn-0016"
+              ]
+            }
+          ]
+        },
+        "grade": {
+          "id": "q-002",
+          "type": "status",
+          "template": "project_status",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal",
+            "endorsement",
+            "scattered_evidence",
+            "worker_directive"
+          ],
+          "valid": true,
+          "abstained": false,
+          "base": 0.6268939393939394,
+          "citation": 0.7916666666666666,
+          "score": 0.5942432133838385,
+          "details": {
+            "verdicts": [
+              {
+                "item": "r1",
+                "weight": 2.0,
+                "verdict": "missing"
+              },
+              {
+                "item": "r2",
+                "weight": 1.0,
+                "verdict": "covered"
+              },
+              {
+                "item": "r3",
+                "weight": 2.0,
+                "verdict": "missing"
+              },
+              {
+                "item": "r4",
+                "weight": 2.0,
+                "verdict": "covered"
+              },
+              {
+                "item": "r5",
+                "weight": 2.0,
+                "verdict": "covered"
+              },
+              {
+                "item": "r6",
+                "weight": 1.0,
+                "verdict": "covered"
+              },
+              {
+                "item": "r7",
+                "weight": 1.0,
+                "verdict": "covered"
+              }
+            ],
+            "padding_penalty": 0.009469696969696961,
+            "citations": {
+              "scope": "question",
+              "total": 24,
+              "valid": 19,
+              "invalid": [
+                {
+                  "cite": "mt-0003",
+                  "why": "not_in_support"
+                },
+                {
+                  "cite": "mn-0011",
+                  "why": "not_in_support"
+                },
+                {
+                  "cite": "em-0010",
+                  "why": "not_in_support"
+                },
+                {
+                  "cite": "mn-0003",
+                  "why": "not_in_support"
+                },
+                {
+                  "cite": "mn-0012",
+                  "why": "not_in_support"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-003",
+          "type": "change",
+          "template": "project_changes",
+          "params": {
+            "project": "pr-translation-help-tool-selection",
+            "since": "2027-08-27"
+          },
+          "text": "What changed on Translation Help Tool Selection since the end of Friday 27 August?",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal",
+            "endorsement",
+            "implied_commitment"
+          ],
+          "support": [
+            "mn-0015",
+            "ch-0041"
+          ],
+          "gold": {
+            "items": [
+              {
+                "event": "e-0116",
+                "summary": "Catrin asked me to review the translation help selection vendor comparison",
+                "date": "2027-08-30",
+                "type": "commitment.create",
+                "keywords": [
+                  "vendor comparison",
+                  "translation help selection"
+                ],
+                "support": [
+                  "mn-0015"
+                ]
+              },
+              {
+                "event": "e-0130",
+                "summary": "I asked Amani for the Noris accessibility conformance report",
+                "date": "2027-08-31",
+                "type": "commitment.create",
+                "keywords": [
+                  "accessibility conformance report",
+                  "noris"
+                ],
+                "support": [
+                  "ch-0041"
+                ]
+              }
+            ]
+          }
+        },
+        "answer": {
+          "type": "change",
+          "abstain": false,
+          "confidence": 0.72,
+          "items": [
+            {
+              "text": "A 30 August Holworth site-visit auto-recap mentions \"Catrin's translation help selection vendor comparison\" with no owner agreed, and a suggested action for Aoife to review it. This is the only mention of such a THTS vendor comparison and is uncorroborated, so it may be a recap error or a confusion with Bisi's dropped Nettle vendor comparison.",
+              "date": "2027-08-30",
+              "cites": [
+                "mn-0015",
+                "ch-0029"
+              ]
+            },
+            {
+              "text": "On 31 August an \"Amani\" DM account said she would send the Noris accessibility conformance report; no report arrived. This may relate to the THTS accessibility-review item, but the sender's surname and the project link are not stated, so it is an inference.",
+              "date": "2027-08-31",
+              "cites": [
+                "ch-0041",
+                "dc-0001"
+              ]
+            },
+            {
+              "text": "No confirmed stage, requirements-list or vendor-selection change: THTS was still in questionnaires (since 20 August) with the 20 September target unchanged; no later artifact confirms either.",
+              "date": null,
+              "cites": [
+                "mt-0004",
+                "nt-0001",
+                "dc-0001"
+              ]
+            }
+          ]
+        },
+        "grade": {
+          "id": "q-003",
+          "type": "change",
+          "template": "project_changes",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal",
+            "endorsement",
+            "implied_commitment"
+          ],
+          "valid": true,
+          "abstained": false,
+          "base": 0.0,
+          "citation": 0.2857142857142857,
+          "score": 0.0,
+          "details": {
+            "n_pred": 3,
+            "n_gold": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "matches": [],
+            "unmatched_gold": [
+              "e-0116",
+              "e-0130"
+            ],
+            "citations": {
+              "scope": "item",
+              "total": 7,
+              "valid": 2,
+              "invalid": [
+                {
+                  "cite": "ch-0029",
+                  "why": "not_in_support",
+                  "item": 0
+                },
+                {
+                  "cite": "dc-0001",
+                  "why": "not_in_support",
+                  "item": 1
+                },
+                {
+                  "cite": "mt-0004",
+                  "why": "not_in_support",
+                  "item": 2
+                },
+                {
+                  "cite": "nt-0001",
+                  "why": "not_in_support",
+                  "item": 2
+                },
+                {
+                  "cite": "dc-0001",
+                  "why": "not_in_support",
+                  "item": 2
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-004",
+          "type": "list",
+          "template": "i_owe",
+          "params": {
+            "person": "p-akosua-bergstrom"
+          },
+          "text": "What do I currently owe Akosua Bergstrom?",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal",
+            "endorsement",
+            "implied_commitment",
+            "name_collision"
+          ],
+          "support": [
+            "em-0038",
+            "em-0056",
+            "mn-0015",
+            "mn-0017"
+          ],
+          "gold": {
+            "items": [
+              {
+                "loop": "c-025",
+                "what": "Confirm the Nettle data dictionary with Akosua",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "data dictionary",
+                  "nettle"
+                ],
+                "support": [
+                  "em-0038"
+                ]
+              },
+              {
+                "loop": "c-036",
+                "what": "Send Akosua the pantry inventory discovery pain-point list",
+                "counterparty": "p-akosua-bergstrom",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "pain-point list",
+                  "pantry inventory discovery"
+                ],
+                "support": [
+                  "em-0056",
+                  "mn-0015",
+                  "mn-0017"
+                ]
+              }
+            ]
+          }
+        },
+        "answer": {
+          "type": "list",
+          "abstain": false,
+          "confidence": 0.78,
+          "items": [
+            {
+              "text": "Send Akosua the Holworth pantry-inventory discovery pain-point list (requested 30 August; the 30 and 31 August recaps say Aoife is picking it up)",
+              "counterparty": "Akosua Bergstrom",
+              "direction": "i_owe",
+              "status": "open",
+              "due": null,
+              "cites": [
+                "em-0056",
+                "mn-0015",
+                "mn-0017"
+              ]
+            },
+            {
+              "text": "Confirm the Nettle data dictionary with Akosua (requested 25 August; no response recorded)",
+              "counterparty": "Akosua Bergstrom",
+              "direction": "i_owe",
+              "status": "open",
+              "due": null,
+              "cites": [
+                "em-0038"
+              ]
+            }
+          ]
+        },
+        "grade": {
+          "id": "q-004",
+          "type": "list",
+          "template": "i_owe",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal",
+            "endorsement",
+            "implied_commitment",
+            "name_collision"
+          ],
+          "valid": true,
+          "abstained": false,
+          "base": 1.0,
+          "citation": 1.0,
+          "score": 1.0,
+          "details": {
+            "n_pred": 2,
+            "n_gold": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "matches": [
+              {
+                "pred": 0,
+                "gold": "c-036",
+                "credit": 1.0,
+                "status": 1.0,
+                "due": 1.0,
+                "counterparty": 1.0
+              },
+              {
+                "pred": 1,
+                "gold": "c-025",
+                "credit": 1.0,
+                "status": 1.0,
+                "due": 1.0,
+                "counterparty": 1.0
+              }
+            ],
+            "unmatched_pred": [],
+            "unmatched_gold": [],
+            "citations": {
+              "scope": "item",
+              "total": 4,
+              "valid": 4,
+              "invalid": []
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-005",
+          "type": "list",
+          "template": "owed_to_me",
+          "params": {
+            "person": "p-douglas-grigoryan",
+            "name_form": "Douglas"
+          },
+          "text": "What does Douglas currently owe me?",
+          "answerable": true,
+          "challenges": [
+            "alias"
+          ],
+          "support": [
+            "mt-0010"
+          ],
+          "gold": {
+            "items": [
+              {
+                "loop": "c-035",
+                "what": "Send Aoife the Nettle member survey",
+                "counterparty": "p-douglas-grigoryan",
+                "direction": "owed_to_me",
+                "status": "waiting",
+                "due": null,
+                "keywords": [
+                  "member survey",
+                  "nettle"
+                ],
+                "support": [
+                  "mt-0010"
+                ]
+              }
+            ]
+          }
+        },
+        "answer": {
+          "type": "list",
+          "abstain": false,
+          "confidence": 0.82,
+          "items": [
+            {
+              "text": "The Nettle member survey, which Douglas said he would send to Aoife on 30 August; no receipt evidence",
+              "counterparty": "Douglas Grigoryan",
+              "direction": "owed_to_me",
+              "status": "waiting",
+              "due": null,
+              "note": "May be a chain: Aoife separately said she would send the Nettle member survey to Bisi [ch-0035].",
+              "cites": [
+                "mt-0010",
+                "ch-0035"
+              ]
+            }
+          ]
+        },
+        "grade": {
+          "id": "q-005",
+          "type": "list",
+          "template": "owed_to_me",
+          "answerable": true,
+          "challenges": [
+            "alias"
+          ],
+          "valid": true,
+          "abstained": false,
+          "base": 1.0,
+          "citation": 0.5,
+          "score": 0.875,
+          "details": {
+            "n_pred": 1,
+            "n_gold": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "matches": [
+              {
+                "pred": 0,
+                "gold": "c-035",
+                "credit": 1.0,
+                "status": 1.0,
+                "due": 1.0,
+                "counterparty": 1.0
+              }
+            ],
+            "unmatched_pred": [],
+            "unmatched_gold": [],
+            "citations": {
+              "scope": "item",
+              "total": 2,
+              "valid": 1,
+              "invalid": [
+                {
+                  "cite": "ch-0035",
+                  "why": "not_in_support",
+                  "item": 0
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-006",
+          "type": "point",
+          "template": "loop_owner",
+          "params": {
+            "commitment": "c-018"
+          },
+          "text": "Who is responsible for \"Pull the pantry inventory baseline data from Holworth\"?",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal"
+          ],
+          "support": [
+            "em-0032",
+            "ch-0022",
+            "mn-0014"
+          ],
+          "gold": {
+            "kind": "entity",
+            "value": "Catrin Dang",
+            "entity": "p-catrin-dang",
+            "accept": [
+              "Catrin Dang",
+              "Catrin",
+              "C. Dang",
+              "catrin.dang@holworth.reddale.example",
+              "@catrin"
+            ]
+          }
+        },
+        "answer": {
+          "type": "point",
+          "abstain": false,
+          "confidence": 0.95,
+          "value": "Catrin Dang",
+          "note": "Catrin Dang, Program Coordinator at Holworth, offered to pull the pantry inventory baseline data on 23 August, recapped the commitment on 24 August, and the 27 August HPID/Nettle sync records her as picking it up. No delivery evidence yet.",
+          "cites": [
+            "em-0032",
+            "ch-0022",
+            "mn-0014"
+          ]
+        },
+        "grade": {
+          "id": "q-006",
+          "type": "point",
+          "template": "loop_owner",
+          "answerable": true,
+          "challenges": [
+            "duplicate_signal"
+          ],
+          "valid": true,
+          "abstained": false,
+          "base": 1.0,
+          "citation": 1.0,
+          "score": 1.0,
+          "details": {
+            "kind": "entity",
+            "value": "Catrin Dang",
+            "gold": "Catrin Dang",
+            "citations": {
+              "scope": "question",
+              "total": 3,
+              "valid": 3,
+              "invalid": []
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-007",
+          "type": "point",
+          "template": "loop_due",
+          "params": {
+            "commitment": "c-038"
+          },
+          "text": "When is \"Send Bisi the Nettle dependency list\" due?",
+          "answerable": true,
+          "challenges": [
+            "scattered_evidence"
+          ],
+          "support": [
+            "ch-0043"
+          ],
+          "gold": {
+            "kind": "date",
+            "value": "2027-09-02",
+            "entity": null,
+            "accept": [
+              "2027-09-02"
+            ]
+          }
+        },
+        "answer": {
+          "type": "point",
+          "abstain": false,
+          "confidence": 0.85,
+          "value": "2027-09-02",
+          "note": "Due Thursday 2 September 2027. Akosua Bergstrom stated this in #nettle-core on 31 August; the message was edited down from \"Saturday 4 September\". Aoife's only offer was \"no promises\" on 30 August, so this is an external deadline on an unaccepted ask.",
+          "cites": [
+            "ch-0043",
+            "mt-0011"
+          ]
+        },
+        "grade": {
+          "id": "q-007",
+          "type": "point",
+          "template": "loop_due",
+          "answerable": true,
+          "challenges": [
+            "scattered_evidence"
+          ],
+          "valid": true,
+          "abstained": false,
+          "base": 1.0,
+          "citation": 0.5,
+          "score": 0.875,
+          "details": {
+            "kind": "date",
+            "value": "2027-09-02",
+            "gold": "2027-09-02",
+            "citations": {
+              "scope": "question",
+              "total": 2,
+              "valid": 1,
+              "invalid": [
+                {
+                  "cite": "mt-0011",
+                  "why": "not_in_support"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-008",
+          "type": "point",
+          "template": "project_attr",
+          "params": {
+            "project": "pr-translation-help-tool-selection",
+            "attribute": "sponsor"
+          },
+          "text": "Who is the executive sponsor of Translation Help Tool Selection?",
+          "answerable": true,
+          "challenges": [],
+          "support": [
+            "nt-0001"
+          ],
+          "gold": {
+            "kind": "entity",
+            "value": "Lilit Yilmaz",
+            "entity": "p-lilit-yilmaz",
+            "accept": [
+              "Lilit Yilmaz",
+              "Lilit",
+              "L. Yilmaz",
+              "lilit.yilmaz@holworth.reddale.example",
+              "@lilit",
+              "Holworth's ED"
+            ]
+          }
+        },
+        "answer": {
+          "type": "point",
+          "abstain": false,
+          "confidence": 0.92,
+          "value": "Lilit Yilmaz",
+          "note": "Lilit Yilmaz, Executive Director of Holworth Family Services, is listed as sponsor of Translation Help Tool Selection in the 16 August portfolio baseline. Aoife Everett is the project owner.",
+          "cites": [
+            "nt-0001"
+          ]
+        },
+        "grade": {
+          "id": "q-008",
+          "type": "point",
+          "template": "project_attr",
+          "answerable": true,
+          "challenges": [],
+          "valid": true,
+          "abstained": false,
+          "base": 1.0,
+          "citation": 1.0,
+          "score": 1.0,
+          "details": {
+            "kind": "entity",
+            "value": "Lilit Yilmaz",
+            "gold": "Lilit Yilmaz",
+            "citations": {
+              "scope": "question",
+              "total": 1,
+              "valid": 1,
+              "invalid": []
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-009",
+          "type": "point",
+          "template": "person_attr",
+          "params": {
+            "person": "p-akosua-bergstrom",
+            "attribute": "relationship",
+            "name_form": "our programs manager"
+          },
+          "text": "What is my working relationship with our programs manager?",
+          "answerable": true,
+          "challenges": [
+            "alias",
+            "name_collision"
+          ],
+          "support": [
+            "nt-0001"
+          ],
+          "gold": {
+            "kind": "text",
+            "value": "peer",
+            "entity": null,
+            "accept": [
+              "peer"
+            ]
+          }
+        },
+        "answer": {
+          "type": "point",
+          "abstain": false,
+          "confidence": 0.8,
+          "value": "Akosua Bergstrom (colleague; Programs Manager, FDO)",
+          "note": "Our programs manager is Akosua Bergstrom in the Federation Data Office. No reporting line is stated in the inputs; the artifacts show a peer/colleague working relationship across Nettle, Pipit, THTS, HPID and Morgate, with her requesting deliverables from Aoife and Aoife sending her items.",
+          "cites": [
+            "nt-0001",
+            "em-0038",
+            "em-0056",
+            "em-0053",
+            "mt-0008"
+          ]
+        },
+        "grade": {
+          "id": "q-009",
+          "type": "point",
+          "template": "person_attr",
+          "answerable": true,
+          "challenges": [
+            "alias",
+            "name_collision"
+          ],
+          "valid": true,
+          "abstained": false,
+          "base": 0.0,
+          "citation": 0.2,
+          "score": 0.0,
+          "details": {
+            "kind": "text",
+            "value": "Akosua Bergstrom (colleague; Programs Manager, FDO)",
+            "gold": "peer",
+            "citations": {
+              "scope": "question",
+              "total": 5,
+              "valid": 1,
+              "invalid": [
+                {
+                  "cite": "em-0038",
+                  "why": "not_in_support"
+                },
+                {
+                  "cite": "em-0056",
+                  "why": "not_in_support"
+                },
+                {
+                  "cite": "em-0053",
+                  "why": "not_in_support"
+                },
+                {
+                  "cite": "mt-0008",
+                  "why": "not_in_support"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-010",
+          "type": "list",
+          "template": "project_loops",
+          "params": {
+            "project": "pr-pipit"
+          },
+          "text": "What loops are open on Pipit?",
+          "answerable": true,
+          "challenges": [],
+          "support": [
+            "mt-0006",
+            "ch-0030",
+            "em-0057"
+          ],
+          "gold": {
+            "items": [
+              {
+                "loop": "c-020",
+                "what": "Configure the Pipit SSO broker for Ormton",
+                "counterparty": "p-sipho-papadopoulos",
+                "direction": "owed_to_me",
+                "status": "waiting",
+                "due": null,
+                "keywords": [
+                  "sso broker",
+                  "pipit"
+                ],
+                "support": [
+                  "mt-0006"
+                ]
+              },
+              {
+                "loop": "c-029",
+                "what": "Send Gaurav the Pipit rollout checklist",
+                "counterparty": "p-gaurav-laine",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "rollout checklist",
+                  "pipit"
+                ],
+                "support": [
+                  "ch-0030"
+                ]
+              },
+              {
+                "loop": "c-037",
+                "what": "Walk Douglas through the Pipit one-page summary",
+                "counterparty": "p-douglas-grigoryan",
+                "direction": "i_owe",
+                "status": "open",
+                "due": null,
+                "keywords": [
+                  "one-page summary",
+                  "pipit"
+                ],
+                "support": [
+                  "em-0057"
+                ]
+              }
+            ]
+          }
+        },
+        "answer": {
+          "type": "list",
+          "abstain": false,
+          "confidence": 0.82,
+          "items": [
+            {
+              "text": "Pipit model allow-list review: no owner agreed and no evidence Aoife accepted it",
+              "counterparty": "Bisi Volkov",
+              "direction": "other",
+              "status": "open",
+              "due": null,
+              "cites": [
+                "mn-0002",
+                "em-0012"
+              ]
+            },
+            {
+              "text": "Configure the Pipit SSO broker for Ormton; Sipho said \"ask me again next week\"",
+              "counterparty": "Sipho Papadopoulos",
+              "direction": "owed_to_me",
+              "status": "waiting",
+              "due": null,
+              "cites": [
+                "mt-0006"
+              ]
+            },
+            {
+              "text": "Send Gaurav the Pipit rollout checklist",
+              "counterparty": "Gaurav Laine",
+              "direction": "i_owe",
+              "status": "open",
+              "due": null,
+              "cites": [
+                "ch-0030"
+              ]
+            },
+            {
+              "text": "Walk Douglas through the Pipit one-page summary",
+              "counterparty": "Douglas Grigoryan",
+              "direction": "i_owe",
+              "status": "open",
+              "due": "2027-09-02",
+              "cites": [
+                "em-0057",
+                "ca-0002"
+              ]
+            },
+            {
+              "text": "Finalise and sign off Pipit on-call rota v3: the document says two sections are still being drafted and asks who signs off the final version and which unit hosts the shared components",
+              "counterparty": "Bisi Volkov",
+              "direction": "other",
+              "status": "open",
+              "due": null,
+              "cites": [
+                "em-0062",
+                "dc-0002"
+              ]
+            }
+          ]
+        },
+        "grade": {
+          "id": "q-010",
+          "type": "list",
+          "template": "project_loops",
+          "answerable": true,
+          "challenges": [],
+          "valid": true,
+          "abstained": false,
+          "base": 0.6666666666666667,
+          "citation": 0.375,
+          "score": 0.5625000000000001,
+          "details": {
+            "n_pred": 5,
+            "n_gold": 3,
+            "precision": 0.5333333333333333,
+            "recall": 0.8888888888888888,
+            "matches": [
+              {
+                "pred": 1,
+                "gold": "c-020",
+                "credit": 1.0,
+                "status": 1.0,
+                "due": 1.0,
+                "counterparty": 1.0
+              },
+              {
+                "pred": 2,
+                "gold": "c-029",
+                "credit": 1.0,
+                "status": 1.0,
+                "due": 1.0,
+                "counterparty": 1.0
+              },
+              {
+                "pred": 3,
+                "gold": "c-037",
+                "credit": 0.6666666666666666,
+                "status": 1.0,
+                "due": 0.0,
+                "counterparty": 1.0
+              }
+            ],
+            "unmatched_pred": [
+              0,
+              4
+            ],
+            "unmatched_gold": [],
+            "citations": {
+              "scope": "item",
+              "total": 8,
+              "valid": 3,
+              "invalid": [
+                {
+                  "cite": "mn-0002",
+                  "why": "not_in_support",
+                  "item": 0
+                },
+                {
+                  "cite": "em-0012",
+                  "why": "not_in_support",
+                  "item": 0
+                },
+                {
+                  "cite": "ca-0002",
+                  "why": "not_in_support",
+                  "item": 3
+                },
+                {
+                  "cite": "em-0062",
+                  "why": "not_in_support",
+                  "item": 4
+                },
+                {
+                  "cite": "dc-0002",
+                  "why": "not_in_support",
+                  "item": 4
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "question": {
+          "id": "q-011",
+          "type": "point",
+          "template": "person_attr",
+          "params": {
+            "person": "p-amani-xu",
+            "attribute": "phone"
+          },
+          "text": "What is Amani Xu's direct phone number?",
+          "answerable": false,
+          "challenges": [
+            "name_collision",
+            "unobservable"
+          ],
+          "support": [],
+          "gold": {}
+        },
+        "answer": {
+          "type": "point",
+          "abstain": true
+        },
+        "grade": {
+          "id": "q-011",
+          "type": "point",
+          "template": "person_attr",
+          "answerable": false,
+          "challenges": [
+            "name_collision",
+            "unobservable"
+          ],
+          "valid": true,
+          "abstained": true,
+          "base": 1.0,
+          "citation": null,
+          "score": 1.0,
+          "details": {
+            "note": "correct abstention"
+          }
+        }
+      }
+    ]
+  }
+}

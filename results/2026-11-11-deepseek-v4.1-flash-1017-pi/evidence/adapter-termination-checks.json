@@ -1,0 +1,47 @@
+[
+  {
+    "raw_reason": "stop",
+    "exit": 0,
+    "termination": {
+      "reason": "stop",
+      "incomplete": false,
+      "raw_stop_reason": "stop"
+    }
+  },
+  {
+    "raw_reason": "length",
+    "exit": 0,
+    "termination": {
+      "reason": "length",
+      "incomplete": true,
+      "raw_stop_reason": "length"
+    }
+  },
+  {
+    "raw_reason": "error",
+    "exit": 1,
+    "termination": {
+      "reason": "error",
+      "incomplete": true,
+      "raw_stop_reason": "error"
+    }
+  },
+  {
+    "raw_reason": "aborted",
+    "exit": 1,
+    "termination": {
+      "reason": "aborted",
+      "incomplete": true,
+      "raw_stop_reason": "aborted"
+    }
+  },
+  {
+    "raw_reason": null,
+    "exit": 0,
+    "termination": {
+      "reason": "no_assistant_message",
+      "incomplete": true,
+      "raw_stop_reason": null
+    }
+  }
+]

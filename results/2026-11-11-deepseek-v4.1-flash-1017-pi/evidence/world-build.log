@@ -1,0 +1,33 @@
+== /home/user/workspace/repo/worlds/dev/gen-s1-w1
+wrote 18 manifest(s), 18 state file(s), 7 oracle store(s) (1094 files), 3 question file(s), gold/calibration.json
+built: 0 error(s), 0 warning(s)
+== /home/user/workspace/repo/worlds/dev/gen-s10-w2-small
+wrote 21 manifest(s), 21 state file(s), 12 oracle store(s) (1451 files), 6 question file(s), gold/calibration.json
+built: 0 error(s), 0 warning(s)
+== /home/user/workspace/repo/worlds/dev/gen-s2-w1
+wrote 17 manifest(s), 17 state file(s), 6 oracle store(s) (908 files), 3 question file(s), gold/calibration.json
+built: 0 error(s), 0 warning(s)
+== /home/user/workspace/repo/worlds/dev/gen-s3-w1
+wrote 16 manifest(s), 16 state file(s), 7 oracle store(s) (959 files), 3 question file(s), gold/calibration.json
+built: 0 error(s), 0 warning(s)
+== /home/user/workspace/repo/worlds/dev/gen-s4-w2
+wrote 24 manifest(s), 24 state file(s), 13 oracle store(s) (2107 files), 6 question file(s), gold/calibration.json
+built: 0 error(s), 0 warning(s)
+== /home/user/workspace/repo/worlds/dev/gen-s5-small
+wrote 18 manifest(s), 18 state file(s), 7 oracle store(s) (794 files), 3 question file(s), gold/calibration.json
+built: 0 error(s), 0 warning(s)
+== /home/user/workspace/repo/worlds/dev/gen-s6-w1
+wrote 16 manifest(s), 16 state file(s), 7 oracle store(s) (1003 files), 3 question file(s), gold/calibration.json
+built: 0 error(s), 0 warning(s)
+== /home/user/workspace/repo/worlds/dev/gen-s7-w2
+wrote 24 manifest(s), 24 state file(s), 13 oracle store(s) (2033 files), 6 question file(s), gold/calibration.json
+built: 0 error(s), 0 warning(s)
+== /home/user/workspace/repo/worlds/dev/gen-s8-w4
+wrote 34 manifest(s), 34 state file(s), 25 oracle store(s) (5318 files), 12 question file(s), gold/calibration.json
+built: 0 error(s), 0 warning(s)
+== /home/user/workspace/repo/worlds/dev/gen-s9-large
+wrote 16 manifest(s), 16 state file(s), 7 oracle store(s) (1211 files), 3 question file(s), gold/calibration.json
+built: 0 error(s), 0 warning(s)
+== /home/user/workspace/repo/worlds/pilot
+wrote 17 manifest(s), 17 state file(s), 7 oracle store(s) (1077 files), 3 question file(s), gold/calibration.json
+built: 0 error(s), 0 warning(s)

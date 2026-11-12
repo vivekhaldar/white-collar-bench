@@ -1,0 +1,97 @@
+[
+  {
+    "path": "/tokenize",
+    "payload": {
+      "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "messages": [
+        {
+          "role": "user",
+          "content": "hello"
+        }
+      ]
+    },
+    "status": 404,
+    "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "path": "/v1/tokenize",
+    "payload": {
+      "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "messages": [
+        {
+          "role": "user",
+          "content": "hello"
+        }
+      ]
+    },
+    "status": 404,
+    "response": "{\"detail\":\"Not Found\"}"
+  },
+  {
+    "path": "/v1/chat/completions",
+    "payload": {
+      "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Reply only 45."
+        }
+      ],
+      "max_tokens": 1048576
+    },
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-8f1b408c63702fe4",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "45",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning": "We need answer only 45. Need comply."
+          },
+          "stop_reason": null,
+          "token_ids": null,
+          "routed_experts": null,
+          "weight_versions": null
+        }
+      ],
+      "created": 1794426979,
+      "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "object": "chat.completion",
+      "moderation": null,
+      "service_tier": null,
+      "system_fingerprint": "vllm-0.1.dev1+g2d75a0ca0.d20261029-dp2-ep-e45251ae",
+      "usage": {
+        "completion_tokens": 13,
+        "prompt_tokens": 35,
+        "total_tokens": 48,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 10,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0,
+          "created_cache_tokens": 0,
+          "multimodal_tokens": null
+        }
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "prompt_text": null,
+      "kv_transfer_params": null,
+      "ec_transfer_params": null,
+      "metrics": null
+    }
+  }
+]

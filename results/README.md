@@ -7,10 +7,18 @@ evaluations, not verified private-test leaderboard submissions.
 | Run | Model / harness | Track A | Track B | Record |
 | --- | --- | ---: | ---: | --- |
 | 2026-11-10–11 | Qwen3.8-27B / Pi 1.5.2 | 72.3422 | 54.9968 | [Detailed report](2026-11-11-qwen3.8-27b-pi/README.md) |
+| 2026-11-11–12 | DeepSeek V4.1 Flash 1017 / Pi 1.5.2 | 84.6439 | 67.4833 | [Detailed report](2026-11-11-deepseek-v4.1-flash-1017-pi/README.md) |
 
-The table uses **original, unchanged-scorer results**. The report separately records the
+The table uses **original scores from each run's unchanged scorer**. The Qwen report separately records the
 Track A missing-checkpoint retest and conservative semantic-credit adjustments. Do not
 substitute these hybrid/manual figures for a complete uniformly configured evaluation.
+
+The DeepSeek run uses the updated benchmark at `c623e77`, gold v4. Historical Qwen results
+use gold v3 and the older scorer/prompts/runtime; their difference is not a controlled
+model-quality comparison. DeepSeek's report includes four turn-budget failures, sampled
+semantic grading limitations, a meter-finalization discrepancy and a credential exposure
+with sanitized shareable transcripts. Rotate the exposed provider key before reuse; unredacted evidence is
+quarantined and excluded from downloadable archives.
 
 For future entries, record the benchmark revision, worlds, track, repeats, model/provider,
 harness/runtime, prompts and budgets, scorer/judge version, original scores and uncertainty,

@@ -1,0 +1,36 @@
+{
+  "archives": [
+    {
+      "file": "deepseek-v41-flash-1017-pi-metering-and-config.tar.gz",
+      "local_path": "/home/user/workspace/repo/.amp/in/artifacts/deepseek-v41-flash-1017-pi-metering-and-config.tar.gz",
+      "sha256": "8c9d15932367c927a0d7d134dca3e5467ee6fe6da80b3840d11a61be6aac7bab",
+      "bytes": 308174,
+      "verified_manifest_files": 12,
+      "expanded_bytes": 5300548,
+      "credential_scan": "No exact credential bytes in any member",
+      "sanitization": "Eight transcript copies redacted; original hashes retained in transcript-redaction.json; quarantined originals excluded"
+    },
+    {
+      "file": "deepseek-v41-flash-1017-pi-track-a-sanitized.tar.gz",
+      "local_path": "/home/user/workspace/repo/.amp/in/artifacts/deepseek-v41-flash-1017-pi-track-a-sanitized.tar.gz",
+      "sha256": "ce05aa285c7e84c85e1ea4d33acb3f4d65eed202cba155a71d7159652d0e1703",
+      "bytes": 71153748,
+      "verified_manifest_files": 25347,
+      "expanded_bytes": 595717597,
+      "credential_scan": "No exact credential bytes in any member",
+      "sanitization": "Eight transcript copies redacted; original hashes retained in transcript-redaction.json; quarantined originals excluded"
+    },
+    {
+      "file": "deepseek-v41-flash-1017-pi-track-b-sanitized.tar.gz",
+      "local_path": "/home/user/workspace/repo/.amp/in/artifacts/deepseek-v41-flash-1017-pi-track-b-sanitized.tar.gz",
+      "sha256": "4ed17bac2e1a5b80c6661706c5e503eb28cda2d19288f099bf4b7eed01b78683",
+      "bytes": 107206680,
+      "verified_manifest_files": 4516,
+      "expanded_bytes": 725458196,
+      "credential_scan": "No exact credential bytes in any member",
+      "sanitization": "Eight transcript copies redacted; original hashes retained in transcript-redaction.json; quarantined originals excluded"
+    }
+  ],
+  "storage": "Outside Git, under this thread .amp/in/artifacts; retain/download with the thread",
+  "credential_rotation": "Not performed; required before key reuse"
+}

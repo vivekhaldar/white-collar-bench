@@ -1,0 +1,73 @@
+[
+  {
+    "probe": "default",
+    "payload": {
+      "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Reply with only the integer that equals 17 plus 28."
+        }
+      ]
+    },
+    "elapsed_s": 1.9921019530011108,
+    "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "usage": {
+      "completion_tokens": 21,
+      "prompt_tokens": 43,
+      "total_tokens": 64,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 18,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      }
+    },
+    "finish_reason": "stop",
+    "content": "45",
+    "reasoning_characters": 0
+  },
+  {
+    "probe": "thinking",
+    "payload": {
+      "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Reply with only the integer that equals 17 plus 28."
+        }
+      ],
+      "thinking": {
+        "type": "enabled"
+      }
+    },
+    "elapsed_s": 1.6778533270007756,
+    "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "usage": {
+      "completion_tokens": 18,
+      "prompt_tokens": 43,
+      "total_tokens": 61,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 15,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      }
+    },
+    "finish_reason": "stop",
+    "content": "45",
+    "reasoning_characters": 0
+  }
+]

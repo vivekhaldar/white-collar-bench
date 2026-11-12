@@ -1,0 +1,14 @@
+{
+  "source": "https://tokenfactory.nebius.com/api/public/models_info",
+  "retrieved_on": "2026-11-11",
+  "retrieval_method": "read_web_page; direct Python request returned HTTP 403",
+  "model_id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "max_model_len": 1048576,
+  "quantization": "fp8",
+  "input_price_per_million_tokens": 0.3,
+  "input_cached_price_per_million_tokens": 0.006,
+  "output_price_per_million_tokens": 1.2,
+  "region": "us-north1",
+  "use_cases": ["text", "image", "code", "function_calling", "reasoning", "responses_api"],
+  "note": "Selected fields transcribed from the official JSON returned by the page reader, not a complete API response; separate authenticated model-list response is preserved. No separate maximum-output field was published."
+}

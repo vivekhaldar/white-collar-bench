@@ -1,0 +1,10 @@
+name: pi-nebius-deepseek-v41-flash-1017
+version: pi-1.5.2-runtime-v1
+model: nebius/deepseek-ai/DeepSeek-V4.1-Flash-1017
+description: Fresh Pi sessions, pinned document readers, bounded bash, explicit termination diagnostics
+cmd: [python, -I, "{adapter_dir}/pi_nebius.py"]
+ingest:
+  timeout_s: 1800
+query:
+  timeout_s: 900
+env_passthrough: [TOKEN_FACTORY_API_KEY, OPENAI_BASE_URL, WCB_PI_NODE_MODULES, WCB_TOOLS_VENV]

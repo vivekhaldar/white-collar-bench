@@ -1,0 +1,57 @@
+{
+  "event": "Provider credential appeared in environment-inspection tool output; quarantine originals and redact transcript copies",
+  "quarantine": "runs/.credential-quarantine-deepseek-2026-11-12 (mode 0700; must not publish)",
+  "replacement": "[REDACTED_TOKEN_FACTORY_API_KEY]",
+  "files": [
+    {
+      "path": "track-b/shards/gen-s10-w2-small/gen-s10-w2-small/r1/sessions/cp3.query/stdout.log",
+      "original_sha256": "53ff6238b32e09f6e8885936c7e08496b3724b37e7b0467dcfeffdf7c1e94c72",
+      "sanitized_sha256": "045834b3f33b3b4779c03270dd09c257aa087b279590b05d50fb95ff8d7eea23",
+      "redactions": 7
+    },
+    {
+      "path": "track-b/measured/gen-s10-w2-small/r1/sessions/cp3.query/stdout.log",
+      "original_sha256": "53ff6238b32e09f6e8885936c7e08496b3724b37e7b0467dcfeffdf7c1e94c72",
+      "sanitized_sha256": "045834b3f33b3b4779c03270dd09c257aa087b279590b05d50fb95ff8d7eea23",
+      "redactions": 7
+    },
+    {
+      "path": "track-a/shards/gen-s8-w4/gen-s8-w4/r1/sessions/cp6.query/stdout.log",
+      "original_sha256": "d3e021eab960d4f5cfa5ab9a9ed325cd2b0fcb1e4ed4e03b3b972a230380ef98",
+      "sanitized_sha256": "cdd52fb74735f58a7bad18bd0460588b5e39f0b19e08d542b16f2933c9cda03a",
+      "redactions": 7
+    },
+    {
+      "path": "track-a/shards/gen-s8-w4/gen-s8-w4/r1/sessions/cp1.query-oracle/stdout.log",
+      "original_sha256": "870cc6bcba344ea038a3b10e9e4574228395847aa9bcfaba8dae35403ef32ff5",
+      "sanitized_sha256": "b476b28c68a47900ace9022aabcdc02dc4890d7d9b0d590fd829d30659636d15",
+      "redactions": 7
+    },
+    {
+      "path": "track-a/shards/gen-s7-w2/gen-s7-w2/r1/sessions/cp4.query-oracle/stdout.log",
+      "original_sha256": "3567453f7db8a767a4898c117c493a1e0cc57af3b02571a214000542b3548385",
+      "sanitized_sha256": "48d9ac49ae992343674fdfd9dedc1061ea27c0ebada42f87421e23becfb251f2",
+      "redactions": 7
+    },
+    {
+      "path": "track-a/measured/gen-s8-w4/r1/sessions/cp6.query/stdout.log",
+      "original_sha256": "d3e021eab960d4f5cfa5ab9a9ed325cd2b0fcb1e4ed4e03b3b972a230380ef98",
+      "sanitized_sha256": "cdd52fb74735f58a7bad18bd0460588b5e39f0b19e08d542b16f2933c9cda03a",
+      "redactions": 7
+    },
+    {
+      "path": "track-a/measured/gen-s8-w4/r1/sessions/cp1.query-oracle/stdout.log",
+      "original_sha256": "870cc6bcba344ea038a3b10e9e4574228395847aa9bcfaba8dae35403ef32ff5",
+      "sanitized_sha256": "b476b28c68a47900ace9022aabcdc02dc4890d7d9b0d590fd829d30659636d15",
+      "redactions": 7
+    },
+    {
+      "path": "track-a/measured/gen-s7-w2/r1/sessions/cp4.query-oracle/stdout.log",
+      "original_sha256": "3567453f7db8a767a4898c117c493a1e0cc57af3b02571a214000542b3548385",
+      "sanitized_sha256": "48d9ac49ae992343674fdfd9dedc1061ea27c0ebada42f87421e23becfb251f2",
+      "redactions": 7
+    }
+  ],
+  "answers_stores_scores_modified": false,
+  "rotation": "Recommended; not performed without user authorization"
+}

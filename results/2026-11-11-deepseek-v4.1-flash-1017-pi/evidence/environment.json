@@ -1,0 +1,63 @@
+{
+  "benchmark_revision": "c623e777a59830ab9bd016dac1fd3ba6896e26d2",
+  "python": "3.11.6",
+  "node": "v26.12.1",
+  "git": "git version 2.55.0",
+  "bwrap": "bubblewrap 0.8.0",
+  "wcb": "0.1.0",
+  "pi": "1.5.2",
+  "configuration_sha256": {
+    "run_all.py": "2894a933101eeae5bcbc29fb1e32988db9b5f3b74a0ca6f94cc4e3ad81c339f1",
+    "pi_nebius.py": "bb541501f9964fd86d17db8a255dc1753a3eec6685fff53e742b6ddfb21a27eb",
+    "runtime.mjs": "eab4b8e25483b800713f1e384b96e1e62f4453428e634957283083a24f8f32cd",
+    "adapter.yaml": "bb786d695d495bd6773a932c8053c8cc1f8f2b59be75fde1378f411252f99063",
+    "tools-lock.txt": "c195b84a6d55083b2d08ab192d9d743fd4684f42a1499ab90fcfb9ac14f1ee5b",
+    "pi-package-lock.json": "42ea6f04a798a44b9b39013b59e39d3fc937174587c2f7e31f54ead882b338ad"
+  },
+  "world_builds": {
+    "worlds/pilot": {
+      "gold_version": 4,
+      "sources_sha256": "c131b4fb15193cde2c8011d571f79138282accfcf5ded1980278a01f670b60b2"
+    },
+    "worlds/dev/gen-s4-w2": {
+      "gold_version": 4,
+      "sources_sha256": "0a8ae88a3f62460a81e6ad7def688fe411e68421ae23ef6594ff4fc55335ebe0"
+    },
+    "worlds/dev/gen-s5-small": {
+      "gold_version": 4,
+      "sources_sha256": "14e4e4a39727995746f0cc6efe7716d7071790e13751325b0c129d4500c0c242"
+    },
+    "worlds/dev/gen-s2-w1": {
+      "gold_version": 4,
+      "sources_sha256": "30e745f17c7af5bd2bd13ca6b2bcc962e45a0f337006408cc446919012e9bd22"
+    },
+    "worlds/dev/gen-s10-w2-small": {
+      "gold_version": 4,
+      "sources_sha256": "a82f82239882b62e714a1cd7c89656f9acf13e91e43be8a38c66a5338395a971"
+    },
+    "worlds/dev/gen-s6-w1": {
+      "gold_version": 4,
+      "sources_sha256": "3b6e8cfe6a223b9308f9ba33df47e258f2388832821ce16a71571523494b469f"
+    },
+    "worlds/dev/gen-s9-large": {
+      "gold_version": 4,
+      "sources_sha256": "f352914976c466a8203f9b8987355be892982b281756cc2605dbe770b44d13c5"
+    },
+    "worlds/dev/gen-s3-w1": {
+      "gold_version": 4,
+      "sources_sha256": "549695cbffebaeda0c5022b17de0315c129fc7d6d22a0abc3b06579f72a67e67"
+    },
+    "worlds/dev/gen-s1-w1": {
+      "gold_version": 4,
+      "sources_sha256": "062db43ed3da09dcb23c9b480c17f90270bb20fa7bca9836a6a49c5c74b015eb"
+    },
+    "worlds/dev/gen-s8-w4": {
+      "gold_version": 4,
+      "sources_sha256": "13a3cd54457a23dd365999a8fe56706faacdfda0df4afcfbee2fbae32c229e51"
+    },
+    "worlds/dev/gen-s7-w2": {
+      "gold_version": 4,
+      "sources_sha256": "0dc224e34c6d50dd392c6c5bb85ea01b91d9d1d4bd7e6f8014e970abaf2e844a"
+    }
+  }
+}

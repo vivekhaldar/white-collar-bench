@@ -1,0 +1,9 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.6, pytest-9.2.0, pluggy-1.7.0
+rootdir: /home/user/workspace/repo
+configfile: pyproject.toml
+collected 12 items
+
+tests/grade/test_perfect_answers.py ............                         [100%]
+
+============================== 12 passed in 5.16s ==============================

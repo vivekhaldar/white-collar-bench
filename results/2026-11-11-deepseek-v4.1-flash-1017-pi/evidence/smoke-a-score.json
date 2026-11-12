@@ -1,0 +1,1755 @@
+{
+  "report_version": "0.1",
+  "scored_at": "2026-11-11T20:13:05+00:00",
+  "scorer": {
+    "version": "0.1",
+    "wcb_version": "0.1.0"
+  },
+  "run": {
+    "dir": "runs/pi-deepseek-v41-flash-1017/smoke-a",
+    "track": "A",
+    "adapter": {
+      "name": "pi-nebius-deepseek-v41-flash-1017",
+      "version": "pi-1.5.2-runtime-v1",
+      "model": "nebius/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "path": "/home/user/workspace/repo/results/2026-11-11-deepseek-v4.1-flash-1017-pi/config/adapter.yaml",
+      "sha256": "bb786d695d495bd6773a932c8053c8cc1f8f2b59be75fde1378f411252f99063"
+    },
+    "wcb_version": "0.1.0",
+    "status": "completed",
+    "started_at": "2026-11-11T19:58:15+00:00",
+    "finished_at": "2026-11-11T20:12:30+00:00",
+    "options": {
+      "max_days": null,
+      "skip_ingest": false,
+      "workspace_root": null,
+      "meter": true
+    },
+    "scored": {
+      "agent": true,
+      "oracle": true
+    }
+  },
+  "judge": {
+    "kind": "heuristic",
+    "name": "heuristic",
+    "model": null,
+    "calls": null
+  },
+  "output": {
+    "dir": "runs/pi-deepseek-v41-flash-1017/smoke-a/scores"
+  },
+  "headline": {
+    "track": "A",
+    "wcb": 91.17965367965368,
+    "wcb_ci95": [
+      91.17965367965368,
+      91.17965367965368
+    ],
+    "synthesis": 92.55952380952381,
+    "synthesis_ci95": [
+      92.55952380952381,
+      92.55952380952381
+    ],
+    "ingestion_cost": 1.3798701298701275,
+    "sis": 97.77000000000001,
+    "sis_final": 97.92,
+    "n_worlds": 1,
+    "n_episodes": 1,
+    "n_questions": 13
+  },
+  "worlds": [
+    {
+      "id": "mini",
+      "path": "/home/user/workspace/repo/tests/fixtures/mini-world",
+      "days": [
+        "2027-01-11",
+        "2027-01-12"
+      ],
+      "n_days": 2,
+      "checkpoints": [
+        {
+          "id": "cp1",
+          "date": "2027-01-11",
+          "label": "end of Monday",
+          "day_index": 1
+        },
+        {
+          "id": "cp2",
+          "date": "2027-01-12",
+          "label": "end of Tuesday",
+          "day_index": 2
+        }
+      ],
+      "repeats": [
+        {
+          "repeat": 1,
+          "checkpoints": [
+            {
+              "id": "cp1",
+              "date": "2027-01-11",
+              "label": "end of Monday",
+              "day_index": 1,
+              "n_questions": 5,
+              "score": 100.0,
+              "score_buckets": {
+                "point": 100.0,
+                "list": 100.0,
+                "unanswerable": 100.0
+              },
+              "synthesis": 100.0,
+              "synthesis_buckets": {
+                "point": 100.0,
+                "list": 100.0,
+                "unanswerable": 100.0
+              },
+              "ingestion_cost": 0.0
+            },
+            {
+              "id": "cp2",
+              "date": "2027-01-12",
+              "label": "end of Tuesday",
+              "day_index": 2,
+              "n_questions": 8,
+              "score": 82.35930735930735,
+              "score_buckets": {
+                "point": 95.83333333333333,
+                "list": 93.75,
+                "status": 100.0,
+                "brief": 93.18181818181819,
+                "change": 66.66666666666666,
+                "temporal": 100.0,
+                "priority": 27.083333333333336
+              },
+              "synthesis": 85.11904761904762,
+              "synthesis_buckets": {
+                "point": 91.66666666666666,
+                "list": 100.0,
+                "status": 100.0,
+                "brief": 75.0,
+                "change": 83.33333333333334,
+                "temporal": 100.0,
+                "priority": 45.83333333333333
+              },
+              "ingestion_cost": 2.759740259740269
+            }
+          ],
+          "score": 91.17965367965368,
+          "synthesis": 92.55952380952381,
+          "ingestion_cost": 1.3798701298701275,
+          "sis": {
+            "days": [
+              {
+                "date": "2027-01-11",
+                "sis": 97.62,
+                "entity_f1": 1.0,
+                "loop_f1": 0.8571,
+                "field_accuracy": 1.0,
+                "freshness": 1.0,
+                "groundedness": 1.0,
+                "validity": 1.0,
+                "errors": {
+                  "entity_fp": 0,
+                  "entity_fn": 0,
+                  "wrong_merges": 0,
+                  "loop_fp": 2,
+                  "loop_fn": 0,
+                  "stale": 0,
+                  "ungrounded": 0,
+                  "validator_errors": 0
+                },
+                "missing_entities": [],
+                "false_positive_records": [],
+                "missing_loops": [],
+                "unmatched_loop_records": [
+                  "loops/attend-the-january-reconciliation-review",
+                  "loops/choose-the-quillon-analytics-vendor"
+                ],
+                "stale_records": []
+              },
+              {
+                "date": "2027-01-12",
+                "sis": 97.92,
+                "entity_f1": 1.0,
+                "loop_f1": 0.875,
+                "field_accuracy": 1.0,
+                "freshness": 1.0,
+                "groundedness": 1.0,
+                "validity": 1.0,
+                "errors": {
+                  "entity_fp": 0,
+                  "entity_fn": 0,
+                  "wrong_merges": 0,
+                  "loop_fp": 2,
+                  "loop_fn": 0,
+                  "stale": 0,
+                  "ungrounded": 0,
+                  "validator_errors": 0
+                },
+                "missing_entities": [],
+                "false_positive_records": [],
+                "missing_loops": [],
+                "unmatched_loop_records": [
+                  "loops/attend-the-january-reconciliation-review",
+                  "loops/choose-the-quillon-analytics-vendor"
+                ],
+                "stale_records": []
+              }
+            ],
+            "mean": 97.77000000000001,
+            "final": 97.92,
+            "final_date": "2027-01-12"
+          }
+        }
+      ],
+      "score": 91.17965367965368,
+      "synthesis": 92.55952380952381,
+      "ingestion_cost": 1.3798701298701275,
+      "sis": 97.77000000000001,
+      "sis_final": 97.92
+    }
+  ],
+  "breakdowns": {
+    "by_type": {
+      "point": {
+        "n": 3,
+        "wcb": 97.22222222222221,
+        "synthesis": 94.44444444444443,
+        "ingestion_cost": -2.7777777777777857
+      },
+      "list": {
+        "n": 4,
+        "wcb": 98.4375,
+        "synthesis": 100.0,
+        "ingestion_cost": 1.5625
+      },
+      "status": {
+        "n": 1,
+        "wcb": 100.0,
+        "synthesis": 100.0,
+        "ingestion_cost": 0.0
+      },
+      "brief": {
+        "n": 1,
+        "wcb": 93.18181818181819,
+        "synthesis": 75.0,
+        "ingestion_cost": -18.181818181818187
+      },
+      "change": {
+        "n": 1,
+        "wcb": 66.66666666666666,
+        "synthesis": 83.33333333333334,
+        "ingestion_cost": 16.666666666666686
+      },
+      "temporal": {
+        "n": 1,
+        "wcb": 100.0,
+        "synthesis": 100.0,
+        "ingestion_cost": 0.0
+      },
+      "priority": {
+        "n": 1,
+        "wcb": 27.083333333333336,
+        "synthesis": 45.83333333333333,
+        "ingestion_cost": 18.749999999999993
+      },
+      "unanswerable": {
+        "n": 1,
+        "wcb": 100.0,
+        "synthesis": 100.0,
+        "ingestion_cost": 0.0
+      }
+    },
+    "by_challenge": {
+      "acceptance_vs_occurrence": {
+        "n": 1,
+        "wcb": 93.75,
+        "synthesis": 100.0,
+        "ingestion_cost": 6.25
+      },
+      "alias": {
+        "n": 1,
+        "wcb": 100.0,
+        "synthesis": 100.0,
+        "ingestion_cost": 0.0
+      },
+      "endorsement": {
+        "n": 1,
+        "wcb": 100.0,
+        "synthesis": 100.0,
+        "ingestion_cost": 0.0
+      },
+      "name_collision": {
+        "n": 1,
+        "wcb": 91.66666666666666,
+        "synthesis": 91.66666666666666,
+        "ingestion_cost": 0.0
+      },
+      "supersession": {
+        "n": 1,
+        "wcb": 100.0,
+        "synthesis": 100.0,
+        "ingestion_cost": 0.0
+      },
+      "transfer": {
+        "n": 2,
+        "wcb": 100.0,
+        "synthesis": 95.83333333333333,
+        "ingestion_cost": -4.166666666666671
+      },
+      "unobservable": {
+        "n": 1,
+        "wcb": 100.0,
+        "synthesis": 100.0,
+        "ingestion_cost": 0.0
+      },
+      "weak_evidence": {
+        "n": 1,
+        "wcb": 93.75,
+        "synthesis": 100.0,
+        "ingestion_cost": 6.25
+      }
+    },
+    "by_checkpoint": [
+      {
+        "world": "mini",
+        "checkpoint": "cp1",
+        "date": "2027-01-11",
+        "label": "end of Monday",
+        "day_index": 1,
+        "n_days": 2,
+        "n_questions": 5,
+        "wcb": 100.0,
+        "synthesis": 100.0,
+        "ingestion_cost": 0.0
+      },
+      {
+        "world": "mini",
+        "checkpoint": "cp2",
+        "date": "2027-01-12",
+        "label": "end of Tuesday",
+        "day_index": 2,
+        "n_days": 2,
+        "n_questions": 8,
+        "wcb": 82.35930735930735,
+        "synthesis": 85.11904761904762,
+        "ingestion_cost": 2.759740259740269
+      }
+    ]
+  },
+  "sis_by_day": [
+    {
+      "world": "mini",
+      "date": "2027-01-11",
+      "n_repeats": 1,
+      "sis": 97.62,
+      "entity_f1": 1.0,
+      "loop_f1": 0.8571,
+      "field_accuracy": 1.0,
+      "freshness": 1.0,
+      "groundedness": 1.0,
+      "validity": 1.0
+    },
+    {
+      "world": "mini",
+      "date": "2027-01-12",
+      "n_repeats": 1,
+      "sis": 97.92,
+      "entity_f1": 1.0,
+      "loop_f1": 0.875,
+      "field_accuracy": 1.0,
+      "freshness": 1.0,
+      "groundedness": 1.0,
+      "validity": 1.0
+    }
+  ],
+  "efficiency": {
+    "summary": {
+      "ingest": {
+        "sessions": 2,
+        "ok": 2,
+        "timeouts": 0,
+        "failures": 0,
+        "usage_reported": 2,
+        "usage_metered": 2,
+        "wall_s": {
+          "total": 526.024,
+          "mean": 263.012
+        },
+        "input_tokens": {
+          "total": 756689.0,
+          "mean": 378344.5
+        },
+        "output_tokens": {
+          "total": 47204.0,
+          "mean": 23602.0
+        },
+        "cost_usd": {
+          "total": 0.155552172,
+          "mean": 0.077776086
+        },
+        "tool_calls": {
+          "total": 63.0,
+          "mean": 31.5
+        }
+      },
+      "query": {
+        "sessions": 2,
+        "ok": 2,
+        "timeouts": 0,
+        "failures": 0,
+        "usage_reported": 2,
+        "usage_metered": 2,
+        "wall_s": {
+          "total": 203.613,
+          "mean": 101.8065
+        },
+        "input_tokens": {
+          "total": 345670.0,
+          "mean": 172835.0
+        },
+        "output_tokens": {
+          "total": 13111.0,
+          "mean": 6555.5
+        },
+        "cost_usd": {
+          "total": 0.089178072,
+          "mean": 0.044589036
+        },
+        "tool_calls": {
+          "total": 25.0,
+          "mean": 12.5
+        }
+      },
+      "query_oracle": {
+        "sessions": 2,
+        "ok": 2,
+        "timeouts": 0,
+        "failures": 0,
+        "usage_reported": 2,
+        "usage_metered": 2,
+        "wall_s": {
+          "total": 124.15700000000001,
+          "mean": 62.078500000000005
+        },
+        "input_tokens": {
+          "total": 204762.0,
+          "mean": 102381.0
+        },
+        "output_tokens": {
+          "total": 8443.0,
+          "mean": 4221.5
+        },
+        "cost_usd": {
+          "total": 0.05658266399999999,
+          "mean": 0.028291331999999995
+        },
+        "tool_calls": {
+          "total": 20.0,
+          "mean": 10.0
+        }
+      }
+    },
+    "per_episode": {
+      "wall_s": 729.637,
+      "input_tokens": 1102359.0,
+      "output_tokens": 60315.0,
+      "cost_usd": 0.24473024399999999,
+      "tool_calls": 88.0
+    },
+    "per_ingest_day": [
+      {
+        "world": "mini",
+        "date": "2027-01-11",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 284.694,
+        "input_tokens": 379545.0,
+        "output_tokens": 25558.0,
+        "cost_usd": 0.08375742,
+        "tool_calls": 31.0
+      },
+      {
+        "world": "mini",
+        "date": "2027-01-12",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 241.33,
+        "input_tokens": 377144.0,
+        "output_tokens": 21646.0,
+        "cost_usd": 0.071794752,
+        "tool_calls": 32.0
+      }
+    ],
+    "per_query_session": [
+      {
+        "world": "mini",
+        "checkpoint": "cp1",
+        "store": "agent",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 36.625,
+        "input_tokens": 135032.0,
+        "output_tokens": 2112.0,
+        "cost_usd": 0.027389087999999995,
+        "tool_calls": 11.0
+      },
+      {
+        "world": "mini",
+        "checkpoint": "cp1",
+        "store": "oracle",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 37.43,
+        "input_tokens": 76889.0,
+        "output_tokens": 2435.0,
+        "cost_usd": 0.021924443999999998,
+        "tool_calls": 6.0
+      },
+      {
+        "world": "mini",
+        "checkpoint": "cp2",
+        "store": "agent",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 166.988,
+        "input_tokens": 210638.0,
+        "output_tokens": 10999.0,
+        "cost_usd": 0.061788984,
+        "tool_calls": 14.0
+      },
+      {
+        "world": "mini",
+        "checkpoint": "cp2",
+        "store": "oracle",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 86.727,
+        "input_tokens": 127873.0,
+        "output_tokens": 6008.0,
+        "cost_usd": 0.034658219999999997,
+        "tool_calls": 14.0
+      }
+    ]
+  },
+  "failures": [
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "agent",
+      "id": "q-010",
+      "type": "priority",
+      "template": "focus_tomorrow",
+      "text": "What should I focus on tomorrow?",
+      "answerable": true,
+      "challenges": [],
+      "score": 0.2708,
+      "base": 0.3333,
+      "citation": 0.25,
+      "gold": {
+        "tomorrow": "2027-01-13",
+        "must_include": [
+          {
+            "loop": "c-003",
+            "what": "Review Sam Patel's ingestion design doc",
+            "counterparty": "p-sam-patel",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-01-13",
+            "keywords": [
+              "ingestion design",
+              "design doc"
+            ],
+            "support": [
+              "em-0002",
+              "nt-0002"
+            ]
+          }
+        ],
+        "worker_active": [
+          {
+            "loop": "c-003",
+            "what": "Review Sam Patel's ingestion design doc",
+            "counterparty": "p-sam-patel",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-01-13",
+            "keywords": [
+              "ingestion design",
+              "design doc"
+            ],
+            "support": [
+              "em-0002",
+              "nt-0002"
+            ]
+          }
+        ],
+        "distractors": [
+          {
+            "loop": "c-001",
+            "what": "Return the Tessellate security questionnaire",
+            "counterparty": "p-cora-velez",
+            "direction": "i_owe",
+            "status": "done",
+            "due": "2027-01-12",
+            "keywords": [
+              "security questionnaire",
+              "questionnaire"
+            ],
+            "support": [
+              "em-0001",
+              "em-0005"
+            ]
+          },
+          {
+            "loop": "c-002",
+            "what": "Send Ada the January reconciliation report",
+            "counterparty": "p-ben-okoro",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "reconciliation report",
+              "january"
+            ],
+            "support": [
+              "ch-0001"
+            ]
+          },
+          {
+            "loop": "c-004",
+            "what": "Send Ada Tessellate volume pricing",
+            "counterparty": "p-cora-velez",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "volume pricing",
+              "pricing"
+            ],
+            "support": [
+              "mt-0001",
+              "em-0004"
+            ]
+          },
+          {
+            "loop": "c-005",
+            "what": "Approve Ben's GL sandbox access request",
+            "counterparty": "p-ben-okoro",
+            "direction": "i_owe",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "access request",
+              "sandbox"
+            ],
+            "support": [
+              "ch-0001",
+              "ch-0002"
+            ]
+          }
+        ],
+        "k": 10
+      },
+      "predicted": {
+        "type": "priority",
+        "abstain": false,
+        "confidence": 0.9,
+        "items": [
+          {
+            "text": "Review Sam Patel's ingestion design doc",
+            "due": "2027-01-13",
+            "why": "This is an accepted commitment to Sam Patel and is due tomorrow.",
+            "cites": [
+              "loops/review-sam-patel-s-ingestion-design-doc",
+              "nt-0002",
+              "em-0002"
+            ]
+          },
+          {
+            "text": "Confirm completion of the January reconciliation review with Ben Okoro",
+            "due": "2027-01-12",
+            "why": "The review was due today and remains open; the calendar shows the invite was accepted but does not establish that the review was held.",
+            "cites": [
+              "loops/attend-the-january-reconciliation-review",
+              "ca-0001",
+              "ca-0002",
+              "projects/ledger-cleanup"
+            ]
+          },
+          {
+            "text": "Obtain the January reconciliation report from Ben Okoro",
+            "due": null,
+            "why": "Ben promised the report and it is still outstanding, blocking visibility into the reconciliation work.",
+            "cites": [
+              "loops/send-ada-the-january-reconciliation-report",
+              "ch-0001",
+              "ca-0001"
+            ]
+          },
+          {
+            "text": "Follow up with Cora Velez on the Tessellate volume pricing",
+            "due": null,
+            "why": "The pricing is still outstanding and is needed for the Quillon vendor decision targeted for 2027-02-05.",
+            "cites": [
+              "loops/send-ada-tessellate-volume-pricing",
+              "mn-0001",
+              "em-0004"
+            ]
+          }
+        ]
+      },
+      "details": {
+        "k": 10,
+        "n_top": 4,
+        "n_loop_items": 3,
+        "recall": 1.0,
+        "penalty": 0.6666666666666666,
+        "matches": [
+          {
+            "pred": 0,
+            "gold": "c-003",
+            "role": "must"
+          },
+          {
+            "pred": 2,
+            "gold": "c-002",
+            "role": "distractor"
+          },
+          {
+            "pred": 3,
+            "gold": "c-004",
+            "role": "distractor"
+          }
+        ],
+        "missed_must": [],
+        "citations": {
+          "scope": "question",
+          "total": 12,
+          "valid": 3,
+          "invalid": [
+            {
+              "cite": "loops/attend-the-january-reconciliation-review",
+              "why": "record_unsupported"
+            },
+            {
+              "cite": "ca-0001",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ca-0002",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "projects/ledger-cleanup",
+              "why": "record_unsupported"
+            },
+            {
+              "cite": "loops/send-ada-the-january-reconciliation-report",
+              "why": "record_unsupported"
+            },
+            {
+              "cite": "ch-0001",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "loops/send-ada-tessellate-volume-pricing",
+              "why": "record_unsupported"
+            },
+            {
+              "cite": "mn-0001",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "em-0004",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "agent",
+      "id": "q-008",
+      "type": "change",
+      "template": "project_changes",
+      "text": "What changed on Quillon since the end of Friday 8 January?",
+      "answerable": true,
+      "challenges": [],
+      "score": 0.6667,
+      "base": 0.6667,
+      "citation": 1.0,
+      "gold": {
+        "items": [
+          {
+            "event": "e-0020",
+            "summary": "Quillon decision target moved to 5 February",
+            "date": "2027-01-11",
+            "type": "fact.set",
+            "keywords": [
+              "target date",
+              "02/05",
+              "2/5",
+              "2027-02-05",
+              "5 feb",
+              "5 february",
+              "5th feb",
+              "5th february",
+              "feb 5",
+              "feb 5th",
+              "february 5",
+              "february 5th"
+            ],
+            "support": [
+              "nt-0002"
+            ]
+          },
+          {
+            "event": "e-0022",
+            "summary": "Volume pricing handed from Sam Reyes to Cora",
+            "date": "2027-01-11",
+            "type": "commitment.update",
+            "keywords": [
+              "volume pricing",
+              "pricing"
+            ],
+            "support": [
+              "em-0004"
+            ]
+          },
+          {
+            "event": "e-0030",
+            "summary": "Reno-only pilot reversed at steering",
+            "date": "2027-01-12",
+            "type": "decision.reverse",
+            "keywords": [
+              "reno",
+              "pilot"
+            ],
+            "support": [
+              "mn-0001"
+            ]
+          },
+          {
+            "event": "e-0031",
+            "summary": "Decided to run the Quillon pilot at the Reno and Sparks depots",
+            "date": "2027-01-12",
+            "type": "decision.make",
+            "keywords": [
+              "sparks",
+              "reno",
+              "pilot"
+            ],
+            "support": [
+              "mn-0001"
+            ]
+          },
+          {
+            "event": "e-0035",
+            "summary": "Quillon phase is now pilot planning",
+            "date": "2027-01-12",
+            "type": "fact.set",
+            "keywords": [
+              "phase",
+              "pilot",
+              "planning"
+            ],
+            "support": [
+              "mn-0001"
+            ]
+          },
+          {
+            "event": "e-0032",
+            "summary": "I sent Cora the completed security questionnaire",
+            "date": "2027-01-12",
+            "type": "commitment.resolve",
+            "keywords": [
+              "security questionnaire",
+              "questionnaire"
+            ],
+            "support": [
+              "em-0005"
+            ]
+          }
+        ]
+      },
+      "predicted": {
+        "type": "change",
+        "abstain": false,
+        "confidence": 0.95,
+        "items": [
+          {
+            "text": "The Quillon vendor decision was moved from 29 January to 5 February.",
+            "date": "2027-01-11",
+            "cites": [
+              "nt-0002",
+              "projects/quillon",
+              "loops/choose-the-quillon-analytics-vendor"
+            ]
+          },
+          {
+            "text": "Sam Reyes went on leave for two weeks, and Cora Velez took over sending the Tessellate volume pricing.",
+            "date": "2027-01-11",
+            "cites": [
+              "em-0004",
+              "loops/send-ada-tessellate-volume-pricing"
+            ]
+          },
+          {
+            "text": "Quillon steering reversed the Reno-only limit and decided to run the pilot at the Reno and Sparks depots.",
+            "date": "2027-01-12",
+            "cites": [
+              "mn-0001",
+              "loops/run-the-quillon-pilot-at-the-reno-and-sparks-depots",
+              "loops/limit-the-quillon-pilot-to-the-reno-depot"
+            ]
+          },
+          {
+            "text": "Quillon's phase changed to pilot planning.",
+            "date": "2027-01-12",
+            "cites": [
+              "mn-0001",
+              "projects/quillon"
+            ]
+          },
+          {
+            "text": "The completed Tessellate security questionnaire was returned to Tessellate.",
+            "date": "2027-01-12",
+            "cites": [
+              "em-0005",
+              "loops/return-the-tessellate-security-questionnaire"
+            ]
+          },
+          {
+            "text": "Volume pricing from Cora Velez was still pending, while the vendor decision remained targeted for 2027-02-05.",
+            "date": "2027-01-12",
+            "cites": [
+              "mn-0001",
+              "loops/send-ada-tessellate-volume-pricing"
+            ]
+          }
+        ]
+      },
+      "details": {
+        "n_pred": 6,
+        "n_gold": 6,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "matches": [
+          {
+            "pred": 0,
+            "gold": "e-0020"
+          },
+          {
+            "pred": 2,
+            "gold": "e-0031"
+          },
+          {
+            "pred": 3,
+            "gold": "e-0035"
+          },
+          {
+            "pred": 4,
+            "gold": "e-0032"
+          }
+        ],
+        "unmatched_gold": [
+          "e-0022",
+          "e-0030"
+        ],
+        "citations": {
+          "scope": "item",
+          "total": 14,
+          "valid": 14,
+          "invalid": []
+        }
+      }
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "agent",
+      "id": "q-013",
+      "type": "point",
+      "template": "person_attr",
+      "text": "What is Sam Reyes's role?",
+      "answerable": true,
+      "challenges": [
+        "name_collision"
+      ],
+      "score": 0.9167,
+      "base": 1.0,
+      "citation": 0.6666666666666666,
+      "gold": {
+        "kind": "text",
+        "value": "Solutions engineer",
+        "entity": null,
+        "accept": [
+          "Solutions engineer"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "confidence": 0.99,
+        "value": "Solutions engineer",
+        "note": "Sam Reyes is a solutions engineer at Tessellate Analytics (vendor); he is on leave for two weeks from 2027-01-11.",
+        "cites": [
+          "people/sam-reyes",
+          "mt-0001",
+          "em-0004"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Solutions engineer",
+        "gold": "Solutions engineer",
+        "citations": {
+          "scope": "question",
+          "total": 3,
+          "valid": 2,
+          "invalid": [
+            {
+              "cite": "em-0004",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "agent",
+      "id": "q-007",
+      "type": "brief",
+      "template": "person_brief",
+      "text": "What am I working on with Ben Okoro?",
+      "answerable": true,
+      "challenges": [],
+      "score": 0.9318,
+      "base": 1.0,
+      "citation": 0.7272727272727273,
+      "gold": {
+        "rubric": [
+          {
+            "id": "r1",
+            "aspect": "shared_project",
+            "text": "Shared project: Ledger cleanup (Ben Okoro is owner)",
+            "weight": 1,
+            "critical": false,
+            "keywords": [
+              [
+                "ledger cleanup",
+                "ledger",
+                "gl cleanup"
+              ]
+            ],
+            "stale": [],
+            "support": [
+              "ch-0001"
+            ]
+          },
+          {
+            "id": "r2",
+            "aspect": "owed_to_me",
+            "text": "Ben Okoro owes me: Send Ada the January reconciliation report",
+            "weight": 2,
+            "critical": true,
+            "keywords": [
+              [
+                "reconciliation report",
+                "january"
+              ]
+            ],
+            "stale": [],
+            "support": [
+              "ch-0001"
+            ]
+          },
+          {
+            "id": "r3",
+            "aspect": "role",
+            "text": "Ben Okoro is Finance systems lead at Larchmont Freight",
+            "weight": 1,
+            "critical": false,
+            "keywords": [
+              [
+                "finance"
+              ],
+              [
+                "systems"
+              ]
+            ],
+            "stale": [],
+            "support": [
+              "ch-0001"
+            ]
+          }
+        ]
+      },
+      "predicted": {
+        "type": "brief",
+        "abstain": false,
+        "confidence": 0.93,
+        "summary": "Ben Okoro is the finance systems lead at Larchmont Freight. You work with him on Ledger cleanup, where he leads the general-ledger data cleanup and owes you the January reconciliation report, and on Quillon, where he attended the 2027-01-12 steering that set the pilot for the Reno and Sparks depots. Your shared open item is the January reconciliation review, which you accepted for 2027-01-12 but which is not recorded as held.",
+        "claims": [
+          {
+            "text": "Ben Okoro is the finance systems lead at Larchmont Freight.",
+            "cites": [
+              "people/ben-okoro",
+              "ch-0001"
+            ]
+          },
+          {
+            "text": "On Ledger cleanup, Ben leads the general-ledger data cleanup, owes you the January reconciliation report, and the January reconciliation review was accepted for 2027-01-12 without a recorded occurrence.",
+            "cites": [
+              "projects/ledger-cleanup",
+              "loops/send-ada-the-january-reconciliation-report",
+              "loops/attend-the-january-reconciliation-review",
+              "ch-0001",
+              "ca-0001",
+              "ca-0002"
+            ]
+          },
+          {
+            "text": "Ben is also involved in Quillon and attended the 2027-01-12 steering where the pilot was set for the Reno and Sparks depots.",
+            "cites": [
+              "projects/quillon",
+              "people/ben-okoro",
+              "mn-0001"
+            ]
+          },
+          {
+            "text": "Ben's GL sandbox access request has been fulfilled.",
+            "cites": [
+              "loops/approve-ben-s-gl-sandbox-access-request",
+              "ch-0002"
+            ]
+          }
+        ]
+      },
+      "details": {
+        "verdicts": [
+          {
+            "item": "r1",
+            "weight": 1.0,
+            "verdict": "covered"
+          },
+          {
+            "item": "r2",
+            "weight": 2.0,
+            "verdict": "covered"
+          },
+          {
+            "item": "r3",
+            "weight": 1.0,
+            "verdict": "covered"
+          }
+        ],
+        "padding_penalty": 0.0,
+        "citations": {
+          "scope": "question",
+          "total": 11,
+          "valid": 8,
+          "invalid": [
+            {
+              "cite": "loops/attend-the-january-reconciliation-review",
+              "why": "record_unsupported"
+            },
+            {
+              "cite": "ca-0001",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ca-0002",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "agent",
+      "id": "q-011",
+      "type": "list",
+      "template": "owed_to_me",
+      "text": "What does Ben Okoro currently owe me?",
+      "answerable": true,
+      "challenges": [
+        "weak_evidence",
+        "acceptance_vs_occurrence"
+      ],
+      "score": 0.9375,
+      "base": 1.0,
+      "citation": 0.75,
+      "gold": {
+        "items": [
+          {
+            "loop": "c-002",
+            "what": "Send Ada the January reconciliation report",
+            "counterparty": "p-ben-okoro",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "reconciliation report",
+              "january"
+            ],
+            "support": [
+              "ch-0001"
+            ]
+          }
+        ]
+      },
+      "predicted": {
+        "type": "list",
+        "abstain": false,
+        "confidence": 0.97,
+        "items": [
+          {
+            "text": "Send Ada the January reconciliation report",
+            "counterparty": "Ben Okoro",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "loops/send-ada-the-january-reconciliation-report",
+              "ch-0001",
+              "ca-0001",
+              "projects/ledger-cleanup"
+            ]
+          }
+        ]
+      },
+      "details": {
+        "n_pred": 1,
+        "n_gold": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "matches": [
+          {
+            "pred": 0,
+            "gold": "c-002",
+            "credit": 1.0,
+            "status": 1.0,
+            "due": 1.0,
+            "counterparty": 1.0
+          }
+        ],
+        "unmatched_pred": [],
+        "unmatched_gold": [],
+        "citations": {
+          "scope": "item",
+          "total": 4,
+          "valid": 3,
+          "invalid": [
+            {
+              "cite": "ca-0001",
+              "why": "not_in_support",
+              "item": 0
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "questions": [
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-001",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-002",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "transfer"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-003",
+      "type": "point",
+      "bucket": "point",
+      "template": "project_attr",
+      "challenges": [
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-005",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "alias",
+        "endorsement"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "oracle",
+      "id": "q-001",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "oracle",
+      "id": "q-002",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "transfer"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "oracle",
+      "id": "q-003",
+      "type": "point",
+      "bucket": "point",
+      "template": "project_attr",
+      "challenges": [
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "oracle",
+      "id": "q-004",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "oracle",
+      "id": "q-005",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "alias",
+        "endorsement"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "agent",
+      "id": "q-006",
+      "type": "status",
+      "bucket": "status",
+      "template": "project_status",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "agent",
+      "id": "q-007",
+      "type": "brief",
+      "bucket": "brief",
+      "template": "person_brief",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.7273,
+      "score": 0.9318
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "agent",
+      "id": "q-008",
+      "type": "change",
+      "bucket": "change",
+      "template": "project_changes",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.6667,
+      "citation": 1.0,
+      "score": 0.6667
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "agent",
+      "id": "q-009",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "decision_date",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "agent",
+      "id": "q-010",
+      "type": "priority",
+      "bucket": "priority",
+      "template": "focus_tomorrow",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.3333,
+      "citation": 0.25,
+      "score": 0.2708
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "agent",
+      "id": "q-011",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "weak_evidence",
+        "acceptance_vs_occurrence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.75,
+      "score": 0.9375
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "agent",
+      "id": "q-012",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [
+        "transfer"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "agent",
+      "id": "q-013",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.6667,
+      "score": 0.9167
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "oracle",
+      "id": "q-006",
+      "type": "status",
+      "bucket": "status",
+      "template": "project_status",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "oracle",
+      "id": "q-007",
+      "type": "brief",
+      "bucket": "brief",
+      "template": "person_brief",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.75,
+      "citation": 1.0,
+      "score": 0.75
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "oracle",
+      "id": "q-008",
+      "type": "change",
+      "bucket": "change",
+      "template": "project_changes",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.8333,
+      "citation": 1.0,
+      "score": 0.8333
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "oracle",
+      "id": "q-009",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "decision_date",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "oracle",
+      "id": "q-010",
+      "type": "priority",
+      "bucket": "priority",
+      "template": "focus_tomorrow",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.5,
+      "citation": 0.6667,
+      "score": 0.4583
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "oracle",
+      "id": "q-011",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "weak_evidence",
+        "acceptance_vs_occurrence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "oracle",
+      "id": "q-012",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [
+        "transfer"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.6667,
+      "score": 0.9167
+    },
+    {
+      "world": "mini",
+      "repeat": 1,
+      "checkpoint": "cp2",
+      "store": "oracle",
+      "id": "q-013",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.6667,
+      "score": 0.9167
+    }
+  ],
+  "notes": []
+}
