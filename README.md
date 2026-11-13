@@ -43,17 +43,6 @@ All of this is generated from a hidden, event-sourced model of what really happe
 
 There are two tracks. In **Track A** the agent starts from a correct store and must maintain it under a published [store contract](contract/CONTRACT.md). In **Track B** it starts from raw history and organizes its memory however it likes; only its answers are graded.
 
-## Status
-
-Version 0.1. The pilot world and ten generated development worlds are public, with their gold answers. The private test split and public leaderboard are not open yet. The scorer is still being calibrated against real agent answers.
-
-| Run | Track A | Track B |
-|---|---|---|
-| Abstain on everything (floor) | 12.7 | not run |
-| Qwen3.8-27B in the Pi harness ([report](results/2026-11-11-qwen3.8-27b-pi/README.md)) | 72.3 | 55.0 |
-
-The Qwen run was graded by scorer v0.1. Its report documents grading errors that are being fixed, so its scores will be regraded. Milestones, measured baselines and open items are in [status](docs/status.md); all recorded runs are in [results](results/README.md).
-
 ## Run your agent
 
 The runner drives the simulated days, and you provide a small adapter file that tells it how to start your agent. Adapters for Claude Code, Codex, any model behind a simple tool loop (Anthropic or OpenAI-compatible), Docker containers and custom scripts are included.
