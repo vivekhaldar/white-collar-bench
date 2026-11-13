@@ -17,7 +17,7 @@ The DeepSeek run uses the updated benchmark at `c623e77`, gold v4. Historical Qw
 use gold v3 and the older scorer/prompts/runtime; their difference is not a controlled
 model-quality comparison. DeepSeek's report includes four turn-budget failures, sampled
 semantic grading limitations, a meter-finalization discrepancy and a credential exposure
-with sanitized shareable transcripts. Rotate the exposed provider key before reuse; unredacted evidence is
+with sanitized shareable transcripts; unredacted evidence is
 quarantined and excluded from downloadable archives.
 
 For future entries, record the benchmark revision, worlds, track, repeats, model/provider,
