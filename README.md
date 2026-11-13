@@ -8,7 +8,7 @@ That bookkeeping is exactly what people hope AI assistants will take over. white
 
 ## The gap it fills
 
-Existing benchmarks each test part of this job. Workplace-agent benchmarks such as TheAgentCompany and WorkBench pose independent tasks, so a mistake never carries forward. Enterprise-search benchmarks such as HERB query a fixed, read-only corpus. Memory benchmarks such as LongMemEval and MEMTRACK treat memory as a hidden mechanism and grade it only through questions. white-collar-bench tests the whole job:
+Existing benchmarks each test part of this job. Workplace-agent benchmarks such as [TheAgentCompany](https://arxiv.org/abs/2412.14161) and [WorkBench](https://arxiv.org/abs/2405.00823) pose independent tasks, so a mistake never carries forward. Enterprise-search benchmarks such as [HERB](https://arxiv.org/abs/2506.23139) query a fixed, read-only corpus. Memory benchmarks such as [LongMemEval](https://arxiv.org/abs/2410.10813) and [MEMTRACK](https://arxiv.org/abs/2510.01353) treat memory as a hidden mechanism and grade it only through questions. white-collar-bench tests the whole job:
 
 - **Memory is a store you can inspect.** The agent keeps what it knows in plain Markdown files, the way a person keeps notes. The benchmark grades those files day by day against what could be known so far, not just the answers given from them.
 - **Errors compound.** Each day's inputs are deleted once that day is over. A missed handoff on Tuesday becomes a wrong answer on Friday, so the benchmark measures sustained reliability, not one-shot accuracy.
@@ -71,7 +71,7 @@ In **Track A**, the agent starts from a correct store built from the prior weeks
 
 ## Results so far
 
-Self-reported runs on the 11 public worlds, scored with the built-in heuristic judge. An agent that abstains on everything scores 12.7.
+Self-reported runs on the 11 public worlds, scored with the built-in heuristic judge. An agent that abstains on everything scores 12.7 (not zero: abstaining is the correct answer to unanswerable questions, one of the eight equally weighted question types, so it earns about 1/8 of the score).
 
 | Agent | Track A | Track B |
 |---|---:|---:|
