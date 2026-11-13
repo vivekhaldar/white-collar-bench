@@ -4,82 +4,106 @@
 
 A lot of senior knowledge work is not producing things but keeping track of them. Every day brings a stream of email, chat, meetings, documents and calendar changes. Buried in that stream are commitments ("I'll send you the costing by Friday"), decisions, handoffs, slipped deadlines and quiet reversals. The job is to keep an accurate picture of who owes what to whom, where each project really stands and what changed, and to act on it.
 
-That bookkeeping is exactly what people hope AI assistants will take over. white-collar-bench measures whether they can. It runs an agent through weeks of simulated work and checks whether it keeps an accurate, usable record that it can still answer from days later.
+That bookkeeping is exactly what people hope AI assistants will take over. white-collar-bench measures whether they can. It runs an agent through weeks of simulated work and checks whether it keeps an accurate record that it can still answer from days later.
 
-## Why another benchmark
+## The gap it fills
 
-Existing benchmarks cover parts of this work: workplace tool use, search over enterprise documents, memory of long conversations. None of them tests the whole job as it plays out in practice:
+Existing benchmarks each test part of this job. Workplace-agent benchmarks such as TheAgentCompany and WorkBench pose independent tasks, so a mistake never carries forward. Enterprise-search benchmarks such as HERB query a fixed, read-only corpus. Memory benchmarks such as LongMemEval and MEMTRACK treat memory as a hidden mechanism and grade it only through questions. white-collar-bench tests the whole job:
 
-- **Memory is a durable artifact.** The agent keeps its knowledge in files it reads and writes, the way a person keeps notes, not in a hidden context window.
-- **Errors compound.** Inputs arrive day by day and are gone afterwards. A missed handoff on Tuesday is a wrong answer on Friday, so the benchmark measures sustained reliability, not one-shot accuracy.
-- **Judgment counts, not just recall.** Questions such as "What is the status of the pilot?" or "What should I focus on tomorrow?" need current, complete, prioritized answers, with honest abstention when the record does not support one.
+- **Memory is a store you can inspect.** The agent keeps what it knows in plain Markdown files, the way a person keeps notes. The benchmark grades those files day by day against what could be known so far, not just the answers given from them.
+- **Errors compound.** Each day's inputs are deleted once that day is over. A missed handoff on Tuesday becomes a wrong answer on Friday, so the benchmark measures sustained reliability, not one-shot accuracy.
+- **Judgment counts, not just recall.** "What's the status of the pilot?" needs an answer that is current, complete and prioritized. Some questions have no answer yet, and the right response is to say so.
 
 More in [motivation and related work](docs/motivation.md).
 
-## What it measures
+## How it works
 
-Each run replays a stretch of simulated workdays for one knowledge worker: about 300 messages and documents in a typical week, across a dozen projects and dozens of people.
+A run replays one to four weeks of simulated work for one knowledge worker. A typical week has about 300 emails, chats, meeting transcripts, documents and calendar invites, across a dozen projects and dozens of people. Two phases alternate:
 
-1. **Ingestion: keeping the record right.** Each simulated day a fresh agent process receives that day's inbox and updates its store, its notes about people, organizations, projects and open commitments. Then the inbox disappears. The store is the agent's only memory.
-2. **Synthesis: answering from the record.** At checkpoints a fresh process answers questions from the store alone, with citations to the evidence. For example: "What do I owe Ramona?", "Who now owns the retention schedule?", "What changed on the pilot since Monday?", "When was the hosting decision made?" Some questions have no knowable answer yet, and the right response is to abstain.
+1. **Ingestion.** Each simulated day, a fresh agent process receives that day's inbox and updates the **store**: a folder of Markdown records for people, organizations, projects, open commitments ("loops") and a daily log. Then the inbox is deleted. The store is the agent's only memory.
+2. **Questions.** At checkpoints, a fresh process answers questions from the store alone and cites its evidence.
 
-The inputs are hard in the ways real work is hard:
+### An example
 
-- **Names:** people appear under nicknames, initials, email handles and job titles, and two colleagues can share a first name.
-- **Facts change:** deadlines move, owners hand work off, decisions get reversed, and corrections arrive days later.
-- **Evidence is weak:** a draft that was never sent, a calendar acceptance that proves nothing, a task that is only implied to be done.
-- **Inputs are messy:** meeting transcripts with misheard names, attachments, newsletters and notices that are pure noise, and an embedded instruction that a careful assistant must not obey.
+In the pilot world, the worker is Mara, an architect at a university system. On her first Monday, this exchange appears in a project chat channel:
 
-All of this is generated from a hidden, event-sourced model of what really happened, so every answer has an exact, auditable gold standard. See [design](docs/design.md) for how that works.
+> **Yusra:** @mara can you send the architecture one-pager before Thursday's ARB prep?<br>
+> **Mara:** yep
 
-### Scores
+A good agent turns that "yep" into a commitment, then closes it the next day when the one-pager goes out by email:
+
+```markdown
+<!-- loops/send-yusra-the-tinderbox-architecture-one-pager.md (abridged) -->
+---
+kind: ask
+owner: people/me
+counterparty: people/yusra-haddad
+project: projects/tinderbox
+status: done
+evidence: [ch-0001, dc-0001, em-0004]
+---
+## Log
+- 2027-02-15: Yusra asked me for the Tinderbox architecture one-pager before Thursday's ARB prep [src: ch-0001]
+- 2027-02-16: Sent Yusra the Tinderbox architecture one-pager [src: dc-0001, em-0004]
+```
+
+Weeks later, the questions check whether the record kept up:
+
+- *"When is Dmitri's LMS context API due now?"* In chat, Dmitri said "by Mar 5". A meeting transcript a week later moved it to "the 10th". The correct answer is 2027-03-10.
+- *"What salary band did we offer Mats?"* Mats is what the candidate Mateus calls himself. No input ever states the band, so the agent should abstain.
+
+The inputs are hard in the ways real work is hard. People go by nicknames, initials, handles and job titles, and two colleagues can share a first name. Deadlines move, owners hand work off and decisions get reversed. Evidence can be weak: a draft that was never sent, or a calendar acceptance that proves nothing. Newsletters and other noise mix with the signal, and one input even contains an instruction the agent must not obey.
+
+### Exact gold answers
+
+Every world is generated from a hidden, event-sourced log of what really happened: who committed to what, when deadlines moved, which decisions were reversed. The inputs are rendered from that log and the gold answers are computed from it. So every answer has an exact, auditable standard, and new worlds can be generated at will, which keeps the test set from being memorized. See [design](docs/design.md).
+
+### Tracks and scores
+
+In **Track A**, the agent starts from a correct store built from the prior weeks and must maintain it under a published [store contract](contract/CONTRACT.md). In **Track B**, it starts with an empty folder plus the prior weeks' raw inputs and organizes its memory however it likes; only its answers are graded.
 
 | Score | What it tells you |
 |---|---|
-| **WCB score** (headline) | How well the agent answers from the record it built, macro-averaged over question types, 0–100 |
-| **Synthesis** | The same questions answered from a perfect record: answering skill on its own |
-| **Ingestion cost** | The gap between the two: what imperfect record-keeping costs |
-| **Store integrity (SIS)** | Whether the record stays valid, grounded in evidence and current |
+| **WCB score** (headline, per track) | How well the agent answers from its own record, 0–100, macro-averaged over eight question types: facts, lists, status, briefs, changes, dates, priorities and unanswerable |
+| **Synthesis** (Track A) | The same questions answered from a perfect store: answering skill on its own |
+| **Ingestion cost** (Track A) | Synthesis minus WCB: the points lost to imperfect record-keeping. Lower is better |
+| **Store integrity, SIS** (Track A) | Whether the store stays valid, grounded in evidence and current. Lenient by design: an agent that never touches its correct starting store scores 91.5 |
 
-There are two tracks. In **Track A** the agent starts from a correct store and must maintain it under a published [store contract](contract/CONTRACT.md). In **Track B** it starts from raw history and organizes its memory however it likes; only its answers are graded.
+## Results so far
 
-## Run your agent
+Self-reported runs on the 11 public worlds, scored with the built-in heuristic judge. An agent that abstains on everything scores 12.7.
 
-The runner drives the simulated days, and you provide a small adapter file that tells it how to start your agent. Adapters for Claude Code, Codex, any model behind a simple tool loop (Anthropic or OpenAI-compatible), Docker containers and custom scripts are included.
+| Agent | Track A | Track B |
+|---|---:|---:|
+| DeepSeek V4.1 Flash (Pi harness) | 84.6 | 67.5 |
+| Qwen3.8-27B (Pi harness) | 72.3 | 55.0 |
+
+Both models lose about 17 points when they have to design their own memory from scratch (Track B). The two runs used different benchmark revisions, so they are not a controlled comparison; see [results](results/README.md).
+
+white-collar-bench is at v0.1. The public worlds, runner and scorer are complete. A private test split, the LLM judge's validation against human labels and verified leaderboard entries are still to come; see [status](docs/status.md).
+
+## Try it
+
+```bash
+git clone https://github.com/vivekhaldar/white-collar-bench && cd white-collar-bench
+uv venv && uv pip install -e '.[dev]' && source .venv/bin/activate
+wcb run --adapter adapters/examples/null.yaml --world pilot --out runs/null
+wcb score runs/null
+```
+
+To test your own agent, write a small adapter file that tells the runner how to start it. Adapters for Claude Code, Codex, any Anthropic or OpenAI-compatible model in a simple tool loop, Docker containers and custom scripts are included. `wcb doctor --adapter my-adapter.yaml` smoke-tests yours.
+
+## Learn more
 
 | I want to… | Read |
 |---|---|
-| Install, smoke-test and run an agent | [Running the benchmark](docs/running.md) |
-| Connect my own agent or model | [Adapters](docs/adapters.md) |
-| Understand how answers are graded | [Scoring](docs/scoring.md) and [judges](docs/judge.md) |
-| Know what my agent will see and must write | [Data formats](docs/formats.md) and the [store contract](docs/contract.md) |
-| Submit results | [Submissions and the leaderboard](docs/leaderboard.md) |
-| Use it from Python | [Python API](docs/api.md) |
-
-## Documentation
-
-**Understand the benchmark**
-- [Motivation and related work](docs/motivation.md)
-- [Benchmark design](docs/design.md)
-- [Status and open items](docs/status.md)
-- [Results](results/README.md)
-
-**Run it**
-- [Running the benchmark](docs/running.md), including a command reference
-- [Adapters](docs/adapters.md)
-- [Scoring and run protocol](docs/scoring.md)
-- [Judges](docs/judge.md)
-- [Submissions and the leaderboard](docs/leaderboard.md)
-
-**How it is built**
-- [Worlds](docs/worlds.md), [questions and gold answers](docs/questions.md) and [data formats](docs/formats.md)
-- [World generator](docs/generator.md) and [calibration targets](docs/calibration.md)
-- [Store contract and validator](docs/contract.md)
-- [Privacy policy and leak scanner](docs/privacy.md)
-- [Construction plan](docs/plan.md)
-
-**Contribute**
-- [Contributing](CONTRIBUTING.md): repository layout, tests and the synthetic-data rule
+| Understand why the benchmark exists | [Motivation and related work](docs/motivation.md), [design](docs/design.md) |
+| Install and run an agent | [Running the benchmark](docs/running.md), [adapters](docs/adapters.md) |
+| Know what my agent sees and must write | [Data formats](docs/formats.md), [store contract](docs/contract.md) |
+| Understand how answers are graded | [Scoring](docs/scoring.md), [judges](docs/judge.md) |
+| See results or submit my own | [Results](results/README.md), [submissions and the leaderboard](docs/leaderboard.md) |
+| Learn how worlds are built | [Worlds](docs/worlds.md), [questions](docs/questions.md), [generator](docs/generator.md), [calibration](docs/calibration.md), [privacy](docs/privacy.md) |
+| Use it from Python, or contribute | [Python API](docs/api.md), [contributing](CONTRIBUTING.md), [status](docs/status.md), [plan](docs/plan.md) |
 
 ## License
 
