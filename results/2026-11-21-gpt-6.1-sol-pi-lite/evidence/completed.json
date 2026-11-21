@@ -1,0 +1,159 @@
+{
+  "finished_at": "2026-11-21T22:23:20.705001+00:00",
+  "outcomes": [
+    {
+      "model": "sol",
+      "track": "B",
+      "world": "dev/gen-s4-w2",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:01:05.043492+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "A",
+      "world": "dev/gen-s4-w2",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:02:56.038573+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "A",
+      "world": "dev/gen-s9-large",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:03:07.334943+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "B",
+      "world": "dev/gen-s9-large",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:03:34.385607+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "B",
+      "world": "dev/gen-s8-w4",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:04:08.452139+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "A",
+      "world": "dev/gen-s8-w4",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:04:40.330902+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "B",
+      "world": "pilot",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:06:22.836636+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "B",
+      "world": "dev/gen-s7-w2",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:09:27.304382+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "A",
+      "world": "pilot",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:10:02.875616+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "A",
+      "world": "dev/gen-s1-w1",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:11:43.305400+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "A",
+      "world": "dev/gen-s7-w2",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:11:53.391398+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "B",
+      "world": "dev/gen-s1-w1",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:13:20.326721+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "B",
+      "world": "dev/gen-s2-w1",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:14:03.454512+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "A",
+      "world": "dev/gen-s2-w1",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:14:31.255861+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "B",
+      "world": "dev/gen-s3-w1",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:15:33.597966+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "A",
+      "world": "dev/gen-s3-w1",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:18:39.932872+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "B",
+      "world": "dev/gen-s6-w1",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:18:51.465576+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "B",
+      "world": "dev/gen-s10-w2-small",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:19:06.519362+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "A",
+      "world": "dev/gen-s10-w2-small",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:20:31.654827+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "A",
+      "world": "dev/gen-s6-w1",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:21:02.765300+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "B",
+      "world": "dev/gen-s5-small",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:21:28.225623+00:00"
+    },
+    {
+      "model": "sol",
+      "track": "A",
+      "world": "dev/gen-s5-small",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:22:48.790891+00:00"
+    }
+  ]
+}
