@@ -9,6 +9,8 @@ evaluations, not verified private-test leaderboard submissions.
 | 2026-11-10–11 | Qwen3.8-27B / Pi 1.5.2 | 72.3422 | 54.9968 | [Detailed report](2026-11-11-qwen3.8-27b-pi/README.md) |
 | 2026-11-11–12 | DeepSeek V4.1 Flash 1017 / Pi 1.5.2 | 84.6439 | 67.4833 | [Detailed report](2026-11-11-deepseek-v4.1-flash-1017-pi/README.md) |
 
+A cross-run [error analysis](2026-11-21-error-analysis-deepseek-qwen/README.md) breaks down where both runs lost points, by component, question type, challenge, world and episode position, and separates model errors from documented grader limitations.
+
 The table uses **original scores from each run's unchanged scorer**. The Qwen report separately records the
 Track A missing-checkpoint retest and conservative semantic-credit adjustments. Do not
 substitute these hybrid/manual figures for a complete uniformly configured evaluation.
