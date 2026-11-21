@@ -102,6 +102,21 @@ def test_heuristic_change_items_use_summary():
     assert not J.same_item({"text": "Quillon budget approved"}, gold, kind="change")
 
 
+def test_hedging_on_acceptance_does_not_hide_the_item():
+    # An unanswered request: answers may hedge on whether the worker has taken it on.
+    gold = {"what": "Send Andres the Fennel rollout checklist", "keywords": ["rollout checklist", "fennel"]}
+    for text in (
+        "Respond to Andres's request for the Fennel rollout checklist; agree whether you can "
+        "deliver it tomorrow, then send it if accepted.",
+        "Decide on and, if accepting, prepare the Fennel rollout checklist for Andres (not yet accepted)",
+    ):
+        assert J.same_item({"text": text}, gold, kind="loop"), text
+    # Hedge words do not make a different object match.
+    assert not J.same_item(
+        {"text": "Confirm whether you can send Andres the Fennel stakeholder map"}, gold, kind="loop"
+    )
+
+
 def test_keyword_route_ignores_calendar_only_keywords():
     gold = {
         "what": "Send Delphine the vendor scorecard summary",
@@ -384,11 +399,17 @@ def test_rubric_labelled_history_and_its_controls(text, verdict):
         ("Target 5 Feb; 29 Jan was the original date.", "covered"),
         ("Target 22 Jan -> 29 Jan -> 5 Feb.", "covered"),
         ("Target slipped from 22 Jan to 29 Jan, then 5 Feb.", "covered"),
+        ("Petra moved the target from 22 Jan to 29 Jan on 8 Jan, then to 5 Feb on 9 Jan.", "covered"),
+        ("The target moved to 5 Feb (it was 22 Jan, then 29 Jan).", "covered"),
+        ("Target moved 22 Jan -> 29 Jan (8 Jan) -> 5 Feb (9 Jan).", "covered"),
         ("Target 5 Feb, replacing the previous 29 Jan date.", "covered"),
         ("Target 5 Feb. 29 Jan (original) no longer holds.", "covered"),
         ("Target 29 Jan (moved to 5 Feb).", "covered"),
         # Not history: the old date stated as the plan, or as the source of a move to it.
         ("Target 29 Jan, then 5 Feb if the vendor slips.", "contradicted"),
+        ("Target 29 Jan on the plan, then 5 Feb if the vendor slips.", "contradicted"),
+        ("Kickoff was last week, then 29 Jan is the target; 5 Feb is a fallback.", "contradicted"),
+        ("Target 29 Jan (8 Jan), 5 Feb is a fallback.", "contradicted"),
         ("Target 29 Jan (moved from 5 Feb).", "contradicted"),
         ("Target 29 Jan and the kickoff was last week; 5 Feb is a fallback.", "contradicted"),
     ],

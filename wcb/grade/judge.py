@@ -108,6 +108,16 @@ FOCUS_NEUTRAL_WORDS = GENERIC_WORDS | frozenset(
     also since until about current currently as""".split()
 )
 
+#: Words that say whether the worker has agreed to an item rather than what it is ("confirm
+#: whether you can take it on", "not yet accepted"). Inputs often leave an incoming request
+#: unanswered, so an answer may hedge on it either way; `heuristic_same_item` ignores these
+#: words in a prediction unless the gold item itself uses them.
+ACCEPTANCE_WORDS = frozenset(
+    """accept accepted accepting acceptance agree agreed agreeing confirm confirmed confirming
+    whether decide decline declining respond reply request requested asked ask not yet formally
+    commitment committed commit if then can push back so resolve""".split()
+)
+
 #: Prediction fields read as free text when matching (besides `text`). Other fields, such as a
 #: priority item's `why` or fields the schema does not define, are never read.
 PRED_TEXT_FIELDS = ("text", "counterparty")
@@ -175,7 +185,10 @@ class HeuristicJudge:
     Tokens are content words (`match_tokens`: no stopwords, no single letters, plural `s`
     stripped). For `same_item`, a month or weekday name the two sides share does not count as
     shared (`common`). The prediction is its `text` and `counterparty`; other fields are never
-    read. `same_item` matches when any of these holds:
+    read. Words about whether the worker has agreed to the item (`ACCEPTANCE_WORDS`: "confirm
+    whether you can take it on", "not yet accepted") are dropped from the prediction unless the
+    gold item uses them, so hedging on an unanswered request neither helps nor hurts.
+    `same_item` matches when any of these holds:
 
     1. *keyword route*: some informative gold keyword phrase (not only month or weekday names,
        and not only names that appear capitalized in the description, such as a project code
@@ -264,7 +277,9 @@ def heuristic_same_item(pred: dict, gold: dict) -> bool:
     full = pred_text(pred, full=True)
     desc = gold_text(gold)
     g = match_tokens(desc)
-    p_full, p_core = match_tokens(full), match_tokens(pred_text(pred, full=False))
+    hedge = ACCEPTANCE_WORDS - gold_vocabulary(gold)
+    p_full = match_tokens(full) - hedge
+    p_core = match_tokens(pred_text(pred, full=False)) - hedge
     keywords = [k for k in gold.get("keywords") or [] if isinstance(k, str) and k.strip()]
     if (
         g
@@ -301,6 +316,7 @@ def different_objects(desc: str, pred_text_: str) -> bool:
     still have at least two words, they describe different objects of the same project:
     "Send Ottavio the course assistant discovery interview guide" vs "... stakeholder map".
     Single leftover words are allowed because they are often synonyms ("doc" / "document").
+    The prediction's `ACCEPTANCE_WORDS` are ignored, as in `heuristic_same_item`.
     """
     names = name_tokens(desc) | name_tokens(pred_text_)  # capitals mark names on either side
 
@@ -308,7 +324,8 @@ def different_objects(desc: str, pred_text_: str) -> bool:
         first = match_tokens(" ".join(_WORD.findall(normalize(text))[:1]))
         return match_tokens(text) - names - first - CALENDAR_WORDS
 
-    g, p = tokens(desc), tokens(pred_text_)
+    g = tokens(desc)
+    p = tokens(pred_text_) - (ACCEPTANCE_WORDS - match_tokens(desc))
     shared = g & p
     return len(g - shared) >= 2 and len(p - shared) >= 2
 

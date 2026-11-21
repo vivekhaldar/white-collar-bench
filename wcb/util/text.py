@@ -154,6 +154,12 @@ MOVE_WORDS = frozenset(
 )
 #: "29 Jan (moved to 5 Feb)": these, followed by `to`, inside a parenthesis right after a value.
 MOVE_TO_WORDS = MOVE_WORDS | frozenset("replaced updated corrected".split())
+#: A short phrase starting with one of these may sit between a moved value and `then`, saying
+#: when the move happened: "moved from 15 Dec to 22 Dec on 8 Nov, then to 31 Dec".
+WHEN_WORDS = frozenset("on in at by during".split())
+WHEN_PHRASE_MAX = 5
+#: "it was 15 Dec, then 22 Dec": the most tokens one link of such a chain may have.
+CHAIN_LINK_MAX = 4
 _SENTENCE_BREAKS = frozenset(".!?")
 
 
@@ -168,11 +174,15 @@ def stale_history(norm: str, start: int, end: int) -> bool:
       between them ("the original 29 Jan date");
     * after it, in its clause and before any `COORDINATORS` word, the first verb is a past one
       (`PAST_VERBS`, not `PRESENT_VERBS`): "the 78/74 in the 4 March email were v1 totals";
-    * an arrow follows it: "1 Nov -> 12 Nov -> 7 Dec";
+    * an arrow follows it, possibly after a short parenthesis: "1 Nov -> 12 Nov -> 7 Dec",
+      "1 Nov -> 12 Nov (13 Sep) -> 24 Nov";
+    * it follows `then` (or `then to`) in a sentence whose chain starts with a
+      `HISTORY_MARKERS` word: "it was 15 Dec, then 22 Dec" (`_then_after_history`);
     * a parenthesis follows it and opens with a `PAREN_HISTORY_LABELS` word, or with a
       `MOVE_TO_WORDS` word and then `to`: "29 Jan (original)", "29 Jan (moved to 5 Feb)";
-    * `then` follows it (after an optional comma) in a sentence with a `MOVE_WORDS` word
-      before it: "moved from 1 Nov to 12 Nov, then 24 Nov, then 7 Dec".
+    * `then` follows it (after an optional comma, and an optional short `WHEN_WORDS` phrase
+      such as "on 8 Nov") in a sentence with a `MOVE_WORDS` word before it: "moved from
+      1 Nov to 12 Nov, then 24 Nov, then 7 Dec", "moved to 22 Dec on 8 Nov, then to 31 Dec".
     """
     if framing(norm, start, end, finished=True) == "history":
         return True
@@ -184,6 +194,12 @@ def stale_history(norm: str, start: int, end: int) -> bool:
             return True
     after = [t for t, _, _ in marked_tokens(norm[end:])]
     if after and after[0] in ("->", "=>"):
+        return True
+    if after[:1] == ["("] and ")" in after[1:WHEN_PHRASE_MAX + 2]:  # "12 Nov (13 Sep) -> 24 Nov"
+        close = after.index(")")
+        if after[close + 1:close + 2] in (["->"], ["=>"]):
+            return True
+    if _then_after_history(before):
         return True
     if after and after[0] == "(":
         inside = after[1:4]
@@ -198,7 +214,12 @@ def stale_history(norm: str, start: int, end: int) -> bool:
             return True
         if tok in PRESENT_VERBS or tok in CURRENT_MARKERS:
             break
-    rest = after[1:] if after[:1] == [","] else after
+    rest = after
+    if rest[:1] and rest[0] in WHEN_WORDS:  # "to 22 Dec on 8 Nov, then 31 Dec"
+        stop = next((i for i, t in enumerate(rest) if t == "then" or t in CLAUSE_BREAKS), len(rest))
+        if stop <= WHEN_PHRASE_MAX:
+            rest = rest[stop:]
+    rest = rest[1:] if rest[:1] == [","] else rest
     if rest[:1] == ["then"]:
         for tok, _, _ in reversed(before):
             if tok in _SENTENCE_BREAKS:
@@ -206,6 +227,30 @@ def stale_history(norm: str, start: int, end: int) -> bool:
             if tok in MOVE_WORDS:
                 return True
     return False
+
+
+def _then_after_history(before: list[tuple[str, int, int]]) -> bool:
+    """True when the value follows `then` (or `then to`) in a chain whose start is framed as
+    history: "it was 15 Dec, then 22 Dec", "It was 14 Oct, then 1 Nov, then 15 Nov". Each link
+    of the chain back to the `HISTORY_MARKERS` word must be a short dated value (at most
+    `CHAIN_LINK_MAX` tokens, a comma included, one of them a number), so "Kickoff was last
+    week, then 29 Jan is the target" is not a chain."""
+    toks = [t for t, _, _ in before]
+    while True:
+        if toks[-1:] == ["to"]:
+            toks = toks[:-1]
+        if toks[-1:] != ["then"]:
+            return False
+        toks = toks[:-1]
+        link: list[str] = []
+        while toks and toks[-1] != "then" and toks[-1] not in HISTORY_MARKERS:
+            if toks[-1] in _SENTENCE_BREAKS or toks[-1] in CURRENT_MARKERS or toks[-1] == "(":
+                return False
+            link.append(toks.pop())
+        if not toks or len(link) > CHAIN_LINK_MAX or not any(t.isdigit() for t in link):
+            return False
+        if toks[-1] in HISTORY_MARKERS:
+            return True
 
 
 #: A value after one of these words in its clause is negated ("not 76", "no longer active").
