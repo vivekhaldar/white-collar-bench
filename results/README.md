@@ -16,6 +16,9 @@ Reduced-suite runs (WCB-lite and WCB-micro; [reduced suites](../docs/lite.md)), 
 | 2026-11-21 | Claude Sonnet 5.5 / Pi 1.5.2 | 83.8 | 71.1 | 85.5 | 67.0 | [Report](2026-11-21-claude-5.5-pi-lite/README.md) |
 | 2026-11-21 | Claude Haiku 5.5 / Pi 1.5.2 | 81.4 | 64.7 | 83.9 | 64.8 | [Report](2026-11-21-claude-5.5-pi-lite/README.md) |
 | 2026-11-21 | GPT-6.1 Sol / Pi 1.5.2 | 69.3 | 58.5 | 70.8 | 57.2 | [Report](2026-11-21-gpt-6.1-sol-pi-lite/README.md) |
+| 2026-11-21 | Claude Opus 5.5 / Pi 1.5.2 | 82.5 | 67.3 | 82.7 | 67.0 | [Report](2026-11-21-claude-opus-5.5-pi-lite/README.md) |
+
+These are original-scorer scores. Rescored with the judge fixes in `ec9ff3d`, lite A / B is Opus 87.5 / 72.4, Sonnet 85.4 / 71.3, Haiku 82.8 / 65.3 and Sol 75.3 / 62.3; the [four-model comparison](2026-11-21-lite-model-comparison/README.md) has the details, costs and a slide deck.
 
 A cross-run [error analysis](2026-11-21-error-analysis-deepseek-qwen/README.md) breaks down where both runs lost points, by component, question type, challenge, world and episode position, and separates model errors from documented grader limitations.
 

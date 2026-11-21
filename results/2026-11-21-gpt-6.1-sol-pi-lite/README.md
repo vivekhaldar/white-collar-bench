@@ -4,6 +4,8 @@
 
 Run on 21 November 2026, 21:54–22:23 UTC. [Reduced suite](../../docs/lite.md): the 11 public worlds, first two episode days, one repeat, the unchanged heuristic scorer at benchmark `eb0e9cd` (gold v5). The user asked for GPT-6.2 Sol, which the LiteLLM proxy does not serve; 6.1 was run instead. All worlds, people and organizations are synthetic.
 
+> **Rescored.** The judge fixes in `ec9ff3d` (date-history chains and acceptance hedges) change these scores to 75.3 / 62.3 (lite A / B); issue 1's focus answers and issue 2's status answers now get credit. This report keeps the original-scorer numbers; see the [four-model comparison](../2026-11-21-lite-model-comparison/README.md).
+
 ## Results
 
 | Model | Track | WCB-lite | 95% CI (worlds) | WCB-micro | Synthesis (oracle store) | Ingestion cost | SIS |
@@ -114,7 +116,7 @@ Sol's point answers are as accurate as Claude's on Track A (0.94).
 2. **Date-history framing.** The heuristic judge treats "moved from X to Y, then to Z" as stating Y as current. Correct, well-framed answers are zeroed (gen-s1-w1 q-002 and gen-s8-w4 q-002 for Sol). The history-framing rules in `wcb/util/text.py` and the rubric judge should recognize chained moves.
 3. **Change matching** still under-credits long, qualified event descriptions, as already documented.
 
-These change grading, so fixes need a new scorer and gold version. Rescoring the saved answers will show how much of Sol's gap they explain.
+Issues 1 and 2 are fixed in the judge (`ec9ff3d`): the matcher ignores acceptance hedges, and the rubric reads dated and `was … then` chains as history. Rescoring the saved answers moves Sol to 75.3 / 62.3 (lite A / B): +2.1 / +1.6 from date-history chains and +3.9 / +2.3 from acceptance hedges. The contract–generator disagreement in issue 1 remains for the next gold version; see the [four-model comparison](../2026-11-21-lite-model-comparison/README.md).
 
 ## Configuration
 

@@ -2,6 +2,8 @@
 
 **Sonnet 5.5 beats Haiku 5.5 on both tracks: WCB-lite Track A 83.8 vs 81.4, Track B 71.1 vs 64.7. Haiku costs about a quarter as much.** These are [reduced-suite](../../docs/lite.md) scores: the 11 public worlds, first two episode days, one repeat, the unchanged heuristic scorer at benchmark `babaf49` (gold v5). Compare them only with other WCB-lite scores, never with full WCB scores. Run on 21 November 2026, 19:37–20:52 UTC. All worlds, people and organizations are synthetic.
 
+> **Rescored.** The judge fixes in `ec9ff3d` (date-history chains and acceptance hedges) change these scores to Haiku 82.8 / 65.3 and Sonnet 85.4 / 71.3 (lite A / B). This report keeps the original-scorer numbers; see the [four-model comparison](../2026-11-21-lite-model-comparison/README.md).
+
 ## Results
 
 | Model | Track | WCB-lite | 95% CI (worlds) | WCB-micro | Synthesis (oracle store) | Ingestion cost | SIS |

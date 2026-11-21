@@ -1,0 +1,159 @@
+{
+  "finished_at": "2026-11-21T23:05:49.011267+00:00",
+  "outcomes": [
+    {
+      "model": "opus",
+      "track": "A",
+      "world": "dev/gen-s8-w4",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:48:36.030952+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "A",
+      "world": "dev/gen-s9-large",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:48:50.370668+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "A",
+      "world": "dev/gen-s4-w2",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:49:13.474126+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "B",
+      "world": "dev/gen-s4-w2",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:49:41.120767+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "B",
+      "world": "dev/gen-s8-w4",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:50:35.238494+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "B",
+      "world": "dev/gen-s9-large",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:52:08.835339+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "A",
+      "world": "pilot",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:54:07.707086+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "A",
+      "world": "dev/gen-s7-w2",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:55:03.453583+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "B",
+      "world": "pilot",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:56:23.544610+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "B",
+      "world": "dev/gen-s1-w1",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:56:32.790933+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "B",
+      "world": "dev/gen-s7-w2",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:56:38.401261+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "A",
+      "world": "dev/gen-s1-w1",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:56:41.697127+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "B",
+      "world": "dev/gen-s2-w1",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:58:16.618532+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "A",
+      "world": "dev/gen-s2-w1",
+      "returncode": 0,
+      "finished_at": "2026-11-21T22:59:10.245012+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "A",
+      "world": "dev/gen-s3-w1",
+      "returncode": 0,
+      "finished_at": "2026-11-21T23:01:42.807993+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "B",
+      "world": "dev/gen-s3-w1",
+      "returncode": 0,
+      "finished_at": "2026-11-21T23:01:48.096057+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "A",
+      "world": "dev/gen-s10-w2-small",
+      "returncode": 0,
+      "finished_at": "2026-11-21T23:01:48.937115+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "B",
+      "world": "dev/gen-s10-w2-small",
+      "returncode": 0,
+      "finished_at": "2026-11-21T23:02:16.486800+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "A",
+      "world": "dev/gen-s6-w1",
+      "returncode": 0,
+      "finished_at": "2026-11-21T23:02:24.574326+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "B",
+      "world": "dev/gen-s6-w1",
+      "returncode": 0,
+      "finished_at": "2026-11-21T23:03:26.523138+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "B",
+      "world": "dev/gen-s5-small",
+      "returncode": 0,
+      "finished_at": "2026-11-21T23:04:27.505662+00:00"
+    },
+    {
+      "model": "opus",
+      "track": "A",
+      "world": "dev/gen-s5-small",
+      "returncode": 0,
+      "finished_at": "2026-11-21T23:05:17.084041+00:00"
+    }
+  ]
+}
