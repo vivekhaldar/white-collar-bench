@@ -9,6 +9,13 @@ evaluations, not verified private-test leaderboard submissions.
 | 2026-11-10–11 | Qwen3.8-27B / Pi 1.5.2 | 72.3422 | 54.9968 | [Detailed report](2026-11-11-qwen3.8-27b-pi/README.md) |
 | 2026-11-11–12 | DeepSeek V4.1 Flash 1017 / Pi 1.5.2 | 84.6439 | 67.4833 | [Detailed report](2026-11-11-deepseek-v4.1-flash-1017-pi/README.md) |
 
+Reduced-suite runs (WCB-lite and WCB-micro; [reduced suites](../docs/lite.md)), comparable only with each other:
+
+| Run | Model / harness | Lite A | Lite B | Micro A | Micro B | Record |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 2026-11-21 | Claude Sonnet 5.5 / Pi 1.5.2 | 83.8 | 71.1 | 85.5 | 67.0 | [Report](2026-11-21-claude-5.5-pi-lite/README.md) |
+| 2026-11-21 | Claude Haiku 5.5 / Pi 1.5.2 | 81.4 | 64.7 | 83.9 | 64.8 | [Report](2026-11-21-claude-5.5-pi-lite/README.md) |
+
 A cross-run [error analysis](2026-11-21-error-analysis-deepseek-qwen/README.md) breaks down where both runs lost points, by component, question type, challenge, world and episode position, and separates model errors from documented grader limitations.
 
 The table uses **original scores from each run's unchanged scorer**. The Qwen report separately records the

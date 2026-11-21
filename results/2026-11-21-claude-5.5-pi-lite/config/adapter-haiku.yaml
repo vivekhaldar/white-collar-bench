@@ -1,0 +1,11 @@
+name: pi-litellm-claude-haiku-5.5
+version: pi-1.5.2-runtime-v2
+model: litellm/claude-haiku-5.5
+description: Fresh Pi sessions over a LiteLLM proxy (Anthropic Messages API), medium adaptive thinking, pinned document readers, bounded bash, 120-turn budget, provider key kept outside the sandbox
+cmd: [python, -I, "{adapter_dir}/pi_litellm.py"]
+ingest:
+  timeout_s: 1800
+query:
+  timeout_s: 900
+env: {WCB_CLAUDE_MODEL: claude-haiku-5.5}
+env_passthrough: [LITELLM_API_KEY, WCB_PI_NODE_MODULES, WCB_TOOLS_VENV]
