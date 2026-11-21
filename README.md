@@ -99,6 +99,7 @@ To test your own agent, write a small adapter file that tells the runner how to 
 |---|---|
 | Understand why the benchmark exists | [Motivation and related work](docs/motivation.md), [design](docs/design.md) |
 | Install and run an agent | [Running the benchmark](docs/running.md), [adapters](docs/adapters.md) |
+| Get a cheap signal before a full run | [Reduced suites: WCB-lite and WCB-micro](docs/lite.md) |
 | Know what my agent sees and must write | [Data formats](docs/formats.md), [store contract](docs/contract.md) |
 | Understand how answers are graded | [Scoring](docs/scoring.md), [judges](docs/judge.md) |
 | See results or submit my own | [Results](results/README.md), [submissions and the leaderboard](docs/leaderboard.md) |

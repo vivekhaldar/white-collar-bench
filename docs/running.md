@@ -151,6 +151,7 @@ wcb run --adapter adapters/my-agent.yaml --split dev --repeats 3 --out runs/my-a
 | `--out DIR` | Run directory. It must be new or empty unless you pass `--resume`. |
 | `--oracle` / `--no-oracle` | Track A: also ask each checkpoint's questions against the oracle store (default on). |
 | `--max-days N` | Play only the first N episode days and their checkpoints. Useful for a quick check. |
+| `--suite lite\|micro` | Run a reduced suite: a fixed set of worlds and days, scored as `WCB-lite` or `WCB-micro` for cheap comparisons ([reduced suites](lite.md)). Sets the worlds and `--max-days`. |
 | `--workspace-root DIR` | Where temporary workspaces are created (default: the system temp directory). |
 | `--resume` | Continue an interrupted run (see §6). |
 | `--skip-ingest` | Run only oracle query sessions (see §7). |
@@ -338,7 +339,7 @@ Replace `WCB_AGENT_IMAGE` and `WCB_AGENT_CMD` with your own image and entry comm
 |---|---|
 | `wcb run --adapter A --world W --out DIR` | Run an agent over worlds (`--split dev`, `--track B`, `--repeats N`, `--resume`, `--skip-ingest` for oracle-only runs) |
 | `wcb doctor --adapter A [--track B]` | Smoke-test an adapter on the two-day mini world, with a checklist and hints |
-| `wcb score DIR [--judge llm --judge-model M]` | Grade a run and write `report.json` and `report.md` |
+| `wcb score DIR [--judge llm --judge-model M]` | Grade a run and write `report.json` and `report.md` (`--suite lite` scores only a reduced suite's worlds and days; [reduced suites](lite.md)) |
 | `wcb judge sample\|label\|run\|agreement` | Sample judge decisions from scored runs, label them by hand or with a judge, and report Cohen's κ ([judges](judge.md#measuring-judge-agreement)) |
 | `wcb validate store DIR` | Check a store against the Track A contract |
 | `wcb validate answers FILE --questions Q` | Check an answers file |

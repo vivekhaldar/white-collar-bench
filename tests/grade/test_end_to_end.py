@@ -314,3 +314,25 @@ def test_scoring_notes_gold_that_changed_since_the_run(built_world, tmp_path):
     (run / "run.json").write_text(json.dumps(meta))
     notes = score_run(run).data["notes"]
     assert any("gold differs" in n and "sources changed" in n for n in notes), notes
+
+
+def test_full_run_scored_as_a_suite(built_world, tmp_path, monkeypatch):
+    from wcb import suites
+
+    monkeypatch.setitem(suites.SUITES, "tiny", suites.Suite("tiny", ("mini",), max_days=1))
+    run = fabricate_run(tmp_path / "run", built_world, ["perfect"])
+    # Ruin the second day: a full score drops, the one-day suite does not see it.
+    cp2 = built_world.checkpoints()[1]["id"]
+    write_json(run / built_world.id / "r1" / "answers" / f"{cp2}.json",
+               abstain_all(visible_questions(gold_doc(built_world, cp2))))
+    full = score_run(run, out_dir=tmp_path / "full").data
+    lite = score_run(run, out_dir=tmp_path / "lite", suite="tiny").data
+    assert full["headline"]["label"] == "WCB" and full["headline"]["wcb"] < 90
+    assert lite["headline"]["label"] == "WCB-tiny" and lite["headline"]["wcb"] >= 95
+    assert [c["id"] for c in lite["worlds"][0]["checkpoints"]] == ["cp1"]
+    assert lite["efficiency"]["summary"]["ingest"]["sessions"] == 1
+    assert "WCB-tiny score (Track A)" in Report(lite).summary_text()
+
+    monkeypatch.setitem(suites.SUITES, "other", suites.Suite("other", ("mini", "absent"), 1))
+    with pytest.raises(ValueError, match="no results for absent"):
+        score_run(run, out_dir=tmp_path / "x", suite="other")

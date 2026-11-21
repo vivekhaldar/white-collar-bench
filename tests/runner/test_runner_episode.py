@@ -797,3 +797,16 @@ def test_world_must_be_given(tmp_path, make_adapter):
     )
     with pytest.raises(ValueError, match="--world"):
         run(cfg)
+
+
+def test_suite_sets_worlds_and_days_and_rejects_overrides(tmp_path):
+    from wcb.suites import SUITES
+
+    cfg = RunConfig(adapter=Path("a.yaml"), worlds=[], split=None, track="A", repeats=1,
+                    out=tmp_path, suite="micro")  # fmt: skip
+    assert cfg.worlds == list(SUITES["micro"].worlds) and cfg.max_days == 2
+    assert episode._options(cfg)["suite"] == "micro"
+    with pytest.raises(ValueError, match="sets the worlds"):
+        RunConfig(adapter=Path("a.yaml"), worlds=["pilot"], split=None, track="A", repeats=1,
+                  out=tmp_path, suite="lite")  # fmt: skip
+    assert episode._merge_options({"suite": "lite"}, {"suite": None})["suite"] is None

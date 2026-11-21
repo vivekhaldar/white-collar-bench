@@ -20,6 +20,8 @@ semantic grading limitations, a meter-finalization discrepancy and a credential 
 with sanitized shareable transcripts; unredacted evidence is
 quarantined and excluded from downloadable archives.
 
+Every full run can also be rescored as a [reduced suite](../docs/lite.md) (`wcb score <run> --suite lite`); the lite and micro scores of these two runs are recorded there.
+
 For future entries, record the benchmark revision, worlds, track, repeats, model/provider,
 harness/runtime, prompts and budgets, scorer/judge version, original scores and uncertainty,
 cost, failures, and evidence provenance. Preserve original results when regrading. Mark

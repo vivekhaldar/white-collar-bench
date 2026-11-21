@@ -12,6 +12,7 @@ import sys
 from pathlib import Path
 
 from wcb import __version__
+from wcb.suites import SUITES
 
 
 def _print_issues(issues, as_json: bool) -> int:
@@ -143,6 +144,7 @@ def cmd_run(a) -> int:
         meter_bind=a.meter_bind,
         meter_host=a.meter_host,
         build=a.build,
+        suite=a.suite,
     )
     return run(cfg)
 
@@ -151,7 +153,8 @@ def cmd_score(a) -> int:
     from wcb.grade.score import score_run
 
     report = score_run(
-        Path(a.run_dir), judge=a.judge, judge_model=a.judge_model, out_dir=Path(a.out) if a.out else None
+        Path(a.run_dir), judge=a.judge, judge_model=a.judge_model,
+        out_dir=Path(a.out) if a.out else None, suite=a.suite,
     )
     print(report.summary_text())
     return 0
@@ -352,6 +355,8 @@ def build_parser() -> argparse.ArgumentParser:
     r.add_argument("--adapter", required=True)
     r.add_argument("--world", action="append", help="world path or name (repeatable)")
     r.add_argument("--split", help="run every world in a split, e.g. dev")
+    r.add_argument("--suite", choices=sorted(SUITES),
+                   help="run a reduced suite (sets the worlds and --max-days; docs/lite.md)")
     r.add_argument("--track", choices=["A", "B"], default="A")
     r.add_argument("--repeats", type=int, default=1)
     r.add_argument("--out", required=True)
@@ -382,6 +387,8 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--judge", choices=["heuristic", "llm"], default="heuristic")
     s.add_argument("--judge-model", help="model for --judge llm (see docs/judge.md)")
     s.add_argument("--out", help="output directory (default: <run_dir>/scores)")
+    s.add_argument("--suite", choices=sorted(SUITES),
+                   help="score only a reduced suite's worlds and days, e.g. a full run as lite")
     s.set_defaults(fn=cmd_score)
 
     b = sub.add_parser("bundle", help="pack a scored run into a .tar.gz for reporting results")

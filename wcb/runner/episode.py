@@ -102,6 +102,21 @@ class RunConfig:
     meter_bind: str = "127.0.0.1"  # address the proxy listens on
     meter_host: str | None = None  # address sessions use to reach it (default: meter_bind)
     build: bool = True  # build worlds whose gold is missing or stale (wcb world build)
+    suite: str | None = None  # a reduced suite (wcb/suites.py); sets the worlds and max_days
+
+    def __post_init__(self) -> None:
+        if self.suite is None:
+            return
+        from wcb.suites import get_suite
+
+        s = get_suite(self.suite)
+        if self.worlds or self.split or self.max_days is not None:
+            raise ValueError(
+                f"--suite {s.name} sets the worlds and --max-days itself; drop --world, --split "
+                "and --max-days"
+            )
+        self.worlds = list(s.worlds)
+        self.max_days = s.max_days
 
 
 # ====================================================================== entry point
@@ -438,6 +453,7 @@ def _options(cfg: RunConfig) -> dict[str, Any]:
         "skip_ingest": cfg.skip_ingest,
         "workspace_root": str(cfg.workspace_root) if cfg.workspace_root else None,
         "meter": cfg.meter,
+        "suite": cfg.suite,
     }
 
 
@@ -457,6 +473,8 @@ def _merge_options(old: dict[str, Any], new: dict[str, Any]) -> dict[str, Any]:
         "max_days": None if None in days else max(int(d) for d in days),
         "skip_ingest": bool(old.get("skip_ingest")) and bool(new.get("skip_ingest")),
         "meter": bool(old.get("meter")) or bool(new.get("meter")),
+        # A run stays a suite run only while every invocation ran that same suite.
+        "suite": old.get("suite") if old.get("suite") == new.get("suite") else None,
     }
 
 

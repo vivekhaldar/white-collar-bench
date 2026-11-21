@@ -48,6 +48,7 @@ from wcb.grade import report as report_render
 from wcb.grade.answers import QuestionScore, ScoreContext, score_answers
 from wcb.grade.integrity import METRICS, store_integrity
 from wcb.grade.judge import make_judge
+from wcb.suites import Suite, get_suite
 from wcb.util.io import read_json, write_json, write_text
 from wcb.world.model import World
 
@@ -92,8 +93,12 @@ def score_run(
     judge: str = "heuristic",
     judge_model: str | None = None,
     out_dir: Path | None = None,
+    suite: str | None = None,
 ) -> Report:
     """Grade the run in `run_dir`, write `report.json` and `report.md`, and return the report.
+
+    `suite` (wcb/suites.py) scores only that suite's worlds and days, so a full run also yields
+    its suite score. A run made with `wcb run --suite` is scored as its suite without it.
 
     `judge` is `heuristic` or `llm` (`wcb.grade.judge.make_judge`); LLM decisions are cached in
     `<out_dir>/judge-cache.jsonl`. `out_dir` defaults to `<run_dir>/scores`. Raises
@@ -104,7 +109,7 @@ def score_run(
     out_dir = Path(out_dir) if out_dir else run_dir / "scores"
     out_dir.mkdir(parents=True, exist_ok=True)
     judge_obj = make_judge(judge, judge_model, cache_path=out_dir / "judge-cache.jsonl")
-    plan = RunPlan.from_meta(run_dir, meta)
+    plan = RunPlan.from_meta(run_dir, meta, suite=suite)
 
     acc = Accumulator()
     worlds = [score_world(plan, entry, judge_obj, acc) for entry in plan.world_entries]
@@ -145,9 +150,10 @@ class RunPlan:
     max_days: int | None
     world_entries: list[dict]
     notes: list[str] = field(default_factory=list)
+    suite: Suite | None = None
 
     @classmethod
-    def from_meta(cls, run_dir: Path, meta: dict) -> RunPlan:
+    def from_meta(cls, run_dir: Path, meta: dict, suite: str | None = None) -> RunPlan:
         track = str(meta.get("track") or "A").upper()
         options = meta.get("options") or {}
         skip_ingest = bool(options.get("skip_ingest"))
@@ -169,15 +175,39 @@ class RunPlan:
         if not entries:
             notes.append("run.json lists no worlds; nothing was scored")
         max_days = options.get("max_days")
+        max_days = int(max_days) if max_days else None
+        suite_obj = None
+        if suite or options.get("suite"):
+            suite_obj = get_suite(suite or options["suite"])
+            ran = {str(w["id"]) for w in entries}
+            missing = [w for w in suite_obj.world_ids if w not in ran]
+            if missing:
+                raise ValueError(
+                    f"cannot score {run_dir} as suite {suite_obj.name}: it has no results for "
+                    f"{', '.join(missing)}"
+                )
+            if max_days is not None and max_days < suite_obj.max_days:
+                raise ValueError(
+                    f"cannot score {run_dir} as suite {suite_obj.name}: it played {max_days} "
+                    f"day(s), the suite needs {suite_obj.max_days}"
+                )
+            entries = [w for w in entries if str(w["id"]) in suite_obj.world_ids]
+            max_days = suite_obj.max_days
+            notes.append(
+                f"scored as suite {suite_obj.name} ({len(entries)} worlds, first {max_days} "
+                f"episode day(s)): the headline is {suite_obj.label}, comparable only with other "
+                f"{suite_obj.label} scores (docs/lite.md)"
+            )
         return cls(
             run_dir=Path(run_dir),
             meta=meta,
             track=track,
             agent=not skip_ingest,
             oracle=oracle,
-            max_days=int(max_days) if max_days else None,
+            max_days=max_days,
             world_entries=entries,
             notes=notes,
+            suite=suite_obj,
         )
 
 
@@ -402,7 +432,11 @@ def score_episode(
         if plan.agent and plan.track == "A"
         else None
     )
-    acc.sessions += collect_sessions(ep_dir, gold.world.id, k)
+    # Sessions after the last scored day (a full run scored as a suite) do not count.
+    acc.sessions += [
+        r for r in collect_sessions(ep_dir, gold.world.id, k)
+        if not r["date"] or r["date"] <= gold.days[-1]
+    ]
     return episode
 
 
@@ -761,6 +795,8 @@ def assemble_report(
     primary = "agent" if plan.agent else "oracle"
     headline = {
         "track": plan.track,
+        "suite": plan.suite.name if plan.suite else None,
+        "label": plan.suite.label if plan.suite else "WCB",
         "wcb": wcb,
         "wcb_ci95": bootstrap_ci(world_scores),
         "synthesis": synthesis,
@@ -786,6 +822,7 @@ def assemble_report(
             "started_at": meta.get("started_at"),
             "finished_at": meta.get("finished_at"),
             "options": meta.get("options") or {},
+            "suite": plan.suite.describe() if plan.suite else None,
             "scored": {"agent": plan.agent, "oracle": plan.oracle},
         },
         "judge": {

@@ -370,10 +370,10 @@ For each group the report gives the session count, `ok` / `timeouts` / `failures
 | Key | Content |
 |---|---|
 | `report_version`, `scored_at`, `scorer` | Report layout version (`0.1`), UTC time of scoring, `{version, wcb_version}` |
-| `run` | `{dir, track, adapter, wcb_version, status, started_at, finished_at, options, scored: {agent, oracle}}` from `run.json` |
+| `run` | `{dir, track, adapter, wcb_version, status, started_at, finished_at, options, suite, scored: {agent, oracle}}` from `run.json` |
 | `judge` | `{kind, name, model, calls}`; `calls` counts LLM calls made (cache misses × samples) |
 | `output` | `{dir}` where the report was written |
-| `headline` | `{track, wcb, wcb_ci95, synthesis, synthesis_ci95, ingestion_cost, sis, sis_final, n_worlds, n_episodes, n_questions}`; `n_questions` counts graded agent question instances (oracle ones for `--skip-ingest`) |
+| `headline` | `{track, suite, label, wcb, wcb_ci95, synthesis, synthesis_ci95, ingestion_cost, sis, sis_final, n_worlds, n_episodes, n_questions}`; `n_questions` counts graded agent question instances (oracle ones for `--skip-ingest`); `suite` is the [reduced suite](lite.md) scored (`null` for a normal run) and `label` the headline's name, `WCB` or `WCB-<suite>` |
 | `worlds[]` | `{id, path, days, n_days, checkpoints[] (with day_index), score, synthesis, ingestion_cost, sis, sis_final, repeats[]}` |
 | `worlds[].repeats[]` | `{repeat, score, synthesis, ingestion_cost, checkpoints[], sis}`; each checkpoint is `{id, date, label, day_index, n_questions, score, score_buckets, synthesis, synthesis_buckets, ingestion_cost}`; `sis` is `null` or `{days[], mean, final, final_date}` |
 | `worlds[].repeats[].sis.days[]` | `{date, sis, entity_f1, loop_f1, field_accuracy, freshness, groundedness, validity, errors: {entity_fp, entity_fn, wrong_merges, loop_fp, loop_fn, stale, ungrounded, validator_errors}, missing_entities, false_positive_records, missing_loops, unmatched_loop_records, stale_records}` |

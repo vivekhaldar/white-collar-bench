@@ -77,7 +77,8 @@ def summary_text(data: dict) -> str:
         f"{h.get('n_worlds', 0)} world(s), {h.get('n_episodes', 0)} episode(s), "
         f"{h.get('n_questions', 0)} question(s)"
     )
-    lines = [f"WCB score (Track {track}): {fmt(h.get('wcb'))} {fmt_ci(h.get('wcb_ci95'))}".rstrip()]
+    label = h.get("label") or "WCB"
+    lines = [f"{label} score (Track {track}): {fmt(h.get('wcb'))} {fmt_ci(h.get('wcb_ci95'))}".rstrip()]
     lines[0] += f"  over {counts}"
     if h.get("synthesis") is not None or track == "A":
         lines.append(
@@ -137,13 +138,14 @@ def _header(data: dict) -> str:
 
 def _headline(data: dict) -> str:
     h = data.get("headline") or {}
+    label = h.get("label") or "WCB"
     rows = [
-        ["WCB score", f"{fmt(h.get('wcb'))} {fmt_ci(h.get('wcb_ci95'))}".strip()],
+        [f"{label} score", f"{fmt(h.get('wcb'))} {fmt_ci(h.get('wcb_ci95'))}".strip()],
         [
             "Synthesis score (oracle store)",
             f"{fmt(h.get('synthesis'))} {fmt_ci(h.get('synthesis_ci95'))}".strip(),
         ],
-        ["Ingestion cost (Synthesis - WCB)", fmt(h.get("ingestion_cost"))],
+        [f"Ingestion cost (Synthesis - {label})", fmt(h.get("ingestion_cost"))],
     ]
     if h.get("track") == "A":
         rows += [
@@ -162,6 +164,12 @@ def _headline(data: dict) -> str:
         + (
             "\n\nScores are on a 0-100 scale. The interval is a 95% bootstrap over worlds; "
             "with one world it is degenerate."
+            + (
+                f" This is a reduced-suite score ({h['suite']}): compare it only with other "
+                f"{label} scores, never with full WCB scores (docs/lite.md)."
+                if h.get("suite")
+                else ""
+            )
         )
     )
 
