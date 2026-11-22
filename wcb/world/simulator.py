@@ -1051,6 +1051,8 @@ class _Sim:
         self._what_counts[what.lower()] = n + 1
         what = what + _repeat_suffix(n)
         kws = _clean_keywords(keywords, what)
+        if not accepted and self.plan["generator"]["version"] >= 2:
+            summary = f"Suggested (not agreed): {what}"
         e = self._ev("commitment.create", t, summary, commitment=cid, kind=kind, what=what, debtor=debtor,
                      creditor=creditor, others=list(others), project=project, status=status, due=due,
                      accepted=accepted, basis=basis, keywords=kws)

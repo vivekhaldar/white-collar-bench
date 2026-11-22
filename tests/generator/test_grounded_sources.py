@@ -11,3 +11,10 @@ def test_hedged_offers_are_unaccepted_in_new_worlds():
     assert offers
     assert all(not e["accepted"] for e in offers)
 
+
+
+def test_suggested_summaries_preserve_the_original_endorsement():
+    sim = simulate(make_plan(5), 5)
+    suggested = [e for e in sim.events if e["type"] == "commitment.create" and not e["accepted"]]
+    assert suggested
+    assert all(e["summary"] == f"Suggested (not agreed): {e['what']}" for e in suggested)
