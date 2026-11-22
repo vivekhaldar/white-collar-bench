@@ -10,7 +10,8 @@ Tracks A and B, Pi harness), packed in results/2026-11-21-lite-model-comparison/
 lite-runs.tar.gz with only what scoring reads (answers, run.json, the checkpoint snapshot).
 Panel decisions come from the committed judge caches (rescored/v6-panel/*.jsonl.gz), so a
 rescore makes no model calls. Changed prompts from the high-severity fixes use the independent
-Luna/Sol in-session votes in regression/subscription-panel.jsonl.gz. Other missing decisions
+Luna/Sol in-session votes in regression/subscription-panel.jsonl.gz. Persistent split citation
+votes use an independent GPT-6 Sol referee. Other missing decisions
 are counted as `uncached`; with --allow-calls they are fetched (needs OPENAI_BASE_URL and
 OPENAI_API_KEY for the panel models, see docs/judge.md) and the cache is extended.
 
@@ -67,7 +68,7 @@ class ReplayJudge(LLMJudge):
         if self.cache_key(prompt) not in self._cache:
             fingerprint = hashlib.sha256((SYSTEM_PROMPT + "\n" + prompt).encode()).hexdigest()
             row = self.supplement.get(fingerprint)
-            if row and row["kind"] == what and row["prompt"] == prompt:
+            if row and row["kind"] == what and row["prompt"] == prompt and self.replacement in row["votes"]:
                 return parse(row["votes"][self.replacement])
         return super()._decide(what, prompt, parse, tie_order)
 
@@ -108,8 +109,11 @@ def rescore(runs: Path, model: str, track: str, allow_calls: bool, penalties: li
         for line in f:
             row = json.loads(line)
             supplement[row["id"]] = row
-    panel = PanelJudge([ReplayJudge(original, replacement, supplement)
-                        for original, replacement in zip(PANEL, ("gpt-6-luna", "gpt-6.1-sol"), strict=True)])
+    panel = PanelJudge(
+        [ReplayJudge(original, replacement, supplement)
+         for original, replacement in zip(PANEL, ("gpt-6-luna", "gpt-6.1-sol"), strict=True)],
+        citation_referee=ReplayJudge("openai:gpt-6-sol", "gpt-6-sol", supplement),
+    )
     for j in panel.panel:
         j._cache.update(cache)
     run = runs / model / f"track-{track}/measured"
@@ -122,10 +126,10 @@ def rescore(runs: Path, model: str, track: str, allow_calls: bool, penalties: li
     panel.recording(True)
     for entry in plan.world_entries:
         score_world(plan, entry, panel, Accumulator())
-    uncached = sum(len(j.pending) for j in panel.panel)
+    uncached = sum(len(j.pending) for j in panel.judges)
     if uncached and allow_calls:
         # New decisions go to a side file next to the committed cache; merge it by hand.
-        for j in panel.panel:
+        for j in panel.judges:
             j.cache_path = CACHES / f"judge-cache-{model}-track-{track}.new.jsonl"
         panel.fetch_pending()
         panel.recording(False)

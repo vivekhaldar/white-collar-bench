@@ -1096,17 +1096,21 @@ class PanelJudge:
     deterministic grader rejects are escalated the same way (`point`).
     """
 
-    def __init__(self, panel: list[LLMJudge]):
+    def __init__(self, panel: list[LLMJudge], *, citation_referee: LLMJudge | None = None):
         if not panel:
             raise ValueError("a panel needs at least one LLM judge")
         self.heuristic = HeuristicJudge()
         self.panel = panel
+        self.citation_referee = citation_referee
+        self.judges = [*panel, citation_referee] if citation_referee else panel
         self.name = "panel:" + "+".join(j.model_spec for j in panel)
+        if citation_referee:
+            self.name += f" (citation referee {citation_referee.model_spec})"
         self.escalated = 0
 
     @property
     def calls(self) -> int:
-        return sum(j.calls for j in self.panel)
+        return sum(j.calls for j in self.judges)
 
     def _agree(self, votes: list[Any]) -> Any:
         return votes[0] if all(v == votes[0] for v in votes) else None
@@ -1134,14 +1138,17 @@ class PanelJudge:
         return self._agree([j.citation(question, claim, evidence) for j in self.panel])
 
     def review_citation(self, question: str, claim: str, evidence: str) -> bool:
-        return self._agree([j.review_citation(question, claim, evidence) for j in self.panel]) is True
+        agreement = self._agree([j.review_citation(question, claim, evidence) for j in self.panel])
+        if agreement is None and self.citation_referee:
+            return self.citation_referee.review_citation(question, claim, evidence)
+        return agreement is True
 
     def recording(self, on: bool) -> None:
-        for j in self.panel:
+        for j in self.judges:
             j.pending = {} if on else None
 
     def fetch_pending(self, workers: int = 16) -> int:
-        return sum(j.fetch_pending(workers) for j in self.panel)
+        return sum(j.fetch_pending(workers) for j in self.judges)
 
 
 def load_cache(path: Path) -> dict[str, Any]:
@@ -1188,8 +1195,10 @@ def make_judge(
     if kind == "panel":
         samples = int(os.environ.get("WCB_JUDGE_SAMPLES", "") or 1)
         specs = [m.strip() for m in (model or DEFAULT_PANEL).split(",") if m.strip()]
+        referee = os.environ.get("WCB_CITATION_REFEREE")
         return PanelJudge(
-            [LLMJudge(make_client(m), samples=samples, cache_path=cache_path) for m in specs]
+            [LLMJudge(make_client(m), samples=samples, cache_path=cache_path) for m in specs],
+            citation_referee=LLMJudge(make_client(referee), samples=samples, cache_path=cache_path) if referee else None,
         )
     samples = int(os.environ.get("WCB_JUDGE_SAMPLES", "") or DEFAULT_SAMPLES)
     return LLMJudge(make_client(model or DEFAULT_LLM_JUDGE), samples=samples, cache_path=cache_path)

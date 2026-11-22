@@ -769,3 +769,18 @@ def test_panel_recording_pass_fills_the_cache(make_fake_client, tmp_path):
     assert panel.fetch_pending(workers=2) == 1
     assert panel.point("Who?", "peer", "a colleague on my team", {}) is True
     assert len(client.calls) == 1
+
+
+def test_citation_referee_only_decides_persistent_splits(make_fake_client):
+    from wcb.grade.judge import PanelJudge
+
+    yes = LLMJudge(make_fake_client(["YES"]))
+    no = LLMJudge(make_fake_client(["NO"]))
+    client = make_fake_client(["YES"])
+    referee = LLMJudge(client)
+    panel = PanelJudge([yes, no], citation_referee=referee)
+    assert panel.review_citation("Who is the meeting with?", "with Priya", "Attendees: Priya") is True
+    assert len(client.calls) == 1
+    agreed = PanelJudge([no, no], citation_referee=referee)
+    assert agreed.review_citation("Who owns it?", "Priya", "Someone else") is False
+    assert len(client.calls) == 1
