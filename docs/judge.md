@@ -295,7 +295,7 @@ judge = make_judge("llm", "anthropic:claude-opus-5-5", cache_path=Path("judge-ca
 scores = score_answers(read_json(".../gold/questions/cp2.json"), read_json("answers.json"), judge, ctx)
 ```
 
-For a disputed citation, the panel receives the question, the attached claim and an excerpt of the delivered source. Store records supply their underlying evidence. Both panelists must agree before the grader credits it. This vote affects citation precision only.
+For a disputed citation, the panel receives the question, the attached claim and an excerpt of the delivered source. Store records supply their underlying evidence. When the first votes split, both judges read a longer source passage with the worker identity and subject aliases and check the specific factual clause. A unanimous yes on either reading validates the citation. This vote affects citation precision only.
 
 Each `QuestionScore` carries `base` (before citations), `citation` and `score`, plus `details`: matches with per-attribute credit, rubric verdicts, invalid citations and validation problems.
 

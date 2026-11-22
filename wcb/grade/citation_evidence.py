@@ -143,4 +143,17 @@ def evidence_vote(question, answer, cite, item, ctx, judge, record_id, source_id
     words = match_tokens(query + " " + claim)
     passages = [evidence_excerpt(_source(ctx.world, aid), query + " " + claim) for aid in ids]
     passages = sorted(filter(None, passages), key=lambda p: -len(words & match_tokens(p)))
-    return bool(passages and judge.citation(query, claim, "\n\n".join(passages[:3])))
+    if not passages:
+        return False
+    decision = judge.citation(query, claim, "\n\n".join(passages[:3]))
+    if decision is not None or not hasattr(judge, "review_citation"):
+        return bool(decision)
+    # A split first read gets more source context, including project aliases used in the question.
+    subjects = [ctx.entities[e] for key, e in (question.get("params") or {}).items()
+                if key in {"person", "project"} and e in ctx.entities]
+    context = [ent["name"] + " (" + ", ".join(ent.get("surface_forms") or []) + ")" for ent in subjects]
+    who = ctx.entities.get(ctx.worker, {}).get("name", "")
+    review = f"Question: {query}\nWorker: {who}\nQuestion subjects and aliases: " + ", ".join(context)
+    sources = sorted((_source(ctx.world, aid) for aid in ids), key=lambda p: -len(words & match_tokens(p)))
+    longer = "\n\n".join(evidence_excerpt(s, query + " " + claim, limit=6500) for s in sources[:3])
+    return bool(judge.review_citation(review, claim, longer))

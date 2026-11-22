@@ -60,3 +60,19 @@ def test_source_index_requires_a_real_file_pointing_to_the_delivered_source(tmp_
     assert citation_precision({"cites": ["sources/mn-0015.md"]}, ["mn-0015"], ctx)[0] == 1
     path.unlink()
     assert citation_precision({"cites": ["sources/mn-0015.md"]}, ["mn-0015"], ctx)[0] == 0
+
+
+def test_split_citation_gets_a_second_read_of_the_source(make_fake_client):
+    from wcb.grade.citation_evidence import evidence_vote
+    from wcb.grade.judge import LLMJudge, PanelJudge
+
+    world = World.load(Path("worlds/dev/gen-s9-large"))
+    ctx = ScoreContext.from_state(world, state_at(world, world.checkpoint("cp1")["date"]))
+    q = {"type": "priority", "text": "What should I focus on tomorrow?"}
+    answer = {"items": [{"text": "A pricing comparison for Anh is still an unsent draft", "cites": ["em-0118"]}]}
+    for second, expected in [("YES", True), ("NO", False)]:
+        first = make_fake_client(["NO", second])
+        other = make_fake_client(["YES", "YES"])
+        panel = PanelJudge([LLMJudge(first), LLMJudge(other)])
+        assert evidence_vote(q, answer, "em-0118", 0, ctx, panel, None) == expected
+        assert len(first.calls) == len(other.calls) == 2
