@@ -505,6 +505,24 @@ class _WatchedJudge:
 
 
 # ---------------------------------------------------------------- point
+def _acknowledges_blocker_conflict(q: dict, answer: dict) -> bool:
+    """Partial credit for identifying both source readings while choosing a third answer."""
+    if not (q.get("gold", {}).get("uncertain") and q.get("params", {}).get("attribute") == "blocker"):
+        return False
+    if not set(answer.get("cites") or []) & set(q.get("support") or []):
+        return False
+    note = normalize(str(answer.get("note") or ""))
+    if not re.search(r"\b(?:no (?:current )?blockers?|nothing major|not right now)\b", note):
+        return False
+    words = normalize(q["gold"]["value"]).split()
+    phrases = [" ".join(pair) for pair in zip(words, words[1:]) if len(match_tokens(" ".join(pair))) == 2]
+    return any(
+        any(phrase in clause for phrase in phrases)
+        and re.search(r"\b(?:unresolved|uncertain|unclear|conflicting|unconfirmed)\b", clause)
+        for clause in re.split(r"[.;!?]", note)
+    )
+
+
 def grade_point(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tuple[float, dict]:
     """1 if the value matches the gold value for its kind, else 0.
 
@@ -583,6 +601,8 @@ def grade_point(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tuple
             judge.point(str(q.get("text") or ""), str(gold.get("value")), text, point_facts(q, ctx))
         )
         details["judge"] = ok
+    if not ok and _acknowledges_blocker_conflict(q, answer):
+        return 0.5, {**details, "acknowledged_conflict": True}
     return (1.0 if ok else 0.0), details
 
 
