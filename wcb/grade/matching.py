@@ -29,6 +29,7 @@ confirm it for, and each copy still counts as a prediction.
 from __future__ import annotations
 
 import json
+import re
 from typing import Any
 
 from wcb.grade.judge import gold_text, match_tokens, pred_text
@@ -108,6 +109,20 @@ def _display_gold(gold: dict, ctx: Any) -> dict:
     return gold
 
 
+def describes_suggestion(text: str) -> bool:
+    """A proposed action must retain its unendorsed status in a change report."""
+    text = text.casefold().replace("’", "'")
+    # Ignore negated commitment language before checking for an affirmative commitment.
+    denial = r"\b(?:not(?: yet)?|never|nobody|no one|no owner) (?:accepted|agreed|committed|confirmed)"
+    affirmed = re.sub(denial, "", text)
+    if re.search(r"\b(?:promised|committed|agreed to|accepted the task)\b", affirmed):
+        return False
+    return bool(re.search(denial, text) or re.search(
+        r"\b(?:suggest(?:ed|ion)?|propos(?:ed|al)|discussed|possible|tentative|unowned|"
+        r"unconfirmed|unaccepted|considering|might|no commitment|still open)\b", text
+    ))
+
+
 def confirmed_edges(
     pred: list[dict], gold: list[dict], judge: Any, *, kind: str, ctx: Any
 ) -> list[tuple[float, int, int]]:
@@ -119,6 +134,8 @@ def confirmed_edges(
     asked: dict[tuple[str, int], bool] = {}
     edges: list[tuple[float, int, int]] = []
     for i, j in candidate_pairs(pred, gold, ctx):
+        if gold[j].get("suggested") and not describes_suggestion(pred_text(pred[i])):
+            continue
         key = (json.dumps(pred[i], sort_keys=True, default=str), j)
         if key not in asked:
             asked[key] = bool(judge.same_item(pred[i], shown[j], kind=kind))

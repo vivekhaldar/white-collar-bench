@@ -411,3 +411,5 @@ For each group the report gives the session count, `ok` / `timeouts` / `failures
 Every answer cites its gold `support`. With `store_ids` (`wcb.store.oracle.record_ids`), items also cite their loop records. The tests use it to check that correct answers score exactly 1 on every question of the pilot and of every dev world (`tests/grade/test_perfect_answers.py`), and about 100 end to end.
 
 A worker offering to try is optional in lists, changes and rubrics, and cannot be a required priority until the worker endorses the commitment. A third party supplying a date does not establish endorsement.
+
+A proposed change is described using its original deliverable and endorsement at creation, even if someone accepts it later. A prediction that reports it as an agreed task does not match the proposal.

@@ -769,14 +769,18 @@ def change_keywords(world: World, state: dict, ev: dict, project: str) -> list[s
 
 def change_item(world: World, state: dict, ev: dict, project: str) -> dict[str, Any]:
     """A knowable event on ``project`` as a change-answer gold item (docs/formats.md §3.2)."""
+    raw = world.by_id.get(ev["id"], {})
+    suggested = ev["type"] == "commitment.create" and raw.get("accepted") is False
+    summary = f"Suggested (not agreed): {raw['what']}" if suggested else ev.get("summary", "")
     return {
         "event": ev["id"],
-        "summary": ev.get("summary", ""),
+        "summary": summary,
+        **({"suggested": True} if suggested else {}),
         "date": ev["date"],
         "type": ev["type"],
         "keywords": change_keywords(world, state, ev, project),
         "support": list(ev.get("artifacts") or []),
-        **({"optional": True} if on_optional_loop(world, state, ev) else {}),
+        **({"optional": True} if suggested or on_optional_loop(world, state, ev) else {}),
     }
 
 
