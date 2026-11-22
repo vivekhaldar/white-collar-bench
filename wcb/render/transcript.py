@@ -59,6 +59,21 @@ ROUNDS = ("Nothing from me this week.", "Nothing new from my side.", "All quiet 
           "Just heads-down on the usual stuff.", "Nothing to flag.", "I'm good, thanks.")
 
 
+# V1 banks above remain available for replay of the published inboxes. V2 filler
+# can discuss the conversation itself but cannot resolve a task, deadline or blocker.
+NEUTRAL_PROBES = (
+    ("Could you repeat that?", ("Sure, give me a moment.", "Of course.")),
+    ("Can everyone hear me?", ("Yes, I can hear you.", "Loud and clear.")),
+    ("Would you like a minute?", ("Just a second, thanks.", "Thanks, go ahead.")),
+    ("Shall I pause here?", ("One moment, please.", "Thanks, carry on.")),
+    ("Was someone else speaking?", ("Go ahead.", "Sorry, I was on mute.")),
+)
+NEUTRAL_ASIDES = ("Give me a moment to write that down.", "Thanks for walking through that.",
+                  "Hang on, my screen went dark.", "I missed the last few words.",
+                  "Let me turn my microphone back on.")
+NEUTRAL_ROUND = ("Nothing to add from me.", "Thanks for the update.", "Pass for now.")
+
+
 class _Bag:
     """Draws from a phrase bank without replacement until it runs out, then starts over."""
 
@@ -142,7 +157,10 @@ def render(ctx: RenderContext, comm: Communication, aid: str) -> Rendered:
     if proj and rng.random() < 0.6:
         segments[-1].append((organizer, rng.choice([f"Main thing today is {proj}.", f"Mostly {proj} updates today.",
                                                     f"Let's start with {proj}."]), None))
-    backs, probes, musings = _Bag(BACKCHANNELS, rng), _Bag(PROBE_PAIRS, rng), _Bag(MUSINGS, rng)
+    legacy = ctx.plan["generator"]["version"] == 1
+    backs = _Bag(BACKCHANNELS, rng)
+    probes = _Bag(PROBE_PAIRS if legacy else NEUTRAL_PROBES, rng)
+    musings = _Bag(MUSINGS if legacy else NEUTRAL_ASIDES, rng)
     multi = len(people) > 1
 
     def backchannel(after: str, seg: list) -> None:
@@ -190,7 +208,7 @@ def render(ctx: RenderContext, comm: Communication, aid: str) -> Rendered:
         segments.append(seg)
     quiet = [p for p in people if p not in actors and p != organizer]
     if len(people) > 2 and len(quiet) >= 2 and rng.random() < 0.6:
-        rbag = _Bag(ROUNDS, rng)
+        rbag = _Bag(ROUNDS if legacy else NEUTRAL_ROUND, rng)
         rounds = []
         for p in rng.sample(quiet, min(len(quiet), rng.randint(2, 4))):
             rounds.append((p, rbag.draw(), None))

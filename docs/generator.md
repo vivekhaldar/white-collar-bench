@@ -235,3 +235,5 @@ The generator tests (`tests/generator/`) generate seeds 0, 1 and 2 at sizes smal
 - **The LLM rewrite** covers email bodies only and is not exercised by the default test suite beyond a fake client.
 
 Generator version 2 records hedged offers as unaccepted. The ten published dev inputs and the archived runs use version 1. Their reproduction script requests that version explicitly.
+
+Version 2 transcript filler concerns the conversation itself. Only event-backed dialogue supplies project blockers, progress and deadlines.

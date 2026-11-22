@@ -9,6 +9,8 @@ from wcb.world.model import World
 
 
 def conflicting_blocker_sources(world: World, state: dict, project: str) -> list[str]:
+    if world.meta.get("generator", {}).get("version") != 1:
+        return []
     ent = state["entities"].get(project, {})
     if not ent.get("attrs", {}).get("blocker"):
         return []
