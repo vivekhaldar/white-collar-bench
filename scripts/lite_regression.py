@@ -10,7 +10,7 @@ Tracks A and B, Pi harness), packed in results/2026-11-21-lite-model-comparison/
 lite-runs.tar.gz with only what scoring reads (answers, run.json, the checkpoint snapshot).
 Panel decisions come from the committed judge caches (rescored/v6-panel/*.jsonl.gz), so a
 rescore makes no model calls. Changed prompts from the high-severity fixes use the independent
-Luna/Sol in-session votes in regression/subscription-panel.jsonl. Other missing decisions
+Luna/Sol in-session votes in regression/subscription-panel.jsonl.gz. Other missing decisions
 are counted as `uncached`; with --allow-calls they are fetched (needs OPENAI_BASE_URL and
 OPENAI_API_KEY for the panel models, see docs/judge.md) and the cache is extended.
 
@@ -104,9 +104,10 @@ def rescore(runs: Path, model: str, track: str, allow_calls: bool, penalties: li
     """Per-question scores {key: score} (agent store) and the number of uncached decisions."""
     cache = cached_decisions(CACHES / f"judge-cache-{model}-track-{track}.jsonl.gz")
     supplement = {}
-    for line in (HERE / "regression/subscription-panel.jsonl").read_text().splitlines():
-        row = json.loads(line)
-        supplement[row["id"]] = row
+    with gzip.open(HERE / "regression/subscription-panel.jsonl.gz", "rt", encoding="utf-8") as f:
+        for line in f:
+            row = json.loads(line)
+            supplement[row["id"]] = row
     panel = PanelJudge([ReplayJudge(original, replacement, supplement)
                         for original, replacement in zip(PANEL, ("gpt-6-luna", "gpt-6.1-sol"), strict=True)])
     for j in panel.panel:
