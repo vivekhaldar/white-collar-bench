@@ -44,6 +44,7 @@ from __future__ import annotations
 import math
 import re
 from dataclasses import asdict, dataclass, field
+from itertools import pairwise
 from pathlib import Path
 from typing import Any
 
@@ -515,7 +516,7 @@ def _acknowledges_blocker_conflict(q: dict, answer: dict) -> bool:
     if not re.search(r"\b(?:no (?:current )?blockers?|nothing major|not right now)\b", note):
         return False
     words = normalize(q["gold"]["value"]).split()
-    phrases = [" ".join(pair) for pair in zip(words, words[1:]) if len(match_tokens(" ".join(pair))) == 2]
+    phrases = [" ".join(pair) for pair in pairwise(words) if len(match_tokens(" ".join(pair))) == 2]
     return any(
         any(phrase in clause for phrase in phrases)
         and re.search(r"\b(?:unresolved|uncertain|unclear|conflicting|unconfirmed)\b", clause)
