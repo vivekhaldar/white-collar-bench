@@ -799,6 +799,25 @@ def _project_changes_gold(params: dict, world: World, state: dict) -> Gold:
         return UNANSWERABLE
     events = project_change_events(world, state, project, since=str(params["since"])[:10])
     items = [change_item(world, state, ev, project) for ev in events]
+    creations = {}
+    decisions = {}
+    for item in items:
+        raw = world.by_id[item["event"]]
+        loop_day = (raw.get("commitment"), item["date"])
+        if item["type"] == "commitment.create" and not item.get("optional"):
+            creations[loop_day] = item["event"]
+        elif item["type"] == "decision.make":
+            decisions.setdefault(raw["t"], []).append(raw)
+        elif item["type"] == "commitment.resolve":
+            related = creations.get(loop_day)
+            if raw.get("status") == "dropped" and "superseded by" in item["summary"].lower():
+                choices = [d for d in decisions.get(raw["t"], []) if
+                           any(k.lower() in item["summary"].lower() for k in d.get("keywords", []))]
+                if len(choices) == 1:
+                    related = choices[0]["id"]
+            if related:
+                item["paired_event"] = related
+                item["outcome"] = raw.get("status")
     return True, {"items": items}, support_union(state, *(i["support"] for i in items))
 
 

@@ -50,7 +50,7 @@ from typing import Any
 from wcb.contract.answers import check_answer
 from wcb.grade.judge import VERDICTS, Judge, match_tokens, padding_penalty
 from wcb.grade.matching import assign, confirmed_edges, distinct_edges, match_items
-from wcb.questions.rubric import STATUS_SYNONYMS
+from wcb.questions.rubric import LOOP_STATUS_WORDS, STATUS_SYNONYMS
 from wcb.util.dates import (
     business_days_between,
     date_mentions,
@@ -64,6 +64,7 @@ from wcb.util.text import (
     HISTORY_MARKERS,
     framing,
     marked_tokens,
+    negated,
     normalize,
     normalize_marked,
     phrase_spans,
@@ -1110,17 +1111,57 @@ def _status_by_default(q: dict, item: dict, verdict: str, verdicts: list[str], t
 
 
 # ---------------------------------------------------------------- change
+def _reported_outcome(pred: dict, item: dict) -> tuple[bool, bool]:
+    """An asserted outcome, and whether its clause names the specific deliverable."""
+    words = list(LOOP_STATUS_WORDS.get(item.get("outcome"), []))
+    if item.get("outcome") == "done":
+        words.extend(["handed", "handed off", "transferred"])
+    keywords = item.get("keywords") or []
+    asserted = False
+    for clause in re.split(r"[;.!?\n]", pred.get("text", "")):
+        text = normalize_marked(clause)
+        for word in words:
+            for start, _ in phrase_spans(text, word):
+                if negated(text, start) or re.search(r"\b(?:will|might|could|to be|to)\s+(?:be\s+)?$", text[:start]):
+                    continue
+                asserted = True
+                if keywords and len(keywords[0].split()) > 1 and phrase_spans(text, keywords[0]):
+                    return True, True
+    return asserted, False
+
+
 def grade_change(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tuple[float, dict]:
-    """F1 over one-to-one matched change items; a repeated item cannot match (see grade_list)."""
+    """F1 over distinct predictions and events, allowing a confirmed same-thread bundle."""
     pred, gold = list(answer.get("items") or []), list((q.get("gold") or {}).get("items") or [])
     if not pred or not gold:
         early = _empty_case(len(pred), sum(1 for g in gold if not g.get("optional")))
         return early, {"n_pred": len(pred), "n_gold": len(gold), "matches": []}
-    pairs = match_items(pred, gold, judge, kind="change", ctx=ctx, distinct=True)
-    hits = sum(1 for _, j in pairs if not gold[j].get("optional"))
-    n_pred, n_gold = _counted(pred, gold, pairs)
+    edges = distinct_edges(pred, confirmed_edges(pred, gold, judge, kind="change", ctx=ctx))
+    pairs = assign(edges)
+    confirmed = {(i, j) for _, i, j in edges}
+    by_event = {item.get("event"): j for j, item in enumerate(gold)}
+    matched = {j: i for i, j in pairs}
+    for end, item in enumerate(gold):
+        start = by_event.get(item.get("paired_event")) if item.get("paired_event") else None
+        if start is None or (start in matched) == (end in matched):
+            continue
+        i = matched[end] if end in matched else matched[start]
+        asserted, explicit = _reported_outcome(pred[i], item)
+        if not asserted or ((i, end) not in confirmed and not explicit):
+            continue
+        # Completion entails creation on the same loop. A decision must be stated too.
+        if gold[start].get("type") == "decision.make" and (i, start) not in confirmed:
+            continue
+        extra = start if end in matched else end
+        pairs.append((i, extra))
+        matched[extra] = i
+    required_preds = {i for i, j in pairs if not gold[j].get("optional")}
+    optional_preds = {i for i, j in pairs if gold[j].get("optional")} - required_preds
+    hits = sum(not gold[j].get("optional") for _, j in pairs)
+    n_pred = len(pred) - len(optional_preds)
+    n_gold = sum(not item.get("optional") for item in gold)
     early = _empty_case(n_pred, n_gold)
-    p = hits / n_pred if n_pred else 0.0
+    p = len(required_preds) / n_pred if n_pred else 0.0
     r = hits / n_gold if n_gold else 0.0
     matched_gold = {j for _, j in pairs}
     return (f1(p, r) if early is None else early), {
@@ -1350,7 +1391,8 @@ def matched_item_support(q: dict, details: dict) -> dict[int, list[str]] | None:
     for m in details.get("matches") or []:
         sup = (by_id.get(m.get("gold")) or {}).get("support")
         if sup:
-            out[int(m["pred"])] = list(sup)
+            index = int(m["pred"])
+            out[index] = list(dict.fromkeys([*out.get(index, []), *sup]))
     return out
 
 

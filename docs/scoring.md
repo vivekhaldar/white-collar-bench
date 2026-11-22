@@ -419,3 +419,5 @@ When a later generated transcript denies a blocker on the same project, either d
 For person roles, affiliations and relationships, gold checks delivered evidence for the person and the value together. Without such evidence a point question accepts abstention as well as the correct seeded value (Track A can see the seed store). Briefs omit unsupported roles and organization qualifiers.
 
 Relationship points accept equivalent natural-language descriptions in both tracks. For an outstanding obligation owed to the worker, either open or waiting receives full status credit when that distinction comes only from its initial label. Later explicit status changes and blocked or closed obligations retain their own labels.
+
+A single change item can cover an explicitly completed same-day creation and resolution on one loop. A decision and its explicitly linked cancellation can also share a prediction when it covers both events. Recall counts the covered events and precision counts the prediction once.
