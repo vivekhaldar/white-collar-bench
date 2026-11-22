@@ -415,3 +415,5 @@ A worker offering to try is optional in lists, changes and rubrics, and cannot b
 A proposed change is described using its original deliverable and endorsement at creation, even if someone accepts it later. A prediction that reports it as an agreed task does not match the proposal.
 
 When a later generated transcript denies a blocker on the same project, either documented reading or abstention is accepted until a newer blocker report resolves the conflict. The disputed blocker is omitted from status rubrics. Unrelated claims remain graded.
+
+For person roles, affiliations and relationships, gold checks delivered evidence for the person and the value together. Without such evidence a point question accepts abstention as well as the correct seeded value (Track A can see the seed store). Briefs omit unsupported roles and organization qualifiers.

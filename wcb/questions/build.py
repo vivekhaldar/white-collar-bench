@@ -19,6 +19,7 @@ from __future__ import annotations
 import datetime as dt
 from typing import Any
 
+from wcb.questions.person_evidence import attribute_sources, ground_person_gold
 from wcb.questions.rubric import normalize_extra_item, number_items
 from wcb.questions.support import widen_support
 from wcb.questions.templates import TEMPLATES, attr_support, support_union
@@ -57,6 +58,13 @@ def build_question(spec: dict[str, Any], world: World, state: dict) -> dict[str,
     answerable, gold, support = template.gold(params, world, state)
     if answerable and spec.get("extra_rubric") and "rubric" in gold:
         gold, support = _with_extra_rubric(gold, spec["extra_rubric"], state, support)
+    if answerable and name in {"person_attr", "person_brief"}:
+        gold = ground_person_gold(gold, world, state, params, name)
+        if name == "person_attr" and params["attribute"] in {"role", "org", "relationship"}:
+            evidence = attribute_sources(world, state, params["person"], params["attribute"])
+            support = support_union(state, support, evidence) if evidence else []
+        elif name == "person_brief":
+            support = support_union(state, *(r["support"] for r in gold["rubric"]))
     if answerable and (name == "project_status" or
                        (name == "project_attr" and params.get("attribute") == "blocker")):
         conflict = conflicting_blocker_sources(world, state, params["project"])

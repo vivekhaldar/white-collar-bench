@@ -289,25 +289,6 @@
             "support": [
               "ch-0001"
             ]
-          },
-          {
-            "id": "r3",
-            "aspect": "role",
-            "text": "Ben Okoro is Finance systems lead at Larchmont Freight",
-            "weight": 1,
-            "critical": false,
-            "keywords": [
-              [
-                "finance"
-              ],
-              [
-                "systems"
-              ]
-            ],
-            "stale": [],
-            "support": [
-              "ch-0001"
-            ]
           }
         ],
         "facts": {
