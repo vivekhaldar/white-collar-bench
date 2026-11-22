@@ -1,0 +1,93 @@
+{
+ "by_arm": {
+  "Opus 5.5|a": {
+   "INGEST": 0.35,
+   "SELECT": 1.05,
+   "JUDGE_ENTITY": 0.42,
+   "GRANULARITY": 0.81,
+   "GRADER": 0.83,
+   "GOLD": 3.43,
+   "CITATION": 1.03,
+   "UNLABELLED": 0.21
+  },
+  "Opus 5.5|b": {
+   "INGEST": 0.21,
+   "SELECT": 1.51,
+   "JUDGE_ENTITY": 0.17,
+   "GRANULARITY": 1.01,
+   "GRADER": 2.33,
+   "GOLD": 4.27,
+   "CITATION": 1.95,
+   "UNLABELLED": 1.2
+  },
+  "Sonnet 5.5|a": {
+   "INGEST": 0.7,
+   "SELECT": 2.12,
+   "JUDGE_ENTITY": 0.84,
+   "GRANULARITY": 1.27,
+   "GRADER": 0.92,
+   "GOLD": 3.51,
+   "CITATION": 1.28,
+   "UNLABELLED": 0.26
+  },
+  "Sonnet 5.5|b": {
+   "INGEST": 0.41,
+   "SELECT": 4.97,
+   "JUDGE_ENTITY": 0.97,
+   "GRANULARITY": 1.9,
+   "GRADER": 2.59,
+   "GOLD": 4.59,
+   "CITATION": 1.84,
+   "UNLABELLED": 2.0
+  },
+  "Haiku 5.5|a": {
+   "INGEST": 0.0,
+   "SELECT": 2.85,
+   "JUDGE_ENTITY": 0.86,
+   "GRANULARITY": 0.96,
+   "GRADER": 1.06,
+   "GOLD": 3.67,
+   "CITATION": 1.23,
+   "UNLABELLED": 0.55
+  },
+  "Haiku 5.5|b": {
+   "INGEST": 2.69,
+   "SELECT": 4.92,
+   "JUDGE_ENTITY": 0.79,
+   "GRANULARITY": 1.58,
+   "GRADER": 2.16,
+   "GOLD": 3.58,
+   "CITATION": 2.68,
+   "UNLABELLED": 3.31
+  },
+  "GPT-6.1 Sol|a": {
+   "INGEST": 0.0,
+   "SELECT": 1.52,
+   "JUDGE_ENTITY": 0.43,
+   "GRANULARITY": 1.89,
+   "GRADER": 3.36,
+   "GOLD": 3.28,
+   "CITATION": 1.89,
+   "UNLABELLED": 0.62
+  },
+  "GPT-6.1 Sol|b": {
+   "INGEST": 0.1,
+   "SELECT": 1.9,
+   "JUDGE_ENTITY": 1.31,
+   "GRANULARITY": 2.56,
+   "GRADER": 5.08,
+   "GOLD": 4.31,
+   "CITATION": 2.73,
+   "UNLABELLED": 2.11
+  }
+ },
+ "classes": [
+  "INGEST",
+  "SELECT",
+  "JUDGE_ENTITY",
+  "GRANULARITY",
+  "GRADER",
+  "GOLD",
+  "CITATION"
+ ]
+}

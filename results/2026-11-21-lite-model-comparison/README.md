@@ -91,3 +91,9 @@ An [audit of every point Opus lost under the old grader](../2026-11-21-claude-op
 - `python results/2026-11-21-lite-model-comparison/compare.py > results/2026-11-21-lite-model-comparison/data.json` collects every number above from the raw runs (`runs/`, git-ignored) and their original and rescored reports.
 - Rescoring a run: `wcb score <run>/track-<t>/measured --suite lite --judge panel --out <run>/track-<t>/scores-v6-panel-lite` (with `OPENAI_BASE_URL` and `OPENAI_API_KEY` pointing at a proxy that serves both panel models). Copy the matching `rescored/v6-panel/judge-cache-*.jsonl.gz`, unzipped, to `<out>/judge-cache.jsonl` first to reuse the decisions.
 - `slides/build.py` renders the deck's charts from `data.json`.
+
+## Regression harness for grader and gold fixes
+
+`regression/lite-runs.tar.gz` (4 MB) packs what scoring reads from the eight lite runs: answers, `run.json`, and each episode's checkpoint snapshot. With the panel caches in `rescored/v6-panel/`, `python scripts/lite_regression.py` rescores all eight with the current grader and gold, **without model calls**, and lists every question whose score changed against `regression/baseline.json`. It re-derives each judge decision from the cached raw outputs, so parser changes take effect too. GitHub issues #16–#30 state the expected changes for each fix.
+
+`failure-classes.json` holds the per-run split of remaining loss into model causes (ingest, select, attribution) and benchmark causes (gold, grader, granularity, citation) from the failure analysis of the 60 costliest questions (91% of loss).
