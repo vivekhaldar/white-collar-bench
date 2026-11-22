@@ -80,7 +80,12 @@ def rescore(runs: Path, model: str, track: str, allow_calls: bool) -> tuple[dict
     for j in panel.panel:
         j._cache.update(cache)
     run = runs / model / f"track-{track}/measured"
-    plan = RunPlan.from_meta(run, load_run_meta(run), suite="lite")
+    meta = load_run_meta(run)
+    for entry in meta["worlds"]:
+        name = entry["id"]
+        directory = ROOT / "worlds" / ("pilot" if name == "pilot" else f"dev/{name}")
+        entry["path"] = str(directory)
+    plan = RunPlan.from_meta(run, meta, suite="lite")
     panel.recording(True)
     for entry in plan.world_entries:
         score_world(plan, entry, panel, Accumulator())
@@ -133,6 +138,9 @@ def main() -> int:
                 if s0 is None or abs(s - s0) >= a.min_delta:
                     print(f"  {k:8s} {q:32s} {s0 if s0 is not None else 'new':>6} -> {s:.3f}  "
                           f"({(s - (s0 or 0)) * w:+.2f})")
+    if a.write_baseline and any(v["uncached"] for v in out.values()) and not a.allow_calls:
+        print("Baseline retained because the panel replay is incomplete.")
+        return 1
     if a.write_baseline:
         BASELINE.write_text(json.dumps(out, indent=1, sort_keys=True) + "\n")
         print(f"\nwrote {BASELINE.relative_to(ROOT)}")
