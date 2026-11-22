@@ -2,12 +2,14 @@
 
 Status: v0.1. How free-text answers are matched and checked. See [scoring](scoring.md) for the full grading rules and [formats](formats.md) §3.2 for the gold shapes.
 
-Most of the grading is deterministic: point facts resolve through the world's alias table, dates and numbers are normalized, and list, change and priority scores are arithmetic over matched items. Two decisions need a **judge**:
+Most of the grading is deterministic: point facts resolve through the world's alias table, dates and numbers are normalized, and list, change and priority scores are arithmetic over matched items. The grader uses these judge decisions.
 
 | Decision | Used by | Question |
 |---|---|---|
 | `same_item(pred, gold, kind)` | list, priority (`kind: loop`), change (`kind: change`) | Does this predicted item describe the same commitment or change as this gold item? |
 | `rubric(answer_text, item, facts)` | status, brief | Does the answer cover this checklist item? `covered`, `missing` or `contradicted` |
+| `point(question, gold, answer, facts)` | free-text point questions | Does the answer state the requested fact? |
+| `citation(question, claim, evidence)` | disputed citations, LLM and panel modes | Does the delivered source support a material part of the specific claim? |
 
 The code lives in `wcb/grade/judge.py` (judges), `wcb/grade/matching.py` (candidates and assignment), `wcb/grade/answers.py` (per-question scores) and `wcb/llm/client.py` (model access).
 

@@ -25,4 +25,3 @@ def test_status_alias_requires_an_unqualified_incoming_obligation():
     state["loops"]["c-045"]["history"].append({"changes": {"status": "waiting"}})
     assert "accept_status" not in list_item(world, state, "c-045")
     assert status_credit("done", "waiting") == 0
-

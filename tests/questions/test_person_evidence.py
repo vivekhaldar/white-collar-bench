@@ -21,4 +21,3 @@ def test_unstated_org_allows_abstention():
     state = state_at(world, world.checkpoint("cp1")["date"])
     spec = next(s for s in load_specs(world) if s["id"] == "q-009")
     assert build_question(spec, world, state)["gold"]["uncertain"]
-

@@ -87,4 +87,3 @@ def ground_person_gold(gold: dict, world: World, state: dict, params: dict, temp
             text = f"{ent['name']} is {ent['attrs']['role']}"
         rubric[rubric.index(role)] = {**role, "text": text, "support": [a for a in role["support"] if a in sources] or sources}
     return {**gold, "rubric": rubric}
-

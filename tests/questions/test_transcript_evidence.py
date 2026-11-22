@@ -24,4 +24,3 @@ def test_wagtail_blocker_conflict_is_scoped_to_project_and_checkpoint():
     assert score_question(q, qualified, HeuristicJudge(), ctx).base == 0.5
     assert score_question(q, {**qualified, "note": "The change request is unresolved."}, HeuristicJudge(), ctx).base == 0
     assert all(r["aspect"] != "blocker" for r in build_question(specs["q-002"], world, state)["gold"]["rubric"])
-

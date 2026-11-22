@@ -46,4 +46,3 @@ def conflicting_blocker_sources(world: World, state: dict, project: str) -> list
     delivered = set(state["delivered"])
     sources = world._cache["blocker_probe_topics"].get(project, [])
     return [a.id for a in sources if a.id in delivered and a.received_at > last_report]
-
