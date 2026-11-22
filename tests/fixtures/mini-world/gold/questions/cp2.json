@@ -566,6 +566,10 @@
             ],
             "support": [
               "ch-0001"
+            ],
+            "accept_status": [
+              "open",
+              "waiting"
             ]
           },
           {
@@ -582,6 +586,10 @@
             "support": [
               "mt-0001",
               "em-0004"
+            ],
+            "accept_status": [
+              "open",
+              "waiting"
             ]
           },
           {
@@ -635,6 +643,10 @@
             ],
             "support": [
               "ch-0001"
+            ],
+            "accept_status": [
+              "open",
+              "waiting"
             ]
           }
         ]

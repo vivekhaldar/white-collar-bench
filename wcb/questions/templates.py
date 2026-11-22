@@ -319,6 +319,10 @@ def list_item(world: World, state: dict, cid: str) -> dict[str, Any]:
         "keywords": group(loop.get("keywords") or []),
         "support": list(loop.get("evidence") or []),
     }
+    history = loop.get("history") or []
+    if (item["direction"] == "owed_to_me" and item["status"] in {"open", "waiting"}
+            and not any("status" in h.get("changes", {}) for h in history[1:])):
+        item["accept_status"] = ["open", "waiting"]
     if is_optional_loop(world, loop):
         item["optional"] = True
     return item

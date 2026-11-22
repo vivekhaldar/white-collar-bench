@@ -567,12 +567,41 @@ def grade_point(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tuple
         if rival is not None:
             details["rival"] = rival
             ok = False
+    if not ok and q.get("template") == "person_attr" and q.get("params", {}).get("attribute") == "relationship":
+        ok = relationship_matches(text, str(gold.get("value")))
     if not ok and kind == "text" and text.strip() and hasattr(judge, "point"):
         ok = bool(
             judge.point(str(q.get("text") or ""), str(gold.get("value")), text, point_facts(q, ctx))
         )
         details["judge"] = ok
     return (1.0 if ok else 0.0), details
+
+
+# Descriptions used by people answering without the store's taxonomy. Match complete
+# descriptions; leave more complex prose and ambiguous reporting lines to the panel.
+RELATIONSHIP_DESCRIPTIONS = {
+    "peer": r"(?:a )?(?:teammate|team[- ]mate|fellow team member|colleague (?:in|on|from) "
+            r"(?:my|our|the) (?:own |same )?(?:org(?:anization)?|team|department)|"
+            r"same[- ]team colleague|cross-portfolio colleague and collaborator)",
+    "stakeholder": r"(?:an? )?(?:cross[- ]department(?:al)? (?:collaborator|counterpart)|"
+                   r"departmental counterpart|client counterpart|external project stakeholder)",
+    "manager": r"(?:my |the worker.s )(?:manager|direct supervisor|line manager|boss)",
+    "report": r"(?:my direct report|reports (?:directly )?to me)",
+    "executive": r"(?:an? )?(?:senior executive|executive sponsor|member of (?:the )?executive leadership)",
+    "vendor": r"(?:an? )?(?:vendor representative|supplier representative|external supplier)",
+}
+
+
+def relationship_matches(text: str, value: str) -> bool:
+    pattern = RELATIONSHIP_DESCRIPTIONS.get(value)
+    if not pattern or hedge_words(text):
+        return False
+    # A trailing qualification may identify the colleague's role or organization.
+    head, _, tail = re.split(r"(:| \(| at )", normalize(text).rstrip(". "), maxsplit=1) if re.search(
+        r":| \(| at ", normalize(text)) else (normalize(text).rstrip(". "), "", "")
+    if re.search(r"\b(?:or|instead|actually|but|not|my manager|my boss|my direct report)\b", tail):
+        return False
+    return re.fullmatch(pattern, head.strip()) is not None
 
 
 def point_facts(q: dict, ctx: ScoreContext) -> dict:
@@ -958,7 +987,8 @@ def counterparty_credit(pred: Any, gold: Any, ctx: ScoreContext) -> float | None
 def attribute_credit(pred: dict, gold: dict, ctx: ScoreContext) -> tuple[float, dict]:
     """Mean of status, due and counterparty credit (counterparty skipped when gold has none)."""
     parts = {
-        "status": status_credit(pred.get("status"), gold.get("status")),
+        "status": (1.0 if pred.get("status") in gold.get("accept_status", [])
+                   else status_credit(pred.get("status"), gold.get("status"))),
         "due": due_credit(pred.get("due"), gold.get("due")),
         "counterparty": counterparty_credit(
             pred.get("counterparty"), gold.get("counterparty"), ctx

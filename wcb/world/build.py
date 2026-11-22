@@ -42,7 +42,7 @@ from wcb.world.stats import compute_stats, read_question_docs
 #: Version of what `wcb world build` writes. Bump it in any change to wcb that alters built gold
 #: (states, oracle stores, question gold), and rebuild tests/fixtures/mini-world. Worlds whose
 #: `gold/BUILD.json` records another version are rebuilt by `wcb run`.
-GOLD_VERSION = 10
+GOLD_VERSION = 11
 BUILD_STAMP = "BUILD.json"
 _SOURCE_FILES = ("world.yaml", "world.jsonl", "questions.yaml")
 
