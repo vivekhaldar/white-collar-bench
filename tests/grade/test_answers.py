@@ -604,6 +604,28 @@ def test_list_empty_cases(ctx, gold, items, expected):
     assert res.base == expected
 
 
+def test_list_optional_items_are_neither_required_nor_wrong(ctx):
+    # c-003 is an unanswered ask (optional); a suggestion matching c-004 is listed separately.
+    q = q_list([C001, {**C003, "optional": True}])
+    q["gold"]["suggested"] = [C004]
+    questionnaire = {
+        "text": "Return the Tessellate security questionnaire",
+        "counterparty": "Cora Velez",
+        "status": "open",
+        "due": "2027-01-12",
+        "cites": ["em-0001"],
+    }
+    pricing = {"text": "Send Ada the Tessellate volume pricing", "counterparty": "Cora Velez"}
+    design = {"text": "Review Sam Patel's ingestion design doc", "counterparty": "Sam Patel"}
+    assert score_question(q, listing(questionnaire), J, ctx).base == pytest.approx(1.0)
+    assert score_question(q, listing(questionnaire, design, pricing), J, ctx).base == pytest.approx(
+        1.0
+    )
+    # A wrong extra item still costs precision.
+    venue = {"text": "Book the offsite venue", "counterparty": "Ben"}
+    assert score_question(q, listing(questionnaire, venue), J, ctx).base == pytest.approx(2 / 3)
+
+
 def test_list_wrong_items_score_zero(ctx):
     ans = listing({"text": "Plan the team offsite", "counterparty": "Ben", "status": "open"})
     assert score_question(q_list([C001, C003]), ans, J, ctx).base == 0.0
@@ -731,6 +753,38 @@ def test_brief_uses_same_rubric_rules(ctx):
 
 def test_status_empty_rubric(ctx):
     assert score_question(q_status(rubric=[]), status("Anything"), J, ctx).base == 1.0
+
+
+def test_status_active_is_covered_unless_another_status_is_given(ctx):
+    active = {
+        "id": "r0",
+        "aspect": "status",
+        "text": "Quillon is active",
+        "weight": 2,
+        "critical": True,
+        "keywords": [["active", "in progress", "underway", "on track", "ongoing", "moving"]],
+        "stale": [],
+    }
+    q = q_status(rubric=[active, *RUBRIC])
+    working = status("Quillon is in security review; decision moved to Feb 5.")
+    paused = status("Quillon is paused; decision moved to Feb 5.")
+    nothing = status("No idea.")
+
+    def verdict(ans):
+        return score_question(q, ans, J, ctx).details["verdicts"][0]["verdict"]
+
+    assert verdict(working) == "covered"
+    assert verdict(paused) == "missing"
+    assert verdict(nothing) == "missing"
+
+
+def test_rubric_optional_item_counts_only_when_addressed(ctx):
+    optional = {**RUBRIC[2], "optional": True}
+    q = q_status(rubric=[*RUBRIC[:2], optional])
+    ans = status("Quillon decision moved to Feb 5; pilot widened to Reno and Sparks.")
+    res = score_question(q, ans, J, ctx)
+    assert res.base == pytest.approx(1.0)
+    assert res.details["verdicts"][2]["verdict"] == "optional"
 
 
 def test_answer_text_joins_summary_and_claims():

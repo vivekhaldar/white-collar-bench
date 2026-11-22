@@ -51,6 +51,7 @@ def earlier_runs() -> dict:
 
 
 EARLIER = earlier_runs()
+JUDGE = json.loads((HERE.parent / "judge-cost.json").read_text())
 COLOR = {"Opus 5.5": "#d97757", "Sonnet 5.5": "#c9a227", "Haiku 5.5": "#7fb37a", "GPT-6.1 Sol": "#5b8def",
          "DeepSeek V4.1 Flash": "#b48ead", "Qwen3.8-27B": "#88c0d0"}
 INK, MUTED, GRID, BG = "#f4f1ea", "#9a968c", "#3a3833", "#1c1b19"
@@ -66,16 +67,28 @@ def t(x, y, s, size=28, fill=INK, anchor="start", weight=400, extra=""):
             f'font-weight="{weight}" {extra}>{esc(str(s))}</text>')  # fmt: skip
 
 
+def xtitle(x0, x1, y, s):
+    """Axis title under a horizontal axis."""
+    return t((x0 + x1) / 2, y, s, 26, MUTED, "middle", 600)
+
+
+def ytitle(x, y0, y1, s):
+    """Axis title beside a vertical axis, rotated."""
+    return (f'<text transform="translate({x:.1f},{(y0 + y1) / 2:.1f}) rotate(-90)" font-size="26" '
+            f'fill="{MUTED}" text-anchor="middle" font-weight="600">{esc(s)}</text>')  # fmt: skip
+
+
 def svg(body: str, w=1400, h=560) -> str:
     return f'<svg viewBox="0 0 {w} {h}" class="chart" role="img">{body}</svg>'
 
 
 # ------------------------------------------------------------------ charts
-def hbars(rows, vmax, fmt, w=1400, h=520, label_w=300, unit="", highlight=None, note=None):
-    """Horizontal bars: rows = [(label, value, color)]."""
+def hbars(rows, vmax, fmt, w=1400, h=560, label_w=300, unit="", highlight=None, note=None,
+          xlab="", ylab=""):
+    """Horizontal bars: rows = [(label, value, color)], with a value axis under them."""
     n = len(rows)
     gap = 26
-    bh = (h - 40 - gap * (n - 1)) / n
+    bh = (h - 130 - gap * (n - 1)) / n
     span = w - label_w - 200
     out = []
     for i, (label, v, color) in enumerate(rows):
@@ -85,19 +98,28 @@ def hbars(rows, vmax, fmt, w=1400, h=520, label_w=300, unit="", highlight=None, 
         out.append(t(label_w - 24, y + bh / 2 + 12, label, 36, INK, "end", 500))
         out.append(f'<rect x="{label_w}" y="{y:.1f}" width="{bw:.1f}" height="{bh:.1f}" rx="8" fill="{color}" opacity="{op}"/>')
         out.append(t(label_w + bw + 18, y + bh / 2 + 14, fmt(v) + unit, 40, INK, "start", 600))
+    base = 20 + n * (bh + gap) - gap + 10
+    out.append(f'<line x1="{label_w}" x2="{label_w + span}" y1="{base:.1f}" y2="{base:.1f}" stroke="{GRID}" stroke-width="2"/>')
+    for k in range(5):
+        v = vmax * k / 4
+        x = label_w + span * k / 4
+        out.append(f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{base:.1f}" y2="{base + 8:.1f}" stroke="{MUTED}"/>')
+        out.append(t(x, base + 34, fmt(v), 22, MUTED, "middle"))
+    out.append(xtitle(label_w, label_w + span, base + 70, xlab))
+    out.append(ytitle(28, 20, base, ylab))
     if note:
-        out.append(t(label_w, h - 2, note, 22, MUTED))
+        out.append(t(label_w, h - 4, note, 22, MUTED))
     return svg("".join(out), w, h)
 
 
 def grouped_scores():
     """Lite A and B per model, with 95% CI whiskers."""
-    w, h = 1400, 560
-    left, right, top, bottom = 90, 40, 30, 90
-    lo, hi = 50, 95
+    w, h = 1400, 600
+    left, right, top, bottom = 120, 40, 30, 130
+    lo, hi = 50, 100
     ys = lambda v: top + (h - top - bottom) * (hi - v) / (hi - lo)  # noqa: E731
     out = []
-    for v in range(50, 96, 10):
+    for v in range(50, 101, 10):
         out.append(f'<line x1="{left}" x2="{w - right}" y1="{ys(v):.1f}" y2="{ys(v):.1f}" stroke="{GRID}"/>')
         out.append(t(left - 14, ys(v) + 9, v, 24, MUTED, "end"))
     gw = (w - left - right) / len(ORDER)
@@ -117,7 +139,9 @@ def grouped_scores():
                 out.append(f'<line x1="{mx - 12}" x2="{mx + 12}" y1="{cy:.1f}" y2="{cy:.1f}" stroke="{INK}" stroke-width="3" opacity=".7"/>')
             out.append(t(mx, ys(lo) - 18, f'{s["rescored"]:.1f}', 34, BG, "middle", 700))
             out.append(t(mx, ys(lo) + 34, "A" if tr == "a" else "B", 24, MUTED, "middle"))
-        out.append(t(cx, h - 14, m, 34, INK, "middle", 600))
+        out.append(t(cx, h - bottom + 80, m, 34, INK, "middle", 600))
+    out.append(xtitle(left, w - right, h - 6, "Model (A = fixed store contract, B = own memory design)"))
+    out.append(ytitle(36, top, h - bottom, "WCB-lite score (0–100)"))
     return svg("".join(out), w, h)
 
 
@@ -128,8 +152,8 @@ def frontier(track: str):
     pts = [(m, DATA[m]["usage"]["lite"]["cost_billed_usd"], DATA[m]["scores"][f"lite-{track}"]["rescored"], True)
            for m in ORDER]  # fmt: skip
     pts += [(m, r["cost"], r["scores"][track], False) for m, r in EARLIER.items()]
-    w, h = 1400, 560
-    left, right, top, bottom = 110, 60, 70, 90
+    w, h = 1400, 580
+    left, right, top, bottom = 130, 60, 70, 90
     xlo, xhi = math.log10(2), math.log10(100)
     ys_ = [p[2] for p in pts]
     ylo, yhi = 5 * math.floor(min(ys_) / 5 - 0.6), 5 * math.ceil(max(ys_) / 5 + 0.4)
@@ -142,7 +166,8 @@ def frontier(track: str):
     for v in range(ylo, yhi + 1, 5):
         out.append(f'<line x1="{left}" x2="{w - right}" y1="{ys(v):.1f}" y2="{ys(v):.1f}" stroke="{GRID}"/>')
         out.append(t(left - 14, ys(v) + 9, v, 24, MUTED, "end"))
-    out.append(t((left + w - right) / 2, h - 12, "Cost of one lite run, Tracks A + B (log scale)", 26, MUTED, "middle"))
+    out.append(xtitle(left, w - right, h - 8, "Cost of one lite run, Tracks A + B, USD (log scale)"))
+    out.append(ytitle(40, top, h - bottom, f"Track {track.upper()} score (0–100)"))
     best, front = -1.0, []
     for p in sorted(pts, key=lambda p: p[1]):
         if p[2] > best:
@@ -151,10 +176,10 @@ def frontier(track: str):
     path = " ".join(f"{'M' if i == 0 else 'L'}{xs(p[1]):.1f},{ys(p[2]):.1f}" for i, p in enumerate(front))
     out.append(f'<path d="{path}" fill="none" stroke="{INK}" stroke-width="4" stroke-dasharray="10 8" opacity=".6"/>')
     # (dx, dy of the name line, anchor): above, below or to one side, so no labels collide
-    place = {"a": {"Opus 5.5": (32, -6, "start"), "DeepSeek V4.1 Flash": (0, -58, "middle"),
-                   "Sonnet 5.5": (0, 54, "middle")},
-             "b": {"Opus 5.5": (32, -6, "start"), "DeepSeek V4.1 Flash": (0, 54, "middle"),
-                   "Sonnet 5.5": (0, -58, "middle")}}[track]
+    place = {"a": {"Opus 5.5": (32, -6, "start"), "Sonnet 5.5": (0, -58, "middle"),
+                   "GPT-6.1 Sol": (0, 54, "middle"), "DeepSeek V4.1 Flash": (30, 44, "start")},
+             "b": {"Opus 5.5": (32, -6, "start"), "Sonnet 5.5": (30, 44, "start"),
+                   "GPT-6.1 Sol": (0, -58, "middle"), "DeepSeek V4.1 Flash": (-30, 44, "end")}}[track]
     place["Haiku 5.5"] = (0, 54, "middle")
     for m, c, sc, ours in pts:
         x, y = xs(c), ys(sc)
@@ -170,14 +195,16 @@ def frontier(track: str):
 
 def stacked_ingest():
     """Synthesis (oracle store) vs Track A: the gap is what the model's own store costs."""
-    w, h = 1400, 520
+    w, h = 1400, 560
     label_w, span = 300, 980
-    lo, hi = 60, 95
+    lo, hi = 60, 100
     xs = lambda v: label_w + span * (v - lo) / (hi - lo)  # noqa: E731
     out = []
-    for v in range(60, 96, 5):
-        out.append(f'<line x1="{xs(v):.1f}" x2="{xs(v):.1f}" y1="10" y2="{h - 60}" stroke="{GRID}"/>')
-        out.append(t(xs(v), h - 24, v, 24, MUTED, "middle"))
+    for v in range(60, 101, 5):
+        out.append(f'<line x1="{xs(v):.1f}" x2="{xs(v):.1f}" y1="10" y2="{h - 100}" stroke="{GRID}"/>')
+        out.append(t(xs(v), h - 64, v, 24, MUTED, "middle"))
+    out.append(xtitle(label_w, label_w + span, h - 20, "Track A score (0–100): own memory (dot) vs perfect memory (ring)"))
+    out.append(ytitle(28, 10, h - 100, "Model"))
     for i, m in enumerate(ORDER):
         y = 40 + i * 110
         a = DATA[m]["scores"]["lite-a"]["rescored"]
@@ -187,7 +214,6 @@ def stacked_ingest():
         out.append(f'<circle cx="{xs(s):.1f}" cy="{y + 30}" r="16" fill="none" stroke="{INK}" stroke-width="4"/>')
         out.append(f'<circle cx="{xs(a):.1f}" cy="{y + 30}" r="16" fill="{COLOR[m]}"/>')
         out.append(t((xs(a) + xs(s)) / 2, y + 2, f"−{s - a:.1f}", 28, INK, "middle", 600))
-    out.append(f'<circle cx="{label_w + 10}" cy="{h - 100 + 470}" r="0"/>')
     return svg("".join(out), w, h)
 
 
@@ -197,7 +223,7 @@ def bucket_heat():
     names = {"point": "Point facts", "temporal": "Dates", "status": "Status", "list": "Lists",
              "brief": "Person briefs", "priority": "Focus tomorrow", "change": "What changed"}  # fmt: skip
     w, h = 1400, 600
-    left, top = 330, 70
+    left, top = 360, 70
     cw, ch = (w - left) / len(ORDER), (h - top) / len(buckets)
     out = []
     for i, m in enumerate(ORDER):
@@ -211,6 +237,8 @@ def bucket_heat():
             hue = 120 * v
             out.append(f'<rect x="{left + i * cw + 6:.1f}" y="{y + 5:.1f}" width="{cw - 12:.1f}" height="{ch - 10:.1f}" rx="8" fill="hsl({hue:.0f},45%,{22 + 10 * v:.0f}%)"/>')
             out.append(t(left + cw * (i + 0.5), y + ch / 2 + 13, f"{v:.2f}", 36, INK, "middle", 700))
+    out.append(ytitle(28, top, h, "Question type"))
+    out.append(t(left - 24, 44, "Model →", 26, MUTED, "end", 600))
     return svg("".join(out), w, h)
 
 
@@ -219,14 +247,16 @@ def turns_dots():
     import random
 
     rng = random.Random(7)
-    w, h = 1400, 520
+    w, h = 1400, 560
     label_w, span = 300, 1000
     vmax = 40
     xs = lambda v: label_w + span * min(v, vmax) / vmax  # noqa: E731
     out = []
     for v in range(0, vmax + 1, 10):
-        out.append(f'<line x1="{xs(v):.1f}" x2="{xs(v):.1f}" y1="10" y2="{h - 60}" stroke="{GRID}"/>')
-        out.append(t(xs(v), h - 24, v, 24, MUTED, "middle"))
+        out.append(f'<line x1="{xs(v):.1f}" x2="{xs(v):.1f}" y1="10" y2="{h - 100}" stroke="{GRID}"/>')
+        out.append(t(xs(v), h - 64, f"{v}+" if v == vmax else v, 24, MUTED, "middle"))
+    out.append(xtitle(label_w, label_w + span, h - 20, "Model turns per ingestion session (one dot per inbox day; bar = median)"))
+    out.append(ytitle(28, 10, h - 100, "Model"))
     for i, m in enumerate(["Sonnet 5.5", "Opus 5.5", "GPT-6.1 Sol", "Haiku 5.5"]):
         y = 70 + i * 110
         out.append(t(label_w - 24, y + 12, m, 34, INK, "end", 500))
@@ -242,7 +272,7 @@ def tokens_split():
     """Total tokens per lite run, split into cache reads, cache writes, uncached input and output."""
     parts = [("cache_read_input_tokens", "cache read", 1.0), ("cache_creation_input_tokens", "cache write", 0.7),
              ("input_tokens", "uncached input", 0.5), ("output_tokens", "output", 0.3)]  # fmt: skip
-    w, h = 1400, 520
+    w, h = 1400, 560
     label_w, span = 300, 760
     tot = {m: sum(DATA[m]["usage"]["lite"]["tokens"][k] + DATA[m]["usage"]["lite"]["oracle_tokens"][k]
                   for k, _, _ in parts) for m in ORDER}  # fmt: skip
@@ -260,25 +290,37 @@ def tokens_split():
         out_m = (DATA[m]["usage"]["lite"]["tokens"]["output_tokens"] + DATA[m]["usage"]["lite"]["oracle_tokens"]["output_tokens"]) / 1e6
         out.append(t(x + 18, y + 30, f"{tot[m] / 1e6:.0f}M", 36, INK, "start", 700))
         out.append(t(x + 18, y + 62, f"{out_m:.1f}M output", 24, MUTED))
-    out.append(t(label_w, h - 10, "Mostly cache reads: each turn re-reads the whole conversation", 24, MUTED))
+    base = 30 + 4 * 110 - 30
+    out.append(f'<line x1="{label_w}" x2="{label_w + span}" y1="{base}" y2="{base}" stroke="{GRID}" stroke-width="2"/>')
+    for k in range(5):
+        v = vmax * k / 4
+        x = label_w + span * k / 4
+        out.append(f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{base}" y2="{base + 8}" stroke="{MUTED}"/>')
+        out.append(t(x, base + 32, f"{v / 1e6:.0f}M", 22, MUTED, "middle"))
+    out.append(xtitle(label_w, label_w + span, base + 66, "Tokens per lite run, millions (shade: cache read, cache write, uncached input, output)"))
+    out.append(ytitle(28, 30, base, "Model"))
     return svg("".join(out), w, h)
 
 
 def lite_cost_bars():
     rows = [(m, DATA[m]["usage"]["lite"]["cost_billed_usd"], COLOR[m]) for m in ORDER]
-    return hbars(rows, 60, lambda v: f"${v:.2f}", note="LiteLLM prices · Sol at the flex tier (half of list) · includes Track A oracle sessions")
+    return hbars(rows, 60, lambda v: f"${v:.0f}" if v == int(v) else f"${v:.2f}",
+                 xlab="USD per lite run, Tracks A + B (LiteLLM prices; Sol at flex tier; includes oracle sessions)",
+                 ylab="Model")
 
 
 def track_gap():
     """Track A vs Track B per model (dumbbell)."""
-    w, h = 1400, 520
+    w, h = 1400, 560
     label_w, span = 300, 980
-    lo, hi = 55, 92
+    lo, hi = 55, 95
     xs = lambda v: label_w + span * (v - lo) / (hi - lo)  # noqa: E731
     out = []
-    for v in range(55, 93, 5):
-        out.append(f'<line x1="{xs(v):.1f}" x2="{xs(v):.1f}" y1="10" y2="{h - 60}" stroke="{GRID}"/>')
-        out.append(t(xs(v), h - 24, v, 24, MUTED, "middle"))
+    for v in range(55, 96, 5):
+        out.append(f'<line x1="{xs(v):.1f}" x2="{xs(v):.1f}" y1="10" y2="{h - 100}" stroke="{GRID}"/>')
+        out.append(t(xs(v), h - 64, v, 24, MUTED, "middle"))
+    out.append(xtitle(label_w, label_w + span, h - 20, "WCB-lite score (0–100): Track A (filled) vs Track B (ring)"))
+    out.append(ytitle(28, 10, h - 100, "Model"))
     for i, m in enumerate(ORDER):
         y = 50 + i * 110
         a, b = DATA[m]["scores"]["lite-a"]["rescored"], DATA[m]["scores"]["lite-b"]["rescored"]
@@ -292,27 +334,62 @@ def track_gap():
     return svg("".join(out), w, h)
 
 
-def rescore_bars():
-    """Lite A before and after the judge fixes."""
-    w, h = 1400, 520
-    label_w, span = 300, 950
-    lo, hi = 60, 90
+def rescore_bars(track="a"):
+    """One track's lite score per model under each grader: original, judge fixes (11-21),
+    gold v6 with the heuristic judge, and gold v6 with the cross-family panel."""
+    steps = [("original", "Original grader", MUTED), ("fixed", "Date/hedge fixes", "#88c0d0"),
+             ("heuristic", "Gold v6, heuristic", "#c9a227"), ("rescored", "Gold v6 + panel", INK)]  # fmt: skip
+    w, h = 1400, 600
+    label_w, span = 300, 980
+    lo, hi = 55, 100
     xs = lambda v: label_w + span * (v - lo) / (hi - lo)  # noqa: E731
     out = []
-    for v in range(60, 91, 10):
-        out.append(f'<line x1="{xs(v):.1f}" x2="{xs(v):.1f}" y1="10" y2="{h - 60}" stroke="{GRID}"/>')
-        out.append(t(xs(v), h - 24, v, 24, MUTED, "middle"))
+    for v in range(55, 101, 5):
+        out.append(f'<line x1="{xs(v):.1f}" x2="{xs(v):.1f}" y1="10" y2="{h - 150}" stroke="{GRID}"/>')
+        out.append(t(xs(v), h - 114, v, 24, MUTED, "middle"))
+    out.append(xtitle(label_w, label_w + span, h - 76, f"Track {track.upper()} WCB-lite score (0–100), same answers"))
+    out.append(ytitle(28, 10, h - 150, "Model"))
     for i, m in enumerate(ORDER):
-        y = 50 + i * 110
-        o, n = DATA[m]["scores"]["lite-a"]["original"], DATA[m]["scores"]["lite-a"]["rescored"]
+        y = 50 + i * 100
+        sc = DATA[m]["scores"][f"lite-{track}"]
         out.append(t(label_w - 24, y + 12, m, 34, INK, "end", 500))
-        out.append(f'<line x1="{xs(o):.1f}" x2="{xs(n) - 20:.1f}" y1="{y}" y2="{y}" stroke="{INK}" stroke-width="4" marker-end="url(#arr)"/>')
-        out.append(f'<circle cx="{xs(o):.1f}" cy="{y}" r="12" fill="{MUTED}"/>')
-        out.append(f'<circle cx="{xs(n):.1f}" cy="{y}" r="16" fill="{COLOR[m]}"/>')
-        out.append(t(xs(n) + 28, y + 12, f"+{n - o:.1f}", 34, INK, "start", 700))
-    defs = (f'<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" '
-            f'orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="{INK}"/></marker></defs>')  # fmt: skip
-    return svg(defs + "".join(out), w, h)
+        lo_v, hi_v = min(sc[k] for k, _, _ in steps), max(sc[k] for k, _, _ in steps)
+        out.append(f'<line x1="{xs(lo_v):.1f}" x2="{xs(hi_v):.1f}" y1="{y}" y2="{y}" stroke="{COLOR[m]}" stroke-width="8" opacity=".45"/>')
+        for k, _, color in steps:
+            r = 16 if k == "rescored" else 11
+            out.append(f'<circle cx="{xs(sc[k]):.1f}" cy="{y}" r="{r}" fill="{color}"/>')
+        out.append(t(xs(sc["rescored"]) + 28, y + 12, f'{sc["rescored"]:.1f}', 34, INK, "start", 700))
+        out.append(t(xs(sc["original"]) - 22, y + 10, f'{sc["original"]:.1f}', 24, MUTED, "end"))
+    for k, (_, name, color) in enumerate(steps):
+        x = label_w + k * 250
+        out.append(f'<circle cx="{x + 12}" cy="{h - 22}" r="11" fill="{color}"/>')
+        out.append(t(x + 32, h - 13, name, 24, INK))
+    return svg("".join(out), w, h)
+
+
+def judge_cost_bars():
+    """Agent cost vs grading cost per lite run (A + B)."""
+    w, h = 1400, 560
+    label_w, span, vmax = 300, 820, 70
+    out = []
+    for i, m in enumerate(ORDER):
+        y = 30 + i * 100
+        agent = DATA[m]["usage"]["lite"]["cost_billed_usd"]
+        judge = sum(JUDGE["runs"][m][t]["cost_billed_usd"] for t in "ab")
+        out.append(t(label_w - 24, y + 44, m, 34, INK, "end", 500))
+        aw, jw = span * agent / vmax, span * judge / vmax
+        out.append(f'<rect x="{label_w}" y="{y + 10}" width="{aw:.1f}" height="54" fill="{COLOR[m]}"/>')
+        out.append(f'<rect x="{label_w + aw:.1f}" y="{y + 10}" width="{jw:.1f}" height="54" fill="{INK}" opacity=".85"/>')
+        out.append(t(label_w + aw + jw + 16, y + 48, f"${agent:.2f} + ${judge:.2f}", 32, INK, "start", 600))
+    base = 30 + 4 * 100 + 4
+    out.append(f'<line x1="{label_w}" x2="{label_w + span}" y1="{base}" y2="{base}" stroke="{GRID}" stroke-width="2"/>')
+    for v in range(0, vmax + 1, 10):
+        x = label_w + span * v / vmax
+        out.append(f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{base}" y2="{base + 8}" stroke="{MUTED}"/>')
+        out.append(t(x, base + 32, f"${v}", 22, MUTED, "middle"))
+    out.append(xtitle(label_w, label_w + span, base + 66, "USD per lite run, Tracks A + B: model under test (color) + judge panel (white)"))
+    out.append(ytitle(28, 30, base, "Model under test"))
+    return svg("".join(out), w, h)
 
 
 def suite_diagram():
@@ -370,7 +447,7 @@ OPUS_LOSS = [("Model error", 2.3, 2.8, "#d97757"), ("Grader too strict", 5.6, 16
 
 def opus_loss():
     """Opus's lost points per track, stacked by cause."""
-    w, h = 1400, 520
+    w, h = 1400, 560
     label_w, span, vmax = 220, 1000, 28
     out = []
     for i, (tr, idx, score) in enumerate([("Track A", 1, 87.5), ("Track B", 2, 72.4)]):
@@ -385,10 +462,17 @@ def opus_loss():
                 out.append(t(x + bw / 2, y + 52, f"{v:.1f}", 30, BG, "middle", 700))
             x += bw
         out.append(t(x + 18, y + 52, f"−{100 - score:.1f}", 36, INK, "start", 700))
+    base = 60 + 190 + 100
+    out.append(f'<line x1="{label_w}" x2="{label_w + span}" y1="{base}" y2="{base}" stroke="{GRID}" stroke-width="2"/>')
+    for v in range(0, vmax + 1, 4):
+        x = label_w + span * v / vmax
+        out.append(f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{base}" y2="{base + 8}" stroke="{MUTED}"/>')
+        out.append(t(x, base + 32, v, 22, MUTED, "middle"))
+    out.append(xtitle(label_w, label_w + span, base + 64, "Points lost (100 − score), heuristic grader, by cause"))
     for k, (name, _, _, color) in enumerate(OPUS_LOSS):
         x = label_w + k * 290
-        out.append(f'<rect x="{x}" y="{h - 70}" width="28" height="28" rx="5" fill="{color}"/>')
-        out.append(t(x + 40, h - 47, name, 28, INK))
+        out.append(f'<rect x="{x}" y="{h - 40}" width="28" height="28" rx="5" fill="{color}"/>')
+        out.append(t(x + 40, h - 17, name, 28, INK))
     return svg("".join(out), w, h)
 
 
@@ -430,7 +514,7 @@ def main() -> None:
     slides.append(
         '<section class="slide title"><div class="kicker">white-collar-bench</div>'
         '<h1 class="hero">Six models, one memory benchmark,<br>lite runs from $3.53</h1>'
-        '<div class="sub">WCB-lite · Claude Opus, Sonnet, Haiku 5.5 · GPT-6.1 Sol · DeepSeek V4.1 Flash · Qwen3.8-27B · Pi harness · Nov 2026</div></section>'
+        '<div class="sub">WCB-lite · Claude Opus, Sonnet, Haiku 5.5 · GPT-6.1 Sol · DeepSeek V4.1 Flash · Qwen3.8-27B · Pi harness · gold v6, judge panel · Nov 2026</div></section>'
     )
     slides.append(slide("The task: be someone's working memory", harness_diagram(),
                         "Synthetic knowledge-worker worlds: projects, people, commitments, decisions"))
@@ -447,20 +531,20 @@ def main() -> None:
                         + big_number("≤ 2.8", "points error in model gaps") + "</div>",
                         "Checked by rescoring two full runs (DeepSeek, Qwen) as each suite"))
 
-    slides.append(slide("Opus and Sonnet tie at the top", grouped_scores(),
-                        "WCB-lite, rescored · bars: Track A solid, Track B faded · whiskers: 95% CI over worlds"))
-    slides.append(slide("One lite run, A + B", lite_cost_bars(), ""))
-    slides.append(slide("Track A: Opus buys 2 points for 3.3× the cost", frontier("a"),
-                        "Dashed: best score per budget · hollow: earlier runs, older scorer"))
-    slides.append(slide("Track B: the same frontier", frontier("b"),
-                        "Dashed: best score per budget · hollow: earlier runs, older scorer"))
+    slides.append(slide("Opus leads; the rest are close", grouped_scores(),
+                        "WCB-lite, gold v6 + judge panel · bars: Track A solid, Track B faded · whiskers: 95% CI over worlds"))
+    slides.append(slide("One lite run costs $3.53 to $57", lite_cost_bars(), "Cost of the model under test, before grading"))
+    slides.append(slide("Track A: Haiku is 89 for $3.53", frontier("a"),
+                        "Dashed: best score per budget · hollow: earlier runs, older grader (not rescored)"))
+    slides.append(slide("Track B: Opus pulls away when memory is up to the model", frontier("b"),
+                        "Dashed: best score per budget · hollow: earlier runs, older grader (not rescored)"))
     slides.append(slide("Six models on lite", earlier_table(),
-                        "DeepSeek and Qwen: earlier full runs on the same harness, rescored as lite from their reports"))
+                        "DeepSeek and Qwen: earlier full runs, rescored as lite with the older grader; raw answers unavailable"))
     slides.append(slide("Answering is easy. Remembering is hard.", stacked_ingest(),
                         "Ring: score from a perfect memory · dot: score from the model's own memory"))
-    slides.append(slide("Without a memory contract, every model drops 13–17 points", track_gap(),
-                        "Track A: fixed store layout · Track B: the model designs its own"))
-    slides.append(slide("Where the points go", bucket_heat(), "Mean score by question type, Track A"))
+    slides.append(slide("Without a memory contract, every model drops", track_gap(),
+                        "Opus loses 4.5 points · the others 7–10 · Track A: fixed store layout · Track B: own design"))
+    slides.append(slide("Where the points go", bucket_heat(), "Mean score by question type, Track A, judge panel"))
 
     slides.append(slide("Sonnet plans; Haiku explores", turns_dots(),
                         "Turns per ingestion day, every session (Tracks A and B)"))
@@ -478,13 +562,13 @@ def main() -> None:
     slides.append(slide("Failure 1: “Should I even do this?”",
                         '<div class="ask">Andres in chat: “can you send me the Fennel rollout checklist by Wednesday?”</div>'
                         + quote("GPT-6.1 Sol", "Respond to Andres's request for the Fennel rollout checklist; <b>agree whether you can deliver it tomorrow</b>, then send it if accepted.",
-                                "0 → 0.93", COLOR["GPT-6.1 Sol"], "Right task, hedged. The grader didn't recognize it.")
+                                "0 → 0.93", COLOR["GPT-6.1 Sol"], "Right task, hedged. Nobody had answered Andres, so the item is now optional.")
                         + '<div class="foot">Gold: “Send Andres the Fennel rollout checklist”. Sol scored 0 on 5 of 11 “focus tomorrow” questions this way.</div>',
                         "What should I focus on tomorrow?"))
     slides.append(slide("Who is right? The rules disagree",
                         '<div class="two"><div class="col"><div class="lab">The memory contract</div><div class="big">An ask is <b>not accepted</b> until the worker agrees</div></div>'
                         '<div class="col"><div class="lab">The world generator</div><div class="big">A direct request is <b>accepted</b></div></div></div>'
-                        + '<div class="foot">Share of new loops a model marks unaccepted: Sol 24% · Haiku 21% · Opus 15% · Sonnet 14%. Fix: the grader now ignores hedge words.</div>',
+                        + '<div class="foot">Share of new loops a model marks unaccepted: Sol 24% · Haiku 21% · Opus 15% · Sonnet 14%. Fix: unanswered asks are optional, neither required nor wrong.</div>',
                         "A benchmark bug, found by a model that read the rules literally"))
     slides.append(slide("Failure 2: telling the history got zero",
                         '<div class="ask">The target date moved twice: 15 Dec → 22 Dec → 31 Dec</div>'
@@ -492,18 +576,28 @@ def main() -> None:
                         + quote("Opus 5.5", "The target date moved to Fri 31 Dec 2027 (<b>it was 15 Dec, then 22 Dec</b>).", "0 → 0.72", COLOR["Opus 5.5"],
                                 "The grader read “22 Dec” as the current date. Fixed."),
                         "What is the status of Marten?"))
-    slides.append(slide("Fixing the grader moved every model up", rescore_bars(),
-                        "Lite Track A before and after · 65 answers gained, none lost"))
+    slides.append(slide("Grading for substance moved every model up", rescore_bars("a"),
+                        "Same answers, four graders · Sol gains most: it explains and hedges"))
+    slides.append(slide("Track B gains the most: 11–17 points", rescore_bars("b"),
+                        "Own-memory answers are longer and freer, so word matching missed them"))
+    slides.append(slide("The judge: heuristic first, then a two-family panel",
+                        '<div class="two"><div class="col"><div class="lab">Heuristic says yes</div><div class="big">Accepted. <b>No model call</b>.</div></div>'
+                        '<div class="col"><div class="lab">Heuristic says no</div><div class="big">Claude Sonnet <b>and</b> GPT-6.1 Sol must both say yes</div></div></div>'
+                        '<div class="foot">Neither family can grade its own models alone · one sample each · every decision cached</div>',
+                        "Substantially correct gets credit, whatever the wording"))
+    slides.append(slide(f"Grading costs ${JUDGE['total_billed_usd']:.0f} for all four runs", judge_cost_bars(),
+                        f"{JUDGE['total']['claude-sonnet-5.5']['calls'] + JUDGE['total']['gpt-6.1-sol']['calls']:,} panel calls · "
+                        f"{JUDGE['total_tokens'] / 1e6:.1f}M tokens · plus ${JUDGE['wasted_sis_calls']['cost_usd']:.0f} lost to a bug, now fixed"))
     slides.append(slide("Failure 3: right answer, buried in explanation",
                         quote("Opus 5.5", "Finish and send the Fulmar privacy impact assessment to Goran Liu. <b>It was due 14 Sep and no completion has been seen, so it is probably overdue</b>", "0", COLOR["Opus 5.5"])
                         + quote("Sonnet 5.5", "Send Fulmar privacy impact assessment to Goran Liu (was due 14 Sep, no completion evidenced)", "0.93", COLOR["Sonnet 5.5"])
-                        + '<div class="foot">Gold: “Complete the Fulmar privacy impact assessment”. Same item, ranked first by both. Opus\'s commentary drowns the match.</div>',
+                        + '<div class="foot">Gold: “Complete the Fulmar privacy impact assessment”. Same item, ranked first by both. The panel now gives Opus 0.92.</div>',
                         "Track B · What should I focus on tomorrow?"))
-    slides.append(slide("Failure 4: “What changed?” stumps everyone",
+    slides.append(slide("Failure 4: “What changed?” stumped the grader",
                         '<div class="ask">Gold: decided to build Corrie in-house · I handed Corrie over to Iselbury</div>'
                         + quote("Sonnet 5.5", "Anastasia confirmed Corrie will be built in-house rather than bought · Handover of Corrie to Iselbury reported done", "0", COLOR["Sonnet 5.5"])
-                        + quote("Opus 5.5", "Anastasia confirmed Corrie will be built in-house rather than bought (decision made) · Hiba … reported it done", "0", COLOR["Opus 5.5"],
-                                "All four models found both events. All four scored 0 or near it."),
+                        + quote("Opus 5.5", "Anastasia confirmed Corrie will be built in-house rather than bought (decision made) · Hiba … reported it done", "0 → 0.80", COLOR["Opus 5.5"],
+                                "Word matching gave every model 0 or near it. The panel accepts both events."),
                         "What changed on Project Corrie since Saturday?"))
     slides.append(slide("Failure 5: a completed task listed as owed",
                         '<div class="ask">What does Sol owe me?   Gold: “Collect two references for Mateus”</div>'
@@ -511,20 +605,20 @@ def main() -> None:
                                 "A real error: a finished loop instead of the open one. Pilot world, the hardest for everyone."),
                         "Track A · pilot world"))
 
-    slides.append(slide("Why Opus isn't at 100: mostly the grader", opus_loss(),
-                        "Points Opus lost, by cause · an LLM judge scores the same answers 89.9 / 85.0"))
+    slides.append(slide("Why Opus wasn't at 100: mostly the grader", opus_loss(),
+                        "Audit of the old grader's losses · with gold v6 and the panel Opus scores 91.9 / 87.4"))
     slides.append(slide("What all four share", '<div class="cards">'
                         + "".join(f'<div class="card"><div class="cn">{esc(a)}</div><div class="cd">{esc(b)}</div></div>'
                                   for a, b in [("Never invent", "Unanswerable questions: 1.00 for every model"),
                                                ("Dates are solid", "Temporal questions: 0.95–1.00"),
-                                               ("“What changed?” is hard", "0.19–0.52, even with perfect memory"),
+                                               ("“What changed?” is hardest", "0.62–0.74 on Track A, lowest of all types"),
                                                ("The pilot world is hardest", "Dense hand-offs and corrections")])
                         + "</div>"))
     slides.append(slide("Takeaways", '<ol class="take">'
                         '<li><b>Lite works.</b> Same ranking as full runs at ~20% of the cost.</li>'
-                        '<li><b>Sonnet is the Claude sweet spot.</b> Opus ties it at 3.3× the price; DeepSeek is competitive.</li>'
-                        '<li><b>Memory, not reasoning, separates models.</b></li>'
-                        '<li><b>Read the failures.</b> Two of them were grader bugs.</li></ol>'))
+                        '<li><b>Opus leads, Haiku is the bargain.</b> 89 on Track A for $3.53.</li>'
+                        '<li><b>Own memory is the real test.</b> Track B separates models.</li>'
+                        f'<li><b>Grade substance, not words.</b> A two-family panel costs ~${JUDGE["total_billed_usd"] / 4:.0f} a run.</li></ol>'))
 
     page = TEMPLATE.replace("{{SLIDES}}", "\n".join(slides))
     (HERE / "index.html").write_text(page)

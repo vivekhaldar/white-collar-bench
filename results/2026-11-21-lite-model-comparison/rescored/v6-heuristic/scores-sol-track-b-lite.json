@@ -1,0 +1,6066 @@
+{
+  "report_version": "0.1",
+  "scored_at": "2026-11-22T02:38:29+00:00",
+  "scorer": {
+    "version": "0.1",
+    "wcb_version": "0.1.0"
+  },
+  "run": {
+    "dir": "runs/gpt-6.1-sol-pi-lite/sol/track-b/measured",
+    "track": "B",
+    "adapter": {
+      "name": "pi-litellm-gpt-6.1-sol",
+      "version": "pi-1.5.2-runtime-v2",
+      "model": "litellm/gpt-6.1-sol",
+      "path": "/home/user/workspace/repo/results/2026-11-21-gpt-6.1-sol-pi-lite/config/adapter.yaml",
+      "sha256": "30aa5a700a48c0ee30498393c47d6bbd2016abf78e5555c72795ae289970235e"
+    },
+    "wcb_version": "0.1.0",
+    "status": "completed",
+    "started_at": "2026-11-21T21:54:21+00:00",
+    "finished_at": "2026-11-21T22:21:28+00:00",
+    "options": {
+      "max_days": 2,
+      "skip_ingest": false,
+      "workspace_root": null,
+      "meter": true,
+      "suite": "lite"
+    },
+    "suite": {
+      "name": "lite",
+      "worlds": [
+        "pilot",
+        "dev/gen-s1-w1",
+        "dev/gen-s2-w1",
+        "dev/gen-s3-w1",
+        "dev/gen-s4-w2",
+        "dev/gen-s5-small",
+        "dev/gen-s6-w1",
+        "dev/gen-s7-w2",
+        "dev/gen-s8-w4",
+        "dev/gen-s9-large",
+        "dev/gen-s10-w2-small"
+      ],
+      "max_days": 2
+    },
+    "scored": {
+      "agent": true,
+      "oracle": false
+    }
+  },
+  "judge": {
+    "kind": "heuristic",
+    "name": "heuristic",
+    "model": null,
+    "calls": null,
+    "escalated": null
+  },
+  "output": {
+    "dir": "runs/gpt-6.1-sol-pi-lite/sol/track-b/scores-v6-lite"
+  },
+  "headline": {
+    "track": "B",
+    "suite": "lite",
+    "label": "WCB-lite",
+    "wcb": 64.9301533578141,
+    "wcb_ci95": [
+      57.91738144441067,
+      71.14066266606333
+    ],
+    "synthesis": null,
+    "synthesis_ci95": null,
+    "ingestion_cost": null,
+    "sis": null,
+    "sis_final": null,
+    "n_worlds": 11,
+    "n_episodes": 11,
+    "n_questions": 159
+  },
+  "worlds": [
+    {
+      "id": "pilot",
+      "path": "/home/user/workspace/repo/worlds/pilot",
+      "days": [
+        "2027-03-01",
+        "2027-03-02"
+      ],
+      "n_days": 6,
+      "checkpoints": [
+        {
+          "id": "cp1",
+          "date": "2027-03-02",
+          "label": "end of Tuesday",
+          "day_index": 2
+        }
+      ],
+      "repeats": [
+        {
+          "repeat": 1,
+          "checkpoints": [
+            {
+              "id": "cp1",
+              "date": "2027-03-02",
+              "label": "end of Tuesday",
+              "day_index": 2,
+              "n_questions": 14,
+              "score": 47.86623814219968,
+              "score_buckets": {
+                "point": 56.94444444444445,
+                "list": 4.742857142857144,
+                "status": 36.24260355029586,
+                "brief": 0.0,
+                "change": 0.0,
+                "temporal": 91.66666666666666,
+                "priority": 93.33333333333333,
+                "unanswerable": 100.0
+              },
+              "synthesis": null,
+              "synthesis_buckets": {},
+              "ingestion_cost": null
+            }
+          ],
+          "score": 47.86623814219968,
+          "synthesis": null,
+          "ingestion_cost": null,
+          "sis": null
+        }
+      ],
+      "score": 47.86623814219968,
+      "synthesis": null,
+      "ingestion_cost": null,
+      "sis": null,
+      "sis_final": null
+    },
+    {
+      "id": "gen-s9-large",
+      "path": "/home/user/workspace/repo/worlds/dev/gen-s9-large",
+      "days": [
+        "2027-11-01",
+        "2027-11-02"
+      ],
+      "n_days": 6,
+      "checkpoints": [
+        {
+          "id": "cp1",
+          "date": "2027-11-02",
+          "label": "end of Tuesday",
+          "day_index": 2
+        }
+      ],
+      "repeats": [
+        {
+          "repeat": 1,
+          "checkpoints": [
+            {
+              "id": "cp1",
+              "date": "2027-11-02",
+              "label": "end of Tuesday",
+              "day_index": 2,
+              "n_questions": 18,
+              "score": 72.3872905643739,
+              "score_buckets": {
+                "point": 54.76190476190476,
+                "list": 55.55555555555555,
+                "status": 76.80555555555556,
+                "brief": 86.41975308641975,
+                "change": 19.444444444444446,
+                "temporal": 100.0,
+                "priority": 86.11111111111111,
+                "unanswerable": 100.0
+              },
+              "synthesis": null,
+              "synthesis_buckets": {},
+              "ingestion_cost": null
+            }
+          ],
+          "score": 72.3872905643739,
+          "synthesis": null,
+          "ingestion_cost": null,
+          "sis": null
+        }
+      ],
+      "score": 72.3872905643739,
+      "synthesis": null,
+      "ingestion_cost": null,
+      "sis": null,
+      "sis_final": null
+    },
+    {
+      "id": "gen-s8-w4",
+      "path": "/home/user/workspace/repo/worlds/dev/gen-s8-w4",
+      "days": [
+        "2027-09-13",
+        "2027-09-14"
+      ],
+      "n_days": 24,
+      "checkpoints": [
+        {
+          "id": "cp1",
+          "date": "2027-09-14",
+          "label": "end of Tuesday (week 1)",
+          "day_index": 2
+        }
+      ],
+      "repeats": [
+        {
+          "repeat": 1,
+          "checkpoints": [
+            {
+              "id": "cp1",
+              "date": "2027-09-14",
+              "label": "end of Tuesday (week 1)",
+              "day_index": 2,
+              "n_questions": 15,
+              "score": 73.6619682421879,
+              "score_buckets": {
+                "point": 100.0,
+                "list": 42.84792368125702,
+                "status": 77.02991452991454,
+                "brief": 34.656002964426875,
+                "change": 46.42857142857143,
+                "temporal": 100.0,
+                "priority": 88.33333333333333,
+                "unanswerable": 100.0
+              },
+              "synthesis": null,
+              "synthesis_buckets": {},
+              "ingestion_cost": null
+            }
+          ],
+          "score": 73.6619682421879,
+          "synthesis": null,
+          "ingestion_cost": null,
+          "sis": null
+        }
+      ],
+      "score": 73.6619682421879,
+      "synthesis": null,
+      "ingestion_cost": null,
+      "sis": null,
+      "sis_final": null
+    },
+    {
+      "id": "gen-s4-w2",
+      "path": "/home/user/workspace/repo/worlds/dev/gen-s4-w2",
+      "days": [
+        "2027-09-06",
+        "2027-09-07"
+      ],
+      "n_days": 12,
+      "checkpoints": [
+        {
+          "id": "cp1",
+          "date": "2027-09-07",
+          "label": "end of Tuesday (week 1)",
+          "day_index": 2
+        }
+      ],
+      "repeats": [
+        {
+          "repeat": 1,
+          "checkpoints": [
+            {
+              "id": "cp1",
+              "date": "2027-09-07",
+              "label": "end of Tuesday (week 1)",
+              "day_index": 2,
+              "n_questions": 15,
+              "score": 74.74024415782145,
+              "score_buckets": {
+                "point": 47.916666666666664,
+                "list": 40.7253086419753,
+                "status": 74.03100775193798,
+                "brief": 97.88135593220339,
+                "change": 41.21376811594203,
+                "temporal": 100.0,
+                "priority": 96.15384615384616,
+                "unanswerable": 100.0
+              },
+              "synthesis": null,
+              "synthesis_buckets": {},
+              "ingestion_cost": null
+            }
+          ],
+          "score": 74.74024415782145,
+          "synthesis": null,
+          "ingestion_cost": null,
+          "sis": null
+        }
+      ],
+      "score": 74.74024415782145,
+      "synthesis": null,
+      "ingestion_cost": null,
+      "sis": null,
+      "sis_final": null
+    },
+    {
+      "id": "gen-s7-w2",
+      "path": "/home/user/workspace/repo/worlds/dev/gen-s7-w2",
+      "days": [
+        "2027-07-05",
+        "2027-07-06"
+      ],
+      "n_days": 12,
+      "checkpoints": [
+        {
+          "id": "cp1",
+          "date": "2027-07-06",
+          "label": "end of Tuesday (week 1)",
+          "day_index": 2
+        }
+      ],
+      "repeats": [
+        {
+          "repeat": 1,
+          "checkpoints": [
+            {
+              "id": "cp1",
+              "date": "2027-07-06",
+              "label": "end of Tuesday (week 1)",
+              "day_index": 2,
+              "n_questions": 15,
+              "score": 75.9461608911433,
+              "score_buckets": {
+                "point": 97.91666666666666,
+                "list": 91.11111111111111,
+                "status": 80.0,
+                "brief": 61.87484268470185,
+                "change": 0.0,
+                "temporal": 85.41666666666667,
+                "priority": 91.25,
+                "unanswerable": 100.0
+              },
+              "synthesis": null,
+              "synthesis_buckets": {},
+              "ingestion_cost": null
+            }
+          ],
+          "score": 75.9461608911433,
+          "synthesis": null,
+          "ingestion_cost": null,
+          "sis": null
+        }
+      ],
+      "score": 75.9461608911433,
+      "synthesis": null,
+      "ingestion_cost": null,
+      "sis": null,
+      "sis_final": null
+    },
+    {
+      "id": "gen-s1-w1",
+      "path": "/home/user/workspace/repo/worlds/dev/gen-s1-w1",
+      "days": [
+        "2027-11-08",
+        "2027-11-09"
+      ],
+      "n_days": 6,
+      "checkpoints": [
+        {
+          "id": "cp1",
+          "date": "2027-11-09",
+          "label": "end of Tuesday",
+          "day_index": 2
+        }
+      ],
+      "repeats": [
+        {
+          "repeat": 1,
+          "checkpoints": [
+            {
+              "id": "cp1",
+              "date": "2027-11-09",
+              "label": "end of Tuesday",
+              "day_index": 2,
+              "n_questions": 15,
+              "score": 75.40760046179842,
+              "score_buckets": {
+                "point": 100.0,
+                "list": 61.30952380952381,
+                "status": 98.599788647343,
+                "brief": 61.135912698412696,
+                "change": 37.36263736263737,
+                "temporal": 100.0,
+                "priority": 44.85294117647059,
+                "unanswerable": 100.0
+              },
+              "synthesis": null,
+              "synthesis_buckets": {},
+              "ingestion_cost": null
+            }
+          ],
+          "score": 75.40760046179842,
+          "synthesis": null,
+          "ingestion_cost": null,
+          "sis": null
+        }
+      ],
+      "score": 75.40760046179842,
+      "synthesis": null,
+      "ingestion_cost": null,
+      "sis": null,
+      "sis_final": null
+    },
+    {
+      "id": "gen-s2-w1",
+      "path": "/home/user/workspace/repo/worlds/dev/gen-s2-w1",
+      "days": [
+        "2027-03-08",
+        "2027-03-09"
+      ],
+      "n_days": 5,
+      "checkpoints": [
+        {
+          "id": "cp1",
+          "date": "2027-03-09",
+          "label": "end of Tuesday",
+          "day_index": 2
+        }
+      ],
+      "repeats": [
+        {
+          "repeat": 1,
+          "checkpoints": [
+            {
+              "id": "cp1",
+              "date": "2027-03-09",
+              "label": "end of Tuesday",
+              "day_index": 2,
+              "n_questions": 15,
+              "score": 63.140878749275,
+              "score_buckets": {
+                "point": 75.0,
+                "list": 52.77777777777778,
+                "status": 66.13427120977458,
+                "brief": 44.791666666666664,
+                "change": 10.493827160493828,
+                "temporal": 89.58333333333333,
+                "priority": 66.34615384615384,
+                "unanswerable": 100.0
+              },
+              "synthesis": null,
+              "synthesis_buckets": {},
+              "ingestion_cost": null
+            }
+          ],
+          "score": 63.140878749275,
+          "synthesis": null,
+          "ingestion_cost": null,
+          "sis": null
+        }
+      ],
+      "score": 63.140878749275,
+      "synthesis": null,
+      "ingestion_cost": null,
+      "sis": null,
+      "sis_final": null
+    },
+    {
+      "id": "gen-s3-w1",
+      "path": "/home/user/workspace/repo/worlds/dev/gen-s3-w1",
+      "days": [
+        "2027-09-20",
+        "2027-09-21"
+      ],
+      "n_days": 6,
+      "checkpoints": [
+        {
+          "id": "cp1",
+          "date": "2027-09-21",
+          "label": "end of Tuesday",
+          "day_index": 2
+        }
+      ],
+      "repeats": [
+        {
+          "repeat": 1,
+          "checkpoints": [
+            {
+              "id": "cp1",
+              "date": "2027-09-21",
+              "label": "end of Tuesday",
+              "day_index": 2,
+              "n_questions": 15,
+              "score": 56.84264844120149,
+              "score_buckets": {
+                "point": 75.0,
+                "list": 22.22222222222222,
+                "status": 54.987622285850634,
+                "brief": 11.643064633260709,
+                "change": 12.01923076923077,
+                "temporal": 89.58333333333333,
+                "priority": 89.28571428571428,
+                "unanswerable": 100.0
+              },
+              "synthesis": null,
+              "synthesis_buckets": {},
+              "ingestion_cost": null
+            }
+          ],
+          "score": 56.84264844120149,
+          "synthesis": null,
+          "ingestion_cost": null,
+          "sis": null
+        }
+      ],
+      "score": 56.84264844120149,
+      "synthesis": null,
+      "ingestion_cost": null,
+      "sis": null,
+      "sis_final": null
+    },
+    {
+      "id": "gen-s6-w1",
+      "path": "/home/user/workspace/repo/worlds/dev/gen-s6-w1",
+      "days": [
+        "2027-02-22",
+        "2027-02-23"
+      ],
+      "n_days": 6,
+      "checkpoints": [
+        {
+          "id": "cp1",
+          "date": "2027-02-23",
+          "label": "end of Tuesday",
+          "day_index": 2
+        }
+      ],
+      "repeats": [
+        {
+          "repeat": 1,
+          "checkpoints": [
+            {
+              "id": "cp1",
+              "date": "2027-02-23",
+              "label": "end of Tuesday",
+              "day_index": 2,
+              "n_questions": 15,
+              "score": 60.970596891933106,
+              "score_buckets": {
+                "point": 100.0,
+                "list": 36.40873015873016,
+                "status": 22.280999651689314,
+                "brief": 37.74928774928775,
+                "change": 8.93939393939394,
+                "temporal": 93.75,
+                "priority": 88.63636363636364,
+                "unanswerable": 100.0
+              },
+              "synthesis": null,
+              "synthesis_buckets": {},
+              "ingestion_cost": null
+            }
+          ],
+          "score": 60.970596891933106,
+          "synthesis": null,
+          "ingestion_cost": null,
+          "sis": null
+        }
+      ],
+      "score": 60.970596891933106,
+      "synthesis": null,
+      "ingestion_cost": null,
+      "sis": null,
+      "sis_final": null
+    },
+    {
+      "id": "gen-s10-w2-small",
+      "path": "/home/user/workspace/repo/worlds/dev/gen-s10-w2-small",
+      "days": [
+        "2027-08-30",
+        "2027-08-31"
+      ],
+      "n_days": 11,
+      "checkpoints": [
+        {
+          "id": "cp1",
+          "date": "2027-08-31",
+          "label": "end of Tuesday (week 1)",
+          "day_index": 2
+        }
+      ],
+      "repeats": [
+        {
+          "repeat": 1,
+          "checkpoints": [
+            {
+              "id": "cp1",
+              "date": "2027-08-31",
+              "label": "end of Tuesday (week 1)",
+              "day_index": 2,
+              "n_questions": 11,
+              "score": 71.16328304555047,
+              "score_buckets": {
+                "point": 75.0,
+                "list": 71.9187062937063,
+                "status": 85.41813483673948,
+                "change": 0.0,
+                "priority": 94.64285714285714,
+                "unanswerable": 100.0
+              },
+              "synthesis": null,
+              "synthesis_buckets": {},
+              "ingestion_cost": null
+            }
+          ],
+          "score": 71.16328304555047,
+          "synthesis": null,
+          "ingestion_cost": null,
+          "sis": null
+        }
+      ],
+      "score": 71.16328304555047,
+      "synthesis": null,
+      "ingestion_cost": null,
+      "sis": null,
+      "sis_final": null
+    },
+    {
+      "id": "gen-s5-small",
+      "path": "/home/user/workspace/repo/worlds/dev/gen-s5-small",
+      "days": [
+        "2027-03-29",
+        "2027-03-30"
+      ],
+      "n_days": 6,
+      "checkpoints": [
+        {
+          "id": "cp1",
+          "date": "2027-03-30",
+          "label": "end of Tuesday",
+          "day_index": 2
+        }
+      ],
+      "repeats": [
+        {
+          "repeat": 1,
+          "checkpoints": [
+            {
+              "id": "cp1",
+              "date": "2027-03-30",
+              "label": "end of Tuesday",
+              "day_index": 2,
+              "n_questions": 11,
+              "score": 42.10477734847046,
+              "score_buckets": {
+                "point": 46.875,
+                "list": 40.48979591836734,
+                "status": 55.64848355707082,
+                "change": 9.615384615384617,
+                "priority": 0.0,
+                "unanswerable": 100.0
+              },
+              "synthesis": null,
+              "synthesis_buckets": {},
+              "ingestion_cost": null
+            }
+          ],
+          "score": 42.10477734847046,
+          "synthesis": null,
+          "ingestion_cost": null,
+          "sis": null
+        }
+      ],
+      "score": 42.10477734847046,
+      "synthesis": null,
+      "ingestion_cost": null,
+      "sis": null,
+      "sis_final": null
+    }
+  ],
+  "breakdowns": {
+    "by_type": {
+      "point": {
+        "n": 46,
+        "wcb": 74.45652173913044,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "list": {
+        "n": 35,
+        "wcb": 44.85183574928473,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "status": {
+        "n": 11,
+        "wcb": 66.1071255978338,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "brief": {
+        "n": 9,
+        "wcb": 48.46132071281997,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "change": {
+        "n": 11,
+        "wcb": 16.865205257827128,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "temporal": {
+        "n": 17,
+        "wcb": 94.6078431372549,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "priority": {
+        "n": 11,
+        "wcb": 76.26778672901668,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "unanswerable": {
+        "n": 19,
+        "wcb": 100.0,
+        "synthesis": null,
+        "ingestion_cost": null
+      }
+    },
+    "by_challenge": {
+      "alias": {
+        "n": 36,
+        "wcb": 51.162492365276314,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "correction": {
+        "n": 1,
+        "wcb": 23.71428571428572,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "draft_vs_sent": {
+        "n": 1,
+        "wcb": 0.0,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "duplicate_signal": {
+        "n": 47,
+        "wcb": 66.72080605455503,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "endorsement": {
+        "n": 20,
+        "wcb": 60.77002901145836,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "implied_commitment": {
+        "n": 32,
+        "wcb": 51.60274283735201,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "name_collision": {
+        "n": 19,
+        "wcb": 57.157591708674516,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "new_entity": {
+        "n": 5,
+        "wcb": 42.27972440434524,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "scattered_evidence": {
+        "n": 38,
+        "wcb": 62.93069999067503,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "silent_closure": {
+        "n": 2,
+        "wcb": 23.9282322615656,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "supersession": {
+        "n": 23,
+        "wcb": 62.25178394296954,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "transfer": {
+        "n": 11,
+        "wcb": 76.8939393939394,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "unobservable": {
+        "n": 21,
+        "wcb": 96.71257391845627,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "worker_directive": {
+        "n": 16,
+        "wcb": 65.91125915178705,
+        "synthesis": null,
+        "ingestion_cost": null
+      }
+    },
+    "by_checkpoint": [
+      {
+        "world": "pilot",
+        "checkpoint": "cp1",
+        "date": "2027-03-02",
+        "label": "end of Tuesday",
+        "day_index": 2,
+        "n_days": 6,
+        "n_questions": 14,
+        "wcb": 47.86623814219968,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      {
+        "world": "gen-s9-large",
+        "checkpoint": "cp1",
+        "date": "2027-11-02",
+        "label": "end of Tuesday",
+        "day_index": 2,
+        "n_days": 6,
+        "n_questions": 18,
+        "wcb": 72.3872905643739,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      {
+        "world": "gen-s8-w4",
+        "checkpoint": "cp1",
+        "date": "2027-09-14",
+        "label": "end of Tuesday (week 1)",
+        "day_index": 2,
+        "n_days": 24,
+        "n_questions": 15,
+        "wcb": 73.6619682421879,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      {
+        "world": "gen-s4-w2",
+        "checkpoint": "cp1",
+        "date": "2027-09-07",
+        "label": "end of Tuesday (week 1)",
+        "day_index": 2,
+        "n_days": 12,
+        "n_questions": 15,
+        "wcb": 74.74024415782145,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      {
+        "world": "gen-s7-w2",
+        "checkpoint": "cp1",
+        "date": "2027-07-06",
+        "label": "end of Tuesday (week 1)",
+        "day_index": 2,
+        "n_days": 12,
+        "n_questions": 15,
+        "wcb": 75.9461608911433,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      {
+        "world": "gen-s1-w1",
+        "checkpoint": "cp1",
+        "date": "2027-11-09",
+        "label": "end of Tuesday",
+        "day_index": 2,
+        "n_days": 6,
+        "n_questions": 15,
+        "wcb": 75.40760046179842,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      {
+        "world": "gen-s2-w1",
+        "checkpoint": "cp1",
+        "date": "2027-03-09",
+        "label": "end of Tuesday",
+        "day_index": 2,
+        "n_days": 5,
+        "n_questions": 15,
+        "wcb": 63.140878749275,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      {
+        "world": "gen-s3-w1",
+        "checkpoint": "cp1",
+        "date": "2027-09-21",
+        "label": "end of Tuesday",
+        "day_index": 2,
+        "n_days": 6,
+        "n_questions": 15,
+        "wcb": 56.84264844120149,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      {
+        "world": "gen-s6-w1",
+        "checkpoint": "cp1",
+        "date": "2027-02-23",
+        "label": "end of Tuesday",
+        "day_index": 2,
+        "n_days": 6,
+        "n_questions": 15,
+        "wcb": 60.970596891933106,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      {
+        "world": "gen-s10-w2-small",
+        "checkpoint": "cp1",
+        "date": "2027-08-31",
+        "label": "end of Tuesday (week 1)",
+        "day_index": 2,
+        "n_days": 11,
+        "n_questions": 11,
+        "wcb": 71.16328304555047,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      {
+        "world": "gen-s5-small",
+        "checkpoint": "cp1",
+        "date": "2027-03-30",
+        "label": "end of Tuesday",
+        "day_index": 2,
+        "n_days": 6,
+        "n_questions": 11,
+        "wcb": 42.10477734847046,
+        "synthesis": null,
+        "ingestion_cost": null
+      }
+    ]
+  },
+  "sis_by_day": [],
+  "efficiency": {
+    "summary": {
+      "ingest": {
+        "sessions": 33,
+        "ok": 33,
+        "timeouts": 0,
+        "failures": 0,
+        "usage_reported": 33,
+        "usage_metered": 33,
+        "wall_s": {
+          "total": 5034.571,
+          "mean": 152.5627575757576
+        },
+        "input_tokens": {
+          "total": 16630580.0,
+          "mean": 503956.9696969697
+        },
+        "output_tokens": {
+          "total": 321306.0,
+          "mean": 9736.545454545454
+        },
+        "cost_usd": {
+          "total": 4.1924194,
+          "mean": 0.12704301212121213
+        },
+        "tool_calls": {
+          "total": 1145.0,
+          "mean": 34.696969696969695
+        }
+      },
+      "query": {
+        "sessions": 11,
+        "ok": 11,
+        "timeouts": 0,
+        "failures": 0,
+        "usage_reported": 11,
+        "usage_metered": 11,
+        "wall_s": {
+          "total": 888.434,
+          "mean": 80.76672727272727
+        },
+        "input_tokens": {
+          "total": 2634563.0,
+          "mean": 239505.72727272726
+        },
+        "output_tokens": {
+          "total": 61600.0,
+          "mean": 5600.0
+        },
+        "cost_usd": {
+          "total": 0.99514935,
+          "mean": 0.09046812272727273
+        },
+        "tool_calls": {
+          "total": 284.0,
+          "mean": 25.818181818181817
+        }
+      },
+      "query_oracle": {
+        "sessions": 0,
+        "ok": 0,
+        "timeouts": 0,
+        "failures": 0,
+        "usage_reported": 0,
+        "usage_metered": 0,
+        "wall_s": {
+          "total": null,
+          "mean": null
+        },
+        "input_tokens": {
+          "total": null,
+          "mean": null
+        },
+        "output_tokens": {
+          "total": null,
+          "mean": null
+        },
+        "cost_usd": {
+          "total": null,
+          "mean": null
+        },
+        "tool_calls": {
+          "total": null,
+          "mean": null
+        }
+      }
+    },
+    "per_episode": {
+      "wall_s": 538.455,
+      "input_tokens": 1751376.6363636365,
+      "output_tokens": 34809.63636363636,
+      "cost_usd": 0.47159715909090916,
+      "tool_calls": 129.9090909090909
+    },
+    "per_ingest_day": [
+      {
+        "world": "gen-s1-w1",
+        "date": "2027-11-06",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 304.949,
+        "input_tokens": 825070.0,
+        "output_tokens": 19453.0,
+        "cost_usd": 0.22578115,
+        "tool_calls": 31.0
+      },
+      {
+        "world": "gen-s1-w1",
+        "date": "2027-11-08",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 123.693,
+        "input_tokens": 397821.0,
+        "output_tokens": 7921.0,
+        "cost_usd": 0.10888565,
+        "tool_calls": 46.0
+      },
+      {
+        "world": "gen-s1-w1",
+        "date": "2027-11-09",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 100.8,
+        "input_tokens": 337963.0,
+        "output_tokens": 6902.0,
+        "cost_usd": 0.09055890000000001,
+        "tool_calls": 21.0
+      },
+      {
+        "world": "gen-s10-w2-small",
+        "date": "2027-08-27",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 165.393,
+        "input_tokens": 667935.0,
+        "output_tokens": 9463.0,
+        "cost_usd": 0.14446610000000004,
+        "tool_calls": 22.0
+      },
+      {
+        "world": "gen-s10-w2-small",
+        "date": "2027-08-30",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 97.376,
+        "input_tokens": 269163.0,
+        "output_tokens": 6238.0,
+        "cost_usd": 0.07304134999999999,
+        "tool_calls": 36.0
+      },
+      {
+        "world": "gen-s10-w2-small",
+        "date": "2027-08-31",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 91.186,
+        "input_tokens": 268741.0,
+        "output_tokens": 5808.0,
+        "cost_usd": 0.0719162,
+        "tool_calls": 33.0
+      },
+      {
+        "world": "gen-s2-w1",
+        "date": "2027-03-06",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 234.078,
+        "input_tokens": 1047352.0,
+        "output_tokens": 12639.0,
+        "cost_usd": 0.20662429999999998,
+        "tool_calls": 28.0
+      },
+      {
+        "world": "gen-s2-w1",
+        "date": "2027-03-08",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 160.713,
+        "input_tokens": 456952.0,
+        "output_tokens": 11033.0,
+        "cost_usd": 0.12069389999999998,
+        "tool_calls": 49.0
+      },
+      {
+        "world": "gen-s2-w1",
+        "date": "2027-03-09",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 124.18,
+        "input_tokens": 345885.0,
+        "output_tokens": 8692.0,
+        "cost_usd": 0.0988874,
+        "tool_calls": 41.0
+      },
+      {
+        "world": "gen-s3-w1",
+        "date": "2027-09-17",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 213.623,
+        "input_tokens": 765593.0,
+        "output_tokens": 12678.0,
+        "cost_usd": 0.16622199999999998,
+        "tool_calls": 33.0
+      },
+      {
+        "world": "gen-s3-w1",
+        "date": "2027-09-20",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 151.654,
+        "input_tokens": 597478.0,
+        "output_tokens": 10654.0,
+        "cost_usd": 0.15099669999999998,
+        "tool_calls": 43.0
+      },
+      {
+        "world": "gen-s3-w1",
+        "date": "2027-09-21",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 94.598,
+        "input_tokens": 232771.0,
+        "output_tokens": 6514.0,
+        "cost_usd": 0.08083434999999999,
+        "tool_calls": 43.0
+      },
+      {
+        "world": "gen-s4-w2",
+        "date": "2027-09-04",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 192.56,
+        "input_tokens": 764024.0,
+        "output_tokens": 10689.0,
+        "cost_usd": 0.15997824999999996,
+        "tool_calls": 34.0
+      },
+      {
+        "world": "gen-s4-w2",
+        "date": "2027-09-06",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 66.87,
+        "input_tokens": 157990.0,
+        "output_tokens": 3896.0,
+        "cost_usd": 0.0505041,
+        "tool_calls": 21.0
+      },
+      {
+        "world": "gen-s4-w2",
+        "date": "2027-09-07",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 66.416,
+        "input_tokens": 115934.0,
+        "output_tokens": 4348.0,
+        "cost_usd": 0.05274795,
+        "tool_calls": 18.0
+      },
+      {
+        "world": "gen-s5-small",
+        "date": "2027-03-27",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 175.993,
+        "input_tokens": 576131.0,
+        "output_tokens": 11041.0,
+        "cost_usd": 0.153348,
+        "tool_calls": 26.0
+      },
+      {
+        "world": "gen-s5-small",
+        "date": "2027-03-29",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 97.148,
+        "input_tokens": 314855.0,
+        "output_tokens": 6261.0,
+        "cost_usd": 0.08361969999999999,
+        "tool_calls": 37.0
+      },
+      {
+        "world": "gen-s5-small",
+        "date": "2027-03-30",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 90.223,
+        "input_tokens": 312377.0,
+        "output_tokens": 6091.0,
+        "cost_usd": 0.09028530000000001,
+        "tool_calls": 33.0
+      },
+      {
+        "world": "gen-s6-w1",
+        "date": "2027-02-19",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 223.915,
+        "input_tokens": 964066.0,
+        "output_tokens": 12659.0,
+        "cost_usd": 0.17779965,
+        "tool_calls": 36.0
+      },
+      {
+        "world": "gen-s6-w1",
+        "date": "2027-02-22",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 111.428,
+        "input_tokens": 201992.0,
+        "output_tokens": 7045.0,
+        "cost_usd": 0.07976880000000001,
+        "tool_calls": 22.0
+      },
+      {
+        "world": "gen-s6-w1",
+        "date": "2027-02-23",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 108.105,
+        "input_tokens": 206786.0,
+        "output_tokens": 8009.0,
+        "cost_usd": 0.0830657,
+        "tool_calls": 36.0
+      },
+      {
+        "world": "gen-s7-w2",
+        "date": "2027-07-03",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 194.369,
+        "input_tokens": 766709.0,
+        "output_tokens": 11368.0,
+        "cost_usd": 0.17394165,
+        "tool_calls": 21.0
+      },
+      {
+        "world": "gen-s7-w2",
+        "date": "2027-07-05",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 104.823,
+        "input_tokens": 297895.0,
+        "output_tokens": 6886.0,
+        "cost_usd": 0.08236510000000001,
+        "tool_calls": 41.0
+      },
+      {
+        "world": "gen-s7-w2",
+        "date": "2027-07-06",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 109.072,
+        "input_tokens": 403992.0,
+        "output_tokens": 6880.0,
+        "cost_usd": 0.09242405000000002,
+        "tool_calls": 44.0
+      },
+      {
+        "world": "gen-s8-w4",
+        "date": "2027-09-10",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 246.318,
+        "input_tokens": 715349.0,
+        "output_tokens": 14994.0,
+        "cost_usd": 0.17768635,
+        "tool_calls": 28.0
+      },
+      {
+        "world": "gen-s8-w4",
+        "date": "2027-09-13",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 124.866,
+        "input_tokens": 467418.0,
+        "output_tokens": 8777.0,
+        "cost_usd": 0.11907265000000002,
+        "tool_calls": 40.0
+      },
+      {
+        "world": "gen-s8-w4",
+        "date": "2027-09-14",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 147.311,
+        "input_tokens": 459053.0,
+        "output_tokens": 10201.0,
+        "cost_usd": 0.12204090000000001,
+        "tool_calls": 44.0
+      },
+      {
+        "world": "gen-s9-large",
+        "date": "2027-10-29",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 210.092,
+        "input_tokens": 761372.0,
+        "output_tokens": 13872.0,
+        "cost_usd": 0.20177755,
+        "tool_calls": 26.0
+      },
+      {
+        "world": "gen-s9-large",
+        "date": "2027-11-01",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 119.843,
+        "input_tokens": 373396.0,
+        "output_tokens": 7885.0,
+        "cost_usd": 0.10250079999999999,
+        "tool_calls": 51.0
+      },
+      {
+        "world": "gen-s9-large",
+        "date": "2027-11-02",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 152.288,
+        "input_tokens": 348136.0,
+        "output_tokens": 12816.0,
+        "cost_usd": 0.12448790000000001,
+        "tool_calls": 21.0
+      },
+      {
+        "world": "pilot",
+        "date": "2027-02-26",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 220.842,
+        "input_tokens": 714714.0,
+        "output_tokens": 12630.0,
+        "cost_usd": 0.1716492,
+        "tool_calls": 56.0
+      },
+      {
+        "world": "pilot",
+        "date": "2027-03-01",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 196.523,
+        "input_tokens": 759550.0,
+        "output_tokens": 12242.0,
+        "cost_usd": 0.16720005000000002,
+        "tool_calls": 40.0
+      },
+      {
+        "world": "pilot",
+        "date": "2027-03-02",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 213.323,
+        "input_tokens": 736117.0,
+        "output_tokens": 14721.0,
+        "cost_usd": 0.18724775000000002,
+        "tool_calls": 44.0
+      }
+    ],
+    "per_query_session": [
+      {
+        "world": "gen-s1-w1",
+        "checkpoint": "cp1",
+        "store": "agent",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 82.869,
+        "input_tokens": 264901.0,
+        "output_tokens": 5823.0,
+        "cost_usd": 0.09399694999999998,
+        "tool_calls": 26.0
+      },
+      {
+        "world": "gen-s10-w2-small",
+        "checkpoint": "cp1",
+        "store": "agent",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 78.364,
+        "input_tokens": 214197.0,
+        "output_tokens": 5141.0,
+        "cost_usd": 0.0722674,
+        "tool_calls": 37.0
+      },
+      {
+        "world": "gen-s2-w1",
+        "checkpoint": "cp1",
+        "store": "agent",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 75.288,
+        "input_tokens": 192425.0,
+        "output_tokens": 5571.0,
+        "cost_usd": 0.08966665,
+        "tool_calls": 20.0
+      },
+      {
+        "world": "gen-s3-w1",
+        "checkpoint": "cp1",
+        "store": "agent",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 90.149,
+        "input_tokens": 339102.0,
+        "output_tokens": 6046.0,
+        "cost_usd": 0.1026629,
+        "tool_calls": 27.0
+      },
+      {
+        "world": "gen-s4-w2",
+        "checkpoint": "cp1",
+        "store": "agent",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 76.89,
+        "input_tokens": 335156.0,
+        "output_tokens": 5100.0,
+        "cost_usd": 0.10894105,
+        "tool_calls": 23.0
+      },
+      {
+        "world": "gen-s5-small",
+        "checkpoint": "cp1",
+        "store": "agent",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 80.685,
+        "input_tokens": 201351.0,
+        "output_tokens": 5756.0,
+        "cost_usd": 0.08300920000000002,
+        "tool_calls": 18.0
+      },
+      {
+        "world": "gen-s6-w1",
+        "checkpoint": "cp1",
+        "store": "agent",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 84.414,
+        "input_tokens": 227299.0,
+        "output_tokens": 6061.0,
+        "cost_usd": 0.09267040000000001,
+        "tool_calls": 22.0
+      },
+      {
+        "world": "gen-s7-w2",
+        "checkpoint": "cp1",
+        "store": "agent",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 93.111,
+        "input_tokens": 244852.0,
+        "output_tokens": 6251.0,
+        "cost_usd": 0.08824934999999998,
+        "tool_calls": 42.0
+      },
+      {
+        "world": "gen-s8-w4",
+        "checkpoint": "cp1",
+        "store": "agent",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 67.56,
+        "input_tokens": 164974.0,
+        "output_tokens": 4753.0,
+        "cost_usd": 0.07470370000000001,
+        "tool_calls": 19.0
+      },
+      {
+        "world": "gen-s9-large",
+        "checkpoint": "cp1",
+        "store": "agent",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 69.529,
+        "input_tokens": 234240.0,
+        "output_tokens": 4654.0,
+        "cost_usd": 0.08623565,
+        "tool_calls": 22.0
+      },
+      {
+        "world": "pilot",
+        "checkpoint": "cp1",
+        "store": "agent",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 89.575,
+        "input_tokens": 216066.0,
+        "output_tokens": 6444.0,
+        "cost_usd": 0.1027461,
+        "tool_calls": 28.0
+      }
+    ]
+  },
+  "failures": [
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "template": "project_loops",
+      "text": "What loops are open on Plain Language Workshop?",
+      "answerable": true,
+      "challenges": [],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 0.6666666666666666,
+      "gold": {
+        "items": [
+          {
+            "loop": "c-012",
+            "what": "Send Jalen the plain language workshop attendee list",
+            "counterparty": "p-jalen-sandberg",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "attendee list",
+              "plain language workshop"
+            ],
+            "support": [
+              "ch-0015"
+            ]
+          },
+          {
+            "loop": "c-018",
+            "what": "Send the plain language workshop post-event survey",
+            "counterparty": "p-jalen-sandberg",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "keywords": [
+              "post-event survey",
+              "plain language workshop"
+            ],
+            "support": [
+              "mn-0003"
+            ]
+          },
+          {
+            "loop": "c-028",
+            "what": "Send Sipho the plain language workshop session outline",
+            "counterparty": "p-sipho-sengupta",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "session outline",
+              "plain language workshop"
+            ],
+            "support": [
+              "nt-0003"
+            ]
+          },
+          {
+            "loop": "c-043",
+            "what": "Send Camila the plain language workshop run sheet",
+            "counterparty": "p-jalen-sandberg",
+            "direction": "owed_to_me",
+            "status": "blocked",
+            "due": null,
+            "keywords": [
+              "run sheet",
+              "plain language workshop"
+            ],
+            "support": [
+              "em-0059",
+              "mt-0011"
+            ]
+          },
+          {
+            "loop": "c-054",
+            "what": "Send Petra the plain language workshop feedback form",
+            "counterparty": "p-petra-korkmaz",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "feedback form",
+              "plain language workshop"
+            ],
+            "support": [
+              "ch-0053"
+            ],
+            "optional": true
+          },
+          {
+            "loop": "c-059",
+            "what": "Send Petra the plain language workshop room plan",
+            "counterparty": "p-petra-korkmaz",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "room plan",
+              "plain language workshop"
+            ],
+            "support": [
+              "ch-0057"
+            ]
+          },
+          {
+            "loop": "c-075",
+            "what": "Walk Jalen through the plain language workshop speaker brief",
+            "counterparty": "p-jalen-sandberg",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-11-15",
+            "keywords": [
+              "speaker brief",
+              "plain language workshop"
+            ],
+            "support": [
+              "nt-0008"
+            ]
+          }
+        ],
+        "suggested": [
+          {
+            "loop": "c-023",
+            "what": "Turn the plain language workshop questions into an FAQ",
+            "counterparty": "p-jalen-sandberg",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "faq",
+              "plain language workshop"
+            ],
+            "support": [
+              "mt-0003"
+            ],
+            "optional": true
+          }
+        ]
+      },
+      "predicted": {
+        "type": "list",
+        "abstain": false,
+        "items": [
+          {
+            "text": "Send the attendee list to Jalen; promised, no delivery shown.",
+            "counterparty": "Jalen Sandberg",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "ch-0015"
+            ]
+          },
+          {
+            "text": "Send slides v2 to Sipho. The 27 October email delivered them to Jalen, not Sipho, so it does not close this recipient-specific task.",
+            "counterparty": "Sipho Sengupta",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "mn-0002",
+              "em-0021"
+            ]
+          },
+          {
+            "text": "Send the session outline to Sipho; self-commitment, no delivery shown.",
+            "counterparty": "Sipho Sengupta",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "nt-0003"
+            ]
+          },
+          {
+            "text": "Send the room plan to Petra; promised, no explicit plan-delivery confirmation.",
+            "counterparty": "Petra Korkmaz",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "ch-0057"
+            ]
+          },
+          {
+            "text": "Walk Jalen through the speaker brief by 15 November; scheduled for 10 November 14:00–14:30 (−07:00), not yet completed.",
+            "counterparty": "Jalen Sandberg",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-11-15",
+            "cites": [
+              "nt-0008",
+              "ca-0007"
+            ]
+          },
+          {
+            "text": "Obtain the post-event survey from Jalen; requested, without explicit acceptance or delivery.",
+            "counterparty": "Jalen Sandberg",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "cites": [
+              "mn-0003"
+            ]
+          },
+          {
+            "text": "Obtain Jalen's promised run sheet; blocked on an unidentified unsigned agreement as of 8 November.",
+            "counterparty": "Jalen Sandberg",
+            "direction": "owed_to_me",
+            "status": "blocked",
+            "due": null,
+            "cites": [
+              "em-0059",
+              "mt-0011"
+            ]
+          },
+          {
+            "text": "Respond to Petra's feedback-form request; not yet accepted by Camila or delivered.",
+            "counterparty": "Petra Korkmaz",
+            "direction": "other",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "ch-0053"
+            ]
+          },
+          {
+            "text": "Decide whether to turn workshop questions into an FAQ; tentative 'Maybe I should' idea, not an accepted commitment.",
+            "counterparty": null,
+            "direction": "other",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "mt-0003"
+            ]
+          }
+        ],
+        "note": "Slow page loads are not an open loop: Yasmin explicitly reported them fixed on 9 November and Camila acknowledged (ch-0079)."
+      },
+      "details": {
+        "n_pred": 9,
+        "n_gold": 7,
+        "precision": 0.0,
+        "recall": 0.0,
+        "matches": [
+          {
+            "pred": 7,
+            "gold": "c-054",
+            "credit": 1.0,
+            "status": 1.0,
+            "due": 1.0,
+            "counterparty": 1.0
+          }
+        ],
+        "unmatched_pred": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "unmatched_gold": [
+          "c-012",
+          "c-018",
+          "c-028",
+          "c-043",
+          "c-059",
+          "c-075"
+        ],
+        "citations": {
+          "scope": "item",
+          "total": 12,
+          "valid": 8,
+          "invalid": [
+            {
+              "cite": "mn-0002",
+              "why": "not_in_support",
+              "item": 1
+            },
+            {
+              "cite": "em-0021",
+              "why": "not_in_support",
+              "item": 1
+            },
+            {
+              "cite": "ca-0007",
+              "why": "not_in_support",
+              "item": 4
+            },
+            {
+              "cite": "mt-0003",
+              "why": "not_in_support",
+              "item": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-003",
+      "type": "change",
+      "template": "project_changes",
+      "text": "What changed on Translation Help Tool Selection since the end of Friday 27 August?",
+      "answerable": true,
+      "challenges": [
+        "duplicate_signal",
+        "endorsement",
+        "implied_commitment"
+      ],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 0.25,
+      "gold": {
+        "items": [
+          {
+            "event": "e-0116",
+            "summary": "Catrin asked me to review the translation help selection vendor comparison",
+            "date": "2027-08-30",
+            "type": "commitment.create",
+            "keywords": [
+              "vendor comparison",
+              "translation help selection"
+            ],
+            "support": [
+              "mn-0015"
+            ],
+            "optional": true
+          },
+          {
+            "event": "e-0130",
+            "summary": "I asked Amani for the Noris accessibility conformance report",
+            "date": "2027-08-31",
+            "type": "commitment.create",
+            "keywords": [
+              "accessibility conformance report",
+              "noris"
+            ],
+            "support": [
+              "ch-0041"
+            ]
+          }
+        ]
+      },
+      "predicted": {
+        "type": "change",
+        "abstain": false,
+        "items": [
+          {
+            "text": "On 30 August, the Holworth site-visit recap raised reviewing Catrin Dang's translation-help-selection vendor comparison and suggested you as reviewer, explicitly saying no owner had agreed. This is a new proposed review, not an accepted commitment, and is distinct from Bisi's dropped Nettle vendor comparison. No later stage change, vendor selection or target-date change is evidenced; the last known stage remains questionnaires and the target remains 20 September 2027.",
+            "date": "2027-08-30",
+            "cites": [
+              "mn-0015",
+              "mt-0004",
+              "nt-0001",
+              "em-0052"
+            ]
+          }
+        ]
+      },
+      "details": {
+        "n_pred": 1,
+        "n_gold": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "matches": [],
+        "unmatched_gold": [
+          "e-0116",
+          "e-0130"
+        ],
+        "citations": {
+          "scope": "item",
+          "total": 4,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "mt-0004",
+              "why": "not_in_support",
+              "item": 0
+            },
+            {
+              "cite": "nt-0001",
+              "why": "not_in_support",
+              "item": 0
+            },
+            {
+              "cite": "em-0052",
+              "why": "not_in_support",
+              "item": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "template": "person_attr",
+      "text": "What is my working relationship with our programs manager?",
+      "answerable": true,
+      "challenges": [
+        "alias",
+        "name_collision"
+      ],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 0.8,
+      "gold": {
+        "kind": "text",
+        "value": "peer",
+        "entity": null,
+        "accept": [
+          "peer"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "value": "Cross-portfolio colleague and collaborator",
+        "note": "Our programs manager is Akosua Bergstrom in the Federation Data Office. You work together across Nettle, Pipit, translation selection, pantry discovery and partnership work, with 1:1s and deliverable exchanges. The files do not establish that she is your line manager or that you report to her.",
+        "cites": [
+          "nt-0001",
+          "ca-0001",
+          "mn-0017",
+          "em-0052",
+          "em-0056"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Cross-portfolio colleague and collaborator",
+        "gold": "peer",
+        "citations": {
+          "scope": "question",
+          "total": 5,
+          "valid": 4,
+          "invalid": [
+            {
+              "cite": "ca-0001",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s2-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "template": "person_attr",
+      "text": "What is my working relationship with Tendai Santos?",
+      "answerable": true,
+      "challenges": [
+        "name_collision"
+      ],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 0.8333333333333334,
+      "gold": {
+        "kind": "text",
+        "value": "stakeholder",
+        "entity": null,
+        "accept": [
+          "stakeholder"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "value": "Departmental counterpart at Selfell Public Works",
+        "note": "Tendai is Customer Service Manager and the Selfell lead. You collaborate on pothole tool selection and the AI workshop, advise his inspection-scheduling work, and await his parking-analytics problem statement and Selfell use-case list. You also promised to introduce Imani Navarro to him for permit intake. No reporting-line relationship is established.",
+        "cites": [
+          "nt-0001",
+          "ch-0028",
+          "mt-0007",
+          "em-0017",
+          "ch-0034",
+          "ch-0038"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Departmental counterpart at Selfell Public Works",
+        "gold": "stakeholder",
+        "citations": {
+          "scope": "question",
+          "total": 6,
+          "valid": 5,
+          "invalid": [
+            {
+              "cite": "ch-0038",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s2-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "template": "project_loops",
+      "text": "What loops are open on the workshop?",
+      "answerable": true,
+      "challenges": [
+        "alias",
+        "duplicate_signal"
+      ],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 0.3333333333333333,
+      "gold": {
+        "items": [
+          {
+            "loop": "c-022",
+            "what": "Turn the AI in public service workshop questions into an FAQ",
+            "counterparty": "p-imani-navarro",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "faq",
+              "ai in public service workshop"
+            ],
+            "support": [
+              "mt-0004"
+            ]
+          },
+          {
+            "loop": "c-038",
+            "what": "Send Dina the AI in public service workshop run sheet",
+            "counterparty": "p-catrin-kuznetsova",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "run sheet",
+              "ai in public service workshop"
+            ],
+            "support": [
+              "ch-0047"
+            ]
+          },
+          {
+            "loop": "c-048",
+            "what": "Share the AI in public service workshop feedback form with Dina",
+            "counterparty": "p-nomvula-jansen",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "feedback form",
+              "ai in public service workshop"
+            ],
+            "support": [
+              "ch-0057",
+              "ch-0066",
+              "ch-0079"
+            ]
+          },
+          {
+            "loop": "c-061",
+            "what": "Share the AI in public service workshop session outline with Dina",
+            "counterparty": "p-imani-navarro",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "keywords": [
+              "session outline",
+              "ai in public service workshop"
+            ],
+            "support": [
+              "ch-0072"
+            ]
+          }
+        ],
+        "suggested": [
+          {
+            "loop": "c-025",
+            "what": "Send Tendai the AI in public service workshop room plan",
+            "counterparty": "p-tendai-santos",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "room plan",
+              "ai in public service workshop"
+            ],
+            "support": [
+              "ch-0028",
+              "mt-0007"
+            ],
+            "optional": true
+          },
+          {
+            "loop": "c-034",
+            "what": "Send Dina the AI in public service workshop speaker brief",
+            "counterparty": "p-catrin-kuznetsova",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "speaker brief",
+              "ai in public service workshop"
+            ],
+            "support": [
+              "ch-0043"
+            ],
+            "optional": true
+          },
+          {
+            "loop": "c-051",
+            "what": "Send Dina the AI in public service workshop registration list",
+            "counterparty": "p-catrin-kuznetsova",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "keywords": [
+              "registration list",
+              "ai in public service workshop"
+            ],
+            "support": [
+              "ch-0063"
+            ],
+            "optional": true
+          }
+        ]
+      },
+      "predicted": {
+        "type": "list",
+        "abstain": false,
+        "note": "Imani explicitly closed the workshop on 8 March (em-0086). These are residual individual loops, not evidence that the event/project remains open. Closure does not prove each item delivered or cancelled.",
+        "items": [
+          {
+            "text": "Convert workshop questions into FAQ — Dina's accepted task, with no individual completion or cancellation evidence.",
+            "counterparty": "Imani Navarro",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "mt-0004",
+              "em-0086"
+            ]
+          },
+          {
+            "text": "Workshop slides — Dina owned them in the baseline, but individual delivery is not confirmed despite project closure.",
+            "counterparty": "Imani Navarro",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "nt-0001",
+              "em-0086"
+            ]
+          },
+          {
+            "text": "Catrin's run sheet — accepted promise, still not received.",
+            "counterparty": "Catrin Kuznetsova",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "cites": [
+              "ch-0047",
+              "em-0086"
+            ]
+          },
+          {
+            "text": "Nomvula's feedback form — promised and explicitly resumed on 9 March, still not received; does not reopen the workshop project.",
+            "counterparty": "Nomvula Jansen",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "cites": [
+              "ch-0057",
+              "ch-0066",
+              "ch-0079",
+              "em-0086"
+            ]
+          },
+          {
+            "text": "Imani's session outline — Nomvula relayed that Imani would share it; no delivery evidenced.",
+            "counterparty": "Imani Navarro",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "cites": [
+              "ch-0072",
+              "em-0086"
+            ]
+          },
+          {
+            "text": "Room plan to Tendai — unaccepted request, not a firm Dina commitment and not automatically live event logistics after closure.",
+            "counterparty": "Tendai Santos",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "ch-0028",
+              "mt-0007",
+              "em-0086"
+            ]
+          },
+          {
+            "text": "Catrin's speaker brief and registration list — requested/possible but never agreed or confirmed; not firm incoming promises.",
+            "counterparty": "Catrin Kuznetsova",
+            "direction": "other",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "ch-0043",
+              "ch-0063",
+              "em-0086"
+            ]
+          }
+        ]
+      },
+      "details": {
+        "n_pred": 7,
+        "n_gold": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "matches": [],
+        "unmatched_pred": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "unmatched_gold": [
+          "c-022",
+          "c-038",
+          "c-048",
+          "c-061"
+        ],
+        "citations": {
+          "scope": "item",
+          "total": 18,
+          "valid": 6,
+          "invalid": [
+            {
+              "cite": "em-0086",
+              "why": "not_in_support",
+              "item": 0
+            },
+            {
+              "cite": "nt-0001",
+              "why": "not_in_support",
+              "item": 1
+            },
+            {
+              "cite": "em-0086",
+              "why": "not_in_support",
+              "item": 1
+            },
+            {
+              "cite": "em-0086",
+              "why": "not_in_support",
+              "item": 2
+            },
+            {
+              "cite": "em-0086",
+              "why": "not_in_support",
+              "item": 3
+            },
+            {
+              "cite": "em-0086",
+              "why": "not_in_support",
+              "item": 4
+            },
+            {
+              "cite": "ch-0028",
+              "why": "not_in_support",
+              "item": 5
+            },
+            {
+              "cite": "mt-0007",
+              "why": "not_in_support",
+              "item": 5
+            },
+            {
+              "cite": "em-0086",
+              "why": "not_in_support",
+              "item": 5
+            },
+            {
+              "cite": "ch-0043",
+              "why": "not_in_support",
+              "item": 6
+            },
+            {
+              "cite": "ch-0063",
+              "why": "not_in_support",
+              "item": 6
+            },
+            {
+              "cite": "em-0086",
+              "why": "not_in_support",
+              "item": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s3-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "template": "i_owe",
+      "text": "What do I currently owe Eleni?",
+      "answerable": true,
+      "challenges": [
+        "alias"
+      ],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 0.3333333333333333,
+      "gold": {
+        "items": [
+          {
+            "loop": "c-068",
+            "what": "Send Eleni the referral triage discovery interview guide",
+            "counterparty": "p-eleni-fontaine",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-09-22",
+            "keywords": [
+              "interview guide",
+              "referral triage discovery"
+            ],
+            "support": [
+              "em-0085"
+            ],
+            "optional": true
+          }
+        ]
+      },
+      "predicted": {
+        "type": "list",
+        "abstain": false,
+        "items": [
+          {
+            "text": "Send the referral-triage discovery interview guide. Eleni requested it by Wednesday 22 September; no acceptance or delivery is recorded, so this is an outstanding request rather than a confirmed promise. No other current direct deliverable owed by you to Eleni is evidenced; the site-visit agenda is owed to Bisi, and the comms plan is Dina's action.",
+            "counterparty": "Eleni Fontaine",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-09-22",
+            "cites": [
+              "em-0085",
+              "ch-0025",
+              "mt-0011"
+            ]
+          }
+        ]
+      },
+      "details": {
+        "n_pred": 1,
+        "n_gold": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "matches": [],
+        "unmatched_pred": [
+          0
+        ],
+        "unmatched_gold": [
+          "c-068"
+        ],
+        "citations": {
+          "scope": "item",
+          "total": 3,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "ch-0025",
+              "why": "not_in_support",
+              "item": 0
+            },
+            {
+              "cite": "mt-0011",
+              "why": "not_in_support",
+              "item": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s3-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "template": "person_attr",
+      "text": "What is my working relationship with Lena?",
+      "answerable": true,
+      "challenges": [
+        "alias"
+      ],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 0.6,
+      "gold": {
+        "kind": "text",
+        "value": "stakeholder",
+        "entity": null,
+        "accept": [
+          "stakeholder"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "value": "Project collaborator on Okapi and Ketford Referral Triage Discovery",
+        "note": "Lena is Eleni Fontaine, Revenue Cycle Analyst at Ketford General Hospital. You collaborate across the CDS–Ketford boundary; no reporting relationship is evidenced. Her earlier current-process-map dependency was superseded by approach B on 20 September; she now requests your interview guide.",
+        "cites": [
+          "nt-0001",
+          "ch-0025",
+          "ch-0042",
+          "nt-0006",
+          "em-0085"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Project collaborator on Okapi and Ketford Referral Triage Discovery",
+        "gold": "stakeholder",
+        "citations": {
+          "scope": "question",
+          "total": 5,
+          "valid": 3,
+          "invalid": [
+            {
+              "cite": "ch-0025",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ch-0042",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s3-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "template": "project_loops",
+      "text": "What loops are open on Rosix Enterprise Agreement?",
+      "answerable": true,
+      "challenges": [
+        "duplicate_signal"
+      ],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 0.5,
+      "gold": {
+        "items": [
+          {
+            "loop": "c-008",
+            "what": "Draft our counter-proposal to Rosix",
+            "counterparty": "p-eun-ji-chen",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "counter-proposal",
+              "rosix"
+            ],
+            "support": [
+              "ch-0006"
+            ]
+          },
+          {
+            "loop": "c-011",
+            "what": "Send Alasdair the Rosix volume tiers",
+            "counterparty": "p-bisi-njoroge",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "keywords": [
+              "volume tiers",
+              "rosix"
+            ],
+            "support": [
+              "ch-0009",
+              "ch-0010"
+            ]
+          },
+          {
+            "loop": "c-018",
+            "what": "Send Alasdair the Rosix enterprise agreement term sheet",
+            "counterparty": "p-bisi-chatterjee",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "keywords": [
+              "term sheet",
+              "rosix enterprise"
+            ],
+            "support": [
+              "mt-0007"
+            ]
+          }
+        ],
+        "suggested": [
+          {
+            "loop": "c-012",
+            "what": "Confirm the Rosix enterprise agreement dependency list with Bisi",
+            "counterparty": "p-bisi-chatterjee",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "dependency list",
+              "rosix enterprise"
+            ],
+            "support": [
+              "mt-0006"
+            ],
+            "optional": true
+          }
+        ]
+      },
+      "predicted": {
+        "type": "list",
+        "abstain": false,
+        "note": "The agreement itself was signed and complete on 16 September. These individual loops lack completion evidence; whether they still need doing is unknown. Do not infer task completion or cancellation from project closure. Kwame's redlines and the Rosix customer references are complete and are not open loops.",
+        "cites": [
+          "ch-0064",
+          "ch-0059",
+          "ch-0060",
+          "em-0045",
+          "ch-0057"
+        ],
+        "items": [
+          {
+            "text": "Draft the Rosix counter-proposal for Eun-ji: you offered on 7 September, but no delivery or explicit cancellation is evidenced; continued need after signing is unknown.",
+            "counterparty": "Eun-ji Chen",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "ch-0006",
+              "ch-0064"
+            ]
+          },
+          {
+            "text": "Confirm the enterprise-agreement dependency list with Bisi Chatterjee: a tentative 'if useful' offer, not clearly accepted; no confirmation or cancellation is evidenced.",
+            "counterparty": "Bisi Chatterjee",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "mt-0006",
+              "ch-0064"
+            ]
+          },
+          {
+            "text": "Rosix volume tiers from Bisi Njoroge: promised via Bisi Chatterjee, repeated in two messages but one action; no delivery is evidenced, and continued need after signing is unknown.",
+            "counterparty": "Bisi Njoroge",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "cites": [
+              "ch-0009",
+              "ch-0010",
+              "ch-0064"
+            ]
+          },
+          {
+            "text": "Enterprise-agreement term sheet from Bisi Chatterjee: she accepted your request on 8 September; no delivery is evidenced, and continued need after signing is unknown.",
+            "counterparty": "Bisi Chatterjee",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "cites": [
+              "mt-0007",
+              "ch-0064"
+            ]
+          }
+        ]
+      },
+      "details": {
+        "n_pred": 4,
+        "n_gold": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "matches": [],
+        "unmatched_pred": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "unmatched_gold": [
+          "c-008",
+          "c-011",
+          "c-018"
+        ],
+        "citations": {
+          "scope": "item",
+          "total": 14,
+          "valid": 7,
+          "invalid": [
+            {
+              "cite": "em-0045",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ch-0057",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ch-0064",
+              "why": "not_in_support",
+              "item": 0
+            },
+            {
+              "cite": "mt-0006",
+              "why": "not_in_support",
+              "item": 1
+            },
+            {
+              "cite": "ch-0064",
+              "why": "not_in_support",
+              "item": 1
+            },
+            {
+              "cite": "ch-0064",
+              "why": "not_in_support",
+              "item": 2
+            },
+            {
+              "cite": "ch-0064",
+              "why": "not_in_support",
+              "item": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "template": "i_owe",
+      "text": "What do I currently owe Tariq?",
+      "answerable": true,
+      "challenges": [
+        "alias"
+      ],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 0.3333333333333333,
+      "gold": {
+        "items": [
+          {
+            "loop": "c-055",
+            "what": "Send Tariq the Friday status note for w/e 10 September",
+            "counterparty": "p-tariq-ivanova",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-09-10",
+            "keywords": [
+              "friday status note",
+              "w/e 10 september"
+            ],
+            "support": [
+              "em-0093"
+            ],
+            "optional": true
+          }
+        ]
+      },
+      "predicted": {
+        "type": "list",
+        "abstain": false,
+        "items": [
+          {
+            "text": "Friday status note for w/e September 10, by end of day: half a page on what moved, what slipped, and leadership needs. August 27 and September 3 notes were already sent.",
+            "counterparty": "Tariq Ivanova",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-09-10",
+            "cites": [
+              "em-0093",
+              "em-0039",
+              "em-0086"
+            ]
+          }
+        ]
+      },
+      "details": {
+        "n_pred": 1,
+        "n_gold": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "matches": [],
+        "unmatched_pred": [
+          0
+        ],
+        "unmatched_gold": [
+          "c-055"
+        ],
+        "citations": {
+          "scope": "item",
+          "total": 3,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "em-0039",
+              "why": "not_in_support",
+              "item": 0
+            },
+            {
+              "cite": "em-0086",
+              "why": "not_in_support",
+              "item": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-006",
+      "type": "point",
+      "template": "loop_owner",
+      "text": "Who is responsible for \"Set up the Fjord single sign-on role mapping\"?",
+      "answerable": true,
+      "challenges": [
+        "duplicate_signal"
+      ],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 1.0,
+      "gold": {
+        "kind": "entity",
+        "value": "Ratna Nikolic",
+        "entity": "p-ratna-nikolic",
+        "accept": [
+          "Ratna Nikolic",
+          "Ratna",
+          "R. Nikolic",
+          "ratna.nikolic@holfield.drayhurst.example",
+          "@ratna"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "value": "Ratna Nikolic and Meera Bondarenko",
+        "note": "The recap names Ratna alone, but her direct DM explicitly commits both of them. September 7 says the mapping is back on, not complete.",
+        "cites": [
+          "ch-0051",
+          "mn-0006",
+          "em-0108"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Ratna Nikolic and Meera Bondarenko",
+        "gold": "Ratna Nikolic",
+        "resolved": [
+          "p-meera-bondarenko",
+          "p-ratna-nikolic"
+        ],
+        "citations": {
+          "scope": "question",
+          "total": 3,
+          "valid": 3,
+          "invalid": []
+        }
+      }
+    }
+  ],
+  "questions": [
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-001",
+      "type": "status",
+      "bucket": "status",
+      "template": "project_status",
+      "challenges": [
+        "alias",
+        "supersession",
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.3846,
+      "citation": 0.7692,
+      "score": 0.3624
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-002",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-003",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_due",
+      "challenges": [
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.3333,
+      "score": 0.8333
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "alias",
+        "implied_commitment",
+        "draft_vs_sent"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.5,
+      "score": 0.0
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-005",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "decision_date",
+      "challenges": [
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.6667,
+      "score": 0.9167
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-006",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 1.0,
+      "score": 0.0
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-007",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "alias"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.3333,
+      "score": 0.0
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-008",
+      "type": "brief",
+      "bucket": "brief",
+      "template": "person_brief",
+      "challenges": [
+        "scattered_evidence",
+        "new_entity"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.6667,
+      "score": 0.0
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "list",
+      "bucket": "list",
+      "template": "project_loops",
+      "challenges": [
+        "alias",
+        "endorsement",
+        "correction"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.24,
+      "citation": 0.9524,
+      "score": 0.2371
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [
+        "transfer",
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.5,
+      "score": 0.875
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-011",
+      "type": "priority",
+      "bucket": "priority",
+      "template": "focus_tomorrow",
+      "challenges": [
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.7333,
+      "score": 0.9333
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-012",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [
+        "new_entity",
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 1.0,
+      "score": 0.0
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-013",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "alias",
+        "implied_commitment"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.1818,
+      "score": 0.0
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-014",
+      "type": "change",
+      "bucket": "change",
+      "template": "project_changes",
+      "challenges": [
+        "supersession",
+        "worker_directive",
+        "transfer"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.6154,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-001",
+      "type": "priority",
+      "bucket": "priority",
+      "template": "focus_tomorrow",
+      "challenges": [
+        "duplicate_signal",
+        "endorsement",
+        "implied_commitment",
+        "scattered_evidence",
+        "unobservable"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.4444,
+      "score": 0.8611
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-002",
+      "type": "status",
+      "bucket": "status",
+      "template": "project_status",
+      "challenges": [
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.7778,
+      "citation": 0.95,
+      "score": 0.7681
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-003",
+      "type": "change",
+      "bucket": "change",
+      "template": "project_changes",
+      "challenges": [
+        "alias",
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.2222,
+      "citation": 0.5,
+      "score": 0.1944
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-005",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "alias",
+        "duplicate_signal",
+        "transfer"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 1.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-006",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [
+        "transfer"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.6667,
+      "score": 0.9167
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-007",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_due",
+      "challenges": [
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.6667,
+      "score": 0.9167
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-008",
+      "type": "point",
+      "bucket": "point",
+      "template": "project_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": true,
+      "base": 0.0,
+      "citation": null,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "bucket": "list",
+      "template": "project_loops",
+      "challenges": [
+        "duplicate_signal",
+        "implied_commitment"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.6667,
+      "citation": 1.0,
+      "score": 0.6667
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-011",
+      "type": "brief",
+      "bucket": "brief",
+      "template": "person_brief",
+      "challenges": [
+        "duplicate_signal",
+        "endorsement"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.8889,
+      "citation": 0.8889,
+      "score": 0.8642
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-012",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "decision_date",
+      "challenges": [
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-013",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "event_date",
+      "challenges": [
+        "duplicate_signal"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-014",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [
+        "transfer"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-015",
+      "type": "point",
+      "bucket": "point",
+      "template": "project_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 1.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-016",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.8333,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-017",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-018",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "alias",
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-001",
+      "type": "priority",
+      "bucket": "priority",
+      "template": "focus_tomorrow",
+      "challenges": [
+        "duplicate_signal",
+        "endorsement",
+        "implied_commitment",
+        "scattered_evidence",
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.5333,
+      "score": 0.8833
+    },
+    {
+      "world": "gen-s8-w4",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-002",
+      "type": "status",
+      "bucket": "status",
+      "template": "project_status",
+      "challenges": [
+        "duplicate_signal",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.7778,
+      "citation": 0.9615,
+      "score": 0.7703
+    },
+    {
+      "world": "gen-s8-w4",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-003",
+      "type": "change",
+      "bucket": "change",
+      "template": "project_changes",
+      "challenges": [
+        "alias",
+        "scattered_evidence",
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.5,
+      "citation": 0.7143,
+      "score": 0.4643
+    },
+    {
+      "world": "gen-s8-w4",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "duplicate_signal",
+        "implied_commitment",
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.7879,
+      "citation": 0.8889,
+      "score": 0.766
+    },
+    {
+      "world": "gen-s8-w4",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-005",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.5,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-006",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [
+        "duplicate_signal",
+        "transfer"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-007",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_due",
+      "challenges": [
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-008",
+      "type": "point",
+      "bucket": "point",
+      "template": "project_attr",
+      "challenges": [
+        "alias",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "bucket": "list",
+      "template": "project_loops",
+      "challenges": [
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.5667,
+      "citation": 0.6667,
+      "score": 0.5194
+    },
+    {
+      "world": "gen-s8-w4",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-011",
+      "type": "brief",
+      "bucket": "brief",
+      "template": "person_brief",
+      "challenges": [
+        "endorsement",
+        "implied_commitment",
+        "scattered_evidence",
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.3824,
+      "citation": 0.625,
+      "score": 0.3466
+    },
+    {
+      "world": "gen-s8-w4",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-012",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "decision_date",
+      "challenges": [
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-013",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "event_date",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-014",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "person_attr",
+      "challenges": [
+        "alias",
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s8-w4",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-015",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-001",
+      "type": "priority",
+      "bucket": "priority",
+      "template": "focus_tomorrow",
+      "challenges": [
+        "duplicate_signal",
+        "implied_commitment",
+        "new_entity",
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.8462,
+      "score": 0.9615
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-002",
+      "type": "status",
+      "bucket": "status",
+      "template": "project_status",
+      "challenges": [
+        "endorsement",
+        "implied_commitment",
+        "new_entity",
+        "scattered_evidence",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.7403,
+      "citation": 1.0,
+      "score": 0.7403
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-003",
+      "type": "change",
+      "bucket": "change",
+      "template": "project_changes",
+      "challenges": [
+        "duplicate_signal",
+        "endorsement",
+        "implied_commitment",
+        "new_entity",
+        "scattered_evidence",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.4348,
+      "citation": 0.7917,
+      "score": 0.4121
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "alias"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.3333,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-005",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.6111,
+      "citation": 0.5,
+      "score": 0.5347
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-006",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [
+        "duplicate_signal"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 1.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-007",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_due",
+      "challenges": [
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.6667,
+      "score": 0.9167
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-008",
+      "type": "point",
+      "bucket": "point",
+      "template": "project_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 1.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "bucket": "list",
+      "template": "project_loops",
+      "challenges": [
+        "alias"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.7778,
+      "citation": 0.5333,
+      "score": 0.687
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-011",
+      "type": "brief",
+      "bucket": "brief",
+      "template": "person_brief",
+      "challenges": [
+        "duplicate_signal"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.9788,
+      "citation": 1.0,
+      "score": 0.9788
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-012",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "decision_date",
+      "challenges": [
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-013",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "event_date",
+      "challenges": [
+        "endorsement",
+        "implied_commitment",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-014",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "person_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-015",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s7-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-001",
+      "type": "priority",
+      "bucket": "priority",
+      "template": "focus_tomorrow",
+      "challenges": [
+        "duplicate_signal",
+        "endorsement",
+        "implied_commitment",
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.65,
+      "score": 0.9125
+    },
+    {
+      "world": "gen-s7-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-002",
+      "type": "status",
+      "bucket": "status",
+      "template": "project_status",
+      "challenges": [
+        "alias",
+        "implied_commitment",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.8,
+      "citation": 1.0,
+      "score": 0.8
+    },
+    {
+      "world": "gen-s7-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-003",
+      "type": "change",
+      "bucket": "change",
+      "template": "project_changes",
+      "challenges": [
+        "alias"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.25,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s7-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "alias",
+        "duplicate_signal",
+        "endorsement"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s7-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-005",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "alias",
+        "duplicate_signal",
+        "endorsement",
+        "implied_commitment",
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.8333,
+      "citation": 1.0,
+      "score": 0.8333
+    },
+    {
+      "world": "gen-s7-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-006",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [
+        "transfer"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s7-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-007",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_due",
+      "challenges": [
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s7-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-008",
+      "type": "point",
+      "bucket": "point",
+      "template": "project_attr",
+      "challenges": [
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s7-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.6667,
+      "score": 0.9167
+    },
+    {
+      "world": "gen-s7-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "bucket": "list",
+      "template": "project_loops",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.6,
+      "score": 0.9
+    },
+    {
+      "world": "gen-s7-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-011",
+      "type": "brief",
+      "bucket": "brief",
+      "template": "person_brief",
+      "challenges": [
+        "duplicate_signal",
+        "implied_commitment",
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.6695,
+      "citation": 0.697,
+      "score": 0.6187
+    },
+    {
+      "world": "gen-s7-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-012",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "decision_date",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.5,
+      "score": 0.875
+    },
+    {
+      "world": "gen-s7-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-013",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "event_date",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.3333,
+      "score": 0.8333
+    },
+    {
+      "world": "gen-s7-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-014",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s7-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-015",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "person_attr",
+      "challenges": [
+        "alias",
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-001",
+      "type": "priority",
+      "bucket": "priority",
+      "template": "focus_tomorrow",
+      "challenges": [
+        "duplicate_signal",
+        "endorsement",
+        "implied_commitment",
+        "scattered_evidence",
+        "unobservable",
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.5,
+      "citation": 0.5882,
+      "score": 0.4485
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-002",
+      "type": "status",
+      "bucket": "status",
+      "template": "project_status",
+      "challenges": [
+        "duplicate_signal",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.9964,
+      "citation": 0.9583,
+      "score": 0.986
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-003",
+      "type": "change",
+      "bucket": "change",
+      "template": "project_changes",
+      "challenges": [
+        "duplicate_signal",
+        "endorsement",
+        "implied_commitment",
+        "scattered_evidence",
+        "silent_closure",
+        "supersession",
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.381,
+      "citation": 0.9231,
+      "score": 0.3736
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "alias",
+        "duplicate_signal"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.8571,
+      "score": 0.9643
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-005",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "alias"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.5,
+      "score": 0.875
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-006",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [
+        "duplicate_signal",
+        "endorsement"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-007",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_due",
+      "challenges": [
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-008",
+      "type": "point",
+      "bucket": "point",
+      "template": "project_attr",
+      "challenges": [
+        "alias"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "bucket": "list",
+      "template": "project_loops",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.6667,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-011",
+      "type": "brief",
+      "bucket": "brief",
+      "template": "person_brief",
+      "challenges": [
+        "duplicate_signal"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.6746,
+      "citation": 0.625,
+      "score": 0.6114
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-012",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "decision_date",
+      "challenges": [
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-013",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "event_date",
+      "challenges": [
+        "duplicate_signal"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-014",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-015",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s2-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-001",
+      "type": "priority",
+      "bucket": "priority",
+      "template": "focus_tomorrow",
+      "challenges": [
+        "duplicate_signal",
+        "implied_commitment",
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.75,
+      "citation": 0.5385,
+      "score": 0.6635
+    },
+    {
+      "world": "gen-s2-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-002",
+      "type": "status",
+      "bucket": "status",
+      "template": "project_status",
+      "challenges": [
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.6743,
+      "citation": 0.9231,
+      "score": 0.6613
+    },
+    {
+      "world": "gen-s2-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-003",
+      "type": "change",
+      "bucket": "change",
+      "template": "project_changes",
+      "challenges": [
+        "duplicate_signal",
+        "endorsement",
+        "implied_commitment",
+        "scattered_evidence",
+        "silent_closure"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.1111,
+      "citation": 0.7778,
+      "score": 0.1049
+    },
+    {
+      "world": "gen-s2-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.6667,
+      "citation": 0.5,
+      "score": 0.5833
+    },
+    {
+      "world": "gen-s2-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-005",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "alias",
+        "duplicate_signal",
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s2-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-006",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [
+        "duplicate_signal",
+        "transfer"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s2-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-007",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_due",
+      "challenges": [
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s2-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-008",
+      "type": "point",
+      "bucket": "point",
+      "template": "project_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s2-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.8333,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s2-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "bucket": "list",
+      "template": "project_loops",
+      "challenges": [
+        "alias",
+        "duplicate_signal"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.3333,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s2-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-011",
+      "type": "brief",
+      "bucket": "brief",
+      "template": "person_brief",
+      "challenges": [
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.5119,
+      "citation": 0.5,
+      "score": 0.4479
+    },
+    {
+      "world": "gen-s2-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-012",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "decision_date",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.5,
+      "score": 0.875
+    },
+    {
+      "world": "gen-s2-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-013",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "event_date",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.6667,
+      "score": 0.9167
+    },
+    {
+      "world": "gen-s2-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-014",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s2-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-015",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "alias",
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s3-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-001",
+      "type": "priority",
+      "bucket": "priority",
+      "template": "focus_tomorrow",
+      "challenges": [
+        "duplicate_signal",
+        "implied_commitment",
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.5714,
+      "score": 0.8929
+    },
+    {
+      "world": "gen-s3-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-002",
+      "type": "status",
+      "bucket": "status",
+      "template": "project_status",
+      "challenges": [
+        "alias",
+        "scattered_evidence",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.5627,
+      "citation": 0.9091,
+      "score": 0.5499
+    },
+    {
+      "world": "gen-s3-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-003",
+      "type": "change",
+      "bucket": "change",
+      "template": "project_changes",
+      "challenges": [
+        "implied_commitment",
+        "scattered_evidence",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.125,
+      "citation": 0.8462,
+      "score": 0.1202
+    },
+    {
+      "world": "gen-s3-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "alias"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.3333,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s3-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-005",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "duplicate_signal",
+        "implied_commitment",
+        "transfer"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.6667,
+      "citation": 1.0,
+      "score": 0.6667
+    },
+    {
+      "world": "gen-s3-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-006",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [
+        "transfer"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s3-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-007",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_due",
+      "challenges": [
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s3-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-008",
+      "type": "point",
+      "bucket": "point",
+      "template": "project_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s3-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [
+        "alias"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.6,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s3-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "bucket": "list",
+      "template": "project_loops",
+      "challenges": [
+        "duplicate_signal"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.5,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s3-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-011",
+      "type": "brief",
+      "bucket": "brief",
+      "template": "person_brief",
+      "challenges": [
+        "endorsement",
+        "implied_commitment",
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.12,
+      "citation": 0.8824,
+      "score": 0.1164
+    },
+    {
+      "world": "gen-s3-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-012",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "decision_date",
+      "challenges": [
+        "duplicate_signal"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.6667,
+      "score": 0.9167
+    },
+    {
+      "world": "gen-s3-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-013",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "event_date",
+      "challenges": [
+        "duplicate_signal"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.5,
+      "score": 0.875
+    },
+    {
+      "world": "gen-s3-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-014",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s3-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-015",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "person_attr",
+      "challenges": [
+        "alias",
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s6-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-001",
+      "type": "priority",
+      "bucket": "priority",
+      "template": "focus_tomorrow",
+      "challenges": [
+        "duplicate_signal",
+        "scattered_evidence",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.5455,
+      "score": 0.8864
+    },
+    {
+      "world": "gen-s6-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-002",
+      "type": "status",
+      "bucket": "status",
+      "template": "project_status",
+      "challenges": [
+        "duplicate_signal",
+        "scattered_evidence",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.2247,
+      "citation": 0.9655,
+      "score": 0.2228
+    },
+    {
+      "world": "gen-s6-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-003",
+      "type": "change",
+      "bucket": "change",
+      "template": "project_changes",
+      "challenges": [
+        "duplicate_signal",
+        "implied_commitment",
+        "scattered_evidence",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0909,
+      "citation": 0.9333,
+      "score": 0.0894
+    },
+    {
+      "world": "gen-s6-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "duplicate_signal",
+        "name_collision",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.5714,
+      "citation": 0.5625,
+      "score": 0.5089
+    },
+    {
+      "world": "gen-s6-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-005",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "alias"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 1.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s6-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-006",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [
+        "transfer"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s6-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-007",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_due",
+      "challenges": [
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s6-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-008",
+      "type": "point",
+      "bucket": "point",
+      "template": "project_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s6-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s6-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "bucket": "list",
+      "template": "project_loops",
+      "challenges": [
+        "alias",
+        "duplicate_signal",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.6364,
+      "citation": 0.6667,
+      "score": 0.5833
+    },
+    {
+      "world": "gen-s6-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-011",
+      "type": "brief",
+      "bucket": "brief",
+      "template": "person_brief",
+      "challenges": [
+        "duplicate_signal",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.4274,
+      "citation": 0.5333,
+      "score": 0.3775
+    },
+    {
+      "world": "gen-s6-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-012",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "decision_date",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.5,
+      "score": 0.875
+    },
+    {
+      "world": "gen-s6-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-013",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "event_date",
+      "challenges": [
+        "duplicate_signal"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s6-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-014",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s6-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-015",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-001",
+      "type": "priority",
+      "bucket": "priority",
+      "template": "focus_tomorrow",
+      "challenges": [
+        "duplicate_signal",
+        "endorsement",
+        "implied_commitment",
+        "scattered_evidence",
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.7857,
+      "score": 0.9464
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-002",
+      "type": "status",
+      "bucket": "status",
+      "template": "project_status",
+      "challenges": [
+        "scattered_evidence",
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.8542,
+      "citation": 1.0,
+      "score": 0.8542
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-003",
+      "type": "change",
+      "bucket": "change",
+      "template": "project_changes",
+      "challenges": [
+        "duplicate_signal",
+        "endorsement",
+        "implied_commitment"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.25,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "duplicate_signal",
+        "endorsement",
+        "implied_commitment",
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.9091,
+      "score": 0.9773
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-005",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "alias"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-006",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [
+        "duplicate_signal"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-007",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_due",
+      "challenges": [
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-008",
+      "type": "point",
+      "bucket": "point",
+      "template": "project_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [
+        "alias",
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.8,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "bucket": "list",
+      "template": "project_loops",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.2083,
+      "citation": 0.4615,
+      "score": 0.1803
+    },
+    {
+      "world": "gen-s10-w2-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-011",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "person_attr",
+      "challenges": [
+        "name_collision",
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-001",
+      "type": "priority",
+      "bucket": "priority",
+      "template": "focus_tomorrow",
+      "challenges": [
+        "implied_commitment",
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.6154,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-002",
+      "type": "status",
+      "bucket": "status",
+      "template": "project_status",
+      "challenges": [
+        "alias",
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.5715,
+      "citation": 0.8947,
+      "score": 0.5565
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-003",
+      "type": "change",
+      "bucket": "change",
+      "template": "project_changes",
+      "challenges": [
+        "alias",
+        "endorsement",
+        "implied_commitment",
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.1,
+      "citation": 0.8462,
+      "score": 0.0962
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "alias",
+        "implied_commitment",
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.5333,
+      "citation": 0.6,
+      "score": 0.48
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-005",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "alias",
+        "duplicate_signal",
+        "implied_commitment",
+        "name_collision",
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.7619,
+      "citation": 0.8571,
+      "score": 0.7347
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-006",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.5,
+      "score": 0.875
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-007",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_due",
+      "challenges": [
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-008",
+      "type": "point",
+      "bucket": "point",
+      "template": "project_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 1.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 1.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "bucket": "list",
+      "template": "project_loops",
+      "challenges": [
+        "duplicate_signal",
+        "implied_commitment"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.75,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-011",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    }
+  ],
+  "notes": [
+    "Track B: store integrity (SIS) is Track A only and is skipped",
+    "scored as suite lite (11 worlds, first 2 episode day(s)): the headline is WCB-lite, comparable only with other WCB-lite scores (docs/lite.md)",
+    "pilot: the gold differs from the gold this run was made against (gold version 5 -> 6); answers are graded against the current gold",
+    "gen-s9-large: the gold differs from the gold this run was made against (gold version 5 -> 6); answers are graded against the current gold",
+    "gen-s8-w4: the gold differs from the gold this run was made against (gold version 5 -> 6); answers are graded against the current gold",
+    "gen-s4-w2: the gold differs from the gold this run was made against (gold version 5 -> 6); answers are graded against the current gold",
+    "gen-s7-w2: the gold differs from the gold this run was made against (gold version 5 -> 6); answers are graded against the current gold",
+    "gen-s1-w1: the gold differs from the gold this run was made against (gold version 5 -> 6); answers are graded against the current gold",
+    "gen-s2-w1: the gold differs from the gold this run was made against (gold version 5 -> 6); answers are graded against the current gold",
+    "gen-s3-w1: the gold differs from the gold this run was made against (gold version 5 -> 6); answers are graded against the current gold",
+    "gen-s6-w1: the gold differs from the gold this run was made against (gold version 5 -> 6); answers are graded against the current gold",
+    "gen-s10-w2-small: the gold differs from the gold this run was made against (gold version 5 -> 6); answers are graded against the current gold",
+    "gen-s5-small: the gold differs from the gold this run was made against (gold version 5 -> 6); answers are graded against the current gold"
+  ]
+}

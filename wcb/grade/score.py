@@ -36,6 +36,7 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import os
 import random
 from collections import defaultdict
 from collections.abc import Iterable
@@ -111,6 +112,13 @@ def score_run(
     judge_obj = make_judge(judge, judge_model, cache_path=out_dir / "judge-cache.jsonl")
     plan = RunPlan.from_meta(run_dir, meta, suite=suite)
 
+    if hasattr(judge_obj, "recording"):
+        # Model judges: one pass records every decision the cache lacks, those are asked in
+        # parallel, and the real pass below reads them from the cache.
+        judge_obj.recording(True)
+        for entry in plan.world_entries:
+            score_world(plan, entry, judge_obj, Accumulator())
+        judge_obj.fetch_pending(int(os.environ.get("WCB_JUDGE_WORKERS", "") or 16))
     acc = Accumulator()
     worlds = [score_world(plan, entry, judge_obj, acc) for entry in plan.world_entries]
     data = assemble_report(plan, worlds, acc, judge, judge_model, judge_obj, out_dir)
@@ -428,7 +436,8 @@ def score_episode(
     }
     episode["ingestion_cost"] = diff(episode["synthesis"], episode["score"])
     episode["sis"] = (
-        episode_sis(gold, ep_dir, judge, acc.notes, tag)
+        # SIS checks store records, not answers: a panel judge leaves it to its heuristic.
+        episode_sis(gold, ep_dir, getattr(judge, "heuristic", judge), acc.notes, tag)
         if plan.agent and plan.track == "A"
         else None
     )
@@ -830,6 +839,7 @@ def assemble_report(
             "name": getattr(judge_obj, "name", judge_kind),
             "model": judge_model,
             "calls": getattr(judge_obj, "calls", None),
+            "escalated": getattr(judge_obj, "escalated", None),
         },
         "output": {"dir": str(out_dir)},
         "headline": headline,

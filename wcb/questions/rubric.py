@@ -276,13 +276,16 @@ def rubric_item(
     support: list[str] | None = None,
     aspect: str = "",
     weight: int | None = None,
+    optional: bool = False,
 ) -> dict[str, Any]:
     """A rubric item (docs/formats.md §3.3) without its ID; `number_items` assigns IDs.
 
     `weight` defaults to 2 for critical items and 1 otherwise. `aspect` names what the item
-    checks (``status``, ``phase``, ``latest_change``...), for reports and debugging.
+    checks (``status``, ``phase``, ``latest_change``...), for reports and debugging. An
+    `optional` item (a loop the worker has not clearly taken on) counts only when an answer
+    covers or contradicts it.
     """
-    return {
+    item = {
         "id": "",
         "aspect": aspect,
         "text": text,
@@ -292,6 +295,9 @@ def rubric_item(
         "stale": [g for g in (group(g) for g in (stale or [])) if g],
         "support": list(support or []),
     }
+    if optional:
+        item["optional"] = True
+    return item
 
 
 def number_items(items: list[dict[str, Any]], start: int = 1) -> list[dict[str, Any]]:

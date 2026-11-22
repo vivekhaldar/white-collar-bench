@@ -1,0 +1,4149 @@
+{
+  "report_version": "0.1",
+  "scored_at": "2026-11-22T02:38:25+00:00",
+  "scorer": {
+    "version": "0.1",
+    "wcb_version": "0.1.0"
+  },
+  "run": {
+    "dir": "runs/gpt-6.1-sol-pi-lite/sol/track-b/measured",
+    "track": "B",
+    "adapter": {
+      "name": "pi-litellm-gpt-6.1-sol",
+      "version": "pi-1.5.2-runtime-v2",
+      "model": "litellm/gpt-6.1-sol",
+      "path": "/home/user/workspace/repo/results/2026-11-21-gpt-6.1-sol-pi-lite/config/adapter.yaml",
+      "sha256": "30aa5a700a48c0ee30498393c47d6bbd2016abf78e5555c72795ae289970235e"
+    },
+    "wcb_version": "0.1.0",
+    "status": "completed",
+    "started_at": "2026-11-21T21:54:21+00:00",
+    "finished_at": "2026-11-21T22:21:28+00:00",
+    "options": {
+      "max_days": 2,
+      "skip_ingest": false,
+      "workspace_root": null,
+      "meter": true,
+      "suite": "lite"
+    },
+    "suite": {
+      "name": "micro",
+      "worlds": [
+        "pilot",
+        "dev/gen-s1-w1",
+        "dev/gen-s4-w2",
+        "dev/gen-s5-small",
+        "dev/gen-s9-large"
+      ],
+      "max_days": 2
+    },
+    "scored": {
+      "agent": true,
+      "oracle": false
+    }
+  },
+  "judge": {
+    "kind": "heuristic",
+    "name": "heuristic",
+    "model": null,
+    "calls": null,
+    "escalated": null
+  },
+  "output": {
+    "dir": "runs/gpt-6.1-sol-pi-lite/sol/track-b/scores-v6-micro"
+  },
+  "headline": {
+    "track": "B",
+    "suite": "micro",
+    "label": "WCB-micro",
+    "wcb": 62.50123013493278,
+    "wcb_ci95": [
+      49.917634129881904,
+      74.53659596072274
+    ],
+    "synthesis": null,
+    "synthesis_ci95": null,
+    "ingestion_cost": null,
+    "sis": null,
+    "sis_final": null,
+    "n_worlds": 5,
+    "n_episodes": 5,
+    "n_questions": 73
+  },
+  "worlds": [
+    {
+      "id": "pilot",
+      "path": "/home/user/workspace/repo/worlds/pilot",
+      "days": [
+        "2027-03-01",
+        "2027-03-02"
+      ],
+      "n_days": 6,
+      "checkpoints": [
+        {
+          "id": "cp1",
+          "date": "2027-03-02",
+          "label": "end of Tuesday",
+          "day_index": 2
+        }
+      ],
+      "repeats": [
+        {
+          "repeat": 1,
+          "checkpoints": [
+            {
+              "id": "cp1",
+              "date": "2027-03-02",
+              "label": "end of Tuesday",
+              "day_index": 2,
+              "n_questions": 14,
+              "score": 47.86623814219968,
+              "score_buckets": {
+                "point": 56.94444444444445,
+                "list": 4.742857142857144,
+                "status": 36.24260355029586,
+                "brief": 0.0,
+                "change": 0.0,
+                "temporal": 91.66666666666666,
+                "priority": 93.33333333333333,
+                "unanswerable": 100.0
+              },
+              "synthesis": null,
+              "synthesis_buckets": {},
+              "ingestion_cost": null
+            }
+          ],
+          "score": 47.86623814219968,
+          "synthesis": null,
+          "ingestion_cost": null,
+          "sis": null
+        }
+      ],
+      "score": 47.86623814219968,
+      "synthesis": null,
+      "ingestion_cost": null,
+      "sis": null,
+      "sis_final": null
+    },
+    {
+      "id": "gen-s9-large",
+      "path": "/home/user/workspace/repo/worlds/dev/gen-s9-large",
+      "days": [
+        "2027-11-01",
+        "2027-11-02"
+      ],
+      "n_days": 6,
+      "checkpoints": [
+        {
+          "id": "cp1",
+          "date": "2027-11-02",
+          "label": "end of Tuesday",
+          "day_index": 2
+        }
+      ],
+      "repeats": [
+        {
+          "repeat": 1,
+          "checkpoints": [
+            {
+              "id": "cp1",
+              "date": "2027-11-02",
+              "label": "end of Tuesday",
+              "day_index": 2,
+              "n_questions": 18,
+              "score": 72.3872905643739,
+              "score_buckets": {
+                "point": 54.76190476190476,
+                "list": 55.55555555555555,
+                "status": 76.80555555555556,
+                "brief": 86.41975308641975,
+                "change": 19.444444444444446,
+                "temporal": 100.0,
+                "priority": 86.11111111111111,
+                "unanswerable": 100.0
+              },
+              "synthesis": null,
+              "synthesis_buckets": {},
+              "ingestion_cost": null
+            }
+          ],
+          "score": 72.3872905643739,
+          "synthesis": null,
+          "ingestion_cost": null,
+          "sis": null
+        }
+      ],
+      "score": 72.3872905643739,
+      "synthesis": null,
+      "ingestion_cost": null,
+      "sis": null,
+      "sis_final": null
+    },
+    {
+      "id": "gen-s4-w2",
+      "path": "/home/user/workspace/repo/worlds/dev/gen-s4-w2",
+      "days": [
+        "2027-09-06",
+        "2027-09-07"
+      ],
+      "n_days": 12,
+      "checkpoints": [
+        {
+          "id": "cp1",
+          "date": "2027-09-07",
+          "label": "end of Tuesday (week 1)",
+          "day_index": 2
+        }
+      ],
+      "repeats": [
+        {
+          "repeat": 1,
+          "checkpoints": [
+            {
+              "id": "cp1",
+              "date": "2027-09-07",
+              "label": "end of Tuesday (week 1)",
+              "day_index": 2,
+              "n_questions": 15,
+              "score": 74.74024415782145,
+              "score_buckets": {
+                "point": 47.916666666666664,
+                "list": 40.7253086419753,
+                "status": 74.03100775193798,
+                "brief": 97.88135593220339,
+                "change": 41.21376811594203,
+                "temporal": 100.0,
+                "priority": 96.15384615384616,
+                "unanswerable": 100.0
+              },
+              "synthesis": null,
+              "synthesis_buckets": {},
+              "ingestion_cost": null
+            }
+          ],
+          "score": 74.74024415782145,
+          "synthesis": null,
+          "ingestion_cost": null,
+          "sis": null
+        }
+      ],
+      "score": 74.74024415782145,
+      "synthesis": null,
+      "ingestion_cost": null,
+      "sis": null,
+      "sis_final": null
+    },
+    {
+      "id": "gen-s1-w1",
+      "path": "/home/user/workspace/repo/worlds/dev/gen-s1-w1",
+      "days": [
+        "2027-11-08",
+        "2027-11-09"
+      ],
+      "n_days": 6,
+      "checkpoints": [
+        {
+          "id": "cp1",
+          "date": "2027-11-09",
+          "label": "end of Tuesday",
+          "day_index": 2
+        }
+      ],
+      "repeats": [
+        {
+          "repeat": 1,
+          "checkpoints": [
+            {
+              "id": "cp1",
+              "date": "2027-11-09",
+              "label": "end of Tuesday",
+              "day_index": 2,
+              "n_questions": 15,
+              "score": 75.40760046179842,
+              "score_buckets": {
+                "point": 100.0,
+                "list": 61.30952380952381,
+                "status": 98.599788647343,
+                "brief": 61.135912698412696,
+                "change": 37.36263736263737,
+                "temporal": 100.0,
+                "priority": 44.85294117647059,
+                "unanswerable": 100.0
+              },
+              "synthesis": null,
+              "synthesis_buckets": {},
+              "ingestion_cost": null
+            }
+          ],
+          "score": 75.40760046179842,
+          "synthesis": null,
+          "ingestion_cost": null,
+          "sis": null
+        }
+      ],
+      "score": 75.40760046179842,
+      "synthesis": null,
+      "ingestion_cost": null,
+      "sis": null,
+      "sis_final": null
+    },
+    {
+      "id": "gen-s5-small",
+      "path": "/home/user/workspace/repo/worlds/dev/gen-s5-small",
+      "days": [
+        "2027-03-29",
+        "2027-03-30"
+      ],
+      "n_days": 6,
+      "checkpoints": [
+        {
+          "id": "cp1",
+          "date": "2027-03-30",
+          "label": "end of Tuesday",
+          "day_index": 2
+        }
+      ],
+      "repeats": [
+        {
+          "repeat": 1,
+          "checkpoints": [
+            {
+              "id": "cp1",
+              "date": "2027-03-30",
+              "label": "end of Tuesday",
+              "day_index": 2,
+              "n_questions": 11,
+              "score": 42.10477734847046,
+              "score_buckets": {
+                "point": 46.875,
+                "list": 40.48979591836734,
+                "status": 55.64848355707082,
+                "change": 9.615384615384617,
+                "priority": 0.0,
+                "unanswerable": 100.0
+              },
+              "synthesis": null,
+              "synthesis_buckets": {},
+              "ingestion_cost": null
+            }
+          ],
+          "score": 42.10477734847046,
+          "synthesis": null,
+          "ingestion_cost": null,
+          "sis": null
+        }
+      ],
+      "score": 42.10477734847046,
+      "synthesis": null,
+      "ingestion_cost": null,
+      "sis": null,
+      "sis_final": null
+    }
+  ],
+  "breakdowns": {
+    "by_type": {
+      "point": {
+        "n": 22,
+        "wcb": 60.60606060606061,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "list": {
+        "n": 17,
+        "wcb": 36.35028455826775,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "status": {
+        "n": 5,
+        "wcb": 68.26548781244064,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "brief": {
+        "n": 4,
+        "wcb": 61.359255429258965,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "change": {
+        "n": 5,
+        "wcb": 21.52724690768169,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "temporal": {
+        "n": 7,
+        "wcb": 98.80952380952381,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "priority": {
+        "n": 5,
+        "wcb": 64.09024635495224,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "unanswerable": {
+        "n": 8,
+        "wcb": 100.0,
+        "synthesis": null,
+        "ingestion_cost": null
+      }
+    },
+    "by_challenge": {
+      "alias": {
+        "n": 17,
+        "wcb": 42.28040380993286,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "correction": {
+        "n": 1,
+        "wcb": 23.71428571428572,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "draft_vs_sent": {
+        "n": 1,
+        "wcb": 0.0,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "duplicate_signal": {
+        "n": 18,
+        "wcb": 65.90531889637367,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "endorsement": {
+        "n": 10,
+        "wcb": 60.33208889341892,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "implied_commitment": {
+        "n": 15,
+        "wcb": 45.16511671393991,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "name_collision": {
+        "n": 8,
+        "wcb": 45.305201247165535,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "new_entity": {
+        "n": 5,
+        "wcb": 42.27972440434524,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "scattered_evidence": {
+        "n": 16,
+        "wcb": 57.57727158608002,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "silent_closure": {
+        "n": 1,
+        "wcb": 37.36263736263737,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "supersession": {
+        "n": 10,
+        "wcb": 64.09220276503784,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "transfer": {
+        "n": 5,
+        "wcb": 55.833333333333336,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "unobservable": {
+        "n": 10,
+        "wcb": 93.09640522875817,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      "worker_directive": {
+        "n": 8,
+        "wcb": 63.76560609450881,
+        "synthesis": null,
+        "ingestion_cost": null
+      }
+    },
+    "by_checkpoint": [
+      {
+        "world": "pilot",
+        "checkpoint": "cp1",
+        "date": "2027-03-02",
+        "label": "end of Tuesday",
+        "day_index": 2,
+        "n_days": 6,
+        "n_questions": 14,
+        "wcb": 47.86623814219968,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      {
+        "world": "gen-s9-large",
+        "checkpoint": "cp1",
+        "date": "2027-11-02",
+        "label": "end of Tuesday",
+        "day_index": 2,
+        "n_days": 6,
+        "n_questions": 18,
+        "wcb": 72.3872905643739,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      {
+        "world": "gen-s4-w2",
+        "checkpoint": "cp1",
+        "date": "2027-09-07",
+        "label": "end of Tuesday (week 1)",
+        "day_index": 2,
+        "n_days": 12,
+        "n_questions": 15,
+        "wcb": 74.74024415782145,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      {
+        "world": "gen-s1-w1",
+        "checkpoint": "cp1",
+        "date": "2027-11-09",
+        "label": "end of Tuesday",
+        "day_index": 2,
+        "n_days": 6,
+        "n_questions": 15,
+        "wcb": 75.40760046179842,
+        "synthesis": null,
+        "ingestion_cost": null
+      },
+      {
+        "world": "gen-s5-small",
+        "checkpoint": "cp1",
+        "date": "2027-03-30",
+        "label": "end of Tuesday",
+        "day_index": 2,
+        "n_days": 6,
+        "n_questions": 11,
+        "wcb": 42.10477734847046,
+        "synthesis": null,
+        "ingestion_cost": null
+      }
+    ]
+  },
+  "sis_by_day": [],
+  "efficiency": {
+    "summary": {
+      "ingest": {
+        "sessions": 15,
+        "ok": 15,
+        "timeouts": 0,
+        "failures": 0,
+        "usage_reported": 15,
+        "usage_metered": 15,
+        "wall_s": {
+          "total": 2331.563,
+          "mean": 155.43753333333333
+        },
+        "input_tokens": {
+          "total": 7495450.0,
+          "mean": 499696.6666666667
+        },
+        "output_tokens": {
+          "total": 150768.0,
+          "mean": 10051.2
+        },
+        "cost_usd": {
+          "total": 1.97057225,
+          "mean": 0.13137148333333334
+        },
+        "tool_calls": {
+          "total": 505.0,
+          "mean": 33.666666666666664
+        }
+      },
+      "query": {
+        "sessions": 5,
+        "ok": 5,
+        "timeouts": 0,
+        "failures": 0,
+        "usage_reported": 5,
+        "usage_metered": 5,
+        "wall_s": {
+          "total": 399.548,
+          "mean": 79.9096
+        },
+        "input_tokens": {
+          "total": 1251714.0,
+          "mean": 250342.8
+        },
+        "output_tokens": {
+          "total": 27777.0,
+          "mean": 5555.4
+        },
+        "cost_usd": {
+          "total": 0.47492895,
+          "mean": 0.09498579
+        },
+        "tool_calls": {
+          "total": 117.0,
+          "mean": 23.4
+        }
+      },
+      "query_oracle": {
+        "sessions": 0,
+        "ok": 0,
+        "timeouts": 0,
+        "failures": 0,
+        "usage_reported": 0,
+        "usage_metered": 0,
+        "wall_s": {
+          "total": null,
+          "mean": null
+        },
+        "input_tokens": {
+          "total": null,
+          "mean": null
+        },
+        "output_tokens": {
+          "total": null,
+          "mean": null
+        },
+        "cost_usd": {
+          "total": null,
+          "mean": null
+        },
+        "tool_calls": {
+          "total": null,
+          "mean": null
+        }
+      }
+    },
+    "per_episode": {
+      "wall_s": 546.2221999999999,
+      "input_tokens": 1749432.8,
+      "output_tokens": 35709.0,
+      "cost_usd": 0.4891002400000001,
+      "tool_calls": 124.4
+    },
+    "per_ingest_day": [
+      {
+        "world": "gen-s1-w1",
+        "date": "2027-11-06",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 304.949,
+        "input_tokens": 825070.0,
+        "output_tokens": 19453.0,
+        "cost_usd": 0.22578115,
+        "tool_calls": 31.0
+      },
+      {
+        "world": "gen-s1-w1",
+        "date": "2027-11-08",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 123.693,
+        "input_tokens": 397821.0,
+        "output_tokens": 7921.0,
+        "cost_usd": 0.10888565,
+        "tool_calls": 46.0
+      },
+      {
+        "world": "gen-s1-w1",
+        "date": "2027-11-09",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 100.8,
+        "input_tokens": 337963.0,
+        "output_tokens": 6902.0,
+        "cost_usd": 0.09055890000000001,
+        "tool_calls": 21.0
+      },
+      {
+        "world": "gen-s4-w2",
+        "date": "2027-09-04",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 192.56,
+        "input_tokens": 764024.0,
+        "output_tokens": 10689.0,
+        "cost_usd": 0.15997824999999996,
+        "tool_calls": 34.0
+      },
+      {
+        "world": "gen-s4-w2",
+        "date": "2027-09-06",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 66.87,
+        "input_tokens": 157990.0,
+        "output_tokens": 3896.0,
+        "cost_usd": 0.0505041,
+        "tool_calls": 21.0
+      },
+      {
+        "world": "gen-s4-w2",
+        "date": "2027-09-07",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 66.416,
+        "input_tokens": 115934.0,
+        "output_tokens": 4348.0,
+        "cost_usd": 0.05274795,
+        "tool_calls": 18.0
+      },
+      {
+        "world": "gen-s5-small",
+        "date": "2027-03-27",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 175.993,
+        "input_tokens": 576131.0,
+        "output_tokens": 11041.0,
+        "cost_usd": 0.153348,
+        "tool_calls": 26.0
+      },
+      {
+        "world": "gen-s5-small",
+        "date": "2027-03-29",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 97.148,
+        "input_tokens": 314855.0,
+        "output_tokens": 6261.0,
+        "cost_usd": 0.08361969999999999,
+        "tool_calls": 37.0
+      },
+      {
+        "world": "gen-s5-small",
+        "date": "2027-03-30",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 90.223,
+        "input_tokens": 312377.0,
+        "output_tokens": 6091.0,
+        "cost_usd": 0.09028530000000001,
+        "tool_calls": 33.0
+      },
+      {
+        "world": "gen-s9-large",
+        "date": "2027-10-29",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 210.092,
+        "input_tokens": 761372.0,
+        "output_tokens": 13872.0,
+        "cost_usd": 0.20177755,
+        "tool_calls": 26.0
+      },
+      {
+        "world": "gen-s9-large",
+        "date": "2027-11-01",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 119.843,
+        "input_tokens": 373396.0,
+        "output_tokens": 7885.0,
+        "cost_usd": 0.10250079999999999,
+        "tool_calls": 51.0
+      },
+      {
+        "world": "gen-s9-large",
+        "date": "2027-11-02",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 152.288,
+        "input_tokens": 348136.0,
+        "output_tokens": 12816.0,
+        "cost_usd": 0.12448790000000001,
+        "tool_calls": 21.0
+      },
+      {
+        "world": "pilot",
+        "date": "2027-02-26",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 220.842,
+        "input_tokens": 714714.0,
+        "output_tokens": 12630.0,
+        "cost_usd": 0.1716492,
+        "tool_calls": 56.0
+      },
+      {
+        "world": "pilot",
+        "date": "2027-03-01",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 196.523,
+        "input_tokens": 759550.0,
+        "output_tokens": 12242.0,
+        "cost_usd": 0.16720005000000002,
+        "tool_calls": 40.0
+      },
+      {
+        "world": "pilot",
+        "date": "2027-03-02",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 213.323,
+        "input_tokens": 736117.0,
+        "output_tokens": 14721.0,
+        "cost_usd": 0.18724775000000002,
+        "tool_calls": 44.0
+      }
+    ],
+    "per_query_session": [
+      {
+        "world": "gen-s1-w1",
+        "checkpoint": "cp1",
+        "store": "agent",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 82.869,
+        "input_tokens": 264901.0,
+        "output_tokens": 5823.0,
+        "cost_usd": 0.09399694999999998,
+        "tool_calls": 26.0
+      },
+      {
+        "world": "gen-s4-w2",
+        "checkpoint": "cp1",
+        "store": "agent",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 76.89,
+        "input_tokens": 335156.0,
+        "output_tokens": 5100.0,
+        "cost_usd": 0.10894105,
+        "tool_calls": 23.0
+      },
+      {
+        "world": "gen-s5-small",
+        "checkpoint": "cp1",
+        "store": "agent",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 80.685,
+        "input_tokens": 201351.0,
+        "output_tokens": 5756.0,
+        "cost_usd": 0.08300920000000002,
+        "tool_calls": 18.0
+      },
+      {
+        "world": "gen-s9-large",
+        "checkpoint": "cp1",
+        "store": "agent",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 69.529,
+        "input_tokens": 234240.0,
+        "output_tokens": 4654.0,
+        "cost_usd": 0.08623565,
+        "tool_calls": 22.0
+      },
+      {
+        "world": "pilot",
+        "checkpoint": "cp1",
+        "store": "agent",
+        "n": 1,
+        "statuses": [
+          "ok"
+        ],
+        "wall_s": 89.575,
+        "input_tokens": 216066.0,
+        "output_tokens": 6444.0,
+        "cost_usd": 0.1027461,
+        "tool_calls": 28.0
+      }
+    ]
+  },
+  "failures": [
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "template": "project_loops",
+      "text": "What loops are open on Plain Language Workshop?",
+      "answerable": true,
+      "challenges": [],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 0.6666666666666666,
+      "gold": {
+        "items": [
+          {
+            "loop": "c-012",
+            "what": "Send Jalen the plain language workshop attendee list",
+            "counterparty": "p-jalen-sandberg",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "attendee list",
+              "plain language workshop"
+            ],
+            "support": [
+              "ch-0015"
+            ]
+          },
+          {
+            "loop": "c-018",
+            "what": "Send the plain language workshop post-event survey",
+            "counterparty": "p-jalen-sandberg",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "keywords": [
+              "post-event survey",
+              "plain language workshop"
+            ],
+            "support": [
+              "mn-0003"
+            ]
+          },
+          {
+            "loop": "c-028",
+            "what": "Send Sipho the plain language workshop session outline",
+            "counterparty": "p-sipho-sengupta",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "session outline",
+              "plain language workshop"
+            ],
+            "support": [
+              "nt-0003"
+            ]
+          },
+          {
+            "loop": "c-043",
+            "what": "Send Camila the plain language workshop run sheet",
+            "counterparty": "p-jalen-sandberg",
+            "direction": "owed_to_me",
+            "status": "blocked",
+            "due": null,
+            "keywords": [
+              "run sheet",
+              "plain language workshop"
+            ],
+            "support": [
+              "em-0059",
+              "mt-0011"
+            ]
+          },
+          {
+            "loop": "c-054",
+            "what": "Send Petra the plain language workshop feedback form",
+            "counterparty": "p-petra-korkmaz",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "feedback form",
+              "plain language workshop"
+            ],
+            "support": [
+              "ch-0053"
+            ],
+            "optional": true
+          },
+          {
+            "loop": "c-059",
+            "what": "Send Petra the plain language workshop room plan",
+            "counterparty": "p-petra-korkmaz",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "room plan",
+              "plain language workshop"
+            ],
+            "support": [
+              "ch-0057"
+            ]
+          },
+          {
+            "loop": "c-075",
+            "what": "Walk Jalen through the plain language workshop speaker brief",
+            "counterparty": "p-jalen-sandberg",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-11-15",
+            "keywords": [
+              "speaker brief",
+              "plain language workshop"
+            ],
+            "support": [
+              "nt-0008"
+            ]
+          }
+        ],
+        "suggested": [
+          {
+            "loop": "c-023",
+            "what": "Turn the plain language workshop questions into an FAQ",
+            "counterparty": "p-jalen-sandberg",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "faq",
+              "plain language workshop"
+            ],
+            "support": [
+              "mt-0003"
+            ],
+            "optional": true
+          }
+        ]
+      },
+      "predicted": {
+        "type": "list",
+        "abstain": false,
+        "items": [
+          {
+            "text": "Send the attendee list to Jalen; promised, no delivery shown.",
+            "counterparty": "Jalen Sandberg",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "ch-0015"
+            ]
+          },
+          {
+            "text": "Send slides v2 to Sipho. The 27 October email delivered them to Jalen, not Sipho, so it does not close this recipient-specific task.",
+            "counterparty": "Sipho Sengupta",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "mn-0002",
+              "em-0021"
+            ]
+          },
+          {
+            "text": "Send the session outline to Sipho; self-commitment, no delivery shown.",
+            "counterparty": "Sipho Sengupta",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "nt-0003"
+            ]
+          },
+          {
+            "text": "Send the room plan to Petra; promised, no explicit plan-delivery confirmation.",
+            "counterparty": "Petra Korkmaz",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "ch-0057"
+            ]
+          },
+          {
+            "text": "Walk Jalen through the speaker brief by 15 November; scheduled for 10 November 14:00–14:30 (−07:00), not yet completed.",
+            "counterparty": "Jalen Sandberg",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-11-15",
+            "cites": [
+              "nt-0008",
+              "ca-0007"
+            ]
+          },
+          {
+            "text": "Obtain the post-event survey from Jalen; requested, without explicit acceptance or delivery.",
+            "counterparty": "Jalen Sandberg",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "cites": [
+              "mn-0003"
+            ]
+          },
+          {
+            "text": "Obtain Jalen's promised run sheet; blocked on an unidentified unsigned agreement as of 8 November.",
+            "counterparty": "Jalen Sandberg",
+            "direction": "owed_to_me",
+            "status": "blocked",
+            "due": null,
+            "cites": [
+              "em-0059",
+              "mt-0011"
+            ]
+          },
+          {
+            "text": "Respond to Petra's feedback-form request; not yet accepted by Camila or delivered.",
+            "counterparty": "Petra Korkmaz",
+            "direction": "other",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "ch-0053"
+            ]
+          },
+          {
+            "text": "Decide whether to turn workshop questions into an FAQ; tentative 'Maybe I should' idea, not an accepted commitment.",
+            "counterparty": null,
+            "direction": "other",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "mt-0003"
+            ]
+          }
+        ],
+        "note": "Slow page loads are not an open loop: Yasmin explicitly reported them fixed on 9 November and Camila acknowledged (ch-0079)."
+      },
+      "details": {
+        "n_pred": 9,
+        "n_gold": 7,
+        "precision": 0.0,
+        "recall": 0.0,
+        "matches": [
+          {
+            "pred": 7,
+            "gold": "c-054",
+            "credit": 1.0,
+            "status": 1.0,
+            "due": 1.0,
+            "counterparty": 1.0
+          }
+        ],
+        "unmatched_pred": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "unmatched_gold": [
+          "c-012",
+          "c-018",
+          "c-028",
+          "c-043",
+          "c-059",
+          "c-075"
+        ],
+        "citations": {
+          "scope": "item",
+          "total": 12,
+          "valid": 8,
+          "invalid": [
+            {
+              "cite": "mn-0002",
+              "why": "not_in_support",
+              "item": 1
+            },
+            {
+              "cite": "em-0021",
+              "why": "not_in_support",
+              "item": 1
+            },
+            {
+              "cite": "ca-0007",
+              "why": "not_in_support",
+              "item": 4
+            },
+            {
+              "cite": "mt-0003",
+              "why": "not_in_support",
+              "item": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "template": "i_owe",
+      "text": "What do I currently owe Tariq?",
+      "answerable": true,
+      "challenges": [
+        "alias"
+      ],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 0.3333333333333333,
+      "gold": {
+        "items": [
+          {
+            "loop": "c-055",
+            "what": "Send Tariq the Friday status note for w/e 10 September",
+            "counterparty": "p-tariq-ivanova",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-09-10",
+            "keywords": [
+              "friday status note",
+              "w/e 10 september"
+            ],
+            "support": [
+              "em-0093"
+            ],
+            "optional": true
+          }
+        ]
+      },
+      "predicted": {
+        "type": "list",
+        "abstain": false,
+        "items": [
+          {
+            "text": "Friday status note for w/e September 10, by end of day: half a page on what moved, what slipped, and leadership needs. August 27 and September 3 notes were already sent.",
+            "counterparty": "Tariq Ivanova",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-09-10",
+            "cites": [
+              "em-0093",
+              "em-0039",
+              "em-0086"
+            ]
+          }
+        ]
+      },
+      "details": {
+        "n_pred": 1,
+        "n_gold": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "matches": [],
+        "unmatched_pred": [
+          0
+        ],
+        "unmatched_gold": [
+          "c-055"
+        ],
+        "citations": {
+          "scope": "item",
+          "total": 3,
+          "valid": 1,
+          "invalid": [
+            {
+              "cite": "em-0039",
+              "why": "not_in_support",
+              "item": 0
+            },
+            {
+              "cite": "em-0086",
+              "why": "not_in_support",
+              "item": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-006",
+      "type": "point",
+      "template": "loop_owner",
+      "text": "Who is responsible for \"Set up the Fjord single sign-on role mapping\"?",
+      "answerable": true,
+      "challenges": [
+        "duplicate_signal"
+      ],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 1.0,
+      "gold": {
+        "kind": "entity",
+        "value": "Ratna Nikolic",
+        "entity": "p-ratna-nikolic",
+        "accept": [
+          "Ratna Nikolic",
+          "Ratna",
+          "R. Nikolic",
+          "ratna.nikolic@holfield.drayhurst.example",
+          "@ratna"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "value": "Ratna Nikolic and Meera Bondarenko",
+        "note": "The recap names Ratna alone, but her direct DM explicitly commits both of them. September 7 says the mapping is back on, not complete.",
+        "cites": [
+          "ch-0051",
+          "mn-0006",
+          "em-0108"
+        ]
+      },
+      "details": {
+        "kind": "entity",
+        "value": "Ratna Nikolic and Meera Bondarenko",
+        "gold": "Ratna Nikolic",
+        "resolved": [
+          "p-meera-bondarenko",
+          "p-ratna-nikolic"
+        ],
+        "citations": {
+          "scope": "question",
+          "total": 3,
+          "valid": 3,
+          "invalid": []
+        }
+      }
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "template": "person_attr",
+      "text": "What is my working relationship with Meera Bondarenko?",
+      "answerable": true,
+      "challenges": [
+        "name_collision"
+      ],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 1.0,
+      "gold": {
+        "kind": "text",
+        "value": "peer",
+        "entity": null,
+        "accept": [
+          "peer"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "value": "SLIO colleague and cross-project collaborator",
+        "note": "Meera is Head of Learning Services in your Systemwide Learning Innovation Office. You collaborate across Fjord, Cairn, both discoveries, room booking, workshop/learning series and other portfolio work. No reporting-line relationship is established.",
+        "cites": [
+          "nt-0001",
+          "em-0096",
+          "mn-0011"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "SLIO colleague and cross-project collaborator",
+        "gold": "peer",
+        "citations": {
+          "scope": "question",
+          "total": 3,
+          "valid": 3,
+          "invalid": []
+        }
+      }
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-001",
+      "type": "priority",
+      "template": "focus_tomorrow",
+      "text": "What should I focus on tomorrow?",
+      "answerable": true,
+      "challenges": [
+        "implied_commitment",
+        "scattered_evidence"
+      ],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 0.6153846153846154,
+      "gold": {
+        "tomorrow": "2027-03-31",
+        "must_include": [
+          {
+            "loop": "c-050",
+            "what": "Review Anahit's Wagtail service blueprint",
+            "counterparty": "p-anahit-fifita",
+            "direction": "i_owe",
+            "status": "waiting",
+            "due": "2027-03-31",
+            "keywords": [
+              "service blueprint",
+              "wagtail"
+            ],
+            "support": [
+              "ch-0049"
+            ]
+          }
+        ],
+        "worker_active": [
+          {
+            "loop": "c-050",
+            "what": "Review Anahit's Wagtail service blueprint",
+            "counterparty": "p-anahit-fifita",
+            "direction": "i_owe",
+            "status": "waiting",
+            "due": "2027-03-31",
+            "keywords": [
+              "service blueprint",
+              "wagtail"
+            ],
+            "support": [
+              "ch-0049"
+            ]
+          },
+          {
+            "loop": "c-046",
+            "what": "Send Friederike the Wagtail RACI chart",
+            "counterparty": "p-friederike-bhatt",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-04-01",
+            "keywords": [
+              "raci chart",
+              "wagtail"
+            ],
+            "support": [
+              "mt-0013",
+              "ch-0054"
+            ]
+          },
+          {
+            "loop": "c-042",
+            "what": "Send Lindiwe the Friday status note for w/e 2 April",
+            "counterparty": "p-lindiwe-ribeiro",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-04-02",
+            "keywords": [
+              "friday status note",
+              "w/e 2 april"
+            ],
+            "support": [
+              "em-0060"
+            ],
+            "optional": true
+          },
+          {
+            "loop": "c-053",
+            "what": "Draft the nurses FAQ for Wagtail",
+            "counterparty": "p-friederike-bhatt",
+            "direction": "i_owe",
+            "status": "open",
+            "due": "2027-04-06",
+            "keywords": [
+              "nurses faq",
+              "wagtail"
+            ],
+            "support": [
+              "ch-0052"
+            ]
+          },
+          {
+            "loop": "c-006",
+            "what": "Update the nurse scheduling selection risk register after Rudo's comments",
+            "counterparty": "p-rudo-ekwueme",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "risk register",
+              "nurse scheduling selection"
+            ],
+            "support": [
+              "ch-0003"
+            ]
+          },
+          {
+            "loop": "c-029",
+            "what": "Confirm the Okapi status slide with Anahit",
+            "counterparty": "p-anahit-fifita",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "status slide",
+              "okapi"
+            ],
+            "support": [
+              "nt-0003"
+            ]
+          },
+          {
+            "loop": "c-030",
+            "what": "Present the clinical documentation discovery readout to Falbury",
+            "counterparty": "p-isla-faure",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "clinical documentation discovery readout",
+              "falbury"
+            ],
+            "support": [
+              "mt-0008"
+            ]
+          },
+          {
+            "loop": "c-043",
+            "what": "Walk Anahit through the Wagtail risk register",
+            "counterparty": "p-anahit-fifita",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "risk register",
+              "wagtail"
+            ],
+            "support": [
+              "em-0061"
+            ]
+          },
+          {
+            "loop": "c-049",
+            "what": "Send Anahit the Okapi cutover plan",
+            "counterparty": "p-anahit-fifita",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "cutover plan",
+              "okapi"
+            ],
+            "support": [
+              "nt-0006"
+            ]
+          },
+          {
+            "loop": "c-054",
+            "what": "Send Anahit the Okapi retention schedule",
+            "counterparty": "p-anahit-fifita",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "retention schedule",
+              "okapi"
+            ],
+            "support": [
+              "mt-0014"
+            ]
+          },
+          {
+            "loop": "c-055",
+            "what": "Look into the Wagtail stale cache",
+            "counterparty": "p-anahit-fifita",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "stale cache",
+              "wagtail"
+            ],
+            "support": [
+              "mt-0014"
+            ]
+          }
+        ],
+        "distractors": [
+          {
+            "loop": "c-001",
+            "what": "Send Hiba the supply par levels problem statement",
+            "counterparty": "p-sneha-arslan",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "keywords": [
+              "problem statement",
+              "supply par levels"
+            ],
+            "support": [
+              "nt-0001"
+            ]
+          },
+          {
+            "loop": "c-002",
+            "what": "Send Hiba the Grion deep-dive materials",
+            "counterparty": "p-petra-moretti",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "keywords": [
+              "deep-dive materials",
+              "grion"
+            ],
+            "support": [
+              "nt-0001",
+              "em-0003"
+            ]
+          },
+          {
+            "loop": "c-003",
+            "what": "Send Lindiwe the Friday status note for w/e 19 March",
+            "counterparty": "p-lindiwe-ribeiro",
+            "direction": "i_owe",
+            "status": "done",
+            "due": "2027-03-19",
+            "keywords": [
+              "friday status note",
+              "w/e 19 march"
+            ],
+            "support": [
+              "em-0001",
+              "mt-0002",
+              "mt-0003",
+              "mt-0004",
+              "mn-0002",
+              "mt-0005",
+              "em-0022",
+              "ch-0026"
+            ]
+          },
+          {
+            "loop": "c-004",
+            "what": "Publish the Okapi tenant onboarding guide",
+            "counterparty": "p-lakshmi-figueroa",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "tenant onboarding guide",
+              "okapi"
+            ],
+            "support": [
+              "em-0002"
+            ]
+          },
+          {
+            "loop": "c-005",
+            "what": "Turn around the Wagtail API contract v2",
+            "counterparty": "p-anahit-fifita",
+            "direction": "i_owe",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "api contract v2",
+              "wagtail"
+            ],
+            "support": [
+              "ch-0003",
+              "em-0010",
+              "mn-0001",
+              "mn-0002",
+              "em-0022"
+            ]
+          },
+          {
+            "loop": "c-007",
+            "what": "Send Hiba the notes from the denials analytics session",
+            "counterparty": "p-kwame-zamora",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "keywords": [
+              "notes from the denials analytics session",
+              "denials analytics"
+            ],
+            "support": [
+              "ch-0004",
+              "mt-0004"
+            ]
+          },
+          {
+            "loop": "c-008",
+            "what": "Configure the Okapi SSO broker for Falbury",
+            "counterparty": "p-jisoo-nowak",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "sso broker",
+              "okapi"
+            ],
+            "support": [
+              "ch-0005",
+              "ch-0009"
+            ]
+          },
+          {
+            "loop": "c-009",
+            "what": "Send Hiba the referral backlog wait-time export",
+            "counterparty": "p-rudo-ekwueme",
+            "direction": "owed_to_me",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "wait-time export",
+              "referral backlog"
+            ],
+            "support": [
+              "em-0014",
+              "ch-0010",
+              "mt-0005",
+              "em-0022"
+            ]
+          },
+          {
+            "loop": "c-010",
+            "what": "Generate a synthetic patient data set for Wagtail",
+            "counterparty": "p-lakshmi-figueroa",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "synthetic patient data",
+              "wagtail"
+            ],
+            "support": [
+              "ch-0011"
+            ]
+          },
+          {
+            "loop": "c-012",
+            "what": "Assemble the Wagtail security review package",
+            "counterparty": "p-friederike-bhatt",
+            "direction": "i_owe",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "security review package",
+              "wagtail"
+            ],
+            "support": [
+              "ch-0013",
+              "ch-0014",
+              "dc-0001",
+              "em-0022",
+              "mt-0007"
+            ],
+            "optional": true
+          },
+          {
+            "loop": "c-015",
+            "what": "Send Hiba the Wagtail change request",
+            "counterparty": "p-friederike-bhatt",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "keywords": [
+              "change request",
+              "wagtail"
+            ],
+            "support": [
+              "mt-0006",
+              "ch-0016",
+              "ch-0040"
+            ]
+          },
+          {
+            "loop": "c-016",
+            "what": "Share the Wagtail status slide with Hiba",
+            "counterparty": "p-anahit-fifita",
+            "direction": "owed_to_me",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "status slide",
+              "wagtail"
+            ],
+            "support": [
+              "nt-0002",
+              "ch-0019"
+            ]
+          },
+          {
+            "loop": "c-017",
+            "what": "Send Hiba the Wagtail accessibility review",
+            "counterparty": "p-anahit-fifita",
+            "direction": "owed_to_me",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "accessibility review",
+              "wagtail"
+            ],
+            "support": [
+              "ch-0017",
+              "ch-0018",
+              "ch-0021"
+            ]
+          },
+          {
+            "loop": "c-019",
+            "what": "Send Lindiwe the Friday status note for w/e 26 March",
+            "counterparty": "p-lindiwe-ribeiro",
+            "direction": "i_owe",
+            "status": "done",
+            "due": "2027-03-26",
+            "keywords": [
+              "friday status note",
+              "w/e 26 march"
+            ],
+            "support": [
+              "em-0026",
+              "mn-0007",
+              "em-0053"
+            ]
+          },
+          {
+            "loop": "c-020",
+            "what": "Set up a coffee with Tahmina about prior authorization",
+            "counterparty": "p-tahmina-rosales",
+            "direction": "i_owe",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "coffee",
+              "prior authorization"
+            ],
+            "support": [
+              "em-0028",
+              "mn-0004",
+              "em-0053",
+              "nt-0005"
+            ]
+          },
+          {
+            "loop": "c-021",
+            "what": "Send Hiba the Wagtail metrics definition",
+            "counterparty": "p-rudo-ekwueme",
+            "direction": "owed_to_me",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "metrics definition",
+              "wagtail"
+            ],
+            "support": [
+              "ch-0020",
+              "ch-0022",
+              "mn-0005",
+              "ch-0037"
+            ]
+          },
+          {
+            "loop": "c-022",
+            "what": "Rotate the Okapi vault secrets",
+            "counterparty": "p-jisoo-nowak",
+            "direction": "other",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "vault secrets",
+              "okapi"
+            ],
+            "support": [
+              "ch-0023",
+              "ch-0024",
+              "em-0053"
+            ]
+          },
+          {
+            "loop": "c-024",
+            "what": "Draft the Okapi on-call rota",
+            "counterparty": "p-lakshmi-figueroa",
+            "direction": "owed_to_me",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "on-call rota",
+              "okapi"
+            ],
+            "support": [
+              "mn-0006",
+              "ch-0044"
+            ]
+          },
+          {
+            "loop": "c-026",
+            "what": "Send Hiba the clinical documentation discovery opportunity list",
+            "counterparty": "p-anahit-fifita",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "opportunity list",
+              "clinical documentation discovery"
+            ],
+            "support": [
+              "mn-0006",
+              "ch-0042",
+              "nt-0005"
+            ]
+          },
+          {
+            "loop": "c-027",
+            "what": "Return the Grion security questionnaire",
+            "counterparty": "p-petra-moretti",
+            "direction": "owed_to_me",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "security questionnaire",
+              "grion"
+            ],
+            "support": [
+              "em-0035",
+              "ch-0028"
+            ]
+          },
+          {
+            "loop": "c-028",
+            "what": "Set up a coffee with Jisoo about prior authorization",
+            "counterparty": "p-jisoo-nowak",
+            "direction": "i_owe",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "coffee",
+              "prior authorization"
+            ],
+            "support": [
+              "em-0036",
+              "ch-0027"
+            ]
+          },
+          {
+            "loop": "c-031",
+            "what": "Confirm the Wagtail decision memo with Friederike",
+            "counterparty": "p-friederike-bhatt",
+            "direction": "i_owe",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "decision memo",
+              "wagtail"
+            ],
+            "support": [
+              "mt-0008",
+              "ch-0043"
+            ]
+          },
+          {
+            "loop": "c-032",
+            "what": "Share the clinical documentation discovery findings summary with Hiba",
+            "counterparty": "p-anahit-fifita",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "findings summary",
+              "clinical documentation discovery"
+            ],
+            "support": [
+              "mt-0009",
+              "ch-0045"
+            ]
+          },
+          {
+            "loop": "c-033",
+            "what": "Review Friederike's Okapi order set review",
+            "counterparty": "p-friederike-bhatt",
+            "direction": "i_owe",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "order set review",
+              "okapi"
+            ],
+            "support": [
+              "mt-0010",
+              "ch-0032"
+            ]
+          },
+          {
+            "loop": "c-034",
+            "what": "Send Hiba the Okapi capacity plan",
+            "counterparty": "p-lakshmi-figueroa",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "capacity plan",
+              "okapi"
+            ],
+            "support": [
+              "mt-0011",
+              "ch-0056"
+            ]
+          },
+          {
+            "loop": "c-035",
+            "what": "Run the Wagtail go-live checklist with Anahit",
+            "counterparty": "p-anahit-fifita",
+            "direction": "i_owe",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "go-live checklist",
+              "wagtail"
+            ],
+            "support": [
+              "mt-0011",
+              "em-0054"
+            ]
+          },
+          {
+            "loop": "c-036",
+            "what": "Send Hiba the Wagtail integration spec",
+            "counterparty": "p-lakshmi-figueroa",
+            "direction": "owed_to_me",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "integration spec",
+              "wagtail"
+            ],
+            "support": [
+              "ch-0033",
+              "ch-0036",
+              "em-0052"
+            ]
+          },
+          {
+            "loop": "c-037",
+            "what": "Return the Marys security questionnaire",
+            "counterparty": "p-anahit-jeong",
+            "direction": "owed_to_me",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "security questionnaire",
+              "marys"
+            ],
+            "support": [
+              "em-0048",
+              "ch-0039"
+            ]
+          },
+          {
+            "loop": "c-038",
+            "what": "Share the Wagtail budget justification with Hiba",
+            "counterparty": "p-isla-faure",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "budget justification",
+              "wagtail"
+            ],
+            "support": [
+              "mt-0012"
+            ]
+          },
+          {
+            "loop": "c-039",
+            "what": "Send Marcelo the Wagtail run-cost estimate",
+            "counterparty": "p-marcelo-brandao",
+            "direction": "i_owe",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "run-cost estimate",
+              "wagtail"
+            ],
+            "support": [
+              "mt-0012",
+              "ch-0046"
+            ]
+          },
+          {
+            "loop": "c-040",
+            "what": "Revise the Wagtail evaluation plan",
+            "counterparty": "p-isla-faure",
+            "direction": "i_owe",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "evaluation plan",
+              "wagtail"
+            ],
+            "support": [
+              "mt-0012",
+              "ch-0047"
+            ]
+          },
+          {
+            "loop": "c-041",
+            "what": "Set up a coffee with Lakshmi about portal message routing",
+            "counterparty": "p-lakshmi-figueroa",
+            "direction": "i_owe",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "coffee",
+              "portal message routing"
+            ],
+            "support": [
+              "em-0057",
+              "em-0059"
+            ]
+          },
+          {
+            "loop": "c-045",
+            "what": "Send Hiba the nurse scheduling selection pricing comparison",
+            "counterparty": "p-anahit-fifita",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "keywords": [
+              "pricing comparison",
+              "nurse scheduling selection"
+            ],
+            "support": [
+              "mt-0013"
+            ]
+          },
+          {
+            "loop": "c-047",
+            "what": "Set up Okapi test tenant login for Hiba",
+            "counterparty": "p-jisoo-nowak",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "keywords": [
+              "test tenant login",
+              "okapi"
+            ],
+            "support": [
+              "nt-0006"
+            ]
+          },
+          {
+            "loop": "c-048",
+            "what": "Send Isla the clinical documentation discovery stakeholder map",
+            "counterparty": "p-isla-faure",
+            "direction": "i_owe",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "stakeholder map",
+              "clinical documentation discovery"
+            ],
+            "support": [
+              "em-0065",
+              "ch-0048",
+              "em-0067"
+            ]
+          },
+          {
+            "loop": "c-051",
+            "what": "Send Hiba the Okapi operating model draft v3",
+            "counterparty": "p-lakshmi-figueroa",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "keywords": [
+              "okapi operating model draft v3",
+              "draft v3"
+            ],
+            "support": [
+              "ch-0050"
+            ]
+          },
+          {
+            "loop": "c-052",
+            "what": "Send Hiba the Okapi test plan",
+            "counterparty": "p-friederike-bhatt",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "keywords": [
+              "test plan",
+              "okapi"
+            ],
+            "support": [
+              "ch-0051"
+            ]
+          },
+          {
+            "loop": "c-056",
+            "what": "Confirm the Wagtail vendor comparison with Anahit",
+            "counterparty": "p-anahit-fifita",
+            "direction": "i_owe",
+            "status": "done",
+            "due": null,
+            "keywords": [
+              "vendor comparison",
+              "wagtail"
+            ],
+            "support": [
+              "mt-0014",
+              "ch-0053"
+            ]
+          },
+          {
+            "loop": "c-057",
+            "what": "Share the Okapi training outline with Hiba",
+            "counterparty": "p-jisoo-nowak",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "keywords": [
+              "training outline",
+              "okapi"
+            ],
+            "support": [
+              "ch-0055"
+            ]
+          }
+        ],
+        "k": 10
+      },
+      "predicted": {
+        "type": "priority",
+        "abstain": false,
+        "items": [
+          {
+            "text": "Resolve the March 31 Wagtail review requests: respond to Anahit about the service blueprint and to Aylin about the privacy impact assessment; agree what you can actually deliver.",
+            "due": "2027-03-31",
+            "why": "Both requested deadlines are tomorrow, but neither request was accepted. Acknowledgements and reactions do not establish a commitment.",
+            "cites": [
+              "ch-0049",
+              "ch-0012"
+            ]
+          },
+          {
+            "text": "Confirm the accelerated Wagtail RACI deadline with Friederike and prepare the chart if taking it on.",
+            "due": "2027-04-01",
+            "why": "Friederike now needs it Thursday April 1, earlier than your tentative next-week offer. No firm acceptance or delivery is recorded.",
+            "cites": [
+              "ch-0054",
+              "mt-0013"
+            ]
+          },
+          {
+            "text": "Investigate the Wagtail stale cache and prepare Anahit's risk-register walkthrough.",
+            "due": "2027-04-01",
+            "why": "You explicitly took ownership of the cache, with no resolution recorded. The walkthrough is scheduled April 1 at 14:00–14:30 UTC−05:00; Anahit's response is still NEEDS-ACTION. The cache itself has no stated deadline.",
+            "cites": [
+              "mt-0014",
+              "em-0061",
+              "ca-0005"
+            ]
+          },
+          {
+            "text": "Progress the open Okapi handoffs to Anahit: cutover plan, retention schedule and status-slide confirmation.",
+            "due": null,
+            "why": "These are worker-owned tasks without completion evidence or stated deadlines; the cutover-plan todo and retention-schedule commitment are recent.",
+            "cites": [
+              "nt-0006",
+              "mt-0014",
+              "nt-0003"
+            ]
+          },
+          {
+            "text": "Start the half-page Friday status note for Lindiwe, capturing movement, slips and leadership needs.",
+            "due": "2027-04-02",
+            "why": "It is due by end of day Friday, and no delivery is recorded. Use the new Wagtail follow-ups rather than reporting already completed work as outstanding.",
+            "cites": [
+              "em-0060",
+              "ch-0046",
+              "ch-0047",
+              "ch-0053",
+              "mt-0014"
+            ]
+          }
+        ]
+      },
+      "details": {
+        "k": 10,
+        "n_top": 5,
+        "n_loop_items": 1,
+        "recall": 0.0,
+        "penalty": 0.0,
+        "matches": [
+          {
+            "pred": 2,
+            "gold": "c-043",
+            "role": "active"
+          }
+        ],
+        "missed_must": [
+          "c-050"
+        ],
+        "citations": {
+          "scope": "question",
+          "total": 13,
+          "valid": 8,
+          "invalid": [
+            {
+              "cite": "ch-0012",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ca-0005",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ch-0046",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ch-0047",
+              "why": "not_in_support"
+            },
+            {
+              "cite": "ch-0053",
+              "why": "not_in_support"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-008",
+      "type": "point",
+      "template": "project_attr",
+      "text": "What is currently blocking Wagtail?",
+      "answerable": true,
+      "challenges": [],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 1.0,
+      "gold": {
+        "kind": "text",
+        "value": "real patient data paused pending the security review",
+        "entity": null,
+        "accept": [
+          "real patient data paused pending the security review"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "value": "No currently reported blockers",
+        "note": "Isla explicitly reported no blockers on March 25, the latest project-level blocker statement. March 18's security-review block is historical; formal security approval is not documented. The March 30 stale cache remains unresolved but is not explicitly called a project blocker; outstanding deliverables likewise should not be reclassified as blockers.",
+        "cites": [
+          "mt-0011",
+          "mn-0003",
+          "mt-0014",
+          "ch-0040"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "No currently reported blockers",
+        "gold": "real patient data paused pending the security review",
+        "citations": {
+          "scope": "question",
+          "total": 4,
+          "valid": 4,
+          "invalid": []
+        }
+      }
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "template": "person_attr",
+      "text": "What is my working relationship with Rodrigo Okada?",
+      "answerable": true,
+      "challenges": [],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 1.0,
+      "gold": {
+        "kind": "text",
+        "value": "executive",
+        "entity": null,
+        "accept": [
+          "executive"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": false,
+        "value": "Wagtail project collaborator",
+        "note": "Rodrigo Okada is Falbury Community Clinics' Chief Medical Information Officer and is listed among Hiba's Wagtail collaborators. The files do not establish a reporting line or a more specific relationship.",
+        "cites": [
+          "nt-0001"
+        ]
+      },
+      "details": {
+        "kind": "text",
+        "value": "Wagtail project collaborator",
+        "gold": "executive",
+        "citations": {
+          "scope": "question",
+          "total": 1,
+          "valid": 1,
+          "invalid": []
+        }
+      }
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "template": "project_loops",
+      "text": "What loops are open on Falbury Clinical Documentation Discovery?",
+      "answerable": true,
+      "challenges": [
+        "duplicate_signal",
+        "implied_commitment"
+      ],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 0.75,
+      "gold": {
+        "items": [
+          {
+            "loop": "c-026",
+            "what": "Send Hiba the clinical documentation discovery opportunity list",
+            "counterparty": "p-anahit-fifita",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "opportunity list",
+              "clinical documentation discovery"
+            ],
+            "support": [
+              "mn-0006",
+              "ch-0042",
+              "nt-0005"
+            ]
+          },
+          {
+            "loop": "c-030",
+            "what": "Present the clinical documentation discovery readout to Falbury",
+            "counterparty": "p-isla-faure",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "clinical documentation discovery readout",
+              "falbury"
+            ],
+            "support": [
+              "mt-0008"
+            ]
+          },
+          {
+            "loop": "c-032",
+            "what": "Share the clinical documentation discovery findings summary with Hiba",
+            "counterparty": "p-anahit-fifita",
+            "direction": "owed_to_me",
+            "status": "open",
+            "due": null,
+            "keywords": [
+              "findings summary",
+              "clinical documentation discovery"
+            ],
+            "support": [
+              "mt-0009",
+              "ch-0045"
+            ]
+          }
+        ]
+      },
+      "predicted": {
+        "type": "list",
+        "abstain": false,
+        "note": "The stakeholder-map loop is closed by Hiba's March 30 delivery (em-0067), and Rudo's referral backlog wait-time export was sent March 17 (ch-0010). Neither belongs in the open list. Latest project stage is readout (em-0032).",
+        "items": [
+          {
+            "text": "Present the discovery readout to Falbury with Anahit Fifita. Hiba committed to the presentation March 24; no date or completion is recorded, and Anahit's separate acceptance is not supplied.",
+            "counterparty": "Anahit Fifita",
+            "direction": "i_owe",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "mt-0008",
+              "nt-0001"
+            ]
+          },
+          {
+            "text": "Receive Anahit's opportunity list. It was assigned March 23, resumed March 26 and described as moving again March 29, not explicitly delivered.",
+            "counterparty": "Anahit Fifita",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "cites": [
+              "mn-0006",
+              "ch-0042",
+              "nt-0005"
+            ]
+          },
+          {
+            "text": "Receive Anahit's findings summary. Promised March 24; March 29's 'back on' update establishes resumed work, not delivery.",
+            "counterparty": "Anahit Fifita",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "cites": [
+              "mt-0009",
+              "ch-0045"
+            ]
+          },
+          {
+            "text": "Decide whether the referral backlog should become its own effort, the unresolved next step from the March 16 discovery pivot. No later split decision, owner or deadline is supplied.",
+            "counterparty": "Isla Faure",
+            "direction": "other",
+            "status": "open",
+            "due": null,
+            "cites": [
+              "ch-0006"
+            ]
+          }
+        ]
+      },
+      "details": {
+        "n_pred": 4,
+        "n_gold": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "matches": [],
+        "unmatched_pred": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "unmatched_gold": [
+          "c-026",
+          "c-030",
+          "c-032"
+        ],
+        "citations": {
+          "scope": "item",
+          "total": 8,
+          "valid": 6,
+          "invalid": [
+            {
+              "cite": "nt-0001",
+              "why": "not_in_support",
+              "item": 0
+            },
+            {
+              "cite": "ch-0006",
+              "why": "not_in_support",
+              "item": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-005",
+      "type": "list",
+      "template": "owed_to_me",
+      "text": "What does Adebayo currently owe me?",
+      "answerable": true,
+      "challenges": [
+        "alias",
+        "duplicate_signal",
+        "transfer"
+      ],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": 1.0,
+      "gold": {
+        "items": [
+          {
+            "loop": "c-028",
+            "what": "Draft the Cirrus load test plan",
+            "counterparty": "p-adebayo-kahananui",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "keywords": [
+              "load test plan",
+              "cirrus"
+            ],
+            "support": [
+              "mn-0007",
+              "ch-0041",
+              "em-0044"
+            ]
+          }
+        ]
+      },
+      "predicted": {
+        "type": "list",
+        "abstain": false,
+        "items": [
+          {
+            "text": "Draft the Cirrus load test plan. Stanley handed responsibility to Adebayo on 22 October; no delivery or explicit reverse handoff is recorded.",
+            "counterparty": "Adebayo Kahananui",
+            "direction": "owed_to_me",
+            "status": "waiting",
+            "due": null,
+            "cites": [
+              "em-0044",
+              "mn-0007",
+              "ch-0041"
+            ]
+          }
+        ]
+      },
+      "details": {
+        "n_pred": 1,
+        "n_gold": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "matches": [],
+        "unmatched_pred": [
+          0
+        ],
+        "unmatched_gold": [
+          "c-028"
+        ],
+        "citations": {
+          "scope": "item",
+          "total": 3,
+          "valid": 3,
+          "invalid": []
+        }
+      }
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "template": "person_attr",
+      "text": "Which organization is Mikayla Babic with?",
+      "answerable": true,
+      "challenges": [],
+      "score": 0.0,
+      "base": 0.0,
+      "citation": null,
+      "gold": {
+        "kind": "entity",
+        "value": "Network Digital Office",
+        "entity": "o-network-digital-office",
+        "accept": [
+          "Network Digital Office",
+          "NDO",
+          "central",
+          "the NDO team",
+          "kirkmarsh.example"
+        ]
+      },
+      "predicted": {
+        "type": "point",
+        "abstain": true
+      },
+      "details": {
+        "note": "abstained on an answerable question"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-001",
+      "type": "status",
+      "bucket": "status",
+      "template": "project_status",
+      "challenges": [
+        "alias",
+        "supersession",
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.3846,
+      "citation": 0.7692,
+      "score": 0.3624
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-002",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-003",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_due",
+      "challenges": [
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.3333,
+      "score": 0.8333
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "alias",
+        "implied_commitment",
+        "draft_vs_sent"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.5,
+      "score": 0.0
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-005",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "decision_date",
+      "challenges": [
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.6667,
+      "score": 0.9167
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-006",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 1.0,
+      "score": 0.0
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-007",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "alias"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.3333,
+      "score": 0.0
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-008",
+      "type": "brief",
+      "bucket": "brief",
+      "template": "person_brief",
+      "challenges": [
+        "scattered_evidence",
+        "new_entity"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.6667,
+      "score": 0.0
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "list",
+      "bucket": "list",
+      "template": "project_loops",
+      "challenges": [
+        "alias",
+        "endorsement",
+        "correction"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.24,
+      "citation": 0.9524,
+      "score": 0.2371
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [
+        "transfer",
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.5,
+      "score": 0.875
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-011",
+      "type": "priority",
+      "bucket": "priority",
+      "template": "focus_tomorrow",
+      "challenges": [
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.7333,
+      "score": 0.9333
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-012",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [
+        "new_entity",
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 1.0,
+      "score": 0.0
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-013",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "alias",
+        "implied_commitment"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.1818,
+      "score": 0.0
+    },
+    {
+      "world": "pilot",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-014",
+      "type": "change",
+      "bucket": "change",
+      "template": "project_changes",
+      "challenges": [
+        "supersession",
+        "worker_directive",
+        "transfer"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.6154,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-001",
+      "type": "priority",
+      "bucket": "priority",
+      "template": "focus_tomorrow",
+      "challenges": [
+        "duplicate_signal",
+        "endorsement",
+        "implied_commitment",
+        "scattered_evidence",
+        "unobservable"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.4444,
+      "score": 0.8611
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-002",
+      "type": "status",
+      "bucket": "status",
+      "template": "project_status",
+      "challenges": [
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.7778,
+      "citation": 0.95,
+      "score": 0.7681
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-003",
+      "type": "change",
+      "bucket": "change",
+      "template": "project_changes",
+      "challenges": [
+        "alias",
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.2222,
+      "citation": 0.5,
+      "score": 0.1944
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-005",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "alias",
+        "duplicate_signal",
+        "transfer"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 1.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-006",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [
+        "transfer"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.6667,
+      "score": 0.9167
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-007",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_due",
+      "challenges": [
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.6667,
+      "score": 0.9167
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-008",
+      "type": "point",
+      "bucket": "point",
+      "template": "project_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": true,
+      "base": 0.0,
+      "citation": null,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "bucket": "list",
+      "template": "project_loops",
+      "challenges": [
+        "duplicate_signal",
+        "implied_commitment"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.6667,
+      "citation": 1.0,
+      "score": 0.6667
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-011",
+      "type": "brief",
+      "bucket": "brief",
+      "template": "person_brief",
+      "challenges": [
+        "duplicate_signal",
+        "endorsement"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.8889,
+      "citation": 0.8889,
+      "score": 0.8642
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-012",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "decision_date",
+      "challenges": [
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-013",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "event_date",
+      "challenges": [
+        "duplicate_signal"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-014",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [
+        "transfer"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-015",
+      "type": "point",
+      "bucket": "point",
+      "template": "project_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 1.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-016",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.8333,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-017",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s9-large",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-018",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "alias",
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-001",
+      "type": "priority",
+      "bucket": "priority",
+      "template": "focus_tomorrow",
+      "challenges": [
+        "duplicate_signal",
+        "implied_commitment",
+        "new_entity",
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.8462,
+      "score": 0.9615
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-002",
+      "type": "status",
+      "bucket": "status",
+      "template": "project_status",
+      "challenges": [
+        "endorsement",
+        "implied_commitment",
+        "new_entity",
+        "scattered_evidence",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.7403,
+      "citation": 1.0,
+      "score": 0.7403
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-003",
+      "type": "change",
+      "bucket": "change",
+      "template": "project_changes",
+      "challenges": [
+        "duplicate_signal",
+        "endorsement",
+        "implied_commitment",
+        "new_entity",
+        "scattered_evidence",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.4348,
+      "citation": 0.7917,
+      "score": 0.4121
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "alias"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.3333,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-005",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.6111,
+      "citation": 0.5,
+      "score": 0.5347
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-006",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [
+        "duplicate_signal"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 1.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-007",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_due",
+      "challenges": [
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.6667,
+      "score": 0.9167
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-008",
+      "type": "point",
+      "bucket": "point",
+      "template": "project_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 1.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "bucket": "list",
+      "template": "project_loops",
+      "challenges": [
+        "alias"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.7778,
+      "citation": 0.5333,
+      "score": 0.687
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-011",
+      "type": "brief",
+      "bucket": "brief",
+      "template": "person_brief",
+      "challenges": [
+        "duplicate_signal"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.9788,
+      "citation": 1.0,
+      "score": 0.9788
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-012",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "decision_date",
+      "challenges": [
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-013",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "event_date",
+      "challenges": [
+        "endorsement",
+        "implied_commitment",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-014",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "person_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s4-w2",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-015",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-001",
+      "type": "priority",
+      "bucket": "priority",
+      "template": "focus_tomorrow",
+      "challenges": [
+        "duplicate_signal",
+        "endorsement",
+        "implied_commitment",
+        "scattered_evidence",
+        "unobservable",
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.5,
+      "citation": 0.5882,
+      "score": 0.4485
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-002",
+      "type": "status",
+      "bucket": "status",
+      "template": "project_status",
+      "challenges": [
+        "duplicate_signal",
+        "supersession"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.9964,
+      "citation": 0.9583,
+      "score": 0.986
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-003",
+      "type": "change",
+      "bucket": "change",
+      "template": "project_changes",
+      "challenges": [
+        "duplicate_signal",
+        "endorsement",
+        "implied_commitment",
+        "scattered_evidence",
+        "silent_closure",
+        "supersession",
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.381,
+      "citation": 0.9231,
+      "score": 0.3736
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "alias",
+        "duplicate_signal"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.8571,
+      "score": 0.9643
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-005",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "alias"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.5,
+      "score": 0.875
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-006",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [
+        "duplicate_signal",
+        "endorsement"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-007",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_due",
+      "challenges": [
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-008",
+      "type": "point",
+      "bucket": "point",
+      "template": "project_attr",
+      "challenges": [
+        "alias"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "bucket": "list",
+      "template": "project_loops",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.6667,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-011",
+      "type": "brief",
+      "bucket": "brief",
+      "template": "person_brief",
+      "challenges": [
+        "duplicate_signal"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.6746,
+      "citation": 0.625,
+      "score": 0.6114
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-012",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "decision_date",
+      "challenges": [
+        "worker_directive"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-013",
+      "type": "temporal",
+      "bucket": "temporal",
+      "template": "event_date",
+      "challenges": [
+        "duplicate_signal"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-014",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s1-w1",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-015",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-001",
+      "type": "priority",
+      "bucket": "priority",
+      "template": "focus_tomorrow",
+      "challenges": [
+        "implied_commitment",
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.6154,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-002",
+      "type": "status",
+      "bucket": "status",
+      "template": "project_status",
+      "challenges": [
+        "alias",
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.5715,
+      "citation": 0.8947,
+      "score": 0.5565
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-003",
+      "type": "change",
+      "bucket": "change",
+      "template": "project_changes",
+      "challenges": [
+        "alias",
+        "endorsement",
+        "implied_commitment",
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.1,
+      "citation": 0.8462,
+      "score": 0.0962
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-004",
+      "type": "list",
+      "bucket": "list",
+      "template": "i_owe",
+      "challenges": [
+        "alias",
+        "implied_commitment",
+        "name_collision"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.5333,
+      "citation": 0.6,
+      "score": 0.48
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-005",
+      "type": "list",
+      "bucket": "list",
+      "template": "owed_to_me",
+      "challenges": [
+        "alias",
+        "duplicate_signal",
+        "implied_commitment",
+        "name_collision",
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.7619,
+      "citation": 0.8571,
+      "score": 0.7347
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-006",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_owner",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 0.5,
+      "score": 0.875
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-007",
+      "type": "point",
+      "bucket": "point",
+      "template": "loop_due",
+      "challenges": [
+        "scattered_evidence"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 1.0,
+      "citation": 1.0,
+      "score": 1.0
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-008",
+      "type": "point",
+      "bucket": "point",
+      "template": "project_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 1.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-009",
+      "type": "point",
+      "bucket": "point",
+      "template": "person_attr",
+      "challenges": [],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 1.0,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-010",
+      "type": "list",
+      "bucket": "list",
+      "template": "project_loops",
+      "challenges": [
+        "duplicate_signal",
+        "implied_commitment"
+      ],
+      "answerable": true,
+      "valid": true,
+      "abstained": false,
+      "base": 0.0,
+      "citation": 0.75,
+      "score": 0.0
+    },
+    {
+      "world": "gen-s5-small",
+      "repeat": 1,
+      "checkpoint": "cp1",
+      "store": "agent",
+      "id": "q-011",
+      "type": "point",
+      "bucket": "unanswerable",
+      "template": "project_attr",
+      "challenges": [
+        "unobservable"
+      ],
+      "answerable": false,
+      "valid": true,
+      "abstained": true,
+      "base": 1.0,
+      "citation": null,
+      "score": 1.0
+    }
+  ],
+  "notes": [
+    "Track B: store integrity (SIS) is Track A only and is skipped",
+    "scored as suite micro (5 worlds, first 2 episode day(s)): the headline is WCB-micro, comparable only with other WCB-micro scores (docs/lite.md)",
+    "pilot: the gold differs from the gold this run was made against (gold version 5 -> 6); answers are graded against the current gold",
+    "gen-s9-large: the gold differs from the gold this run was made against (gold version 5 -> 6); answers are graded against the current gold",
+    "gen-s4-w2: the gold differs from the gold this run was made against (gold version 5 -> 6); answers are graded against the current gold",
+    "gen-s1-w1: the gold differs from the gold this run was made against (gold version 5 -> 6); answers are graded against the current gold",
+    "gen-s5-small: the gold differs from the gold this run was made against (gold version 5 -> 6); answers are graded against the current gold"
+  ]
+}

@@ -1,6 +1,6 @@
 # Status
 
-Where the benchmark stands against the [construction plan](plan.md#5-milestones), with measured numbers. Updated 2026-11-12 for wcb 0.1.0, `GOLD_VERSION` 5.
+Where the benchmark stands against the [construction plan](plan.md#5-milestones), with measured numbers. Updated 2026-11-22 for wcb 0.1.0, `GOLD_VERSION` 6.
 
 ## Milestones
 
@@ -31,6 +31,8 @@ Where the benchmark stands against the [construction plan](plan.md#5-milestones)
 | `dev/gen-s10-w2-small` | nonprofit federation | 2 | small | 11 | 6 | 269 | 66 |
 
 745 questions in all. Every world passes `wcb world check` with no issues and has no findings from the privacy scan against the private source repository (`wcb privacy scan`, [privacy](privacy.md)). Dev worlds regenerate identically from `scripts/make_dev_worlds.py`; they were regenerated on 2026-11-11 so that project summaries track decisions that change scope ([issue #8](https://github.com/vivekhaldar/white-collar-bench/issues/8)). Inputs did not change; 33 questions did.
+
+On 2026-11-22, `GOLD_VERSION` 6 changed gold without changing inputs or questions: loops that are only suggested, or asks the worker never answered, are marked `optional`; an `active` status item is covered by an answer naming no other status; and status, brief and point citations may point at any delivered artifact about the question's subject. A cross-family panel judge (`wcb score --judge panel`) was added for reported results ([judges](judge.md#panel-judge)). No agent rerun is needed; the lite runs of 2026-11-21 were regraded ([comparison](../results/2026-11-21-lite-model-comparison/README.md)).
 
 On 2026-11-12, the dev worlds were regenerated again to refresh 40 stale `challenges` annotations after the rubric changes ([issue #13](https://github.com/vivekhaldar/white-collar-bench/issues/13)). `GOLD_VERSION` 5 records this annotation-only refresh: inboxes, question IDs/parameters/text, expected answers and supporting evidence are unchanged from version 4. Only challenge-specific score groupings can change; no agent rerun is needed. The original Qwen and DeepSeek result records remain unchanged and have not been regraded as part of this refresh.
 

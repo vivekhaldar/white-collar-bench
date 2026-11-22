@@ -3,9 +3,11 @@
 
     python results/2026-11-21-lite-model-comparison/compare.py > results/2026-11-21-lite-model-comparison/data.json
 
-Reads each run's measured sessions and its `scores-<suite>` (original scorer) and
-`scores-fixed-<suite>` (rescored with the date-history and acceptance-hedge fixes) reports
-under runs/, and prints one JSON document: headlines, bucket and per-world scores, per-session
+Reads each run's measured sessions and four score reports per suite under runs/:
+`scores-<suite>` (original scorer), `scores-fixed-<suite>` (date-history and acceptance-hedge
+fixes), `scores-v6-<suite>` (gold v6: optional asks, status and citation fixes; heuristic judge)
+and `scores-v6-panel-<suite>` (gold v6, cross-family panel judge; the headline, `rescored`).
+It prints one JSON document: headlines, bucket and per-world scores, per-session
 turns, wall time and tokens, cost (Pi's per-session cost, billed; list price for Sol is twice its flex rate),
 and the lite suite's wall-clock duration. The figures and tables in README.md and the slide
 deck come from this output.
@@ -109,13 +111,16 @@ def main() -> None:
         for suite in ("lite", "micro"):
             for t in "ab":
                 o = headline(run / f"track-{t}/scores-{suite}/report.json")
-                n = headline(run / f"track-{t}/scores-fixed-{suite}/report.json")
+                f = headline(run / f"track-{t}/scores-fixed-{suite}/report.json")
+                h = headline(run / f"track-{t}/scores-v6-{suite}/report.json")
+                n = headline(run / f"track-{t}/scores-v6-panel-{suite}/report.json")
                 m["scores"][f"{suite}-{t}"] = dict(
-                    original=o["wcb"], rescored=n["wcb"], ci95=n["wcb_ci95"],
-                    synthesis=n.get("synthesis"), ingestion_cost=n.get("ingestion_cost"), sis=n.get("sis"),
+                    original=o["wcb"], fixed=f["wcb"], heuristic=h["wcb"], rescored=n["wcb"],
+                    ci95=n["wcb_ci95"], synthesis=n.get("synthesis"), ingestion_cost=n.get("ingestion_cost"),
+                    sis=n.get("sis"), synthesis_heuristic=h.get("synthesis"),
                     synthesis_original=o.get("synthesis"))  # fmt: skip
         for t in "ab":
-            rep = report(run, t, "scores-fixed-lite")
+            rep = report(run, t, "scores-v6-panel-lite")
             m["buckets"][t] = {b: dict(agent=v.get("wcb"), oracle=v.get("synthesis"))
                                for b, v in rep["breakdowns"]["by_type"].items()}  # fmt: skip
             m["worlds"][t] = {w["id"]: w["score"] for w in rep["worlds"]}

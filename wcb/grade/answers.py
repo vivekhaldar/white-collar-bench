@@ -161,6 +161,8 @@ class ScoreContext:
     date: str
     delivered: set[str]
     store_root: Path | None = None
+    #: Delivered artifact ID -> entities, loops and decisions its knowable events are about.
+    about: dict[str, set[str]] = field(default_factory=dict)
     _index: dict[tuple[str, ...], set[str]] | None = field(
         default=None, init=False, repr=False, compare=False
     )
@@ -178,6 +180,7 @@ class ScoreContext:
             date=state["date"],
             delivered=set(state.get("delivered") or []),
             store_root=Path(store_root) if store_root else None,
+            about=artifact_subjects(state),
         )
 
     @property
@@ -301,6 +304,27 @@ class ScoreContext:
         return {"p": "person", "o": "org"}.get(eid.split("-", 1)[0], "")
 
 
+def artifact_subjects(state: dict) -> dict[str, set[str]]:
+    """Artifact ID -> what its knowable events are about: their `subjects` (entities, loops,
+    decisions) and `project`, from the gold state's event list."""
+    out: dict[str, set[str]] = {}
+    for ev in state.get("events") or []:
+        about = {str(x) for x in ev.get("subjects") or []}
+        if ev.get("project"):
+            about.add(str(ev["project"]))
+        for a in ev.get("artifacts") or []:
+            out.setdefault(a, set()).update(about)
+    return out
+
+
+def question_subjects(q: dict) -> set[str]:
+    """The objects a question is about (`params`: project, person, commitment, decision)."""
+    params = q.get("params") or {}
+    return {
+        str(params[k]) for k in ("project", "person", "commitment", "decision") if params.get(k)
+    }
+
+
 # ---------------------------------------------------------------- result
 @dataclass
 class QuestionScore:
@@ -402,7 +426,11 @@ def score_question(q: dict, answer: dict | None, judge: Judge, ctx: ScoreContext
     try:
         base, details = GRADERS[qtype](q, answer, watched, ctx)
         c, cite_details = citation_precision(
-            answer, q.get("support") or [], ctx, item_support=matched_item_support(q, details)
+            answer,
+            q.get("support") or [],
+            ctx,
+            item_support=matched_item_support(q, details),
+            subjects=question_subjects(q),
         )
     except GRADER_ERRORS as e:
         if watched.raised:
@@ -451,6 +479,19 @@ class _WatchedJudge:
         except BaseException:
             self.raised = True
             raise
+
+    def __getattr__(self, name: str) -> Any:
+        """Optional judge methods (`point`), watched the same way."""
+        fn = getattr(self._judge, name)
+
+        def call(*a: Any, **k: Any) -> Any:
+            try:
+                return fn(*a, **k)
+            except BaseException:
+                self.raised = True
+                raise
+
+        return call
 
 
 # ---------------------------------------------------------------- point
@@ -523,7 +564,36 @@ def grade_point(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tuple
         if rival is not None:
             details["rival"] = rival
             ok = False
+    if not ok and kind == "text" and text.strip() and hasattr(judge, "point"):
+        ok = bool(
+            judge.point(str(q.get("text") or ""), str(gold.get("value")), text, point_facts(q, ctx))
+        )
+        details["judge"] = ok
     return (1.0 if ok else 0.0), details
+
+
+def point_facts(q: dict, ctx: ScoreContext) -> dict:
+    """What an LLM judge sees about a point question's subject: its current attributes (entity
+    IDs as names) and earlier values of the asked attribute, which are wrong answers."""
+    params = q.get("params") or {}
+    subject = params.get("project") or params.get("person")
+    ent = ctx.entities.get(str(subject)) or {}
+
+    def show(v: Any) -> Any:
+        if isinstance(v, list):
+            return [show(x) for x in v]
+        if isinstance(v, str) and v in ctx.entities:
+            return ctx.entities[v].get("name", v)
+        return v
+
+    attrs = {k: show(v) for k, v in (ent.get("attrs") or {}).items() if not str(k).startswith("_")}
+    attr = params.get("attribute")
+    hist = ((ent.get("attr_history") or {}).get(attr) or []) if attr else []
+    earlier = [show(h.get("value")) for h in hist[:-1] if isinstance(h, dict)]
+    out: dict[str, Any] = {"subject": ent.get("name", subject), "attributes": attrs}
+    if earlier:
+        out["earlier_values"] = earlier
+    return out
 
 
 def is_status_question(q: dict) -> bool:
@@ -899,6 +969,17 @@ def f1(p: float, r: float) -> float:
     return 0.0 if p + r == 0 else 2 * p * r / (p + r)
 
 
+def _counted(pred: list, gold: list, pairs: list[tuple[int, int]]) -> tuple[int, int]:
+    """Predictions and gold items that count in precision and recall.
+
+    An optional gold item (a suggested loop, or an ask the worker has not answered) is
+    neither required nor wrong: it leaves recall's denominator, and a prediction matched to it
+    leaves precision's."""
+    to_optional = sum(1 for _, j in pairs if gold[j].get("optional"))
+    required = sum(1 for g in gold if not g.get("optional"))
+    return len(pred) - to_optional, required
+
+
 def _empty_case(n_pred: int, n_gold: int) -> float | None:
     """Score when either side is empty: 1 if both are, 0 if only one is, None otherwise."""
     if n_pred == 0 and n_gold == 0:
@@ -915,18 +996,27 @@ def grade_list(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tuple[
     but still counts as predicted.
     """
     pred, gold = list(answer.get("items") or []), list((q.get("gold") or {}).get("items") or [])
-    early = _empty_case(len(pred), len(gold))
-    if early is not None:
+    if not pred or not (gold or (q.get("gold") or {}).get("suggested")):
+        early = _empty_case(len(pred), sum(1 for g in gold if not g.get("optional")))
         return early, {"n_pred": len(pred), "n_gold": len(gold), "matches": []}
     pairs = match_items(pred, gold, judge, kind="loop", ctx=ctx, distinct=True)
     matches, total = [], 0.0
     for i, j in pairs:
         a, parts = attribute_credit(pred[i], gold[j], ctx)
-        total += a
+        if not gold[j].get("optional"):
+            total += a
         matches.append({"pred": i, "gold": gold[j].get("loop", j), "credit": a, **parts})
-    p, r = total / len(pred), total / len(gold)
+    n_pred, n_gold = _counted(pred, gold, pairs)
     matched_pred, matched_gold = {i for i, _ in pairs}, {j for _, j in pairs}
-    return f1(p, r), {
+    suggested = list((q.get("gold") or {}).get("suggested") or [])
+    rest = [i for i in range(len(pred)) if i not in matched_pred]
+    if suggested and rest:
+        extra = match_items([pred[i] for i in rest], suggested, judge, kind="loop", ctx=ctx)
+        n_pred -= len(extra)
+    early = _empty_case(n_pred, n_gold)
+    p = total / n_pred if n_pred else 0.0
+    r = total / n_gold if n_gold else 0.0
+    return (f1(p, r) if early is None else early), {
         "n_pred": len(pred),
         "n_gold": len(gold),
         "precision": p,
@@ -954,10 +1044,14 @@ def grade_rubric(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tupl
     items, facts = gold.get("rubric") or [], gold.get("facts") or {}
     text = answer_text(answer)
     verdicts, total, net = [], 0.0, 0.0
-    for item in items:
+    raw = [judge.rubric(text, item, facts) for item in items]
+    raw = [v if v in VERDICTS else "missing" for v in raw]
+    raw = [_status_by_default(q, item, v, raw, text) for item, v in zip(items, raw, strict=True)]
+    for item, v in zip(items, raw, strict=True):
         w = float(item.get("weight", 1))
-        v = judge.rubric(text, item, facts)
-        v = v if v in VERDICTS else "missing"
+        if item.get("optional") and v == "missing":
+            verdicts.append({"item": item.get("id"), "weight": 0.0, "verdict": "optional"})
+            continue
         total += w
         net += w if v == "covered" else (-w if v == "contradicted" else 0.0)
         verdicts.append({"item": item.get("id"), "weight": w, "verdict": v})
@@ -966,17 +1060,37 @@ def grade_rubric(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tupl
     return score, {"verdicts": verdicts, "padding_penalty": penalty}
 
 
+def _status_by_default(q: dict, item: dict, verdict: str, verdicts: list[str], text: str) -> str:
+    """An `active` project-status item is covered by an answer that gives no other status.
+
+    Answers describe a running project by what it is doing (\"in build\", \"in security review
+    and blocked\") rather than by the word \"active\". Such an answer covers the item when it
+    names no other status (paused, dormant, done, cancelled, merged; `statuses_named`) and
+    covers at least one other item, so an empty or off-topic answer still earns nothing."""
+    if verdict != "missing" or q.get("type") != "status" or item.get("aspect") != "status":
+        return verdict
+    if "active" not in (item.get("keywords") or [[]])[0]:
+        return verdict
+    if statuses_named(text) - {"active"}:
+        return verdict
+    return "covered" if "covered" in verdicts else verdict
+
+
 # ---------------------------------------------------------------- change
 def grade_change(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tuple[float, dict]:
     """F1 over one-to-one matched change items; a repeated item cannot match (see grade_list)."""
     pred, gold = list(answer.get("items") or []), list((q.get("gold") or {}).get("items") or [])
-    early = _empty_case(len(pred), len(gold))
-    if early is not None:
+    if not pred or not gold:
+        early = _empty_case(len(pred), sum(1 for g in gold if not g.get("optional")))
         return early, {"n_pred": len(pred), "n_gold": len(gold), "matches": []}
     pairs = match_items(pred, gold, judge, kind="change", ctx=ctx, distinct=True)
-    p, r = len(pairs) / len(pred), len(pairs) / len(gold)
+    hits = sum(1 for _, j in pairs if not gold[j].get("optional"))
+    n_pred, n_gold = _counted(pred, gold, pairs)
+    early = _empty_case(n_pred, n_gold)
+    p = hits / n_pred if n_pred else 0.0
+    r = hits / n_gold if n_gold else 0.0
     matched_gold = {j for _, j in pairs}
-    return f1(p, r), {
+    return (f1(p, r) if early is None else early), {
         "n_pred": len(pred),
         "n_gold": len(gold),
         "precision": p,
@@ -1213,6 +1327,7 @@ def citation_precision(
     ctx: ScoreContext,
     *,
     item_support: dict[int, list[str]] | None = None,
+    subjects: set[str] | None = None,
 ) -> tuple[float | None, dict]:
     """c = valid cites / counted cites, 0 when there are none; plus per-cite diagnostics.
 
@@ -1225,6 +1340,13 @@ def citation_precision(
     gold item it matched, or against the question's support when it matched none. Top-level
     and claim cites form one more unit, checked against the question's support. A source
     counts once per unit, so one cited on two items counts twice and must support both.
+
+    With `subjects` (`question_subjects`), a cite checked against the question's support
+    (not a list or change item's) is also valid when it is a delivered artifact revealing an
+    event about one of them (`ScoreContext.about`): gold support lists the evidence for each
+    fact, while a status, brief or point answer may fairly cite other inputs about the same
+    project or person. Item cites stay strict, so evidence for another loop of the same
+    person is still `not_in_support` or `wrong_item`.
 
     With an empty `support` there is nothing a citation could point to, so `c` is None (not
     applicable) and the question score is its base score.
@@ -1252,6 +1374,13 @@ def citation_precision(
         for cite in distinct.values():
             total += 1
             why = cite_status(cite, scope, ctx, question=wider)
+            if (
+                why == "not_in_support"
+                and item is None
+                and subjects
+                and ctx.about.get(cite, set()) & subjects
+            ):
+                why = "valid"
             if why == "valid":
                 valid += 1
             else:

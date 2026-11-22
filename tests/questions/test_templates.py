@@ -95,7 +95,9 @@ def test_hidden_and_missing_attributes(mini_world):
 def test_empty_list_is_answerable(mini_world):
     # c-003 is only a suggestion until it is accepted on 2027-01-11.
     q = build_one(mini_world, "2027-01-08", "i_owe", {"person": "p-sam-patel"})
-    assert q["answerable"] is True and q["gold"] == {"items": []} and q["support"] == []
+    assert q["answerable"] is True and q["gold"]["items"] == [] and q["support"] == []
+    # The suggestion is listed as optional: an answer may include it without losing precision.
+    assert [i["loop"] for i in q["gold"]["suggested"]] == ["c-003"]
 
 
 # ---------------------------------------------------------------- point variants

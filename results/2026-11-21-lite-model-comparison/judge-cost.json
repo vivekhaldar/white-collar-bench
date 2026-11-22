@@ -1,0 +1,193 @@
+{
+ "panel": [
+  "claude-sonnet-5.5",
+  "gpt-6.1-sol"
+ ],
+ "calibration": {
+  "claude-sonnet-5.5": {
+   "tokens_per_char": 0.3612661412436687,
+   "output_per_call": 55.4
+  },
+  "gpt-6.1-sol": {
+   "tokens_per_char": 0.23829413210974545,
+   "output_per_call": 11.766666666666667
+  }
+ },
+ "runs": {
+  "Haiku 5.5": {
+   "a": {
+    "claude-sonnet-5.5": {
+     "calls": 1432,
+     "input_tokens": 533532,
+     "output_tokens": 79333,
+     "cost_list_usd": 1.8603911310040344,
+     "cost_billed_usd": 1.8603911310040344
+    },
+    "gpt-6.1-sol": {
+     "calls": 1432,
+     "input_tokens": 351922,
+     "output_tokens": 16850,
+     "cost_list_usd": 0.8723423256200512,
+     "cost_billed_usd": 0.4361711628100256
+    },
+    "cost_billed_usd": 2.29656229381406
+   },
+   "b": {
+    "claude-sonnet-5.5": {
+     "calls": 914,
+     "input_tokens": 384376,
+     "output_tokens": 50636,
+     "cost_list_usd": 1.2751072275334874,
+     "cost_billed_usd": 1.2751072275334874
+    },
+    "gpt-6.1-sol": {
+     "calls": 914,
+     "input_tokens": 253537,
+     "output_tokens": 10755,
+     "cost_list_usd": 0.6146219956384166,
+     "cost_billed_usd": 0.3073109978192083
+    },
+    "cost_billed_usd": 1.5824182253526957
+   }
+  },
+  "Sonnet 5.5": {
+   "a": {
+    "claude-sonnet-5.5": {
+     "calls": 1199,
+     "input_tokens": 446058,
+     "output_tokens": 66425,
+     "cost_list_usd": 1.5563616669130926,
+     "cost_billed_usd": 1.5563616669130926
+    },
+    "gpt-6.1-sol": {
+     "calls": 1199,
+     "input_tokens": 294223,
+     "output_tokens": 14108,
+     "cost_list_usd": 0.7295291992829883,
+     "cost_billed_usd": 0.36476459964149416
+    },
+    "cost_billed_usd": 1.9211262665545867
+   },
+   "b": {
+    "claude-sonnet-5.5": {
+     "calls": 754,
+     "input_tokens": 320470,
+     "output_tokens": 41772,
+     "cost_list_usd": 1.058655601955172,
+     "cost_billed_usd": 1.058655601955172
+    },
+    "gpt-6.1-sol": {
+     "calls": 754,
+     "input_tokens": 211385,
+     "output_tokens": 8872,
+     "cost_list_usd": 0.5114897245609074,
+     "cost_billed_usd": 0.2557448622804537
+    },
+    "cost_billed_usd": 1.3144004642356257
+   }
+  },
+  "Opus 5.5": {
+   "a": {
+    "claude-sonnet-5.5": {
+     "calls": 1503,
+     "input_tokens": 524613,
+     "output_tokens": 83266,
+     "cost_list_usd": 1.881887254013987,
+     "cost_billed_usd": 1.881887254013987
+    },
+    "gpt-6.1-sol": {
+     "calls": 1503,
+     "input_tokens": 346039,
+     "output_tokens": 17685,
+     "cost_list_usd": 0.8689306478863338,
+     "cost_billed_usd": 0.4344653239431669
+    },
+    "cost_billed_usd": 2.316352577957154
+   },
+   "b": {
+    "claude-sonnet-5.5": {
+     "calls": 906,
+     "input_tokens": 354271,
+     "output_tokens": 50192,
+     "cost_list_usd": 1.2104666124338177,
+     "cost_billed_usd": 1.2104666124338177
+    },
+    "gpt-6.1-sol": {
+     "calls": 906,
+     "input_tokens": 233680,
+     "output_tokens": 10661,
+     "cost_list_usd": 0.5739665622476731,
+     "cost_billed_usd": 0.28698328112383653
+    },
+    "cost_billed_usd": 1.4974498935576541
+   }
+  },
+  "GPT-6.1 Sol": {
+   "a": {
+    "claude-sonnet-5.5": {
+     "calls": 1587,
+     "input_tokens": 617827,
+     "output_tokens": 87920,
+     "cost_list_usd": 2.1148510335413695,
+     "cost_billed_usd": 2.1148510335413695
+    },
+    "gpt-6.1-sol": {
+     "calls": 1587,
+     "input_tokens": 407523,
+     "output_tokens": 18674,
+     "cost_list_usd": 1.0017839518202467,
+     "cost_billed_usd": 0.5008919759101234
+    },
+    "cost_billed_usd": 2.615743009451493
+   },
+   "b": {
+    "claude-sonnet-5.5": {
+     "calls": 957,
+     "input_tokens": 424021,
+     "output_tokens": 53018,
+     "cost_list_usd": 1.3782191976813654,
+     "cost_billed_usd": 1.3782191976813654
+    },
+    "gpt-6.1-sol": {
+     "calls": 957,
+     "input_tokens": 279687,
+     "output_tokens": 11261,
+     "cost_list_usd": 0.671981981832266,
+     "cost_billed_usd": 0.335990990916133
+    },
+    "cost_billed_usd": 1.7142101885974983
+   }
+  }
+ },
+ "total": {
+  "claude-sonnet-5.5": {
+   "calls": 9252,
+   "input_tokens": 3605168,
+   "output_tokens": 512562,
+   "cost_list_usd": 12.335939725076328,
+   "cost_billed_usd": 12.335939725076328
+  },
+  "gpt-6.1-sol": {
+   "calls": 9252,
+   "input_tokens": 2377996,
+   "output_tokens": 108866,
+   "cost_list_usd": 5.844646388888883,
+   "cost_billed_usd": 2.9223231944444414
+  }
+ },
+ "total_billed_usd": 15.258262919520769,
+ "total_list_usd": 18.180586113965212,
+ "total_tokens": 6604592,
+ "calibration_calls_usd": null,
+ "wasted_sis_calls": {
+  "model": "claude-sonnet-5.5",
+  "calls": 45907,
+  "input_tokens": 17888289,
+  "output_tokens": 2543254,
+  "cost_usd": 61.209115012105485,
+  "note": "First panel pass also judged store-integrity (SIS) checks, which do not enter WCB; fixed (SIS now uses the heuristic). Estimated at the panel mean tokens per call."
+ },
+ "spent_billed_usd": 76.46737793162626,
+ "spent_tokens": 27036134,
+ "calibration_note": "Tokens are estimated: prompt characters x tokens-per-character, plus mean output tokens per call, both measured on 30 real calls per model with usage (LiteLLM). Prices: $2/M input, $10/M output for both; Sol billed at flex (half)."
+}

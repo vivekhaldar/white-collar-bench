@@ -569,7 +569,8 @@
             "support": [
               "em-0001",
               "em-0005"
-            ]
+            ],
+            "optional": true
           },
           {
             "loop": "c-002",

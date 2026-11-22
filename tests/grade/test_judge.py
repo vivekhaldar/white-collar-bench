@@ -734,3 +734,38 @@ def test_heuristic_keeps_transfers_and_restatements():
              "keywords": ["ivyworth duplicate requests discovery", "split", "spun out"]}
     text = split["summary"] + " (ivyworth duplicate requests discovery; split; spun out; carved out)."
     assert J.same_item({"text": text}, split, kind="change")
+
+
+def test_panel_escalates_only_negatives_and_needs_agreement(make_fake_client):
+    from wcb.grade.judge import PanelJudge
+
+    loop = {"what": "Return the Tessellate security questionnaire", "keywords": ["questionnaire"]}
+    clear = {"text": "Return the Tessellate security questionnaire"}
+    reworded = {"text": "Finish the vendor's infosec form for Tessellate and send it back"}
+    yes, no = make_fake_client(["YES"]), make_fake_client(["NO"])
+
+    split = PanelJudge([LLMJudge(yes), LLMJudge(no)])
+    assert split.same_item(clear, loop, kind="loop") is True  # heuristic yes stands
+    assert yes.calls == [] and no.calls == []
+    assert split.same_item(reworded, loop, kind="loop") is False  # panel disagrees
+    agree = PanelJudge([LLMJudge(make_fake_client(["YES"])), LLMJudge(make_fake_client(["YES"]))])
+    assert agree.same_item(reworded, loop, kind="loop") is True
+
+    item = {"text": "Waiting on volume pricing from Cora", "keywords": [["volume pricing"], ["cora"]]}
+    covered = PanelJudge([LLMJudge(make_fake_client(["COVERED"]))] * 2)
+    assert covered.rubric("Cora still owes us the Tessellate quote.", item, {}) == "covered"
+    torn = PanelJudge([LLMJudge(make_fake_client(["COVERED"])), LLMJudge(make_fake_client(["MISSING"]))])
+    assert torn.rubric("Cora still owes us the Tessellate quote.", item, {}) == "missing"
+
+
+def test_panel_recording_pass_fills_the_cache(make_fake_client, tmp_path):
+    from wcb.grade.judge import PanelJudge
+
+    client = make_fake_client(["YES"])
+    panel = PanelJudge([LLMJudge(client, cache_path=tmp_path / "c.jsonl")])
+    panel.recording(True)
+    assert panel.point("Who?", "peer", "a colleague on my team", {}) is False  # deferred
+    assert client.calls == []
+    assert panel.fetch_pending(workers=2) == 1
+    assert panel.point("Who?", "peer", "a colleague on my team", {}) is True
+    assert len(client.calls) == 1

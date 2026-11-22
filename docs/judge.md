@@ -15,20 +15,54 @@ The code lives in `wcb/grade/judge.py` (judges), `wcb/grade/matching.py` (candid
 
 ```bash
 wcb score runs/my-agent                                   # heuristic judge (default)
+wcb score runs/my-agent --judge panel                     # heuristic + cross-family LLM panel
 wcb score runs/my-agent --judge llm                       # LLM judge, default pinned model
 wcb score runs/my-agent --judge llm --judge-model anthropic:claude-opus-5-5
 wcb score runs/my-agent --judge llm --judge-model openai:gpt-judge-model
 wcb score runs/my-agent --judge llm --judge-model "cmd:claude -p"
 ```
 
-| | Heuristic | LLM |
-|---|---|---|
-| Cost | free | one model call per candidate pair and rubric item, times samples; cached |
-| Reproducibility | exact | pinned model and prompts, majority vote, decision cache |
-| Paraphrases | under-credits loose paraphrases | handles paraphrase and implication |
-| Use it for | development loops, CI, quick comparisons | reported results |
+| | Heuristic | Panel | LLM |
+|---|---|---|---|
+| Cost | free | only the decisions the heuristic rejects, per panel model; cached | every candidate pair and rubric item, times samples; cached |
+| Reproducibility | exact | pinned models and prompts, decision cache | pinned model and prompts, majority vote, decision cache |
+| Paraphrases | under-credits loose paraphrases | credits an answer that is right in substance when the panel agrees | handles paraphrase and implication |
+| Self-grading | none | no single model decides | the judge may grade its own family |
+| Use it for | development loops, CI, quick comparisons | reported results | judge experiments |
 
-Report which judge you used: it is recorded as the judge `name` (`heuristic`, or `llm:<spec>` such as `llm:anthropic:claude-opus-5-5`). Scores from different judges are not comparable.
+Report which judge you used: it is recorded as the judge `name` (`heuristic`, `panel:<spec>+<spec>`, or `llm:<spec>` such as `llm:anthropic:claude-opus-5-5`). Scores from different judges are not comparable; report the heuristic score next to a panel score as a stable regression signal.
+
+## Panel judge
+
+The benchmark's policy is that **an answer that is substantially correct gets credit, whatever its level of detail or wording.** The heuristic judge is tuned for precision (no credit for keyword stuffing or a shared name), so it rejects many correct answers that are worded differently or carry extra explanation. `PanelJudge` (`--judge panel`) fixes that without trusting any one model:
+
+- **The heuristic decides first.** A heuristic match (`same_item` YES) or *covered* rubric verdict stands; no model is asked.
+- **Every negative goes to the panel.** A heuristic NO, *missing* or *contradicted* is put to each panel model with the LLM judge's prompts. The panel's verdict replaces the heuristic's only when **all** panel models agree; otherwise the heuristic verdict stands.
+- **Point answers too.** A free-text point answer (`kind: text`, such as a role, blocker or relationship) that the deterministic rules reject is put to the panel with the `point` prompt below; it is correct when all panel models say YES.
+- The default panel is `openai:claude-sonnet-5.5,openai:gpt-6.1-sol`: one model from each of two families, so neither family can raise or lower its own models' scores alone. Pass another comma-separated list with `--judge-model`. Each model takes one sample per decision (`WCB_JUDGE_SAMPLES`, default 1 for a panel); agreement across families replaces voting.
+- Scoring runs a recording pass first, asks every missing decision in parallel (`WCB_JUDGE_WORKERS`, default 16), and then scores from the cache (`<out>/judge-cache.jsonl`), so re-scoring is free.
+
+### `point` prompt
+
+`{facts}` holds the subject's current attributes (entity IDs as names) and earlier values of the asked attribute, which are wrong answers.
+
+```text
+Grade a short answer against the reference answer.
+
+Question:
+{question}
+
+Reference answer:
+{gold}
+
+Context about the subject (JSON):
+{facts}
+
+Answer (a JSON string):
+{answer}
+
+The answer is correct when it states the reference answer in substance: paraphrase, a synonym, a description that clearly amounts to the same thing (for a relationship, "a colleague in my own team" for "peer"), or extra true detail are all fine. It is wrong when it gives a different or superseded value, hedges between values, or leaves out the substance of the reference answer. Reply with the single word YES if the answer is correct, otherwise NO.
+```
 
 ## Matching list and change items
 

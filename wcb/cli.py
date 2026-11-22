@@ -384,8 +384,12 @@ def build_parser() -> argparse.ArgumentParser:
 
     s = sub.add_parser("score", help="grade a run directory and write a report")
     s.add_argument("run_dir")
-    s.add_argument("--judge", choices=["heuristic", "llm"], default="heuristic")
-    s.add_argument("--judge-model", help="model for --judge llm (see docs/judge.md)")
+    s.add_argument("--judge", choices=["heuristic", "llm", "panel"], default="heuristic")
+    s.add_argument(
+        "--judge-model",
+        help="model for --judge llm, or comma-separated models for --judge panel "
+        "(see docs/judge.md)",
+    )
     s.add_argument("--out", help="output directory (default: <run_dir>/scores)")
     s.add_argument("--suite", choices=sorted(SUITES),
                    help="score only a reduced suite's worlds and days, e.g. a full run as lite")

@@ -23,6 +23,8 @@ Conventions used throughout:
 
 from __future__ import annotations
 
+import email
+import json
 from collections.abc import Callable, Iterable
 from dataclasses import dataclass, field
 from typing import Any
@@ -52,7 +54,7 @@ from wcb.questions.rubric import (
     value_groups,
 )
 from wcb.util.dates import MONTHS, next_business_day, parse_date
-from wcb.util.text import tokens
+from wcb.util.text import normalize, tokens
 from wcb.world.model import ACTIVE_STATUSES, CLOSED_STATUSES, World
 
 Gold = tuple[bool, dict[str, Any], list[str]]
@@ -196,6 +198,64 @@ def is_accepted_active(loop: dict) -> bool:
     return bool(loop.get("accepted")) and is_active(loop)
 
 
+def _worker_wrote(world: World, aid: str) -> bool:
+    """Whether the worker wrote in a chat or email artifact (other channels count as yes)."""
+    cache = world._cache.setdefault("worker_wrote", {})
+    if aid not in cache:
+        art = world.artifacts.get(aid)
+        ent = world.entity_events().get(world.worker) or {}
+        forms = {
+            normalize(str(f)) for f in [ent.get("name"), *(ent.get("surface_forms") or [])] if f
+        }
+        wrote = True
+        if art is not None and art.channel in ("chat", "email"):
+            try:
+                raw = (world.dir / art.path).read_text(encoding="utf-8", errors="replace")
+            except OSError:
+                raw = ""
+            if art.channel == "chat":
+                try:
+                    msgs = json.loads(raw).get("messages") or []
+                except ValueError:
+                    msgs = []
+                wrote = any(
+                    normalize(str(m.get("user", ""))) in forms
+                    or normalize(str(m.get("handle", ""))) in forms
+                    for m in msgs
+                )
+            else:
+                msg = email.message_from_string(raw)
+                sender = normalize(msg.get("From") or "")
+                # A system reminder (a recurring status note) is a standing duty, not an ask.
+                wrote = bool(msg.get("Auto-Submitted")) or any(f and f in sender for f in forms)
+        cache[aid] = wrote
+    return cache[aid]
+
+
+def is_unanswered_ask(world: World, loop: dict) -> bool:
+    """An accepted loop the worker owes only because someone asked (basis ``received``), with
+    no reply from the worker in the artifacts that created it and no later endorsement.
+
+    Under contract rule 7 an unanswered request is not yet the worker's commitment, while the
+    generator records most of them as accepted, so either reading is defensible."""
+    if not loop.get("accepted") or loop.get("debtor") != world.worker:
+        return False
+    if loop.get("basis") != "received":
+        return False
+    hist = loop.get("history") or []
+    if any((h.get("changes") or {}).get("accepted") is True for h in hist[1:]):
+        return False
+    created = list((hist[0].get("artifacts") if hist else None) or loop.get("evidence") or [])
+    return not any(_worker_wrote(world, a) for a in created)
+
+
+def is_optional_loop(world: World, loop: dict) -> bool:
+    """A loop an answer may list or leave out: suggested (``accepted: false``) or an
+    unanswered ask (`is_unanswered_ask`). Gold marks such items ``optional``; graders neither
+    reward nor penalize them."""
+    return not loop.get("accepted") or is_unanswered_ask(world, loop)
+
+
 def direction(loop: dict, worker: str) -> str:
     """``i_owe`` when the worker is the debtor, ``owed_to_me`` when the worker is the creditor
     and someone else the debtor, otherwise ``other``."""
@@ -212,9 +272,10 @@ def counterparty(loop: dict, worker: str) -> str:
 
 
 def list_item(world: World, state: dict, cid: str) -> dict[str, Any]:
-    """A loop as a list-answer gold item (docs/formats.md §3.2)."""
+    """A loop as a list-answer gold item (docs/formats.md §3.2). A loop that is only suggested
+    or an unanswered ask (`is_optional_loop`) gets ``optional: true``."""
     loop = state["loops"][cid]
-    return {
+    item = {
         "loop": cid,
         "what": loop["what"],
         "counterparty": counterparty(loop, world.worker),
@@ -224,6 +285,9 @@ def list_item(world: World, state: dict, cid: str) -> dict[str, Any]:
         "keywords": group(loop.get("keywords") or []),
         "support": list(loop.get("evidence") or []),
     }
+    if is_optional_loop(world, loop):
+        item["optional"] = True
+    return item
 
 
 def by_due(cid_loop: tuple[str, dict]) -> tuple[str, str]:
@@ -237,10 +301,20 @@ def select_loops(state: dict, pred: Callable[[dict], bool]) -> list[str]:
     return sorted(cid for cid, loop in state["loops"].items() if pred(loop))
 
 
-def list_gold(world: World, state: dict, cids: list[str]) -> Gold:
-    """An answerable list gold; an empty list is a valid answer."""
+def list_gold(
+    world: World, state: dict, cids: list[str], suggested: Iterable[str] = ()
+) -> Gold:
+    """An answerable list gold; an empty list is a valid answer.
+
+    ``suggested`` names active loops the worker has not taken on that fit the question. They go
+    under ``suggested``, outside ``items`` and the support: an answer may list them (they are
+    neither required nor wrong), so a prediction matching one does not lower precision."""
     items = [list_item(world, state, cid) for cid in cids]
-    return True, {"items": items}, support_union(state, *(i["support"] for i in items))
+    gold: dict[str, Any] = {"items": items}
+    extra = [list_item(world, state, c) for c in suggested if c not in cids]
+    if extra:
+        gold["suggested"] = extra
+    return True, gold, support_union(state, *(i["support"] for i in items))
 
 
 def loop_what(world: World, state: dict, cid: str) -> str:
@@ -421,50 +495,72 @@ def _project_loops_text(params: dict, world: World, state: dict) -> str:
     return f"What loops are open on {display_name(world, state, params['project'], params)}?"
 
 
-def owed_by_worker_to(state: dict, worker: str, person: str) -> list[str]:
-    """Accepted active loops the worker owes ``person`` (as creditor or one of ``others``)."""
+def owed_by_worker_to(
+    state: dict, worker: str, person: str, *, suggested: bool = False
+) -> list[str]:
+    """Accepted active loops the worker owes ``person`` (as creditor or one of ``others``);
+    with ``suggested``, active suggested ones too."""
+    live = is_active if suggested else is_accepted_active
     return select_loops(
         state,
         lambda lp: (
             lp["debtor"] == worker
-            and is_accepted_active(lp)
+            and live(lp)
             and (lp["creditor"] == person or person in (lp.get("others") or []))
         ),
     )
 
 
-def owed_to_worker_by(state: dict, worker: str, person: str) -> list[str]:
-    """Accepted active loops ``person`` owes the worker."""
+def owed_to_worker_by(
+    state: dict, worker: str, person: str, *, suggested: bool = False
+) -> list[str]:
+    """Accepted active loops ``person`` owes the worker; with ``suggested``, suggested too."""
+    live = is_active if suggested else is_accepted_active
     return select_loops(
-        state,
-        lambda lp: lp["debtor"] == person and lp["creditor"] == worker and is_accepted_active(lp),
+        state, lambda lp: lp["debtor"] == person and lp["creditor"] == worker and live(lp)
     )
 
 
-def active_on_project(state: dict, project: str) -> list[str]:
-    """Accepted active loops on a project."""
-    return select_loops(state, lambda lp: lp.get("project") == project and is_accepted_active(lp))
+def active_on_project(state: dict, project: str, *, suggested: bool = False) -> list[str]:
+    """Accepted active loops on a project; with ``suggested``, suggested ones too."""
+    live = is_active if suggested else is_accepted_active
+    return select_loops(state, lambda lp: lp.get("project") == project and live(lp))
 
 
 def _i_owe_gold(params: dict, world: World, state: dict) -> Gold:
     person = params["person"]
     if not knowable(state, person):
         return UNANSWERABLE
-    return list_gold(world, state, owed_by_worker_to(state, world.worker, person))
+    return list_gold(
+        world,
+        state,
+        owed_by_worker_to(state, world.worker, person),
+        owed_by_worker_to(state, world.worker, person, suggested=True),
+    )
 
 
 def _owed_to_me_gold(params: dict, world: World, state: dict) -> Gold:
     person = params["person"]
     if not knowable(state, person):
         return UNANSWERABLE
-    return list_gold(world, state, owed_to_worker_by(state, world.worker, person))
+    return list_gold(
+        world,
+        state,
+        owed_to_worker_by(state, world.worker, person),
+        owed_to_worker_by(state, world.worker, person, suggested=True),
+    )
 
 
 def _project_loops_gold(params: dict, world: World, state: dict) -> Gold:
     project = params["project"]
     if not knowable(state, project, "project"):
         return UNANSWERABLE
-    return list_gold(world, state, active_on_project(state, project))
+    return list_gold(
+        world,
+        state,
+        active_on_project(state, project),
+        active_on_project(state, project, suggested=True),
+    )
 
 
 # ================================================================ change: project_changes
@@ -503,6 +599,15 @@ def on_suggested_loop(world: World, state: dict, ev: dict) -> bool:
         return False
     loop = state["loops"].get(world.by_id.get(ev["id"], {}).get("commitment"))
     return loop is not None and not loop.get("accepted")
+
+
+def on_optional_loop(world: World, state: dict, ev: dict) -> bool:
+    """Whether ``ev`` creates or rewords a loop that is optional (`is_optional_loop`) at the
+    state date: a suggestion, or an ask the worker has not answered."""
+    if ev["type"] not in ("commitment.create", "commitment.update"):
+        return False
+    loop = state["loops"].get(world.by_id.get(ev["id"], {}).get("commitment"))
+    return loop is not None and is_optional_loop(world, loop)
 
 
 def status_change_events(world: World, state: dict, project: str) -> list[dict]:
@@ -637,6 +742,7 @@ def change_item(world: World, state: dict, ev: dict, project: str) -> dict[str, 
         "type": ev["type"],
         "keywords": change_keywords(world, state, ev, project),
         "support": list(ev.get("artifacts") or []),
+        **({"optional": True} if on_optional_loop(world, state, ev) else {}),
     }
 
 
@@ -817,6 +923,7 @@ def project_status_rubric(world: World, state: dict, project: str) -> list[dict[
                 [loop_keyword_group(world, state, loop)],
                 support=list(loop.get("evidence") or []),
                 aspect="loop",
+                optional=is_optional_loop(world, loop),
             )
         )
     attr_item("next_step", "Next step: {v}", critical=False, aspect="next_step")
@@ -964,6 +1071,7 @@ def person_brief_rubric(world: World, state: dict, person: str) -> list[dict[str
                 critical=True,
                 support=list(loop.get("evidence") or []),
                 aspect="i_owe",
+                optional=is_optional_loop(world, loop),
             )
         )
     owing = [(c, state["loops"][c]) for c in owed_to_worker_by(state, worker, person)]
@@ -976,6 +1084,7 @@ def person_brief_rubric(world: World, state: dict, person: str) -> list[dict[str
                 critical=True,
                 support=list(loop.get("evidence") or []),
                 aspect="owed_to_me",
+                optional=is_optional_loop(world, loop),
             )
         )
     role = ent["attrs"].get("role")
@@ -1111,7 +1220,11 @@ def _focus_tomorrow_gold(params: dict, world: World, state: dict) -> Gold:
         ),
         key=by_due,
     )
-    must = [cid for cid, loop in active if loop.get("due") and str(loop["due"]) <= tomorrow]
+    must = [
+        cid
+        for cid, loop in active
+        if loop.get("due") and str(loop["due"]) <= tomorrow and not is_optional_loop(world, loop)
+    ]
     distractors = select_loops(
         state, lambda lp: lp.get("status") in CLOSED_STATUSES or lp["debtor"] != worker
     )

@@ -31,7 +31,8 @@
             ],
             "support": [
               "em-0001"
-            ]
+            ],
+            "optional": true
           }
         ]
       }

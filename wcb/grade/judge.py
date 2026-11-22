@@ -25,6 +25,7 @@ import hashlib
 import json
 import os
 import re
+import threading
 from collections import Counter
 from pathlib import Path
 from typing import Any, Protocol
@@ -847,6 +848,22 @@ COVERED - the answer states the checklist item (paraphrase is fine).
 MISSING - the answer does not state it.
 CONTRADICTED - the answer presents a superseded or conflicting value as current."""
 
+POINT_PROMPT = """Grade a short answer against the reference answer.
+
+Question:
+{question}
+
+Reference answer:
+{gold}
+
+Context about the subject (JSON):
+{facts}
+
+Answer (a JSON string):
+{answer}
+
+The answer is correct when it states the reference answer in substance: paraphrase, a synonym, a description that clearly amounts to the same thing (for a relationship, "a colleague in my own team" for "peer"), or extra true detail are all fine. It is wrong when it gives a different or superseded value, hedges between values, or leaves out the substance of the reference answer. Reply with the single word YES if the answer is correct, otherwise NO."""
+
 #: Gold fields shown to the LLM for `same_item`, by kind.
 GOLD_FIELDS = {
     "loop": ("what", "counterparty_name", "counterparty", "direction", "status", "due"),
@@ -904,6 +921,13 @@ def rubric_prompt(answer_text: str, item: dict, facts: dict) -> str:
     )
 
 
+def point_prompt(question: str, gold: str, answer: str, facts: dict) -> str:
+    """The exact user prompt for one `point` decision (a free-text point answer)."""
+    return POINT_PROMPT.format(
+        question=question, gold=gold, facts=_dumps(facts or {}), answer=_dumps(str(answer or ""))
+    )
+
+
 def parse_yes_no(text: str) -> bool | None:
     """First YES/NO word in a completion (markdown and punctuation tolerated); None if absent."""
     m = _YES_NO.search(normalize(text or ""))
@@ -923,6 +947,9 @@ def majority(values: list[Any], tie_order: tuple[Any, ...]) -> Any:
         return tie_order[0]
     best = max(counts.values())
     return next(v for v in tie_order if counts.get(v) == best)
+
+
+_CACHE_LOCK = threading.Lock()
 
 
 class LLMJudge:
@@ -948,6 +975,8 @@ class LLMJudge:
         self.name = f"llm:{self.model_spec}"
         self.cache_path = Path(cache_path) if cache_path else None
         self.calls = 0  # model calls actually made (cache misses x samples)
+        #: When a dict, cache misses are recorded here instead of asked (`fetch_pending`).
+        self.pending: dict[str, tuple] | None = None
         self._cache: dict[str, Any] = {}
         if self.cache_path and self.cache_path.exists():
             self._cache.update(load_cache(self.cache_path))
@@ -966,6 +995,10 @@ class LLMJudge:
             self._decide("rubric", prompt, parse_verdict, ("missing", "covered", "contradicted"))
         )
 
+    def point(self, question: str, gold: str, answer: str, facts: dict) -> bool:
+        prompt = point_prompt(question, gold, answer, facts)
+        return bool(self._decide("point", prompt, parse_yes_no, (False, True)))
+
     def cache_key(self, prompt: str) -> str:
         raw = _dumps([self.model_spec, self.samples, SYSTEM_PROMPT, prompt])
         return hashlib.sha256(raw.encode("utf-8")).hexdigest()
@@ -974,6 +1007,9 @@ class LLMJudge:
         key = self.cache_key(prompt)
         if key in self._cache:
             return self._cache[key]
+        if self.pending is not None:  # recording pass (`prefetch`): decide later
+            self.pending[key] = (what, prompt, parse, tie_order)
+            return tie_order[0]
         outputs = []
         for _ in range(self.samples):
             self.calls += 1
@@ -988,6 +1024,12 @@ class LLMJudge:
         decision = majority([parse(o) for o in outputs], tie_order)
         self._cache[key] = decision
         if self.cache_path:
+            with _CACHE_LOCK:
+                self._append(key, what, decision, outputs)
+        return decision
+
+    def _append(self, key: str, what: str, decision: Any, outputs: list[str]) -> None:
+        if self.cache_path:
             self.cache_path.parent.mkdir(parents=True, exist_ok=True)
             row = {
                 "key": key,
@@ -999,7 +1041,74 @@ class LLMJudge:
             }
             with open(self.cache_path, "a", encoding="utf-8") as f:
                 f.write(json.dumps(row, ensure_ascii=False) + "\n")
-        return decision
+
+    def recording(self, on: bool) -> None:
+        self.pending = {} if on else None
+
+    def fetch_pending(self, workers: int = 16) -> int:
+        """Ask every recorded cache miss in parallel and cache the decisions; returns how many.
+
+        Used to fill the cache before a normal scoring pass: score once with `pending = {}`
+        (misses get the conservative default and are recorded), call this, then score again.
+        """
+        from concurrent.futures import ThreadPoolExecutor
+
+        todo, self.pending = dict(self.pending or {}), None
+        with ThreadPoolExecutor(max(1, workers)) as ex:
+            list(ex.map(lambda t: self._decide(t[0], t[1], t[2], t[3]), todo.values()))
+        return len(todo)
+
+
+class PanelJudge:
+    """The heuristic judge, with every negative decision escalated to a panel of LLM judges.
+
+    A heuristic match or *covered* verdict stands. A heuristic NO, *missing* or
+    *contradicted* is put to every panel judge, and the panel's verdict replaces it only when
+    all of them agree; otherwise the heuristic verdict stands. So an answer that is right in
+    substance but worded differently gets credit when models of different families agree, and
+    no single model can raise or lower a score on its own. Free-text point answers the
+    deterministic grader rejects are escalated the same way (`point`).
+    """
+
+    def __init__(self, panel: list[LLMJudge]):
+        if not panel:
+            raise ValueError("a panel needs at least one LLM judge")
+        self.heuristic = HeuristicJudge()
+        self.panel = panel
+        self.name = "panel:" + "+".join(j.model_spec for j in panel)
+        self.escalated = 0
+
+    @property
+    def calls(self) -> int:
+        return sum(j.calls for j in self.panel)
+
+    def _agree(self, votes: list[Any]) -> Any:
+        return votes[0] if all(v == votes[0] for v in votes) else None
+
+    def same_item(self, pred: dict, gold: dict, *, kind: str) -> bool:
+        if self.heuristic.same_item(pred, gold, kind=kind):
+            return True
+        self.escalated += 1
+        return self._agree([j.same_item(pred, gold, kind=kind) for j in self.panel]) is True
+
+    def rubric(self, answer_text: str, item: dict, facts: dict) -> str:
+        v = self.heuristic.rubric(answer_text, item, facts)
+        if v == "covered":
+            return v
+        self.escalated += 1
+        agreed = self._agree([j.rubric(answer_text, item, facts) for j in self.panel])
+        return agreed or v
+
+    def point(self, question: str, gold: str, answer: str, facts: dict) -> bool:
+        self.escalated += 1
+        return self._agree([j.point(question, gold, answer, facts) for j in self.panel]) is True
+
+    def recording(self, on: bool) -> None:
+        for j in self.panel:
+            j.pending = {} if on else None
+
+    def fetch_pending(self, workers: int = 16) -> int:
+        return sum(j.fetch_pending(workers) for j in self.panel)
 
 
 def load_cache(path: Path) -> dict[str, Any]:
@@ -1018,6 +1127,9 @@ def load_cache(path: Path) -> dict[str, Any]:
 # ---------------------------------------------------------------- factory
 #: Judge model used when `--judge llm` is given without `--judge-model`. Pinned per release.
 DEFAULT_LLM_JUDGE = "anthropic:claude-opus-5-5"
+#: Panel used by `--judge panel` without `--judge-model`: one model from each of two
+#: families, so neither can grade its own family alone. Comma-separated LLM specs.
+DEFAULT_PANEL = "openai:claude-sonnet-5.5,openai:gpt-6.1-sol"
 #: Votes per decision for `make_judge` (docs/scoring.md: majority of 3 samples).
 DEFAULT_SAMPLES = 3
 
@@ -1034,11 +1146,17 @@ def make_judge(
     """
     if kind == "heuristic":
         return HeuristicJudge()
-    if kind != "llm":
-        raise ValueError(f"unknown judge kind {kind!r} (expected 'heuristic' or 'llm')")
+    if kind not in ("llm", "panel"):
+        raise ValueError(f"unknown judge kind {kind!r} (expected 'heuristic', 'llm' or 'panel')")
     from wcb.llm.client import make_client
 
-    samples = int(os.environ.get("WCB_JUDGE_SAMPLES", "") or DEFAULT_SAMPLES)
     if cache_path is None and os.environ.get("WCB_JUDGE_CACHE"):
         cache_path = Path(os.environ["WCB_JUDGE_CACHE"])
+    if kind == "panel":
+        samples = int(os.environ.get("WCB_JUDGE_SAMPLES", "") or 1)
+        specs = [m.strip() for m in (model or DEFAULT_PANEL).split(",") if m.strip()]
+        return PanelJudge(
+            [LLMJudge(make_client(m), samples=samples, cache_path=cache_path) for m in specs]
+        )
+    samples = int(os.environ.get("WCB_JUDGE_SAMPLES", "") or DEFAULT_SAMPLES)
     return LLMJudge(make_client(model or DEFAULT_LLM_JUDGE), samples=samples, cache_path=cache_path)

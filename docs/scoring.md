@@ -147,6 +147,12 @@ Each question scores between 0 and 1.
 
 **Abstention on answerable questions scores 0.** There is no partial credit for hedging.
 
+**Substance over wording.** An answer that is substantially correct gets credit whatever its level of detail or wording. Reported results use the panel judge ([judges](judge.md#panel-judge)), which puts every answer the deterministic rules reject to a cross-family panel of models.
+
+**Optional items.** Some loops are defensible either way under [contract](../contract/CONTRACT.md) rule 7: a suggestion nobody accepted (`accepted: false`), and an ask the worker owes only because someone requested it (`basis: received`), with no reply from the worker in the message that created it and no later endorsement. Gold marks such items `optional` (list and change items, status and brief rubric items) or lists them under `suggested` (active suggested loops that fit a list question). An optional item is neither required nor wrong: it leaves recall's denominator, a prediction matched to it leaves precision's, and an optional rubric item counts only when the answer covers or contradicts it. Optional loops are never in a priority question's `must_include`.
+
+**Project status.** A project-status rubric item that says the project is `active` is covered by an answer that gives the project no other status (paused, dormant, done, cancelled, merged) and covers at least one other item: answers describe a running project by what it is doing (\"in build\", \"in security review\"), not by the word \"active\".
+
 ### Citations
 
 Each claim or item cites artifact IDs and, in Track A, store paths. Citation precision `c` is the fraction of citations that exist and support what they are attached to: in list and change answers, the item; otherwise the answer as a whole. Supporting artifact IDs come from the world model; store paths are judged against the record's content. The final question score is:
@@ -154,6 +160,8 @@ Each claim or item cites artifact IDs and, in Track A, store paths. Citation pre
 ```text
 q_final = q × (0.75 + 0.25 × c)
 ```
+
+For status, brief, point, temporal and priority answers, a cited artifact outside the question's support also counts when it was delivered and reveals an event about the question's subject (its project, person, commitment or decision): gold support lists the evidence for each fact, while an answer may fairly cite other inputs about the same subject. List and change items stay checked against their matched item's support.
 
 Missing citations give `c = 0`, which caps the question at 0.75. A question with no supporting artifacts, such as an answerable list whose correct answer is empty, has nothing to cite: `c` does not apply and the score is `q`.
 

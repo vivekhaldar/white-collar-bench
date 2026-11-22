@@ -1,41 +1,61 @@
 # Four models on WCB-lite: Haiku, Sonnet and Opus 5.5, GPT-6.1 Sol (Pi harness)
 
-**Rescored with the fixed judge, Opus 5.5 and Sonnet 5.5 tie at the top (Track A 87.5 vs 85.4, Track B 72.4 vs 71.3), Haiku 5.5 is a few points behind at a fifth of Sonnet's cost, and GPT-6.1 Sol trails by 10–12 points on A.** Opus costs 3.3× Sonnet for a gain inside the noise.
+**Graded for substance (gold v6 and a cross-family judge panel), Opus 5.5 leads on both tracks (A 91.9, B 87.4). Sonnet 5.5, Haiku 5.5 and GPT-6.1 Sol are within 2 points of each other on Track A (87.0–89.1), with overlapping confidence intervals.** Haiku costs $3.53 per lite run, a fifth of Sonnet's cost. Track B, where the model designs its own memory, separates the models most: Opus loses 4.5 points there, the others 7–10.
 
-All four runs used the same harness (Pi 1.5.2 with the `pi_litellm.py` wrapper), the same [WCB-lite suite](../../docs/lite.md) (11 public worlds, two episode days, one repeat), gold v5, medium reasoning effort and a LiteLLM proxy. They are the closest thing to a controlled model comparison in `results/`. All worlds, people and organizations are synthetic.
+All four runs used the same harness (Pi 1.5.2 with the `pi_litellm.py` wrapper), the same [WCB-lite suite](../../docs/lite.md) (11 public worlds, two episode days, one repeat), medium reasoning effort and a LiteLLM proxy. They are the closest thing to a controlled model comparison in `results/`. All worlds, people and organizations are synthetic.
 
-Per-run reports: [Haiku and Sonnet](../2026-11-21-claude-5.5-pi-lite/README.md), [Opus](../2026-11-21-claude-opus-5.5-pi-lite/README.md), [Sol](../2026-11-21-gpt-6.1-sol-pi-lite/README.md). The deck for presenting these results is [`slides/index.html`](slides/index.html) (PDF: [`slides/wcb-lite-results.pdf`](slides/wcb-lite-results.pdf)). It also shows DeepSeek V4.1 Flash and Qwen3.8-27B, whose earlier full runs are rescored as lite from their saved reports (older scorer and gold).
+Per-run reports: [Haiku and Sonnet](../2026-11-21-claude-5.5-pi-lite/README.md), [Opus](../2026-11-21-claude-opus-5.5-pi-lite/README.md), [Sol](../2026-11-21-gpt-6.1-sol-pi-lite/README.md). The deck for presenting these results is [`slides/index.html`](slides/index.html) (PDF: [`slides/wcb-lite-results.pdf`](slides/wcb-lite-results.pdf)). It also shows DeepSeek V4.1 Flash and Qwen3.8-27B, whose earlier full runs are rescored as lite from their saved reports with the older grader; their raw answers are not available, so they could not be regraded.
 
 ## Scores
 
-| Model | Lite A | Lite B | 95% CI A | 95% CI B | Micro A | Micro B | Synthesis | Ingestion cost | Lite $ |
-|---|---:|---:|---|---|---:|---:|---:|---:|---:|
-| Opus 5.5 | **87.5** | **72.4** | 83.2–91.2 | 65.6–78.2 | 86.6 | 71.5 | 93.1 | **5.6** | 56.93 |
-| Sonnet 5.5 | 85.4 | 71.3 | 81.8–88.8 | 65.3–76.6 | 86.5 | 67.2 | **93.2** | 7.8 | 17.24 |
-| Haiku 5.5 | 82.8 | 65.3 | 78.7–86.4 | 59.5–70.3 | 84.4 | 65.2 | 90.2 | 7.4 | **3.53** |
-| GPT-6.1 Sol | 75.3 | 62.3 | 69.0–80.8 | 55.4–68.2 | 77.0 | 60.0 | 87.4 | 12.1 | 10.72 (flex) |
+Gold v6 with the panel judge (headline), on the same saved answers:
 
-*Synthesis* is the Track A score answering from the perfect oracle store; *ingestion cost* is how much the model's own store costs it (Synthesis minus Track A, before citation effects). Costs include Track A oracle sessions. Sol is billed at OpenAI's flex tier, half of its $21.44 list price.
+| Model | Lite A | Lite B | 95% CI A | 95% CI B | Micro A | Micro B | Synthesis | Ingestion cost | Heuristic only, A / B | Lite $ |
+|---|---:|---:|---|---|---:|---:|---:|---:|---:|---:|
+| Opus 5.5 | **91.9** | **87.4** | 88.1–94.9 | 83.3–90.6 | 92.3 | 85.9 | 96.6 | **4.7** | 88.0 / 76.1 | 56.93 |
+| Sonnet 5.5 | 89.1 | 80.7 | 84.7–92.8 | 76.1–84.9 | 89.9 | 78.1 | 96.2 | 7.1 | 85.5 / 74.2 | 17.24 |
+| Haiku 5.5 | 88.8 | 78.3 | 86.5–91.2 | 75.4–81.6 | 89.9 | 81.7 | 94.8 | 6.0 | 84.6 / 67.3 | **3.53** |
+| GPT-6.1 Sol | 87.0 | 79.9 | 83.2–90.7 | 73.3–84.7 | 89.3 | 78.2 | 94.8 | 7.8 | 78.0 / 64.9 | 10.72 (flex) |
 
-- **The ranking is the same on both tracks and in both suites:** Opus ≈ Sonnet > Haiku > Sol. Micro agrees with lite to within 1.6 points on A and 4.1 on B (Sonnet B is the outlier), so micro at half the price gives the same ordering.
-- **Track B costs every model 13–17 points.** Without the contract's store layout, every model keeps a worse memory. The gap is smallest for Sol (13.0), whose Track A is already low.
-- **Answering is not the bottleneck for the Claude models.** All three score 90–93 from the oracle store. What separates them is ingestion: Opus's store costs it 5.6 points, Sonnet's 7.8, Haiku's 7.4 and Sol's 12.1.
+*Synthesis* is the Track A score answering from the perfect oracle store; *ingestion cost* is Synthesis minus Track A. *Lite $* is the cost of the model under test, including Track A oracle sessions, before grading. Sol is billed at OpenAI's flex tier, half of its $21.44 list price.
 
-## Judge fixes and rescoring
+- **Opus is clearly first on Track B** (87.4; next is Sonnet at 80.7, intervals barely touching) and first on A. The other three are statistically tied on A.
+- **Answering from a perfect memory is nearly solved:** every model scores 94.8–96.6 from the oracle store. What separates them is the memory they build.
+- **Sol gained the most from grading for substance** (A 78.0 → 87.0 heuristic → panel; B 64.9 → 79.9). Its answers are the longest and hedge most (contract rule 7), which word matching punished.
 
-Two scorer bugs were found in the Sol error analysis and fixed in `ec9ff3d` ([docs/judge.md](../../docs/judge.md)). Every run was rescored; 65 answers went up and none went down.
+## Grading changes and rescoring
 
-| Model | Lite A (orig → new) | Lite B (orig → new) | From date-history chains | From acceptance hedges |
+The same saved answers were scored with four graders. The [deck](slides/index.html) charts all four.
+
+| Model | Original A / B | Judge fixes `ec9ff3d` | Gold v6, heuristic | Gold v6 + panel |
 |---|---|---|---|---|
-| Haiku 5.5 | 81.4 → 82.8 | 64.7 → 65.3 | 0 / 0 | +1.5 / +0.6 |
-| Sonnet 5.5 | 83.8 → 85.4 | 71.1 → 71.3 | 0 / 0 | +1.5 / +0.2 |
-| Opus 5.5 | 82.5 → 87.5 | 67.3 → 72.4 | 0 / +2.5 | +5.1 / +2.5 |
-| GPT-6.1 Sol | 69.3 → 75.3 | 58.5 → 62.3 | +2.1 / +1.6 | +3.9 / +2.3 |
+| Haiku 5.5 | 81.4 / 64.7 | 82.8 / 65.3 | 84.6 / 67.3 | 88.8 / 78.3 |
+| Sonnet 5.5 | 83.8 / 71.1 | 85.4 / 71.3 | 85.5 / 74.2 | 89.1 / 80.7 |
+| Opus 5.5 | 82.5 / 67.3 | 87.5 / 72.4 | 88.0 / 76.1 | 91.9 / 87.4 |
+| GPT-6.1 Sol | 69.3 / 58.5 | 75.3 / 62.3 | 78.0 / 64.9 | 87.0 / 79.9 |
 
-1. **Date-history chains.** A status answer that tells the full history of a moved date ("moved from 15 Dec to 22 Dec on 8 Nov, then to 31 Dec", "it was 15 Dec, then 22 Dec", "1 Nov → 12 Nov (13 Sep) → 24 Nov") had its date items marked *contradicted*, zeroing a correct answer. The rubric now reads these as history; negative controls ("Target 29 Jan, then 5 Feb if the vendor slips", "Kickoff was last week, then 29 Jan is the target") still contradict. Only the two most detailed writers, Opus and Sol, were hit.
-2. **Acceptance hedges.** [Contract](../../contract/CONTRACT.md) rule 7 says a loop suggested to the worker is unaccepted until they agree, while the world generator treats an unanswered direct request as accepted. Models that follow the contract write items such as "Respond to Andres's request for the Fennel rollout checklist; agree whether you can deliver it tomorrow", and the matcher rejected them because the hedge words diluted the item. The matcher now ignores words about acceptance (accept, confirm, whether, not yet, request, …) unless the gold item uses them. It still requires the right object: "Confirm whether you can send Andres the Fennel stakeholder map" does not match the checklist.
+1. **Judge fixes (`ec9ff3d`).** Date-history chains (\"moved from 15 Dec to 22 Dec on 8 Nov, then to 31 Dec\") no longer read as stale dates, and the item matcher ignores acceptance hedges (\"confirm whether you can…\"). 65 answers rose, none fell.
+2. **Gold v6** ([scoring](../../docs/scoring.md#query-scoring)). It needs no new runs; it only changes how gold marks items:
+   - *Optional loops.* A suggestion nobody accepted, or an ask the worker owes only because someone requested it with no reply from the worker, is defensible either way under contract rule 7. Such items are now `optional`: neither required nor wrong. 43 of 144 lite list items and 9 of 104 change items are optional.
+   - *Project status.* An \"X is active\" rubric item is covered by an answer that gives no other status (\"in build\", \"in security review\").
+   - *Citations.* For status, brief and point answers, a delivered artifact about the question's subject counts even when it is outside the minimal gold support.
+3. **Panel judge** ([judges](../../docs/judge.md#panel-judge)). The heuristic decides first; every negative decision goes to Claude Sonnet 5.5 and GPT-6.1 Sol, and is overturned only when both agree. So no family grades its own models alone. Free-text point answers the deterministic rules reject (a relationship described as \"a colleague in my own org\" for `peer`) go to the panel too.
 
-The contract and generator still disagree on rule 7. Fixing the generator (rendering unanswered asks as tentative) would regenerate every dev world's inbox and void all existing runs, so that is left for the next gold version. The original-scorer reports stay in each run's directory; the rescored reports are in [`rescored/`](rescored/).
+**Spot check of the panel.** On Opus Track B the panel overturned 89 heuristic decisions. Reading about 40, most are clearly right: correct items with explanation attached, \"in security review\" for an active project, \"colleague in my own org\" for `peer`. A few are lenient, for example an item naming the right deliverable with the wrong owner (\"Bisi to send the term sheet\" for \"Send Alasdair the Rosix term sheet\"). Report the heuristic score next to the panel score.
+
+### Judging cost
+
+| Run graded | Panel calls (Sonnet + Sol) | Cost, A + B |
+|---|---:|---:|
+| Haiku 5.5 | 4,692 | $3.88 |
+| Sonnet 5.5 | 3,906 | $3.24 |
+| Opus 5.5 | 4,818 | $3.81 |
+| GPT-6.1 Sol | 5,088 | $4.33 |
+| **Total** | **18,504** | **$15.26** ($18.18 at list) |
+
+That is 6.6M tokens (6.0M input, 0.6M output): Sonnet 3.6M in / 0.5M out at $12.34, Sol 2.4M in / 0.1M out at $2.92 (flex). Grading adds 7% to Opus's run cost and 110% to Haiku's. Token counts are estimated, not metered: the judge client does not record usage, so prompt characters were converted with tokens-per-character and mean output tokens measured on 30 real calls per model ([`judge-cost.json`](judge-cost.json)). The first panel pass also judged the store-integrity check (SIS), which does not enter the WCB headline, before it was switched back to the heuristic: about 46,000 wasted Sonnet calls, an estimated $61 and 20M tokens. Total spent on judging: about $76.
+
+Rescored reports are in [`rescored/`](rescored/): the `ec9ff3d` reports at the top level, `v6-heuristic/` and `v6-panel/` (with the gzipped decision caches, so the panel scores can be reproduced without model calls).
 
 ## How the models differ
 
@@ -57,17 +77,17 @@ The contract and generator still disagree on rule 7. Fixing the generator (rende
 
 ## Why the best model is not near 100
 
-An [audit of every point Opus lost](../2026-11-21-claude-opus-5.5-pi-lite/ERROR-AUDIT.md) finds its own errors cost only about 2.3 points on A and 2.8 on B. The heuristic grader costs 5.6 / 16.0, arguable gold items 3.0 / 5.6 and citation penalties 1.5 / 3.2. An LLM judge (Opus 5.5, so an upper estimate) scores the same answers 89.9 / 85.0. Scores near the top of lite therefore measure the grader as much as the model; use the LLM judge when comparing frontier models.
+An [audit of every point Opus lost under the old grader](../2026-11-21-claude-opus-5.5-pi-lite/ERROR-AUDIT.md) found its own errors cost only about 2.3 points on A and 2.8 on B; the rest was the heuristic grader, arguable gold and citation penalties. Gold v6 and the panel address the grader and the two clearest gold ambiguities, and Opus now scores 91.9 / 87.4. What remains is its real errors, citation penalties and change questions.
 
 ## What all four get wrong
 
-- **Change questions are the weakest type for every model:** 0.19–0.52 on A, 0.17–0.43 on B. Even from the perfect store the best is 0.85 (Sonnet). Answers fold several events into one item or describe them differently from gold, and the heuristic matcher under-credits paraphrases.
-- **The pilot world is the hardest for every model** (A 57–76, B 43–62). It is hand-authored, with dense hand-offs, corrections and an offsite day that moves everything.
-- **Track B lists lose loops:** list scores fall from 0.69–0.87 on A to 0.42–0.68 on B. Without the contract's loop records, models forget commitments made in passing.
+- **Change questions are still the weakest type for every model:** 0.62–0.74 on A, 0.57–0.75 on B. Answers fold several events into one item, and one-to-one matching credits it once.
+- **The pilot world is the hardest for every model.** It is hand-authored, with dense hand-offs, corrections and an offsite day that moves everything.
+- **Track B lists lose loops:** list scores fall from 0.84–0.90 on A to 0.69–0.82 on B. Without the contract's loop records, models forget commitments made in passing.
 - **None of them invents answers.** Unanswerable questions score 1.00 for every model on both tracks, and temporal questions 0.95–1.00.
 
 ## Reproduction
 
 - `python results/2026-11-21-lite-model-comparison/compare.py > results/2026-11-21-lite-model-comparison/data.json` collects every number above from the raw runs (`runs/`, git-ignored) and their original and rescored reports.
-- Rescoring a run: `wcb score <run>/track-<t>/measured --suite lite --out <run>/track-<t>/scores-fixed-lite` at `ec9ff3d` or later.
+- Rescoring a run: `wcb score <run>/track-<t>/measured --suite lite --judge panel --out <run>/track-<t>/scores-v6-panel-lite` (with `OPENAI_BASE_URL` and `OPENAI_API_KEY` pointing at a proxy that serves both panel models). Copy the matching `rescored/v6-panel/judge-cache-*.jsonl.gz`, unzipped, to `<out>/judge-cache.jsonl` first to reuse the decisions.
 - `slides/build.py` renders the deck's charts from `data.json`.
