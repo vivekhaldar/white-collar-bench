@@ -26,7 +26,8 @@ def test_track_b_workspace_note_has_no_vote(tmp_path):
     def score(cites):
         return citation_precision({"cites": cites}, ["ch-0001"], ctx)[0]
     assert score(["commitments.md#A20", "ch-0001"]) == 1
-    for note in ["commitments.md H25", "commitments.md #24", "commitments.md B#17", "commitments.md 2027-11-05"]:
+    for note in ["commitments.md H25", "commitments.md #24", "commitments.md B#17", "commitments.md 2027-11-05",
+                 "commitments.md (tentative row)", "commitments.md §8"]:
         assert score([note, "ch-0001"]) == 1
     assert score(["commitments.md#A20"]) == 0
     assert score(["missing.md", "ch-0001"]) == 0.5
