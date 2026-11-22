@@ -536,6 +536,8 @@ def grade_point(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tuple
     text = "" if raw is None else str(raw)
     accept = [str(a) for a in [gold.get("value"), *(gold.get("accept") or [])] if a is not None]
     details: dict[str, Any] = {"kind": kind, "value": raw, "gold": gold.get("value")}
+    if gold.get("uncertain") and q.get("template") == "person_attr":
+        accept += ["unknown", "not specified", "not stated", "unknown from the inputs"]
     if kind == "entity":
         accept = [a for a in accept if len(ctx.alias_ids(a)) <= 1]
     if kind == "text" and is_terminal_phase(q, ctx):

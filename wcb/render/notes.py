@@ -14,8 +14,8 @@
 from __future__ import annotations
 
 import random
-from pathlib import Path
 import re
+from pathlib import Path
 
 from wcb.render.context import RenderContext, Rendered, day_words, time_words
 from wcb.render.phrases import (

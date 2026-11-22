@@ -46,6 +46,7 @@ def attribute_sources(world: World, state: dict, person: str, attribute: str) ->
         org = world.entity_events().get(value) if attribute == "org" else None
         forms = [org["name"], *org.get("surface_forms", [])] if org else [value]
         subject, target = _pattern(names), _pattern(forms)
+        normalized_names = {normalize(n) for n in names}
         found = []
         for aid in world.artifacts:
             lines = _lines(world, aid)
@@ -53,7 +54,7 @@ def attribute_sources(world: World, state: dict, person: str, attribute: str) ->
                 if not subject.search(line):
                     continue
                 # In a signature, the next line can give the signer's title and organization.
-                signature = line.strip(" -*,") in {normalize(n) for n in names}
+                signature = line.strip(" -*,") in normalized_names
                 passage = " ".join(lines[index:index + 2]) if signature else line
                 if target.search(passage):
                     found.append(aid)
@@ -84,6 +85,6 @@ def ground_person_gold(gold: dict, world: World, state: dict, params: dict, temp
         text = role["text"]
         if ent["attrs"].get("org") and not attribute_sources(world, state, person, "org"):
             text = f"{ent['name']} is {ent['attrs']['role']}"
-        rubric[rubric.index(role)] = {**role, "text": text, "support": sources}
+        rubric[rubric.index(role)] = {**role, "text": text, "support": [a for a in role["support"] if a in sources] or sources}
     return {**gold, "rubric": rubric}
 

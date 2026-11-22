@@ -194,11 +194,10 @@ def test_q007_person_brief(question):
     q = question("q-007")
     assert q["text"] == "What am I working on with Ben Okoro?"
     aspects = [r["aspect"] for r in q["gold"]["rubric"]]
-    assert aspects == ["shared_project", "owed_to_me", "role"]
-    shared, owed, role = q["gold"]["rubric"]
+    assert aspects == ["shared_project", "owed_to_me"]  # No delivered source states Ben’s title.
+    shared, owed = q["gold"]["rubric"]
     assert "ledger cleanup" in shared["keywords"][0] and "gl cleanup" in shared["keywords"][0]
     assert owed["critical"] and owed["keywords"] == [["reconciliation report", "january"]]
-    assert role["keywords"] == [["finance"], ["systems"]]
     assert [f["loop"] for f in q["gold"]["facts"]["owed_to_me"]] == ["c-002"]
 
 

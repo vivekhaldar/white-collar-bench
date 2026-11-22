@@ -25,6 +25,7 @@ from wcb.grade.answers import (
 )
 from wcb.grade.judge import HeuristicJudge
 from wcb.questions.build import build_question, load_specs
+from wcb.questions.person_evidence import attribute_sources
 from wcb.questions.support import ThreadIndex, widen_support
 from wcb.questions.templates import TEMPLATES
 from wcb.world.model import World
@@ -198,10 +199,15 @@ def test_status_and_brief_support_covers_facts(pilot, cp, qid):
     for section in ("active_loops", "i_owe", "owed_to_me"):
         for lp in facts.get(section) or []:
             assert set(state["loops"][lp["loop"]]["evidence"]) <= set(q["support"]), lp
-    # Rubric items keep the template's support.
-    assert [r["support"] for r in q["gold"]["rubric"]] == [
-        r["support"] for r in template.gold(q["params"], pilot, state)[1]["rubric"]
+    # Each required role must cite evidence tying its value to the named person.
+    original = template.gold(q["params"], pilot, state)[1]["rubric"]
+    assert [r["support"] for r in q["gold"]["rubric"] if r["aspect"] != "role"] == [
+        r["support"] for r in original if r["aspect"] != "role"
     ]
+    for role in (r for r in q["gold"]["rubric"] if r["aspect"] == "role"):
+        assert role["support"] and set(role["support"]) <= set(
+            attribute_sources(pilot, state, q["params"]["person"], "role")
+        )
     # Still only delivered artifacts, in delivery order.
     order = {a: i for i, a in enumerate(state["delivered"])}
     assert all(a in order for a in q["support"])
@@ -232,7 +238,11 @@ def test_point_and_temporal_support_unchanged(pilot):
         state = state_at(pilot, date)
         q = build_question(spec, pilot, state)
         ok, gold, support = template.gold(q["params"], pilot, state)
-        if ok:
+        if ok and q["template"] == "person_attr" and q["params"]["attribute"] in {"role", "org", "relationship"}:
+            evidence = attribute_sources(pilot, state, q["params"]["person"], q["params"]["attribute"])
+            assert set(q["support"]) <= set(evidence)
+            assert bool(evidence) != bool(q["gold"].get("uncertain"))
+        elif ok:
             assert q["support"] == list(support), q["id"]  # loops already carry their thread
             assert q["gold"] == gold
             n += 1

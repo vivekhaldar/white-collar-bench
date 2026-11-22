@@ -62,7 +62,7 @@ def build_question(spec: dict[str, Any], world: World, state: dict) -> dict[str,
         gold = ground_person_gold(gold, world, state, params, name)
         if name == "person_attr" and params["attribute"] in {"role", "org", "relationship"}:
             evidence = attribute_sources(world, state, params["person"], params["attribute"])
-            support = support_union(state, support, evidence) if evidence else []
+            support = [aid for aid in support if aid in evidence] or evidence
         elif name == "person_brief":
             support = support_union(state, *(r["support"] for r in gold["rubric"]))
     if answerable and (name == "project_status" or
