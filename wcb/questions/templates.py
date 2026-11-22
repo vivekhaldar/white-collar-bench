@@ -249,11 +249,45 @@ def is_unanswered_ask(world: World, loop: dict) -> bool:
     return not any(_worker_wrote(world, a) for a in created)
 
 
+def hedged_offer(world: World, loop: dict) -> bool:
+    """Whether the creation evidence offers to try, with no subsequent endorsement."""
+    history = loop.get("history") or []
+    if not history or loop.get("debtor") != world.worker:
+        return False
+    if any(h.get("changes", {}).get("accepted") is True or "debtor" in h.get("changes", {})
+           for h in history[1:]):
+        return False
+    creation = history[0]
+    summary = normalize(creation.get("summary", ""))
+    if summary.startswith("i said i could get ") and "sometime next week" in summary:
+        return True
+    keywords = [normalize(k) for k in loop.get("keywords", []) if k]
+    # A transcript can discuss many loops. Require the deliverable and hedge on one line.
+    markers = ("no promises", "i can probably ", "i could look at it, i mean",
+               "i'll see if i can ", "let me try to ", "(soft)")
+    cache = world._cache.setdefault("hedged_offers", {})
+    key = creation.get("event")
+    if key not in cache:
+        cache[key] = False
+        for aid in creation.get("artifacts") or []:
+            artifact = world.artifacts.get(aid)
+            if artifact is None or not keywords:
+                continue
+            from wcb.world.check import artifact_text
+
+            body = artifact_text(world.dir / artifact.path) or ""
+            if any(keywords[0] in line and any(m in line for m in markers)
+                   for line in map(normalize, body.splitlines())):
+                cache[key] = True
+                break
+    return cache[key]
+
+
 def is_optional_loop(world: World, loop: dict) -> bool:
     """A loop an answer may list or leave out: suggested (``accepted: false``) or an
     unanswered ask (`is_unanswered_ask`). Gold marks such items ``optional``; graders neither
     reward nor penalize them."""
-    return not loop.get("accepted") or is_unanswered_ask(world, loop)
+    return not loop.get("accepted") or is_unanswered_ask(world, loop) or hedged_offer(world, loop)
 
 
 def direction(loop: dict, worker: str) -> str:
