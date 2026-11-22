@@ -1375,7 +1375,10 @@ def store_record_id(cite: str) -> str | None:
 
 def workspace_reference(cite: str, root: Path | None) -> bool:
     """A Track B reference to its own existing notes is ancillary to source citations."""
-    relative = Path(cite.removeprefix("[[").removesuffix("]]").partition("#")[0])
+    # Agents also write "commitments.md H25" for a labeled note entry.
+    name = cite.removeprefix("[[").removesuffix("]]").partition("#")[0]
+    name = re.sub(r"(\.md)\s+[A-Za-z]+[0-9]+$", r"\1", name)
+    relative = Path(name)
     if root is None or relative.is_absolute() or ".." in relative.parts or not relative.suffix:
         return False
     try:

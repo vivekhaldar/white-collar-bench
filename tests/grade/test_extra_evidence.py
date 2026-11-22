@@ -26,9 +26,9 @@ def test_track_b_workspace_note_has_no_vote(tmp_path):
     def score(cites):
         return citation_precision({"cites": cites}, ["ch-0001"], ctx)[0]
     assert score(["commitments.md#A20", "ch-0001"]) == 1
+    assert score(["commitments.md H25", "ch-0001"]) == 1
     assert score(["commitments.md#A20"]) == 0
     assert score(["missing.md", "ch-0001"]) == 0.5
-
 
 
 def test_panel_checks_only_the_cited_claim_and_delivered_source():

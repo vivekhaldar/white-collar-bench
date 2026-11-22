@@ -27,7 +27,11 @@ def _source(world, aid):
 def _scheduled_or_draft(text, source, channel):
     if channel == "calendar":
         title = re.search(r"^SUMMARY:(.+)$", source, re.MULTILINE)
-        if not title or re.search(r"\b(completed|attended|took place|was held|cancelled)\b", text, re.I):
+        cancelled = bool(re.search(r"^(?:METHOD:CANCEL|STATUS:CANCELLED)\s*$", source, re.I | re.M))
+        claims_cancellation = bool(re.search(r"\bcancel(?:led|ed|lation)\b", text, re.I))
+        if not title or cancelled != claims_cancellation or re.search(
+            r"\b(completed|attended|took place|was held|already met)\b", text, re.I
+        ):
             return False
         subject = title[1].replace("\\,", ",")
     elif channel == "email":
@@ -81,16 +85,17 @@ def _confirms_item(item, aid, artifact, source, claim, world):
         return _scheduled_or_draft(claim, source, artifact.channel)
     # Attachments and same-thread replies must also identify this deliverable: some
     # messages and their attachments mention several distinct commitments.
-    source = normalize(source)
+    passages = [normalize(line) for line in source.splitlines() if line.strip()]
     keywords = [s for s in item.get("keywords", []) if isinstance(s, str)]
-    if not keywords or not contains_phrase(source, keywords[0]):
+    if not keywords or not any(contains_phrase(p, keywords[0]) for p in passages):
         return False
     support = item.get("support", [])
     if artifact.parent in support or any(world.artifacts[a].parent == aid for a in support if a in world.artifacts):
         return True
     # Distinct deliverable plus project or another identifying phrase.
     return (len(match_tokens(keywords[0])) >= 2 and
-            any(contains_phrase(source, s) for s in keywords[1:] if s != keywords[0]))
+            any(contains_phrase(p, keywords[0]) and contains_phrase(p, s)
+                for p in passages for s in keywords[1:] if s != keywords[0]))
 
 
 
