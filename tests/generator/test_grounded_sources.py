@@ -28,3 +28,22 @@ def test_new_transcripts_use_content_neutral_probes(tmp_path):
     transcripts = "\n".join(p.read_text() for p in (world / "inbox").rglob("*.vtt"))
     assert any(question in transcripts for question, _ in NEUTRAL_PROBES)
     assert not any(question in transcripts for question, _ in PROBE_PAIRS)
+
+
+def test_new_contacts_are_documented_at_first_delivery(tmp_path):
+    from wcb.world.generate import generate_world
+    from wcb.world.model import World
+
+    w = World.load(generate_world(seed=2, out_dir=tmp_path, build=False))
+    for eid, event in w.entity_events().items():
+        if event.get("kind") != "person":
+            continue
+        sources = [a for a in w.artifacts.values() if event["id"] in a.reveals]
+        if not sources:
+            continue
+        other = [a for a in sources if a.title != "Contact directory updates"]
+        notes = [a for a in sources if a.title == "Contact directory updates"]
+        assert len(notes) == 1 and notes[0].date == min(a.date for a in other)
+        entry = next(line for line in (w.dir / notes[0].path).read_text().splitlines()
+                     if line.startswith(f"- {event['name']}:"))
+        assert event["attrs"].get("role", "") in entry, eid

@@ -122,6 +122,8 @@ def render_world(plan: dict, sim: Any, world_dir: Path, *, seed: int, rewriter: 
                 missing = [s for s in comm.secrets if s not in secrets]
                 if missing and len(rendered) == 1:
                     raise RenderError(f"{r.artifact}: secrets {missing} were not written into the file")
+    if plan["generator"]["version"] >= 2:
+        emits.extend(notes_r.write_contact_updates(ctx, world_dir, emits, n))
     verify_artifacts(world_dir, sim.events, emits)
     return emits, ctx
 

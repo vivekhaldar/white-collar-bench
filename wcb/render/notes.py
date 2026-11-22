@@ -14,6 +14,7 @@
 from __future__ import annotations
 
 import random
+from pathlib import Path
 import re
 
 from wcb.render.context import RenderContext, Rendered, day_words, time_words
@@ -250,3 +251,36 @@ def _portfolio(ctx: RenderContext, comm: Communication, aid: str, rng: random.Ra
     return Rendered(aid, ".md", "Portfolio map", content=text, text=text)
 
 
+
+
+def write_contact_updates(ctx: RenderContext, world_dir: Path, emits: list[dict], last_event: int) -> list[dict]:
+    """Deliver contact entries on the day each contact is first introduced, never before."""
+    seen = set()
+    days = {}
+    for artifact in sorted(emits, key=lambda a: (a["received_at"], a["id"])):
+        for eid in artifact["reveals"]:
+            event = ctx.events[eid]
+            if eid in seen or event.get("kind") != "person" or event["type"] != "entity.create":
+                continue
+            seen.add(eid)
+            day = artifact["received_at"][:10]
+            days.setdefault(day, []).append((artifact["received_at"], event))
+    last_note = max((int(a["artifact"][3:]) for a in emits if a["artifact"].startswith("nt-")), default=0)
+    updates = []
+    for number, (day, contacts) in enumerate(sorted(days.items()), 1):
+        aid = f"nt-{last_note + number:04d}"
+        title = "Contact directory updates"
+        lines = [f"# {title}", ""]
+        for _, e in contacts:
+            attrs = e.get("attrs", {})
+            org = ctx.orgs.get(attrs.get("org"), {})
+            fields = [attrs.get("role"), org.get("name"), attrs.get("relationship")]
+            lines.append(f"- {e['name']}: " + " | ".join(v for v in fields if v))
+        path = f"inbox/{day}/{aid}.md"
+        (world_dir / path).write_text("\n".join(lines) + "\n", encoding="utf-8")
+        received = max(time for time, _ in contacts)
+        updates.append({"id": f"e-{last_event + number:04d}", "type": "artifact.emit",
+                        "t": received, "received_at": received, "artifact": aid, "path": path,
+                        "channel": "note", "title": title, "reveals": [e["id"] for _, e in contacts],
+                        "parent": None, "secrets": [], "noise": False, "challenges": []})
+    return updates
