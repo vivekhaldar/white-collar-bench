@@ -1160,6 +1160,16 @@ def _reported_outcome(pred: dict, item: dict) -> tuple[bool, bool]:
     return asserted, False
 
 
+def _states_linked_decision(text: str, decision: dict) -> bool:
+    for clause in re.split(r"[;.!?\n]", normalize_marked(text)):
+        verdict = re.search(r"\b(?:decided|chose|selected|adopted|approved)\b", clause)
+        if verdict and not negated(clause, verdict.start()) and any(
+            phrase_spans(clause, kw) for kw in decision.get("keywords", [])
+        ):
+            return True
+    return False
+
+
 def grade_change(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tuple[float, dict]:
     """F1 over distinct predictions and events, allowing a confirmed same-thread bundle."""
     pred, gold = list(answer.get("items") or []), list((q.get("gold") or {}).get("items") or [])
@@ -1176,11 +1186,14 @@ def grade_change(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tupl
         if start is None or (start in matched) == (end in matched):
             continue
         i = matched[end] if end in matched else matched[start]
+        if pred[i].get("date") and pred[i]["date"] != item.get("date"):
+            continue
         asserted, explicit = _reported_outcome(pred[i], item)
         if not asserted or ((i, end) not in confirmed and not explicit):
             continue
         # Completion entails creation on the same loop. A decision must be stated too.
-        if gold[start].get("type") == "decision.make" and (i, start) not in confirmed:
+        if (gold[start].get("type") == "decision.make" and (i, start) not in confirmed
+                and not _states_linked_decision(pred[i].get("text", ""), gold[start])):
             continue
         extra = start if end in matched else end
         pairs.append((i, extra))

@@ -14,7 +14,7 @@ def test_handoff_and_decision_bundles():
     items = {g["event"]: g for g in build_question(spec, world, state)["gold"]["items"]}
     for first, last, text in [
         ("e-0218", "e-0232", "Marten RACI chart confirmed with Yasmin (done)"),
-        ("e-0196", "e-0197", "Decided approach C for the Marten requirements matrix; dropped the Marten rollout checklist"),
+        ("e-0196", "e-0197", "Decided approach C; rollout checklist dropped"),
     ]:
         assert items[last]["paired_event"] == first
         question = {"gold": {"items": [items[first], items[last]]}}
@@ -25,3 +25,5 @@ def test_handoff_and_decision_bundles():
         score, _ = grade_change({"gold": {"items": [items[first], unrelated]}}, answer, HeuristicJudge(), None)
         assert score < 1
 
+        wrong_day = {"items": [{**answer["items"][0], "date": "1999-01-01"}]}
+        assert grade_change(question, wrong_day, HeuristicJudge(), None)[0] < 1
