@@ -9,7 +9,8 @@ The runs are the eight lite runs of 2026-11-21 (Claude Opus/Sonnet/Haiku 5.5 and
 Tracks A and B, Pi harness), packed in results/2026-11-21-lite-model-comparison/regression/
 lite-runs.tar.gz with only what scoring reads (answers, run.json, the checkpoint snapshot).
 Panel decisions come from the committed judge caches (rescored/v6-panel/*.jsonl.gz), so a
-rescore makes no model calls unless a change alters what the judge is asked. Those decisions
+rescore makes no model calls. Changed prompts from the high-severity fixes use the independent
+Luna/Sol in-session votes in regression/subscription-panel.jsonl. Other missing decisions
 are counted as `uncached`; with --allow-calls they are fetched (needs OPENAI_BASE_URL and
 OPENAI_API_KEY for the panel models, see docs/judge.md) and the cache is extended.
 
@@ -22,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import gzip
+import hashlib
 import json
 import sys
 import tarfile
@@ -33,7 +35,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 import wcb.grade.score as S  # noqa: E402
-from wcb.grade.judge import LLMJudge, PanelJudge, majority, parse_verdict, parse_yes_no  # noqa: E402
+from wcb.grade.judge import SYSTEM_PROMPT, LLMJudge, PanelJudge, majority, parse_verdict, parse_yes_no  # noqa: E402
 from wcb.grade.score import Accumulator, RunPlan, load_run_meta, score_world  # noqa: E402
 from wcb.llm.client import make_client  # noqa: E402
 
@@ -43,6 +45,23 @@ BASELINE = HERE / "regression/baseline.json"
 CACHES = HERE / "rescored/v6-panel"
 MODELS = ("opus", "sonnet", "haiku", "sol")
 PANEL = ("openai:claude-sonnet-5.5", "openai:gpt-6.1-sol")
+
+
+class ReplayJudge(LLMJudge):
+    """Look up a replacement panelist's recorded vote only on an original cache miss."""
+
+    def __init__(self, original, replacement, supplement):
+        super().__init__(make_client(original), samples=1)
+        self.replacement = replacement
+        self.supplement = supplement
+
+    def _decide(self, what, prompt, parse, tie_order):
+        if self.cache_key(prompt) not in self._cache:
+            fingerprint = hashlib.sha256((SYSTEM_PROMPT + "\n" + prompt).encode()).hexdigest()
+            row = self.supplement.get(fingerprint)
+            if row and row["kind"] == what and row["prompt"] == prompt:
+                return parse(row["votes"][self.replacement])
+        return super()._decide(what, prompt, parse, tie_order)
 
 
 def weights(rows: list[dict]) -> None:
@@ -76,7 +95,12 @@ def cached_decisions(path: Path) -> dict:
 def rescore(runs: Path, model: str, track: str, allow_calls: bool) -> tuple[dict, int]:
     """Per-question scores {key: score} (agent store) and the number of uncached decisions."""
     cache = cached_decisions(CACHES / f"judge-cache-{model}-track-{track}.jsonl.gz")
-    panel = PanelJudge([LLMJudge(make_client(m), samples=1) for m in PANEL])
+    supplement = {}
+    for line in (HERE / "regression/subscription-panel.jsonl").read_text().splitlines():
+        row = json.loads(line)
+        supplement[row["id"]] = row
+    panel = PanelJudge([ReplayJudge(original, replacement, supplement)
+                        for original, replacement in zip(PANEL, ("gpt-6-luna", "gpt-6.1-sol"), strict=True)])
     for j in panel.panel:
         j._cache.update(cache)
     run = runs / model / f"track-{track}/measured"
