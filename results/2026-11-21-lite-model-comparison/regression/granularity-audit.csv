@@ -1,0 +1,87 @@
+arm,world,question,prediction,event,relation,credited,reason
+opus-a,pilot,q-014,0,e-0198,linked,True,Hosting decision also explicitly drops dedicated-deployment pricing.
+opus-a,pilot,q-014,4,e-0248,linked,False,Ownership-meeting promise also says Lucia is booking it.
+opus-a,pilot,q-014,6,e-0268,linked,False,API-date item separately records the Thursday v2 promise to Dmitri.
+opus-a,gen-s4-w2,q-003,7,e-0162,linked,False,Deadline item also explicitly dates the earlier tentative script offer.
+opus-a,gen-s6-w1,q-003,9,e-0198,unrelated,False,Support-model item separately assigns the timeline send to Andres.
+opus-b,pilot,q-014,0,e-0198,linked,False,Shared-hosting item explicitly stops option-one pricing.
+opus-b,pilot,q-014,7,e-0268,linked,False,API target item also records Mara’s firm Thursday v2 promise.
+opus-b,gen-s2-w1,q-003,1,e-0191,unrelated,False,Cassandra delivery item also explicitly agrees a separate delivery to Thibault.
+opus-b,gen-s6-w1,q-003,2,e-0180,unrelated,False,Access-request item also says Despina took on the slow-page-load investigation.
+opus-b,gen-s6-w1,q-003,6,e-0197,unrelated,False,Target-change item explicitly assigns the support-model send to Losa.
+opus-b,gen-s6-w1,q-003,6,e-0198,unrelated,False,Target-change item explicitly assigns the timeline send to Andres.
+sonnet-a,pilot,q-014,0,e-0198,linked,True,Hosting choice also explicitly drops option-one pricing.
+sonnet-a,pilot,q-014,5,e-0268,linked,False,API target item specifies the Thursday v2 dependency date.
+sonnet-a,pilot,q-014,7,e-0245,linked,False,PIA questionnaire item also explicitly requests a walkthrough.
+sonnet-a,gen-s4-w2,q-003,4,e-0162,unrelated,False,Dictionary promise item separately offers Meera the script next week.
+sonnet-a,gen-s4-w2,q-003,9,e-0182,unrelated,False,Incoming test-plan item also states Meera requested the change request.
+sonnet-a,gen-s2-w1,q-003,2,e-0191,unrelated,False,Cassandra comparison item also names the separate Thibault delivery.
+sonnet-a,gen-s2-w1,q-003,2,e-0182,unrelated,False,Comparison item also explicitly assigns duplicate-notification investigation.
+sonnet-a,gen-s2-w1,q-003,2,e-0192,unrelated,False,Comparison item also explicitly names Cassandra’s equity-impact walkthrough.
+sonnet-a,gen-s2-w1,q-003,3,e-0177,linked,False,Retention deadline item also records the preceding hedged offer.
+sonnet-a,gen-s6-w1,q-003,2,e-0180,unrelated,False,Access-request item also explicitly takes on slow page loads.
+sonnet-a,gen-s6-w1,q-003,7,e-0198,unrelated,False,Losa support-model item also assigns Andres’s timeline.
+sonnet-a,gen-s6-w1,q-003,9,e-0199,unrelated,False,Slow-page-load completion item also explicitly reports API v2 sent.
+sonnet-a,gen-s5-small,q-003,4,e-0141,linked,False,RACI deadline item also explicitly states the undertaking to send it.
+sonnet-b,pilot,q-014,1,e-0251,linked,False,Spec item also explicitly supplies the revised March 10 API date.
+sonnet-b,pilot,q-014,1,e-0268,linked,False,Spec item separately supplies Mara’s March 4 v2 deadline.
+sonnet-b,pilot,q-014,5,e-0245,linked,False,Questionnaire item also explicitly requires the preceding walkthrough.
+sonnet-b,gen-s9-large,q-003,0,e-0234,linked,False,Pricing-comparison promise item also records Adebayo’s November 4 need.
+sonnet-b,gen-s4-w2,q-003,4,e-0182,unrelated,False,Privacy-form item also names Meera’s separate change-request ask.
+sonnet-b,gen-s4-w2,q-003,6,e-0166,unrelated,False,Onboarding item also explicitly records taking the timeout investigation.
+sonnet-b,gen-s4-w2,q-003,6,e-0164,unrelated,False,Onboarding item also explicitly records receiving Darius’s playbook.
+sonnet-b,gen-s1-w1,q-003,2,e-0208,unrelated,False,Jalen memo item also explicitly offers Petra the test plan.
+sonnet-b,gen-s1-w1,q-003,5,e-0232,linked,False,Login item separately reports the RACI chart confirmed.
+sonnet-b,gen-s2-w1,q-003,7,e-0207,unrelated,False,Architecture-diagram delivery item also requests Cassandra’s dashboard access.
+sonnet-b,gen-s3-w1,q-003,1,e-0182,unrelated,False,Bisi action-log item also records the tentative evaluation rubric.
+sonnet-b,gen-s6-w1,q-003,4,e-0199,linked,False,Item matched to the API undertaking explicitly reports delivery/completion.
+haiku-a,pilot,q-014,0,e-0198,linked,True,Hosting choice explicitly drops the dedicated deployment option.
+haiku-a,pilot,q-014,6,e-0268,linked,False,API-date item also specifies the Thursday v2 dependency deadline.
+haiku-a,pilot,q-014,7,e-0245,linked,False,Questionnaire item also explicitly requests a data-flow walkthrough.
+haiku-a,gen-s2-w1,q-003,1,e-0191,unrelated,False,Cassandra comparison item also explicitly accepts sending it to Thibault.
+haiku-a,gen-s2-w1,q-003,4,e-0177,unrelated,False,Notification item also explicitly gives the no-promises retention offer.
+haiku-a,gen-s6-w1,q-003,4,e-0180,unrelated,False,API undertaking item also explicitly takes on slow page loads.
+haiku-a,gen-s6-w1,q-003,9,e-0199,unrelated,False,Page-load completion item also explicitly reports API v2 sent.
+haiku-a,gen-s6-w1,q-003,10,e-0198,unrelated,False,Support-model item also explicitly promises Andres the timeline.
+haiku-b,pilot,q-014,1,e-0198,linked,True,Shared-hosting decision also explicitly stops option-one pricing.
+haiku-b,pilot,q-014,7,e-0268,linked,False,API-date item expressly identifies Thursday v2 as Mara’s commitment.
+haiku-b,gen-s9-large,q-003,1,e-0222,unrelated,False,Adebayo tentative-offer item separately states the promise to Anh.
+haiku-b,gen-s8-w4,q-003,1,e-0167,linked,False,Glossary deadline item also explicitly mentions the next-week offer.
+haiku-b,gen-s2-w1,q-003,2,e-0191,unrelated,False,Cassandra comparison item also names Thibault’s separate expected delivery.
+haiku-b,gen-s5-small,q-003,9,e-0152,unrelated,False,Vendor-comparison item separately says Hiba took on the stale cache.
+sol-a,pilot,q-014,0,e-0198,linked,True,Hosting choice also explicitly drops dedicated-deployment pricing.
+sol-a,pilot,q-014,1,e-0203,unrelated,False,Spec commitment item also expressly commits Hugo’s security package.
+sol-a,pilot,q-014,3,e-0231,unrelated,False,Ownership-discussion item also explicitly reports dashboard lines sent.
+sol-a,pilot,q-014,5,e-0268,linked,False,Revised API target item also explicitly promises stable v2 on March 4.
+sol-a,pilot,q-014,6,e-0245,linked,False,PIA questionnaire item also expressly specifies a preceding walkthrough.
+sol-a,gen-s4-w2,q-003,5,e-0162,linked,False,Script deadline item explicitly recounts the September 6 tentative next-week offer.
+sol-a,gen-s2-w1,q-003,2,e-0191,unrelated,False,Cassandra comparison item explicitly names a separate Thibault delivery.
+sol-a,gen-s2-w1,q-003,4,e-0182,unrelated,False,Equity-walkthrough item also explicitly reports the notification investigation offer.
+sol-a,gen-s2-w1,q-003,7,e-0177,linked,False,Retention deadline item also explicitly retains the preceding tentative offer.
+sol-a,gen-s2-w1,q-003,8,e-0199,unrelated,False,Dashboard-access item also explicitly states Bilal’s distinct revision request.
+sol-a,gen-s6-w1,q-003,1,e-0176,unrelated,False,Andres delivery item explicitly records the separate unaccepted Nathaniel action.
+sol-a,gen-s6-w1,q-003,2,e-0180,unrelated,False,API undertaking item explicitly includes taking on slow-page-load investigation.
+sol-a,gen-s6-w1,q-003,2,e-0181,unrelated,False,API undertaking item explicitly includes Lindiwe’s access-request offer.
+sol-a,gen-s6-w1,q-003,4,e-0197,unrelated,False,Target-change item explicitly assigns sending Losa the support model.
+sol-a,gen-s6-w1,q-003,4,e-0198,unrelated,False,Target-change item explicitly assigns sending Andres the timeline.
+sol-a,gen-s6-w1,q-003,6,e-0199,unrelated,False,Page-load completion item explicitly reports API v2 complete as well.
+sol-a,gen-s5-small,q-003,0,e-0137,unrelated,False,Risk walkthrough item explicitly adds the unaccepted order-set review request.
+sol-a,gen-s5-small,q-003,1,e-0142,unrelated,False,Run-cost delivery item separately reports evaluation-plan revision complete.
+sol-a,gen-s5-small,q-003,6,e-0152,unrelated,False,Comparison-confirmation item explicitly takes responsibility for stale cache.
+sol-b,pilot,q-014,0,e-0198,linked,True,Hosting choice expressly makes dedicated-deployment pricing unnecessary.
+sol-b,pilot,q-014,4,e-0251,linked,False,V2 promise item explicitly records the conditional March 10 API target.
+sol-b,pilot,q-014,5,e-0244,linked,False,Walkthrough item separately specifies the PIA questionnaire due March 12.
+sol-b,gen-s9-large,q-003,1,e-0215,unrelated,False,Anh promise item separately describes the tentative Adebayo offer.
+sol-b,gen-s4-w2,q-003,6,e-0162,linked,False,Script deadline item explicitly recounts the September 6 tentative offer.
+sol-b,gen-s1-w1,q-003,0,e-0197,linked,True,Approach-C decision expressly stops the superseded rollout checklist.
+sol-b,gen-s2-w1,q-003,2,e-0175,unrelated,False,Thibault promise item separately records the Cassandra comparison offer.
+sol-b,gen-s2-w1,q-003,4,e-0177,linked,False,Retention deadline item explicitly includes Dina’s no-promises offer.
+sol-b,gen-s2-w1,q-003,6,e-0199,unrelated,False,Dashboard-access item explicitly includes Bilal’s separate revision request.
+sol-b,gen-s2-w1,q-003,7,e-0182,unrelated,False,Accessibility suggestion item separately records recap-assigned notification work.
+sol-b,gen-s6-w1,q-003,1,e-0184,unrelated,False,Nathaniel soft-offer item separately records the offer to Andres.
+sol-b,gen-s6-w1,q-003,1,e-0190,unrelated,False,Nathaniel soft-offer item separately reports sending Andres map v1.
+sol-b,gen-s6-w1,q-003,2,e-0181,unrelated,False,Page-load investigation item explicitly includes Lindiwe’s access-request offer.
+sol-b,gen-s6-w1,q-003,4,e-0187,linked,False,API completion item explicitly recalls Monday’s undertaking.
+sol-b,gen-s6-w1,q-003,6,e-0197,unrelated,False,Target-change item separately assigns sending Losa the support model.
+sol-b,gen-s6-w1,q-003,6,e-0198,unrelated,False,Target-change item separately assigns sending Andres the timeline.
+sol-b,gen-s5-small,q-003,4,e-0141,linked,False,RACI deadline item explicitly recalls the tentative next-week offer.
