@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 from email import policy
 from email.parser import Parser
@@ -91,3 +92,49 @@ def _confirms_item(item, aid, artifact, source, claim, world):
     return (len(match_tokens(keywords[0])) >= 2 and
             any(contains_phrase(source, s) for s in keywords[1:] if s != keywords[0]))
 
+
+
+def evidence_excerpt(source, claim, limit=1700):
+    """Keep the header and a contiguous passage around the strongest matching line."""
+    if len(source) <= limit:
+        return source
+    words = match_tokens(claim)
+    lines = source.splitlines(keepends=True)
+    anchor = max(range(len(lines)), key=lambda i: len(words & match_tokens(lines[i])))
+    offset = sum(map(len, lines[:anchor]))
+    start = max(0, offset - 250)
+    return source[:260] + "\n[…]\n" + source[start:start + limit - 270]
+
+
+def cited_claim(answer, cite, item):
+    """Retain only units carrying this citation, including any explicit attribution."""
+    units = answer.get("items", []) if item is not None else [
+        u for key in ("items", "claims") for u in answer.get(key, []) if cite in u.get("cites", [])
+    ]
+    if item is not None:
+        units = [units[item]]
+    if not units:
+        units = [answer]
+    parts = [{k: v for k, v in unit.items() if k in
+              {"text", "why", "value", "summary", "note", "counterparty", "status", "date", "due", "owner"} and v}
+             for unit in units]
+    return json.dumps(parts, ensure_ascii=False, sort_keys=True)
+
+
+def evidence_vote(question, answer, cite, item, ctx, judge, record_id):
+    """Adjudicate delivered evidence using the question and the actual attached claim."""
+    if ctx.world is None or not hasattr(judge, "citation"):
+        return False
+    ids = [cite] if cite in ctx.delivered else []
+    if record_id and record_id != "people/me":
+        ids = sorted((ctx.record_refs(record_id) or set()) & ctx.delivered)
+    if not ids:
+        return False
+    claim = cited_claim(answer, cite, item)
+    if not claim or claim == "[{}]":
+        return False
+    query = question["text"]
+    words = match_tokens(query + " " + claim)
+    passages = [evidence_excerpt(_source(ctx.world, aid), query + " " + claim) for aid in ids]
+    passages = sorted(filter(None, passages), key=lambda p: -len(words & match_tokens(p)))
+    return bool(passages and judge.citation(query, claim, "\n\n".join(passages[:3])))

@@ -48,7 +48,7 @@ from pathlib import Path
 from typing import Any
 
 from wcb.contract.answers import check_answer
-from wcb.grade.citation_evidence import additional_sources
+from wcb.grade.citation_evidence import additional_sources, evidence_vote
 from wcb.grade.judge import VERDICTS, Judge, match_tokens, padding_penalty
 from wcb.grade.matching import assign, confirmed_edges, distinct_edges, match_items
 from wcb.questions.rubric import LOOP_STATUS_WORDS, STATUS_SYNONYMS
@@ -440,6 +440,7 @@ def score_question(q: dict, answer: dict | None, judge: Judge, ctx: ScoreContext
             item_support=matched_item_support(q, details),
             subjects=question_subjects(q),
             extra=additional_sources(q, answer, details, ctx),
+            adjudicate=lambda cite, item: evidence_vote(q, answer, cite, item, ctx, watched, store_record_id(cite)),
         )
     except GRADER_ERRORS as e:
         if watched.raised:
@@ -1423,6 +1424,7 @@ def citation_precision(
     item_support: dict[int, list[str]] | None = None,
     subjects: set[str] | None = None,
     extra: dict[int, set[str]] | None = None,
+    adjudicate=None,
 ) -> tuple[float | None, dict]:
     """c = valid cites / counted cites, 0 when there are none; plus per-cite diagnostics.
 
@@ -1484,6 +1486,9 @@ def citation_precision(
                 pooled_extra if item is None else extra.get(item, set())
             ):
                 why = "valid"
+            if sup and why in {"not_in_support", "wrong_item", "record_unsupported"} and adjudicate:
+                if adjudicate(cite, item):
+                    why = "valid"
             if why == "valid":
                 valid += 1
             else:

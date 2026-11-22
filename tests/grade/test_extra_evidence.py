@@ -29,3 +29,21 @@ def test_track_b_workspace_note_has_no_vote(tmp_path):
     assert score(["commitments.md#A20"]) == 0
     assert score(["missing.md", "ch-0001"]) == 0.5
 
+
+
+def test_panel_checks_only_the_cited_claim_and_delivered_source():
+    from wcb.grade.citation_evidence import evidence_vote
+
+    world = World.load(Path("worlds/dev/gen-s9-large"))
+    state = state_at(world, world.checkpoint("cp1")["date"])
+    ctx = ScoreContext.from_state(world, state)
+    q = {"type": "priority", "text": "What is on my calendar?"}
+    answer = {"items": [{"text": "Walk Mathieu through the Cirrus budget justification", "cites": ["ca-0008"]},
+                        {"text": "Unrelated item", "cites": []}]}
+    class CheckPacket:
+        def citation(self, question, claim, source):
+            assert question == q["text"] and "Unrelated" not in claim
+            return "Mathieu" in claim and "Cirrus budget justification" in source
+    assert evidence_vote(q, answer, "ca-0008", 0, ctx, CheckPacket(), None)
+    assert not evidence_vote(q, answer, "ca-9999", 0, ctx, CheckPacket(), None)
+
