@@ -1478,7 +1478,7 @@ def citation_precision(
                 and ctx.about.get(cite, set()) & subjects
             ):
                 why = "valid"
-            if why in {"wrong_item", "not_in_support"} and cite in (
+            if why == "not_in_support" and cite in (
                 pooled_extra if item is None else extra.get(item, set())
             ):
                 why = "valid"
