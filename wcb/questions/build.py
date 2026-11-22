@@ -21,7 +21,8 @@ from typing import Any
 
 from wcb.questions.rubric import normalize_extra_item, number_items
 from wcb.questions.support import widen_support
-from wcb.questions.templates import TEMPLATES, support_union
+from wcb.questions.templates import TEMPLATES, attr_support, support_union
+from wcb.questions.transcript_evidence import conflicting_blocker_sources
 from wcb.util.io import read_yaml
 from wcb.world.model import World
 from wcb.world.state import state_at
@@ -56,6 +57,18 @@ def build_question(spec: dict[str, Any], world: World, state: dict) -> dict[str,
     answerable, gold, support = template.gold(params, world, state)
     if answerable and spec.get("extra_rubric") and "rubric" in gold:
         gold, support = _with_extra_rubric(gold, spec["extra_rubric"], state, support)
+    if answerable and (name == "project_status" or
+                       (name == "project_attr" and params.get("attribute") == "blocker")):
+        conflict = conflicting_blocker_sources(world, state, params["project"])
+        if conflict and name == "project_attr":
+            gold = {**gold, "uncertain": True, "accept": [*gold.get("accept", []),
+                    "nothing", "none", "no blockers", "no current blockers", "no currently reported blockers"]}
+            support = support_union(state, support, conflict)
+        elif conflict:
+            disputed = set(attr_support(world, state, params["project"], "blocker"))
+            gold = {**gold, "rubric": [r for r in gold["rubric"] if r.get("aspect") != "blocker"
+                    and not (r.get("aspect") == "latest_change" and disputed & set(r["support"])
+                             and "block" in r["text"].lower())]}
     if answerable:
         gold, support = widen_support(template.qtype, gold, support, world, state)
     return {

@@ -413,3 +413,5 @@ Every answer cites its gold `support`. With `store_ids` (`wcb.store.oracle.recor
 A worker offering to try is optional in lists, changes and rubrics, and cannot be a required priority until the worker endorses the commitment. A third party supplying a date does not establish endorsement.
 
 A proposed change is described using its original deliverable and endorsement at creation, even if someone accepts it later. A prediction that reports it as an agreed task does not match the proposal.
+
+When a later generated transcript denies a blocker on the same project, either documented reading or abstention is accepted until a newer blocker report resolves the conflict. The disputed blocker is omitted from status rubrics. Unrelated claims remain graded.

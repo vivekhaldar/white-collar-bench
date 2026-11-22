@@ -412,6 +412,9 @@ def score_question(q: dict, answer: dict | None, judge: Judge, ctx: ScoreContext
         return result(
             valid=True, abstained=abstained, base=s, citation=None, score=s, details={"note": note}
         )
+    if abstained and q.get("gold", {}).get("uncertain"):
+        return result(valid=True, abstained=True, base=1.0, citation=None, score=1.0,
+                      details={"note": "source evidence is inconclusive"})
     if abstained:
         return result(
             valid=True,
