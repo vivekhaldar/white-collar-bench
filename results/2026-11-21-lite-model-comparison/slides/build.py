@@ -18,7 +18,41 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 DATA = json.loads((HERE.parent / "data.json").read_text())["models"]
 ORDER = ["Opus 5.5", "Sonnet 5.5", "Haiku 5.5", "GPT-6.1 Sol"]
-COLOR = {"Opus 5.5": "#d97757", "Sonnet 5.5": "#c9a227", "Haiku 5.5": "#7fb37a", "GPT-6.1 Sol": "#5b8def"}
+ROOT = HERE.parents[2]
+
+
+def earlier_runs() -> dict:
+    """DeepSeek V4.1 Flash and Qwen3.8-27B: full runs (Pi 1.5.2) rescored as lite from their
+    saved reports by scripts/suite_fidelity.py's `view` (older scorer and gold v4 / v3, so not
+    strictly comparable). Cost: agent sessions of the lite days plus Track A oracle sessions."""
+    import sys
+
+    sys.path[:0] = [str(ROOT), str(ROOT / "scripts")]
+    from suite_fidelity import view
+
+    from wcb.suites import SUITES
+
+    out = {}
+    for label, d in (("DeepSeek V4.1 Flash", "2026-11-11-deepseek-v4.1-flash-1017-pi"),
+                     ("Qwen3.8-27B", "2026-11-11-qwen3.8-27b-pi")):  # fmt: skip
+        r = {"scores": {}, "cost": 0.0}
+        for t in "ab":
+            rep = json.loads((ROOT / "results" / d / f"scores-track-{t}.json").read_text())
+            su = SUITES["lite"]
+            score, cost = view(rep, su)
+            worlds = {w["id"]: w for w in rep["worlds"]}
+            last = {w: worlds[w]["days"][su.max_days - 1] for w in su.world_ids}
+            cps = {(w, c["id"]) for w in last for c in worlds[w]["checkpoints"] if c["date"] <= last[w]}
+            cost += sum(q["cost_usd"] or 0 for q in rep["efficiency"]["per_query_session"]
+                        if q.get("store") == "oracle" and (q["world"], q["checkpoint"]) in cps)  # fmt: skip
+            r["scores"][t], r["cost"] = score, r["cost"] + cost
+        out[label] = r
+    return out
+
+
+EARLIER = earlier_runs()
+COLOR = {"Opus 5.5": "#d97757", "Sonnet 5.5": "#c9a227", "Haiku 5.5": "#7fb37a", "GPT-6.1 Sol": "#5b8def",
+         "DeepSeek V4.1 Flash": "#b48ead", "Qwen3.8-27B": "#88c0d0"}
 INK, MUTED, GRID, BG = "#f4f1ea", "#9a968c", "#3a3833", "#1c1b19"
 W, H = 1600, 900  # slide coordinate system
 
@@ -87,33 +121,50 @@ def grouped_scores():
     return svg("".join(out), w, h)
 
 
-def scatter_cost():
-    """Lite cost (log x) vs Track A score."""
+def frontier(track: str):
+    """Score vs cost of one lite run (A + B, log x) for all six runs, with the Pareto frontier."""
     import math
 
-    w, h = 1400, 600
-    left, right, top, bottom = 110, 60, 30, 90
+    pts = [(m, DATA[m]["usage"]["lite"]["cost_billed_usd"], DATA[m]["scores"][f"lite-{track}"]["rescored"], True)
+           for m in ORDER]  # fmt: skip
+    pts += [(m, r["cost"], r["scores"][track], False) for m, r in EARLIER.items()]
+    w, h = 1400, 560
+    left, right, top, bottom = 110, 60, 70, 90
     xlo, xhi = math.log10(2), math.log10(100)
-    ylo, yhi = 70, 92
+    ys_ = [p[2] for p in pts]
+    ylo, yhi = 5 * math.floor(min(ys_) / 5 - 0.6), 5 * math.ceil(max(ys_) / 5 + 0.4)
     xs = lambda c: left + (w - left - right) * (math.log10(c) - xlo) / (xhi - xlo)  # noqa: E731
     ys = lambda v: top + (h - top - bottom) * (yhi - v) / (yhi - ylo)  # noqa: E731
     out = []
     for c in (2, 5, 10, 20, 50, 100):
         out.append(f'<line x1="{xs(c):.1f}" x2="{xs(c):.1f}" y1="{top}" y2="{h - bottom}" stroke="{GRID}"/>')
         out.append(t(xs(c), h - bottom + 40, f"${c}", 26, MUTED, "middle"))
-    for v in range(70, 93, 5):
+    for v in range(ylo, yhi + 1, 5):
         out.append(f'<line x1="{left}" x2="{w - right}" y1="{ys(v):.1f}" y2="{ys(v):.1f}" stroke="{GRID}"/>')
         out.append(t(left - 14, ys(v) + 9, v, 24, MUTED, "end"))
     out.append(t((left + w - right) / 2, h - 12, "Cost of one lite run, Tracks A + B (log scale)", 26, MUTED, "middle"))
-    out.append(t(30, top + 10, "Track A", 26, MUTED, "start"))
-    for m in ORDER:
-        c = DATA[m]["usage"]["lite"]["cost_billed_usd"]
-        s = DATA[m]["scores"]["lite-a"]["rescored"]
-        x, y = xs(c), ys(s)
-        out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="22" fill="{COLOR[m]}"/>')
-        dx, anchor = (34, "start") if m != "Opus 5.5" else (-34, "end")
-        out.append(t(x + dx, y - 6, m, 34, INK, anchor, 600))
-        out.append(t(x + dx, y + 30, f"${c:.2f} · {s:.1f}", 26, MUTED, anchor))
+    best, front = -1.0, []
+    for p in sorted(pts, key=lambda p: p[1]):
+        if p[2] > best:
+            best = p[2]
+            front.append(p)
+    path = " ".join(f"{'M' if i == 0 else 'L'}{xs(p[1]):.1f},{ys(p[2]):.1f}" for i, p in enumerate(front))
+    out.append(f'<path d="{path}" fill="none" stroke="{INK}" stroke-width="4" stroke-dasharray="10 8" opacity=".6"/>')
+    # (dx, dy of the name line, anchor): above, below or to one side, so no labels collide
+    place = {"a": {"Opus 5.5": (32, -6, "start"), "DeepSeek V4.1 Flash": (0, -58, "middle"),
+                   "Sonnet 5.5": (0, 54, "middle")},
+             "b": {"Opus 5.5": (32, -6, "start"), "DeepSeek V4.1 Flash": (0, 54, "middle"),
+                   "Sonnet 5.5": (0, -58, "middle")}}[track]
+    place["Haiku 5.5"] = (0, 54, "middle")
+    for m, c, sc, ours in pts:
+        x, y = xs(c), ys(sc)
+        if ours:
+            out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="20" fill="{COLOR[m]}"/>')
+        else:
+            out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="17" fill="none" stroke="{COLOR[m]}" stroke-width="6"/>')
+        dx, dy, anchor = place.get(m, (32, -6, "start"))
+        out.append(t(x + dx, y + dy, m, 32, INK, anchor, 600))
+        out.append(t(x + dx, y + dy + 32, f"${c:.2f} · {sc:.1f}", 24, MUTED, anchor))
     return svg("".join(out), w, h)
 
 
@@ -177,7 +228,7 @@ def turns_dots():
         out.append(f'<line x1="{xs(v):.1f}" x2="{xs(v):.1f}" y1="10" y2="{h - 60}" stroke="{GRID}"/>')
         out.append(t(xs(v), h - 24, v, 24, MUTED, "middle"))
     for i, m in enumerate(["Sonnet 5.5", "Opus 5.5", "GPT-6.1 Sol", "Haiku 5.5"]):
-        y = 50 + i * 110
+        y = 70 + i * 110
         out.append(t(label_w - 24, y + 12, m, 34, INK, "end", 500))
         for s in DATA[m]["ingest_sessions"]:
             out.append(f'<circle cx="{xs(s["turns"]) + rng.uniform(-4, 4):.1f}" cy="{y + rng.uniform(-24, 24):.1f}" r="7" fill="{COLOR[m]}" opacity=".75"/>')
@@ -192,7 +243,7 @@ def tokens_split():
     parts = [("cache_read_input_tokens", "cache read", 1.0), ("cache_creation_input_tokens", "cache write", 0.7),
              ("input_tokens", "uncached input", 0.5), ("output_tokens", "output", 0.3)]  # fmt: skip
     w, h = 1400, 520
-    label_w, span = 300, 950
+    label_w, span = 300, 760
     tot = {m: sum(DATA[m]["usage"]["lite"]["tokens"][k] + DATA[m]["usage"]["lite"]["oracle_tokens"][k]
                   for k, _, _ in parts) for m in ORDER}  # fmt: skip
     vmax = max(tot.values())
@@ -312,6 +363,48 @@ def harness_diagram():
     return svg(defs + "".join(out), w, h)
 
 
+#: Opus 5.5 lost points by cause, lite, rescored (results/2026-11-21-claude-opus-5.5-pi-lite/ERROR-AUDIT.md)
+OPUS_LOSS = [("Model error", 2.3, 2.8, "#d97757"), ("Grader too strict", 5.6, 16.0, "#c9a227"),
+             ("Arguable gold", 3.0, 5.6, "#88c0d0"), ("Citation penalty", 1.5, 3.2, "#9a968c")]
+
+
+def opus_loss():
+    """Opus's lost points per track, stacked by cause."""
+    w, h = 1400, 520
+    label_w, span, vmax = 220, 1000, 28
+    out = []
+    for i, (tr, idx, score) in enumerate([("Track A", 1, 87.5), ("Track B", 2, 72.4)]):
+        y = 60 + i * 190
+        out.append(t(label_w - 24, y + 50, tr, 36, INK, "end", 600))
+        x = label_w
+        for _, a, b, color in OPUS_LOSS:
+            v = (a, b)[idx - 1]
+            bw = span * v / vmax
+            out.append(f'<rect x="{x:.1f}" y="{y}" width="{bw:.1f}" height="80" fill="{color}"/>')
+            if bw > 60:
+                out.append(t(x + bw / 2, y + 52, f"{v:.1f}", 30, BG, "middle", 700))
+            x += bw
+        out.append(t(x + 18, y + 52, f"−{100 - score:.1f}", 36, INK, "start", 700))
+    for k, (name, _, _, color) in enumerate(OPUS_LOSS):
+        x = label_w + k * 290
+        out.append(f'<rect x="{x}" y="{h - 70}" width="28" height="28" rx="5" fill="{color}"/>')
+        out.append(t(x + 40, h - 47, name, 28, INK))
+    return svg("".join(out), w, h)
+
+
+def earlier_table():
+    rows = [(m, DATA[m]["scores"]["lite-a"]["rescored"], DATA[m]["scores"]["lite-b"]["rescored"],
+             DATA[m]["usage"]["lite"]["cost_billed_usd"], "") for m in ORDER]  # fmt: skip
+    rows += [(m, r["scores"]["a"], r["scores"]["b"], r["cost"], "*") for m, r in EARLIER.items()]
+    rows.sort(key=lambda r: -r[1])
+    head = '<tr><th></th><th>Track A</th><th>Track B</th><th>Lite cost</th></tr>'
+    body = "".join(f'<tr><td style="color:{COLOR[m]}">{esc(m)}{mark}</td><td>{a:.1f}</td><td>{b:.1f}</td><td>${c:.2f}</td></tr>'
+                   for m, a, b, c, mark in rows)  # fmt: skip
+    return (f'<table class="tbl">{head}{body}</table>'
+            '<div class="foot">* Full runs from 11 Nov rescored as lite; older scorer (gold v4 DeepSeek, v3 Qwen), '
+            'no judge fixes. Full-run scores: DeepSeek 84.6 / 67.5, Qwen 72.3 / 55.0.</div>')
+
+
 # ------------------------------------------------------------------ slides
 def quote(who, text, score, color, verdict=None):
     v = f'<div class="verdict">{esc(verdict)}</div>' if verdict else ""
@@ -336,8 +429,8 @@ def main() -> None:
 
     slides.append(
         '<section class="slide title"><div class="kicker">white-collar-bench</div>'
-        '<h1 class="hero">Four models, one memory benchmark,<br>$88 for all four</h1>'
-        '<div class="sub">WCB-lite results · Claude Opus, Sonnet and Haiku 5.5 · GPT-6.1 Sol · Pi harness · 21 Nov 2026</div></section>'
+        '<h1 class="hero">Six models, one memory benchmark,<br>lite runs from $3.53</h1>'
+        '<div class="sub">WCB-lite · Claude Opus, Sonnet, Haiku 5.5 · GPT-6.1 Sol · DeepSeek V4.1 Flash · Qwen3.8-27B · Pi harness · Nov 2026</div></section>'
     )
     slides.append(slide("The task: be someone's working memory", harness_diagram(),
                         "Synthetic knowledge-worker worlds: projects, people, commitments, decisions"))
@@ -356,9 +449,13 @@ def main() -> None:
 
     slides.append(slide("Opus and Sonnet tie at the top", grouped_scores(),
                         "WCB-lite, rescored · bars: Track A solid, Track B faded · whiskers: 95% CI over worlds"))
-    slides.append(slide("Opus costs 3× Sonnet for a gain inside the noise", scatter_cost(),
-                        "Differences under ~3 points on lite are ties"))
     slides.append(slide("One lite run, A + B", lite_cost_bars(), ""))
+    slides.append(slide("Track A: Opus buys 2 points for 3.3× the cost", frontier("a"),
+                        "Dashed: best score per budget · hollow: earlier runs, older scorer"))
+    slides.append(slide("Track B: the same frontier", frontier("b"),
+                        "Dashed: best score per budget · hollow: earlier runs, older scorer"))
+    slides.append(slide("Six models on lite", earlier_table(),
+                        "DeepSeek and Qwen: earlier full runs on the same harness, rescored as lite from their reports"))
     slides.append(slide("Answering is easy. Remembering is hard.", stacked_ingest(),
                         "Ring: score from a perfect memory · dot: score from the model's own memory"))
     slides.append(slide("Without a memory contract, every model drops 13–17 points", track_gap(),
@@ -414,6 +511,8 @@ def main() -> None:
                                 "A real error: a finished loop instead of the open one. Pilot world, the hardest for everyone."),
                         "Track A · pilot world"))
 
+    slides.append(slide("Why Opus isn't at 100: mostly the grader", opus_loss(),
+                        "Points Opus lost, by cause · an LLM judge scores the same answers 89.9 / 85.0"))
     slides.append(slide("What all four share", '<div class="cards">'
                         + "".join(f'<div class="card"><div class="cn">{esc(a)}</div><div class="cd">{esc(b)}</div></div>'
                                   for a, b in [("Never invent", "Unanswerable questions: 1.00 for every model"),
@@ -423,7 +522,7 @@ def main() -> None:
                         + "</div>"))
     slides.append(slide("Takeaways", '<ol class="take">'
                         '<li><b>Lite works.</b> Same ranking as full runs at ~20% of the cost.</li>'
-                        '<li><b>Sonnet is the sweet spot.</b> Opus ties it at 3.3× the price.</li>'
+                        '<li><b>Sonnet is the Claude sweet spot.</b> Opus ties it at 3.3× the price; DeepSeek is competitive.</li>'
                         '<li><b>Memory, not reasoning, separates models.</b></li>'
                         '<li><b>Read the failures.</b> Two of them were grader bugs.</li></ol>'))
 
@@ -470,6 +569,10 @@ h1 { font-size: 64px; line-height: 1.1; margin: 0 0 12px; font-weight: 700; lett
 .card .cn { font-size: 44px; font-weight: 700; } .card .cd { font-size: 34px; color: var(--muted); margin-top: 10px; }
 .take { font-size: 50px; line-height: 1.35; padding-left: 60px; margin: 0; } .take li { margin: 14px 0; }
 .take b { color: #ffd37a; }
+.tbl { font-size: 40px; border-collapse: collapse; width: 100%; }
+.tbl th { color: var(--muted); font-weight: 500; font-size: 28px; text-align: right; padding: 8px 24px; }
+.tbl td { padding: 10px 24px; text-align: right; border-top: 2px solid #3a3833; font-variant-numeric: tabular-nums; }
+.tbl td:first-child, .tbl th:first-child { text-align: left; font-weight: 700; }
 #n { position: fixed; right: 18px; bottom: 12px; color: #666; font: 14px sans-serif; }
 @media print { html, body { overflow: visible; background: var(--bg); }
   #stage { position: static; transform: none !important; } .slide { position: relative; display: flex !important;

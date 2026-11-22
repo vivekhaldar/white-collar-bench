@@ -34,6 +34,9 @@ Points lost on Track A: 12.5 in total (3.1 from 4 zero-scored answers, 7.8 parti
 
 ## Error analysis
 
+**A full audit of every lost point is in [ERROR-AUDIT.md](ERROR-AUDIT.md).** Opus's own errors cost about 2.3 points on Track A and 2.8 on Track B. The rest is the heuristic grader (5.6 / 16.0), arguable gold (3.0 / 5.6) and citation penalties (1.5 / 3.2). The LLM judge scores the same answers 89.9 / 85.0; its decisions are cached in `llm-judge/`.
+
+
 ### 1. Change questions are still the weakest type, but Opus is best at them
 
 Change questions score 0.52 on A and 0.43 on B, against 0.38 / 0.36 for Sonnet and 0.19 / 0.17 for Sol. Even with the perfect oracle store Opus gets only 0.76. Two patterns:

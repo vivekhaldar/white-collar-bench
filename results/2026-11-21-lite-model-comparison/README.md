@@ -4,7 +4,7 @@
 
 All four runs used the same harness (Pi 1.5.2 with the `pi_litellm.py` wrapper), the same [WCB-lite suite](../../docs/lite.md) (11 public worlds, two episode days, one repeat), gold v5, medium reasoning effort and a LiteLLM proxy. They are the closest thing to a controlled model comparison in `results/`. All worlds, people and organizations are synthetic.
 
-Per-run reports: [Haiku and Sonnet](../2026-11-21-claude-5.5-pi-lite/README.md), [Opus](../2026-11-21-claude-opus-5.5-pi-lite/README.md), [Sol](../2026-11-21-gpt-6.1-sol-pi-lite/README.md). The deck for presenting these results is [`slides/`](slides/index.html).
+Per-run reports: [Haiku and Sonnet](../2026-11-21-claude-5.5-pi-lite/README.md), [Opus](../2026-11-21-claude-opus-5.5-pi-lite/README.md), [Sol](../2026-11-21-gpt-6.1-sol-pi-lite/README.md). The deck for presenting these results is [`slides/index.html`](slides/index.html) (PDF: [`slides/wcb-lite-results.pdf`](slides/wcb-lite-results.pdf)). It also shows DeepSeek V4.1 Flash and Qwen3.8-27B, whose earlier full runs are rescored as lite from their saved reports (older scorer and gold).
 
 ## Scores
 
@@ -54,6 +54,10 @@ The contract and generator still disagree on rule 7. Fixing the generator (rende
 - **Haiku is cheap per token but not per task.** It takes 3× Sonnet's turns and 5× its output, reading files piece by piece. Low prices still make it the cheapest run by far, and it was slower than Sonnet in wall time.
 - **Opus writes more than Sonnet and keeps the best memory.** Its answers are long and explanatory, which helps on change questions (best of the four) and hurts where the strict matcher reads explanation as a different item (Track B priority).
 - **Sol is the most literal and the most verbose.** It follows contract rule 7 most strictly, writes the longest answers and list items, and has the weakest store (ingestion cost 12.1).
+
+## Why the best model is not near 100
+
+An [audit of every point Opus lost](../2026-11-21-claude-opus-5.5-pi-lite/ERROR-AUDIT.md) finds its own errors cost only about 2.3 points on A and 2.8 on B. The heuristic grader costs 5.6 / 16.0, arguable gold items 3.0 / 5.6 and citation penalties 1.5 / 3.2. An LLM judge (Opus 5.5, so an upper estimate) scores the same answers 89.9 / 85.0. Scores near the top of lite therefore measure the grader as much as the model; use the LLM judge when comparing frontier models.
 
 ## What all four get wrong
 
