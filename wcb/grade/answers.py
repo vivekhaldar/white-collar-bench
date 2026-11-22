@@ -626,9 +626,11 @@ def relationship_matches(text: str, value: str) -> bool:
     if not pattern or hedge_words(text):
         return False
     # A trailing qualification may identify the colleague's role or organization.
-    head, _, tail = re.split(r"(:| \(| at )", normalize(text).rstrip(". "), maxsplit=1) if re.search(
-        r":| \(| at ", normalize(text)) else (normalize(text).rstrip(". "), "", "")
+    parts = re.split(r":| \(| at ", normalize(text).rstrip(". "), maxsplit=1)
+    head, tail = parts[0], parts[1] if len(parts) > 1 else ""
     if re.search(r"\b(?:or|instead|actually|but|not|my manager|my boss|my direct report)\b", tail):
+        return False
+    if any(re.search(r"\b" + label + r"\b", tail) for label in RELATIONSHIP_DESCRIPTIONS if label != value):
         return False
     return re.fullmatch(pattern, head.strip()) is not None
 
