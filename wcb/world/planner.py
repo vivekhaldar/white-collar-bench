@@ -38,7 +38,7 @@ from wcb.world.names import (
     person_surface_forms,
 )
 
-GENERATOR_VERSION = 1
+GENERATOR_VERSION = 2
 
 CHALLENGE_TAGS = (
     "supersession", "reversal", "alias", "name_collision", "new_entity", "duplicate_signal",
@@ -362,6 +362,7 @@ def make_plan(
     world_id: str | None = None,
     start: str | None = None,
     setting: str | None = None,
+    version: int = GENERATOR_VERSION,
 ) -> dict:
     """The plan (plan.yaml content) for a world. Deterministic in its arguments.
 
@@ -378,7 +379,11 @@ def make_plan(
     if parse_date(start).weekday() != 0:
         raise ValueError(f"start {start} is not a Monday")
     rng = random.Random(f"wcb-plan:{seed}:{size}:{weeks}")
-    return _Planner(rng, seed, weeks, size, world_id or f"gen-s{seed}-w{weeks}", start, setting).build()
+    if version not in (1, GENERATOR_VERSION):
+        raise ValueError(f"unsupported generator version: {version}")
+    plan = _Planner(rng, seed, weeks, size, world_id or f"gen-s{seed}-w{weeks}", start, setting).build()
+    plan["generator"]["version"] = version
+    return plan
 
 
 def seed_start_monday(seed: int) -> str:
@@ -419,7 +424,7 @@ class _Planner:
         cadences = self._cadences()
         challenges = self._challenges()
         return {
-            "plan_version": GENERATOR_VERSION,
+            "plan_version": 1,
             "world_id": self.world_id,
             "generator": {"kind": "wcb-gen", "version": GENERATOR_VERSION, "seed": self.seed,
                           "size": self.size, "weeks": self.weeks},

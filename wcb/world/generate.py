@@ -38,6 +38,7 @@ def generate_world(
     llm: bool = False,
     llm_model: str | None = None,
     build: bool = True,
+    version: int = GENERATOR_VERSION,
 ) -> Path:
     """Generate a world into `out_dir` and return its path.
 
@@ -60,7 +61,7 @@ def generate_world(
         if (out / name).is_dir():
             shutil.rmtree(out / name)
 
-    plan = make_plan(seed, weeks=weeks, size=size, world_id=world_id)
+    plan = make_plan(seed, weeks=weeks, size=size, world_id=world_id, version=version)
     sim = simulate(plan, seed)
     rewriter = _rewriter(llm, llm_model)
     emits, ctx = render_world(plan, sim, out, seed=seed, rewriter=rewriter)
@@ -68,7 +69,7 @@ def generate_world(
     meta = dict(sim.meta)
     meta["generator"] = {
         "kind": "wcb-gen",
-        "version": GENERATOR_VERSION,
+        "version": version,
         "seed": seed,
         "weeks": weeks,
         "size": size,

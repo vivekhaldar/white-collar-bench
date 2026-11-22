@@ -233,3 +233,5 @@ The generator tests (`tests/generator/`) generate seeds 0, 1 and 2 at sizes smal
 - **Unrecorded meetings** leave no artifact at all; the invite, when there was one, is their only trace.
 - **Recaps' wrong lines** never contradict gold (owners, due dates and statuses come from world events); they misspell names, add an attendee or invent a follow-up meeting.
 - **The LLM rewrite** covers email bodies only and is not exercised by the default test suite beyond a fake client.
+
+Generator version 2 records hedged offers as unaccepted. The ten published dev inputs and the archived runs use version 1. Their reproduction script requests that version explicitly.

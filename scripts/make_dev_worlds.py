@@ -63,7 +63,7 @@ def main() -> int:
             if not a.check and dest.exists():
                 shutil.rmtree(dest)
             generate_world(seed=seed, weeks=weeks, size=size, world_id=wid, out_dir=dest,
-                           build=not a.check)
+                           build=not a.check, version=1)
             if a.check:
                 diff = _differs(a.out / wid, dest) if (a.out / wid).is_dir() else ["(missing)"]
                 print(f"{wid}: {'differs: ' + ', '.join(diff[:5]) if diff else 'matches'}")

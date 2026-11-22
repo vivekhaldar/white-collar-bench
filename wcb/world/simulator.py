@@ -1184,14 +1184,16 @@ class _Sim:
         if comm.kind == "meeting" and accepted and debtor != self.W and debtor not in comm.participants \
                 and len(comm.participants) >= 3:
             comm.participants.append(debtor)  # whoever takes on an action was in the room
+        if not how:
+            hedge = debtor == self.W and beat.kind == "task" and basis in ("sent", "reported")
+            how = "hedged" if (hedge and self.rng.random() < 0.15) else "direct"
+        if how == "hedged" and self.plan["generator"]["version"] >= 2:
+            accepted = False
         lp = self._commit(t, what=what, summary=summary, kind=beat.kind, debtor=debtor, creditor=creditor,
                           others=others, project=proj.id if proj else None, status=status, due=due,
                           accepted=accepted, basis=basis, keywords=keywords)
         if comm.kind == "email":
             lp.thread = comm.thread
-        if not how:
-            hedge = debtor == self.W and beat.kind == "task" and basis in ("sent", "reported")
-            how = "hedged" if (hedge and self.rng.random() < 0.15) else "direct"
         self.reveal(comm, self.loop_ev[lp.id], how, by)
         if lifecycle:
             self._plan_lifecycle(lp, day)
