@@ -123,6 +123,19 @@ def describes_suggestion(text: str) -> bool:
     ))
 
 
+def _identified_optional(pred: dict, gold: dict, ctx: Any) -> bool:
+    """A cited, explicitly named optional deliverable can include a qualification after it."""
+    if not gold.get("optional") or not _counterparty_hit(pred, gold, ctx):
+        return False
+    if pred.get("direction") != gold.get("direction") or not (_cites(pred) & set(gold.get("support", []))):
+        return False
+    person = match_tokens(pred.get("counterparty"))
+    target = match_tokens(gold.get("what")) - person
+    # Compare the leading task description, so a passing mention in an explanation cannot match.
+    lead = re.split(r"[;:(]|\s[–—]\s|\.(?:\s|$)", pred.get("text", ""), maxsplit=1)[0]
+    return len(target) >= 3 and match_tokens(lead) - person == target
+
+
 def confirmed_edges(
     pred: list[dict], gold: list[dict], judge: Any, *, kind: str, ctx: Any
 ) -> list[tuple[float, int, int]]:
@@ -138,7 +151,9 @@ def confirmed_edges(
             continue
         key = (json.dumps(pred[i], sort_keys=True, default=str), j)
         if key not in asked:
-            asked[key] = bool(judge.same_item(pred[i], shown[j], kind=kind))
+            asked[key] = (kind == "loop" and _identified_optional(pred[i], gold[j], ctx)) or bool(
+                judge.same_item(pred[i], shown[j], kind=kind)
+            )
         if asked[key]:
             edges.append((similarity(pred[i], gold[j]), i, j))
     return edges

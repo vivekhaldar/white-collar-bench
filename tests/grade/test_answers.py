@@ -626,6 +626,20 @@ def test_list_optional_items_are_neither_required_nor_wrong(ctx):
     assert score_question(q, listing(questionnaire, venue), J, ctx).base == pytest.approx(2 / 3)
 
 
+def test_qualified_optional_deliverable(ctx):
+    from wcb.grade.matching import confirmed_edges
+
+    class NoMatch:
+        def same_item(self, *_args, **_kwargs):
+            return False
+
+    pred = {"text": "Review the ingestion design doc — pending request, not yet accepted.",
+            "counterparty": "Sam Patel", "direction": "i_owe", "cites": ["em-0002"]}
+    gold = {**C003, "optional": True}
+    assert confirmed_edges([pred], [gold], NoMatch(), kind="loop", ctx=ctx)
+    assert not confirmed_edges([{**pred, "counterparty": "Cora Velez"}], [gold], NoMatch(), kind="loop", ctx=ctx)
+
+
 def test_list_wrong_items_score_zero(ctx):
     ans = listing({"text": "Plan the team offsite", "counterparty": "Ben", "status": "open"})
     assert score_question(q_list([C001, C003]), ans, J, ctx).base == 0.0
