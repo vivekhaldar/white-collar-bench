@@ -35,7 +35,14 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 import wcb.grade.score as S  # noqa: E402
-from wcb.grade.judge import SYSTEM_PROMPT, LLMJudge, PanelJudge, majority, parse_verdict, parse_yes_no  # noqa: E402
+from wcb.grade.judge import (  # noqa: E402
+    SYSTEM_PROMPT,
+    LLMJudge,
+    PanelJudge,
+    majority,
+    parse_verdict,
+    parse_yes_no,
+)
 from wcb.grade.score import Accumulator, RunPlan, load_run_meta, score_world  # noqa: E402
 from wcb.llm.client import make_client  # noqa: E402
 
