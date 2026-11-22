@@ -1,5 +1,23 @@
 # Four models on WCB-lite: Haiku, Sonnet and Opus 5.5, GPT-6.1 Sol (Pi harness)
 
+## Gold v14 rescore
+
+The seven high-severity fixes were applied to the original saved answers. Changes below are headline points relative to gold v6.
+
+| Model | Track A | Change | Track B | Change |
+|---|---:|---:|---:|---:|
+| Opus 5.5 | 94.46 | +2.59 | 92.86 | +5.51 |
+| Sonnet 5.5 | 91.91 | +2.81 | 86.94 | +6.21 |
+| Haiku 5.5 | 91.65 | +2.83 | 83.25 | +4.96 |
+| GPT-6.1 Sol | 91.17 | +4.16 | 85.07 | +5.17 |
+
+The original Sonnet/Sol votes were reused wherever the judge inputs matched. GPT-6 Luna and GPT-6.1 Sol independently judged the new prompts in a ChatGPT session. For persistent split citation votes, GPT-6 Sol independently read the same evidence and cast the deciding vote. The archive contains 1,588 distinct prompts. The archived prompts and votes reproduce all eight scores offline with zero missing decisions. Historical confidence intervals, cost estimates and model comparisons below refer to gold v6.
+
+[Complete per-question changes](regression/high-severity-diff.txt) · [Residual citation audit](regression/citation-audit.csv) · [Loss classification](regression/loss-audit.md)
+
+## Original gold v6 study
+
+
 **Graded for substance (gold v6 and a cross-family judge panel), Opus 5.5 leads on both tracks (A 91.9, B 87.4). Sonnet 5.5, Haiku 5.5 and GPT-6.1 Sol are within 2 points of each other on Track A (87.0–89.1), with overlapping confidence intervals.** Haiku costs $3.53 per lite run, a fifth of Sonnet's cost. Track B, where the model designs its own memory, separates the models most: Opus loses 4.5 points there, the others 7–10.
 
 All four runs used the same harness (Pi 1.5.2 with the `pi_litellm.py` wrapper), the same [WCB-lite suite](../../docs/lite.md) (11 public worlds, two episode days, one repeat), medium reasoning effort and a LiteLLM proxy. They are the closest thing to a controlled model comparison in `results/`. All worlds, people and organizations are synthetic.

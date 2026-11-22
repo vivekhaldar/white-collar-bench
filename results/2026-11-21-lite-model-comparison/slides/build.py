@@ -501,6 +501,16 @@ def slide(title, body="", sub="", cls=""):
     return f'<section class="slide {cls}"><h1>{esc(title)}</h1>{s}<div class="body">{body}</div></section>'
 
 
+def rescored_table():
+    baseline = json.loads((HERE.parent / "regression/baseline.json").read_text())
+    header = "<tr><th>Model</th><th>Track A</th><th>Track B</th></tr>"
+    rows = []
+    for label, key in zip(ORDER, ("opus", "sonnet", "haiku", "sol"), strict=True):
+        a, b = (baseline[f"{key}-{track}"]["headline"] for track in "ab")
+        rows.append(f"<tr><td>{esc(label)}</td><td>{a:.2f}</td><td>{b:.2f}</td></tr>")
+    return '<table class="tbl">' + header + "".join(rows) + "</table>"
+
+
 def big_number(n, label):
     return f'<div class="bignum"><div class="n">{esc(n)}</div><div class="l">{esc(label)}</div></div>'
 
@@ -514,8 +524,11 @@ def main() -> None:
     slides.append(
         '<section class="slide title"><div class="kicker">white-collar-bench</div>'
         '<h1 class="hero">Six models, one memory benchmark,<br>lite runs from $3.53</h1>'
-        '<div class="sub">WCB-lite · Claude Opus, Sonnet, Haiku 5.5 · GPT-6.1 Sol · DeepSeek V4.1 Flash · Qwen3.8-27B · Pi harness · gold v6, judge panel · Nov 2026</div></section>'
+        '<div class="sub">WCB-lite · Claude Opus, Sonnet, Haiku 5.5 · GPT-6.1 Sol · DeepSeek V4.1 Flash · Qwen3.8-27B · Pi harness · gold v14 rescore and original gold v6 study · Nov 2026</div></section>'
     )
+    slides.append(slide("Gold v14 rescore of the saved answers", rescored_table(),
+                        "Original panel votes were reused. Luna and Sol judged new prompts. "
+                        "The following slides present the original gold v6 study."))
     slides.append(slide("The task: be someone's working memory", harness_diagram(),
                         "Synthetic knowledge-worker worlds: projects, people, commitments, decisions"))
     slides.append(slide("A full run is expensive", '<div class="row">'
