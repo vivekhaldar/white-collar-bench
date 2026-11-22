@@ -26,7 +26,8 @@ def test_track_b_workspace_note_has_no_vote(tmp_path):
     def score(cites):
         return citation_precision({"cites": cites}, ["ch-0001"], ctx)[0]
     assert score(["commitments.md#A20", "ch-0001"]) == 1
-    assert score(["commitments.md H25", "ch-0001"]) == 1
+    for note in ["commitments.md H25", "commitments.md #24", "commitments.md B#17", "commitments.md 2027-11-05"]:
+        assert score([note, "ch-0001"]) == 1
     assert score(["commitments.md#A20"]) == 0
     assert score(["missing.md", "ch-0001"]) == 0.5
 
@@ -47,3 +48,15 @@ def test_panel_checks_only_the_cited_claim_and_delivered_source():
     assert evidence_vote(q, answer, "ca-0008", 0, ctx, CheckPacket(), None)
     assert not evidence_vote(q, answer, "ca-9999", 0, ctx, CheckPacket(), None)
 
+
+
+def test_source_index_requires_a_real_file_pointing_to_the_delivered_source(tmp_path):
+    ctx = ScoreContext({}, {}, "", "", {"mn-0015"}, store_root=tmp_path, track="A")
+    root = tmp_path / "sources"
+    root.mkdir()
+    path = root / "mn-0015.md"
+    path.write_text("Source: mn-0015")
+    assert citation_precision({"cites": ["sources/mn-0015.md", "mn-0015 (auto)"]}, ["mn-0015"], ctx)[1]["total"] == 1
+    assert citation_precision({"cites": ["sources/mn-0015.md"]}, ["mn-0015"], ctx)[0] == 1
+    path.unlink()
+    assert citation_precision({"cites": ["sources/mn-0015.md"]}, ["mn-0015"], ctx)[0] == 0

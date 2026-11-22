@@ -441,7 +441,9 @@ def score_question(q: dict, answer: dict | None, judge: Judge, ctx: ScoreContext
             item_support=matched_item_support(q, details),
             subjects=question_subjects(q),
             extra=additional_sources(q, answer, details, ctx),
-            adjudicate=lambda cite, item: evidence_vote(q, answer, cite, item, ctx, watched, store_record_id(cite)),
+            adjudicate=lambda cite, item, source: evidence_vote(
+                q, answer, cite, item, ctx, watched, store_record_id(cite), source
+            ),
         )
     except GRADER_ERRORS as e:
         if watched.raised:
@@ -1395,8 +1397,8 @@ def store_record_id(cite: str) -> str | None:
 def workspace_reference(cite: str, root: Path | None) -> bool:
     """A Track B reference to its own existing notes is ancillary to source citations."""
     # Agents also write "commitments.md H25" for a labeled note entry.
-    name = cite.removeprefix("[[").removesuffix("]]").partition("#")[0]
-    name = re.sub(r"(\.md)\s+[A-Za-z]+[0-9]+$", r"\1", name)
+    name = cite.removeprefix("[[").removesuffix("]]").partition("#")[0].strip()
+    name = re.sub(r"(\.md)\s+(?:[A-Za-z]+[0-9]*|\d{4}-\d{2}-\d{2})$", r"\1", name)
     relative = Path(name)
     if root is None or relative.is_absolute() or ".." in relative.parts or not relative.suffix:
         return False
@@ -1405,6 +1407,18 @@ def workspace_reference(cite: str, root: Path | None) -> bool:
         return path.resolve().is_relative_to(root.resolve()) and path.is_file()
     except (OSError, RuntimeError, ValueError):
         return False
+
+
+def source_reference(cite: str, ctx: ScoreContext) -> str:
+    """A single annotated ID or an existing source-index entry can name an original input."""
+    annotated = re.fullmatch(r"([a-z]{2}-\d+)\s+\((?:auto|draft|notes?)\)", cite, re.I)
+    if annotated and annotated[1] in ctx.delivered:
+        return annotated[1]
+    index = re.fullmatch(r"(?:\./)?sources/([a-z]{2}-\d+)\.md", cite)
+    if index and ctx.track == "A" and ctx.store_root and index[1] in ctx.delivered:
+        if workspace_reference(cite, ctx.store_root) and index[1] in (ctx.record_refs(f"sources/{index[1]}") or ()):
+            return index[1]
+    return cite
 
 
 def cite_key(cite: str) -> str:
@@ -1525,18 +1539,19 @@ def citation_precision(
     for item, scope, cites in units:
         distinct: dict[str, str] = {}
         for cite in cites:
-            distinct.setdefault(cite_key(cite), cite)
+            distinct.setdefault(cite_key(source_reference(cite, ctx)), cite)
         wider = sup if scope is not sup else None
         for cite in distinct.values():
             if ctx.track == "B" and workspace_reference(cite, ctx.store_root):
                 continue
             total += 1
-            why = cite_status(cite, scope, ctx, question=wider)
+            source = source_reference(cite, ctx)
+            why = cite_status(source, scope, ctx, question=wider)
             if (
                 why == "not_in_support"
                 and item is None
                 and subjects
-                and ctx.about.get(cite, set()) & subjects
+                and ctx.about.get(source, set()) & subjects
             ):
                 why = "valid"
             if why == "not_in_support" and cite in (
@@ -1544,7 +1559,7 @@ def citation_precision(
             ):
                 why = "valid"
             if sup and why in {"not_in_support", "wrong_item", "record_unsupported"} and adjudicate:
-                if adjudicate(cite, item):
+                if adjudicate(cite, item, source):
                     why = "valid"
             if why == "valid":
                 valid += 1

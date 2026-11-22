@@ -126,11 +126,12 @@ def cited_claim(answer, cite, item):
     return json.dumps(parts, ensure_ascii=False, sort_keys=True)
 
 
-def evidence_vote(question, answer, cite, item, ctx, judge, record_id):
+def evidence_vote(question, answer, cite, item, ctx, judge, record_id, source_id=None):
     """Adjudicate delivered evidence using the question and the actual attached claim."""
     if ctx.world is None or not hasattr(judge, "citation"):
         return False
-    ids = [cite] if cite in ctx.delivered else []
+    source_id = source_id or cite
+    ids = [source_id] if source_id in ctx.delivered else []
     if record_id and record_id != "people/me":
         ids = sorted((ctx.record_refs(record_id) or set()) & ctx.delivered)
     if not ids:
