@@ -377,6 +377,14 @@ def test_matched_item_support_mapping():
     assert matched_item_support({"type": "priority", "gold": {}}, {"matches": []}) is None
 
 
+def test_optional_suggestion_keeps_its_item_evidence(ctx):
+    q = q_list(QUESTIONNAIRE)
+    q["gold"]["suggested"] = [DESIGN_DOC]
+    result = score_question(q, answer(["em-0001"], ["em-0002"]), J, ctx)
+    assert result.base == result.citation == 1
+    assert result.details["unmatched_pred"] == []
+
+
 def test_cite_groups_keep_positions():
     ans = {"cites": ["em-1"], "items": [{"cites": ["em-2"]}, "junk", {"text": "x"}]}
     assert cite_groups(ans) == [("cites", ["em-1"]), ("items[0]", ["em-2"]), ("items[2]", [])]

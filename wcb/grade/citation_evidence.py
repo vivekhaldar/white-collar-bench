@@ -53,7 +53,7 @@ def additional_sources(question, answer, details, ctx):
     if world is None or question["type"] not in {"list", "change", "priority"}:
         return {}
     gold = question["gold"]
-    items = gold.get("items", [])
+    items = [*gold.get("items", []), *gold.get("suggested", [])]
     by_id = {g.get("loop") or g.get("event"): g for g in items}
     references = {}
     for match in details.get("matches", []):

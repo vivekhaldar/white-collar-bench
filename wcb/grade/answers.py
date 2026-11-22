@@ -1081,6 +1081,10 @@ def grade_list(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tuple[
     if suggested and rest:
         extra = match_items([pred[i] for i in rest], suggested, judge, kind="loop", ctx=ctx)
         n_pred -= len(extra)
+        for local, j in extra:
+            i = rest[local]
+            matched_pred.add(i)
+            matches.append({"pred": i, "gold": suggested[j].get("loop", j), "optional": True})
     early = _empty_case(n_pred, n_gold)
     p = total / n_pred if n_pred else 0.0
     r = total / n_gold if n_gold else 0.0
@@ -1477,6 +1481,7 @@ def matched_item_support(q: dict, details: dict) -> dict[int, list[str]] | None:
     if key is None:
         return None
     gold = list((q.get("gold") or {}).get("items") or [])
+    gold.extend((q.get("gold") or {}).get("suggested") or [])
     by_id = {g.get(key, j): g for j, g in enumerate(gold) if isinstance(g, dict)}
     out: dict[int, list[str]] = {}
     for m in details.get("matches") or []:
