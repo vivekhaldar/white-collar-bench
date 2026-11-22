@@ -410,6 +410,8 @@ For each group the report gives the session count, `ok` / `timeouts` / `failures
 
 Every answer cites its gold `support`. With `store_ids` (`wcb.store.oracle.record_ids`), items also cite their loop records. The tests use it to check that correct answers score exactly 1 on every question of the pilot and of every dev world (`tests/grade/test_perfect_answers.py`), and about 100 end to end.
 
+## Grounding answers in the delivered evidence
+
 A worker offering to try is optional in lists, changes and rubrics, and cannot be a required priority until the worker endorses the commitment. A third party supplying a date does not establish endorsement.
 
 A proposed change is described using its original deliverable and endorsement at creation, even if someone accepts it later. A prediction that reports it as an agreed task does not match the proposal.
@@ -422,4 +424,4 @@ Relationship points accept equivalent natural-language descriptions in both trac
 
 A single change item can cover an explicitly completed same-day creation and resolution on one loop. A decision and its explicitly linked cancellation can also share a prediction when it covers both events. Recall counts the covered events and precision counts the prediction once.
 
-Additional delivered evidence is checked against the item citing it. A scheduled priority may cite its calendar invitation, and an unsent draft may support a pending send. Neither establishes completion. With a panel judge, a remaining disputed citation is checked against the specific attached claim and question. A store record is checked through its delivered source references. Panelists must agree that the evidence supports a material part of the claim, including the identity of its subject. List and change items can cite corroboration identifying the deliverable and project, or a related attachment identifying the deliverable. In Track B, references to existing workspace notes are ancillary: only source citations earn precision credit, and an answer with notes alone has zero citation precision.
+Additional delivered evidence is checked against the item citing it. A scheduled priority may cite its calendar invitation, and an unsent draft may support a pending send. Neither establishes completion. With a panel judge, a remaining disputed citation is checked against the specific attached claim and question. A store record is checked through its delivered source references. Panelists must agree that the evidence supports a material part of the claim, including the identity of its subject. List and change items can cite corroboration identifying the deliverable and project, or a related attachment identifying the deliverable. A Track A source-index entry can identify an original artifact when the entry exists and cites that delivered ID. In Track B, references to existing workspace notes are ancillary: only source citations earn precision credit, and an answer with notes alone has zero citation precision.
