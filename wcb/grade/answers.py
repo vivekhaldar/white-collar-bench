@@ -48,6 +48,7 @@ from pathlib import Path
 from typing import Any
 
 from wcb.contract.answers import check_answer
+from wcb.grade.citation_evidence import additional_sources
 from wcb.grade.judge import VERDICTS, Judge, match_tokens, padding_penalty
 from wcb.grade.matching import assign, confirmed_edges, distinct_edges, match_items
 from wcb.questions.rubric import LOOP_STATUS_WORDS, STATUS_SYNONYMS
@@ -164,6 +165,8 @@ class ScoreContext:
     store_root: Path | None = None
     #: Delivered artifact ID -> entities, loops and decisions its knowable events are about.
     about: dict[str, set[str]] = field(default_factory=dict)
+    track: str = "A"
+    world: Any = field(default=None, repr=False, compare=False)
     _index: dict[tuple[str, ...], set[str]] | None = field(
         default=None, init=False, repr=False, compare=False
     )
@@ -172,7 +175,7 @@ class ScoreContext:
     )
 
     @classmethod
-    def from_state(cls, world: Any, state: dict, *, store_root: Path | None = None) -> ScoreContext:
+    def from_state(cls, world: Any, state: dict, *, store_root: Path | None = None, track: str = "A") -> ScoreContext:
         """Build a context from a `wcb.world.model.World` and its gold state at the checkpoint."""
         return cls(
             alias_table=world.alias_table(),
@@ -182,6 +185,7 @@ class ScoreContext:
             delivered=set(state.get("delivered") or []),
             store_root=Path(store_root) if store_root else None,
             about=artifact_subjects(state),
+            track=track, world=world,
         )
 
     @property
@@ -435,6 +439,7 @@ def score_question(q: dict, answer: dict | None, judge: Judge, ctx: ScoreContext
             ctx,
             item_support=matched_item_support(q, details),
             subjects=question_subjects(q),
+            extra=additional_sources(q, answer, details, ctx),
         )
     except GRADER_ERRORS as e:
         if watched.raised:
@@ -1330,6 +1335,18 @@ def store_record_id(cite: str) -> str | None:
     return s
 
 
+def workspace_reference(cite: str, root: Path | None) -> bool:
+    """A Track B reference to its own existing notes is ancillary to source citations."""
+    relative = Path(cite.removeprefix("[[").removesuffix("]]").partition("#")[0])
+    if root is None or relative.is_absolute() or ".." in relative.parts or not relative.suffix:
+        return False
+    try:
+        path = root / relative
+        return path.resolve().is_relative_to(root.resolve()) and path.is_file()
+    except (OSError, RuntimeError, ValueError):
+        return False
+
+
 def cite_key(cite: str) -> str:
     """What makes two cites the same source: the artifact ID, or the normalized record ID."""
     return cite if ARTIFACT_RE.match(cite) else (store_record_id(cite) or cite)
@@ -1403,6 +1420,7 @@ def citation_precision(
     *,
     item_support: dict[int, list[str]] | None = None,
     subjects: set[str] | None = None,
+    extra: dict[int, set[str]] | None = None,
 ) -> tuple[float | None, dict]:
     """c = valid cites / counted cites, 0 when there are none; plus per-cite diagnostics.
 
@@ -1427,6 +1445,8 @@ def citation_precision(
     applicable) and the question score is its base score.
     """
     sup = set(support)
+    extra = extra or {}
+    pooled_extra = set().union(*extra.values()) if item_support is None else set()
     units: list[tuple[int | None, set[str], list[str]]] = []
     if item_support is None:
         units.append((None, sup, collect_cites(answer)))
@@ -1447,6 +1467,8 @@ def citation_precision(
             distinct.setdefault(cite_key(cite), cite)
         wider = sup if scope is not sup else None
         for cite in distinct.values():
+            if ctx.track == "B" and workspace_reference(cite, ctx.store_root):
+                continue
             total += 1
             why = cite_status(cite, scope, ctx, question=wider)
             if (
@@ -1454,6 +1476,10 @@ def citation_precision(
                 and item is None
                 and subjects
                 and ctx.about.get(cite, set()) & subjects
+            ):
+                why = "valid"
+            if why in {"wrong_item", "not_in_support"} and cite in (
+                pooled_extra if item is None else extra.get(item, set())
             ):
                 why = "valid"
             if why == "valid":

@@ -54,7 +54,7 @@ from wcb.util.io import read_json, write_json, write_text
 from wcb.world.model import World
 
 #: Version of the scoring rules and report layout. Bump when either changes.
-SCORER_VERSION = "0.1"
+SCORER_VERSION = "0.2"
 #: Bootstrap resamples for confidence intervals, and the fixed seed that makes them repeatable.
 BOOTSTRAP_SAMPLES = 2000
 BOOTSTRAP_SEED = 20270101
@@ -422,7 +422,7 @@ def score_episode(
             if not enabled:
                 row[key], row[f"{key}_buckets"] = None, {}
                 continue
-            scored = score_checkpoint(gold, ep_dir, cp, doc, store, judge, acc, tag, k)
+            scored = score_checkpoint(gold, ep_dir, cp, doc, store, judge, acc, tag, k, track=plan.track)
             value, buckets = checkpoint_score([s.score for s in scored])
             row[key] = pct(value)
             row[f"{key}_buckets"] = {b: pct(v) for b, v in buckets.items()}
@@ -459,6 +459,7 @@ def score_checkpoint(
     acc: Accumulator,
     tag: str,
     k: int,
+    *, track: str = "A",
 ) -> list[Scored]:
     """Grade one answers file (`answers/<cp>.json` or `answers/<cp>.oracle.json`)."""
     suffix = ".oracle.json" if store == "oracle" else ".json"
@@ -476,7 +477,7 @@ def score_checkpoint(
             "count as invalid"
         )
         store_root = None
-    ctx = ScoreContext.from_state(gold.world, gold.state(cp["date"]), store_root=store_root)
+    ctx = ScoreContext.from_state(gold.world, gold.state(cp["date"]), store_root=store_root, track=track)
     results = score_answers(doc, answers, judge, ctx)
     for s in results:
         if s.details.get("grader_error"):
