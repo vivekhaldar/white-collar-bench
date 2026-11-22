@@ -810,9 +810,10 @@ def _project_changes_gold(params: dict, world: World, state: dict) -> Gold:
             decisions.setdefault(raw["t"], []).append(raw)
         elif item["type"] == "commitment.resolve":
             related = creations.get(loop_day)
-            if raw.get("status") == "dropped" and "superseded by" in item["summary"].lower():
-                choices = [d for d in decisions.get(raw["t"], []) if
-                           any(k.lower() in item["summary"].lower() for k in d.get("keywords", []))]
+            summary = item["summary"].lower()
+            if raw.get("status") == "dropped" and any(link in summary for link in ("superseded by", "after choosing")):
+                choices = [d for d in decisions.get(raw["t"], []) if d.get("project") == raw.get("project")
+                           and any(k.lower() in summary for k in d.get("keywords", []))]
                 if len(choices) == 1:
                     related = choices[0]["id"]
             if related:

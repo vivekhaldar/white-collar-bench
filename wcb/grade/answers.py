@@ -1148,6 +1148,8 @@ def _reported_outcome(pred: dict, item: dict) -> tuple[bool, bool]:
     words = list(LOOP_STATUS_WORDS.get(item.get("outcome"), []))
     if item.get("outcome") == "done":
         words.extend(["handed", "handed off", "transferred"])
+    elif item.get("outcome") == "dropped":
+        words.extend(["no longer needed", "superseded", "dropped", "stopped"])
     keywords = item.get("keywords") or []
     asserted = False
     for clause in re.split(r"[;.!?\n]", pred.get("text", "")):
@@ -1185,7 +1187,22 @@ def grade_change(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tupl
     matched = {j: i for i, j in pairs}
     for end, item in enumerate(gold):
         start = by_event.get(item.get("paired_event")) if item.get("paired_event") else None
-        if start is None or (start in matched) == (end in matched):
+        if start is None or (start in matched and end in matched):
+            continue
+        if start not in matched and end not in matched:
+            if gold[start].get("type") != "decision.make":
+                continue
+            # A bundled description can be too long to match either single-event summary.
+            # Require explicit wording for both facts and a cited source shared by both.
+            shared = set(gold[start].get("support", [])) & set(item.get("support", []))
+            candidate = next((k for k, p in enumerate(pred) if k not in matched.values()
+                              and (not p.get("date") or p["date"] == item.get("date"))
+                              and shared.intersection(p.get("cites", []))
+                              and _states_linked_decision(p.get("text", ""), gold[start])
+                              and _reported_outcome(p, item)[1]), None)
+            if candidate is not None:
+                pairs.extend([(candidate, start), (candidate, end)])
+                matched[start] = matched[end] = candidate
             continue
         i = matched[end] if end in matched else matched[start]
         if pred[i].get("date") and pred[i]["date"] != item.get("date"):

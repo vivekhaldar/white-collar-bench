@@ -27,3 +27,15 @@ def test_handoff_and_decision_bundles():
 
         wrong_day = {"items": [{**answer["items"][0], "date": "1999-01-01"}]}
         assert grade_change(question, wrong_day, HeuristicJudge(), None)[0] < 1
+
+
+def test_pilot_hosting_decision_explains_dropped_pricing():
+    world = World.load(Path("worlds/pilot"))
+    state = state_at(world, world.checkpoint("cp1")["date"])
+    spec = next(q for q in load_specs(world) if q["id"] == "q-014")
+    items = {g["event"]: g for g in build_question(spec, world, state)["gold"]["items"]}
+    assert items["e-0198"]["paired_event"] == "e-0197"
+    question = {"gold": {"items": [items["e-0197"], items["e-0198"]]}}
+    answer = {"items": [{"text": "Hosting decided: shared Kettleyard tenant (option 2); option 1 pricing dropped",
+                         "cites": ["nt-0004"]}]}
+    assert grade_change(question, answer, HeuristicJudge(), None)[0] == 1
