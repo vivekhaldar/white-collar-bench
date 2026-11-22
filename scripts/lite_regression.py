@@ -25,6 +25,7 @@ import argparse
 import gzip
 import hashlib
 import json
+import random
 import sys
 import tarfile
 import tempfile
@@ -99,7 +100,7 @@ def cached_decisions(path: Path) -> dict:
     return out
 
 
-def rescore(runs: Path, model: str, track: str, allow_calls: bool) -> tuple[dict, int]:
+def rescore(runs: Path, model: str, track: str, allow_calls: bool, penalties: list | None = None) -> tuple[dict, int]:
     """Per-question scores {key: score} (agent store) and the number of uncached decisions."""
     cache = cached_decisions(CACHES / f"judge-cache-{model}-track-{track}.jsonl.gz")
     supplement = {}
@@ -132,9 +133,32 @@ def rescore(runs: Path, model: str, track: str, allow_calls: bool) -> tuple[dict
     acc = Accumulator()
     for entry in plan.world_entries:
         score_world(plan, entry, panel, acc)
+    if penalties is not None:
+        for s in acc.scored:
+            if s.store == "agent" and s.score.citation is not None:
+                for invalid in s.score.details.get("citations", {}).get("invalid", []):
+                    penalties.append({"arm": f"{model}-{track}", "world": s.world, "checkpoint": s.checkpoint,
+                                      "qid": s.score.id, **invalid})
     rows = [s.row() for s in acc.scored if s.store == "agent"]
     weights(rows)
     return {f"{r['world']}/{r['checkpoint']}/{r['id']}": [round(r["score"], 4), r["w"]] for r in rows}, uncached
+
+
+def sample_penalties(penalties: list[dict], n: int = 50, seed: int = 27) -> list[dict]:
+    """Sample citation occurrences without replacement, with equal representation by arm."""
+    arms = defaultdict(list)
+    for row in penalties:
+        arms[row["arm"]].append(row)
+    rng = random.Random(seed)
+    for arm in sorted(arms):
+        arms[arm].sort(key=lambda r: (r["world"], r["checkpoint"], r["qid"], r["cite"], r.get("item", -1)))
+        rng.shuffle(arms[arm])
+    sample = []
+    while len(sample) < n and any(arms.values()):
+        for arm in sorted(arms):
+            if arms[arm] and len(sample) < n:
+                sample.append(arms[arm].pop())
+    return sample
 
 
 def main() -> int:
@@ -142,16 +166,18 @@ def main() -> int:
     ap.add_argument("--write-baseline", action="store_true", help="save current scores as the baseline")
     ap.add_argument("--allow-calls", action="store_true", help="fetch decisions missing from the cache")
     ap.add_argument("--min-delta", type=float, default=0.01, help="smallest per-question change to list")
+    ap.add_argument("--citation-sample", type=Path, metavar="PATH", help="write 50 sampled residual citations to JSON")
     a = ap.parse_args()
     S.episode_sis = lambda *_, **__: None  # store integrity is not in the headline
     base = json.loads(BASELINE.read_text()) if BASELINE.is_file() else None
     out: dict = {}
+    penalties = [] if a.citation_sample else None
     with tempfile.TemporaryDirectory() as tmp:
         with tarfile.open(BUNDLE) as tf:
             tf.extractall(tmp, filter="data")
         for m in MODELS:
             for t in "ab":
-                qs, uncached = rescore(Path(tmp), m, t, a.allow_calls)
+                qs, uncached = rescore(Path(tmp), m, t, a.allow_calls, penalties)
                 head = 100 - sum(w * (1 - s) for s, w in qs.values())
                 out[f"{m}-{t}"] = {"headline": round(head, 2), "uncached": uncached, "questions": qs}
     print(f"{'run':10s} {'baseline':>9s} {'now':>7s} {'delta':>7s} {'uncached':>9s}")
@@ -169,6 +195,8 @@ def main() -> int:
                 if s0 is None or abs(s - s0) >= a.min_delta:
                     print(f"  {k:8s} {q:32s} {s0 if s0 is not None else 'new':>6} -> {s:.3f}  "
                           f"({(s - (s0 or 0)) * w:+.2f})")
+    if a.citation_sample and penalties is not None:
+        a.citation_sample.write_text(json.dumps(sample_penalties(penalties), indent=2) + "\n")
     if a.write_baseline and any(v["uncached"] for v in out.values()) and not a.allow_calls:
         print("Baseline retained because the panel replay is incomplete.")
         return 1
