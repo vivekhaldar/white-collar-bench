@@ -5,6 +5,8 @@ from wcb.questions.templates import list_item
 def test_relationship_description_controls():
     assert relationship_matches("Colleague in my own org (SLIO)", "peer")
     assert relationship_matches("Cross-department collaborator: the Selfell lead", "stakeholder")
+    assert relationship_matches("Client counterpart: Customer Service Manager at Selfell Public Works", "stakeholder")
+    assert relationship_matches("External collaborator: the Revenue Cycle Analyst", "stakeholder")
     assert not relationship_matches("my manager", "peer")
     assert not relationship_matches("vendor", "peer")
     assert not relationship_matches("Colleague in my own org: vendor", "peer")

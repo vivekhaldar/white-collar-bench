@@ -614,7 +614,7 @@ RELATIONSHIP_DESCRIPTIONS = {
             r"(?:my|our|the) (?:own |same )?(?:org(?:anization)?|team|department)|"
             r"same[- ]team colleague|cross-portfolio colleague and collaborator)",
     "stakeholder": r"(?:an? )?(?:cross[- ]department(?:al)? (?:collaborator|counterpart)|"
-                   r"departmental counterpart|client counterpart|external project stakeholder)",
+                   r"departmental counterpart|client counterpart|external collaborator|external project stakeholder)",
     "manager": r"(?:my |the worker.s )(?:manager|direct supervisor|line manager|boss)",
     "report": r"(?:my direct report|reports (?:directly )?to me)",
     "executive": r"(?:an? )?(?:senior executive|executive sponsor|member of (?:the )?executive leadership)",
@@ -631,7 +631,8 @@ def relationship_matches(text: str, value: str) -> bool:
     head, tail = parts[0], parts[1] if len(parts) > 1 else ""
     if re.search(r"\b(?:or|instead|actually|but|not|my manager|my boss|my direct report)\b", tail):
         return False
-    if any(re.search(r"\b" + label + r"\b", tail) for label in RELATIONSHIP_DESCRIPTIONS if label != value):
+    qualifier = tail.strip(" ()").removeprefix("a ").removeprefix("an ")
+    if qualifier in RELATIONSHIP_DESCRIPTIONS and qualifier != value:
         return False
     return re.fullmatch(pattern, head.strip()) is not None
 
