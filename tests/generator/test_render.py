@@ -39,8 +39,11 @@ def rendered(tmp_path_factory):
 def test_every_communication_becomes_files(rendered):
     out, _plan, sim, emits, _ctx = rendered
     expected = [a for c in sim.comms for a in c.artifacts]
-    assert [e["artifact"] for e in emits] == expected
-    assert len(set(expected)) == len(expected)
+    actual = [e["artifact"] for e in emits]
+    assert actual[:len(expected)] == expected
+    directory = emits[len(expected):]
+    assert directory and all(e["title"] == "Contact directory updates" for e in directory)
+    assert len(set(actual)) == len(actual)
     ids = [int(e["id"][2:]) for e in emits]
     assert ids == list(range(len(sim.events) + 1, len(sim.events) + 1 + len(emits)))
     for e in emits:

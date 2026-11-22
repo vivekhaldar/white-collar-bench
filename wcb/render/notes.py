@@ -251,8 +251,6 @@ def _portfolio(ctx: RenderContext, comm: Communication, aid: str, rng: random.Ra
     return Rendered(aid, ".md", "Portfolio map", content=text, text=text)
 
 
-
-
 def write_contact_updates(ctx: RenderContext, world_dir: Path, emits: list[dict], last_event: int) -> list[dict]:
     """Deliver contact entries on the day each contact is first introduced, never before."""
     seen = set()
