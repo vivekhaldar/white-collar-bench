@@ -1085,10 +1085,17 @@ def grade_list(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tuple[
             i = rest[local]
             matched_pred.add(i)
             matches.append({"pred": i, "gold": suggested[j].get("loop", j), "optional": True})
-    early = _empty_case(n_pred, n_gold)
-    p = total / n_pred if n_pred else 0.0
-    r = total / n_gold if n_gold else 0.0
-    return (f1(p, r) if early is None else early), {
+    if n_gold:
+        p = total / n_pred if n_pred else 0.0
+        r = total / n_gold
+        score = f1(p, r)
+    else:
+        # Omission is valid. For a nonempty answer only the fraction of
+        # distinct predictions matched to optional or suggested loops matters.
+        p = len(matched_pred) / len(pred)
+        r = 1.0
+        score = p
+    return score, {
         "n_pred": len(pred),
         "n_gold": len(gold),
         "precision": p,

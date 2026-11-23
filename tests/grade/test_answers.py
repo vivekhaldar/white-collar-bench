@@ -626,6 +626,19 @@ def test_list_optional_items_are_neither_required_nor_wrong(ctx):
     assert score_question(q, listing(questionnaire, venue), J, ctx).base == pytest.approx(2 / 3)
 
 
+def test_all_optional_list_scores_precision_over_reported_items(ctx):
+    q = q_list([{**C003, "optional": True}])
+    q["gold"]["suggested"] = [C004]
+    optional = {"text": "Review Sam Patel's ingestion design doc", "counterparty": "Sam Patel"}
+    suggested = {"text": "Send Ada the Tessellate volume pricing", "counterparty": "Cora Velez"}
+    handed_off = {"text": "Book the offsite venue (transferred to Ben)", "counterparty": "Ben"}
+    for items, expected in [([], 1), ([optional], 1), ([suggested], 1),
+                            ([optional, suggested], 1), ([optional, suggested, handed_off], 2/3),
+                            ([optional, dict(optional)], 0.5), ([handed_off], 0)]:
+        score = score_question(q, listing(*items), J, ctx)
+        assert score.base == pytest.approx(expected)
+
+
 def test_qualified_optional_deliverable(ctx):
     from wcb.grade.matching import confirmed_edges
 
