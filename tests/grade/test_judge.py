@@ -482,6 +482,9 @@ def test_rubric_without_keywords_falls_back_to_tokens():
         ("", None),
         ("Maybe", None),
         ("nope", None),
+        ("The answer quotes 'I’ll try, no promises' and is consistent.\n\n**YES**", True),
+        ("NO. The items differ.", False),
+        ("YES was an earlier guess. Final answer: NO.", False),
     ],
 )
 def test_parse_yes_no(text, expected):
@@ -497,6 +500,8 @@ def test_parse_yes_no(text, expected):
         ("Verdict: Covered.", "covered"),
         ("NOT COVERED", "missing"),
         ("The answer contradicts it", "contradicted"),
+        ("The answer is not a contradiction of the reference.\n\nCOVERED", "covered"),
+        ("It discusses the point marked COVERED, but my verdict is NOT COVERED.", "missing"),
         ("", None),
         ("unclear", None),
     ],
@@ -642,6 +647,21 @@ def test_llm_cache_file_hit(tmp_path, make_fake_client):
     assert judge.same_item(PRED, GOLD, kind="loop") is False
     assert second.calls == []
     assert load_cache(cache) == {rows[0]["key"]: False, rows[1]["key"]: "missing"}
+
+
+def test_prior_format_cache_reparses_same_model_raw_vote(tmp_path, make_fake_client):
+    from wcb.grade.judge import LEGACY_SYSTEM_PROMPT, same_item_prompt
+
+    cache = tmp_path / "judge.jsonl"
+    client = make_fake_client([])
+    judge = LLMJudge(client)
+    prompt = same_item_prompt(PRED, GOLD, "loop")
+    key = judge.cache_key(prompt, system=LEGACY_SYSTEM_PROMPT)
+    assert key != judge.cache_key(prompt)
+    cache.write_text(json.dumps({"key": key, "kind": "same_item", "decision": False,
+                                 "outputs": ["The text quotes 'no promises'. YES"]}) + "\n")
+    assert LLMJudge(client, cache_path=cache).same_item(PRED, GOLD, kind="loop")
+    assert not client.calls
 
 
 def test_llm_cache_key_depends_on_model_and_samples(tmp_path, make_fake_client):
