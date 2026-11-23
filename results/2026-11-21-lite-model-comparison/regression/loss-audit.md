@@ -1,10 +1,10 @@
-# Residual loss on gold v14
+# Historical residual loss on gold v14
 
 All eight arms use the original saved answers. Headline points use the regression harness’s world, checkpoint and question-bucket weights. All quantities below sum over the eight arms unless noted.
 
 ## Failure classification
 
-The 60 costliest world/checkpoint/questions account for 96.3% of the remaining 82.69 headline points. GPT-6.1 Sol assigned the base-score loss for each imperfect answer in this group using the source dossier and archived workspace. For mixed cases it apportioned the loss. The remaining difference between base and final score is assigned to citations. Questions outside the top 60 are unclassified. The reported benchmark-side share is 73.4% of all residual loss. These are model judgments, with uncertainty particularly around ingestion versus answer selection.
+The 60 costliest world/checkpoint/questions account for 96.3% of the remaining 82.69 headline points. GPT-6.1 Sol assigned the base-score loss for each imperfect answer in this group using the source dossier and archived workspace. For mixed cases it apportioned the loss. The remaining difference between base and final score is assigned to citations. Questions outside the top 60 are unclassified. The 73.4% benchmark-side share is indicative. GPT-6.1 Sol was both the sole classifier and one of the four graded models. No independent family reviewed its classifications or measured agreement. The estimate describes the historical mixed-panel replay. These are model judgments, with uncertainty particularly around ingestion versus answer selection.
 
 | Cause | Headline points |
 |---|---:|
@@ -18,6 +18,12 @@ The 60 costliest world/checkpoint/questions account for 96.3% of the remaining 8
 | CITATION | 0.90 |
 
 [Per-answer classifications](loss-classification.csv) · [Original gold v6 totals](../failure-classes.json)
+
+## Review of scoring assumptions
+
+The v14 relationship shortcuts included language copied verbatim from saved answers, such as “cross-portfolio colleague and collaborator.” On the corrected grader, unambiguous short forms still receive deterministic credit. Descriptions that require interpreting the relationship go to the point panel with definitions of all contract labels. The v14 audit predates this change.
+
+Commit `0bd01bf` was motivated by the pilot hosting example. The rule uses an explicit causal phrase in a dropped loop’s summary (“superseded by” or “after choosing”), a unique decision on the same project at the same timestamp, and matching decision keywords. When neither fact initially matches, one answer must cite shared evidence and explicitly state both the decision and its outcome. It contains no project, date, event ID or option specific to the pilot. Its dependence on those causal phrases can still miss other ways of reporting a cancellation.
 
 ## Bundled changes
 

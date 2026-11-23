@@ -326,6 +326,25 @@ def test_note_is_not_graded():
     assert base(q, "Head of Learning Services", ctx, note="Information Security Manager") == 0.0
 
 
+@pytest.mark.parametrize("vote", [False, True])
+def test_relationship_description_uses_point_judge_with_enum_definitions(vote):
+    from wcb.grade.answers import grade_point
+    from wcb.world.check import RELATIONSHIPS
+
+    class Judge:
+        def point(self, question, gold, answer, facts):
+            assert gold == "peer" and question == "How do we work together?"
+            assert answer == "cross-portfolio colleague and collaborator"
+            assert set(facts["relationship_definitions"]) == set(RELATIONSHIPS)
+            return vote
+
+    q = attr_question("p-mathieu", "relationship", "How do we work together?", "peer")
+    answer = {"value": "cross-portfolio colleague and collaborator"}
+    result, details = grade_point(q, answer, Judge(), context(RELATIONS, worker="p-alasdair"))
+    assert details["judge"] is vote
+    assert result == float(vote)
+
+
 def test_support_comes_from_the_subjects_record():
     ctx = context(RELATIONS, worker="p-alasdair")
     q = attr_question("p-mathieu", "relationship", "What is my working relationship with "

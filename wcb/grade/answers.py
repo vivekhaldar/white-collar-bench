@@ -609,34 +609,31 @@ def grade_point(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tuple
     return (1.0 if ok else 0.0), details
 
 
-# Descriptions used by people answering without the store's taxonomy. Match complete
-# descriptions; leave more complex prose and ambiguous reporting lines to the panel.
-RELATIONSHIP_DESCRIPTIONS = {
-    "peer": r"(?:a )?(?:teammate|team[- ]mate|fellow team member|colleague (?:in|on|from) "
-            r"(?:my|our|the) (?:own |same )?(?:org(?:anization)?|team|department)|"
-            r"same[- ]team colleague|cross-portfolio colleague and collaborator)",
-    "stakeholder": r"(?:an? )?(?:cross[- ]department(?:al)? (?:collaborator|counterpart)|"
-                   r"departmental counterpart|client counterpart|external collaborator|external project stakeholder)",
-    "manager": r"(?:my |the worker.s )(?:manager|direct supervisor|line manager|boss)",
-    "report": r"(?:my direct report|reports (?:directly )?to me)",
-    "executive": r"(?:an? )?(?:senior executive|executive sponsor|member of (?:the )?executive leadership)",
-    "vendor": r"(?:an? )?(?:vendor representative|supplier representative|external supplier)",
+# Only whole short forms decide a descriptive answer without semantic judgment.
+RELATIONSHIP_SHORT_FORMS = {
+    "peer": {"teammate", "team-mate", "my teammate", "fellow team member"},
+    "manager": {"my manager", "my direct supervisor", "my line manager", "my boss"},
+    "report": {"my direct report", "reports directly to me"},
+    "vendor": {"supplier representative", "vendor representative"},
+}
+
+RELATIONSHIP_DEFINITIONS = {
+    "manager": "supervises the worker",
+    "report": "reports to the worker",
+    "peer": "a colleague working alongside the worker",
+    "stakeholder": "a person with an interest in or affected by the worker's work",
+    "executive": "a member of executive leadership",
+    "assistant": "provides administrative support",
+    "vendor": "supplies goods or services",
+    "partner": "works with the worker as a partner",
+    "candidate": "is being considered for a position",
+    "advisor": "advises the worker",
+    "other": "a relationship outside the listed categories",
 }
 
 
 def relationship_matches(text: str, value: str) -> bool:
-    pattern = RELATIONSHIP_DESCRIPTIONS.get(value)
-    if not pattern or hedge_words(text):
-        return False
-    # A trailing qualification may identify the colleague's role or organization.
-    parts = re.split(r":| \(| at ", normalize(text).rstrip(". "), maxsplit=1)
-    head, tail = parts[0], parts[1] if len(parts) > 1 else ""
-    if re.search(r"\b(?:or|instead|actually|but|not|my manager|my boss|my direct report)\b", tail):
-        return False
-    qualifier = tail.strip(" ()").removeprefix("a ").removeprefix("an ")
-    if qualifier in RELATIONSHIP_DESCRIPTIONS and qualifier != value:
-        return False
-    return re.fullmatch(pattern, head.strip()) is not None
+    return normalize(text).rstrip(".") in RELATIONSHIP_SHORT_FORMS.get(value, ())
 
 
 def point_facts(q: dict, ctx: ScoreContext) -> dict:
@@ -658,6 +655,8 @@ def point_facts(q: dict, ctx: ScoreContext) -> dict:
     hist = ((ent.get("attr_history") or {}).get(attr) or []) if attr else []
     earlier = [show(h.get("value")) for h in hist[:-1] if isinstance(h, dict)]
     out: dict[str, Any] = {"subject": ent.get("name", subject), "attributes": attrs}
+    if q.get("template") == "person_attr" and attr == "relationship":
+        out["relationship_definitions"] = RELATIONSHIP_DEFINITIONS
     if earlier:
         out["earlier_values"] = earlier
     return out

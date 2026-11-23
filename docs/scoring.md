@@ -418,7 +418,7 @@ A proposed change is described using its original deliverable and endorsement at
 
 When a later generated transcript denies a blocker on the same project, either documented reading or abstention is accepted until a newer blocker report resolves the conflict. A different primary answer earns half credit if its cited explanation identifies both the denial and the unresolved reported blocker. The disputed blocker is omitted from status rubrics. Unrelated claims remain graded.
 
-For person roles, affiliations and relationships, gold checks delivered evidence for the person and the value together. Without such evidence a point question accepts abstention as well as the correct seeded value (Track A can see the seed store). Briefs omit unsupported roles and organization qualifiers.
+For person roles, affiliations and relationships, gold checks delivered evidence for the person and the value together. Without such evidence a point question accepts abstention as well as the correct seeded value (Track A can see the seed store). Briefs omit unsupported roles and organization qualifiers. Short unambiguous relationship descriptions such as “my direct supervisor” count directly. For other paraphrases, the point panel receives the relationship definitions alongside the subject’s record.
 
 Relationship points accept equivalent natural-language descriptions in both tracks. For an outstanding obligation owed to the worker, either open or waiting receives full status credit when that distinction comes only from its initial label. Later explicit status changes and blocked or closed obligations retain their own labels.
 
