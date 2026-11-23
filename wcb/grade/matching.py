@@ -113,9 +113,16 @@ def describes_suggestion(text: str) -> bool:
     """A proposed action must retain its unendorsed status in a change report."""
     text = text.casefold().replace("’", "'")
     # Ignore negated commitment language before checking for an affirmative commitment.
-    denial = r"\b(?:not(?: yet)?|never|nobody|no one|no owner) (?:accepted|agreed|committed|confirmed)"
+    denial = (r"\b(?:not(?: yet)?|never|nobody|no one|no owner|nothing) "
+              r"(?:(?:was|has been|had been) )?(?:accepted|agreed|committed|confirmed|promised)\b"
+              r"|\b(?:did not|didn't) (?:accept|agree|commit|confirm|promise|say yes)\b")
     affirmed = re.sub(denial, "", text)
-    if re.search(r"\b(?:promised|committed|agreed to|accepted the task)\b", affirmed):
+    endorsement = (
+        r"\b(?:promised|committed|agreed|said yes|accepted (?:it|the (?:task|request))|took it on)\b"
+        r"|\b(?:i'll|i will|we'll|we will)\s+(?!(?:try|see if|consider|think about|not)\b)\w+"
+        r"|\bwill (?:send|deliver|complete|finish|take on)\b"
+    )
+    if re.search(endorsement, affirmed):
         return False
     return bool(re.search(denial, text) or re.search(
         r"\b(?:suggest(?:ed|ion)?|propos(?:ed|al)|discussed|possible|tentative|unowned|"
