@@ -51,7 +51,7 @@ from typing import Any
 from wcb.contract.answers import check_answer
 from wcb.grade.citation_evidence import additional_sources, evidence_vote
 from wcb.grade.judge import VERDICTS, Judge, match_tokens, padding_penalty
-from wcb.grade.matching import assign, confirmed_edges, distinct_edges, match_items
+from wcb.grade.matching import assign, confirmed_edges, distinct_edges, item_key, match_items
 from wcb.questions.rubric import LOOP_STATUS_WORDS, STATUS_SYNONYMS
 from wcb.util.dates import (
     business_days_between,
@@ -1076,9 +1076,10 @@ def grade_list(q: dict, answer: dict, judge: Judge, ctx: ScoreContext) -> tuple[
     n_pred, n_gold = _counted(pred, gold, pairs)
     matched_pred, matched_gold = {i for i, _ in pairs}, {j for _, j in pairs}
     suggested = list((q.get("gold") or {}).get("suggested") or [])
-    rest = [i for i in range(len(pred)) if i not in matched_pred]
-    if suggested and rest:
-        extra = match_items([pred[i] for i in rest], suggested, judge, kind="loop", ctx=ctx)
+    if suggested:
+        used_keys = {item_key(pred[i]) for i in matched_pred}
+        rest = [i for i, item in enumerate(pred) if item_key(item) not in used_keys]
+        extra = match_items([pred[i] for i in rest], suggested, judge, kind="loop", ctx=ctx, distinct=True)
         n_pred -= len(extra)
         for local, j in extra:
             i = rest[local]

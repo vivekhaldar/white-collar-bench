@@ -639,6 +639,13 @@ def test_all_optional_list_scores_precision_over_reported_items(ctx):
         assert score.base == pytest.approx(expected)
 
 
+def test_duplicate_optional_prediction_cannot_match_again_as_a_suggestion(ctx):
+    q = q_list([{**C003, "optional": True}])
+    q["gold"]["suggested"] = [{**C003, "loop": "different-loop"}]
+    item = {"text": "Review Sam Patel's ingestion design doc", "counterparty": "Sam Patel"}
+    assert score_question(q, listing(item, dict(item)), J, ctx).base == 0.5
+
+
 def test_qualified_optional_deliverable(ctx):
     from wcb.grade.matching import confirmed_edges
 
