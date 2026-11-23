@@ -81,7 +81,7 @@
 - id: q-014
   checkpoint: cp1
   template: project_changes
-  params: {project: pr-tinderbox, since: '2027-02-25'}
+  params: {project: pr-tinderbox, since: '2027-02-26'}
   text: What changed on Tinderbox since last Friday?
   challenges: [supersession, worker_directive, transfer]
 # ---------------- cp2

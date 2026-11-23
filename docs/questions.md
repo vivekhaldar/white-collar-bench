@@ -272,3 +272,5 @@ The fixture world `tests/fixtures/mini-world` exercises most templates. At `cp2`
 | r5 | loop | Send Ada Tessellate volume pricing (owner: Cora Velez) | volume pricing / pricing | |
 
 An answer that still gives 29 January as the target date is contradicted on r4, and so is one that hedges ("29 Jan or 5 Feb"); one that says the target "moved from 29 January" is not. One that says Quillon is "in progress, now planning the pilot" covers r1 and r2.
+
+A change question phrased “since last <weekday>” uses the most recent occurrence of that weekday strictly before the checkpoint date. Its events start on the following day.
