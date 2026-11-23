@@ -44,6 +44,8 @@ The seeded sample contains 50 residual citation occurrences across all eight arm
 
 ## Score decreases from gold v6
 
+The table records the original v14 diagnostic. Two zeroes on `gen-s2-w1/cp1/q-004` were caused by the all-optional scoring bug. With precision over optional and suggested items, Haiku B matches three of four predictions. Its extra prediction is the decision memo handed off to Thibault. Sol B also matches three of four. Its fourth item describes Cassandra’s accessibility-review request, which Yael relayed in `em-0077`. The gold identifies Cassandra as the creditor. Both base scores are 0.75 under the existing counterparty rule. Release question scores also depend on the configured panel’s citation votes.
+
 Making an item optional removes it from the scoring denominator. This can lower the score of an answer that covered the optional item and missed a required one, or that lists an additional closed or transferred task. Correcting a suggestion to its original wording also changes what the judges accept. Removing the disputed blocker from a status rubric changes the relative weight of the remaining facts. The table shows each decline and separates the base score from citation precision. A dash means citation precision did not apply.
 
 | Run | World and question | Base score | Citation precision | Final score |
