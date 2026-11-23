@@ -21,6 +21,7 @@ version bump (docs/judge.md).
 
 from __future__ import annotations
 
+import gzip
 import hashlib
 import json
 import os
@@ -1162,7 +1163,8 @@ class PanelJudge:
 def load_cache(path: Path) -> dict[str, Any]:
     """Read a judge cache file into {key: decision}; malformed lines are skipped."""
     out: dict[str, Any] = {}
-    with open(path, encoding="utf-8") as f:
+    opener = gzip.open if path.suffix == ".gz" else open
+    with opener(path, "rt", encoding="utf-8") as f:
         for line in f:
             try:
                 row = json.loads(line)

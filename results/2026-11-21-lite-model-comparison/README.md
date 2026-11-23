@@ -1,19 +1,12 @@
 # Four models on WCB-lite: Haiku, Sonnet and Opus 5.5, GPT-6.1 Sol (Pi harness)
 
-## Gold v14 rescore
+## Panel provenance and publication status
 
-The seven high-severity fixes were applied to the original saved answers. Changes below are headline points relative to gold v6.
+The latest verified comparison with the configured cross-family panel is the gold v6 study below. The gold v14 table at commit `070f12e` and the existing deck used a different panel for changed prompts. Those numbers are historical diagnostics and are withdrawn as release headlines.
 
-| Model | Track A | Change | Track B | Change |
-|---|---:|---:|---:|---:|
-| Opus 5.5 | 94.46 | +2.59 | 92.86 | +5.51 |
-| Sonnet 5.5 | 91.91 | +2.81 | 86.94 | +6.21 |
-| Haiku 5.5 | 91.65 | +2.83 | 83.25 | +4.96 |
-| GPT-6.1 Sol | 91.17 | +4.16 | 85.07 | +5.17 |
+For gold v14, original cached decisions came from Claude Sonnet 5.5 and GPT-6.1 Sol. GPT-6 Luna and GPT-6.1 Sol decided new prompts in a ChatGPT session, and GPT-6 Sol resolved persistent citation splits. The historical votes and per-question baseline are retained for comparison. The current regression command uses only Claude Sonnet 5.5 and GPT-6.1 Sol. A citation must receive cross-family agreement, including on the second reading. The release uses no referee.
 
-The original Sonnet/Sol votes were reused wherever the judge inputs matched. GPT-6 Luna and GPT-6.1 Sol independently judged the new prompts in a ChatGPT session. For persistent split citation votes, GPT-6 Sol independently read the same evidence and cast the deciding vote. The archive contains 1,588 distinct prompts. The archived prompts and votes reproduce all eight scores offline with zero missing decisions. Historical confidence intervals, cost estimates and model comparisons below refer to gold v6.
-
-[Complete per-question changes](regression/high-severity-diff.txt) · [Residual citation audit](regression/citation-audit.csv) · [Loss classification](regression/loss-audit.md)
+The corrected comparison awaits the configured panel's raw responses. Fill the shared cache with `python scripts/lite_regression.py --allow-calls`, then run offline to compare every changed question against the historical baseline. A replacement baseline requires zero missing votes on every arm.
 
 ## Original gold v6 study
 
